@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Vitality.Website</id>
+    <title>Vitality.Website</title>
+    <version>1.0.0</version>
+    <authors>DevOps</authors>
+    <owners>Vitality</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Vitality Website Release Package</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+	<file src="_Tools\PackageInstaller.asmx" target="_Tools" />
+	<file src="App_Config\ConnectionStrings.config" target="App_Config" />
+	<file src="App_Config\**\*.*" target="App_Config" />
+	<file src="bin\**\*.dll" exclude="bin\**\Sitecore.*.dll;bin\**\System.*.dll" target="bin" />
+	<file src="Views\**\*.*" target="Views" />
+	<file src="Global.asax" />
+	<file src="packages.config" />
+	<file src="Web.config" />
+	<file src="Web.Release.config" />
+  </files>
+</package>
