@@ -1,0 +1,723 @@
+﻿@using Sitecore.Mvc
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@Html.Sitecore().Field("title", new { DisableWebEdit = true })</title>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "errorBeacon": "bam.nr-data.net", "licenseKey": "67f7fd583e", "applicationID": "13979791", "transactionName": "YVVTZUMCCkdVWxVdDVgffGdyTDdATVQEcxdfVFRyXg0QRltUDVEQGXlfVVQb", "queueTime": 0, "applicationTime": 4, "ttGuid": "647CC2230E528116", "agent": "" }</script>
+    <script type="text/javascript">        window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) { function r(n) { if (!t[n]) { var o = t[n] = { exports: {} }; e[n][0].call(o.exports, function (t) { var o = e[n][1][t]; return r(o || t) }, o, o.exports) } return t[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var o = 0; o < n.length; o++) r(n[o]); return r }({ 1: [function (e, t, n) { function r(e, t) { return function () { o(e, [(new Date).getTime()].concat(a(arguments)), null, t) } } var o = e("handle"), i = e(2), a = e(3); "undefined" == typeof window.newrelic && (newrelic = NREUM); var u = ["setPageViewName", "addPageAction", "setCustomAttribute", "finished", "addToTrace", "inlineHit"], c = ["addPageAction"], f = "api-"; i(u, function (e, t) { newrelic[t] = r(f + t, "api") }), i(c, function (e, t) { newrelic[t] = r(f + t) }), t.exports = newrelic, newrelic.noticeError = function (e) { "string" == typeof e && (e = new Error(e)), o("err", [e, (new Date).getTime()]) } }, {}], 2: [function (e, t, n) { function r(e, t) { var n = [], r = "", i = 0; for (r in e) o.call(e, r) && (n[i] = t(r, e[r]), i += 1); return n } var o = Object.prototype.hasOwnProperty; t.exports = r }, {}], 3: [function (e, t, n) { function r(e, t, n) { t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0); for (var r = -1, o = n - t || 0, i = Array(0 > o ? 0 : o) ; ++r < o;) i[r] = e[t + r]; return i } t.exports = r }, {}], ee: [function (e, t, n) { function r() { } function o(e) { function t(e) { return e && e instanceof r ? e : e ? u(e, a, i) : i() } function n(n, r, o) { e && e(n, r, o); for (var i = t(o), a = l(n), u = a.length, c = 0; u > c; c++) a[c].apply(i, r); var s = f[g[n]]; return s && s.push([m, n, r, i]), i } function p(e, t) { w[e] = l(e).concat(t) } function l(e) { return w[e] || [] } function d(e) { return s[e] = s[e] || o(n) } function v(e, t) { c(e, function (e, n) { t = t || "feature", g[n] = t, t in f || (f[t] = []) }) } var w = {}, g = {}, m = { on: p, emit: n, get: d, listeners: l, context: t, buffer: v }; return m } function i() { return new r } var a = "nr@context", u = e("gos"), c = e(2), f = {}, s = {}, p = t.exports = o(); p.backlog = f }, {}], gos: [function (e, t, n) { function r(e, t, n) { if (o.call(e, t)) return e[t]; var r = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(e, t, { value: r, writable: !0, enumerable: !1 }), r } catch (i) { } return e[t] = r, r } var o = Object.prototype.hasOwnProperty; t.exports = r }, {}], handle: [function (e, t, n) { function r(e, t, n, r) { o.buffer([e], r), o.emit(e, t, n) } var o = e("ee").get("handle"); t.exports = r, r.ee = o }, {}], id: [function (e, t, n) { function r(e) { var t = typeof e; return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () { return o++ }) } var o = 1, i = "nr@id", a = e("gos"); t.exports = r }, {}], loader: [function (e, t, n) { function r() { if (!w++) { var e = v.info = NREUM.info, t = s.getElementsByTagName("script")[0]; if (e && e.licenseKey && e.applicationID && t) { c(l, function (t, n) { e[t] || (e[t] = n) }); var n = "https" === p.split(":")[0] || e.sslForHttp; v.proto = n ? "https://" : "http://", u("mark", ["onload", a()], null, "api"); var r = s.createElement("script"); r.src = v.proto + e.agent, t.parentNode.insertBefore(r, t) } } } function o() { "complete" === s.readyState && i() } function i() { u("mark", ["domContent", a()], null, "api") } function a() { return (new Date).getTime() } var u = e("handle"), c = e(2), f = window, s = f.document; NREUM.o = { ST: setTimeout, CT: clearTimeout, XHR: f.XMLHttpRequest, REQ: f.Request, EV: f.Event, PR: f.Promise, MO: f.MutationObserver }, e(1); var p = "" + location, l = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-918.min.js" }, d = window.XMLHttpRequest && XMLHttpRequest.prototype && XMLHttpRequest.prototype.addEventListener && !/CriOS/.test(navigator.userAgent), v = t.exports = { offset: a(), origin: p, features: {}, xhrWrappable: d }; s.addEventListener ? (s.addEventListener("DOMContentLoaded", i, !1), f.addEventListener("load", r, !1)) : (s.attachEvent("onreadystatechange", o), f.attachEvent("onload", r)), u("mark", ["firstbyte", a()], null, "api"); var w = 0 }, {}] }, {}, ["loader"]);</script>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0">
+
+    <!-- Google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600' rel='stylesheet' type='text/css'>
+
+    <!-- Favicons -->
+    <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#da532c">
+    <meta name="apple-mobile-web-app-title" content="Vitality Website">
+    <meta name="application-name" content="Vitality Website">
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/assets/images/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/assets/images/favicon/manifest.json">
+    <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#da532c">
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
+    <meta property="og:image" content="/assets/images/favicon/open-graph.png">
+    <meta name="apple-mobile-web-app-title" content="Vitality Website">
+    <meta name="application-name" content="Vitality Website">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/assets/images/favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/assets/js/modernizr-custom.min.js"></script>
+
+    <!-- production
+    <link rel="stylesheet" type="text/css" href="/assets/css/screen-0.0.1.css" media="screen" />
+    <script src="/assets/js/static/require.js" data-main="/assets/js/app" async></script>
+    -->
+    <!-- active development  -->
+    <link rel="stylesheet" type="text/css" href="/css/screen-0.0.1.css" media="screen" />
+    <script src="/src/js/static/require.js" data-main="/src/js/app" async></script>
+
+</head>
+<body>
+    <div class="page">
+
+        <a href="#main-content" class="offscreen">Skip to Content</a>
+
+        <header class="page-header">
+
+            <!-- top-bar mobile -->
+            <div class="top-bar top-bar--small">
+
+                <div class="top-bar__home">
+
+                    <a href="/">
+                        <img src="/assets/images/svg/vitality-logo.svg" alt="Vitality" class="top-bar__logo">
+                    </a>
+
+                </div>
+
+                <ul class="utility-nav--small">
+
+                    <li class="utility-nav__item utility-nav__item--search js-search-toggle">
+
+                        <div class="utility-nav__inner">
+                            <a href="search.html">
+                                <img src="/assets/images/svg/search.svg" alt="Search">
+                                <span>Search</span>
+                            </a>
+                        </div>
+
+
+                    </li>
+
+                    <li class="utility-nav__item utility-nav__item--log-in js-log-in-toggle">
+
+                        <div class="utility-nav__inner ">
+                            <img src="/assets/images/svg/log-in.svg" alt="Log in">
+                            <span>Log In</span>
+                        </div>
+
+                    </li>
+
+                    <li class="utility-nav__item utility-nav__item--menu js-main-menu-toggle">
+
+                        <div class="utility-nav__inner">
+
+                            <div class="burger-menu"><span></span></div>
+
+                            <span>Menu</span>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+            </div>
+            <!-- end top-bar mobile -->
+            <!-- top-bar desktop - contains site nav -->
+            <div class="top-bar top-bar--large">
+
+                <ul class="site-nav">
+
+                    <li class="site-nav__item is-active">
+                        <a href="/">Personal</a>
+                    </li>
+
+                    <li class="site-nav__item">
+                        <a href="/">Business</a>
+                    </li>
+
+                    <li class="site-nav__item">
+                        <a href="/">Advisers</a>
+                    </li>
+
+                    <li class="site-nav__item">
+                        <a href="/">Healthcare Providers</a>
+                    </li>
+
+                </ul>
+
+                <ul class="utility-nav">
+
+                    <li class="utility-nav__item utility-nav__item--search js-search-toggle">
+                        <a href="search.html">
+                            <img src="/assets/images/svg/search.svg" alt="Search">
+                            Search
+                        </a>
+                    </li>
+
+                    <li class="utility-nav__item utility-nav__item--log-in js-log-in-toggle">
+
+                        <a href="/">Log In</a>
+
+                        <!-- log in panel -->
+                        <div class="log-in log-in--large">
+                            <div class="log-in__content">
+
+                                <div class="log-in__avatar">
+                                    <img src="/assets/images/log-in-avatar.png" alt="Stanley the dachshund">
+                                </div>
+
+                                <p class="log-in__header">
+                                    Member Zone
+                                </p>
+
+                                <div class="log-in__links">
+                                    <a href="#log-in" class="box-button box-button--rounded box-button--secondary box-button--full-width">Log in</a>
+                                    <a href="#register" class="box-button box-button--rounded box-button--full-width">Register today</a>
+                                </div>
+
+                                <div class="log-in__forgotten">
+                                    <a href="#forgot">I've forgotten my details</a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- end log in panel desktop-->
+                    </li>
+
+                    <li class="utility-nav__item">
+                        <a href="/">Contact us</a>
+                    </li>
+
+                    <li class="utility-nav__item utility-nav__item--social">
+
+                        <ul class="social-icons-list">
+
+                            <li class="social-icon">
+                                <a href="https://www.facebook.com/VitalityUK" target="_blank">
+                                    <img src="/assets/images/svg/facebook.svg" alt="Facebook">
+                                </a>
+                            </li>
+
+                            <li class="social-icon">
+                                <a href="https://twitter.com/Vitality_UK?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+                                    <img src="/assets/images/svg/twitter.svg" alt="Twitter">
+                                </a>
+                            </li>
+
+                            <li class="social-icon">
+                                <a href="https://www.instagram.com/vitality_uk/?hl=en" target="_blank">
+                                    <img src="/assets/images/svg/instagram.svg" alt="Instagram">
+                                </a>
+                            </li>
+
+                            <li class="social-icon">
+                                <a href="https://www.youtube.com/user/livewithVitality" target="_blank">
+                                    <img src="/assets/images/svg/youtube.svg" alt="Youtube">
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+
+            </div><!-- end top-bar desktop-->
+            <!-- section-nav - for all sizes - contains megamenu -->
+            <ul class="section-nav">
+
+                <li class="section-nav__item section-nav__item--home section-nav__item--no-shadow">
+
+                    <a href="/">
+                        <img src="/assets/images/svg/vitality-logo.svg" alt="Vitality" class="top-bar__logo">
+                    </a>
+
+                </li>
+
+                <li class="section-nav__item section-nav__item--megamenu">
+
+                    <a href="/">Health Insurance</a>
+
+                    <div class="megamenu">
+
+                        <div class="megamenu__wrap">
+
+                            <div class="megamenu__col ">
+                                <p class="megamenu__heading">Explore Health Insurance</p>
+
+                                <a href="#" class="megamenu__back">Health Insurance</a>
+
+                                <ul class="megamenu__list">
+                                    <li><a href="/">Health insurance overview</a></li>
+                                    <li><a href="/">Cover options</a></li>
+                                    <li><a href="/">Medical insurance</a></li>
+                                    <li><a href="/">PMI</a></li>
+                                    <li><a href="/">Health care</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="megamenu__col megamenu__col--useful">
+                                <p class="megamenu__heading">Useful links</p>
+                                <ul class="megamenu__list">
+                                    <li><a href="/">Compare cover options</a></li>
+                                    <li><a href="/">Choose your hospital</a></li>
+                                    <li><a href="/">Get a quote</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="megamenu__col megamenu__col--feature">
+
+                                <div class=" megamenu-feature">
+                                    <h3 class="megamenu-feature__header">Featured article section</h3>
+                                    <p class="megamenu-feature__body">
+                                        Swicth Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, unde.
+                                    </p>
+
+                                    <a href="#" class="box-button box-button--light megamenu-feature__button">Find out more</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </li>
+
+                <li class="section-nav__item section-nav__item--megamenu">
+                    <a href="/">Life Insurance</a>
+
+                    <div class="megamenu">
+
+                        <div class="megamenu__wrap">
+
+                            <div class="megamenu__col">
+                                <p class="megamenu__heading">Explore Life Insurance</p>
+
+                                <a href="#" class="megamenu__back">Life Insurance</a>
+
+                                <ul class="megamenu__list">
+
+                                    <li><a href="/">Life insurance overview</a></li>
+                                    <li><a href="/">Life cover</a></li>
+                                    <li><a href="/">Income protection insurance</a></li>
+                                    <li><a href="/">Serious illness cover</a></li>
+                                    <li><a href="/">Mortgage protection insurance</a></li>
+                                    <li><a href="/">Lifestylecare cover</a></li>
+
+                                </ul>
+                            </div>
+
+                            <div class="megamenu__col  megamenu__col--useful">
+                                <p class="megamenu__heading">Useful links</p>
+                                <ul class="megamenu__list">
+                                    <li><a href="/">Compare life insurance</a></li>
+                                    <li><a href="/">Additional cover options</a></li>
+                                    <li><a href="/">Vitality Optimiser</a></li>
+                                    <li><a href="/">Get a quote</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="megamenu__col megamenu__col--feature">
+
+                                <div class=" megamenu-feature">
+                                    <h3 class="megamenu-feature__header">Featured article section</h3>
+                                    <p class="megamenu-feature__body">
+                                        Swicth Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus non laborum, quae molestiae facere consequuntur inventore, aut aliquid doloremque, excepturi labore id eos.
+                                    </p>
+
+                                    <a href="#" class="box-button box-button--light megamenu-feature__button">Find out more</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="section-nav__item section-nav__item--megamenu">
+                    <a href="/">Rewards</a>
+
+                    <div class="megamenu">
+
+                        <div class="megamenu__wrap">
+
+                            <div class="megamenu__col">
+                                <p class="megamenu__heading">Explore Life Insurance</p>
+
+                                <a href="#" class="megamenu__back">Life Insurance</a>
+
+                                <ul class="megamenu__list">
+
+                                    <li><a href="/style-guide/Accordion">Accordion</a></li>
+                                    <li><a href="/style-guide/Buttons">Buttons</a></li>
+                                    <li><a href="/style-guide/CTA">CTA</a></li>
+                                    <li><a href="/style-guide/Default">Defaults</a></li>
+                                    <li><a href="/style-guide/FeatureBlocks">FeatureBlocks</a></li>
+                                    <li><a href="/style-guide/Forms">Forms</a></li>
+                                    <li><a href="/style-guide/Grids">Grids</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="megamenu__col  megamenu__col--useful">
+                                <p class="megamenu__heading">Useful links</p>
+                                <ul class="megamenu__list">
+                                    <li><a href="/style-guide/IconList">IconList</a></li>
+                                    <li><a href="/style-guide/MediaComponent">MediaComponent</a></li>
+                                    <li><a href="/style-guide/Partners">Partners</a></li>
+                                    <li><a href="/style-guide/Spotlight">Spotlight</a></li>
+                                    <li><a href="/style-guide/Tables">Tables</a></li>
+                                    <li><a href="/style-guide/Tabs">Tabs</a></li>
+                                    <li><a href="/style-guide/Utilities">Utilities</a></li>
+                                    <li><a href="/style-guide/Video">Video</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="megamenu__col megamenu__col--feature">
+
+                                <div class=" megamenu-feature">
+                                    <h3 class="megamenu-feature__header">Note</h3>
+                                    <p class="megamenu-feature__body">
+                                        Note - this menu is being used temporarily for the boilerplate links.
+                                    </p>
+
+                                    <a href="/" class="box-button box-button--light megamenu-feature__button">Find out more</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="section-nav__item section-nav__item--megamenu">
+                    <a href="/">Tools &amp; guides</a>
+
+                    <div class="megamenu">
+
+                        <div class="megamenu__wrap">
+
+                            <div class="megamenu__col ">
+                                <p class="megamenu__heading">Explore tools &amp; guides</p>
+
+                                <a href="#" class="megamenu__back">Tools &amp; guides</a>
+
+                                <ul class="megamenu__list">
+                                    <li><a href="/">Age calculator</a></li>
+                                    <li><a href="/">BMI calculator</a></li>
+                                    <li><a href="/">Savings calculator</a></li>
+                                    <li><a href="/">Points calculator</a></li>
+                                    <li><a href="/">Partner finder</a></li>
+                                    <li><a href="/">Hospital finder</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="megamenu__col megamenu__col--useful">
+                                <p class="megamenu__heading">Useful links</p>
+                                <ul class="megamenu__list">
+                                    <li><a href="/">How to make a claim</a></li>
+                                    <li><a href="/">How to buy</a></li>
+                                    <li><a href="/">Health and wellness guides</a></li>
+                                    <li><a href="/">Joint product FAQs</a></li>
+                                    <li><a href="/">Glossary</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="megamenu__col megamenu__col--feature">
+
+                                <div class=" megamenu-feature">
+                                    <h3 class="megamenu-feature__header">Featured article section</h3>
+                                    <p class="megamenu-feature__body">
+                                        Swicth Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, unde.
+                                    </p>
+
+                                    <a href="#" class="box-button box-button--light megamenu-feature__button">Find out more</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="section-nav__item">
+                    <a href="/">Community</a>
+                </li>
+
+                <li class="section-nav__item section-nav__item--phone section-nav__item--no-shadow">
+                    <a href="/"><span class="section-nav__phone-text text-icon--phone-dark">Help or apply</span> <span class="section-nav__phone-number">0333 920 8005</span></a>
+                </li>
+
+            </ul><!-- end section-nav -->
+            <!-- site-nav for mobile, moved to botom of menu -->
+            <ul class="site-nav--small">
+
+                <li class="site-nav__item is-active">
+                    <a href="/">Personal</a>
+                </li>
+
+                <li class="site-nav__item">
+                    <a href="/">Business</a>
+                </li>
+
+                <li class="site-nav__item">
+                    <a href="/">Advisers</a>
+                </li>
+
+                <li class="site-nav__item">
+                    <a href="/">Healthcare Providers</a>
+                </li>
+
+                <li class="site-nav__item">
+                    <a href="/">Contact us</a>
+                </li>
+
+            </ul>
+
+        </header>
+
+
+        <!-- log in panel for mobile -->
+        <div class="log-in log-in--small">
+            <div class="log-in__content">
+
+                <div class="log-in__avatar">
+                    <img src="/assets/images/log-in-avatar.png" alt="Stanley the dachshund">
+                </div>
+
+                <p class="log-in__header">
+                    Member Zone
+                </p>
+
+                <div class="log-in__links">
+                    <a href="#log-in" class="box-button box-button--rounded box-button--secondary box-button--full-width">Log in</a>
+                    <a href="#register" class="box-button box-button--rounded box-button--full-width">Register today</a>
+                </div>
+
+                <div class="log-in__forgotten">
+                    <a href="#forgot">I've forgotten my details</a>
+                </div>
+
+            </div>
+        </div>
+        <!-- end log in panel mobile-->
+        <!-- search panel for mobile -->
+        <div class="search-panel">
+
+            <div class="search-panel__content pinch">
+
+                <div class="search-panel__header">
+
+                    <p>Type anything to search Vitality</p>
+
+                    <div class="search-panel__close-button js-search-close"><p>Close</p></div>
+
+                </div>
+
+                <div class="search-panel__search-field form">
+                    <div class="form__field">
+                        <input type="text" class="search-panel__search-input js-search-input" placeholder="Search...">
+                    </div>
+
+                    <div class="search-panel__search-details">
+                        <p><span class="js-search-matches">X</span> results for <span class="search-string js-search-string">search term</span>.
+                    </div>
+
+                </div>
+
+                <div class="search-panel__search-results">
+
+                    <p class="search-results__header">Products (3)</p>
+
+                    <ul class="search-results__list">
+
+                        <li class="search-results__item">
+                            <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Health Insurance</a></h4>
+                            <p class="search-results__item-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, illo...
+                            </p>
+                        </li>
+
+                        <li class="search-results__item">
+                            <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Stay healthy at work</a></h4>
+                            <p class="search-results__item-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+                            </p>
+                        </li>
+
+                        <li class="search-results__item">
+                            <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Free Vitality healthcheck</a></h4>
+                            <p class="search-results__item-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non!...
+                            </p>
+                        </li>
+
+                    </ul>
+
+                    <p class="search-results__header">Tools (3)</p>
+
+                    <ul class="search-results__list">
+
+                        <li class="search-results__item">
+                            <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Health Insurance</a></h4>
+                            <p class="search-results__item-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quos, dolorum molestiae ab cupiditate sunt maxime error, dolorem est labore veniam saepe quae asperiores sequi consequuntur consequatur assumenda nam voluptates amet totam. A optio iure modi maiores commodi, hic aspernatur...
+                            </p>
+                        </li>
+
+                        <li class="search-results__item">
+                            <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Stay healthy at work</a></h4>
+                            <p class="search-results__item-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates...
+                            </p>
+                        </li>
+
+                        <li class="search-results__item">
+                            <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Free Vitality healthcheck</a></h4>
+                            <p class="search-results__item-body">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non!...
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="search-panel__background-image" style="background-image: url('/media/000/search-background.png');">
+                </div>
+
+            </div>
+        </div>
+        <!-- end search panel mobile-->
+
+        <main id="main-content" tabindex="-1">
+
+
+            <section>
+                <div class="pinch">
+
+                    <h1> What is the boilerplate?</h1>
+
+                    <p>
+                        The boilerplate is a repository of all the styles and re-usable components used in the project. This includes branding variables, layouts and grids available as well as components created for the project. By assembling a reference of our patterns, we are able to speed up our process and aid  communication. A common lexicon of code and UI elements allows us to build consistently, reuse code instead of reinventing the wheel and see all of our patterns in one place.
+                    </p>
+
+                    <p>
+                        Please view component pages using the menu.
+                    </p>
+
+                    <hr>
+
+                    <small>
+                        Please note that boilerplate naviagtion items have been temporarily added to the "rewards" mega menu to allow navigation through the components.
+                    </small>
+
+                </div>
+            </section>
+        </main>
+
+    </div>
+
+    <footer class="page-footer">
+
+        <div class="page-footer__grid pinch">
+
+            <div class="page-footer__links--small">
+                <div class="expander expander--dark  expander--with-style  js-expander-is-accordion">
+                    <a href="#expander-footer-item1" class="expander__link">Get a quote</a>
+                    <div id="expander-footer-item1" class="expander__content">
+                        <ul class="page-footer__list page-footer__list--quote">
+                            <li><a href="#">Health Insurance</a></li>
+                            <li><a href="#">Life Insurance</a></li>
+                        </ul>
+                    </div>
+                    <a href="#expander-footer-item2" class="expander__link">Useful links</a>
+                    <div id="expander-footer-item2" class="expander__content">
+                        <ul class="page-footer__list page-footer__list--helpful">
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Legal &amp; security</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Accessibility</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Cookies</a></li>
+                            <li><a href="#">Press centre</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page-footer__logo page-footer__logo--large">
+                <a href="/"><img src="/assets/images/svg/vitality-logo--white.svg" alt="Vitality" class="page-footer__logo-img"></a>
+
+                <p class="page-footer__copyright">©2016 Vitality. All&nbsp;rights&nbsp;reserved.</p>
+            </div>
+
+            <div class="page-footer__quote">
+                <p class="page-footer__header">Get a quote</p>
+
+                <ul class="page-footer__list page-footer__list--quote">
+                    <li><a href="#">Health Insurance</a></li>
+                    <li><a href="#">Life Insurance</a></li>
+                </ul>
+            </div>
+
+            <div class="page-footer__helpful">
+                <p class="page-footer__header">Helpful links</p>
+
+                <ul class="page-footer__list page-footer__list--helpful">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Legal &amp; security</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Press centre</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+
+            </div>
+
+            <div class="page-footer__connect">
+                <p class="page-footer__header">Connect with Vitality</p>
+
+                <ul class="social-icons-list">
+
+                    <li class="social-icon">
+                        <a href="https://www.facebook.com/VitalityUK" target="_blank">
+                            <img src="/assets/images/svg/facebook--footer.svg" alt="Facebook">
+                        </a>
+                    </li>
+
+                    <li class="social-icon">
+                        <a href="https://twitter.com/Vitality_UK?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">
+                            <img src="/assets/images/svg/twitter--footer.svg" alt="Twitter">
+                        </a>
+                    </li>
+
+                    <li class="social-icon">
+                        <a href="https://www.instagram.com/vitality_uk/?hl=en" target="_blank">
+                            <img src="/assets/images/svg/instagram--footer.svg" alt="Instagram">
+                        </a>
+                    </li>
+
+                    <li class="social-icon">
+                        <a href="https://www.youtube.com/user/livewithVitality" target="_blank">
+                            <img src="/assets/images/svg/youtube--footer.svg" alt="Youtube">
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="page-footer__logo page-footer__logo--small">
+                <a href="/"><img src="/assets/images/svg/vitality-logo--white.svg" alt="Vitality" class="page-footer__logo-img"></a>
+
+                <p class="page-footer__copyright">©2016 Vitality. All&nbsp;rights&nbsp;reserved.</p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="http://localhost:35729/livereload.js"></script>
+
+
+    @Html.Sitecore().Placeholder("main")
+</body>
+</html>
