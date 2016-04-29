@@ -1,0 +1,19 @@
+﻿namespace Vitality.Website.Areas.Presales.Models.Navigation
+{
+    using System.Collections.Generic;
+
+    using Glass.Mapper.Sc.Fields;
+
+    using Vitality.Website.Areas.Global.Models;
+
+    public class NavigationSection : SitecoreItem
+    {
+        public Link SectionLink { get; set; }
+
+        public Link AdditionalLink { get; set; }
+
+        public string AdditionalLinkSubHeader { get; set; }
+
+        public IEnumerable<NavigationSubSection> NavigationSubSections { get; set; }
+    }
+}
