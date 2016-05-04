@@ -237,3 +237,10 @@ Vitality.Website/webedit.css
 
 #Setup
 /install
+
+# Client-side build.
+Vitality.Website/css/**/*.css
+Vitality.Website/client_side/sass/*.css
+Vitality.Website/client_side/sass/*.map
+Vitality.Website/img/**/*.*
+Vitality.Website/js/**/*.js
