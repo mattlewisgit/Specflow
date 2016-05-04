@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {AFB99F79-99E5-4B03-A30B-6D078F8DB836}
+id: {01E14541-B996-4A76-870F-159D49F554B7}
 database: master
-path: /sitecore/content/Presales/Content/Navigation/Main Navigation/Social links/Facebook
+path: /sitecore/content/Presales/Content/Navigation/Main Navigation/Social links/Instagram
 parent: {514FD854-8A5A-490E-AC65-F26B7E2355E3}
-name: Facebook
+name: Instagram
 master: {00000000-0000-0000-0000-000000000000}
 template: {BDD88ED4-C40F-43A1-9900-572B18179434}
 templatekey: Image Link
@@ -15,47 +15,47 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-100
+200
 ----version----
 language: en
 version: 1
-revision: 26bddd72-f756-4697-b78e-ad8644f0d9ff
+revision: 4e0ae200-9c86-4f46-b11a-63a1b3fd3f27
 
 ----field----
 field: {C428ADB9-FE45-44B0-AC23-805EF8BC4335}
 name: Link
 key: link
-content-length: 102
+content-length: 97
 
-<link text="Facebook" linktype="external" url="http://www.facebook.co.uk" anchor="" target="_blank" />
+<link text="Instagram" linktype="external" url="http://www.facebook.co.uk" anchor="" target="" />
 ----field----
 field: {FF833EB2-ACD6-4A43-8392-06C2BB98D65B}
 name: Image
 key: image
 content-length: 58
 
-<image mediaid="{AB7E97D5-2B55-4210-B21C-41AA8ED5CB3E}" />
+<image mediaid="{5BA1E9B4-308E-4E5D-9D63-54CF7134D044}" />
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160429T111022Z
+20160503T093305Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-26bddd72-f756-4697-b78e-ad8644f0d9ff
+4e0ae200-9c86-4f46-b11a-63a1b3fd3f27
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160503T093314Z
+20160503T093329Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -201,13 +201,14 @@
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="App_Start\IoC.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Areas\Global\Models\ImageLinkItem.cs" />
+    <Compile Include="Areas\Global\Models\ImageLink.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
+    <Compile Include="Extensions\ItemConstants.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -6,8 +6,9 @@
 
     public class SitecoreItem
     {
-        [
-        SitecoreId]
+        [SitecoreId]
         public Guid Id { get; set; }
+
+        public Guid TemplateId { get; set; }
     }
 }

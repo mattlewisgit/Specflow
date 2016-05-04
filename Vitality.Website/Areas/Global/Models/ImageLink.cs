@@ -2,7 +2,7 @@
 {
     using Glass.Mapper.Sc.Fields;
 
-    public class ImageLinkItem : SitecoreItem
+    public class ImageLink : SitecoreItem
     {
         public Link Link { get; set; }
         public Image Image { get; set; }
