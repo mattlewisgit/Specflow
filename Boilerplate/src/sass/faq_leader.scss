@@ -2,7 +2,7 @@
 
 .faq_leader {
     .header, .more {
-        @include centre;
+        @include text-centre;
     }
 
     .more a {
