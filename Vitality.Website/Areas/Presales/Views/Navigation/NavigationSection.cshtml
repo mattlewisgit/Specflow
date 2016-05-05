@@ -1,228 +1,24 @@
-﻿<ul class="section-nav">
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Navigation.NavigationSection>
+
+<ul class="section-nav">
 
     <li class="section-nav__item section-nav__item--home section-nav__item--no-shadow">
-
         <a href="/">
-            <img src="/assets/images/svg/vitality-logo.svg" alt="Vitality" class="top-bar__logo">
+            <img src="/img/vitality-logo.svg" alt="Vitality" class="top-bar__logo">
         </a>
-
     </li>
 
-    <li class="section-nav__item section-nav__item--megamenu">
+    @foreach (var subSection in Model.NavigationSubSections)
+    {
+        @Html.Partial("/Areas/Presales/Views/Navigation/NavigationSubSection.cshtml", subSection)
+    }
 
-        <a href="/">Health Insurance</a>
-
-        <div class="megamenu">
-
-            <div class="megamenu__wrap">
-
-                <div class="megamenu__col ">
-                    <p class="megamenu__heading">Explore Health Insurance</p>
-
-                    <a href="#" class="megamenu__back">Health Insurance</a>
-
-                    <ul class="megamenu__list">
-                        <li><a href="/">Health insurance overview</a></li>
-                        <li><a href="/">Cover options</a></li>
-                        <li><a href="/">Medical insurance</a></li>
-                        <li><a href="/">PMI</a></li>
-                        <li><a href="/">Health care</a></li>
-                    </ul>
-                </div>
-
-                <div class="megamenu__col megamenu__col--useful">
-                    <p class="megamenu__heading">Useful links</p>
-                    <ul class="megamenu__list">
-                        <li><a href="/">Compare cover options</a></li>
-                        <li><a href="/">Choose your hospital</a></li>
-                        <li><a href="/">Get a quote</a></li>
-                    </ul>
-                </div>
-
-                <div class="megamenu__col megamenu__col--feature">
-
-                    <div class=" megamenu-feature">
-                        <h3 class="megamenu-feature__header">Featured article section</h3>
-                        <p class="megamenu-feature__body">
-                            Swicth Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, unde.
-                        </p>
-
-                        <a href="#" class="box-button box-button--light megamenu-feature__button">Find out more</a>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </li>
-
-    <li class="section-nav__item section-nav__item--megamenu">
-        <a href="/">Life Insurance</a>
-
-        <div class="megamenu">
-
-            <div class="megamenu__wrap">
-
-                <div class="megamenu__col">
-                    <p class="megamenu__heading">Explore Life Insurance</p>
-
-                    <a href="#" class="megamenu__back">Life Insurance</a>
-
-                    <ul class="megamenu__list">
-
-                        <li><a href="/">Life insurance overview</a></li>
-                        <li><a href="/">Life cover</a></li>
-                        <li><a href="/">Income protection insurance</a></li>
-                        <li><a href="/">Serious illness cover</a></li>
-                        <li><a href="/">Mortgage protection insurance</a></li>
-                        <li><a href="/">Lifestylecare cover</a></li>
-
-                    </ul>
-                </div>
-
-                <div class="megamenu__col  megamenu__col--useful">
-                    <p class="megamenu__heading">Useful links</p>
-                    <ul class="megamenu__list">
-                        <li><a href="/">Compare life insurance</a></li>
-                        <li><a href="/">Additional cover options</a></li>
-                        <li><a href="/">Vitality Optimiser</a></li>
-                        <li><a href="/">Get a quote</a></li>
-                    </ul>
-                </div>
-
-                <div class="megamenu__col megamenu__col--feature">
-
-                    <div class=" megamenu-feature">
-                        <h3 class="megamenu-feature__header">Featured article section</h3>
-                        <p class="megamenu-feature__body">
-                            Swicth Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus non laborum, quae molestiae facere consequuntur inventore, aut aliquid doloremque, excepturi labore id eos.
-                        </p>
-
-                        <a href="#" class="box-button box-button--light megamenu-feature__button">Find out more</a>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </li>
-
-    <li class="section-nav__item section-nav__item--megamenu">
-        <a href="/">Rewards</a>
-
-        <div class="megamenu">
-
-            <div class="megamenu__wrap">
-
-                <div class="megamenu__col">
-                    <p class="megamenu__heading">Explore Life Insurance</p>
-
-                    <a href="#" class="megamenu__back">Life Insurance</a>
-
-                    <ul class="megamenu__list">
-
-                        <li><a href="/style-guide/Accordion">Accordion</a></li>
-                        <li><a href="/style-guide/Buttons">Buttons</a></li>
-                        <li><a href="/style-guide/CTA">CTA</a></li>
-                        <li><a href="/style-guide/Default">Defaults</a></li>
-                        <li><a href="/style-guide/FeatureBlocks">FeatureBlocks</a></li>
-                        <li><a href="/style-guide/Forms">Forms</a></li>
-                        <li><a href="/style-guide/Grids">Grids</a></li>
-                    </ul>
-                </div>
-
-                <div class="megamenu__col  megamenu__col--useful">
-                    <p class="megamenu__heading">Useful links</p>
-                    <ul class="megamenu__list">
-                        <li><a href="/style-guide/IconList">IconList</a></li>
-                        <li><a href="/style-guide/MediaComponent">MediaComponent</a></li>
-                        <li><a href="/style-guide/Partners">Partners</a></li>
-                        <li><a href="/style-guide/Spotlight">Spotlight</a></li>
-                        <li><a href="/style-guide/Tables">Tables</a></li>
-                        <li><a href="/style-guide/Tabs">Tabs</a></li>
-                        <li><a href="/style-guide/Utilities">Utilities</a></li>
-                        <li><a href="/style-guide/Video">Video</a></li>
-                    </ul>
-                </div>
-
-                <div class="megamenu__col megamenu__col--feature">
-
-                    <div class=" megamenu-feature">
-                        <h3 class="megamenu-feature__header">Note</h3>
-                        <p class="megamenu-feature__body">
-                            Note - this menu is being used temporarily for the boilerplate links.
-                        </p>
-
-                        <a href="/" class="box-button box-button--light megamenu-feature__button">Find out more</a>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </li>
-
-    <li class="section-nav__item section-nav__item--megamenu">
-        <a href="/">Tools &amp; guides</a>
-
-        <div class="megamenu">
-
-            <div class="megamenu__wrap">
-
-                <div class="megamenu__col ">
-                    <p class="megamenu__heading">Explore tools &amp; guides</p>
-
-                    <a href="#" class="megamenu__back">Tools &amp; guides</a>
-
-                    <ul class="megamenu__list">
-                        <li><a href="/">Age calculator</a></li>
-                        <li><a href="/">BMI calculator</a></li>
-                        <li><a href="/">Savings calculator</a></li>
-                        <li><a href="/">Points calculator</a></li>
-                        <li><a href="/">Partner finder</a></li>
-                        <li><a href="/">Hospital finder</a></li>
-                    </ul>
-                </div>
-
-                <div class="megamenu__col megamenu__col--useful">
-                    <p class="megamenu__heading">Useful links</p>
-                    <ul class="megamenu__list">
-                        <li><a href="/">How to make a claim</a></li>
-                        <li><a href="/">How to buy</a></li>
-                        <li><a href="/">Health and wellness guides</a></li>
-                        <li><a href="/">Joint product FAQs</a></li>
-                        <li><a href="/">Glossary</a></li>
-                    </ul>
-                </div>
-
-                <div class="megamenu__col megamenu__col--feature">
-
-                    <div class=" megamenu-feature">
-                        <h3 class="megamenu-feature__header">Featured article section</h3>
-                        <p class="megamenu-feature__body">
-                            Swicth Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, unde.
-                        </p>
-
-                        <a href="#" class="box-button box-button--light megamenu-feature__button">Find out more</a>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-    </li>
-
-    <li class="section-nav__item">
-        <a href="/">Community</a>
-    </li>
-
-    <li class="section-nav__item section-nav__item--phone section-nav__item--no-shadow">
-        <a href="/"><span class="section-nav__phone-text text-icon--phone-dark">Help or apply</span> <span class="section-nav__phone-number">0333 920 8005</span></a>
-    </li>
+<li class="section-nav__item section-nav__item--phone section-nav__item--no-shadow">
+    @using (BeginRenderLink(Model, item => item.AdditionalLink, new { tel = Model.AdditionalLinkSubHeader }))
+    {
+        <span class="section-nav__phone-text text-icon--phone-dark">@Html.Raw(Model.AdditionalLink.Text)</span>
+        <span class="section-nav__phone-number">@Html.Raw(Model.AdditionalLinkSubHeader)</span>
+    }
+</li>
 
 </ul>

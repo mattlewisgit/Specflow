@@ -1,14 +1,13 @@
 ﻿namespace Vitality.Website.Areas.Presales.Models.Navigation
 {
     using System.Collections.Generic;
-    using System.Linq;
 
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
 
     using Vitality.Website.Areas.Global.Models;
-    using Vitality.Website.Extensions;
+    using Vitality.Website.Utilities;
 
     public class MainNavigation : SitecoreItem
     {
@@ -36,13 +35,6 @@
         [SitecoreQuery(HasNavigationSectionTemplate, IsRelative = true)]
         public IEnumerable<NavigationSection> NavigationSections { get; set; }
 
-        [SitecoreIgnore]
-        public NavigationSection ActiveNavigationSection
-        {
-            get
-            {
-                return this.NavigationSections.First();
-            }
-        }
+        
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Extensions
+﻿namespace Vitality.Website.Utilities
 {
     public static class ItemConstants
     {
