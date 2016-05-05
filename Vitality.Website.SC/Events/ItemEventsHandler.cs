@@ -19,13 +19,13 @@ namespace Vitality.Website.SC.Events
 
             if (ItemIsMasterDatabaseContentPage(item))
             {
-                var hyphenatedName = StringHelper.HyphenatedWords(item.Name);
+                var hyphenatedName = StringHelper.HyphenatedWords(item.Name).ToLowerInvariant();
                 if (!item.Name.Equals(hyphenatedName, StringComparison.Ordinal))
                 {
                     using (new EditContext(item))
                     {
                         item.Appearance.DisplayName = item.Name;
-                        item.Name = hyphenatedName.ToLowerInvariant();
+                        item.Name = hyphenatedName;
                     }
                 }
             }

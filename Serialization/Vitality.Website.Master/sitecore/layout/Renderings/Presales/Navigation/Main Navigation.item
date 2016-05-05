@@ -10,6 +10,13 @@ template: {99F8905D-4A87-4EB8-9F8B-A9BEBFB3ADD6}
 templatekey: View rendering
 
 ----field----
+field: {AF554463-7896-491E-B7A2-E4C3E29E8BC0}
+name: VaryByAncestor
+key: varybyancestor
+content-length: 1
+
+1
+----field----
 field: {51B435BC-F7B9-478A-9C51-52916AF96FF5}
 name: Path
 key: path
@@ -27,16 +34,16 @@ Presales
 field: {3D08DB46-2267-41B0-BC52-BE69FD618633}
 name: Cacheable
 key: cacheable
-content-length: 0
+content-length: 1
 
-
+1
 ----field----
 field: {8B6D532B-6128-4486-A044-CA06D90948BA}
 name: VaryByData
 key: varybydata
-content-length: 0
+content-length: 1
 
-
+1
 ----field----
 field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
 name: Datasource Location
@@ -54,7 +61,7 @@ content-length: 75
 ----version----
 language: en
 version: 1
-revision: 4c0f386e-d870-4fb4-8c89-206f3d7c9060
+revision: 73b5bd82-89c0-4488-83fc-1771b1ef00c0
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -69,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4c0f386e-d870-4fb4-8c89-206f3d7c9060
+73b5bd82-89c0-4488-83fc-1771b1ef00c0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160429T111706Z
+20160505T152421Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

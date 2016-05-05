@@ -152,23 +152,18 @@
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
-    <Content Include="client_side\img\facebook.svg" />
     <Content Include="client_side\img\icon-mouse.svg" />
     <Content Include="client_side\img\icon-phone--dark.svg" />
     <Content Include="client_side\img\icon-phone.svg" />
     <Content Include="client_side\img\instagram--footer.svg" />
-    <Content Include="client_side\img\instagram.svg" />
-    <Content Include="client_side\img\log-in-avatar.png" />
     <Content Include="client_side\img\log-in.svg" />
     <Content Include="client_side\img\search-background.png" />
     <Content Include="client_side\img\search.svg" />
     <Content Include="client_side\img\sprite-generated.png" />
     <Content Include="client_side\img\twitter--footer.svg" />
-    <Content Include="client_side\img\twitter.svg" />
     <Content Include="client_side\img\vitality-logo--white.svg" />
     <Content Include="client_side\img\vitality-logo.svg" />
     <Content Include="client_side\img\youtube--footer.svg" />
-    <Content Include="client_side\img\youtube.svg" />
     <Content Include="client_side\js\app.js" />
     <Content Include="client_side\sass\app.css">
       <DependentUpon>app.scss</DependentUpon>

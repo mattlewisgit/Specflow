@@ -23,11 +23,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4C6C7D
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitality.Website.SC", "Vitality.Website.SC\Vitality.Website.SC.csproj", "{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}"
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{35AA802E-56A4-45F8-8C04-2433B61C9621}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-		.gitignore = .gitignore
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitality.Website.SC.UnitTests", "UnitTests\Vitality.Website.SC.UnitTests\Vitality.Website.SC.UnitTests.csproj", "{1A5386C6-8B46-4ECD-A81B-A9A043969E3E}"
 EndProject
