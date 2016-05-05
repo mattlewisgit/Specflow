@@ -13,7 +13,6 @@ namespace Vitality.Website.App_Start
 
 			var dependencyResolver = new DependencyResolver(config);
 			// add any changes to the standard resolver here
-
 			return dependencyResolver;
 		}
 

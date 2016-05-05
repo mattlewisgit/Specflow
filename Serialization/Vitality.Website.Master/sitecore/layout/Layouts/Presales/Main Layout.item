@@ -13,13 +13,20 @@ templatekey: Layout
 field: {A036B2BC-BA04-44F6-A75F-BAE6CD242ABF}
 name: Path
 key: path
-content-length: 42
+content-length: 46
 
-/Views/Layouts/Presales/Main Layout.cshtml
+/Areas/Presales/Views/Shared/MainLayout.cshtml
+----field----
+field: {70DC08D9-CDA2-4F04-AA35-C11FD7138066}
+name: Area
+key: area
+content-length: 8
+
+Presales
 ----version----
 language: en
 version: 1
-revision: 80b336ef-771d-4142-933a-1711ee3f07d0
+revision: c2315804-bd82-4736-b030-4b2d5ae18e63
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -41,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-80b336ef-771d-4142-933a-1711ee3f07d0
+c2315804-bd82-4736-b030-4b2d5ae18e63
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160428T152056Z
+20160429T102737Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

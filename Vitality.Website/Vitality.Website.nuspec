@@ -11,14 +11,17 @@
     <releaseNotes></releaseNotes>
   </metadata>
   <files>
-	<file src="_Tools\PackageInstaller.asmx" target="_Tools" />
-	<file src="App_Config\ConnectionStrings.config" target="App_Config" />
-	<file src="App_Config\**\*.*" target="App_Config" />
-	<file src="bin\**\*.dll" target="bin" />
-	<file src="Views\**\*.*" target="Views" />
-	<file src="Global.asax" />
-	<file src="packages.config" />
-	<file src="Web.config" />
-	<file src="Web.Release.config" />
+	  <file src="_Tools\PackageInstaller.asmx" target="_Tools" />
+	  <file src="App_Config\ConnectionStrings.config" target="App_Config" />
+	  <file src="App_Config\**\*.*" target="App_Config" />
+	  <file src="bin\**\*.dll" target="bin" />
+    <file src="css\**\*.css" target="css" />
+	  <file src="js\**\*.js" target="js" />
+    <file src="img\**\*.*" target="img" />
+	  <file src="Global.asax" />
+	  <file src="packages.config" />
+    <file src="Views\**\*.*" target="Views" />
+	  <file src="Web.config" />
+	  <file src="Web.Release.config" />
   </files>
 </package>
