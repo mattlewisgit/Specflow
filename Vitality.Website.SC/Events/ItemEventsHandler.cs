@@ -2,6 +2,8 @@
 
 namespace Vitality.Website.SC.Events
 {
+    using Humanizer;
+
     using Sitecore;
     using Sitecore.Data;
     using Sitecore.Data.Items;
@@ -39,7 +41,7 @@ namespace Vitality.Website.SC.Events
             {
                 if (item.TemplateID == this.fieldTemplateId && item.Fields["Title"] != null)
                 {
-                    item.Fields["Title"].SetValue(StringHelper.SplitCamelCase(item.Name), false);
+                    item.Fields["Title"].SetValue(item.Name.Humanize(LetterCasing.Title), false);
                 }
             }
         }

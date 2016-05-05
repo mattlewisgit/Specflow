@@ -150,7 +150,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
-    <None Include="client_side\gulp.bat" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
     <Content Include="client_side\img\icon-mouse.svg" />
