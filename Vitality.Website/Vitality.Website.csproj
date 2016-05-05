@@ -43,15 +43,17 @@
       <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Glass.Mapper, Version=4.0.9.60, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Glass.Mapper.Sc.4.0.9.60\lib\net45\Glass.Mapper.dll</HintPath>
+    <Reference Include="Glass.Mapper, Version=4.0.11.63, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glass.Mapper.Sc.4.0.11.63\lib\net45\Glass.Mapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Glass.Mapper.Sc">
-      <HintPath>..\packages\Glass.Mapper.Sc.4.0.9.60\lib\81\Glass.Mapper.Sc.dll</HintPath>
+    <Reference Include="Glass.Mapper.Sc, Version=4.0.11.63, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Glass.Mapper.Sc.4.0.11.63\lib\81\Glass.Mapper.Sc.dll</HintPath>
     </Reference>
-    <Reference Include="Glass.Mapper.Sc.Mvc">
-      <HintPath>..\packages\Glass.Mapper.Sc.4.0.9.60\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
+    <Reference Include="Glass.Mapper.Sc.Mvc, Version=4.0.11.63, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Glass.Mapper.Sc.4.0.11.63\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="SimpleInjector, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
@@ -151,23 +153,18 @@
     <None Include="client_side\gulp.bat" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
-    <Content Include="client_side\img\facebook.svg" />
     <Content Include="client_side\img\icon-mouse.svg" />
     <Content Include="client_side\img\icon-phone--dark.svg" />
     <Content Include="client_side\img\icon-phone.svg" />
     <Content Include="client_side\img\instagram--footer.svg" />
-    <Content Include="client_side\img\instagram.svg" />
-    <Content Include="client_side\img\log-in-avatar.png" />
     <Content Include="client_side\img\log-in.svg" />
     <Content Include="client_side\img\search-background.png" />
     <Content Include="client_side\img\search.svg" />
     <Content Include="client_side\img\sprite-generated.png" />
     <Content Include="client_side\img\twitter--footer.svg" />
-    <Content Include="client_side\img\twitter.svg" />
     <Content Include="client_side\img\vitality-logo--white.svg" />
     <Content Include="client_side\img\vitality-logo.svg" />
     <Content Include="client_side\img\youtube--footer.svg" />
-    <Content Include="client_side\img\youtube.svg" />
     <Content Include="client_side\js\app.js" />
     <Content Include="client_side\sass\app.css">
       <DependentUpon>app.scss</DependentUpon>
@@ -208,6 +205,14 @@
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="App_Start\IoC.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Global\Models\ImageLink.cs" />
+    <Compile Include="Areas\Global\Models\LinkItem.cs" />
+    <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
+    <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
+    <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
+    <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
+    <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
+    <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -404,9 +409,6 @@
     <Content Include="App_Config\Include\XslExtension.config.example" />
     <Content Include="App_Config\Include\z.Glass.Mapper.Sc.ViewRender.config.exclude" />
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\SwitchMasterToWeb.config.example" />
-    <Content Include="App_Config\Include\Glass.Mapper.Sc.Start.config" />
-    <Content Include="App_Config\Include\Glass.Mapper.Sc.config" />
-    <Content Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />
     <Content Include="App_Config\Include\Vitality\Vitality.Sites.config">
       <SubType>Designer</SubType>
     </Content>
@@ -416,14 +418,22 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Events.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\Glass.Mapper.Sc.Start.config" />
+    <Content Include="App_Config\Include\Glass.Mapper.Sc.config" />
+    <Content Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />
     <None Include="App_Config\Include\Vitality\Vitality.Sites.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
     <Content Include="Vitality.Website.nuspec">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Views\Layouts\Presales\Main Layout.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\MainLayout.cshtml" />
     <Content Include="css\screen-0.0.1.css" />
+    <Content Include="Areas\Presales\Views\web.config" />
+    <Content Include="Areas\Presales\Views\Navigation\MainNavigation.cshtml" />
+    <Content Include="Areas\Presales\Views\Navigation\NavigationSection.cshtml" />
+    <Content Include="Areas\Presales\Views\Navigation\NavigationSubSection.cshtml" />
+    <Content Include="Areas\Presales\Views\Navigation\MobileNavigation.cshtml" />
     <Content Include="client_side\.jshintrc" />
     <Content Include="client_side\package.json" />
     <Content Include="client_side\sass\app.scss" />
@@ -443,8 +453,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Presales\Controllers\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vitality.Website.SC\Vitality.Website.SC.csproj">
+      <Project>{ee2349ba-bc4f-48e3-851e-90aa3aef0250}</Project>
+      <Name>Vitality.Website.SC</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

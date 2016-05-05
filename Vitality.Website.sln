@@ -22,11 +22,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4C6C7D
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{35AA802E-56A4-45F8-8C04-2433B61C9621}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-		.gitignore = .gitignore
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitality.Website.SC", "Vitality.Website.SC\Vitality.Website.SC.csproj", "{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitality.Website.SC.UnitTests", "UnitTests\Vitality.Website.SC.UnitTests\Vitality.Website.SC.UnitTests.csproj", "{1A5386C6-8B46-4ECD-A81B-A9A043969E3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +48,14 @@ Global
 		{11D0116B-F0F0-4060-A0F7-4B0D733F5223}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{11D0116B-F0F0-4060-A0F7-4B0D733F5223}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11D0116B-F0F0-4060-A0F7-4B0D733F5223}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A5386C6-8B46-4ECD-A81B-A9A043969E3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A5386C6-8B46-4ECD-A81B-A9A043969E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A5386C6-8B46-4ECD-A81B-A9A043969E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A5386C6-8B46-4ECD-A81B-A9A043969E3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,5 +64,6 @@ Global
 		{72A74C1C-2B22-43E9-BB37-F3AB8D4731C5} = {5EC4A583-F002-4FE9-BC9A-7B01EC9329F7}
 		{300EABB6-2BB8-4BDB-BA8E-0C64599D6153} = {9975603A-4885-49BE-A349-C5F149F51F6A}
 		{11D0116B-F0F0-4060-A0F7-4B0D733F5223} = {7DBC029E-4BFE-47D4-ADED-4124A0876869}
+		{1A5386C6-8B46-4ECD-A81B-A9A043969E3E} = {5EC4A583-F002-4FE9-BC9A-7B01EC9329F7}
 	EndGlobalSection
 EndGlobal
