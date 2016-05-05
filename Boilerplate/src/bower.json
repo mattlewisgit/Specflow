@@ -1,0 +1,24 @@
+{
+  "name": "boilerplate",
+  "description": "Vitality Boilerplate",
+  "main": "",
+  "authors": [
+    "Digital Operations <digital_operations@vitality.co.uk>"
+  ],
+  "license": "Vitality",
+  "moduleType": [
+    "amd"
+  ],
+  "homepage": "https://www.vitality.co.uk/",
+  "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "prism": "*"
+    }
+}

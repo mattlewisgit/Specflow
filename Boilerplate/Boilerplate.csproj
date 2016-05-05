@@ -77,6 +77,8 @@
     <Content Include="src\sass\app.css.map">
       <DependentUpon>app.css</DependentUpon>
     </Content>
+    <Content Include="src\package.json" />
+    <Content Include="src\bower.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
