@@ -205,7 +205,6 @@
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
-    <Compile Include="Utilities\ItemConstants.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -426,6 +425,7 @@
     <Content Include="Areas\Presales\Views\Navigation\MainNavigation.cshtml" />
     <Content Include="Areas\Presales\Views\Navigation\NavigationSection.cshtml" />
     <Content Include="Areas\Presales\Views\Navigation\NavigationSubSection.cshtml" />
+    <Content Include="Areas\Presales\Views\Navigation\MobileNavigation.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

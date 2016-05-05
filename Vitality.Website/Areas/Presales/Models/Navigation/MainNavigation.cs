@@ -7,7 +7,7 @@
     using Glass.Mapper.Sc.Fields;
 
     using Vitality.Website.Areas.Global.Models;
-    using Vitality.Website.Utilities;
+    using Vitality.Website.SC;
 
     public class MainNavigation : SitecoreItem
     {
@@ -34,7 +34,5 @@
 
         [SitecoreQuery(HasNavigationSectionTemplate, IsRelative = true)]
         public IEnumerable<NavigationSection> NavigationSections { get; set; }
-
-        
     }
 }

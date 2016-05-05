@@ -23,10 +23,17 @@ key: __standard values
 content-length: 38
 
 {87ED57EF-5F45-41BF-992D-28039D54275F}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 26
+
+Control/32x32/menu_b_d.png
 ----version----
 language: en
 version: 1
-revision: 87e515b3-c306-4a78-a07e-5d9496cfb218
+revision: 79b43aad-8ca8-4521-a069-7f0641ab4c8e
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -48,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-87e515b3-c306-4a78-a07e-5d9496cfb218
+79b43aad-8ca8-4521-a069-7f0641ab4c8e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160429T103528Z
+20160505T112812Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

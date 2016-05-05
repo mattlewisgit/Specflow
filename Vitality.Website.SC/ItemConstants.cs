@@ -1,9 +1,17 @@
-﻿namespace Vitality.Website.Utilities
+﻿namespace Vitality.Website.SC
 {
     public static class ItemConstants
     {
         public static class Presales
         {
+            public static class Content
+            {
+                public static class Home
+                {
+                    public const string Path = "/sitecore/content/Presales/home";
+                }
+            }
+
             public static class Templates
             {
                 public static class NavigationSection
