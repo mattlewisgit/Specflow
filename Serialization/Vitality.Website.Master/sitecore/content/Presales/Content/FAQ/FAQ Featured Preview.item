@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {650BEC7B-66D1-412E-8C8A-6D5FF0CB35D5}
+database: master
+path: /sitecore/content/Presales/Content/FAQ/FAQ Featured Preview
+parent: {3EF7FDAD-19C8-4931-846F-8BC623CB72C9}
+name: FAQ Featured Preview
+master: {00000000-0000-0000-0000-000000000000}
+template: {BE2854DE-BB75-42FF-879D-9E6C05B1C6AA}
+templatekey: FAQ Featured Preview
+
+----version----
+language: en
+version: 1
+revision: c5b0d31a-85ef-4b6d-a1c5-01442db0b0de
+
+----field----
+field: {1A08BCFD-A925-4D5E-9443-DF79F3D140E6}
+name: Title
+key: title
+content-length: 26
+
+Frequently asked questions
+----field----
+field: {F7F5E8E6-0E10-4C4B-B4E2-F4A5BB94A47B}
+name: Subtitle
+key: subtitle
+content-length: 76
+
+Here's a selection of questions and answers that we've helped customers with
+----field----
+field: {38A66812-1633-4C5F-82F1-0A720B2BD0AF}
+name: Featured questions
+key: featured questions
+content-length: 155
+
+{9287302D-B609-41E4-B496-9DFDD17040DF}|{DF7CB67F-FB99-4307-B4C5-49817B8F2566}|{89B28628-4DF3-4072-857F-E712E432F4E5}|{70FA3211-D2B8-40D6-B3A6-242CAA681ED2}
+----field----
+field: {3597D90E-53F7-42D2-A465-E734633B4BE9}
+name: CTA
+key: cta
+content-length: 168
+
+<link text="Show me more" linktype="internal" class="box-button box-button--rounded" title="Show me more"  querystring="" id="{3B629946-E14C-4A5B-BEBD-6A304816EBE7}" />
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160505T154920Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c5b0d31a-85ef-4b6d-a1c5-01442db0b0de
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160505T160832Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
