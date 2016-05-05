@@ -1,0 +1,20 @@
+{
+    "name": "vitality.website",
+    "version": "1.0.0",
+    "description": "Vitality Website",
+    "dependencies": {
+        "del": "*",
+        "gulp": "*",
+        "gulp-cssnano": "*",
+        "gulp-imagemin": "*",
+        "gulp-jshint": "*",
+        "gulp-jscs": "*",
+        "gulp-sass": "*",
+        "gulp-sass-lint": "*",
+        "jshint": "*"
+    },
+    "scripts": {
+        "gulp": "gulp"
+    },
+    "sasslintConfig": "sass-lint.yml"
+}

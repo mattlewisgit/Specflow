@@ -1,0 +1,44 @@
+﻿options:
+  formatter: stylish
+  merge-default-rules: false
+files:
+  include: "sass/**/*.scss"
+  ignore:
+    - "sass/vendor/**/*.*"
+rules:
+  extends-before-mixins: 2
+  extends-before-declarations: 2
+  placeholder-in-extend: 2
+  mixins-before-declarations:
+    - 2
+    - exclude:
+        - breakpoint
+        - mq
+  no-warn: 1
+  no-debug: 1
+  no-ids: 2
+  no-important: 2
+  hex-notation:
+    - 2
+    - style: lowercase
+  indentation:
+    - 4
+    -
+      size: 4
+  quotes:
+    - style: double
+  property-sort-order:
+    - 1
+    - order:
+        - display
+        - margin
+      ignore-custom-properties: true
+  variable-for-property:
+    - 2
+    - properties:
+        - margin
+        - content
+  variable-name-format:
+    - 1
+    - allow-leading-underscore: true
+      convention: hyphenatedlowercase
