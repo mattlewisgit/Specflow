@@ -150,21 +150,33 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
+    <Content Include="client_side\gulpfile.js" />
+    <Content Include="client_side\img\facebook--footer.svg" />
+    <Content Include="client_side\img\facebook.svg" />
+    <Content Include="client_side\img\icon-mouse.svg" />
+    <Content Include="client_side\img\icon-phone--dark.svg" />
+    <Content Include="client_side\img\icon-phone.svg" />
+    <Content Include="client_side\img\instagram--footer.svg" />
+    <Content Include="client_side\img\instagram.svg" />
+    <Content Include="client_side\img\log-in-avatar.png" />
+    <Content Include="client_side\img\log-in.svg" />
+    <Content Include="client_side\img\search-background.png" />
+    <Content Include="client_side\img\search.svg" />
+    <Content Include="client_side\img\sprite-generated.png" />
+    <Content Include="client_side\img\twitter--footer.svg" />
+    <Content Include="client_side\img\twitter.svg" />
+    <Content Include="client_side\img\vitality-logo--white.svg" />
+    <Content Include="client_side\img\vitality-logo.svg" />
+    <Content Include="client_side\img\youtube--footer.svg" />
+    <Content Include="client_side\img\youtube.svg" />
+    <Content Include="client_side\js\app.js" />
+    <Content Include="client_side\sass\app.css">
+      <DependentUpon>app.scss</DependentUpon>
+    </Content>
+    <Content Include="client_side\sass\app.min.css">
+      <DependentUpon>app.css</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
-    <Content Include="img\facebook--footer.svg" />
-    <Content Include="img\icon-mouse.svg" />
-    <Content Include="img\icon-phone--dark.svg" />
-    <Content Include="img\icon-phone.svg" />
-    <Content Include="img\instagram--footer.svg" />
-    <Content Include="img\log-in-avatar.png" />
-    <Content Include="img\log-in.svg" />
-    <Content Include="img\search-background.png" />
-    <Content Include="img\search.svg" />
-    <Content Include="img\sprite-generated.png" />
-    <Content Include="img\twitter--footer.svg" />
-    <Content Include="img\vitality-logo--white.svg" />
-    <Content Include="img\vitality-logo.svg" />
-    <Content Include="img\youtube--footer.svg" />
     <Content Include="js\accordionModule.js" />
     <Content Include="js\animationDelayModule.js" />
     <Content Include="js\app.js" />
@@ -426,6 +438,15 @@
     <Content Include="Areas\Presales\Views\Navigation\NavigationSection.cshtml" />
     <Content Include="Areas\Presales\Views\Navigation\NavigationSubSection.cshtml" />
     <Content Include="Areas\Presales\Views\Navigation\MobileNavigation.cshtml" />
+    <Content Include="client_side\.jshintrc" />
+    <Content Include="client_side\package.json" />
+    <Content Include="client_side\sass\app.scss" />
+    <Content Include="client_side\sass\_base.scss" />
+    <Content Include="client_side\sass\app.css.map">
+      <DependentUpon>app.css</DependentUpon>
+    </Content>
+    <Content Include="client_side\.jscsrc" />
+    <Content Include="client_side\sass-lint.yml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
