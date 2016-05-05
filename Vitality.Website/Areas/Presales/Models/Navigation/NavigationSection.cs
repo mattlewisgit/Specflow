@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
 
+    using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
 
     using Vitality.Website.Areas.Global.Models;
@@ -14,6 +15,7 @@
 
         public string AdditionalLinkSubHeader { get; set; }
 
+        [SitecoreChildren]
         public IEnumerable<NavigationSubSection> NavigationSubSections { get; set; }
     }
 }

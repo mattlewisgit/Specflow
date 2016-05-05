@@ -1,4 +1,7 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Navigation.MainNavigation>
+﻿@using System.Web.Mvc.Html
+@using Vitality.Website.Areas.Global.Models
+@using Vitality.Website.Extensions.Models
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Navigation.MainNavigation>
 
 <!-- top-bar mobile -->
 <div class="top-bar top-bar--small">
@@ -56,26 +59,19 @@
 
         @foreach (var navigationSection in Model.NavigationSections)
         {
-            <li class="site-nav__item is-active">
-                @RenderLink(navigationSection, item => item.SectionLink)
-            </li>
+            if (Model.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()).Equals(navigationSection))
+            {
+                <li class="site-nav__item is-active">
+                    @RenderLink(navigationSection, item => item.SectionLink)
+                </li>
+            }
+            else
+            {
+                <li class="site-nav__item">
+                    @RenderLink(navigationSection, item => item.SectionLink)
+                </li>
+            }
         }
-
-        @*<li class="site-nav__item is-active">
-            <a href="/">Personal</a>
-        </li>
-
-        <li class="site-nav__item">
-            <a href="/">Business</a>
-        </li>
-
-        <li class="site-nav__item">
-            <a href="/">Advisers</a>
-        </li>
-
-        <li class="site-nav__item">
-            <a href="/">Healthcare Providers</a>
-        </li>*@
 
     </ul>
 
@@ -87,10 +83,6 @@
                 <img src="/img/search.svg" alt="Search">
                 @Html.Raw(Model.SearchPage.Text)
             }
-            @*<a href="search.html">
-                <img src="/img/search.svg" alt="Search">
-                Search
-            </a>*@
         </li>
 
         <li class="utility-nav__item utility-nav__item--log-in js-log-in-toggle">
@@ -103,7 +95,6 @@
 
                     <div class="log-in__avatar">
                         @RenderImage(Model, item => item.LogInAvatar)
-                        @*<img src="/img/log-in-avatar.png" alt="Stanley the dachshund">*@
                     </div>
 
                     <p class="log-in__header">
@@ -158,6 +149,7 @@
 <!-- section-nav - for all sizes - contains megamenu -->
 <!-- end section-nav -->
 
+@Html.Partial("/Areas/Presales/Views/Navigation/NavigationSection.cshtml", Model.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()))
 
 <!-- site-nav for mobile, moved to botom of menu -->
 <ul class="site-nav--small">

@@ -12,7 +12,7 @@ templatekey: Main Navigation
 ----version----
 language: en
 version: 1
-revision: 7825e356-76c3-48e3-a693-d4e100486ba6
+revision: f9bdf5f3-889c-4aa2-9b89-bf8a64372199
 
 ----field----
 field: {DD94F527-6FB6-4CE9-B760-1718E0C2B2A8}
@@ -42,6 +42,13 @@ key: loginlink
 content-length: 94
 
 <link text="Log In" linktype="external" url="http://www.facebook.co.uk" anchor="" target="" />
+----field----
+field: {0F6A05B4-3396-449E-A256-D887AD7A46A2}
+name: LogInAvatar
+key: loginavatar
+content-length: 58
+
+<image mediaid="{8CF8E0A1-1C06-4F81-836F-17A693414148}" />
 ----field----
 field: {B3A2DF61-38FE-4A1A-BF15-A0765936B9E7}
 name: LogInHeader
@@ -97,14 +104,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7825e356-76c3-48e3-a693-d4e100486ba6
+f9bdf5f3-889c-4aa2-9b89-bf8a64372199
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160503T093402Z
+20160504T143221Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

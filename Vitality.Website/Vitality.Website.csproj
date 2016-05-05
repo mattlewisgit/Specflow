@@ -216,7 +216,8 @@
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
-    <Compile Include="Extensions\ItemConstants.cs" />
+    <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
+    <Compile Include="Utilities\ItemConstants.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
