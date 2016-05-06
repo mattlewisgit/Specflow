@@ -212,6 +212,7 @@
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
+    <Compile Include="Areas\Presales\Models\FeatureBlocks\BenefitLeader.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -444,6 +445,7 @@
     <Content Include="client_side\.jscsrc" />
     <Content Include="client_side\sass-lint.yml" />
     <Content Include="client_side\gulp.targets" />
+    <Content Include="Areas\Presales\Views\FeatureBlocks\BenefitLeader.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

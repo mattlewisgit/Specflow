@@ -41,6 +41,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="benefit_leader.html" />
     <Content Include="css\screen-0.0.1.css" />
     <Content Include="faq_leader.html" />
     <Content Include="index.html" />
@@ -50,6 +51,7 @@
     <Content Include="src\sass\app.min.css">
       <DependentUpon>app.css</DependentUpon>
     </Content>
+    <None Include="src\sass\benefit_leader.scss" />
     <Content Include="src\sass\_defaults.css">
       <DependentUpon>_defaults.scss</DependentUpon>
     </Content>
