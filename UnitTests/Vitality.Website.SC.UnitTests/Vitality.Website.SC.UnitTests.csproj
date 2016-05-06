@@ -69,7 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Vitality.Website.SC\Vitality.Website.SC.csproj">
-      <Project>{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}</Project>
+      <Project>{ee2349ba-bc4f-48e3-851e-90aa3aef0250}</Project>
       <Name>Vitality.Website.SC</Name>
     </ProjectReference>
   </ItemGroup>

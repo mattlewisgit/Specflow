@@ -8,6 +8,20 @@
 
     public class StringHelperTests
     {
+        public class SplitCamelCaseTests
+        {
+            [Fact]
+            public void Camel_case_string_should_be_split_with_single_spaces()
+            {
+                var input = "TheQuickBrownFoxJumpsOverTheLazyDog";
+                var expected = "The Quick Brown Fox Jumps Over The Lazy Dog";
+
+                var result = StringHelper.SplitCamelCase(input);
+
+                result.ShouldBe(expected);
+            }
+        }
+
         public class HyphenatedWordsTests
         {
             [Fact]

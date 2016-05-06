@@ -26,10 +26,10 @@
 });
 
 // Load the main app module to start the app
-require(["vendor/domready", "modules/main"], function (domReady, main) {
+require(["vendor/domready", "modules/main"], function(domReady, main) {
     "use strict";
 
-    domReady(function () {
+    domReady(function() {
         main.init();
     });
 });
