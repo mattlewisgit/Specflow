@@ -1,32 +1,25 @@
 ----item----
 version: 1
-id: {02AB080B-5AE2-4773-ADF2-026A18641E40}
+id: {A3A0F00A-FC11-4B56-A866-442CAEBA543D}
 database: master
-path: /sitecore/layout/Placeholder Settings/Presales/Content
-parent: {8D383B87-ADB9-47E8-93A6-01E99591C7BE}
-name: Content
+path: /sitecore/content/Presales/Configuration/Background Colours
+parent: {38D91B77-AA7E-4705-9045-C8451E08C1E8}
+name: Background Colours
 master: {00000000-0000-0000-0000-000000000000}
-template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
-templatekey: Placeholder
+template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
+templatekey: Folder
 
 ----field----
-field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
-name: Placeholder Key
-key: placeholder key
-content-length: 16
-
-presales-content
-----field----
-field: {E391B526-D0C5-439D-803E-17512EAE6222}
-name: Allowed Controls
-key: allowed controls
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
 content-length: 38
 
-{9CE5E97F-991C-4576-A167-B2E587CA01E9}
+{A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
 ----version----
 language: en
 version: 1
-revision: c46427e9-6a08-4bc1-8ce3-7d85cf5a0cbb
+revision: 74d561c0-de33-4c6a-bbc9-bdcce5ced90c
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -34,21 +27,28 @@ name: __Created
 key: __created
 content-length: 16
 
-20160506T110909Z
+20160506T144956Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-c46427e9-6a08-4bc1-8ce3-7d85cf5a0cbb
+74d561c0-de33-4c6a-bbc9-bdcce5ced90c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160506T111021Z
+20160506T145205Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,21 +1,19 @@
-﻿<div class="feature-block-gradient feature-block-gradient--secondary">
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.FeatureBlocks.BenefitLeader>
 
-    <div class="feature-block-gradient__image background-position-middle-right" style="background-image: url('/media/000/image-example-8.jpg');">
+@using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Benefit Leader", Model.Path))
+{
+<div class="feature-block-gradient feature-block-gradient--@this.BackgroundColour() @this.BackgroundImageLeft()">
+    <div class="feature-block-gradient__image background-position-middle-right" style="background-image: url('@Model.BackgroundImage.Src');">
     </div>
 
     <div class="feature-block-gradient__content-container">
         <div class="feature-block-gradient__content">
-            <h3>feature block gradient text-dark</h3>
-            <p>
-                feature-block-gradient__content - Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, aspernatur.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolores nobis iure rerum magni.
-            </p>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos perferendis esse minus vitae, perspiciatis numquam? Amet dolorum molestias beatae id magni mollitia consequatur iste cumque, architecto cupiditate, facere odit necessitatibus quis laborum. Soluta, sit voluptates, ex eius suscipit alias in maxime a, minima labore officia velit quo quasi eos odit nemo. Eveniet eum, at ullam quos vitae natus voluptatum delectus sed sit velit, officia aut voluptatem explicabo aliquam quidem praesentium facere ratione. Itaque dolore quisquam, adipisci fugit corporis minima! Iste, totam nostrum dicta accusantium cum itaque error possimus, necessitatibus nobis quibusdam omnis earum rem architecto excepturi magni nulla facilis eligendi.
-            </p>
+            <p>@Editable(Model, item => item.LeadIn)</p>
+            <h3>@Editable(Model, item => item.Headline)</h3>
+            <p>@Editable(Model, item => item.Body)</p>
+            @Editable(Model, item => item.CallToAction, new { @class = "box-button box-button--rounded" })
         </div>
     </div>
-
 </div>
+}

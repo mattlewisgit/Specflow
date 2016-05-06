@@ -206,6 +206,7 @@
     <Compile Include="App_Start\IoC.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Global\Models\ImageLink.cs" />
+    <Compile Include="Areas\Global\Models\KeyValuePair.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
@@ -213,7 +214,9 @@
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
     <Compile Include="Areas\Presales\Models\FeatureBlocks\BenefitLeader.cs" />
+    <Compile Include="Areas\Presales\RenderingModels\BenefitLeaderRendering.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\Views\BenefitLeaderExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
