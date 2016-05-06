@@ -1,10 +1,10 @@
-$wide_padding: 3em;
+$wide-padding: 3em;
 
 @mixin text-centre() {
     text-align: center;
 }
 
 @mixin wide-padding() {
-    padding-left: $wide_padding;
-    padding-right: $wide_padding;
+    padding-left: $wide-padding;
+    padding-right: $wide-padding;
 }
