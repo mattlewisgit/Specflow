@@ -2,9 +2,9 @@
 version: 1
 id: {ECAA428B-EA59-49B1-93FE-D4B5A1F24C4F}
 database: master
-path: /sitecore/content/Presales/Home/faq-sample
+path: /sitecore/content/Presales/Home/faq-preview
 parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
-name: faq-sample
+name: faq-preview
 master: {00000000-0000-0000-0000-000000000000}
 template: {AF73942C-3598-446F-9D23-40F968E7DDC1}
 templatekey: Page
@@ -19,15 +19,15 @@ content-length: 253
 ----version----
 language: en
 version: 1
-revision: 04cf4288-0c70-416a-8570-2fde045223d1
+revision: 7581f4cf-e096-4c54-9ed0-0b57fafd3ecc
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 10
+content-length: 11
 
-FAQ Sample
+FAQ Preview
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -41,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-04cf4288-0c70-416a-8570-2fde045223d1
+7581f4cf-e096-4c54-9ed0-0b57fafd3ecc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160505T154950Z
+20160506T140746Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -56,3 +56,10 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

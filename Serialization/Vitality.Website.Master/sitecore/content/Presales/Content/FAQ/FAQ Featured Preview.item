@@ -12,7 +12,7 @@ templatekey: FAQ Featured Preview
 ----version----
 language: en
 version: 1
-revision: c5b0d31a-85ef-4b6d-a1c5-01442db0b0de
+revision: cae3ada9-3588-477e-ba15-73ba2cc44abd
 
 ----field----
 field: {1A08BCFD-A925-4D5E-9443-DF79F3D140E6}
@@ -25,13 +25,13 @@ Frequently asked questions
 field: {F7F5E8E6-0E10-4C4B-B4E2-F4A5BB94A47B}
 name: Subtitle
 key: subtitle
-content-length: 76
+content-length: 77
 
-Here's a selection of questions and answers that we've helped customers with
+Here's a selection of questions and answers that we've helped customers with.
 ----field----
 field: {38A66812-1633-4C5F-82F1-0A720B2BD0AF}
-name: Featured questions
-key: featured questions
+name: Questions
+key: questions
 content-length: 155
 
 {9287302D-B609-41E4-B496-9DFDD17040DF}|{DF7CB67F-FB99-4307-B4C5-49817B8F2566}|{89B28628-4DF3-4072-857F-E712E432F4E5}|{70FA3211-D2B8-40D6-B3A6-242CAA681ED2}
@@ -69,14 +69,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c5b0d31a-85ef-4b6d-a1c5-01442db0b0de
+cae3ada9-3588-477e-ba15-73ba2cc44abd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160505T160832Z
+20160506T142601Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -84,3 +84,10 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

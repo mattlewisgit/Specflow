@@ -33,8 +33,22 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: c803f1f5-d5cf-4923-b311-c75a3ae772b1
+revision: 824190d9-9d1d-47b7-99c6-64a62771cec3
 
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 20
+
+Call to action (CTA)
+----field----
+field: {9541E67D-CE8C-4225-803D-33F7F29F09EF}
+name: __Short description
+key: __short description
+content-length: 20
+
+Call to Action (CTA)
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -48,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c803f1f5-d5cf-4923-b311-c75a3ae772b1
+824190d9-9d1d-47b7-99c6-64a62771cec3
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160505T160732Z
+20160506T153750Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
