@@ -41,8 +41,14 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="cards_stacked.html" />
     <Content Include="css\screen-0.0.1.css" />
     <Content Include="faq_leader.html" />
+    <Content Include="img\clipboard-icon.png" />
+    <Content Include="img\heart-icon.png" />
+    <Content Include="img\image-example-8.jpg" />
+    <Content Include="img\stars-icon.png" />
+    <Content Include="img\stethoscope-icon.png" />
     <Content Include="index.html" />
     <Content Include="src\gulpfile.js" />
     <Content Include="src\sass\app.css">

@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {02AB080B-5AE2-4773-ADF2-026A18641E40}
+database: master
+path: /sitecore/layout/Placeholder Settings/Presales/PresalesContent
+parent: {8D383B87-ADB9-47E8-93A6-01E99591C7BE}
+name: PresalesContent
+master: {00000000-0000-0000-0000-000000000000}
+template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
+templatekey: Placeholder
+
+----field----
+field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
+name: Placeholder Key
+key: placeholder key
+content-length: 15
+
+PresalesContent
+----field----
+field: {E391B526-D0C5-439D-803E-17512EAE6222}
+name: Allowed Controls
+key: allowed controls
+content-length: 116
+
+{9CE5E97F-991C-4576-A167-B2E587CA01E9}|{2CFABA9B-4639-4B90-95FA-8586FF3505EE}|{8829319E-7570-4398-8C4E-C362B276D003}
+----version----
+language: en
+version: 1
+revision: 554ddf11-3cc8-480a-ac59-132e40d2e535
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160506T110909Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+554ddf11-3cc8-480a-ac59-132e40d2e535
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160509T134917Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

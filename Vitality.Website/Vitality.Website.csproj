@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
+    <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
     <Content Include="client_side\img\icon-mouse.svg" />
@@ -208,6 +209,8 @@
     <Compile Include="Areas\Global\Models\ImageLink.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
+    <Compile Include="Areas\Presales\Models\Cards\Card.cs" />
+    <Compile Include="Areas\Presales\Models\Cards\CardsStacked.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
