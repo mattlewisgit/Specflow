@@ -43,7 +43,26 @@
   <ItemGroup>
     <Content Include="css\screen-0.0.1.css" />
     <Content Include="faq_leader.html" />
+    <Content Include="img\facebook--footer.svg" />
+    <Content Include="img\facebook.svg" />
+    <Content Include="img\icon-mouse.svg" />
+    <Content Include="img\icon-phone--dark.svg" />
+    <Content Include="img\icon-phone.svg" />
+    <Content Include="img\instagram--footer.svg" />
+    <Content Include="img\instagram.svg" />
+    <Content Include="img\log-in-avatar.png" />
+    <Content Include="img\log-in.svg" />
+    <Content Include="img\search-background.png" />
+    <Content Include="img\search.svg" />
+    <Content Include="img\sprite-generated.png" />
+    <Content Include="img\twitter--footer.svg" />
+    <Content Include="img\twitter.svg" />
+    <Content Include="img\vitality-logo--white.svg" />
+    <Content Include="img\vitality-logo.svg" />
+    <Content Include="img\youtube--footer.svg" />
+    <Content Include="img\youtube.svg" />
     <Content Include="index.html" />
+    <Content Include="main_navigation.html" />
     <Content Include="src\sass\app.css">
       <DependentUpon>app.scss</DependentUpon>
     </Content>
