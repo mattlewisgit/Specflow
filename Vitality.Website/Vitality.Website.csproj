@@ -208,6 +208,8 @@
     <Compile Include="Areas\Global\Models\ImageLink.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
+    <Compile Include="Areas\Presales\Models\FAQ\FeaturedQuestions.cs" />
+    <Compile Include="Areas\Presales\Models\FAQ\QuestionAnswer.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
@@ -444,6 +446,7 @@
     <Content Include="client_side\.jscsrc" />
     <Content Include="client_side\sass-lint.yml" />
     <Content Include="client_side\gulp.targets" />
+    <Content Include="Areas\Presales\Views\FAQ\FAQPreview.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
