@@ -23,10 +23,17 @@ key: __standard values
 content-length: 38
 
 {CD5C1046-1A3B-453F-8AB9-547FCDC74619}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 33
+
+Business/32x32/money_envelope.png
 ----version----
 language: en
 version: 1
-revision: 7656b20f-8f2e-4622-bd23-1ca55f7df07e
+revision: e1795110-3a1e-4774-aae9-471562597828
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -48,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7656b20f-8f2e-4622-bd23-1ca55f7df07e
+e1795110-3a1e-4774-aae9-471562597828
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160506T105825Z
+20160509T095432Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

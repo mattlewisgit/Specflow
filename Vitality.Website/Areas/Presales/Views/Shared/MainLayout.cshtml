@@ -61,6 +61,11 @@
     <link rel="stylesheet" type="text/css" href="/css/screen-0.0.1.css" media="screen" />
     <script src="/js/require.js" data-main="/js/app" async></script>
 
+    @if (Sitecore.Context.PageMode.IsExperienceEditor || Sitecore.Context.PageMode.IsExperienceEditorEditing)
+    {
+        <link rel="stylesheet" href="/css/experience-editor-fix.css"/>
+    }
+
 </head>
 <body>
     <div class="page">
