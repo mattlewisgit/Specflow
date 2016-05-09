@@ -44,8 +44,11 @@
     <Content Include="benefit_leader.html" />
     <Content Include="css\screen-0.0.1.css" />
     <Content Include="faq_leader.html" />
+    <Content Include="img\family.jpg" />
+    <Content Include="img\cyclist.jpg" />
     <Content Include="index.html" />
     <Content Include="src\gulpfile.js" />
+    <Content Include="js\boilerplate.js" />
     <Content Include="src\sass\app.css">
       <DependentUpon>app.scss</DependentUpon>
     </Content>

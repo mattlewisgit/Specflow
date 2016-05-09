@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" class="cssgradients">
 <head>
     <title>Benefit Leader</title>
 
@@ -11,88 +11,121 @@
     <link href="css/app.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div>
-        <h1>Benefit Leader</h1>
-        <h2>Description</h2>
+    <h1>Benefit Leader</h1>
+    <h2>Description</h2>
 
-        <p>
-            This component groups concise answers to Benefit Leader,
-            inviting the user to read the full details on another page via a link.
-        </p>
-    </div>
+    <p>
+        This component groups concise answers to Benefit Leader,
+        inviting the user to read the full details on another page via a link.
+    </p>
 
-    <div>
-        <h2>Example</h2>
+    <h2>Examples</h2>
 
-        <div id="example_1" class="feature-block feature-block--primary feature-block--right burst">
+    <h3>Image Left</h3>
 
-            <div class="feature-block__image" style="background-image: url('/img/image-example-3.jpg');">
-            </div>
+    <h4>Demo</h4>
+    
+    <section class="vertical-flush example">
+        <div class="feature-block feature-block--primary feature-block--right burst">
+            <div class="feature-block__image"
+                 style="background-image: url('/img/family.jpg');"></div>
 
             <div class="feature-block__content-container">
                 <div class="feature-block__content">
-                    <h3>Feature block feature-block--right</h3>
+                    <h6>Flexible Cover Options</h6>
+
+                    <h3>Boost Core Cover with flexible cover choices</h3>
+
                     <p>
-                        feature-block__content - Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, aspernatur.
+                        Everyone's needs and budgets are different. So you can choose from a
+                        range of health cover options to create a plan that's just right for you.
                     </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolores nobis iure rerum magni.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos perferendis esse minus vitae, perspiciatis  itaque error possimus, necessitatibus nobis quibusdam omnis earum rem architecto excepturi magni nulla facilis eligendi.
-                    </p>
+
+                    <a href="#" class="box-button box-button--light box-button--rounded">View cover options</a>
                 </div>
             </div>
-
         </div>
+    </section>
 
-        <div id="example_2" class="feature-block-gradient feature-block-gradient--secondary">
+    <h4>Markup</h4>
 
-            <div class="feature-block-gradient__image background-position-middle-right" style="background-image: url('/img/image-example-8.jpg');">
-            </div>
+    <div>
+        <pre>
+        <code class="language-markup"></code>
+        </pre>
+    </div>
+    
+    <h3>Image Right with Gradient</h3>
+
+    <h4>Demo</h4>
+
+    <section class="vertical-flush example">
+        <div class="feature-block-gradient feature-block-gradient--secondary">
+            <div class="feature-block-gradient__image background-position-middle-right"
+                 style="background-image: url('/img/cyclist.jpg');"></div>
 
             <div class="feature-block-gradient__content-container">
                 <div class="feature-block-gradient__content">
-                    <h3>feature block gradient text-dark</h3>
+                    <h3>Choose where you get treatment</h3>
+
                     <p>
-                        feature-block-gradient__content - Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, aspernatur.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur dolores nobis iure rerum magni.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos perferendis esse minus vitae, perspiciatis numquam? Amet dolorum molestias beatae id magni mollitia consequatur iste cumque, architecto cupiditate, facere odit necessitatibus quis laborum. Soluta, sit voluptates, ex eius suscipit alias in maxime a, minima labore officia velit quo quasi eos odit nemo. Eveniet eum, at ullam quos vitae natus voluptatum delectus sed sit velit, officia aut voluptatem explicabo aliquam quidem praesentium facere ratione. Itaque dolore quisquam, adipisci fugit corporis minima! Iste, totam nostrum dicta accusantium cum itaque error possimus, necessitatibus nobis quibusdam omnis earum rem architecto excepturi magni nulla facilis eligendi.
+                        You can choose Vitality GP Select, which means a Vitality GP will determine
+                        your treatment pathway, or you can choose from three different hospital lists
+                        depending on where you live and how much you want to pay.
                     </p>
                 </div>
             </div>
-
         </div>
+    </section>
 
-    </div>
+    <h4>Markup</h4>
 
     <div>
-        <h2>Markup</h2>
+        <p>
+            Note: the <b>cssgradients</b> class must be applied to the <b>html</b> tag.
+        </p>
 
         <pre>
-        <code id="markup_1" class="language-markup">
-            </code>
+            <code class="language-markup"></code>
         </pre>
     </div>
 
-    <script>
-        function htmlSpecialChars(unsafe) {
-            return unsafe
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&apos;");
-        }
+    <h3>Image Right with Light Gradient</h3>
 
-        document.getElementById("markup_1").innerHTML =
-            htmlSpecialChars("        " + document.getElementById("example_1").outerHTML);
-    </script>
+    <h4>Demo</h4>
 
+    <section class="vertical-flush example">
+        <div class="feature-block-gradient feature-block-gradient--light">
+            <div class="feature-block-gradient__image background-position-middle-right"
+                 style="background-image: url('/img/cyclist.jpg');"></div>
+
+            <div class="feature-block-gradient__content-container">
+                <div class="feature-block-gradient__content">
+                    <h3>Choose where you get treatment</h3>
+
+                    <p>
+                        You can choose Vitality GP Select, which means a Vitality GP will determine
+                        your treatment pathway, or you can choose from three different hospital lists
+                        depending on where you live and how much you want to pay.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h4>Markup</h4>
+
+    <div>
+        <p>
+            Note: the <b>cssgradients</b> class must be applied to the <b>html</b> tag.
+        </p>
+
+        <pre>
+            <code class="language-markup"></code>
+        </pre>
+    </div>
+    
+    <script type="text/javascript" src="js/boilerplate.js"></script>
     <script type="text/javascript" src="src/bower_components/prism/prism.js"></script>
 </body>
 </html>
