@@ -13,9 +13,16 @@ templatekey: Template field
 field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
 name: Type
 key: type
-content-length: 6
+content-length: 8
 
-Number
+Droplink
+----field----
+field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
+name: Source
+key: source
+content-length: 62
+
+/sitecore/content/Presales/Configuration/Rewards/Icons Per Row
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
@@ -26,7 +33,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 6c1d5a7d-3d24-4d63-8953-346deddb15d6
+revision: 6a1532c4-6efe-4ca8-a3eb-34cb288c1d58
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -55,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6c1d5a7d-3d24-4d63-8953-346deddb15d6
+6a1532c4-6efe-4ca8-a3eb-34cb288c1d58
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160509T110346Z
+20160509T113934Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

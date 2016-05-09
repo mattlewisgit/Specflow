@@ -1,32 +1,25 @@
 ----item----
 version: 1
-id: {A76E5C3E-5239-4D0D-A730-100E747B7D89}
+id: {38D91B77-AA7E-4705-9045-C8451E08C1E8}
 database: master
-path: /sitecore/templates/Presales/Rendering Templates/Rewards Leader Rendering
-parent: {F60AB061-3632-44BC-855A-97A5E9031203}
-name: Rewards Leader Rendering
+path: /sitecore/content/Presales/Configuration
+parent: {BFFA7523-62F6-4EA1-A809-A723BAE5C8F8}
+name: Configuration
 master: {00000000-0000-0000-0000-000000000000}
-template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
-templatekey: Template
+template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
+templatekey: Folder
 
 ----field----
-field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
-name: __Base template
-key: __base template
-content-length: 77
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 39
 
-{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{8CA06D6A-B353-44E8-BC31-B528C7306971}
-----field----
-field: {F7D48A55-2158-4F02-9356-756654404F73}
-name: __Standard values
-key: __standard values
-content-length: 38
-
-{ABFDB847-EF3D-4941-AA4B-CD9085B7D29D}
+Applications/32x32/gear_preferences.png
 ----version----
 language: en
 version: 1
-revision: 2c3bc9d8-1cc4-4e7b-a231-3b2f01509d70
+revision: c23211b3-ca34-4a90-9523-4dadc2ddf1dd
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -34,7 +27,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160509T105339Z
+20160506T144936Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-2c3bc9d8-1cc4-4e7b-a231-3b2f01509d70
+c23211b3-ca34-4a90-9523-4dadc2ddf1dd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160509T113903Z
+20160509T100048Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

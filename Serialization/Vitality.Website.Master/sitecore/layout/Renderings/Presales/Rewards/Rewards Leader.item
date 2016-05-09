@@ -65,10 +65,17 @@ key: page editor buttons
 content-length: 194
 
 {31A3A929-C599-4DD3-91A6-F4A9487CC8B7}|{028DFE18-F0FE-431B-B5D2-9D944FD8B3C6}|{6E281DBE-EA70-4F29-9045-265CA310C8F9}|{E0C30162-EA09-4244-8261-81FD8456D4AF}|{28E37FE8-6561-4854-8B11-468E64DF5374}
+----field----
+field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
+name: __Thumbnail
+key: __thumbnail
+content-length: 58
+
+<image mediaid="{26FCB62C-5636-4517-ACA9-F5E42210EBE6}" />
 ----version----
 language: en
 version: 1
-revision: c982317b-3fa9-4e9e-b7e2-aa69e8437465
+revision: c37b4917-9b51-4ed6-ae65-e4c5aa26a80f
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -83,14 +90,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c982317b-3fa9-4e9e-b7e2-aa69e8437465
+c37b4917-9b51-4ed6-ae65-e4c5aa26a80f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160509T110143Z
+20160509T121045Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
