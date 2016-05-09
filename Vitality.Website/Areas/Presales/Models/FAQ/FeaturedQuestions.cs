@@ -15,7 +15,7 @@ namespace Vitality.Website.Areas.Presales.Models.FAQ
         [SitecoreField]
         public string Subtitle { get; set; }
 
-        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        [SitecoreChildren]
         public IEnumerable<QuestionAnswer> Questions { get; set; }
 
         [SitecoreField]

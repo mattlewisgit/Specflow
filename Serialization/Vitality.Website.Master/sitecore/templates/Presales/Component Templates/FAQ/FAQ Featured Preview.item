@@ -16,10 +16,17 @@ key: __base template
 content-length: 38
 
 {1930BBEB-7805-471A-A3BE-4858AC7CF696}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 28
+
+Applications/32x32/about.png
 ----version----
 language: en
 version: 1
-revision: 72bba63e-06f8-4a64-87e5-3b69b22ec849
+revision: f4cdcdfd-f569-41da-a9dc-e20aebad3905
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -41,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-72bba63e-06f8-4a64-87e5-3b69b22ec849
+f4cdcdfd-f569-41da-a9dc-e20aebad3905
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160505T151042Z
+20160509T145144Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

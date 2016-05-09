@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {9287302D-B609-41E4-B496-9DFDD17040DF}
+id: {E5196CA2-C06C-4C28-9C74-CD00A7942475}
 database: master
-path: /sitecore/content/Presales/Content/FAQ/Questions Answers/Am I covered for heart attacks or stroke
-parent: {2E33A44A-FED6-4FC6-8309-A62E0666F208}
-name: Am I covered for heart attacks or stroke
+path: /sitecore/content/Presales/Content/FAQ/FAQ Featured Preview/What is the difference between Life and Serious Illness Cover
+parent: {650BEC7B-66D1-412E-8C8A-6D5FF0CB35D5}
+name: What is the difference between Life and Serious Illness Cover
 master: {00000000-0000-0000-0000-000000000000}
 template: {E5BEA071-8E83-42C6-9348-68A6E7B0C66D}
 templatekey: Question-Answer
@@ -15,64 +15,55 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-300
+400
 ----version----
 language: en
 version: 1
-revision: 29e9357c-7f33-4bb1-9967-7a003a7873ec
+revision: 483380e1-482a-4e20-9134-a938a38760e9
 
 ----field----
 field: {09EF649A-71BB-420C-A987-034F16AB9884}
 name: Question Text
 key: question text
-content-length: 41
+content-length: 61
 
-Am I covered for heart attacks or stroke?
+What is the difference between Life and Serious Illness Cover
 ----field----
 field: {00A14B16-A96C-430C-ADFF-6F10A55C1DFC}
 name: Preview
 key: preview
-content-length: 201
+content-length: 401
 
-Aenean nec mattis nibh. Nunc in nulla sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum, massa in tristique posuere, ex orci luctus est, eget vehicula nunc magna interdum erat.
-----field----
-field: {3A595148-70F3-4622-A4B2-72346A971C92}
-name: Answer
-key: answer
-content-length: 609
-
-Aenean nec mattis nibh. Nunc in nulla sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum, massa in tristique posuere, ex orci luctus est, eget vehicula nunc magna interdum erat.
-Aenean nec mattis nibh. Nunc in nulla sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum, massa in tristique posuere, ex orci luctus est, eget vehicula nunc magna interdum erat.
-
+Test nec mattis nibh. Nunc in nulla sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum, massa in tristique posuere, ex orci luctus est, eget vehicula nunc magna interdum erat.
 Aenean nec mattis nibh. Nunc in nulla sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum, massa in tristique posuere, ex orci luctus est, eget vehicula nunc magna interdum erat.
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 41
+content-length: 61
 
-Am I covered for heart attacks or stroke?
+What is the difference between Life and Serious Illness Cover
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160505T155931Z
+20160509T145601Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-29e9357c-7f33-4bb1-9967-7a003a7873ec
+483380e1-482a-4e20-9134-a938a38760e9
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160505T160006Z
+20160509T145719Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -80,3 +71,10 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

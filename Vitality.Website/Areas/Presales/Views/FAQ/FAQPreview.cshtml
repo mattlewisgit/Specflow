@@ -1,13 +1,9 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
-@using Sitecore.Mvc
 @using Vitality.Website.Areas.Presales.Models.FAQ
 @inherits GlassView<FeaturedQuestions>
 
 <h1>FAQ Preview</h1>
 
-@{
-    int k = 0;
-}
 <div id="example_1" class="faq_leader">
     <div class="header">
         <h2>@Editable(m => Model.Title)</h2>
@@ -18,19 +14,40 @@
         @{
             var batches = Model.Questions.Select((x, i) => new { x, i }).GroupBy(p => (p.i / 2), p => p.x);
         }
-        @foreach (var row in batches)
-        {
-            <div class="grid">
-                @foreach (var questionAnswer in row)
-                {
-                    <div class="grid-col-6-12">
-                        <h6 class="text-detail-block__heading">@Editable(m => questionAnswer.QuestionText)</h6>
-                        <div>@Editable(m => questionAnswer.Preview)</div>
-                    </div>
-                }
-            </div>
-        }
 
+        @if (Sitecore.Context.PageMode.IsPageEditor)
+        {
+            foreach (var row in batches)
+            {
+                <div class="grid">
+                    @foreach (var questionAnswer in row)
+                    {
+                        using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", questionAnswer.Path))
+                        {
+                            <div class="grid-col-6-12">
+                                <h6 class="text-detail-block__heading">@Editable(questionAnswer, m => questionAnswer.QuestionText)</h6>
+                                <div>@Editable(questionAnswer, m => questionAnswer.Preview)</div>
+                            </div>
+                        }
+                    }
+                </div>
+            }
+        }
+        else
+        {
+            foreach (var row in batches)
+            {
+                <div class="grid">
+                    @foreach (var questionAnswer in row)
+                    {
+                        <div class="grid-col-6-12">
+                            <h6 class="text-detail-block__heading">@Editable(questionAnswer, m => m.QuestionText)</h6>
+                            <div>@Editable(questionAnswer, m => questionAnswer.Preview)</div>
+                        </div>
+                    }
+                </div>
+            }
+        }
     </div>
 
     <div class="more">@Editable(m => Model.CTA)</div>
