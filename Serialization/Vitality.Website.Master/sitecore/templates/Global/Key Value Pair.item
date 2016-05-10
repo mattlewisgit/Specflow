@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {BE2854DE-BB75-42FF-879D-9E6C05B1C6AA}
+id: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
 database: master
-path: /sitecore/templates/Presales/Component Templates/FAQ/FAQ Featured Preview
-parent: {BA0B0E09-3B5A-425F-B22D-058D5F76E3DB}
-name: FAQ Featured Preview
+path: /sitecore/templates/Global/Key Value Pair
+parent: {C16D2401-1329-4BC5-B4B0-C380B99CEDCB}
+name: Key Value Pair
 master: {00000000-0000-0000-0000-000000000000}
 template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
 templatekey: Template
@@ -20,20 +20,20 @@ content-length: 38
 field: {F7D48A55-2158-4F02-9356-756654404F73}
 name: __Standard values
 key: __standard values
-content-length: 38
+content-length: 0
 
-{95C094BD-E1B1-402D-9ED0-28D1788FE573}
+
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 28
+content-length: 68
 
-Applications/32x32/about.png
+http://dev.vitality.co.uk/temp/iconcache/people/32x32/windup_key.png
 ----version----
 language: en
 version: 1
-revision: d5afb219-e06a-4676-a992-ee5c9305cb73
+revision: ac4a9318-4bcc-43db-aaa8-d1ecb3cc4970
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -41,7 +41,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160505T151042Z
+20160506T145015Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d5afb219-e06a-4676-a992-ee5c9305cb73
+ac4a9318-4bcc-43db-aaa8-d1ecb3cc4970
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160510T134734Z
+20160506T151453Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

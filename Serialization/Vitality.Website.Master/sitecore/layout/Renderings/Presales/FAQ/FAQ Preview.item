@@ -41,13 +41,20 @@ content-length: 73
 field: {A2F5D9DF-8CBA-4A1D-99EB-51ACB94CB057}
 name: Page Editor Buttons
 key: page editor buttons
-content-length: 116
+content-length: 77
 
-{31A3A929-C599-4DD3-91A6-F4A9487CC8B7}|{6E281DBE-EA70-4F29-9045-265CA310C8F9}|{028DFE18-F0FE-431B-B5D2-9D944FD8B3C6}
+{31A3A929-C599-4DD3-91A6-F4A9487CC8B7}|{6E281DBE-EA70-4F29-9045-265CA310C8F9}
+----field----
+field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
+name: __Thumbnail
+key: __thumbnail
+content-length: 58
+
+<image mediaid="{B974C95B-4FA7-426B-83D2-391781359EF0}" />
 ----version----
 language: en
 version: 1
-revision: c823e8ed-276a-43a3-b93b-a38a720ef507
+revision: 5b8504b0-e784-4fa9-93b2-294a6e25f98c
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -62,14 +69,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c823e8ed-276a-43a3-b93b-a38a720ef507
+5b8504b0-e784-4fa9-93b2-294a6e25f98c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160510T110728Z
+20160510T120507Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
