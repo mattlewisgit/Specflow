@@ -172,7 +172,6 @@
       <DependentUpon>experience_editor_fix.css</DependentUpon>
     </Content>
     <Content Include="css\app.css" />
-    <Content Include="css\experience-editor-fix.css" />
     <Content Include="Global.asax" />
     <Content Include="js\accordionModule.js" />
     <Content Include="js\animationDelayModule.js" />

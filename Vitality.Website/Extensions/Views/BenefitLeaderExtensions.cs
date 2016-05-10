@@ -21,5 +21,13 @@
             return view.GetRenderingParameters<BenefitLeaderRendering>().BackgroundImageLeft ? "feature-block-gradient--right" : string.Empty;
         }
 
+        public static string BackgroundPosition(this GlassView<BenefitLeader> view)
+        {
+            if (view.GetRenderingParameters<BenefitLeaderRendering>().BackgroundColour != null)
+            {
+                return view.GetRenderingParameters<BenefitLeaderRendering>().BackgroundPostion.Value;
+            }
+            return string.Empty;
+        }
     }
 }

@@ -11,5 +11,8 @@
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public KeyValuePair BackgroundColour { get; set; }
         public bool BackgroundImageLeft { get; set; }
+
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public KeyValuePair BackgroundPostion { get; set; }
     }
 }
