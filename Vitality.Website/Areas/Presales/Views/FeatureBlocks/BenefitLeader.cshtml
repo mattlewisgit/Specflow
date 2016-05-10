@@ -1,15 +1,19 @@
 ﻿@using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.FeatureBlocks.BenefitLeader>
 
-@using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Benefit Leader", Model.Path))
+@using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
 {
 <div class="feature-block-gradient feature-block-gradient--@this.BackgroundColour() @this.BackgroundImageLeft()">
-    <div class="feature-block-gradient__image background-position-middle-right" style="background-image: url('@Model.BackgroundImage.Src');">
-    </div>
+    <div class="feature-block-gradient__image background-position-@("middle")-@("right")"
+         style="background-image: url(@(Model.BackgroundImage.Src);"></div>
 
     <div class="feature-block-gradient__content-container">
         <div class="feature-block-gradient__content">
-            <p>@Editable(Model, item => item.LeadIn)</p>
+            @if (!IsInEditingMode && string.IsNullOrWhiteSpace(Model.LeadIn))
+            {
+                <h6>@Editable(Model, item => item.LeadIn)</h6>
+            }
+
             <h3>@Editable(Model, item => item.Headline)</h3>
             <p>@Editable(Model, item => item.Body)</p>
             @Editable(Model, item => item.CallToAction, new { @class = "box-button box-button--rounded" })

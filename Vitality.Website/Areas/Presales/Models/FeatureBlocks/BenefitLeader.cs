@@ -6,6 +6,11 @@
 
     public class BenefitLeader : SitecoreItem
     {
+        public BenefitLeader()
+        {
+            BackgroundImage = new Image();
+        }
+
         public string LeadIn { get; set; }
 
         public string Headline { get; set; }
