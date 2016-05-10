@@ -10,6 +10,7 @@ var jshint = require("gulp-jshint");
 var jscs = require("gulp-jscs");
 var sass = require("gulp-sass");
 var sassLint = require("gulp-sass-lint");
+var uglify = require("gulp-uglify");
 
 // Store the tasks as names, so that they can be easily
 // referenced from the individual and default tasks.
@@ -56,7 +57,6 @@ gulp.task(sassLintTask, function () {
 // Cleans build artefacts.
 gulp.task(cleanTask, function () {
     return del([
-        "../js/*",
         "sass/**/*.css"
     ]);
 });
@@ -85,21 +85,9 @@ gulp.task(jsBuildTask, function () {
             configFile: "./js/app.js",
             baseUrl: './js'
         }))
-        .pipe(concat("main.js"))
+        .pipe(concat("vitality-boilerplate.js"))
+        .pipe(uglify())
         .pipe(gulp.dest("../js"));
-
-    /*
-    requireJS({
-        baseUrl: 'js/',
-        basePath: 'js/',
-        name: "app.js",
-        out: "vitality.boilerplate.js",
-        shim: {
-            // standard require.js shim options 
-        },
-        // ... more require.js options 
-    });
-    */
 });
 
 // A group of all lint tasks.

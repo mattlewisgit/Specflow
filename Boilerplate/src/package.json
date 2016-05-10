@@ -13,6 +13,7 @@
         "gulp-jscs": "*",
         "gulp-sass": "*",
         "gulp-sass-lint": "*",
+        "gulp-uglify": "*",
         "jshint": "*"
     },
     "scripts": {
