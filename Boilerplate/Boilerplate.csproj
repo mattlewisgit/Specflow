@@ -43,26 +43,9 @@
   <ItemGroup>
     <Content Include="css\screen-0.0.1.css" />
     <Content Include="faq_leader.html" />
-    <Content Include="img\facebook--footer.svg" />
-    <Content Include="img\facebook.svg" />
-    <Content Include="img\icon-mouse.svg" />
-    <Content Include="img\icon-phone--dark.svg" />
-    <Content Include="img\icon-phone.svg" />
-    <Content Include="img\instagram--footer.svg" />
-    <Content Include="img\instagram.svg" />
-    <Content Include="img\log-in-avatar.png" />
-    <Content Include="img\log-in.svg" />
-    <Content Include="img\search-background.png" />
-    <Content Include="img\search.svg" />
-    <Content Include="img\sprite-generated.png" />
-    <Content Include="img\twitter--footer.svg" />
-    <Content Include="img\twitter.svg" />
-    <Content Include="img\vitality-logo--white.svg" />
-    <Content Include="img\vitality-logo.svg" />
-    <Content Include="img\youtube--footer.svg" />
-    <Content Include="img\youtube.svg" />
     <Content Include="index.html" />
     <Content Include="main_navigation.html" />
+    <Content Include="src\gulpfile.js" />
     <Content Include="src\sass\app.css">
       <DependentUpon>app.scss</DependentUpon>
     </Content>
@@ -98,6 +81,10 @@
     </Content>
     <Content Include="src\package.json" />
     <Content Include="src\bower.json" />
+    <Content Include="src\sass-lint.yml" />
+    <Content Include="src\gulp.targets" />
+    <Content Include="src\.jscsrc" />
+    <Content Include="src\.jshintrc" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -115,6 +102,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Import Project="$(ProjectDir)\src\gulp.targets" />
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
