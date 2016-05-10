@@ -25,9 +25,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitality.Website.SC", "Vitality.Website.SC\Vitality.Website.SC.csproj", "{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitality.Website.SC.UnitTests", "UnitTests\Vitality.Website.SC.UnitTests\Vitality.Website.SC.UnitTests.csproj", "{1A5386C6-8B46-4ECD-A81B-A9A043969E3E}"
-		WebEssentials-Settings.json = WebEssentials-Settings.json
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boilerplate", "Boilerplate\Boilerplate.csproj", "{B5F22EFA-9799-406C-84E9-AF239C578FC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E0BED16D-5DA4-4F68-B781-7F333FA4E837}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +56,6 @@ Global
 		{11D0116B-F0F0-4060-A0F7-4B0D733F5223}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{11D0116B-F0F0-4060-A0F7-4B0D733F5223}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11D0116B-F0F0-4060-A0F7-4B0D733F5223}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{B5F22EFA-9799-406C-84E9-AF239C578FC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B5F22EFA-9799-406C-84E9-AF239C578FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B5F22EFA-9799-406C-84E9-AF239C578FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B5F22EFA-9799-406C-84E9-AF239C578FC0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +64,10 @@ Global
 		{1A5386C6-8B46-4ECD-A81B-A9A043969E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A5386C6-8B46-4ECD-A81B-A9A043969E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A5386C6-8B46-4ECD-A81B-A9A043969E3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5F22EFA-9799-406C-84E9-AF239C578FC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5F22EFA-9799-406C-84E9-AF239C578FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5F22EFA-9799-406C-84E9-AF239C578FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5F22EFA-9799-406C-84E9-AF239C578FC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
