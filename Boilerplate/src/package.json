@@ -3,9 +3,19 @@
     "version": "1.0.0",
     "description": "Vitality Boilerplate",
     "dependencies": {
-        "bower": "*"
+        "bower": "*",
+        "del": "*",
+        "gulp": "*",
+        "gulp-cssnano": "*",
+        "gulp-jshint": "*",
+        "gulp-jscs": "*",
+        "gulp-sass": "*",
+        "gulp-sass-lint": "*",
+        "jshint": "*"
     },
     "scripts": {
-        "bower": "bower"
-    }
+        "bower": "bower",
+        "gulp": "gulp"
+    },
+    "sasslintConfig": "sass-lint.yml"
 }

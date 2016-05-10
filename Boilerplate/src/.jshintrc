@@ -1,0 +1,26 @@
+{
+    "bitwise": false,
+    "browser": true,
+    "curly": true,
+    "eqeqeq": true,
+    "forin": true,
+    "freeze": true,
+    "futurehostile": true,
+    "maxcomplexity": 4,
+    "maxdepth": 4,
+    "maxparams": 4,
+    "maxstatements": 20,
+    "noarg": true,
+    "nocomma": true,
+    "nonbsp": true,
+    "nonew": true,
+    "shadow": "outer",
+    "strict": true,
+    "undef": true,
+    "unused": true,
+    "varstmt": false,
+    "predef": [
+        "require",
+        "requirejs"
+    ]
+}
