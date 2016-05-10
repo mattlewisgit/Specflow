@@ -13,6 +13,6 @@
         public bool BackgroundImageLeft { get; set; }
 
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public KeyValuePair BackgroundPostion { get; set; }
+        public KeyValuePair BackgroundPosition { get; set; }
     }
 }

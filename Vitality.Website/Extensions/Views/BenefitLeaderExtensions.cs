@@ -13,7 +13,7 @@
             {
                 return view.GetRenderingParameters<BenefitLeaderRendering>().BackgroundColour.Value;
             }
-            return "light";
+            return "feature-block-gradient--light";
         }
 
         public static string BackgroundImageLeft(this GlassView<BenefitLeader> view)
@@ -23,9 +23,9 @@
 
         public static string BackgroundPosition(this GlassView<BenefitLeader> view)
         {
-            if (view.GetRenderingParameters<BenefitLeaderRendering>().BackgroundColour != null)
+            if (view.GetRenderingParameters<BenefitLeaderRendering>().BackgroundPosition != null)
             {
-                return view.GetRenderingParameters<BenefitLeaderRendering>().BackgroundPostion.Value;
+                return view.GetRenderingParameters<BenefitLeaderRendering>().BackgroundPosition.Value;
             }
             return string.Empty;
         }

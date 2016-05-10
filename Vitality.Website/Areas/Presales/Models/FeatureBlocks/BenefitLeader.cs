@@ -8,7 +8,7 @@
     {
         public BenefitLeader()
         {
-            BackgroundImage = new Image();
+            this.BackgroundImage = new Image();
         }
 
         public string LeadIn { get; set; }
