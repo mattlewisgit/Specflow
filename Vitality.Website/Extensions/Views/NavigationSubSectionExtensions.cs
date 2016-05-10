@@ -10,7 +10,13 @@
     {
         public static string MegaMenuCssClass(this GlassView<NavigationSubSection> view)
         {
-            return (view.Model.MainMenuLinks.Any() || view.Model.AdditionalMenuLinks.Any() || view.Model.ShowFeature) ? "section-nav__item--megamenu" : string.Empty;
+            return ShowMegaMenu(view) ? "section-nav__item--megamenu" : string.Empty;
         }
+
+        public static bool ShowMegaMenu(this GlassView<NavigationSubSection> view)
+        {
+            return (view.Model.MainMenuLinks.Any() || view.Model.AdditionalMenuLinks.Any() || view.Model.ShowFeature);
+        }
+
     }
 }

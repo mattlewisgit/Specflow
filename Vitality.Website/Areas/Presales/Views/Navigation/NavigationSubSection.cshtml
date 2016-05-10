@@ -5,7 +5,7 @@
 
     @RenderLink(Model, item => item.SubSectionLink)
 
-    @if (Model.ShowMegaMenu)
+    @if (this.ShowMegaMenu())
     {
     <div class="megamenu">
         <div class="megamenu__wrap">
