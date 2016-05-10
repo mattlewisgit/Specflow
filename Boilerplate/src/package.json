@@ -3,9 +3,11 @@
     "version": "1.0.0",
     "description": "Vitality Boilerplate",
     "dependencies": {
+        "amd-optimize": "*",
         "bower": "*",
         "del": "*",
         "gulp": "*",
+        "gulp-concat": "*",
         "gulp-cssnano": "*",
         "gulp-jshint": "*",
         "gulp-jscs": "*",

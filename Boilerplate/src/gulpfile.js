@@ -1,6 +1,8 @@
 // jshint strict: false
 
 // Include the libraries.
+var amdOptimize = require("amd-optimize");
+var concat = require("gulp-concat");
 var cssnano = require("gulp-cssnano");
 var del = require("del");
 var gulp = require("gulp");
@@ -14,6 +16,7 @@ var sassLint = require("gulp-sass-lint");
 var buildTask = "build";
 var cleanTask = "clean";
 var cssMinify = "css_minify";
+var jsBuildTask = "js_build";
 var jsStaticAnalysis = "js_static_analysis";
 var jsStyle = "js_style";
 var lintTask = "lint";
@@ -50,9 +53,10 @@ gulp.task(sassLintTask, function () {
         .pipe(sassLint.failOnError());
 });
 
-// Cleans up.
+// Cleans build artefacts.
 gulp.task(cleanTask, function () {
     return del([
+        "../js/*",
         "sass/**/*.css"
     ]);
 });
@@ -72,6 +76,32 @@ gulp.task(cssMinify, function () {
         .pipe(gulp.dest("../css"));
 });
 
+// Require JS build.
+gulp.task(jsBuildTask, function () {
+    return gulp
+        .src("src/**/*.js")
+        .pipe(amdOptimize("app", {
+            name: "app",
+            configFile: "./js/app.js",
+            baseUrl: './js'
+        }))
+        .pipe(concat("main.js"))
+        .pipe(gulp.dest("../js"));
+
+    /*
+    requireJS({
+        baseUrl: 'js/',
+        basePath: 'js/',
+        name: "app.js",
+        out: "vitality.boilerplate.js",
+        shim: {
+            // standard require.js shim options 
+        },
+        // ... more require.js options 
+    });
+    */
+});
+
 // A group of all lint tasks.
 gulp.task(lintTask, [
     //jsStaticAnalysis,
@@ -81,8 +111,9 @@ gulp.task(lintTask, [
 
 // A group of all build tasks.
 gulp.task(buildTask, [
-    sassBuildTask
+    sassBuildTask,
     //cssMinify
+    jsBuildTask
 ]);
 
 // Default task that runs all the tasks.

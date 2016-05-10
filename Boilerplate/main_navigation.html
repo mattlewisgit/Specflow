@@ -7,8 +7,13 @@
 
     <link href="/src/bower_components/prism/themes/prism.css" rel="stylesheet" />
     <link href="/css/screen-0.0.1.css" rel="stylesheet" type="text/css">
-    <script src="/src/js/modernizr-custom.min.js" ></script>
-    <script src="/src/js/require.js" data-main="src/js/app" async></script>
+    <script src="/src/js/modernizr-custom.min.js"></script>
+    
+    <!-- Development source. -->
+    <!--<script src="/src/js/require.js" data-main="src/js/app" async></script>-->
+    
+    <!-- Production source. -->
+    <script src="/src/js/require.js" data-main="/js/main" async></script>
 </head>
 <body>
     <div>
