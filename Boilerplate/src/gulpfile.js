@@ -74,15 +74,15 @@ gulp.task(cssMinify, function () {
 
 // A group of all lint tasks.
 gulp.task(lintTask, [
-    jsStaticAnalysis,
-    jsStyle,
-    sassLintTask,
+    //jsStaticAnalysis,
+    //jsStyle,
+    sassLintTask
 ]);
 
 // A group of all build tasks.
 gulp.task(buildTask, [
-    sassBuildTask,
-    cssMinify
+    sassBuildTask
+    //cssMinify
 ]);
 
 // Default task that runs all the tasks.

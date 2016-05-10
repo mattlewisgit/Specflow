@@ -1,1 +1,6 @@
-.faq_leader .header,.faq_leader .more{text-align:center}.faq_leader .more a{padding-left:3em;padding-right:3em}padding-right: 3em; }
+.faq_leader .header, .faq_leader .more {
+  text-align: center; }
+
+.faq_leader .more a {
+  padding-left: 3em;
+  padding-right: 3em; }

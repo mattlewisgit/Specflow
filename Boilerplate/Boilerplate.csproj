@@ -43,9 +43,35 @@
   <ItemGroup>
     <Content Include="css\screen-0.0.1.css" />
     <Content Include="faq_leader.html" />
+    <Content Include="img\running-man.jpg" />
     <Content Include="index.html" />
     <Content Include="main_navigation.html" />
     <Content Include="src\gulpfile.js" />
+    <Content Include="images\sprite-generated.png" />
+    <Content Include="src\images\svg-sprite.svg" />
+    <Content Include="src\js\modules\accordionModule.js" />
+    <Content Include="src\js\modules\animationDelayModule.js" />
+    <Content Include="src\js\app.js" />
+    <Content Include="src\js\modules\collapsibleModule.js" />
+    <Content Include="src\js\vendor\domready.js" />
+    <Content Include="src\js\libraries\fastclick.js" />
+    <Content Include="src\js\modules\filterModule.js" />
+    <Content Include="src\js\modules\helpers.js" />
+    <Content Include="src\js\libraries\jquery-1.11.3.js" />
+    <Content Include="src\js\libraries\jquery-ui.js" />
+    <Content Include="src\js\libraries\jquery.matchHeight.js" />
+    <Content Include="src\js\libraries\jquery.smart-resize.js" />
+    <Content Include="src\js\modules\main.js" />
+    <Content Include="src\js\modules\matchHeightsModule.js" />
+    <Content Include="src\js\modules\menuModule.js" />
+    <Content Include="src\js\modernizr-custom.min.js" />
+    <Content Include="src\js\nr-918.min.js" />
+    <Content Include="src\js\require.js" />
+    <Content Include="src\js\modules\searchModule.js" />
+    <Content Include="src\js\modules\socialShareModule.js" />
+    <Content Include="src\js\libraries\tablesaw.stackonly.js" />
+    <Content Include="src\js\modules\tabsModule.js" />
+    <Content Include="src\js\libraries\wow.js" />
     <Content Include="src\sass\app.css">
       <DependentUpon>app.scss</DependentUpon>
     </Content>
