@@ -31,5 +31,10 @@
         {
             webDriver.Manage().Window.Size = new System.Drawing.Size(width, height);
         }
+
+        public static void Maximise()
+        {
+            webDriver.Manage().Window.Maximize();
+        }
     }
 }

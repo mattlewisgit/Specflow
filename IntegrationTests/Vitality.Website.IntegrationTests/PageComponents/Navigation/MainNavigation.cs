@@ -41,5 +41,21 @@
                 return this.webDriver.FindElement(new JQuerySelector(".section-nav__item--home a"));
             }
         }
+
+        public IWebElement MemberZone
+        {
+            get
+            {
+                return this.webDriver.FindElement(new JQuerySelector(".top-bar--large .utility-nav__item--log-in"));
+            }
+        }
+
+        public IWebElement LogInButton
+        {
+            get
+            {
+                return this.webDriver.FindElement(new JQuerySelector(".log-in__links a.box-button--secondary"));
+            }
+        }
     }
 }

@@ -13,7 +13,7 @@
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
-            var ffBinary = new FirefoxBinary(@"C:\Program Files (x86)\Mozilla Firefox\Firefox.exe");
+            var ffBinary = new FirefoxBinary(AppSettings.Paths.Firefox);
             var firefoxProfile = new FirefoxProfile();
 
             WebDriver = new FirefoxDriver(ffBinary, firefoxProfile);

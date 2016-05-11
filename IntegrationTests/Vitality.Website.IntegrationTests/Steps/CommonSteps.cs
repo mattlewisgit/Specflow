@@ -20,7 +20,7 @@
         [Given(@"I am on the (.*)")]
         public void GivenIAmOnThe(string p0)
         {
-            Browser.GoTo(p0);
+            Browser.GoTo(AppSettings.Links.VitalityBaseUrl + p0);
             this.container.RegisterInstanceAs(new PresalesPage(WebDriver));
         }
     }
