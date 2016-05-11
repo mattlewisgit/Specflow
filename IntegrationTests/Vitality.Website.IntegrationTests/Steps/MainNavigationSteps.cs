@@ -1,65 +1,51 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
-using System;
-using System.Linq;
-using System.Configuration;
-using TechTalk.SpecFlow;
-using Xunit;
-using Selenium.WebDriver.Extensions.JQuery;
-using By = Selenium.WebDriver.Extensions.JQuery.By;
-
-namespace Vitality.Website.IntegrationTests
+﻿namespace Vitality.Website.IntegrationTests.Steps
 {
+    using Shouldly;
+
+    using TechTalk.SpecFlow;
+
+    using Vitality.Website.IntegrationTests.Extensions;
+    using Vitality.Website.IntegrationTests.PageObjects;
+    using Vitality.Website.IntegrationTests.Utilities;
+
     [Binding]
-    public class MainNavigationSteps
+    public class MainNavigationSteps : BaseSteps
     {
-        private FirefoxDriver driver;
+        private readonly PresalesPage presalesPage;
 
-        [Given(@"I am on the (.*)")]
-        public void GivenIAmOnThe(string p0)
+        public MainNavigationSteps(PresalesPage presalesPage)
         {
-            var url = ConfigurationManager.AppSettings["Links.VitalityBaseUrl"] + ConfigurationManager.AppSettings[p0];
-            var ffBinary = new FirefoxBinary(@"C:\Program Files\Mozilla Firefox\Firefox.exe");
-            var firefoxProfile = new FirefoxProfile();
-
-            driver = new FirefoxDriver(ffBinary, firefoxProfile);
-            driver.Navigate().GoToUrl(p0);
+            this.presalesPage = presalesPage;
         }
 
         [When(@"I click on the business section link")]
         public void WhenIClickOnTheBusinessSectionLink()
         {
-            var navItems = driver.FindElements(By.JQuerySelector(".site-nav a"));
-            var businessNavItem = navItems.FirstOrDefault(e => e.GetAttribute("href").Contains("business"));
-            businessNavItem.Click();
+            this.presalesPage.MainNavigation.ClickNavigationSectionLink("business");
         }
         
         [When(@"I click on the navigation logo")]
         public void WhenIClickOnTheNavigationLogo()
         {
-            var navItem = driver.FindElement(By.JQuerySelector(".section-nav__item--home a"));
-            navItem.Click();
+            this.presalesPage.MainNavigation.Logo.Click();
         }
         
         [Then(@"I expect the (.*) to open")]
         public void ThenIExpectTheToOpen(string p0)
         {
-            var expectedUrl = ConfigurationManager.AppSettings["Links.VitalityBaseUrl"] + ConfigurationManager.AppSettings[p0];
-            Assert.Equal(p0, driver.Url);
+            Browser.CurrentUrl.ShouldBe(p0);
         }
 
         [When(@"I resize to mobile view")]
         public void WhenIResizeToMobileView()
         {
-            driver.Manage().Window.Size = new System.Drawing.Size(320, 800);
+            Browser.Resize(320, 800);
         }
 
         [Then(@"I expect the hamburger to be visible")]
         public void ThenIExpectTheHamburgerToBeVisible()
         {
-            var navItem = driver.FindElement(By.JQuerySelector(".burger-menu"));
-            Assert.NotNull(navItem);
+            this.presalesPage.MainNavigation.MobileNavigation.BurgerMenu.ShouldNotBeNull();
         }
-
     }
 }

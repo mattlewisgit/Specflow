@@ -41,6 +41,10 @@
       <HintPath>..\..\packages\Selenium.WebDriver.Extensions.JQuery.1.7.485\lib\net45\Selenium.WebDriver.Extensions.JQuery.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Shouldly, Version=2.7.0.0, Culture=neutral, PublicKeyToken=6042cbcb05cbc941, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Shouldly.2.7.0\lib\net40\Shouldly.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -80,13 +84,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Features\MainNavigation.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MainNavigation.feature</DependentUpon>
     </Compile>
+    <Compile Include="PageComponents\Navigation\MainNavigation.cs" />
+    <Compile Include="PageComponents\Navigation\MobileNavigation.cs" />
+    <Compile Include="PageComponents\Navigation\NavigationSection.cs" />
+    <Compile Include="PageObjects\PresalesPage.cs" />
+    <Compile Include="Steps\BaseSteps.cs" />
+    <Compile Include="Steps\CommonSteps.cs" />
     <Compile Include="Steps\MainNavigationSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\Browser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
