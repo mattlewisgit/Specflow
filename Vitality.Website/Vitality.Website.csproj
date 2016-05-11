@@ -173,30 +173,27 @@
     </Content>
     <Content Include="css\app.css" />
     <Content Include="Global.asax" />
-    <Content Include="js\accordionModule.js" />
-    <Content Include="js\animationDelayModule.js" />
-    <Content Include="js\app.js" />
-    <Content Include="js\collapsibleModule.js" />
-    <Content Include="js\domready.js" />
-    <Content Include="js\fastclick.js" />
-    <Content Include="js\filterModule.js" />
-    <Content Include="js\helpers.js" />
-    <Content Include="js\jquery-1.11.3.js" />
-    <Content Include="js\jquery-ui.js" />
-    <Content Include="js\jquery.matchHeight.js" />
-    <Content Include="js\jquery.smart-resize.js" />
-    <Content Include="js\main.js" />
-    <Content Include="js\matchHeightsModule.js" />
-    <Content Include="js\menuModule.js" />
+    <Content Include="img\facebook--footer.svg" />
+    <Content Include="img\facebook.svg" />
+    <Content Include="img\icon-mouse.svg" />
+    <Content Include="img\icon-phone--dark.svg" />
+    <Content Include="img\icon-phone.svg" />
+    <Content Include="img\instagram--footer.svg" />
+    <Content Include="img\instagram.svg" />
+    <Content Include="img\log-in-avatar.png" />
+    <Content Include="img\log-in.svg" />
+    <Content Include="img\search-background.png" />
+    <Content Include="img\search.svg" />
+    <Content Include="img\sprite-generated.png" />
+    <Content Include="img\twitter--footer.svg" />
+    <Content Include="img\twitter.svg" />
+    <Content Include="img\vitality-logo--white.svg" />
+    <Content Include="img\vitality-logo.svg" />
+    <Content Include="img\youtube--footer.svg" />
+    <Content Include="img\youtube.svg" />
     <Content Include="js\modernizr-custom.min.js" />
-    <Content Include="js\nr-918.min.js" />
-    <Content Include="js\prism.js" />
     <Content Include="js\require.js" />
-    <Content Include="js\searchModule.js" />
-    <Content Include="js\socialShareModule.js" />
-    <Content Include="js\tablesaw.stackonly.js" />
-    <Content Include="js\tabsModule.js" />
-    <Content Include="js\wow.js" />
+    <Content Include="js\vitality-boilerplate.js" />
     <Content Include="Web.config" />
     <Content Include="_Tools\PackageInstaller.asmx" />
   </ItemGroup>
@@ -213,6 +210,7 @@
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\Views\NavigationSubSectionExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
