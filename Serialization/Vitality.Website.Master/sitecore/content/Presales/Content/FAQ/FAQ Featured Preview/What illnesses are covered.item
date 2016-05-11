@@ -23,8 +23,8 @@ revision: 7ff81ff8-93e4-47e0-a9bf-0d93bfae81c8
 
 ----field----
 field: {09EF649A-71BB-420C-A987-034F16AB9884}
-name: Question Text
-key: question text
+name: QuestionText
+key: questiontext
 content-length: 27
 
 What illnesses are covered?

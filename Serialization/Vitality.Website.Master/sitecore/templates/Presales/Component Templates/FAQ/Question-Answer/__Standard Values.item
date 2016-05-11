@@ -16,8 +16,8 @@ revision: 2246ec72-1ba7-4c00-b4aa-989d35e73db3
 
 ----field----
 field: {09EF649A-71BB-420C-A987-034F16AB9884}
-name: Question Text
-key: question text
+name: QuestionText
+key: questiontext
 content-length: 5
 
 $name

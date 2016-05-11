@@ -23,8 +23,8 @@ revision: 483380e1-482a-4e20-9134-a938a38760e9
 
 ----field----
 field: {09EF649A-71BB-420C-A987-034F16AB9884}
-name: Question Text
-key: question text
+name: QuestionText
+key: questiontext
 content-length: 61
 
 What is the difference between Life and Serious Illness Cover
