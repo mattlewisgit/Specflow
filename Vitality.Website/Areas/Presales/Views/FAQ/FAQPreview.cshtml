@@ -1,0 +1,34 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using Vitality.Website.Areas.Presales.Models.FAQ
+@using Vitality.Website.Extensions.Views
+@inherits GlassView<FeaturedQuestions>
+
+<div id="example_1" class="faq_leader">
+    <div class="header">
+        <h2>@Editable(m => Model.Title)</h2>
+        <p class="paragraph-emphasis">@Editable(m => Model.Subtitle)</p>
+    </div>
+
+    <div class="faqs">
+        @{
+            foreach (var row in this.ModelBatches())
+            {
+                <div class="grid">
+                    
+                    @foreach (var questionAnswer in row)
+                    {
+                        using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", questionAnswer.Path))
+                        {
+                            <div class="grid-col-6-12">
+                                <h6 class="text-detail-block__heading">@Editable(questionAnswer, m => m.QuestionText)</h6>
+                                <div>@Editable(questionAnswer, m => m.Preview)</div>
+                            </div>
+                        }
+                    }
+                </div>
+            }
+        }
+    </div>
+
+    <div class="more">@Editable(m => Model.CTA)</div>
+</div>
