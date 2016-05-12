@@ -51,139 +51,16 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <script src="/js/modernizr-custom.min.js"></script>
-
-    @* production
-    <link rel="stylesheet" type="text/css" href="/assets/css/screen-0.0.1.css" media="screen" />
-    <script src="/assets/js/static/require.js" data-main="/assets/js/app" async></script>
-    *@
-    @* active development *@
     <link rel="stylesheet" type="text/css" href="/css/screen-0.0.1.css" media="screen" />
-    <script src="/js/require.js" data-main="/js/app" async></script>
-
+    <script src="/js/modernizr-custom.min.js"></script>
+    <script src="/js/require.js" data-main="/js/vitality-boilerplate" async></script>
 </head>
 <body>
     <div class="page">
 
         <a href="#main-content" class="offscreen">Skip to Content</a>
-
-    <header class="page-header">
         @Html.Sitecore().Placeholder("header")
-    </header>
-
-
-        <!-- log in panel for mobile -->
-        <div class="log-in log-in--small">
-            <div class="log-in__content">
-
-                <div class="log-in__avatar">
-                    <img src="/img/log-in-avatar.png" alt="Stanley the dachshund">
-                </div>
-
-                <p class="log-in__header">
-                    Member Zone
-                </p>
-
-                <div class="log-in__links">
-                    <a href="#log-in" class="box-button box-button--rounded box-button--secondary box-button--full-width">Log in</a>
-                    <a href="#register" class="box-button box-button--rounded box-button--full-width">Register today</a>
-                </div>
-
-                <div class="log-in__forgotten">
-                    <a href="#forgot">I've forgotten my details</a>
-                </div>
-
-            </div>
-        </div>
-        <!-- end log in panel mobile-->
-        <!-- search panel for mobile -->
-        <div class="search-panel">
-
-            <div class="search-panel__content pinch">
-
-                <div class="search-panel__header">
-
-                    <p>Type anything to search Vitality</p>
-
-                    <div class="search-panel__close-button js-search-close"><p>Close</p></div>
-
-                </div>
-
-                <div class="search-panel__search-field form">
-                    <div class="form__field">
-                        <input type="text" class="search-panel__search-input js-search-input" placeholder="Search...">
-                    </div>
-
-                    <div class="search-panel__search-details">
-                        <p><span class="js-search-matches">X</span> results for <span class="search-string js-search-string">search term</span>.
-                    </div>
-
-                </div>
-
-                <div class="search-panel__search-results">
-
-                    <p class="search-results__header">Products (3)</p>
-
-                    <ul class="search-results__list">
-
-                        <li class="search-results__item">
-                            <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Health Insurance</a></h4>
-                            <p class="search-results__item-body">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, illo...
-                            </p>
-                        </li>
-
-                        <li class="search-results__item">
-                            <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Stay healthy at work</a></h4>
-                            <p class="search-results__item-body">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit...
-                            </p>
-                        </li>
-
-                        <li class="search-results__item">
-                            <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Free Vitality healthcheck</a></h4>
-                            <p class="search-results__item-body">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non!...
-                            </p>
-                        </li>
-
-                    </ul>
-
-                    <p class="search-results__header">Tools (3)</p>
-
-                    <ul class="search-results__list">
-
-                        <li class="search-results__item">
-                            <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Health Insurance</a></h4>
-                            <p class="search-results__item-body">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quos, dolorum molestiae ab cupiditate sunt maxime error, dolorem est labore veniam saepe quae asperiores sequi consequuntur consequatur assumenda nam voluptates amet totam. A optio iure modi maiores commodi, hic aspernatur...
-                            </p>
-                        </li>
-
-                        <li class="search-results__item">
-                            <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Stay healthy at work</a></h4>
-                            <p class="search-results__item-body">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates...
-                            </p>
-                        </li>
-
-                        <li class="search-results__item">
-                            <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Free Vitality healthcheck</a></h4>
-                            <p class="search-results__item-body">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non!...
-                            </p>
-                        </li>
-
-                    </ul>
-                </div>
-
-                <div class="search-panel__background-image" style="background-image: url('/img/search-background.png');">
-                </div>
-
-            </div>
-        </div>
-        <!-- end search panel mobile-->
-
+    
         <main id="main-content" tabindex="-1">
 
             <section class="vertical-flush">
