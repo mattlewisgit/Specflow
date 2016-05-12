@@ -15,25 +15,28 @@
         <ul class="spotlight__list">
             @foreach (var card in Model.Cards)
             {
-                <li class="spotlight__list-item js-animate-on-scroll js-column-animation-delay fadeInUp">
-                    <div class="spotlight-item">
-                        <div class="spotlight-item__top-content">
-                            <p class="spotlight-item__heading">
-                                @Editable(card, item => item.Title)
-                            </p>
-                            <div class="spotlight-item__icon">
-                                @Editable(card, item => item.Icon)
+                using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", card.Path))
+                {
+                    <li class="spotlight__list-item js-animate-on-scroll js-column-animation-delay fadeInUp">
+                        <div class="spotlight-item">
+                            <div class="spotlight-item__top-content">
+                                <p class="spotlight-item__heading">
+                                    @Editable(card, item => item.Title)
+                                </p>
+                                <div class="spotlight-item__icon">
+                                    @Editable(card, item => item.Icon)
+                                </div>
+                                <div class="spotlight-item__content">
+                                    <p>@Editable(card, item => item.Text)</p>
+                                </div>
                             </div>
-                            <div class="spotlight-item__content">
-                                <p>@Editable(card, item => item.Text)</p>
-                            </div>
-                        </div>
 
-                        <div class="spotlight-item__cta">
-                            @Editable(card, item => item.CallToAction, new { @class = "emphasis-link" })
+                            <div class="spotlight-item__cta">
+                                @Editable(card, item => item.CallToAction, new {@class = "emphasis-link"})
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
+                }
             }
         </ul>
     </div>
