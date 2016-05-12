@@ -60,7 +60,8 @@ gulp.task(sassLintTask, function () {
 // Cleans build artefacts.
 gulp.task(cleanTask, function () {
     return del([
-        "sass/**/*.css"
+        "sass/**/*.css",
+        "sass/**/*.min.*"
     ]);
 });
 
