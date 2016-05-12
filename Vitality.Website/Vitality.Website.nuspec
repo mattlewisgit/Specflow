@@ -14,7 +14,7 @@
 	  <file src="_Tools\PackageInstaller.asmx" target="_Tools" />
 	  <file src="App_Config\ConnectionStrings.config" target="App_Config" />
 	  <file src="App_Config\**\*.*" target="App_Config" />
-	  <file src="Areas\Presales\Views\**\*.*" target="Areas" />
+	  <file src="Areas\Presales\Views\**\*.*" target="Areas\Presales\Views" />
 	  <file src="bin\**\*.dll" target="bin" />
 	  <file src="css\**\*.css" target="css" />
 	  <file src="Global.asax" />
