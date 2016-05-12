@@ -1,5 +1,7 @@
 ﻿namespace Vitality.Website.IntegrationTests.Steps
 {
+    using System;
+
     using Shouldly;
 
     using TechTalk.SpecFlow;
@@ -40,7 +42,7 @@
         [When(@"I resize to mobile view")]
         public void WhenIResizeToMobileView()
         {
-            Browser.Resize(320, 800);
+            Browser.Resize(320, 800).Wait(TimeSpan.FromMilliseconds(50));
         }
 
         [Then(@"I expect the hamburger to be visible")]
@@ -76,13 +78,13 @@
         [Then(@"I expect the Register button to be visible")]
         public void ThenIExpectTheRegisterButtonToBeVisible()
         {
-            ScenarioContext.Current.Pending();
+            this.presalesPage.MainNavigation.RegisterButton.Displayed.ShouldBeTrue();
         }
 
         [Then(@"I expect the Forgotten button to be visible")]
         public void ThenIExpectTheForgottenButtonToBeVisible()
         {
-            ScenarioContext.Current.Pending();
+            this.presalesPage.MainNavigation.ForgottenDetailsButton.Displayed.ShouldBeTrue();
         }
 
     }

@@ -1,5 +1,7 @@
 ﻿namespace Vitality.Website.IntegrationTests.Utilities
 {
+    using System;
+
     using OpenQA.Selenium;
 
     using Vitality.Website.IntegrationTests.Steps;
@@ -45,15 +47,32 @@
         {
             return Browser.Resize(width, height);
         }
-        
+
+        public static BrowserChainer Maximise()
+        {
+            webDriver.Manage().Window.Maximize();
+            return browserChainerInstance;
+        }
+
+        public static BrowserChainer Maximise(this BrowserChainer browserChainer)
+        {
+            return Browser.Maximise();
+        }
+
+        public static BrowserChainer Wait(TimeSpan timespan)
+        {
+            webDriver.Manage().Timeouts().ImplicitlyWait(timespan);
+            return browserChainerInstance;
+        }
+
+        public static BrowserChainer Wait(this BrowserChainer browserChainer, TimeSpan timespan)
+        {
+            return Browser.Wait(timespan);
+        }
+
         public class BrowserChainer
         {
 
-        }
-
-        public static void Maximise()
-        {
-            webDriver.Manage().Window.Maximize();
         }
     }
 }
