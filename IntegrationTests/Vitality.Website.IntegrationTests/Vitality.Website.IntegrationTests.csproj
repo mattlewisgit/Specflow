@@ -84,6 +84,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppSettings.cs" />
     <Compile Include="Extensions\MainNavigationExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Features\MainNavigation.feature.cs">
