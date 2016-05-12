@@ -10,6 +10,9 @@
         [SitecoreId]
         public Guid Id { get; set; }
 
+        [SitecoreInfo(SitecoreInfoType.Name)]
+        public string Name { get; set; }
+
         [SitecoreInfo(SitecoreInfoType.TemplateId)]
         public Guid TemplateId { get; set; }
 

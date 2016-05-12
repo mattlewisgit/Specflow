@@ -165,11 +165,11 @@
     <Content Include="client_side\img\vitality-logo.svg" />
     <Content Include="client_side\img\youtube--footer.svg" />
     <Content Include="client_side\js\app.js" />
-    <Content Include="client_side\sass\app.css">
-      <DependentUpon>app.scss</DependentUpon>
+    <Content Include="client_side\sass\experience_editor_fix.css">
+      <DependentUpon>experience_editor_fix.scss</DependentUpon>
     </Content>
-    <Content Include="client_side\sass\app.min.css">
-      <DependentUpon>app.css</DependentUpon>
+    <Content Include="client_side\sass\experience_editor_fix.min.css">
+      <DependentUpon>experience_editor_fix.css</DependentUpon>
     </Content>
     <Content Include="css\app.css" />
     <Content Include="Global.asax" />
@@ -203,6 +203,7 @@
     <Compile Include="App_Start\IoC.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Global\Models\ImageLink.cs" />
+    <Compile Include="Areas\Global\Models\KeyValuePair.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
     <Compile Include="Areas\Presales\Models\FAQ\FeaturedQuestions.cs" />
@@ -211,7 +212,10 @@
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
+    <Compile Include="Areas\Presales\Models\FeatureBlocks\BenefitLeader.cs" />
+    <Compile Include="Areas\Presales\RenderingModels\BenefitLeaderRendering.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\Views\BenefitLeaderExtensions.cs" />
     <Compile Include="Extensions\Views\FaqPreviewExtensions.cs" />
     <Compile Include="Extensions\Views\NavigationSubSectionExtensions.cs" />
     <Compile Include="Global.asax.cs">
@@ -437,14 +441,14 @@
     <Content Include="Areas\Presales\Views\Navigation\MobileNavigation.cshtml" />
     <Content Include="client_side\.jshintrc" />
     <Content Include="client_side\package.json" />
-    <Content Include="client_side\sass\app.scss" />
-    <Content Include="client_side\sass\_base.scss" />
-    <Content Include="client_side\sass\app.css.map">
-      <DependentUpon>app.css</DependentUpon>
+    <Content Include="client_side\sass\experience_editor_fix.scss" />
+    <Content Include="client_side\sass\experience_editor_fix.css.map">
+      <DependentUpon>experience_editor_fix.css</DependentUpon>
     </Content>
     <Content Include="client_side\.jscsrc" />
     <Content Include="client_side\sass-lint.yml" />
     <Content Include="client_side\gulp.targets" />
+    <Content Include="Areas\Presales\Views\FeatureBlocks\BenefitLeader.cshtml" />
     <Content Include="Areas\Presales\Views\FAQ\FAQPreview.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
