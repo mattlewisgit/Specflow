@@ -15,6 +15,13 @@ version: 1
 revision: fd709fc6-d6c3-4f05-854a-e149994e4dac
 
 ----field----
+field: {53299977-3D8B-45D3-A326-E1FB124EE244}
+name: BrowserTitle
+key: browsertitle
+content-length: 18
+
+Illness Protection
+----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name

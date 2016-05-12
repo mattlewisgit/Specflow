@@ -1,40 +1,26 @@
 ----item----
 version: 1
-id: {1C6384F9-1CC0-4F1C-9C27-DAFDC905CEC9}
+id: {C036FCE9-47A2-44F4-B8D1-7B1F3F4625FF}
 database: master
-path: /sitecore/content/Presales/Home/business/business-protection
-parent: {C6A83330-52BB-4041-ADDF-2EF3B70AA28E}
-name: business-protection
+path: /sitecore/templates/Presales/Page Templates/Base Page/Titles
+parent: {F208B3A5-D159-4F81-989C-4ACA52089997}
+name: Titles
 master: {00000000-0000-0000-0000-000000000000}
-template: {F208B3A5-D159-4F81-989C-4ACA52089997}
-templatekey: Base Page
+template: {E269FBB5-3750-427A-9149-7AA950B49301}
+templatekey: Template section
 
 ----version----
 language: en
 version: 1
-revision: 9acd631f-8117-48c9-9d3f-e67ce0f1d47d
+revision: 16922be7-a71b-4c0f-b6d6-4dc0b0f4c8b6
 
-----field----
-field: {53299977-3D8B-45D3-A326-E1FB124EE244}
-name: BrowserTitle
-key: browsertitle
-content-length: 19
-
-Business Protection
-----field----
-field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
-name: __Display name
-key: __display name
-content-length: 19
-
-Business Protection
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160505T124615Z
+20160509T100735Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,14 +34,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9acd631f-8117-48c9-9d3f-e67ce0f1d47d
+16922be7-a71b-4c0f-b6d6-4dc0b0f4c8b6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160505T124615Z
+20160509T100735Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
