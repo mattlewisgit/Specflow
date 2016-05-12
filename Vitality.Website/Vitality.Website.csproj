@@ -206,6 +206,8 @@
     <Compile Include="Areas\Global\Models\KeyValuePair.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
+    <Compile Include="Areas\Presales\Models\FAQ\FeaturedQuestions.cs" />
+    <Compile Include="Areas\Presales\Models\FAQ\QuestionAnswer.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
@@ -214,6 +216,7 @@
     <Compile Include="Areas\Presales\RenderingModels\RewardsLeaderRendering.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
     <Compile Include="Extensions\Views\RewardsLeaderExtensions.cs" />
+    <Compile Include="Extensions\Views\FaqPreviewExtensions.cs" />
     <Compile Include="Extensions\Views\NavigationSubSectionExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -447,6 +450,7 @@
     <Content Include="client_side\sass-lint.yml" />
     <Content Include="client_side\gulp.targets" />
     <Content Include="Areas\Presales\Views\Rewards\RewardsLeader.cshtml" />
+    <Content Include="Areas\Presales\Views\FAQ\FAQPreview.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

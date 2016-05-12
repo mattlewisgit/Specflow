@@ -1,5 +1,7 @@
 ﻿namespace Vitality.Website.IntegrationTests.Steps
 {
+    using System;
+
     using Shouldly;
 
     using TechTalk.SpecFlow;
@@ -33,19 +35,57 @@
         [Then(@"I expect the (.*) to open")]
         public void ThenIExpectTheToOpen(string p0)
         {
-            Browser.CurrentUrl.ShouldBe(p0);
+            var expected = AppSettings.Links.VitalityBaseUrl + p0;
+            Browser.CurrentUrl.ShouldBe(expected);
         }
 
         [When(@"I resize to mobile view")]
         public void WhenIResizeToMobileView()
         {
-            Browser.Resize(320, 800);
+            Browser.Resize(320, 800).Wait(TimeSpan.FromMilliseconds(50));
         }
 
         [Then(@"I expect the hamburger to be visible")]
         public void ThenIExpectTheHamburgerToBeVisible()
         {
-            this.presalesPage.MainNavigation.MobileNavigation.BurgerMenu.ShouldNotBeNull();
+            this.presalesPage.MainNavigation.MobileNavigation.BurgerMenu.Displayed.ShouldBeTrue();
         }
+
+        [When(@"I resize to full-screen view")]
+        public void WhenIResizeToFull_ScreenView()
+        {
+            Browser.Maximise();
+        }
+
+        [Then(@"I expect the hamburger to be invisible")]
+        public void ThenIExpectTheHamburgerToBeInvisible()
+        {
+            this.presalesPage.MainNavigation.MobileNavigation.BurgerMenu.Displayed.ShouldBeFalse();
+        }
+
+        [When(@"I click the Member Zone button")]
+        public void WhenIClickTheMemberZoneButton()
+        {
+            this.presalesPage.MainNavigation.MemberZone.Click();
+        }
+
+        [Then(@"I expect the Login button to be visible")]
+        public void ThenIExpectTheLoginButtonToBeVisible()
+        {
+            this.presalesPage.MainNavigation.LogInButton.Displayed.ShouldBeTrue();
+        }
+
+        [Then(@"I expect the Register button to be visible")]
+        public void ThenIExpectTheRegisterButtonToBeVisible()
+        {
+            this.presalesPage.MainNavigation.RegisterButton.Displayed.ShouldBeTrue();
+        }
+
+        [Then(@"I expect the Forgotten button to be visible")]
+        public void ThenIExpectTheForgottenButtonToBeVisible()
+        {
+            this.presalesPage.MainNavigation.ForgottenDetailsButton.Displayed.ShouldBeTrue();
+        }
+
     }
 }
