@@ -9,9 +9,12 @@
         <div>
             @foreach (var reward in Model.Rewards)
             {
-                using (BeginRenderLink(reward, item => item.Link, isEditable: true))
+                using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", reward.Path))
                 {
-                    @Editable(reward, item => item.Image)
+                    using (BeginRenderLink(reward, item => item.Link, isEditable: true))
+                    {
+                        @Editable(reward, item => item.Image)
+                    }
                 }
             }
         </div>
