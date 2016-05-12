@@ -1,5 +1,6 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
 @using Vitality.Website.Areas.Presales.Models.FAQ
+@using Vitality.Website.Extensions.Views
 @inherits GlassView<FeaturedQuestions>
 
 <div id="example_1" class="faq_leader">
@@ -10,38 +11,19 @@
 
     <div class="faqs">
         @{
-            var batches = Model.Questions.Select((x, i) => new { x, i }).GroupBy(p => (p.i / 2), p => p.x);
-        }
-
-        @if (Sitecore.Context.PageMode.IsPageEditor)
-        {
-            foreach (var row in batches)
+            foreach (var row in this.ModelBatches())
             {
                 <div class="grid">
+                    
                     @foreach (var questionAnswer in row)
                     {
                         using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", questionAnswer.Path))
                         {
                             <div class="grid-col-6-12">
                                 <h6 class="text-detail-block__heading">@Editable(questionAnswer, m => questionAnswer.QuestionText)</h6>
-                                <div>@Editable(questionAnswer, m => questionAnswer.Preview)</div>
+                                <div>@Editable(questionAnswer, m => m.Preview)</div>
                             </div>
                         }
-                    }
-                </div>
-            }
-        }
-        else
-        {
-            foreach (var row in batches)
-            {
-                <div class="grid">
-                    @foreach (var questionAnswer in row)
-                    {
-                        <div class="grid-col-6-12">
-                            <h6 class="text-detail-block__heading">@Editable(questionAnswer, m => m.QuestionText)</h6>
-                            <div>@Editable(questionAnswer, m => m.Preview)</div>
-                        </div>
                     }
                 </div>
             }
