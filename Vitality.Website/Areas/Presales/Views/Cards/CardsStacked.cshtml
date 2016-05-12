@@ -3,10 +3,11 @@
 @using (BeginEditFrame(Model, "Edit Background Image", item => item.BackgroundImage))
 {
 <section class="background-position-top-right" style="background-size: cover; background-image: url('@Model.BackgroundImage.Src');">
-    <div class="spotlight pinch">
+    <div class="spotlight pinch text-light">
         <h4 class="spotlight__heading">
             @Editable(Model, item => item.Headline)
         </h4>
+
         <p class="spotlight__intro">
             @Editable(Model, item => item.OpeningParagraph)
         </p>
