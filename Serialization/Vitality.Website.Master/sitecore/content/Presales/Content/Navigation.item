@@ -9,10 +9,17 @@ master: {00000000-0000-0000-0000-000000000000}
 template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
 templatekey: Folder
 
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 33
+
+Software/32x32/branch_element.png
 ----version----
 language: en
 version: 1
-revision: 8d45c76e-e819-4a98-b553-92378b5c8f4d
+revision: 7cc6b8df-0635-4544-b09d-0e34efb28042
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -34,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8d45c76e-e819-4a98-b553-92378b5c8f4d
+7cc6b8df-0635-4544-b09d-0e34efb28042
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160428T164430Z
+20160509T095643Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {666DD3D7-5CDA-454A-AC87-CF54B91E63DE}
+database: master
+path: /sitecore/content/Presales/Content/Navigation/Main Navigation/Personal/Tools guides/Health and wellness guides
+parent: {57816E0B-1F9A-4897-98DE-D05642C6B68F}
+name: Health and wellness guides
+master: {00000000-0000-0000-0000-000000000000}
+template: {86112F62-773D-464C-AEE7-F6E86CEC4A11}
+templatekey: Link
+
+----version----
+language: en
+version: 1
+revision: c8c00dbd-4304-44da-a7cb-2f4b2662cf01
+
+----field----
+field: {89E4692B-40AF-44F4-ABD6-347753F08243}
+name: Link
+key: link
+content-length: 89
+
+<link text="Health and wellness guides" linktype="internal" url="" anchor="" target="" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160511T144212Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c8c00dbd-4304-44da-a7cb-2f4b2662cf01
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160511T144212Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
