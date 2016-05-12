@@ -91,7 +91,7 @@ gulp.task(lintTask, [
 // A group of all build tasks.
 gulp.task(buildTask, [
     sassLintTask,
-    //sassBuildTask,
+    sassBuildTask,
     //cssMinify,
     imageMinify
 ]);
