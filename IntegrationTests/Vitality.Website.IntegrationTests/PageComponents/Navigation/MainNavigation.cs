@@ -41,5 +41,45 @@
                 return this.webDriver.FindElement(new JQuerySelector(".section-nav__item--home a"));
             }
         }
+
+        public IWebElement MemberZone
+        {
+            get
+            {
+                return this.webDriver.FindElement(new JQuerySelector(".top-bar--large .utility-nav__item--log-in"));
+            }
+        }
+
+        public IEnumerable<IWebElement> LogInPanelLinks
+        {
+            get
+            {
+                return this.webDriver.FindElements(new JQuerySelector(".log-in--large a"));
+            }
+        }
+
+        public IWebElement LogInButton
+        {
+            get
+            {
+                return this.webDriver.FindElement(new JQuerySelector(".log-in__links a.box-button--secondary"));
+            }
+        }
+
+        public IWebElement RegisterButton
+        {
+            get
+            {
+                return this.webDriver.FindElements(new JQuerySelector(".log-in--large a")).ElementAt(1);
+            }
+        }
+
+        public IWebElement ForgottenDetailsButton
+        {
+            get
+            {
+                return this.webDriver.FindElement(new JQuerySelector(".log-in__forgotten a"));
+            }
+        }
     }
 }
