@@ -11,21 +11,21 @@
     <link href="css/app.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div>
-        <h1>FAQ Leader</h1>
-        <h2>Description</h2>
+     <main tabindex="-1" role="main">
+        <div>
+            <h1>FAQ Leader</h1>
+            <h2>Description</h2>
 
-        <p>
-            This component groups concise answers to <abbr title="Frequently-Asked Questions">FAQs</abbr>,
-            inviting the user to read the full details on another page via a link.
-        </p>
-    </div>
+            <p>
+                This component groups concise answers to <abbr title="Frequently-Asked Questions">FAQs</abbr>,
+                inviting the user to read the full details on another page via a link.
+            </p>
+        </div>
 
-    <div>
-        <h2>Example</h2>
+        <div>
+            <h2>Example</h2>
 
-        <div class="example">
-            <div class="faq_leader">
+            <div id="example_1" class="faq_leader">
                 <div class="header">
                     <h2>Frequently asked questions</h2>
 
@@ -44,6 +44,10 @@
                             <div>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula ac libero et bibendum.
                                 Cras pharetra tincidunt tortor ac pulvinar.
+
+                                <p>
+                                    <a href="#">Read more</a>
+                                </p>
                             </div>
                         </div>
 
@@ -79,6 +83,10 @@
                             <div>
                                 Aenean nec mattis nibh. Nunc in nulla sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                 Morbi rutrum, massa in tristique posuere, ex orci luctus est, eget vehicula nunc magna interdum erat.
+
+                                <p>
+                                    <a href="#">Read more</a>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -91,18 +99,31 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <div>
-        <h2>Markup</h2>
+        <div>
+            <h2>Markup</h2>
 
-        <pre>
-        <code class="language-markup">
-            </code>
-        </pre>
-    </div>
+            <pre>
+            <code id="markup_1" class="language-markup">
+        </code>
+    </pre>
+        </div>
+    </main>
 
-    <script type="text/javascript" src="js/boilerplate.js"></script>
+    <script>
+        function htmlSpecialChars(unsafe) {
+            return unsafe
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&apos;");
+        }
+
+        document.getElementById("markup_1").innerHTML =
+            htmlSpecialChars("        " + document.getElementById("example_1").outerHTML);
+    </script>
+
     <script type="text/javascript" src="src/bower_components/prism/prism.js"></script>
 </body>
 </html>
