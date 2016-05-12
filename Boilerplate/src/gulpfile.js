@@ -12,6 +12,9 @@ var sass = require("gulp-sass");
 var sassLint = require("gulp-sass-lint");
 var uglify = require("gulp-uglify");
 
+// Include custom configuration.
+var cssnanoConfig = require('./cssnano_config.json');
+
 // Store the tasks as names, so that they can be easily
 // referenced from the individual and default tasks.
 var buildTask = "build";
@@ -65,14 +68,14 @@ gulp.task(sassBuildTask, function () {
     return gulp
         .src("sass/**/*.scss")
         .pipe(sass().on("error", sass.logError))
-        .pipe(gulp.dest("../css"));
+        .pipe(gulp.dest("sass/"));
 });
 
 // Minifies CSS.
 gulp.task(cssMinify, function () {
     return gulp
-        .src("../css/app.css")
-        .pipe(cssnano())
+        .src("sass/app.css")
+        .pipe(cssnano(cssnanoConfig))
         .pipe(gulp.dest("../css"));
 });
 
@@ -100,7 +103,7 @@ gulp.task(lintTask, [
 // A group of all build tasks.
 gulp.task(buildTask, [
     sassBuildTask,
-    //cssMinify
+    cssMinify,
     jsBuildTask
 ]);
 
