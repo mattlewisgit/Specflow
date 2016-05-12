@@ -20,7 +20,7 @@
                         using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", questionAnswer.Path))
                         {
                             <div class="grid-col-6-12">
-                                <h6 class="text-detail-block__heading">@Editable(questionAnswer, m => questionAnswer.QuestionText)</h6>
+                                <h6 class="text-detail-block__heading">@Editable(questionAnswer, m => m.QuestionText)</h6>
                                 <div>@Editable(questionAnswer, m => m.Preview)</div>
                             </div>
                         }
