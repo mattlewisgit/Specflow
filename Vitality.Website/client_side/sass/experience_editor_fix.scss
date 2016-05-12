@@ -4,7 +4,7 @@ section div.scLooseFrameZone {
 
 // Force the width on grid items whilst editing.
 .grid {
-    .grid-col-6-12 {
+    .grid-col-6-12, .scLooseFrameZone.scEnabledChrome {
         width: 100%;
     }
 }
