@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\screen-0.0.1.css" />
+    <Content Include="rewards_leader.html" />
     <Content Include="faq_leader.html" />
     <Content Include="img\facebook--footer.svg" />
     <Content Include="img\icon-mouse.svg" />
@@ -92,6 +93,12 @@
     <Content Include="src\sass\app.min.css">
       <DependentUpon>app.css</DependentUpon>
     </Content>
+    <Content Include="src\sass\rewards_leader.css">
+      <DependentUpon>rewards_leader.scss</DependentUpon>
+    </Content>
+    <Content Include="src\sass\rewards_leader.min.css">
+      <DependentUpon>rewards_leader.css</DependentUpon>
+    </Content>
     <Content Include="src\sass\_defaults.css">
       <DependentUpon>_defaults.scss</DependentUpon>
     </Content>
@@ -125,6 +132,10 @@
     <Content Include="src\gulp.targets" />
     <Content Include="src\.jscsrc" />
     <Content Include="src\.jshintrc" />
+    <Content Include="src\sass\rewards_leader.scss" />
+    <Content Include="src\sass\rewards_leader.css.map">
+      <DependentUpon>rewards_leader.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

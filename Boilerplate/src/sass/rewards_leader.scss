@@ -1,0 +1,9 @@
+@import "defaults";
+
+.rewards_leader {
+    @include text-centre;
+    background: $tertiary-colour;
+    border: $padding-normal solid $darken;
+    box-sizing: border-box;
+    padding: $padding-thick;
+}

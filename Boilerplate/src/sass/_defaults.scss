@@ -1,3 +1,10 @@
+$darken: rgba(0, 0, 0, 0.15);
+$tertiary-colour: #6e527e;
+
+$padding-thin: 10px;
+$padding-normal: $padding-thin * 2;
+$padding-thick: $padding-thin * 4;
+
 $wide-padding: 3em;
 
 @mixin text-centre() {
@@ -8,3 +15,4 @@ $wide-padding: 3em;
     padding-left: $wide-padding;
     padding-right: $wide-padding;
 }
+
