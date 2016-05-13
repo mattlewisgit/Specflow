@@ -252,3 +252,4 @@ Vitality.Website/js/**/*.js
 Boilerplate/**/*.css
 Boilerplate/**/*.map
 Boilerplate/**/*.min.*
+Boilerplate/js/*.js

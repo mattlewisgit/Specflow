@@ -1,0 +1,25 @@
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Rewards.RewardsLeader>
+
+<div class="feature-block feature-block--dark rewards_leader @this.IconsPerRow()">
+    <div class="feature-block__content">
+        <h3>@Editable(Model, item => item.Headline)</h3>
+        <p>@Editable(Model, item => item.OpeningParagraph)</p>
+
+        <div>
+            @foreach (var reward in Model.Rewards)
+            {
+                using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", reward.Path))
+                {
+                    using (BeginRenderLink(reward, item => item.Link, isEditable: true))
+                    {
+                        @Editable(reward, item => item.Image)
+                    }
+                }
+            }
+        </div>
+
+        @Editable(Model, item => item.CallToAction,
+            new { @class = "box-button box-button--light box-button--rounded" })
+    </div>
+</div>
