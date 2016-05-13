@@ -513,6 +513,9 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Renderings\Presales\Cards\Cards Stacked.item">
+        <ItemDeployment>AlwaysUpdate</ItemDeployment>
+        <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+    </SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Renderings\Presales\Feature Blocks.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
