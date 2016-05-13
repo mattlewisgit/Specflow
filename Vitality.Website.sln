@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4C6C7D
 		.nuget\packages.config = .nuget\packages.config
 	EndProjectSection
 EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Vitality.Website.Core", "Serialization\Vitality.Website.Core\Vitality.Website.Core.scproj", "{7DF208E1-19F6-46B0-B73D-BE169EA5891F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{11D0116B-F0F0-4060-A0F7-4B0D733F5223}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{11D0116B-F0F0-4060-A0F7-4B0D733F5223}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11D0116B-F0F0-4060-A0F7-4B0D733F5223}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7DF208E1-19F6-46B0-B73D-BE169EA5891F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DF208E1-19F6-46B0-B73D-BE169EA5891F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7DF208E1-19F6-46B0-B73D-BE169EA5891F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DF208E1-19F6-46B0-B73D-BE169EA5891F}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,5 +58,6 @@ Global
 		{72A74C1C-2B22-43E9-BB37-F3AB8D4731C5} = {5EC4A583-F002-4FE9-BC9A-7B01EC9329F7}
 		{300EABB6-2BB8-4BDB-BA8E-0C64599D6153} = {9975603A-4885-49BE-A349-C5F149F51F6A}
 		{11D0116B-F0F0-4060-A0F7-4B0D733F5223} = {7DBC029E-4BFE-47D4-ADED-4124A0876869}
+		{7DF208E1-19F6-46B0-B73D-BE169EA5891F} = {7DBC029E-4BFE-47D4-ADED-4124A0876869}
 	EndGlobalSection
 EndGlobal
