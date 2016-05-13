@@ -1,0 +1,140 @@
+----item----
+version: 1
+id: {FA081EEC-1FF6-4FDC-865E-1D05D94F283F}
+database: master
+path: /sitecore/media library/Presales/Media Icons/heart-icon
+parent: {D2C81505-C4E1-4C87-8513-102C274705BB}
+name: heart-icon
+master: {00000000-0000-0000-0000-000000000000}
+template: {F1828A2C-7E5D-4BBD-98CA-320474871548}
+templatekey: Image
+
+----field----
+field: {40E50ED9-BA07-4702-992E-A912738D32DC}
+name: Blob
+key: blob
+content-length: 2594
+
+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
+CAAAAABJRU5ErkJggg==
+----field----
+field: {22EAC599-F13B-4607-A89D-C091763A467D}
+name: Width
+key: width
+content-length: 3
+
+120
+----field----
+field: {DE2CA9E4-C117-4C8A-A139-1FF4B199D15A}
+name: Height
+key: height
+content-length: 3
+
+120
+----field----
+field: {C06867FE-9A43-4C7D-B739-48780492D06F}
+name: Extension
+key: extension
+content-length: 3
+
+png
+----field----
+field: {6F47A0A5-9C94-4B48-ABEB-42D38DEF6054}
+name: Mime Type
+key: mime type
+content-length: 9
+
+image/png
+----field----
+field: {6954B7C7-2487-423F-8600-436CB3B6DC0E}
+name: Size
+key: size
+content-length: 4
+
+1894
+----field----
+field: {CB09946F-3218-4823-87D2-D5007C199A96}
+name: Dimensions
+key: dimensions
+content-length: 9
+
+120 x 120
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 61
+
+-/media/FA081EEC1FF64FDC865E1D05D94F283F.ashx?h=16&thn=1&w=16
+----version----
+language: en
+version: 1
+revision: 2aa9b514-157c-456f-8633-e760b7502c4d
+
+----field----
+field: {65885C44-8FCD-4A7F-94F1-EE63703FE193}
+name: Alt
+key: alt
+content-length: 10
+
+Heart Icon
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160509T144324Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+2aa9b514-157c-456f-8633-e760b7502c4d
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160509T144354Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
