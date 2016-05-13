@@ -39,7 +39,10 @@ namespace Vitality.Website.SC.Events
             {
                 if (item.TemplateID == this.fieldTemplateId && item.Fields["Title"] != null)
                 {
-                    item.Fields["Title"].SetValue(StringHelper.SplitCamelCase(item.Name), false);
+                    using (new EditContext(item))
+                    {
+                        item.Fields["Title"].SetValue(StringHelper.SplitCamelCase(item.Name), false);
+                    }
                 }
             }
         }
