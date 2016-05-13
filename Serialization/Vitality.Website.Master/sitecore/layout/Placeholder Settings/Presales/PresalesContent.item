@@ -20,13 +20,13 @@ PresalesContent
 field: {E391B526-D0C5-439D-803E-17512EAE6222}
 name: Allowed Controls
 key: allowed controls
-content-length: 77
+content-length: 116
 
-{493B3A83-0FA7-4484-8FC9-4680991CF743}|{9CE5E97F-991C-4576-A167-B2E587CA01E9}
+{9CE5E97F-991C-4576-A167-B2E587CA01E9}|{2CFABA9B-4639-4B90-95FA-8586FF3505EE}|{8829319E-7570-4398-8C4E-C362B276D003}
 ----version----
 language: en
 version: 1
-revision: c1b8020c-4198-49cb-b294-8c612929eb94
+revision: 80fddb47-7581-4466-aa2f-93009d918a77
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -41,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c1b8020c-4198-49cb-b294-8c612929eb94
+80fddb47-7581-4466-aa2f-93009d918a77
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160506T135642Z
+20160513T100113Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
