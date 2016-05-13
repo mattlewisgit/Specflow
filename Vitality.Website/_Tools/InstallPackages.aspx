@@ -9,8 +9,10 @@
 <%@ Import Namespace="Sitecore.Update.Installer.Installer.Utils" %>
 <%@ Import Namespace="Sitecore.Update.Installer.Utils" %>
 <%@ Import Namespace="Sitecore.Update.Utils" %>
+<%@ Import Namespace="Sitecore.IO" %>
 
-<%@  Language="C#" %>
+<%@ Page Language="C#" AutoEventWireup="true" %>
+
 <html>
 <script runat="server" language="C#">
     public void Page_Load(object sender, EventArgs e)
@@ -81,24 +83,6 @@
     <form id="MyForm" runat="server">
         <div>This page installs packages from \sitecore\admin\Packages folder.</div>
         Current server time is <% =GetTime()%>
-    </form>
-</body>
-</html>
-
-<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="InstallPackages.aspx.cs" Inherits="Vitality.Website._Tools.InstallPackages" %>
-
-<%@ Import Namespace="Sitecore.IO" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
     </form>
 </body>
 </html>

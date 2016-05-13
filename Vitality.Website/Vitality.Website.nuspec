@@ -11,7 +11,7 @@
     <releaseNotes></releaseNotes>
   </metadata>
   <files>
-	  <file src="_Tools\PackageInstaller.asmx" target="_Tools" />
+	  <file src="_Tools\*.*" target="_Tools" />
 	  <file src="App_Config\ConnectionStrings.config" target="App_Config" />
 	  <file src="App_Config\**\*.*" target="App_Config" />
 	  <file src="Areas\Presales\Views\**\*.*" target="Areas\Presales\Views" />
