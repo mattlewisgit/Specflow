@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Rewards Leader</title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600">
+    
+    <link rel="stylesheet" type="text/css" href="src/bower_components/prism/themes/prism.css" />
+
+    <link rel="stylesheet" type="text/css" href="/css/screen-0.0.1.css" />
+    <link rel="stylesheet" type="text/css" href="/css/app.css" />
+</head>
+<body>
+    <div class="page">
+        <main tabindex="-1" role="main">
+            <div>
+                <h1>Rewards Leader</h1>
+                <h2>Description</h2>
+
+                <p>
+                    This component showcases a few prominent rewards partners and invites the user to learn more about them.
+                </p>
+            </div>
+
+            <div>
+                <h2>Example</h2>
+
+                <div id="example">
+                    <div class="feature-block feature-block--dark rewards_leader">
+                        <div class="feature-block__content">
+                            <h3>Our Rewards Partners</h3>
+
+                            <p>
+                                Some of the great partners our members enjoy rewards from:
+                            </p>
+
+                            <div>
+                                <p>
+                                    <img src="img/facebook--footer.svg" alt="Facebook" height="50px" />
+                                    <img src="img/instagram--footer.svg" alt="Facebook" height="50px" />
+                                    <img src="img/search.svg" alt="Facebook" height="50px" />
+                                    <img src="img/twitter--footer.svg" alt="Facebook" height="50px" />
+                                    <img src="img/vitality-logo--white.svg" alt="Facebook" height="50px" />
+                                </p>
+
+                                <p>
+                                    <img src="img/youtube--footer.svg" alt="Facebook" height="50px" />
+                                    <img src="img/facebook--footer.svg" alt="Facebook" height="50px" />
+                                    <img src="img/instagram--footer.svg" alt="Facebook" height="50px" />
+                                    <img src="img/twitter--footer.svg" alt="Facebook" height="50px" />
+                                </p>
+                            </div>  
+
+                            <a href="#" class="box-button box-button--light box-button--rounded">
+                                Learn about rewards
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2>Markup</h2>
+
+                <pre>
+                    <code id="markup" class="language-markup"></code>
+                </pre>
+            </div>
+
+            <script>
+                function htmlSpecialChars(unsafe) {
+                    return unsafe
+                        .replace(/&/g, "&amp;")
+                        .replace(/</g, "&lt;")
+                        .replace(/>/g, "&gt;")
+                        .replace(/"/g, "&quot;")
+                        .replace(/'/g, "&apos;");
+                }
+
+                document.getElementById("markup").innerHTML =
+                    htmlSpecialChars("        " + document.getElementById("example").outerHTML);
+            </script>
+        </main>
+    </div>
+
+    <script type="text/javascript" src="src/bower_components/prism/prism.js"></script>
+</body>
+</html>

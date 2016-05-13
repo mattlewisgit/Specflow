@@ -1,40 +1,26 @@
 ----item----
 version: 1
-id: {6A32E0A0-A104-4201-BDAB-2E52BA7D384A}
+id: {2E30AC56-89F0-4451-AED6-7FF3037F5654}
 database: master
-path: /sitecore/content/Presales/Home/illness-protection
-parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
-name: illness-protection
+path: /sitecore/templates/Presales/Component Templates/Rewards/Rewards Leader/Content
+parent: {5CDF9BF1-35E1-4E28-8718-21F6506D7AE5}
+name: Content
 master: {00000000-0000-0000-0000-000000000000}
-template: {F208B3A5-D159-4F81-989C-4ACA52089997}
-templatekey: Base Page
+template: {E269FBB5-3750-427A-9149-7AA950B49301}
+templatekey: Template section
 
 ----version----
 language: en
 version: 1
-revision: c249c9f9-23f5-4f67-9f18-75242eb10c53
+revision: 750ec3be-74ae-4744-bc4e-1e574802a164
 
-----field----
-field: {53299977-3D8B-45D3-A326-E1FB124EE244}
-name: BrowserTitle
-key: browsertitle
-content-length: 18
-
-Illness Protection
-----field----
-field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
-name: __Display name
-key: __display name
-content-length: 18
-
-Illness Protection
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160505T124304Z
+20160509T102647Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,14 +34,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c249c9f9-23f5-4f67-9f18-75242eb10c53
+750ec3be-74ae-4744-bc4e-1e574802a164
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160509T100859Z
+20160509T104330Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
