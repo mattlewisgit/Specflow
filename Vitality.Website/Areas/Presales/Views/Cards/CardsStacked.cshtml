@@ -1,0 +1,44 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Cards.CardsStacked>
+
+@using (BeginEditFrame(Model, "Edit Background Image", item => item.BackgroundImage))
+{
+<section class="background-position-top-right" style="background-size: cover; background-image: url('@Model.BackgroundImage.Src');">
+    <div class="spotlight pinch text-light">
+        <h4 class="spotlight__heading">
+            @Editable(Model, item => item.Headline)
+        </h4>
+
+        <p class="spotlight__intro">
+            @Editable(Model, item => item.OpeningParagraph)
+        </p>
+
+        <ul class="spotlight__list">
+            @foreach (var card in Model.Cards)
+            {
+                using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", card.Path))
+                {
+                    <li class="spotlight__list-item js-animate-on-scroll js-column-animation-delay fadeInUp">
+                        <div class="spotlight-item">
+                            <div class="spotlight-item__top-content">
+                                <p class="spotlight-item__heading">
+                                    @Editable(card, item => item.Title)
+                                </p>
+                                <div class="spotlight-item__icon">
+                                    @Editable(card, item => item.Icon)
+                                </div>
+                                <div class="spotlight-item__content">
+                                    <p>@Editable(card, item => item.Text)</p>
+                                </div>
+                            </div>
+
+                            <div class="spotlight-item__cta">
+                                @Editable(card, item => item.CallToAction, new {@class = "emphasis-link"})
+                            </div>
+                        </div>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</section>
+}
