@@ -1,0 +1,133 @@
+----item----
+version: 1
+id: {25CF68C3-0083-4535-857C-00E5B9497D7F}
+database: master
+path: /sitecore/media library/Presales/Media Icons/clipboard-icon
+parent: {D2C81505-C4E1-4C87-8513-102C274705BB}
+name: clipboard-icon
+master: {00000000-0000-0000-0000-000000000000}
+template: {F1828A2C-7E5D-4BBD-98CA-320474871548}
+templatekey: Image
+
+----field----
+field: {40E50ED9-BA07-4702-992E-A912738D32DC}
+name: Blob
+key: blob
+content-length: 2040
+
+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
+AElFTkSuQmCC
+----field----
+field: {22EAC599-F13B-4607-A89D-C091763A467D}
+name: Width
+key: width
+content-length: 3
+
+120
+----field----
+field: {DE2CA9E4-C117-4C8A-A139-1FF4B199D15A}
+name: Height
+key: height
+content-length: 3
+
+120
+----field----
+field: {C06867FE-9A43-4C7D-B739-48780492D06F}
+name: Extension
+key: extension
+content-length: 3
+
+png
+----field----
+field: {6F47A0A5-9C94-4B48-ABEB-42D38DEF6054}
+name: Mime Type
+key: mime type
+content-length: 9
+
+image/png
+----field----
+field: {6954B7C7-2487-423F-8600-436CB3B6DC0E}
+name: Size
+key: size
+content-length: 4
+
+1491
+----field----
+field: {CB09946F-3218-4823-87D2-D5007C199A96}
+name: Dimensions
+key: dimensions
+content-length: 9
+
+120 x 120
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 61
+
+-/media/25CF68C300834535857C00E5B9497D7F.ashx?h=16&thn=1&w=16
+----version----
+language: en
+version: 1
+revision: b553f06f-b9df-4766-9fca-cd566bcfd648
+
+----field----
+field: {65885C44-8FCD-4A7F-94F1-EE63703FE193}
+name: Alt
+key: alt
+content-length: 14
+
+Clipboard Icon
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160509T144324Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+b553f06f-b9df-4766-9fca-cd566bcfd648
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160509T144359Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

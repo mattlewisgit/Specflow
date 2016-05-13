@@ -3,6 +3,7 @@
     <sites>
       <site name="presales">
         <patch:attribute name="hostName" value="#{Vitality.Website.HostName}" />
+        <patch:attribute name="cacheHtml" value="true" />
       </site>
     </sites>
   </sitecore>
