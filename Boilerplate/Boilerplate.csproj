@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cards_stacked.html" />
-    <Content Include="css\screen-0.0.1.css" />
     <Content Include="faq_leader.html" />
     <Content Include="img\clipboard-icon.png" />
     <Content Include="img\heart-icon.png" />
@@ -148,6 +147,7 @@
     <Content Include="src\sass\rewards_leader.css.map">
       <DependentUpon>rewards_leader.css</DependentUpon>
     </Content>
+    <Content Include="src\cssnano_config.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -170,7 +170,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>53646</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
