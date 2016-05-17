@@ -24,8 +24,8 @@
 
         <h2>Example</h2>
 
-        <div id="example_1">
-            <section class="background-position-top-right" style="background-size:cover; background-image: url('/img/image-example-8.jpg');">
+        <div class="example">
+            <section class="cards-stacked background-position-top-right" style="background-size:cover; background-image: url('/img/image-example-8.jpg');">
                 <div class="spotlight pinch text-light">
                     <h4 class="spotlight__heading">Why choose vitality?</h4>
 
@@ -34,7 +34,7 @@
                     </p>
 
                     <ul class="spotlight__list">
-                        <li class="spotlight__list-item js-animate-on-scroll js-column-animation-delay fadeInUp">
+                        <li class="spotlight__list-item">
                             <div class="spotlight-item">
                                 <div class="spotlight-item__top-content">
                                     <p class="spotlight-item__heading">
@@ -58,7 +58,7 @@
                             </div>
                         </li>
 
-                        <li class="spotlight__list-item js-animate-on-scroll js-column-animation-delay fadeInUp">
+                        <li class="spotlight__list-item">
                             <div class="spotlight-item">
                                 <div class="spotlight-item__top-content">
                                     <p class="spotlight-item__heading">
@@ -82,7 +82,7 @@
                             </div>
                         </li>
 
-                        <li class="spotlight__list-item js-animate-on-scroll js-column-animation-delay fadeInUp">
+                        <li class="spotlight__list-item">
                             <div class="spotlight-item">
                                 <div class="spotlight-item__top-content">
                                     <p class="spotlight-item__heading">
@@ -106,7 +106,7 @@
                             </div>
                         </li>
 
-                        <li class="spotlight__list-item js-animate-on-scroll js-column-animation-delay fadeInUp">
+                        <li class="spotlight__list-item">
                             <div class="spotlight-item">
                                 <div class="spotlight-item__top-content">
                                     <p class="spotlight-item__heading">
@@ -138,25 +138,11 @@
             <h2>Markup</h2>
 
             <pre>
-            <code id="markup_1" class="language-markup">
-            </code>
-        </pre>
+                <code class="language-markup"></code>
+            </pre>
         </div>
 
-        <script>
-            function htmlSpecialChars(unsafe) {
-                return unsafe
-                    .replace(/&/g, "&amp;")
-                    .replace(/</g, "&lt;")
-                    .replace(/>/g, "&gt;")
-                    .replace(/"/g, "&quot;")
-                    .replace(/'/g, "&apos;");
-            }
-
-            document.getElementById("markup_1").innerHTML =
-                htmlSpecialChars("        " + document.getElementById("example_1").innerHTML);
-        </script>
-
+        <script type="text/javascript" src="js/boilerplate.js"></script>
         <script type="text/javascript" src="src/bower_components/prism/prism.js"></script>
     </main>
 </body>
