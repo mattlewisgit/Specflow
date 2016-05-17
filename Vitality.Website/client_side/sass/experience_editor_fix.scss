@@ -8,3 +8,8 @@ section div.scLooseFrameZone {
         width: 100%;
     }
 }
+
+// Keep cards inline.
+.spotlight__list div.scLooseFrameZone.scEnabledChrome {
+    display: inline;
+}
