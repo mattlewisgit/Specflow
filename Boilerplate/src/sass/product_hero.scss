@@ -1,0 +1,17 @@
+@import "defaults";
+
+.product-hero {
+    display: flex;
+
+    h1 {
+        margin-top: 0;
+    }
+
+    .button-cta {
+        color: $grey;
+    }
+
+    .lead-in {
+        height: 70px;
+    }
+}

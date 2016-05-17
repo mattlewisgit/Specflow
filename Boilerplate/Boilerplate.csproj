@@ -41,6 +41,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="product_hero.html" />
     <Content Include="cards_stacked.html" />
     <Content Include="faq_leader.html" />
     <Content Include="img\clipboard-icon.png" />
@@ -103,6 +104,12 @@
     <Content Include="src\sass\app.min.css">
       <DependentUpon>app.css</DependentUpon>
     </Content>
+    <Content Include="src\sass\product_hero.css">
+      <DependentUpon>product_hero.scss</DependentUpon>
+    </Content>
+    <Content Include="src\sass\product_hero.min.css">
+      <DependentUpon>product_hero.css</DependentUpon>
+    </Content>
     <Content Include="src\sass\rewards_leader.css">
       <DependentUpon>rewards_leader.scss</DependentUpon>
     </Content>
@@ -147,6 +154,11 @@
       <DependentUpon>rewards_leader.css</DependentUpon>
     </Content>
     <Content Include="src\cssnano_config.json" />
+    <Content Include="src\sass\product_hero.scss" />
+    <Content Include="src\sass\_screen_overrides.scss" />
+    <Content Include="src\sass\product_hero.css.map">
+      <DependentUpon>product_hero.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

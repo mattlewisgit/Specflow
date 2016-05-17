@@ -26,6 +26,7 @@ var jsStyle = "js_style";
 var lintTask = "lint";
 var sassBuildTask = "sass_build";
 var sassLintTask = "sass_lint";
+var watchTask = "watch";
 
 // Lints all local JavaScript files, including this!
 gulp.task(jsStaticAnalysis, function () {
@@ -65,9 +66,11 @@ gulp.task(cleanTask, function () {
     ]);
 });
 
+var sassFiles = "sass/**/*.scss";
+
 gulp.task(sassBuildTask, function () {
     return gulp
-        .src("sass/**/*.scss")
+        .src(sassFiles)
         .pipe(sass().on("error", sass.logError))
         .pipe(gulp.dest("sass/"));
 });
@@ -114,3 +117,11 @@ gulp.task("default", [
     lintTask,
     buildTask
 ]);
+
+// Default watch task that continuously compiles pre-processor code.
+gulp.task(watchTask, function () {
+    gulp.watch(sassFiles, [
+        cleanTask,
+        buildTask
+    ]);
+});
