@@ -103,6 +103,12 @@
     <Content Include="src\sass\app.min.css">
       <DependentUpon>app.css</DependentUpon>
     </Content>
+    <Content Include="src\sass\cards_stacked.css">
+      <DependentUpon>cards_stacked.scss</DependentUpon>
+    </Content>
+    <Content Include="src\sass\cards_stacked.min.css">
+      <DependentUpon>cards_stacked.css</DependentUpon>
+    </Content>
     <Content Include="src\sass\rewards_leader.css">
       <DependentUpon>rewards_leader.scss</DependentUpon>
     </Content>
@@ -147,6 +153,10 @@
       <DependentUpon>rewards_leader.css</DependentUpon>
     </Content>
     <Content Include="src\cssnano_config.json" />
+    <Content Include="src\sass\cards_stacked.scss" />
+    <Content Include="src\sass\cards_stacked.css.map">
+      <DependentUpon>cards_stacked.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
