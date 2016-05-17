@@ -7,7 +7,17 @@
     box-sizing: border-box;
     padding: $padding-thick;
 
-    img:not(:last-child) {
-        margin-right: $padding-thick;
+    .feature-block__image-list {
+        a {
+            color: transparent;
+        }
+
+        p {
+            > img, > a {
+                &:not(:last-child) {
+                    margin-right: $padding-thick;
+                }
+            }
+        }
     }
 }

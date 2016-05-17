@@ -6,7 +6,7 @@
         <h3>@Editable(Model, item => item.Headline)</h3>
         <p>@Editable(Model, item => item.OpeningParagraph)</p>
 
-        <div>
+        <div class="feature-block__image-list">
             @foreach (var reward in Model.Rewards)
             {
                 using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", reward.Path))
