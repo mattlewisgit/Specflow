@@ -417,7 +417,7 @@
     <Content Include="App_Config\Include\Glass.Mapper.Sc.Start.config" />
     <Content Include="App_Config\Include\Glass.Mapper.Sc.config" />
     <Content Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />
-    <None Include="App_Config\Include\Vitality\Vitality.Sites.Release.config">
+    <None Include="App_Config\Include\Vitality\Vitality.Sites.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
     <Content Include="Vitality.Website.nuspec">
