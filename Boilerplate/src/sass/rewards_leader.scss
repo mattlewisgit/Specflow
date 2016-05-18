@@ -12,7 +12,7 @@
             color: transparent;
         }
 
-        p {
+        div {
             > img, > a {
                 &:not(:last-child) {
                     margin-right: $padding-thick;
