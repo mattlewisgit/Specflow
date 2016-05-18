@@ -11,7 +11,12 @@
 
     .feature-block__image {
         background: $primary-colour;
-        background-repeat: no-repeat;
+    }
+
+    @media only screen and (min-width: $breakpoint-large) {
+        .feature-block__image img {
+            @include scale-and-centre(100%);
+        }
     }
 
     .lead-in {

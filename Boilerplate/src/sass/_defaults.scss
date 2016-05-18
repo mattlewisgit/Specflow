@@ -1,4 +1,5 @@
-$small-and-up: 33.6875em;
+$breakpoint-small: 33.6875em;
+$breakpoint-large: 56.25em;
 
 $darken: rgba(0, 0, 0, 0.15);
 
@@ -24,4 +25,14 @@ $wide-padding: 3em;
 @mixin wide-padding() {
     padding-left: $wide-padding;
     padding-right: $wide-padding;
+}
+
+@mixin scale-and-centre($scale) {
+    $scale-centre: $scale / 2;
+    left: $scale-centre;
+    max-height: $scale;
+    max-width: $scale;
+    position: absolute;
+    top: $scale-centre;
+    transform: translateX(-$scale-centre) translateY(-$scale-centre);
 }

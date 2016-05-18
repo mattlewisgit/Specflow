@@ -6,7 +6,7 @@
     background: $primary-colour;
 }
 
-@media only screen and (max-width: $small-and-up) {
+@media only screen and (max-width: $breakpoint-small) {
     .cards-stacked {
         // Must force an override here,
         // as the background imageis set on the element.
