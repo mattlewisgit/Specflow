@@ -110,6 +110,12 @@
     <Content Include="src\sass\product_hero.min.css">
       <DependentUpon>product_hero.css</DependentUpon>
     </Content>
+    <Content Include="src\sass\cards_stacked.css">
+      <DependentUpon>cards_stacked.scss</DependentUpon>
+    </Content>
+    <Content Include="src\sass\cards_stacked.min.css">
+      <DependentUpon>cards_stacked.css</DependentUpon>
+    </Content>
     <Content Include="src\sass\rewards_leader.css">
       <DependentUpon>rewards_leader.scss</DependentUpon>
     </Content>
@@ -158,6 +164,10 @@
     <Content Include="src\sass\_screen_overrides.scss" />
     <Content Include="src\sass\product_hero.css.map">
       <DependentUpon>product_hero.css</DependentUpon>
+    </Content>
+    <Content Include="src\sass\cards_stacked.scss" />
+    <Content Include="src\sass\cards_stacked.css.map">
+      <DependentUpon>cards_stacked.css</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

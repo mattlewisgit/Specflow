@@ -1,7 +1,15 @@
+$small-and-up: 33.6875em;
+
 $darken: rgba(0, 0, 0, 0.15);
-$tertiary-colour: #6e527e;
+
+$black: #000;
 $grey: #666;
 $white: #fff;
+
+$primary-colour: #f41c5e;
+$tertiary-colour: #6e527e;
+
+$primary-background-colour: #eaeff4;
 
 $padding-thin: 10px;
 $padding-normal: $padding-thin * 2;
@@ -17,4 +25,3 @@ $wide-padding: 3em;
     padding-left: $wide-padding;
     padding-right: $wide-padding;
 }
-
