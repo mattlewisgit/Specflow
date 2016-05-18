@@ -1,5 +1,11 @@
 @import "defaults";
 
+// Set a default background colour, which enables the component
+// to be used without a background, particularly useful when editing.
+.cards-stacked {
+    background: $primary-colour;
+}
+
 @media only screen and (max-width: $small-and-up) {
     .cards-stacked {
         // Must force an override here,
