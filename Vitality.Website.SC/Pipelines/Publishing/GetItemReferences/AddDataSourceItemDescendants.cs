@@ -22,11 +22,12 @@ namespace Vitality.Website.SC.Pipelines.Publishing.GetItemReferences
             var itemsToPublish = new List<Item>();
             foreach (var item in referredItem)
             {
-                if (item.Paths.FullPath.StartsWith(ItemConstants.Presales.Content.ContentFolder.Path) && !pathsToIgnore.Any(path => item.Paths.FullPath.StartsWith(path)))
+                if (ItemIsDataSource(item))
                 {
                     foreach (Item child in item.Children)
                     {
-                        if (!referredItem.Contains(child) && !itemsToPublish.Contains(child))
+                        if (!referredItem.Contains(child) && 
+                            !itemsToPublish.Contains(child))
                         {
                             itemsToPublish.Add(child);
                         }
@@ -36,6 +37,12 @@ namespace Vitality.Website.SC.Pipelines.Publishing.GetItemReferences
             }
 
             return itemsToPublish;
+        }
+
+        private bool ItemIsDataSource(Item item)
+        {
+            return item.Paths.FullPath.StartsWith(ItemConstants.Presales.Content.ContentFolder.Path) &&
+                   !pathsToIgnore.Any(path => item.Paths.FullPath.StartsWith(path));
         }
     }
 }
