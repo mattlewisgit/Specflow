@@ -3,7 +3,7 @@
 
 @using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
 {
-<div class="feature-block-gradient @this.BackgroundColour() @this.BackgroundImageLeft()">
+<div class="feature-block-gradient feature-block-gradient--@this.BackgroundColour() @this.BackgroundImageLeft()">
     <div class="feature-block-gradient__image @this.BackgroundPosition()"
          style="background-image: url(@(Model.BackgroundImage.Src);"></div>
 

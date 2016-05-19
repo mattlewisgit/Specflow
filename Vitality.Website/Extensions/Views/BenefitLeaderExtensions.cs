@@ -13,7 +13,7 @@
             {
                 return view.GetRenderingParameters<BenefitLeaderRendering>().BackgroundColour.Value;
             }
-            return "feature-block-gradient--light";
+            return "light";
         }
 
         public static string BackgroundImageLeft(this GlassView<BenefitLeader> view)
