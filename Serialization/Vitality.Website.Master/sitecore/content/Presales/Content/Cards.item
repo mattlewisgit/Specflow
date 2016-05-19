@@ -23,10 +23,17 @@ key: __masters
 content-length: 38
 
 {89D4A4DE-9F77-4427-86CB-CF824F5EEF02}
+----field----
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 118
+
+ar|sitecore\Presales User|pe|+item:read|+item:create|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
 ----version----
 language: en
 version: 1
-revision: 87896234-8af4-43d6-97ea-dca489e736b2
+revision: d748bbd8-057f-4c14-8db5-e62f2ba38482
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -48,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-87896234-8af4-43d6-97ea-dca489e736b2
+d748bbd8-057f-4c14-8db5-e62f2ba38482
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160509T134633Z
+20160518T104748Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

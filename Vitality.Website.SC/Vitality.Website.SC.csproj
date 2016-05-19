@@ -82,6 +82,7 @@
   <ItemGroup>
     <Compile Include="Events\ItemEventsHandler.cs" />
     <Compile Include="ItemConstants.cs" />
+    <Compile Include="Pipelines\Publishing\GetItemReferences\AddDataSourceItemDescendants.cs" />
     <Compile Include="Pipelines\Response\RenderRendering\VaryByAncestor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\StringHelper.cs" />
