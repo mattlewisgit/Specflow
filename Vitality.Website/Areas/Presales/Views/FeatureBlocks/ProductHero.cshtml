@@ -1,22 +1,24 @@
-﻿<div class="product-hero feature-block feature-block--primary">
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using Vitality.Website.Areas.Presales.Models.FeatureBlocks
+@inherits GlassView<ProductHero>
+
+<div class="product-hero feature-block feature-block--primary">
     <div class="feature-block__image">
-        <img src="/img/search-background.png" alt="Stanley">
+        @Editable(Model, item => item.VitalityLogo)
     </div>
 
     <div class="feature-block__content-container">
         <div class="feature-block__content">
-            <img class="lead-in" src="img/vitality-logo--white.svg" alt="Vitality logo">
+            @Editable(Model, item => item.VitalityLogo)
 
-            <h1>Private Health Insurance with Rewards</h1>
+            @if (IsInEditingMode || !string.IsNullOrWhiteSpace(Model.Headline))
+            {
+                <h1>@Editable(Model, item => item.Headline)</h1>
+            }
 
-            <p>
-                We're making it cheaper and easier to
-                live healthier by rewarding members for getting active.
-            </p>
+            <p>@Editable(Model, item => item.Body)</p>
 
-            <a href="#" class="button-cta">
-                The benefits of Vitality Health
-            </a>
+            @Editable(Model, item => item.CallToAction)
         </div>
     </div>
 </div>

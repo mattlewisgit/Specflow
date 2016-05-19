@@ -196,6 +196,7 @@
     <Compile Include="Areas\Presales\Models\Cards\CardsStacked.cs" />
     <Compile Include="Areas\Presales\Models\FAQ\FeaturedQuestions.cs" />
     <Compile Include="Areas\Presales\Models\FAQ\QuestionAnswer.cs" />
+    <Compile Include="Areas\Presales\Models\FeatureBlocks\ProductHero.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
@@ -442,6 +443,9 @@
     <Content Include="Areas\Presales\Views\Rewards\RewardsLeader.cshtml" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\BenefitLeader.cshtml" />
     <Content Include="Areas\Presales\Views\FAQ\FAQPreview.cshtml" />
+    <Content Include="Areas\Presales\Views\FeatureBlocks\ProductHero.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
