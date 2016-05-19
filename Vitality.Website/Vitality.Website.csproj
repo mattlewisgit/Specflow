@@ -202,12 +202,14 @@
     <Compile Include="Areas\Presales\Models\Rewards\RewardsLeader.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
     <Compile Include="Areas\Presales\RenderingModels\RewardsLeaderRendering.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\Views\RewardsLeaderExtensions.cs" />
     <Compile Include="Areas\Presales\Models\FeatureBlocks\BenefitLeader.cs" />
     <Compile Include="Areas\Presales\RenderingModels\BenefitLeaderRendering.cs" />
     <Compile Include="Extensions\Views\BenefitLeaderExtensions.cs" />
-    <Compile Include="Extensions\Views\FaqPreviewExtensions.cs" />
     <Compile Include="Extensions\Views\NavigationSubSectionExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

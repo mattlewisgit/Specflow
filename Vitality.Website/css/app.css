@@ -1,1 +1,58 @@
-.faq_leader .header,.faq_leader .more{text-align:center}.faq_leader .more a{padding-left:3em;padding-right:3em}.rewards_leader{text-align:center;background:#6e527e;border:20px solid rgba(0,0,0,.15);box-sizing:border-box;padding:40px}.rewards_leader .feature-block__image-list a{color:transparent}.rewards_leader .feature-block__image-list p>a:not(:last-child),.rewards_leader .feature-block__image-list p>img:not(:last-child){margin-right:40px}
+.cards-stacked {
+    background: #f41c5e;
+}
+
+@media only screen and (max-width:33.6875em) {
+    .cards-stacked {
+        background: #eaeff4 !important;
+        color: #000;
+    }
+
+        .cards-stacked .spotlight__heading, .cards-stacked .spotlight__intro {
+            color: #000;
+        }
+}
+
+.faq_leader .header, .faq_leader .more {
+    text-align: center;
+}
+
+    .faq_leader .more a {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+.rewards_leader {
+    text-align: center;
+    border: 20px solid rgba(0,0,0,.15);
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+    .rewards_leader .feature-block__content {
+        max-width: 100%;
+    }
+
+    .rewards_leader .feature-block__image-list a {
+        color: transparent;
+    }
+
+    .rewards_leader .feature-block__image-list div > a:not(:last-child), .rewards_leader .feature-block__image-list div > img:not(:last-child) {
+        margin-right: 40px;
+    }
+
+.feature-block--primary {
+    background: #f41c5e;
+}
+
+.feature-block--secondary {
+    background: #5bb6b1;
+}
+
+.feature-block--tertiary {
+    background: #6e527e;
+}
+
+.feature-block--dark {
+    background: #4f738a;
+}

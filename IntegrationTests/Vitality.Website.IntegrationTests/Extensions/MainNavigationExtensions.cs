@@ -3,6 +3,7 @@
     using System;
     using System.Linq;
 
+    using Vitality.Website.Extensions;
     using Vitality.Website.IntegrationTests.PageComponents.Navigation;
 
     public static class MainNavigationExtensions

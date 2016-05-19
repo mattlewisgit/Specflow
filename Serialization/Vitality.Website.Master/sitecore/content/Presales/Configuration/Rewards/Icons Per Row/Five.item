@@ -12,15 +12,15 @@ templatekey: Key Value Pair
 ----version----
 language: en
 version: 1
-revision: 376a8a41-849c-45d9-8ffa-c3bed07e2850
+revision: 4cbc90c1-767a-4738-a21e-6254367fd686
 
 ----field----
 field: {C01F61CF-8603-4C48-A96A-EFDDDFEB52ED}
 name: Value
 key: value
-content-length: 20
+content-length: 1
 
-rewards-leader--five
+5
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -48,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-376a8a41-849c-45d9-8ffa-c3bed07e2850
+4cbc90c1-767a-4738-a21e-6254367fd686
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160509T121639Z
+20160518T151823Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
