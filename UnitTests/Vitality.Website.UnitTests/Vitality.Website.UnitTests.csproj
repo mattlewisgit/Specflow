@@ -147,8 +147,8 @@
   <ItemGroup>
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
+    <Compile Include="Extensions\EnumerableExtensionsTests.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions_GetActiveNavigationSection.cs" />
-    <Compile Include="Extensions\Views\RewardsLeaderExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

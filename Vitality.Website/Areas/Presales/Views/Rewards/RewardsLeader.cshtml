@@ -1,4 +1,5 @@
-﻿@using Vitality.Website.Extensions.Views
+﻿@using Vitality.Website.Extensions
+@using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Rewards.RewardsLeader>
 
 <div class="feature-block feature-block--dark rewards_leader">
@@ -7,7 +8,7 @@
         <p>@Editable(Model, item => item.OpeningParagraph)</p>
 
         <div class="feature-block__image-list">
-            @foreach (var rows in this.GroupedRewardsIconRows(this.IconsPerRow()))
+            @foreach (var rows in Model.Rewards.GroupIntoRows(this.IconsPerRow()))
             {
                 <div>
                 @foreach (var rewardsIcon in rows)
