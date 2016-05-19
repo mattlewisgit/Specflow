@@ -2,7 +2,6 @@
 
 .rewards_leader {
     @include text-centre;
-    background: $tertiary-colour;
     border: $padding-normal solid $darken;
     box-sizing: border-box;
     padding: $padding-thick;
@@ -24,4 +23,20 @@
             }
         }
     }
+}
+    
+.feature-block--primary {
+    background: $primary-colour;
+}
+
+.feature-block--secondary {
+    background: $secondary-colour;
+}
+
+.feature-block--tertiary {
+    background: $tertiary-colour;
+}
+
+.feature-block--dark {
+    background: $dark-colour;
 }
