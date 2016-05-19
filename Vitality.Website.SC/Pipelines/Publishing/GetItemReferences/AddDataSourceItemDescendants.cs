@@ -22,7 +22,7 @@ namespace Vitality.Website.SC.Pipelines.Publishing.GetItemReferences
             var itemsToPublish = new List<Item>();
             foreach (var item in referredItem)
             {
-                if (item.Paths.FullPath.StartsWith("/sitecore/content/Presales/Content") && !pathsToIgnore.Any(path => item.Paths.FullPath.StartsWith(path)))
+                if (item.Paths.FullPath.StartsWith(ItemConstants.Presales.Content.ContentFolder.Path) && !pathsToIgnore.Any(path => item.Paths.FullPath.StartsWith(path)))
                 {
                     foreach (Item child in item.Children)
                     {
