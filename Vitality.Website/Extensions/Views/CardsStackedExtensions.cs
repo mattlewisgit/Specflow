@@ -1,38 +1,25 @@
 ﻿namespace Vitality.Website.Extensions.Views
 {
+    using Glass.Mapper.Sc.Web.Mvc;
     using Vitality.Website.Areas.Presales.Models.Cards;
 
-    /// <summary>
-    /// Provides extension methods for <see cref="CardsStacked">CardsStacked</see>.
-    /// </summary>
-    public static class CardsStackedExtensions
+   public static class CardsStackedExtensions
     {
-        /// <summary>
-        /// Provides a class to position the background image if available,
-        /// otherwise defaults to a dark theme.
-        /// </summary>
-        /// <param name="source">View model</param>
-        /// <returns>CSS class</returns>
-        public static string BackgroundClass(this CardsStacked source)
+        public static string BackgroundClass(this GlassView<CardsStacked> view)
         {
-            return source == null || string.IsNullOrWhiteSpace(source.BackgroundImage.Src)
+            return view == null || string.IsNullOrWhiteSpace(view.GetRenderingParameters<CardsStacked>().BackgroundImage.Src)
                 ? "text-dark"
                 : "background-position-top-right";
         }
 
-        /// <summary>
-        /// Provides to style a background image if available.
-        /// </summary>
-        /// <param name="source">View model</param>
-        /// <returns>CSS style</returns>
-        public static string BackgroundStyle(this CardsStacked source)
+        public static string BackgroundStyle(this GlassView<CardsStacked> view)
         {
-            if (source == null)
+            if (view == null)
             {
                 return string.Empty;
             }
 
-            var imageSource = source.BackgroundImage.Src;
+            var imageSource = view.GetRenderingParameters<CardsStacked>().BackgroundImage.Src;
 
             return !string.IsNullOrWhiteSpace(imageSource)
                 ? "background-size: cover; background-image: url(" + imageSource + ");"
