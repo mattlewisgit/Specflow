@@ -7,6 +7,10 @@
     box-sizing: border-box;
     padding: $padding-thick;
 
+    .feature-block__content {
+        max-width: 100%;
+    }
+
     .feature-block__image-list {
         a {
             color: transparent;
