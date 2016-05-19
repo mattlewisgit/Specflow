@@ -1,16 +1,9 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Cards.CardsStacked>
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Cards.CardsStacked>
 
 @using (BeginEditFrame(Model, "Edit Background Image", item => item.BackgroundImage))
 {
-    var imageSource = Model.BackgroundImage.Src;
-    var hasImage = !string.IsNullOrWhiteSpace(imageSource);
-    var backgroundStyle = hasImage
-        ? "background-size: cover; background-image: url(" + imageSource + ";"
-        : "";
-
-    var varyClass = hasImage ? "background-position-top-right" : "text-dark";
-
-<section class="cards-stacked @varyClass" style="@backgroundStyle">
+<section class="cards-stacked @Model.BackgroundClass()" style="@Model.BackgroundStyle()">
     <div class="spotlight pinch text-light">
         <h4 class="spotlight__heading">
             @Editable(Model, item => item.Headline)
@@ -23,7 +16,7 @@
         <ul class="spotlight__list">
             @foreach (var card in Model.Cards)
             {
-                using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", card.Path))
+                using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", card.Path))
                 {
                     <li class="spotlight__list-item">
                         <div class="spotlight-item">
