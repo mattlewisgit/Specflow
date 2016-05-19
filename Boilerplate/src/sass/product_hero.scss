@@ -11,6 +11,8 @@
 
     .feature-block__image {
         background: $primary-colour;
+        padding-top: 0;
+        text-align: center;
     }
 
     @media only screen and (min-width: $breakpoint-large) {
