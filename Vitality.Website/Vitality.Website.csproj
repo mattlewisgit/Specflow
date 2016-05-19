@@ -150,6 +150,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
+    <None Include="App_Config\Include\Vitality\Vitality.Deployment.config.disabled" />
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
