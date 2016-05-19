@@ -20,7 +20,7 @@
     <Name>Vitality.Website.Core</Name>
     <RootNamespace>Vitality.Website.Core</RootNamespace>
     <EnableCodeGeneration>false</EnableCodeGeneration>
-    <ManageRoles>False</ManageRoles>
+    <ManageRoles>True</ManageRoles>
     <SitecoreDatabase>core</SitecoreDatabase>
     <AssemblyStatus>Exclude</AssemblyStatus>
   </PropertyGroup>
@@ -94,6 +94,12 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
+  </ItemGroup>
+  <ItemGroup>
+    <SitecoreRole Include="Sitecore Roles\sitecore\Presales Admin.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Presales Content Author.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Presales Content Manager.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Presales User.role" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" />
 </Project>

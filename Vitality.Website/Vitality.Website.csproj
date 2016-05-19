@@ -205,6 +205,7 @@
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\Views\CardsStackedExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\Views\RewardsLeaderExtensions.cs" />
     <Compile Include="Areas\Presales\Models\FeatureBlocks\BenefitLeader.cs" />
@@ -418,7 +419,6 @@
     </Content>
     <Content Include="App_Config\Include\Glass.Mapper.Sc.Start.config" />
     <Content Include="App_Config\Include\Glass.Mapper.Sc.config" />
-    <Content Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />
     <None Include="App_Config\Include\Vitality\Vitality.Sites.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -477,7 +477,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>59728</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
