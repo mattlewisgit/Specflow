@@ -10,7 +10,10 @@ using System.Xml;
 using log4net;
 using log4net.Config;
 
+using Sitecore.Data;
+using Sitecore.Globalization;
 using Sitecore.IO;
+using Sitecore.Publishing;
 using Sitecore.SecurityModel;
 using Sitecore.Update;
 using Sitecore.Update.Installer;
@@ -85,5 +88,21 @@ public class PackageInstaller : WebService
                 }    
             }
         }
+    }
+
+    [WebMethod]
+    public void PublishSite(string source, string target)
+    {
+        try
+        {
+            PublishManager.PublishSmart(Database.GetDatabase(source), new[] { Database.GetDatabase(target) }, new[] { Sitecore.Context.Language });
+
+            HttpContext.Current.Response.Write(string.Format("Publishing initiated for '{0}' database to '{1} database'", source, target));
+        }
+        catch (Exception ex)
+        {
+            throw new HttpException(500, string.Format("Failed to publish from '{0}' database to '{1} database'", source, target), ex);
+        }
+        
     }
 }
