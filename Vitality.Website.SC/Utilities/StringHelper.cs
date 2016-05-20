@@ -11,7 +11,7 @@
 
         public static string SplitCamelCase(string input)
         {
-            return Regex.Replace(input, "([A-Z])", " $1", RegexOptions.Compiled).Trim();
+            return Regex.Replace(input, @"([a-z])(\s*)([A-Z])", "$1 $3", RegexOptions.Compiled).Trim();
         }
     }
 }
