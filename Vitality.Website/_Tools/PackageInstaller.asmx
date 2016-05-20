@@ -33,7 +33,7 @@ public class PackageInstaller : WebService
         var log = LogManager.GetLogger("root");
         XmlConfigurator.Configure((XmlElement)ConfigurationManager.GetSection("log4net"));
 
-        var packagePath = HttpContext.Current.Server.MapPath(Path.Combine("/upload/" + packageName));
+        var packagePath = HttpContext.Current.Server.MapPath(Path.Combine("/sitecore/admin/Packages/" + packageName));
         var file = new FileInfo(packagePath);
         if (!file.Exists)
         {

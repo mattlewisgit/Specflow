@@ -7,23 +7,20 @@
     {
         public static string BackgroundClass(this GlassView<CardsStacked> view)
         {
-            return view == null || string.IsNullOrWhiteSpace(view.GetRenderingParameters<CardsStacked>().BackgroundImage.Src)
-                ? "text-dark"
-                : "background-position-top-right";
+            if (string.IsNullOrWhiteSpace(view.Model.BackgroundImage.Src))
+            {
+                return "text-dark";
+            }
+            return "background-position-top-right";
         }
 
         public static string BackgroundStyle(this GlassView<CardsStacked> view)
         {
-            if (view == null)
+            if (!string.IsNullOrWhiteSpace(view.Model.BackgroundImage.Src))
             {
-                return string.Empty;
+                return "background-size: cover; background-image: url(" + view.Model.BackgroundImage.Src + ");";
             }
-
-            var imageSource = view.GetRenderingParameters<CardsStacked>().BackgroundImage.Src;
-
-            return !string.IsNullOrWhiteSpace(imageSource)
-                ? "background-size: cover; background-image: url(" + imageSource + ");"
-                : string.Empty;
+            return string.Empty;
         }
     }
 }
