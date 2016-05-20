@@ -12,7 +12,7 @@ templatekey: Product Hero
 ----version----
 language: en
 version: 1
-revision: 31d7cfd3-58fc-4177-8b09-c0cd194cd9b7
+revision: 0ee2c544-6ecc-437e-aa03-2eef57d07dcc
 
 ----field----
 field: {FF436064-A7BD-4C5A-AC15-FCCB8A525C54}
@@ -40,16 +40,16 @@ content-length: 186
 field: {45311C1F-5C7C-4516-B432-4D6EE207D258}
 name: Image
 key: image
-content-length: 111
+content-length: 58
 
-<image mediaid="{7EF293A3-F25F-48B3-93CA-74DCFE7DFCD7}" alt="Stanley" height="" width="" hspace="" vspace="" />
+<image mediaid="{931824BE-0A0A-423A-AA34-62D7F00086A8}" />
 ----field----
 field: {DE1C7B6A-E74A-41BF-B73B-B20663C2794C}
 name: VitalityLogo
 key: vitalitylogo
 content-length: 117
 
-<image mediaid="{5D2373AA-B5C1-46C7-A08D-C13C05DC107D}" alt="Vitality logo" height="" width="" hspace="" vspace="" />
+<image mediaid="{7EF293A3-F25F-48B3-93CA-74DCFE7DFCD7}" height="" hspace="" width="" alt="Vitality logo" vspace="" />
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -63,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-31d7cfd3-58fc-4177-8b09-c0cd194cd9b7
+0ee2c544-6ecc-437e-aa03-2eef57d07dcc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160519T134642Z
+20160519T153830Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
