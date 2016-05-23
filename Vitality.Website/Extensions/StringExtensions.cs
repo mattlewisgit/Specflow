@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.IntegrationTests.Extensions
+﻿namespace Vitality.Website.Extensions
 {
     public static class StringExtensions
     {

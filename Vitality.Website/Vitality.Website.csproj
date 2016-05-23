@@ -150,6 +150,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
+    <None Include="App_Config\Include\Vitality\Vitality.Deployment.config.disabled" />
+    <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
@@ -178,7 +182,6 @@
     <Content Include="js\require.js" />
     <Content Include="js\vitality-boilerplate.js" />
     <Content Include="Web.config" />
-    <Content Include="_Tools\InstallPackages.aspx" />
     <Content Include="_Tools\PackageInstaller.asmx" />
   </ItemGroup>
   <ItemGroup>
@@ -200,20 +203,20 @@
     <Compile Include="Areas\Presales\Models\Rewards\RewardsLeader.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
     <Compile Include="Areas\Presales\RenderingModels\RewardsLeaderRendering.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\Views\CardsStackedExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\Views\RewardsLeaderExtensions.cs" />
     <Compile Include="Areas\Presales\Models\FeatureBlocks\BenefitLeader.cs" />
     <Compile Include="Areas\Presales\RenderingModels\BenefitLeaderRendering.cs" />
     <Compile Include="Extensions\Views\BenefitLeaderExtensions.cs" />
-    <Compile Include="Extensions\Views\FaqPreviewExtensions.cs" />
     <Compile Include="Extensions\Views\NavigationSubSectionExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="_Tools\InstallPackages.aspx.designer.cs">
-      <DependentUpon>InstallPackages.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config">

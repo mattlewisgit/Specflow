@@ -1,0 +1,20 @@
+@import "defaults";
+
+// Set a default background colour, which enables the component
+// to be used without a background, particularly useful when editing.
+.cards-stacked {
+    background: $primary-background-colour;
+}
+
+@media only screen and (max-width: $small-and-up) {
+    .cards-stacked {
+        // Must force an override here,
+        // as the background imageis set on the element.
+        background: $primary-background-colour !important;
+        color: $black;
+
+        .spotlight__heading, .spotlight__intro {
+            color: $black;
+        }
+    }
+}

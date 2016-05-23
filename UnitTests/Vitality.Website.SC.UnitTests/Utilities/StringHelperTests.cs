@@ -11,14 +11,29 @@
         public class SplitCamelCaseTests
         {
             [Fact]
-            public void Camel_case_string_should_be_split_with_single_spaces()
+            public void Camel_case_string_with_no_spaces_should_be_split_with_single_spaces()
             {
                 var input = "TheQuickBrownFoxJumpsOverTheLazyDog";
                 var expected = "The Quick Brown Fox Jumps Over The Lazy Dog";
 
-                var result = StringHelper.SplitCamelCase(input);
+                StringHelper.SplitCamelCase(input).ShouldBe(expected);
+            }
 
-                result.ShouldBe(expected);
+            [Fact]
+            public void Split_samel_case_string_with_single_spaces_should_not_change()
+            {
+                var input = "The Quick Brown Fox Jumps Over The Lazy Dog";
+
+                StringHelper.SplitCamelCase(input).ShouldBe(input);
+            }
+
+            [Fact]
+            public void Split_samel_case_string_with_multiple_spaces_should_be_split_with_single_spaces()
+            {
+                var input = "The   Quick   Brown   Fox   Jumps   Over   The   Lazy   Dog";
+                var expected = "The Quick Brown Fox Jumps Over The Lazy Dog";
+
+                StringHelper.SplitCamelCase(input).ShouldBe(expected);
             }
         }
 
@@ -30,9 +45,7 @@
                 var input = "The Quick Brown Fox Jumps Over The Lazy Dog";
                 var expected = "The-Quick-Brown-Fox-Jumps-Over-The-Lazy-Dog";
 
-                var result = StringHelper.HyphenatedWords(input);
-
-                result.ShouldBe(expected);
+                StringHelper.HyphenatedWords(input).ShouldBe(expected);
             }
 
             [Fact]
@@ -41,9 +54,7 @@
                 var input = "The     Quick";
                 var expected = "The-Quick";
 
-                var result = StringHelper.HyphenatedWords(input);
-
-                result.ShouldBe(expected);
+                StringHelper.HyphenatedWords(input).ShouldBe(expected);
             }
         }
     }

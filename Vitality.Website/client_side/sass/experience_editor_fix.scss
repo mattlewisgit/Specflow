@@ -8,3 +8,16 @@ section div.scLooseFrameZone {
         width: 100%;
     }
 }
+
+// Keep cards inline.
+.spotlight__list div.scLooseFrameZone.scEnabledChrome {
+    display: inline;
+}
+
+.cards-stacked li span {
+    color: #000;
+}
+
+.feature-block__image-list div.scLooseFrameZone {
+    display: inline;
+} 

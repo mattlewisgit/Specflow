@@ -1,16 +1,14 @@
-﻿@using Glass.Mapper.Sc.Web.Mvc
-@using Vitality.Website.Areas.Presales.Models.FAQ
-@using Vitality.Website.Extensions.Views
-@inherits GlassView<FeaturedQuestions>
+﻿@using Vitality.Website.Extensions
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.FAQ.FeaturedQuestions>
 
-<div id="example_1" class="faq_leader">
+<div class="faq_leader">
     <div class="header">
         <h2>@Editable(Model, m => m.Title)</h2>
         <p class="paragraph-emphasis">@Editable(Model, m => m.Subtitle)</p>
     </div>
 
     <div class="faqs">
-        @foreach (var row in this.ModelBatches())
+        @foreach (var row in Model.Questions.GroupIntoRows(2))
         {
             <div class="grid">
             @foreach (var questionAnswer in row)
@@ -25,7 +23,6 @@
             }
             </div>
         }
-        
     </div>
 
     <div class="more">@Editable(Model, m => m.CTA)</div>
