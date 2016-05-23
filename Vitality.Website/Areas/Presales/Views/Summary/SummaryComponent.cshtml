@@ -1,13 +1,20 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Summary.SummaryComponent>
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Summary.SummaryComponent>
 
 <div>
     <div class="summary-left">
-        <h6>@Editable(Model, m => m.LeftContentLeadIn)</h6>
-
+        @if (this.CanShowLeadIn())
+        {
+            <h6>@Editable(Model, m => m.LeftContentLeadIn)</h6>
+        }
+        
         <h1>@Editable(Model, m => m.LeftContentHeadline)</h1>
 
-        <p>@Editable(Model, m => m.LeftContentOpeningParagraph)</p>
-
+        @if (this.CanShowOpeningParagraph())
+        {
+            <p>@Editable(Model, m => m.LeftContentOpeningParagraph)</p>
+        }
+        
         <div>@Editable(Model, m => m.LeftContentBody)</div>
     </div>
     <div class="summary-right">
