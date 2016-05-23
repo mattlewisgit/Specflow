@@ -71,7 +71,6 @@
     <Content Include="main_navigation.html" />
     <Content Include="src\gulpfile.js" />
     <Content Include="js\boilerplate.js" />
-    <Content Include="images\sprite-generated.png" />
     <Content Include="src\images\svg-sprite.svg" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
