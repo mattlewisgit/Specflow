@@ -10,10 +10,12 @@ var jshint = require("gulp-jshint");
 var jscs = require("gulp-jscs");
 var sass = require("gulp-sass");
 var sassLint = require("gulp-sass-lint");
+var spritesmith = require("gulp.spritesmith");
+var svgSprite = require("gulp-svg-sprite");
 var uglify = require("gulp-uglify");
 
 // Include custom configuration.
-var cssnanoConfig = require('./cssnano_config.json');
+var cssnanoConfig = require("./cssnano_config.json");
 
 // Store the tasks as names, so that they can be easily
 // referenced from the individual and default tasks.
@@ -26,6 +28,9 @@ var jsStyle = "js_style";
 var lintTask = "lint";
 var sassBuildTask = "sass_build";
 var sassLintTask = "sass_lint";
+var spriteTask = "sprite";
+var spritesTask = "sprites";
+var svgTask = "svg";
 
 // Lints all local JavaScript files, including this!
 gulp.task(jsStaticAnalysis, function () {
@@ -53,8 +58,9 @@ gulp.task(sassLintTask, function () {
     return gulp
         .src([
             "sass/**/*.scss",
-            "!sass/vendor/**/*.scss",
-            "!sass/utils/_svg-template.scss"
+            "!sass/generated/*.scss",
+            "!sass/utils/_svg-template.scss",
+            "!sass/vendor/**/*.scss"
         ])
         .pipe(sassLint())
         .pipe(sassLint.format())
@@ -65,11 +71,61 @@ gulp.task(sassLintTask, function () {
 gulp.task(cleanTask, function () {
     return del([
         "sass/**/*.css",
-        "sass/**/*.min.*"
+        "sass/**/*.min.*",
+        "sass/generated/*.scss"
     ]);
 });
 
-gulp.task(sassBuildTask, function () {
+// Spritesheet generation.
+gulp.task(spriteTask, function () {
+    var source = "images/sprite/**/";
+
+    var spriteData = gulp
+        .src(source + "*.png")
+        .pipe(spritesmith({
+            src: source + "*.png",
+            retinaSrcFilter: source + "*@2x.png",
+            imgName: "images/sprite-generated.png",
+            padding: 5,
+            retinaImgName: "images/sprite-generated@2x.png",
+            cssName: "sass/generated/_sprite.scss",
+            cssVarMap: function (sprite) {
+                sprite.name = "sprite_" + sprite.name;
+            }
+        }));
+
+    spriteData.img.pipe(gulp.dest("."));
+    spriteData.css.pipe(gulp.dest("."));
+});
+
+gulp.task(svgTask, function () {
+    return gulp
+        .src("images/**/*.svg")
+        .pipe(svgSprite({
+            shape: {
+                spacing: {
+                    padding: 10
+                }
+            },
+            mode: {
+                css: {
+                    dest: "",
+                    bust: false,
+                    sprite: "images/svg-sprite.svg",
+                    render: {
+                        scss: {
+                            dest: "sass/generated/_svg-sprite.scss",
+                            template: "sass/utils/_svg-template.scss"
+                        }
+                    },
+                    dimensions: true
+                }
+            }
+        }))
+        .pipe(gulp.dest("."));
+});
+
+gulp.task(sassBuildTask, [spriteTask, svgTask], function () {
     return gulp
         .src("sass/**/*.scss")
         .pipe(sass().on("error", sass.logError))
@@ -91,7 +147,7 @@ gulp.task(jsBuildTask, function () {
         .pipe(amdOptimize("app", {
             name: "app",
             configFile: "./js/app.js",
-            baseUrl: './js'
+            baseUrl: "./js"
         }))
         .pipe(concat("vitality-boilerplate.js"))
         .pipe(uglify())
@@ -114,7 +170,7 @@ gulp.task(buildTask, [
 
 // Default task that runs all the tasks.
 gulp.task("default", [
-    cleanTask,
+    //cleanTask,
     lintTask,
     buildTask
 ]);

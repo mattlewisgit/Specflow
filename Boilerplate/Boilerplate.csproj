@@ -49,7 +49,6 @@
     <Content Include="img\stars-icon.png" />
     <Content Include="img\stethoscope-icon.png" />
     <Content Include="benefit_leader.html" />
-    <Content Include="css\screen-0.0.1.css" />
     <Content Include="rewards_leader.html" />
     <Content Include="img\family.jpg" />
     <Content Include="img\cyclist.jpg" />
@@ -97,12 +96,6 @@
     <Content Include="src\js\libraries\tablesaw.stackonly.js" />
     <Content Include="src\js\modules\tabsModule.js" />
     <Content Include="src\js\libraries\wow.js" />
-    <Content Include="src\sass\app.css">
-      <DependentUpon>app.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\app.min.css">
-      <DependentUpon>app.css</DependentUpon>
-    </Content>
     <Content Include="src\sass\cards_stacked.css">
       <DependentUpon>cards_stacked.scss</DependentUpon>
     </Content>
@@ -138,10 +131,6 @@
     <Content Include="src\sass\_defaults.css.map">
       <DependentUpon>_defaults.css</DependentUpon>
     </Content>
-    <Content Include="src\sass\app.scss" />
-    <Content Include="src\sass\app.css.map">
-      <DependentUpon>app.css</DependentUpon>
-    </Content>
     <Content Include="src\package.json" />
     <Content Include="src\bower.json" />
     <Content Include="src\sass-lint.yml" />
@@ -157,6 +146,149 @@
     <Content Include="src\sass\cards_stacked.css.map">
       <DependentUpon>cards_stacked.css</DependentUpon>
     </Content>
+    <Content Include="src\sass\base\_base.scss" />
+    <Content Include="src\sass\base\_box-buttons.scss" />
+    <Content Include="src\sass\base\_buttons.scss" />
+    <Content Include="src\sass\base\_fonts.scss" />
+    <Content Include="src\sass\base\_forms.scss" />
+    <Content Include="src\sass\base\_grids.scss" />
+    <Content Include="src\sass\base\_icons.scss" />
+    <Content Include="src\sass\base\_skip-nav.scss" />
+    <Content Include="src\sass\base\_sticky-footer.scss" />
+    <Content Include="src\sass\base\_type.scss" />
+    <Content Include="src\sass\base\_vars.scss" />
+    <Content Include="src\sass\boilerplate\_boilerplate.scss" />
+    <Content Include="src\sass\boilerplate\_swatches.scss" />
+    <Content Include="src\sass\layout\_burger-menu.scss" />
+    <Content Include="src\sass\layout\_footer.scss" />
+    <Content Include="src\sass\layout\_header.scss" />
+    <Content Include="src\sass\layout\_header__log-in.scss" />
+    <Content Include="src\sass\layout\_header__megamenu.scss" />
+    <Content Include="src\sass\layout\_header__search-panel.scss" />
+    <Content Include="src\sass\modules\_article--heading-block.scss" />
+    <Content Include="src\sass\modules\_cta.scss" />
+    <Content Include="src\sass\modules\_datatable.scss" />
+    <Content Include="src\sass\modules\_expander.scss" />
+    <Content Include="src\sass\modules\_feature-block-gradient.scss" />
+    <Content Include="src\sass\modules\_feature-block.scss" />
+    <Content Include="src\sass\modules\_filter-options.scss" />
+    <Content Include="src\sass\modules\_iconlist.scss" />
+    <Content Include="src\sass\modules\_jquery-ui-datepicker.scss" />
+    <Content Include="src\sass\modules\_media-object.scss" />
+    <Content Include="src\sass\modules\_richtext.scss" />
+    <Content Include="src\sass\modules\_social.scss" />
+    <Content Include="src\sass\modules\_spotlight.scss" />
+    <Content Include="src\sass\modules\_text-detail-block.scss" />
+    <Content Include="src\sass\modules\_video.scss" />
+    <Content Include="src\sass\utils\_css-reset.scss" />
+    <Content Include="src\sass\utils\_media-print.scss" />
+    <Content Include="src\sass\utils\_mixins.scss" />
+    <Content Include="src\sass\utils\_svg-template.scss" />
+    <Content Include="src\sass\utils\_triangle-callout.scss" />
+    <Content Include="src\sass\utils\_utils.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_border-color.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_border-radius.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_border-style.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_border-width.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_buttons.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_clearfix.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_ellipsis.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_font-stacks.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_hide-text.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_margin.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_padding.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_position.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_prefixer.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_retina-image.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_size.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_text-inputs.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_timing-functions.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_triangle.scss" />
+    <Content Include="src\sass\vendor\bourbon\addons\_word-wrap.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_animation.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_appearance.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_backface-visibility.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_background-image.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_background.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_border-image.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_calc.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_columns.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_filter.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_flex-box.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_font-face.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_font-feature-settings.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_hidpi-media-query.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_hyphens.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_image-rendering.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_keyframes.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_linear-gradient.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_perspective.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_placeholder.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_radial-gradient.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_selection.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_text-decoration.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_transform.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_transition.scss" />
+    <Content Include="src\sass\vendor\bourbon\css3\_user-select.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_assign-inputs.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_contains-falsy.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_contains.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_is-length.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_is-light.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_is-number.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_is-size.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_modular-scale.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_px-to-em.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_px-to-rem.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_shade.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_strip-units.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_tint.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_transition-property-name.scss" />
+    <Content Include="src\sass\vendor\bourbon\functions\_unpack.scss" />
+    <Content Include="src\sass\vendor\bourbon\helpers\_convert-units.scss" />
+    <Content Include="src\sass\vendor\bourbon\helpers\_directional-values.scss" />
+    <Content Include="src\sass\vendor\bourbon\helpers\_font-source-declaration.scss" />
+    <Content Include="src\sass\vendor\bourbon\helpers\_gradient-positions-parser.scss" />
+    <Content Include="src\sass\vendor\bourbon\helpers\_linear-angle-parser.scss" />
+    <Content Include="src\sass\vendor\bourbon\helpers\_linear-gradient-parser.scss" />
+    <Content Include="src\sass\vendor\bourbon\helpers\_linear-positions-parser.scss" />
+    <Content Include="src\sass\vendor\bourbon\helpers\_linear-side-corner-parser.scss" />
+    <Content Include="src\sass\vendor\bourbon\helpers\_radial-arg-parser.scss" />
+    <Content Include="src\sass\vendor\bourbon\helpers\_radial-gradient-parser.scss" />
+    <Content Include="src\sass\vendor\bourbon\helpers\_radial-positions-parser.scss" />
+    <Content Include="src\sass\vendor\bourbon\helpers\_render-gradients.scss" />
+    <Content Include="src\sass\vendor\bourbon\helpers\_shape-size-stripper.scss" />
+    <Content Include="src\sass\vendor\bourbon\helpers\_str-to-num.scss" />
+    <Content Include="src\sass\vendor\bourbon\settings\_asset-pipeline.scss" />
+    <Content Include="src\sass\vendor\bourbon\settings\_prefixer.scss" />
+    <Content Include="src\sass\vendor\bourbon\settings\_px-to-em.scss" />
+    <Content Include="src\sass\vendor\bourbon\_bourbon-deprecated-upcoming.scss" />
+    <Content Include="src\sass\vendor\bourbon\_bourbon.scss" />
+    <Content Include="src\sass\vendor\neat\functions\_new-breakpoint.scss" />
+    <Content Include="src\sass\vendor\neat\functions\_private.scss" />
+    <Content Include="src\sass\vendor\neat\grid\_box-sizing.scss" />
+    <Content Include="src\sass\vendor\neat\grid\_direction-context.scss" />
+    <Content Include="src\sass\vendor\neat\grid\_display-context.scss" />
+    <Content Include="src\sass\vendor\neat\grid\_fill-parent.scss" />
+    <Content Include="src\sass\vendor\neat\grid\_media.scss" />
+    <Content Include="src\sass\vendor\neat\grid\_omega.scss" />
+    <Content Include="src\sass\vendor\neat\grid\_outer-container.scss" />
+    <Content Include="src\sass\vendor\neat\grid\_pad.scss" />
+    <Content Include="src\sass\vendor\neat\grid\_private.scss" />
+    <Content Include="src\sass\vendor\neat\grid\_row.scss" />
+    <Content Include="src\sass\vendor\neat\grid\_shift.scss" />
+    <Content Include="src\sass\vendor\neat\grid\_span-columns.scss" />
+    <Content Include="src\sass\vendor\neat\grid\_to-deprecate.scss" />
+    <Content Include="src\sass\vendor\neat\grid\_visual-grid.scss" />
+    <Content Include="src\sass\vendor\neat\settings\_disable-warnings.scss" />
+    <Content Include="src\sass\vendor\neat\settings\_grid.scss" />
+    <Content Include="src\sass\vendor\neat\settings\_visual-grid.scss" />
+    <Content Include="src\sass\vendor\neat\_neat-helpers.scss" />
+    <Content Include="src\sass\vendor\neat\_neat.scss" />
+    <Content Include="src\sass\vendor\_animate.scss" />
+    <Content Include="src\sass\vendor\_prism.scss" />
+    <Content Include="src\sass\vendor\_tablesaw.stackonly.scss" />
+    <Content Include="src\sass\app.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -165,6 +297,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="css\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <PropertyGroup>

@@ -13,6 +13,8 @@
         "gulp-jscs": "*",
         "gulp-sass": "*",
         "gulp-sass-lint": "*",
+        "gulp.spritesmith": "*",
+        "gulp-svg-sprite": "*",
         "gulp-uglify": "*",
         "jshint": "*"
     },
