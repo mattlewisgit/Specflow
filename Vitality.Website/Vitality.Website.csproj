@@ -170,12 +170,6 @@
     <Content Include="client_side\img\vitality-logo.svg" />
     <Content Include="client_side\img\youtube--footer.svg" />
     <Content Include="client_side\js\app.js" />
-    <Content Include="client_side\sass\experience_editor_fix.css">
-      <DependentUpon>experience_editor_fix.scss</DependentUpon>
-    </Content>
-    <Content Include="client_side\sass\experience_editor_fix.min.css">
-      <DependentUpon>experience_editor_fix.css</DependentUpon>
-    </Content>
     <Content Include="css\app.css" />
     <Content Include="Global.asax" />
     <Content Include="js\modernizr-custom.min.js" />
@@ -437,9 +431,6 @@
     <Content Include="client_side\.jshintrc" />
     <Content Include="client_side\package.json" />
     <Content Include="client_side\sass\experience_editor_fix.scss" />
-    <Content Include="client_side\sass\experience_editor_fix.css.map">
-      <DependentUpon>experience_editor_fix.css</DependentUpon>
-    </Content>
     <Content Include="client_side\.jscsrc" />
     <Content Include="client_side\sass-lint.yml" />
     <Content Include="client_side\gulp.targets" />
@@ -447,6 +438,7 @@
     <Content Include="Areas\Presales\Views\FeatureBlocks\BenefitLeader.cshtml" />
     <Content Include="Areas\Presales\Views\FAQ\FAQPreview.cshtml" />
     <Content Include="Areas\Presales\Views\Summary\SummaryComponent.cshtml" />
+    <Content Include="client_side\sass\rich_text_editor.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

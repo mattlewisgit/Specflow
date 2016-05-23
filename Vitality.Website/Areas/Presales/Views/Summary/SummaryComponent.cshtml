@@ -1,15 +1,16 @@
 ﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Summary.SummaryComponent>
 
 <div>
-    @Editable(Model, m => m.LeftContentLeadIn)
+    <div class="summary-left">
+        <h6>@Editable(Model, m => m.LeftContentLeadIn)</h6>
 
-    @Editable(Model, m => m.LeftContentHeadline)
+        <h1>@Editable(Model, m => m.LeftContentHeadline)</h1>
 
-    @Editable(Model, m => m.LeftContentOpeningParagraph)
+        <p>@Editable(Model, m => m.LeftContentOpeningParagraph)</p>
 
-    @Editable(Model, m => m.LeftContentBody)
-</div>
-
-<div>
-    <h1>Summary Component Right Half</h1>
+        <div>@Editable(Model, m => m.LeftContentBody)</div>
+    </div>
+    <div class="summary-right">
+        <h1>Summary Component Right Half</h1>
+    </div>
 </div>
