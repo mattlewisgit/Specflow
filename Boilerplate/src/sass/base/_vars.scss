@@ -1,0 +1,186 @@
+// /*-------------------------------------------------.
+// \    Config: Grid debugging -
+//  `-------------------------------------------------*/
+
+$visual-grid: false;
+
+// /*-------------------------------------------------.
+// \    Config: Colours
+//  `-------------------------------------------------*/
+
+$primary-color: #f41c5e; //Hot pink
+$secondary-color: #5bb6b1; //Bright teal
+$tertiary-color: #6e527e; //Purple
+$highlight-color: #ed8b00; //Bright orange
+
+$primary-background-color: #eaeff4; //Very light grey blue
+$secondary-background-color: #4f738a;
+$tertiary-background-color: #34404d;
+$error-color:#ff6961;
+
+$lighten-percentage:10%;
+$darken-percentage:10%;
+
+//Light modifiers -
+$primary-color--light: lighten($primary-color, $lighten-percentage);
+$secondary-color--light: lighten($secondary-color, $lighten-percentage);
+$tertiary-color--light: lighten($tertiary-color, $lighten-percentage);
+$highlight-color--light: lighten($highlight-color, $lighten-percentage);
+$error-color--light: lighten($error-color, $lighten-percentage);
+
+//Dark modifiers -
+$primary-color--dark: darken($primary-color, $darken-percentage);
+$secondary-color--dark: darken($secondary-color, $darken-percentage);
+$tertiary-color--dark: darken($tertiary-color, $darken-percentage);
+$highlight-color--dark: darken($highlight-color, $darken-percentage);
+$error-color--dark: darken($error-color, $darken-percentage);
+
+// Social Media colours -
+$facebook-color: #27489b;
+$twitter-color: #38a8e5;
+
+// Monochrome helpers -
+$grey:#4d4d4d;
+$grey--light:#f2f2f2;
+$black: #000;
+$white: #fff;
+$color-mono-14: #eee;
+$color-mono-13: #ddd;
+$color-mono-12: #ccc;
+$color-mono-11: #bbb;
+$color-mono-10: #aaa;
+$color-mono-9: #999;
+$color-mono-8: #888;
+$color-mono-7: #777;
+$color-mono-6: #666;
+$color-mono-5: #555;
+$color-mono-4: #444;
+$color-mono-3: #333;
+$color-mono-2: #222;
+$color-mono-1: #111;
+
+$outline-color: #ced9dd;
+$nav-gradient-color: #f2f8f8;
+
+$body-color: #666;
+$body-color--alt: #b3b3b3;
+$heading-color: $color-mono-3;
+
+$dropshadow-color: rgba($body-color, 0.25);
+
+$nav-gradient:linear-gradient(
+  to bottom,
+  $white 75%,
+  $nav-gradient-color 100%
+);
+
+// /*-------------------------------------------------.
+// \    Config: Typography
+//  `-------------------------------------------------*/
+
+//Base Font size -
+$basesize: 1.6;
+$paragraph-emphasis: 1.8;
+
+//Heading sizes -
+$h1: 2.8;
+$h2: 2.5;
+$h3: 2.2;
+$h4: 2;
+$h5: 2;
+$h6: 1.8;
+
+$h1--large: 4;
+$h2--large: 3.5;
+$h3--large: 3.2;
+$h4--large: 2.5;
+$h5--large: 2;
+$h6--large: 1.8;
+
+$max-text-width:485px;
+
+// /*-------------------------------------------------.
+// \    Config: Layout
+//  `-------------------------------------------------*/
+
+//Main content max width -
+$max-width:1200px;
+
+//Module padding -
+$pad: 20px;
+$pad--large: 40px;
+
+// /*-------------------------------------------------.
+// \    Config: Responsive
+//  `-------------------------------------------------*/
+
+$breakpoint-smaller: em(350);
+$breakpoint-small:   em(540);
+$breakpoint-medium:  em(770);
+$breakpoint-large:   em(900);
+$breakpoint-larger:  em(1025);
+$breakpoint-massive: em(1200);
+$breakpoint-max:     em(1400);
+
+$breakpoint-under-smaller: em(349);
+$breakpoint-under-small:   em(539);
+$breakpoint-under-medium:  em(769);
+$breakpoint-under-large:   em(899);
+$breakpoint-under-larger:  em(1024);
+$breakpoint-under-massive: em(1199);
+$breakpoint-under-max:     em(1399);
+
+
+
+// MQ debug helper
+body {
+  &:before {
+    display: block;
+    position: fixed;
+    padding: 0.333em 0.666em;
+    opacity: 0.7;
+    bottom: 0;
+    right: 0;
+    color: $white;
+    z-index: 999;
+    font-size: 13px;
+
+    content: 'MQ: < Smaller';
+    background-color: rebeccapurple;
+
+    @media only screen and (min-width : $breakpoint-smaller){
+      content: 'MQ: Smaller';
+      background-color: red;
+    }
+
+    @media only screen and (min-width : $breakpoint-small){
+      content: 'MQ: Small';
+      background-color: indigo;
+    }
+
+    @media only screen and (min-width : $breakpoint-medium){
+      content: 'MQ: Medium';
+      background-color: blue;
+    }
+
+    @media only screen and (min-width : $breakpoint-large){
+      content: 'MQ: Large';
+      background-color: green;
+    }
+
+    @media only screen and (min-width : $breakpoint-larger){
+      content: 'MQ: Larger';
+      background-color: purple;
+    }
+
+    @media only screen and (min-width : $breakpoint-massive){
+      content: 'MQ: Massive';
+      background-color: orange;
+    }
+
+    @media only screen and (min-width : $breakpoint-max){
+      content: 'MQ: Max';
+      background-color: seagreen;
+    }
+  }
+}

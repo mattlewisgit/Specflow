@@ -1,0 +1,743 @@
+
+
+// Structure -
+
+// Top Bar -
+
+//  Mobile
+//      Logo
+//      Utility nav
+
+//  Desktop
+//      Site nav (personal, business etc)
+//      Utility nav - incl contact & social
+
+// Section nav -
+//  Logo (desktop only)
+//  Sections in current site branch(Health insurance, life cover etc.)
+//  Phone number (desktop only ??)
+
+//  Mega menu -
+//      Sub section links
+//      Feature block (desktop only)
+
+// Site-nav small (mobile only)
+//  As Site nav above, but duplicated to avoid dom reordering
+
+
+
+
+//
+// General styles -
+//
+
+.page-header {
+  @extend .clearfix;
+  width: 100%;
+  background-color: $color-mono-14;
+  position: relative;
+  z-index: 99; //Generic "above everything else"
+}
+
+
+
+//
+// Top Bar
+//
+
+//Show / hide the bars at various screeen sizes -
+
+.top-bar--large {
+  @extend .medium-and-up;
+  @extend .clearfix;
+
+  background-color: $grey--light;
+  border-bottom: 1px solid $outline-color;
+}
+
+.top-bar--small {
+  @extend .medium-less-than;
+  @extend .clearfix;
+
+  border-bottom: 1px solid $outline-color;
+  background-color: $white;
+
+  transition: background-color 0.5s ease;
+
+  .log-in-open &,
+  .mainmenu-open &,
+  .search-open & {
+    background-color: $grey--light;
+  }
+
+  .top-bar__home {
+    @extend .coverlink;
+    float: left;
+    width: 40%;
+    max-width: 200px;
+    height: 80px;
+
+    a {
+      padding: 10px;
+      display: table;
+    }
+
+    img {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+      height: 100%;
+      max-width: 100px;
+      max-height: 60px;
+      margin: 0 auto;
+
+      @media only screen and (min-width : $breakpoint-smaller){
+        margin: 0 10px;
+      }
+    }
+
+
+  }
+}
+
+.utility-nav,
+.utility-nav--small {
+  @extend .non-list;
+  text-align: right;
+  float: right;
+  font-size: 0;
+
+  .utility-nav__item {
+    @extend .coverlink;
+    @include font-size(0.9);
+
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    padding: 0 10px;
+    vertical-align: top;
+  }
+
+  .utility-nav__inner {
+
+    margin-top: 20px;
+
+    img,
+    svg {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      height: 22px;
+      margin: auto auto 5px auto;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  .utility-nav__item--search {
+
+    @extend .coverlink;
+
+    a,
+    a:hover,
+    a:focus,
+    a.js-focus {
+      color: $body-color;
+      font-weight: normal;
+    }
+  }
+}
+
+
+@media only screen and (min-width : $breakpoint-medium) {
+  //Desktop search item -
+  .utility-nav__item--search {
+    position: relative;
+
+    img {
+      width: 100%;
+      max-width: 22px;
+      max-height: 22px;
+      position: absolute;
+      left: 8px;
+      top: 14px;
+    }
+
+    > a {
+      display: inline-block;
+      width: auto;
+      padding-left: 26px;
+    }
+
+    .search-open & {
+      background-color: $white;
+    }
+  }
+
+  //Desktop log in item -
+  .utility-nav__item--log-in {
+    position: relative;
+
+    > a {
+      padding-right: 26px;
+    }
+
+    &:after {
+      @include retina-sprite($sprite-arrow-down-grey-group);
+      display: block;
+      content: '';
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      transition: transform 0.25s ease;
+    }
+
+    &.is-active,
+    &:hover,
+    &:focus,
+    .log-in-open & {
+
+      &:after {
+        @include retina-sprite($sprite-arrow-down-pink-group);
+        transform: translateY(-1px)rotate(180deg);
+      }
+
+    }
+
+    .log-in-open & {
+      background-color: $white;
+    }
+  }
+}
+
+.utility-nav {
+
+  .utility-nav__item--social {
+    @extend .large-and-up;
+    height: 50px;
+    min-width: 150px;
+    padding: 0;
+    line-height: 0;
+
+    ul {
+      background-color: $grey--light;
+    }
+
+    li {
+      height: 50px;
+      overflow: hidden;
+
+      .svg-sprite {
+        margin-left: -0.5em;
+      }
+    }
+
+    img {
+      margin: 14px auto;
+    }
+  }
+}
+
+.utility-nav--small {
+  width: 60%;
+
+  .utility-nav__item {
+    max-width: 65px;
+    height: 80px;
+    width: 33%;
+
+    background-color: $white;
+    transition: background-color 0.5s ease;
+
+    //permanent hover states for log in and nav states -
+    .search-open & {
+      &--log-in,
+      &--menu {
+        background-color: $grey--light;
+      }
+    }
+
+    .log-in-open & {
+      &--search,
+      &--menu {
+        background-color: $grey--light;
+      }
+    }
+
+    .mainmenu-open & {
+      &--search,
+      &--log-in {
+        background-color: $grey--light;
+      }
+    }
+
+  }
+
+}
+
+//Shared styles for desktop site nav & utility nav -
+
+.site-nav__item,
+.utility-nav__item {
+  @extend .coverlink;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $grey;
+  display: inline-block;
+  letter-spacing: 0.1em;
+  padding: 0 10px;
+  background-color: $grey--light;
+
+  border-right: 1px solid $outline-color;
+
+  &:first-child {
+    border-left: 1px solid $outline-color;
+  }
+
+  a,
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+
+  &.is-active,
+  &:hover,
+  &:focus {
+    background-color: $white;
+  }
+
+  //Variable font sizes -
+  a {
+    @media only screen and (min-width : $breakpoint-medium) {
+      @include font-size(1);
+      font-weight: 500;
+    }
+
+    @media only screen and (min-width : $breakpoint-large) {
+      @include font-size(1.3);
+    }
+  }
+
+  @media only screen and (min-width : $breakpoint-medium){
+
+    height: 100%;
+    line-height: 50px;
+  }
+}
+
+//
+// Site nav desktop -
+//
+
+.site-nav {
+  @extend .non-list;
+  @extend .clearfix;
+  height: 50px;
+  float: left;
+  font-size: 0;
+}
+
+
+//
+// Section Nav
+//
+
+.mobile-nav-link {
+  @include font-size(1.8);
+  width: 100%;
+  background-color: $white;
+  border-top: 1px solid $outline-color;
+  color: $grey;
+  text-align: left;
+
+  display: flex;
+
+  &:first-child {
+    border-top: 0;
+  }
+
+  > a {
+    padding: 15px 30px 15px 0;
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+  }
+
+  a {
+    font-weight: 500;
+  }
+
+  &:hover,
+  &:focus,
+  &.js-focus {
+
+    background-image: none;
+    background-color: $white;
+
+    >a {
+      color: $primary-color;
+    }
+  }
+}
+
+.section-nav {
+  @extend .non-list;
+  font-size: 0;
+  position: relative;
+
+  padding: 0 20px;
+  background-color: $white;
+
+  .section-nav__item {
+
+    @extend .mobile-nav-link;
+
+    //Hide the border top of the 2nd child - 1st child is the hidden brand logo-
+    &:nth-child(2) {
+      border-top: 0;
+    }
+
+    // Right arrow icon -
+    &--megamenu {
+      > a:after {
+        @include retina-sprite($sprite-arrow-right-grey-group);
+
+        content: '';
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: calc(50% - 8px);
+      }
+
+      &:hover,
+      &:focus,
+      &.js-focus {
+        > a:after {
+          @include retina-sprite($sprite-arrow-right-pink-group);
+        }
+      }
+    }
+
+    &--phone {
+      @extend .large-and-up;
+
+      a {
+        transition: color 1s;
+      }
+
+      .section-nav__phone-text,
+      .section-nav__phone-number {
+        display: block;
+      }
+
+      .section-nav__phone-text {
+        @include font-size(1.2);
+        text-transform: uppercase;
+      }
+
+      .section-nav__phone-number {
+        @include font-size(2);
+        color: $primary-color;
+      }
+    }
+
+  }
+
+  @media only screen and (min-width : $breakpoint-medium){
+
+    display: flex;
+    position: relative;
+    padding: 0;
+
+
+
+    //Bottom drop shadow -
+    //box-shadow: 0 0 20px -2px $dropshadow-color;
+
+    .section-nav__item {
+      text-align: center;
+      flex: 1 0 auto;
+      width: auto;
+      min-height: 100px;
+      background-color: $white;
+      border-top: 0;
+      border-right: 1px solid $outline-color;
+      border-bottom: 1px solid $outline-color;
+
+      > a {
+
+        flex-direction: column;
+
+        justify-content: center;
+        padding: 10px;
+        line-height: 1.25;
+
+        //Variable font sizes -
+        @media only screen and (min-width : $breakpoint-medium){
+          @include font-size(1.6);
+        }
+
+        @media only screen and (min-width : $breakpoint-larger){
+          @include font-size(1.8);
+        }
+
+
+        //Fake the drop shadow - where it won't interfere with the buttons -
+        .csspointerevents & {
+
+          //The horizontal spread of the nav drop shadows -
+          $dropshadow-spread: 2.9px;
+
+          &:before {
+            opacity: 0;
+            transition: opacity 0.2s;
+            content: '';
+            pointer-events: none;
+            display: block;
+            position: absolute;
+            width: calc(100% + #{2 * $dropshadow-spread});
+            height: 100%;
+            top: 0;
+            left: #{-1 * $dropshadow-spread};
+            background-image: linear-gradient(to right, transparent 0%, $dropshadow-color #{$dropshadow-spread}, transparent #{$dropshadow-spread - 1px}), linear-gradient(to left, transparent 0%, $dropshadow-color  #{$dropshadow-spread}, transparent #{$dropshadow-spread});
+
+          }
+        }
+      }
+
+
+      &:hover,
+      &:focus,
+      &.js-focus {
+        //Show the drop shadow -
+        .csspointerevents & {
+          >a:before {
+            opacity: 1;
+          }
+        }
+      }
+
+      //Min width for the logo link item-
+      &--home {
+        min-width: 135px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          max-height: 100px;
+          max-width: 100px;
+        }
+      }
+
+      &--megamenu {
+
+        // Down arrow icon -
+        > a:after {
+          @include retina-sprite($sprite-arrow-down-grey-group);
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 18px;
+          left: 50%;
+          left: calc(50% - 7px);
+          top: auto;
+          right: auto;
+        }
+
+        &:hover,
+        &:focus,
+        &.js-focus {
+
+          border-bottom: 1px solid transparent;
+
+          > a:after {
+            @include retina-sprite($sprite-arrow-down-pink-group);
+          }
+        }
+      }
+    }
+
+    //Section nav items have an option to not have the hover shadow -
+    .csspointerevents & {
+      .section-nav__item--no-shadow {
+        > a:before {
+          content: none;
+        }
+      }
+    }
+
+    //Custom hover effect for the home button -
+    .section-nav__item--home {
+      img {
+        transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); //Ease out back
+      }
+
+      &:hover,
+      &:focus,
+      &.js-acitve {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+
+
+    // IE9 & 10 nav - tables used where flexbox not suported -
+
+    .no-flexbox & {
+
+      position: relative;
+      height: 100px;
+      width: 100%;
+      background-color: $white;
+      display: table;
+
+      .section-nav__item {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100px;
+
+        > a {
+          display: block;
+          width: 100%;
+          height: auto;
+          position: relative;
+
+          &.megamenu__back {
+            display: none;
+          }
+
+          //IE absolute position in tablecell fix -
+          &:after {
+            top: 50px;
+          }
+        }
+      }
+
+      .section-nav__item--home {
+        max-height: 100px;
+        overflow: hidden;
+
+        img {
+          max-height: 70px;
+        }
+      }
+
+      .section-nav__item--phone {
+        @media only screen and (max-width : $breakpoint-under-large) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//Home & contact on larger screens only -
+.section-nav {
+  .section-nav__item--home {
+    @extend .medium-and-up;
+  }
+}
+
+//
+// Desktop megamenu - see header_megamenu partial
+//
+
+
+//
+// Site nav mobile -
+//
+
+.site-nav--small {
+  @extend .medium-less-than;
+  @extend .non-list;
+  padding: 10px 0;
+  background-color: $grey--light;
+  font-size: 0;
+
+  .site-nav__item {
+    @include font-size($basesize);
+    width: 100%;
+    line-height: 2em;
+    color: $black;
+    text-transform: uppercase;
+    border: 0;
+
+    a {
+      @include font-size(1.3);
+      padding: 10px;
+      font-weight: 500;
+    }
+
+    &.is-active {
+      display: none;
+    }
+  }
+}
+
+
+//Mobile toggle -
+@media only screen and (max-width : $breakpoint-under-medium){
+  .page-header {
+    max-height: 81px;
+    overflow: hidden;
+
+    transition: max-height 0.75s ease;
+
+    .mainmenu-open & {
+      transition: max-height 0.75s ease;
+      max-height: 1000px; // Nasty magic number max height - do nice VH fix?
+      max-height: calc(100vh - 80px);
+    }
+
+    .megamenu-overflow & {
+      overflow: visible;
+    }
+  }
+
+  //Drop shadow items -
+
+  .megamenu,
+  .search-panel,
+  .page-header,
+  .log-in--small {
+    //Bottom drop shadow -
+    box-shadow: 0 0 20px -2px $dropshadow-color;
+  }
+
+  // Hide the top bar shadow when the sub-sections are open -
+  .log-in-open,
+  .search-open {
+    .page-header {
+      box-shadow: none;
+    }
+  }
+
+}
+
+//Desktop sticky nav -
+@media only screen and (min-width : $breakpoint-medium){
+
+  .js-fixed-position-nav {
+
+    padding-top: 151px;
+
+    .page-header {
+
+      position: fixed;
+      top: -160px;
+      margin-top: 0;
+      left: 0;
+    }
+  }
+
+  .page-header {
+    box-shadow: 0 0 20px -2px $dropshadow-color;
+  }
+}

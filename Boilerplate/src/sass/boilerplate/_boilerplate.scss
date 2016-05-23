@@ -1,0 +1,70 @@
+//CSS specific to the boilerplate demo.
+//Can be excluded from final production css
+
+//
+//Triangle callout util testing -
+//
+.box-holder {
+  @extend .clearfix;
+  margin: 0 auto;
+
+  .flexbox & {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .no-flexbox & {
+    text-align: center;
+  }
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 80px auto;
+  position: relative;
+
+  .no-flexbox & {
+    display: inline-block;
+  }
+}
+
+.box--pink {
+  background-color: pink;
+
+  &.callout-tri--central-down {
+    @include triangle-callout--central-down(pink);
+  }
+
+  &.callout-tri--left-up {
+    @include triangle-callout--left-up(pink, 80px, 60px);
+  }
+}
+
+.box--green {
+  background-color: seagreen;
+
+  &.callout-tri--central-down {
+    @include triangle-callout--central-down(seagreen, 60px, 44px);
+  }
+
+  &.callout-tri--left-up {
+    @include triangle-callout--left-up(seagreen);
+  }
+}
+
+
+
+// Test for column animaiton delay utility -
+
+.animation-test{
+  padding-top:50px;
+
+  .anim-test-box{
+    width:100px;
+    height:100px;
+    background-color: rgba(0,0,255,0.2);
+    display: inline-block;
+    margin:0 2px;
+  }
+}

@@ -1,0 +1,46 @@
+//Colour swatches -
+.color-swatches {
+  @extend .non-list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-swatch {
+  margin: 10px;
+  min-width: 175px;
+
+  &__preview {
+    width: 100px;
+    height: 100px;
+    display: block;
+    background-color: $color-mono-12;
+
+    .color-swatch--1 & {
+      background-color: $primary-color;
+    }
+
+    .color-swatch--2 & {
+      background-color: $secondary-color;
+    }
+
+    .color-swatch--3 & {
+      background-color: $tertiary-color;
+    }
+
+    .color-swatch--4 & {
+      background-color: $primary-background-color;
+    }
+
+    .color-swatch--5 & {
+      background-color: $secondary-background-color;
+    }
+
+    .color-swatch--6 & {
+      background-color: $highlight-color;
+    }
+
+    .color-swatch--7 & {
+      background-color: $error-color;
+    }
+  }
+}
