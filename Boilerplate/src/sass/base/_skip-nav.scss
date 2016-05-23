@@ -1,37 +1,37 @@
 //Skip nav
 a.offscreen {
-  @include font-size(1.7);
-  position: absolute;
-  left: -1000px;
-  top: -1000px;
-  width: 1px;
-  height: 1px;
-  text-align: left;
-  overflow: hidden;
-  font-weight: bold;
+    @include font-size(1.7);
+    position: absolute;
+    left: -1000px;
+    top: -1000px;
+    width: 1px;
+    height: 1px;
+    text-align: left;
+    overflow: hidden;
+    font-weight: bold;
 
-  &,
-  &:hover,
-  &:focus {
-    color: $white;
-  }
+    &,
+    &:hover,
+    &:focus {
+        color: $white;
+    }
 }
 
 a.offscreen:focus,
 a.offscreen:active,
 a.offscreen:hover {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 999;
-  width: auto;
-  height: auto;
-  min-width: 175px;
-  padding: 30px;
-  overflow: visible;
-  background-color: $black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: auto;
+    height: auto;
+    min-width: 175px;
+    padding: 30px;
+    overflow: visible;
+    background-color: $black;
 }
 
 #main-content:focus {
-  outline: none;
+    outline: none;
 }

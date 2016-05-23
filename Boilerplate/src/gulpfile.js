@@ -51,7 +51,11 @@ gulp.task(jsStyle, function () {
 
 gulp.task(sassLintTask, function () {
     return gulp
-        .src("sass/**/*.scss")
+        .src([
+            "sass/**/*.scss",
+            "!sass/vendor/**/*.scss",
+            "!sass/utils/_svg-template.scss"
+        ])
         .pipe(sassLint())
         .pipe(sassLint.format())
         .pipe(sassLint.failOnError());

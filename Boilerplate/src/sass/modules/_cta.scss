@@ -1,44 +1,38 @@
 .cta {
-  text-align: center;
-  color: $heading-color;
+    text-align: center;
+    color: $heading-color;
 
-  .grid-module {
-    @include max-text-width;
-  }
-
-  &__header {
-    font-weight: 500;
-  }
-
-  //Only do vertical alignment and separater line on larger layout -
-  @media only screen and (min-width : $breakpoint-medium){
-    [class*='grid-col-'] {
-
-      //Verticaly align modules
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      //Add the middle border line -
-
-      &:after {
-        content: '';
-        width: 1px;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: -3.8%; // Nasty magic number relating to variable gutter width.
-        background-color: $primary-background-color;
-      }
+    .grid-module {
+        @include max-text-width;
     }
 
-    //Remove the middle border line for the last column -
-
-    [class*='grid-col-']:last-of-type {
-      &:after {
-        content: none;
-      }
+    &__header {
+        font-weight: 500;
     }
-  }
+    //Only do vertical alignment and separater line on larger layout -
+    @media only screen and (min-width : $breakpoint-medium) {
+        [class*='grid-col-'] {
+            //Verticaly align modules
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            //Add the middle border line -
+            &:after {
+                content: '';
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                right: -3.8%; // Nasty magic number relating to variable gutter width.
+                background-color: $primary-background-color;
+            }
+        }
+        //Remove the middle border line for the last column -
+        [class*='grid-col-']:last-of-type {
+            &:after {
+                content: none;
+            }
+        }
+    }
 }

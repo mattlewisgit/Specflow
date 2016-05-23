@@ -1,196 +1,195 @@
 //Grid item top margin - based on gutter scaling var
-$grid-margin-top:2.3576515979%;
+$grid-margin-top: 2.3576515979%;
 
 .grid,
 .grid-no-gutters {
-  @include outer-container;
+    @include outer-container;
 }
 
 .grid img {
-  display: block;
+    display: block;
 }
 
 [class*="grid-col-"] {
-  margin-top: $grid-margin-top;
-  padding: $pad;
+    margin-top: $grid-margin-top;
+    padding: $pad;
 
-  &.no-pad {
-    padding: 0;
-  }
+    &.no-pad {
+        padding: 0;
+    }
 
-  .grid-debug & {
-    background-color: rgba($highlight-color, 0.1);
-  }
+    .grid-debug & {
+        background-color: rgba($highlight-color, 0.1);
+    }
 }
 
-@media only screen and (min-width : $breakpoint-medium){
+@media only screen and (min-width : $breakpoint-medium) {
 
-  .grid,
-  .grid-no-gutters {
-    display: flex;
-  }
-
-  .grid {
-    .grid-col-1-12 {
-      @include span-columns(1);
+    .grid,
+    .grid-no-gutters {
+        display: flex;
     }
 
-    .grid-col-2-12,
-    .grid-col-1-6 {
-      @include span-columns(2);
+    .grid {
+        .grid-col-1-12 {
+            @include span-columns(1);
+        }
+
+        .grid-col-2-12,
+        .grid-col-1-6 {
+            @include span-columns(2);
+        }
+
+        .grid-col-3-12,
+        .grid-col-2-8,
+        .grid-col-1-4 {
+            @include span-columns(3);
+        }
+
+        .grid-col-4-12,
+        .grid-col-3-9,
+        .grid-col-2-6,
+        .grid-col-1-3 {
+            @include span-columns(4);
+        }
+
+        .grid-col-5-12 {
+            @include span-columns(5);
+        }
+
+        .grid-col-6-12,
+        .grid-col-5-10,
+        .grid-col-4-8,
+        .grid-col-3-6,
+        .grid-col-2-4,
+        .grid-col-1-2 {
+            @include span-columns(6);
+        }
+
+        .grid-col-7-12 {
+            @include span-columns(7);
+        }
+
+        .grid-col-8-12,
+        .grid-col-4-6,
+        .grid-col-2-3 {
+            @include span-columns(8);
+        }
+
+        .grid-col-9-12,
+        .grid-col-6-8,
+        .grid-col-3-4 {
+            @include span-columns(9);
+        }
+
+        .grid-col-10-12,
+        .grid-col-5-6 {
+            @include span-columns(10);
+        }
+
+        .grid-col-11-12 {
+            @include span-columns(11);
+        }
+
+        .grid-col-12-12,
+        .grid-col-10-10,
+        .grid-col-8-8,
+        .grid-col-6-6,
+        .grid-col-4-4,
+        .grid-col-3-3,
+        .grid-col-2-2,
+        .grid-col-1-1 {
+            @include span-columns(12);
+        }
     }
 
-    .grid-col-3-12,
-    .grid-col-2-8,
-    .grid-col-1-4 {
-      @include span-columns(3);
+    // no gutters -
+
+    .grid-no-gutters {
+
+        @include fill-parent;
+
+        [class*="grid-col-"] {
+            @include pad();
+            margin-top: 0;
+            float: left;
+
+            &.no-pad {
+                padding: 0;
+            }
+        }
+
+        .grid-col-1-12 {
+            width: (1 / 12) * 100%;
+        }
+
+        .grid-col-2-12,
+        .grid-col-1-6 {
+            width: (2 / 12) * 100%;
+        }
+
+        .grid-col-3-12,
+        .grid-col-2-8,
+        .grid-col-1-4 {
+            width: (3 / 12) * 100%;
+        }
+
+        .grid-col-4-12,
+        .grid-col-3-9,
+        .grid-col-2-6,
+        .grid-col-1-3 {
+            width: (4 / 12) * 100%;
+        }
+
+        .grid-col-5-12 {
+            width: (5 / 12) * 100%;
+        }
+
+        .grid-col-6-12,
+        .grid-col-5-10,
+        .grid-col-4-8,
+        .grid-col-3-6,
+        .grid-col-2-4,
+        .grid-col-1-2 {
+            width: (6 / 12) * 100%;
+        }
+
+        .grid-col-7-12 {
+            width: (7 / 12) * 100%;
+        }
+
+        .grid-col-8-12,
+        .grid-col-4-6,
+        .grid-col-2-3 {
+            width: (8 / 12) * 100%;
+        }
+
+        .grid-col-9-12,
+        .grid-col-6-8,
+        .grid-col-3-4 {
+            width: (9 / 12) * 100%;
+        }
+
+        .grid-col-10-12,
+        .grid-col-5-6 {
+            width: (10 / 12) * 100%;
+        }
+
+        .grid-col-11-12 {
+            width: (11 / 12) * 100%;
+        }
+
+        .grid-col-12-12,
+        .grid-col-10-10,
+        .grid-col-8-8,
+        .grid-col-6-6,
+        .grid-col-4-4,
+        .grid-col-3-3,
+        .grid-col-2-2,
+        .grid-col-1-1 {
+            width: (12 / 12) * 100%;
+        }
     }
-
-    .grid-col-4-12,
-    .grid-col-3-9,
-    .grid-col-2-6,
-    .grid-col-1-3 {
-      @include span-columns(4);
-    }
-
-    .grid-col-5-12 {
-      @include span-columns(5);
-    }
-
-    .grid-col-6-12,
-    .grid-col-5-10,
-    .grid-col-4-8,
-    .grid-col-3-6,
-    .grid-col-2-4,
-    .grid-col-1-2 {
-      @include span-columns(6);
-    }
-
-    .grid-col-7-12 {
-      @include span-columns(7);
-    }
-
-    .grid-col-8-12,
-    .grid-col-4-6,
-    .grid-col-2-3 {
-      @include span-columns(8);
-    }
-
-    .grid-col-9-12,
-    .grid-col-6-8,
-    .grid-col-3-4 {
-      @include span-columns(9);
-    }
-
-    .grid-col-10-12,
-    .grid-col-5-6 {
-      @include span-columns(10);
-    }
-
-    .grid-col-11-12 {
-      @include span-columns(11);
-    }
-
-    .grid-col-12-12,
-    .grid-col-10-10,
-    .grid-col-8-8,
-    .grid-col-6-6,
-    .grid-col-4-4,
-    .grid-col-3-3,
-    .grid-col-2-2,
-    .grid-col-1-1 {
-      @include span-columns(12);
-    }
-  }
-
-  // no gutters -
-
-  .grid-no-gutters {
-
-    @include fill-parent;
-
-    [class*="grid-col-"] {
-      @include pad();
-      margin-top: 0;
-      float: left;
-
-      &.no-pad {
-        padding: 0;
-      }
-    }
-
-    .grid-col-1-12 {
-      width: (1 / 12) * 100%;
-    }
-
-    .grid-col-2-12,
-    .grid-col-1-6 {
-      width: (2 / 12) * 100%;
-    }
-
-    .grid-col-3-12,
-    .grid-col-2-8,
-    .grid-col-1-4 {
-      width: (3 / 12) * 100%;
-    }
-
-    .grid-col-4-12,
-    .grid-col-3-9,
-    .grid-col-2-6,
-    .grid-col-1-3 {
-      width: (4 / 12) * 100%;
-    }
-
-    .grid-col-5-12 {
-      width: (5 / 12) * 100%;
-    }
-
-    .grid-col-6-12,
-    .grid-col-5-10,
-    .grid-col-4-8,
-    .grid-col-3-6,
-    .grid-col-2-4,
-    .grid-col-1-2 {
-      width: (6 / 12) * 100%;
-    }
-
-    .grid-col-7-12 {
-      width: (7 / 12) * 100%;
-    }
-
-    .grid-col-8-12,
-    .grid-col-4-6,
-    .grid-col-2-3 {
-      width: (8 / 12) * 100%;
-    }
-
-    .grid-col-9-12,
-    .grid-col-6-8,
-    .grid-col-3-4 {
-      width: (9 / 12) * 100%;
-    }
-
-    .grid-col-10-12,
-    .grid-col-5-6 {
-      width: (10 / 12) * 100%;
-    }
-
-    .grid-col-11-12 {
-      width: (11 / 12) * 100%;
-    }
-
-    .grid-col-12-12,
-    .grid-col-10-10,
-    .grid-col-8-8,
-    .grid-col-6-6,
-    .grid-col-4-4,
-    .grid-col-3-3,
-    .grid-col-2-2,
-    .grid-col-1-1 {
-      width: (12 / 12) * 100%;
-    }
-  }
-
 }
 
 
@@ -198,38 +197,35 @@ $grid-margin-top:2.3576515979%;
 // Custom grid example
 .custom-grid {
 
-  @include outer-container;
+    @include outer-container;
 
-  .custom-col {
+    .custom-col {
+        // //50% on small screens -
+        @include span-columns(6);
+        @include omega(2n);
+        background-color: rgba($tertiary-color, 0.2);
+        margin-top: $grid-margin-top;
+        padding: 10px;
 
-    // //50% on small screens -
-    @include span-columns(6);
-    @include omega(2n);
+        @media only screen and (min-width : $breakpoint-medium) {
+            //25% on medium screens -
+            @include omega-reset(2n); //  - Reset omega function - see http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat
+            @include span-columns(3);
+            @include omega(4n);
+        }
 
-    background-color: rgba($tertiary-color, 0.2);
-    margin-top: $grid-margin-top;
-    padding: 10px;
+        @media only screen and (min-width : $breakpoint-larger) {
+            //16.66% on larger screens -
+            @include omega-reset(4n);
+            @include span-columns(2);
+            @include omega(6n);
+        }
 
-    @media only screen and (min-width : $breakpoint-medium){
-      //25% on medium screens -
-      @include omega-reset(2n); //  - Reset omega function - see http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat
-      @include span-columns(3);
-      @include omega(4n);
+        @media only screen and (min-width : $breakpoint-max) {
+            //Back to 50% on largest screens -
+            @include omega-reset(6n);
+            @include span-columns(6);
+            @include omega(2n);
+        }
     }
-
-    @media only screen and (min-width : $breakpoint-larger){
-      //16.66% on larger screens -
-      @include omega-reset(4n);
-      @include span-columns(2);
-      @include omega(6n);
-    }
-
-    @media only screen and (min-width : $breakpoint-max){
-      //Back to 50% on largest screens -
-      @include omega-reset(6n);
-      @include span-columns(6);
-      @include omega(2n);
-    }
-
-  }
 }

@@ -1,96 +1,94 @@
 .iconlist,
 .richtext .iconlist {
-  @extend .non-list;
-  @extend .clearfix;
+    @extend .non-list;
+    @extend .clearfix;
+    margin-top: $pad;
+    margin-bottom: $pad;
 
-  margin-top: $pad;
-  margin-bottom: $pad;
+    &__item {
+        padding: 0 25px 25px 50px;
+        position: relative;
 
-  &__item {
-    padding: 0 25px 25px 50px;
-    position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
-  }
 }
 
 // Two columns on larger screens -
-@media only screen and (min-width : $breakpoint-medium){
+@media only screen and (min-width : $breakpoint-medium) {
 
-  .iconlist,
-  .richtext .iconlist {
+    .iconlist,
+    .richtext .iconlist {
 
-    &__item {
-      float: left;
-      width: 50%;
+        &__item {
+            float: left;
+            width: 50%;
 
-      &:nth-child(odd) {
-        clear: both;
-      }
+            &:nth-child(odd) {
+                clear: both;
+            }
+        }
+
+        &--full {
+            .iconlist__item {
+                width: 100%;
+            }
+        }
     }
-
-    &--full {
-      .iconlist__item {
-        width: 100%;
-      }
-    }
-  }
-
 }
 
 
 //Icon definitions -
 .iconlist--check .iconlist__item:before,
 .iconlist__item--check:before {
-  @include retina-sprite($sprite-icon-check-group);
+    @include retina-sprite($sprite-icon-check-group);
 }
 
 .iconlist--chevron-bottom .iconlist__item:before,
 .iconlist__item--chevron-bottom:before {
-  @include retina-sprite($sprite-icon-chevron-bottom-group);
+    @include retina-sprite($sprite-icon-chevron-bottom-group);
 }
 
 .iconlist--chevron-left .iconlist__item:before,
 .iconlist__item--chevron-left:before {
-  @include retina-sprite($sprite-icon-chevron-left-group);
+    @include retina-sprite($sprite-icon-chevron-left-group);
 }
 
 .iconlist--chevron-right .iconlist__item:before,
 .iconlist__item--chevron-right:before {
-  @include retina-sprite($sprite-icon-chevron-right-group);
+    @include retina-sprite($sprite-icon-chevron-right-group);
 }
 
 .iconlist--chevron-top .iconlist__item:before,
 .iconlist__item--chevron-top:before {
-  @include retina-sprite($sprite-icon-chevron-top-group);
+    @include retina-sprite($sprite-icon-chevron-top-group);
 }
 
 .iconlist--circle-x .iconlist__item:before,
 .iconlist__item--circle-x:before {
-  @include retina-sprite($sprite-icon-circle-x-group);
+    @include retina-sprite($sprite-icon-circle-x-group);
 }
 
 .iconlist--heart .iconlist__item:before,
 .iconlist__item--heart:before {
-  @include retina-sprite($sprite-icon-heart-group);
+    @include retina-sprite($sprite-icon-heart-group);
 }
 
 .iconlist--lock-locked .iconlist__item:before,
 .iconlist__item--lock-locked:before {
-  @include retina-sprite($sprite-icon-lock-locked-group);
+    @include retina-sprite($sprite-icon-lock-locked-group);
 }
 
 .iconlist--lock-unlocked .iconlist__item:before,
 .iconlist__item--lock-unlocked:before {
-  @include retina-sprite($sprite-icon-lock-unlocked-group);
+    @include retina-sprite($sprite-icon-lock-unlocked-group);
 }
 
 .iconlist--map-marker .iconlist__item:before,
 .iconlist__item--map-marker:before {
-  @include retina-sprite($sprite-icon-map-marker-group);
+    @include retina-sprite($sprite-icon-map-marker-group);
 }

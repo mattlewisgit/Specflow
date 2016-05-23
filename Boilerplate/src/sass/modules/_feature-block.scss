@@ -1,157 +1,152 @@
 //Left side content by default -
 .feature-block {
-  @extend .clearfix;
-  position: relative;
-
-  &__image {
-    background-size: cover;
-    background-position: 50% 50%;
-    width: 100%;
-    height: 0%;
-    padding-top: 56.25%; // 16:9
+    @extend .clearfix;
     position: relative;
-  }
-
-  &__content-container {
-    padding: $pad;
-  }
-
-  &__content {
-    width: 100%;
-    height: 100%;
-    color: $body-color;
-    position: relative;
-
-    //Remove top margin of first child -
-    > :first-child {
-      margin-top: 0;
-    }
-  }
-
-  //Right side content with --right modifier -
-  &--right {
-
-    .feature-block__content-container {
-      padding: $pad;
-    }
-  }
-
-
-  //Color modifiers -
-  &--primary {
-    .feature-block__content-container {
-      background-color: $primary-color;
-    }
-
-    .feature-block__content {
-      @extend .text-light;
-    }
-  }
-
-  &--secondary {
-    .feature-block__content-container {
-      background-color: $secondary-color;
-    }
-
-    .feature-block__content {
-      @extend .text-light;
-    }
-  }
-
-  &--tertiary {
-    .feature-block__content-container {
-      background-color: $tertiary-color;
-    }
-
-    .feature-block__content {
-      @extend .text-light;
-    }
-  }
-
-  &--highlight {
-    .feature-block__content-container {
-      background-color: $highlight-color;
-    }
-
-    .feature-block__content {
-      @extend .text-light;
-    }
-  }
-
-  &--light {
-    .feature-block__content-container {
-      background-color: $primary-background-color;
-    }
-
-    .feature-block__content {
-      @extend .text-dark;
-    }
-  }
-
-  &--dark {
-    .feature-block__content-container {
-      background-color: $secondary-background-color;
-    }
-
-    .feature-block__content {
-      @extend .text-light;
-    }
-  }
-}
-
-@media only screen and (min-width : $breakpoint-medium){
-  .feature-block {
-    &__content-container {
-      padding: $pad--large;
-    }
-
-    &--right {
-      .feature-block__content-container {
-        padding: $pad--large;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width : $breakpoint-large){
-
-  .feature-block {
 
     &__image {
-      position: absolute;
-      right: 0;
-      z-index: 0;
-      height: 100%;
-      padding-top: 0;
-      width: 50%;
-      float: left;
+        background-size: cover;
+        background-position: 50% 50%;
+        width: 100%;
+        height: 0%;
+        padding-top: 56.25%; // 16:9
+        position: relative;
     }
 
     &__content-container {
-      z-index: 2;
-      width: 50%;
-      float: left;
+        padding: $pad;
     }
 
     &__content {
-      @include max-text-width;
-      margin: 0 auto;
-
-      //Remove top margin of first child -
-      > :first-child {
-        margin-top: 0;
-      }
+        width: 100%;
+        height: 100%;
+        color: $body-color;
+        position: relative;
+        //Remove top margin of first child -
+        > :first-child {
+            margin-top: 0;
+        }
     }
-
+    //Right side content with --right modifier -
     &--right {
-      .feature-block__content-container {
-        float: right;
-      }
 
-      .feature-block__image {
-        right: auto;
-        left: 0;
-      }
+        .feature-block__content-container {
+            padding: $pad;
+        }
     }
-  }
+    //Color modifiers -
+    &--primary {
+        .feature-block__content-container {
+            background-color: $primary-color;
+        }
+
+        .feature-block__content {
+            @extend .text-light;
+        }
+    }
+
+    &--secondary {
+        .feature-block__content-container {
+            background-color: $secondary-color;
+        }
+
+        .feature-block__content {
+            @extend .text-light;
+        }
+    }
+
+    &--tertiary {
+        .feature-block__content-container {
+            background-color: $tertiary-color;
+        }
+
+        .feature-block__content {
+            @extend .text-light;
+        }
+    }
+
+    &--highlight {
+        .feature-block__content-container {
+            background-color: $highlight-color;
+        }
+
+        .feature-block__content {
+            @extend .text-light;
+        }
+    }
+
+    &--light {
+        .feature-block__content-container {
+            background-color: $primary-background-color;
+        }
+
+        .feature-block__content {
+            @extend .text-dark;
+        }
+    }
+
+    &--dark {
+        .feature-block__content-container {
+            background-color: $secondary-background-color;
+        }
+
+        .feature-block__content {
+            @extend .text-light;
+        }
+    }
+}
+
+@media only screen and (min-width : $breakpoint-medium) {
+    .feature-block {
+        &__content-container {
+            padding: $pad--large;
+        }
+
+        &--right {
+            .feature-block__content-container {
+                padding: $pad--large;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width : $breakpoint-large) {
+
+    .feature-block {
+
+        &__image {
+            position: absolute;
+            right: 0;
+            z-index: 0;
+            height: 100%;
+            padding-top: 0;
+            width: 50%;
+            float: left;
+        }
+
+        &__content-container {
+            z-index: 2;
+            width: 50%;
+            float: left;
+        }
+
+        &__content {
+            @include max-text-width;
+            margin: 0 auto;
+            //Remove top margin of first child -
+            > :first-child {
+                margin-top: 0;
+            }
+        }
+
+        &--right {
+            .feature-block__content-container {
+                float: right;
+            }
+
+            .feature-block__image {
+                right: auto;
+                left: 0;
+            }
+        }
+    }
 }

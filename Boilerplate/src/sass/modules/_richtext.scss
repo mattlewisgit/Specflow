@@ -1,11 +1,10 @@
 .richtext {
 
-  ul {
-    @extend .styled-ul;
-  }
+    ul {
+        @extend .styled-ul;
+    }
 
-  ol {
-    @extend .styled-ol;
-  }
-
+    ol {
+        @extend .styled-ol;
+    }
 }

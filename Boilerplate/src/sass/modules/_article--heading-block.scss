@@ -1,14 +1,14 @@
 .article--heading-block {
-  @extend .burst;
-  background-color: $color-mono-12;
-  padding: $pad;
+    @extend .burst;
+    background-color: $color-mono-12;
+    padding: $pad;
 
-  @media only screen and (min-width : $breakpoint-medium){
-    padding: $pad--large;
-  }
+    @media only screen and (min-width : $breakpoint-medium) {
+        padding: $pad--large;
+    }
 
-  &__content {
-    margin: 40px auto;
-    text-align: center;
-  }
+    &__content {
+        margin: 40px auto;
+        text-align: center;
+    }
 }
