@@ -253,3 +253,4 @@ Boilerplate/**/*.css
 Boilerplate/**/*.map
 Boilerplate/**/*.min.*
 Boilerplate/js/*.js
+Boilerplate/images/*.*

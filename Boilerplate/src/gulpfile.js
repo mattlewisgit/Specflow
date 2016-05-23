@@ -85,9 +85,9 @@ gulp.task(spriteTask, function () {
         .pipe(spritesmith({
             src: source + "*.png",
             retinaSrcFilter: source + "*@2x.png",
-            imgName: "images/sprite-generated.png",
+            imgName: "../images/sprite-generated.png",
             padding: 5,
-            retinaImgName: "images/sprite-generated@2x.png",
+            retinaImgName: "../images/sprite-generated@2x.png",
             cssName: "sass/generated/_sprite.scss",
             cssVarMap: function (sprite) {
                 sprite.name = "sprite_" + sprite.name;
@@ -170,7 +170,7 @@ gulp.task(buildTask, [
 
 // Default task that runs all the tasks.
 gulp.task("default", [
-    //cleanTask,
+    cleanTask,
     lintTask,
     buildTask
 ]);
