@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cards_stacked.html" />
+    <Content Include="components\summary\summary-left.html" />
+    <Content Include="components\summary\index.html" />
     <Content Include="faq_leader.html" />
     <Content Include="img\clipboard-icon.png" />
     <Content Include="img\heart-icon.png" />
@@ -115,6 +117,12 @@
     <Content Include="src\sass\rewards_leader.min.css">
       <DependentUpon>rewards_leader.css</DependentUpon>
     </Content>
+    <Content Include="src\sass\summary.css">
+      <DependentUpon>summary.scss</DependentUpon>
+    </Content>
+    <Content Include="src\sass\summary.min.css">
+      <DependentUpon>summary.css</DependentUpon>
+    </Content>
     <Content Include="src\sass\_defaults.css">
       <DependentUpon>_defaults.scss</DependentUpon>
     </Content>
@@ -156,6 +164,10 @@
     <Content Include="src\sass\cards_stacked.scss" />
     <Content Include="src\sass\cards_stacked.css.map">
       <DependentUpon>cards_stacked.css</DependentUpon>
+    </Content>
+    <Content Include="src\sass\summary.scss" />
+    <Content Include="src\sass\summary.css.map">
+      <DependentUpon>summary.css</DependentUpon>
     </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
