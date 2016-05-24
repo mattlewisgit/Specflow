@@ -11,6 +11,7 @@
         "gulp-cssnano": "*",
         "gulp-jshint": "*",
         "gulp-jscs": "*",
+        "gulp-real-favicon": "*",
         "gulp-sass": "*",
         "gulp-sass-lint": "*",
         "gulp.spritesmith": "*",

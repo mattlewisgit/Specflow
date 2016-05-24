@@ -252,5 +252,6 @@ Vitality.Website/js/**/*.js
 Boilerplate/**/*.css
 Boilerplate/**/*.map
 Boilerplate/**/*.min.*
+Boilerplate/img/favicon/*.*
 Boilerplate/js/*.js
-Boilerplate/images/*.*
+Boilerplate/src/favicon-data.json

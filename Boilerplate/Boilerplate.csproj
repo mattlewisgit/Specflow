@@ -69,6 +69,7 @@
     <Content Include="img\youtube--footer.svg" />
     <Content Include="index.html" />
     <Content Include="main_navigation.html" />
+    <Content Include="src\favicon-template.html" />
     <Content Include="src\gulpfile.js" />
     <Content Include="js\boilerplate.js" />
     <Content Include="src\images\svg-sprite.svg" />
