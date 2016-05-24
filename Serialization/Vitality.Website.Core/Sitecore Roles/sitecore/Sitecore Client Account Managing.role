@@ -1,0 +1,6 @@
+----role----
+name: sitecore\Sitecore Client Account Managing
+
+----role-in-role----
+rolename: sitecore\Sitecore Local Administrators
+

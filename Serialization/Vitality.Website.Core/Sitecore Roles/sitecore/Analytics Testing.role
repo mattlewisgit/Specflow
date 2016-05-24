@@ -1,0 +1,6 @@
+----role----
+name: sitecore\Analytics Testing
+
+----role-in-role----
+rolename: sitecore\Author
+
