@@ -11,7 +11,7 @@ namespace Vitality.Website.SC.Events
 
     public class ItemEventsHandler
     {
-        private readonly ID fieldTemplateId = new ID("{455A3E98-A627-4B40-8035-E683A0331AC7}");
+        private static readonly ID fieldTemplateId = new ID("{455A3E98-A627-4B40-8035-E683A0331AC7}");
 
         public void SetSeoFriendlyItemName(object sender, EventArgs args)
         {
@@ -37,7 +37,7 @@ namespace Vitality.Website.SC.Events
 
             if (item != null && ItemIsMasterDatabaseTemplateField(item))
             {
-                if (item.TemplateID == this.fieldTemplateId && item.Fields["Title"] != null)
+                if (FieldItemTitleIsNotSplitCamelCase(item))
                 {
                     using (new EditContext(item))
                     {
@@ -49,14 +49,21 @@ namespace Vitality.Website.SC.Events
 
         private static bool ItemIsMasterDatabaseContentPage(Item item)
         {
-            return item != null && item.Database.Name == "master"
-                   && item.Paths.FullPath.StartsWith(ItemConstants.Presales.Content.Home.Path, StringComparison.OrdinalIgnoreCase);
+            return item != null && item.Database.Name == "master" 
+                && item.Paths.FullPath.StartsWith(ItemConstants.Presales.Content.Home.Path, StringComparison.OrdinalIgnoreCase);
         }
 
         private static bool ItemIsMasterDatabaseTemplateField(Item item)
         {
             return item != null && item.Database.Name == "master"
-                   && item.TemplateID.Equals(TemplateIDs.TemplateField);
+                && item.TemplateID.Equals(TemplateIDs.TemplateField);
+        }
+
+        private static bool FieldItemTitleIsNotSplitCamelCase(Item item)
+        {
+            return item.TemplateID == fieldTemplateId 
+                && item.Fields["Title"] != null 
+                && item.Fields["Title"].Value != StringHelper.SplitCamelCase(item.Name);
         }
 
         private Item GetItem(EventArgs args)

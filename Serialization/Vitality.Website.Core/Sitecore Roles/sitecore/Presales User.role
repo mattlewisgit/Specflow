@@ -1,0 +1,12 @@
+----role----
+name: sitecore\Presales User
+
+----role-in-role----
+rolename: sitecore\Presales Admin
+
+----role-in-role----
+rolename: sitecore\Presales Content Author
+
+----role-in-role----
+rolename: sitecore\Presales Content Manager
+

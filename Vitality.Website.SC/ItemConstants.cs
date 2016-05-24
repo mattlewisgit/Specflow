@@ -10,6 +10,11 @@
                 {
                     public const string Path = "/sitecore/content/Presales/home";
                 }
+
+                public static class ContentFolder
+                {
+                    public const string Path = "/sitecore/content/Presales/Content";
+                }
             }
 
             public static class Templates

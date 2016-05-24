@@ -1,0 +1,6 @@
+----role----
+name: sitecore\Analytics Maintaining
+
+----role-in-role----
+rolename: sitecore\Experience Explorer
+

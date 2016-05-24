@@ -86,7 +86,7 @@
                     @foreach (var socialLink in Model.SocialLinks)
                     {
                         <li class="social-icon">
-                            @using (BeginRenderLink(socialLink, item => item.Link, new { _target = "blank" }))
+                            @using (BeginRenderLink(socialLink, item => item.Link))
                             {
                                 @RenderImage(socialLink, item => item.Image, isEditable: false)
                             }

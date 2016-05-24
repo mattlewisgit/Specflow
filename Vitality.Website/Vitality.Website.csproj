@@ -151,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
+    <None Include="App_Config\Include\Vitality\Vitality.Deployment.config.disabled" />
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -204,13 +205,16 @@
     <Compile Include="Areas\Presales\Models\Rewards\RewardsLeader.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
     <Compile Include="Areas\Presales\RenderingModels\RewardsLeaderRendering.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
     <Compile Include="Extensions\Views\ProductHeroExtensions.cs" />
+    <Compile Include="Extensions\Views\CardsStackedExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\Views\RewardsLeaderExtensions.cs" />
     <Compile Include="Areas\Presales\Models\FeatureBlocks\BenefitLeader.cs" />
     <Compile Include="Areas\Presales\RenderingModels\BenefitLeaderRendering.cs" />
     <Compile Include="Extensions\Views\BenefitLeaderExtensions.cs" />
-    <Compile Include="Extensions\Views\FaqPreviewExtensions.cs" />
     <Compile Include="Extensions\Views\NavigationSubSectionExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -419,7 +423,6 @@
     </Content>
     <Content Include="App_Config\Include\Glass.Mapper.Sc.Start.config" />
     <Content Include="App_Config\Include\Glass.Mapper.Sc.config" />
-    <Content Include="App_Config\Include\Glass.Mapper.Sc.CodeFirst.config.exclude" />
     <None Include="App_Config\Include\Vitality\Vitality.Sites.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -481,7 +484,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>59728</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
