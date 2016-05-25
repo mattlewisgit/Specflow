@@ -20,6 +20,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <NuGetPackageImportStamp>ae141f4c</NuGetPackageImportStamp>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -169,9 +170,41 @@
     <Content Include="client_side\img\vitality-logo--white.svg" />
     <Content Include="client_side\img\vitality-logo.svg" />
     <Content Include="client_side\img\youtube--footer.svg" />
-    <Content Include="client_side\js\app.js" />
     <Content Include="css\app.css" />
+    <Content Include="css\rich_text_editor.css" />
     <Content Include="Global.asax" />
+    <Content Include="images\sprite-generated%402x.png" />
+    <Content Include="images\sprite-generated.png" />
+    <Content Include="img\favicon\android-chrome-144x144.png" />
+    <Content Include="img\favicon\android-chrome-192x192.png" />
+    <Content Include="img\favicon\android-chrome-36x36.png" />
+    <Content Include="img\favicon\android-chrome-48x48.png" />
+    <Content Include="img\favicon\android-chrome-72x72.png" />
+    <Content Include="img\favicon\android-chrome-96x96.png" />
+    <Content Include="img\favicon\apple-touch-icon-114x114.png" />
+    <Content Include="img\favicon\apple-touch-icon-120x120.png" />
+    <Content Include="img\favicon\apple-touch-icon-144x144.png" />
+    <Content Include="img\favicon\apple-touch-icon-152x152.png" />
+    <Content Include="img\favicon\apple-touch-icon-180x180.png" />
+    <Content Include="img\favicon\apple-touch-icon-57x57.png" />
+    <Content Include="img\favicon\apple-touch-icon-60x60.png" />
+    <Content Include="img\favicon\apple-touch-icon-72x72.png" />
+    <Content Include="img\favicon\apple-touch-icon-76x76.png" />
+    <Content Include="img\favicon\apple-touch-icon-precomposed.png" />
+    <Content Include="img\favicon\apple-touch-icon.png" />
+    <Content Include="img\favicon\browserconfig.xml" />
+    <Content Include="img\favicon\favicon-16x16.png" />
+    <Content Include="img\favicon\favicon-194x194.png" />
+    <Content Include="img\favicon\favicon-32x32.png" />
+    <Content Include="img\favicon\favicon-96x96.png" />
+    <Content Include="img\favicon\favicon.ico" />
+    <Content Include="img\favicon\mstile-144x144.png" />
+    <Content Include="img\favicon\mstile-150x150.png" />
+    <Content Include="img\favicon\mstile-310x150.png" />
+    <Content Include="img\favicon\mstile-310x310.png" />
+    <Content Include="img\favicon\mstile-70x70.png" />
+    <Content Include="img\favicon\open-graph.png" />
+    <Content Include="img\favicon\safari-pinned-tab.svg" />
     <Content Include="js\modernizr-custom.min.js" />
     <Content Include="js\require.js" />
     <Content Include="js\vitality-boilerplate.js" />
@@ -191,6 +224,7 @@
     <Compile Include="Areas\Presales\Models\Cards\CardsStacked.cs" />
     <Compile Include="Areas\Presales\Models\FAQ\FeaturedQuestions.cs" />
     <Compile Include="Areas\Presales\Models\FAQ\QuestionAnswer.cs" />
+    <Compile Include="Areas\Presales\Models\FeatureBlocks\ProductHero.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
@@ -201,6 +235,7 @@
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\Views\ProductHeroExtensions.cs" />
     <Compile Include="Extensions\Views\CardsStackedExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\Views\RewardsLeaderExtensions.cs" />
@@ -423,7 +458,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Areas\Presales\Views\Shared\MainLayout.cshtml" />
-    <Content Include="css\screen-0.0.1.css" />
     <Content Include="Areas\Presales\Views\web.config" />
     <Content Include="Areas\Presales\Views\Navigation\MainNavigation.cshtml" />
     <Content Include="Areas\Presales\Views\Navigation\NavigationSection.cshtml" />
@@ -439,7 +473,10 @@
     <Content Include="Areas\Presales\Views\FeatureBlocks\BenefitLeader.cshtml" />
     <Content Include="Areas\Presales\Views\FAQ\FAQPreview.cshtml" />
     <Content Include="Areas\Presales\Views\Summary\SummaryComponent.cshtml" />
-    <Content Include="client_side\sass\rich_text_editor.scss" />
+    <Content Include="img\favicon\manifest.json" />
+    <Content Include="Areas\Presales\Views\FeatureBlocks\ProductHero.cshtml">
+      <SubType>Code</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -451,7 +488,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Presales\Controllers\" />
     <Folder Include="Controllers\" />
-    <Folder Include="img\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

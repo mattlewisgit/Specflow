@@ -1,0 +1,9 @@
+----role----
+name: sitecore\Experience Explorer
+
+----role-in-role----
+rolename: sitecore\Presales Content Author
+
+----role-in-role----
+rolename: sitecore\Presales Content Manager
+

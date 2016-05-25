@@ -11,10 +11,14 @@
         "gulp-cssnano": "*",
         "gulp-jshint": "*",
         "gulp-jscs": "*",
+        "gulp-real-favicon": "*",
         "gulp-sass": "*",
         "gulp-sass-lint": "*",
+        "gulp.spritesmith": "*",
+        "gulp-svg-sprite": "*",
         "gulp-uglify": "*",
-        "jshint": "*"
+        "jshint": "*",
+        "run-sequence": "*"
     },
     "scripts": {
         "bower": "bower",

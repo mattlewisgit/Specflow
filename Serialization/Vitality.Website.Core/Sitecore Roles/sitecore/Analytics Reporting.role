@@ -1,0 +1,6 @@
+----role----
+name: sitecore\Analytics Reporting
+
+----role-in-role----
+rolename: sitecore\List Manager Editors
+

@@ -1,0 +1,215 @@
+.search-panel {
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: $white;
+
+    &__content {
+        padding: $pad;
+    }
+
+    &__close-button {
+        display: none;
+    }
+
+    &__header {
+        @include font-size(1.4);
+        color: $grey;
+        font-weight: 500;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    &__search-field.form {
+
+        .form__field {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 0;
+        }
+
+        .search-panel__search-details {
+            display: none;
+            font-weight: 500;
+        }
+
+        .search-string {
+            color: $primary-color;
+        }
+
+        .search-panel__search-input {
+            @include font-size(4.8);
+            color: $grey;
+            line-height: 1.1em;
+            height: 1.5em;
+            width: 100%;
+            border: 0;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0;
+        }
+    }
+
+    .search-panel__search-results {
+        display: none;
+        margin-top: 60px;
+    }
+
+    .search-results {
+
+        &__header {
+            color: $primary-color;
+            font-weight: 500;
+        }
+
+        &__list {
+            @extend .non-list;
+            margin-bottom: 40px;
+        }
+
+        &__item {
+            border-bottom: 1px solid $grey--light;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        &__item-header {
+            @include font-size(1.8);
+            color: $grey;
+            font-weight: 500;
+        }
+
+        &__item-body {
+            @include font-size(1.4);
+            color: $grey;
+            font-weight: 500;
+        }
+
+        &__background-image {
+            display: none;
+        }
+    }
+}
+
+
+@media only screen and (min-width : $breakpoint-medium) {
+
+    .search-panel {
+        position: absolute;
+        //Hidden & offscreen - work around for display none -> opacity fading issue.
+        visibility: hidden;
+        top: -1000%;
+        z-index: 100;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        //Delay change on top & visibility properties when removing the search-open class
+        //Allows smooth fade in & fade out -
+        transition: opacity 0.5s 0.25s, top 0s 0.75s, visibility 0s 0.75s;
+        opacity: 0;
+
+        .search-open & {
+            transition: opacity 0.5s;
+            visibility: visible;
+            top: 0;
+            opacity: 1;
+            overflow-y: scroll;
+        }
+
+        &__header {
+            @include font-size(2);
+            position: relative;
+            padding-right: 75px;
+        }
+
+        &__close-button {
+            @include retina-sprite($sprite-close-icon-group);
+            @include hide-text();
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 22px;
+            height: 22px;
+            cursor: pointer;
+            transition: opacity;
+
+            &:focus,
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        &__content {
+            padding: $pad--large;
+        }
+
+        &__search-field.form {
+            .search-panel__search-input {
+                border-bottom: 1px solid $grey--light;
+            }
+        }
+
+        &__search-results {
+            width: 50%;
+        }
+        // When there is enough vertical room - show the serach background -
+        @media only screen and (min-height : 650px) {
+
+            &__background-image {
+                display: block;
+                pointer-events: none;
+                z-index: -1;
+                position: fixed;
+                right: -1000%; //
+                bottom: 10px;
+                width: 42%;
+                height: 50%;
+                opacity: 0.2;
+                background-size: contain;
+                background-position: 100% 100%;
+                background-repeat: no-repeat;
+                //Image set through markup to allows CMS control of image -
+                //background-image: url('/media/000/search-background.png');
+                transition: right 0s 1s;
+
+                .search-open & {
+                    right: 30px;
+                    transition: right 0s 0s;
+                }
+            }
+        }
+    }
+
+    //When the full screen search is open - disable scrolling on the body -
+    body.search-open {
+        position: fixed;
+        overflow-y: hidden;
+        width: 100%;
+    }
+}
+
+//Mobile toggle -
+@media only screen and (max-width : $breakpoint-under-medium) {
+
+    .search-panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.75s ease;
+
+        .search-open & {
+            max-height: 1000px;
+            max-height: calc(100vh - 80px);
+        }
+
+        .search-overflow & {
+            height: auto;
+            max-height: none;
+            min-height: calc(100vh - 80px);
+        }
+    }
+}

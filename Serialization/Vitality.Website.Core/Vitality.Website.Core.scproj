@@ -416,10 +416,48 @@
     </SitecoreItem>
   </ItemGroup>
   <ItemGroup>
+    <SitecoreRole Include="Sitecore Roles\default\Everyone.role" />
+    <SitecoreRole Include="Sitecore Roles\extranet\Everyone.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Analytics Advanced Testing.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Analytics Content Profiling.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Analytics Maintaining.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Analytics Management Reporting.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Analytics Personalization.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Analytics Reporting.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Analytics Testing.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Author.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Designer.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Developer.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Everyone.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Experience Explorer.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Facebook Message Reviewer.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\List Manager Editors.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Presales Admin.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Presales Content Author.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Presales Content Manager.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Presales User.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Client Account Managing.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Client Advanced Publishing.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Client Authoring.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Client Bucket Management.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Client Configuring.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Client Designing.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Client Developing.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Client Maintaining.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Client Publishing.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Client Securing.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Client Social Authoring.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Client Translating.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Client Users.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Limited Content Editor.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Limited Page Editor.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Local Administrators.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Sitecore Minimal Page Editor.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Social Marketer Message Reviewer.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Social Message Author.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Social Message Workflow Editor.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Social Message Workflow Reviewer.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Twitter Message Reviewer.role" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" />
 </Project>
