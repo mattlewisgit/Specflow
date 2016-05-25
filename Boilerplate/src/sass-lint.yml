@@ -4,11 +4,11 @@
 files:
   include: "sass/**/*.scss"
   ignore:
-    - "sass/vendor/**/*.*"
+    - "sass/vendor/**/*.scss"
 rules:
   extends-before-mixins: 2
   extends-before-declarations: 2
-  placeholder-in-extend: 2
+  placeholder-in-extend: 1
   mixins-before-declarations:
     - 2
     - exclude:
@@ -26,6 +26,7 @@ rules:
     -
       size: 4
   quotes:
+    - 1
     - style: double
   property-sort-order:
     - 1
@@ -34,7 +35,7 @@ rules:
         - margin
       ignore-custom-properties: true
   variable-for-property:
-    - 2
+    - 1
     - properties:
         - margin
         - content

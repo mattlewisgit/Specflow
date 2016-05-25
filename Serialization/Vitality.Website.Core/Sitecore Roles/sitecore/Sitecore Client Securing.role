@@ -1,0 +1,6 @@
+----role----
+name: sitecore\Sitecore Client Securing
+
+----role-in-role----
+rolename: sitecore\Sitecore Local Administrators
+

@@ -243,6 +243,7 @@ Vitality.Website/css/**/*.css
 Vitality.Website/client_side/sass/*.css
 Vitality.Website/client_side/sass/*.map
 Vitality.Website/img/**/*.*
+!Vitality.Website/img/favicon/*.*
 Vitality.Website/js/**/*.js
 
 # Diffs.
@@ -252,4 +253,9 @@ Vitality.Website/js/**/*.js
 Boilerplate/**/*.css
 Boilerplate/**/*.map
 Boilerplate/**/*.min.*
+Boilerplate/images/**/*.*
+Boilerplate/img/favicon/*.*
 Boilerplate/js/*.js
+Boilerplate/src/favicon-data.json
+Boilerplate/src/images/**/*sprite*.*
+Boilerplate/src/sass/generated/*.scss

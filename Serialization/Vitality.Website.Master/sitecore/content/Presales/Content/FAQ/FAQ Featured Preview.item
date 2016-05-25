@@ -43,13 +43,6 @@ content-length: 77
 
 Here's a selection of questions and answers that we've helped customers with.
 ----field----
-field: {38A66812-1633-4C5F-82F1-0A720B2BD0AF}
-name: Questions
-key: questions
-content-length: 0
-
-
-----field----
 field: {3597D90E-53F7-42D2-A465-E734633B4BE9}
 name: CTA
 key: cta
