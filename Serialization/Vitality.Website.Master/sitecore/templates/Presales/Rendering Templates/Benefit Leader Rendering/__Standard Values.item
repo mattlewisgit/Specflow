@@ -15,19 +15,19 @@ version: 1
 revision: 09233b00-5768-4e6c-9f4c-0555162cbcb1
 
 ----field----
+field: {874A1D46-E828-4A67-BAF0-ED3FF53869D8}
+name: ImageRelativePosition
+key: imagerelativeposition
+content-length: 38
+
+{C6367441-9501-48A2-A09E-2492E7D2DB49}
+----field----
 field: {6680EEAA-ACC9-487C-AFF6-B366DBD8210C}
 name: BackgroundColour
 key: backgroundcolour
 content-length: 38
 
 {C4292409-D871-40A2-805E-B113B865F57D}
-----field----
-field: {874A1D46-E828-4A67-BAF0-ED3FF53869D8}
-name: BackgroundPosition
-key: backgroundposition
-content-length: 38
-
-{C6367441-9501-48A2-A09E-2492E7D2DB49}
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created

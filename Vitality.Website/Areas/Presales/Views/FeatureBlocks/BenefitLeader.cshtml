@@ -1,23 +1,29 @@
 ﻿@using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.FeatureBlocks.BenefitLeader>
+@{
+    var contentAlignment = this.ContentAlignment();
+    var applyGradient = this.ApplyGradient();
+    var backgroundColour = this.BackgroundColour();
+    var imageRelativePosition = this.ImageRelativePosition();
+}
 
 @using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
 {
-<div class="feature-block-gradient feature-block-gradient--@this.BackgroundColour() @this.BackgroundImageLeft()">
-    <div class="feature-block-gradient__image @this.BackgroundPosition()"
-         style="background-image: url(@(Model.BackgroundImage.Src);"></div>
+    <div class="feature-block@(applyGradient) feature-block@(applyGradient)--@backgroundColour @contentAlignment">
+        <div class="feature-block@(applyGradient)__image @imageRelativePosition"
+             style="background-image: url(@(Model.BackgroundImage.Src);"></div>
 
-    <div class="feature-block-gradient__content-container">
-        <div class="feature-block-gradient__content">
-            @if (IsInEditingMode || !string.IsNullOrWhiteSpace(Model.LeadIn))
-            {
-                <h6>@Editable(Model, item => item.LeadIn)</h6>
-            }
+        <div class="feature-block@(applyGradient)__content-container">
+            <div class="feature-block@(applyGradient)__content">
+                @if (IsInEditingMode || !string.IsNullOrWhiteSpace(Model.LeadIn))
+                {
+                    <h6>@Editable(Model, item => item.LeadIn)</h6>
+                }
 
-            <h3>@Editable(Model, item => item.Headline)</h3>
-            <p>@Editable(Model, item => item.Body)</p>
-            @Editable(Model, item => item.CallToAction, new { @class = "box-button box-button--rounded" })
+                <h3>@Editable(Model, item => item.Headline)</h3>
+                <p>@Editable(Model, item => item.Body)</p>
+                @Editable(Model, item => item.CallToAction, new { @class = this.ButtonStyle() })
+            </div>
         </div>
     </div>
-</div>
 }
