@@ -10,7 +10,7 @@
         
         <h1>@Editable(Model, m => m.LeftContentHeadline)</h1>
 
-        @if (this.CanShowOpeningParagraph())
+        @if (this.CanShowLeftContentOpeningParagraph())
         {
             <p>@Editable(Model, m => m.LeftContentOpeningParagraph)</p>
         }
@@ -18,6 +18,18 @@
         <div>@Editable(Model, m => m.LeftContentBody)</div>
     </div>
     <div class="summary-right">
-        <h1>Summary Component Right Half</h1>
+        <h1>@Editable(Model, m => m.RightContentHeadline)</h1>
+
+        @if (this.CanShowRightContentOpeningParagraph())
+        {
+            <p>@Editable(Model, m => m.RightContentOpeningParagraph)</p>
+        }
+
+        @foreach (var summaryListItem in Model.SummaryListItems)
+        {
+            
+        }
+
+        @Editable(Model, m => m.CallToAction)
     </div>
 </div>

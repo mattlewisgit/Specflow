@@ -11,9 +11,14 @@
             return view.IsInEditingMode || !string.IsNullOrWhiteSpace(view.Model.LeftContentLeadIn);
         }
 
-        public static bool CanShowOpeningParagraph(this GlassView<SummaryComponent> view)
+        public static bool CanShowLeftContentOpeningParagraph(this GlassView<SummaryComponent> view)
         {
             return view.IsInEditingMode || !string.IsNullOrWhiteSpace(view.Model.LeftContentOpeningParagraph);
+        }
+
+        public static bool CanShowRightContentOpeningParagraph(this GlassView<SummaryComponent> view)
+        {
+            return view.IsInEditingMode || !string.IsNullOrWhiteSpace(view.Model.RightContentOpeningParagraph);
         }
     }
 }

@@ -52,6 +52,13 @@ content-length: 74
 
 /sitecore/templates/Presales/Component Templates/Summary/Summary Component
 ----field----
+field: {A2F5D9DF-8CBA-4A1D-99EB-51ACB94CB057}
+name: Page Editor Buttons
+key: page editor buttons
+content-length: 77
+
+{31A3A929-C599-4DD3-91A6-F4A9487CC8B7}|{6E281DBE-EA70-4F29-9045-265CA310C8F9}
+----field----
 field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
 name: __Thumbnail
 key: __thumbnail
@@ -61,7 +68,7 @@ content-length: 58
 ----version----
 language: en
 version: 1
-revision: b938bec5-8344-44b6-8d87-78136ebea427
+revision: e39122ad-cd54-40e1-80b3-4d1e4db1ed40
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -76,14 +83,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b938bec5-8344-44b6-8d87-78136ebea427
+e39122ad-cd54-40e1-80b3-4d1e4db1ed40
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160523T110831Z
+20160525T152449Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
