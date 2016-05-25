@@ -85,13 +85,10 @@ gulp.task(cleanTask, function () {
 
 // Spritesheet generation.
 gulp.task(spriteTask, function () {
-    var source = "images/sprite/**/";
-
     var spriteData = gulp
-        .src(source + "*.png")
+        .src("images/**/*.png")
         .pipe(spritesmith({
-            src: source + "*.png",
-            retinaSrcFilter: source + "*@2x.png",
+            retinaSrcFilter: "images/**/*@2x.png",
             imgName: "../images/sprite-generated.png",
             padding: 5,
             retinaImgName: "../images/sprite-generated@2x.png",
@@ -255,6 +252,7 @@ gulp.task(faviconTemplateTask, function () {
         .pipe(realFavicon.injectFaviconMarkups
             (JSON.parse(fs.readFileSync(favicon.data)).favicon.html_code))
         .pipe(gulp.dest("../"));
+});
 
 // Default watch task that continuously compiles pre-processor code.
 gulp.task(watchTask, function () {
