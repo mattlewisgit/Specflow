@@ -23,7 +23,6 @@ var cssnanoConfig = require("./cssnano_config.json");
 // referenced from the individual and default tasks.
 var buildTask = "build";
 var cleanTask = "clean";
-var cssMinify = "css_minify";
 var faviconTask = "favicon";
 var faviconTemplateTask = "favicon-template";
 var jsBuildTask = "js_build";
@@ -84,6 +83,7 @@ gulp.task(cleanTask, function () {
 });
 
 // Spritesheet generation.
+// TODO Use gulp-image-resize to resize non-retina images.
 gulp.task(spriteTask, function () {
     var spriteData = gulp
         .src("images/**/*.png")
@@ -133,13 +133,7 @@ gulp.task(sassBuildTask, [spriteTask, svgTask], function () {
     return gulp
         .src(sassFiles)
         .pipe(sass().on("error", sass.logError))
-        .pipe(gulp.dest("sass/"));
-});
-
-// Minifies CSS.
-gulp.task(cssMinify, function () {
-    return gulp
-        .src("sass/app.css")
+        .pipe(gulp.dest("sass/"))
         .pipe(cssnano(cssnanoConfig))
         .pipe(gulp.dest("../css"));
 });
@@ -168,7 +162,6 @@ gulp.task(lintTask, [
 // A group of all build tasks.
 gulp.task(buildTask, [
     sassBuildTask,
-    cssMinify,
     jsBuildTask
 ]);
 
