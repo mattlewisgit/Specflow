@@ -243,6 +243,7 @@ Vitality.Website/css/**/*.css
 Vitality.Website/client_side/sass/*.css
 Vitality.Website/client_side/sass/*.map
 Vitality.Website/img/**/*.*
+!Vitality.Website/img/favicon/*.*
 Vitality.Website/js/**/*.js
 
 # Diffs.
