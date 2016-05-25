@@ -68,7 +68,11 @@ $heading-color: $color-mono-3;
 
 $dropshadow-color: rgba($body-color, 0.25);
 
+$darken-heavy: rgba(0, 0, 0, 0.6);
+
 $nav-gradient: linear-gradient( to bottom, $white 75%, $nav-gradient-color 100% );
+
+$dashed-border: dashed rgba(255, 255, 255, 0.5) 1px;
 
 // /*-------------------------------------------------.
 // \    Config: Typography
@@ -107,6 +111,14 @@ $pad: 20px;
 $pad--thin: $pad / 2;
 $pad--large: $pad * 2;
 $pad--xlarge: $pad * 4;
+
+// Icon padding
+$icon-padding: 25px;
+
+// Width.
+$width--max: 100%;
+$width--half: $width--max / 2;
+$width--near-max: 80%;
 
 // /*-------------------------------------------------.
 // \    Config: Responsive
