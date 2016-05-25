@@ -2,7 +2,6 @@
 {
     using System.Collections.Generic;
 
-    using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
 
@@ -22,8 +21,8 @@
 
         public string RightContentOpeningParagraph { get; set; }
 
-        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public IEnumerable<SitecoreItem> SummaryListItems { get; set; }
+        [SitecoreChildren(IsLazy = false)]
+        public IEnumerable<SummaryListItem> SummaryListItems { get; set; }
 
         public Link CallToAction { get; set; }
     }
