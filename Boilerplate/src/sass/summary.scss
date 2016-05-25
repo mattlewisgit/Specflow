@@ -1,5 +1,58 @@
 @import "base/vars";
+@import "defaults";
 
 .summary-left {
-    padding: $pad;
+    padding: $pad--xlarge;
+}
+
+.summary-right {
+    padding: $pad--xlarge;
+
+    &.feature-block-gradient__image {
+        position: relative;
+    }
+
+    .title h4, .content {
+        background: rgba(0, 0, 0, 0.6);
+        margin: 0;
+    }
+
+    .title {
+        text-align: center;
+
+        h4 {
+            display: inline-block;
+            padding: $pad $pad--large;
+        }
+    }
+
+    .content {
+        padding: $pad--large;
+
+        p {
+            margin-bottom: 0;
+        }
+
+        h6 {
+            margin: 0;
+        }
+
+        .iconlist__item {
+            border-top: dashed rgba(255, 255, 255, 0.5) 1px;
+            padding-top: 25px;
+
+            &:before {
+                top: 25px;
+            }
+        }
+
+        .cta {
+            text-align: center;
+            
+            a {
+                display: inline-block;
+                width: 80%;
+            }
+        }
+    }
 }
