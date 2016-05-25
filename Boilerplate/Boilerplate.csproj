@@ -123,6 +123,12 @@
     <Content Include="src\sass\rewards_leader.min.css">
       <DependentUpon>rewards_leader.css</DependentUpon>
     </Content>
+    <Content Include="src\sass\rich_text_editor.css">
+      <DependentUpon>rich_text_editor.scss</DependentUpon>
+    </Content>
+    <Content Include="src\sass\rich_text_editor.min.css">
+      <DependentUpon>rich_text_editor.css</DependentUpon>
+    </Content>
     <Content Include="src\sass\summary.css">
       <DependentUpon>summary.scss</DependentUpon>
     </Content>
@@ -319,6 +325,12 @@
     <Content Include="src\sass\vendor\_tablesaw.stackonly.scss" />
     <Content Include="src\sass\app.scss" />
     <Content Include="src\sass\rich_text_editor.scss" />
+    <Content Include="src\sass\rich_text_editor.css.map">
+      <DependentUpon>rich_text_editor.css</DependentUpon>
+    </Content>
+    <Content Include="src\sass\app.css.map">
+      <DependentUpon>app.css</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

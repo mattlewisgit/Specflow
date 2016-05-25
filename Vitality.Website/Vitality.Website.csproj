@@ -170,9 +170,11 @@
     <Content Include="client_side\img\vitality-logo--white.svg" />
     <Content Include="client_side\img\vitality-logo.svg" />
     <Content Include="client_side\img\youtube--footer.svg" />
-    <Content Include="client_side\js\app.js" />
     <Content Include="css\app.css" />
+    <Content Include="css\rich_text_editor.css" />
     <Content Include="Global.asax" />
+    <Content Include="images\sprite-generated%402x.png" />
+    <Content Include="images\sprite-generated.png" />
     <Content Include="img\favicon\android-chrome-144x144.png" />
     <Content Include="img\favicon\android-chrome-192x192.png" />
     <Content Include="img\favicon\android-chrome-36x36.png" />
@@ -456,7 +458,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Areas\Presales\Views\Shared\MainLayout.cshtml" />
-    <Content Include="css\screen-0.0.1.css" />
     <Content Include="Areas\Presales\Views\web.config" />
     <Content Include="Areas\Presales\Views\Navigation\MainNavigation.cshtml" />
     <Content Include="Areas\Presales\Views\Navigation\NavigationSection.cshtml" />
@@ -472,7 +473,6 @@
     <Content Include="Areas\Presales\Views\FeatureBlocks\BenefitLeader.cshtml" />
     <Content Include="Areas\Presales\Views\FAQ\FAQPreview.cshtml" />
     <Content Include="Areas\Presales\Views\Summary\SummaryComponent.cshtml" />
-    <Content Include="client_side\sass\rich_text_editor.scss" />
     <Content Include="img\favicon\manifest.json" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\ProductHero.cshtml">
       <SubType>Code</SubType>
