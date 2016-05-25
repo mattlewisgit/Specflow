@@ -35,6 +35,9 @@ var sassLintTask = "sass_lint";
 var spriteTask = "sprite";
 var spritesTask = "sprites";
 var svgTask = "svg";
+var watchTask = "watch";
+
+var sassFiles = "sass/**/*.scss";
 
 // Lints all local JavaScript files, including this!
 gulp.task(jsStaticAnalysis, function () {
@@ -131,7 +134,7 @@ gulp.task(svgTask, function () {
 
 gulp.task(sassBuildTask, [spriteTask, svgTask], function () {
     return gulp
-        .src("sass/**/*.scss")
+        .src(sassFiles)
         .pipe(sass().on("error", sass.logError))
         .pipe(gulp.dest("sass/"));
 });
@@ -180,7 +183,6 @@ gulp.task("default", [
 ]);
 
 // Favicon tasks, deliberately separate to the main build.
-
 var favicon = {
     data: "favicon-data.json",
     image: "images/favicon/favicon.svg",
@@ -253,4 +255,11 @@ gulp.task(faviconTemplateTask, function () {
         .pipe(realFavicon.injectFaviconMarkups
             (JSON.parse(fs.readFileSync(favicon.data)).favicon.html_code))
         .pipe(gulp.dest("../"));
+
+// Default watch task that continuously compiles pre-processor code.
+gulp.task(watchTask, function () {
+    gulp.watch(sassFiles, [
+        cleanTask,
+        buildTask
+    ]);
 });
