@@ -41,6 +41,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="components\summary\summary-right.html" />
     <Content Include="product_hero.html" />
     <Content Include="cards_stacked.html" />
     <Content Include="components\summary\summary-left.html" />
