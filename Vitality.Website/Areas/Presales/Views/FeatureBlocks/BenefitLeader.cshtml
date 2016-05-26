@@ -1,20 +1,14 @@
 ﻿@using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.FeatureBlocks.BenefitLeader>
-@{
-    var contentAlignment = this.ContentAlignment();
-    var applyGradient = this.ApplyGradient();
-    var backgroundColour = this.BackgroundColour();
-    var imageRelativePosition = this.ImageRelativePosition();
-}
 
 @using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
 {
-    <div class="feature-block@(applyGradient) feature-block@(applyGradient)--@backgroundColour @contentAlignment">
-        <div class="feature-block@(applyGradient)__image @imageRelativePosition"
+    <div class="feature-block@(this.ApplyGradient()) feature-block@(this.ApplyGradient())--@this.BackgroundColour() @this.ContentAlignment()">
+        <div class="feature-block@(this.ApplyGradient())__image @this.ImageRelativePosition()"
              style="background-image: url(@(Model.BackgroundImage.Src);"></div>
 
-        <div class="feature-block@(applyGradient)__content-container">
-            <div class="feature-block@(applyGradient)__content">
+        <div class="feature-block@(this.ApplyGradient())__content-container">
+            <div class="feature-block@(this.ApplyGradient())__content">
                 @if (IsInEditingMode || !string.IsNullOrWhiteSpace(Model.LeadIn))
                 {
                     <h6>@Editable(Model, item => item.LeadIn)</h6>
