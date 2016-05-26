@@ -7,9 +7,12 @@ var cssnano = require("gulp-cssnano");
 var del = require("del");
 var gulp = require("gulp");
 var fs = require("fs");
+var imageResize = require("gulp-image-resize");
 var jshint = require("gulp-jshint");
 var jscs = require("gulp-jscs");
 var realFavicon = require("gulp-real-favicon");
+var rename = require("gulp-rename");
+var runSequence = require('run-sequence');
 var sass = require("gulp-sass");
 var sassLint = require("gulp-sass-lint");
 var spritesmith = require("gulp.spritesmith");
@@ -23,16 +26,17 @@ var cssnanoConfig = require("./cssnano_config.json");
 // referenced from the individual and default tasks.
 var buildTask = "build";
 var cleanTask = "clean";
+var cssTask = "css";
 var faviconTask = "favicon";
 var faviconTemplateTask = "favicon-template";
 var jsBuildTask = "js_build";
 var jsStaticAnalysis = "js_static_analysis";
 var jsStyle = "js_style";
 var lintTask = "lint";
-var sassBuildTask = "sass_build";
+var resizeTask = "resize";
+var sassBuildTask = "sass";
 var sassLintTask = "sass_lint";
 var spriteTask = "sprite";
-var spritesTask = "sprites";
 var svgTask = "svg";
 var watchTask = "watch";
 
@@ -82,8 +86,23 @@ gulp.task(cleanTask, function () {
     ]);
 });
 
+// TODO Delete all smaller images, remove @2x from the names, then resize.
+gulp.task(resizeTask, function () {
+    gulp
+        .src("images/**/*.png")
+        .pipe(imageResize({
+            width: "50%",
+            height: "50%",
+            crop: false,
+            upscale: false
+        }))
+        .pipe(rename(function(path) {
+            path.basename += "@half";
+        }))
+        .pipe(gulp.dest("../images/"));
+});
+
 // Spritesheet generation.
-// TODO Use gulp-image-resize to resize non-retina images.
 gulp.task(spriteTask, function () {
     var spriteData = gulp
         .src("images/**/*.png")
@@ -138,6 +157,14 @@ gulp.task(sassBuildTask, [spriteTask, svgTask], function () {
         .pipe(gulp.dest("../css"));
 });
 
+// CSS tasks that forces dependencies to be run sequentially.
+// Parallelisation is playing havoc, as the spritesheets
+// must be generated first, as their SASS outputs
+// are required for the SASS build!
+gulp.task(cssTask, [spriteTask, svgTask], function () {
+    runSequence(spriteTask, svgTask, sassBuildTask);
+});
+
 // Require JS build.
 gulp.task(jsBuildTask, function () {
     return gulp
@@ -161,7 +188,7 @@ gulp.task(lintTask, [
 
 // A group of all build tasks.
 gulp.task(buildTask, [
-    sassBuildTask,
+    cssTask,
     jsBuildTask
 ]);
 

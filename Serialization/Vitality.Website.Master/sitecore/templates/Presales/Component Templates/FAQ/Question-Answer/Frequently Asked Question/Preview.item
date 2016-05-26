@@ -29,6 +29,13 @@ version: 1
 revision: 8c5dfc10-495d-460d-add7-636fa62bf4c3
 
 ----field----
+field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
+name: Title
+key: title
+content-length: 7
+
+Preview
+----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
