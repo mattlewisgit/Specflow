@@ -9,6 +9,12 @@
 
     public class SummaryComponent : SitecoreItem
     {
+        public SummaryComponent()
+        {
+            this.BackgroundImage = new Image();
+            this.CallToAction = new Link();
+        }
+
         public string LeftContentLeadIn { get; set; }
 
         public string LeftContentHeadline { get; set; }
@@ -20,6 +26,8 @@
         public string RightContentHeadline { get; set; }
 
         public string RightContentOpeningParagraph { get; set; }
+
+        public Image BackgroundImage { get; set; }
 
         [SitecoreChildren(IsLazy = false)]
         public IEnumerable<SummaryListItem> SummaryListItems { get; set; }

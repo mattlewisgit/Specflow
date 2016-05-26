@@ -17,13 +17,14 @@
 
         <div>@Editable(Model, m => m.LeftContentBody)</div>
     </div>
-    <div class="summary-right">
+    @using (BeginEditFrame(Model, "Edit background image", m => m.BackgroundImage))
+    {
+    <div class="summary-right feature-block-gradient__image @this.BackgroundPosition() text-light" style="@this.BackgroundImage()">
         <div class="title">
             <h4>@Editable(Model, m => m.RightContentHeadline)</h4>
         </div>
 
         <div class="content">
-
             @if (this.CanShowRightContentOpeningParagraph())
             {
                 <p>@Editable(Model, m => m.RightContentOpeningParagraph)</p>
@@ -31,31 +32,35 @@
 
             @foreach (var summaryListItemsGroup in this.GroupSummaryListItems())
             {
-            <ul class="iconlist iconlist--check @this.SummaryListClass(summaryListItemsGroup.Key)">
-                @foreach (var summaryListItem in summaryListItemsGroup)
-                {
-                    using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", summaryListItem.Path))
+                <ul class="iconlist iconlist--check @this.SummaryListClass(summaryListItemsGroup.Key)">
+                    @foreach (var summaryListItem in summaryListItemsGroup)
                     {
-                    <li class="iconlist__item">
-                        @if (summaryListItem.IsShortListItem)
+                        using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", summaryListItem.Path))
                         {
-                            @Editable(summaryListItem, m => m.Title)
-                        }
-                        else
-                        {
-                            <h6>@Editable(summaryListItem, m => m.Title)</h6>
+                            <li class="iconlist__item">
+                                @if (summaryListItem.IsShortListItem)
+                                {
+                                    @Editable(summaryListItem, m => m.Title)
+                                }
+                                else
+                                {
+                                    <h6>@Editable(summaryListItem, m => m.Title)</h6>
 
-                            <p>@Editable(summaryListItem, m => m.Body)</p>
+                                    <p>@Editable(summaryListItem, m => m.Body)</p>
+                                }
+                            </li>
                         }
-                    </li>
                     }
-                }
-            </ul>
+                </ul>
             }
 
-            <div class="cta">
-                @Editable(Model, m => m.CallToAction, new { @class = "box-button box-button--light box-button--rounded" })
-            </div>
+            @if (this.CanShowCallToAction())
+            {
+                <div class="cta">
+                    @Editable(Model, m => m.CallToAction, new { @class = "box-button box-button--light box-button--rounded" })
+                </div>
+            }
         </div>
-    </div>
+        </div>
+    }
 </div>
