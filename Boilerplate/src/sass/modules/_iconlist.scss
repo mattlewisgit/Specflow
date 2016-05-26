@@ -6,7 +6,7 @@
     margin-bottom: $pad;
 
     &__item {
-        padding: 0 25px 25px 50px;
+        padding: 0 $icon-padding $icon-padding ($icon-padding * 2);
         position: relative;
 
         &:before {

@@ -9,15 +9,18 @@
         "gulp": "*",
         "gulp-concat": "*",
         "gulp-cssnano": "*",
+        "gulp-image-resize": "*",
         "gulp-jshint": "*",
         "gulp-jscs": "*",
         "gulp-real-favicon": "*",
+        "gulp-rename": "*",
         "gulp-sass": "*",
         "gulp-sass-lint": "*",
         "gulp.spritesmith": "*",
         "gulp-svg-sprite": "*",
         "gulp-uglify": "*",
-        "jshint": "*"
+        "jshint": "*",
+        "run-sequence": "*"
     },
     "scripts": {
         "bower": "bower",

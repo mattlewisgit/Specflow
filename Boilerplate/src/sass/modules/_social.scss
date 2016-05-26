@@ -27,6 +27,15 @@
         a:focus {
             opacity: 0.8;
         }
+
+        img {
+            width: 26px;
+            height: 26px;
+            vertical-align: middle;
+            display: block;
+            margin: 12px auto;
+            position: relative;
+        }
     }
 }
 

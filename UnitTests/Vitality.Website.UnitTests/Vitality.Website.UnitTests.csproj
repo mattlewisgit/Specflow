@@ -163,6 +163,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Vitality.Website.SC\Vitality.Website.SC.csproj">
+      <Project>{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}</Project>
+      <Name>Vitality.Website.SC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Vitality.Website\Vitality.Website.csproj">
       <Project>{ed53f038-83ee-4c5d-b208-783b0c6b3917}</Project>
       <Name>Vitality.Website</Name>
