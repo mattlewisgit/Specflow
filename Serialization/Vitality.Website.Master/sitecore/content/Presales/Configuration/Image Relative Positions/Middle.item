@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {45898EBA-C0C9-4756-8C7C-D590E43FB3D9}
+id: {E0442EF8-75DB-4773-893E-F2DFCF3F9363}
 database: master
-path: /sitecore/content/Presales/Configuration/Background Position/Bottom Left
+path: /sitecore/content/Presales/Configuration/Image Relative Positions/Middle
 parent: {5F6F3831-1237-4AE9-8DDB-1860672A6938}
-name: Bottom Left
+name: Middle
 master: {00000000-0000-0000-0000-000000000000}
 template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
 templatekey: Key Value Pair
@@ -15,19 +15,19 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-500
+300
 ----version----
 language: en
 version: 1
-revision: 0be6cffa-dd02-4d03-9304-89499e215a16
+revision: e938b5d6-1001-4225-9471-761e155c0fc7
 
 ----field----
 field: {C01F61CF-8603-4C48-A96A-EFDDDFEB52ED}
 name: Value
 key: value
-content-length: 31
+content-length: 26
 
-background-position-bottom-left
+background-position-middle
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -41,7 +41,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160510T122727Z
+20160510T122650Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-0be6cffa-dd02-4d03-9304-89499e215a16
+e938b5d6-1001-4225-9471-761e155c0fc7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160510T122738Z
+20160510T122659Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
