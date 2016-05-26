@@ -3,6 +3,7 @@
 @import 'generated/sprite';
 @import 'generated/svg-sprite';
 
+$_border-radius: 5px;
 $_padding: 3%;
 
 @media only screen and (min-width: $breakpoint-medium) {
@@ -14,7 +15,7 @@ $_padding: 3%;
 
 .summary-left, .summary-right {
     font-size: 90%;
-    line-height: 1.2;
+    line-height: 1.5;
     padding: $_padding;
 }
 
@@ -32,12 +33,15 @@ $_padding: 3%;
         @include text-centre;
 
         h4 {
+            border-radius: $_border-radius $_border-radius 0 0;
             display: inline-block;
-            padding: $pad $pad--large;
+            font-size: 1.7rem;
+            padding: $_padding ($_padding + 1);
         }
     }
 
     .content {
+        border-radius: $_border-radius;
         padding: $_padding;
 
         p {
@@ -49,6 +53,7 @@ $_padding: 3%;
         }
 
         h6 {
+            font-weight: 600;
             margin: 0;
         }
 
@@ -58,8 +63,8 @@ $_padding: 3%;
 
         .iconlist__item {
             border-top: $dashed-border;
-            padding-bottom: $_padding;
-            padding-top: $_padding;
+            padding: $_padding;
+            padding-left: $_padding * 2.5;
 
             &:before {
                 top: 12px;
@@ -86,6 +91,7 @@ $_padding: 3%;
         }
 
         .cta {
+            padding-top: $_padding;
             @include text-centre;
             
             a {
