@@ -1,8 +1,8 @@
 ﻿@using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Summary.SummaryComponent>
 
-<div>
-    <div class="summary-left">
+<div class="summary grid">
+    <div class="summary-left grid-col-6-12">
         @if (this.CanShowLeadIn())
         {
             <h6>@Editable(Model, m => m.LeftContentLeadIn)</h6>
@@ -19,7 +19,7 @@
     </div>
     @using (BeginEditFrame(Model, "Edit background image", m => m.BackgroundImage))
     {
-    <div class="summary-right feature-block-gradient__image @this.BackgroundPosition() text-light" style="@this.BackgroundImage()">
+    <div class="summary-right feature-block-gradient__image @this.BackgroundPosition() text-light grid-col-6-12" style="@this.BackgroundImage()">
         <div class="title">
             <h4>@Editable(Model, m => m.RightContentHeadline)</h4>
         </div>
