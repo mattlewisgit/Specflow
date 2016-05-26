@@ -2,7 +2,7 @@
 version: 1
 id: {E0442EF8-75DB-4773-893E-F2DFCF3F9363}
 database: master
-path: /sitecore/content/Presales/Configuration/Background Position/Middle
+path: /sitecore/content/Presales/Configuration/Image Relative Positions/Middle
 parent: {5F6F3831-1237-4AE9-8DDB-1860672A6938}
 name: Middle
 master: {00000000-0000-0000-0000-000000000000}

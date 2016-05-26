@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {5F6F3831-1237-4AE9-8DDB-1860672A6938}
+id: {43A63456-A2CF-40F9-8D24-3AB5F43A8280}
 database: master
-path: /sitecore/content/Presales/Configuration/Background Position
+path: /sitecore/content/Presales/Configuration/Content Alignments
 parent: {38D91B77-AA7E-4705-9045-C8451E08C1E8}
-name: Background Position
+name: Content Alignments
 master: {00000000-0000-0000-0000-000000000000}
 template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
 templatekey: Folder
@@ -13,27 +13,13 @@ templatekey: Folder
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 31
+content-length: 34
 
-Imaging/32x32/fit_selection.png
-----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
-content-length: 38
-
-{A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
-----field----
-field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
-name: __Security
-key: __security
-content-length: 0
-
-
+Control/32x32/splitter_ver_b_h.png
 ----version----
 language: en
 version: 1
-revision: 3f1b7088-ac93-4287-aaf3-2e08abe6c970
+revision: 3b8d3c96-98e3-41c7-9ff8-2606ce5b17db
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -41,7 +27,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160510T115117Z
+20160525T095951Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3f1b7088-ac93-4287-aaf3-2e08abe6c970
+3b8d3c96-98e3-41c7-9ff8-2606ce5b17db
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160518T105327Z
+20160525T100517Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

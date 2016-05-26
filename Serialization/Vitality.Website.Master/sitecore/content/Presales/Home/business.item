@@ -162,7 +162,7 @@ content-length: 5
 ----version----
 language: en
 version: 3
-revision: c0c9b3e3-b4d2-4472-9c38-7512a026a6cf
+revision: b82f706d-d056-4dd5-b0ab-37309b5c7cfc
 
 ----field----
 field: {53299977-3D8B-45D3-A326-E1FB124EE244}
@@ -182,9 +182,9 @@ Business
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 362
+content-length: 599
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{DA3D3537-D699-469D-93E2-5169600CBC22}" p:before="*" s:ds="{A363C8B1-8E4D-4450-BBE4-7384722BE064}" s:id="{9CE5E97F-991C-4576-A167-B2E587CA01E9}" s:par="BackgroundColour=%7B7B6B218D-1A51-4958-B311-840D837A7447%7D&amp;BackgroundImageLeft=1" s:ph="PresalesContent" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{DA3D3537-D699-469D-93E2-5169600CBC22}" p:before="*" s:ds="{A363C8B1-8E4D-4450-BBE4-7384722BE064}" s:id="{9CE5E97F-991C-4576-A167-B2E587CA01E9}" s:par="ContentAlignment=%7B5DE8C46C-2EC3-4F7F-971A-5A9242C98AA7%7D&amp;ImageRelativePosition=%7B4462B7F7-58EB-4A54-9152-F3EFB3416EA6%7D&amp;BackgroundColour=%7B7B6B218D-1A51-4958-B311-840D837A7447%7D&amp;ApplyGradient=1&amp;BackgroundImageLeft&amp;BackgroundPosition=%257BC6367441-9501-48A2-A09E-2492E7D2DB49%257D&amp;UseGradient" s:ph="PresalesContent" /></d></r>
 ----field----
 field: {C8F93AFE-BFD4-4E8F-9C61-152559854661}
 name: __Valid from
@@ -212,28 +212,28 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c0c9b3e3-b4d2-4472-9c38-7512a026a6cf
+b82f706d-d056-4dd5-b0ab-37309b5c7cfc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160518T114248Z
+20160525T155244Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 20
+content-length: 14
 
-sitecore\testmanager
+sitecore\admin
 ----field----
 field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
 name: __Workflow state
 key: __workflow state
 content-length: 38
 
-{A97DF72C-3EE9-495F-B2F6-C111CE90BDC9}
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
 ----field----
 field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
 name: __Lock

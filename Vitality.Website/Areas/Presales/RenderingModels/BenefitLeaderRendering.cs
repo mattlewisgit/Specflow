@@ -9,10 +9,14 @@
     public class BenefitLeaderRendering
     {
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public KeyValuePair BackgroundColour { get; set; }
-        public bool BackgroundImageLeft { get; set; }
+        public KeyValuePair ContentAlignment { get; set; }
 
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public KeyValuePair BackgroundPosition { get; set; }
+        public KeyValuePair ImageRelativePosition { get; set; }
+
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public KeyValuePair BackgroundColour { get; set; }
+        
+        public bool ApplyGradient { get; set; }
     }
 }
