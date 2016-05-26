@@ -7,9 +7,11 @@ var cssnano = require("gulp-cssnano");
 var del = require("del");
 var gulp = require("gulp");
 var fs = require("fs");
+var imageResize = require("gulp-image-resize");
 var jshint = require("gulp-jshint");
 var jscs = require("gulp-jscs");
 var realFavicon = require("gulp-real-favicon");
+var rename = require("gulp-rename");
 var runSequence = require('run-sequence');
 var sass = require("gulp-sass");
 var sassLint = require("gulp-sass-lint");
@@ -31,6 +33,7 @@ var jsBuildTask = "js_build";
 var jsStaticAnalysis = "js_static_analysis";
 var jsStyle = "js_style";
 var lintTask = "lint";
+var resizeTask = "resize";
 var sassBuildTask = "sass";
 var sassLintTask = "sass_lint";
 var spriteTask = "sprite";
@@ -83,8 +86,23 @@ gulp.task(cleanTask, function () {
     ]);
 });
 
+// TODO Delete all smaller images, remove @2x from the names, then resize.
+gulp.task(resizeTask, function () {
+    gulp
+        .src("images/**/*.png")
+        .pipe(imageResize({
+            width: "50%",
+            height: "50%",
+            crop: false,
+            upscale: false
+        }))
+        .pipe(rename(function(path) {
+            path.basename += "@half";
+        }))
+        .pipe(gulp.dest("../images/"));
+});
+
 // Spritesheet generation.
-// TODO Use gulp-image-resize to resize non-retina images.
 gulp.task(spriteTask, function () {
     var spriteData = gulp
         .src("images/**/*.png")

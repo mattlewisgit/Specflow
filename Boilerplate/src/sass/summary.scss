@@ -1,13 +1,24 @@
-@import "base/vars";
 @import "defaults";
+@import "base/vars";
+@import 'generated/sprite';
+@import 'generated/svg-sprite';
 
-.summary-left {
-    padding: $pad--xlarge;
+$_padding: 3%;
+
+@media only screen and (min-width: $breakpoint-medium) {
+    .summary.grid .grid-col-6-12 {
+        margin-right: 0;
+        width: $width--half;
+    }
+}
+
+.summary-left, .summary-right {
+    font-size: 90%;
+    line-height: 1.2;
+    padding: $_padding;
 }
 
 .summary-right {
-    padding: $pad--xlarge;
-
     &.feature-block-gradient__image {
         position: relative;
     }
@@ -27,26 +38,40 @@
     }
 
     .content {
-        padding: $pad--large;
+        padding: $_padding;
 
         p {
-            margin-bottom: 0;
+            margin: 0;
+
+            &:first-child {
+                padding-bottom: $_padding;
+            }
         }
 
         h6 {
             margin: 0;
         }
 
+        ul {
+            margin: 0;
+        }
+
         .iconlist__item {
             border-top: $dashed-border;
-            padding-top: $icon-padding;
+            padding-bottom: $_padding;
+            padding-top: $_padding;
 
             &:before {
-                top: $icon-padding;
+                top: 12px;
+                @include retina-sprite($sprite-tick-circle-teal-group);
             }
         }
 
-        @media only screen and (min-width : $breakpoint-medium) {
+        .iconlist--full .iconlist__item {
+            padding-right: 0;
+        }
+
+        @media only screen and (min-width: $breakpoint-medium) {
             ul:not(.iconlist--full) {
                 $gap: 2%;
 
