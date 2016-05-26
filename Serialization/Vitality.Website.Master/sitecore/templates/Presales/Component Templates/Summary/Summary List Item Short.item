@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {F2A3AC96-B8E1-402D-B3B1-A18BC68E7A68}
+id: {428438C8-D8C7-4D8E-BA51-B4FAAE4269C5}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Summary/Summary Component
+path: /sitecore/templates/Presales/Component Templates/Summary/Summary List Item Short
 parent: {75726846-D496-4645-80C0-9A0BA617D5D4}
-name: Summary Component
+name: Summary List Item Short
 master: {00000000-0000-0000-0000-000000000000}
 template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
 templatekey: Template
@@ -22,18 +22,18 @@ name: __Standard values
 key: __standard values
 content-length: 38
 
-{5FA1C172-4E4B-423A-BAD8-68307E4F3C42}
+{5938BB4E-C8D5-41CB-976F-02AC26C7C791}
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 33
+content-length: 29
 
-Office/32x32/window_split_hor.png
+Applications/32x32/checks.png
 ----version----
 language: en
 version: 1
-revision: de35b614-4af3-46b4-b0b2-b3284cdc37ef
+revision: 998c9ff8-d221-4e77-a0c0-f8dd06aed6da
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -41,7 +41,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160523T102749Z
+20160525T151540Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-de35b614-4af3-46b4-b0b2-b3284cdc37ef
+998c9ff8-d221-4e77-a0c0-f8dd06aed6da
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160525T152340Z
+20160525T152151Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
