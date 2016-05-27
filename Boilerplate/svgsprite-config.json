@@ -1,0 +1,21 @@
+﻿{
+    "shape": {
+        "spacing": {
+            "padding": 10
+        }
+    },
+    "mode": {
+        "css": {
+            "dest": "",
+            "bust": false,
+            "sprite": "src/images/svg-sprite.svg",
+            "render": {
+                "scss": {
+                    "dest": "src/sass/generated/_svg-sprite.scss",
+                    "template": "src/sass/utils/_svg-template.scss"
+                }
+            },
+            "dimensions": true
+        }
+    }
+}

@@ -21,7 +21,9 @@ var uglify = require("gulp-uglify");
 
 // Include custom configuration.
 var configs = {
-    cssnano: require("./cssnano_config.json")
+    cssnano: require("./cssnano-config.json"),
+    favicon: require("./favicon-config.json"),
+    svgSprite: require("./svgsprite-config.json")
 };
 
 // Store the tasks as names, so that they can be easily
@@ -138,27 +140,7 @@ gulp.task(tasks.sprite, function () {
 gulp.task(tasks.svg, function () {
     return gulp
         .src("src/images/**/*.svg")
-        .pipe(svgSprite({
-            shape: {
-                spacing: {
-                    padding: 10
-                }
-            },
-            mode: {
-                css: {
-                    dest: "",
-                    bust: false,
-                    sprite: "src/images/svg-sprite.svg",
-                    render: {
-                        scss: {
-                            dest: "src/sass/generated/_svg-sprite.scss",
-                            template: "src/sass/utils/_svg-template.scss"
-                        }
-                    },
-                    dimensions: true
-                }
-            }
-        }))
+        .pipe(svgSprite(configs.svgSprite))
         .pipe(gulp.dest("."));
 });
 
@@ -214,77 +196,16 @@ gulp.task(tasks.default, [
 ]);
 
 // Favicon tasks, deliberately separate to the main build.
-var favicon = {
-    data: "favicon-data.json",
-    image: "images/favicon/favicon.svg",
-    iconsPath: "img/favicon/",
-    template: "src/favicon-template.html"
-};
-
 gulp.task(tasks.favicon, function () {
-    // TODO Use SASS variables from JSON.
-    var backgroundColour = "#fff";
-    var colour = "#f41c5e";
-    var projectName = "Vitality";
-
-    realFavicon.generateFavicon({
-        dest: ".." + favicon.iconsPath,
-        iconsPath: favicon.iconsPath,
-        markupFile: favicon.data,
-        masterPicture: favicon.image,
-        design: {
-            ios: {
-                pictureAspect: "backgroundAndMargin",
-                backgroundColor: backgroundColour,
-                margin: "14%",
-                appName: projectName
-            },
-            desktopBrowser: {},
-            windows: {
-                pictureAspect: "whiteSilhouette",
-                backgroundColor: colour,
-                onConflict: "override",
-                appName: projectName
-            },
-            androidChrome: {
-                pictureAspect: "backgroundAndMargin",
-                margin: "17%",
-                backgroundColor: backgroundColour,
-                themeColor: backgroundColour,
-                manifest: {
-                    name: projectName,
-                    display: "browser",
-                    orientation: "notSet",
-                    onConflict: "override",
-                    declared: true
-                }
-            },
-            safariPinnedTab: {
-                pictureAspect: "silhouette",
-                themeColor: colour
-            },
-            openGraph: {
-                pictureAspect: "backgroundAndMargin",
-                backgroundColor: backgroundColour,
-                margin: "30%",
-                ratio: "1.91:1",
-                siteUrl: "https://www.vitality.co.uk/"
-            }
-        },
-        settings: {
-            compression: 1,
-            scalingAlgorithm: "Mitchell",
-            errorOnImageTooSmall: false
-        }
-    });
+    realFavicon.generateFavicon(configs.favicon);
 });
 
 // Fill in the standard favicon HTML template.
 gulp.task(tasks.faviconTemplate, function () {
     return gulp
-        .src(favicon.template)
+        .src("src/favicon-template.html")
         .pipe(realFavicon.injectFaviconMarkups
-            (JSON.parse(fs.readFileSync(favicon.data)).favicon.html_code))
+            (JSON.parse(fs.readFileSync("favicon-data.json")).favicon.html_code))
         .pipe(gulp.dest("."));
 });
 
