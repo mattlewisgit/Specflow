@@ -68,8 +68,8 @@ $_padding: 3%;
             padding-left: $_padding-abs * 3;
 
             &:before {
-                top: 12px;
                 @include retina-sprite($sprite-tick-circle-teal-group);
+                top: 12px;
             }
         }
 
@@ -92,8 +92,8 @@ $_padding: 3%;
         }
 
         .cta {
-            padding-top: $_padding;
             @include text-centre;
+            padding-top: $_padding;
             
             a {
                 display: inline-block;

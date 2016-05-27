@@ -40,14 +40,14 @@ var spriteTask = "sprite";
 var svgTask = "svg";
 var watchTask = "watch";
 
-var sassFiles = "sass/**/*.scss";
+var sassFiles = "src/sass/**/*.scss";
 
 // Lints all local JavaScript files, including this!
 gulp.task(jsStaticAnalysis, function () {
     return gulp
         .src([
             "gulpfile.js",
-            "js/**/*.js"
+            "src/js/**/*.js"
         ])
         .pipe(jshint())
         .pipe(jshint.reporter("default"))
@@ -58,7 +58,7 @@ gulp.task(jsStyle, function () {
     return gulp
         .src([
             "gulpfile.js",
-            "js/**/*.js"
+            "src/js/**/*.js"
         ])
         .pipe(jscs())
         .pipe(jscs.reporter());
@@ -67,10 +67,10 @@ gulp.task(jsStyle, function () {
 gulp.task(sassLintTask, function () {
     return gulp
         .src([
-            "sass/**/*.scss",
-            "!sass/generated/*.scss",
-            "!sass/utils/_svg-template.scss",
-            "!sass/vendor/**/*.scss"
+            "src/sass/**/*.scss",
+            "!src/sass/generated/*.scss",
+            "!src/sass/utils/_svg-template.scss",
+            "!src/sass/vendor/**/*.scss"
         ])
         .pipe(sassLint())
         .pipe(sassLint.format())
@@ -80,16 +80,16 @@ gulp.task(sassLintTask, function () {
 // Cleans build artefacts.
 gulp.task(cleanTask, function () {
     return del([
-        "sass/**/*.css",
-        "sass/**/*.min.*",
-        "sass/generated/*.scss"
+        "src/sass/**/*.css",
+        "src/sass/**/*.min.*",
+        "src/sass/generated/*.scss"
     ]);
 });
 
 // TODO Delete all smaller images, remove @2x from the names, then resize.
 gulp.task(resizeTask, function () {
     gulp
-        .src("images/**/*.png")
+        .src("src/images/**/*.png")
         .pipe(imageResize({
             width: "50%",
             height: "50%",
@@ -99,19 +99,19 @@ gulp.task(resizeTask, function () {
         .pipe(rename(function(path) {
             path.basename += "@half";
         }))
-        .pipe(gulp.dest("../images/"));
+        .pipe(gulp.dest("images/"));
 });
 
 // Spritesheet generation.
 gulp.task(spriteTask, function () {
     var spriteData = gulp
-        .src("images/**/*.png")
+        .src("src/images/**/*.png")
         .pipe(spritesmith({
-            retinaSrcFilter: "images/**/*@2x.png",
-            imgName: "../images/sprite-generated.png",
+            retinaSrcFilter: "src/images/**/*@2x.png",
+            imgName: "images/sprite-generated.png",
             padding: 5,
-            retinaImgName: "../images/sprite-generated@2x.png",
-            cssName: "sass/generated/_sprite.scss",
+            retinaImgName: "images/sprite-generated@2x.png",
+            cssName: "src/sass/generated/_sprite.scss",
             cssVarMap: function (sprite) {
                 sprite.name = "sprite_" + sprite.name;
             }
@@ -123,7 +123,7 @@ gulp.task(spriteTask, function () {
 
 gulp.task(svgTask, function () {
     return gulp
-        .src("images/**/*.svg")
+        .src("src/images/**/*.svg")
         .pipe(svgSprite({
             shape: {
                 spacing: {
@@ -134,11 +134,11 @@ gulp.task(svgTask, function () {
                 css: {
                     dest: "",
                     bust: false,
-                    sprite: "images/svg-sprite.svg",
+                    sprite: "src/images/svg-sprite.svg",
                     render: {
                         scss: {
-                            dest: "sass/generated/_svg-sprite.scss",
-                            template: "sass/utils/_svg-template.scss"
+                            dest: "src/sass/generated/_svg-sprite.scss",
+                            template: "src/sass/utils/_svg-template.scss"
                         }
                     },
                     dimensions: true
@@ -152,9 +152,9 @@ gulp.task(sassBuildTask, [spriteTask, svgTask], function () {
     return gulp
         .src(sassFiles)
         .pipe(sass().on("error", sass.logError))
-        .pipe(gulp.dest("sass/"))
+        .pipe(gulp.dest("src/sass/"))
         .pipe(cssnano(cssnanoConfig))
-        .pipe(gulp.dest("../css"));
+        .pipe(gulp.dest("css"));
 });
 
 // CSS tasks that forces dependencies to be run sequentially.
@@ -171,12 +171,12 @@ gulp.task(jsBuildTask, function () {
         .src("src/**/*.js")
         .pipe(amdOptimize("app", {
             name: "app",
-            configFile: "./js/app.js",
-            baseUrl: "./js"
+            configFile: "src/js/app.js",
+            baseUrl: "src//js"
         }))
         .pipe(concat("vitality-boilerplate.js"))
         .pipe(uglify())
-        .pipe(gulp.dest("../js"));
+        .pipe(gulp.dest("js"));
 });
 
 // A group of all lint tasks.
@@ -203,8 +203,8 @@ gulp.task("default", [
 var favicon = {
     data: "favicon-data.json",
     image: "images/favicon/favicon.svg",
-    iconsPath: "/img/favicon/",
-    template: "favicon-template.html"
+    iconsPath: "img/favicon/",
+    template: "src/favicon-template.html"
 };
 
 gulp.task(faviconTask, function () {
@@ -271,7 +271,7 @@ gulp.task(faviconTemplateTask, function () {
         .src(favicon.template)
         .pipe(realFavicon.injectFaviconMarkups
             (JSON.parse(fs.readFileSync(favicon.data)).favicon.html_code))
-        .pipe(gulp.dest("../"));
+        .pipe(gulp.dest("."));
 });
 
 // Default watch task that continuously compiles pre-processor code.

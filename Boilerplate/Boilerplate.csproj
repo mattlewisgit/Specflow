@@ -74,7 +74,7 @@
     <Content Include="index.html" />
     <Content Include="components\main_navigation.html" />
     <Content Include="src\favicon-template.html" />
-    <Content Include="src\gulpfile.js" />
+    <Content Include="gulpfile.js" />
     <Content Include="js\boilerplate.js" />
     <Content Include="src\images\svg-sprite.svg" />
     <Content Include="src\js\modules\accordionModule.js" />
@@ -159,17 +159,17 @@
     <Content Include="src\sass\_defaults.css.map">
       <DependentUpon>_defaults.css</DependentUpon>
     </Content>
-    <Content Include="src\package.json" />
-    <Content Include="src\bower.json" />
-    <Content Include="src\sass-lint.yml" />
-    <Content Include="src\gulp.targets" />
-    <Content Include="src\.jscsrc" />
-    <Content Include="src\.jshintrc" />
+    <Content Include="package.json" />
+    <Content Include="bower.json" />
+    <Content Include="sass-lint.yml" />
+    <Content Include="gulp.targets" />
+    <Content Include=".jscsrc" />
+    <Content Include=".jshintrc" />
     <Content Include="src\sass\rewards_leader.scss" />
     <Content Include="src\sass\rewards_leader.css.map">
       <DependentUpon>rewards_leader.css</DependentUpon>
     </Content>
-    <Content Include="src\cssnano_config.json" />
+    <Content Include="cssnano_config.json" />
     <Content Include="src\sass\product_hero.scss" />
     <Content Include="src\sass\_screen_overrides.scss" />
     <Content Include="src\sass\product_hero.css.map">
@@ -350,7 +350,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <Import Project="$(ProjectDir)\src\gulp.targets" />
+  <Import Project="$(ProjectDir)\gulp.targets" />
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
