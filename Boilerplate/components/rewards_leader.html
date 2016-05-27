@@ -4,7 +4,7 @@
     <title>Rewards Leader</title>
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600" />
-    <link rel="stylesheet" type="text/css" href="src/bower_components/prism/themes/prism.css" />
+    <link rel="stylesheet" type="text/css" href="/src/bower_components/prism/themes/prism.css" />
     <link rel="stylesheet" type="text/css" href="/css/app.css" />
 </head>
 <body>
@@ -22,7 +22,7 @@
             <div>
                 <h2>Example</h2>
 
-                <div id="example">
+                <div class="example">
                     <div class="feature-block feature-block--dark rewards_leader">
                         <div class="feature-block__content">
                             <h3>Our Rewards Partners</h3>
@@ -33,26 +33,26 @@
 
                             <div class="feature-block__image-list">
                                 <div>
-                                    <img src="img/facebook--footer.svg" alt="Facebook" height="50" />
+                                    <img src="/img/facebook--footer.svg" alt="Facebook" height="50" />
 
                                     <a href="#">
-                                        <img src="img/instagram--footer.svg" alt="Facebook" height="50" />
+                                        <img src="/img/instagram--footer.svg" alt="Facebook" height="50" />
                                     </a>
 
-                                    <img src="img/search.svg" alt="Facebook" height="50" />
-                                    <img src="img/twitter--footer.svg" alt="Facebook" height="50" />
-                                    <img src="img/vitality-logo--white.svg" alt="Facebook" height="50" />
+                                    <img src="/img/search.svg" alt="Facebook" height="50" />
+                                    <img src="/img/twitter--footer.svg" alt="Facebook" height="50" />
+                                    <img src="/img/vitality-logo--white.svg" alt="Facebook" height="50" />
                                 </div>
 
                                 <div>
-                                    <img src="img/youtube--footer.svg" alt="Facebook" height="50" />
+                                    <img src="/img/youtube--footer.svg" alt="Facebook" height="50" />
 
                                     <a href="#">
-                                        <img src="img/facebook--footer.svg" alt="Facebook" height="50" />
+                                        <img src="/img/facebook--footer.svg" alt="Facebook" height="50" />
                                     </a>
 
-                                    <img src="img/instagram--footer.svg" alt="Facebook" height="50" />
-                                    <img src="img/twitter--footer.svg" alt="Facebook" height="50" />
+                                    <img src="/img/instagram--footer.svg" alt="Facebook" height="50" />
+                                    <img src="/img/twitter--footer.svg" alt="Facebook" height="50" />
                                 </div>
                             </div>
 
@@ -68,26 +68,13 @@
                 <h2>Markup</h2>
 
                 <pre>
-                <code id="markup" class="language-markup"></code>
+                    <code class="language-markup"></code>
                 </pre>
             </div>
-
-            <script>
-                function htmlSpecialChars(unsafe) {
-                    return unsafe
-                        .replace(/&/g, "&amp;")
-                        .replace(/</g, "&lt;")
-                        .replace(/>/g, "&gt;")
-                        .replace(/"/g, "&quot;")
-                        .replace(/'/g, "&apos;");
-                }
-
-                document.getElementById("markup").innerHTML =
-                    htmlSpecialChars("        " + document.getElementById("example").outerHTML);
-            </script>
         </main>
     </div>
 
-    <script type="text/javascript" src="src/bower_components/prism/prism.js"></script>
+    <script type="text/javascript" src="/js/boilerplate.js"></script>
+    <script type="text/javascript" src="/src/bower_components/prism/prism.js"></script>
 </body>
 </html>

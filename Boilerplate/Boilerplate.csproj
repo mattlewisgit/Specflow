@@ -43,17 +43,17 @@
   <ItemGroup>
     <Content Include="components\summary\summary-right.html" />
     <Content Include="img\shoes.jpg" />
-    <Content Include="product_hero.html" />
-    <Content Include="cards_stacked.html" />
+    <Content Include="components\product_hero.html" />
+    <Content Include="components\cards_stacked.html" />
     <Content Include="components\summary\summary-left.html" />
     <Content Include="components\summary\index.html" />
-    <Content Include="faq_leader.html" />
+    <Content Include="components\faq_leader.html" />
     <Content Include="img\clipboard-icon.png" />
     <Content Include="img\heart-icon.png" />
     <Content Include="img\stars-icon.png" />
     <Content Include="img\stethoscope-icon.png" />
-    <Content Include="benefit_leader.html" />
-    <Content Include="rewards_leader.html" />
+    <Content Include="components\benefit_leader.html" />
+    <Content Include="components\rewards_leader.html" />
     <Content Include="img\family.jpg" />
     <Content Include="img\cyclist.jpg" />
     <Content Include="img\facebook--footer.svg" />
@@ -72,7 +72,7 @@
     <Content Include="img\vitality-logo.svg" />
     <Content Include="img\youtube--footer.svg" />
     <Content Include="index.html" />
-    <Content Include="main_navigation.html" />
+    <Content Include="components\main_navigation.html" />
     <Content Include="src\favicon-template.html" />
     <Content Include="src\gulpfile.js" />
     <Content Include="js\boilerplate.js" />
