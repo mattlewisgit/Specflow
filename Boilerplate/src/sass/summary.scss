@@ -62,9 +62,10 @@ $_padding: 3%;
         }
 
         .iconlist__item {
+            $_padding-abs: 10px;
             border-top: $dashed-border;
-            padding: $_padding;
-            padding-left: $_padding * 2.5;
+            padding: $_padding-abs;
+            padding-left: $_padding-abs * 3;
 
             &:before {
                 top: 12px;
