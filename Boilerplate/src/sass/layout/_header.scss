@@ -180,7 +180,7 @@
         &:after {
             @include retina-sprite($sprite-arrow-down-grey-group);
             display: block;
-            content: '';
+            content: "";
             position: absolute;
             top: 20px;
             right: 10px;
@@ -385,7 +385,7 @@
         &--megamenu {
             > a:after {
                 @include retina-sprite($sprite-arrow-right-grey-group);
-                content: '';
+                content: "";
                 display: block;
                 position: absolute;
                 right: 10px;
@@ -462,7 +462,7 @@
                     &:before {
                         opacity: 0;
                         transition: opacity 0.2s;
-                        content: '';
+                        content: "";
                         pointer-events: none;
                         display: block;
                         position: absolute;
@@ -502,7 +502,7 @@
                 // Down arrow icon -
                 > a:after {
                     @include retina-sprite($sprite-arrow-down-grey-group);
-                    content: '';
+                    content: "";
                     display: block;
                     position: absolute;
                     bottom: 18px;

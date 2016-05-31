@@ -15,7 +15,7 @@ body {
 }
 
 .page:after {
-    content: '\00a0'; // &nbsp;
+    content: "\00a0"; // &nbsp;
     display: block;
     height: 0;
     visibility: hidden;

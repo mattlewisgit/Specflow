@@ -174,7 +174,7 @@
                 background-position: 100% 100%;
                 background-repeat: no-repeat;
                 //Image set through markup to allows CMS control of image -
-                //background-image: url('/media/000/search-background.png');
+                //background-image: url(/media/000/search-background.png);
                 transition: right 0s 1s;
 
                 .search-open & {

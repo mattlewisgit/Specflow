@@ -162,41 +162,41 @@ body {
         color: $white;
         z-index: 999;
         font-size: 13px;
-        content: 'MQ: < Smaller';
+        content: "MQ: < Smaller";
         background-color: rebeccapurple;
 
         @media only screen and (min-width : $breakpoint-smaller) {
-            content: 'MQ: Smaller';
+            content: "MQ: Smaller";
             background-color: red;
         }
 
         @media only screen and (min-width : $breakpoint-small) {
-            content: 'MQ: Small';
+            content: "MQ: Small";
             background-color: indigo;
         }
 
         @media only screen and (min-width : $breakpoint-medium) {
-            content: 'MQ: Medium';
+            content: "MQ: Medium";
             background-color: blue;
         }
 
         @media only screen and (min-width : $breakpoint-large) {
-            content: 'MQ: Large';
+            content: "MQ: Large";
             background-color: green;
         }
 
         @media only screen and (min-width : $breakpoint-larger) {
-            content: 'MQ: Larger';
+            content: "MQ: Larger";
             background-color: purple;
         }
 
         @media only screen and (min-width : $breakpoint-massive) {
-            content: 'MQ: Massive';
+            content: "MQ: Massive";
             background-color: orange;
         }
 
         @media only screen and (min-width : $breakpoint-max) {
-            content: 'MQ: Max';
+            content: "MQ: Max";
             background-color: seagreen;
         }
     }
