@@ -30,10 +30,8 @@ rules:
     - style: double
   property-sort-order:
     - 1
-    - order:
-        - display
-        - margin
-      ignore-custom-properties: true
+    - order: alphabetical
+    - ignore-custom-properties: false
   variable-for-property:
     - 1
     - properties:
