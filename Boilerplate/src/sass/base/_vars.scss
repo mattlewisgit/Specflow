@@ -1,3 +1,5 @@
+@import "../utils/mixins";
+
 // /*-------------------------------------------------.
 // \    Config: Grid debugging -
 //  `-------------------------------------------------*/
@@ -147,57 +149,3 @@ $breakpoint-under-large: em($_large - 1);
 $breakpoint-under-larger: em($_larger - 1);
 $breakpoint-under-massive: em($_massive - 1);
 $breakpoint-under-max: em($_max - 1);
-
-
-
-// MQ debug helper
-body {
-    &:before {
-        display: block;
-        position: fixed;
-        padding: 0.333em 0.666em;
-        opacity: 0.7;
-        bottom: 0;
-        right: 0;
-        color: $white;
-        z-index: 999;
-        font-size: 13px;
-        content: "MQ: < Smaller";
-        background-color: rebeccapurple;
-
-        @media only screen and (min-width : $breakpoint-smaller) {
-            content: "MQ: Smaller";
-            background-color: red;
-        }
-
-        @media only screen and (min-width : $breakpoint-small) {
-            content: "MQ: Small";
-            background-color: indigo;
-        }
-
-        @media only screen and (min-width : $breakpoint-medium) {
-            content: "MQ: Medium";
-            background-color: blue;
-        }
-
-        @media only screen and (min-width : $breakpoint-large) {
-            content: "MQ: Large";
-            background-color: green;
-        }
-
-        @media only screen and (min-width : $breakpoint-larger) {
-            content: "MQ: Larger";
-            background-color: purple;
-        }
-
-        @media only screen and (min-width : $breakpoint-massive) {
-            content: "MQ: Massive";
-            background-color: orange;
-        }
-
-        @media only screen and (min-width : $breakpoint-max) {
-            content: "MQ: Max";
-            background-color: seagreen;
-        }
-    }
-}

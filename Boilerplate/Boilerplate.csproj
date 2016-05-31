@@ -106,6 +106,12 @@
     <Content Include="src\sass\app.min.css">
       <DependentUpon>app.css</DependentUpon>
     </Content>
+    <Content Include="src\sass\boilerplate.css">
+      <DependentUpon>boilerplate.scss</DependentUpon>
+    </Content>
+    <Content Include="src\sass\boilerplate.min.css">
+      <DependentUpon>boilerplate.css</DependentUpon>
+    </Content>
     <Content Include="src\sass\product_hero.css">
       <DependentUpon>product_hero.scss</DependentUpon>
     </Content>
@@ -334,6 +340,7 @@
     </Content>
     <Content Include="svgsprite-config.json" />
     <Content Include="favicon-config.json" />
+    <Content Include="src\sass\boilerplate.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
