@@ -169,7 +169,7 @@
     <Content Include="src\sass\rewards_leader.css.map">
       <DependentUpon>rewards_leader.css</DependentUpon>
     </Content>
-    <Content Include="cssnano_config.json" />
+    <Content Include="cssnano-config.json" />
     <Content Include="src\sass\product_hero.scss" />
     <Content Include="src\sass\_screen_overrides.scss" />
     <Content Include="src\sass\product_hero.css.map">
@@ -332,6 +332,8 @@
     <Content Include="src\sass\app.css.map">
       <DependentUpon>app.css</DependentUpon>
     </Content>
+    <Content Include="svgsprite-config.json" />
+    <Content Include="favicon-config.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
