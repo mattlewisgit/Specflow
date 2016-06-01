@@ -225,6 +225,7 @@
     <Compile Include="Areas\Presales\Models\FAQ\FeaturedQuestions.cs" />
     <Compile Include="Areas\Presales\Models\FAQ\QuestionAnswer.cs" />
     <Compile Include="Areas\Presales\Models\FeatureBlocks\ProductHero.cs" />
+    <Compile Include="Areas\Presales\Models\Generic\Content.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\FooterSection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\GlobalFooter.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
@@ -259,7 +260,9 @@
     </Content>
     <Content Include="packages.config" />
     <Content Include="App_Config\ConnectionStrings.config" />
-    <Content Include="App_Config\Sitecore.config" />
+    <Content Include="App_Config\Sitecore.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\Include\001.Sitecore.Speak.Important.config" />
     <Content Include="App_Config\Include\CES\Sitecore.CES.config" />
     <Content Include="App_Config\Include\CES\Sitecore.CES.DeviceDetection.CheckInitialization.config.disabled" />
@@ -481,6 +484,7 @@
     <Content Include="Areas\Presales\Views\FeatureBlocks\ProductHero.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Areas\Presales\Views\Generic\Content.cshtml" />
     <Content Include="Areas\Presales\Views\Navigation\GlobalFooter.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
