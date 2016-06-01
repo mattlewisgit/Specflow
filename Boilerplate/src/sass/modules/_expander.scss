@@ -178,10 +178,6 @@
                 border-right-color: transparent;
             }
         }
-
-        &:last-child .expander__link {
-            border-bottom-color: $color-mono-14;
-        }
     }
 
     &--tabs.expander--init {

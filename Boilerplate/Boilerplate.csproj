@@ -41,6 +41,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="components\tabs.html" />
     <Content Include="components\summary\summary-right.html" />
     <Content Include="img\shoes.jpg" />
     <Content Include="components\product_hero.html" />

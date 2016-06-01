@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      lang="en"
+      class="flash csspointerevents svg flexbox cssgradients no-flexboxtweener no-touchevents target">
+<head>
+    <title>Vitality Boilerplate | Components | Tabs</title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/themes/prism.css" />
+    <link rel="stylesheet" type="text/css" href="/css/app.css" />
+    <link rel="stylesheet" type="text/css" href="/css/boilerplate.css" />
+    
+    <script src="/src/js/modernizr-custom.min.js"></script>
+    <script src="/src/js/require.js" data-main="/js/vitality-boilerplate" async></script>
+</head>
+<body>
+    <main tabindex="-1">
+        <section class="vertical-flush">
+            <h1>Tabs</h1>
+            <h2>Description</h2>
+
+            <p>
+                A tab groups content by headings, and only allows the content of one heading
+                to be revealed at one time, to prevent too much information from being displayed at any one time.
+            </p>
+
+            <h2>Note</h2>
+
+            <p>
+                Tabs rely on <b>id</b> attributes, in order to now which heading to expand
+                and conserve state via expander classes, and also so that they can be expanded by default
+                when a URL with an anchor is used, e.g. <b>test.html#accordion1-item1</b>.
+                If multiple accordions are used on the page, ensure that these IDs are unique.
+            </p>
+
+
+            <h2>Examples</h2>
+
+            <h3>Side Pane</h3>
+
+            <div class="example">
+                <div class="expander expander--with-style js-expander-is-switchable">
+                    <a href="#expander1-item1" class="expander__link">
+                        Tab 1 Link
+                    </a>
+
+                    <div id="expander1-item1" class="expander__content">
+                        <h2>Tab 1 Header</h2>
+
+                        <p class="paragraph-emphasis">
+                            Whether you're single, in a relationship, have a family or are a single parent,
+                            protection can give you the financial security you need for yourself or for your dependants.
+                        </p>
+
+                        <p>
+                            Curabitur a tempor nulla, a faucibus leo. In dictum risus sed tristique egestas.
+                            Mauris blandit metus id leo aliquam, quis rhoncus urna placerat.
+                            Aliquam mattis orci sit amet gravida imperdiet. In condimentum sem at odio mollis,
+                            non molestie purus blandit. Ut mollis commodo arcu, vel imperdiet ex.
+                        </p>
+
+                        <p>
+                            Integer tincidunt, ipsum a malesuada aliquam, lectus neque volutpat arcu,
+                            imperdiet rutrum sem felis vitae tortor. Vestibulum vel ultrices nisi.
+                            Vestibulum lacinia viverra lacinia. Nullam accumsan blandit erat a sollicitudin.
+                            Aenean eget pharetra erat. Curabitur semper ipsum a neque euismod dictum.
+                            Donec aliquet sollicitudin augue eget semper. Nullam accumsan blandit erat a sollicitudin.
+                            Aenean eget pharetra erat. Curabitur semper ipsum a neque euismod dictum.
+                        </p>
+                    </div>
+
+                    <a href="#expander1-item2" class="expander__link">
+                        Tab 2 Link
+                    </a>
+
+                    <div id="expander1-item2" class="expander__content">
+                        <h2>Tab 2 Header</h2>
+
+                        <p class="paragraph-emphasis">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Vel odio tempora qui repellendus dignissimos aspernatur cum vero atque dolorum cumque.
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quos totam commodi
+                            repellendus quam est voluptatum, perspiciatis deserunt suscipit numquam quae nihil,
+                            ab neque! Esse architecto nulla, dignissimos repellat animi!
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolorum quas,
+                            totam cum reprehenderit, unde, vero rem quasi, provident distinctio aliquam quos libero.
+                            Laudantium asperiores necessitatibus quos, eveniet accusamus eius vel dolores recusandae
+                            quas voluptate numquam tenetur, minima quod! Maxime.
+                        </p>
+                    </div>
+
+                    <a href="#expander1-item3" class="expander__link">
+                        Tab 3 Link
+                    </a>
+
+                    <div id="expander1-item3" class="expander__content">
+                        <h2>Tab 3 Header</h2>
+
+                        <p class="paragraph-emphasis">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti quaerat rerum
+                            voluptate vel totam, dignissimos, beatae natus doloremque tempore officia!
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit consectetur
+                            sequi maiores nostrum aperiam accusamus ex excepturi reprehenderit ipsam unde,
+                            id necessitatibus, error sed, expedita quia. Expedita, iure dolorum explicabo!
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptas dicta,
+                            reiciendis quibusdam non temporibus est inventore debitis excepturi sit ipsa maxime
+                            ullam aliquid esse quo! Amet quibusdam sequi aut accusamus ratione dolore!
+                            Beatae, ullam quod fugit officia eligendi id!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3>Markup</h3>
+
+                <pre>
+                    <code class="language-markup"></code>
+                </pre>
+            </div>
+            
+            <h3>Header</h3>
+
+            <div class="example">
+                <div class="expander expander--with-style expander--horizontal js-expander-is-switchable">
+                    <a href="#expander2-item1" class="expander__link">
+                        Tab 1 Link
+                    </a>
+
+                    <div id="expander2-item1" class="expander__content">
+                        <h2>Tab 1 Header</h2>
+
+                        <p class="paragraph-emphasis">
+                            Whether you're single, in a relationship, have a family or are a single parent,
+                            protection can give you the financial security you need for yourself or for your dependants.
+                        </p>
+
+                        <p>
+                            Curabitur a tempor nulla, a faucibus leo. In dictum risus sed tristique egestas.
+                            Mauris blandit metus id leo aliquam, quis rhoncus urna placerat.
+                            Aliquam mattis orci sit amet gravida imperdiet. In condimentum sem at odio mollis,
+                            non molestie purus blandit. Ut mollis commodo arcu, vel imperdiet ex.
+                        </p>
+
+                        <p>
+                            Integer tincidunt, ipsum a malesuada aliquam, lectus neque volutpat arcu,
+                            imperdiet rutrum sem felis vitae tortor. Vestibulum vel ultrices nisi.
+                            Vestibulum lacinia viverra lacinia. Nullam accumsan blandit erat a sollicitudin.
+                            Aenean eget pharetra erat. Curabitur semper ipsum a neque euismod dictum.
+                            Donec aliquet sollicitudin augue eget semper. Nullam accumsan blandit erat a sollicitudin.
+                            Aenean eget pharetra erat. Curabitur semper ipsum a neque euismod dictum.
+                        </p>
+                    </div>
+
+                    <a href="#expander2-item2" class="expander__link">
+                        Tab 2 Link
+                    </a>
+
+                    <div id="expander2-item2" class="expander__content">
+                        <h2>Tab 2 Header</h2>
+
+                        <p class="paragraph-emphasis">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Vel odio tempora qui repellendus dignissimos aspernatur cum vero atque dolorum cumque.
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quos totam commodi
+                            repellendus quam est voluptatum, perspiciatis deserunt suscipit numquam quae nihil,
+                            ab neque! Esse architecto nulla, dignissimos repellat animi!
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolorum quas,
+                            totam cum reprehenderit, unde, vero rem quasi, provident distinctio aliquam quos libero.
+                            Laudantium asperiores necessitatibus quos, eveniet accusamus eius vel dolores recusandae
+                            quas voluptate numquam tenetur, minima quod! Maxime.
+                        </p>
+                    </div>
+
+                    <a href="#expander2-item3" class="expander__link">
+                        Tab 3 Link
+                    </a>
+
+                    <div id="expander2-item3" class="expander__content">
+                        <h2>Tab 3 Header</h2>
+
+                        <p class="paragraph-emphasis">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti quaerat rerum
+                            voluptate vel totam, dignissimos, beatae natus doloremque tempore officia!
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit consectetur
+                            sequi maiores nostrum aperiam accusamus ex excepturi reprehenderit ipsam unde,
+                            id necessitatibus, error sed, expedita quia. Expedita, iure dolorum explicabo!
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptas dicta,
+                            reiciendis quibusdam non temporibus est inventore debitis excepturi sit ipsa maxime
+                            ullam aliquid esse quo! Amet quibusdam sequi aut accusamus ratione dolore!
+                            Beatae, ullam quod fugit officia eligendi id!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Markup</h3>
+
+                <pre>
+                <code class="language-markup"></code>
+                </pre>
+            </div>
+            
+            <h3>Minimal Header</h3>
+
+            <div class="example">
+                <div class="expander expander--with-style expander--horizontal expander--minimal js-expander-is-switchable">
+                    <a href="#expander3-item1" class="expander__link">
+                        Tab 1 Link
+                    </a>
+
+                    <div id="expander3-item1" class="expander__content">
+                        <h2>Tab 1 Header</h2>
+
+                        <p class="paragraph-emphasis">
+                            Whether you're single, in a relationship, have a family or are a single parent,
+                            protection can give you the financial security you need for yourself or for your dependants.
+                        </p>
+
+                        <p>
+                            Curabitur a tempor nulla, a faucibus leo. In dictum risus sed tristique egestas.
+                            Mauris blandit metus id leo aliquam, quis rhoncus urna placerat.
+                            Aliquam mattis orci sit amet gravida imperdiet. In condimentum sem at odio mollis,
+                            non molestie purus blandit. Ut mollis commodo arcu, vel imperdiet ex.
+                        </p>
+
+                        <p>
+                            Integer tincidunt, ipsum a malesuada aliquam, lectus neque volutpat arcu,
+                            imperdiet rutrum sem felis vitae tortor. Vestibulum vel ultrices nisi.
+                            Vestibulum lacinia viverra lacinia. Nullam accumsan blandit erat a sollicitudin.
+                            Aenean eget pharetra erat. Curabitur semper ipsum a neque euismod dictum.
+                            Donec aliquet sollicitudin augue eget semper. Nullam accumsan blandit erat a sollicitudin.
+                            Aenean eget pharetra erat. Curabitur semper ipsum a neque euismod dictum.
+                        </p>
+                    </div>
+
+                    <a href="#expander3-item2" class="expander__link">
+                        Tab 2 Link
+                    </a>
+
+                    <div id="expander3-item2" class="expander__content">
+                        <h2>Tab 2 Header</h2>
+
+                        <p class="paragraph-emphasis">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Vel odio tempora qui repellendus dignissimos aspernatur cum vero atque dolorum cumque.
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quos totam commodi
+                            repellendus quam est voluptatum, perspiciatis deserunt suscipit numquam quae nihil,
+                            ab neque! Esse architecto nulla, dignissimos repellat animi!
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolorum quas,
+                            totam cum reprehenderit, unde, vero rem quasi, provident distinctio aliquam quos libero.
+                            Laudantium asperiores necessitatibus quos, eveniet accusamus eius vel dolores recusandae
+                            quas voluptate numquam tenetur, minima quod! Maxime.
+                        </p>
+                    </div>
+
+                    <a href="#expander3-item3" class="expander__link">
+                        Tab 3 Link
+                    </a>
+
+                    <div id="expander3-item3" class="expander__content">
+                        <h2>Tab 3 Header</h2>
+
+                        <p class="paragraph-emphasis">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti quaerat rerum
+                            voluptate vel totam, dignissimos, beatae natus doloremque tempore officia!
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit consectetur
+                            sequi maiores nostrum aperiam accusamus ex excepturi reprehenderit ipsam unde,
+                            id necessitatibus, error sed, expedita quia. Expedita, iure dolorum explicabo!
+                        </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptas dicta,
+                            reiciendis quibusdam non temporibus est inventore debitis excepturi sit ipsa maxime
+                            ullam aliquid esse quo! Amet quibusdam sequi aut accusamus ratione dolore!
+                            Beatae, ullam quod fugit officia eligendi id!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3>Markup</h3>
+
+                <pre>
+                    <code class="language-markup"></code>
+                </pre>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="/js/boilerplate.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/prism.js"></script>
+</body>
+</html>
