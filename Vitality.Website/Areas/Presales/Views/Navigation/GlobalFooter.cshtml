@@ -1,12 +1,11 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Navigation.GlobalFooter>
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Navigation.GlobalFooter>
 
 <footer class="page-footer">
-
     <div class="page-footer__grid pinch">
-
         <div class="page-footer__links--small">
             <div class="expander expander--dark  expander--with-style  js-expander-is-accordion">
-                @foreach (var footerSection in Model.FooterLinksAllColumns)
+                @foreach (var footerSection in this.FooterSections())
                 {
                 <a href="#@footerSection.Name" class="expander__link">@Html.Raw(footerSection.Heading)</a>
                 <div id="@footerSection.Name" class="expander__content">
@@ -30,71 +29,41 @@
             </p>
         </div>
 
+        @foreach (var column in this.GroupFooterSectionsByColumn())
+        {
         <div class="page-footer__quote">
-            @foreach (var footerSection in Model.FooterLinksColumn1)
+            @foreach (var footerSection in column)
             {
                 <p class="page-footer__header">
                     @Html.Raw(footerSection.Heading)
                 </p>
 
                 <ul class="page-footer__list page-footer__list--quote">
-                @foreach (var footerLink in footerSection.FooterLinks)
-                {
-                    <li>@RenderLink(footerLink, m => m.Link)</li>
-                }
+                    @foreach (var footerLink in footerSection.FooterLinks)
+                    {
+                        <li>@RenderLink(footerLink, m => m.Link)</li>
+                    }
                 </ul>
             }
         </div>
-
-        <div class="page-footer__quote">
-            @foreach (var footerSection in Model.FooterLinksColumn2)
-            {
-                <p class="page-footer__header">
-                    @Html.Raw(footerSection.Heading)
-                </p>
-
-                <ul class="page-footer__list page-footer__list--quote">
-                @foreach (var footerLink in footerSection.FooterLinks)
-                {
-                    <li>@RenderLink(footerLink, m => m.Link)</li>
-                }
-                </ul>
-            }
-        </div>
-
-        <div class="page-footer__quote">
-            @foreach (var footerSection in Model.FooterLinksColumn3)
-            {
-                <p class="page-footer__header">
-                    @Html.Raw(footerSection.Heading)
-                </p>
-
-                <ul class="page-footer__list page-footer__list--quote">
-                @foreach (var footerLink in footerSection.FooterLinks)
-                {
-                    <li>@RenderLink(footerLink, m => m.Link)</li>
-                }
-                </ul>
-            }
-        </div>
+        }
 
         <div class="page-footer__connect">
-            @foreach (var socialLinks in Model.FooterSocialLinksColumn)
+        @foreach (var socialLinks in Model.FooterSocialLinksColumn)
+        {
+            <p class="page-footer__header">@Html.Raw(socialLinks.Heading)</p>
+            <ul class="social-icons-list">
+            @foreach (var socialLink in socialLinks.SocialLinks)
             {
-                <p class="page-footer__header">@Html.Raw(socialLinks.Heading)</p>
-
-                <ul class="social-icons-list">
-                @foreach (var socialLink in socialLinks.SocialLinks)
-                {
-                    <li class="social-icon">
-                        @using (BeginRenderLink(socialLink, m => m.Link))
-                        {
-                            @RenderImage(socialLink, m => m.Image)
-                        }
-                    </li>
-                }
-                </ul>
+                <li class="social-icon">
+                    @using (BeginRenderLink(socialLink, m => m.Link))
+                    {
+                        @RenderImage(socialLink, m => m.Image)
+                    }
+                </li>
             }
+            </ul>
+        }
         </div>
 
         <div class="page-footer__logo page-footer__logo--small">
