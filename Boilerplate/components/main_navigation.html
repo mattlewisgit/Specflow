@@ -4,10 +4,11 @@
     <title>Main Navigation</title>
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600" />
-    <link rel="stylesheet" type="text/css" href="/src/bower_components/prism/themes/prism.css" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/themes/prism.css" />
     <link rel="stylesheet" type="text/css" href="/css/app.css" />
-    <script src="/src/js/modernizr-custom.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/boilerplate.css" />
 
+    <script src="/src/js/modernizr-custom.min.js"></script>
     <script src="/src/js/require.js" data-main="/js/vitality-boilerplate" async></script>
 </head>
 <body>
@@ -20,11 +21,10 @@
         </p>
     </div>
 
-    <div>
-        <h2>Example</h2>
+    <h2>Example</h2>
 
-        <header id="example_1" class="page-header">
-
+    <div class="example">
+        <header class="page-header">
             <!-- top-bar mobile -->
             <div class="top-bar top-bar--small">
 
@@ -67,11 +67,8 @@
 
                             <span>Menu</span>
                         </div>
-
                     </li>
-
                 </ul>
-
             </div>
             <!-- end top-bar mobile -->
             <!-- top-bar desktop - contains site nav -->
@@ -407,7 +404,6 @@
                 </ul><!-- end section-nav -->
             </nav>
 
-
             <!-- site-nav for mobile, moved to botom of menu -->
             <nav role="navigation">
                 <ul class="site-nav--small">
@@ -434,7 +430,6 @@
 
                 </ul>
             </nav>
-
         </header>
     </div>
 
@@ -442,25 +437,11 @@
         <h2>Markup</h2>
 
         <pre>
-        <code id="markup_1" class="language-markup">
-            </code>
+        <code class="language-markup"></code>
         </pre>
     </div>
 
-    <script>
-        function htmlSpecialChars(unsafe) {
-            return unsafe
-                .replace(/&/g, "&amp;")
-                .replace(/</g, "&lt;")
-                .replace(/>/g, "&gt;")
-                .replace(/"/g, "&quot;")
-                .replace(/'/g, "&apos;");
-        }
-
-        document.getElementById("markup_1").innerHTML =
-            htmlSpecialChars("        " + document.getElementById("example_1").outerHTML);
-    </script>
-
-    <script type="text/javascript" src="src/bower_components/prism/prism.js"></script>
+    <script type="text/javascript" src="/js/boilerplate.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/prism.js"></script>
 </body>
 </html>

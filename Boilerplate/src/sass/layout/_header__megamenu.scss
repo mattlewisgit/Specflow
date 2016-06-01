@@ -42,7 +42,7 @@ $menu-transition-time: 0.5s;
         color: $body-color;
         // Underline
         &:before {
-            content: '';
+            content: "";
             display: block;
             position: absolute;
             bottom: 0;
@@ -54,7 +54,7 @@ $menu-transition-time: 0.5s;
         // Left arrow icon -
         &:after {
             @include retina-sprite($sprite-arrow-left-grey-group);
-            content: '';
+            content: "";
             display: block;
             position: absolute;
             left: 20px;
