@@ -1,47 +1,47 @@
 ----item----
 version: 1
-id: {B71ADCC2-F0FC-4F18-A3E7-F76FF4C9A8DB}
+id: {3F6F1BB7-5BDA-4308-82CF-BFD3FF5DAE1A}
 database: master
-path: /sitecore/content/Presales/Content/Cards
-parent: {1513AD49-B5AE-4ACC-9D41-E63E41363B58}
-name: Cards
+path: /sitecore/templates/Presales/Component Templates/Generic/Tab Collection/__Standard Values
+parent: {F7CFF045-57AE-49F5-BD7A-B24C06EF287B}
+name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
-templatekey: Folder
+template: {F7CFF045-57AE-49F5-BD7A-B24C06EF287B}
+templatekey: Tab Collection
 
-----field----
-field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
-name: __Icon
-key: __icon
-content-length: 28
-
-People/32x32/playingcard.png
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
 name: __Masters
 key: __masters
 content-length: 38
 
-{89D4A4DE-9F77-4427-86CB-CF824F5EEF02}
-----field----
-field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
-name: __Security
-key: __security
-content-length: 118
-
-ar|sitecore\Presales User|pe|+item:read|+item:create|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
+{A5530129-F521-479B-8A24-520E741BA5A7}
 ----version----
 language: en
 version: 1
-revision: 244d47f1-ac40-493d-ba9a-f41b7335cf47
+revision: ae5d1310-f3e1-4b06-bfff-774a8190417d
 
+----field----
+field: {7EE590B1-EA5E-4B79-9EAA-B5D99E61AE43}
+name: Heading
+key: heading
+content-length: 5
+
+$name
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160509T134557Z
+20160603T114428Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-244d47f1-ac40-493d-ba9a-f41b7335cf47
+ae5d1310-f3e1-4b06-bfff-774a8190417d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160603T115143Z
+20160603T114452Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

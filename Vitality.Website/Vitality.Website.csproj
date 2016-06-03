@@ -226,6 +226,8 @@
     <Compile Include="Areas\Presales\Models\FAQ\QuestionAnswer.cs" />
     <Compile Include="Areas\Presales\Models\FeatureBlocks\ProductHero.cs" />
     <Compile Include="Areas\Presales\Models\Generic\Content.cs" />
+    <Compile Include="Areas\Presales\Models\Generic\Tab.cs" />
+    <Compile Include="Areas\Presales\Models\Generic\Tabs.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
@@ -483,6 +485,7 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="Areas\Presales\Views\Generic\Content.cshtml" />
+    <Content Include="Areas\Presales\Views\Generic\AccordionContent.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

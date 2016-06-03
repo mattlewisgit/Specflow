@@ -1,0 +1,18 @@
+﻿@using Vitality.Website.Extensions
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Generic.TabCollection>
+
+<div class="expander expander--with-style js-expander-is-accordion expander--init">
+    <h2>@Editable(Model, m => m.Heading)</h2>
+    @foreach (var tab in Model.Tabs)
+    {
+        using(BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", tab.Path))
+        {
+        <a href="#@tab.Name.ToLowerHyphenatedString()" class="expander__link">
+            @Editable(tab, m => m.Title)
+        </a>
+        <div id="@tab.Name.ToLowerHyphenatedString()" class="expander__content">
+            @Editable(tab, m => m.Body)
+        </div>
+        }
+    }
+</div>
