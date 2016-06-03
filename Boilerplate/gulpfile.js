@@ -1,6 +1,7 @@
 // jshint strict: false
 
 var amdOptimize = require("amd-optimize");
+var browserSync = require("browser-sync");
 var buffer = require("vinyl-buffer");
 var del = require("del");
 var gulp = require("gulp");
@@ -41,6 +42,7 @@ var tasks = {
             svg: "sass:spritesheet-svg",
         }
     },
+    serve: "serve",
     watch: "watch"
 };
 
@@ -51,6 +53,11 @@ var paths = {
         template: "src/favicon-template.html"
     },
     gulp: "gulpfile.js",
+    html: [
+        "**/*.html",
+        "!bower_components/",
+        "!node_modules/"
+    ],
     img: {
         examples: {
             dest: "img/examples",
@@ -238,4 +245,27 @@ gulp.task(tasks.watch, function () {
     gulp.watch(paths.sass.srcAll, [
         tasks.sass.build
     ]);
+});
+
+gulp.task(tasks.serve, function() {
+    browserSync({
+        server: {
+            baseDir: paths.base
+        }
+    });
+
+    gulp.watch(
+        paths.html,
+        { cwd: paths.base },
+        browserSync.reload);
+
+    gulp.watch(
+        [paths.js.srcAll],
+        { cwd: paths.base },
+        [tasks.js.build, browserSync.reload]);
+
+    gulp.watch(
+        [paths.sass.srcAll],
+        { cwd: paths.base },
+        [tasks.sass.build, browserSync.reload]);
 });

@@ -5,6 +5,7 @@
     "dependencies": {
         "amd-optimize": "*",
         "bower": "*",
+        "browser-sync": "*",
         "del": "*",
         "gulp": "*",
         "gulp-changed": "*",
