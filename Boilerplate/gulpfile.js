@@ -2,22 +2,15 @@
 
 // Include the libraries.
 var amdOptimize = require("amd-optimize");
-var concat = require("gulp-concat");
-var cssnano = require("gulp-cssnano");
 var del = require("del");
 var gulp = require("gulp");
 var fs = require("fs");
-var imageResize = require("gulp-image-resize");
-var jshint = require("gulp-jshint");
-var jscs = require("gulp-jscs");
-var realFavicon = require("gulp-real-favicon");
-var rename = require("gulp-rename");
 var runSequence = require('run-sequence');
-var sass = require("gulp-sass");
-var sassLint = require("gulp-sass-lint");
-var spritesmith = require("gulp.spritesmith");
-var svgSprite = require("gulp-svg-sprite");
-var uglify = require("gulp-uglify");
+
+var plugins = require("gulp-load-plugins")({
+    pattern: ["gulp[\-\.]*"],
+    replaceString: /\bgulp[\-\.]/
+});
 
 // Include custom configuration.
 var configs = {
@@ -65,9 +58,9 @@ gulp.task(tasks.js.staticAnalysis, function () {
             files.gulp,
             files.js
         ])
-        .pipe(jshint())
-        .pipe(jshint.reporter("default"))
-        .pipe(jshint.reporter("fail"));
+        .pipe(plugins.jshint())
+        .pipe(plugins.jshint.reporter("default"))
+        .pipe(plugins.jshint.reporter("fail"));
 });
 
 gulp.task(tasks.js.style, function () {
@@ -76,8 +69,8 @@ gulp.task(tasks.js.style, function () {
             files.gulp,
             files.js
         ])
-        .pipe(jscs())
-        .pipe(jscs.reporter());
+        .pipe(plugins.jscs())
+        .pipe(plugins.jscs.reporter());
 });
 
 gulp.task(tasks.sass.lint, function () {
@@ -88,9 +81,9 @@ gulp.task(tasks.sass.lint, function () {
             "!src/sass/utils/_svg-template.scss",
             "!src/sass/vendor/**/*.scss"
         ])
-        .pipe(sassLint())
-        .pipe(sassLint.format())
-        .pipe(sassLint.failOnError());
+        .pipe(plugins.sassLint())
+        .pipe(plugins.sassLint.format())
+        .pipe(plugins.sassLint.failOnError());
 });
 
 // Cleans build artefacts.
@@ -106,13 +99,13 @@ gulp.task(tasks.clean, function () {
 gulp.task(tasks.resize, function () {
     gulp
         .src("src/images/**/*.png")
-        .pipe(imageResize({
+        .pipe(plugins.imageResize({
             width: "50%",
             height: "50%",
             crop: false,
             upscale: false
         }))
-        .pipe(rename(function(path) {
+        .pipe(plugins.rename(function(path) {
             path.basename += "@half";
         }))
         .pipe(gulp.dest("images/"));
@@ -122,7 +115,7 @@ gulp.task(tasks.resize, function () {
 gulp.task(tasks.sprite, function () {
     var spriteData = gulp
         .src("src/images/**/*.png")
-        .pipe(spritesmith({
+        .pipe(plugins.spritesmith({
             retinaSrcFilter: "src/images/**/*@2x.png",
             imgName: "images/sprite-generated.png",
             padding: 5,
@@ -140,16 +133,18 @@ gulp.task(tasks.sprite, function () {
 gulp.task(tasks.svg, function () {
     return gulp
         .src("src/images/**/*.svg")
-        .pipe(svgSprite(configs.svgSprite))
+        .pipe(plugins.svgSprite(configs.svgSprite))
         .pipe(gulp.dest("."));
 });
 
 gulp.task(tasks.sass.build, [tasks.sprite, tasks.svg], function () {
-    return gulp
+    gulp
         .src(files.sass)
-        .pipe(sass().on("error", sass.logError))
+        .pipe(plugins.sourcemaps.init())
+        .pipe(plugins.sass().on("error", plugins.sass.logError))
         .pipe(gulp.dest("src/sass/"))
-        .pipe(cssnano(configs.cssnano))
+        .pipe(plugins.sourcemaps.write())
+        //.pipe(plugins.cssnano(configs.cssnano))
         .pipe(gulp.dest("css"));
 });
 
@@ -170,8 +165,8 @@ gulp.task(tasks.js.build, function () {
             configFile: "src/js/app.js",
             baseUrl: "src/js"
         }))
-        .pipe(concat("vitality-boilerplate.js"))
-        .pipe(uglify())
+        .pipe(plugins.concat("vitality-boilerplate.js"))
+        .pipe(plugins.uglify())
         .pipe(gulp.dest("js"));
 });
 
@@ -197,14 +192,14 @@ gulp.task(tasks.default, [
 
 // Favicon tasks, deliberately separate to the main build.
 gulp.task(tasks.favicon, function () {
-    realFavicon.generateFavicon(configs.favicon);
+    plugins.realFavicon.generateFavicon(configs.favicon);
 });
 
 // Fill in the standard favicon HTML template.
 gulp.task(tasks.faviconTemplate, function () {
     return gulp
         .src("src/favicon-template.html")
-        .pipe(realFavicon.injectFaviconMarkups
+        .pipe(plugins.realFavicon.injectFaviconMarkups
             (JSON.parse(fs.readFileSync("favicon-data.json")).favicon.html_code))
         .pipe(gulp.dest("."));
 });

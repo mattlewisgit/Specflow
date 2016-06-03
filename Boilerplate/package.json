@@ -12,14 +12,17 @@
         "gulp-image-resize": "*",
         "gulp-jshint": "*",
         "gulp-jscs": "*",
+        "gulp-load-plugins": "*",
         "gulp-real-favicon": "*",
         "gulp-rename": "*",
         "gulp-sass": "*",
         "gulp-sass-lint": "*",
+        "gulp-sourcemaps": "*",
         "gulp.spritesmith": "*",
         "gulp-svg-sprite": "*",
         "gulp-uglify": "*",
         "jshint": "*",
+        "node-gyp": "3.3.0",
         "run-sequence": "*"
     },
     "scripts": {
