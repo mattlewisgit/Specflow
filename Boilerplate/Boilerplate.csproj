@@ -186,82 +186,28 @@
     <Content Include="src\sass\boilerplate.min.css">
       <DependentUpon>boilerplate.css</DependentUpon>
     </Content>
-    <Content Include="src\sass\product_hero.css">
-      <DependentUpon>product_hero.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\product_hero.min.css">
-      <DependentUpon>product_hero.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\cards_stacked.css">
-      <DependentUpon>cards_stacked.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\cards_stacked.min.css">
-      <DependentUpon>cards_stacked.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\rewards_leader.css">
-      <DependentUpon>rewards_leader.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\rewards_leader.min.css">
-      <DependentUpon>rewards_leader.css</DependentUpon>
-    </Content>
     <Content Include="src\sass\rich_text_editor.css">
-      <DependentUpon>rich_text_editor.scss</DependentUpon>
+      <DependentUpon>rich-text-editor.scss</DependentUpon>
     </Content>
     <Content Include="src\sass\rich_text_editor.min.css">
       <DependentUpon>rich_text_editor.css</DependentUpon>
     </Content>
-    <Content Include="src\sass\summary.css">
-      <DependentUpon>summary.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\summary.min.css">
-      <DependentUpon>summary.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\_defaults.css">
-      <DependentUpon>_defaults.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\_defaults.min.css">
-      <DependentUpon>_defaults.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\faq_leader.css">
-      <DependentUpon>faq_leader.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\faq_leader.min.css">
-      <DependentUpon>faq_leader.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\faq_leader.scss" />
-    <Content Include="src\sass\faq_leader.css.map">
-      <DependentUpon>faq_leader.css</DependentUpon>
-    </Content>
+    <Content Include="src\sass\modules\_faq-leader.scss" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="src\sass\_defaults.scss" />
-    <Content Include="src\sass\_defaults.css.map">
-      <DependentUpon>_defaults.css</DependentUpon>
-    </Content>
+    <Content Include="src\sass\base\_defaults.scss" />
     <Content Include="package.json" />
     <Content Include="bower.json" />
     <Content Include="sass-lint.yml" />
     <Content Include="gulp.targets" />
     <Content Include=".jscsrc" />
     <Content Include=".jshintrc" />
-    <Content Include="src\sass\rewards_leader.scss" />
-    <Content Include="src\sass\rewards_leader.css.map">
-      <DependentUpon>rewards_leader.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\product_hero.scss" />
-    <Content Include="src\sass\_screen_overrides.scss" />
-    <Content Include="src\sass\product_hero.css.map">
-      <DependentUpon>product_hero.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\cards_stacked.scss" />
-    <Content Include="src\sass\cards_stacked.css.map">
-      <DependentUpon>cards_stacked.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\summary.scss" />
-    <Content Include="src\sass\summary.css.map">
-      <DependentUpon>summary.css</DependentUpon>
-    </Content>
+    <Content Include="src\sass\modules\_rewards-leader.scss" />
+    <Content Include="src\sass\modules\_product-hero.scss" />
+    <Content Include="src\sass\base\_screen-overrides.scss" />
+    <Content Include="src\sass\modules\_cards-stacked.scss" />
+    <Content Include="src\sass\modules\_summary.scss" />
     <Content Include="src\sass\base\_base.scss" />
     <Content Include="src\sass\base\_box-buttons.scss" />
     <Content Include="src\sass\base\_buttons.scss" />
@@ -404,7 +350,7 @@
     <Content Include="src\sass\vendor\_animate.scss" />
     <Content Include="src\sass\vendor\_tablesaw.stackonly.scss" />
     <Content Include="src\sass\app.scss" />
-    <Content Include="src\sass\rich_text_editor.scss" />
+    <Content Include="src\sass\rich-text-editor.scss" />
     <Content Include="src\sass\rich_text_editor.css.map">
       <DependentUpon>rich_text_editor.css</DependentUpon>
     </Content>
@@ -413,6 +359,10 @@
     </Content>
     <Content Include="src\sass\boilerplate.scss" />
     <Content Include=".bowerrc" />
+    <Content Include="config\cssnano-config.json" />
+    <Content Include="config\favicon-config.json" />
+    <Content Include="config\image-resize-config.json" />
+    <Content Include="config\svgsprite-config.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -421,7 +371,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <PropertyGroup>
