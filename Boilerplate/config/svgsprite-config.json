@@ -8,7 +8,7 @@
         "css": {
             "dest": "",
             "bust": false,
-            "sprite": "src/images/svg-sprite.svg",
+            "sprite": "img/spritesheets/svg-sprite.svg",
             "render": {
                 "scss": {
                     "dest": "src/sass/generated/_svg-sprite.scss",

@@ -1,8 +1,8 @@
 ﻿{
-    "dest": "..img/favicon/",
+    "dest": "img/favicon/",
     "iconsPath": "img/favicon/",
     "markupFile": "favicon-data.json",
-    "masterPicture": "images/favicon/favicon.svg",
+    "masterPicture": "src/img/favicon/favicon.svg",
     "design": {
         "ios": {
             "pictureAspect": "backgroundAndMargin",

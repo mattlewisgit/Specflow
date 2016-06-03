@@ -31,7 +31,7 @@ define([
     AnimationDelayModule,
     SearchModule
 ) {
-
+  "use strict";
     var main = {
 
         init: function(){
@@ -62,7 +62,7 @@ define([
           wow.init();
       }
       else{
-        //Add a class showing that the animationlibrary has not been initialised -
+        //Add a class showing that the animation library has not been initialised -
         $("html").addClass("no-js-animations");
       }
 
@@ -90,15 +90,14 @@ define([
             //Check for height matching -
             MatchHeightsModule.init();
 
-      //Check for column animaiton delays -
+      //Check for column animation delays -
       AnimationDelayModule.init();
 
-      //Search funcitonalilty -
+      //Search functionality -
       SearchModule.init();
 
         }
     };
 
     return main;
-
 });
