@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {2BF5E532-C146-4BD3-B11E-63F3EF1E1DD7}
+id: {3486949D-2D21-47E3-A56D-6E99C71CC7CF}
 database: master
-path: /sitecore/layout/Renderings/Presales/Generic/Accordion Content
+path: /sitecore/layout/Renderings/Presales/Generic/Tabbed Content
 parent: {852B298E-43AD-4045-8B8A-CCFA70D5A9D8}
-name: Accordion Content
+name: Tabbed Content
 master: {00000000-0000-0000-0000-000000000000}
 template: {99F8905D-4A87-4EB8-9F8B-A9BEBFB3ADD6}
 templatekey: View rendering
@@ -13,9 +13,9 @@ templatekey: View rendering
 field: {51B435BC-F7B9-478A-9C51-52916AF96FF5}
 name: Path
 key: path
-content-length: 53
+content-length: 50
 
-/Areas/Presales/Views/Generic/AccordionContent.cshtml
+/Areas/Presales/Views/Generic/TabbedContent.cshtml
 ----field----
 field: {F869E724-0718-43E4-92A0-D612FE191CFB}
 name: Area
@@ -57,7 +57,7 @@ name: Compatible Renderings
 key: compatible renderings
 content-length: 38
 
-{3486949D-2D21-47E3-A56D-6E99C71CC7CF}
+{2BF5E532-C146-4BD3-B11E-63F3EF1E1DD7}
 ----field----
 field: {A2F5D9DF-8CBA-4A1D-99EB-51ACB94CB057}
 name: Page Editor Buttons
@@ -71,11 +71,11 @@ name: __Thumbnail
 key: __thumbnail
 content-length: 58
 
-<image mediaid="{21B4C33B-FA4E-4006-85C8-DC284B0071A8}" />
+<image mediaid="{59B5F49A-E12A-4DA2-9E5E-3415E6AA7D93}" />
 ----version----
 language: en
 version: 1
-revision: b02676ca-657a-4d15-af20-bc8184a18e54
+revision: 93a4584d-a1c6-438b-b029-2830939f3102
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -83,21 +83,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20160603T114825Z
+20160606T101737Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-b02676ca-657a-4d15-af20-bc8184a18e54
+93a4584d-a1c6-438b-b029-2830939f3102
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160603T120607Z
+20160606T102543Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
