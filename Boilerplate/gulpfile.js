@@ -1,218 +1,271 @@
 // jshint strict: false
 
-// Include the libraries.
 var amdOptimize = require("amd-optimize");
-var concat = require("gulp-concat");
-var cssnano = require("gulp-cssnano");
+var browserSync = require("browser-sync");
+var buffer = require("vinyl-buffer");
 var del = require("del");
 var gulp = require("gulp");
 var fs = require("fs");
-var imageResize = require("gulp-image-resize");
-var jshint = require("gulp-jshint");
-var jscs = require("gulp-jscs");
-var realFavicon = require("gulp-real-favicon");
-var rename = require("gulp-rename");
-var runSequence = require('run-sequence');
-var sass = require("gulp-sass");
-var sassLint = require("gulp-sass-lint");
-var spritesmith = require("gulp.spritesmith");
-var svgSprite = require("gulp-svg-sprite");
-var uglify = require("gulp-uglify");
+var runSequence = require("run-sequence");
 
-// Include custom configuration.
+var plugins = require("gulp-load-plugins")({
+    pattern: ["gulp[\-\.]*"],
+    replaceString: /\bgulp[\-\.]/
+});
+
 var configs = {
-    cssnano: require("./cssnano-config.json"),
-    favicon: require("./favicon-config.json"),
-    svgSprite: require("./svgsprite-config.json")
+    cssnano: require("./config/cssnano-config.json"),
+    favicon: require("./config/favicon-config.json"),
+    imageResize: require("./config/image-resize-config.json"),
+    svgSprite: require("./config/svgsprite-config.json")
 };
 
-// Store the tasks as names, so that they can be easily
-// referenced from the individual and default tasks.
 var tasks = {
-    build: "build",
     clean: "clean",
-    css: "css",
     "default": "default",
-    favicon: "favicon",
-    faviconTemplate: "favicon-template",
-    js: {
-        build: "js_build",
-        staticAnalysis: "js_static_analysis",
-        style: "js_style"
+    favicon: {
+        build: "favicon:build",
+        template: "favicon:template"
     },
-    lint: "lint",
+    help: "help",
+    images: "images",
+    js: {
+        build: "js",
+        lint: "js:lint"
+    },
     resize: "resize",
     sass: {
         build: "sass",
-        lint: "sass_lint"
+        lint: "sass:lint",
+        spritesheet: {
+            png: "sass:spritesheet-png",
+            svg: "sass:spritesheet-svg",
+        }
     },
-    sprite: "sprite",
-    svg: "svg",
+    serve: "serve",
     watch: "watch"
 };
 
-var files = {
+var paths = {
+    base: ".",
+    css: "css",
+    favicon: {
+        template: "src/favicon-template.html"
+    },
     gulp: "gulpfile.js",
-    js: "src/js/**/*.js",
-    sass: "src/sass/**/*.scss",
-    sassGenerated: "src/sass/generated/*.scss"
+    html: [
+        "**/*.html",
+        "!bower_components/",
+        "!node_modules/"
+    ],
+    img: {
+        examples: {
+            dest: "img/examples",
+            src: "src/img/examples/**/*"
+        },
+        spritesheets: {
+            // TODO move to "img/spritesheets"
+            dest: "css",
+            pngSrc: "src/images/**/*.png",
+            svgSrc: "src/images/**/*.svg"
+        }
+    },
+    js: {
+        dest: "js",
+        filename: "vitality-boilerplate.js",
+        src: [
+            "src/js/**/*.js",
+            "!src/js/modernizr-custom.min.js",
+            "!src/js/require.js",
+            "!src/js/libraries/**/*.js",
+            "!src/js/vendor/**/*.js"
+        ],
+        srcAll: "src/js/**/*.js"
+    },
+    sass: {
+        generated: "src/sass/generated",
+        src: [
+            "src/sass/**/*.scss",
+            "!src/sass/generated/*.scss",
+            "!src/sass/utils/_svg-template.scss",
+            "!src/sass/vendor/**/*.scss"
+        ],
+        srcAll: "src/sass/**/*.scss"
+    },
+    temp: "tmp"
 };
 
-// Lints all local JavaScript files, including this!
-gulp.task(tasks.js.staticAnalysis, function () {
-    return gulp
-        .src([
-            files.gulp,
-            files.js
-        ])
-        .pipe(jshint())
-        .pipe(jshint.reporter("default"))
-        .pipe(jshint.reporter("fail"));
-});
+gulp.task(tasks.help, plugins.taskListing);
 
-gulp.task(tasks.js.style, function () {
+gulp.task(tasks.js.lint, function () {
     return gulp
-        .src([
-            files.gulp,
-            files.js
-        ])
-        .pipe(jscs())
-        .pipe(jscs.reporter());
+        .src([paths.gulp].concat(paths.js.src))
+        .pipe(plugins.changed(paths.temp))
+        .pipe(gulp.dest(paths.temp))
+        .pipe(plugins.jshint())
+        .pipe(plugins.jscs())
+        .pipe(plugins.jscsStylish.combineWithHintResults())
+        .pipe(plugins.jshint.reporter("jshint-stylish"));
 });
 
 gulp.task(tasks.sass.lint, function () {
     return gulp
-        .src([
-            files.sass,
-            "!" + files.sassGenerated,
-            "!src/sass/utils/_svg-template.scss",
-            "!src/sass/vendor/**/*.scss"
-        ])
-        .pipe(sassLint())
-        .pipe(sassLint.format())
-        .pipe(sassLint.failOnError());
+        .src(paths.sass.src)
+        .pipe(plugins.changed(paths.temp))
+        .pipe(gulp.dest(paths.temp))
+        .pipe(plugins.sassLint())
+        .pipe(plugins.sassLint.format())
+        .pipe(plugins.sassLint.failOnError());
 });
 
-// Cleans build artefacts.
 gulp.task(tasks.clean, function () {
     return del([
-        "src/sass/**/*.css",
-        "src/sass/**/*.min.*",
-        files.sassGenerated
+        paths.css,
+        paths.img.examples.dest,
+        paths.img.spritesheets.dest,
+        paths.js.dest + "/" + paths.js.filename,
+        paths.sass.generated,
+        paths.temp
     ]);
 });
 
-// TODO Delete all smaller images, remove @2x from the names, then resize.
-gulp.task(tasks.resize, function () {
-    gulp
-        .src("src/images/**/*.png")
-        .pipe(imageResize({
-            width: "50%",
-            height: "50%",
-            crop: false,
-            upscale: false
-        }))
-        .pipe(rename(function(path) {
-            path.basename += "@half";
-        }))
-        .pipe(gulp.dest("images/"));
+gulp.task(tasks.images, function() {
+    return gulp
+        .src(paths.img.examples.src)
+        .pipe(plugins.changed(paths.img.examples.src))
+        .pipe(plugins.imagemin())
+        .pipe(gulp.dest(paths.img.examples.dest));
 });
 
-// Spritesheet generation.
-gulp.task(tasks.sprite, function () {
+gulp.task(tasks.sass.spritesheet.png, function () {
     var spriteData = gulp
-        .src("src/images/**/*.png")
-        .pipe(spritesmith({
-            retinaSrcFilter: "src/images/**/*@2x.png",
-            imgName: "images/sprite-generated.png",
+        .src(paths.img.spritesheets.pngSrc)
+        .pipe(plugins.changed(paths.temp))
+        .pipe(gulp.dest(paths.temp))
+        .pipe(plugins.spritesmith({
+            retinaSrcFilter: "tmp/**/*@2x.png",
+            imgName: "sprite-generated.png",
+            retinaImgName: "sprite-generated@2x.png",
+            cssName: "_sprite.scss",
             padding: 5,
-            retinaImgName: "images/sprite-generated@2x.png",
-            cssName: "src/sass/generated/_sprite.scss",
             cssVarMap: function (sprite) {
                 sprite.name = "sprite_" + sprite.name;
             }
         }));
 
-    spriteData.img.pipe(gulp.dest("."));
-    spriteData.css.pipe(gulp.dest("."));
+    spriteData.img
+        .pipe(buffer())
+        .pipe(plugins.imagemin())
+        .pipe(gulp.dest(paths.img.spritesheets.dest));
+
+    spriteData.css.pipe(gulp.dest(paths.sass.generated));
 });
 
-gulp.task(tasks.svg, function () {
+gulp.task(tasks.sass.spritesheet.svg, function () {
     return gulp
-        .src("src/images/**/*.svg")
-        .pipe(svgSprite(configs.svgSprite))
-        .pipe(gulp.dest("."));
+        .src(paths.img.spritesheets.svgSrc)
+        .pipe(plugins.changed(paths.temp))
+        .pipe(gulp.dest(paths.temp))
+        .pipe(plugins.svgSprite(configs.svgSprite))
+        .pipe(gulp.dest(paths.base));
+        //.pipe(plugins.wait(1000));
 });
 
-gulp.task(tasks.sass.build, [tasks.sprite, tasks.svg], function () {
+gulp.task(tasks.sass.build, [
+    tasks.sass.lint,
+    //tasks.sass.spritesheet.png,
+    //tasks.sass.spritesheet.svg
+], function () {
+    // TODO Enable source maps and use auto-prefixer.
     return gulp
-        .src(files.sass)
-        .pipe(sass().on("error", sass.logError))
-        .pipe(gulp.dest("src/sass/"))
-        .pipe(cssnano(configs.cssnano))
-        .pipe(gulp.dest("css"));
+        .src(paths.sass.srcAll)
+        .pipe(plugins.sourcemaps.init())
+        .pipe(plugins.sass().on("error", plugins.sass.logError))
+        .pipe(gulp.dest(paths.temp))
+        //.pipe(plugins.sourcemaps.write())
+        .pipe(plugins.cssnano(configs.cssnano))
+        .pipe(gulp.dest(paths.css));
 });
 
+/*
 // CSS tasks that forces dependencies to be run sequentially.
 // Parallelisation is playing havoc, as the spritesheets
 // must be generated first, as their SASS outputs
 // are required for the SASS build!
-gulp.task(tasks.css, [tasks.sprite, tasks.svg], function () {
-    runSequence(tasks.sprite, tasks.svg, tasks.sass.build);
+gulp.task("css", function () {
+    runSequence(
+        tasks.sass.lint,
+        tasks.sass.spritesheet.png,
+        tasks.sass.spritesheet.svg,
+        tasks.sass.build);
 });
+*/
 
-// Require JS build.
-gulp.task(tasks.js.build, function () {
+// TODO Use gulp-if and lazypipe to only run this when any files has changed.
+gulp.task(tasks.js.build, [tasks.js.lint], function () {
     return gulp
-        .src(files.js)
+        .src(paths.js.srcAll)
         .pipe(amdOptimize("app", {
             name: "app",
             configFile: "src/js/app.js",
             baseUrl: "src/js"
         }))
-        .pipe(concat("vitality-boilerplate.js"))
-        .pipe(uglify())
-        .pipe(gulp.dest("js"));
+        .pipe(plugins.concat(paths.js.filename))
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest(paths.js.dest));
 });
 
-// A group of all lint tasks.
-gulp.task(tasks.lint, [
-    //jsStaticAnalysis,
-    //jsStyle,
-    tasks.sass.lint
-]);
-
-// A group of all build tasks.
-gulp.task(tasks.build, [
-    tasks.css,
-    tasks.js.build
-]);
-
-// Default task that runs all the tasks.
 gulp.task(tasks.default, [
-    tasks.clean,
-    tasks.lint,
-    tasks.build
+    tasks.js.build,
+    tasks.images,
+    tasks.sass.build
 ]);
 
 // Favicon tasks, deliberately separate to the main build.
-gulp.task(tasks.favicon, function () {
-    realFavicon.generateFavicon(configs.favicon);
+// TODO Conditionally run these!
+gulp.task(tasks.favicon.build, function () {
+    plugins.realFavicon.generateFavicon(configs.favicon);
 });
 
-// Fill in the standard favicon HTML template.
-gulp.task(tasks.faviconTemplate, function () {
+gulp.task(tasks.favicon.template, function () {
     return gulp
-        .src("src/favicon-template.html")
-        .pipe(realFavicon.injectFaviconMarkups
-            (JSON.parse(fs.readFileSync("favicon-data.json")).favicon.html_code))
-        .pipe(gulp.dest("."));
+        .src(paths.favicon.template)
+        .pipe(plugins.realFavicon.injectFaviconMarkups
+            (JSON.parse(fs
+                .readFileSync(configs.favicon-config.markupFile))
+                .favicon.html_code))
+        .pipe(gulp.dest(paths.base));
 });
 
-// Default watch task that continuously compiles pre-processor code.
 gulp.task(tasks.watch, function () {
-    gulp.watch(files.sass, [
-        tasks.clean,
-        tasks.build
+    gulp.watch(paths.js.src, [
+        tasks.js.build
     ]);
+
+    gulp.watch(paths.sass.srcAll, [
+        tasks.sass.build
+    ]);
+});
+
+gulp.task(tasks.serve, function() {
+    browserSync({
+        server: {
+            baseDir: paths.base
+        }
+    });
+
+    gulp.watch(
+        paths.html,
+        { cwd: paths.base },
+        browserSync.reload);
+
+    gulp.watch(
+        [paths.js.srcAll],
+        { cwd: paths.base },
+        [tasks.js.build, browserSync.reload]);
+
+    gulp.watch(
+        [paths.sass.srcAll],
+        { cwd: paths.base },
+        [tasks.sass.build, browserSync.reload]);
 });

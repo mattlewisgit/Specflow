@@ -7,7 +7,9 @@
     <CSSOutput Include="$(ProjectDir)css\**\*.css" />
   </ItemGroup>
   <Target Name="AfterBuild" Inputs="@(JSInput);@(SASSInput)" Outputs="@(JSOutput);@(CSSOutput)">
+    <!--
     <Exec WorkingDirectory="$(ProjectDir)client_side" Command="npm install" />
     <Exec WorkingDirectory="$(ProjectDir)client_side" Command="npm run gulp" />
+    -->
   </Target>
 </Project>

@@ -2,6 +2,7 @@
     "bitwise": false,
     "browser": true,
     "curly": true,
+    "devel": true,
     "eqeqeq": true,
     "forin": true,
     "freeze": true,
@@ -20,6 +21,7 @@
     "unused": true,
     "varstmt": false,
     "predef": [
+        "define",
         "require",
         "requirejs"
     ]
