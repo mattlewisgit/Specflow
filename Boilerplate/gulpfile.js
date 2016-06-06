@@ -22,6 +22,7 @@ var configs = {
 
 var tasks = {
     clean: "clean",
+    css: "css",
     "default": "default",
     favicon: {
         build: "favicon:build",
@@ -35,7 +36,7 @@ var tasks = {
     },
     resize: "resize",
     sass: {
-        build: "sass",
+        build: "sass:build",
         lint: "sass:lint",
         spritesheet: {
             png: "sass:spritesheet-png",
@@ -168,14 +169,9 @@ gulp.task(tasks.sass.spritesheet.svg, function () {
         .pipe(gulp.dest(paths.temp))
         .pipe(plugins.svgSprite(configs.svgSprite))
         .pipe(gulp.dest(paths.base));
-        //.pipe(plugins.wait(1000));
 });
 
-gulp.task(tasks.sass.build, [
-    tasks.sass.lint,
-    //tasks.sass.spritesheet.png,
-    //tasks.sass.spritesheet.svg
-], function () {
+gulp.task(tasks.sass.build, function () {
     // TODO Enable source maps and use auto-prefixer.
     return gulp
         .src(paths.sass.srcAll)
@@ -187,19 +183,18 @@ gulp.task(tasks.sass.build, [
         .pipe(gulp.dest(paths.css));
 });
 
-/*
-// CSS tasks that forces dependencies to be run sequentially.
+
+// CSS task that forces dependencies to be run sequentially.
 // Parallelisation is playing havoc, as the spritesheets
 // must be generated first, as their SASS outputs
 // are required for the SASS build!
-gulp.task("css", function () {
+gulp.task(tasks.css, function () {
     runSequence(
-        tasks.sass.lint,
         tasks.sass.spritesheet.png,
         tasks.sass.spritesheet.svg,
+        tasks.sass.lint,
         tasks.sass.build);
 });
-*/
 
 // TODO Use gulp-if and lazypipe to only run this when any files has changed.
 gulp.task(tasks.js.build, [tasks.js.lint], function () {
@@ -216,9 +211,9 @@ gulp.task(tasks.js.build, [tasks.js.lint], function () {
 });
 
 gulp.task(tasks.default, [
-    tasks.js.build,
+    tasks.css,
     tasks.images,
-    tasks.sass.build
+    tasks.js.build
 ]);
 
 // Favicon tasks, deliberately separate to the main build.
