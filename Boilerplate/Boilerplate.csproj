@@ -43,41 +43,115 @@
   <ItemGroup>
     <Content Include="components\tabs.html" />
     <Content Include="components\summary\summary-right.html" />
-    <Content Include="img\shoes.jpg" />
     <Content Include="components\product_hero.html" />
     <Content Include="components\cards_stacked.html" />
     <Content Include="components\summary\summary-left.html" />
     <Content Include="components\summary\index.html" />
     <Content Include="components\faq_leader.html" />
-    <Content Include="img\clipboard-icon.png" />
-    <Content Include="img\heart-icon.png" />
-    <Content Include="img\stars-icon.png" />
-    <Content Include="img\stethoscope-icon.png" />
     <Content Include="components\benefit_leader.html" />
     <Content Include="components\rewards_leader.html" />
-    <Content Include="img\family.jpg" />
-    <Content Include="img\cyclist.jpg" />
-    <Content Include="img\facebook--footer.svg" />
-    <Content Include="img\icon-mouse.svg" />
-    <Content Include="img\icon-phone--dark.svg" />
-    <Content Include="img\icon-phone.svg" />
-    <Content Include="img\instagram--footer.svg" />
-    <Content Include="img\log-in-avatar.png" />
-    <Content Include="img\log-in.svg" />
-    <Content Include="img\running-man.jpg" />
-    <Content Include="img\search-background.png" />
-    <Content Include="img\search.svg" />
-    <Content Include="img\sprite-generated.png" />
-    <Content Include="img\twitter--footer.svg" />
-    <Content Include="img\vitality-logo--white.svg" />
-    <Content Include="img\vitality-logo.svg" />
-    <Content Include="img\youtube--footer.svg" />
     <Content Include="index.html" />
     <Content Include="components\main_navigation.html" />
     <Content Include="src\favicon-template.html" />
     <Content Include="gulpfile.js" />
     <Content Include="js\boilerplate.js" />
-    <Content Include="src\images\svg-sprite.svg" />
+    <Content Include="src\images\arrow-down%402x.png" />
+    <Content Include="src\images\arrow-down--grey%402x.png" />
+    <Content Include="src\images\arrow-down--grey.png" />
+    <Content Include="src\images\arrow-down--light%402x.png" />
+    <Content Include="src\images\arrow-down--light.png" />
+    <Content Include="src\images\arrow-down--pink%402x.png" />
+    <Content Include="src\images\arrow-down--pink.png" />
+    <Content Include="src\images\arrow-down.png" />
+    <Content Include="src\images\arrow-left%402x.png" />
+    <Content Include="src\images\arrow-left--grey%402x.png" />
+    <Content Include="src\images\arrow-left--grey.png" />
+    <Content Include="src\images\arrow-left--light%402x.png" />
+    <Content Include="src\images\arrow-left--light.png" />
+    <Content Include="src\images\arrow-left--pink%402x.png" />
+    <Content Include="src\images\arrow-left--pink.png" />
+    <Content Include="src\images\arrow-left.png" />
+    <Content Include="src\images\arrow-right%402x.png" />
+    <Content Include="src\images\arrow-right--grey%402x.png" />
+    <Content Include="src\images\arrow-right--grey.png" />
+    <Content Include="src\images\arrow-right--light%402x.png" />
+    <Content Include="src\images\arrow-right--light.png" />
+    <Content Include="src\images\arrow-right--pink%402x.png" />
+    <Content Include="src\images\arrow-right--pink.png" />
+    <Content Include="src\images\arrow-right.png" />
+    <Content Include="src\images\arrow-up%402x.png" />
+    <Content Include="src\images\arrow-up--light%402x.png" />
+    <Content Include="src\images\arrow-up--light.png" />
+    <Content Include="src\images\arrow-up.png" />
+    <Content Include="src\images\button-arrow-down%402x.png" />
+    <Content Include="src\images\button-arrow-down.png" />
+    <Content Include="src\images\button-arrow-left%402x.png" />
+    <Content Include="src\images\button-arrow-left.png" />
+    <Content Include="src\images\button-arrow-right%402x.png" />
+    <Content Include="src\images\button-arrow-right.png" />
+    <Content Include="src\images\close-icon%402x.png" />
+    <Content Include="src\images\close-icon.png" />
+    <Content Include="src\images\facebook--footer.svg" />
+    <Content Include="src\images\facebook.svg" />
+    <Content Include="src\images\icon-mouse.svg" />
+    <Content Include="src\images\icon-phone--dark.svg" />
+    <Content Include="src\images\icon-phone.svg" />
+    <Content Include="src\images\instagram--footer.svg" />
+    <Content Include="src\images\instagram.svg" />
+    <Content Include="src\images\log-in.svg" />
+    <Content Include="src\images\search.svg" />
+    <Content Include="src\images\sprite\icon-list\icon-check%402x.png" />
+    <Content Include="src\images\sprite\icon-list\icon-check.png" />
+    <Content Include="src\images\sprite\icon-list\icon-chevron-bottom%402x.png" />
+    <Content Include="src\images\sprite\icon-list\icon-chevron-bottom.png" />
+    <Content Include="src\images\sprite\icon-list\icon-chevron-left%402x.png" />
+    <Content Include="src\images\sprite\icon-list\icon-chevron-left.png" />
+    <Content Include="src\images\sprite\icon-list\icon-chevron-right%402x.png" />
+    <Content Include="src\images\sprite\icon-list\icon-chevron-right.png" />
+    <Content Include="src\images\sprite\icon-list\icon-chevron-top%402x.png" />
+    <Content Include="src\images\sprite\icon-list\icon-chevron-top.png" />
+    <Content Include="src\images\sprite\icon-list\icon-circle-x%402x.png" />
+    <Content Include="src\images\sprite\icon-list\icon-circle-x.png" />
+    <Content Include="src\images\sprite\icon-list\icon-heart%402x.png" />
+    <Content Include="src\images\sprite\icon-list\icon-heart.png" />
+    <Content Include="src\images\sprite\icon-list\icon-lock-locked%402x.png" />
+    <Content Include="src\images\sprite\icon-list\icon-lock-locked.png" />
+    <Content Include="src\images\sprite\icon-list\icon-lock-unlocked%402x.png" />
+    <Content Include="src\images\sprite\icon-list\icon-lock-unlocked.png" />
+    <Content Include="src\images\sprite\icon-list\icon-map-marker%402x.png" />
+    <Content Include="src\images\sprite\icon-list\icon-map-marker.png" />
+    <Content Include="src\images\svg\log-in.svg" />
+    <Content Include="src\images\svg\search.svg" />
+    <Content Include="src\images\svg\vitality-logo--white.svg" />
+    <Content Include="src\images\svg\vitality-logo.svg" />
+    <Content Include="src\images\tick-circle--teal%402x.png" />
+    <Content Include="src\images\tick-circle--teal.png" />
+    <Content Include="src\images\twitter--footer.svg" />
+    <Content Include="src\images\twitter.svg" />
+    <Content Include="src\images\youtube--footer.svg" />
+    <Content Include="src\images\youtube.svg" />
+    <Content Include="src\img\examples\clipboard-icon.png" />
+    <Content Include="src\img\examples\cyclist.jpg" />
+    <Content Include="src\img\examples\facebook--footer.svg" />
+    <Content Include="src\img\examples\family.jpg" />
+    <Content Include="src\img\examples\heart-icon.png" />
+    <Content Include="src\img\examples\icon-mouse.svg" />
+    <Content Include="src\img\examples\icon-phone--dark.svg" />
+    <Content Include="src\img\examples\icon-phone.svg" />
+    <Content Include="src\img\examples\instagram--footer.svg" />
+    <Content Include="src\img\examples\log-in-avatar.png" />
+    <Content Include="src\img\examples\log-in.svg" />
+    <Content Include="src\img\examples\running-man.jpg" />
+    <Content Include="src\img\examples\search-background.png" />
+    <Content Include="src\img\examples\search.svg" />
+    <Content Include="src\img\examples\shoes.jpg" />
+    <Content Include="src\img\examples\stars-icon.png" />
+    <Content Include="src\img\examples\stethoscope-icon.png" />
+    <Content Include="src\img\examples\twitter--footer.svg" />
+    <Content Include="src\img\examples\vitality-logo--white.svg" />
+    <Content Include="src\img\examples\vitality-logo.svg" />
+    <Content Include="src\img\examples\youtube--footer.svg" />
+    <Content Include="src\img\favicon\favicon.svg" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
     <Content Include="src\js\app.js" />
@@ -113,83 +187,28 @@
     <Content Include="src\sass\boilerplate.min.css">
       <DependentUpon>boilerplate.css</DependentUpon>
     </Content>
-    <Content Include="src\sass\product_hero.css">
-      <DependentUpon>product_hero.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\product_hero.min.css">
-      <DependentUpon>product_hero.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\cards_stacked.css">
-      <DependentUpon>cards_stacked.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\cards_stacked.min.css">
-      <DependentUpon>cards_stacked.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\rewards_leader.css">
-      <DependentUpon>rewards_leader.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\rewards_leader.min.css">
-      <DependentUpon>rewards_leader.css</DependentUpon>
-    </Content>
     <Content Include="src\sass\rich_text_editor.css">
-      <DependentUpon>rich_text_editor.scss</DependentUpon>
+      <DependentUpon>rich-text-editor.scss</DependentUpon>
     </Content>
     <Content Include="src\sass\rich_text_editor.min.css">
       <DependentUpon>rich_text_editor.css</DependentUpon>
     </Content>
-    <Content Include="src\sass\summary.css">
-      <DependentUpon>summary.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\summary.min.css">
-      <DependentUpon>summary.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\_defaults.css">
-      <DependentUpon>_defaults.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\_defaults.min.css">
-      <DependentUpon>_defaults.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\faq_leader.css">
-      <DependentUpon>faq_leader.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\faq_leader.min.css">
-      <DependentUpon>faq_leader.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\faq_leader.scss" />
-    <Content Include="src\sass\faq_leader.css.map">
-      <DependentUpon>faq_leader.css</DependentUpon>
-    </Content>
+    <Content Include="src\sass\modules\_faq-leader.scss" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="src\sass\_defaults.scss" />
-    <Content Include="src\sass\_defaults.css.map">
-      <DependentUpon>_defaults.css</DependentUpon>
-    </Content>
+    <Content Include="src\sass\base\_defaults.scss" />
     <Content Include="package.json" />
     <Content Include="bower.json" />
     <Content Include="sass-lint.yml" />
     <Content Include="gulp.targets" />
     <Content Include=".jscsrc" />
     <Content Include=".jshintrc" />
-    <Content Include="src\sass\rewards_leader.scss" />
-    <Content Include="src\sass\rewards_leader.css.map">
-      <DependentUpon>rewards_leader.css</DependentUpon>
-    </Content>
-    <Content Include="cssnano-config.json" />
-    <Content Include="src\sass\product_hero.scss" />
-    <Content Include="src\sass\_screen_overrides.scss" />
-    <Content Include="src\sass\product_hero.css.map">
-      <DependentUpon>product_hero.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\cards_stacked.scss" />
-    <Content Include="src\sass\cards_stacked.css.map">
-      <DependentUpon>cards_stacked.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\summary.scss" />
-    <Content Include="src\sass\summary.css.map">
-      <DependentUpon>summary.css</DependentUpon>
-    </Content>
+    <Content Include="src\sass\modules\_rewards-leader.scss" />
+    <Content Include="src\sass\modules\_product-hero.scss" />
+    <Content Include="src\sass\base\_screen-overrides.scss" />
+    <Content Include="src\sass\modules\_cards-stacked.scss" />
+    <Content Include="src\sass\modules\_summary.scss" />
     <Content Include="src\sass\base\_base.scss" />
     <Content Include="src\sass\base\_box-buttons.scss" />
     <Content Include="src\sass\base\_buttons.scss" />
@@ -332,16 +351,19 @@
     <Content Include="src\sass\vendor\_animate.scss" />
     <Content Include="src\sass\vendor\_tablesaw.stackonly.scss" />
     <Content Include="src\sass\app.scss" />
-    <Content Include="src\sass\rich_text_editor.scss" />
+    <Content Include="src\sass\rich-text-editor.scss" />
     <Content Include="src\sass\rich_text_editor.css.map">
       <DependentUpon>rich_text_editor.css</DependentUpon>
     </Content>
     <Content Include="src\sass\app.css.map">
       <DependentUpon>app.css</DependentUpon>
     </Content>
-    <Content Include="svgsprite-config.json" />
-    <Content Include="favicon-config.json" />
     <Content Include="src\sass\boilerplate.scss" />
+    <Content Include=".bowerrc" />
+    <Content Include="config\cssnano-config.json" />
+    <Content Include="config\favicon-config.json" />
+    <Content Include="config\image-resize-config.json" />
+    <Content Include="config\svgsprite-config.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -350,7 +372,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <PropertyGroup>
