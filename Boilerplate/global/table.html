@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" class="flash csspointerevents svg flexbox cssgradients no-flexboxtweener no-touchevents target">
+<head>
+    <title>Vitality Boilerplate | Global | Tables</title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/themes/prism.css" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/tablesaw/dist/tablesaw.css" />
+    <link rel="stylesheet" type="text/css" href="/css/app.css" />
+    <link rel="stylesheet" type="text/css" href="/css/boilerplate.css" />
+</head>
+<body>
+    <main tabindex="-1">
+        <section class="vertical-flush">
+            <h1>Tables</h1>
+            <h2>Description</h2>
+
+            <p>
+                Standard HTML tables are augmented by the
+                <a href="https://github.com/filamentgroup/tablesaw" title="Tablesaw: a group of plugins for responsive tables">tablesaw</a>
+                plugin, to adapt them for easier use on small devices.
+            </p>
+
+            <h2>Examples</h2>
+
+            <h3>Stacked</h3>
+
+            <div class="example">
+                <table class="data-table tablesaw tablesaw-stack"
+                       data-tablesaw-mode="stack">
+                    <thead>
+                        <tr>
+                            <th>Screen name</th>
+                            <th>Retail price</th>
+                            <th>Your price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Active</td>
+                            <td>£129</td>
+                            <td>£64.50</td>
+                        </tr>
+                        <tr>
+                            <td>Core</td>
+                            <td>£169</td>
+                            <td>£84.50</td>
+                        </tr>
+                        <tr>
+                            <td>Executive</td>
+                            <td>£249</td>
+                            <td>£124.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <h2>Markup</h2>
+
+                <pre>
+                    <code class="language-markup"></code>
+                </pre>
+            </div>
+
+            <h3>Swipe</h3>
+
+            <div class="example">
+                <table class="data-table tablesaw" data-tablesaw-mode="swipe" data-tablesaw-minimap>
+                    <thead>
+                        <tr>
+                            <th data-tablesaw-priority="persist">Screen name</th>
+                            <th>Retail price</th>
+                            <th>Your price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Active</td>
+                            <td>£129</td>
+                            <td>£64.50</td>
+                        </tr>
+                        <tr>
+                            <td>Core</td>
+                            <td>£169</td>
+                            <td>£84.50</td>
+                        </tr>
+                        <tr>
+                            <td>Executive</td>
+                            <td>£249</td>
+                            <td>£124.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <h2>Markup</h2>
+
+                <pre>
+                    <code class="language-markup"></code>
+                </pre>
+            </div>
+        </section>
+    </main>
+    
+    <script src="/src/js/modernizr-custom.min.js"></script>
+    <script src="/src/js/require.js" data-main="/js/vitality-boilerplate"></script>
+    <script src="/bower_components/tablesaw/dist/tablesaw.js"></script>
+
+    <script type="text/javascript" src="/js/boilerplate.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/prism.js"></script>
+</body>
+</html>

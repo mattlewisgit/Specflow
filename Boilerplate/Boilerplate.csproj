@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="components\summary\summary-right.html" />
+    <Content Include="global\table.html" />
     <Content Include="components\product_hero.html" />
     <Content Include="components\cards_stacked.html" />
     <Content Include="components\summary\summary-left.html" />
@@ -348,7 +349,6 @@
     <Content Include="src\sass\vendor\neat\_neat-helpers.scss" />
     <Content Include="src\sass\vendor\neat\_neat.scss" />
     <Content Include="src\sass\vendor\_animate.scss" />
-    <Content Include="src\sass\vendor\_tablesaw.stackonly.scss" />
     <Content Include="src\sass\app.scss" />
     <Content Include="src\sass\rich-text-editor.scss" />
     <Content Include="src\sass\rich_text_editor.css.map">
