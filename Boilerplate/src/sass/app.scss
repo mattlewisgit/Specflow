@@ -12,9 +12,6 @@
 @import "generated/sprite";
 @import "generated/svg-sprite";
 
-@import "vendor/animate";
-@import "vendor/tablesaw.stackonly";
-
 @import "base/base";
 @import "base/buttons";
 @import "base/box-buttons";
@@ -54,10 +51,10 @@
 
 @import "utils/media-print";
 
-@import "screen_overrides";
+@import "base/screen-overrides";
 
-@import "cards_stacked";
-@import "faq_leader";
-@import "product_hero";
-@import "rewards_leader";
-@import "summary";
+@import "modules/cards-stacked";
+@import "modules/faq-leader";
+@import "modules/product-hero";
+@import "modules/rewards-leader";
+@import "modules/summary";
