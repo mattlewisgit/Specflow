@@ -13,6 +13,8 @@
     {
         private const string HasNavigationSectionTemplate = "./*[@@templateid='" + ItemConstants.Presales.Templates.NavigationSection.Id + "']";
 
+        public Image Logo { get; set; }
+
         public Link SearchPage { get; set; }
 
         public Link ContactUsPage { get; set; }
