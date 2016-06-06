@@ -6,7 +6,7 @@
     <div class="top-bar__home">
 
         <a href="/">
-            <img src="/img/vitality-logo.svg" alt="Vitality" class="top-bar__logo">
+            @RenderImage(Model, m => m.Logo, new { @class = "top-bar__logo" })
         </a>
 
     </div>

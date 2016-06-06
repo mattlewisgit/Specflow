@@ -17,5 +17,8 @@
 
         [SitecoreChildren]
         public IEnumerable<NavigationSubSection> NavigationSubSections { get; set; }
+
+        [SitecoreQuery("..", IsRelative = true, IsLazy = false)]
+        public MainNavigation MainNavigation { get; set; }
     }
 }

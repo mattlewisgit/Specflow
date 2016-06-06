@@ -1,33 +1,33 @@
 ----item----
 version: 1
-id: {CD74644F-8147-4B51-B666-DB529E771646}
+id: {F83E0202-0955-463A-9FA3-2ABA2D317440}
 database: master
-path: /sitecore/templates/Presales/Page Templates/Home Page/__Standard Values
-parent: {4C595B14-AB9A-4D9D-82B0-7A8799A3D70C}
+path: /sitecore/templates/Presales/Component Templates/Navigation/Footer Section/__Standard Values
+parent: {DD329039-011C-4A6D-8B97-4F6B796EEEE8}
 name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {4C595B14-AB9A-4D9D-82B0-7A8799A3D70C}
-templatekey: Home Page
+template: {DD329039-011C-4A6D-8B97-4F6B796EEEE8}
+templatekey: Footer Section
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
 name: __Masters
 key: __masters
-content-length: 38
+content-length: 77
 
-{EAE876EB-8043-4F1B-95C4-C015EAE09215}
-----field----
-field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
-name: __Renderings
-key: __renderings
-content-length: 372
-
-<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{9739784C-FDA6-45F1-ADA4-A86F18E3D4A0}"><r ds="" id="{874D1721-7D2C-4934-A983-B70FD0AC1B35}" par="" ph="header" uid="{B73C367C-CC35-4EE2-B7F7-CA6164E76688}" /><r id="{BF71492E-474C-41CD-9EA5-328E5909AD50}" ph="footer" uid="{8A3178E9-9A83-47AC-8A10-553E16F024EE}" /></d></r>
+{86112F62-773D-464C-AEE7-F6E86CEC4A11}|{BDD88ED4-C40F-43A1-9900-572B18179434}
 ----version----
 language: en
 version: 1
-revision: 3824ef22-90fe-46fd-832e-483ab5654c0c
+revision: 24b922e6-3e0b-4054-9d57-495cc6196c0d
 
+----field----
+field: {69A57290-F3CA-4673-9717-5532E7A24149}
+name: Heading
+key: heading
+content-length: 5
+
+$name
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -41,7 +41,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160428T152529Z
+20160601T120928Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3824ef22-90fe-46fd-832e-483ab5654c0c
+24b922e6-3e0b-4054-9d57-495cc6196c0d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160601T123021Z
+20160601T121612Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
