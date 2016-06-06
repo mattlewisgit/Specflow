@@ -208,8 +208,6 @@
     <Content Include="js\modernizr-custom.min.js" />
     <Content Include="js\require.js" />
     <Content Include="js\vitality-boilerplate.js" />
-    <Content Include="sitecore\shell\Controls\Rich Text Editor\CustomDialogs\TableWizard.ascx" />
-    <Content Include="sitecore\shell\Controls\Rich Text Editor\EditorPage.aspx" />
     <Content Include="Web.config" />
     <Content Include="_Tools\PackageInstaller.asmx" />
   </ItemGroup>
