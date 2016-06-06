@@ -134,7 +134,7 @@ gulp.task(tasks.images, function() {
         .src(paths.img.examples.src)
         .pipe(plugins.changed(paths.img.examples.src))
         .pipe(plugins.imagemin())
-        .pipe(gulp.dest(paths.img.examples.src));
+        .pipe(gulp.dest(paths.img.examples.dest));
 });
 
 gulp.task(tasks.sass.spritesheet.png, function () {
