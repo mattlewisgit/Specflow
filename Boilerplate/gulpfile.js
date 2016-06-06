@@ -105,7 +105,7 @@ gulp.task(tasks.js.lint, function () {
         .pipe(plugins.jshint())
         .pipe(plugins.jscs())
         .pipe(plugins.jscsStylish.combineWithHintResults())
-        .pipe(plugins.jshint.reporter("jshint-stylish"));
+        .pipe(plugins.jshint.reporter());
 });
 
 gulp.task(tasks.sass.lint, function () {
