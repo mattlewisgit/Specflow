@@ -1,56 +1,51 @@
 ﻿define([
     "jquery",
     "modules/accordionModule"
-], function(
+], function (
     $,
     Accordion
-){
-
-    'use strict';
+) {
+    "use strict";
 
     //vars -
     var _settings = {
-        selector: '.js-expander-is-switchable',
-        menuClass: '.expander__menu',
-        activeClass: 'is-active',
-        breakpoint: '769px'
+        selector: ".js-expander-is-switchable",
+        menuClass: ".expander__menu",
+        activeClass: "is-active",
+        breakpoint: "769px"
     };
 
     var _globals = {
         isAvailable: true
     };
 
-    var _tabModules =[];
+    var _tabModules = [];
 
-    // Tab Modules wrapped in function to keep each one's scope to itself.
+    // Tab Modules wrapped in function to keep each one"s scope to itself.
     // Replaced generalised $(_settings.selector) dom selection.
-    var TabModule = function(tabModuleDomElement){
-
+    var TabModule = function (tabModuleDomElement) {
         var $thisTabModule = tabModuleDomElement;
 
         var _setDefaultContent = function () {
-
             // set default for links
-            if ($('.expander__link.' + _settings.activeClass, $thisTabModule).length === 0){
-                $('.expander__link', $thisTabModule).first().addClass(_settings.activeClass);
+            if ($(".expander__link." + _settings.activeClass, $thisTabModule).length === 0) {
+                $(".expander__link", $thisTabModule).first().addClass(_settings.activeClass);
             }
 
             // set default for content
-            if ($('.expander__content.' + _settings.activeClass, $thisTabModule).length === 0){
-                $('.expander__content', $thisTabModule).first().addClass(_settings.activeClass);
+            if ($(".expander__content." + _settings.activeClass, $thisTabModule).length === 0) {
+                $(".expander__content", $thisTabModule).first().addClass(_settings.activeClass);
             }
-
         };
 
         var _createTabs = function () {
-
             // create the menu to hold tabs
-            var $menu = $('<ul />', { class: _settings.menuClass.replace('.', '') });
+            var $menu = $("<ul />", { class: _settings.menuClass.replace(".", "") });
 
             // append all links to the menu inside a tab
-            $('.expander__link', $thisTabModule)
+            $(".expander__link", $thisTabModule)
                 .appendTo($menu)
-                .wrap('<li class="expander__item"></li>');
+                .wrap("<li class='expander__item'></li>");
 
             $thisTabModule.prepend($menu);
 
@@ -58,8 +53,7 @@
             _setDefaultContent();
 
             // rebind the click function
-            $('.expander__link', $thisTabModule).unbind('click').on('click', function (e) {
-
+            $(".expander__link", $thisTabModule).unbind("click").on("click", function (e) {
                 e.preventDefault();
 
                 var $link = $(this);
@@ -77,52 +71,39 @@
                 $(content).addClass(_settings.activeClass);
 
                 return false;
-
             });
 
             $thisTabModule
-                .removeClass('expander--collapsible  expander--init')
-                .addClass('expander--tabs  expander--init');
-
+                .removeClass("expander--collapsible  expander--init")
+                .addClass("expander--tabs  expander--init");
         };
 
         var _createAccordion = function () {
-
             Accordion.createAccordion($thisTabModule);
-
-            $thisTabModule.removeClass('expander--tabs');
-
+            $thisTabModule.removeClass("expander--tabs");
         };
 
         var _switchToTabs = function () {
-
-            // create tabs
             _createTabs();
-
         };
 
         var _switchToAccordion = function () {
-
             // find the menu
             var $menu = $(_settings.menuClass, $thisTabModule);
 
             // find each link in menu
-            $('.expander__link', $menu).each(function () {
+            $(".expander__link", $menu).each(function () {
 
                 var $link = $(this),
-                    $content = $($link.attr('href'));
+                    $content = $($link.attr("href"));
 
                 // move it to just before its content partner
                 $link.insertBefore($content);
 
             });
 
-            // remove the menu altogether
             $menu.remove();
-
-            // create the accordion
             _createAccordion();
-
         };
 
         var _isAccordionState = function () {
@@ -144,25 +125,21 @@
         }
 
         //For each registered Expander module -
-        $.each(_tabModules, function(){
-
+        $.each(_tabModules, function () {
             var _thisExpanderModule = this;
 
-            if(Modernizr.mq("(min-width : "+_settings.breakpoint+")") && _thisExpanderModule.isAccordionState() ){
+            if (Modernizr.mq("(min-width : " + _settings.breakpoint+")") && _thisExpanderModule.isAccordionState()) {
                 _thisExpanderModule.switchToTabs();
-            } else if (Modernizr.mq("(max-width : "+_settings.breakpoint+")") && _thisExpanderModule.isAccordionState() === false) {
+            } else if (Modernizr.mq("(max-width : " + _settings.breakpoint+")") && _thisExpanderModule.isAccordionState() === false) {
                 _thisExpanderModule.switchToAccordion();
             }
         });
     };
-
-
+    
     /**
      *  initialiser
      */
     var init = function () {
-        console.log("TabsModule module init");
-
         // check existence of tabs
         if ($(_settings.selector).length === 0) {
             _globals.isAvailable = false;
@@ -170,8 +147,7 @@
         }
 
         //For each expander module in the html -
-        $(_settings.selector).each(function(){
-
+        $(_settings.selector).each(function () {
             //Create a new tabModule -
             var tabModule = new TabModule($(this));
 
@@ -179,10 +155,9 @@
             _tabModules.push(tabModule);
 
             // determine what we should do on startup
-            if(Modernizr.mq("(min-width : "+_settings.breakpoint+")") && tabModule.isAccordionState() ){
+            if (Modernizr.mq("(min-width : " + _settings.breakpoint+")") && tabModule.isAccordionState()) {
                 // if larger screen sizes and currently in accordion state, switch
                 tabModule.switchToTabs($(this));
-
             } else {
                 // otherwise go ahead and create accordion on smaller screens
                 tabModule.createAccordion($(this));
@@ -194,7 +169,6 @@
 
     //Return our public methods -
     return {
-        "init":init
+        "init": init
     };
-
 });

@@ -40,7 +40,7 @@ var tasks = {
         lint: "sass:lint",
         spritesheet: {
             png: "sass:spritesheet-png",
-            svg: "sass:spritesheet-svg",
+            svg: "sass:spritesheet-svg"
         }
     },
     serve: "serve",
@@ -101,12 +101,11 @@ gulp.task(tasks.help, plugins.taskListing);
 gulp.task(tasks.js.lint, function () {
     return gulp
         .src([paths.gulp].concat(paths.js.src))
-        .pipe(plugins.changed(paths.temp))
-        .pipe(gulp.dest(paths.temp))
         .pipe(plugins.jshint())
         .pipe(plugins.jscs())
         .pipe(plugins.jscsStylish.combineWithHintResults())
-        .pipe(plugins.jshint.reporter("jshint-stylish"));
+        .pipe(plugins.jshint.reporter("jshint-stylish"))
+        .pipe(plugins.jshint.reporter("fail"));
 });
 
 gulp.task(tasks.sass.lint, function () {
@@ -227,7 +226,7 @@ gulp.task(tasks.favicon.template, function () {
         .src(paths.favicon.template)
         .pipe(plugins.realFavicon.injectFaviconMarkups
             (JSON.parse(fs
-                .readFileSync(configs.favicon-config.markupFile))
+                .readFileSync(configs.favicon.markupFile))
                 .favicon.html_code))
         .pipe(gulp.dest(paths.base));
 });

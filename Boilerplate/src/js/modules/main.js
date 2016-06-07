@@ -1,3 +1,4 @@
+/*jshint maxparams: 20*/
 define([
     "jquery",
     "libraries/fastclick",
@@ -14,7 +15,7 @@ define([
     "modules/matchHeightsModule",
     "modules/animationDelayModule",
     "modules/searchModule"
-], function(
+], function (
     $,
     FastClick,
     DatePicker,
@@ -31,46 +32,42 @@ define([
     AnimationDelayModule,
     SearchModule
 ) {
-  "use strict";
+    "use strict";
     var main = {
-
-        init: function(){
-
-            // Your code here
-            console.log("Main JS init here!");
-
+        init: function () {
             //
-        // Vendor libraries -
-        //
+            // Vendor libraries -
+            //
 
             //Start fastclick -
             FastClick.attach(document.body);
 
             //JQ UI Date picker init  -
-      //Where JS used, disable direct input to stop mobile keyboards -
-        $(".js-datepicker").datepicker().attr("readonly", "true");
+            //Where JS used, disable direct input to stop mobile keyboards -
+            $(".js-datepicker").datepicker().attr("readonly", "true");
 
-        //TableSaw responsive tables init -
-        $( document ).trigger( "enhance.tablesaw" );
+            //TableSaw responsive tables init -
+            $(document).trigger("enhance.tablesaw");
 
-        //init wow js  - only for larger screens -
-      var wow;
-      if(Modernizr.mq("(min-width : 770px)")){
-          wow = new WOW({
-              boxClass: "animate-on-scroll"
-          });
-          wow.init();
-      }
-      else{
-        //Add a class showing that the animation library has not been initialised -
-        $("html").addClass("no-js-animations");
-      }
+            //init wow js  - only for larger screens -
+            var wow;
 
-      //
-      // Custom modules -
-      //
+            if (Modernizr.mq("(min-width : 770px)")) {
+                wow = new Wow({
+                    boxClass: "animate-on-scroll"
+                });
 
-      //Demo of how to use helpers -
+                wow.init();
+            } else {
+                //Add a class showing that the animation library has not been initialised -
+                $("html").addClass("no-js-animations");
+            }
+
+            //
+            // Custom modules -
+            //
+
+            //Demo of how to use helpers -
             //Helpers.init();
             //console.log(Helpers.getViewport());
 
@@ -90,12 +87,11 @@ define([
             //Check for height matching -
             MatchHeightsModule.init();
 
-      //Check for column animation delays -
-      AnimationDelayModule.init();
+            //Check for column animation delays -
+            AnimationDelayModule.init();
 
-      //Search functionality -
-      SearchModule.init();
-
+            //Search functionality -
+            SearchModule.init();
         }
     };
 
