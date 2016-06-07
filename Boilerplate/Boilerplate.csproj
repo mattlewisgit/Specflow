@@ -168,7 +168,6 @@
     <Content Include="src\js\modules\matchHeightsModule.js" />
     <Content Include="src\js\modules\menuModule.js" />
     <Content Include="src\js\modernizr-custom.min.js" />
-    <Content Include="src\js\nr-918.min.js" />
     <Content Include="src\js\require.js" />
     <Content Include="src\js\modules\searchModule.js" />
     <Content Include="src\js\modules\socialShareModule.js" />

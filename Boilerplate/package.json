@@ -18,6 +18,7 @@
         "gulp-jscs": "*",
         "gulp-jscs-stylish": "*",
         "gulp-load-plugins": "*",
+        "gulp-modernizr": "*",
         "gulp-real-favicon": "*",
         "gulp-rename": "*",
         "gulp-sass": "*",

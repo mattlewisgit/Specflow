@@ -1,118 +1,111 @@
 define([
-	"jquery",
-], function(
-	$
-){
+    "jquery"
+], function (
+    $
+) {
+    // --------------------------------------------------------------------Debug
+    "use strict";
 
-	// --------------------------------------------------------------------Debug
-	'use strict';
+    var init = function () {
+        // Avoid `console` errors in browsers that lack a console.
+        (function () {
+            var method;
+            var noop = function () { };
+            var methods = [
+                "assert", "clear", "count", "debug", "dir", "dirxml", "error",
+                "exception", "group", "groupCollapsed", "groupEnd", "info", "log",
+                "markTimeline", "profile", "profileEnd", "table", "time", "timeEnd",
+                "timeStamp", "trace", "warn"
+            ];
+            var length = methods.length;
+            var console = (window.console = window.console || {});
 
-	var init = function() {
+            while (length--) {
+                method = methods[length];
 
-		console.log("helpers init!");
+                // Only stub undefined methods.
+                if (!console[method]) {
+                    console[method] = noop;
+                }
+            }
+        }());
 
-		// Avoid `console` errors in browsers that lack a console.
-		(function() {
-			var method;
-			var noop = function() {};
-			var methods = [
-				'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-				'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-				'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-				'timeStamp', 'trace', 'warn'
-			];
-			var length = methods.length;
-			var console = (window.console = window.console || {});
+        // --------------------------------------------------------------------Block Heights
 
-			while (length--) {
-				method = methods[length];
+        // Usage $(".block").equalizeHeights();
+        $.fn.equalizeHeights = function () {
+            return this.height(Math.max.apply(this, $(this)
+                .map(function (i, e) {
+                    return $(e)
+                        .height();
+                })
+                .get()));
+        };
+        // --------------------------------------------------------------------Form clear
 
-				// Only stub undefined methods.
-				if (!console[method]) {
-					console[method] = noop;
-				}
-			}
-		}());
+        // Usage $("input[type="text"]").clrInput();
 
-		// --------------------------------------------------------------------Block Heights
+        $.fn.clrInput = function () {
+            return this.focus(function () {
+                if (this.value === this.defaultValue) {
+                    this.value = "";
+                }
+            }).blur(function () {
+                if (!this.value.length) {
+                    this.value = this.defaultValue;
+                }
+            });
+        };
 
-		// Usage $('.block').equalizeHeights();
-		$.fn.equalizeHeights = function() {
-			return this.height(Math.max.apply(this, $(this)
-				.map(function(i, e) {
-					return $(e)
-						.height();
-				})
-				.get()));
-		};
-		// --------------------------------------------------------------------Form clear
+        // --------------------------------------------------------------------IE 11 Check
 
-		// Usage $('input[type="text"]').clrInput();
+        if (navigator.userAgent.match(/Trident.*rv:11\./)) {
+            $("body").addClass("ie11");
+        }
+    };
 
-		$.fn.clrInput = function() {
-			return this.focus(function() {
-				if (this.value === this.defaultValue) {
-					this.value = '';
-				}
-			}).blur(function() {
-				if (!this.value.length) {
-					this.value = this.defaultValue;
-				}
-			});
-		};
+    // --------------------------------------------------------------------Scroll To Element
+    var scrollToElement = function (el, off, dur) {
 
-		// --------------------------------------------------------------------IE 11 Check
+        dur = typeof dur !== "undefined" ? dur : 500;
+        off = typeof off !== "undefined" ? off : 0;
 
-		if (navigator.userAgent.match(/Trident.*rv:11\./)) {
-			$('body').addClass('ie11');
-		}
-	};
+        // $(el).velocity("scroll", off);
 
-	// --------------------------------------------------------------------Scroll To Element
-	var scrollToElement = function(el, off, dur) {
+        $("body").scrollTo(el, dur, {
+            offset: -off,
+            queue: false
+        });
+    };
 
-		dur = typeof dur !== 'undefined' ? dur : 500;
-		off = typeof off !== 'undefined' ? off : 0;
+    // --------------------------------------------------------------------Get viewport sizes
+    var getViewport = function () {
+        var viewPortWidth;
+        var viewPortHeight;
 
-		// $(el).velocity('scroll', off);
+        // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+        if (typeof window.innerWidth !== "undefined") {
+            viewPortWidth = window.innerWidth;
+            viewPortHeight = window.innerHeight;
 
-		$('body').scrollTo(el, dur, {
-			offset: -off,
-			queue: false
-		});
-	};
+            // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+        } else if (typeof document.documentElement !== "undefined" && typeof document.documentElement.clientWidth !== "undefined" && document.documentElement.clientWidth !== 0) {
+            viewPortWidth = document.documentElement.clientWidth;
+            viewPortHeight = document.documentElement.clientHeight;
 
-		// --------------------------------------------------------------------Get viewport sizes
-	var getViewport = function(){
+            // older versions of IE
+        } else {
+            viewPortWidth = document.getElementsByTagName("body")[0].clientWidth;
+            viewPortHeight = document.getElementsByTagName("body")[0].clientHeight;
+        }
 
-		var viewPortWidth;
-		var viewPortHeight;
+        return [viewPortWidth, viewPortHeight];
+    };
 
-		// the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
-		if (typeof window.innerWidth !== 'undefined') {
-			viewPortWidth = window.innerWidth;
-			viewPortHeight = window.innerHeight;
-
-			// IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
-		} else if (typeof document.documentElement !== 'undefined' && typeof document.documentElement.clientWidth !== 'undefined' && document.documentElement.clientWidth !== 0) {
-			viewPortWidth = document.documentElement.clientWidth;
-			viewPortHeight = document.documentElement.clientHeight;
-
-			// older versions of IE
-		} else {
-			viewPortWidth = document.getElementsByTagName('body')[0].clientWidth;
-			viewPortHeight = document.getElementsByTagName('body')[0].clientHeight;
-		}
-
-		return [viewPortWidth, viewPortHeight];
-	};
-
-	//Return our public methods -
-
-	return {
-		"init":init,
-		"scrollToElement":scrollToElement,
-		"getViewport":getViewport
-	};
-
+    //Return our public methods -
+    return {
+        "init": init,
+        "scrollToElement": scrollToElement,
+        "getViewport": getViewport
+    };
 });
