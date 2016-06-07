@@ -1,6 +1,3 @@
-// Place third party dependencies in the vendor folder
-// Configure loading modules from the vendor directory,
-// except "app" ones,
 requirejs.config({
     baseUrl: "/src/js/",
     paths: {
@@ -9,25 +6,18 @@ requirejs.config({
         "domready": "vendor/domReady",
         "smart-resize": "libraries/jquery.smart-resize",
         "tablesaw": "libraries/tablesaw.stackonly",
-        "match-height": "libraries/jquery.matchHeight",
+        "match-height": "libraries/jquery.matchHeight"
     },
 
     "shim": {
         "smart-resize": ["jquery"],
-        "jq-date-picker": ["jquery"],
-        "tablesaw": ["jquery"],
-        "match-height": ["jquery"]
+        "tablesaw": ["jquery"]
     },
 
-    // Changing this to false strips out our comment too (set in "wrap" in Gruntfile.js)
     preserveLicenseComments: true
 });
 
-// Load the main app module to start the app
 require(["vendor/domready", "modules/main"], function(domReady, main) {
     "use strict";
-
-    domReady(function() {
-        main.init();
-    });
+    domReady( main.init);
 });

@@ -53,7 +53,8 @@ define([
             var wow;
 
             if (Modernizr.mq("(min-width : 770px)")) {
-                wow = new Wow({
+                /* global WOW */
+                wow = new WOW({
                     boxClass: "animate-on-scroll"
                 });
 
