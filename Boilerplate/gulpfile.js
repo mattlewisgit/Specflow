@@ -32,7 +32,8 @@ var tasks = {
     images: "images",
     js: {
         build: "js",
-        lint: "js:lint"
+        lint: "js:lint",
+        modernizr: "js:modernizr"
     },
     resize: "resize",
     sass: {
@@ -214,6 +215,14 @@ gulp.task(tasks.default, [
     tasks.images,
     tasks.js.build
 ]);
+
+gulp.task(tasks.js.modernizr, function () {
+    return gulp
+        .src(paths.js.src)
+        .pipe(plugins.modernizr("modernizr-custom.min.js"))
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest(paths.js.dest));
+});
 
 // Favicon tasks, deliberately separate to the main build.
 // TODO Conditionally run these!
