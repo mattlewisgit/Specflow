@@ -28,7 +28,7 @@ namespace Vitality.Website.SC.Pipelines.RichTextEditor.SaveRichTextContent
                         table.Attributes.Add("data-tablesaw-mode", string.Empty);
                     }
 
-                    table.Attributes["class"].Value = "tablesaw tablesaw-stack";
+                    table.Attributes["class"].Value = "data-table tablesaw tablesaw-stack";
                     table.Attributes["data-tablesaw-mode"].Value = "stack";
                 }
             }

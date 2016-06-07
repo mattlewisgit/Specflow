@@ -32,7 +32,7 @@ namespace Vitality.Website.SC.UnitTests.Pipelines.RichTextEditor.SaveRichTextCon
         [Fact]
         public void Should_inject_table_saw_class_when_table_element_present()
         {
-            var expected = "class=\"tablesaw tablesaw-stack\"";
+            var expected = "class=\"data-table tablesaw tablesaw-stack\"";
             
             injectTableStyles.Process(args);
 
@@ -52,19 +52,19 @@ namespace Vitality.Website.SC.UnitTests.Pipelines.RichTextEditor.SaveRichTextCon
         [Fact]
         public void Should_not_modify_content_if_table_already_contains_tablesaw_class()
         {
-            var expected = "<p>some test content <table class=\"tablesaw tablesaw-stack\" data-tablesaw-mode=\"stack\"><tr></tr></table></p>";
+            var expected = "<p>some test content <table class=\"data-table tablesaw tablesaw-stack\" data-tablesaw-mode=\"stack\"><tr></tr></table></p>";
             args.Content = expected;
-            var index = expected.LastIndexOf("class=\"tablesaw tablesaw-stack\"", StringComparison.OrdinalIgnoreCase);
+            var index = expected.LastIndexOf("class=\"data-table tablesaw tablesaw-stack\"", StringComparison.OrdinalIgnoreCase);
             
             injectTableStyles.Process(args);
 
-            args.Content.LastIndexOf("class=\"tablesaw tablesaw-stack\"", StringComparison.OrdinalIgnoreCase).ShouldBe(index);
+            args.Content.LastIndexOf("class=\"data-table tablesaw tablesaw-stack\"", StringComparison.OrdinalIgnoreCase).ShouldBe(index);
         }
 
         [Fact]
         public void Should_not_modify_content_if_table_already_contains_tablesaw_data_attribute()
         {
-            var expected = "<p>some test content <table class=\"tablesaw tablesaw-stack\" data-tablesaw-mode=\"stack\"><tr></tr></table></p>";
+            var expected = "<p>some test content <table class=\"data-table tablesaw tablesaw-stack\" data-tablesaw-mode=\"stack\"><tr></tr></table></p>";
             args.Content = expected;
             var index = expected.LastIndexOf("data-tablesaw-mode=\"stack\"", StringComparison.OrdinalIgnoreCase);
 
@@ -76,8 +76,8 @@ namespace Vitality.Website.SC.UnitTests.Pipelines.RichTextEditor.SaveRichTextCon
         [Fact]
         public void Should_inject_table_saw_class_and_data_attribute_for_all_tables()
         {
-            var expected = "<p>some test content <table class=\"tablesaw tablesaw-stack\" data-tablesaw-mode=\"stack\"><tr></tr></table>" +
-                           "<br><table class=\"tablesaw tablesaw-stack\" data-tablesaw-mode=\"stack\"><tr></tr></table></p>";
+            var expected = "<p>some test content <table class=\"data-table tablesaw tablesaw-stack\" data-tablesaw-mode=\"stack\"><tr></tr></table>" +
+                           "<br><table class=\"data-table tablesaw tablesaw-stack\" data-tablesaw-mode=\"stack\"><tr></tr></table></p>";
 
             injectTableStyles.Process(args);
 
