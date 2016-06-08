@@ -1,166 +1,141 @@
 // Filterable functionality
 /*
+    When a ".filter-options__item" is clicked,
+    Look up it"s data-filter attribute.
 
-When a ".filter-options__item" is clicked,
-Look up it's data-filter attribute.
+    Fade out the ".filtered-container",
+    Set it"s children to visibile or invisible based on if they match the filter data
 
-Fade out the ".filtered-container",
-Set it's children to visibile or invisible based on if they match the filter data
+    Then fade it back in.
 
-Then fade it back in.
-
-Any filter names can be used, other than "all" which is a reserved word, used to show all items
-
+    Any filter names can be used, other than "all" which is a reserved word, used to show all items
 */
 
-
-
 define([
-	"jquery",
-], function(
-	$
-){
+    "jquery"
+], function (
+    $
+) {
+    "use strict";
 
-	'use strict';
+    //vars -
+    var _settings = {
+        filterOptionClass: ".js-filter-options",
+        filterOptionItemClass: ".js-filter-options__item",
 
-	//vars -
-	var _settings = {
-		filterOptionClass:".js-filter-options",
-		filterOptionItemClass:".js-filter-options__item",
+        defaultFilterOptionItemClass: ".js-filter-options__item--default",
 
-    defaultFilterOptionItemClass:".js-filter-options__item--default",
+        filteredContainerClass: ".js-filtered-container",
+        filteredContainerItemClass: ".js-filtered-container__item",
 
-		filteredContainerClass:".js-filtered-container",
-		filteredContainerItemClass:".js-filtered-container__item",
+        filterDataName: "filter",
+        focusClass: "js-focus"
+    };
 
-    filterDataName : "filter",
-    focusClass:"js-focus"
-	};
+    var currentFilter = "all";
 
-  var currentFilter = "all";
-  var $filterOptionContainer;
-  var $filterOptionItems;
-  var $filteredContainer;
-  var $filteredContainerItems;
+    var $filterOptionContainer;
+    var $filterOptionItems;
+    var $filteredContainer;
+    var $filteredContainerItems;
 
-  var animtionHandler;
+    var animtionHandler;
 
+    //functions -
+    var _filterModule = {
+        initFilterSection: function () {
+            // On clicking a filter control -
+            $filterOptionContainer.on("click", "a", _filterModule.filterSelected);
 
-	//functions -
-	var _filterModule = {
+            //If there is a default option - set the focus class -
+            if ($(_settings.defaultFilterOptionItemClass)) {
+                $(_settings.defaultFilterOptionItemClass).find("a").addClass(_settings.focusClass);
+            }
+        },
 
-		initFilterSection: function() {
-      // On clicking a filter control -
-      $filterOptionContainer.on("click","a", _filterModule.filterSelected);
+        filterSelected: function () {
+            // Look up the filter data -
+            var selectedFilter = $(this).data(_settings.filterDataName);
 
-      //If there is a default option - set the focus class -
-      if($(_settings.defaultFilterOptionItemClass)){
-        $(_settings.defaultFilterOptionItemClass).find("a").addClass(_settings.focusClass);
-      }
+            //Remove any focused filters -
+            $filterOptionContainer.find("." + _settings.focusClass).removeClass(_settings.focusClass);
 
-		},
+            //Add the focus class to this filter -
+            $(this).addClass(_settings.focusClass);
 
-    filterSelected: function(){
-      // Look up the filter data -
-      var selectedFilter = $(this).data(_settings.filterDataName);
+            //If it"s changed, call the filter function -
+            if (currentFilter !== selectedFilter) {
+                _filterModule.filterItemsBy(selectedFilter);
+                currentFilter = selectedFilter;
+            }
+        },
 
-      //Remove any focused filters -
-      $filterOptionContainer.find("."+_settings.focusClass).removeClass(_settings.focusClass);
+        //Filter the items by the data name -
+        filterItemsBy: function (filterName) {
+            if (animtionHandler) {
+                animtionHandler.stop();
+            }
 
-      //Add the focus class to this filter -
-      $(this).addClass(_settings.focusClass);
+            //Fade out the container -
+            $filteredContainer.fadeOut("fast", function () {
+                //Check if the filter name is "all" - a reserved word which will always show all the items -
+                var showAll = false;
 
-      //If it's changed, call the filter function -
-      if(currentFilter!==selectedFilter){
-        _filterModule.filterItemsBy(selectedFilter);
-        currentFilter = selectedFilter;
-      }
+                //Check for reserved words -
+                if (filterName === "all") {
+                    showAll = true;
+                }
 
-    },
+                //For each filterable item -
+                $.each($filteredContainerItems, function () {
+                    //Remove the animation class to stop odd animations on filter -
+                    $(this).removeClass("animate-on-scroll").removeClass("fadeInUp").removeAttr("style");
 
-    //Filter the items by the data name -
-    filterItemsBy: function(filterName){
+                    //If "all" selected, show them all -
+                    if (showAll) {
+                        $(this).show();
+                    } else {
+                        //Otherwise, check if their filter data matches the selected filter -
+                        var show = ($(this).data(_settings.filterDataName) === filterName);
 
-      if(animtionHandler){
-        console.log("animtionHandler.stop");
-        animtionHandler.stop();
-      }
+                        if (show) {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    }
+                });
 
-      //Fade out the container -
-      $filteredContainer.fadeOut("fast", function(){
-
-        //Check if the filter name is "all" - a reserved word which will always show all the items -
-        var showAll = false;
-        //Check for reserved words -
-        if(filterName==="all"){
-          showAll = true;
+                $filteredContainer.fadeIn("fast");
+                $("body").trigger("TRIGGER_MATCH_HEIGHTS");
+            });
         }
+    };
 
-        //For each filterable item -
-        $.each($filteredContainerItems, function(){
-
-          //Remove the animation class to stop odd animations on filter -
-          $(this).removeClass("animate-on-scroll").removeClass("fadeInUp").removeAttr("style");
-
-          //If "all" selected, show them all -
-          if(showAll){
-            $(this).show();
-          }
-          else{
-
-            //Otherwise, check if their filter data matches the selected filter -
-            var show = ($(this).data(_settings.filterDataName) === filterName);
-
-            if(show){
-              $(this).show();
-            }
-            else{
-             $(this).hide();
-            }
-          }
-        });
-
-        //Fade the conatiner back in -
-        $filteredContainer.fadeIn("fast");
-
-        $("body").trigger("TRIGGER_MATCH_HEIGHTS");
-
-      });
-
-    }
-
-
-	};
-
-	/**
+    /**
      *  initialiser
      */
     var init = function (wowInstance) {
-    	console.log("Filter section init");
+        //Set a reference to the main animaiton handler -
+        animtionHandler = wowInstance;
 
-      //Set a reference to the main animaiton handler -
-      animtionHandler = wowInstance;
+        //If there is a filterable section on the page -
+        if ($(_settings.filterOptionClass).length > 0) {
+            //Look up and set up some dom vars -
+            $filterOptionContainer = $(_settings.filterOptionClass);
+            $filterOptionItems = $(_settings.filterOptionItemClass);
 
-      //If there is a filterable section on the page -
-      if($(_settings.filterOptionClass).length>0){
+            $filteredContainer = $(_settings.filteredContainerClass);
+            $filteredContainerItems = $(_settings.filteredContainerItemClass);
 
-        //Look up and set up some dom vars -
-        $filterOptionContainer = $(_settings.filterOptionClass);
-        $filterOptionItems = $(_settings.filterOptionItemClass);
-
-        $filteredContainer = $(_settings.filteredContainerClass);
-        $filteredContainerItems = $(_settings.filteredContainerItemClass);
-
-        //And init the module -
-        _filterModule.initFilterSection();
-      }
+            //And init the module -
+            _filterModule.initFilterSection();
+        }
 
     };
 
-	//Return our public methods -
-	return {
-		"init":init
-	};
-
+    //Return our public methods -
+    return {
+        "init": init
+    };
 });
-

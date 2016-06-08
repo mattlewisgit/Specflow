@@ -13,6 +13,6 @@
 
     for (var i = 0; i < examples.length; ++i) {
         markups[i].innerHTML =
-            htmlSpecialChars("    " + examples[i].innerHTML);
+            htmlSpecialChars(examples[i].innerHTML);
     }
 })();
