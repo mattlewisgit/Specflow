@@ -26,6 +26,7 @@ var tasks = {
     "default": "default",
     favicon: {
         build: "favicon:build",
+        checkForUpdate: "favicon:check-for-update",
         template: "favicon:template"
     },
     help: "help",
@@ -240,6 +241,17 @@ gulp.task(tasks.favicon.template, function () {
                 .readFileSync(configs.favicon.markupFile))
                 .favicon.html_code))
         .pipe(gulp.dest(paths.base));
+});
+
+gulp.task(tasks.favicon.checkForUpdate, function () {
+    var currentVersion = JSON.parse
+        (fs.readFileSync(configs.favicon.markupFile)).version;
+
+    plugins.realFavicon.checkForUpdates(currentVersion, function (err) {
+        if (err) {
+            throw err;
+        }
+    });
 });
 
 gulp.task(tasks.watch, function () {
