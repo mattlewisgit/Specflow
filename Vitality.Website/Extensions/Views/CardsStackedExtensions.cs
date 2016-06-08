@@ -2,6 +2,7 @@
 {
     using Glass.Mapper.Sc.Web.Mvc;
     using Vitality.Website.Areas.Presales.Models.Cards;
+    using Vitality.Website.Areas.Presales.RenderingModels;
 
    public static class CardsStackedExtensions
     {
@@ -21,6 +22,11 @@
                 return "background-size: cover; background-image: url(" + view.Model.BackgroundImage.Src + ");";
             }
             return string.Empty;
+        }
+
+        public static bool ImageOnTop(this GlassView<CardsStacked> view)
+        {
+            return view.GetRenderingParameters<CardsStackedRendering>().ImageOnTop;
         }
     }
 }
