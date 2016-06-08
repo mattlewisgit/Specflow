@@ -26,6 +26,7 @@ var tasks = {
     "default": "default",
     favicon: {
         build: "favicon:build",
+        checkForUpdate: "favicon:check-for-update",
         template: "favicon:template"
     },
     help: "help",
@@ -75,9 +76,9 @@ var paths = {
     js: {
         dest: "js",
         filename: "vitality-boilerplate.js",
+        modernizrFilename: "modernizr-custom.min.js",
         src: [
             "src/js/**/*.js",
-            "!src/js/modernizr-custom.min.js",
             "!src/js/require.js",
             "!src/js/libraries/**/*.js",
             "!src/js/vendor/**/*.js"
@@ -196,8 +197,7 @@ gulp.task(tasks.css, function () {
         tasks.sass.build);
 });
 
-// TODO Use gulp-if and lazypipe to only run this when any files has changed.
-gulp.task(tasks.js.build, [tasks.js.lint], function () {
+gulp.task(tasks.js.build, [tasks.js.lint, tasks.js.modernizr], function () {
     return gulp
         .src(paths.js.srcAll)
         .pipe(amdOptimize("app", {
@@ -219,8 +219,11 @@ gulp.task(tasks.default, [
 gulp.task(tasks.js.modernizr, function () {
     return gulp
         .src(paths.js.src)
-        .pipe(plugins.modernizr("modernizr-custom.min.js"))
+        .pipe(plugins.modernizr({
+            options: [ "mq" ]
+        }))
         .pipe(plugins.uglify())
+        .pipe(plugins.rename(paths.js.modernizrFilename))
         .pipe(gulp.dest(paths.js.dest));
 });
 
@@ -238,6 +241,17 @@ gulp.task(tasks.favicon.template, function () {
                 .readFileSync(configs.favicon.markupFile))
                 .favicon.html_code))
         .pipe(gulp.dest(paths.base));
+});
+
+gulp.task(tasks.favicon.checkForUpdate, function () {
+    var currentVersion = JSON.parse
+        (fs.readFileSync(configs.favicon.markupFile)).version;
+
+    plugins.realFavicon.checkForUpdates(currentVersion, function (err) {
+        if (err) {
+            throw err;
+        }
+    });
 });
 
 gulp.task(tasks.watch, function () {
