@@ -1,10 +1,10 @@
 ﻿{
-    "autoprefixer": false,
+    "autoprefixer": true,
     "calc": false,
     "colormin": true,
     "convertValues": true,
     "core": true,
-    "discardComments": false,
+    "discardComments": true,
     "discardDuplicates": true,
     "discardEmpty": true,
     "discardUnused": true,
