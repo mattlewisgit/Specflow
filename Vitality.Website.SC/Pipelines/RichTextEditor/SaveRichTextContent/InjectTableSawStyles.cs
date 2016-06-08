@@ -1,13 +1,19 @@
-﻿using System;
-using System.IO;
-using System.Web.UI;
-using Sitecore.Shell.Controls.RichTextEditor.Pipelines.SaveRichTextContent;
-using Sitecore.WordOCX.HtmlDocument;
-
-namespace Vitality.Website.SC.Pipelines.RichTextEditor.SaveRichTextContent
+﻿namespace Vitality.Website.SC.Pipelines.RichTextEditor.SaveRichTextContent
 {
+    using System.IO;
+    using System.Linq;
+
+    using Sitecore.Shell.Controls.RichTextEditor.Pipelines.SaveRichTextContent;
+    using Sitecore.WordOCX.HtmlDocument;
+
     public class InjectTableSawStyles
     {
+        static class Attributes
+        {
+            public const string Class = "class";
+            public const string DataTablesawMode = "data-tablesaw-mode";
+        }
+
         public void Process(SaveRichTextContentArgs args)
         {
             var htmlDoc = new HtmlDocument();
@@ -15,22 +21,25 @@ namespace Vitality.Website.SC.Pipelines.RichTextEditor.SaveRichTextContent
 
             var tables = htmlDoc.DocumentNode.SelectNodes("//table");
 
-            if (tables != null)
+            if (tables == null)
             {
-                foreach (var table in tables)
-                {
-                    if (table.Attributes["class"] == null)
-                    {
-                        table.Attributes.Add("class", string.Empty);
-                    }
-                    if (table.Attributes["data-tablesaw-mode"] == null)
-                    {
-                        table.Attributes.Add("data-tablesaw-mode", string.Empty);
-                    }
+                return;
+            }
 
-                    table.Attributes["class"].Value = "data-table tablesaw tablesaw-stack";
-                    table.Attributes["data-tablesaw-mode"].Value = "stack";
+            foreach (var attributes in tables.Select(table => table.Attributes))
+            {
+                if (attributes[Attributes.Class] == null)
+                {
+                    attributes.Add(Attributes.Class, string.Empty);
                 }
+                
+                if (attributes[Attributes.DataTablesawMode] == null)
+                {
+                    attributes.Add(Attributes.DataTablesawMode, string.Empty);
+                }
+
+                attributes[Attributes.Class].Value = "data-table tablesaw tablesaw-stack";
+                attributes[Attributes.DataTablesawMode].Value = "stack";
             }
 
             using (var textWriter = new StringWriter())
@@ -41,4 +50,3 @@ namespace Vitality.Website.SC.Pipelines.RichTextEditor.SaveRichTextContent
         }
     }
 }
-    

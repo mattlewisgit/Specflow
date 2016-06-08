@@ -13,7 +13,18 @@ namespace Vitality.Website.SC.UnitTests.Pipelines.RichTextEditor.SaveRichTextCon
 
         public InjectTableSawStylesTests()
         {
-            var content = "<p>some test content <table><tr></tr></table><br><table><tr></tr></table></p>";
+            const string content = @"
+            <p>
+                some test content
+                <table>
+                    <tr></tr>
+                </table>
+                <br>
+                <table>
+                    <tr></tr>
+                </table>
+            </p>";
+
             this.args = new SaveRichTextContentArgs(content);
             this.injectTableStyles = new InjectTableSawStyles();
         }
@@ -21,7 +32,7 @@ namespace Vitality.Website.SC.UnitTests.Pipelines.RichTextEditor.SaveRichTextCon
         [Fact]
         public void Content_Should_Not_Be_Modified_If_Content_Does_Not_Contain_Tables()
         {
-            var content = "<p>some table test content</p>";
+            const string content = "<p>some table test content</p>";
             args.Content = content;
             
             injectTableStyles.Process(args);
@@ -32,7 +43,7 @@ namespace Vitality.Website.SC.UnitTests.Pipelines.RichTextEditor.SaveRichTextCon
         [Fact]
         public void Should_inject_table_saw_class_when_table_element_present()
         {
-            var expected = "class=\"data-table tablesaw tablesaw-stack\"";
+            const string expected = "class=\"data-table tablesaw tablesaw-stack\"";
             
             injectTableStyles.Process(args);
 
@@ -42,7 +53,7 @@ namespace Vitality.Website.SC.UnitTests.Pipelines.RichTextEditor.SaveRichTextCon
         [Fact]
         public void Should_inject_table_saw_data_attribute_when_table_element_present()
         {
-            var expected = "data-tablesaw-mode=\"stack\"";
+            const string expected = "data-tablesaw-mode=\"stack\"";
 
             injectTableStyles.Process(args);
 
@@ -52,7 +63,14 @@ namespace Vitality.Website.SC.UnitTests.Pipelines.RichTextEditor.SaveRichTextCon
         [Fact]
         public void Should_not_modify_content_if_table_already_contains_tablesaw_class()
         {
-            var expected = "<p>some test content <table class=\"data-table tablesaw tablesaw-stack\" data-tablesaw-mode=\"stack\"><tr></tr></table></p>";
+            const string expected = @"
+            <p>
+                some test content
+                <table class=""data-table tablesaw tablesaw-stack"" data-tablesaw-mode=""stack"">
+                    <tr></tr>
+                </table>
+            </p>";
+
             args.Content = expected;
             var index = expected.LastIndexOf("class=\"data-table tablesaw tablesaw-stack\"", StringComparison.OrdinalIgnoreCase);
             
@@ -64,7 +82,14 @@ namespace Vitality.Website.SC.UnitTests.Pipelines.RichTextEditor.SaveRichTextCon
         [Fact]
         public void Should_not_modify_content_if_table_already_contains_tablesaw_data_attribute()
         {
-            var expected = "<p>some test content <table class=\"data-table tablesaw tablesaw-stack\" data-tablesaw-mode=\"stack\"><tr></tr></table></p>";
+            const string expected = @"
+            <p>
+                some test content
+                <table class=""data-table tablesaw tablesaw-stack"" data-tablesaw-mode=""stack"">
+                    <tr></tr>
+                </table>
+            </p>";
+
             args.Content = expected;
             var index = expected.LastIndexOf("data-tablesaw-mode=\"stack\"", StringComparison.OrdinalIgnoreCase);
 
@@ -76,8 +101,17 @@ namespace Vitality.Website.SC.UnitTests.Pipelines.RichTextEditor.SaveRichTextCon
         [Fact]
         public void Should_inject_table_saw_class_and_data_attribute_for_all_tables()
         {
-            var expected = "<p>some test content <table class=\"data-table tablesaw tablesaw-stack\" data-tablesaw-mode=\"stack\"><tr></tr></table>" +
-                           "<br><table class=\"data-table tablesaw tablesaw-stack\" data-tablesaw-mode=\"stack\"><tr></tr></table></p>";
+            const string expected = @"
+            <p>
+                some test content
+                <table class=""data-table tablesaw tablesaw-stack"" data-tablesaw-mode=""stack"">
+                    <tr></tr>
+                </table>
+                <br>
+                <table class=""data-table tablesaw tablesaw-stack"" data-tablesaw-mode=""stack"">
+                    <tr></tr>
+                </table>
+            </p>";
 
             injectTableStyles.Process(args);
 
