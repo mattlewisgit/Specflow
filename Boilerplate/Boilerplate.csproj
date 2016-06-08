@@ -153,6 +153,7 @@
     <Content Include="src\img\examples\vitality-logo.svg" />
     <Content Include="src\img\examples\youtube--footer.svg" />
     <Content Include="src\img\favicon\favicon.svg" />
+    <Content Include="src\js\libraries\tablesaw.js" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
     <Content Include="src\js\app.js" />
@@ -171,7 +172,6 @@
     <Content Include="src\js\require.js" />
     <Content Include="src\js\modules\searchModule.js" />
     <Content Include="src\js\modules\socialShareModule.js" />
-    <Content Include="src\js\libraries\tablesaw.stackonly.js" />
     <Content Include="src\js\modules\tabsModule.js" />
     <Content Include="src\js\libraries\wow.js" />
     <Content Include="src\sass\app.css">
