@@ -9,7 +9,7 @@
             return string.Format(@string, values);
         }
 
-        public static string ToLowerHypenatedString(this string @string)
+        public static string ToLowerHyphenatedString(this string @string)
         {
             return StringHelper.HyphenatedWords(@string).ToLower();
         }
