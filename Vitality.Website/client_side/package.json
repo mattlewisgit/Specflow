@@ -6,12 +6,9 @@
         "del": "*",
         "gulp": "*",
         "gulp-cssnano": "*",
-        "gulp-imagemin": "*",
-        "gulp-jshint": "*",
-        "gulp-jscs": "*",
+        "gulp-load-plugins": "*",
         "gulp-sass": "*",
-        "gulp-sass-lint": "*",
-        "jshint": "*"
+        "gulp-sass-lint": "*"
     },
     "scripts": {
         "gulp": "gulp"
