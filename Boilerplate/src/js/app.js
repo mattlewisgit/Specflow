@@ -5,7 +5,7 @@ requirejs.config({
         "jq-date-picker": "libraries/jquery-ui",
         "domready": "vendor/domReady",
         "smart-resize": "libraries/jquery.smart-resize",
-        "tablesaw": "libraries/tablesaw.stackonly",
+        "tablesaw": "libraries/tablesaw",
         "match-height": "libraries/jquery.matchHeight"
     },
 

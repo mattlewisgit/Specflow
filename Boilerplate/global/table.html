@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Vitality Boilerplate | Global | Tables</title>
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/themes/prism.css" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/plugins/line-numbers/prism-line-numbers.css" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/tablesaw/dist/tablesaw.css" />
+    <link rel="stylesheet" type="text/css" href="/css/app.css" />
+    <link rel="stylesheet" type="text/css" href="/css/boilerplate.css" />
+</head>
+<body>
+    <main tabindex="-1">
+        <section class="vertical-flush">
+            <h1>Tables</h1>
+            <h2>Description</h2>
+
+            <p>
+                Standard HTML tables are augmented by the
+                <a href="https://github.com/filamentgroup/tablesaw" title="Tablesaw: a group of plugins for responsive tables">tablesaw</a>
+                plugin, to adapt them for easier use on small devices.
+            </p>
+
+            <h2>Examples</h2>
+
+            <h3>Stacked</h3>
+            
+            <h4>Demo</h4>
+
+            <div class="example">
+                <table class="data-table tablesaw tablesaw-stack"
+                       data-tablesaw-mode="stack">
+                    <thead>
+                        <tr>
+                            <th>Screen name</th>
+                            <th>Retail price</th>
+                            <th>Your price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Active</td>
+                            <td>£129</td>
+                            <td>£64.50</td>
+                        </tr>
+                        <tr>
+                            <td>Core</td>
+                            <td>£169</td>
+                            <td>£84.50</td>
+                        </tr>
+                        <tr>
+                            <td>Executive</td>
+                            <td>£249</td>
+                            <td>£124.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <h4>Markup</h4>
+
+                <pre>
+                    <code class="language-markup"></code>
+                </pre>
+            </div>
+
+            <h3>Swipe</h3>
+            
+            <h4>Demo</h4>
+
+            <div class="example">
+                <table class="data-table tablesaw tablesaw-swipe"
+                       data-tablesaw-mode="swipe"
+                       data-tablesaw-minimap>
+                    <thead>
+                        <tr>
+                            <th data-tablesaw-priority="persist"></th>
+                            <th data-tablesaw-priority="persist">Level</th>
+                            <th>Indexed</th>
+                            <th>Decreasing</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Will my cover level stay the same?</td>
+
+                            <td>
+                                <img src="/img/examples/icon-check.png" alt="Yes" />
+                            </td>
+
+                            <td>
+                                <p><img src="/img/examples/icon-circle-x.png" alt="No" /></p>
+                                It will increase in line with inflation
+                            </td>
+                            <td>
+                                <p><img src="/img/examples/icon-circle-x.png" alt="No" /></p>
+                                It will decrease with your mortgage
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Is it available with Whole of Life Cover?</td>
+
+                            <td>
+                                <img src="/img/examples/icon-check.png" alt="Yes" />
+                            </td>
+
+                            <td>
+                                <img src="/img/examples/icon-check.png" alt="Yes" />
+                            </td>
+
+                            <td>
+                                <img src="/img/examples/icon-circle-x.png" alt="No" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Can Serious Illness Cover be added to my policy?</td>
+                            
+                            <td>
+                                <img src="/img/examples/icon-check.png" alt="Yes" />
+                            </td>
+
+                            <td>
+                                <img src="/img/examples/icon-check.png" alt="Yes" />
+                            </td>
+
+                            <td>
+                                <p><img src="/img/examples/icon-check.png" alt="Yes" /></p>
+                                Only if it has the same fixed term
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Can Optional Serious Illness Cover for Children be added to my policy?</td>
+
+                            <td>
+                                <img src="/img/examples/icon-check.png" alt="Yes" />
+                            </td>
+                            
+                            <td>
+                                <img src="/img/examples/icon-check.png" alt="Yes" />
+                            </td>
+                            
+                            <td>
+                                <img src="/img/examples/icon-check.png" alt="Yes" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <h4>Markup</h4>
+
+                <pre>
+                    <code class="language-markup"></code>
+                </pre>
+            </div>
+        </section>
+    </main>
+    
+    <script type="text/javascript" src="/js/modernizr-custom.min.js"></script>
+    <script type="text/javascript" src="/src/js/require.js" data-main="/js/vitality-boilerplate" async></script>
+
+    <script type="text/javascript" src="/js/boilerplate.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/prism.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/normalize-whitespace/prism-normalize-whitespace.js"></script>
+</body>
+</html>

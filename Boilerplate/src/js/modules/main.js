@@ -47,7 +47,9 @@ define([
             $(".js-datepicker").datepicker().attr("readonly", "true");
 
             //TableSaw responsive tables init -
-            $(document).trigger("enhance.tablesaw");
+            if (!$("html").hasClass("disable-tablesaw")) {
+                $(document).trigger("enhance.tablesaw");
+            }
 
             //init wow js  - only for larger screens -
             var wow;
