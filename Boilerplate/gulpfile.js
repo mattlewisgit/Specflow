@@ -138,7 +138,7 @@ gulp.task(tasks.clean, function () {
         paths.js.dest + "/" + paths.js.filename,
         paths.sass.generated,
         paths.temp,
-        tempFiles
+        paths.tempFiles
     ]);
 });
 
