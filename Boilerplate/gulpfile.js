@@ -22,24 +22,27 @@ var configs = {
 
 var tasks = {
     clean: "clean",
+    css: "css",
     "default": "default",
     favicon: {
         build: "favicon:build",
+        checkForUpdate: "favicon:check-for-update",
         template: "favicon:template"
     },
     help: "help",
     images: "images",
     js: {
         build: "js",
-        lint: "js:lint"
+        lint: "js:lint",
+        modernizr: "js:modernizr"
     },
     resize: "resize",
     sass: {
-        build: "sass",
+        build: "sass:build",
         lint: "sass:lint",
         spritesheet: {
             png: "sass:spritesheet-png",
-            svg: "sass:spritesheet-svg",
+            svg: "sass:spritesheet-svg"
         }
     },
     serve: "serve",
@@ -73,9 +76,9 @@ var paths = {
     js: {
         dest: "js",
         filename: "vitality-boilerplate.js",
+        modernizrFilename: "modernizr-custom.min.js",
         src: [
             "src/js/**/*.js",
-            "!src/js/modernizr-custom.min.js",
             "!src/js/require.js",
             "!src/js/libraries/**/*.js",
             "!src/js/vendor/**/*.js"
@@ -100,12 +103,11 @@ gulp.task(tasks.help, plugins.taskListing);
 gulp.task(tasks.js.lint, function () {
     return gulp
         .src([paths.gulp].concat(paths.js.src))
-        .pipe(plugins.changed(paths.temp))
-        .pipe(gulp.dest(paths.temp))
         .pipe(plugins.jshint())
         .pipe(plugins.jscs())
         .pipe(plugins.jscsStylish.combineWithHintResults())
-        .pipe(plugins.jshint.reporter("jshint-stylish"));
+        .pipe(plugins.jshint.reporter("jshint-stylish"))
+        .pipe(plugins.jshint.reporter("fail"));
 });
 
 gulp.task(tasks.sass.lint, function () {
@@ -168,14 +170,9 @@ gulp.task(tasks.sass.spritesheet.svg, function () {
         .pipe(gulp.dest(paths.temp))
         .pipe(plugins.svgSprite(configs.svgSprite))
         .pipe(gulp.dest(paths.base));
-        //.pipe(plugins.wait(1000));
 });
 
-gulp.task(tasks.sass.build, [
-    tasks.sass.lint,
-    //tasks.sass.spritesheet.png,
-    //tasks.sass.spritesheet.svg
-], function () {
+gulp.task(tasks.sass.build, function () {
     // TODO Enable source maps and use auto-prefixer.
     return gulp
         .src(paths.sass.srcAll)
@@ -187,22 +184,20 @@ gulp.task(tasks.sass.build, [
         .pipe(gulp.dest(paths.css));
 });
 
-/*
-// CSS tasks that forces dependencies to be run sequentially.
+
+// CSS task that forces dependencies to be run sequentially.
 // Parallelisation is playing havoc, as the spritesheets
 // must be generated first, as their SASS outputs
 // are required for the SASS build!
-gulp.task("css", function () {
+gulp.task(tasks.css, function () {
     runSequence(
-        tasks.sass.lint,
         tasks.sass.spritesheet.png,
         tasks.sass.spritesheet.svg,
+        tasks.sass.lint,
         tasks.sass.build);
 });
-*/
 
-// TODO Use gulp-if and lazypipe to only run this when any files has changed.
-gulp.task(tasks.js.build, [tasks.js.lint], function () {
+gulp.task(tasks.js.build, [tasks.js.lint, tasks.js.modernizr], function () {
     return gulp
         .src(paths.js.srcAll)
         .pipe(amdOptimize("app", {
@@ -216,10 +211,21 @@ gulp.task(tasks.js.build, [tasks.js.lint], function () {
 });
 
 gulp.task(tasks.default, [
-    tasks.js.build,
+    tasks.css,
     tasks.images,
-    tasks.sass.build
+    tasks.js.build
 ]);
+
+gulp.task(tasks.js.modernizr, function () {
+    return gulp
+        .src(paths.js.src)
+        .pipe(plugins.modernizr({
+            options: [ "mq" ]
+        }))
+        .pipe(plugins.uglify())
+        .pipe(plugins.rename(paths.js.modernizrFilename))
+        .pipe(gulp.dest(paths.js.dest));
+});
 
 // Favicon tasks, deliberately separate to the main build.
 // TODO Conditionally run these!
@@ -232,9 +238,20 @@ gulp.task(tasks.favicon.template, function () {
         .src(paths.favicon.template)
         .pipe(plugins.realFavicon.injectFaviconMarkups
             (JSON.parse(fs
-                .readFileSync(configs.favicon-config.markupFile))
+                .readFileSync(configs.favicon.markupFile))
                 .favicon.html_code))
         .pipe(gulp.dest(paths.base));
+});
+
+gulp.task(tasks.favicon.checkForUpdate, function () {
+    var currentVersion = JSON.parse
+        (fs.readFileSync(configs.favicon.markupFile)).version;
+
+    plugins.realFavicon.checkForUpdates(currentVersion, function (err) {
+        if (err) {
+            throw err;
+        }
+    });
 });
 
 gulp.task(tasks.watch, function () {

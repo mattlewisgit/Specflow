@@ -235,6 +235,7 @@
     <Compile Include="Areas\Presales\Models\Summary\SummaryComponent.cs" />
     <Compile Include="Areas\Presales\Models\Summary\SummaryListItem.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
+    <Compile Include="Areas\Presales\RenderingModels\CardsStackedRendering.cs" />
     <Compile Include="Areas\Presales\RenderingModels\RewardsLeaderRendering.cs" />
     <Compile Include="Areas\Presales\RenderingModels\SummaryComponentRendering.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
