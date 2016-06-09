@@ -227,7 +227,7 @@
     <Compile Include="Areas\Presales\Models\FeatureBlocks\ProductHero.cs" />
     <Compile Include="Areas\Presales\Models\Generic\Content.cs" />
     <Compile Include="Areas\Presales\Models\Generic\Tab.cs" />
-    <Compile Include="Areas\Presales\Models\Generic\Tabs.cs" />
+    <Compile Include="Areas\Presales\Models\Generic\TabCollection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\FooterSection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\GlobalFooter.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
@@ -490,6 +490,7 @@
     </Content>
     <Content Include="Areas\Presales\Views\Generic\Content.cshtml" />
     <Content Include="Areas\Presales\Views\Generic\AccordionContent.cshtml" />
+    <Content Include="Areas\Presales\Views\Generic\TabbedContent.cshtml" />
     <Content Include="Areas\Presales\Views\Navigation\GlobalFooter.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

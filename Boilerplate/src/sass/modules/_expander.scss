@@ -3,6 +3,8 @@
 //
 
 .expander {
+    $_transition: 0.2s;
+    $_transition--long: $_transition * 2;
 
     @extend .clearfix;
     background: $white;
@@ -84,7 +86,7 @@
                 position: absolute;
                 top: 50%;
                 right: 20px;
-                transition: transform 0.25s ease;
+                transition: transform $_transition ease;
             }
 
             &.is-active {
@@ -172,15 +174,12 @@
             }
 
             &.is-active {
-                border-top-color: $primary-color;
                 border-bottom-color: $primary-color;
                 border-left-color: $primary-color;
                 border-right-color: transparent;
+                border-top-color: $primary-color;
+                transition: border-left-color $_transition--long ease $_transition, border-bottom-color $_transition ease, border-top-color $_transition ease;
             }
-        }
-
-        &:last-child .expander__link {
-            border-bottom-color: $color-mono-14;
         }
     }
 
@@ -249,10 +248,11 @@
             position: relative;
 
             &.is-active {
-                border-top-color: $primary-color;
-                border-right-color: $primary-color;
                 border-bottom-color: transparent;
                 border-left-color: $primary-color;
+                border-right-color: $primary-color;
+                border-top-color: $primary-color;
+                transition: border-left-color $_transition--long ease, border-right-color $_transition--long ease;
                 z-index: 2;
 
                 &:before {
@@ -267,6 +267,7 @@
                     border: 1px solid $primary-color;
                     border-bottom: 0;
                     z-index: 3;
+                    transition: top 0.2s ease;
                 }
             }
         }
@@ -305,7 +306,7 @@
                 background-color: $primary-color;
                 transform: scaleX(0);
                 width: 100%;
-                transition: transform 0.5s ease;
+                transition: transform $_transition--long ease;
             }
 
             &.is-active:after {

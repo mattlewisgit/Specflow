@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="components\accordion.html" />
+    <Content Include="components\tabs.html" />
     <Content Include="components\footer.html" />
     <Content Include="components\summary\summary-right.html" />
     <Content Include="global\table.html" />
