@@ -13,45 +13,54 @@ templatekey: Html Editor Snippet
 field: {7DFF83D2-E609-4C5F-99A9-13EC8536D65B}
 name: Value
 key: value
-content-length: 1054
+content-length: 1468
 
-<div class="spotlight">
-    <div class="spotlight__list-item">
-        <div class="spotlight-item">
-            <div class="spotlight-item__top-content">
-                <div class="spotlight-item__intro-image burst">
-                    <img src="/img/examples/cyclist-man.jpg" alt="Example">
+<div class="grid ">
+    <div class="grid-col-8-12">
+        Content here...
+    </div>
+
+    <div class="grid-col-4-12 text-center">
+        <div class="spotlight">
+            <div class="spotlight__list-item spotlight__standalone">
+                <div class="spotlight-item">
+                    <div class="spotlight-item__top-content">
+                        <div class="spotlight-item__intro-image burst">
+                            <img src="/img/examples/cyclist-man.jpg" alt="Example">
+                        </div>
+
+                        <p class="spotlight-item__heading">
+                            SWITCH TODAY
+                        </p>
+
+                        <div class="spotlight-item__content">
+                            <p>
+                                Integer tincident, ipsum a male suada
+                                aliquam, lectus neque volutpat.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="spotlight-item__cta">
+                        <a href="#" class="emphasis-link">
+                            0800 779 555
+                        </a>
+                        <p>or</p>
+                        <a href="#" class="emphasis-link">
+                            Get a quote
+                        </a>
+                    </div>
                 </div>
-
-                <p class="spotlight-item__heading">
-                    SWITCH TODAY
-                </p>
-
-                <div class="spotlight-item__content">
-                    <p>
-                        Integer tincident, ipsum a male suada
-                        aliquam, lectus neque volutpat.
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="spotlight-item__cta">
-                <a href="#" class="emphasis-link">
-                    0800 779 555
-                </a>
-                <p>or</p>
-                <a href="#" class="emphasis-link">
-                    Get a quote
-                </a>
             </div>
         </div>
     </div>
 </div>
+
 ----version----
 language: en
 version: 1
-revision: 5fafa859-dd1d-4def-afe8-d2aada4becd5
+revision: cff8ce45-5350-4bb1-bdd2-fb9fb43ff0b0
 
 ----field----
 field: {8E5179B0-2A09-4624-885D-619C0E3D0390}
@@ -87,14 +96,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5fafa859-dd1d-4def-afe8-d2aada4becd5
+cff8ce45-5350-4bb1-bdd2-fb9fb43ff0b0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160606T155314Z
+20160609T121257Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
