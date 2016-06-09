@@ -8,11 +8,8 @@
 
     public class InjectTableSawStyles
     {
-        static class Attributes
-        {
-            public const string Class = "class";
-            public const string DataTablesawMode = "data-tablesaw-mode";
-        }
+        public const string Class = "class";
+        public const string DataTablesawMode = "data-tablesaw-mode";
 
         public void Process(SaveRichTextContentArgs args)
         {
@@ -21,31 +18,29 @@
 
             var tables = htmlDoc.DocumentNode.SelectNodes("//table");
 
-            if (tables == null)
+            if (tables != null)
             {
-                return;
-            }
-
-            foreach (var attributes in tables.Select(table => table.Attributes))
-            {
-                if (attributes[Attributes.Class] == null)
+                foreach (var attributes in tables.Select(table => table.Attributes))
                 {
-                    attributes.Add(Attributes.Class, string.Empty);
+                    if (attributes[Class] == null)
+                    {
+                        attributes.Add(Class, string.Empty);
+                    }
+
+                    if (attributes[DataTablesawMode] == null)
+                    {
+                        attributes.Add(DataTablesawMode, string.Empty);
+                    }
+
+                    attributes[Class].Value = "data-table tablesaw tablesaw-stack";
+                    attributes[DataTablesawMode].Value = "stack";
                 }
-                
-                if (attributes[Attributes.DataTablesawMode] == null)
+
+                using (var textWriter = new StringWriter())
                 {
-                    attributes.Add(Attributes.DataTablesawMode, string.Empty);
+                    htmlDoc.Save(textWriter);
+                    args.Content = textWriter.ToString();
                 }
-
-                attributes[Attributes.Class].Value = "data-table tablesaw tablesaw-stack";
-                attributes[Attributes.DataTablesawMode].Value = "stack";
-            }
-
-            using (var textWriter = new StringWriter())
-            {
-                htmlDoc.Save(textWriter);
-                args.Content = textWriter.ToString();
             }
         }
     }
