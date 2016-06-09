@@ -3,6 +3,7 @@
 var amdOptimize = require("amd-optimize");
 var browserSync = require("browser-sync");
 var buffer = require("vinyl-buffer");
+var critical = require("critical");
 var del = require("del");
 var gulp = require("gulp");
 var fs = require("fs");
@@ -36,9 +37,11 @@ var tasks = {
         lint: "js:lint",
         modernizr: "js:modernizr"
     },
+    razor: "razor",
     resize: "resize",
     sass: {
         build: "sass:build",
+        critical: "sass:critical",
         lint: "sass:lint",
         spritesheet: {
             png: "sass:spritesheet-png",
@@ -52,6 +55,7 @@ var tasks = {
 var paths = {
     base: ".",
     css: "css",
+    critical: "critical-css.html",
     favicon: {
         template: "src/favicon-template.html"
     },
@@ -95,7 +99,13 @@ var paths = {
         ],
         srcAll: "src/sass/**/*.scss"
     },
-    temp: "tmp"
+    temp: "tmp",
+    tempFiles: "tmp-*.*",
+    templates: {
+        dest: "dist/templates/",
+        src: "src/templates/"
+    }
+
 };
 
 gulp.task(tasks.help, plugins.taskListing);
@@ -127,7 +137,8 @@ gulp.task(tasks.clean, function () {
         paths.img.spritesheets.dest,
         paths.js.dest + "/" + paths.js.filename,
         paths.sass.generated,
-        paths.temp
+        paths.temp,
+        tempFiles
     ]);
 });
 
@@ -184,6 +195,24 @@ gulp.task(tasks.sass.build, function () {
         .pipe(gulp.dest(paths.css));
 });
 
+gulp.task(tasks.sass.critical, function () {
+    critical.generate({
+        inline: true,
+        base: ".",
+        src: paths.templates.src + paths.critical,
+        dest: paths.templates.dest + paths.critical,
+        // TODO Take from variable JSON used to power SASS and JS.
+        dimensions: [
+            {
+                height: 216,
+                width: 540
+            }, {
+                height: 900,
+                width: 1200
+            }
+        ]
+    }, function () { gulp.start("razor"); });
+});
 
 // CSS task that forces dependencies to be run sequentially.
 // Parallelisation is playing havoc, as the spritesheets
@@ -194,7 +223,8 @@ gulp.task(tasks.css, function () {
         tasks.sass.spritesheet.png,
         tasks.sass.spritesheet.svg,
         tasks.sass.lint,
-        tasks.sass.build);
+        tasks.sass.build,
+        tasks.sass.critical);
 });
 
 gulp.task(tasks.js.build, [tasks.js.lint, tasks.js.modernizr], function () {
@@ -225,6 +255,15 @@ gulp.task(tasks.js.modernizr, function () {
         .pipe(plugins.uglify())
         .pipe(plugins.rename(paths.js.modernizrFilename))
         .pipe(gulp.dest(paths.js.dest));
+});
+
+gulp.task(tasks.razor, function () {
+    gulp
+        .src(paths.templates.dest + "*.html")
+        .pipe(plugins.rename(function (path) {
+            path.extname = ".cshtml";
+        }))
+        .pipe(gulp.dest(paths.templates.dest));
 });
 
 // Favicon tasks, deliberately separate to the main build.

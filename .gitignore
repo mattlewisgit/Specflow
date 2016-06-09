@@ -252,7 +252,9 @@ Vitality.Website/js/**/*.js
 # Boilerplate.
 Boilerplate/favicon-data.json
 Boilerplate/favicon-template.html
+Boilerplate/tmp-*.*
 Boilerplate/css/
+Boilerplate/dist/
 Boilerplate/images/
 Boilerplate/img/
 Boilerplate/js/

@@ -6,6 +6,7 @@
         "amd-optimize": "*",
         "bower": "*",
         "browser-sync": "*",
+        "critical": "*",
         "del": "*",
         "gulp": "*",
         "gulp-changed": "*",
