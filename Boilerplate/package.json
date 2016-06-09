@@ -1,5 +1,5 @@
 {
-    "name": "boilerplate",
+    "name": "vitality.boilerplate",
     "version": "1.0.0",
     "description": "Vitality Boilerplate",
     "dependencies": {
@@ -11,7 +11,6 @@
         "gulp-changed": "*",
         "gulp-concat": "*",
         "gulp-cssnano": "*",
-        "gulp-if": "*",
         "gulp-image-resize": "*",
         "gulp-imagemin": "*",
         "gulp-jshint": "*",
@@ -28,9 +27,6 @@
         "gulp-svg-sprite": "*",
         "gulp-task-listing": "*",
         "gulp-uglify": "*",
-        "gulp-wait": "*",
-        "jshint": "*",
-        "lazypipe": "*",
         "node-gyp": "3.3.0",
         "run-sequence": "*",
         "vinyl-buffer": "*"
