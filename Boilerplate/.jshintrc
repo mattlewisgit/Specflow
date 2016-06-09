@@ -2,7 +2,7 @@
     "bitwise": false,
     "browser": true,
     "curly": true,
-    "devel": true,
+    "devel": false,
     "eqeqeq": true,
     "forin": true,
     "freeze": true,
@@ -22,6 +22,7 @@
     "varstmt": false,
     "predef": [
         "define",
+        "Modernizr",
         "require",
         "requirejs"
     ]

@@ -1,4 +1,4 @@
-.data-table {
+.data-table, .data-table.tablesaw {
     position: relative;
     background: $white;
     border-collapse: collapse;
@@ -6,12 +6,13 @@
     margin: $pad 0;
 
     thead {
-
         th {
             @include font-size(2);
             background-color: $secondary-background-color;
             color: $white;
             font-weight: normal;
+            text-shadow: none;
+            text-transform: none;
         }
     }
 

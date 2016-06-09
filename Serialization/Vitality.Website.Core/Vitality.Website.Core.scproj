@@ -414,6 +414,250 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Buttons.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Buttons\HTML View.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Class Translation.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Class Translation\Head1.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Class Translation\Head2.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Class Translation\Head3.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Class Translation\MsoBodytext.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Class Translation\MsoHead1.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Class Translation\MsoHead2.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Class Translation\MsoHead3.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Images.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Images\Help.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Paragraphs.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Paragraphs\Heading 1.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Paragraphs\Heading 2.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Paragraphs\Heading 3.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Paragraphs\Heading 4.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Paragraphs\Heading 5.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Paragraphs\Heading 6.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Paragraphs\Normal.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Snippets.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Snippets\Summary Block.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Bold.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Css Class.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Divider 1.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Divider 2.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Divider 3.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Divider 4.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Format Block.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Insert Link.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Insert Ordered List.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Insert Sitecore Link.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Insert Sitecore Media.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Insert Snippet.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Insert Table.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Insert Unordered List.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Italic.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Paragraph.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\StrikeThrough.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Subscript.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Superscript.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Underline.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 1\Unlink.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\AjaxSpellcheck.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\Clean.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\Divider 1.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\Divider 2.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\Divider 3.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\Find.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\Paste Html.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\Paste Plain Text.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\Paste Word No Font Sizes.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\Paste Word.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\Redo.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\Select All.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\Undo.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\XhtmlValidator.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Toolbar 2\Zoom.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\WebEdit Buttons.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\WebEdit Buttons\Bold.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\WebEdit Buttons\Edit html.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\WebEdit Buttons\Insert Image.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\WebEdit Buttons\Insert Link.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\WebEdit Buttons\Italic.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\WebEdit Buttons\Underline.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Zoom.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Zoom\10.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Zoom\100.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Zoom\20.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Zoom\200.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Zoom\30.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Zoom\40.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Zoom\50.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Zoom\66.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\system\Settings\Html Editor Profiles\Vitality Rich Text Medium\Zoom\80.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
   </ItemGroup>
   <ItemGroup>
     <SitecoreRole Include="Sitecore Roles\default\Everyone.role" />

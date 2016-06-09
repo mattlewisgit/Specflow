@@ -1,68 +1,62 @@
 define([
-	"jquery",
-	"match-height",
-  "smart-resize"
-], function(
-	$
+    "jquery",
+    "match-height",
+    "smart-resize"
+], function (
+    $
 ) {
+    "use strict";
 
-  'use strict';
+    //vars -
+    var _settings = {
 
-  //vars -
-  var _settings = {
+        matchHeightClasses: [
+            // Any element with the utility class of .match-height
+            ".match-height",
 
-    matchHeightClasses:[
-      ".match-height", // Any element with the utility class of .match-height
-      ".spotlight-item__top-content", // The top-content wrapper for the spotlights - to ensure the CTA links line up
-      ".spotlight-item" // The outisde container of the spotlight elements -
-    ]
+            // The top-content wrapper for the spotlights - to ensure the CTA links line up
+            ".spotlight-item__top-content",
 
-  };
+            // The outisde container of the spotlight elements
+            ".spotlight-item"
+        ]
+    };
 
-  var $allMatchHeightElements;
+    var $allMatchHeightElements;
 
-  //funcitons -
-	var _matchHeightMod = {
+    //funcitons -
+    var _matchHeightMod = {
+        init: function () {
+            //Populate the elements -
+            $allMatchHeightElements = [];
 
-		init: function(){
+            //For each match height class in the settings, add it to the array of elements to be height matched -
+            for (var i = 0; i < _settings.matchHeightClasses.length; i++) {
+                $allMatchHeightElements.push($(_settings.matchHeightClasses[i]));
+            }
 
-			// Your code here
-			console.log("Match heights JS init here!");
+            _matchHeightMod.matchHeights();
+            $(window).smartresize(_matchHeightMod.matchHeights);
 
-      //Populate the elements -
-      $allMatchHeightElements = [];
+            $("body").on("TRIGGER_MATCH_HEIGHTS", _matchHeightMod.matchHeights);
+        },
 
-      //For each match height class in the settings, add it to the array of elements to be height matched -
-      for(var i=0; i<_settings.matchHeightClasses.length; i++){
-        $allMatchHeightElements.push($(_settings.matchHeightClasses[i]));
-      }
+        matchHeights: function () {
+            for (var i = 0; i < $allMatchHeightElements.length; i++) {
+                $allMatchHeightElements[i].matchHeight();
+            }
+        }
+    };
 
-      _matchHeightMod.matchHeights();
-      $(window).smartresize(_matchHeightMod.matchHeights);
+    /**
+       *  initialiser
+       */
+    var init = function () {
+        _matchHeightMod.init();
+    };
 
-      $("body").on("TRIGGER_MATCH_HEIGHTS", _matchHeightMod.matchHeights);
-
-		},
-
-    matchHeights:function(){
-      for(var i=0; i < $allMatchHeightElements.length; i++){
-        $allMatchHeightElements[i].matchHeight();
-      }
-    }
-
-	};
-
-  /**
-     *  initialiser
-     */
-  var init = function () {
-    console.log("Match height module init");
-    _matchHeightMod.init();
-  };
-
-  //Return our public methods -
-  return {
-    "init":init
-  };
-
+    //Return our public methods -
+    return {
+        "init": init
+    };
 });

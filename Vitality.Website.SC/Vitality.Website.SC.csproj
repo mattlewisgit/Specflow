@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\HtmlAgilityPack.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Analytics, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Analytics.dll</HintPath>
       <Private>True</Private>
@@ -84,6 +88,7 @@
     <Compile Include="ItemConstants.cs" />
     <Compile Include="Pipelines\Publishing\GetItemReferences\AddDataSourceItemDescendants.cs" />
     <Compile Include="Pipelines\Response\RenderRendering\VaryByAncestor.cs" />
+    <Compile Include="Pipelines\RichTextEditor\SaveRichTextContent\InjectTableSawStyles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\StringHelper.cs" />
   </ItemGroup>

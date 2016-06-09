@@ -3,14 +3,13 @@
 //
 
 .expander {
+    @extend .clearfix;
     $_transition: 0.2s;
     $_transition--long: $_transition * 2;
 
-    @extend .clearfix;
     background: $white;
     border-top: 1px solid $color-mono-14;
     border-bottom: 1px solid $color-mono-14;
-
 
     &__menu {
         @extend .non-list;

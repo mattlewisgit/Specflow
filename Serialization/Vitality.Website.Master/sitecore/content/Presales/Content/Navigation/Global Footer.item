@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {34E61CC7-C4B4-422B-9D01-A1BCC0956F7C}
+database: master
+path: /sitecore/content/Presales/Content/Navigation/Global Footer
+parent: {052F0D06-4115-463F-B209-A1A00C9394AD}
+name: Global Footer
+master: {00000000-0000-0000-0000-000000000000}
+template: {A1DD938B-A29C-4FC5-BE54-DAA0468D1796}
+templatekey: Global Footer
+
+----version----
+language: en
+version: 1
+revision: bf4fb135-17bb-47fd-af71-d4afa8729cce
+
+----field----
+field: {B4CA641A-2DAD-4A88-BABC-0EB9955A6476}
+name: Logo
+key: logo
+content-length: 58
+
+<image mediaid="{4C3060EC-14F4-4A34-AB4B-C7E412AD4E52}" />
+----field----
+field: {8BBBC7A6-5DC1-4533-8303-59A682A3DBF9}
+name: CopyrightStatement
+key: copyrightstatement
+content-length: 118
+
+&copy;<script type="text/javascript">document.write(new Date().getFullYear());</script> Vitality. All rights reserved.
+----field----
+field: {755CAAB0-9AB3-40A9-B44C-05CE713BE2E7}
+name: FooterLinksColumn1
+key: footerlinkscolumn1
+content-length: 77
+
+{72CDEB1A-6097-48F7-A7C0-75C7BA4FFE3B}|{14E0FC55-2C7F-41AA-BA46-0F6E1DBB7DEE}
+----field----
+field: {F6CB5967-30ED-4F28-B791-353BF5190EF8}
+name: FooterLinksColumn2
+key: footerlinkscolumn2
+content-length: 77
+
+{02C9A9CF-94BC-4692-A392-15B33C95AA1F}|{14E0FC55-2C7F-41AA-BA46-0F6E1DBB7DEE}
+----field----
+field: {B6A55171-AA17-43B8-87B2-48BC9F686E82}
+name: FooterLinksColumn3
+key: footerlinkscolumn3
+content-length: 77
+
+{97CAD631-F2C6-4062-A275-CE8A2B13DE5E}|{14E0FC55-2C7F-41AA-BA46-0F6E1DBB7DEE}
+----field----
+field: {E37B1F31-B1D5-4FA8-810F-AFA96CDE1F66}
+name: FooterSocialLinksColumn
+key: footersociallinkscolumn
+content-length: 38
+
+{161B908A-84F5-49C1-B1A4-5B5D4E2554BD}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160601T121650Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+bf4fb135-17bb-47fd-af71-d4afa8729cce
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160601T163010Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
