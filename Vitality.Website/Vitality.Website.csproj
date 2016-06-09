@@ -155,6 +155,7 @@
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Areas\Presales\Views\CallToAction\PrimaryCallToAction.cshtml" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
@@ -220,6 +221,8 @@
     <Compile Include="Areas\Global\Models\KeyValuePair.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
+    <Compile Include="Areas\Presales\Models\CallToAction\CallToActionPanel.cs" />
+    <Compile Include="Areas\Presales\Models\CallToAction\PrimaryCallToAction.cs" />
     <Compile Include="Areas\Presales\Models\Cards\Card.cs" />
     <Compile Include="Areas\Presales\Models\Cards\CardsStacked.cs" />
     <Compile Include="Areas\Presales\Models\FAQ\FeaturedQuestions.cs" />
@@ -238,6 +241,7 @@
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\Views\PrimaryCallToActionExtensions.cs" />
     <Compile Include="Extensions\Views\ProductHeroExtensions.cs" />
     <Compile Include="Extensions\Views\CardsStackedExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />

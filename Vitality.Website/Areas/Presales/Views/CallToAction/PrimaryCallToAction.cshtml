@@ -1,0 +1,28 @@
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.CallToAction.PrimaryCallToAction>
+
+<div class="cta grid grid-gutters">
+    @if (this.DisplayInsertMessage())
+    {
+        <h2>Insert Call To Action Panels Here</h2>
+    }
+    @foreach (var panel in Model.Panels)
+    {
+    <div class="grid-col-1-@this.NumberOfColumns()">
+        @using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", panel.Path))
+        {
+        <div class="grid-module">
+            <h3 class="cta__header">
+                @Editable(panel, m => m.Icon)
+                @Editable(panel, m => m.Headline)
+            </h3>
+            <p class="cta__body">
+                @Editable(panel, m => m.OpeningParagraph)
+            </p>
+            @Editable(panel, m => m.CallToAction, new { @class = "box-button box-button--rounded" })
+            @Editable(panel, m => m.SecondaryCallToAction, new { @class = "box-button box-button--rounded" })
+        </div>
+        }
+    </div>
+    }
+</div>
