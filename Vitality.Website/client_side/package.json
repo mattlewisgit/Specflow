@@ -8,7 +8,8 @@
         "gulp-cssnano": "*",
         "gulp-load-plugins": "*",
         "gulp-sass": "*",
-        "gulp-sass-lint": "*"
+        "gulp-sass-lint": "*",
+        "gulp-task-listing": "*"
     },
     "scripts": {
         "gulp": "gulp"
