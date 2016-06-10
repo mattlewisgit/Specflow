@@ -172,6 +172,7 @@
     <Content Include="client_side\img\youtube--footer.svg" />
     <Content Include="css\app.css" />
     <Content Include="css\rich_text_editor.css" />
+    <Content Include="css\tablesaw.css" />
     <Content Include="Global.asax" />
     <Content Include="images\sprite-generated%402x.png" />
     <Content Include="images\sprite-generated.png" />
