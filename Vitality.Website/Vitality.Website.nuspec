@@ -17,10 +17,11 @@
       <file src="Areas\Presales\Views\**\*.*" target="Areas\Presales\Views" />
       <file src="bin\**\*.dll" target="bin" />
       <file src="bin\**\*.lic" target="bin" />
-      <file src="css\**\*.css" target="css" />
+      <file src="css\*.css" target="css" />
+      <file src="css\*.png" target="css" />
       <file src="Global.asax" />
       <file src="img\**\*.*" target="img" />
-      <file src="js\**\*.js" target="js" />
+      <file src="js\*.js" target="js" />
       <file src="Views\**\*.*" target="Views" />
       <file src="Web.config" />
       <file src="Web.Release.config" />
