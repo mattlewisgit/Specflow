@@ -13,9 +13,9 @@ templatekey: Folder
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 69
+content-length: 28
 
-http://dev.vitality.co.uk/temp/iconcache/people/32x32/playingcard.png
+People/32x32/playingcard.png
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
 name: __Masters
@@ -33,7 +33,7 @@ ar|sitecore\Presales User|pe|+item:read|+item:create|pd|+item:rename|+item:creat
 ----version----
 language: en
 version: 1
-revision: d748bbd8-057f-4c14-8db5-e62f2ba38482
+revision: 244d47f1-ac40-493d-ba9a-f41b7335cf47
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d748bbd8-057f-4c14-8db5-e62f2ba38482
+244d47f1-ac40-493d-ba9a-f41b7335cf47
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160518T104748Z
+20160603T115143Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

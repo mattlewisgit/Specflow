@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {D121DC49-57E7-43D9-8FFE-46BDB982E07E}
+database: master
+path: /sitecore/content/Presales/Content/Navigation/Global Footer/Connect with Vitality/Twitter
+parent: {161B908A-84F5-49C1-B1A4-5B5D4E2554BD}
+name: Twitter
+master: {00000000-0000-0000-0000-000000000000}
+template: {BDD88ED4-C40F-43A1-9900-572B18179434}
+templatekey: Image Link
+
+----version----
+language: en
+version: 1
+revision: 4cd18961-560e-4a07-a107-8a64120a2ec0
+
+----field----
+field: {C428ADB9-FE45-44B0-AC23-805EF8BC4335}
+name: Link
+key: link
+content-length: 70
+
+<link text="Twitter" linktype="internal" url="" anchor="" target="" />
+----field----
+field: {FF833EB2-ACD6-4A43-8392-06C2BB98D65B}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{5CBC7651-63B5-4799-A339-48842CB5AE51}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160601T162747Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+4cd18961-560e-4a07-a107-8a64120a2ec0
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160601T162919Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

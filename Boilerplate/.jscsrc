@@ -1,5 +1,5 @@
 {
-    "requireCurlyBraces": true,
+    "requireCurlyBraces": ["return", "continue", "break"],
     "requireSpaceBeforeObjectValues": true,
     "requireSpaceBetweenArguments": true,
     "requireSpacesInConditionalExpression": {
@@ -16,7 +16,6 @@
         "position": "above"
     },
     "validateIndentation": 4,
-    //"validateLineBreaks": "LF",
     "validateParameterSeparator": ", ",
     "validateQuoteMarks": "\""
 }

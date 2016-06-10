@@ -1,115 +1,127 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" class="flash csspointerevents svg flexbox cssgradients no-flexboxtweener no-touchevents target">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>FAQ Leader</title>
+    <title>Vitality Boilerplate | Components | FAQ Leader</title>
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600" />
     <link rel="stylesheet" type="text/css" href="/bower_components/prism/themes/prism.css" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/plugins/line-numbers/prism-line-numbers.css" />
     <link rel="stylesheet" type="text/css" href="/css/app.css" />
     <link rel="stylesheet" type="text/css" href="/css/boilerplate.css" />
+
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-    <main tabindex="-1" role="main">
-        <div>
-            <h1>FAQ Leader</h1>
-            <h2>Description</h2>
+    <main tabindex="-1">
+        <section class="vertical-flush">
+            <div>
+                <h1>FAQ Leader</h1>
+                <h2>Description</h2>
 
-            <p>
-                This component groups concise answers to <abbr title="Frequently-Asked Questions">FAQs</abbr>,
-                inviting the user to read the full details on another page via a link.
-            </p>
-        </div>
+                <p>
+                    This component groups concise answers to <abbr title="Frequently-Asked Questions">FAQs</abbr>,
+                    inviting the user to read the full details on another page via a link.
+                </p>
+            </div>
 
-        <div>
-            <h2>Example</h2>
-            
-            <div class="example">
-                <div class="faq_leader">
-                    <div class="header">
-                        <h2>Frequently asked questions</h2>
+            <div>
+                <h2>Example</h2>
 
-                        <p class="paragraph-emphasis">
-                            Here's a selection of questions and answers that we've helped customers with
-                        </p>
-                    </div>
+                <div class="example">
+                    <div class="faq_leader">
+                        <div class="header">
+                            <h2>Frequently asked questions</h2>
 
-                    <div class="faqs">
-                        <div class="grid">
-                            <div class="grid-col-1-2">
-                                <h6 class="text-detail-block__heading">
-                                    How does Serious Illness Cover work?
-                                </h6>
+                            <p class="paragraph-emphasis">
+                                Here's a selection of questions and answers that we've helped customers with
+                            </p>
+                        </div>
 
-                                <div>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula ac libero et bibendum.
-                                    Cras pharetra tincidunt tortor ac pulvinar.
+                        <div class="faqs">
+                            <div class="grid">
+                                <div class="grid-col-1-2">
+                                    <h6 class="text-detail-block__heading">
+                                        How does Serious Illness Cover work?
+                                    </h6>
 
-                                    <p>
-                                        <a href="#">Read more</a>
-                                    </p>
+                                    <div>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula ac libero et bibendum.
+                                        Cras pharetra tincidunt tortor ac pulvinar.
+
+                                        <p>
+                                            <a href="#">Read more</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="grid-col-1-2">
+                                    <h6 class="text-detail-block__heading">
+                                        What's the difference between Life and Serious Illness Cover?
+                                    </h6>
+
+                                    <div>
+                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                        Morbi non laoreet nulla. Mauris iaculis efficitur leo eu commodo.
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="grid-col-1-2">
-                                <h6 class="text-detail-block__heading">
-                                    What's the difference between Life and Serious Illness Cover?
-                                </h6>
+                            <div class="grid">
+                                <div class="grid-col-1-2">
+                                    <h6 class="text-detail-block__heading">
+                                        What illnesses are covered?
+                                    </h6>
 
-                                <div>
-                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                    Morbi non laoreet nulla. Mauris iaculis efficitur leo eu commodo.
+                                    <div>
+                                        Proin vestibulum placerat mauris, quis fermentum ipsum varius id.
+                                        Morbi nec turpis consectetur, laoreet odio eget, sagittis risus. Nullam sed faucibus nisl.
+                                    </div>
+                                </div>
+
+                                <div class="grid-col-1-2">
+                                    <h6 class="text-detail-block__heading">
+                                        Am I covered for heart attacks or stroke?
+                                    </h6>
+
+                                    <div>
+                                        Aenean nec mattis nibh. Nunc in nulla sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Morbi rutrum, massa in tristique posuere, ex orci luctus est, eget vehicula nunc magna interdum erat.
+
+                                        <p>
+                                            <a href="#">Read more</a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="grid">
-                            <div class="grid-col-1-2">
-                                <h6 class="text-detail-block__heading">
-                                    What illnesses are covered?
-                                </h6>
-
-                                <div>
-                                    Proin vestibulum placerat mauris, quis fermentum ipsum varius id.
-                                    Morbi nec turpis consectetur, laoreet odio eget, sagittis risus. Nullam sed faucibus nisl.
-                                </div>
-                            </div>
-
-                            <div class="grid-col-1-2">
-                                <h6 class="text-detail-block__heading">
-                                    Am I covered for heart attacks or stroke?
-                                </h6>
-
-                                <div>
-                                    Aenean nec mattis nibh. Nunc in nulla sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Morbi rutrum, massa in tristique posuere, ex orci luctus est, eget vehicula nunc magna interdum erat.
-
-                                    <p>
-                                        <a href="#">Read more</a>
-                                    </p>
-                                </div>
-                            </div>
+                        <div class="more">
+                            <a href="#" class="box-button box-button--rounded">
+                                Show me more
+                            </a>
                         </div>
-                    </div>
-
-                    <div class="more">
-                        <a href="#" class="box-button box-button--rounded">
-                            Show me more
-                        </a>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div>
-            <h2>Markup</h2>
+            <div>
+                <h2>Markup</h2>
 
-            <pre>
-                <code class="language-markup"></code>
-            </pre>
-        </div>
+                <pre>
+                    <code class="language-markup line-numbers"></code>
+                </pre>
+            </div>
+        </section>
     </main>
+
+    <script type="text/javascript" src="/js/modernizr-custom.min.js"></script>
+    <script type="text/javascript" src="/src/js/require.js" data-main="/js/vitality-boilerplate" async></script>
 
     <script type="text/javascript" src="/js/boilerplate.js"></script>
     <script type="text/javascript" src="/bower_components/prism/prism.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/normalize-whitespace/prism-normalize-whitespace.js"></script>
 </body>
 </html>

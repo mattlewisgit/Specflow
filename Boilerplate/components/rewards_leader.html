@@ -1,16 +1,21 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" class="flash csspointerevents svg flexbox cssgradients no-flexboxtweener no-touchevents target">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Rewards Leader</title>
+    <title>Vitality Boilerplate | Components | Rewards Leader</title>
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600" />
     <link rel="stylesheet" type="text/css" href="/bower_components/prism/themes/prism.css" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/plugins/line-numbers/prism-line-numbers.css" />
     <link rel="stylesheet" type="text/css" href="/css/app.css" />
     <link rel="stylesheet" type="text/css" href="/css/boilerplate.css" />
+
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-    <div class="page">
-        <main tabindex="-1" role="main">
+    <main tabindex="-1">
+        <section class="vertical-flush">
             <div>
                 <h1>Rewards Leader</h1>
                 <h2>Description</h2>
@@ -34,26 +39,26 @@
 
                             <div class="feature-block__image-list">
                                 <div>
-                                    <img src="/img/facebook--footer.svg" alt="Facebook" height="50" />
+                                    <img src="/img/examples/facebook--footer.svg" alt="Facebook" height="50" />
 
                                     <a href="#">
-                                        <img src="/img/instagram--footer.svg" alt="Facebook" height="50" />
+                                        <img src="/img/examples/instagram--footer.svg" alt="Facebook" height="50" />
                                     </a>
 
-                                    <img src="/img/search.svg" alt="Facebook" height="50" />
-                                    <img src="/img/twitter--footer.svg" alt="Facebook" height="50" />
-                                    <img src="/img/vitality-logo--white.svg" alt="Facebook" height="50" />
+                                    <img src="/img/examples/search.svg" alt="Facebook" height="50" />
+                                    <img src="/img/examples/twitter--footer.svg" alt="Facebook" height="50" />
+                                    <img src="/img/examples/vitality-logo--white.svg" alt="Facebook" height="50" />
                                 </div>
 
                                 <div>
-                                    <img src="/img/youtube--footer.svg" alt="Facebook" height="50" />
+                                    <img src="/img/examples/youtube--footer.svg" alt="Facebook" height="50" />
 
                                     <a href="#">
-                                        <img src="/img/facebook--footer.svg" alt="Facebook" height="50" />
+                                        <img src="/img/examples/facebook--footer.svg" alt="Facebook" height="50" />
                                     </a>
 
-                                    <img src="/img/instagram--footer.svg" alt="Facebook" height="50" />
-                                    <img src="/img/twitter--footer.svg" alt="Facebook" height="50" />
+                                    <img src="/img/examples/instagram--footer.svg" alt="Facebook" height="50" />
+                                    <img src="/img/examples/twitter--footer.svg" alt="Facebook" height="50" />
                                 </div>
                             </div>
 
@@ -69,13 +74,18 @@
                 <h2>Markup</h2>
 
                 <pre>
-                    <code class="language-markup"></code>
+                    <code class="language-markup line-numbers"></code>
                 </pre>
             </div>
-        </main>
-    </div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="/js/modernizr-custom.min.js"></script>
+    <script type="text/javascript" src="/src/js/require.js" data-main="/js/vitality-boilerplate" async></script>
 
     <script type="text/javascript" src="/js/boilerplate.js"></script>
     <script type="text/javascript" src="/bower_components/prism/prism.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/normalize-whitespace/prism-normalize-whitespace.js"></script>
 </body>
 </html>

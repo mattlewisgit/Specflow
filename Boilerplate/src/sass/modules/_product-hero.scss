@@ -1,0 +1,27 @@
+@import "../base/defaults";
+
+.product-hero {
+    h1 {
+        margin-top: 0;
+    }
+
+    .button-cta, .button-internal {
+        color: $grey;
+    }
+
+    .feature-block__image {
+        background: $primary-colour;
+        padding-top: 0;
+        text-align: center;
+    }
+
+    @media only screen and (min-width: $breakpoint-large) {
+        .feature-block__image img {
+            @include scale-and-centre(100%);
+        }
+    }
+
+    .lead-in {
+        height: 70px;
+    }
+}

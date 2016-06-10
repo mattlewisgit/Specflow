@@ -229,6 +229,10 @@
     <Compile Include="Areas\Presales\Models\FAQ\QuestionAnswer.cs" />
     <Compile Include="Areas\Presales\Models\FeatureBlocks\ProductHero.cs" />
     <Compile Include="Areas\Presales\Models\Generic\Content.cs" />
+    <Compile Include="Areas\Presales\Models\Generic\Tab.cs" />
+    <Compile Include="Areas\Presales\Models\Generic\TabCollection.cs" />
+    <Compile Include="Areas\Presales\Models\Navigation\FooterSection.cs" />
+    <Compile Include="Areas\Presales\Models\Navigation\GlobalFooter.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
@@ -236,12 +240,14 @@
     <Compile Include="Areas\Presales\Models\Summary\SummaryComponent.cs" />
     <Compile Include="Areas\Presales\Models\Summary\SummaryListItem.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
+    <Compile Include="Areas\Presales\RenderingModels\CardsStackedRendering.cs" />
     <Compile Include="Areas\Presales\RenderingModels\RewardsLeaderRendering.cs" />
     <Compile Include="Areas\Presales\RenderingModels\SummaryComponentRendering.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
     <Compile Include="Extensions\Views\PrimaryCallToActionExtensions.cs" />
+    <Compile Include="Extensions\Views\GlobalFooterExtensions.cs" />
     <Compile Include="Extensions\Views\ProductHeroExtensions.cs" />
     <Compile Include="Extensions\Views\CardsStackedExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
@@ -487,6 +493,11 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="Areas\Presales\Views\Generic\Content.cshtml" />
+    <Content Include="Areas\Presales\Views\Generic\AccordionContent.cshtml" />
+    <Content Include="Areas\Presales\Views\Generic\TabbedContent.cshtml" />
+    <Content Include="Areas\Presales\Views\Navigation\GlobalFooter.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\_Favicons.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\_CriticalCss.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -498,6 +509,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Presales\Controllers\" />
     <Folder Include="Controllers\" />
+    <Folder Include="img\examples\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
