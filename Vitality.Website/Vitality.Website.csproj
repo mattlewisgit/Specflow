@@ -492,6 +492,8 @@
     <Content Include="Areas\Presales\Views\Generic\AccordionContent.cshtml" />
     <Content Include="Areas\Presales\Views\Generic\TabbedContent.cshtml" />
     <Content Include="Areas\Presales\Views\Navigation\GlobalFooter.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\_Favicons.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\_CriticalCss.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

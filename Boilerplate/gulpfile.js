@@ -8,6 +8,7 @@ var del = require("del");
 var gulp = require("gulp");
 var fs = require("fs");
 var runSequence = require("run-sequence");
+var toTitleCase = require("to-title-case");
 
 var plugins = require("gulp-load-plugins")({
     pattern: ["gulp[\-\.]*"],
@@ -211,7 +212,7 @@ gulp.task(tasks.sass.critical, function () {
                 width: 1200
             }
         ]
-    }, function () { gulp.start("razor"); });
+    }, function () { gulp.start(tasks.razor); });
 });
 
 // CSS task that forces dependencies to be run sequentially.
@@ -257,10 +258,18 @@ gulp.task(tasks.js.modernizr, function () {
         .pipe(gulp.dest(paths.js.dest));
 });
 
+function asRazorPartialName(filename) {
+    return "_" + toTitleCase(filename
+        .replace(/[ -_]/g, " "))
+        .replace(/ /g, "");
+}
+
 gulp.task(tasks.razor, function () {
     gulp
         .src(paths.templates.dest + "*.html")
+        .pipe(plugins.replace("@", "@@"))
         .pipe(plugins.rename(function (path) {
+            path.basename = asRazorPartialName(path.basename);
             path.extname = ".cshtml";
         }))
         .pipe(gulp.dest(paths.templates.dest));
