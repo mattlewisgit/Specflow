@@ -505,6 +505,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Presales\Controllers\" />
     <Folder Include="Controllers\" />
+    <Folder Include="img\examples\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
