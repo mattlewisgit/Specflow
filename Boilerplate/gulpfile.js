@@ -80,6 +80,7 @@ var paths = {
         }
     },
     js: {
+        breakpoints: "config/breakpoints.json",
         dest: "js",
         filename: "vitality-boilerplate.js",
         modernizrFilename: "modernizr-custom.min.js",
@@ -150,6 +151,18 @@ gulp.task(tasks.images, function() {
         .pipe(plugins.changed(paths.img.examples.src))
         .pipe(plugins.imagemin())
         .pipe(gulp.dest(paths.img.examples.dest));
+});
+
+gulp.task(tasks.sass.json, function () {
+    return gulp
+        .src(paths.js.breakpoints)
+        .pipe(plugins.jsonSass({
+            sass: false
+        }))
+        .pipe(plugins.rename({
+            prefix: "_"
+        }))
+        .pipe(gulp.dest(paths.sass.generated));
 });
 
 gulp.task(tasks.sass.spritesheet.png, function () {
@@ -224,6 +237,7 @@ gulp.task(tasks.css, function () {
     runSequence(
         tasks.sass.spritesheet.png,
         tasks.sass.spritesheet.svg,
+        tasks.sass.json,
         tasks.sass.lint,
         tasks.sass.build,
         tasks.sass.modernizr,
