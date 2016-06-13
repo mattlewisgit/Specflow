@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {504B31E6-B848-4424-A3F0-8D230119B172}
+database: master
+path: /sitecore/content/Presales/Content/Cards/Why VH
+parent: {B71ADCC2-F0FC-4F18-A3E7-F76FF4C9A8DB}
+name: Why VH
+master: {00000000-0000-0000-0000-000000000000}
+template: {89D4A4DE-9F77-4427-86CB-CF824F5EEF02}
+templatekey: Cards Stacked
+
+----version----
+language: en
+version: 1
+revision: 9d7d166e-222a-43c7-83bb-2ca0a0861345
+
+----field----
+field: {EBCCD884-A229-439B-95A2-2E2BF2375995}
+name: Headline
+key: headline
+content-length: 6
+
+Why VH
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160513T110523Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9d7d166e-222a-43c7-83bb-2ca0a0861345
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160513T110523Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

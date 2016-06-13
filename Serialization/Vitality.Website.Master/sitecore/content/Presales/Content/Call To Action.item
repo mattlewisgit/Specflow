@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {B71ADCC2-F0FC-4F18-A3E7-F76FF4C9A8DB}
+id: {5B106F86-596A-4797-BF55-C991242BC1CD}
 database: master
-path: /sitecore/content/Presales/Content/Cards
+path: /sitecore/content/Presales/Content/Call To Action
 parent: {1513AD49-B5AE-4ACC-9D41-E63E41363B58}
-name: Cards
+name: Call To Action
 master: {00000000-0000-0000-0000-000000000000}
 template: {7C96FFFF-DA60-44F1-BC58-2E4315D2F483}
 templatekey: Datasource Folder
@@ -15,25 +15,18 @@ name: __Icon
 key: __icon
 content-length: 28
 
-People/32x32/playingcard.png
+People/32x32/loudspeaker.png
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
 name: __Masters
 key: __masters
 content-length: 77
 
-{4902517E-93B7-41B5-BCC4-387E1D0304A7}|{89D4A4DE-9F77-4427-86CB-CF824F5EEF02}
-----field----
-field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
-name: __Security
-key: __security
-content-length: 118
-
-ar|sitecore\Presales User|pe|+item:read|+item:create|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
+{4902517E-93B7-41B5-BCC4-387E1D0304A7}|{18709C78-2661-47A9-AF8D-2FAB087EC546}
 ----version----
 language: en
 version: 1
-revision: bdd49e92-3ac0-4374-983c-8ec0c46a30ae
+revision: 39ae1024-a1c0-40bc-b34c-360f8f6e20ae
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -41,7 +34,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160509T134557Z
+20160609T105202Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-bdd49e92-3ac0-4374-983c-8ec0c46a30ae
+39ae1024-a1c0-40bc-b34c-360f8f6e20ae
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160613T162813Z
+20160613T162720Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

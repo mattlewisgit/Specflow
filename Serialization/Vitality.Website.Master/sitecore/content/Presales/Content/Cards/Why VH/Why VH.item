@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {F4E36F85-7391-4CEB-BCE2-E8B75873D78E}
+database: master
+path: /sitecore/content/Presales/Content/Cards/Why VH/Why VH
+parent: {504B31E6-B848-4424-A3F0-8D230119B172}
+name: Why VH
+master: {00000000-0000-0000-0000-000000000000}
+template: {4616C2A8-C5BE-456A-8314-F8961D50A109}
+templatekey: Card
+
+----version----
+language: en
+version: 1
+revision: b09e58a2-e9f1-48ac-ba97-2d5706b5c79f
+
+----field----
+field: {A709A5E9-9DF9-4783-A36D-13F9678FB487}
+name: Title
+key: title
+content-length: 6
+
+Why VH
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160513T110601Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+b09e58a2-e9f1-48ac-ba97-2d5706b5c79f
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160513T110601Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

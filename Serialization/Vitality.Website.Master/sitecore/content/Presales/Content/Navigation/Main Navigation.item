@@ -12,7 +12,7 @@ templatekey: Main Navigation
 ----version----
 language: en
 version: 1
-revision: f6562af6-9731-43b9-9741-2e8adef1b8db
+revision: 44cecd63-12ab-48b5-a59b-8dbd2654a063
 
 ----field----
 field: {DD94F527-6FB6-4CE9-B760-1718E0C2B2A8}
@@ -35,6 +35,13 @@ key: sociallinks
 content-length: 155
 
 {AFB99F79-99E5-4B03-A30B-6D078F8DB836}|{01E14541-B996-4A76-870F-159D49F554B7}|{946A5CBA-067D-4ADF-9C0F-EFFD135760ED}|{825A3862-595B-4FEB-B4B4-CFD92007EB70}
+----field----
+field: {60CDF892-8CFC-45F2-9707-35235155DFE2}
+name: Logo
+key: logo
+content-length: 58
+
+<image mediaid="{053194D3-8B26-45ED-AA47-7C6070A90B4C}" />
 ----field----
 field: {1CC67424-4B8B-47E6-AA5F-19261DD39515}
 name: LogInLink
@@ -104,14 +111,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f6562af6-9731-43b9-9741-2e8adef1b8db
+44cecd63-12ab-48b5-a59b-8dbd2654a063
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160506T130844Z
+20160601T154108Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

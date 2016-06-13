@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {2845A39A-5C3B-4BFE-B3F1-8F9F388B995A}
+database: master
+path: /sitecore/content/Presales/Content/Cards/Why Choose Vitality/Card 4
+parent: {D1847316-0DDA-49C4-B06D-5EDDC3F223E6}
+name: Card 4
+master: {00000000-0000-0000-0000-000000000000}
+template: {4616C2A8-C5BE-456A-8314-F8961D50A109}
+templatekey: Card
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+225
+----version----
+language: en
+version: 1
+revision: 1351e3e6-1291-4cc0-b552-2e5cc357143a
+
+----field----
+field: {A709A5E9-9DF9-4783-A36D-13F9678FB487}
+name: Title
+key: title
+content-length: 6
+
+Card 4
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160513T111006Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+1351e3e6-1291-4cc0-b552-2e5cc357143a
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160513T111232Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

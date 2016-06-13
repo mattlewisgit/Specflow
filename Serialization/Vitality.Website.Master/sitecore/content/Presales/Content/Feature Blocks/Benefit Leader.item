@@ -1,0 +1,80 @@
+----item----
+version: 1
+id: {D86DB794-9C0E-4457-9823-A649C6082289}
+database: master
+path: /sitecore/content/Presales/Content/Feature Blocks/Benefit Leader
+parent: {B626955A-8D36-4516-B6EB-F2A66D89D6BA}
+name: Benefit Leader
+master: {00000000-0000-0000-0000-000000000000}
+template: {0D4CB8F9-6D49-40AF-920A-FC5C881BEA94}
+templatekey: Benefit Leader
+
+----version----
+language: en
+version: 1
+revision: 2a6067c7-64e6-4c05-a1fd-d8fa02bf6d27
+
+----field----
+field: {DA87BB32-8FA1-4F37-8B7E-D3BB6E67DB9C}
+name: Headline
+key: headline
+content-length: 31
+
+Benefit Leadejgfifhgldfhglhgkgr
+----field----
+field: {80D33F35-A61F-45C9-97F2-4929238901D8}
+name: Body
+key: body
+content-length: 54
+
+ujfdshkjdhfkjdhfksjdhfkjh hfkjdfhskjhdfkdshj fhdjsfdk
+
+----field----
+field: {4BEF1E56-7D25-49A4-870C-52692B7BB9A9}
+name: CallToAction
+key: calltoaction
+content-length: 103
+
+<link linktype="external" text="VitalityLife " url="http://www.pruprotect.co.uk" anchor="" target="" />
+----field----
+field: {DB27A15F-40DB-4367-B41C-01117BBCD6E8}
+name: BackgroundImage
+key: backgroundimage
+content-length: 58
+
+<image mediaid="{4D13DB20-B854-4CC1-9934-1EE3C7D62095}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160513T105720Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+2a6067c7-64e6-4c05-a1fd-d8fa02bf6d27
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160513T110611Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
