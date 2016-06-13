@@ -1,3 +1,4 @@
+@import "../generated/breakpoints";
 @import "../utils/mixins";
 
 // /*-------------------------------------------------.
@@ -125,15 +126,6 @@ $width--near-max: 80%;
 // /*-------------------------------------------------.
 // \    Config: Responsive
 //  `-------------------------------------------------*/
-
-$_smaller: 350;
-$_small: 540;
-$_medium: 770;
-$_large: 900;
-$_larger: 1025;
-$_massive: 1200;
-$_max: 1440;
-
 $breakpoint-smaller: em($_smaller);
 $breakpoint-small: em($_small);
 $breakpoint-medium: em($_medium);

@@ -8,13 +8,17 @@ var plugins = require("gulp-load-plugins")({
     replaceString: /\bgulp[\-\.]/
 });
 
+var configs = {
+    cssnano: require("./config/cssnano-config.json")
+};
+
 var tasks = {
-    css: "css",
+    css: {
+        build: "css",
+        lint: "css:lint"
+    },
     "default": "default",
-    sass: {
-        build: "sass:build",
-        lint: "sass:lint"
-    }
+    help: "help"
 };
 
 var paths = {
@@ -22,7 +26,9 @@ var paths = {
     sass: "sass/**/*.scss"
 }
 
-gulp.task(tasks.sass.lint, function () {
+gulp.task(tasks.help, plugins.taskListing);
+
+gulp.task(tasks.css.lint, function () {
     return gulp
         .src(paths.sass)
         .pipe(plugins.sassLint())
@@ -30,20 +36,14 @@ gulp.task(tasks.sass.lint, function () {
         .pipe(plugins.sassLint.failOnError());
 });
 
-gulp.task(tasks.sass.build, [tasks.sass.lint], function () {
+gulp.task(tasks.css.build, [tasks.css.lint], function () {
     return gulp
         .src(paths.sass)
         .pipe(plugins.sass().on("error", plugins.sass.logError))
-        .pipe(gulp.dest(paths.css));
-});
-
-gulp.task(tasks.css, [tasks.sass.build], function () {
-    return gulp
-        .src("../css/**/*.css")
-        .pipe(plugins.cssnano())
+        .pipe(plugins.cssnano(configs.cssnano))
         .pipe(gulp.dest(paths.css));
 });
 
 gulp.task(tasks.default, [
-    tasks.css
+    tasks.css.build
 ]);

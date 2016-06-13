@@ -17,10 +17,12 @@
         "gulp-jshint": "*",
         "gulp-jscs": "*",
         "gulp-jscs-stylish": "*",
+        "gulp-json-sass": "*",
         "gulp-load-plugins": "*",
         "gulp-modernizr": "*",
         "gulp-real-favicon": "*",
         "gulp-rename": "*",
+        "gulp-replace": "*",
         "gulp-sass": "*",
         "gulp-sass-lint": "*",
         "gulp-sourcemaps": "*",
@@ -30,6 +32,7 @@
         "gulp-uglify": "*",
         "node-gyp": "3.3.0",
         "run-sequence": "*",
+        "to-title-case": "*",
         "vinyl-buffer": "*"
     },
     "scripts": {

@@ -8,6 +8,7 @@ var del = require("del");
 var gulp = require("gulp");
 var fs = require("fs");
 var runSequence = require("run-sequence");
+var toTitleCase = require("to-title-case");
 
 var plugins = require("gulp-load-plugins")({
     pattern: ["gulp[\-\.]*"],
@@ -34,15 +35,16 @@ var tasks = {
     images: "images",
     js: {
         build: "js",
-        lint: "js:lint",
-        modernizr: "js:modernizr"
+        lint: "js:lint"
     },
     razor: "razor",
     resize: "resize",
     sass: {
         build: "sass:build",
         critical: "sass:critical",
+        json: "sass:json",
         lint: "sass:lint",
+        modernizr: "sass:modernizr",
         spritesheet: {
             png: "sass:spritesheet-png",
             svg: "sass:spritesheet-svg"
@@ -78,6 +80,7 @@ var paths = {
         }
     },
     js: {
+        breakpoints: "config/breakpoints.json",
         dest: "js",
         filename: "vitality-boilerplate.js",
         modernizrFilename: "modernizr-custom.min.js",
@@ -150,6 +153,20 @@ gulp.task(tasks.images, function() {
         .pipe(gulp.dest(paths.img.examples.dest));
 });
 
+gulp.task(tasks.sass.json, function () {
+    return gulp
+        .src(paths.js.breakpoints)
+        .pipe(plugins.changed(paths.temp))
+        .pipe(gulp.dest(paths.temp))
+        .pipe(plugins.jsonSass({
+            sass: false
+        }))
+        .pipe(plugins.rename({
+            prefix: "_"
+        }))
+        .pipe(gulp.dest(paths.sass.generated));
+});
+
 gulp.task(tasks.sass.spritesheet.png, function () {
     var spriteData = gulp
         .src(paths.img.spritesheets.pngSrc)
@@ -211,7 +228,7 @@ gulp.task(tasks.sass.critical, function () {
                 width: 1200
             }
         ]
-    }, function () { gulp.start("razor"); });
+    }, function () { gulp.start(tasks.razor); });
 });
 
 // CSS task that forces dependencies to be run sequentially.
@@ -222,12 +239,14 @@ gulp.task(tasks.css, function () {
     runSequence(
         tasks.sass.spritesheet.png,
         tasks.sass.spritesheet.svg,
+        tasks.sass.json,
         tasks.sass.lint,
         tasks.sass.build,
+        tasks.sass.modernizr,
         tasks.sass.critical);
 });
 
-gulp.task(tasks.js.build, [tasks.js.lint, tasks.js.modernizr], function () {
+gulp.task(tasks.js.build, [tasks.js.lint], function () {
     return gulp
         .src(paths.js.srcAll)
         .pipe(amdOptimize("app", {
@@ -246,21 +265,35 @@ gulp.task(tasks.default, [
     tasks.js.build
 ]);
 
-gulp.task(tasks.js.modernizr, function () {
+gulp.task(tasks.sass.modernizr, function () {
     return gulp
-        .src(paths.js.src)
+        .src(paths.sass.src)
         .pipe(plugins.modernizr({
-            options: [ "mq" ]
+            cache: true,
+            crawl: true,
+            options: [
+                "html5shiv",
+                "mq",
+                "setClasses"
+            ]
         }))
         .pipe(plugins.uglify())
         .pipe(plugins.rename(paths.js.modernizrFilename))
         .pipe(gulp.dest(paths.js.dest));
 });
 
+function asRazorPartialName(filename) {
+    return "_" + toTitleCase(filename
+        .replace(/[ -_]/g, " "))
+        .replace(/ /g, "");
+}
+
 gulp.task(tasks.razor, function () {
     gulp
         .src(paths.templates.dest + "*.html")
+        .pipe(plugins.replace("@", "@@"))
         .pipe(plugins.rename(function (path) {
+            path.basename = asRazorPartialName(path.basename);
             path.extname = ".cshtml";
         }))
         .pipe(gulp.dest(paths.templates.dest));
