@@ -1,0 +1,31 @@
+@import "../base/vars";
+@import "../utils/mixins";
+
+.quote-footer {
+    @include ensure-at-front;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+
+    h6 {
+        @include tab-rounding;
+        color: $white;
+        display: inline-block;
+        margin: 0;
+        padding: 10px 10%;
+    }
+
+    h6, &--body {
+        background-color: $darken-heavy;
+    }
+
+    &--body {
+        padding: 15px 0;
+
+        a {
+            margin: 0;
+        }
+    }
+}
