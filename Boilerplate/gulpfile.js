@@ -35,15 +35,16 @@ var tasks = {
     images: "images",
     js: {
         build: "js",
-        lint: "js:lint",
-        modernizr: "js:modernizr"
+        lint: "js:lint"
     },
     razor: "razor",
     resize: "resize",
     sass: {
         build: "sass:build",
         critical: "sass:critical",
+        json: "sass:json",
         lint: "sass:lint",
+        modernizr: "sass:modernizr",
         spritesheet: {
             png: "sass:spritesheet-png",
             svg: "sass:spritesheet-svg"
@@ -117,7 +118,7 @@ gulp.task(tasks.js.lint, function () {
         .pipe(plugins.jshint())
         .pipe(plugins.jscs())
         .pipe(plugins.jscsStylish.combineWithHintResults())
-        //.pipe(plugins.jshint.reporter("jshint-stylish"))
+        .pipe(plugins.jshint.reporter("jshint-stylish"))
         .pipe(plugins.jshint.reporter("fail"));
 });
 
@@ -225,10 +226,11 @@ gulp.task(tasks.css, function () {
         tasks.sass.spritesheet.svg,
         tasks.sass.lint,
         tasks.sass.build,
+        tasks.sass.modernizr,
         tasks.sass.critical);
 });
 
-gulp.task(tasks.js.build, [tasks.js.lint, tasks.js.modernizr], function () {
+gulp.task(tasks.js.build, [tasks.js.lint], function () {
     return gulp
         .src(paths.js.srcAll)
         .pipe(amdOptimize("app", {
@@ -247,11 +249,15 @@ gulp.task(tasks.default, [
     tasks.js.build
 ]);
 
-gulp.task(tasks.js.modernizr, function () {
+gulp.task(tasks.sass.modernizr, function () {
     return gulp
-        .src(paths.js.src)
+        .src(paths.sass.src)
         .pipe(plugins.modernizr({
-            options: [ "mq" ]
+            options: [
+                "html5shiv",
+                "mq",
+                "setClasses"
+            ]
         }))
         .pipe(plugins.uglify())
         .pipe(plugins.rename(paths.js.modernizrFilename))
