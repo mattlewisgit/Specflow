@@ -365,6 +365,7 @@
     <Content Include="config\favicon-config.json" />
     <Content Include="config\image-resize-config.json" />
     <Content Include="config\svgsprite-config.json" />
+    <Content Include="config\breakpoints.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

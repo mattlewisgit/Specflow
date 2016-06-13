@@ -22,6 +22,12 @@ section div.scLooseFrameZone {
     display: inline;
 }
 
+// Always leave accordions and tabs expanded for easier editing.
 .expander__content {
     display: block !important;
+}
+
+// Override the SC applied height attribute to keep the image scaled proportionally.
+.spotlight-item img {
+    height: 100% !important;
 }
