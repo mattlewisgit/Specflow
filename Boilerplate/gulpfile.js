@@ -156,6 +156,8 @@ gulp.task(tasks.images, function() {
 gulp.task(tasks.sass.json, function () {
     return gulp
         .src(paths.js.breakpoints)
+        .pipe(plugins.changed(paths.temp))
+        .pipe(gulp.dest(paths.temp))
         .pipe(plugins.jsonSass({
             sass: false
         }))
@@ -267,6 +269,8 @@ gulp.task(tasks.sass.modernizr, function () {
     return gulp
         .src(paths.sass.src)
         .pipe(plugins.modernizr({
+            cache: true,
+            crawl: true,
             options: [
                 "html5shiv",
                 "mq",
