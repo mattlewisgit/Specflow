@@ -13,6 +13,7 @@ define([
     "modules/tabsModule",
     "modules/filterModule",
     "modules/matchHeightsModule",
+    "modules/matchWidthsModule",
     "modules/animationDelayModule",
     "modules/searchModule"
 ], function (
@@ -29,6 +30,7 @@ define([
     TabsModule,
     FilerModule,
     MatchHeightsModule,
+    MatchWidthsModule,
     AnimationDelayModule,
     SearchModule
 ) {
@@ -87,8 +89,9 @@ define([
             //Check for filterable content - pass a reference to the animation object -
             FilerModule.init(wow);
 
-            //Check for height matching -
+            // Match sizes.
             MatchHeightsModule.init();
+            MatchWidthsModule.init();
 
             //Check for column animation delays -
             AnimationDelayModule.init();

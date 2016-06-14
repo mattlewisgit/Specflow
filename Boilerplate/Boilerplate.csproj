@@ -161,6 +161,7 @@
     <Content Include="src\js\modules\animationDelayModule.js" />
     <Content Include="src\js\app.js" />
     <Content Include="src\js\modules\collapsibleModule.js" />
+    <Content Include="src\js\modules\matchWidthsModule.js" />
     <Content Include="src\js\vendor\domready.js" />
     <Content Include="src\js\libraries\fastclick.js" />
     <Content Include="src\js\modules\filterModule.js" />
