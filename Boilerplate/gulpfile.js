@@ -201,10 +201,10 @@ gulp.task(tasks.sass.spritesheet.svg, function () {
 });
 
 gulp.task(tasks.sass.build, function () {
-    // TODO Enable source maps and use auto-prefixer.
+    // TODO Enable source maps.
     return gulp
         .src(paths.sass.srcAll)
-        .pipe(plugins.sourcemaps.init())
+        //.pipe(plugins.sourcemaps.init())
         .pipe(plugins.sass().on("error", plugins.sass.logError))
         .pipe(gulp.dest(paths.temp))
         //.pipe(plugins.sourcemaps.write())
