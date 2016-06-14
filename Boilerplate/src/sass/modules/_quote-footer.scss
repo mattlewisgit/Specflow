@@ -3,18 +3,38 @@
 
 .quote-footer {
     @include ensure-at-front;
-    bottom: 0;
+    
+    // Start off the page to prevent hide flicker
+    // or transition to collapsed on smaller devices.
+    bottom: -300px;
+
     left: 0;
     position: absolute;
     right: 0;
     text-align: center;
+    transition: bottom $delay--medium ease;
 
     h6 {
         @include tab-rounding;
         color: $white;
         display: inline-block;
         margin: 0;
-        padding: 10px 10%;
+        padding: $pad--thin 10%;
+
+        a {
+            cursor: pointer;
+            display: none;
+        }
+
+        @media only screen and (max-width: $breakpoint-small) {
+            a {
+                display: block;
+            }
+
+            span {
+                display: none;
+            }
+        }
     }
 
     h6, &--body {
@@ -22,14 +42,16 @@
     }
 
     &--body {
-        padding: 10px 0;
+        padding: $pad--thin 0;
 
         a {
-            margin: 5px;
+            margin: $pad--xthin;
         }
     }
 }
 
+// Use flexbox to adjust the widths if Modernizr detects it.
+// If not, the JS match heights module should be applied.
 .flexbox {
     .quote-footer {
         &--body {
@@ -40,10 +62,11 @@
             justify-content: center;
 
             a {
+                $_max-width: 300px;
                 display: inline-flex;
                 flex: 1;
-                flex-basis: 300px;
-                max-width: 300px;
+                flex-basis: $_max-width;
+                max-width: $_max-width;
             }
         }
     }
