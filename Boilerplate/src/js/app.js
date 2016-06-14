@@ -1,4 +1,10 @@
 requirejs.config({
+    map: {
+        "*": {
+            "json": "../../bower_components/require-json/json"
+        }
+    },
+
     baseUrl: "/src/js/",
     paths: {
         "jquery": "libraries/jquery-1.11.3",

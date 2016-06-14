@@ -1,4 +1,10 @@
-define(["jquery"], function ($) {
+define([
+    "jquery",
+    "modules/breakpointsModule"
+], function (
+    $,
+    breakpoints
+) {
     "use strict";
 
     var module = {
@@ -35,7 +41,7 @@ define(["jquery"], function ($) {
                 return;
             }
 
-            if (Modernizr.mq("(max-width: 540px)")) {
+            if (breakpoints.max.small()) {
                 if (!module.isCollapsed) {
                     // Cache the collapsed state and hide.
                     module.isCollapsed = true;
