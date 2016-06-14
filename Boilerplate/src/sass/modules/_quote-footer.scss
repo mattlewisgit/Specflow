@@ -3,11 +3,16 @@
 
 .quote-footer {
     @include ensure-at-front;
-    bottom: 0;
+    
+    // Start off the page to prevent hide flicker
+    // or transition to collapsed on smaller devices.
+    bottom: -300px;
+
     left: 0;
     position: absolute;
     right: 0;
     text-align: center;
+    transition: bottom $delay--medium ease;
 
     h6 {
         @include tab-rounding;
@@ -15,6 +20,21 @@
         display: inline-block;
         margin: 0;
         padding: $pad--thin 10%;
+
+        a {
+            cursor: pointer;
+            display: none;
+        }
+
+        @media only screen and (max-width: $breakpoint-small) {
+            a {
+                display: block;
+            }
+
+            span {
+                display: none;
+            }
+        }
     }
 
     h6, &--body {

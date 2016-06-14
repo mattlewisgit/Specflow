@@ -14,6 +14,7 @@ define([
     "modules/filterModule",
     "modules/matchHeightsModule",
     "modules/matchWidthsModule",
+    "modules/quoteFooterModule",
     "modules/animationDelayModule",
     "modules/searchModule"
 ], function (
@@ -31,6 +32,7 @@ define([
     FilerModule,
     MatchHeightsModule,
     MatchWidthsModule,
+    QuoteFooterModule,
     AnimationDelayModule,
     SearchModule
 ) {
@@ -92,6 +94,8 @@ define([
             // Match sizes.
             MatchHeightsModule.init();
             MatchWidthsModule.init();
+
+            QuoteFooterModule.init();
 
             //Check for column animation delays -
             AnimationDelayModule.init();
