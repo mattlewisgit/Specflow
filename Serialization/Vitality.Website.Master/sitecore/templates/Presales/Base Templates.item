@@ -1,32 +1,18 @@
 ----item----
 version: 1
-id: {F208B3A5-D159-4F81-989C-4ACA52089997}
+id: {8B734D81-E90D-4DEF-AC05-12671638F725}
 database: master
-path: /sitecore/templates/Presales/Page Templates/Base Page
-parent: {B2AD4D9A-BD16-4ADD-B01D-E2911328525B}
-name: Base Page
+path: /sitecore/templates/Presales/Base Templates
+parent: {DD04D093-ED82-4A4E-B520-2A19B648E493}
+name: Base Templates
 master: {00000000-0000-0000-0000-000000000000}
-template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
-templatekey: Template
+template: {0437FEE2-44C9-46A6-ABE9-28858D9FEE8C}
+templatekey: Template Folder
 
-----field----
-field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
-name: __Base template
-key: __base template
-content-length: 77
-
-{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{16212850-8AAE-4F28-9EB9-1D73D75A68C8}
-----field----
-field: {F7D48A55-2158-4F02-9356-756654404F73}
-name: __Standard values
-key: __standard values
-content-length: 38
-
-{862A2312-E822-4715-A763-067DA167DC28}
 ----version----
 language: en
 version: 1
-revision: cfea489c-e3eb-49f4-9fdb-674cc0efcf91
+revision: ee6ea549-64c5-428f-95f6-4297e113332b
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -34,7 +20,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160505T123814Z
+20160614T103002Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,14 +34,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-cfea489c-e3eb-49f4-9fdb-674cc0efcf91
+ee6ea549-64c5-428f-95f6-4297e113332b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160614T115240Z
+20160614T103002Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

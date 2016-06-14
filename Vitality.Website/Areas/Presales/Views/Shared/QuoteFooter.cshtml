@@ -1,0 +1,9 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.BaseTemplates.IQuoteFooter>
+
+@if (Model.ShowQuoteFooter)
+{
+    foreach (var globalFooterButton in Model.QuoteFooterLinks)
+    {
+        @RenderLink(globalFooterButton, m => m.Link)
+    }
+}
