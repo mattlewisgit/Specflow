@@ -10,14 +10,24 @@ define(["jquery"], function ($) {
         init: function () {
             module.footer = $(".quote-footer");
 
+            // Ignore if no footer found.
             if (!module.footer.length) {
-                return;
+                return null;
             }
 
             module.footerBody = $(".quote-footer--body");
+
+            // If only a single button is present,
+            // hide the tab and permanently show the button.
+            if (module.footerBody.children().length < 2) {
+                module.footer.find("h6").hide();
+                return module.show();
+            }
+
+            // For multiple buttons, register events and adapt the footer.
             module.footer.find("h6 a").click(module.toggle);
             module.adapt();
-            $(window).resize(module.adapt);
+            return $(window).resize(module.adapt);
         },
 
         adapt: function () {
@@ -27,30 +37,31 @@ define(["jquery"], function ($) {
 
             if (Modernizr.mq("(max-width: 540px)")) {
                 if (!module.isCollapsed) {
+                    // Cache the collapsed state and hide.
                     module.isCollapsed = true;
-
-                    module.footer.css({
-                        bottom: "-" + module.footerBody.height() + "px"
-                    });
+                    module.hide();
                 }
             } else {
                 module.isCollapsed = false;
-                module.footer.css({
-                    bottom: "0"
-                });
+                module.show();
             }
+        },
+
+        hide: function() {
+            module.footer.css({
+                bottom: "-" + module.footerBody.height() + "px"
+            });
+        },
+
+        show: function() {
+            module.footer.css({
+                bottom: "0"
+            });
         },
 
         toggle: function() {
             module.isExpanded = !module.isExpanded;
-            
-            if (module.isExpanded) {
-                module.footer.css({ bottom: "0" });
-            } else {
-                module.footer.css({
-                    bottom: "-" + module.footerBody.height() + "px"
-                });
-            }
+            return module.isExpanded ? module.show() : module.hide();
         }
     };
 
