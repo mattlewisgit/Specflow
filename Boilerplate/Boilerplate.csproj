@@ -42,7 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="components\accordion.html" />
-    <Content Include="components\quote-footer.html" />
+    <Content Include="components\quote-footer\quote-footer-3-buttons.html" />
+    <Content Include="components\quote-footer\quote-footer-2-buttons.html" />
+    <Content Include="components\quote-footer\quote-footer-1-button.html" />
+    <Content Include="components\quote-footer\index.html" />
     <Content Include="components\tabs.html" />
     <Content Include="components\footer.html" />
     <Content Include="components\summary\summary-right.html" />
@@ -161,6 +164,8 @@
     <Content Include="src\js\modules\animationDelayModule.js" />
     <Content Include="src\js\app.js" />
     <Content Include="src\js\modules\collapsibleModule.js" />
+    <Content Include="src\js\modules\breakpointsModule.js" />
+    <Content Include="src\js\modules\quoteFooterModule.js" />
     <Content Include="src\js\modules\matchWidthsModule.js" />
     <Content Include="src\js\vendor\domready.js" />
     <Content Include="src\js\libraries\fastclick.js" />
@@ -366,7 +371,7 @@
     <Content Include="config\favicon-config.json" />
     <Content Include="config\image-resize-config.json" />
     <Content Include="config\svgsprite-config.json" />
-    <Content Include="config\breakpoints.json" />
+    <Content Include="src\js\breakpoints.json" />
     <Content Include="src\sass\modules\_quote-footer.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
