@@ -249,6 +249,7 @@
     <Compile Include="Areas\Presales\RenderingModels\CardsStackedRendering.cs" />
     <Compile Include="Areas\Presales\RenderingModels\RewardsLeaderRendering.cs" />
     <Compile Include="Areas\Presales\RenderingModels\SummaryComponentRendering.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
