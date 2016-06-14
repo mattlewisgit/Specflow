@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {F208B3A5-D159-4F81-989C-4ACA52089997}
+id: {5C947101-4C02-406F-A09E-ADDFAA7ADB7C}
 database: master
-path: /sitecore/templates/Presales/Page Templates/Base Page
-parent: {B2AD4D9A-BD16-4ADD-B01D-E2911328525B}
-name: Base Page
+path: /sitecore/templates/Presales/Base Templates/_ResponsiveDesignGlobal
+parent: {8B734D81-E90D-4DEF-AC05-12671638F725}
+name: _ResponsiveDesignGlobal
 master: {00000000-0000-0000-0000-000000000000}
 template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
 templatekey: Template
@@ -13,20 +13,13 @@ templatekey: Template
 field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
 name: __Base template
 key: __base template
-content-length: 233
-
-{ABC9A19A-176E-4424-AD6E-E4FCE0328A6C}|{D0450C3D-D352-436A-870A-D0148DDDBA7A}|{208101CD-497F-43A6-A123-DB0A8E9543D4}|{D962B6E5-B2F9-40B3-BA6E-62F94F2128B1}|{8F88B056-7B24-4D8B-8597-D3EB6FAC031E}|{51C8EB8B-843C-4B0C-B717-E25624686C3B}
-----field----
-field: {F7D48A55-2158-4F02-9356-756654404F73}
-name: __Standard values
-key: __standard values
 content-length: 38
 
-{862A2312-E822-4715-A763-067DA167DC28}
+{1930BBEB-7805-471A-A3BE-4858AC7CF696}
 ----version----
 language: en
 version: 1
-revision: 8943b808-afee-4e49-9374-753e3f0618cd
+revision: 970e39c4-ed36-4fb6-bd17-131e35cfca48
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -34,7 +27,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160505T123814Z
+20160614T113638Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8943b808-afee-4e49-9374-753e3f0618cd
+970e39c4-ed36-4fb6-bd17-131e35cfca48
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160614T145814Z
+20160614T133846Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
