@@ -234,9 +234,12 @@
     <Compile Include="Areas\Presales\BaseTemplates\IContentFormatGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IDuplicateContentPage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IGoogleAuthorshipGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IGoogleTagManagerGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IIndexationPage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IOpenGraphGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IOpenGraphPage.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IQubitOpenTagGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IResponseTapGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IResponsiveDesignGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ISerpAppearancePage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterGlobal.cs" />

@@ -7,7 +7,7 @@ using Vitality.Website.Areas.Presales.BaseTemplates;
 
 namespace Vitality.Website.Areas.Presales.SettingsTemplates
 {
-    public class GlobalSettings : SitecoreItem, IAnalyticsGlobal, IAppReferenceGlobal, IBrowserLatencyGlobal, IBrowserStylingGlobal, IContentFormatGlobal, IGoogleAuthorshipGlobal, IOpenGraphGlobal, IResponsiveDesignGlobal, ITwitterGlobal
+    public class GlobalSettings : SitecoreItem, IAnalyticsGlobal, IAppReferenceGlobal, IBrowserLatencyGlobal, IBrowserStylingGlobal, IContentFormatGlobal, IGoogleAuthorshipGlobal, IOpenGraphGlobal, IResponsiveDesignGlobal, ITwitterGlobal, IResponseTapGlobal, IGoogleTagManagerGlobal, IQubitOpenTagGlobal
     {
         public string Referrer { get; set; }
         public string AppleITunesApp { get; set; }
@@ -25,5 +25,8 @@ namespace Vitality.Website.Areas.Presales.SettingsTemplates
         public string TwitterCard { get; set; }
         public string TwitterAppIPhoneId { get; set; }
         public string TwitterAppIPhoneName { get; set; }
+        public string ResponseTapScript { get; set; }
+        public string GoogleTagManagerScript { get; set; }
+        public string QubitOpenTagScript { get; set; }
     }
 }
