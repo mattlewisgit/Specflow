@@ -1,0 +1,14 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Products.ProductsComponent>
+
+<div>
+	<h1>Insert here</h1>
+	@foreach (var panel in Model.ProductPanels)
+	{
+		using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", panel.Path))
+		{
+			@Editable(panel, m => m.Image, new {height = 300})
+			@Editable(panel, m => m.OpeningParagraph)
+			@Editable(panel, m => m.CallToAction, new {@class = "css-class"})
+		}
+	}
+</div>
