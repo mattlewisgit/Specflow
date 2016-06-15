@@ -8,6 +8,7 @@ define([
     "use strict";
 
     var module = {
+        breakpoint: breakpoints.max.small,
         isCollapsed: false,
         isExpanded: false,
         footer: null,
@@ -33,15 +34,31 @@ define([
             // For multiple buttons, register events and adapt the footer.
             module.footer.find("h6 a").click(module.toggle);
             module.adapt();
+
+            // Attach the adapt event to the matchMedia listener
+            // if possible, to prevent it from being called every
+            // time the window resizes, which is the failover for old browsers.
+            if (window.matchMedia) {                
+                return window
+                    .matchMedia(module.breakpoint.value)
+                    .addListener(module.adapt);
+            }
+            
             return $(window).resize(module.adapt);
         },
 
-        adapt: function () {
+        /**
+         * Adapts the quote footer based on a media query.
+         * For backwards-compatibility, the mql is optional,
+         * so this can be fired from window.matchMedia or window.resize.
+         * @param {MediaQueryListEvent} [mql] From window.matchMedia.
+         */
+        adapt: function (mql) {
             if (module.isExpanded) {
                 return;
             }
 
-            if (breakpoints.max.small()) {
+            if ((mql && mql.matches) || module.breakpoint.test()) {
                 if (!module.isCollapsed) {
                     // Cache the collapsed state and hide.
                     module.isCollapsed = true;
@@ -55,7 +72,7 @@ define([
 
         hide: function() {
             module.footer.css({
-                bottom: "-" + module.footerBody.height() + "px"
+                bottom: "-" + module.footerBody.outerHeight() + "px"
             });
         },
 
