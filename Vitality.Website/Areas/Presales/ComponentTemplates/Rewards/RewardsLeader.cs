@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.Models.Cards
+﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.Rewards
 {
     using System.Collections.Generic;
 
@@ -7,20 +7,15 @@
 
     using Vitality.Website.Areas.Global.Models;
 
-    public class CardsStacked : SitecoreItem
+    public class RewardsLeader : SitecoreItem
     {
-        public CardsStacked()
-        {
-            this.BackgroundImage = new Image();
-        }
-
         public string Headline { get; set; }
 
         public string OpeningParagraph { get; set; }
 
-        public Image BackgroundImage { get; set; }
+        public Link CallToAction { get; set; }
 
         [SitecoreChildren]
-        public IEnumerable<Card> Cards { get; set; }
+        public IEnumerable<ImageLink> Rewards { get; set; }
     }
 }
