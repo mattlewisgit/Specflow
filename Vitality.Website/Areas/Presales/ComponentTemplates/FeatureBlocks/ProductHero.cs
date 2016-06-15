@@ -1,8 +1,8 @@
-﻿namespace Vitality.Website.Areas.Presales.Models.FeatureBlocks
+﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
 {
     using Glass.Mapper.Sc.Fields;
 
-    using Global.Models;
+    using Vitality.Website.Areas.Global.Models;
 
     public class ProductHero : SitecoreItem
     {

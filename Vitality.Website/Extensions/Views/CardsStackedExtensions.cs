@@ -1,10 +1,11 @@
 ﻿namespace Vitality.Website.Extensions.Views
 {
     using Glass.Mapper.Sc.Web.Mvc;
-    using Vitality.Website.Areas.Presales.Models.Cards;
-    using Vitality.Website.Areas.Presales.RenderingModels;
 
-   public static class CardsStackedExtensions
+    using Vitality.Website.Areas.Presales.ComponentTemplates.Cards;
+    using Vitality.Website.Areas.Presales.RenderingTemplates;
+
+    public static class CardsStackedExtensions
     {
         public static string BackgroundClass(this GlassView<CardsStacked> view)
         {

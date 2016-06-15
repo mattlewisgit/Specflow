@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.RenderingModels
+﻿namespace Vitality.Website.Areas.Presales.RenderingTemplates
 {
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;

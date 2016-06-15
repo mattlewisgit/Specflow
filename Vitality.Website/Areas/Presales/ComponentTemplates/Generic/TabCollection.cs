@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace Vitality.Website.Areas.Presales.Models.Generic
+﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.Generic
 {
+    using System.Collections.Generic;
+
     using Glass.Mapper.Sc.Configuration.Attributes;
 
     using Vitality.Website.Areas.Global.Models;

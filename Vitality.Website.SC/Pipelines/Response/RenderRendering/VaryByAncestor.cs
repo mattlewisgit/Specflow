@@ -35,7 +35,6 @@
             }
         }
 
-
         public void AddTemplateById(string templateId)
         {
             Assert.ArgumentNotNullOrEmpty(templateId, "templateId");
@@ -59,12 +58,6 @@
                 return;
             }
             var dataSource = args.PageContext.Item;
-
-            /*if (!string.IsNullOrWhiteSpace(args.Rendering.DataSource))
-            {
-                dataSource = args.PageContext.Database.GetItem(args.Rendering.DataSource);
-                Assert.IsNotNull(dataSource, "dataSource: " + args.Rendering.DataSource);
-            }*/
 
             Assert.IsNotNull(dataSource, "dataSource: args.PageContext.Item");
 

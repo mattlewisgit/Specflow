@@ -4,7 +4,7 @@
 
     using Glass.Mapper.Sc.Web.Mvc;
 
-    using Vitality.Website.Areas.Presales.Models.Navigation;
+    using Vitality.Website.Areas.Presales.ComponentTemplates.Navigation;
 
     public static class NavigationSubSectionExtensions
     {

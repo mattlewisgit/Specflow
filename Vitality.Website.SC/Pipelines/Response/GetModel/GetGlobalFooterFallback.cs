@@ -16,7 +16,7 @@
                 {
                     contextItem = contextItem.Parent;
                 }
-                rendering.DataSource = contextItem.Paths.FullPath;
+                rendering.Item = contextItem;
             }
         }
     }

@@ -1,6 +1,5 @@
 ﻿namespace Vitality.Website.Areas.Presales.BaseTemplates
 {
-    using System;
     using System.Collections.Generic;
 
     using Glass.Mapper.Sc.Configuration;
@@ -9,6 +8,7 @@
 
     using Vitality.Website.Areas.Global.Models;
     using Vitality.Website.Areas.Presales.SettingsTemplates;
+    using Vitality.Website.SC;
 
     public interface IQuoteFooter
     {
@@ -29,7 +29,7 @@
             this.Map(
                 x => x.AutoMap(),
                 x => x.Delegate(footer => footer.Headline).GetValue(
-                    context => context.Service.GetItem<QuoteFooter>(Guid.Parse("{5F2E1820-3907-400D-B0F4-3C8D6DDB0989}")).Headline)
+                    context => context.Service.GetItem<QuoteFooter>(ItemConstants.Presales.Content.Configuration.QuoteFooter.Id).Headline)
                 );
         }
     }
