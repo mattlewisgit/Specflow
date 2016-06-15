@@ -2,8 +2,17 @@
 
 @if (Model.ShowQuoteFooter)
 {
-    foreach (var globalFooterButton in Model.QuoteFooterLinks)
-    {
-        @RenderLink(globalFooterButton, m => m.Link)
-    }
+    <div class="quote-footer">
+        <h6>
+            <span>@Html.Raw(Model.Headline)</span>
+            <a>@Html.Raw(Model.Headline)</a>
+        </h6>
+
+        <div class="quote-footer--body match-width">
+            @foreach (var link in Model.QuoteFooterLinks)
+            {
+                @RenderLink(link, m => m.Link)
+            }
+        </div>
+    </div>
 }

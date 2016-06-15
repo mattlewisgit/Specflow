@@ -11,6 +11,8 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
 
         public IEnumerable<LinkItem> QuoteFooterLinks { get; set; }
 
+        public string Headline { get; set; }
+
         public bool InheritQuoteFooterSettings { get; set; }
     }
 }
