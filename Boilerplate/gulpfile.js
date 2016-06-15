@@ -19,6 +19,7 @@ var configs = {
     cssnano: require("./config/cssnano-config.json"),
     favicon: require("./config/favicon-config.json"),
     imageResize: require("./config/image-resize-config.json"),
+    sizeReport: require("./config/sizereport-config.json"),
     svgSprite: require("./config/svgsprite-config.json")
 };
 
@@ -38,6 +39,7 @@ var tasks = {
         lint: "js:lint"
     },
     razor: "razor",
+    report: "report",
     resize: "resize",
     sass: {
         build: "sass:build",
@@ -324,6 +326,16 @@ gulp.task(tasks.favicon.checkForUpdate, function () {
             throw err;
         }
     });
+});
+
+gulp.task(tasks.report, function () {
+    return gulp
+        .src([
+            paths.css + "/*.css",
+            paths.js.dest + "/*.js*/",
+            paths.templates.dest + "**/*.html"
+        ])
+        .pipe(plugins.sizereport(configs.sizeReport));
 });
 
 gulp.task(tasks.watch, function () {
