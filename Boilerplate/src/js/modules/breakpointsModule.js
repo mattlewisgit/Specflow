@@ -7,23 +7,32 @@ define([
 ) {
     "use strict";
 
-    // Take raw breakpoint values from JSON and packages
-    // them up as reusable Modernizr media query tests for easy reuse!
+    // Take raw breakpoint values from JSON and repackage them
+    // as reusable values and Modernizr media query tests!
     var breakpoints = {
         max: {},
         min: {}
     };
 
     $.each(data, function (name, value) {
-        // Creates functions for each breakpoint,
+        var max = "(max-width: " + value + "px)";
+        var min = "(min-width: " + value + "px)";
+
+        // Creates values and functions for each breakpoint,
         // as they need to be evaluated each time, not precalculated.
-        // e.g. breakpoints.max.small()
-        breakpoints.max[name] = function () {
-            return Modernizr.mq("(max-width: " + value + "px)");
+        // e.g. breakpoints.max.small.test()
+        breakpoints.max[name] = {
+            test: function() {
+                return Modernizr.mq(max);
+            },
+            value: max
         };
 
-        breakpoints.min[name] = function () {
-            return Modernizr.mq("(min-width: " + value + "px)");
+        breakpoints.min.name = {
+            test: function() {
+                return Modernizr.mq(min);
+            },
+            value: min
         };
     });
 
