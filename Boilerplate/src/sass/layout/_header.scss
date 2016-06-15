@@ -270,7 +270,6 @@
 .site-nav__item,
 .utility-nav__item {
     @extend .coverlink;
-    text-transform: uppercase;
     font-weight: 500;
     color: $grey;
     display: inline-block;
