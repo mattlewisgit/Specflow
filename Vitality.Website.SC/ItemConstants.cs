@@ -4,6 +4,17 @@
 
     public static class ItemConstants
     {
+        public static class Global
+        {
+            public static class Templates
+            {
+                public static class Subfolder
+                {
+                    public static readonly Guid Id = Guid.Parse("{4902517E-93B7-41B5-BCC4-387E1D0304A7}");
+                }
+            }
+        }
+
         public static class Presales
         {
             public static class Content

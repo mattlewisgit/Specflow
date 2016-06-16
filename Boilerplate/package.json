@@ -25,6 +25,7 @@
         "gulp-replace": "*",
         "gulp-sass": "*",
         "gulp-sass-lint": "*",
+        "gulp-sizereport": "*",
         "gulp-sourcemaps": "*",
         "gulp.spritesmith": "*",
         "gulp-svg-sprite": "*",

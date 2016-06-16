@@ -1,0 +1,7 @@
+﻿{
+    "gzip": true,
+    "maxMinifiedGzippedSize": 100000,
+    "maxSize": 100000,
+    "maxTotalGzippedSize": 200000,
+    "maxTotalSize": 200000
+}

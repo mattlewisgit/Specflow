@@ -19,6 +19,7 @@ var configs = {
     cssnano: require("./config/cssnano-config.json"),
     favicon: require("./config/favicon-config.json"),
     imageResize: require("./config/image-resize-config.json"),
+    sizeReport: require("./config/sizereport-config.json"),
     svgSprite: require("./config/svgsprite-config.json")
 };
 
@@ -35,13 +36,16 @@ var tasks = {
     images: "images",
     js: {
         build: "js",
+        devel: "js:devel",
         lint: "js:lint"
     },
     razor: "razor",
+    report: "report",
     resize: "resize",
     sass: {
         build: "sass:build",
         critical: "sass:critical",
+        devel: "sass:devel",
         json: "sass:json",
         lint: "sass:lint",
         modernizr: "sass:modernizr",
@@ -58,6 +62,7 @@ var paths = {
     base: ".",
     css: "css",
     critical: "critical-css.html",
+    dist: "dist",
     favicon: {
         template: "src/favicon-template.html"
     },
@@ -80,10 +85,10 @@ var paths = {
         }
     },
     js: {
-        breakpoints: "src/js/breakpoints.json",
+        breakpoints: "config/breakpoints.json",
         dest: "js",
         filename: "vitality-boilerplate.js",
-        modernizrFilename: "modernizr-custom.min.js",
+        modernizrFilename: "modernizr-custom.js",
         src: [
             "src/js/**/*.js",
             "!src/js/require.js",
@@ -126,8 +131,6 @@ gulp.task(tasks.js.lint, function () {
 gulp.task(tasks.sass.lint, function () {
     return gulp
         .src(paths.sass.src)
-        .pipe(plugins.changed(paths.temp))
-        .pipe(gulp.dest(paths.temp))
         .pipe(plugins.sassLint())
         .pipe(plugins.sassLint.format())
         .pipe(plugins.sassLint.failOnError());
@@ -161,8 +164,6 @@ gulp.task(tasks.sass.json, function () {
         .pipe(plugins.jsonSass({
             sass: false
         }))
-        // Make all variables read as private.
-        .pipe(plugins.replace("$", "$_"))
         .pipe(plugins.rename({
             prefix: "_"
         }))
@@ -202,16 +203,23 @@ gulp.task(tasks.sass.spritesheet.svg, function () {
         .pipe(gulp.dest(paths.base));
 });
 
-gulp.task(tasks.sass.build, function () {
-    // TODO Enable source maps.
+gulp.task(tasks.sass.devel, function () {
     return gulp
         .src(paths.sass.srcAll)
-        //.pipe(plugins.sourcemaps.init())
+        .pipe(plugins.sourcemaps.init())
         .pipe(plugins.sass().on("error", plugins.sass.logError))
-        .pipe(gulp.dest(paths.temp))
-        //.pipe(plugins.sourcemaps.write())
-        .pipe(plugins.cssnano(configs.cssnano))
+        .pipe(plugins.sourcemaps.write("."))
         .pipe(gulp.dest(paths.css));
+});
+
+gulp.task(tasks.sass.build, function () {
+    return gulp
+        .src(paths.css + "/*.css")
+        .pipe(plugins.cssnano(configs.cssnano))
+        .pipe(plugins.rename({
+            suffix: ".min"
+        }))
+        .pipe(gulp.dest(paths.dist));
 });
 
 gulp.task(tasks.sass.critical, function () {
@@ -243,12 +251,13 @@ gulp.task(tasks.css, function () {
         tasks.sass.spritesheet.svg,
         tasks.sass.json,
         tasks.sass.lint,
+        tasks.sass.devel,
         tasks.sass.build,
         tasks.sass.modernizr,
         tasks.sass.critical);
 });
 
-gulp.task(tasks.js.build, [tasks.js.lint], function () {
+gulp.task(tasks.js.devel, function () {
     return gulp
         .src(paths.js.srcAll)
         .pipe(amdOptimize("app", {
@@ -257,8 +266,17 @@ gulp.task(tasks.js.build, [tasks.js.lint], function () {
             baseUrl: "src/js"
         }))
         .pipe(plugins.concat(paths.js.filename))
-        .pipe(plugins.uglify())
         .pipe(gulp.dest(paths.js.dest));
+});
+
+gulp.task(tasks.js.build, [tasks.js.lint, tasks.js.devel], function () {
+    return gulp
+        .src(paths.js.dest + "/*.js*/")
+        .pipe(plugins.uglify())
+        .pipe(plugins.rename({
+            suffix: ".min"
+        }))
+        .pipe(gulp.dest(paths.dist));
 });
 
 gulp.task(tasks.default, [
@@ -279,7 +297,6 @@ gulp.task(tasks.sass.modernizr, function () {
                 "setClasses"
             ]
         }))
-        .pipe(plugins.uglify())
         .pipe(plugins.rename(paths.js.modernizrFilename))
         .pipe(gulp.dest(paths.js.dest));
 });
@@ -328,6 +345,12 @@ gulp.task(tasks.favicon.checkForUpdate, function () {
     });
 });
 
+gulp.task(tasks.report, function () {
+    return gulp
+        .src(paths.dist + "/**/*")
+        .pipe(plugins.sizereport(configs.sizeReport));
+});
+
 gulp.task(tasks.watch, function () {
     gulp.watch(paths.js.src, [
         tasks.js.build
@@ -353,10 +376,10 @@ gulp.task(tasks.serve, function() {
     gulp.watch(
         [paths.js.srcAll],
         { cwd: paths.base },
-        [tasks.js.build, browserSync.reload]);
+        [tasks.js.devel, browserSync.reload]);
 
     gulp.watch(
         [paths.sass.srcAll],
         { cwd: paths.base },
-        [tasks.sass.build, browserSync.reload]);
+        [tasks.sass.devel, browserSync.reload]);
 });
