@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Vitality.Website.Areas.Presales.BaseTemplates
 {
-    public interface IBrowserStylingGlobal
+    public interface IWebmasterToolsGlobal
     {
-        string ApplicationName { get; set; }
+        string GoogleSiteVerification { get; set; }
+        string BingSiteVerification { get; set; }
     }
 }

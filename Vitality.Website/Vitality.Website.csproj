@@ -227,11 +227,9 @@
     <Compile Include="Areas\Global\Models\KeyValuePair.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
-    <Compile Include="Areas\Presales\BaseTemplates\IAnalyticsGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IAppReferenceGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IBrowserLatencyGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IBrowserStylingGlobal.cs" />
-    <Compile Include="Areas\Presales\BaseTemplates\IContentFormatGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IDuplicateContentPage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IGoogleAuthorshipGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IGoogleTagManagerGlobal.cs" />
@@ -240,10 +238,10 @@
     <Compile Include="Areas\Presales\BaseTemplates\IOpenGraphPage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IQubitOpenTagGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IResponseTapGlobal.cs" />
-    <Compile Include="Areas\Presales\BaseTemplates\IResponsiveDesignGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ISerpAppearancePage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterPage.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IWebmasterToolsGlobal.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsStacked.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FeaturedQuestions.cs" />
@@ -261,7 +259,6 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Settings\GlobalSettings.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryComponent.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryListItem.cs" />
-    <Compile Include="Areas\Presales\PageTemplates\Base.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
     <Compile Include="Areas\Presales\RenderingModels\CardsStackedRendering.cs" />
@@ -524,6 +521,7 @@
     <Content Include="Areas\Presales\Views\Shared\_Favicons.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_CriticalCss.cshtml" />
     <Content Include="client_side\config\cssnano-config.json" />
+    <Content Include="Areas\Presales\Views\Shared\_Metadata.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

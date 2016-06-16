@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {EC84C2E8-BE96-4AA3-AA8D-27DD42C1E0C9}
+id: {FBE38A80-984A-47DA-8F64-D2D4E1B93900}
 database: master
-path: /sitecore/templates/Presales/Base Templates/_AnalyticsGlobal
+path: /sitecore/templates/Presales/Base Templates/_WebmasterToolsGlobal
 parent: {8B734D81-E90D-4DEF-AC05-12671638F725}
-name: _AnalyticsGlobal
+name: _WebmasterToolsGlobal
 master: {00000000-0000-0000-0000-000000000000}
 template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
 templatekey: Template
@@ -19,7 +19,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 2ba29bea-4b13-4ba0-b2dc-e64549cfcb48
+revision: c46f093d-aefc-48c5-a046-ad63fad3f4d2
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -27,7 +27,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160614T143526Z
+20160616T081212Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -41,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-2ba29bea-4b13-4ba0-b2dc-e64549cfcb48
+c46f093d-aefc-48c5-a046-ad63fad3f4d2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160614T143527Z
+20160616T081633Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

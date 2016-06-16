@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {091F5E75-46E6-473E-BA30-23C3391CBDA8}
+id: {424C5D6B-3155-477A-A1BC-C5F6B6A9FF56}
 database: master
-path: /sitecore/templates/Presales/Base Templates/_ResponsiveDesignGlobal/Responsive Design/HandheldFriendly
-parent: {FFAB6A62-321D-4BD2-939B-DED7737E09C1}
-name: HandheldFriendly
+path: /sitecore/templates/Presales/Base Templates/_WebmasterToolsGlobal/Webmaster Tools/BingSiteVerification
+parent: {64F2F7E9-AEF4-47B4-AA19-A3E0B0974C35}
+name: BingSiteVerification
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -22,40 +22,40 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-100
+200
 ----version----
 language: en
 version: 1
-revision: a5d228ac-d5e6-4427-afd3-7f43a4a36463
+revision: c9c99385-2163-462c-92e6-ba8e9a3fe20c
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 17
+content-length: 22
 
-Handheld Friendly
+Bing Site Verification
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160614T133046Z
+20160614T150240Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-a5d228ac-d5e6-4427-afd3-7f43a4a36463
+c9c99385-2163-462c-92e6-ba8e9a3fe20c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160614T133047Z
+20160616T081641Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
