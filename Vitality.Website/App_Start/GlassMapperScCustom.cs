@@ -6,7 +6,7 @@ using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
 
 namespace Vitality.Website.App_Start
 {
-    using Vitality.Website.Areas.Presales.BaseTemplates;
+    using Vitality.Website.Areas.Presales.PageTemplates;
 
     public static  class GlassMapperScCustom
     {
@@ -50,7 +50,7 @@ namespace Vitality.Website.App_Start
         {
 			// Add maps here
             // mapsConfigFactory.Add(() => new SeoMap());
-            mapsConfigFactory.Add(() => new QuoteFooterConfig());
+            mapsConfigFactory.Add(() => new BasePageConfig());
         }
     }
 }

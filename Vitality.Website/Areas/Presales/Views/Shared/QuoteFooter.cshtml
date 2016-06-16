@@ -1,18 +1,17 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.BaseTemplates.IQuoteFooter>
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.BasePage>
 
 @if (Model.ShowQuoteFooter)
 {
-    <div class="quote-footer">
-        <h6>
-            <span>@Html.Raw(Model.Headline)</span>
-            <a>@Html.Raw(Model.Headline)</a>
-        </h6>
-
-        <div class="quote-footer--body match-width">
-            @foreach (var link in Model.QuoteFooterLinks)
-            {
-                @RenderLink(link, m => m.Link)
-            }
-        </div>
+<div class="quote-footer">
+    <h6>
+        <span>@Html.Raw(Model.Headline)</span>
+        <a>@Html.Raw(Model.Headline)</a>
+    </h6>
+    <div class="quote-footer--body match-width">
+        @foreach (var link in Model.QuoteFooterLinks)
+        {
+            @RenderLink(link, m => m.Link, new { @class = "button-cta" })
+        }
     </div>
+</div>
 }

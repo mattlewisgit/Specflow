@@ -87,7 +87,7 @@
     <Compile Include="Events\ItemEventsHandler.cs" />
     <Compile Include="ItemConstants.cs" />
     <Compile Include="Pipelines\Publishing\GetItemReferences\AddDataSourceItemDescendants.cs" />
-    <Compile Include="Pipelines\Response\GetModel\GetGlobalFooterFallback.cs" />
+    <Compile Include="Pipelines\Response\GetModel\GetQuoteFooterFallback.cs" />
     <Compile Include="Pipelines\Response\RenderRendering\VaryByAncestor.cs" />
     <Compile Include="Pipelines\RichTextEditor\SaveRichTextContent\InjectTableSawStyles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -39,6 +39,17 @@
                 }
             }
 
+            public static class Layout
+            {
+                public static class Renderings
+                {
+                    public static class QuoteFooter
+                    {
+                        public static readonly Guid Id = Guid.Parse("{F643ED45-4AC0-4751-AF89-4F31755527B5}");
+                    }
+                }
+            }
+
             public static class Templates
             {
                 public static class NavigationSection
