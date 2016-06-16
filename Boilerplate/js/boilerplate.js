@@ -12,7 +12,11 @@
     var markups = document.getElementsByClassName("language-markup");
 
     for (var i = 0; i < examples.length; ++i) {
+        var example = examples[i];
+        var htmlAttr = example.classList.contains("example--outer")
+            ? "outerHTML" : "innerHTML";
+
         markups[i].innerHTML =
-            htmlSpecialChars(examples[i].innerHTML);
+            htmlSpecialChars(example[htmlAttr]);
     }
 })();

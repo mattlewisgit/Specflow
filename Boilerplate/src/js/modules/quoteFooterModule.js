@@ -13,6 +13,7 @@ define([
         isExpanded: false,
         footer: null,
         footerBody: null,
+        hiddenClass: "quote-footer--body__hidden",
 
         init: function () {
             module.footer = $(".quote-footer");
@@ -71,15 +72,11 @@ define([
         },
 
         hide: function() {
-            module.footer.css({
-                bottom: "-" + module.footerBody.outerHeight() + "px"
-            });
+            module.footerBody.addClass(module.hiddenClass);
         },
 
         show: function() {
-            module.footer.css({
-                bottom: "0"
-            });
+            module.footerBody.removeClass(module.hiddenClass);
         },
 
         toggle: function() {

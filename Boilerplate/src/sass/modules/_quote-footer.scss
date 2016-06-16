@@ -4,15 +4,11 @@
 .quote-footer {
     @include ensure-at-front;
     
-    // Start off the page to prevent hide flicker
-    // or transition to collapsed on smaller devices.
-    bottom: -300px;
-
+    bottom: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
     right: 0;
     text-align: center;
-    transition: bottom $delay--medium ease;
 
     h6 {
         @include tab-rounding;
@@ -42,10 +38,20 @@
     }
 
     &--body {
+        // Height transition can only work on max-height,
+        // so set to a limit that the content would never reach.
+        max-height: 500px;
+        overflow-y: hidden;
         padding: $pad--thin 0;
+        transition: max-height $delay--medium ease;
 
         a {
             margin: $pad--xthin;
+        }
+
+        &__hidden {
+            max-height: 0;
+            padding: 0;
         }
     }
 }
