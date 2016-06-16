@@ -23,6 +23,10 @@
         }
 
         @media only screen and (max-width: $breakpoint-small) {
+            a, span {
+                @include font-size($font-small);
+            }
+
             a {
                 display: block;
             }
@@ -47,6 +51,15 @@
 
         a {
             margin: $pad--xthin;
+        }
+
+        @media only screen and (max-width: $breakpoint-small) {
+            a {
+                border-radius: 0;
+                border-width: 1px;
+                @include font-size($font-small);
+                padding: $pad--thin;
+            }
         }
 
         &__hidden {
