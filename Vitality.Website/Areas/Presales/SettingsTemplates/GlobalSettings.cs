@@ -1,10 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Linq.Expressions;
+using System.Reflection;
+using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.Fields;
+using Glass.Mapper.Sc.Maps;
+using Sitecore.Data.Items;
 using Vitality.Website.Areas.Global.Models;
 using Vitality.Website.Areas.Presales.BaseTemplates;
+using Vitality.Website.SC;
 
 namespace Vitality.Website.Areas.Presales.SettingsTemplates
 {
@@ -40,5 +44,40 @@ namespace Vitality.Website.Areas.Presales.SettingsTemplates
         public Image TwitterImage { get; set; }
         public string GoogleSiteVerification { get; set; }
         public string BingSiteVerification { get; set; }
+    }
+
+    public class GlobalSettingsConfig : SitecoreGlassMap<GlobalSettings>
+    {
+        public override void Configure()
+        {
+            var properties = typeof(GlobalSettings).GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+
+            var globalSettings = Expression.Parameter(typeof (GlobalSettings), "globalSettings");
+
+            Map(x => x.AutoMap());
+
+            foreach (var property in properties)
+            {
+                if (property.PropertyType == typeof (string))
+                {
+                    var propertyAccess = Expression.Property(globalSettings, property);
+                    var convertToObject = Expression.Convert(propertyAccess, typeof(object));
+                    var lambda = Expression.Lambda<Func<GlobalSettings, object>>(convertToObject, globalSettings);
+                    string fieldName = property.Name;
+                    Func<GlobalSettings, object> func = lambda.Compile();
+                    Map(x => x.Delegate(lambda).GetValue(context => GetFallbackValue(context, item => item[fieldName], func)));
+                }
+            }
+        }
+
+        private object GetFallbackValue(SitecoreDataMappingContext context, Func<Item, string> getFieldValue, Func<GlobalSettings, object> getFallbackValue)
+        {
+            if (!string.IsNullOrWhiteSpace(getFieldValue(context.Item)))
+            {
+                return getFieldValue(context.Item);
+            }
+            var fallbackSettings = context.Service.GetItem<GlobalSettings>(ItemConstants.Presales.Content.Configuration.GlobalSettings.Id);
+            return getFallbackValue(fallbackSettings);
+        }
     }
 }

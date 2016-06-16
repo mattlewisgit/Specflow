@@ -28,6 +28,14 @@
                 {
                     public const string Path = "/sitecore/content/Presales/Content";
                 }
+
+                public static class Configuration
+                {
+                     public static class GlobalSettings
+                     {
+                         public static readonly Guid Id = Guid.Parse("{578F19B0-CEF6-4B29-AB9F-45BF82417DF4}");
+                     }
+                }
             }
 
             public static class Templates

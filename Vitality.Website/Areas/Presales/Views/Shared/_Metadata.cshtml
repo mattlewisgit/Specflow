@@ -1,6 +1,4 @@
-﻿@using Vitality.Website.Extensions
-@using Vitality.Website.Extensions.Views
-@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.SettingsTemplates.GlobalSettings>
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.SettingsTemplates.GlobalSettings>
 
 <title>@Model.Title</title>
 <meta name="description" content="@Model.Description"/>
@@ -30,7 +28,7 @@
 <link rel="publisher" href="@Model.Publisher">
 <meta name="apple-itunes-app" content="@Model.AppleITunesApp"/>
 <!-- foreach -->
-<link rel="dns-prefetch" href="http://"/> <!-- string split-->
+<link rel="dns-prefetch" href="@Model.DnsPrefetch"/> <!-- string split-->
 <link rel="canonical" href="@Model.Canonical"/>
 <meta name="referrer" content="unsafe-url"/>
 <meta name="robots" content="@Model.Robots"/>
