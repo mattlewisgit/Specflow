@@ -13,7 +13,9 @@ define([
         isExpanded: false,
         footer: null,
         footerBody: null,
+        footerHeader: null,
         hiddenClass: "quote-footer--body__hidden",
+        pageFooter: null,
 
         init: function () {
             module.footer = $(".quote-footer");
@@ -24,16 +26,18 @@ define([
             }
 
             module.footerBody = $(".quote-footer--body");
+            module.footerHeader = module.footer.find("h6");
+            module.pageFooter = $("footer:last-of-type");
 
             // If only a single button is present,
             // hide the tab and permanently show the button.
             if (module.footerBody.children().length < 2) {
-                module.footer.find("h6").hide();
+                module.footerHeader.hide();
                 return module.show();
             }
 
             // For multiple buttons, register events and adapt the footer.
-            module.footer.find("h6 a").click(module.toggle);
+            module.footerHeader.find("a").click(module.toggle);
             module.adapt();
 
             // Attach the adapt event to the matchMedia listener
@@ -71,12 +75,25 @@ define([
             }
         },
 
+        adaptPageFooter: function (height) {
+            // Note: setTimeout cannot be moved to this function!
+            module.pageFooter.css("padding-bottom", (height + 20) + "px");
+        },
+
         hide: function() {
             module.footerBody.addClass(module.hiddenClass);
+
+            setTimeout(function () {
+                module.adaptPageFooter(module.footerHeader.outerHeight());
+            }, 350);
         },
 
         show: function() {
             module.footerBody.removeClass(module.hiddenClass);
+
+            setTimeout(function () {
+                module.adaptPageFooter(module.footer.outerHeight());
+            }, 350);
         },
 
         toggle: function() {
