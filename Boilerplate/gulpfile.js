@@ -131,8 +131,6 @@ gulp.task(tasks.js.lint, function () {
 gulp.task(tasks.sass.lint, function () {
     return gulp
         .src(paths.sass.src)
-        .pipe(plugins.changed(paths.temp))
-        .pipe(gulp.dest(paths.temp))
         .pipe(plugins.sassLint())
         .pipe(plugins.sassLint.format())
         .pipe(plugins.sassLint.failOnError());
