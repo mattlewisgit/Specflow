@@ -1,0 +1,16 @@
+.products-component {
+    text-align: center;
+    padding: $pad--thin;
+
+    p {
+        padding: 0 $pad--large;
+    }
+
+    &-panel {
+        background-color: $primary-color;
+    }
+
+    img{
+        display : inline;
+    }
+}

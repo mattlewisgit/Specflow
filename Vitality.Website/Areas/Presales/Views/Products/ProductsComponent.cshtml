@@ -1,14 +1,23 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Products.ProductsComponent>
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Products.ProductsComponent>
 
-<div>
-	<h1>Insert here</h1>
-	@foreach (var panel in Model.ProductPanels)
-	{
-		using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", panel.Path))
+<div class="products-component text-light">
+	<div class="grid">
+		@foreach (var panel in Model.ProductPanels)
 		{
-			@Editable(panel, m => m.Image, new {height = 300})
-			@Editable(panel, m => m.OpeningParagraph)
-			@Editable(panel, m => m.CallToAction, new {@class = "css-class"})
+			using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", panel.Path))
+			{
+				<div class="products-component-panel grid-col-1-@this.NumberOfColumns()">
+					<div>
+						@Editable(panel, m => m.Image)
+					</div>
+					<p>
+						@Editable(panel, m => m.OpeningParagraph)
+					</p>
+
+					@Editable(panel, m => m.CallToAction, new { @class = "button-cta" })
+				</div>
+			}
 		}
-	}
+	</div>
 </div>
