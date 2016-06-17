@@ -1,0 +1,114 @@
+----item----
+version: 1
+id: {2FDFF1CB-6DF1-41E1-AB00-605C489215C2}
+database: master
+path: /sitecore/content/Presales/Content/Rich Text/Content 2
+parent: {16D790E9-5910-45CC-93B0-AA186A7D387D}
+name: Content 2
+master: {00000000-0000-0000-0000-000000000000}
+template: {1EFF0C91-5C21-4AE9-B0AA-8F05772410E6}
+templatekey: Content
+
+----version----
+language: en
+version: 1
+revision: 19420104-6edc-4071-a299-de4704c31925
+
+----field----
+field: {35B57356-DA32-4179-AFD5-3A74F13831B9}
+name: RichText
+key: richtext
+content-length: 2480
+
+<table summary="This is a summary" style="width: 590px; height: 74px;" class="data-table tablesaw tablesaw-stack" data-tablesaw-mode="stack">
+    <caption><strong>This is a heading</strong></caption>
+    <thead>
+        <tr>
+            <th> Cras elementum </th>
+            <th> Lorem ipsum </th>
+            <th>Phasellus ac </th>
+            <th>Nunc efficitur </th>
+            <th>Donec </th>
+            <th>tristique </th>
+            <th>viverra  </th>
+            <th>tempor  </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td> Donec faucibus </td>
+            <td> a tristique mauris </td>
+            <td> tincidunt tempor </td>
+            <td> pharetra sed nisl.</td>
+            <td> ultrices,</td>
+            <td> tristique</td>
+            <td> viverra</td>
+            <td> semper ut </td>
+        </tr>
+        <tr>
+            <td> <span style="color: #333333; background-color: #eaeff4;">massa vitae </span></td>
+            <td> <span style="color: #333333; background-color: #eaeff4;">leo,</span></td>
+            <td> faucibus</td>
+            <td> consectetur</td>
+            <td> fermentum.</td>
+            <td> Curabitur</td>
+            <td> <span style="color: #333333; background-color: #eaeff4;">est. Suspendisse </span></td>
+            <td> <span style="color: #333333; background-color: #eaeff4;">laoreet in </span></td>
+        </tr>
+        <tr>
+            <td> <span style="color: #333333; background-color: #eaeff4;">lacus </span></td>
+            <td> <span style="color: #333333; background-color: #eaeff4;">libero </span></td>
+            <td> porttitor</td>
+            <td> suscipit</td>
+            <td> Maecenas</td>
+            <td>dictum </td>
+            <td> laoreet</td>
+            <td> <span style="color: #333333; background-color: #eaeff4;">urna nec </span></td>
+        </tr>
+        <tr>
+            <td> <span style="color: #333333; background-color: #eaeff4;">imperdiet,</span></td>
+            <td> <span style="color: #333333; background-color: #eaeff4;">pharetra. Maecenas </span></td>
+            <td> <span style="color: #333333; background-color: #eaeff4;">auctor in,</span></td>
+            <td> gravida </td>
+            <td> Aliquam</td>
+            <td> Donec </td>
+            <td> dignissim</td>
+            <td> <span style="color: #333333; background-color: #eaeff4;">fermentum.</span></td>
+        </tr>
+    </tbody>
+</table>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160617T145934Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+19420104-6edc-4071-a299-de4704c31925
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160617T151536Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

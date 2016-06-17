@@ -171,9 +171,6 @@
     <Content Include="client_side\img\vitality-logo--white.svg" />
     <Content Include="client_side\img\vitality-logo.svg" />
     <Content Include="client_side\img\youtube--footer.svg" />
-    <Content Include="css\app.css" />
-    <Content Include="css\rich_text_editor.css" />
-    <Content Include="css\tablesaw.css" />
     <Content Include="Global.asax" />
     <Content Include="images\sprite-generated%402x.png" />
     <Content Include="images\sprite-generated.png" />
@@ -232,8 +229,8 @@
     <Compile Include="Areas\Presales\Models\CallToAction\PrimaryCallToAction.cs" />
     <Compile Include="Areas\Presales\Models\Cards\Card.cs" />
     <Compile Include="Areas\Presales\Models\Cards\CardsStacked.cs" />
-    <Compile Include="Areas\Presales\Models\FAQ\FeaturedQuestions.cs" />
-    <Compile Include="Areas\Presales\Models\FAQ\QuestionAnswer.cs" />
+    <Compile Include="Areas\Presales\Models\FAQ\FaqLeader.cs" />
+    <Compile Include="Areas\Presales\Models\FAQ\FaqPreview.cs" />
     <Compile Include="Areas\Presales\Models\FeatureBlocks\ProductHero.cs" />
     <Compile Include="Areas\Presales\Models\Generic\Content.cs" />
     <Compile Include="Areas\Presales\Models\Generic\Tab.cs" />
@@ -345,7 +342,6 @@
     <Content Include="App_Config\Include\Sitecore.Analytics.Tracking.Outcome.config" />
     <Content Include="App_Config\Include\Sitecore.Analytics.Tracking.RobotDetection.config" />
     <Content Include="App_Config\Include\Sitecore.AntiCsrf.config" />
-    <Content Include="App_Config\Include\Sitecore.Apps.TagInjection.config" />
     <Content Include="App_Config\Include\Sitecore.Buckets.config" />
     <Content Include="App_Config\Include\Sitecore.Buckets.WarmupQueries.config.example" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Analytics.config" />
@@ -460,7 +456,6 @@
     <Content Include="App_Config\Include\XdbCloud\Sitecore.ContentSearch.Cloud.DefaultIndexConfiguration.config.disabled" />
     <Content Include="App_Config\Include\XdbCloud\Sitecore.ContentSearch.Cloud.Index.Analytics.config.disabled" />
     <Content Include="App_Config\Include\XslExtension.config.example" />
-    <Content Include="App_Config\Include\z.Glass.Mapper.Sc.ViewRender.config.exclude" />
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\SwitchMasterToWeb.config.example" />
     <Content Include="App_Config\Include\Vitality\Vitality.Sites.config">
       <SubType>Designer</SubType>
@@ -493,7 +488,7 @@
     <Content Include="client_side\gulp.targets" />
     <Content Include="Areas\Presales\Views\Rewards\RewardsLeader.cshtml" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\BenefitLeader.cshtml" />
-    <Content Include="Areas\Presales\Views\FAQ\FAQPreview.cshtml" />
+    <Content Include="Areas\Presales\Views\FAQ\FAQLeader.cshtml" />
     <Content Include="Areas\Presales\Views\Summary\SummaryComponent.cshtml" />
     <Content Include="img\favicon\manifest.json" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\ProductHero.cshtml">

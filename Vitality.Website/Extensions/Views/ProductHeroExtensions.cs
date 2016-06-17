@@ -8,8 +8,11 @@
     {
         public static string ButtonClass(this GlassView<ProductHero> view)
         {
-            return view.Model.CallToAction.Type == LinkType.Anchor
-                ? "button-internal scroll-to-el" : "button-cta";
+            if (view.Model.CallToAction != null && view.Model.CallToAction.Type == LinkType.Anchor)
+            {
+                return "button-internal scroll-to-el";
+            }
+            return "button-cta";
         }
     }
 }
