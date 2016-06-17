@@ -22,13 +22,6 @@ version: 1
 revision: 74e6ee1a-7da1-4c7c-b1d8-0df5214f52fb
 
 ----field----
-field: {53299977-3D8B-45D3-A326-E1FB124EE244}
-name: BrowserTitle
-key: browsertitle
-content-length: 14
-
-Tabbed Content
-----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
