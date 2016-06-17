@@ -31,6 +31,8 @@
     <SitecoreAccessGuid>b7e2695a-c408-44c9-b2d9-17ed9b71b5a2</SitecoreAccessGuid>
     <InstallSitecoreConnector>True</InstallSitecoreConnector>
     <DisableFileDeployment>False</DisableFileDeployment>
+    <EnableValidations>False</EnableValidations>
+    <ValidationSettingsFilePath>.\Vitality.Website.Master_Debug.xml</ValidationSettingsFilePath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>

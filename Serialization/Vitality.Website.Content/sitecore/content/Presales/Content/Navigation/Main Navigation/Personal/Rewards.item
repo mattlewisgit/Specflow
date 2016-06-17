@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {46E5A744-D085-432F-8585-D05E21684BFD}
+database: master
+path: /sitecore/content/Presales/Content/Navigation/Main Navigation/Personal/Rewards
+parent: {34578FD9-D281-43E1-A4B3-2FE256144F84}
+name: Rewards
+master: {00000000-0000-0000-0000-000000000000}
+template: {1112F57A-7F76-46A8-8C10-95B16A7A5016}
+templatekey: Navigation Sub Section
+
+----version----
+language: en
+version: 1
+revision: 44f331d6-cbb8-4cb8-abe9-a429467d769a
+
+----field----
+field: {BD0CBAE0-0BD6-469B-B39A-C850EF09B1DC}
+name: SubSectionLink
+key: subsectionlink
+content-length: 70
+
+<link text="Rewards" linktype="internal" url="" anchor="" target="" />
+----field----
+field: {EDD6CAA1-BAE0-496F-8E15-9D84C4BD004A}
+name: MainMenuHeader
+key: mainmenuheader
+content-length: 22
+
+Explore Life Insurance
+----field----
+field: {DEC71AA4-DF96-4D3A-8521-DBA43A6FFBF3}
+name: MainMenuLinks
+key: mainmenulinks
+content-length: 272
+
+{D30482AB-C68F-43D0-A742-BCBF8D9C4C48}|{08536CAF-350C-40E1-81D3-0A949D3660D4}|{B97F5B03-2C82-4436-8F44-E181588A91B5}|{A289F305-6B36-41EF-AFD0-CB407513C912}|{4E4CC4CB-6600-49A0-A2C4-87247509AC90}|{90112B56-00A1-4053-8F7F-65FDC30988DC}|{D0D5D383-CF21-487A-A9C9-13DB48E7D5AD}
+----field----
+field: {C3CA5661-B0B6-4D90-A475-CA1236690517}
+name: AdditionalMenuHeader
+key: additionalmenuheader
+content-length: 12
+
+Useful Links
+----field----
+field: {BEE3DB8D-813D-411C-8910-3AD5FC54FAAA}
+name: AdditionalMenuLinks
+key: additionalmenulinks
+content-length: 311
+
+{4B891EDF-285B-4187-A67B-C1DE2FC5691B}|{C4E1A872-3484-4559-80C8-55EAA21F5C55}|{1AA5B61F-764E-4C4C-BA66-F9922C070FF4}|{87767536-881B-490C-BB76-74DB73361FE7}|{87878726-8410-45EF-BC09-94BAF98E4A38}|{7296559A-2270-475C-8F17-C92DF8553C18}|{AB11AA7A-933B-4A39-8A0A-21286621E8BD}|{ECB51134-BA75-458F-A00A-9CCA83DE2C45}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160511T104318Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+44f331d6-cbb8-4cb8-abe9-a429467d769a
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160511T144026Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
