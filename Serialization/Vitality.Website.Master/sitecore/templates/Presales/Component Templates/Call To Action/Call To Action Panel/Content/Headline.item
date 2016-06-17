@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {F4794F12-6EEB-41F2-9063-E54B12C034DD}
+id: {448B79B6-D57E-416F-AF3E-CF4202E2F0ED}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Summary/Summary Component/Right Content/RightContentOpeningParagraph
-parent: {02B41539-62EC-458F-BE8B-D75CCA75092C}
-name: RightContentOpeningParagraph
+path: /sitecore/templates/Presales/Component Templates/Call To Action/Call To Action Panel/Content/Headline
+parent: {40E10449-B12B-48F1-971C-4A6788728DD0}
+name: Headline
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -33,36 +33,36 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: dfa83050-442f-4f0c-9f08-071c92c75666
+revision: b3b4af7e-912b-474e-ba10-2e3e968d81bc
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 31
+content-length: 8
 
-Right Content Opening Paragraph
+Headline
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160525T151421Z
+20160609T104700Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-dfa83050-442f-4f0c-9f08-071c92c75666
+b3b4af7e-912b-474e-ba10-2e3e968d81bc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160615T170817Z
+20160617T095718Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

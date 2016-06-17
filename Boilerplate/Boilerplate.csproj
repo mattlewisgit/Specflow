@@ -41,6 +41,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="components\primary-cta.html" />
     <Content Include="components\accordion.html" />
     <Content Include="components\quote-footer\quote-footer-3-buttons.html" />
     <Content Include="components\quote-footer\quote-footer-2-buttons.html" />
