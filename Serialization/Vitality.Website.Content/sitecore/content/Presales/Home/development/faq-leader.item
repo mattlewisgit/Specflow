@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {17FEEA40-A431-4AB5-9E78-318ABEB3F999}
+id: {70909960-75A3-4041-A392-FB68300F78C9}
 database: master
-path: /sitecore/content/Presales/home/summary-component
-parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
-name: summary-component
+path: /sitecore/content/Presales/home/development/faq-leader
+parent: {077FEBB4-E848-4606-B9C5-5B186C648E97}
+name: faq-leader
 master: {00000000-0000-0000-0000-000000000000}
 template: {EAE876EB-8043-4F1B-95C4-C015EAE09215}
 templatekey: Product Overview Page
@@ -26,43 +26,50 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: a1527779-2427-4f04-9d33-fbbe24333440
+revision: f53ba1f0-07fc-440a-8ad0-5ab592f2c04e
 
+----field----
+field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
+name: Title
+key: title
+content-length: 10
+
+FAQ Leader
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 17
+content-length: 10
 
-Summary Component
+FAQ Leader
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 638
+content-length: 268
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{8D03DA58-B481-4FAC-8178-692277248BE6}" p:before="*" s:ds="{8CB5D35D-D163-45A9-B0AB-153FCFDD794A}" s:id="{5F16610E-4879-416D-9104-EFB56D687CC0}" s:par="ImageRelativePosition=%7B4462B7F7-58EB-4A54-9152-F3EFB3416EA6%7D" s:ph="PresalesContent" /><r uid="{542484AE-02C1-4434-8AD4-888F0B55366A}" p:after="r[@uid='{8D03DA58-B481-4FAC-8178-692277248BE6}']" s:ds="{8CB5D35D-D163-45A9-B0AB-153FCFDD794A}" s:id="{5F16610E-4879-416D-9104-EFB56D687CC0}" s:par="ImageRelativePosition=%7B45898EBA-C0C9-4756-8C7C-D590E43FB3D9%7D" s:ph="PresalesContent" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{C4D09015-24A1-467E-BFB4-4338BF1C2183}" p:before="*" s:ds="{61140004-1405-4D7C-8F14-5E95F8D40142}" s:id="{667B833F-ABE7-47A2-A965-9160E975330A}" s:ph="PresalesContent" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160617T132438Z
+20160617T124423Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-a1527779-2427-4f04-9d33-fbbe24333440
+f53ba1f0-07fc-440a-8ad0-5ab592f2c04e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T135348Z
+20160617T155724Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
