@@ -1,14 +1,21 @@
 ----item----
 version: 1
-id: {0E492DD6-0A37-40CB-B067-6378C627C0F7}
+id: {077FEBB4-E848-4606-B9C5-5B186C648E97}
 database: master
-path: /sitecore/content/Presales/Home/content
+path: /sitecore/content/Presales/home/development
 parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
-name: content
+name: development
 master: {00000000-0000-0000-0000-000000000000}
 template: {EAE876EB-8043-4F1B-95C4-C015EAE09215}
 templatekey: Product Overview Page
 
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 208
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}"><p:d /></r><r uid="{B59AF949-7B41-4E23-8CD4-A41D5128E3F8}"><p:d /></r></d></r>
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
 name: __Workflow
@@ -19,50 +26,36 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 8c28b680-1d77-4015-9de3-ce7ea5d0ca2b
+revision: abaa0f6a-0a73-47b6-b841-313498299f3f
 
-----field----
-field: {53299977-3D8B-45D3-A326-E1FB124EE244}
-name: BrowserTitle
-key: browsertitle
-content-length: 7
-
-Content
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 7
+content-length: 11
 
-Content
-----field----
-field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
-name: __Final Renderings
-key: __final renderings
-content-length: 492
-
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{DE7C6439-B630-4314-B06E-DDB83125A7C0}" p:before="*" s:ds="{A2CD5FBD-B70A-4A97-A529-29BEC421DBBD}" s:id="{25359980-8C72-4BA2-8B4C-755725B6C8BB}" s:ph="PresalesContent" /><r uid="{3DF4A8D5-3B59-403E-9E26-4786836E5D21}" p:after="r[@uid='{DE7C6439-B630-4314-B06E-DDB83125A7C0}']" s:ds="{2FDFF1CB-6DF1-41E1-AB00-605C489215C2}" s:id="{25359980-8C72-4BA2-8B4C-755725B6C8BB}" s:ph="PresalesContent" /></d></r>
+Development
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160617T134852Z
+20160617T155718Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-8c28b680-1d77-4015-9de3-ce7ea5d0ca2b
+abaa0f6a-0a73-47b6-b841-313498299f3f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T150447Z
+20160617T155858Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

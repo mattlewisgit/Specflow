@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {9FE12F6A-61A6-4F78-8C34-A8EC2ED1E094}
+id: {B79A6BC9-6487-468D-8D08-4701DA1FCE70}
 database: master
-path: /sitecore/content/Presales/Content/Navigation/Main Navigation/Development/Components/Summary Component
+path: /sitecore/content/Presales/Content/Navigation/Main Navigation/Development/Components/Benefit Leader
 parent: {7AC07B93-215C-48D9-9BE2-ABE8A0EF01C8}
-name: Summary Component
+name: Benefit Leader
 master: {00000000-0000-0000-0000-000000000000}
 template: {86112F62-773D-464C-AEE7-F6E86CEC4A11}
 templatekey: Link
@@ -12,36 +12,36 @@ templatekey: Link
 ----version----
 language: en
 version: 1
-revision: d67e239d-3749-49d1-b3e0-648552a9b482
+revision: 33b587b4-f4a2-493d-85b8-d38265bb489d
 
 ----field----
 field: {89E4692B-40AF-44F4-ABD6-347753F08243}
 name: Link
 key: link
-content-length: 181
+content-length: 175
 
-<link id="{17FEEA40-A431-4AB5-9E78-318ABEB3F999}" querystring="" text="Summary Component" title="" class="" url="/Presales/home/development/summary-component" linktype="internal" />
+<link id="{91EFB890-74D8-4556-AD3E-2BFE6B6547C9}" querystring="" text="Benefit Leader" title="" class="" url="/Presales/home/development/benefit-leader" linktype="internal" />
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160617T135458Z
+20160617T155055Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-d67e239d-3749-49d1-b3e0-648552a9b482
+33b587b4-f4a2-493d-85b8-d38265bb489d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T155751Z
+20160617T155735Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

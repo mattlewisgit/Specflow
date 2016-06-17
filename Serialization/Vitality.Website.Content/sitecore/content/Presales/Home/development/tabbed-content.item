@@ -2,13 +2,20 @@
 version: 1
 id: {4C2348AE-DF94-4836-8C1D-BC84A1AA3479}
 database: master
-path: /sitecore/content/Presales/Home/tabbed-content
-parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
+path: /sitecore/content/Presales/home/development/tabbed-content
+parent: {077FEBB4-E848-4606-B9C5-5B186C648E97}
 name: tabbed-content
 master: {00000000-0000-0000-0000-000000000000}
 template: {EAE876EB-8043-4F1B-95C4-C015EAE09215}
 templatekey: Product Overview Page
 
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 208
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}"><p:d /></r><r uid="{B59AF949-7B41-4E23-8CD4-A41D5128E3F8}"><p:d /></r></d></r>
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
 name: __Workflow
@@ -19,15 +26,8 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 74e6ee1a-7da1-4c7c-b1d8-0df5214f52fb
+revision: 6b4dc943-7b22-4bcc-8ebf-82a0bef17d1a
 
-----field----
-field: {53299977-3D8B-45D3-A326-E1FB124EE244}
-name: BrowserTitle
-key: browsertitle
-content-length: 14
-
-Tabbed Content
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-74e6ee1a-7da1-4c7c-b1d8-0df5214f52fb
+6b4dc943-7b22-4bcc-8ebf-82a0bef17d1a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T141641Z
+20160617T160049Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -76,7 +76,7 @@ name: __Workflow state
 key: __workflow state
 content-length: 38
 
-{2E731AFD-ACB0-4361-B91B-43C68E853BE9}
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
 ----field----
 field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
 name: __Lock
