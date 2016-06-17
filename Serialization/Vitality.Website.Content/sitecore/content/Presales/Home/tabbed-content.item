@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {4C2348AE-DF94-4836-8C1D-BC84A1AA3479}
+database: master
+path: /sitecore/content/Presales/Home/tabbed-content
+parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
+name: tabbed-content
+master: {00000000-0000-0000-0000-000000000000}
+template: {EAE876EB-8043-4F1B-95C4-C015EAE09215}
+templatekey: Product Overview Page
+
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
+----version----
+language: en
+version: 1
+revision: 74e6ee1a-7da1-4c7c-b1d8-0df5214f52fb
+
+----field----
+field: {53299977-3D8B-45D3-A326-E1FB124EE244}
+name: BrowserTitle
+key: browsertitle
+content-length: 14
+
+Tabbed Content
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 14
+
+Tabbed Content
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 268
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{EFE70128-DCC9-4287-BD7D-EADB592D8B6F}" p:before="*" s:ds="{B6A7CC36-2792-4D3F-AE9F-36A2A15074F3}" s:id="{3486949D-2D21-47E3-A56D-6E99C71CC7CF}" s:ph="PresalesContent" /></d></r>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160617T141453Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+74e6ee1a-7da1-4c7c-b1d8-0df5214f52fb
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160617T141641Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{2E731AFD-ACB0-4361-B91B-43C68E853BE9}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
