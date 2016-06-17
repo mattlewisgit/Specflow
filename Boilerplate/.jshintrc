@@ -24,6 +24,7 @@
         "define",
         "Modernizr",
         "require",
-        "requirejs"
+        "requirejs",
+        "WOW"
     ]
 }
