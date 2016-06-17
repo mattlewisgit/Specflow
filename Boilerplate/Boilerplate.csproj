@@ -43,6 +43,7 @@
   <ItemGroup>
     <Content Include="components\accordion.html" />
     <Content Include="components\products_component.html" />
+    <Content Include="components\partner_hero.html" />
     <Content Include="components\tabs.html" />
     <Content Include="components\footer.html" />
     <Content Include="components\summary\summary-right.html" />
@@ -367,6 +368,7 @@
     <Content Include="config\svgsprite-config.json" />
     <Content Include="config\breakpoints.json" />
     <Content Include="src\sass\modules\_products-component.scss" />
+    <Content Include="src\sass\modules\_partner-hero.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

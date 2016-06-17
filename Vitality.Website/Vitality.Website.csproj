@@ -240,6 +240,7 @@
     <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
+    <Compile Include="Areas\Presales\Models\Partners\PartnerHero.cs" />
     <Compile Include="Areas\Presales\Models\Products\ProductPanel.cs" />
     <Compile Include="Areas\Presales\Models\Products\ProductsComponent.cs" />
     <Compile Include="Areas\Presales\Models\Rewards\RewardsLeader.cs" />
@@ -506,6 +507,7 @@
     <Content Include="Areas\Presales\Views\Shared\_CriticalCss.cshtml" />
     <Content Include="client_side\config\cssnano-config.json" />
     <Content Include="Areas\Presales\Views\Products\ProductsComponent.cshtml" />
+    <Content Include="Areas\Presales\Views\Partners\PartnerHero.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,42 @@
+﻿@import "../base/defaults";
+
+.partner-hero {
+
+    height: 477px; 
+    background-size: 100%;    
+
+    .feature-block {
+            background: $primary-colour;   
+
+
+        
+        &-white{
+            background: $white;
+        }   
+        
+        &-content {
+            text-align: center; 
+            display: block; 
+            margin: 0 auto; 
+            padding: 150px;
+
+            h1 {        
+                @include font-size($h1--large); 
+                margin-top: 0;
+            }
+
+            &-left{
+                text-align: left;
+            }
+        }          
+    }
+
+    &-list-item {
+        @include font-size($basesize); 
+        vertical-align: top;
+        padding: 10px;
+        position: relative;
+        z-index: 2;
+        max-width: 300px;        
+    }  
+}
