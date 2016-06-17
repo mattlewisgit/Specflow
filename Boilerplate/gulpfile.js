@@ -85,7 +85,7 @@ var paths = {
         }
     },
     js: {
-        breakpoints: "config/breakpoints.json",
+        breakpoints: "src/js/breakpoints.json",
         dest: "js",
         filename: "vitality-boilerplate.js",
         modernizrFilename: "modernizr-custom.js",
@@ -164,6 +164,7 @@ gulp.task(tasks.sass.json, function () {
         .pipe(plugins.jsonSass({
             sass: false
         }))
+        .pipe(plugins.replace("$", "$_"))
         .pipe(plugins.rename({
             prefix: "_"
         }))
