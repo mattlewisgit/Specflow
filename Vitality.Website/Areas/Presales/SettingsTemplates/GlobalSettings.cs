@@ -5,6 +5,7 @@ using System.Reflection;
 using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.Fields;
 using Glass.Mapper.Sc.Maps;
+using Sitecore.Data;
 using Sitecore.Data.Items;
 using Vitality.Website.Areas.Global.Models;
 using Vitality.Website.Areas.Presales.BaseTemplates;
@@ -50,13 +51,17 @@ namespace Vitality.Website.Areas.Presales.SettingsTemplates
     {
         public override void Configure()
         {
+            // Retrieve all public properties from GlobalSettings class
             var properties = typeof(GlobalSettings).GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
 
+            // Create lambda expression parameter (i.e 'x' of x => x.FieldName)
             var globalSettings = Expression.Parameter(typeof (GlobalSettings), "globalSettings");
 
+            // Perform default glass mapping of GlobalSettings class
             Map(x => x.AutoMap());
-
-            foreach (var property in properties)
+           
+            // Iterate through GlobalSettings properties creating lambda expression that passes property to FallBack method (x => x.Title)
+            foreach (var property in properties)    
             {
                 if (property.PropertyType == typeof (string))
                 {
@@ -72,10 +77,13 @@ namespace Vitality.Website.Areas.Presales.SettingsTemplates
 
         private object GetFallbackValue(SitecoreDataMappingContext context, Func<Item, string> getFieldValue, Func<GlobalSettings, object> getFallbackValue)
         {
-            if (!string.IsNullOrWhiteSpace(getFieldValue(context.Item)))
+            // Return the current field value if it is populated or we are already inspecting the GlobalSettings item
+            if (!string.IsNullOrWhiteSpace(getFieldValue(context.Item)) || context.Item.ID == new ID(ItemConstants.Presales.Content.Configuration.GlobalSettings.Id))
             {
                 return getFieldValue(context.Item);
             }
+
+            // Otherwise attempt to retrive the property from GlobalSettings item (fallback)
             var fallbackSettings = context.Service.GetItem<GlobalSettings>(ItemConstants.Presales.Content.Configuration.GlobalSettings.Id);
             return getFallbackValue(fallbackSettings);
         }
