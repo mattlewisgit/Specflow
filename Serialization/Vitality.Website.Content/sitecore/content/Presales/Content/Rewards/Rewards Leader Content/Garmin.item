@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {5BF6704C-D403-40D3-88A9-A30E673CC0E4}
+database: master
+path: /sitecore/content/Presales/Content/Rewards/Rewards Leader Content/Garmin
+parent: {187B74E2-4462-4E41-B7BA-D414C1407C4B}
+name: Garmin
+master: {00000000-0000-0000-0000-000000000000}
+template: {BDD88ED4-C40F-43A1-9900-572B18179434}
+templatekey: Image Link
+
+----version----
+language: en
+version: 1
+revision: d3bbe992-e5a8-4ee4-97f5-d4e1d682ca5e
+
+----field----
+field: {C428ADB9-FE45-44B0-AC23-805EF8BC4335}
+name: Link
+key: link
+content-length: 69
+
+<link text="Garmin" linktype="internal" url="" anchor="" target="" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160617T144656Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d3bbe992-e5a8-4ee4-97f5-d4e1d682ca5e
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160617T144656Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
