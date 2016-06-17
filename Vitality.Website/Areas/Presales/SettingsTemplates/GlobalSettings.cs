@@ -1,18 +1,15 @@
-﻿using System;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Reflection;
-using Glass.Mapper.Sc;
-using Glass.Mapper.Sc.Fields;
-using Glass.Mapper.Sc.Maps;
-using Sitecore.Data.Items;
+﻿using Glass.Mapper.Sc.Fields;
+
 using Vitality.Website.Areas.Global.Models;
 using Vitality.Website.Areas.Presales.BaseTemplates;
-using Vitality.Website.SC;
 
 namespace Vitality.Website.Areas.Presales.SettingsTemplates
 {
-    public class GlobalSettings : SitecoreItem, IAppReferenceGlobal, IBrowserLatencyGlobal, IBrowserStylingGlobal, IDuplicateContentPage, IGoogleAuthorshipGlobal, IGoogleTagManagerGlobal, 
+    using Glass.Mapper.Sc.Configuration.Attributes;
+    using Glass.Mapper.Sc.Maps;
+
+    [SitecoreType(Cachable = true)]
+    public class GlobalSettings : SitecoreItem, IAppReferenceGlobal, IBrowserLatencyGlobal, IBrowserStylingGlobal, IDuplicateContentPage, IGoogleAuthorshipGlobal, IGoogleTagManagerGlobal,
         IIndexationPage, IOpenGraphGlobal, IOpenGraphPage, IQubitOpenTagGlobal, IResponseTapGlobal, ISerpAppearancePage, ITwitterGlobal, ITwitterPage, IWebmasterToolsGlobal
     {
         public string AppleITunesApp { get; set; }
@@ -50,34 +47,9 @@ namespace Vitality.Website.Areas.Presales.SettingsTemplates
     {
         public override void Configure()
         {
-            var properties = typeof(GlobalSettings).GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
-
-            var globalSettings = Expression.Parameter(typeof (GlobalSettings), "globalSettings");
-
-            Map(x => x.AutoMap());
-
-            foreach (var property in properties)
-            {
-                if (property.PropertyType == typeof (string))
-                {
-                    var propertyAccess = Expression.Property(globalSettings, property);
-                    var convertToObject = Expression.Convert(propertyAccess, typeof(object));
-                    var lambda = Expression.Lambda<Func<GlobalSettings, object>>(convertToObject, globalSettings);
-                    string fieldName = property.Name;
-                    Func<GlobalSettings, object> func = lambda.Compile();
-                    Map(x => x.Delegate(lambda).GetValue(context => GetFallbackValue(context, item => item[fieldName], func)));
-                }
-            }
-        }
-
-        private object GetFallbackValue(SitecoreDataMappingContext context, Func<Item, string> getFieldValue, Func<GlobalSettings, object> getFallbackValue)
-        {
-            if (!string.IsNullOrWhiteSpace(getFieldValue(context.Item)))
-            {
-                return getFieldValue(context.Item);
-            }
-            var fallbackSettings = context.Service.GetItem<GlobalSettings>(ItemConstants.Presales.Content.Configuration.GlobalSettings.Id);
-            return getFallbackValue(fallbackSettings);
+            this.Map(
+                x => x.AutoMap(),
+                x => x.Delegate(settings => settings.DnsPrefetch).GetValue(context => context.Item["DnsPrefetch"].Split('|')));
         }
     }
 }
