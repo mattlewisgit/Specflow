@@ -1,47 +1,47 @@
 ----item----
 version: 1
-id: {02C9A9CF-94BC-4692-A392-15B33C95AA1F}
+id: {4923202F-6B05-4601-960A-3DFF0E3F2953}
 database: master
-path: /sitecore/content/Presales/Content/Navigation/Global Footer/Log In
-parent: {34E61CC7-C4B4-422B-9D01-A1BCC0956F7C}
-name: Log In
+path: /sitecore/content/Presales/Content/Navigation/Global Footer/Components/Cards Stacked
+parent: {7754BA18-0952-4857-9F62-1E9997F20E4B}
+name: Cards Stacked
 master: {00000000-0000-0000-0000-000000000000}
-template: {DD329039-011C-4A6D-8B97-4F6B796EEEE8}
-templatekey: Footer Section
+template: {86112F62-773D-464C-AEE7-F6E86CEC4A11}
+templatekey: Link
 
 ----version----
 language: en
 version: 1
-revision: 91a6d45f-1461-405c-bce5-9c83a5fa7c8d
+revision: caaa974a-64e4-4b8e-b67f-8e0db1913024
 
 ----field----
-field: {69A57290-F3CA-4673-9717-5532E7A24149}
-name: Heading
-key: heading
-content-length: 6
+field: {89E4692B-40AF-44F4-ABD6-347753F08243}
+name: Link
+key: link
+content-length: 127
 
-Log In
+<link text="Cards Stacked" linktype="internal" class="" title=""  querystring="" id="{65ED89D7-180C-4AFC-BBDE-D1DA8548532E}" />
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160601T162618Z
+20160617T145026Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-91a6d45f-1461-405c-bce5-9c83a5fa7c8d
+caaa974a-64e4-4b8e-b67f-8e0db1913024
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160601T162618Z
+20160617T145041Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
