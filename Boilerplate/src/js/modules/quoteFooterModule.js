@@ -20,8 +20,8 @@ define([
         init: function () {
             module.footer = $(".quote-footer");
 
-            // Ignore if no footer found.
-            if (!module.footer.length) {
+            // Ignore if no footer found, or it is hidden in Experience Editor.
+            if (!module.footer.length || module.footer.is(":hidden")) {
                 return null;
             }
 
