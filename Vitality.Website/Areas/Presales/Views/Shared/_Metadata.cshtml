@@ -1,11 +1,12 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.BasePage>
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.BasePage>
 
 <title>@Model.Title</title>
 <meta name="description" content="@Model.Description"/>
 <meta property="og:title" content="@Model.OpenGraphTitle"/>
 <meta property="og:type" content="@Model.OpenGraphType"/>
 <meta property="og:url" content="@Model.OpenGraphUrl"/>
-<meta property="og:image" content="@Model.OpenGraphImage.Src"/>
+<meta property="og:image" content="@this.AbsoluteUrl(Model.OpenGraphImage.Src)"/>
 <meta property="og:site_name" content="@Model.OpenGraphSiteName"/>
 <meta property="og:description" content="@Model.OpenGraphDescription"/>
 <meta property="og:locale" content="en_GB"/>
@@ -16,7 +17,7 @@
 <meta name="twitter:site" content="@Model.TwitterSite"/>
 <meta name="twitter:title" content="@Model.TwitterTitle"/>
 <meta name="twitter:description" content="@Model.TwitterDescription"/>
-<meta name="twitter:image" content="@Model.TwitterImage.Src"/>
+<meta name="twitter:image" content="@this.AbsoluteUrl(Model.TwitterImage.Src)"/>
 <meta name="twitter:app:id:iphone" content="@Model.TwitterAppIPhoneId"/>
 <meta name="twitter:app:name:iphone" content="@Model.TwitterAppIPhoneName"/>
 <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
@@ -29,12 +30,13 @@
 <meta name="apple-itunes-app" content="@Model.AppleITunesApp"/>
 @foreach (var dnsPrefetch in Model.DnsPrefetch)
 {
-<link rel="dns-prefetch" href="@dnsPrefetch" /> <!-- string split-->
+<link rel="dns-prefetch" href="@dnsPrefetch" />
 }
 <link rel="canonical" href="@Model.Canonical"/>
 <meta name="referrer" content="unsafe-url"/>
 <meta name="robots" content="@Model.Robots"/>
-
-<!-- home page only -->
-<meta name="google-site-verification" content="@Model.GoogleSiteVerification"/>
+@if (this.IsHomePage())
+{
+<meta name="google-site-verification" content="@Model.GoogleSiteVerification" />
 <meta name="msvalidate.01" content="@Model.BingSiteVerification" />
+}

@@ -256,7 +256,6 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSubSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Rewards\RewardsLeader.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\Settings\GlobalSettings.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryComponent.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryListItem.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
@@ -269,6 +268,7 @@
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\Views\BasePageExtensions.cs" />
     <Compile Include="Extensions\Views\GlobalFooterExtensions.cs" />
     <Compile Include="Extensions\Views\ProductHeroExtensions.cs" />
     <Compile Include="Extensions\Views\CardsStackedExtensions.cs" />
