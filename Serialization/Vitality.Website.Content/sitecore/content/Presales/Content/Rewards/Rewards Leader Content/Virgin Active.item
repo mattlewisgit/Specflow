@@ -12,7 +12,7 @@ templatekey: Image Link
 ----version----
 language: en
 version: 1
-revision: 76e5ff76-66ba-4177-9cf1-8f1729c3cf8e
+revision: 94ae6535-b307-49da-beed-f701793974c4
 
 ----field----
 field: {C428ADB9-FE45-44B0-AC23-805EF8BC4335}
@@ -21,6 +21,13 @@ key: link
 content-length: 76
 
 <link text="Virgin Active" linktype="internal" url="" anchor="" target="" />
+----field----
+field: {FF833EB2-ACD6-4A43-8392-06C2BB98D65B}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{E40115D8-03A8-443E-9FD7-C7609A809C10}" />
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -34,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-76e5ff76-66ba-4177-9cf1-8f1729c3cf8e
+94ae6535-b307-49da-beed-f701793974c4
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T143059Z
+20160617T161043Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -49,3 +56,10 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

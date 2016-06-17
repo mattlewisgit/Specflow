@@ -130,6 +130,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Feature Blocks\Benefit Leader Content.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Feature Blocks\Product Hero Example 2.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -365,6 +366,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Home\accordion-content.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Home\benefit-leader-page.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -376,6 +378,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Home\content.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Home\faq-leader.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -395,6 +398,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Home\tabbed-content.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\media library.item">
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
@@ -408,9 +412,27 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
+    <SitecoreItem Include="sitecore\media library\Presales\Components\ba_white.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\media library\Presales\Components\cineworld_white.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\media library\Presales\Components\evans_white.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\media library\Presales\Components\garmin_white.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
     <SitecoreItem Include="sitecore\media library\Presales\Components\Jess.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\media library\Presales\Components\polar_white.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\media library\Presales\Components\sainsbury_white.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\media library\Presales\Components\Stanley.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -419,6 +441,15 @@
     <SitecoreItem Include="sitecore\media library\Presales\Components\Stanley-2.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\media library\Presales\Components\starbucks_white.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\media library\Presales\Components\virgin_acive_white.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\media library\Presales\Components\weightwatchers_white.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" />
