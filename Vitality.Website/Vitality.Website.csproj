@@ -226,8 +226,8 @@
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
     <Compile Include="Areas\Presales\Models\Cards\Card.cs" />
     <Compile Include="Areas\Presales\Models\Cards\CardsStacked.cs" />
-    <Compile Include="Areas\Presales\Models\FAQ\FeaturedQuestions.cs" />
-    <Compile Include="Areas\Presales\Models\FAQ\QuestionAnswer.cs" />
+    <Compile Include="Areas\Presales\Models\FAQ\FaqLeader.cs" />
+    <Compile Include="Areas\Presales\Models\FAQ\FaqPreview.cs" />
     <Compile Include="Areas\Presales\Models\FeatureBlocks\ProductHero.cs" />
     <Compile Include="Areas\Presales\Models\Generic\Content.cs" />
     <Compile Include="Areas\Presales\Models\Generic\Tab.cs" />
@@ -484,7 +484,7 @@
     <Content Include="client_side\gulp.targets" />
     <Content Include="Areas\Presales\Views\Rewards\RewardsLeader.cshtml" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\BenefitLeader.cshtml" />
-    <Content Include="Areas\Presales\Views\FAQ\FAQPreview.cshtml" />
+    <Content Include="Areas\Presales\Views\FAQ\FAQLeader.cshtml" />
     <Content Include="Areas\Presales\Views\Summary\SummaryComponent.cshtml" />
     <Content Include="img\favicon\manifest.json" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\ProductHero.cshtml">

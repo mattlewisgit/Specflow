@@ -282,7 +282,7 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\layout\Renderings\Presales\FAQ\FAQ Preview.item">
+    <SitecoreItem Include="sitecore\layout\Renderings\Presales\FAQ\FAQ Leader.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
@@ -658,51 +658,51 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Featured Preview.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Leader.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Featured Preview\__Standard Values.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Leader\__Standard Values.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Featured Preview\FAQ Featured Preview.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Leader\FAQ Leader.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Featured Preview\FAQ Featured Preview\CTA.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Leader\FAQ Leader\CallToAction.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Featured Preview\FAQ Featured Preview\Subtitle.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Leader\FAQ Leader\Headline.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Featured Preview\FAQ Featured Preview\Title.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Leader\FAQ Leader\OpeningParagraph.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\Question-Answer.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Preview.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\Question-Answer\__Standard Values.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Preview\__Standard Values.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\Question-Answer\Frequently Asked Question.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Preview\FAQ Preview.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\Question-Answer\Frequently Asked Question\Answer.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Preview\FAQ Preview\AnswerText.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\Question-Answer\Frequently Asked Question\Preview.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Preview\FAQ Preview\QuestionText.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\Question-Answer\Frequently Asked Question\QuestionText.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\FAQ\FAQ Preview\FAQ Preview\ReadMoreLink.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
