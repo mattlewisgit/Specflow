@@ -6,8 +6,8 @@ path: /sitecore/content/Presales/Content/Rich Text
 parent: {1513AD49-B5AE-4ACC-9D41-E63E41363B58}
 name: Rich Text
 master: {00000000-0000-0000-0000-000000000000}
-template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
-templatekey: Folder
+template: {7C96FFFF-DA60-44F1-BC58-2E4315D2F483}
+templatekey: Datasource Folder
 
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
@@ -20,13 +20,13 @@ applications/32x32/text_rich_colored.png
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
 name: __Masters
 key: __masters
-content-length: 38
+content-length: 77
 
-{1EFF0C91-5C21-4AE9-B0AA-8F05772410E6}
+{4902517E-93B7-41B5-BCC4-387E1D0304A7}|{1EFF0C91-5C21-4AE9-B0AA-8F05772410E6}
 ----version----
 language: en
 version: 1
-revision: 81e1399e-483c-435c-b3c6-785811d1470b
+revision: 566346e0-b7b9-42f0-a4a3-e91bd435f1d0
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -48,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-81e1399e-483c-435c-b3c6-785811d1470b
+566346e0-b7b9-42f0-a4a3-e91bd435f1d0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160531T161404Z
+20160613T163120Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

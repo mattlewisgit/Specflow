@@ -245,6 +245,7 @@ Vitality.Website/client_side/sass/*.map
 
 # Diffs.
 *.orig
+*.*~HEAD
 
 # Boilerplate.
 Boilerplate/favicon-data.json

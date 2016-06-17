@@ -47,6 +47,19 @@ namespace Vitality.Website.SC.Events
             }
         }
 
+        public void SetSubFolderInsertOptions(object sender, EventArgs args)
+        {
+            var item = this.GetItem(args);
+            if (ItemIsMasterDatabaseSubFolder(item))
+            {
+                var insertOptions = item.Parent["__Masters"];
+                using (new EditContext(item))
+                {
+                    item["__Masters"] = insertOptions;
+                }
+            }
+        }
+
         private static bool ItemIsMasterDatabaseContentPage(Item item)
         {
             return item != null && item.Database.Name == "master" 
@@ -57,6 +70,13 @@ namespace Vitality.Website.SC.Events
         {
             return item != null && item.Database.Name == "master"
                 && item.TemplateID.Equals(TemplateIDs.TemplateField);
+        }
+
+        private static bool ItemIsMasterDatabaseSubFolder(Item item)
+        {
+            return item != null && item.Database.Name == "master"
+                   && item.TemplateID.Guid.Equals(ItemConstants.Global.Templates.Subfolder.Id)
+                   && !item.Name.Equals("__Standard Values", StringComparison.OrdinalIgnoreCase);
         }
 
         private static bool FieldItemTitleIsNotSplitCamelCase(Item item)
