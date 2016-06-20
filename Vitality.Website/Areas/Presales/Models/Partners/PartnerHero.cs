@@ -8,10 +8,10 @@ namespace Vitality.Website.Areas.Presales.Models.Partners
         public PartnerHero()
         {
             this.PartnerIcon = new Image();
-            this.BackGroundImage = new Image();
+            this.BackgroundImage = new Image();
         }
 
-        public Image BackGroundImage { get; set; }
+        public Image BackgroundImage { get; set; }
         public string Headline1 { get; set; }
         public string Headline2 { get; set; }
 

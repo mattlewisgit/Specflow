@@ -1,13 +1,12 @@
 ﻿@using Glass.Mapper.Sc.Web.Mvc
-@using Vitality.Website.Areas.Presales.Models.FeatureBlocks
 @using Vitality.Website.Extensions.Views
 @inherits GlassView<Vitality.Website.Areas.Presales.Models.Partners.PartnerHero>
 
-@using (BeginEditFrame(Model, "Edit Background image", item => item.BackGroundImage))
+@using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
 {
-	<div class="partner-hero background-position-top-middle text-light" style="@this.BackgroundImage()">
+	<div class="partner-hero background-position-middle-left" style="@this.BackgroundImage()">
 		<div class="grid">
-			<div class="feature-block-content grid-col-8-12">
+			<div class="partner-hero--headline grid-col-8-12 text-light">
 				<div class="feature-block-content-left">
 					<h4>@Editable(Model, item => item.Headline1)</h4>
 					<h1>@Editable(Model, item => item.Headline2)</h1>
@@ -16,17 +15,25 @@
 			</div>
 
 			<div class="grid-col-4-12">
-				<div class="partner-hero-list-item feature-block-white">
-					<div class="text-center text-dark">
-						<p>@Editable(Model, item => item.PartnerName)</p>
+				<div class="partner-hero--card">
+					<div class="spotlight-item__circle-logo">
+						@Editable(Model, item => item.PartnerIcon)
+					</div>																	 
+
+					<div class="partner-hero--card__top">
+						<h6>@Editable(Model, item => item.PartnerName)</h6>
+
+						<hr />
+
 						<p>@Editable(Model, item => item.Line)</p>
 					</div>
-					<div class="feature-block text-upper text-light text-center">
+
+					<div class="partner-hero--card__bottom text-light">
 						@Editable(Model, item => item.Benefits)
 					</div>
+
 				</div>
 			</div>
-
 		</div>
 	</div>
 }

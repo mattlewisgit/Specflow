@@ -8,9 +8,9 @@ namespace Vitality.Website.Extensions.Views
     {
         public static string BackgroundImage(this GlassView<PartnerHero> view)
         {
-            if (!string.IsNullOrWhiteSpace(view.Model.BackGroundImage.Src))
+            if (!string.IsNullOrWhiteSpace(view.Model.BackgroundImage.Src))
             {
-                return string.Format("background-image: url('" + view.Model.BackGroundImage.Src + "');");
+                return string.Format("background-image: url('" + view.Model.BackgroundImage.Src + "');");
             }
             return string.Empty;
         }
