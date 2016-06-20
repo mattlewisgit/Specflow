@@ -1,0 +1,18 @@
+﻿using Glass.Mapper.Sc.Web.Mvc;
+using Vitality.Website.Areas.Presales.Models.Partners;
+using Vitality.Website.Areas.Presales.Models.Summary;
+
+namespace Vitality.Website.Extensions.Views
+{
+    public static class PartnerHeroExtensions
+    {
+        public static string BackgroundImage(this GlassView<PartnerHero> view)
+        {
+            if (!string.IsNullOrWhiteSpace(view.Model.BackGroundImage.Src))
+            {
+                return string.Format("background-image: url('" + view.Model.BackGroundImage.Src + "');");
+            }
+            return string.Empty;
+        }
+    }
+}

@@ -3,35 +3,30 @@
 @using Vitality.Website.Extensions.Views
 @inherits GlassView<Vitality.Website.Areas.Presales.Models.Partners.PartnerHero>
 
-<div class="background-position-top-middle text-light" style="height: 477px; background-image: url(@Editable(Model, item => item.Image); background-size: 100%">
-	<div class="grid">
-		<div class="feature-block_content grid-col-8-12">
-			<div style="text-align: left">
-				<h4>Vitality partner</h4>
-				<h1>@Editable(Model, item => item.PartnerName)</h1>
-			</div>
-		</div>
-
-		<div class="grid-col-4-12">
-			<div class="partner-hero-list-item feature-block-white" style="padding: 10px">
-				<div class="text-center text-dark">
-					<p class="text-upper" style="font-size: 1.5em;">
-						@Editable(Model, item => item.PartnerName)
-					</p>
-					<hr>
-					<p style="padding: 10px">
-						@Editable(Model, item => item.Line)
-					</p>
-				</div>
-				<div class="feature-block text-upper text-light text-center">
-					<h6>You could save</h6>
-					<p>
-						£260
-					</p>
-					<p>year</p>
+@using (BeginEditFrame(Model, "Edit Background image", item => item.BackGroundImage))
+{
+	<div class="partner-hero background-position-top-middle text-light" style="@this.BackgroundImage()">
+		<div class="grid">
+			<div class="feature-block-content grid-col-8-12">
+				<div class="feature-block-content-left">
+					<h4>@Editable(Model, item => item.Headline1)</h4>
+					<h1>@Editable(Model, item => item.Headline2)</h1>
+					<h1>@Editable(Model, item => item.OpeningParagraph)</h1>
 				</div>
 			</div>
-		</div>
 
+			<div class="grid-col-4-12">
+				<div class="partner-hero-list-item feature-block-white">
+					<div class="text-center text-dark">
+						<p>@Editable(Model, item => item.PartnerName)</p>
+						<p>@Editable(Model, item => item.Line)</p>
+					</div>
+					<div class="feature-block text-upper text-light text-center">
+						@Editable(Model, item => item.Benefits)
+					</div>
+				</div>
+			</div>
+
+		</div>
 	</div>
-</div>
+}

@@ -254,6 +254,7 @@
     <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
     <Compile Include="Extensions\Views\GlobalFooterExtensions.cs" />
+    <Compile Include="Extensions\Views\PartnerHeroExtensions.cs" />
     <Compile Include="Extensions\Views\ProductHeroExtensions.cs" />
     <Compile Include="Extensions\Views\CardsStackedExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
