@@ -1,73 +1,79 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>Vitality Boilerplate | Components | Partner Hero</title>
+    <title>Vitality Boilerplate | Components | Partner Hero</title>
 
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600">
-	<link rel="stylesheet" type="text/css" href="/bower_components/prism/themes/prism.css" />
-	<link rel="stylesheet" type="text/css" href="/bower_components/prism/plugins/line-numbers/prism-line-numbers.css" />
-	<link rel="stylesheet" type="text/css" href="/css/app.css" />
-	<link rel="stylesheet" type="text/css" href="/css/boilerplate.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600">
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/themes/prism.css" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/plugins/line-numbers/prism-line-numbers.css" />
+    <link rel="stylesheet" type="text/css" href="/css/app.css" />
+    <link rel="stylesheet" type="text/css" href="/css/boilerplate.css" />
 
-	<!--[if lt IE 9]>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-	<![endif]-->
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-	<main tabindex="-1">
-		<section>
-			<h1>Partner Hero</h1>
-			<h2>Description</h2>
+    <main tabindex="-1">
+        <section>
+            <h1>Partner Hero</h1>
+            <h2>Description</h2>
+            
+            <p>
+                The Partner Hero is designed to introduce a user to a partner &mdash; such as Starbucks &mdash;
+                and encourage them to read more using a hero image and card with potential rewards.
+            </p>
 
-			<div class="example">
-				<div class="partner-hero background-position-top-middle text-light" style="background-image: url(../src/img/examples/chilling.jpg);">
-					<div class="grid">
-						<div class="feature-block-content grid-col-8-12">
-							<div class="feature-block-content-left">
-								<h4>Vitality partner</h4>
-								<h1>Starbucks</h1>
-							</div>
-						</div>
+            <div class="example">
+                <div class="partner-hero background-position-middle-left"
+                     style="background-image: url(../src/img/examples/family.jpg);">
+                    <div class="grid">
+                        <div class="partner-hero--headline grid-col-8-12 text-light">
+                            <h4>Vitality Partner</h4>
+                            <h1>Starbucks</h1>
+                        </div>
 
-						<div class="grid-col-4-12">
-							<div class="partner-hero-list-item feature-block-white">
-								<div class="text-center text-dark">
-									<p>
-										Starbucks
-									</p>
-									<hr />
-									<p>
-										1 x free coffee per week
-									</p>
-								</div>
-								<div class="feature-block text-upper text-light text-center">
-									<p>You could save
-										£260
-									
-									year</p>
-								</div>
-							</div>
-						</div>
+                        <div class="grid-col-4-12">
+                            <div class="partner-hero--card">
+                                <div class="spotlight-item__circle-logo">
+                                    <img src="/src/img/logos/starbucks.png" alt="Logo">
+                                </div>
 
-					</div>
-				</div>
-			</div>
-			<div class="vertical-flush">
-				<h2>Markup</h2>
+                                <div class="partner-hero--card__top">
+                                    <h6>STARBUCKS</h6>
 
-				<pre>
-				<code class="language-markup line-numbers"></code>
-                    </pre>
-			</div>
-		</section>
-	</main>
+                                    <hr />
 
-	<script type="text/javascript" src="/js/modernizr-custom.min.js"></script>
-	<script type="text/javascript" src="/src/js/require.js" data-main="/js/vitality-boilerplate" async></script>
+                                    <p>1 x free coffee per week</p>
+                                </div>
 
-	<script type="text/javascript" src="/js/boilerplate.js"></script>
-	<script type="text/javascript" src="/bower_components/prism/prism.js"></script>
-	<script type="text/javascript" src="/bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
-	<script type="text/javascript" src="/bower_components/prism/plugins/normalize-whitespace/prism-normalize-whitespace.js"></script>
+                                <div class="partner-hero--card__bottom text-light">
+                                    <p>YOU COULD SAVE</p>
+                                    <h1>£260</h1>
+                                    <p>PER YEAR</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="vertical-flush">
+                <h2>Markup</h2>
+
+                <pre>
+                    <code class="language-markup line-numbers"></code>
+                </pre>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript" src="/js/modernizr-custom.min.js"></script>
+    <script type="text/javascript" src="/src/js/require.js" data-main="/js/vitality-boilerplate" async></script>
+
+    <script type="text/javascript" src="/js/boilerplate.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/prism.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/normalize-whitespace/prism-normalize-whitespace.js"></script>
 </body>
 </html>
