@@ -57,6 +57,14 @@
       <HintPath>..\packages\Glass.Mapper.Sc.4.0.11.63\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Nancy, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.0.17.1\lib\net40\Nancy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Aspnet, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.Hosting.Aspnet.0.17.1\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SimpleInjector, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.3.1.2\lib\net45\SimpleInjector.dll</HintPath>
       <Private>True</Private>
@@ -99,6 +107,18 @@
     </Reference>
     <Reference Include="sitecore.nexus, Version=1.0.0.4404, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\sitecore.nexus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Ship, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Ship.Core, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Ship.Infrastructure, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Speak.Client, Version=2.0.812.0, Culture=neutral, processorArchitecture=MSIL">
@@ -151,7 +171,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
-    <None Include="App_Config\Include\Vitality\Vitality.Deployment.config.disabled" />
+    <Content Include="App_Config\Include\ship.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -214,7 +234,6 @@
     <Content Include="js\require.js" />
     <Content Include="js\vitality-boilerplate.js" />
     <Content Include="Web.config" />
-    <Content Include="_Tools\PackageInstaller.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\GlassMapperSc.cs" />
