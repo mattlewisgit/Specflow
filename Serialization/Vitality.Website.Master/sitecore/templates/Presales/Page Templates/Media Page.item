@@ -23,10 +23,17 @@ key: __standard values
 content-length: 38
 
 {C4493F3A-3FD3-42A5-A9EE-9D5AEBFCB876}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 24
+
+Office/32x32/cd_case.png
 ----version----
 language: en
 version: 1
-revision: b58ce734-c980-4508-95e9-bac0a7ba9ea9
+revision: be36e074-ef09-44f0-9d51-507178830653
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -48,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b58ce734-c980-4508-95e9-bac0a7ba9ea9
+be36e074-ef09-44f0-9d51-507178830653
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160620T143634Z
+20160620T161700Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

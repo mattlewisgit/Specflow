@@ -190,10 +190,6 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Cards.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\FAQ.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -235,6 +231,30 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Home.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Home\accessibility.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Home\contact.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Home\legal.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Home\media.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Home\rewards.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Home\sitemap.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
@@ -1216,6 +1236,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Accessibility Page\__Standard Values.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Base Page.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -1231,6 +1252,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Contact Page\__Standard Values.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Generic Page.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -1238,6 +1260,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Generic Page\__Standard Values.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Home Page.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -1253,6 +1276,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Hub Page\__Standard Values.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Legal Page.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -1260,6 +1284,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Legal Page\__Standard Values.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Lifestyle Page.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -1267,19 +1292,13 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Lifestyle Page\__Standard Values.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Media Page.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Media Page\__Standard Values.item">
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Page.item">
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Page\__Standard Values.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
@@ -1289,6 +1308,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Partner Page\__Standard Values.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Product Details Page.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -1296,6 +1316,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Product Details Page\__Standard Values.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Product Overview Page.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -1311,6 +1332,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Quote Page\__Standard Values.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Rewards Grid Page.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -1318,6 +1340,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Rewards Grid Page\__Standard Values.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Sitemap Page.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -1325,6 +1348,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Sitemap Page\__Standard Values.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Rendering Templates.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>

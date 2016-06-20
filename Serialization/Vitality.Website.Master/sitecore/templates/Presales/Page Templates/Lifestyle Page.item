@@ -23,10 +23,17 @@ key: __standard values
 content-length: 38
 
 {D39E6B03-C6F3-44A1-BF6D-D9ADC56B185E}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 22
+
+Office/32x32/heart.png
 ----version----
 language: en
 version: 1
-revision: 4a564f87-0988-458e-afb8-63fd8401f422
+revision: b07276dc-4c40-403f-b864-6e0f3110f551
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -48,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4a564f87-0988-458e-afb8-63fd8401f422
+b07276dc-4c40-403f-b864-6e0f3110f551
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160620T143615Z
+20160620T162431Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
