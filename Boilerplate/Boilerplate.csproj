@@ -157,6 +157,7 @@
     <Content Include="src\img\examples\vitality-logo.svg" />
     <Content Include="src\img\examples\youtube--footer.svg" />
     <Content Include="src\img\favicon\favicon.svg" />
+    <Content Include="src\img\logos\starbucks.png" />
     <Content Include="src\js\libraries\tablesaw.js" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
