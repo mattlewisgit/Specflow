@@ -29,13 +29,6 @@ version: 1
 revision: f53ba1f0-07fc-440a-8ad0-5ab592f2c04e
 
 ----field----
-field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
-name: Title
-key: title
-content-length: 10
-
-FAQ Leader
-----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name

@@ -12,7 +12,7 @@ templatekey: Global Footer
 ----version----
 language: en
 version: 1
-revision: 5169dbde-01d9-4529-974e-9c8dfae1cf67
+revision: e69467e6-485e-4eff-a054-90408740ad21
 
 ----field----
 field: {B4CA641A-2DAD-4A88-BABC-0EB9955A6476}
@@ -39,9 +39,9 @@ content-length: 38
 field: {F6CB5967-30ED-4F28-B791-353BF5190EF8}
 name: FooterLinksColumn2
 key: footerlinkscolumn2
-content-length: 0
+content-length: 38
 
-
+{10E1FFBC-DAEE-4184-AAB3-2D695AE38890}
 ----field----
 field: {B6A55171-AA17-43B8-87B2-48BC9F686E82}
 name: FooterLinksColumn3
@@ -69,14 +69,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5169dbde-01d9-4529-974e-9c8dfae1cf67
+e69467e6-485e-4eff-a054-90408740ad21
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T135733Z
+20160621T102138Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

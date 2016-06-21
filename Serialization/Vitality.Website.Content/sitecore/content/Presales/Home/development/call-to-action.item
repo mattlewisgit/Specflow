@@ -1,21 +1,14 @@
 ----item----
 version: 1
-id: {8328AE60-1FA7-4FAB-8D49-E6F18B78BE70}
+id: {EC469EE0-F4E5-4FB9-A8C8-96443FE63177}
 database: master
-path: /sitecore/content/Presales/home/development/product-hero
+path: /sitecore/content/Presales/home/development/call-to-action
 parent: {077FEBB4-E848-4606-B9C5-5B186C648E97}
-name: product-hero
+name: call-to-action
 master: {00000000-0000-0000-0000-000000000000}
-template: {EAE876EB-8043-4F1B-95C4-C015EAE09215}
-templatekey: Product Overview Page
+template: {487B20F5-0959-4419-B030-D8E8C21120ED}
+templatekey: Generic Page
 
-----field----
-field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
-name: __Renderings
-key: __renderings
-content-length: 208
-
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}"><p:d /></r><r uid="{B59AF949-7B41-4E23-8CD4-A41D5128E3F8}"><p:d /></r></d></r>
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
 name: __Workflow
@@ -26,43 +19,43 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 5205905e-cb44-4f38-9c4f-ce9ceba8591e
+revision: a3463f9d-6ce4-48ff-b683-7acd428d6508
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 12
+content-length: 14
 
-Product Hero
+Call To Action
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 492
+content-length: 533
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{B13A484D-185E-4D87-92B6-277AABF5645E}" p:before="*" s:ds="{EFE1CEF5-37CB-4475-9B2A-C60FF8939812}" s:id="{155B25B4-16CC-4F03-9096-34B5C57A30F4}" s:ph="PresalesContent" /><r uid="{0BA96B38-62EF-4F98-AA23-92681D683246}" p:after="r[@uid='{B13A484D-185E-4D87-92B6-277AABF5645E}']" s:ds="{CA5FCFEA-55C5-4257-A5A1-D9460B2743CA}" s:id="{155B25B4-16CC-4F03-9096-34B5C57A30F4}" s:ph="PresalesContent" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1" s:xsd="http://www.w3.org/2001/XMLSchema"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{28EA7724-DD21-48C8-A437-68C61852ABB7}" p:before="*" s:ds="{299AA2F2-DF6A-4E8C-9838-7B1A0A097540}" s:id="{A0A1B9B4-9D2B-4EA0-9B3C-1CFB7CE8F1A5}" s:ph="PresalesContent" /><r uid="{BBBE921C-B6C6-45CC-9481-10EB43FC973E}" p:after="r[@uid='{28EA7724-DD21-48C8-A437-68C61852ABB7}']" s:ds="{21DF8CFC-9E36-4312-A5D7-F0FA2BA864A8}" s:id="{A0A1B9B4-9D2B-4EA0-9B3C-1CFB7CE8F1A5}" s:ph="PresalesContent" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160617T130056Z
+20160621T095736Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-5205905e-cb44-4f38-9c4f-ce9ceba8591e
+a3463f9d-6ce4-48ff-b683-7acd428d6508
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T155743Z
+20160621T101107Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
