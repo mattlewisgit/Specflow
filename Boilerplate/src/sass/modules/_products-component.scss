@@ -1,16 +1,34 @@
 .products-component {
-    text-align: center;
     padding: $pad--thin;
+    text-align: center;
+    
+    img {
+        display : inline;
+    }
 
     p {
+        line-height: 125%;
         padding: 0 $pad--large;
     }
 
-    &-panel {
+    &--panel {
         background-color: $primary-color;
-    }
 
-    img{
-        display : inline;
+        .button-cta {
+            margin: $pad--thin;
+        }
+
+        // Compress the three-column product grid before it adapts to mobile.
+        @media (min-width: $breakpoint-medium) and (max-width: $breakpoint-larger) {
+            &.grid-col-4-12 {
+                font-size: 90%;
+                padding: $pad--thin;
+
+                .button-cta {
+                    padding: $pad--thin;
+                    padding-right: 60px;
+                }
+            }
+        }
     }
 }
