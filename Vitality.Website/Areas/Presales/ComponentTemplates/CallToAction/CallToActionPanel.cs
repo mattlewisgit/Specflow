@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.Models.CallToAction
+﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.CallToAction
 {
     using Glass.Mapper.Sc.Fields;
 

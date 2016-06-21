@@ -1,8 +1,8 @@
-﻿using Vitality.Website.Areas.Global.Models;
-
-namespace Vitality.Website.Areas.Presales.Models.FAQ
+﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.FAQ
 {
     using Glass.Mapper.Sc.Fields;
+
+    using Vitality.Website.Areas.Global.Models;
 
     public class FaqPreview : SitecoreItem
     {
