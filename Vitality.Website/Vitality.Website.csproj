@@ -252,6 +252,7 @@
     <Compile Include="Areas\Presales\Models\FAQ\FaqPreview.cs" />
     <Compile Include="Areas\Presales\Models\FeatureBlocks\ProductHero.cs" />
     <Compile Include="Areas\Presales\Models\Generic\Content.cs" />
+    <Compile Include="Areas\Presales\Models\Generic\LoginMenu.cs" />
     <Compile Include="Areas\Presales\Models\Generic\Tab.cs" />
     <Compile Include="Areas\Presales\Models\Generic\TabCollection.cs" />
     <Compile Include="Areas\Presales\Models\Navigation\FooterSection.cs" />
