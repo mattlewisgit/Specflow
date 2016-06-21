@@ -3,12 +3,15 @@
     text-align: center;
     
     img {
-        display : inline;
+        width: 100%;
     }
 
     p {
         line-height: 125%;
         padding: 0 $pad--large;
+
+        // Stop the CTA from flexbox interfering on widescreen!
+        width: 100%;
     }
 
     .grid {
@@ -42,6 +45,21 @@
                     padding-right: 60px;
                 }
             }
+        }
+    }
+}
+
+// Use flexbox to align the CTA to the bottom of the component.
+.flexbox {
+    .products-component--panel {
+        align-content: stretch;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+           
+        .button-cta {
+            align-self: flex-end;
         }
     }
 }
