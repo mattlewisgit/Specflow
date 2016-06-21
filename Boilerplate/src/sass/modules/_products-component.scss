@@ -11,6 +11,19 @@
         padding: 0 $pad--large;
     }
 
+    .grid {
+        background-color: $grey--light;
+        padding: $pad--thin;
+
+        // Use the top padding of the components instead,
+        // as this will ensure they are spaced evenly for mobile.
+        padding-top: 0;
+
+        [class*=grid-col-] {
+            margin-top: $pad--thin;
+        }
+    }
+
     &--panel {
         background-color: $primary-color;
 
