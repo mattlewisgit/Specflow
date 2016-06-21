@@ -1,9 +1,9 @@
-@import "base/defaults";
-@import "base/vars";
-@import "generated/sprite";
-@import "generated/svg-sprite";
+@import "../base/defaults";
+@import "../base/vars";
+@import "../generated/sprite";
+@import "../generated/svg-sprite";
+@import "../utils/mixins";
 
-$_border-radius: 5px;
 $_padding: 3%;
 
 @media only screen and (min-width: $breakpoint-medium) {
@@ -33,7 +33,7 @@ $_padding: 3%;
         @include text-centre;
 
         h4 {
-            border-radius: $_border-radius $_border-radius 0 0;
+            @include tab-rounding;
             display: inline-block;
             font-size: 1.7rem;
             padding: $_padding ($_padding + 1);
@@ -41,7 +41,7 @@ $_padding: 3%;
     }
 
     .content {
-        border-radius: $_border-radius;
+        @include rounding;
         padding: $_padding;
 
         p {

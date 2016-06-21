@@ -27,6 +27,11 @@ section div.scLooseFrameZone {
     display: block !important;
 }
 
+// Always hide the quote footer
+.quote-footer {
+    display: none;
+}
+
 // Override the SC applied height attribute to keep the image scaled proportionally.
 .spotlight-item img {
     height: 100% !important;
