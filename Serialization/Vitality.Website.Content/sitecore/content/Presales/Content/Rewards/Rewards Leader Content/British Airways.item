@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {C983F6A4-4E4D-4CF3-A7ED-886908ED8B08}
+database: master
+path: /sitecore/content/Presales/Content/Rewards/Rewards Leader Content/British Airways
+parent: {187B74E2-4462-4E41-B7BA-D414C1407C4B}
+name: British Airways
+master: {00000000-0000-0000-0000-000000000000}
+template: {BDD88ED4-C40F-43A1-9900-572B18179434}
+templatekey: Image Link
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+9100
+----version----
+language: en
+version: 1
+revision: 4c59f368-cb80-4453-a5ff-53f4b4f24ce9
+
+----field----
+field: {C428ADB9-FE45-44B0-AC23-805EF8BC4335}
+name: Link
+key: link
+content-length: 78
+
+<link text="British Airways" linktype="internal" url="" anchor="" target="" />
+----field----
+field: {FF833EB2-ACD6-4A43-8392-06C2BB98D65B}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{E3BA78C0-10F1-4368-9215-F75624F4E620}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160617T144324Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+4c59f368-cb80-4453-a5ff-53f4b4f24ce9
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160617T161043Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
