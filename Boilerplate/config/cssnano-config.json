@@ -1,5 +1,12 @@
 ﻿{
-    "autoprefixer": true,
+    "autoprefixer": {
+        "add": true,
+        "browsers": [
+            "last 3 versions",
+            "ie > 7"
+        ],
+        "cascade": false
+    },
     "calc": false,
     "colormin": true,
     "convertValues": true,

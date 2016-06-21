@@ -244,28 +244,31 @@
     <Compile Include="Areas\Global\Models\KeyValuePair.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
-    <Compile Include="Areas\Presales\Models\CallToAction\CallToActionPanel.cs" />
-    <Compile Include="Areas\Presales\Models\CallToAction\PrimaryCallToAction.cs" />
-    <Compile Include="Areas\Presales\Models\Cards\Card.cs" />
-    <Compile Include="Areas\Presales\Models\Cards\CardsStacked.cs" />
-    <Compile Include="Areas\Presales\Models\FAQ\FaqLeader.cs" />
-    <Compile Include="Areas\Presales\Models\FAQ\FaqPreview.cs" />
-    <Compile Include="Areas\Presales\Models\FeatureBlocks\ProductHero.cs" />
-    <Compile Include="Areas\Presales\Models\Generic\Content.cs" />
-    <Compile Include="Areas\Presales\Models\Generic\Tab.cs" />
-    <Compile Include="Areas\Presales\Models\Generic\TabCollection.cs" />
-    <Compile Include="Areas\Presales\Models\Navigation\FooterSection.cs" />
-    <Compile Include="Areas\Presales\Models\Navigation\GlobalFooter.cs" />
-    <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
-    <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
-    <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
-    <Compile Include="Areas\Presales\Models\Rewards\RewardsLeader.cs" />
-    <Compile Include="Areas\Presales\Models\Summary\SummaryComponent.cs" />
-    <Compile Include="Areas\Presales\Models\Summary\SummaryListItem.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IQuoteFooter.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsStacked.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\ProductHero.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Generic\Content.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Generic\Tab.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Generic\TabCollection.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Navigation\FooterSection.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Navigation\GlobalFooter.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Navigation\MainNavigation.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSection.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSubSection.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Rewards\RewardsLeader.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryComponent.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryListItem.cs" />
+    <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\CallToActionPanel.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\PrimaryCallToAction.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqLeader.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqPreview.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
-    <Compile Include="Areas\Presales\RenderingModels\CardsStackedRendering.cs" />
-    <Compile Include="Areas\Presales\RenderingModels\RewardsLeaderRendering.cs" />
-    <Compile Include="Areas\Presales\RenderingModels\SummaryComponentRendering.cs" />
+    <Compile Include="Areas\Presales\RenderingTemplates\CardsStackedRendering.cs" />
+    <Compile Include="Areas\Presales\RenderingTemplates\RewardsLeaderRendering.cs" />
+    <Compile Include="Areas\Presales\RenderingTemplates\SummaryComponentRendering.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
@@ -275,8 +278,8 @@
     <Compile Include="Extensions\Views\CardsStackedExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\Views\RewardsLeaderExtensions.cs" />
-    <Compile Include="Areas\Presales\Models\FeatureBlocks\BenefitLeader.cs" />
-    <Compile Include="Areas\Presales\RenderingModels\BenefitLeaderRendering.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\BenefitLeader.cs" />
+    <Compile Include="Areas\Presales\RenderingTemplates\BenefitLeaderRendering.cs" />
     <Compile Include="Extensions\Views\BenefitLeaderExtensions.cs" />
     <Compile Include="Extensions\Views\NavigationSubSectionExtensions.cs" />
     <Compile Include="Extensions\Views\SummaryComponentExtensions.cs" />
@@ -286,9 +289,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="packages.config" />
     <Content Include="App_Config\ConnectionStrings.config" />
     <Content Include="App_Config\Sitecore.config">
@@ -520,6 +520,7 @@
     <Content Include="Areas\Presales\Views\Shared\_Favicons.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_CriticalCss.cshtml" />
     <Content Include="client_side\config\cssnano-config.json" />
+    <Content Include="Areas\Presales\Views\Shared\QuoteFooter.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -528,11 +529,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Areas\Presales\Controllers\" />
-    <Folder Include="Controllers\" />
     <Folder Include="img\examples\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vitality.Website.SC\Vitality.Website.SC.csproj">

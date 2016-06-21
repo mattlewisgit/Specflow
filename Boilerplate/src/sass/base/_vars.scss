@@ -77,6 +77,9 @@ $nav-gradient: linear-gradient( to bottom, $white 75%, $nav-gradient-color 100% 
 
 $dashed-border: dashed rgba(255, 255, 255, 0.5) 1px;
 
+// Animation delays;
+$delay--medium: 0.3s;
+
 // /*-------------------------------------------------.
 // \    Config: Typography
 //  `-------------------------------------------------*/
@@ -84,6 +87,7 @@ $dashed-border: dashed rgba(255, 255, 255, 0.5) 1px;
 //Base Font size -
 $basesize: 1.6;
 $paragraph-emphasis: 1.8;
+$font-small: 1.4;
 
 //Heading sizes -
 $h1: 2.8;
@@ -111,6 +115,7 @@ $max-width: 1200px;
 
 //Module padding -
 $pad: 20px;
+$pad--xthin: $pad / 4;
 $pad--tiny: $pad / 4;
 $pad--thin: $pad / 2;
 $pad--large: $pad * 2;

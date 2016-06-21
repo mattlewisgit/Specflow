@@ -7,7 +7,7 @@
     "forin": true,
     "freeze": true,
     "futurehostile": true,
-    "maxcomplexity": 4,
+    "maxcomplexity": 5,
     "maxdepth": 4,
     "maxparams": 4,
     "maxstatements": 20,
