@@ -166,7 +166,12 @@
     <Content Include="src\img\examples\vitality-logo.svg" />
     <Content Include="src\img\examples\youtube--footer.svg" />
     <Content Include="src\img\favicon\favicon.svg" />
-    <Content Include="src\img\logos\evans-cycles.jpg" />
+    <Content Include="src\img\logos\cinemas.png" />
+    <Content Include="src\img\logos\evans.png" />
+    <Content Include="src\img\logos\sainsburys.png" />
+    <Content Include="src\img\logos\starbucks.png" />
+    <Content Include="src\img\logos\virgin_active.png" />
+    <Content Include="src\img\logos\weightwatchers.png" />
     <Content Include="src\js\libraries\tablesaw.js" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
