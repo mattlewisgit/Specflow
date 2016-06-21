@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {41CFD27A-50B5-436F-8F5B-8CF734C30759}
+database: master
+path: /sitecore/content/Presales/Content/Call To Action/Primary Call To Action Example/Scratch the furniture tuxedo cats
+parent: {299AA2F2-DF6A-4E8C-9838-7B1A0A097540}
+name: Scratch the furniture tuxedo cats
+master: {00000000-0000-0000-0000-000000000000}
+template: {1B6BD083-B9CA-44F6-8B2D-F742FCAFF3E4}
+templatekey: Call To Action Panel
+
+----version----
+language: en
+version: 1
+revision: 41d8c085-a082-448d-9046-1820127f8f35
+
+----field----
+field: {943F577A-22CE-47D5-9007-9A1315711BD5}
+name: Icon
+key: icon
+content-length: 58
+
+<image mediaid="{6334906C-7320-4882-9A83-AB37CAC67BBE}" />
+----field----
+field: {448B79B6-D57E-416F-AF3E-CF4202E2F0ED}
+name: Headline
+key: headline
+content-length: 33
+
+Scratch the furniture tuxedo cats
+----field----
+field: {B71E9071-2A2D-4701-B864-63D54E73D98C}
+name: OpeningParagraph
+key: openingparagraph
+content-length: 340
+
+Jump off balcony, onto stranger's head chirp at birds intently stare at the same spot destroy couch as revenge yet sleep in the bathroom sink. Bathe private parts with tongue then lick owner's face if it smells like fish eat as much as you wish sit by the fire tuxedo cats always looking dapper so hack up furballs but cat slap dog in face.
+----field----
+field: {B542B7E4-5B22-4856-B68E-644265700AF9}
+name: CallToAction
+key: calltoaction
+content-length: 140
+
+<link linktype="internal" text="Hack up furballs hate dog lick butt" querystring="" target="" id="{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160621T100644Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+41d8c085-a082-448d-9046-1820127f8f35
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160621T100728Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
