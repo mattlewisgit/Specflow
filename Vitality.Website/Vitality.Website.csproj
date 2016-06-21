@@ -57,6 +57,14 @@
       <HintPath>..\packages\Glass.Mapper.Sc.4.0.11.63\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Nancy, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.0.17.1\lib\net40\Nancy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Aspnet, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.Hosting.Aspnet.0.17.1\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SimpleInjector, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.3.1.2\lib\net45\SimpleInjector.dll</HintPath>
       <Private>True</Private>
@@ -99,6 +107,18 @@
     </Reference>
     <Reference Include="sitecore.nexus, Version=1.0.0.4404, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\sitecore.nexus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Ship, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Ship.Core, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Ship.Infrastructure, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Speak.Client, Version=2.0.812.0, Culture=neutral, processorArchitecture=MSIL">
@@ -151,10 +171,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
-    <None Include="App_Config\Include\Vitality\Vitality.Deployment.config.disabled" />
+    <Content Include="App_Config\Include\ship.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Areas\Presales\Views\CallToAction\PrimaryCallToAction.cshtml" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
@@ -170,9 +191,6 @@
     <Content Include="client_side\img\vitality-logo--white.svg" />
     <Content Include="client_side\img\vitality-logo.svg" />
     <Content Include="client_side\img\youtube--footer.svg" />
-    <Content Include="css\app.css" />
-    <Content Include="css\rich_text_editor.css" />
-    <Content Include="css\tablesaw.css" />
     <Content Include="Global.asax" />
     <Content Include="images\sprite-generated%402x.png" />
     <Content Include="images\sprite-generated.png" />
@@ -216,7 +234,6 @@
     <Content Include="js\require.js" />
     <Content Include="js\vitality-boilerplate.js" />
     <Content Include="Web.config" />
-    <Content Include="_Tools\PackageInstaller.asmx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\GlassMapperSc.cs" />
@@ -227,39 +244,45 @@
     <Compile Include="Areas\Global\Models\KeyValuePair.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
-    <Compile Include="Areas\Presales\Models\Cards\Card.cs" />
-    <Compile Include="Areas\Presales\Models\Cards\CardsStacked.cs" />
-    <Compile Include="Areas\Presales\Models\FAQ\FeaturedQuestions.cs" />
-    <Compile Include="Areas\Presales\Models\FAQ\QuestionAnswer.cs" />
-    <Compile Include="Areas\Presales\Models\FeatureBlocks\ProductHero.cs" />
-    <Compile Include="Areas\Presales\Models\Generic\Content.cs" />
-    <Compile Include="Areas\Presales\Models\Generic\Tab.cs" />
-    <Compile Include="Areas\Presales\Models\Generic\TabCollection.cs" />
-    <Compile Include="Areas\Presales\Models\Navigation\FooterSection.cs" />
-    <Compile Include="Areas\Presales\Models\Navigation\GlobalFooter.cs" />
-    <Compile Include="Areas\Presales\Models\Navigation\MainNavigation.cs" />
-    <Compile Include="Areas\Presales\Models\Navigation\NavigationSection.cs" />
-    <Compile Include="Areas\Presales\Models\Navigation\NavigationSubSection.cs" />
     <Compile Include="Areas\Presales\Models\Products\ProductPanel.cs" />
     <Compile Include="Areas\Presales\Models\Products\ProductsComponent.cs" />
-    <Compile Include="Areas\Presales\Models\Rewards\RewardsLeader.cs" />
-    <Compile Include="Areas\Presales\Models\Summary\SummaryComponent.cs" />
-    <Compile Include="Areas\Presales\Models\Summary\SummaryListItem.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IQuoteFooter.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsStacked.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\ProductHero.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Generic\Content.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Generic\Tab.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Generic\TabCollection.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Navigation\FooterSection.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Navigation\GlobalFooter.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Navigation\MainNavigation.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSection.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSubSection.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Rewards\RewardsLeader.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryComponent.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryListItem.cs" />
+    <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\CallToActionPanel.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\PrimaryCallToAction.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqLeader.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqPreview.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
-    <Compile Include="Areas\Presales\RenderingModels\CardsStackedRendering.cs" />
-    <Compile Include="Areas\Presales\RenderingModels\RewardsLeaderRendering.cs" />
-    <Compile Include="Areas\Presales\RenderingModels\SummaryComponentRendering.cs" />
+    <Compile Include="Areas\Presales\RenderingTemplates\CardsStackedRendering.cs" />
+    <Compile Include="Areas\Presales\RenderingTemplates\RewardsLeaderRendering.cs" />
+    <Compile Include="Areas\Presales\RenderingTemplates\SummaryComponentRendering.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\Views\PrimaryCallToActionExtensions.cs" />
     <Compile Include="Extensions\Views\GlobalFooterExtensions.cs" />
     <Compile Include="Extensions\Views\ProductHeroExtensions.cs" />
     <Compile Include="Extensions\Views\CardsStackedExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\Views\ProductsComponentExtensions.cs" />
     <Compile Include="Extensions\Views\RewardsLeaderExtensions.cs" />
-    <Compile Include="Areas\Presales\Models\FeatureBlocks\BenefitLeader.cs" />
-    <Compile Include="Areas\Presales\RenderingModels\BenefitLeaderRendering.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\BenefitLeader.cs" />
+    <Compile Include="Areas\Presales\RenderingTemplates\BenefitLeaderRendering.cs" />
     <Compile Include="Extensions\Views\BenefitLeaderExtensions.cs" />
     <Compile Include="Extensions\Views\NavigationSubSectionExtensions.cs" />
     <Compile Include="Extensions\Views\SummaryComponentExtensions.cs" />
@@ -269,9 +292,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config">
-      <SubType>Designer</SubType>
-    </Content>
     <Content Include="packages.config" />
     <Content Include="App_Config\ConnectionStrings.config" />
     <Content Include="App_Config\Sitecore.config">
@@ -344,7 +364,6 @@
     <Content Include="App_Config\Include\Sitecore.Analytics.Tracking.Outcome.config" />
     <Content Include="App_Config\Include\Sitecore.Analytics.Tracking.RobotDetection.config" />
     <Content Include="App_Config\Include\Sitecore.AntiCsrf.config" />
-    <Content Include="App_Config\Include\Sitecore.Apps.TagInjection.config" />
     <Content Include="App_Config\Include\Sitecore.Buckets.config" />
     <Content Include="App_Config\Include\Sitecore.Buckets.WarmupQueries.config.example" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Analytics.config" />
@@ -459,7 +478,6 @@
     <Content Include="App_Config\Include\XdbCloud\Sitecore.ContentSearch.Cloud.DefaultIndexConfiguration.config.disabled" />
     <Content Include="App_Config\Include\XdbCloud\Sitecore.ContentSearch.Cloud.Index.Analytics.config.disabled" />
     <Content Include="App_Config\Include\XslExtension.config.example" />
-    <Content Include="App_Config\Include\z.Glass.Mapper.Sc.ViewRender.config.exclude" />
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\SwitchMasterToWeb.config.example" />
     <Content Include="App_Config\Include\Vitality\Vitality.Sites.config">
       <SubType>Designer</SubType>
@@ -492,7 +510,7 @@
     <Content Include="client_side\gulp.targets" />
     <Content Include="Areas\Presales\Views\Rewards\RewardsLeader.cshtml" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\BenefitLeader.cshtml" />
-    <Content Include="Areas\Presales\Views\FAQ\FAQPreview.cshtml" />
+    <Content Include="Areas\Presales\Views\FAQ\FAQLeader.cshtml" />
     <Content Include="Areas\Presales\Views\Summary\SummaryComponent.cshtml" />
     <Content Include="img\favicon\manifest.json" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\ProductHero.cshtml">
@@ -506,6 +524,7 @@
     <Content Include="Areas\Presales\Views\Shared\_CriticalCss.cshtml" />
     <Content Include="client_side\config\cssnano-config.json" />
     <Content Include="Areas\Presales\Views\Products\ProductsComponent.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\QuoteFooter.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -514,11 +533,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Areas\Presales\Controllers\" />
-    <Folder Include="Controllers\" />
     <Folder Include="img\examples\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vitality.Website.SC\Vitality.Website.SC.csproj">

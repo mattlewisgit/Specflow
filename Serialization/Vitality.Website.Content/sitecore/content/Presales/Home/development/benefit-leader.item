@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {91EFB890-74D8-4556-AD3E-2BFE6B6547C9}
+database: master
+path: /sitecore/content/Presales/home/development/benefit-leader
+parent: {077FEBB4-E848-4606-B9C5-5B186C648E97}
+name: benefit-leader
+master: {00000000-0000-0000-0000-000000000000}
+template: {EAE876EB-8043-4F1B-95C4-C015EAE09215}
+templatekey: Product Overview Page
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 208
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}"><p:d /></r><r uid="{B59AF949-7B41-4E23-8CD4-A41D5128E3F8}"><p:d /></r></d></r>
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
+----version----
+language: en
+version: 1
+revision: 29f6138c-9432-43b1-8a40-36bc706e4070
+
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 14
+
+Benefit Leader
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 1332
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{7B6BF377-397D-4632-8E59-D48556D69BFF}" p:before="*" s:ds="{9006B1F7-0CE7-4F1F-AD8A-26EBB96CB943}" s:id="{9CE5E97F-991C-4576-A167-B2E587CA01E9}" s:par="ContentAlignment=%7B4C1E4C72-8316-4343-BE9F-867DC473456C%7D&amp;ImageRelativePosition=%7B9097C6EB-902B-4408-B106-89CEDA90DBA8%7D&amp;BackgroundColour=%7B7B6B218D-1A51-4958-B311-840D837A7447%7D&amp;ApplyGradient=1" s:ph="PresalesContent" /><r uid="{9B18A6AC-968F-4766-984A-6ACB973A1A98}" p:after="r[@uid='{7B6BF377-397D-4632-8E59-D48556D69BFF}']" s:ds="{9006B1F7-0CE7-4F1F-AD8A-26EBB96CB943}" s:id="{9CE5E97F-991C-4576-A167-B2E587CA01E9}" s:par="ContentAlignment&amp;ImageRelativePosition=%7BC6367441-9501-48A2-A09E-2492E7D2DB49%7D&amp;BackgroundColour=%7B7B6B218D-1A51-4958-B311-840D837A7447%7D&amp;ApplyGradient" s:ph="PresalesContent" /><r uid="{E8897D79-35DE-4149-8A3E-7292858C51CE}" p:after="r[@uid='{9B18A6AC-968F-4766-984A-6ACB973A1A98}']" s:ds="{9006B1F7-0CE7-4F1F-AD8A-26EBB96CB943}" s:id="{9CE5E97F-991C-4576-A167-B2E587CA01E9}" s:par="ContentAlignment=%7B4C1E4C72-8316-4343-BE9F-867DC473456C%7D&amp;ImageRelativePosition=%7BC6367441-9501-48A2-A09E-2492E7D2DB49%7D&amp;BackgroundColour=%7B7B6B218D-1A51-4958-B311-840D837A7447%7D&amp;ApplyGradient" s:ph="PresalesContent" /></d></r>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160617T120438Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+29f6138c-9432-43b1-8a40-36bc706e4070
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160617T160538Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

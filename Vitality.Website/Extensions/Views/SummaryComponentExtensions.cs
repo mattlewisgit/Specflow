@@ -6,8 +6,8 @@
 
     using Glass.Mapper.Sc.Web.Mvc;
 
-    using Vitality.Website.Areas.Presales.Models.Summary;
-    using Vitality.Website.Areas.Presales.RenderingModels;
+    using Vitality.Website.Areas.Presales.ComponentTemplates.Summary;
+    using Vitality.Website.Areas.Presales.RenderingTemplates;
     using Vitality.Website.SC;
 
     public static class SummaryComponentExtensions

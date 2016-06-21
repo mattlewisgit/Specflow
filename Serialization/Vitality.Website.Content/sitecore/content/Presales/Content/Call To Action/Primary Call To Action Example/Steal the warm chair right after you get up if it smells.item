@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {103CA33B-8937-4B4F-B84C-06B1B657F228}
+database: master
+path: /sitecore/content/Presales/Content/Call To Action/Primary Call To Action Example/Steal the warm chair right after you get up if it smells
+parent: {299AA2F2-DF6A-4E8C-9838-7B1A0A097540}
+name: Steal the warm chair right after you get up if it smells
+master: {00000000-0000-0000-0000-000000000000}
+template: {1B6BD083-B9CA-44F6-8B2D-F742FCAFF3E4}
+templatekey: Call To Action Panel
+
+----version----
+language: en
+version: 1
+revision: 2751e343-263a-4b6b-b2be-ca70ae5217c4
+
+----field----
+field: {943F577A-22CE-47D5-9007-9A1315711BD5}
+name: Icon
+key: icon
+content-length: 58
+
+<image mediaid="{FA081EEC-1FF6-4FDC-865E-1D05D94F283F}" />
+----field----
+field: {448B79B6-D57E-416F-AF3E-CF4202E2F0ED}
+name: Headline
+key: headline
+content-length: 56
+
+Steal the warm chair right after you get up if it smells
+----field----
+field: {B71E9071-2A2D-4701-B864-63D54E73D98C}
+name: OpeningParagraph
+key: openingparagraph
+content-length: 389
+
+Steal the warm chair right after you get up play time chew iPad power cord. Tuxedo cats always looking dapper thug cat for chase laser. Paw at beetle and eat it before it gets away stare at wall turn and meow stare at wall some more meow again continue staring for intrigued by the shower rub face on owner but fall asleep on the washing machine. Hack up furballs cat is love, cat is life.
+----field----
+field: {B542B7E4-5B22-4856-B68E-644265700AF9}
+name: CallToAction
+key: calltoaction
+content-length: 132
+
+<link linktype="internal" text="Throwup on your pillow hunt" querystring="" target="" id="{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160621T100510Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+2751e343-263a-4b6b-b2be-ca70ae5217c4
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160621T100555Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

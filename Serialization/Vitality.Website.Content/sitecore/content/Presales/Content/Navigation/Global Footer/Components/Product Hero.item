@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {F1F1C017-0105-4F50-8AEA-A4B363C1A2C0}
+database: master
+path: /sitecore/content/Presales/Content/Navigation/Global Footer/Components/Product Hero
+parent: {7754BA18-0952-4857-9F62-1E9997F20E4B}
+name: Product Hero
+master: {00000000-0000-0000-0000-000000000000}
+template: {86112F62-773D-464C-AEE7-F6E86CEC4A11}
+templatekey: Link
+
+----version----
+language: en
+version: 1
+revision: 606a966d-e1d1-4b13-aaeb-e05369fc14e4
+
+----field----
+field: {89E4692B-40AF-44F4-ABD6-347753F08243}
+name: Link
+key: link
+content-length: 171
+
+<link id="{8328AE60-1FA7-4FAB-8D49-E6F18B78BE70}" querystring="" text="Product Hero" title="" class="" url="/Presales/home/development/product-hero" linktype="internal" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160617T135640Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+606a966d-e1d1-4b13-aaeb-e05369fc14e4
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160617T155743Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

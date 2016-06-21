@@ -1,3 +1,5 @@
+@import "../utils/mixins";
+
 .search-panel {
     width: 100%;
     height: calc(100vh - 80px);
@@ -98,11 +100,11 @@
 @media only screen and (min-width : $breakpoint-medium) {
 
     .search-panel {
+        @include ensure-at-front;
         position: absolute;
         //Hidden & offscreen - work around for display none -> opacity fading issue.
         visibility: hidden;
         top: -1000%;
-        z-index: 100;
         left: 0;
         width: 100%;
         height: 100vh;

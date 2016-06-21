@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {A3E41051-E929-49AF-BFF9-E734667ED8ED}
+database: master
+path: /sitecore/templates/Presales/Component Templates/Call To Action/Call To Action Panel/__Standard Values
+parent: {1B6BD083-B9CA-44F6-8B2D-F742FCAFF3E4}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {1B6BD083-B9CA-44F6-8B2D-F742FCAFF3E4}
+templatekey: Call To Action Panel
+
+----version----
+language: en
+version: 1
+revision: 80093e6b-63c2-4319-b0c1-328cdbabb08b
+
+----field----
+field: {448B79B6-D57E-416F-AF3E-CF4202E2F0ED}
+name: Headline
+key: headline
+content-length: 5
+
+$name
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160609T104705Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+80093e6b-63c2-4319-b0c1-328cdbabb08b
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160609T104712Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

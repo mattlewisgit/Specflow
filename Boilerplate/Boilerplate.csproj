@@ -41,8 +41,13 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="components\primary-cta.html" />
     <Content Include="components\accordion.html" />
     <Content Include="components\products_component.html" />
+    <Content Include="components\quote-footer\quote-footer-3-buttons.html" />
+    <Content Include="components\quote-footer\quote-footer-2-buttons.html" />
+    <Content Include="components\quote-footer\quote-footer-1-button.html" />
+    <Content Include="components\quote-footer\index.html" />
     <Content Include="components\tabs.html" />
     <Content Include="components\footer.html" />
     <Content Include="components\summary\summary-right.html" />
@@ -172,6 +177,9 @@
     <Content Include="src\js\modules\animationDelayModule.js" />
     <Content Include="src\js\app.js" />
     <Content Include="src\js\modules\collapsibleModule.js" />
+    <Content Include="src\js\modules\breakpointsModule.js" />
+    <Content Include="src\js\modules\quoteFooterModule.js" />
+    <Content Include="src\js\modules\matchWidthsModule.js" />
     <Content Include="src\js\vendor\domready.js" />
     <Content Include="src\js\libraries\fastclick.js" />
     <Content Include="src\js\modules\filterModule.js" />
@@ -188,24 +196,6 @@
     <Content Include="src\js\modules\socialShareModule.js" />
     <Content Include="src\js\modules\tabsModule.js" />
     <Content Include="src\js\libraries\wow.js" />
-    <Content Include="src\sass\app.css">
-      <DependentUpon>app.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\app.min.css">
-      <DependentUpon>app.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\boilerplate.css">
-      <DependentUpon>boilerplate.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\boilerplate.min.css">
-      <DependentUpon>boilerplate.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\rich_text_editor.css">
-      <DependentUpon>rich-text-editor.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\rich_text_editor.min.css">
-      <DependentUpon>rich_text_editor.css</DependentUpon>
-    </Content>
     <Content Include="src\sass\modules\_faq-leader.scss" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -364,12 +354,6 @@
     <Content Include="src\sass\vendor\_animate.scss" />
     <Content Include="src\sass\app.scss" />
     <Content Include="src\sass\rich-text-editor.scss" />
-    <Content Include="src\sass\rich_text_editor.css.map">
-      <DependentUpon>rich_text_editor.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\app.css.map">
-      <DependentUpon>app.css</DependentUpon>
-    </Content>
     <Content Include="src\sass\boilerplate.scss" />
     <Content Include=".bowerrc" />
     <Content Include="config\cssnano-config.json" />
@@ -378,6 +362,8 @@
     <Content Include="config\svgsprite-config.json" />
     <Content Include="config\breakpoints.json" />
     <Content Include="src\sass\modules\_products-component.scss" />
+    <Content Include="src\js\breakpoints.json" />
+    <Content Include="src\sass\modules\_quote-footer.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
