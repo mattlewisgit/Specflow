@@ -1,209 +1,64 @@
-﻿<div class="js-filter-section">
-    <div class="spotlight spotlight--max-3 pinch">
-        <h4 class="spotlight__heading">Partners</h4>
+﻿@using Vitality.Website.Extensions
+@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Cards.CardsTabbed>
 
-        <p class="spotlight__intro">
-            Comprehensive cover, access to healthcare and
-            huge rewards for our Health &amp; Life Insurance customers.
-        </p>
+<div class="js-filter-section">
+    <div class="spotlight spotlight--max-3 pinch">
+        <h4 class="spotlight__heading">@Editable(Model, m => m.Headline)</h4>
+        <p class="spotlight__intro">@Editable(Model, m => m.OpeningParagraph)</p>
 
         <ul class="filter-list js-filter-options">
             <li class="filter-list__item js-filter-options__item js-filter-options__item--default">
-                <a class="js-focus" href="#" data-filter="all">All</a>
+                <a class="js-focus" href="#" data-filter="all">@Editable(Model, m => m.AllCategoriesText)</a>
             </li>
-
+        @foreach (var category in Model.Categories)
+        {
             <li class="filter-list__item js-filter-options__item">
-                <a href="#" data-filter="activity-tracking">Activity tracking</a>
+                <a href="#" data-filter="@Html.Raw(category.Name.ToLowerHyphenatedString())">@Html.Raw(category.Title)</a>
             </li>
-
-            <li class="filter-list__item js-filter-options__item">
-                <a href="#" data-filter="health-checks">Health checks</a>
-            </li>
-
-            <li class="filter-list__item js-filter-options__item">
-                <a href="#" data-filter="healthy-foods">Healthy foods</a>
-            </li>
-
-            <li class="filter-list__item js-filter-options__item">
-                <a href="#" data-filter="fitness">Fitness</a>
-            </li>
+        }
         </ul>
 
         <div class="filter-section__details js-filter-section__details">
-            <p>
-                Viewing <span class="js-filter-matches">X</span> Vitality Partners for
-                <span class="js-filter-string">filter term</span>.
-            </p>
+            @if (IsInEditingMode)
+            {
+                <p>@Editable(Model, m => m.ResultsCountText)</p>
+            }
+            else
+            {
+                <p>@Html.Raw(this.ResultsCountText())</p>
+            }
         </div>
 
         <ul class="spotlight__list js-filtered-container">
-            <li class="spotlight__list-item js-filtered-container__item" data-filter="healthy-foods">
-                <div class="spotlight-item js-match-height--2">
-                    <div class="spotlight-item__top-content js-match-height">
-                        <div class="spotlight-item__intro-image burst">
-                            <img src="/src/img/examples/running-woman-2.jpg" alt="">
+            @foreach (var partnerCard in Model.PartnerCards)
+            {
+                using (BeginEditFrame(partnerCard, "Edit partner categories", m => m.Categories))
+                {
+                <li class="spotlight__list-item js-filtered-container__item" data-filter="@this.PartnerCategories(partnerCard)">
+                    <div class="spotlight-item js-match-height--2">
+                        <div class="spotlight-item__top-content js-match-height">
+                            <div class="spotlight-item__intro-image burst">
+                                @Editable(partnerCard, m => m.Image, new { w = 305, h = 175 })
+                            </div>
+
+                            <div class="spotlight-item__logo">
+                                <a href="#">
+                                    @Editable(partnerCard, m => m.Logo, new { mw = 200, mh = 100 })
+                                </a>
+                            </div>
+
+                            <h3 class="spotlight-item__heading">@Editable(partnerCard, m => m.Headline)</h3>
+
+                            <div class="spotlight-item__content">@Editable(partnerCard, m => m.OpeningParagraph)</div>
                         </div>
-
-                        <div class="spotlight-item__logo" style="background-color: #005953;">
-                            <a href="#">
-                                <img src="/src/img/logos/evans.png" alt="Evans Cycles">
-                            </a>
-                        </div>
-
-                        <h3 class="spotlight-item__heading">
-                            Weight Watchers
-                        </h3>
-
-                        <div class="spotlight-item__content">
-                            Get a Weight Watchers Monthly Pass for 6 months for £30.
-                        </div>
-                    </div>
-                    <div class="spotlight-item__cta">
-
-                        <a href="#" class="emphasis-link">Learn more</a>
-                    </div>
-                </div>
-            </li>
-
-            <li class="spotlight__list-item js-filtered-container__item" data-filter="fitness">
-                <div class="spotlight-item js-match-height--2">
-                    <div class="spotlight-item__top-content js-match-height">
-                        <div class="spotlight-item__intro-image burst">
-                            <img src="/src/img/examples/family.jpg" alt="">
-                        </div>
-
-                        <div class="spotlight-item__logo">
-                            <a href="#">
-                                <img src="/src/img/logos/virgin_active.png" alt="Virgin Active">
-                            </a>
-                        </div>
-
-                        <h3 class="spotlight-item__heading">
-                            Virgin Active
-                        </h3>
-
-                        <div class="spotlight-item__content">
-                            50% off monthly membership fees. A joining fee will apply.
+                        <div class="spotlight-item__cta">
+                            @Editable(partnerCard, m => m.CallToAction, new { @class = "emphasis-link" })
                         </div>
                     </div>
-
-                    <div class="spotlight-item__cta">
-                        <a href="#" class="emphasis-link">Learn more</a>
-                    </div>
-                </div>
-            </li>
-
-            <li class="spotlight__list-item js-filtered-container__item" data-filter="healthy-foods">
-                <div class="spotlight-item js-match-height--2">
-                    <div class="spotlight-item__top-content js-match-height">
-                        <div class="spotlight-item__intro-image burst">
-                            <img src="/src/img/examples/tennis.jpg" alt="">
-                        </div>
-
-                        <div class="spotlight-item__logo" style="background-color: #005953;">
-                            <a href="#">
-                                <img src="/src/img/logos/evans.png" alt="Evans Cycles">
-                            </a>
-                        </div>
-
-                        <h3 class="spotlight-item__heading">
-                            Evans Cycles
-                        </h3>
-
-                        <div class="spotlight-item__content">
-                            Up to 50% cash back on a bike.
-                        </div>
-                    </div>
-
-                    <div class="spotlight-item__cta">
-                        <a href="#" class="emphasis-link">Learn more</a>
-                    </div>
-                </div>
-            </li>
-
-            <li class="spotlight__list-item js-filtered-container__item" data-filter="health-checks">
-                <div class="spotlight-item js-match-height--2">
-                    <div class="spotlight-item__top-content js-match-height">
-                        <div class="spotlight-item__intro-image burst">
-                            <img src="/src/img/examples/cyclist-man.jpg" alt="">
-                        </div>
-
-                        <div class="spotlight-item__logo">
-                            <a href="#">
-                                <img src="/src/img/logos/starbucks.png" alt="Starbucks">
-                            </a>
-                        </div>
-
-                        <h3 class="spotlight-item__heading">
-                            Starbucks
-                        </h3>
-
-                        <div class="spotlight-item__content">
-                            Get active and be rewarded with a drink at Starbucks every week.
-                        </div>
-                    </div>
-
-                    <div class="spotlight-item__cta">
-                        <a href="#" class="emphasis-link">Learn more</a>
-                    </div>
-                </div>
-            </li>
-
-            <li class="spotlight__list-item js-filtered-container__item" data-filter="activity-tracking">
-                <div class="spotlight-item js-match-height--2">
-                    <div class="spotlight-item__top-content js-match-height">
-                        <div class="spotlight-item__intro-image burst">
-                            <img src="/src/img/examples/coffee.jpg" alt="">
-                        </div>
-
-                        <div class="spotlight-item__logo">
-                            <a href="#">
-                                <img src="/src/img/logos/sainsburys.png" alt="Sainsbury's">
-                            </a>
-                        </div>
-
-                        <h3 class="spotlight-item__heading">
-                            Sainsbury's
-                        </h3>
-
-                        <div class="spotlight-item__content">
-                            Vitality points and bonus Nectar points on certain healthy foods.
-                        </div>
-                    </div>
-
-                    <div class="spotlight-item__cta">
-                        <a href="#" class="emphasis-link">Learn more</a>
-                    </div>
-                </div>
-            </li>
-
-            <li class="spotlight__list-item js-filtered-container__item" data-filter="fitness">
-                <div class="spotlight-item js-match-height--2">
-                    <div class="spotlight-item__top-content js-match-height">
-                        <div class="spotlight-item__intro-image burst">
-                            <img src="/src/img/examples/laptop-user.jpg" alt="">
-                        </div>
-
-                        <div class="spotlight-item__logo" style="background-color: #000;">
-                            <a href="#">
-                                <img src="/src/img/logos/cinemas.png" alt="Cinemas">
-                            </a>
-                        </div>
-
-                        <h3 class="spotlight-item__heading">
-                            Cineworld and Vue
-                        </h3>
-
-                        <div class="spotlight-item__content">
-                            Get active and enjoy a film on us.
-                        </div>
-                    </div>
-
-                    <div class="spotlight-item__cta">
-                        <a href="#" class="emphasis-link">Learn more</a>
-                    </div>
-                </div>
-            </li>
+                </li>
+                }
+            }
         </ul>
     </div>
 </div>

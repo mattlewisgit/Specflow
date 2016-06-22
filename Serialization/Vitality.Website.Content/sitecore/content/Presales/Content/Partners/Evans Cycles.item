@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {512A73DA-5936-4AF2-812B-57152B58B06E}
+database: master
+path: /sitecore/content/Presales/Content/Partners/Evans Cycles
+parent: {14B3F9CC-1D26-473E-B7D9-148093F3C960}
+name: Evans Cycles
+master: {00000000-0000-0000-0000-000000000000}
+template: {E8118048-EB94-4F70-8793-30A460D1B041}
+templatekey: Partner Card
+
+----version----
+language: en
+version: 1
+revision: 9079d18b-9e40-468f-8d6a-0763a6402ccb
+
+----field----
+field: {116B55E0-A9AE-4A68-A962-34AC7B6BEB7A}
+name: Headline
+key: headline
+content-length: 12
+
+Evans Cycles
+----field----
+field: {D7C606CD-0574-4DA8-A18C-71D5FE1EE00B}
+name: OpeningParagraph
+key: openingparagraph
+content-length: 29
+
+Up to 50% cash back on a bike
+----field----
+field: {F77D1744-EB66-4542-ADDE-761ECE55DC25}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{4D13DB20-B854-4CC1-9934-1EE3C7D62095}" />
+----field----
+field: {0EEEA750-A523-4E00-A23C-A868D84206D0}
+name: Logo
+key: logo
+content-length: 58
+
+<image mediaid="{031E77B1-B682-4053-ABFE-795AAD67837C}" />
+----field----
+field: {4124A12F-DE27-43EB-9E9E-84DC114EF22E}
+name: CallToAction
+key: calltoaction
+content-length: 124
+
+<link text="Learn more" linktype="internal" class="" title=""  querystring="" id="{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" />
+----field----
+field: {0C60D441-2779-4A02-AF2D-35AB2DB986A5}
+name: Categories
+key: categories
+content-length: 77
+
+{CEA1CF6B-BA7E-4210-8102-ECC8636A375C}|{F5FD35C7-51CC-47EB-BFE6-2BDBDC019FB4}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160622T121619Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9079d18b-9e40-468f-8d6a-0763a6402ccb
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160622T121723Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
