@@ -18,17 +18,15 @@
         <section class="vertical-flush">
             <div>
                 <h1>Cards Tabbed</h1>
-
                 <h2>Description</h2>
 
                 <p>
                     Enables a single list of cards that can be filtered using a tabbed menu.
-                    The menu and subsequent filtering are powered by a single dat attribute assigned to each card.
-
+                    The menu and subsequent filtering are powered by a single data attribute assigned to each card.
+                    <b>Note</b>: the data attribute can be comma-separated, so a card can be seen in multiple filters.
                 </p>
 
                 <h2>Example</h2>
-
                 <h3>Demo</h3>
 
                 <div class="example">
@@ -71,7 +69,7 @@
                             </div>
 
                             <ul class="spotlight__list js-filtered-container">
-                                <li class="spotlight__list-item js-filtered-container__item" data-filter="healthy-foods">
+                                <li class="spotlight__list-item js-filtered-container__item" data-filter="healthy-foods,fitness">
                                     <div class="spotlight-item js-match-height--2">
                                         <div class="spotlight-item__top-content js-match-height">
                                             <div class="spotlight-item__intro-image burst">
@@ -245,10 +243,7 @@
 
                 <div>
                     <h2>Markup</h2>
-
-                    <pre>
-                    <code class="language-markup line-numbers"></code>
-                    </pre>
+                    <pre><code class="language-markup line-numbers"></code></pre>
                 </div>
             </div>
         </section>
