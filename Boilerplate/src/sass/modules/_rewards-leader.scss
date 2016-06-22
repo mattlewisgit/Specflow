@@ -6,13 +6,27 @@
     box-sizing: border-box;
     padding: $padding-thick;
 
+    .box-button {
+        margin: 0;
+    }
+
     .feature-block__content {
         max-width: 100%;
     }
 
     .feature-block__image-list {
+        margin-bottom: $pad;
+
         a {
             color: transparent;
+
+            &:hover img {
+                animation-name: pulse;
+                animation-duration: 0.3s;
+                animation-direction: alternate;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+            }
         }
 
         div {
@@ -22,21 +36,27 @@
                 }
             }
         }
+
+        img {
+            max-height: 80px;
+        }
     }
 }
     
-.feature-block--primary {
-    background: $primary-colour;
-}
+.feature-block {
+    &--primary {
+        background: $primary-colour;
+    }
 
-.feature-block--secondary {
-    background: $secondary-colour;
-}
+    &--secondary {
+        background: $secondary-colour;
+    }
 
-.feature-block--tertiary {
-    background: $tertiary-colour;
-}
+    &--tertiary {
+        background: $tertiary-colour;
+    }
 
-.feature-block--dark {
-    background: $dark-colour;
+    &--dark {
+        background: $dark-colour;
+    }
 }
