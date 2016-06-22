@@ -20,14 +20,7 @@
         </ul>
 
         <div class="filter-section__details js-filter-section__details">
-            @if (IsInEditingMode)
-            {
-                <p>@Editable(Model, m => m.ResultsCountText)</p>
-            }
-            else
-            {
-                <p>@Html.Raw(this.ResultsCountText())</p>
-            }
+            <p>@Html.Raw(this.ResultsCountText())</p>
         </div>
 
         <ul class="spotlight__list js-filtered-container">
