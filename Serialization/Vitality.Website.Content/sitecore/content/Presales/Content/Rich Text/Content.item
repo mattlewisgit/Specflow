@@ -1,0 +1,82 @@
+----item----
+version: 1
+id: {A2CD5FBD-B70A-4A97-A529-29BEC421DBBD}
+database: master
+path: /sitecore/content/Presales/Content/Rich Text/Content
+parent: {16D790E9-5910-45CC-93B0-AA186A7D387D}
+name: Content
+master: {00000000-0000-0000-0000-000000000000}
+template: {1EFF0C91-5C21-4AE9-B0AA-8F05772410E6}
+templatekey: Content
+
+----version----
+language: en
+version: 1
+revision: 928d7800-17a1-45e4-87e0-6270a5271bb5
+
+----field----
+field: {35B57356-DA32-4179-AFD5-3A74F13831B9}
+name: RichText
+key: richtext
+content-length: 3122
+
+<div class="grid ">
+<div class="grid-col-8-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur velit id posuere laoreet. Aliquam erat volutpat. Phasellus ac condimentum tellus. Maecenas tempor dolor eu ullamcorper viverra. Pellentesque dapibus sit amet magna et lacinia. Mauris euismod nibh nulla, eget eleifend nisi tempus ut. Etiam tempus volutpat nisi hendrerit elementum. Curabitur id metus ligula. Nulla vestibulum purus justo, sit amet sodales mi porttitor vel. Vestibulum nulla augue, vehicula id consectetur vitae, sollicitudin ut turpis. Cras dapibus neque sit amet mauris consectetur gravida. Mauris in commodo augue, sit amet dictum tortor. Curabitur et mattis tortor, quis rutrum tellus. Donec tempor, nulla vel pharetra accumsan, est augue sagittis lacus, eget placerat justo eros ut nulla. Mauris nec quam ante.<br>
+<br>
+Curabitur eget vulputate urna. Donec faucibus massa vitae lacus imperdiet, a tristique mauris pharetra. Maecenas libero leo, tincidunt tempor auctor in, pharetra sed nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus ac viverra dolor. Integer eleifend diam a eros interdum fringilla. Proin aliquet lorem eu mattis malesuada. Aenean ac lobortis leo. Nam orci ex, vestibulum et urna at, consectetur gravida est. In in pharetra leo, suscipit gravida enim. Nullam aliquet, orci vitae varius laoreet, dolor augue volutpat arcu, in malesuada neque sem nec ligula. Aenean ante nunc, facilisis et ornare et, semper ut est. Suspendisse laoreet in urna nec fermentum. Morbi posuere vehicula felis, sit amet laoreet magna tristique in. Mauris malesuada in enim in maximus.<br>
+<br>
+Nulla lorem dolor, faucibus non accumsan sit amet, dignissim sit amet mauris. Integer vitae turpis ultrices, tristique justo ac, viverra nulla. Etiam lorem turpis, faucibus sed purus vestibulum, molestie porttitor orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi sed pulvinar elit. Cras elementum at leo ac placerat. Morbi sagittis urna et sem sagittis pharetra.</div>
+<div class="grid-col-4-12 text-center">
+<div class="spotlight">
+<div class="spotlight__list-item spotlight__standalone">
+<div class="spotlight-item">
+<div class="spotlight-item__top-content">
+<div class="spotlight-item__intro-image burst">                            <img src="/img/examples/cyclist-man.jpg" alt="Example">                        </div>
+<p class="spotlight-item__heading">                            SWITCH TODAY                        </p>
+<div class="spotlight-item__content">
+<p>                                Integer tincident, ipsum a male suada                                aliquam, lectus neque volutpat.                            </p>
+</div>
+</div>
+<div class="spotlight-item__cta">                        <a href="#" class="emphasis-link">                            0800 779 555                        </a>
+<p>or</p>
+<a href="#" class="emphasis-link">                            Get a quote                        </a>                    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160617T135316Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+928d7800-17a1-45e4-87e0-6270a5271bb5
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160617T145912Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

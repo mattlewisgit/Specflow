@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {4923202F-6B05-4601-960A-3DFF0E3F2953}
+database: master
+path: /sitecore/content/Presales/Content/Navigation/Global Footer/Components/Cards Stacked
+parent: {7754BA18-0952-4857-9F62-1E9997F20E4B}
+name: Cards Stacked
+master: {00000000-0000-0000-0000-000000000000}
+template: {86112F62-773D-464C-AEE7-F6E86CEC4A11}
+templatekey: Link
+
+----version----
+language: en
+version: 1
+revision: ec630da5-7237-4e8e-9f77-beee43e98011
+
+----field----
+field: {89E4692B-40AF-44F4-ABD6-347753F08243}
+name: Link
+key: link
+content-length: 173
+
+<link id="{65ED89D7-180C-4AFC-BBDE-D1DA8548532E}" querystring="" text="Cards Stacked" title="" class="" url="/Presales/home/development/cards-stacked" linktype="internal" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160617T145026Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+ec630da5-7237-4e8e-9f77-beee43e98011
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160617T155732Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

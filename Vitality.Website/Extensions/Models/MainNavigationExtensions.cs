@@ -3,7 +3,7 @@
     using System.Linq;
 
     using Vitality.Website.Areas.Global.Models;
-    using Vitality.Website.Areas.Presales.Models.Navigation;
+    using Vitality.Website.Areas.Presales.ComponentTemplates.Navigation;
 
     public static class MainNavigationExtensions
     {
