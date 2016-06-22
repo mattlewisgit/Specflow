@@ -162,6 +162,15 @@
     <Content Include="src\img\examples\vitality-logo.svg" />
     <Content Include="src\img\examples\youtube--footer.svg" />
     <Content Include="src\img\favicon\favicon.svg" />
+    <Content Include="src\img\logos\white\ba_white.png" />
+    <Content Include="src\img\logos\white\cineworld_white.png" />
+    <Content Include="src\img\logos\white\evans_white.png" />
+    <Content Include="src\img\logos\white\garmin_white.png" />
+    <Content Include="src\img\logos\white\polar_white.png" />
+    <Content Include="src\img\logos\white\sainsbury_white.png" />
+    <Content Include="src\img\logos\white\starbucks_white.png" />
+    <Content Include="src\img\logos\white\virgin-active_white.png" />
+    <Content Include="src\img\logos\white\weightwatchers_white.png" />
     <Content Include="src\js\libraries\tablesaw.js" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
