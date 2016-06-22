@@ -41,6 +41,7 @@ define([
         filterStringClass: ".js-filter-string",
 
         filterDataName: "filter",
+        filterSeparator: ",",
         focusClass: "js-focus"
     };
 
@@ -164,10 +165,12 @@ define([
                         .addClass(_settings.filterShowClass);
                 }
 
-                // Otherwise, check if their filter data matches the selected filter.
-                var show = (element.data(_settings.filterDataName) === filterName);
+                // Otherwise, check if their filter data contains the selected filter.
+                var filters = element
+                    .data(_settings.filterDataName)
+                    .split(_settings.filterSeparator);
 
-                if (show) {
+                if ($.inArray(filterName, filters) > -1) {
                     element.show().addClass(_settings.filterShowClass);
                     return count++;
                 }
