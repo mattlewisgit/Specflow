@@ -1,39 +1,32 @@
 ----item----
 version: 1
-id: {3BC5CDA4-5B6A-4B0E-99BE-19A4E9387426}
+id: {96D454CB-925E-490B-9127-6732FCE6267A}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Generic/Login Menu
-parent: {A2F37E12-EE77-4E4D-958F-E468A0E01404}
-name: Login Menu
+path: /sitecore/content/Presales/Content/Navigation/Main Navigation/Login links
+parent: {CA82253A-AD79-4CE8-AB73-7E978819FE46}
+name: Login links
 master: {00000000-0000-0000-0000-000000000000}
-template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
-templatekey: Template
+template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
+templatekey: Folder
 
-----field----
-field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
-name: __Base template
-key: __base template
-content-length: 38
-
-{1930BBEB-7805-471A-A3BE-4858AC7CF696}
-----field----
-field: {F7D48A55-2158-4F02-9356-756654404F73}
-name: __Standard values
-key: __standard values
-content-length: 38
-
-{99A6B2AC-FC5A-4314-A9E5-649357A0B539}
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
 content-length: 19
 
-Apps/32x32/Lock.png
+apps/32x32/lock.png
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{86112F62-773D-464C-AEE7-F6E86CEC4A11}
 ----version----
 language: en
 version: 1
-revision: 977dc9e1-9f46-47c9-bf26-44ff9f5af5af
+revision: 9ecdbfff-c3e3-43bf-8013-c0541d897223
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -41,7 +34,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160621T134230Z
+20160621T143908Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-977dc9e1-9f46-47c9-bf26-44ff9f5af5af
+9ecdbfff-c3e3-43bf-8013-c0541d897223
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160621T135255Z
+20160621T144240Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
