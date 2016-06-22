@@ -521,6 +521,7 @@
     <Content Include="Areas\Presales\Views\Shared\_CriticalCss.cshtml" />
     <Content Include="client_side\config\cssnano-config.json" />
     <Content Include="Areas\Presales\Views\Shared\QuoteFooter.cshtml" />
+    <Content Include="Areas\Presales\Views\Cards\CardsTabbed.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
