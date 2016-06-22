@@ -1,4 +1,5 @@
-﻿using Glass.Mapper.Sc.Fields;
+﻿using System.Collections.Generic;
+using Glass.Mapper.Sc.Fields;
 using Vitality.Website.Areas.Global.Models;
 using Vitality.Website.Areas.Presales.BaseTemplates;
 
@@ -7,18 +8,27 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
     using System;
     using System.Linq.Expressions;
     using System.Reflection;
-
+    using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc;
     using Glass.Mapper.Sc.Maps;
 
     using Sitecore.Data.Fields;
 
+    using Vitality.Website.Areas.Presales.BaseTemplates;
     using Vitality.Website.Areas.Presales.SettingsTemplates;
     using Vitality.Website.SC;
 
-    public class BasePage : SitecoreItem, IAppReferenceGlobal, IBrowserLatencyGlobal, IBrowserStylingGlobal, IDuplicateContentPage, IGoogleAuthorshipGlobal, IGoogleTagManagerGlobal,
+    public class BasePage : SitecoreItem, IQuoteFooter, IAppReferenceGlobal, IBrowserLatencyGlobal, IBrowserStylingGlobal, IDuplicateContentPage, IGoogleAuthorshipGlobal, IGoogleTagManagerGlobal,
         IIndexationPage, IOpenGraphGlobal, IOpenGraphPage, IQubitOpenTagGlobal, IResponseTapGlobal, ISerpAppearancePage, ITwitterGlobal, ITwitterPage, IWebmasterToolsGlobal
     {
+        public bool ShowQuoteFooter { get; set; }
+        public IEnumerable<LinkItem> QuoteFooterLinks { get; set; }
+        public string Headline { get; set; }
+        public bool InheritQuoteFooterSettings { get; set; }
+
+        [SitecoreParent]
+        public BasePage Parent { get; set; }
+
         public string AppleITunesApp { get; set; }
         public string[] DnsPrefetch { get; set; }
         public string ApplicationName { get; set; }
@@ -54,10 +64,21 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
     {
         public override void Configure()
         {
+            this.Map(
+                x => x.AutoMap(),
+                x => x.Delegate(footer => footer.Headline).GetValue(
+                    context => context.Service.GetItem<QuoteFooter>(ItemConstants.Presales.Content.Configuration.QuoteFooter.Id).Headline)
+                );
+
             var properties = typeof(BasePage).GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
 
             foreach (var property in properties)
             {
+                if (typeof(GlobalSettings).GetProperty(property.Name) == null)
+                {
+                    continue;
+                }
+
                 string fieldName = property.Name;
                 var basePageProperty = this.BuildPropertyAccess<BasePage>(fieldName);
                 var globalSettingsProperty = this.BuildPropertyAccess<GlobalSettings>(fieldName).Compile();

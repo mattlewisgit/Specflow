@@ -5,6 +5,7 @@
 
 @import "vendor/bourbon/bourbon";
 @import "vendor/neat/neat";
+@import "vendor/animate";
 
 @import "utils/utils";
 @import "utils/triangle-callout";
@@ -39,6 +40,7 @@
 @import "modules/datatable";
 @import "modules/expander";
 @import "modules/filter-options";
+@import "modules/quote-footer";
 @import "modules/richtext";
 @import "modules/social";
 @import "modules/spotlight";

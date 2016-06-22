@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.Models.Rewards
+﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.Rewards
 {
     using System.Collections.Generic;
 

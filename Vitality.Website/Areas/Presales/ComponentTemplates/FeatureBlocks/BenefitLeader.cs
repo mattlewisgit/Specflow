@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.Models.FeatureBlocks
+﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
 {
     using Glass.Mapper.Sc.Fields;
 

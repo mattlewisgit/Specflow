@@ -2,8 +2,8 @@
 {
     using Glass.Mapper.Sc.Web.Mvc;
 
-    using Vitality.Website.Areas.Presales.Models.Rewards;
-    using Vitality.Website.Areas.Presales.RenderingModels;
+    using Vitality.Website.Areas.Presales.ComponentTemplates.Rewards;
+    using Vitality.Website.Areas.Presales.RenderingTemplates;
 
     public static class RewardsLeaderExtensions
     {
