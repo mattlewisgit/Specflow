@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.Models.Banners
+﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.Banners
 {
     using Glass.Mapper.Sc.Fields;
 

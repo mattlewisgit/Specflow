@@ -246,6 +246,7 @@
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IQuoteFooter.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Banners\HomeHero.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsStacked.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\ProductHero.cs" />
@@ -267,6 +268,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqPreview.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\CardsStackedRendering.cs" />
+    <Compile Include="Areas\Presales\RenderingTemplates\HomeHeroRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\RewardsLeaderRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\SummaryComponentRendering.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />

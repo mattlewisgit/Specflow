@@ -1,9 +1,9 @@
 ﻿@using Vitality.Website.Extensions.Views
-@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Banners.HomeHero>
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Banners.HomeHero>
 
 @using (BeginEditFrame(Model, "Edit background image", m => m.PosterImage))
 {
-    <div class="home-hero background-position-middle-left" style="@this.BackgroundImage()">
+    <div class="home-hero @this.ImageRelativePosition() @this.FontTheme()" style="@this.BackgroundImage()">
         <h4>@Editable(Model, m => m.Headline)</h4>
         <h1>@Editable(Model, m => m.SecondHeadline)</h1>
         <p>
