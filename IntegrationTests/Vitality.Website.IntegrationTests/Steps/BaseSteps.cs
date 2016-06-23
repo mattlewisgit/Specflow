@@ -1,9 +1,10 @@
 ﻿namespace Vitality.Website.IntegrationTests.Steps
 {
     using OpenQA.Selenium;
-    using OpenQA.Selenium.Firefox;
 
     using TechTalk.SpecFlow;
+
+    using Vitality.Website.IntegrationTests.Drivers;
 
     [Binding]
     public class BaseSteps
@@ -13,10 +14,7 @@
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
-            var ffBinary = new FirefoxBinary(AppSettings.Paths.Firefox);
-            var firefoxProfile = new FirefoxProfile();
-
-            WebDriver = new FirefoxDriver(ffBinary, firefoxProfile);
+            WebDriver = DriverFactory.PhantonJs();
         }
 
         [AfterTestRun]

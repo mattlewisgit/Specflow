@@ -248,6 +248,21 @@
     <Compile Include="Areas\Presales\Models\Products\ProductPanel.cs" />
     <Compile Include="Areas\Presales\Models\Products\ProductsComponent.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IQuoteFooter.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IAppReferenceGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IBrowserLatencyGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IBrowserStylingGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IDuplicateContentPage.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IGoogleAuthorshipGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IGoogleTagManagerGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IIndexationPage.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IOpenGraphGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IOpenGraphPage.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IQubitOpenTagGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IResponseTapGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\ISerpAppearancePage.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\ITwitterGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\ITwitterPage.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IWebmasterToolsGlobal.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Banners\HomeHero.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsStacked.cs" />
@@ -274,9 +289,13 @@
     <Compile Include="Areas\Presales\RenderingTemplates\RewardsLeaderRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\SummaryComponentRendering.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\GlobalSettings.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Views\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\Views\BasePageExtensions.cs" />
     <Compile Include="Extensions\Views\PrimaryCallToActionExtensions.cs" />
     <Compile Include="Extensions\Views\GlobalFooterExtensions.cs" />
     <Compile Include="Extensions\Views\HomeHeroExtensions.cs" />
@@ -529,6 +548,7 @@
     <Content Include="client_side\config\cssnano-config.json" />
     <Content Include="Areas\Presales\Views\Products\ProductsComponent.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\QuoteFooter.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\_Metadata.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_JsThirdParty.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

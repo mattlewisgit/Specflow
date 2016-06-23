@@ -206,7 +206,9 @@
     <Content Include="package.json" />
     <Content Include="bower.json" />
     <Content Include="sass-lint.yml" />
-    <Content Include="gulp.targets" />
+    <Content Include="gulp.targets">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include=".jscsrc" />
     <Content Include=".jshintrc" />
     <Content Include="src\sass\modules\_rewards-leader.scss" />
