@@ -1,6 +1,5 @@
 ﻿using Glass.Mapper.Sc.Web.Mvc;
 using Vitality.Website.Areas.Presales.Models.Partners;
-using Vitality.Website.Areas.Presales.Models.Summary;
 
 namespace Vitality.Website.Extensions.Views
 {

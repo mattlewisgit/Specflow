@@ -43,6 +43,16 @@
     #{$attribute}: $color;
 }
 
+$_border-radius: 5px;
+
+@mixin rounding {
+    border-radius: $_border-radius;
+}
+
+@mixin tab-rounding {
+    border-radius: $_border-radius $_border-radius 0 0;
+}
+
 //Hide text mixin
 @mixin hide-text2 {
     font: 0/0 serif;
@@ -60,7 +70,11 @@
     margin-right: auto;
 }
 
- @mixin shadow--dark {
+@mixin ensure-at-front {
+    z-index: 100;
+}
+
+@mixin shadow--dark {
     text-shadow: 0 0 $pad--thin $darken-light;
 }
 

@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {8A68D4DB-B8D3-444E-A218-8C16F643DE69}
+database: master
+path: /sitecore/content/Presales/Content/Navigation/Main Navigation/Development/Components/Rewards Leader
+parent: {7AC07B93-215C-48D9-9BE2-ABE8A0EF01C8}
+name: Rewards Leader
+master: {00000000-0000-0000-0000-000000000000}
+template: {86112F62-773D-464C-AEE7-F6E86CEC4A11}
+templatekey: Link
+
+----version----
+language: en
+version: 1
+revision: a766a5f0-c557-4030-8ae1-707aca98db7e
+
+----field----
+field: {89E4692B-40AF-44F4-ABD6-347753F08243}
+name: Link
+key: link
+content-length: 175
+
+<link id="{A9878ED9-7819-4F97-9578-500216B8EE50}" querystring="" text="Rewards Leader" title="" class="" url="/Presales/home/development/rewards-leader" linktype="internal" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160617T155122Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+a766a5f0-c557-4030-8ae1-707aca98db7e
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160617T155747Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

@@ -1,0 +1,92 @@
+@import "../base/vars";
+@import "../utils/mixins";
+
+.quote-footer {
+    @include ensure-at-front;
+    
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+
+    h6 {
+        @include tab-rounding;
+        color: $white;
+        display: inline-block;
+        margin: 0;
+        padding: $pad--thin 10%;
+
+        a {
+            cursor: pointer;
+            display: none;
+        }
+
+        @media only screen and (max-width: $breakpoint-small) {
+            a, span {
+                @include font-size($font-small);
+            }
+
+            a {
+                display: block;
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    h6, &--body {
+        background-color: $darken-heavy;
+    }
+
+    &--body {
+        // Height transition can only work on max-height,
+        // so set to a limit that the content would never reach.
+        max-height: 500px;
+        overflow-y: hidden;
+        padding: $pad--thin 0;
+        transition: max-height $delay--medium ease;
+
+        a {
+            margin: $pad--tiny;
+        }
+
+        @media only screen and (max-width: $breakpoint-small) {
+            a {
+                @include font-size($font-small);
+                border-radius: 0;
+                border-width: 1px;
+                padding: $pad--thin;
+            }
+        }
+
+        &__hidden {
+            max-height: 0;
+            padding: 0;
+        }
+    }
+}
+
+// Use flexbox to adjust the widths if Modernizr detects it.
+// If not, the JS match heights module should be applied.
+.flexbox {
+    .quote-footer {
+        &--body {
+            align-content: stretch;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            a {
+                $_max-width: 300px;
+                display: inline-flex;
+                flex: 1;
+                flex-basis: $_max-width;
+                max-width: $_max-width;
+            }
+        }
+    }
+}

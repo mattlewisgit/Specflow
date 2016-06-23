@@ -1,0 +1,9 @@
+﻿{
+    "smaller": 350,
+    "small": 540,
+    "medium": 770,
+    "large": 900,
+    "larger": 1025,
+    "massive": 1200,
+    "max": 1440
+}
