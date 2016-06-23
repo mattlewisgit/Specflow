@@ -287,7 +287,6 @@ gulp.task(tasks.js.thirdParty, function () {
         .pipe(plugins.changed(paths.temp))
         .pipe(gulp.dest(paths.temp))
         .pipe(plugins.cdnizer(configs.cdnizer))
-        .pipe(plugins.htmlmin(configs.htmlMin))
         .pipe(gulp.dest(paths.templates.dest));
 
     return gulp.start(tasks.razor);
