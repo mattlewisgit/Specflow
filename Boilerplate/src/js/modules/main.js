@@ -9,7 +9,8 @@ var SearchModule = require("./searchModule");
 var SocialShareModule = require("./socialShareModule");
 var TabsModule = require("./tabsModule");
 
-$(document).ready(function() {
+$(document).ready(function () {
+    "use strict";
     //
     // Vendor libraries -
     //

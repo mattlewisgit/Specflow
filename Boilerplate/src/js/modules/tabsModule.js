@@ -17,6 +17,7 @@ var _tabModules = [];
 // Tab Modules wrapped in function to keep each one"s scope to itself.
 // Replaced generalised $(_settings.selector) dom selection.
 var TabModule = function (tabModuleDomElement) {
+    "use strict";
     var $thisTabModule = tabModuleDomElement;
 
     var _setDefaultContent = function () {
@@ -112,6 +113,7 @@ var TabModule = function (tabModuleDomElement) {
 };
 
 var _handleResize = function () {
+    "use strict";
     // check whether to do anything
     if (_globals.isAvailable === false){
         return;
@@ -130,6 +132,7 @@ var _handleResize = function () {
 };
 
 var init = function () {
+    "use strict";
     // check existence of tabs
     if ($(_settings.selector).length === 0) {
         _globals.isAvailable = false;

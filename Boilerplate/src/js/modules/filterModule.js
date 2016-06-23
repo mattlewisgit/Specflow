@@ -37,6 +37,7 @@ var animtionHandler;
 //functions -
 var _filterModule = {
     initFilterSection: function () {
+        "use strict";
         // On clicking a filter control -
         $filterOptionContainer.on("click", "a", _filterModule.filterSelected);
 
@@ -47,6 +48,7 @@ var _filterModule = {
     },
 
     filterSelected: function () {
+        "use strict";
         // Look up the filter data -
         var selectedFilter = $(this).data(_settings.filterDataName);
 
@@ -65,6 +67,7 @@ var _filterModule = {
 
     //Filter the items by the data name -
     filterItemsBy: function (filterName) {
+        "use strict";
         if (animtionHandler) {
             animtionHandler.stop();
         }
@@ -106,6 +109,7 @@ var _filterModule = {
 };
 
 var init = function (wowInstance) {
+    "use strict";
     //Set a reference to the main animaiton handler -
     animtionHandler = wowInstance;
 

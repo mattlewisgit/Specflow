@@ -10,6 +10,7 @@ var $searchMatches;
 
 var _searchModule = {
     init: function () {
+        "use strict";
         $searchInput.on("input", function () {
             var searchString = $(this).val();
             $searchOutput.html(searchString);
@@ -31,6 +32,7 @@ var _searchModule = {
 };
 
 var init = function () {
+    "use strict";
     $searchInput = $(_settings.searchInputClass);
     $searchOutput = $(_settings.searchStringOutput);
     $searchMatches = $(_settings.searchMatchesOutput);

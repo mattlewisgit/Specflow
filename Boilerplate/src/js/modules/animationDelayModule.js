@@ -16,6 +16,7 @@ var count = 0;
 
 var _animationDelayMod = {
     init: function () {
+        "use strict";
         //Populate the elements -
         $animationElements = $(_settings.animationDelayClass);
 
@@ -27,6 +28,7 @@ var _animationDelayMod = {
     },
 
     setDelays: function () {
+        "use strict";
         if (Modernizr.mq("(min-width : 770px)")) {
             $.each($animationElements, function () {
                 //Work out its column position

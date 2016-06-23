@@ -1,4 +1,5 @@
 var init = function () {
+    "use strict";
     // Avoid `console` errors in browsers that lack a console.
     (function () {
         var method;
@@ -58,7 +59,7 @@ var init = function () {
 
 // --------------------------------------------------------------------Scroll To Element
 var scrollToElement = function (el, off, dur) {
-
+    "use strict";
     dur = typeof dur !== "undefined" ? dur : 500;
     off = typeof off !== "undefined" ? off : 0;
 
@@ -72,6 +73,7 @@ var scrollToElement = function (el, off, dur) {
 
 // --------------------------------------------------------------------Get viewport sizes
 var getViewport = function () {
+    "use strict";
     var viewPortWidth;
     var viewPortHeight;
 

@@ -15,6 +15,7 @@ var $allMatchHeightElements;
 
 var _matchHeightMod = {
     init: function () {
+        "use strict";
         //Populate the elements -
         $allMatchHeightElements = [];
 
@@ -30,6 +31,7 @@ var _matchHeightMod = {
     },
 
     matchHeights: function () {
+        "use strict";
         for (var i = 0; i < $allMatchHeightElements.length; i++) {
             $allMatchHeightElements[i].matchHeight();
         }

@@ -25,6 +25,7 @@
         "FastClick",
         "jQuery",
         "Modernizr",
+        "module",
         "require",
         "WOW"
     ]

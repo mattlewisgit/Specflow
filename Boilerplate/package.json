@@ -33,6 +33,7 @@
         "gulp-svg-sprite": "*",
         "gulp-task-listing": "*",
         "gulp-uglify": "*",
+        "gulp-util": "*",
         "htmlhint-stylish": "*",
         "jshint-stylish": "*",
         "node-gyp": "3.3.0",

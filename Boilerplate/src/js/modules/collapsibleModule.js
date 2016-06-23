@@ -6,6 +6,7 @@
 
 var  _collapsibleModule = {
     _destroyCollapsible: function (context) {
+        "use strict";
         var contextSelector = context || _settings.selector;
 
         $(".expander__link", contextSelector).unbind("click");
@@ -15,6 +16,7 @@ var  _collapsibleModule = {
     },
 
     _createCollapsible: function (context, onBeforeSlideDown) {
+        "use strict";
         var $context = context ? $(context) : $(_settings.selector);
 
         // if it"s already set up, return
@@ -64,6 +66,7 @@ var  _collapsibleModule = {
     },
 
     _createAllCollapsibles: function () {
+        "use strict";
         $(_settings.selector).each(function () {
             _collapsibleModule._createCollapsible($(this));
         });
@@ -71,6 +74,7 @@ var  _collapsibleModule = {
 };
 
 var handleResize = function () {
+    "use strict";
     if (Modernizr.mq("(min-width : "+_settings.breakpoint+")")) {
         // destroy mobile-only
         _collapsibleModule._destroyCollapsible(_settings.selector + ".expander--mobile");
@@ -81,6 +85,7 @@ var handleResize = function () {
 };
 
 var init = function () {
+    "use strict";
     _collapsibleModule._createAllCollapsibles();
     $(window).on("throttledresize", handleResize);
 };

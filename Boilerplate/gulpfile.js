@@ -1,6 +1,5 @@
 // jshint strict: false
 
-var amdOptimize = require("amd-optimize");
 var browserify = require("browserify");
 var browserSync = require("browser-sync");
 var buffer = require("vinyl-buffer");
@@ -275,6 +274,14 @@ gulp.task(tasks.js.devel, function () {
 });
 
 gulp.task(tasks.js.thirdParty, function () {
+    // Copy all reference bower failovers to the dist folder.
+    var replacements = configs.cdnizer.files
+        .map(function (file) { return "./" + file.file; });
+
+    gulp
+        .src(replacements, { base: "." })
+        .pipe(gulp.dest("dist"));
+
     gulp
         .src(paths.js.thirdPartyTemplate)
         .pipe(plugins.changed(paths.temp))

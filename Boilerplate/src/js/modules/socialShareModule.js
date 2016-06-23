@@ -4,7 +4,7 @@ var _settings = {
 
 var _socialShareModule = {
     configureShareData: function ($anchor) {
-
+        "use strict";
         var socialChannel = $anchor.data("type");
         //var shareTitle = encodeURIComponent($anchor.data("title"));
         //var shareDescription = encodeURIComponent($anchor.data("description"));
@@ -25,6 +25,7 @@ var _socialShareModule = {
 };
 
 var init = function () {
+    "use strict";
     var $shareComponents = $(_settings.socialSharingLinkSelector);
 
     $shareComponents.on("click", function (e) {

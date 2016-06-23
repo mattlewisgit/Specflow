@@ -1,16 +1,18 @@
 var enablerClass = ".match-width";
 
 function init() {
+    "use strict";
     // Only use this as a failover for a lack of flexbox.
     if (Modernizr && Modernizr.flexbox) {
         return;
     }
 
     // Resize the children of each parent element with the enabler.
-    $(module.enablerClass).each(module.matchWidths);
+    $(enablerClass).each(matchWidths);
 }
 
- function matchWidths(i, element) {
+function matchWidths(i, element) {
+    "use strict";
     var maxWidth = 0;
 
     $(element)

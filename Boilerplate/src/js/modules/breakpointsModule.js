@@ -8,6 +8,7 @@ var breakpoints = {
 };
 
 $.each(data, function (name, value) {
+    "use strict";
     var max = "(max-width: " + value + "px)";
     var min = "(min-width: " + value + "px)";
 

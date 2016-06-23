@@ -27,11 +27,8 @@ var _settings = {
 //functions -
 
 var _menuModule = {
-    initMobileMenu: function () {
-        //Set up toggle click etc on mobile -
-    },
-
     initMainMobile: function () {
+        "use strict";
         //Tab index helpers - megamenu accessibility
         $megaMenuItems = $(_settings.megaMenuClass);
 
@@ -71,6 +68,7 @@ var _menuModule = {
 
     //Megamenu touch events - for large sceen layouts, but with no mouse eg. iPads -
     onMegaMenuOpenTouchLarge: function (e) {
+        "use strict";
         if (Modernizr.mq("(min-width : "+_settings.breakpoint+")") && Modernizr.touchevents) {
             event.stopPropagation();
 
@@ -96,14 +94,16 @@ var _menuModule = {
     //Slight delay before removing the overflow visible class from the mobile mega menu
     //Prevents the megamenu being clipped before the transform is complete
     delayRemoveMegaMenuOverflowClass: function (delay) {
-        var _delay =  delay ? delay : 0;
+        "use strict";
+        delay = delay || 0;
 
         setTimeout(function () {
             $body.removeClass(_settings.mobileMegaMenuOverflowClass);
-        }, _delay);
+        }, delay);
     },
 
     onTouchOutsideOpenMegaMenu: function () {
+        "use strict";
         $("."+_settings.focusClass).removeClass(_settings.focusClass);
         //Remove listener for clicking anything other than the megamenu, to close it again -
         $html.off("click", _menuModule.onTouchOutsideOpenMegaMenu);
@@ -111,6 +111,7 @@ var _menuModule = {
 
     //Tab button focus megamenu for accessibility -
     onTabCheckMegamenuFocus: function () {
+        "use strict";
         var count = 0;
 
         //For each mega menu item -
@@ -141,6 +142,7 @@ var _menuModule = {
 
     //Tab buttons for Log In Menu =
     onTabCheckLoginFocus: function () {
+        "use strict";
         var loginIcon = $("."+_settings.logInToggleSelector);
         //Check if  a child element has focus -
         var hasFocus = (loginIcon.find(":focus").length > 0);
@@ -157,6 +159,7 @@ var _menuModule = {
 
     //The mobile toggle menu button -
     onMobileMenuButtonPressed: function (e) {
+        "use strict";
         if (e) {
             e.preventDefault();
             e.stopPropagation();
@@ -190,6 +193,7 @@ var _menuModule = {
 
     //Toggle the log in panel -
     onLogInButtonPressed: function (e) {
+        "use strict";
         e.preventDefault();
         e.stopPropagation();
 
@@ -209,6 +213,7 @@ var _menuModule = {
     },
 
     onSearchButtonPressed: function (e) {
+        "use strict";
         e.preventDefault();
         e.stopPropagation();
 
@@ -229,26 +234,27 @@ var _menuModule = {
     },
 
     delaySearchNoMaxHeight: function (delay) {
+        "use strict";
         var _delay =  delay ? delay : 0;
 
         setTimeout(function() {
             $body.addClass(_settings.searchOverflowClass);
         }, _delay);
-
     },
 
     closeSearchMenu: function () {
+        "use strict";
         $body.removeClass(_settings.searchOverflowClass);
         var _delay = 0.2;
 
         setTimeout(function() {
             $body.removeClass(_settings.searchClass);
         }, _delay);
-
     },
 
     //Mobile mega menu open / close
     onMobileMegaMenuSelect: function (e) {
+        "use strict";
         if (Modernizr.mq("(max-width : "+_settings.breakpoint+")")) {
             var $this = $(this);
             var $target = $(e.target);
@@ -284,6 +290,7 @@ var _menuModule = {
     //If touch outside of the open menu on mobile - close it -
     //Unless it"s a menu link to follow -
     onTouchOutsideOpenMobileMenu: function (e) {
+        "use strict";
         var target = $(e.target);
 
         if (!target.is("a")) {
@@ -297,13 +304,13 @@ var _menuModule = {
 };
 
 var init = function () {
+    "use strict";
     $body = $("body");
     $html = $("html");
 
-    _menuModule.initMobileMenu();
     _menuModule.initMainMobile();
 };
 
 module.exports = {
-    "init": init
+    init: init
 };

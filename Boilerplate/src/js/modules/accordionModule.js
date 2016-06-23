@@ -15,6 +15,7 @@ var _globals = {
 //functions -
 var _accordionModule = {
     _showActiveContent: function () {
+        "use strict";
         // set default for links
         if ($(".expander__link." + _settings.activeClass, _settings.selector).length === 0){
             $(".expander__link", _settings.selector).first().addClass(_settings.activeClass);
@@ -27,6 +28,7 @@ var _accordionModule = {
     },
 
     _hideActiveContent: function () {
+        "use strict";
         var compoundLinkSelector = ".expander__link" + "." + _settings.activeClass;
         var compoundContentSelector = ".expander__content" + "." + _settings.activeClass;
 
@@ -35,16 +37,13 @@ var _accordionModule = {
         $(compoundContentSelector, _settings.selector).removeClass(_settings.activeClass);
     },
 
-    _setDefaultContent: function () {
-        this._showActiveContent();
-    },
-
     _createAccordion: function (context) {
+        "use strict";
         var contextSelector = context || _settings.selector;
 
         // set the default content to be open if required
         if (_settings.openFirstAccordionOption) {
-            this._setDefaultContent();
+            this._showActiveContent();
         }
 
         Collapsible.createCollapsible(contextSelector, function ($target) {

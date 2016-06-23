@@ -11,6 +11,7 @@ var settings = {
     pageFooter: null,
 
     init: function () {
+        "use strict";
         settings.footer = $(".quote-footer");
 
         // Ignore if no footer found, or it is hidden in Experience Editor.
@@ -52,6 +53,7 @@ var settings = {
      * @param {MediaQueryListEvent} [mql] From window.matchMedia.
      */
     adapt: function (mql) {
+        "use strict";
         if (settings.isExpanded) {
             return;
         }
@@ -69,11 +71,13 @@ var settings = {
     },
 
     adaptPageFooter: function (height) {
+        "use strict";
         // Note: setTimeout cannot be moved to this function!
         settings.pageFooter.css("padding-bottom", (height + 20) + "px");
     },
 
-    hide: function() {
+    hide: function () {
+        "use strict";
         settings.footerBody.addClass(settings.hiddenClass);
 
         setTimeout(function () {
@@ -81,7 +85,8 @@ var settings = {
         }, 350);
     },
 
-    show: function() {
+    show: function () {
+        "use strict";
         settings.footerBody.removeClass(settings.hiddenClass);
 
         setTimeout(function () {
@@ -89,7 +94,8 @@ var settings = {
         }, 350);
     },
 
-    toggle: function() {
+    toggle: function () {
+        "use strict";
         settings.isExpanded = !settings.isExpanded;
         return settings.isExpanded ? settings.show() : settings.hide();
     }
