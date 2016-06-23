@@ -245,6 +245,8 @@
     <Compile Include="Areas\Global\Models\KeyValuePair.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
+    <Compile Include="Areas\Presales\Models\Products\ProductPanel.cs" />
+    <Compile Include="Areas\Presales\Models\Products\ProductsComponent.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IQuoteFooter.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Banners\HomeHero.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
@@ -281,6 +283,7 @@
     <Compile Include="Extensions\Views\ProductHeroExtensions.cs" />
     <Compile Include="Extensions\Views\CardsStackedExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\Views\ProductsComponentExtensions.cs" />
     <Compile Include="Extensions\Views\RewardsLeaderExtensions.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\BenefitLeader.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\BenefitLeaderRendering.cs" />
@@ -524,6 +527,7 @@
     <Content Include="Areas\Presales\Views\Shared\_Favicons.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_CriticalCss.cshtml" />
     <Content Include="client_side\config\cssnano-config.json" />
+    <Content Include="Areas\Presales\Views\Products\ProductsComponent.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\QuoteFooter.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_JsThirdParty.cshtml" />
     <None Include="Web.Debug.config">
