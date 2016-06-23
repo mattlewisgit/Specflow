@@ -1,6 +1,7 @@
 // jshint strict: false
 
 var amdOptimize = require("amd-optimize");
+var browserify = require("browserify");
 var browserSync = require("browser-sync");
 var buffer = require("vinyl-buffer");
 var critical = require("critical");
@@ -8,6 +9,7 @@ var del = require("del");
 var gulp = require("gulp");
 var fs = require("fs");
 var runSequence = require("run-sequence");
+var source = require("vinyl-source-stream");
 var toTitleCase = require("to-title-case");
 
 var plugins = require("gulp-load-plugins")({
@@ -260,15 +262,12 @@ gulp.task(tasks.css, function () {
 });
 
 gulp.task(tasks.js.devel, function () {
-    return gulp
-        .src(paths.js.srcAll)
-        .pipe(amdOptimize("app", {
-            name: "app",
-            configFile: "src/js/app.js",
-            baseUrl: "src/js"
-        }))
-        .pipe(plugins.concat(paths.js.filename))
-        .pipe(gulp.dest(paths.js.dest));
+    del("./js/app.js");
+
+    return browserify("./src/js/modules/main.js")
+        .bundle()
+        .pipe(source("app.js"))
+        .pipe(gulp.dest("./js/"));
 });
 
 gulp.task(tasks.js.build, [tasks.js.lint, tasks.js.devel], function () {

@@ -3,14 +3,13 @@
     "version": "1.0.0",
     "description": "Vitality Boilerplate",
     "dependencies": {
-        "amd-optimize": "*",
         "bower": "*",
         "browser-sync": "*",
+        "browserify": "*",
         "critical": "*",
         "del": "*",
         "gulp": "*",
         "gulp-changed": "*",
-        "gulp-concat": "*",
         "gulp-cssnano": "*",
         "gulp-htmlhint": "*",
         "gulp-image-resize": "*",
@@ -37,7 +36,8 @@
         "node-gyp": "3.3.0",
         "run-sequence": "*",
         "to-title-case": "*",
-        "vinyl-buffer": "*"
+        "vinyl-buffer": "*",
+        "vinyl-source-stream": "*"
     },
     "scripts": {
         "bower": "bower",

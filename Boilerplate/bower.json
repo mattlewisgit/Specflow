@@ -1,5 +1,5 @@
 {
-    "name": "boilerplate",
+    "name": "vitality.boilerplate",
     "description": "Vitality Boilerplate",
     "main": "",
     "authors": [
@@ -19,9 +19,13 @@
         "tests"
     ],
     "dependencies": {
+        "fastclick": "*",
+        "jquery": "*",
+        "jquery-match-height": "*",
+        "jquery.smartresize": "*",
+        "jqueryui": "*",
         "prism": "*",
-        "requirejs": "*",
-        "requirejs-json": "*",
-        "tablesaw": "*"
+        "tablesaw": "*",
+        "wowjs": "*"
     }
 }

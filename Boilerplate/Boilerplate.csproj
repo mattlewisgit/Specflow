@@ -169,30 +169,20 @@
     <Content Include="src\img\logos\white\starbucks_white.png" />
     <Content Include="src\img\logos\white\virgin-active_white.png" />
     <Content Include="src\img\logos\white\weightwatchers_white.png" />
-    <Content Include="src\js\libraries\tablesaw.js" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
-    <Content Include="src\js\app.js" />
     <Content Include="src\js\modules\collapsibleModule.js" />
     <Content Include="src\js\modules\breakpointsModule.js" />
     <Content Include="src\js\modules\quoteFooterModule.js" />
     <Content Include="src\js\modules\matchWidthsModule.js" />
-    <Content Include="src\js\vendor\domready.js" />
-    <Content Include="src\js\libraries\fastclick.js" />
     <Content Include="src\js\modules\filterModule.js" />
     <Content Include="src\js\modules\helpers.js" />
-    <Content Include="src\js\libraries\jquery-1.11.3.js" />
-    <Content Include="src\js\libraries\jquery-ui.js" />
-    <Content Include="src\js\libraries\jquery.matchHeight.js" />
-    <Content Include="src\js\libraries\jquery.smart-resize.js" />
     <Content Include="src\js\modules\main.js" />
     <Content Include="src\js\modules\matchHeightsModule.js" />
     <Content Include="src\js\modules\menuModule.js" />
-    <Content Include="src\js\require.js" />
     <Content Include="src\js\modules\searchModule.js" />
     <Content Include="src\js\modules\socialShareModule.js" />
     <Content Include="src\js\modules\tabsModule.js" />
-    <Content Include="src\js\libraries\wow.js" />
     <Content Include="src\sass\app.css">
       <DependentUpon>app.scss</DependentUpon>
     </Content>
@@ -383,6 +373,7 @@
     <Content Include="config\svgsprite-config.json" />
     <Content Include="src\js\breakpoints.json" />
     <Content Include="src\sass\modules\_quote-footer.scss" />
+    <Content Include=".htmlhintrc" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
