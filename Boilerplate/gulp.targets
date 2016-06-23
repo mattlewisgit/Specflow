@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <Target Name="Build">
-        <!--
-        <Exec WorkingDirectory="$(ProjectDir)src" Command="npm install" />
-        <Exec WorkingDirectory="$(ProjectDir)src" Command="npm run bower install" />
-        <Exec WorkingDirectory="$(ProjectDir)src" Command="npm run gulp" />
-        -->
+        <Exec WorkingDirectory="$(ProjectDir)" Command="npm run bower install" />
+        <Exec WorkingDirectory="$(ProjectDir)" Command="npm run gulp" />
     </Target>
 </Project>

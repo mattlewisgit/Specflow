@@ -3,10 +3,8 @@ section div.scLooseFrameZone {
 } 
 
 // Force the width on grid items whilst editing.
-.grid {
-    .grid-col-6-12, .scLooseFrameZone.scEnabledChrome {
-        width: 100%;
-    }
+.grid .scLooseFrameZone.scEnabledChrome [class*=grid-col-] {
+    width: 100%;
 }
 
 // Keep cards inline.
