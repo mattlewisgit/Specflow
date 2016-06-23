@@ -194,10 +194,10 @@
     <Content Include="src\js\modules\main.js" />
     <Content Include="src\js\modules\matchHeightsModule.js" />
     <Content Include="src\js\modules\menuModule.js" />
+    <Content Include="js\rAF.js" />
     <Content Include="src\js\modules\searchModule.js" />
     <Content Include="src\js\modules\socialShareModule.js" />
     <Content Include="src\js\modules\tabsModule.js" />
-    <Content Include="src\js\libraries\wow.js" />
     <Content Include="src\sass\modules\_faq-leader.scss" />
     <Content Include="Web.config" />
   </ItemGroup>
