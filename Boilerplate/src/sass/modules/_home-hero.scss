@@ -1,0 +1,25 @@
+@import "../base/defaults";
+@import "../base/vars";
+@import "../utils/mixins";
+
+.home-hero {
+    @include shadow--dark();
+    @include text-centre();
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: $pad;
+	padding-top: $pad--large;
+
+    &.text-light {
+        @include shadow--light();
+    }
+
+	h1 {
+		@include font-size($h1--xlarge);
+		margin: $pad--thin 0 $pad--xxlarge;
+	}
+
+	h4 {
+		margin-bottom: 0;
+	}
+}
