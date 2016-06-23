@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {B478C6A0-E7F4-4007-A6A8-6A11D34A78D3}
+database: master
+path: /sitecore/templates/Presales/Rendering Templates/Home Hero Rendering/__Standard Values
+parent: {A91288D3-080B-4E0A-8253-96C70D78B30C}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {A91288D3-080B-4E0A-8253-96C70D78B30C}
+templatekey: Home Hero Rendering
+
+----field----
+field: {3094D236-5985-4C4F-AE6A-E30740885532}
+name: Caching
+key: caching
+content-length: 15
+
+0|0|0|0|0|0|0|0
+----version----
+language: en
+version: 1
+revision: b56e8731-60d5-43cf-b43c-3f604fd13b40
+
+----field----
+field: {0A83FE9E-C83B-42F4-B9BE-CE301D6AE53E}
+name: FontTheme
+key: fonttheme
+content-length: 38
+
+{DAE842BC-82A2-4DC4-998B-B64A74FB25C9}
+----field----
+field: {90F109DC-B2E0-434B-9F01-11F8877DA621}
+name: ImageRelativePosition
+key: imagerelativeposition
+content-length: 38
+
+{9097C6EB-902B-4408-B106-89CEDA90DBA8}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160506T145717Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+b56e8731-60d5-43cf-b43c-3f604fd13b40
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160622T142202Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
