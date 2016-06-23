@@ -54,8 +54,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="TechTalk.SpecFlow, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SpecFlow.2.0.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    <Reference Include="TechTalk.SpecFlow, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="WebDriver, Version=2.53.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -91,6 +91,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MainNavigation.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\MetaTags.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MetaTags.feature</DependentUpon>
+    </Compile>
     <Compile Include="PageComponents\Navigation\MainNavigation.cs" />
     <Compile Include="PageComponents\Navigation\MobileNavigation.cs" />
     <Compile Include="PageComponents\Navigation\NavigationSection.cs" />
@@ -99,6 +104,7 @@
     <Compile Include="Steps\CommonSteps.cs" />
     <Compile Include="Steps\MainNavigationSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\MetaTagsSteps.cs" />
     <Compile Include="Utilities\Browser.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +117,10 @@
     <None Include="Features\MainNavigation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>MainNavigation.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\MetaTags.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MetaTags.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

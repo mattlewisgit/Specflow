@@ -23,6 +23,13 @@ namespace Vitality.Website.IntegrationTests
                     return GetValue("Paths.Firefox");
                 }
             }
+            public static string Chrome
+            {
+                get
+                {
+                    return GetValue("Paths.Chrome");
+                }
+            }
         }
 
         public static class Links
