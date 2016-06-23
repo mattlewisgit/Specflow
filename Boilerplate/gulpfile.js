@@ -18,8 +18,10 @@ var plugins = require("gulp-load-plugins")({
 });
 
 var configs = {
+    cdnizer: require("./config/cdnizer-config.json"),
     cssnano: require("./config/cssnano-config.json"),
     favicon: require("./config/favicon-config.json"),
+    htmlMin: require("./config/htmlmin-config.json"),
     imageResize: require("./config/image-resize-config.json"),
     sizeReport: require("./config/sizereport-config.json"),
     svgSprite: require("./config/svgsprite-config.json")
@@ -40,7 +42,8 @@ var tasks = {
     js: {
         build: "js",
         devel: "js:devel",
-        lint: "js:lint"
+        lint: "js:lint",
+        thirdParty: "js:third-party"
     },
     razor: "razor",
     report: "report",
@@ -98,7 +101,8 @@ var paths = {
             "!src/js/libraries/**/*.js",
             "!src/js/vendor/**/*.js"
         ],
-        srcAll: "src/js/**/*.js"
+        srcAll: "src/js/**/*.js",
+        thirdPartyTemplate: "src/js-third-party.html"
     },
     sass: {
         generated: "src/sass/generated",
@@ -270,15 +274,30 @@ gulp.task(tasks.js.devel, function () {
         .pipe(gulp.dest("./js/"));
 });
 
-gulp.task(tasks.js.build, [tasks.js.lint, tasks.js.devel], function () {
-    return gulp
-        .src(paths.js.dest + "/*.js*/")
-        .pipe(plugins.uglify())
-        .pipe(plugins.rename({
-            suffix: ".min"
-        }))
-        .pipe(gulp.dest(paths.dist));
+gulp.task(tasks.js.thirdParty, function () {
+    gulp
+        .src(paths.js.thirdPartyTemplate)
+        .pipe(plugins.changed(paths.temp))
+        .pipe(gulp.dest(paths.temp))
+        .pipe(plugins.cdnizer(configs.cdnizer))
+        .pipe(plugins.htmlmin(configs.htmlMin))
+        .pipe(gulp.dest(paths.templates.dest));
+
+    return gulp.start(tasks.razor);
 });
+
+gulp.task(
+    tasks.js.build,
+    [tasks.js.lint, tasks.js.devel, tasks.js.thirdParty],
+    function () {
+        return gulp
+            .src(paths.js.dest + "/*.js*/")
+            .pipe(plugins.uglify())
+            .pipe(plugins.rename({
+                suffix: ".min"
+            }))
+            .pipe(gulp.dest(paths.dist));
+    });
 
 gulp.task(tasks.html, function () {
     return gulp

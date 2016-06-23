@@ -19,13 +19,13 @@
         "tests"
     ],
     "dependencies": {
-        "fastclick": "*",
-        "jquery": "*",
-        "jquery-match-height": "*",
-        "jquery.smartresize": "*",
-        "jqueryui": "*",
-        "prism": "*",
-        "tablesaw": "*",
-        "wowjs": "*"
+        "fastclick": "1.0.6",
+        "jquery": "2.2.3",
+        "jquery-match-height": "0.7.0",
+        "jquery.smartresize": "1.0.0",
+        "jqueryui": "1.11.4",
+        "prism": "1.5.1",
+        "tablesaw": "2.0.3",
+        "wowjs": "1.1.2"
     }
 }

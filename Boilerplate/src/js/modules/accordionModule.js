@@ -43,12 +43,11 @@ var _accordionModule = {
         var contextSelector = context || _settings.selector;
 
         // set the default content to be open if required
-        if(_settings.openFirstAccordionOption){
+        if (_settings.openFirstAccordionOption) {
             this._setDefaultContent();
         }
 
         Collapsible.createCollapsible(contextSelector, function ($target) {
-
             // user has interacted
             _globals.userInteracted = true;
 
@@ -64,32 +63,10 @@ var _accordionModule = {
                     $(this).removeClass(_settings.activeClass).removeAttr("style");
                 });
         });
-
     }
-
 };
 
-/*
-var handleResize = function () {
-    // just call to set defaults
-    _accordionModule._setDefaultContent();
-};
-*/
-
-/**
- * initialiser
- */
-var init = function () {
-    _accordionModule._createAccordion();
-    //$(window).smartresize(handleResize);
-};
-
-var createAccordion = function (context) {
-    _accordionModule._createAccordion(context);
-};
-
-//Return our public methods -
 module.exports = {
-    init: init,
-    createAccordion: createAccordion
+    init: _accordionModule._createAccordion,
+    createAccordion: _accordionModule._createAccordion
 };
