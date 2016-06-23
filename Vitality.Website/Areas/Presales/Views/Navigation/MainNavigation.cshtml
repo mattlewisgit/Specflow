@@ -1,6 +1,5 @@
 ﻿@using System.Web.Mvc.Html
 @using Vitality.Website.Areas.Global.Models
-@using Vitality.Website.Extensions.Models
 @using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Navigation.MainNavigation>
 
@@ -15,7 +14,7 @@
 
             @foreach (var navigationSection in Model.NavigationSections)
             {
-                if (Model.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()).Equals(navigationSection))
+                if (this.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()).Equals(navigationSection))
                 {
                     <li class="site-nav__item is-active">
                         @RenderLink(navigationSection, item => item.SectionLink)
@@ -81,14 +80,14 @@
 
     </div><!-- end top-bar desktop-->
     <!-- section-nav - for all sizes - contains megamenu -->
-    @Html.Partial("/Areas/Presales/Views/Navigation/NavigationSection.cshtml", Model.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()))
+    @Html.Partial("/Areas/Presales/Views/Navigation/NavigationSection.cshtml", this.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()))
     <!-- end section-nav -->
     <!-- site-nav for mobile, moved to botom of menu -->
     <ul class="site-nav--small">
 
         @foreach (var navigationSection in Model.NavigationSections)
         {
-            if (Model.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()).Equals(navigationSection))
+            if (this.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()).Equals(navigationSection))
             {
                 <li class="site-nav__item is-active">
                     @RenderLink(navigationSection, item => item.SectionLink)

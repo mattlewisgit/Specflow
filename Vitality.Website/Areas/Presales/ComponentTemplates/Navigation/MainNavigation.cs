@@ -27,7 +27,6 @@
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<LinkItem> LoginLinks { get; set; }
         
-        
         [SitecoreQuery(HasNavigationSectionTemplate, IsRelative = true)]
         public IEnumerable<NavigationSection> NavigationSections { get; set; }
     }
