@@ -1,0 +1,43 @@
+﻿{
+    "allowMin": true,
+    "allowRev": true,
+    "files": [
+        {
+            "file": "/bower_components/jquery/dist/jquery.min.js",
+            "package": "jquery",
+            "comment": "Test for jQuery and not $, as Chrome has $ as a built-in!",
+            "test": "jQuery",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/jquery/${version}/jquery.min.js"
+        },
+        {
+            "file": "/bower_components/jqueryui/jquery-ui.min.js",
+            "package": "jqueryui",
+            "test": "$.datepicker",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/jqueryui/${version}/jquery-ui.min.js"
+        },
+        {
+            "file": "/bower_components/wowjs/dist/wow.min.js",
+            "package": "wowjs",
+            "test": "WOW",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/wow/${version}/wow.min.js"
+        },
+        {
+            "file": "/bower_components/jquery-match-height/jquery.matchHeight-min.js",
+            "package": "jquery-match-height",
+            "test": "$(window).matchHeight",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/${version}/jquery.matchHeight-min.js"
+        },
+        {
+            "file": "/bower_components/fastclick/lib/fastclick.js",
+            "package": "fastclick",
+            "test": "FastClick",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/fastclick/${version}/fastclick.min.js"
+        },
+        {
+            "file": "/bower_components/jquery.smartresize/jquery.smartresize.js",
+            "package": "jquery.smartresize",
+            "test": "$.event.special.debouncedresize",
+            "cdn": "//cdn.jsdelivr.net/jquery.smartresize/0.1/jquery.debouncedresize.js"
+        }
+    ]
+}
