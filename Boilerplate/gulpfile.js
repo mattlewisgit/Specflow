@@ -33,6 +33,7 @@ var tasks = {
         template: "favicon:template"
     },
     help: "help",
+    html: "html",
     images: "images",
     js: {
         build: "js",
@@ -68,9 +69,9 @@ var paths = {
     },
     gulp: "gulpfile.js",
     html: [
-        "**/*.html",
-        "!bower_components/",
-        "!node_modules/"
+        "index.html",
+        "components/**/*.html",
+        "global/**/*.html"
     ],
     img: {
         examples: {
@@ -85,7 +86,7 @@ var paths = {
         }
     },
     js: {
-        breakpoints: "config/breakpoints.json",
+        breakpoints: "src/js/breakpoints.json",
         dest: "js",
         filename: "vitality-boilerplate.js",
         modernizrFilename: "modernizr-custom.js",
@@ -164,6 +165,7 @@ gulp.task(tasks.sass.json, function () {
         .pipe(plugins.jsonSass({
             sass: false
         }))
+        .pipe(plugins.replace("$", "$_"))
         .pipe(plugins.rename({
             prefix: "_"
         }))
@@ -279,10 +281,19 @@ gulp.task(tasks.js.build, [tasks.js.lint, tasks.js.devel], function () {
         .pipe(gulp.dest(paths.dist));
 });
 
+gulp.task(tasks.html, function () {
+    return gulp
+        .src(paths.html)
+        .pipe(plugins.htmlhint(".htmlhintrc"))
+        .pipe(plugins.htmlhint.reporter("htmlhint-stylish"))
+        .pipe(plugins.htmlhint.failReporter());
+});
+
 gulp.task(tasks.default, [
     tasks.css,
     tasks.images,
-    tasks.js.build
+    tasks.js.build,
+    tasks.html
 ]);
 
 gulp.task(tasks.sass.modernizr, function () {

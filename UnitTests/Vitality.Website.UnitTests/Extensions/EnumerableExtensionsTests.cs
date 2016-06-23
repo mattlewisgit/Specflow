@@ -5,7 +5,7 @@
 
     using Shouldly;
 
-    using Vitality.Website.Areas.Presales.Models.Summary;
+    using Vitality.Website.Areas.Presales.ComponentTemplates.Summary;
     using Vitality.Website.Extensions;
     using Vitality.Website.SC;
 

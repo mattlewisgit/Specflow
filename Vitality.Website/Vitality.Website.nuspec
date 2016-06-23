@@ -21,7 +21,6 @@
       <file src="Global.asax" />
       <file src="img\**\*.*" target="img" />
       <file src="js\*.js" target="js" />
-      <file src="Views\**\*.*" target="Views" />
       <file src="Web.config" />
       <file src="Web.Release.config" />
   </files>

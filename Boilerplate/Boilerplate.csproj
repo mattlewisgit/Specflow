@@ -43,6 +43,12 @@
   <ItemGroup>
     <Content Include="components\primary-cta.html" />
     <Content Include="components\accordion.html" />
+    <Content Include="components\quote-footer\quote-footer-3-buttons.html" />
+    <Content Include="components\quote-footer\quote-footer-2-buttons.html" />
+    <Content Include="components\quote-footer\quote-footer-1-button.html" />
+    <Content Include="components\quote-footer\index.html" />
+    <Content Include="components\accordion.html" />
+    <Content Include="components\home-hero.html" />
     <Content Include="components\tabs.html" />
     <Content Include="components\footer.html" />
     <Content Include="components\summary\summary-right.html" />
@@ -156,11 +162,23 @@
     <Content Include="src\img\examples\vitality-logo.svg" />
     <Content Include="src\img\examples\youtube--footer.svg" />
     <Content Include="src\img\favicon\favicon.svg" />
+    <Content Include="src\img\logos\white\ba_white.png" />
+    <Content Include="src\img\logos\white\cineworld_white.png" />
+    <Content Include="src\img\logos\white\evans_white.png" />
+    <Content Include="src\img\logos\white\garmin_white.png" />
+    <Content Include="src\img\logos\white\polar_white.png" />
+    <Content Include="src\img\logos\white\sainsbury_white.png" />
+    <Content Include="src\img\logos\white\starbucks_white.png" />
+    <Content Include="src\img\logos\white\virgin-active_white.png" />
+    <Content Include="src\img\logos\white\weightwatchers_white.png" />
     <Content Include="src\js\libraries\tablesaw.js" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
     <Content Include="src\js\app.js" />
     <Content Include="src\js\modules\collapsibleModule.js" />
+    <Content Include="src\js\modules\breakpointsModule.js" />
+    <Content Include="src\js\modules\quoteFooterModule.js" />
+    <Content Include="src\js\modules\matchWidthsModule.js" />
     <Content Include="src\js\vendor\domready.js" />
     <Content Include="src\js\libraries\fastclick.js" />
     <Content Include="src\js\modules\filterModule.js" />
@@ -365,7 +383,10 @@
     <Content Include="config\favicon-config.json" />
     <Content Include="config\image-resize-config.json" />
     <Content Include="config\svgsprite-config.json" />
+    <Content Include="src\js\breakpoints.json" />
+    <Content Include="src\sass\modules\_quote-footer.scss" />
     <Content Include="config\breakpoints.json" />
+    <Content Include="src\sass\modules\_home-hero.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

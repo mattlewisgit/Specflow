@@ -49,8 +49,9 @@
     }
 
     &--rounded {
-        border-radius: 5px;
+        @include rounding;
     }
+
     //Colour modifiers -
     &--primary,
     &--secondary,

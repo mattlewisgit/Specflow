@@ -1,8 +1,9 @@
 ﻿namespace Vitality.Website.Extensions.Views
 {
-    using Areas.Presales.Models.FeatureBlocks;
     using Glass.Mapper.Sc.Fields;
     using Glass.Mapper.Sc.Web.Mvc;
+
+    using Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks;
 
     public static class ProductHeroExtensions
     {
