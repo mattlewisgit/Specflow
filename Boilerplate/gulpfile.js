@@ -1,6 +1,6 @@
 // jshint strict: false
 
-var amdOptimize = require("amd-optimize");
+var browserify = require("browserify");
 var browserSync = require("browser-sync");
 var buffer = require("vinyl-buffer");
 var critical = require("critical");
@@ -8,6 +8,7 @@ var del = require("del");
 var gulp = require("gulp");
 var fs = require("fs");
 var runSequence = require("run-sequence");
+var source = require("vinyl-source-stream");
 var toTitleCase = require("to-title-case");
 
 var plugins = require("gulp-load-plugins")({
@@ -16,8 +17,10 @@ var plugins = require("gulp-load-plugins")({
 });
 
 var configs = {
+    cdnizer: require("./config/cdnizer-config.json"),
     cssnano: require("./config/cssnano-config.json"),
     favicon: require("./config/favicon-config.json"),
+    htmlMin: require("./config/htmlmin-config.json"),
     imageResize: require("./config/image-resize-config.json"),
     sizeReport: require("./config/sizereport-config.json"),
     svgSprite: require("./config/svgsprite-config.json")
@@ -33,11 +36,13 @@ var tasks = {
         template: "favicon:template"
     },
     help: "help",
+    html: "html",
     images: "images",
     js: {
         build: "js",
         devel: "js:devel",
-        lint: "js:lint"
+        lint: "js:lint",
+        thirdParty: "js:third-party"
     },
     razor: "razor",
     report: "report",
@@ -68,9 +73,9 @@ var paths = {
     },
     gulp: "gulpfile.js",
     html: [
-        "**/*.html",
-        "!bower_components/",
-        "!node_modules/"
+        "index.html",
+        "components/**/*.html",
+        "global/**/*.html"
     ],
     img: {
         examples: {
@@ -95,7 +100,8 @@ var paths = {
             "!src/js/libraries/**/*.js",
             "!src/js/vendor/**/*.js"
         ],
-        srcAll: "src/js/**/*.js"
+        srcAll: "src/js/**/*.js",
+        thirdPartyTemplate: "src/js-third-party.html"
     },
     sass: {
         generated: "src/sass/generated",
@@ -259,31 +265,59 @@ gulp.task(tasks.css, function () {
 });
 
 gulp.task(tasks.js.devel, function () {
-    return gulp
-        .src(paths.js.srcAll)
-        .pipe(amdOptimize("app", {
-            name: "app",
-            configFile: "src/js/app.js",
-            baseUrl: "src/js"
-        }))
-        .pipe(plugins.concat(paths.js.filename))
-        .pipe(gulp.dest(paths.js.dest));
+    del("./js/app.js");
+
+    return browserify("./src/js/modules/main.js")
+        .bundle()
+        .pipe(source("app.js"))
+        .pipe(gulp.dest("./js/"));
 });
 
-gulp.task(tasks.js.build, [tasks.js.lint, tasks.js.devel], function () {
+gulp.task(tasks.js.thirdParty, function () {
+    // Copy all reference bower failovers to the dist folder.
+    var replacements = configs.cdnizer.files
+        .map(function (file) { return "./" + file.file; });
+
+    gulp
+        .src(replacements, { base: "." })
+        .pipe(gulp.dest("dist"));
+
+    gulp
+        .src(paths.js.thirdPartyTemplate)
+        .pipe(plugins.changed(paths.temp))
+        .pipe(gulp.dest(paths.temp))
+        .pipe(plugins.cdnizer(configs.cdnizer))
+        .pipe(gulp.dest(paths.templates.dest));
+
+    return gulp.start(tasks.razor);
+});
+
+gulp.task(
+    tasks.js.build,
+    [tasks.js.lint, tasks.js.devel, tasks.js.thirdParty],
+    function () {
+        return gulp
+            .src(paths.js.dest + "/*.js*/")
+            .pipe(plugins.uglify())
+            .pipe(plugins.rename({
+                suffix: ".min"
+            }))
+            .pipe(gulp.dest(paths.dist));
+    });
+
+gulp.task(tasks.html, function () {
     return gulp
-        .src(paths.js.dest + "/*.js*/")
-        .pipe(plugins.uglify())
-        .pipe(plugins.rename({
-            suffix: ".min"
-        }))
-        .pipe(gulp.dest(paths.dist));
+        .src(paths.html)
+        .pipe(plugins.htmlhint(".htmlhintrc"))
+        .pipe(plugins.htmlhint.reporter("htmlhint-stylish"))
+        .pipe(plugins.htmlhint.failReporter());
 });
 
 gulp.task(tasks.default, [
     tasks.css,
     tasks.images,
-    tasks.js.build
+    tasks.js.build,
+    tasks.html
 ]);
 
 gulp.task(tasks.sass.modernizr, function () {

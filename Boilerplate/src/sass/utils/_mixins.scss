@@ -73,3 +73,11 @@ $_border-radius: 5px;
 @mixin ensure-at-front {
     z-index: 100;
 }
+
+@mixin shadow--dark {
+    text-shadow: 0 0 $pad--thin $darken-light;
+}
+
+@mixin shadow--light {
+    text-shadow: 0 0 $pad--thin $darken-heavy;
+}
