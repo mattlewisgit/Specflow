@@ -111,19 +111,14 @@
 
 <!-- log in panel for mobile -->
 <div class="log-in log-in--small">
-    <div class="log-in__content">
-
-        
-        <div class="log-in__links">
-            <a href="#log-in" class="box-button box-button--rounded box-button--secondary box-button--full-width">
-                @Html.Raw(Model.LogInText)
-            </a>
-            <a href="#register" class="box-button box-button--rounded box-button--full-width">
-            </a>
-        </div>
-        
-
-    </div>
+	<div class="log-in__content">
+		<div class="log-in__links">
+			@foreach (var loginLink in Model.LoginLinks)
+			{
+				@RenderLink(loginLink, m => m.Link, this.LoginLinkCssClass(loginLink))
+			}
+		</div>
+	</div>
 </div>
 <!-- end log in panel mobile-->
 <!-- search panel for mobile -->
