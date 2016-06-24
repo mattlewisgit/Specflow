@@ -34,7 +34,7 @@ var TabModule = function (tabModuleDomElement) {
 
     var _createTabs = function () {
         // create the menu to hold tabs
-        var $menu = $("<ul />", { class: _settings.menuClass.replace(".", "") });
+        var $menu = $("<ul />", { "class": _settings.menuClass.replace(".", "") });
 
         // append all links to the menu inside a tab
         $(".expander__link", $thisTabModule)

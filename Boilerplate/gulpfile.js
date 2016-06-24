@@ -42,6 +42,7 @@ var tasks = {
         build: "js",
         devel: "js:devel",
         lint: "js:lint",
+        polyfill: "js:polyfill",
         thirdParty: "js:third-party"
     },
     razor: "razor",
@@ -93,14 +94,9 @@ var paths = {
         breakpoints: "src/js/breakpoints.json",
         dest: "js",
         filename: "vitality-boilerplate.js",
-        modernizrFilename: "modernizr-custom.js",
-        src: [
-            "src/js/**/*.js",
-            "!src/js/require.js",
-            "!src/js/libraries/**/*.js",
-            "!src/js/vendor/**/*.js"
-        ],
-        srcAll: "src/js/**/*.js",
+        modernizr: "modernizr-custom.js",
+        polyfill: "polyfill-custom.js",
+        src: "src/js/**/*.js",
         thirdPartyTemplate: "src/js-third-party.html"
     },
     sass: {
@@ -122,11 +118,14 @@ var paths = {
 
 };
 
+var replacements = configs.cdnizer.files
+    .map(function (file) { return "./" + file.file; });
+
 gulp.task(tasks.help, plugins.taskListing);
 
 gulp.task(tasks.js.lint, function () {
     return gulp
-        .src([paths.gulp].concat(paths.js.src))
+        .src([paths.gulp, paths.js.src])
         .pipe(plugins.jshint())
         .pipe(plugins.jscs())
         .pipe(plugins.jscsStylish.combineWithHintResults())
@@ -274,10 +273,6 @@ gulp.task(tasks.js.devel, function () {
 });
 
 gulp.task(tasks.js.thirdParty, function () {
-    // Copy all reference bower failovers to the dist folder.
-    var replacements = configs.cdnizer.files
-        .map(function (file) { return "./" + file.file; });
-
     gulp
         .src(replacements, { base: "." })
         .pipe(gulp.dest("dist"));
@@ -292,16 +287,35 @@ gulp.task(tasks.js.thirdParty, function () {
     return gulp.start(tasks.razor);
 });
 
+gulp.task(tasks.js.polyfill, function () {
+    // Copy the bower failover paths and add the app.
+    var allJs = replacements.splice(0);
+    allJs.push(paths.js.src);
+
+    return gulp
+        .src(allJs)
+        .pipe(plugins.autopolyfiller(paths.js.polyfill, {
+            browsers: ["last 3 versions", "ie 8", "ie 9"]
+        }))
+        .pipe(gulp.dest(paths.js.dest));
+});
+
 gulp.task(
-    tasks.js.build,
-    [tasks.js.lint, tasks.js.devel, tasks.js.thirdParty],
+    tasks.js.build, [
+        tasks.js.lint,
+        tasks.js.devel,
+        tasks.js.thirdParty,
+        tasks.js.polyfill
+    ],
     function () {
         return gulp
-            .src(paths.js.dest + "/*.js*/")
+            .src([
+                paths.js.dest + "/" + paths.js.modernizr,
+                paths.js.dest + "/" + paths.js.polyfill,
+                paths.js.dest + "/" + "app.js"
+            ])
+            .pipe(plugins.concat("vitality-boilerplate.min.js"))
             .pipe(plugins.uglify())
-            .pipe(plugins.rename({
-                suffix: ".min"
-            }))
             .pipe(gulp.dest(paths.dist));
     });
 
@@ -332,7 +346,7 @@ gulp.task(tasks.sass.modernizr, function () {
                 "setClasses"
             ]
         }))
-        .pipe(plugins.rename(paths.js.modernizrFilename))
+        .pipe(plugins.rename(paths.js.modernizr))
         .pipe(gulp.dest(paths.js.dest));
 });
 
@@ -391,7 +405,7 @@ gulp.task(tasks.watch, function () {
         tasks.js.build
     ]);
 
-    gulp.watch(paths.sass.srcAll, [
+    gulp.watch(paths.sass.src, [
         tasks.sass.build
     ]);
 });
@@ -409,7 +423,7 @@ gulp.task(tasks.serve, function() {
         browserSync.reload);
 
     gulp.watch(
-        [paths.js.srcAll],
+        [paths.js.src],
         { cwd: paths.base },
         [tasks.js.devel, browserSync.reload]);
 
