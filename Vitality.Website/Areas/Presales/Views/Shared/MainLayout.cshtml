@@ -4,15 +4,12 @@
         || Sitecore.Context.PageMode.IsExperienceEditorEditing;
 }
 <!DOCTYPE html>
-<html class="@(isEditing ? "disable-tablesaw" : null)">
+<html class="@(isEditing ? "disable-tablesaw" : null)" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
-    <title>@Html.Sitecore().Field("BrowserTitle", new { DisableWebEdit = true })</title>
+    @Html.Sitecore().Placeholder("metadata")
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600">
-    
+
     @Html.Partial("_Favicons")
     @Html.Partial("_CriticalCss")
 
@@ -22,16 +19,14 @@
 
     @if (isEditing)
     {
-        <link rel="stylesheet" href="/css/experience_editor_fix.css" />
+        <link rel="stylesheet" href="/css/experience_editor_fix.css"/>
     }
     else
     {
-        <link rel="stylesheet" type="text/css" href="/css/tablesaw.css" />
+        <link rel="stylesheet" type="text/css" href="/css/tablesaw.css"/>
     }
 
     <link rel="stylesheet" type="text/css" href="/css/app.css" media="screen" />
-    <script src="/js/modernizr-custom.min.js"></script>
-    <script src="/js/require.js" data-main="/js/vitality-boilerplate" async></script>
 </head>
 <body>
     <div class="page">
@@ -47,5 +42,9 @@
     </div>
 
     @Html.Sitecore().Placeholder("footer")
+    @Html.Partial("_JsThirdParty")
+    
+    <script type="text/javascript" src="/js/modernizr-custom.min.js"></script>
+    <script type="text/javascript" src="/js/vitality-boilerplate.js"></script>
 </body>
 </html>

@@ -21,10 +21,12 @@
     "unused": true,
     "varstmt": false,
     "predef": [
-        "define",
+        "$",
+        "FastClick",
+        "jQuery",
         "Modernizr",
+        "module",
         "require",
-        "requirejs",
         "WOW"
     ]
 }

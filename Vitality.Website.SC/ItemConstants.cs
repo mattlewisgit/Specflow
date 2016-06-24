@@ -36,6 +36,11 @@
                     {
                         public static readonly Guid Id = Guid.Parse("{5F2E1820-3907-400D-B0F4-3C8D6DDB0989}");
                     }
+
+                    public static class GlobalSettings
+                    {
+                        public static readonly Guid Id = Guid.Parse("{578F19B0-CEF6-4B29-AB9F-45BF82417DF4}");
+                    }
                 }
             }
 
@@ -47,6 +52,14 @@
                     {
                         public static readonly Guid Id = Guid.Parse("{F643ED45-4AC0-4751-AF89-4F31755527B5}");
                     }
+                }
+
+                public static class Configuration
+                {
+                     public static class GlobalSettings
+                     {
+                         public static readonly Guid Id = Guid.Parse("{578F19B0-CEF6-4B29-AB9F-45BF82417DF4}");
+                     }
                 }
             }
 

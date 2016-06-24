@@ -43,10 +43,12 @@
   <ItemGroup>
     <Content Include="components\primary-cta.html" />
     <Content Include="components\accordion.html" />
+    <Content Include="components\products_component.html" />
     <Content Include="components\quote-footer\quote-footer-3-buttons.html" />
     <Content Include="components\quote-footer\quote-footer-2-buttons.html" />
     <Content Include="components\quote-footer\quote-footer-1-button.html" />
     <Content Include="components\quote-footer\index.html" />
+    <Content Include="components\home-hero.html" />
     <Content Include="components\tabs.html" />
     <Content Include="components\footer.html" />
     <Content Include="components\summary\summary-right.html" />
@@ -64,6 +66,7 @@
     <Content Include="src\favicon-template.html" />
     <Content Include="gulpfile.js" />
     <Content Include="js\boilerplate.js" />
+    <Content Include="src\js-third-party.html" />
     <Content Include="src\images\arrow-down%402x.png" />
     <Content Include="src\images\arrow-down--grey%402x.png" />
     <Content Include="src\images\arrow-down--grey.png" />
@@ -162,6 +165,8 @@
     <Content Include="src\img\examples\search-background.png" />
     <Content Include="src\img\examples\search.svg" />
     <Content Include="src\img\examples\shoes.jpg" />
+    <Content Include="src\img\examples\stanley-health.png" />
+    <Content Include="src\img\examples\stanley-life.png" />
     <Content Include="src\img\examples\stars-icon.png" />
     <Content Include="src\img\examples\stethoscope-icon.png" />
     <Content Include="src\img\examples\tennis.jpg" />
@@ -177,47 +182,30 @@
     <Content Include="src\img\logos\virgin_active.png" />
     <Content Include="src\img\logos\weightwatchers.png" />
     <Content Include="src\js\libraries\tablesaw.js" />
+    <Content Include="src\img\logos\white\ba_white.png" />
+    <Content Include="src\img\logos\white\cineworld_white.png" />
+    <Content Include="src\img\logos\white\evans_white.png" />
+    <Content Include="src\img\logos\white\garmin_white.png" />
+    <Content Include="src\img\logos\white\polar_white.png" />
+    <Content Include="src\img\logos\white\sainsbury_white.png" />
+    <Content Include="src\img\logos\white\starbucks_white.png" />
+    <Content Include="src\img\logos\white\virgin-active_white.png" />
+    <Content Include="src\img\logos\white\weightwatchers_white.png" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
-    <Content Include="src\js\app.js" />
     <Content Include="src\js\modules\collapsibleModule.js" />
     <Content Include="src\js\modules\breakpointsModule.js" />
     <Content Include="src\js\modules\quoteFooterModule.js" />
     <Content Include="src\js\modules\matchWidthsModule.js" />
-    <Content Include="src\js\vendor\domready.js" />
-    <Content Include="src\js\libraries\fastclick.js" />
     <Content Include="src\js\modules\filterModule.js" />
     <Content Include="src\js\modules\helpers.js" />
-    <Content Include="src\js\libraries\jquery-1.11.3.js" />
-    <Content Include="src\js\libraries\jquery-ui.js" />
-    <Content Include="src\js\libraries\jquery.matchHeight.js" />
-    <Content Include="src\js\libraries\jquery.smart-resize.js" />
     <Content Include="src\js\modules\main.js" />
     <Content Include="src\js\modules\matchHeightsModule.js" />
     <Content Include="src\js\modules\menuModule.js" />
-    <Content Include="src\js\require.js" />
+    <Content Include="js\rAF.js" />
     <Content Include="src\js\modules\searchModule.js" />
     <Content Include="src\js\modules\socialShareModule.js" />
     <Content Include="src\js\modules\tabsModule.js" />
-    <Content Include="src\js\libraries\wow.js" />
-    <Content Include="src\sass\app.css">
-      <DependentUpon>app.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\app.min.css">
-      <DependentUpon>app.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\boilerplate.css">
-      <DependentUpon>boilerplate.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\boilerplate.min.css">
-      <DependentUpon>boilerplate.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\rich_text_editor.css">
-      <DependentUpon>rich-text-editor.scss</DependentUpon>
-    </Content>
-    <Content Include="src\sass\rich_text_editor.min.css">
-      <DependentUpon>rich_text_editor.css</DependentUpon>
-    </Content>
     <Content Include="src\sass\modules\_faq-leader.scss" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -226,7 +214,9 @@
     <Content Include="package.json" />
     <Content Include="bower.json" />
     <Content Include="sass-lint.yml" />
-    <Content Include="gulp.targets" />
+    <Content Include="gulp.targets">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include=".jscsrc" />
     <Content Include=".jshintrc" />
     <Content Include="src\sass\modules\_rewards-leader.scss" />
@@ -376,20 +366,20 @@
     <Content Include="src\sass\vendor\_animate.scss" />
     <Content Include="src\sass\app.scss" />
     <Content Include="src\sass\rich-text-editor.scss" />
-    <Content Include="src\sass\rich_text_editor.css.map">
-      <DependentUpon>rich_text_editor.css</DependentUpon>
-    </Content>
-    <Content Include="src\sass\app.css.map">
-      <DependentUpon>app.css</DependentUpon>
-    </Content>
     <Content Include="src\sass\boilerplate.scss" />
     <Content Include=".bowerrc" />
     <Content Include="config\cssnano-config.json" />
     <Content Include="config\favicon-config.json" />
     <Content Include="config\image-resize-config.json" />
     <Content Include="config\svgsprite-config.json" />
+    <Content Include="config\breakpoints.json" />
+    <Content Include="src\sass\modules\_products-component.scss" />
     <Content Include="src\js\breakpoints.json" />
     <Content Include="src\sass\modules\_quote-footer.scss" />
+    <Content Include=".htmlhintrc" />
+    <Content Include="config\cdnizer-config.json" />
+    <Content Include="config\htmlmin-config.json" />
+    <Content Include="src\sass\modules\_home-hero.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

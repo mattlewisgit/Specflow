@@ -71,6 +71,7 @@ $heading-color: $color-mono-3;
 
 $dropshadow-color: rgba($body-color, 0.25);
 
+$darken-light: rgba(255, 255, 255, .6);
 $darken-heavy: rgba(0, 0, 0, 0.6);
 
 $nav-gradient: linear-gradient( to bottom, $white 75%, $nav-gradient-color 100% );
@@ -97,6 +98,7 @@ $h4: 2;
 $h5: 2;
 $h6: 1.8;
 
+$h1--xlarge: 8.0;
 $h1--large: 4;
 $h2--large: 3.5;
 $h3--large: 3.2;
@@ -120,6 +122,7 @@ $pad--tiny: $pad / 4;
 $pad--thin: $pad / 2;
 $pad--large: $pad * 2;
 $pad--xlarge: $pad * 4;
+$pad--xxlarge: $pad * 8;
 
 // Icon padding
 $icon-padding: 25px;
