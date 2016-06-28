@@ -1,9 +1,5 @@
-//**
-// Form Elements
-//**
-
 .form {
-    // Generic -
+    // Generic.
     label {
         display: block;
         margin-bottom: 0.25em;
@@ -32,7 +28,8 @@
             border-color: $primary-color--light;
         }
     }
-    // Match datepicker filed width to the datepicker widget
+
+    // Match datepicker filed width to the datepicker widget.
     input[type="text"].datepicker {
         max-width: 215px;
     }
@@ -60,24 +57,26 @@
         &__input {
             position: relative;
         }
-        //Styled select boxes -
-        &__input--select {
-            //If the browser supports css pointer events, restyle the
-            .csspointerevents & {
 
+        // Styled select boxes.
+        &__input--select {
+            // If the browser supports css pointer events, restyle the.
+            .csspointerevents & {
                 select {
                     position: relative;
                     padding-right: 32px;
-                    //Hide default down arrow -
-                    -webkit-appearance: none; // autoprefixer won't add this and we still need it
+                    
+                    //Hide default down arrow.
+                    // autoprefixer will not add this and we still need it.
+                    -webkit-appearance: none;
                     appearance: none;
                     -moz-appearance: none;
                     text-indent: 1px;
-                    text-overflow: '';
+                    text-overflow: "";
                 }
 
                 select::-ms-expand {
-                    //Hide default down arrow in IE -
+                    // Hide the default down arrow in IE.
                     display: none;
                 }
 
@@ -95,66 +94,67 @@
                 }
             }
         }
-        // Styled submit button -
+
+        // Styled submit button.
         &__input--submit {
             input[type="submit"]:hover {
                 background-color: $color-mono-3;
                 color: $white;
             }
         }
-        //Styled checkboxes & radio buttons -
-        &__input--checkbox input[type="checkbox"],
-        &__input--checkbox input[type="radio"] {
-            display: none;
 
-            ~ label {
-                padding-left: 30px;
-                position: relative;
-                cursor: pointer;
-            }
+        // Styled checkboxes & radio buttons.
+        &__input--checkbox {
+            input[type="checkbox"], input[type="radio"] {
+                display: none;
 
-            ~ label:before {
-                @include rounding;
-                content: "";
-                display: block;
-                width: 19px;
-                height: 19px;
-                vertical-align: middle;
-                position: absolute;
-                top: 0.2em;
-                left: 0;
-                cursor: pointer;
-                margin-right: 10px;
-                padding-left: 4px;
-                line-height: 19px;
-                border: 1px solid $black;
-            }
+                ~ label {
+                    padding-left: 30px;
+                    position: relative;
+                    cursor: pointer;
+                }
 
-            &:checked ~ label:after {
-                content: "\2713"; // Tick
-                font-weight: 600;
-                color: $primary-color;
-                top: -9px;
-                left: 3px;
-                font-size: 24px;
-                display: block;
-                position: absolute;
+                ~ label:before {
+                    @include rounding;
+                    content: "";
+                    display: block;
+                    width: 19px;
+                    height: 19px;
+                    vertical-align: middle;
+                    position: absolute;
+                    top: 0.2em;
+                    left: 0;
+                    cursor: pointer;
+                    margin-right: 10px;
+                    padding-left: 4px;
+                    line-height: 19px;
+                    border: 1px solid $black;
+                }
 
-                $shadow-spread: 1px;
+                &:checked ~ label:after {
+                    // Tick.
+                    content: "\2713";
+                    font-weight: 600;
+                    color: $primary-color;
+                    top: -9px;
+                    left: 3px;
+                    font-size: 24px;
+                    display: block;
+                    position: absolute;
 
-                text-shadow: - $shadow-spread - $shadow-spread 0 $white, $shadow-spread - $shadow-spread 0 $white, - $shadow-spread $shadow-spread 0 $white, $shadow-spread $shadow-spread 0 $white;
-            }
+                    $shadow-spread: 1px;
 
-            &:checked ~ label:before {
-                border-color: $primary-color;
+                    text-shadow: - $shadow-spread - $shadow-spread 0 $white, $shadow-spread - $shadow-spread 0 $white, - $shadow-spread $shadow-spread 0 $white, $shadow-spread $shadow-spread 0 $white;
+                }
+
+                &:checked ~ label:before {
+                    border-color: $primary-color;
+                }
             }
         }
-        //Styled checkboxes specific -
-        //&__input--checkbox input[type="checkbox"]{
-        //}
-        //Styled radio buttons specific -
-        &__input--checkbox input[type="radio"] {
 
+        // Styled radio buttons specific.
+        &__input--checkbox input[type="radio"] {
             ~ label:before {
                 left: 0;
                 top: 5px;

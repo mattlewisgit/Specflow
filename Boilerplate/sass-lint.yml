@@ -8,7 +8,7 @@ files:
 rules:
   extends-before-mixins: 2
   extends-before-declarations: 2
-  placeholder-in-extend: 1
+  placeholder-in-extend: 0
   mixins-before-declarations:
     - 2
     - exclude:
@@ -29,11 +29,11 @@ rules:
     - 1
     - style: double
   property-sort-order:
-    - 1
+    - 0
     - order: alphabetical
     - ignore-custom-properties: false
   variable-for-property:
-    - 1
+    - 0
     - properties:
         - margin
         - content
