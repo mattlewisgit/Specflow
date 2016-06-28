@@ -13,5 +13,14 @@ namespace Vitality.Website.Extensions.Views
             }
             return string.Empty;
         }
+
+        public static bool ShowPartnerCard(this GlassView<PartnerHero> view)
+        {
+            return !string.IsNullOrWhiteSpace(view.Model.PartnerIcon.Src) 
+                || !string.IsNullOrWhiteSpace(view.Model.PartnerName) 
+                || !string.IsNullOrWhiteSpace(view.Model.Line)
+                || !string.IsNullOrWhiteSpace(view.Model.Benefits)
+                || view.IsInEditingMode;
+        }
     }
 }
