@@ -1,16 +1,14 @@
-@import "../base/defaults";
-
 // Set a default background colour, which enables the component
 // to be used without a background, particularly useful when editing.
 .cards-stacked {
-    background: $primary-background-colour;
+    background: $primary-background-color;
 }
 
-@media only screen and (max-width: $breakpoint-small) {
+@include mq($until: mobileLandscape) {
     .cards-stacked {
         // Must force an override here,
         // as the background imageis set on the element.
-        background: $primary-background-colour !important;
+        background: $primary-background-color !important;
         color: $black;
 
         .spotlight__heading, .spotlight__intro {
@@ -18,3 +16,4 @@
         }
     }
 }
+

@@ -25,6 +25,7 @@
         "jquery.smartresize": "1.0.0",
         "jqueryui": "1.11.4",
         "prism": "1.5.1",
+        "sass-mq": "3.2.9",
         "tablesaw": "2.0.3",
         "wowjs": "1.1.2"
     }
