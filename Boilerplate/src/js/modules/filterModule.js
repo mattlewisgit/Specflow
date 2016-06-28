@@ -22,6 +22,7 @@ var _settings = {
     filteredContainerItemClass: ".js-filtered-container__item",
 
     filterDataName: "filter",
+    filterSeparator: ",",
     focusClass: "js-focus"
 };
 
@@ -91,10 +92,12 @@ var _filterModule = {
                 if (showAll) {
                     $(this).show();
                 } else {
-                    //Otherwise, check if their filter data matches the selected filter -
-                    var show = ($(this).data(_settings.filterDataName) === filterName);
-
-                    if (show) {
+                    // Otherwise, check if their filter data contains the selected filter.
+                    var filters = $(this)
+                        .data(_settings.filterDataName)
+                        .split(_settings.filterSeparator);
+   
+                    if ($.inArray(filterName, filters) > -1) {
                         $(this).show();
                     } else {
                         $(this).hide();

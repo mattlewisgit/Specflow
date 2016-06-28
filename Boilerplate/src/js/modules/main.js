@@ -20,7 +20,9 @@ $(document).ready(function () {
 
     //JQ UI Date picker init  -
     //Where JS used, disable direct input to stop mobile keyboards -
-    $(".js-datepicker").datepicker().attr("readonly", "true");
+    if ($(".js-datepicker").length) {
+        $(".js-datepicker").datepicker().attr("readonly", "true");
+    }
 
     //TableSaw responsive tables init -
     if (!$("html").hasClass("disable-tablesaw")) {
