@@ -12,7 +12,7 @@ templatekey: Main Navigation
 ----version----
 language: en
 version: 1
-revision: 78276aef-b312-4fa6-8f80-db2a70f52565
+revision: 6528fd33-d2a0-43d1-9f0e-95634f335c0a
 
 ----field----
 field: {DD94F527-6FB6-4CE9-B760-1718E0C2B2A8}
@@ -43,27 +43,6 @@ content-length: 58
 
 <image mediaid="{053194D3-8B26-45ED-AA47-7C6070A90B4C}" />
 ----field----
-field: {1CC67424-4B8B-47E6-AA5F-19261DD39515}
-name: LogInLink
-key: loginlink
-content-length: 94
-
-<link text="Log In" linktype="external" url="http://www.facebook.co.uk" anchor="" target="" />
-----field----
-field: {0F6A05B4-3396-449E-A256-D887AD7A46A2}
-name: LogInAvatar
-key: loginavatar
-content-length: 58
-
-<image mediaid="{8CF8E0A1-1C06-4F81-836F-17A693414148}" />
-----field----
-field: {B3A2DF61-38FE-4A1A-BF15-A0765936B9E7}
-name: LogInHeader
-key: loginheader
-content-length: 11
-
-Member Zone
-----field----
 field: {54700ABD-EDF9-4135-BAC2-81399B54E89E}
 name: LogInText
 key: logintext
@@ -71,19 +50,12 @@ content-length: 6
 
 Log In
 ----field----
-field: {E473BD53-5317-42C4-9845-086362443476}
-name: RegisterText
-key: registertext
-content-length: 14
+field: {3E62950D-6172-462B-B504-3E1D00351B15}
+name: LoginLinks
+key: loginlinks
+content-length: 194
 
-Register Today
-----field----
-field: {19604040-EBA1-45AE-A0E3-70AED4B311C1}
-name: ForgottenDetailsText
-key: forgottendetailstext
-content-length: 25
-
-I've Forgotten My Details
+{2B259801-E152-44F2-B7BF-B207E2F7047E}|{00E83956-383E-4DFB-A93A-8A9FFED57466}|{FFBD7A92-A424-425B-B002-3446C1D4D7A4}|{725B2334-B53E-40DD-B6FA-E8FC27C60085}|{9C4AB7F1-6F8F-4F68-A512-2B02D03B667C}
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -111,14 +83,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-78276aef-b312-4fa6-8f80-db2a70f52565
+6528fd33-d2a0-43d1-9f0e-95634f335c0a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T124011Z
+20160621T144522Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

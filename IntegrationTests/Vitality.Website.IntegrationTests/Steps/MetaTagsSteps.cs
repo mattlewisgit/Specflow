@@ -52,7 +52,7 @@
             {
                 return new [] 
                     {
-                        "<meta property=\"og:locale\" content=\"en_GB\">",
+                        "<meta property=\"og:locale\" content=\"en_GB\"",
                         "<meta name=\"description",
                         "<meta property=\"og:title",
                         "<meta property=\"og:type",
