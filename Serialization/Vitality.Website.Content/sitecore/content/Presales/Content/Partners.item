@@ -1,40 +1,40 @@
 ----item----
 version: 1
-id: {DAE842BC-82A2-4DC4-998B-B64A74FB25C9}
+id: {14B3F9CC-1D26-473E-B7D9-148093F3C960}
 database: master
-path: /sitecore/content/Presales/Configuration/Font Themes/Dark
-parent: {535D0D97-9813-4A01-9BF7-E4F5F3D660BF}
-name: Dark
+path: /sitecore/content/Presales/Content/Partners
+parent: {1513AD49-B5AE-4ACC-9D41-E63E41363B58}
+name: Partners
 master: {00000000-0000-0000-0000-000000000000}
-template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
-templatekey: Key Value Pair
+template: {7C96FFFF-DA60-44F1-BC58-2E4315D2F483}
+templatekey: Datasource Folder
 
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 23
+
+People/32x32/users1.png
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 116
+
+{4902517E-93B7-41B5-BCC4-387E1D0304A7}|{6FB18645-464E-4405-BFCB-028F32110291}|{E8118048-EB94-4F70-8793-30A460D1B041}
 ----version----
 language: en
 version: 1
-revision: 5113acf1-e194-4be2-a3c5-618231a80d4a
+revision: 1877da5f-61ee-43a1-9998-bfad30dd4070
 
-----field----
-field: {C01F61CF-8603-4C48-A96A-EFDDDFEB52ED}
-name: Value
-key: value
-content-length: 9
-
-text-dark
-----field----
-field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
-name: __Owner
-key: __owner
-content-length: 14
-
-sitecore\admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160622T140240Z
+20160620T151333Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5113acf1-e194-4be2-a3c5-618231a80d4a
+1877da5f-61ee-43a1-9998-bfad30dd4070
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160629T122823Z
+20160622T102739Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

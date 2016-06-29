@@ -3,6 +3,8 @@ using Vitality.Website.Areas.Presales.Models.Partners;
 
 namespace Vitality.Website.Extensions.Views
 {
+    using Vitality.Website.Areas.Presales.RenderingTemplates;
+
     public static class PartnerHeroExtensions
     {
         public static string BackgroundImage(this GlassView<PartnerHero> view)
@@ -12,6 +14,33 @@ namespace Vitality.Website.Extensions.Views
                 return string.Format("background-image: url('" + view.Model.BackgroundImage.Src + "');");
             }
             return string.Empty;
+        }
+
+        public static string ImageRelativePosition(this GlassView<PartnerHero> view)
+        {
+            if (view.GetRenderingParameters<PartnerHeroRendering>().ImageRelativePosition != null)
+            {
+                return view.GetRenderingParameters<PartnerHeroRendering>().ImageRelativePosition.Value;
+            }
+            return string.Empty;
+        }
+
+        public static string FontTheme(this GlassView<PartnerHero> view)
+        {
+            if (view.GetRenderingParameters<PartnerHeroRendering>().FontTheme != null)
+            {
+                return view.GetRenderingParameters<PartnerHeroRendering>().FontTheme.Value;
+            }
+            return "text-dark";
+        }
+
+        public static string ColumnSpan(this GlassView<PartnerHero> view)
+        {
+            if (ShowPartnerCard(view))
+            {
+                return "grid-col-8-12";
+            }
+            return "grid-col-12-12";
         }
 
         public static bool ShowPartnerCard(this GlassView<PartnerHero> view)

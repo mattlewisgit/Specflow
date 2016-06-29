@@ -4,20 +4,18 @@
 
 @using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
 {
-	<div class="partner-hero background-position-middle-left" style="@this.BackgroundImage()">
+	<div class="partner-hero @this.ImageRelativePosition()" style="@this.BackgroundImage()">
 		<div class="grid">
-			<div class="partner-hero--headline grid-col-8-12 text-light">
-				<div class="feature-block-content-left">
-					<h4>@Editable(Model, item => item.Headline1)</h4>
-					<h1>@Editable(Model, item => item.Headline2)</h1>
-					<h1>@Editable(Model, item => item.OpeningParagraph)</h1>
-				</div>
+			<div class="partner-hero--headline @this.ColumnSpan() @this.FontTheme()">
+					<h1>@Editable(Model, item => item.Headline1)</h1>
+					<h2>@Editable(Model, item => item.Headline2)</h2>
+					<p>@Editable(Model, item => item.OpeningParagraph)</p>
 			</div>
         @if (this.ShowPartnerCard())
         {
-            <div class="grid-col-4-12">
+            <div class="grid-col-4-12 partner-hero--right">
                 <div class="partner-hero--card">
-                    <div class="spotlight-item__circle-logo">
+                    <div class="spotlight-item__logo--large">
                         @Editable(Model, item => item.PartnerIcon)
                     </div>
                     <div class="partner-hero--card__top">
