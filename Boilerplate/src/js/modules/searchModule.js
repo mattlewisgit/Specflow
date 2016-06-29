@@ -1,7 +1,7 @@
 var _settings = {
     searchInputClass: ".js-search-input",
     searchStringOutput: ".js-search-string",
-    searchMatchesOutput: ".js-search-matches",
+    searchMatchesOutput: ".js-search-matches"
 };
 
 var $searchInput;
@@ -22,7 +22,7 @@ var _searchModule = {
 
         });
 
-        //Prevent scrolling of the large input text -
+        // Prevent scrolling of the large input text.
         $searchInput.on("mousewheel DOMMouseScroll", function (e) {
             e.stopPropagation();
             e.preventDefault();
