@@ -1,5 +1,4 @@
-[class*='text-icon'] {
-
+[class*="text-icon"] {
     &:before {
         @extend .svg-sprite;
         content: "";
@@ -10,11 +9,8 @@
 
 
 @media only screen and (min-width : $breakpoint-medium) {
-
-    [class*='text-icon'] {
-
+    [class*="text-icon"] {
         &:before {
-            content: "";
             display: inline-block;
             font-size: 0.5em;
             margin-bottom: -0.65em;
