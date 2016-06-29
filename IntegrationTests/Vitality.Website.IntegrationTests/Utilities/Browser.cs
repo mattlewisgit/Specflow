@@ -70,6 +70,13 @@
             return Browser.Wait(timespan);
         }
 
+        public static string PageSource
+        {
+            get
+            {
+                return webDriver.PageSource;
+            }
+        }
         public class BrowserChainer
         {
 

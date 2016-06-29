@@ -5,15 +5,9 @@
     <div class="summary-left grid-col-6-12">
         @if (this.CanShowLeadIn())
         {
-            <h6>@Editable(Model, m => m.LeftContentLeadIn)</h6>
+        <h6>@Editable(Model, m => m.LeftContentLeadIn)</h6>
         }
-
         <h1>@Editable(Model, m => m.LeftContentHeadline)</h1>
-
-        @if (this.CanShowLeftContentOpeningParagraph())
-        {
-            <p>@Editable(Model, m => m.LeftContentOpeningParagraph)</p>
-        }
 
         <div>@Editable(Model, m => m.LeftContentBody)</div>
     </div>
@@ -61,6 +55,6 @@
                 </div>
             }
         </div>
-        </div>
+    </div>
     }
 </div>

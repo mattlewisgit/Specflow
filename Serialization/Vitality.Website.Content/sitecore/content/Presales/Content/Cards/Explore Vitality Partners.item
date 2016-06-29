@@ -1,0 +1,93 @@
+----item----
+version: 1
+id: {30EF8F19-0562-45F5-8FF4-1A49810DAF13}
+database: master
+path: /sitecore/content/Presales/Content/Cards/Explore Vitality Partners
+parent: {B71ADCC2-F0FC-4F18-A3E7-F76FF4C9A8DB}
+name: Explore Vitality Partners
+master: {00000000-0000-0000-0000-000000000000}
+template: {68B9701F-44A3-4FDF-9D4F-8253B232A692}
+templatekey: Cards Tabbed
+
+----version----
+language: en
+version: 1
+revision: ddb8fe3d-3dd0-4acd-a497-0bdb08837016
+
+----field----
+field: {DE51AE3E-F03B-43F7-9FF1-ED9C5B32C935}
+name: Headline
+key: headline
+content-length: 25
+
+Explore Vitality Partners
+----field----
+field: {1FE57A76-C432-45FB-85FB-10115179A701}
+name: OpeningParagraph
+key: openingparagraph
+content-length: 101
+
+Comprehensive cover, access to healthcare and huge rewards for our Health & Life Insurance customers.
+----field----
+field: {31E9F6AF-66F2-4CB6-8DBA-B1825448907C}
+name: AllCategoriesText
+key: allcategoriestext
+content-length: 12
+
+All Partners
+----field----
+field: {86B1A95A-44C4-441A-B0A5-32B95BFCFFB3}
+name: ResultsCountText
+key: resultscounttext
+content-length: 34
+
+Viewing {count} Vitality Partners.
+----field----
+field: {1C449353-67EC-42A0-8D4E-A54912A4900E}
+name: PartnerCards
+key: partnercards
+content-length: 116
+
+{8E7B22C9-2934-4539-AAF2-47C47EF52C49}|{512A73DA-5936-4AF2-812B-57152B58B06E}|{C4EB8403-E7EC-434A-83FE-54B12DD10536}
+----field----
+field: {3446659D-1DD6-4A14-A474-0DAB585E0B9F}
+name: Categories
+key: categories
+content-length: 116
+
+{CEA1CF6B-BA7E-4210-8102-ECC8636A375C}|{AF7A1038-05E9-4C21-BA54-DE5142E6F085}|{F5FD35C7-51CC-47EB-BFE6-2BDBDC019FB4}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160622T115236Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+ddb8fe3d-3dd0-4acd-a497-0bdb08837016
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160622T121921Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

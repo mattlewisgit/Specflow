@@ -9,10 +9,9 @@ namespace Vitality.Website.Extensions.Views
 {
     public static class ProductsComponentExtensions
     {
-
         public static int NumberOfColumns(this GlassView<ProductsComponent> view)
         {
-            return view.Model.ProductPanels.Count();
+            return 12 / view.Model.ProductPanels.Count();
         }
     }
 }

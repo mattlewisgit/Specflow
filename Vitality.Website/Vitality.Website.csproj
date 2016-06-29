@@ -231,9 +231,7 @@
     <Content Include="css\sprite-generated%402x.png" />
     <Content Include="css\sprite-generated.png" />
     <Content Include="img\spritesheets\svg-sprite.svg" />
-    <Content Include="js\modernizr-custom.min.js" />
-    <Content Include="js\require.js" />
-    <Content Include="js\vitality-boilerplate.js" />
+    <Content Include="js\vitality-boilerplate.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -245,10 +243,27 @@
     <Compile Include="Areas\Global\Models\KeyValuePair.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
+    <Compile Include="Areas\Global\Models\Taxonomy.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IQuoteFooter.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IAppReferenceGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IBrowserLatencyGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IBrowserStylingGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IDuplicateContentPage.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IGoogleAuthorshipGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IGoogleTagManagerGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IIndexationPage.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IOpenGraphGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IOpenGraphPage.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IQubitOpenTagGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IResponseTapGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\ISerpAppearancePage.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\ITwitterGlobal.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\ITwitterPage.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IWebmasterToolsGlobal.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Banners\HomeHero.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsStacked.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsTabbed.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\ProductHero.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Content.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Tab.cs" />
@@ -258,6 +273,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\MainNavigation.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSubSection.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Partners\PartnerCard.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Rewards\RewardsLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryComponent.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryListItem.cs" />
@@ -276,9 +292,13 @@
     <Compile Include="Areas\Presales\RenderingTemplates\RewardsLeaderRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\SummaryComponentRendering.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\GlobalSettings.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
-    <Compile Include="Extensions\Models\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\Views\MainNavigationExtensions.cs" />
+    <Compile Include="Extensions\Views\CardsTabbedExtensions.cs" />
+    <Compile Include="Extensions\Views\BasePageExtensions.cs" />
     <Compile Include="Extensions\Views\PrimaryCallToActionExtensions.cs" />
     <Compile Include="Extensions\Views\GlobalFooterExtensions.cs" />
     <Compile Include="Extensions\Views\PartnerHeroExtensions.cs" />
@@ -533,6 +553,8 @@
     <Content Include="Areas\Presales\Views\Products\ProductsComponent.cshtml" />
     <Content Include="Areas\Presales\Views\Partners\PartnerHero.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\QuoteFooter.cshtml" />
+    <Content Include="Areas\Presales\Views\Cards\CardsTabbed.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\_Metadata.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_JsThirdParty.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -543,6 +565,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Presales\Controllers\" />
+    <Folder Include="Areas\Presales\Views\Partners\" />
     <Folder Include="img\examples\" />
   </ItemGroup>
   <ItemGroup>

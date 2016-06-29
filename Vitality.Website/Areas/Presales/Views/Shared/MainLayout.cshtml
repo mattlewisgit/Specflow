@@ -4,20 +4,21 @@
         || Sitecore.Context.PageMode.IsExperienceEditorEditing;
 }
 <!DOCTYPE html>
-<html class="@(isEditing ? "disable-tablesaw" : null)">
+<html class="@(isEditing ? "disable-tablesaw" : null)" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
-    <title>@Html.Sitecore().Field("BrowserTitle", new { DisableWebEdit = true })</title>
+    @Html.Sitecore().Placeholder("metadata")
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0" />
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600" />
     
     @Html.Partial("_Favicons")
     @Html.Partial("_CriticalCss")
 
     <!--[if lt IE 9]>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/aight/2.1.1/aight.min.js"></script>
     <![endif]-->
 
     @if (isEditing)
@@ -47,7 +48,6 @@
     @Html.Sitecore().Placeholder("footer")
     @Html.Partial("_JsThirdParty")
     
-    <script type="text/javascript" src="/js/modernizr-custom.min.js"></script>
-    <script type="text/javascript" src="/js/vitality-boilerplate.js"></script>
+    <script type="text/javascript" src="/js/vitality-boilerplate.min.js"></script>
 </body>
 </html>

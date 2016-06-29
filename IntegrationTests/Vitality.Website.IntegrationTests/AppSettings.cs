@@ -1,19 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Configuration;
 
 namespace Vitality.Website.IntegrationTests
 {
     public static class AppSettings
     {
-        public static string GetValue(string key)
-        {
-            return ConfigurationManager.AppSettings[key];
-        }
-
         public static class Paths
         {
             public static string Firefox
@@ -21,6 +11,22 @@ namespace Vitality.Website.IntegrationTests
                 get
                 {
                     return GetValue("Paths.Firefox");
+                }
+            }
+
+            public static string Firefox64
+            {
+                get
+                {
+                    return GetValue("Paths.Firefox64");
+                }
+            }
+
+            public static string Chrome
+            {
+                get
+                {
+                    return GetValue("Paths.Chrome");
                 }
             }
         }
@@ -34,6 +40,10 @@ namespace Vitality.Website.IntegrationTests
                     return GetValue("Links.VitalityBaseUrl");
                 }
             }
+        }
+        private static string GetValue(string key)
+        {
+            return ConfigurationManager.AppSettings[key];
         }
     }
 }

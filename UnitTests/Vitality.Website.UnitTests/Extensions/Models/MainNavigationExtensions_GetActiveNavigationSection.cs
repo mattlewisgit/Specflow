@@ -3,12 +3,13 @@
     using System.Collections.Generic;
 
     using Glass.Mapper.Sc.Fields;
+    using Glass.Mapper.Sc.Web.Mvc;
 
     using Shouldly;
 
     using Vitality.Website.Areas.Global.Models;
     using Vitality.Website.Areas.Presales.ComponentTemplates.Navigation;
-    using Vitality.Website.Extensions.Models;
+    using Vitality.Website.Extensions.Views;
 
     using Xunit;
 
@@ -76,9 +77,22 @@
                 return navigationSection;
             }
 
-            public MainNavigation Build()
+            public GlassView<MainNavigation> Build()
             {
-                return new MainNavigation { NavigationSections = this.navigationSections };
+                return new MainNavigationViewStub(new MainNavigation { NavigationSections = this.navigationSections });
+            }
+        }
+
+        private class MainNavigationViewStub : GlassView<MainNavigation>
+        {
+            public MainNavigationViewStub(MainNavigation model)
+            {
+                this.ViewData.Model = model;
+            }
+
+            public override void Execute()
+            {
+                throw new System.NotImplementedException();
             }
         }
     }

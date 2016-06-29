@@ -90,18 +90,20 @@
         }
     }
 
-    &__circle-logo {
-        border: 5px solid $white;
-        border-radius: 50%;
-        width: 94px;
-        height: 94px;
+    &__logo {
+        background-color: $white;
+        border: $pad--tiny solid $white;
+        border-radius: $pad--thin;
+        line-height: 0;
         margin: 0 auto;
-        overflow: hidden;
         margin-top: -54px;
+        padding: $pad--thin;
         position: relative;
+        width: 60%;
 
         img {
-            max-width: 100%;
+            margin: 0;
+            max-height: 50px;
         }
     }
         
