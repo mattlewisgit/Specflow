@@ -1662,10 +1662,6 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Summary\Summary Component\Left Content\LeftContentOpeningParagraph.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Summary\Summary Component\Right Content.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>

@@ -45,5 +45,10 @@
             return !string.IsNullOrWhiteSpace(value)
                 ? baseClasses + " box-button--light" : baseClasses;
         }
+
+        public static string BackgroundImage(this GlassView<BenefitLeader> view)
+        {
+            return string.Format("background-image: url('{0}')", view.Model.BackgroundImage.Src);
+        }
    }
 }
