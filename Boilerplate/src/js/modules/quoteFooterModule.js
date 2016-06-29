@@ -37,12 +37,12 @@ var settings = {
         // Attach the adapt event to the matchMedia listener
         // if possible, to prevent it from being called every
         // time the window resizes, which is the failover for old browsers.
-        if (window.matchMedia) {                
+        if (window.matchMedia) {
             return window
                 .matchMedia(settings.breakpoint.value)
                 .addListener(settings.adapt);
         }
-            
+
         return $(window).resize(settings.adapt);
     },
 

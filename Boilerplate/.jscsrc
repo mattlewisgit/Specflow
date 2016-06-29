@@ -1,5 +1,8 @@
 {
-    "requireCurlyBraces": ["return", "continue", "break"],
+    "disallowKeywords": ["with"],
+    "disallowTrailingComma":  true,
+    "disallowTrailingWhitespace": true,
+    "requireCurlyBraces": [ "return", "continue", "break" ],
     "requireSpaceBeforeObjectValues": true,
     "requireSpaceBetweenArguments": true,
     "requireSpacesInConditionalExpression": {
