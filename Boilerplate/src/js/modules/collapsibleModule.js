@@ -1,65 +1,61 @@
-﻿var _settings = {
+﻿var Breakpoints = require("./breakpointsModule");
+
+var _settings = {
     selector: ".js-expander-is-collapsible",
     activeClass: "is-active",
-    breakpoint: "500px"
+    breakpointTest: Breakpoints.min.small.test
 };
 
 var  _collapsibleModule = {
     _destroyCollapsible: function (context) {
         "use strict";
         var contextSelector = context || _settings.selector;
-
         $(".expander__link", contextSelector).unbind("click");
-
         $(contextSelector).removeClass("expander--collapsible  expander--init");
-
     },
 
     _createCollapsible: function (context, onBeforeSlideDown) {
         "use strict";
         var $context = context ? $(context) : $(_settings.selector);
 
-        // if it"s already set up, return
+        // Bomb out if it is already set up.
         if ($context.hasClass("expander--collapsible")){
             return;
         }
 
-        // if we shouldn"t be creating it, return
-        //if ($context.hasClass("expander--mobile") && _screensize.greaterThan(_settings.breakpoint))
-        if ($context.hasClass("expander--mobile") && Modernizr.mq("(min-width : "+_settings.breakpoint+")")){
+        // Bomb out if we should not be creating it.
+        if ($context.hasClass("expander--mobile") && _settings.breakpointTest()) {
             return;
         }
 
         $(".expander__link", $context).unbind("click").on("click", function (e) {
             e.preventDefault();
-
-            var $link = $(this);
-
+            var $link = $(e.target);
             var content = $link.attr("href");
 
             if ($link.hasClass(_settings.activeClass)) {
                 // set the active content area
-                $(content).stop().slideUp("fast", function () {
+                $(content).stop().slideUp("fast", function() {
                     $(this).removeClass(_settings.activeClass).removeAttr("style");
                     $link.removeClass(_settings.activeClass);
                 });
-            } else {
-                // switch the current link
-                $link.addClass(_settings.activeClass);
-                $(".expander__link", $context).not($link).removeClass(_settings.activeClass);
 
-                // run callback if it"s there
-                if (typeof onBeforeSlideDown === "function") {
-                    onBeforeSlideDown($link);
-                }
-
-                // set the active content area
-                $(content).stop().slideDown("fast", function () {
-                    $(this).addClass(_settings.activeClass).removeAttr("style");
-                });
+                return false;
             }
 
-            return false;
+            // switch the current link
+            $link.addClass(_settings.activeClass);
+            $(".expander__link", $context).not($link).removeClass(_settings.activeClass);
+
+            // Run the callback if it exists.
+            if (typeof onBeforeSlideDown === "function") {
+                onBeforeSlideDown($link);
+            }
+
+            // Set the active content area.
+            $(content).stop().slideDown("fast", function () {
+                $(this).addClass(_settings.activeClass).removeAttr("style");
+            });
         });
 
         $context.addClass("expander--collapsible  expander--init");
@@ -75,19 +71,24 @@ var  _collapsibleModule = {
 
 var handleResize = function () {
     "use strict";
-    if (Modernizr.mq("(min-width : "+_settings.breakpoint+")")) {
-        // destroy mobile-only
-        _collapsibleModule._destroyCollapsible(_settings.selector + ".expander--mobile");
-    } else {
-        // create mobile only
-        _collapsibleModule._createCollapsible(_settings.selector + ".expander--mobile");
-    }
+    var method = _settings.breakpointTest() ? "_destroyCollapsible" : "_createCollapsible";
+    _collapsibleModule[method](_settings.selector + ".expander--mobile");
 };
 
 var init = function () {
     "use strict";
     _collapsibleModule._createAllCollapsibles();
-    $(window).on("throttledresize", handleResize);
+
+    // Attach the adapt event to the matchMedia listener
+    // if possible, to prevent it from being called every
+    // time the window resizes, which is the failover for old browsers.
+    if (window.matchMedia) {
+        return window
+            .matchMedia(Breakpoints.min.small.value)
+            .addListener(handleResize);
+    }
+
+    return $(window).resize(handleResize);
 };
 
 module.exports = {

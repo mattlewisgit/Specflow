@@ -9,9 +9,9 @@
     {
         public static string BackgroundColour(this GlassView<RewardsLeader> view)
         {
-            if (view.GetRenderingParameters<BenefitLeaderRendering>().BackgroundColour != null)
+            if (view.GetRenderingParameters<RewardsLeaderRendering>().BackgroundColour != null)
             {
-                return view.GetRenderingParameters<BenefitLeaderRendering>().BackgroundColour.Value;
+                return view.GetRenderingParameters<RewardsLeaderRendering>().BackgroundColour.Value;
             }
             return "dark";
         }
