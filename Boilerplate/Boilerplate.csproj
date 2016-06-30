@@ -378,7 +378,6 @@
     <Content Include="config\htmlmin-config.json" />
     <Content Include="src\sass\modules\_home-hero.scss" />
     <Content Include="src\sass\app-devel.scss" />
-    <Content Include="src\sass\utils\_mq-vitality.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
