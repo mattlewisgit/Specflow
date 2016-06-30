@@ -2,7 +2,7 @@
 version: 1
 id: {296FB5A6-AD6E-4E95-8A5B-E2D384B092ED}
 database: master
-path: /sitecore/templates/Presales/Rendering Templates/Partner Hero Rendering/Partner Hero/FontTheme
+path: /sitecore/templates/Presales/Rendering Templates/Partner Hero Rendering/Content Presentation/FontTheme
 parent: {E6FC6643-6A28-4C13-A865-8007A4EA9C46}
 name: FontTheme
 master: {00000000-0000-0000-0000-000000000000}
@@ -47,7 +47,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: dc77bc0c-5420-48ce-93d4-4b9ba652dddd
+revision: 7358df16-cb10-4309-b59d-317d5d9817fa
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -76,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-dc77bc0c-5420-48ce-93d4-4b9ba652dddd
+7358df16-cb10-4309-b59d-317d5d9817fa
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160629T122034Z
+20160630T103605Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

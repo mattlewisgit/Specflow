@@ -2,7 +2,7 @@
 version: 1
 id: {7CB682B3-9B2D-4376-9E23-74F501180106}
 database: master
-path: /sitecore/templates/Presales/Rendering Templates/Partner Hero Rendering/Partner Hero/ImageRelativePosition
+path: /sitecore/templates/Presales/Rendering Templates/Partner Hero Rendering/Content Presentation/ImageRelativePosition
 parent: {E6FC6643-6A28-4C13-A865-8007A4EA9C46}
 name: ImageRelativePosition
 master: {00000000-0000-0000-0000-000000000000}
@@ -33,7 +33,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 6b225f73-709c-4527-9d5d-13ea4bd8f197
+revision: f4cb1c91-0043-403b-9c6f-b6800f9aab60
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6b225f73-709c-4527-9d5d-13ea4bd8f197
+f4cb1c91-0043-403b-9c6f-b6800f9aab60
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160629T122035Z
+20160630T103605Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
