@@ -3,10 +3,10 @@
 
 @using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
 {
-    <div class="feature-block@(this.ApplyGradient()) feature-block@(this.ApplyGradient())--@this.BackgroundColour() @this.ContentAlignment()">
-        <div class="feature-block@(this.ApplyGradient())__image @this.ImageRelativePosition()" style="@this.BackgroundImage()"></div>
-        <div class="feature-block@(this.ApplyGradient())__content-container">
-            <div class="feature-block@(this.ApplyGradient())__content">
+    <div class="@this.CssClass() @this.BackgroundColour() @this.ContentAlignment()">
+        <div class="@this.CssClass()__image @this.ImageRelativePosition()" style="@this.BackgroundImage()"></div>
+        <div class="@this.CssClass()__content-container">
+            <div class="@this.CssClass()__content">
                 @if (IsInEditingMode || !string.IsNullOrWhiteSpace(Model.LeadIn))
                 {
                 <h6>@Editable(Model, item => item.LeadIn)</h6>

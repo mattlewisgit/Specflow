@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {EE874089-6B77-449D-8271-00243B28E59B}
+id: {4AF0BEC7-140C-43BB-8E3C-906227AE50DF}
 database: master
-path: /sitecore/templates/Presales/Rendering Templates/Summary Component Rendering/Summary Component/ImageRelativePosition
-parent: {67B6D882-9EAE-4FA6-9BF2-0C165AB4948B}
-name: ImageRelativePosition
+path: /sitecore/templates/Presales/Rendering Templates/Cards Stacked Rendering/Content Presentation/ImageOnTop
+parent: {8A084510-496D-4678-B3F2-7EB2CCFDD451}
+name: ImageOnTop
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -15,14 +15,7 @@ name: Type
 key: type
 content-length: 8
 
-Droplink
-----field----
-field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
-name: Source
-key: source
-content-length: 65
-
-/sitecore/content/Presales/Configuration/Image Relative Positions
+Checkbox
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
@@ -33,36 +26,36 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 55756f24-349e-475e-a080-77c0fc927b83
+revision: 1e4c4871-bfa2-46e0-bd16-5cc0ba3e3907
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 23
+content-length: 12
 
-Image Relative Position
+Image On Top
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160526T095302Z
+20160607T102206Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-55756f24-349e-475e-a080-77c0fc927b83
+1e4c4871-bfa2-46e0-bd16-5cc0ba3e3907
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T135201Z
+20160630T103556Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

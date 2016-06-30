@@ -9,11 +9,25 @@ master: {00000000-0000-0000-0000-000000000000}
 template: {B9CDB7FF-850D-4B1E-9EF0-05F29F29B16E}
 templatekey: Benefit Leader Rendering
 
+----field----
+field: {3094D236-5985-4C4F-AE6A-E30740885532}
+name: Caching
+key: caching
+content-length: 15
+
+0|0|0|0|0|0|0|0
 ----version----
 language: en
 version: 1
-revision: 09233b00-5768-4e6c-9f4c-0555162cbcb1
+revision: 2136460d-c20f-4807-be9c-8ac1ef9d4a99
 
+----field----
+field: {7D9D8B22-97B7-45B5-8CB3-B03227232D6F}
+name: ContentAlignment
+key: contentalignment
+content-length: 38
+
+{5DE8C46C-2EC3-4F7F-971A-5A9242C98AA7}
 ----field----
 field: {874A1D46-E828-4A67-BAF0-ED3FF53869D8}
 name: ImageRelativePosition
@@ -41,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-09233b00-5768-4e6c-9f4c-0555162cbcb1
+2136460d-c20f-4807-be9c-8ac1ef9d4a99
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160510T120757Z
+20160630T103205Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
