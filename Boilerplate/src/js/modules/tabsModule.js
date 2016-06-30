@@ -112,9 +112,9 @@ var _handleResize = function () {
     $.each(_tabModules, function (i, tab) {
         var isAccordion = tab.isAccordionState();
 
-        if (Breakpoints.min.medium.test() && isAccordion) {
+        if (Breakpoints.min.tablet.test() && isAccordion) {
             tab.switchToTabs();
-        } else if (Breakpoints.max.medium.test() && !isAccordion) {
+        } else if (Breakpoints.max.tablet.test() && !isAccordion) {
             tab.switchToAccordion();
         }
     });
@@ -132,7 +132,7 @@ var init = function () {
         _tabModules.push(tabModule);
 
         // Determine what we should do on startup.
-        if (Breakpoints.min.medium.test() && tabModule.isAccordionState()) {
+        if (Breakpoints.min.tablet.test() && tabModule.isAccordionState()) {
             // Switch to tabs larger screen sizes currently in accordion state.
             tabModule.switchToTabs($(this));
         } else {
@@ -146,7 +146,7 @@ var init = function () {
     // time the window resizes, which is the failover for old browsers.
     if (window.matchMedia) {
         return window
-            .matchMedia(Breakpoints.min.medium.value)
+            .matchMedia(Breakpoints.min.tablet.value)
             .addListener(_handleResize);
     }
 

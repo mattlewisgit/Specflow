@@ -1,7 +1,7 @@
-var breakpoints = require("./breakpointsModule");
+var Breakpoints = require("./breakpointsModule");
 
 var settings = {
-    breakpoint: breakpoints.max.small,
+    breakpoint: Breakpoints.max["mobile-landscape"],
     isCollapsed: false,
     isExpanded: false,
     footer: null,

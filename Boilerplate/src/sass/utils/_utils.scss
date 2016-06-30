@@ -1,4 +1,5 @@
-@import "mq-vitality";
+// Need to import these again here to keep the compiler happy.
+@import "generated/breakpoints";
 @import "../../bower_components/sass-mq/mq";
 
 // Utils

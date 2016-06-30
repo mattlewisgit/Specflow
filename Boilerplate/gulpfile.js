@@ -161,18 +161,24 @@ gulp.task(tasks.images, function() {
         .pipe(gulp.dest(paths.img.examples.dest));
 });
 
+// Use the breakpoints JSON config to create a map for sass-mq.
+// The same config is used directly via browersify as a JavaScript module,
+// so changing a single value there and rebuilding via Gulp will change it
+// everywhere, ensuring JS and CSS is kept in sync.
 gulp.task(tasks.sass.json, function () {
+    var breakpoints = require("./" + paths.js.breakpoints);
+
+    var content = Object.keys(breakpoints).map(function (key) {
+        return "    ".concat(key, ": ", breakpoints[key]);
+    })
+    .join(",\n");
+
+    var contents = "$mq-breakpoints: (\n" + content + "\n);\n";
+
     return gulp
         .src(paths.js.breakpoints)
         .pipe(plugins.changed(paths.temp))
-        .pipe(gulp.dest(paths.temp))
-        .pipe(plugins.jsonSass({
-            sass: false
-        }))
-        .pipe(plugins.replace("$", "$_"))
-        .pipe(plugins.rename({
-            prefix: "_"
-        }))
+        .pipe(plugins.file("_breakpoints.scss", contents))
         .pipe(gulp.dest(paths.sass.generated));
 });
 
