@@ -1,5 +1,7 @@
-@import "utils/css-reset";
 @import "utils/mq-vitality";
+@import "../../bower_components/sass-mq/mq";
+
+@import "utils/css-reset";
 @import "utils/mixins";
 
 @import "base/vars";

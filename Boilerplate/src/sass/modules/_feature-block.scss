@@ -95,7 +95,7 @@
     }
 }
 
-@media only screen and (min-width : $breakpoint-medium) {
+@include mq($from: tablet) {
     .feature-block {
         &__content-container {
             padding: $pad--large;
@@ -109,7 +109,7 @@
     }
 }
 
-@media only screen and (min-width : $breakpoint-large) {
+@include mq($from: desktop) {
 
     .feature-block {
 

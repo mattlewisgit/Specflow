@@ -131,22 +131,3 @@ $icon-padding: 25px;
 $width--max: 100%;
 $width--half: $width--max / 2;
 $width--near-max: 80%;
-
-// /*-------------------------------------------------.
-// \    Config: Responsive
-//  `-------------------------------------------------*/
-$breakpoint-smaller: em($_smaller);
-$breakpoint-small: em($_small);
-$breakpoint-medium: em($_medium);
-$breakpoint-large: em($_large);
-$breakpoint-larger: em($_larger);
-$breakpoint-massive: em($_massive);
-$breakpoint-max: em($_max);
-
-$breakpoint-under-smaller: em($_smaller - 1);
-$breakpoint-under-small: em($_small - 1);
-$breakpoint-under-medium: em($_medium - 1);
-$breakpoint-under-large: em($_large - 1);
-$breakpoint-under-larger: em($_larger - 1);
-$breakpoint-under-massive: em($_massive - 1);
-$breakpoint-under-max: em($_max - 1);

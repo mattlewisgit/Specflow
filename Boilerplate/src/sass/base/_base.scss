@@ -36,7 +36,7 @@ iframe {
 main > *:last-child {
     margin-bottom: $pad;
 
-    @media only screen and (min-width : $breakpoint-medium) {
+    @include mq($from: tablet) {
         margin-bottom: $pad--large;
     }
 
@@ -50,7 +50,7 @@ footer {
     @extend .clearfix;
     padding: 0 $pad;
 
-    @media only screen and (min-width : $breakpoint-medium) {
+    @include mq($from: tablet) {
         padding: 0 $pad--large;
     }
 }
@@ -60,7 +60,7 @@ footer {
 //Hide the animated items initially for smoother animations.
 //For no-js, don't do this -
 
-@media only screen and (min-width : $breakpoint-medium) {
+@include mq($from: tablet) {
     .js .js-animate-on-scroll {
         visibility: hidden;
     }

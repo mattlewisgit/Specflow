@@ -86,7 +86,7 @@
         margin: 0 auto;
     }
 
-    @media only screen and (min-width : $breakpoint-small) {
+    @include mq($from: mobile-landscape) {
         &__quote {
             @include span-columns(4);
         }
@@ -140,7 +140,7 @@
         }
     }
     // More padding and grid layout where possible -
-    @media only screen and (min-width : $breakpoint-medium) {
+    @include mq($from: tablet) {
         padding: $pad--large;
 
         &__logo,

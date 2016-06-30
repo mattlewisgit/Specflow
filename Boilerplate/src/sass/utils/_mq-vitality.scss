@@ -1,10 +1,8 @@
 $mq-breakpoints: (
     mobile: 350px,
-    mobileLandscape: 540px,
+    mobile-landscape: 540px,
     tablet: 770px,
     desktop: 1025px,
     wide: 1200px,
-    massive: 1440px
+    max: 1440px
 );
-
-@import "../../bower_components/sass-mq/mq";

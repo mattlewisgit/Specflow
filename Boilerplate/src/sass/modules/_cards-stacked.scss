@@ -4,7 +4,7 @@
     background: $primary-background-color;
 }
 
-@include mq($until: mobileLandscape) {
+@include mq($until: mobile-landscape) {
     .cards-stacked {
         // Must force an override here,
         // as the background imageis set on the element.

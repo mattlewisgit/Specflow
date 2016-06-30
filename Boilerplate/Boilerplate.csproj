@@ -181,7 +181,6 @@
     <Content Include="src\img\logos\starbucks.png" />
     <Content Include="src\img\logos\virgin_active.png" />
     <Content Include="src\img\logos\weightwatchers.png" />
-    <Content Include="src\js\libraries\tablesaw.js" />
     <Content Include="src\img\logos\white\ba_white.png" />
     <Content Include="src\img\logos\white\cineworld_white.png" />
     <Content Include="src\img\logos\white\evans_white.png" />
@@ -366,13 +365,11 @@
     <Content Include="src\sass\vendor\_animate.scss" />
     <Content Include="src\sass\app.scss" />
     <Content Include="src\sass\rich-text-editor.scss" />
-    <Content Include="src\sass\boilerplate.scss" />
     <Content Include=".bowerrc" />
     <Content Include="config\cssnano-config.json" />
     <Content Include="config\favicon-config.json" />
     <Content Include="config\image-resize-config.json" />
     <Content Include="config\svgsprite-config.json" />
-    <Content Include="config\breakpoints.json" />
     <Content Include="src\sass\modules\_products-component.scss" />
     <Content Include="src\js\breakpoints.json" />
     <Content Include="src\sass\modules\_quote-footer.scss" />

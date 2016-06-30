@@ -1,3 +1,5 @@
+@import "mq-vitality";
+@import "../../bower_components/sass-mq/mq";
 
 // Utils
 //
@@ -42,7 +44,7 @@
     margin: 0 #{-$pad};
     width: calc(100% + #{$pad + $pad});
 
-    @media only screen and (min-width : $breakpoint-medium) {
+    @include mq($from: tablet) {
         margin: 0 #{-$pad--large};
         width: calc(100% + #{$pad--large + $pad--large});
     }
@@ -127,102 +129,88 @@
     border: 1px solid $black;
 }
 
-//
-//  Hide at various size helpers
-//
-.smaller-and-up {
-    @media only screen and (max-width : $breakpoint-under-smaller) {
+// Hide at various sizes.
+.mobile-and-up {
+    @include mq($until: mobile) {
         display: none;
     }
 }
 
-.small-and-up {
-    @media only screen and (max-width : $breakpoint-under-small) {
+.mobile-landscape-and-up {
+    @include mq($until: mobile-landscape) {
         display: none;
     }
 }
 
-.medium-and-up {
-    @media only screen and (max-width : $breakpoint-under-medium) {
+.tablet-and-up {
+    @include mq($until: tablet) {
         display: none;
     }
 }
 
-.large-and-up {
-    @media only screen and (max-width : $breakpoint-under-large) {
+.desktop-and-up {
+    @include mq($until: desktop) {
         display: none;
     }
 }
 
-.larger-and-up {
-    @media only screen and (max-width : $breakpoint-under-larger) {
-        display: none;
-    }
-}
-
-.massive-and-up {
-    @media only screen and (max-width : $breakpoint-under-massive) {
+.wide-and-up {
+    @include mq($until: wide) {
         display: none;
     }
 }
 
 .max-and-up {
-    @media only screen and (max-width : $breakpoint-max) {
+    @include mq($until: max) {
         display: none;
     }
 }
 
-.smaller-less-than {
-    @media only screen and (min-width : $breakpoint-smaller) {
+.mobile-less-than {
+    @include mq($from: mobile) {
         display: none;
     }
 }
 
-.small-less-than {
-    @media only screen and (min-width : $breakpoint-small) {
+.mobile-landscape-less-than {
+    @include mq($from: mobile-landscape) {
         display: none;
     }
 }
 
-.medium-less-than {
-    @media only screen and (min-width : $breakpoint-medium) {
+.tablet-less-than {
+    @include mq($from: tablet) {
         display: none;
     }
 }
 
-.large-less-than {
-    @media only screen and (min-width : $breakpoint-large) {
+.desktop-less-than {
+    @include mq($from: desktop) {
         display: none;
     }
 }
 
-.larger-less-than {
-    @media only screen and (min-width : $breakpoint-larger) {
-        display: none;
-    }
-}
-
-.massive-less-than {
-    @media only screen and (min-width : $breakpoint-massive) {
+.wide-less-than {
+    @include mq($from: wide) {
         display: none;
     }
 }
 
 .max-less-than {
-    @media only screen and (min-width : $breakpoint-max) {
+    @include mq($from: max) {
         display: none;
     }
 }
 
 
-
-
+// Background positions.
 $bg-top: 15%;
 $bg-middle: 50%;
 $bg-left: 15%;
 $bg-right: 85%;
 $bg-bottom: 85%;
 
+// Relative.
 .background-position-top-left {
     background-position: $bg-left $bg-top !important;
 }
@@ -259,8 +247,7 @@ $bg-bottom: 85%;
     background-position: $bg-right $bg-bottom !important;
 }
 
-
-
+// Absolute.
 .background-position-abs-top-left {
     background-position: top left !important;
 }

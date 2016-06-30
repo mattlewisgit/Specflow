@@ -103,7 +103,7 @@ h6,
 }
 
 // Increase heading size on larger screens -
-@media only screen and (min-width : $breakpoint-medium) {
+@include mq($from: tablet) {
     h1,
     .h1 {
         @include font-size($h1--large);

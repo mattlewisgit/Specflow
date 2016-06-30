@@ -20,7 +20,7 @@
         font-size: 0;
         margin: $pad auto;
 
-        @media only screen and (min-width : $breakpoint-medium) {
+        @include mq($from: tablet) {
             margin: $pad--large auto;
         }
     }
@@ -34,12 +34,12 @@
         z-index: 2;
         max-width: 300px;
 
-        @media only screen and (min-width : $breakpoint-medium) {
+        @include mq($from: tablet) {
             max-width: none;
             width: 50%;
         }
 
-        @media only screen and (min-width : $breakpoint-larger) {
+        @include mq($from: desktop) {
             width: 25%;
         }
     }
@@ -48,11 +48,11 @@
     &--max-3 {
         .spotlight__list-item {
 
-            @media only screen and (min-width : $breakpoint-medium) {
+            @include mq($from: tablet) {
                 width: 33.33%;
             }
 
-            @media only screen and (min-width : $breakpoint-larger) {
+            @include mq($from: desktop) {
                 width: 33.33%;
             }
         }
