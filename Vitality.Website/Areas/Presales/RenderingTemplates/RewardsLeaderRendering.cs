@@ -9,6 +9,9 @@
     public class RewardsLeaderRendering
     {
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public KeyValuePair BackgroundColour { get; set; }
+
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public KeyValuePair IconsPerRow { get; set; }
     }
 }

@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {8A084510-496D-4678-B3F2-7EB2CCFDD451}
+id: {C76825A1-B5CC-4A0E-A50A-59324B70C51A}
 database: master
-path: /sitecore/templates/Presales/Rendering Templates/Cards Stacked Rendering/Cards Stacked
-parent: {CAB66853-13C5-43F1-97F3-0A943171B012}
-name: Cards Stacked
+path: /sitecore/templates/Presales/Rendering Templates/Benefit Leader Rendering/Content Presentation
+parent: {B9CDB7FF-850D-4B1E-9EF0-05F29F29B16E}
+name: Content Presentation
 master: {00000000-0000-0000-0000-000000000000}
 template: {E269FBB5-3750-427A-9149-7AA950B49301}
 templatekey: Template section
@@ -12,7 +12,7 @@ templatekey: Template section
 ----version----
 language: en
 version: 1
-revision: f590b4b9-df9a-40cd-b303-055ef7623403
+revision: c3a0e360-e067-4f4e-83a0-3e70bc7a2a0c
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -20,7 +20,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160607T102205Z
+20160506T144904Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -34,14 +34,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f590b4b9-df9a-40cd-b303-055ef7623403
+c3a0e360-e067-4f4e-83a0-3e70bc7a2a0c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160607T102220Z
+20160630T103550Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

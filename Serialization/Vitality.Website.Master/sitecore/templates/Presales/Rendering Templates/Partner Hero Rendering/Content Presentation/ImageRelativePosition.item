@@ -1,9 +1,9 @@
 ----item----
 version: 1
-id: {90F109DC-B2E0-434B-9F01-11F8877DA621}
+id: {7CB682B3-9B2D-4376-9E23-74F501180106}
 database: master
-path: /sitecore/templates/Presales/Rendering Templates/Home Hero Rendering/Home Hero/ImageRelativePosition
-parent: {7E34B74C-ACF3-43FC-918B-1E23512EBA1F}
+path: /sitecore/templates/Presales/Rendering Templates/Partner Hero Rendering/Content Presentation/ImageRelativePosition
+parent: {E6FC6643-6A28-4C13-A865-8007A4EA9C46}
 name: ImageRelativePosition
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
@@ -33,7 +33,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 85d8c8fd-8ace-4965-84a2-baf5881b958e
+revision: f4cb1c91-0043-403b-9c6f-b6800f9aab60
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-85d8c8fd-8ace-4965-84a2-baf5881b958e
+f4cb1c91-0043-403b-9c6f-b6800f9aab60
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160622T142231Z
+20160630T103605Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

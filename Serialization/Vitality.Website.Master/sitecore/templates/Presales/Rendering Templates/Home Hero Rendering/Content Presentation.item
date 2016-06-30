@@ -1,18 +1,18 @@
 ----item----
 version: 1
-id: {AC57C021-B921-494F-9899-6A8F49C9346D}
+id: {7E34B74C-ACF3-43FC-918B-1E23512EBA1F}
 database: master
-path: /sitecore/content/Presales/Configuration/Background Colours/Navy
-parent: {A3A0F00A-FC11-4B56-A866-442CAEBA543D}
-name: Navy
+path: /sitecore/templates/Presales/Rendering Templates/Home Hero Rendering/Content Presentation
+parent: {A91288D3-080B-4E0A-8253-96C70D78B30C}
+name: Content Presentation
 master: {00000000-0000-0000-0000-000000000000}
-template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
-templatekey: Key Value Pair
+template: {E269FBB5-3750-427A-9149-7AA950B49301}
+templatekey: Template section
 
 ----version----
 language: en
 version: 1
-revision: 3e97f4ea-2841-4c6a-a6bd-b260c378aa4a
+revision: 6f667971-3265-4841-847e-3c7e41c3bd6a
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -20,21 +20,28 @@ name: __Created
 key: __created
 content-length: 16
 
-20160506T145500Z
+20160506T144904Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-3e97f4ea-2841-4c6a-a6bd-b260c378aa4a
+6f667971-3265-4841-847e-3c7e41c3bd6a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160506T145502Z
+20160630T103600Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

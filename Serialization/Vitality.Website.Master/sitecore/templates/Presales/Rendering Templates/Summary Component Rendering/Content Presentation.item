@@ -1,18 +1,18 @@
 ----item----
 version: 1
-id: {68B94AAC-878B-4637-BF30-D270BC1D2397}
+id: {67B6D882-9EAE-4FA6-9BF2-0C165AB4948B}
 database: master
-path: /sitecore/content/Presales/Configuration/Background Colours/Salmon
-parent: {A3A0F00A-FC11-4B56-A866-442CAEBA543D}
-name: Salmon
+path: /sitecore/templates/Presales/Rendering Templates/Summary Component Rendering/Content Presentation
+parent: {7D52C634-D455-42EE-ADB6-17090ECFAFA9}
+name: Content Presentation
 master: {00000000-0000-0000-0000-000000000000}
-template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
-templatekey: Key Value Pair
+template: {E269FBB5-3750-427A-9149-7AA950B49301}
+templatekey: Template section
 
 ----version----
 language: en
 version: 1
-revision: f45df0ba-23be-46e0-a42f-844726f26d2f
+revision: 5ce0ff31-5474-4347-bcc2-94a61dea2ce5
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -20,21 +20,28 @@ name: __Created
 key: __created
 content-length: 16
 
-20160506T145535Z
+20160526T095302Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-f45df0ba-23be-46e0-a42f-844726f26d2f
+5ce0ff31-5474-4347-bcc2-94a61dea2ce5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160506T145538Z
+20160630T103623Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
