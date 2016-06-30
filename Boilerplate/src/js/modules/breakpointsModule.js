@@ -22,7 +22,7 @@ $.each(data, function (name, value) {
         value: max
     };
 
-    breakpoints.min.name = {
+    breakpoints.min[name] = {
         test: function() {
             return Modernizr.mq(min);
         },
