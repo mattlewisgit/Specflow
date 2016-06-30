@@ -1,5 +1,6 @@
 var AccordionModule = require("./accordionModule");
 var AnimationDelayModule = require("./animationDelayModule");
+var Breakpoints = require("./breakpointsModule");
 var FilerModule = require("./filterModule");
 var MatchHeightsModule = require("./matchHeightsModule");
 var MatchWidthsModule = require("./matchWidthsModule");
@@ -9,56 +10,48 @@ var SearchModule = require("./searchModule");
 var SocialShareModule = require("./socialShareModule");
 var TabsModule = require("./tabsModule");
 
-$(document).ready(function () {
+function _initVendor() {
     "use strict";
-    //
-    // Vendor libraries -
-    //
-
-    //Start fastclick -
     FastClick.attach(document.body);
 
-    //JQ UI Date picker init  -
-    //Where JS used, disable direct input to stop mobile keyboards -
-    if ($(".js-datepicker").length) {
-        $(".js-datepicker").datepicker().attr("readonly", "true");
+    // Where JS is used, disable direct input to stop mobile keyboards.
+    var datePicker = $(".js-datepicker");
+    if (datePicker.length) {
+        datePicker.datepicker().attr("readonly", "true");
     }
 
-    //TableSaw responsive tables init -
+    // TableSaw responsive tables.
     if (!$("html").hasClass("disable-tablesaw")) {
         $(document).trigger("enhance.tablesaw");
     }
 
-    //init wow js  - only for larger screens -
+    // Add WOW for larger screens.
     var wow;
 
-    if (Modernizr.mq("(min-width : 770px)")) {
-        /* global WOW */
+    if (Breakpoints.min.medium.test()) {
         wow = new WOW({
             boxClass: "animate-on-scroll"
         });
 
         wow.init();
     } else {
-        //Add a class showing that the animation library has not been initialised -
+        // Add a class showing that the animation library has not been initialised.
         $("html").addClass("no-js-animations");
     }
 
-    //
-    // Custom modules -
-    //
+    return wow;
+}
 
-    //Main & Mobile menu functionality -
+function _initCustom(wow) {
+    "use strict";
     MenuModule.init();
 
-    //Social Sharing pop ups -
     SocialShareModule.init();
 
-    //Modules for accordions & tabs -
     AccordionModule.init();
     TabsModule.init();
 
-    //Check for filterable content - pass a reference to the animation object -
+    // Check for filterable content with the animation instance.
     FilerModule.init(wow);
 
     // Match sizes.
@@ -66,10 +59,11 @@ $(document).ready(function () {
     MatchWidthsModule.init();
 
     QuoteFooterModule.init();
-
-    //Check for column animation delays -
     AnimationDelayModule.init();
-
-    //Search functionality -
     SearchModule.init();
+}
+
+$(document).ready(function () {
+    "use strict";
+    _initCustom(_initVendor());
 });
