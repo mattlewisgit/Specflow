@@ -173,10 +173,6 @@ var _menuModule = {
             //Remove open megamenu toggle -
             $body.removeClass(_settings.mobileMegaMenuClass);
             _menuModule.delayRemoveMegaMenuOverflowClass();
-
-            //Add listener for clicking anything other than the megamenu, to close it again -
-            //Removed this due to design request to be able to browse the site with the menu open -
-            //$html.off("click", _menuModule.onTouchOutsideOpenMobileMenu);
         } else {
             $body.addClass(_settings.mobileMainMenuClass);
 
@@ -184,10 +180,6 @@ var _menuModule = {
             _menuModule.closeSearchMenu();
 
             $body.removeClass(_settings.logInClass);
-
-            //Add listener for clicking anything other than the megamenu, to close it again -
-            //Removed this due to design request to be able to browse the site with the menu open -
-            //$html.on("click", _menuModule.onTouchOutsideOpenMobileMenu);
         }
     },
 
@@ -199,7 +191,7 @@ var _menuModule = {
 
         //Close the search if open -
         _menuModule.closeSearchMenu();
-            
+
         if ($body.hasClass(_settings.logInClass)) {
             $body.removeClass(_settings.logInClass);
         } else {

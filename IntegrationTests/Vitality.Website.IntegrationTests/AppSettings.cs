@@ -29,6 +29,14 @@ namespace Vitality.Website.IntegrationTests
                     return GetValue("Paths.Chrome");
                 }
             }
+
+            public static string PhantomJS
+            {
+                get
+                {
+                    return GetValue("Paths.PhantomJS");
+                }
+            }
         }
 
         public static class Links

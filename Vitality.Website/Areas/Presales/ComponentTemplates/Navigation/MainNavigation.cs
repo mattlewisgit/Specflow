@@ -21,19 +21,12 @@
 
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<ImageLink> SocialLinks { get; set; }
-
-        public Link LogInLink { get; set; }
-
-        public Image LogInAvatar { get; set; }
-
-        public string LogInHeader { get; set; }
-
+        
         public string LogInText { get; set; }
 
-        public string RegisterText { get; set; }
-
-        public string ForgottenDetailsText { get; set; }
-
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public IEnumerable<LinkItem> LoginLinks { get; set; }
+        
         [SitecoreQuery(HasNavigationSectionTemplate, IsRelative = true)]
         public IEnumerable<NavigationSection> NavigationSections { get; set; }
     }

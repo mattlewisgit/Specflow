@@ -6,8 +6,6 @@ var _socialShareModule = {
     configureShareData: function ($anchor) {
         "use strict";
         var socialChannel = $anchor.data("type");
-        //var shareTitle = encodeURIComponent($anchor.data("title"));
-        //var shareDescription = encodeURIComponent($anchor.data("description"));
         var shareUrl = $anchor.attr("href");
 
         switch (socialChannel) {
@@ -19,6 +17,8 @@ var _socialShareModule = {
                 break;
             case "linkedin":
                 window.open(shareUrl, "", "width=974,height=510");
+                break;
+            default:
                 break;
         }
     }

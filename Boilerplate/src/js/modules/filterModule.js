@@ -96,7 +96,7 @@ var _filterModule = {
                     var filters = $(this)
                         .data(_settings.filterDataName)
                         .split(_settings.filterSeparator);
-   
+
                     if ($.inArray(filterName, filters) > -1) {
                         $(this).show();
                     } else {

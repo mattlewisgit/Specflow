@@ -11,7 +11,8 @@
     {
         public static IWebDriver PhantonJs()
         {
-            return new PhantomJSDriver();
+            var service = PhantomJSDriverService.CreateDefaultService(AppSettings.Paths.PhantomJS);
+            return new PhantomJSDriver(service);
         }
 
         public static IWebDriver Firefox()
