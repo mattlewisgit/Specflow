@@ -1,0 +1,95 @@
+﻿@import "../base/defaults";
+@import "../base/vars";
+@import "../utils/mixins";
+
+.partner-hero {
+    background-size: cover;
+	background-repeat: no-repeat;
+    
+    &--headline {
+        display: block;
+        margin: 0 auto;
+        padding: $pad--xxlarge $pad;
+
+        &.text-light {
+            @include shadow--light();
+        }
+
+        &.text-dark {
+            @include shadow--dark();
+        }
+
+        h1 {
+            @include font-size($h3--large);
+            font-weight: 300;
+            margin: $pad--tiny 0;
+        }
+
+        h2 {
+            @include font-size($h2--xlarge);
+            font-weight: 600;
+            margin: $pad--tiny 0;
+        }
+
+        p {
+            @include font-size($h4--large);
+            margin: $pad--tiny 0;
+        }
+    }
+
+    &--right {
+        margin: $pad--large;
+    }
+
+    &--card {
+        @include font-size($basesize);
+        background: $white;
+        margin-top: $pad;
+        max-width: 300px;
+        padding: $pad--thin;
+        text-align: center;
+
+        &__top {
+            h6 {
+                text-transform: uppercase;
+            }
+
+            hr {
+                display: block;
+                height: 1px;
+                border: 0;
+                border-top: 1px solid $body-color--alt;
+                margin: 1em 0;
+                padding: 0;
+            }
+        }
+
+        &__bottom {
+            @include triangle-callout--central-top($white);
+            background: $primary-colour;
+            color: $white;
+            padding: 30px 0;
+
+            // Ensure the arrow positions correctly.
+            position: relative;
+
+            h1, h2, h3, h4, h5, h6, p {
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : $breakpoint-under-medium) {
+    .partner-hero.partner-hero--with-card {
+        .partner-hero--headline {
+            display: none;
+        }
+
+        .partner-hero--card {
+            margin-top: $pad--large;
+            max-width: 100%;
+        }
+    }
+}
