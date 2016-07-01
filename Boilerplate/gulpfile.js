@@ -22,6 +22,7 @@ var configs = {
     favicon: require("./config/favicon-config.json"),
     htmlMin: require("./config/htmlmin-config.json"),
     imageResize: require("./config/image-resize-config.json"),
+    "package": require("./package.json"),
     sizeReport: require("./config/sizereport-config.json"),
     svgSprite: require("./config/svgsprite-config.json")
 };
@@ -66,6 +67,7 @@ var tasks = {
 
 var paths = {
     base: ".",
+    baseAssetName: "vitality-boilerplate-",
     css: "css",
     critical: "critical-css.html",
     dist: "dist",
@@ -92,8 +94,7 @@ var paths = {
     },
     js: {
         breakpoints: "src/js/breakpoints.json",
-        dest: "js",
-        filename: "vitality-boilerplate.js",
+        dest: "js/",
         modernizr: "modernizr-custom.js",
         polyfill: "polyfill-custom.js",
         src: "src/js/**/*.js",
@@ -146,7 +147,6 @@ gulp.task(tasks.clean, function () {
         paths.css,
         paths.img.examples.dest,
         paths.img.spritesheets.dest,
-        paths.js.dest + "/" + paths.js.filename,
         paths.sass.generated,
         paths.temp,
         paths.tempFiles
@@ -223,6 +223,8 @@ gulp.task(tasks.sass.build, function () {
         .src(paths.css + "/*.css")
         .pipe(plugins.cssnano(configs.cssnano))
         .pipe(plugins.rename({
+            prefix: paths.baseAssetName,
+            basename: configs.package.version,
             suffix: ".min"
         }))
         .pipe(gulp.dest(paths.dist));
@@ -310,11 +312,12 @@ gulp.task(
     function () {
         return gulp
             .src([
-                paths.js.dest + "/" + paths.js.modernizr,
-                paths.js.dest + "/" + paths.js.polyfill,
-                paths.js.dest + "/" + "app.js"
+                paths.js.dest + paths.js.modernizr,
+                paths.js.dest + paths.js.polyfill,
+                paths.js.dest + "app.js"
             ])
-            .pipe(plugins.concat("vitality-boilerplate.min.js"))
+            .pipe(plugins.concat
+                (paths.baseAssetName + configs.package.version + ".min.js"))
             .pipe(plugins.uglify())
             .pipe(gulp.dest(paths.dist));
     });
