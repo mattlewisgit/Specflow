@@ -56,6 +56,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Glass.Mapper.Sc.4.0.11.63\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="Krusen.Sitecore.WebApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krusen.Sitecore.WebApi.1.0.0\lib\net45\Krusen.Sitecore.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Nancy, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nancy.0.17.1\lib\net40\Nancy.dll</HintPath>
@@ -63,6 +67,10 @@
     </Reference>
     <Reference Include="Nancy.Hosting.Aspnet, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nancy.Hosting.Aspnet.0.17.1\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="SimpleInjector, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
@@ -109,6 +117,7 @@
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\sitecore.nexus.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Sitecore.Services.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Sitecore.Ship, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.dll</HintPath>
       <Private>True</Private>
@@ -129,6 +138,11 @@
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -138,6 +152,14 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -172,6 +194,7 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
     <Content Include="App_Config\Include\ship.config" />
+    <Content Include="App_Config\Include\Custom\Krusen.Sitecore.WebApi.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -284,6 +307,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\PrimaryCallToAction.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqPreview.cs" />
+    <Compile Include="Areas\Presales\PageTemplates\LiteratureLibraryPage.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\CardsStackedRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\HomeHeroRendering.cs" />
@@ -458,7 +482,9 @@
     <Content Include="App_Config\Include\Sitecore.Publishing.Parallel.config.disabled" />
     <Content Include="App_Config\Include\Sitecore.Publishing.Recovery.config.example" />
     <Content Include="App_Config\Include\Sitecore.SegmentBuilder.config" />
-    <Content Include="App_Config\Include\Sitecore.Services.Client.config" />
+    <Content Include="App_Config\Include\Sitecore.Services.Client.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\Include\Sitecore.Shell.MarketingAutomation.config" />
     <Content Include="App_Config\Include\Sitecore.Speak.AntiCsrf.SheerUI.config" />
     <Content Include="App_Config\Include\Sitecore.Speak.Applications.config" />
@@ -552,6 +578,7 @@
     <Content Include="Areas\Presales\Views\Cards\CardsTabbed.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_Metadata.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_JsThirdParty.cshtml" />
+    <Content Include="Areas\Presales\Views\Literature\LiteratureLibrary.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -562,6 +589,7 @@
   <ItemGroup>
     <Folder Include="Areas\Presales\Controllers\" />
     <Folder Include="Areas\Presales\Views\Partners\" />
+    <Folder Include="Controllers\" />
     <Folder Include="img\examples\" />
   </ItemGroup>
   <ItemGroup>
