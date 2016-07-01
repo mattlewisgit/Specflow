@@ -16,16 +16,6 @@ var plugins = require("gulp-load-plugins")({
     replaceString: /\bgulp[\-\.]/
 });
 
-var configs = {
-    cdnizer: require("./config/cdnizer-config.json"),
-    cssnano: require("./config/cssnano-config.json"),
-    favicon: require("./config/favicon-config.json"),
-    htmlMin: require("./config/htmlmin-config.json"),
-    imageResize: require("./config/image-resize-config.json"),
-    sizeReport: require("./config/sizereport-config.json"),
-    svgSprite: require("./config/svgsprite-config.json")
-};
-
 var tasks = {
     clean: "clean",
     css: "css",
@@ -118,7 +108,18 @@ var paths = {
 
 };
 
-var replacements = configs.cdnizer.files
+var configs = {
+    breakpoints: require("./" + paths.js.breakpoints),
+    cdnizer: require("./config/cdnizer-config.json"),
+    cssnano: require("./config/cssnano-config.json"),
+    favicon: require("./config/favicon-config.json"),
+    htmlMin: require("./config/htmlmin-config.json"),
+    imageResize: require("./config/image-resize-config.json"),
+    sizeReport: require("./config/sizereport-config.json"),
+    svgSprite: require("./config/svgsprite-config.json")
+};
+
+var cdnReplacements = configs.cdnizer.files
     .map(function (file) { return "./" + file.file; });
 
 gulp.task(tasks.help, plugins.taskListing);
@@ -166,19 +167,17 @@ gulp.task(tasks.images, function() {
 // so changing a single value there and rebuilding via Gulp will change it
 // everywhere, ensuring JS and CSS is kept in sync.
 gulp.task(tasks.sass.json, function () {
-    var breakpoints = require("./" + paths.js.breakpoints);
-
-    var content = Object.keys(breakpoints).map(function (key) {
-        return "    ".concat(key, ": ", breakpoints[key]);
+    var mapContents = Object.keys(configs.breakpoints).map(function (key) {
+        return "    ".concat(key, ": ", configs.breakpoints[key]);
     })
     .join(",\n");
 
-    var contents = "$mq-breakpoints: (\n" + content + "\n);\n";
+    var mqMap = "$mq-breakpoints: (\n" + mapContents + "\n);\n";
 
     return gulp
         .src(paths.js.breakpoints)
         .pipe(plugins.changed(paths.temp))
-        .pipe(plugins.file("_breakpoints.scss", contents))
+        .pipe(plugins.file("_breakpoints.scss", mqMap))
         .pipe(gulp.dest(paths.sass.generated));
 });
 
@@ -234,23 +233,30 @@ gulp.task(tasks.sass.build, function () {
         .pipe(gulp.dest(paths.dist));
 });
 
+// Creates a critical CSS template from a sample main navigation page.
+// This means that the page will render incredibly quickly, then load
+// the rest of the styles via JavaScript.
 gulp.task(tasks.sass.critical, function () {
+    // Use all the breakpoints to generate the critical CSS for each media query.
+    // The height is not important here, so use an estimate.
+    var dimensions = Object.keys(configs.breakpoints).map(function(key) {
+        var width = configs.breakpoints[key];
+
+        return {
+            height: width * 0.6,
+            width: width
+        };
+    });
+
     critical.generate({
         inline: true,
         base: ".",
-        src: paths.templates.src + paths.critical,
         dest: paths.templates.dest + paths.critical,
-        // TODO Take from variable JSON used to power SASS and JS.
-        dimensions: [
-            {
-                height: 216,
-                width: 540
-            }, {
-                height: 900,
-                width: 1200
-            }
-        ]
-    }, function () { gulp.start(tasks.razor); });
+        dimensions: dimensions,
+        src: paths.templates.src + paths.critical
+    }, function () {
+        gulp.start(tasks.razor);
+    });
 });
 
 // CSS task that forces dependencies to be run sequentially.
@@ -280,7 +286,7 @@ gulp.task(tasks.js.devel, function () {
 
 gulp.task(tasks.js.thirdParty, function () {
     gulp
-        .src(replacements, { base: "." })
+        .src(cdnReplacements, { base: "." })
         .pipe(gulp.dest("dist"));
 
     gulp
@@ -295,7 +301,7 @@ gulp.task(tasks.js.thirdParty, function () {
 
 gulp.task(tasks.js.polyfill, function () {
     // Copy the bower failover paths and add the app.
-    var allJs = replacements.splice(0);
+    var allJs = cdnReplacements.splice(0);
     allJs.push(paths.js.src);
 
     return gulp
@@ -307,7 +313,8 @@ gulp.task(tasks.js.polyfill, function () {
 });
 
 gulp.task(
-    tasks.js.build, [
+    tasks.js.build,
+    [
         tasks.js.lint,
         tasks.js.devel,
         tasks.js.thirdParty,
