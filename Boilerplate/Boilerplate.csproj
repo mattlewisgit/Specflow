@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,6 +45,7 @@
     <Content Include="components\primary-cta.html" />
     <Content Include="components\accordion.html" />
     <Content Include="components\products_component.html" />
+    <Content Include="components\partner_hero.html" />
     <Content Include="components\quote-footer\quote-footer-3-buttons.html" />
     <Content Include="components\quote-footer\quote-footer-2-buttons.html" />
     <Content Include="components\quote-footer\quote-footer-1-button.html" />
@@ -372,10 +374,10 @@
     <Content Include="config\favicon-config.json" />
     <Content Include="config\image-resize-config.json" />
     <Content Include="config\svgsprite-config.json" />
-    <Content Include="config\breakpoints.json" />
-    <Content Include="src\sass\modules\_products-component.scss" />
     <Content Include="src\js\breakpoints.json" />
     <Content Include="src\sass\modules\_quote-footer.scss" />
+    <Content Include="src\sass\modules\_products-component.scss" />
+    <Content Include="src\sass\modules\_partner-hero.scss" />
     <Content Include=".htmlhintrc" />
     <Content Include="config\cdnizer-config.json" />
     <Content Include="config\htmlmin-config.json" />
