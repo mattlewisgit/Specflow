@@ -67,12 +67,9 @@ content-length: 24
 field: {4DC3EF13-D274-4ABF-8D04-F7536FC372F4}
 name: Benefits
 key: benefits
-content-length: 60
+content-length: 21
 
 <p>You could save</p>
-<h3>£260</h3>
-<p>a year!</p>
-<h4></h4>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created

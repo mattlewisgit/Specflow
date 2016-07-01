@@ -45,6 +45,7 @@
         @include font-size($basesize);
         background: $white;
         margin-top: $pad;
+        max-width: 300px;
         padding: $pad--thin;
         text-align: center;
 
@@ -81,12 +82,12 @@
 }
 
 @media only screen and (max-width : $breakpoint-under-medium) {
-    .partner-hero {
-        &--headline {
+    .partner-hero.partner-hero--with-card {
+        .partner-hero--headline {
             display: none;
         }
 
-        &--card {
+        .partner-hero--card {
             margin-top: $pad--large;
             max-width: 100%;
         }

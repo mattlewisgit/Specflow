@@ -51,5 +51,14 @@ namespace Vitality.Website.Extensions.Views
                 || !string.IsNullOrWhiteSpace(view.Model.Benefits)
                 || view.IsInEditingMode;
         }
+
+        public static string PartnerWithCardClass(this GlassView<PartnerHero> view)
+        {
+            if (ShowPartnerCard(view))
+            {
+                return "partner-hero--with-card";
+            }
+            return null;
+        }
     }
 }
