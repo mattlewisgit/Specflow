@@ -50,7 +50,7 @@
         transition: max-height $delay--medium ease;
 
         a {
-            margin: $pad--xthin;
+            margin: $pad--tiny;
         }
 
         @include mq($until: mobile-landscape) {

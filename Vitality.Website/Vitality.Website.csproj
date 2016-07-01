@@ -192,6 +192,10 @@
     <Content Include="client_side\img\vitality-logo--white.svg" />
     <Content Include="client_side\img\vitality-logo.svg" />
     <Content Include="client_side\img\youtube--footer.svg" />
+    <Content Include="css\experience_editor_fix.css" />
+    <Content Include="css\rich-text-editor.css" />
+    <Content Include="css\tablesaw.css" />
+    <Content Include="css\vitality-boilerplate-1.0.0.min.css" />
     <Content Include="Global.asax" />
     <Content Include="images\sprite-generated%402x.png" />
     <Content Include="images\sprite-generated.png" />
@@ -231,7 +235,7 @@
     <Content Include="css\sprite-generated%402x.png" />
     <Content Include="css\sprite-generated.png" />
     <Content Include="img\spritesheets\svg-sprite.svg" />
-    <Content Include="js\vitality-boilerplate.min.js" />
+    <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -244,8 +248,6 @@
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
     <Compile Include="Areas\Global\Models\Taxonomy.cs" />
-    <Compile Include="Areas\Presales\Models\Products\ProductPanel.cs" />
-    <Compile Include="Areas\Presales\Models\Products\ProductsComponent.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IQuoteFooter.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IAppReferenceGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IBrowserLatencyGlobal.cs" />
@@ -279,6 +281,9 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Rewards\RewardsLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryComponent.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryListItem.cs" />
+    <Compile Include="Areas\Presales\Models\Partners\PartnerHero.cs" />
+    <Compile Include="Areas\Presales\Models\Products\ProductPanel.cs" />
+    <Compile Include="Areas\Presales\Models\Products\ProductsComponent.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\CallToActionPanel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\PrimaryCallToAction.cs" />
@@ -287,6 +292,7 @@
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\CardsStackedRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\HomeHeroRendering.cs" />
+    <Compile Include="Areas\Presales\RenderingTemplates\PartnerHeroRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\RewardsLeaderRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\SummaryComponentRendering.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
@@ -299,6 +305,7 @@
     <Compile Include="Extensions\Views\BasePageExtensions.cs" />
     <Compile Include="Extensions\Views\PrimaryCallToActionExtensions.cs" />
     <Compile Include="Extensions\Views\GlobalFooterExtensions.cs" />
+    <Compile Include="Extensions\Views\PartnerHeroExtensions.cs" />
     <Compile Include="Extensions\Views\HomeHeroExtensions.cs" />
     <Compile Include="Extensions\Views\ProductHeroExtensions.cs" />
     <Compile Include="Extensions\Views\CardsStackedExtensions.cs" />
@@ -548,6 +555,7 @@
     <Content Include="Areas\Presales\Views\Shared\_CriticalCss.cshtml" />
     <Content Include="client_side\config\cssnano-config.json" />
     <Content Include="Areas\Presales\Views\Products\ProductsComponent.cshtml" />
+    <Content Include="Areas\Presales\Views\Partners\PartnerHero.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\QuoteFooter.cshtml" />
     <Content Include="Areas\Presales\Views\Cards\CardsTabbed.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_Metadata.cshtml" />

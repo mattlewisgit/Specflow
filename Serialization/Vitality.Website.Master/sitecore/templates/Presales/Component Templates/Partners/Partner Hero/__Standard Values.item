@@ -1,40 +1,33 @@
 ----item----
 version: 1
-id: {1513AD49-B5AE-4ACC-9D41-E63E41363B58}
+id: {5AF27745-A2AC-4608-A1FE-9FC5B1134C18}
 database: master
-path: /sitecore/content/Presales/Content
-parent: {BFFA7523-62F6-4EA1-A809-A723BAE5C8F8}
-name: Content
+path: /sitecore/templates/Presales/Component Templates/Partners/Partner Hero/__Standard Values
+parent: {6FB18645-464E-4405-BFCB-028F32110291}
+name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
-templatekey: Folder
+template: {6FB18645-464E-4405-BFCB-028F32110291}
+templatekey: Partner Hero
 
-----field----
-field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
-name: __Icon
-key: __icon
-content-length: 26
-
-People/32x32/box_white.png
-----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
-content-length: 38
-
-{7C96FFFF-DA60-44F1-BC58-2E4315D2F483}
 ----version----
 language: en
 version: 1
-revision: 08cd2ebb-a39c-4f4e-80f1-582b9458ba55
+revision: 6bc1b5fe-8e3c-4f86-801c-3e91e5f10d10
 
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160428T164421Z
+20160617T133505Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-08cd2ebb-a39c-4f4e-80f1-582b9458ba55
+6bc1b5fe-8e3c-4f86-801c-3e91e5f10d10
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160621T112424Z
+20160617T133505Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

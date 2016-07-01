@@ -1,32 +1,39 @@
 ----item----
 version: 1
-id: {14B3F9CC-1D26-473E-B7D9-148093F3C960}
+id: {5B28A872-2800-495E-86C4-D3B1EA5917A5}
 database: master
-path: /sitecore/content/Presales/Content/Partners
-parent: {1513AD49-B5AE-4ACC-9D41-E63E41363B58}
-name: Partners
+path: /sitecore/templates/Presales/Rendering Templates/Partner Hero Rendering
+parent: {F60AB061-3632-44BC-855A-97A5E9031203}
+name: Partner Hero Rendering
 master: {00000000-0000-0000-0000-000000000000}
-template: {7C96FFFF-DA60-44F1-BC58-2E4315D2F483}
-templatekey: Datasource Folder
+template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
+templatekey: Template
 
+----field----
+field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
+name: __Base template
+key: __base template
+content-length: 77
+
+{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{8CA06D6A-B353-44E8-BC31-B528C7306971}
+----field----
+field: {F7D48A55-2158-4F02-9356-756654404F73}
+name: __Standard values
+key: __standard values
+content-length: 38
+
+{5B2BFCB1-740F-4FE8-9C4E-287C71093965}
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 23
+content-length: 32
 
-People/32x32/users1.png
-----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
-content-length: 116
-
-{4902517E-93B7-41B5-BCC4-387E1D0304A7}|{6FB18645-464E-4405-BFCB-028F32110291}|{E8118048-EB94-4F70-8793-30A460D1B041}
+Applications/32x32/form_blue.png
 ----version----
 language: en
 version: 1
-revision: 1877da5f-61ee-43a1-9998-bfad30dd4070
+revision: 3584d53d-3cc6-41f2-8893-a8f0d958a16f
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -34,7 +41,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160620T151333Z
+20160506T144702Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,22 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-<<<<<<< HEAD
-a4675872-1f33-47cc-8cd5-25daf11e168f
-=======
-1877da5f-61ee-43a1-9998-bfad30dd4070
->>>>>>> develop
+3584d53d-3cc6-41f2-8893-a8f0d958a16f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-<<<<<<< HEAD
-20160620T152311Z
-=======
-20160622T102739Z
->>>>>>> develop
+20160629T122025Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
