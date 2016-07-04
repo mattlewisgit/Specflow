@@ -66,8 +66,10 @@
 
     &__intro-image {
         &.burst {
-            width: calc(100% + 20px);
+            overflow-y: hidden;
             margin: -10px -10px 0 -10px;
+            max-height: 200px;
+            width: calc(100% + 20px);
 
             img {
                 width: 100%;
