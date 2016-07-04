@@ -366,7 +366,7 @@
     <Content Include="src\sass\vendor\neat\_neat-helpers.scss" />
     <Content Include="src\sass\vendor\neat\_neat.scss" />
     <Content Include="src\sass\vendor\_animate.scss" />
-    <Content Include="src\sass\app.scss" />
+    <Content Include="src\sass\vitality-boilerplate.scss" />
     <Content Include="src\sass\rich-text-editor.scss" />
     <Content Include=".bowerrc" />
     <Content Include="config\cssnano-config.json" />

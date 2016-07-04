@@ -231,10 +231,8 @@ gulp.task(tasks.sass.build, function () {
     return gulp
         .src(paths.css + "/*.css")
         .pipe(plugins.cssnano(configs.cssnano))
-        .pipe(plugins.rename({
-            prefix: paths.baseAssetName,
-            basename: configs.package.version,
-            suffix: ".min"
+        .pipe(plugins.rename(function (path) {
+            path.basename += "-" + configs.package.version + ".min";
         }))
         .pipe(gulp.dest(paths.dist));
 });

@@ -38,7 +38,7 @@ namespace Vitality.Website.Extensions.Views
         {
             if (ShowPartnerCard(view))
             {
-                return "grid-col-8-12";
+                return "grid-col-6-12";
             }
             return "grid-col-12-12";
         }

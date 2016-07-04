@@ -34,25 +34,30 @@
 @import "layout/header__search-panel";
 @import "layout/footer";
 
-@import "modules/media-object";
-@import "modules/jquery-ui-datepicker";
 @import "modules/article--heading-block";
-@import "modules/feature-block";
-@import "modules/feature-block-gradient";
+@import "modules/cards-stacked";
 @import "modules/cta";
 @import "modules/datatable";
 @import "modules/expander";
-@import "modules/home-hero";
+@import "modules/faq-leader";
+@import "modules/feature-block";
+@import "modules/feature-block-gradient";
 @import "modules/filter-options";
+@import "modules/home-hero";
+@import "modules/iconlist";
+@import "modules/jquery-ui-datepicker";
+@import "modules/media-object";
+@import "modules/partner-hero";
+@import "modules/product-hero";
+@import "modules/products-component";
 @import "modules/quote-footer";
+@import "modules/rewards-leader";
 @import "modules/richtext";
 @import "modules/social";
 @import "modules/spotlight";
-@import "modules/iconlist";
-@import "modules/video";
+@import "modules/summary";
 @import "modules/text-detail-block";
-@import "modules/products-component";
-@import "modules/partner-hero";
+@import "modules/video";
 
 @import "boilerplate/boilerplate";
 @import "boilerplate/swatches";
@@ -60,9 +65,3 @@
 @import "utils/media-print";
 
 @import "base/screen-overrides";
-
-@import "modules/cards-stacked";
-@import "modules/faq-leader";
-@import "modules/product-hero";
-@import "modules/rewards-leader";
-@import "modules/summary";
