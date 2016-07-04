@@ -48,22 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-<<<<<<< HEAD
-a4675872-1f33-47cc-8cd5-25daf11e168f
-=======
 1877da5f-61ee-43a1-9998-bfad30dd4070
->>>>>>> develop
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-<<<<<<< HEAD
-20160620T152311Z
-=======
 20160622T102739Z
->>>>>>> develop
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
