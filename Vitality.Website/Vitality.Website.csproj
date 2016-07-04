@@ -193,7 +193,7 @@
     <Content Include="client_side\img\vitality-logo.svg" />
     <Content Include="client_side\img\youtube--footer.svg" />
     <Content Include="css\experience_editor_fix.css" />
-    <Content Include="css\rich-text-editor.css" />
+    <Content Include="css\rich-text-editor-1.0.0.min.css" />
     <Content Include="css\tablesaw.css" />
     <Content Include="css\vitality-boilerplate-1.0.0.min.css" />
     <Content Include="Global.asax" />
@@ -569,7 +569,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Presales\Controllers\" />
-    <Folder Include="Areas\Presales\Views\Partners\" />
     <Folder Include="img\examples\" />
   </ItemGroup>
   <ItemGroup>
