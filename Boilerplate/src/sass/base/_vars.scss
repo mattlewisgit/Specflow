@@ -71,6 +71,7 @@ $heading-color: $color-mono-3;
 $dropshadow-color: rgba($body-color, 0.25);
 
 $darken-light: rgba(255, 255, 255, .6);
+$darken-medium: rgba(0, 0, 0, 0.15);
 $darken-heavy: rgba(0, 0, 0, 0.6);
 
 $nav-gradient: linear-gradient( to bottom, $white 75%, $nav-gradient-color 100% );
@@ -118,7 +119,6 @@ $max-width: 1200px;
 //Module padding -
 $pad: 20px;
 $pad--xthin: $pad / 4;
-$pad--tiny: $pad / 4;
 $pad--thin: $pad / 2;
 $pad--large: $pad * 2;
 $pad--xlarge: $pad * 4;

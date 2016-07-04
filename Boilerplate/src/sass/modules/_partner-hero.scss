@@ -1,5 +1,4 @@
-﻿@import "../base/defaults";
-@import "../base/vars";
+﻿@import "../base/vars";
 @import "../utils/mixins";
 
 .partner-hero {
@@ -22,18 +21,18 @@
         h1 {
             @include font-size($h3--large);
             font-weight: 300;
-            margin: $pad--tiny 0;
+            margin: $pad--xthin 0;
         }
 
         h2 {
             @include font-size($h2--xlarge);
             font-weight: 600;
-            margin: $pad--tiny 0;
+            margin: $pad--xthin 0;
         }
 
         p {
             @include font-size($h4--large);
-            margin: $pad--tiny 0;
+            margin: $pad--xthin 0;
         }
     }
 
@@ -46,7 +45,7 @@
         background: $white;
         margin-top: $pad;
         max-width: 300px;
-        padding: $pad--thin;
+        padding: $pad--xthin;
         text-align: center;
 
         &__top {
@@ -66,7 +65,7 @@
 
         &__bottom {
             @include triangle-callout--central-top($white);
-            background: $primary-colour;
+            background: $primary-color;
             color: $white;
             padding: 30px 0;
 
