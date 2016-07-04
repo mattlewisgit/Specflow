@@ -298,20 +298,26 @@ gulp.task(tasks.js.thirdParty, function () {
         .pipe(plugins.changed(paths.temp))
         .pipe(gulp.dest(paths.temp))
         .pipe(plugins.cdnizer(configs.cdnizer))
+        .pipe(plugins.htmlmin(configs.htmlMin))
         .pipe(gulp.dest(paths.templates.dest));
 
     return gulp.start(tasks.razor);
 });
 
 gulp.task(tasks.js.polyfill, function () {
-    // Copy the bower failover paths and add the app.
-    var allJs = cdnReplacements.splice(0);
+    // Copy the bower failover JS paths only and add the app.
+    var allJs = cdnReplacements
+        .splice(0)
+        .filter(function(fileConfig) {
+            return fileConfig.test;
+        });
+
     allJs.push(paths.js.src);
 
     return gulp
         .src(allJs)
         .pipe(plugins.autopolyfiller(paths.js.polyfill, {
-            browsers: ["last 3 versions", "ie 8", "ie 9"]
+            browsers: ["last 3 versions", "ie 9"]
         }))
         .pipe(gulp.dest(paths.js.dest));
 });
@@ -414,7 +420,9 @@ gulp.task(tasks.favicon.checkForUpdate, function () {
 
 gulp.task(tasks.report, function () {
     return gulp
-        .src(paths.dist + "/**/*")
+        .src([
+            paths.dist + "/" + paths.baseAssetName + "*.*"
+        ])
         .pipe(plugins.sizereport(configs.sizeReport));
 });
 

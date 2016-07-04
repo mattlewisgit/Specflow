@@ -223,7 +223,6 @@
     <Content Include=".jshintrc" />
     <Content Include="src\sass\modules\_rewards-leader.scss" />
     <Content Include="src\sass\modules\_product-hero.scss" />
-    <Content Include="src\sass\base\_screen-overrides.scss" />
     <Content Include="src\sass\modules\_cards-stacked.scss" />
     <Content Include="src\sass\modules\_summary.scss" />
     <Content Include="src\sass\base\_base.scss" />
@@ -260,7 +259,6 @@
     <Content Include="src\sass\modules\_spotlight.scss" />
     <Content Include="src\sass\modules\_text-detail-block.scss" />
     <Content Include="src\sass\modules\_video.scss" />
-    <Content Include="src\sass\utils\_css-reset.scss" />
     <Content Include="src\sass\utils\_media-print.scss" />
     <Content Include="src\sass\utils\_mixins.scss" />
     <Content Include="src\sass\utils\_svg-template.scss" />
@@ -365,7 +363,6 @@
     <Content Include="src\sass\vendor\neat\settings\_visual-grid.scss" />
     <Content Include="src\sass\vendor\neat\_neat-helpers.scss" />
     <Content Include="src\sass\vendor\neat\_neat.scss" />
-    <Content Include="src\sass\vendor\_animate.scss" />
     <Content Include="src\sass\vitality-boilerplate.scss" />
     <Content Include="src\sass\rich-text-editor.scss" />
     <Content Include=".bowerrc" />
