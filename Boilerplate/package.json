@@ -22,6 +22,7 @@
         "gulp-jshint": "*",
         "gulp-jscs": "*",
         "gulp-jscs-stylish": "*",
+        "gulp-jscpd": "*",
         "gulp-load-plugins": "*",
         "gulp-modernizr": "*",
         "gulp-real-favicon": "*",

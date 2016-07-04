@@ -128,6 +128,10 @@ gulp.task(tasks.help, plugins.taskListing);
 gulp.task(tasks.js.lint, function () {
     return gulp
         .src([paths.gulp, paths.js.src])
+        .pipe(plugins.jscpd({
+            "min-lines": 10,
+            verbose: true
+        }))
         .pipe(plugins.jshint())
         .pipe(plugins.jscs())
         .pipe(plugins.jscsStylish.combineWithHintResults())
