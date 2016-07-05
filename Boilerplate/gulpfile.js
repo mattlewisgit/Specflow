@@ -380,10 +380,15 @@ function asRazorPartialName(filename) {
         .replace(/ /g, "");
 }
 
+// Creates razor versions of the templates.
+// Does this by renaming to a .NET-friendly format,
+// and replacing tags and adding NWebsec tags.
 gulp.task(tasks.razor, function () {
     gulp
         .src(paths.templates.dest + "*.html")
         .pipe(plugins.replace("@", "@@"))
+        .pipe(plugins.replace("<script", "<script @Html.CspScriptNonce()"))
+        .pipe(plugins.replace("<link", "<link @Html.CspScriptNonce()"))
         .pipe(plugins.rename(function (path) {
             path.basename = asRazorPartialName(path.basename);
             path.extname = ".cshtml";
