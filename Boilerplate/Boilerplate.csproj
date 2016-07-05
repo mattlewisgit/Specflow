@@ -54,6 +54,8 @@
     <Content Include="components\tabs.html" />
     <Content Include="components\footer.html" />
     <Content Include="components\summary\summary-right.html" />
+    <Content Include="global\lists.html" />
+    <Content Include="global\text.html" />
     <Content Include="global\table.html" />
     <Content Include="components\product_hero.html" />
     <Content Include="components\cards-tabbed.html" />
