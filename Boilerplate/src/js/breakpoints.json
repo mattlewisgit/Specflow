@@ -1,9 +1,8 @@
 ﻿{
-    "smaller": 350,
-    "small": 540,
-    "medium": 770,
-    "large": 900,
-    "larger": 1025,
-    "massive": 1200,
-    "max": 1440
+    "mobile": "350px",
+    "mobile-landscape": "540px",
+    "tablet": "770px",
+    "desktop": "1025px",
+    "wide": "1200px",
+    "max": "1440px"
 }

@@ -21,7 +21,6 @@
 .button-step {
     @include alpha-attribute(border-color, rgba($black, 0.4), $white);
     display: inline-block;
-    text-transform: uppercase;
     text-decoration: none;
     text-align: left;
     line-height: 1.25;

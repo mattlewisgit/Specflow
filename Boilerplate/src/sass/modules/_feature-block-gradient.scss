@@ -109,7 +109,7 @@ $gradient-transparent-by: 100%;
     }
 }
 
-@media only screen and (min-width : $breakpoint-medium) {
+@include mq($from: tablet) {
     .feature-block-gradient {
         &__content-container {
             padding: $pad--large;
@@ -123,7 +123,7 @@ $gradient-transparent-by: 100%;
     }
 }
 
-@media only screen and (min-width : $breakpoint-large) {
+@include mq($from: desktop) {
 
     .feature-block-gradient {
 

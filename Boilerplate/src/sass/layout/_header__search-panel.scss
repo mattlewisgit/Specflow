@@ -97,7 +97,7 @@
 }
 
 
-@media only screen and (min-width : $breakpoint-medium) {
+@include mq($from: tablet) {
 
     .search-panel {
         @include ensure-at-front;
@@ -195,9 +195,8 @@
     }
 }
 
-//Mobile toggle -
-@media only screen and (max-width : $breakpoint-under-medium) {
-
+// Mobile toggle.
+@include mq($until: tablet) {
     .search-panel {
         max-height: 0;
         overflow: hidden;

@@ -1,10 +1,8 @@
-@import "../base/defaults";
-
 .rewards_leader {
     @include text-centre;
-    border: $padding-normal solid $darken;
+    border: $pad solid $darken-medium;
     box-sizing: border-box;
-    padding: $padding-thick;
+    padding: $pad--large;
 
     .box-button {
         margin: 0;
@@ -32,7 +30,7 @@
         div {
             > img, > a {
                 &:not(:last-child) {
-                    margin-right: $padding-thick;
+                    margin-right: $pad--large;
                 }
             }
         }
@@ -45,18 +43,18 @@
     
 .feature-block {
     &--primary {
-        background: $primary-colour;
+        background: $primary-color;
     }
 
     &--secondary {
-        background: $secondary-colour;
+        background: $secondary-color;
     }
 
     &--tertiary {
-        background: $tertiary-colour;
+        background: $tertiary-color;
     }
 
     &--dark {
-        background: $dark-colour;
+        background: $secondary-background-color;
     }
 }

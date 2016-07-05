@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -44,6 +45,7 @@
     <Content Include="components\primary-cta.html" />
     <Content Include="components\accordion.html" />
     <Content Include="components\products_component.html" />
+    <Content Include="components\partner_hero.html" />
     <Content Include="components\quote-footer\quote-footer-3-buttons.html" />
     <Content Include="components\quote-footer\quote-footer-2-buttons.html" />
     <Content Include="components\quote-footer\quote-footer-1-button.html" />
@@ -181,7 +183,6 @@
     <Content Include="src\img\logos\starbucks.png" />
     <Content Include="src\img\logos\virgin_active.png" />
     <Content Include="src\img\logos\weightwatchers.png" />
-    <Content Include="src\js\libraries\tablesaw.js" />
     <Content Include="src\img\logos\white\ba_white.png" />
     <Content Include="src\img\logos\white\cineworld_white.png" />
     <Content Include="src\img\logos\white\evans_white.png" />
@@ -207,10 +208,10 @@
     <Content Include="src\js\modules\socialShareModule.js" />
     <Content Include="src\js\modules\tabsModule.js" />
     <Content Include="src\sass\modules\_faq-leader.scss" />
+    <Content Include="src\templates\critical-css.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="src\sass\base\_defaults.scss" />
     <Content Include="package.json" />
     <Content Include="bower.json" />
     <Content Include="sass-lint.yml" />
@@ -221,7 +222,6 @@
     <Content Include=".jshintrc" />
     <Content Include="src\sass\modules\_rewards-leader.scss" />
     <Content Include="src\sass\modules\_product-hero.scss" />
-    <Content Include="src\sass\base\_screen-overrides.scss" />
     <Content Include="src\sass\modules\_cards-stacked.scss" />
     <Content Include="src\sass\modules\_summary.scss" />
     <Content Include="src\sass\base\_base.scss" />
@@ -258,7 +258,6 @@
     <Content Include="src\sass\modules\_spotlight.scss" />
     <Content Include="src\sass\modules\_text-detail-block.scss" />
     <Content Include="src\sass\modules\_video.scss" />
-    <Content Include="src\sass\utils\_css-reset.scss" />
     <Content Include="src\sass\utils\_media-print.scss" />
     <Content Include="src\sass\utils\_mixins.scss" />
     <Content Include="src\sass\utils\_svg-template.scss" />
@@ -363,23 +362,22 @@
     <Content Include="src\sass\vendor\neat\settings\_visual-grid.scss" />
     <Content Include="src\sass\vendor\neat\_neat-helpers.scss" />
     <Content Include="src\sass\vendor\neat\_neat.scss" />
-    <Content Include="src\sass\vendor\_animate.scss" />
-    <Content Include="src\sass\app.scss" />
+    <Content Include="src\sass\vitality-boilerplate.scss" />
     <Content Include="src\sass\rich-text-editor.scss" />
-    <Content Include="src\sass\boilerplate.scss" />
     <Content Include=".bowerrc" />
     <Content Include="config\cssnano-config.json" />
     <Content Include="config\favicon-config.json" />
     <Content Include="config\image-resize-config.json" />
     <Content Include="config\svgsprite-config.json" />
-    <Content Include="config\breakpoints.json" />
-    <Content Include="src\sass\modules\_products-component.scss" />
     <Content Include="src\js\breakpoints.json" />
     <Content Include="src\sass\modules\_quote-footer.scss" />
+    <Content Include="src\sass\modules\_products-component.scss" />
+    <Content Include="src\sass\modules\_partner-hero.scss" />
     <Content Include=".htmlhintrc" />
     <Content Include="config\cdnizer-config.json" />
     <Content Include="config\htmlmin-config.json" />
     <Content Include="src\sass\modules\_home-hero.scss" />
+    <Content Include="src\sass\app-devel.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

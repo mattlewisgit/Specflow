@@ -114,7 +114,7 @@ $menu-transition-time: 0.5s;
         margin-bottom: 0;
     }
     //Feature blocks with images display at larger screen sizes -
-    @media only screen and (min-width : $breakpoint-max) {
+    @include mq($from: wide) {
         &--image {
             padding-right: 30%;
         }
@@ -135,7 +135,7 @@ $menu-transition-time: 0.5s;
 //Mobile megamenu sliding functionality -
 .section-nav,
 .site-nav--small {
-    @media only screen and (max-width : $breakpoint-under-medium) {
+    @include mq($until: tablet) {
         transition: transform $menu-transition-time ease;
 
         .megamenu-open & {
@@ -147,8 +147,7 @@ $menu-transition-time: 0.5s;
 //
 // Desktop megamenu -
 //
-@media only screen and (min-width : $breakpoint-medium) {
-
+@include mq($from: tablet) {
     .megamenu {
         //Hide megamenus for the time being -
         display: none;
@@ -215,8 +214,7 @@ $menu-transition-time: 0.5s;
     }
 }
 
-
-@media only screen and (min-width : $breakpoint-massive) {
+@include mq($from: wide) {
     .megamenu {
         &__col {
             @include span-columns(3);

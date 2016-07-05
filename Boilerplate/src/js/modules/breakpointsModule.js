@@ -9,12 +9,12 @@ var breakpoints = {
 
 $.each(data, function (name, value) {
     "use strict";
-    var max = "(max-width: " + value + "px)";
-    var min = "(min-width: " + value + "px)";
+    var max = "(max-width: " + value + ")";
+    var min = "(min-width: " + value + ")";
 
     // Creates values and functions for each breakpoint,
     // as they need to be evaluated each time, not precalculated.
-    // e.g. breakpoints.max.small.test()
+    // e.g. breakpoints.max.desktop.test()
     breakpoints.max[name] = {
         test: function() {
             return Modernizr.mq(max);
@@ -22,7 +22,7 @@ $.each(data, function (name, value) {
         value: max
     };
 
-    breakpoints.min.name = {
+    breakpoints.min[name] = {
         test: function() {
             return Modernizr.mq(min);
         },

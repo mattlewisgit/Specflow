@@ -18,7 +18,7 @@
     }
 
     // Only do vertical alignment and separater line on larger layout.
-    @media only screen and (min-width : $breakpoint-medium) {
+    @include mq($from: tablet) {
         [class*="grid-col-"] {
             // Verticaly align modules.
             position: relative;

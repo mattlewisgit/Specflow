@@ -19,7 +19,7 @@
 }
 
 // Two columns on larger screens -
-@media only screen and (min-width : $breakpoint-medium) {
+@include mq($from: tablet) {
 
     .iconlist,
     .richtext .iconlist {

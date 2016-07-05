@@ -20,7 +20,7 @@
         font-size: 0;
         margin: $pad auto;
 
-        @media only screen and (min-width : $breakpoint-medium) {
+        @include mq($from: tablet) {
             margin: $pad--large auto;
         }
     }
@@ -34,12 +34,12 @@
         z-index: 2;
         max-width: 300px;
 
-        @media only screen and (min-width : $breakpoint-medium) {
+        @include mq($from: tablet) {
             max-width: none;
             width: 50%;
         }
 
-        @media only screen and (min-width : $breakpoint-larger) {
+        @include mq($from: desktop) {
             width: 25%;
         }
     }
@@ -48,11 +48,11 @@
     &--max-3 {
         .spotlight__list-item {
 
-            @media only screen and (min-width : $breakpoint-medium) {
+            @include mq($from: tablet) {
                 width: 33.33%;
             }
 
-            @media only screen and (min-width : $breakpoint-larger) {
+            @include mq($from: desktop) {
                 width: 33.33%;
             }
         }
@@ -66,8 +66,10 @@
 
     &__intro-image {
         &.burst {
-            width: calc(100% + 20px);
+            overflow-y: hidden;
             margin: -10px -10px 0 -10px;
+            max-height: 200px;
+            width: calc(100% + 20px);
 
             img {
                 width: 100%;
@@ -92,7 +94,7 @@
 
     &__logo {
         background-color: $white;
-        border: $pad--tiny solid $white;
+        border: $pad--xthin solid $white;
         border-radius: $pad--thin;
         line-height: 0;
         margin: 0 auto;
@@ -104,6 +106,23 @@
         img {
             margin: 0;
             max-height: 50px;
+        }
+    }
+        
+    &__logo--large {
+        background-color: $white;
+        border: $pad--xthin solid $white;
+        border-radius: $pad--thin;
+        line-height: 0;
+        margin: 0 auto;
+        margin-top: -54px;
+        padding: $pad--thin;
+        position: relative;
+        width: 60%;
+
+        img {
+            margin: 0 auto;
+            max-height: 80px;
         }
     }
 
