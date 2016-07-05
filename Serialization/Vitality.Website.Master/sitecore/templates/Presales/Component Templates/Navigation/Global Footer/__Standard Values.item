@@ -27,7 +27,7 @@ name: CopyrightStatement
 key: copyrightstatement
 content-length: 130
 
-&copy;<script type="text/javascript">var dt = new Date();document.write(dt.getFullYear());</script> Vitality. All rights reserved.
+&copy;2016 Vitality. All rights reserved.
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
