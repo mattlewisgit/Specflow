@@ -47,7 +47,13 @@
 
     @Html.Sitecore().Placeholder("footer")
     @Html.Partial("_JsThirdParty")
-    
+
+    @if (!isEditing)
+    {
+        <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw.js"></script>
+        <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw-init.js"></script>
+    }
+
     <script type="text/javascript" src="/js/vitality-boilerplate-1.0.0.min.js"></script>
 </body>
 </html>
