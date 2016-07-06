@@ -6,7 +6,6 @@
 @import "vendor/neat/neat";
 
 @import "utils/utils";
-@import "utils/triangle-callout";
 
 @import "generated/sprite";
 @import "generated/svg-sprite";
@@ -18,22 +17,12 @@
 @import "base/fonts";
 @import "base/grids";
 @import "base/icons";
-@import "base/skip-nav";
-@import "base/sticky-footer";
 @import "base/type";
 
 @import "layout/header";
-@import "layout/burger-menu";
-@import "layout/header__megamenu";
-@import "layout/header__log-in";
-@import "layout/header__search-panel";
-@import "layout/footer";
 
 @import "modules/media-object";
-@import "modules/jquery-ui-datepicker";
 @import "modules/article--heading-block";
-@import "modules/feature-block";
-@import "modules/feature-block-gradient";
 @import "modules/cta";
 @import "modules/datatable";
 @import "modules/expander";
@@ -44,3 +33,5 @@
 @import "modules/iconlist";
 @import "modules/video";
 @import "modules/text-detail-block";
+
+@import "rte-fixes";
