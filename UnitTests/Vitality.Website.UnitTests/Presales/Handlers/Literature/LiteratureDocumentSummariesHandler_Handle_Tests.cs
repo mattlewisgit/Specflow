@@ -13,7 +13,7 @@
 
         public LiteratureDocumentSummariesHandler_Handle_Tests()
         {
-            this.handler = new LiteratureDocumentSummariesHandler(new SearchContextStub());
+            this.handler = new LiteratureDocumentSummariesHandler(index => new SearchContextStub());
         }
 
         [Fact]

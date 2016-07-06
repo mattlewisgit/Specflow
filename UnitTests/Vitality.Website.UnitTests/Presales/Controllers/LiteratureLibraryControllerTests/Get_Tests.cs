@@ -1,13 +1,11 @@
 ﻿namespace Vitality.Website.UnitTests.Presales.Controllers.LiteratureLibraryControllerTests
 {
-    using System;
     using System.Net;
     using System.Net.Http;
 
     using Shouldly;
 
     using Vitality.Website.Areas.Presales.Controllers;
-    using Vitality.Website.Areas.Presales.Handlers;
     using Vitality.Website.Areas.Presales.Handlers.Literature;
     using Vitality.Website.UnitTests.TestDoubles;
 
@@ -19,7 +17,7 @@
 
         public Get_Tests()
         {
-            var handler = new MediatorStub<LiteratureDocumentRequest, LiteratureDocumentDto>(new LiteratureDocumentHandler(new SearchContextStub()));
+            var handler = new MediatorStub<LiteratureDocumentRequest, LiteratureDocumentDto>(new LiteratureDocumentHandler(index => new SearchContextStub()));
             this.controller = new LiteratureLibraryController(handler);
         }
 

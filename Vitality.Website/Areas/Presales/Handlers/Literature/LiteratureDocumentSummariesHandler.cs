@@ -16,9 +16,9 @@
     {
         private readonly IProviderSearchContext searchContext;
 
-        public LiteratureDocumentSummariesHandler(IProviderSearchContext searchContext)
+        public LiteratureDocumentSummariesHandler(Func<string, IProviderSearchContext> searchContextFactory)
         {
-            this.searchContext = searchContext;
+            this.searchContext = searchContextFactory("literature_library");
         }
 
         public IEnumerable<LiteratureDocumentSummaryDto> Handle(LiteratureDocumentSummariesRequest request)

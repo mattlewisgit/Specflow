@@ -1,6 +1,5 @@
 ﻿namespace Vitality.Website.UnitTests.Presales.Controllers.LiteratureLibraryControllerTests
 {
-    using System;
     using System.Collections.Generic;
     using System.Net;
     using System.Net.Http;
@@ -8,7 +7,6 @@
     using Shouldly;
 
     using Vitality.Website.Areas.Presales.Controllers;
-    using Vitality.Website.Areas.Presales.Handlers;
     using Vitality.Website.Areas.Presales.Handlers.Literature;
     using Vitality.Website.UnitTests.TestDoubles;
 
@@ -20,7 +18,7 @@
 
         public Search_Tests()
         {
-            var handler = new MediatorStub<LiteratureDocumentSummariesRequest, IEnumerable<LiteratureDocumentSummaryDto>>(new LiteratureDocumentSummariesHandler(new SearchContextStub()));
+            var handler = new MediatorStub<LiteratureDocumentSummariesRequest, IEnumerable<LiteratureDocumentSummaryDto>>(new LiteratureDocumentSummariesHandler(index => new SearchContextStub()));
             this.controller = new LiteratureLibraryController(handler);
         }
 

@@ -10,7 +10,6 @@
 
     using MediatR;
 
-    using Vitality.Website.Areas.Presales.Handlers;
     using Vitality.Website.Areas.Presales.Handlers.Literature;
 
     public class LiteratureLibraryController : ApiController

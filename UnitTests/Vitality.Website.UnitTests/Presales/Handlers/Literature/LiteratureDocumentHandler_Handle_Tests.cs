@@ -13,7 +13,7 @@
 
         public LiteratureDocumentHandler_Handle_Tests()
         {
-            this.handler = new LiteratureDocumentHandler(new SearchContextStub());
+            this.handler = new LiteratureDocumentHandler(index => new SearchContextStub());
         }
 
         [Fact]

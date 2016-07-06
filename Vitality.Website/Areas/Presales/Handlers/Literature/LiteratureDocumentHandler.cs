@@ -1,5 +1,6 @@
 ﻿namespace Vitality.Website.Areas.Presales.Handlers.Literature
 {
+    using System;
     using System.Linq;
 
     using MediatR;
@@ -12,9 +13,9 @@
     {
         private readonly IProviderSearchContext searchContext;
 
-        public LiteratureDocumentHandler(IProviderSearchContext searchContext)
+        public LiteratureDocumentHandler(Func<string, IProviderSearchContext> searchContextFactory)
         {
-            this.searchContext = searchContext;
+            this.searchContext = searchContextFactory("literature_library");
         }
 
         public LiteratureDocumentDto Handle(LiteratureDocumentRequest request)
