@@ -28,7 +28,7 @@ function _initVendor() {
     // Add WOW for larger screens.
     var wow;
 
-    if (Breakpoints.min.medium.test()) {
+    if (Breakpoints.min.tablet.test()) {
         wow = new WOW({
             boxClass: "animate-on-scroll"
         });

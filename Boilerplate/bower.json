@@ -19,12 +19,15 @@
         "tests"
     ],
     "dependencies": {
+        "animate.css": "3.5.1",
         "fastclick": "1.0.6",
         "jquery": "2.2.3",
         "jquery-match-height": "0.7.0",
         "jquery.smartresize": "1.0.0",
         "jqueryui": "1.11.4",
+        "normalize.css": "4.2.0",
         "prism": "1.5.1",
+        "sass-mq": "3.2.9",
         "tablesaw": "2.0.3",
         "wowjs": "1.1.2"
     }

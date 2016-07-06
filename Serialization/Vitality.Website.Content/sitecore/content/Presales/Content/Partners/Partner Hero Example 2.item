@@ -1,0 +1,107 @@
+----item----
+version: 1
+id: {F8778C5D-AC2A-4856-A646-830BD09DE835}
+database: master
+path: /sitecore/content/Presales/Content/Partners/Partner Hero Example 2
+parent: {14B3F9CC-1D26-473E-B7D9-148093F3C960}
+name: Partner Hero Example 2
+master: {00000000-0000-0000-0000-000000000000}
+template: {6FB18645-464E-4405-BFCB-028F32110291}
+templatekey: Partner Hero
+
+----version----
+language: en
+version: 1
+revision: 0778841f-1e2b-4a6d-b841-453f467bdc20
+
+----field----
+field: {185FAC07-1C93-4455-A855-7AD04FD3C2E2}
+name: BackgroundImage
+key: backgroundimage
+content-length: 58
+
+<image mediaid="{7E535AEC-99B7-4F26-9116-CC473CB9577A}" />
+----field----
+field: {C56D7475-BF58-4221-8582-5A7F246FD405}
+name: Headline1
+key: headline1
+content-length: 16
+
+Vitality Partner
+----field----
+field: {48EBF77F-D27F-4203-821B-A9D31E8BBF98}
+name: Headline2
+key: headline2
+content-length: 6
+
+Garmin
+----field----
+field: {411327AB-05A7-4A0D-BA39-F5125CBA648B}
+name: OpeningParagraph
+key: openingparagraph
+content-length: 27
+
+Track it down with Vitality
+----field----
+field: {68821E96-4BE8-4C4D-BE5A-6E0A2299B441}
+name: PartnerIcon
+key: partnericon
+content-length: 0
+
+
+----field----
+field: {24C57A6B-1AFF-4F7A-9B6A-1AE87A7571D3}
+name: PartnerName
+key: partnername
+content-length: 0
+
+
+----field----
+field: {B1EBD41A-F842-4112-97D0-56B87B80B654}
+name: Line
+key: line
+content-length: 0
+
+
+----field----
+field: {4DC3EF13-D274-4ABF-8D04-F7536FC372F4}
+name: Benefits
+key: benefits
+content-length: 0
+
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160628T114418Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+0778841f-1e2b-4a6d-b841-453f467bdc20
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160628T120322Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

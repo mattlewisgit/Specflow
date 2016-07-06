@@ -16,16 +16,6 @@ var plugins = require("gulp-load-plugins")({
     replaceString: /\bgulp[\-\.]/
 });
 
-var configs = {
-    cdnizer: require("./config/cdnizer-config.json"),
-    cssnano: require("./config/cssnano-config.json"),
-    favicon: require("./config/favicon-config.json"),
-    htmlMin: require("./config/htmlmin-config.json"),
-    imageResize: require("./config/image-resize-config.json"),
-    sizeReport: require("./config/sizereport-config.json"),
-    svgSprite: require("./config/svgsprite-config.json")
-};
-
 var tasks = {
     clean: "clean",
     css: "css",
@@ -66,6 +56,7 @@ var tasks = {
 
 var paths = {
     base: ".",
+    baseAssetName: "vitality-boilerplate-",
     css: "css",
     critical: "critical-css.html",
     dist: "dist",
@@ -92,8 +83,7 @@ var paths = {
     },
     js: {
         breakpoints: "src/js/breakpoints.json",
-        dest: "js",
-        filename: "vitality-boilerplate.js",
+        dest: "js/",
         modernizr: "modernizr-custom.js",
         polyfill: "polyfill-custom.js",
         src: "src/js/**/*.js",
@@ -118,7 +108,19 @@ var paths = {
 
 };
 
-var replacements = configs.cdnizer.files
+var configs = {
+    breakpoints: require("./" + paths.js.breakpoints),
+    cdnizer: require("./config/cdnizer-config.json"),
+    cssnano: require("./config/cssnano-config.json"),
+    favicon: require("./config/favicon-config.json"),
+    htmlMin: require("./config/htmlmin-config.json"),
+    imageResize: require("./config/image-resize-config.json"),
+    "package": require("./package.json"),
+    sizeReport: require("./config/sizereport-config.json"),
+    svgSprite: require("./config/svgsprite-config.json")
+};
+
+var cdnReplacements = configs.cdnizer.files
     .map(function (file) { return "./" + file.file; });
 
 gulp.task(tasks.help, plugins.taskListing);
@@ -126,6 +128,10 @@ gulp.task(tasks.help, plugins.taskListing);
 gulp.task(tasks.js.lint, function () {
     return gulp
         .src([paths.gulp, paths.js.src])
+        .pipe(plugins.jscpd({
+            "min-lines": 10,
+            verbose: true
+        }))
         .pipe(plugins.jshint())
         .pipe(plugins.jscs())
         .pipe(plugins.jscsStylish.combineWithHintResults())
@@ -146,7 +152,6 @@ gulp.task(tasks.clean, function () {
         paths.css,
         paths.img.examples.dest,
         paths.img.spritesheets.dest,
-        paths.js.dest + "/" + paths.js.filename,
         paths.sass.generated,
         paths.temp,
         paths.tempFiles
@@ -161,18 +166,22 @@ gulp.task(tasks.images, function() {
         .pipe(gulp.dest(paths.img.examples.dest));
 });
 
+// Use the breakpoints JSON config to create a map for sass-mq.
+// The same config is used directly via browersify as a JavaScript module,
+// so changing a single value there and rebuilding via Gulp will change it
+// everywhere, ensuring JS and CSS is kept in sync.
 gulp.task(tasks.sass.json, function () {
+    var mapContents = Object.keys(configs.breakpoints).map(function (key) {
+        return "    ".concat(key, ": ", configs.breakpoints[key]);
+    })
+    .join(",\n");
+
+    var mqMap = "$mq-breakpoints: (\n" + mapContents + "\n);\n";
+
     return gulp
         .src(paths.js.breakpoints)
         .pipe(plugins.changed(paths.temp))
-        .pipe(gulp.dest(paths.temp))
-        .pipe(plugins.jsonSass({
-            sass: false
-        }))
-        .pipe(plugins.replace("$", "$_"))
-        .pipe(plugins.rename({
-            prefix: "_"
-        }))
+        .pipe(plugins.file("_breakpoints.scss", mqMap))
         .pipe(gulp.dest(paths.sass.generated));
 });
 
@@ -222,29 +231,36 @@ gulp.task(tasks.sass.build, function () {
     return gulp
         .src(paths.css + "/*.css")
         .pipe(plugins.cssnano(configs.cssnano))
-        .pipe(plugins.rename({
-            suffix: ".min"
+        .pipe(plugins.rename(function (path) {
+            path.basename += "-" + configs.package.version + ".min";
         }))
         .pipe(gulp.dest(paths.dist));
 });
 
+// Creates a critical CSS template from a sample main navigation page.
+// This means that the page will render incredibly quickly, then load
+// the rest of the styles via JavaScript.
 gulp.task(tasks.sass.critical, function () {
+    // Use all the breakpoints to generate the critical CSS for each media query.
+    // The height is not important here, so use an estimate.
+    var dimensions = Object.keys(configs.breakpoints).map(function(key) {
+        var width = configs.breakpoints[key];
+
+        return {
+            height: width * 0.6,
+            width: width
+        };
+    });
+
     critical.generate({
         inline: true,
         base: ".",
-        src: paths.templates.src + paths.critical,
         dest: paths.templates.dest + paths.critical,
-        // TODO Take from variable JSON used to power SASS and JS.
-        dimensions: [
-            {
-                height: 216,
-                width: 540
-            }, {
-                height: 900,
-                width: 1200
-            }
-        ]
-    }, function () { gulp.start(tasks.razor); });
+        dimensions: dimensions,
+        src: paths.templates.src + paths.critical
+    }, function () {
+        gulp.start(tasks.razor);
+    });
 });
 
 // CSS task that forces dependencies to be run sequentially.
@@ -274,7 +290,7 @@ gulp.task(tasks.js.devel, function () {
 
 gulp.task(tasks.js.thirdParty, function () {
     gulp
-        .src(replacements, { base: "." })
+        .src(cdnReplacements, { base: "." })
         .pipe(gulp.dest("dist"));
 
     gulp
@@ -282,26 +298,33 @@ gulp.task(tasks.js.thirdParty, function () {
         .pipe(plugins.changed(paths.temp))
         .pipe(gulp.dest(paths.temp))
         .pipe(plugins.cdnizer(configs.cdnizer))
+        .pipe(plugins.htmlmin(configs.htmlMin))
         .pipe(gulp.dest(paths.templates.dest));
 
     return gulp.start(tasks.razor);
 });
 
 gulp.task(tasks.js.polyfill, function () {
-    // Copy the bower failover paths and add the app.
-    var allJs = replacements.splice(0);
+    // Copy the bower failover JS paths only and add the app.
+    var allJs = cdnReplacements
+        .splice(0)
+        .filter(function(fileConfig) {
+            return fileConfig.test;
+        });
+
     allJs.push(paths.js.src);
 
     return gulp
         .src(allJs)
         .pipe(plugins.autopolyfiller(paths.js.polyfill, {
-            browsers: ["last 3 versions", "ie 8", "ie 9"]
+            browsers: ["last 3 versions", "ie 9"]
         }))
         .pipe(gulp.dest(paths.js.dest));
 });
 
 gulp.task(
-    tasks.js.build, [
+    tasks.js.build,
+    [
         tasks.js.lint,
         tasks.js.devel,
         tasks.js.thirdParty,
@@ -310,11 +333,12 @@ gulp.task(
     function () {
         return gulp
             .src([
-                paths.js.dest + "/" + paths.js.modernizr,
-                paths.js.dest + "/" + paths.js.polyfill,
-                paths.js.dest + "/" + "app.js"
+                paths.js.dest + paths.js.modernizr,
+                paths.js.dest + paths.js.polyfill,
+                paths.js.dest + "app.js"
             ])
-            .pipe(plugins.concat("vitality-boilerplate.min.js"))
+            .pipe(plugins.concat
+                (paths.baseAssetName + configs.package.version + ".min.js"))
             .pipe(plugins.uglify())
             .pipe(gulp.dest(paths.dist));
     });
@@ -396,7 +420,9 @@ gulp.task(tasks.favicon.checkForUpdate, function () {
 
 gulp.task(tasks.report, function () {
     return gulp
-        .src(paths.dist + "/**/*")
+        .src([
+            paths.dist + "/" + paths.baseAssetName + "*.*"
+        ])
         .pipe(plugins.sizereport(configs.sizeReport));
 });
 

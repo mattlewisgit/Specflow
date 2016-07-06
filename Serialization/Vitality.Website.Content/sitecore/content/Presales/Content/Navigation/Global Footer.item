@@ -9,10 +9,17 @@ master: {00000000-0000-0000-0000-000000000000}
 template: {A1DD938B-A29C-4FC5-BE54-DAA0468D1796}
 templatekey: Global Footer
 
+----field----
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 65
+
+ar|sitecore\Presales Content Author|pd|+item:rename|+item:delete|
 ----version----
 language: en
 version: 1
-revision: e69467e6-485e-4eff-a054-90408740ad21
+revision: 9f7f91fd-6e59-4d51-bf1b-59cf275fa171
 
 ----field----
 field: {B4CA641A-2DAD-4A88-BABC-0EB9955A6476}
@@ -69,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e69467e6-485e-4eff-a054-90408740ad21
+9f7f91fd-6e59-4d51-bf1b-59cf275fa171
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160621T102138Z
+20160705T095446Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
