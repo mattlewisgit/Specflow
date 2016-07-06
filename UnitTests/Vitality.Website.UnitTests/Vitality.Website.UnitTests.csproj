@@ -169,10 +169,10 @@
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\Get_Tests.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\List_Tests.cs" />
     <Compile Include="TestDoubles\MediatorStub.cs" />
-    <Compile Include="Presales\Handlers\LiteratureDocumentSummariesHandler_Handle_Tests.cs" />
+    <Compile Include="Presales\Handlers\Literature\LiteratureDocumentSummariesHandler_Handle_Tests.cs" />
     <Compile Include="TestDoubles\SearchContextStub.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\Search_Tests.cs" />
-    <Compile Include="Presales\Handlers\LiteratureDocumentHandler_Handle_Tests.cs" />
+    <Compile Include="Presales\Handlers\Literature\LiteratureDocumentHandler_Handle_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

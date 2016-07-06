@@ -1,0 +1,37 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using Vitality.Website.Extensions.Views
+@inherits GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Partners.PartnerHero>
+
+@using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
+{
+    <div class="partner-hero @this.PartnerWithCardClass() @this.ImageRelativePosition()" style="@this.BackgroundImage()">
+        <div class="grid">
+            <div class="partner-hero--headline @this.ColumnSpan() @this.FontTheme()">
+                <h1>@Editable(Model, item => item.Headline1)</h1>
+                <h2>@Editable(Model, item => item.Headline2)</h2>
+                <p>@Editable(Model, item => item.OpeningParagraph)</p>
+            </div>
+
+            @if (this.ShowPartnerCard())
+            {
+                <div class="grid-col-6-12 partner-hero--right">
+                    <div class="partner-hero--card">
+                        <div class="spotlight-item__logo--large">
+                            @Editable(Model, item => item.PartnerIcon)
+                        </div>
+
+                        <div class="partner-hero--card__top">
+                            <h6>@Editable(Model, item => item.PartnerName)</h6>
+                            <hr />
+                            <p>@Editable(Model, item => item.Line)</p>
+                        </div>
+
+                        <div class="partner-hero--card__bottom text-light">
+                            @Editable(Model, item => item.Benefits)
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

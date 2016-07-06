@@ -29,7 +29,7 @@
         margin-bottom: $pad;
     }
 
-    @media only screen and (min-width : $breakpoint-medium) {
+    @include mq($from: tablet) {
         margin-top: $pad--large;
         margin-bottom: $pad--large;
     }

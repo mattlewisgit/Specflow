@@ -3,7 +3,7 @@
     background-color: $color-mono-12;
     padding: $pad;
 
-    @media only screen and (min-width : $breakpoint-medium) {
+    @include mq($from: tablet) {
         padding: $pad--large;
     }
 

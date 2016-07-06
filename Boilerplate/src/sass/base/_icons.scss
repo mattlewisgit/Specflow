@@ -8,7 +8,7 @@
 }
 
 
-@media only screen and (min-width : $breakpoint-medium) {
+@include mq($from: tablet) {
     [class*="text-icon"] {
         &:before {
             display: inline-block;

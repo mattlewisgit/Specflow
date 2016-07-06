@@ -1,4 +1,5 @@
-//vars -
+var Breakpoints = require("./breakpointsModule");
+
 var $megaMenuItems, $body, $html;
 
 var _settings = {
@@ -19,12 +20,8 @@ var _settings = {
     mobileMegaMenuClass: "megamenu-open",
     mobileMegaMenuOverflowClass: "megamenu-overflow",
 
-
-    focusClass: "js-focus",
-    breakpoint: "769px"
+    focusClass: "js-focus"
 };
-
-//functions -
 
 var _menuModule = {
     initMainMobile: function () {
@@ -43,56 +40,50 @@ var _menuModule = {
             }
         });
 
-        //Main menu toggle for mobile -
-        $("."+_settings.mainMenuToggleSelector).on("click", _menuModule.onMobileMenuButtonPressed);
+        $("." + _settings.mainMenuToggleSelector).click(_menuModule.onMobileMenuButtonPressed);
+        $("." + _settings.logInToggleSelector).click(_menuModule.onLogInButtonPressed);
+        $("." + _settings.searchToggleSelector).click(_menuModule.onSearchButtonPressed);
+        $("." + _settings.searchCloseClass).click(_menuModule.closeSearchMenu);
 
-        //Menu toggle for log in pop - up -
-        $("."+_settings.logInToggleSelector).on("click", _menuModule.onLogInButtonPressed);
+        // Temp.
+        $(".log-in").click(function (e) { e.stopPropagation(); });
 
-        //Menu toggle for search -
-        $("."+_settings.searchToggleSelector).on("click", _menuModule.onSearchButtonPressed);
+        // Megamenu toggle for mobile.
+        $megaMenuItems.click(_menuModule.onMobileMegaMenuSelect);
 
-        //Search close button -
-        $("."+_settings.searchCloseClass).on("click", _menuModule.closeSearchMenu);
-
-
-        //Temp =
-        $(".log-in").on("click", function (e) { e.stopPropagation(); });
-
-        //Megamenu toggle for mobile -
-        $megaMenuItems.on("click", _menuModule.onMobileMegaMenuSelect);
-
-        //Megamenu toggle focus for opening on click of heading rather than hover -
-        $megaMenuItems.on("click", _menuModule.onMegaMenuOpenTouchLarge);
+        // Megamenu toggle focus for opening on click of heading rather than hover.
+        $megaMenuItems.click(_menuModule.onMegaMenuOpenTouchLarge);
     },
 
-    //Megamenu touch events - for large sceen layouts, but with no mouse eg. iPads -
+    // Megamenu touch events: for large sceen layouts, but with no mouse eg. iPads.
     onMegaMenuOpenTouchLarge: function (e) {
         "use strict";
-        if (Modernizr.mq("(min-width : "+_settings.breakpoint+")") && Modernizr.touchevents) {
-            event.stopPropagation();
-
-            //If this menu already has focus, follow the link to the overview landing page -
-            if (!$(this).hasClass(_settings.focusClass)) {
-
-                //prevent the clickthrough to the overview landing page -
-                e.preventDefault();
-
-                //Otherwise, Remove focus from any other megamenus -
-                $("."+_settings.focusClass).removeClass(_settings.focusClass);
-
-                //Open this megamenu -
-                $(this).addClass(_settings.focusClass);
-
-                //Add listener for clicking anything other than the megamenu, to close it again -
-                $html.on("click", _menuModule.onTouchOutsideOpenMegaMenu);
-
-            }
+        if (!Modernizr.touchevents || !Breakpoints.min.tablet.test()) {
+            return;
         }
+
+        event.stopPropagation();
+
+        // If this menu already has focus, follow the link to the overview landing page.
+        if ($(this).hasClass(_settings.focusClass)) {
+            return;
+        }
+
+        // Prevent the clickthrough to the overview landing page.
+        e.preventDefault();
+
+        // Otherwise, Remove focus from any other megamenus.
+        $("."+_settings.focusClass).removeClass(_settings.focusClass);
+
+        // Open this megamenu.
+        $(this).addClass(_settings.focusClass);
+
+        // Add listener for clicking anything other than the megamenu, to close it again.
+        $html.click(_menuModule.onTouchOutsideOpenMegaMenu);
     },
 
-    //Slight delay before removing the overflow visible class from the mobile mega menu
-    //Prevents the megamenu being clipped before the transform is complete
+    // Slight delay before removing the overflow visible class from the mobile mega menu.
+    // Prevents the megamenu being clipped before the transform is complete.
     delayRemoveMegaMenuOverflowClass: function (delay) {
         "use strict";
         delay = delay || 0;
@@ -105,7 +96,8 @@ var _menuModule = {
     onTouchOutsideOpenMegaMenu: function () {
         "use strict";
         $("."+_settings.focusClass).removeClass(_settings.focusClass);
-        //Remove listener for clicking anything other than the megamenu, to close it again -
+
+        // Remove listener for clicking anything other than the megamenu, to close it again.
         $html.off("click", _menuModule.onTouchOutsideOpenMegaMenu);
     },
 
@@ -244,52 +236,54 @@ var _menuModule = {
         }, _delay);
     },
 
-    //Mobile mega menu open / close
+    // Mobile mega menu open and close.
     onMobileMegaMenuSelect: function (e) {
         "use strict";
-        if (Modernizr.mq("(max-width : "+_settings.breakpoint+")")) {
-            var $this = $(this);
-            var $target = $(e.target);
+        if (!Breakpoints.max.tablet.test()) {
+            return;
+        }
+        var $this = $(this);
+        var $target = $(e.target);
 
-            //If the seciton is already open -
-            if ($this.hasClass(_settings.focusClass)) {
-                //if back button -
-                if (($target.hasClass("megamenu__back"))) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    $body.removeClass(_settings.mobileMegaMenuClass);
-                    _menuModule.delayRemoveMegaMenuOverflowClass(500);
-                }
-
-                //Remove all active sections -
-                $("."+_settings.focusClass).removeClass(_settings.focusClass);
-
-                //otherwise, no action - follow the link :)
-            } else {
-                //Open the mega menu -
+        // Check if the section is already open.
+        if ($this.hasClass(_settings.focusClass)) {
+            // Check for the back button.
+            if (($target.hasClass("megamenu__back"))) {
                 e.preventDefault();
                 e.stopPropagation();
-                $body.addClass(_settings.mobileMegaMenuClass);
-                $body.addClass(_settings.mobileMegaMenuOverflowClass);
-
-                //Remove other active sections -
-                $("." + _settings.focusClass).removeClass(_settings.focusClass);
-                $(this).addClass(_settings.focusClass);
+                $body.removeClass(_settings.mobileMegaMenuClass);
+                _menuModule.delayRemoveMegaMenuOverflowClass(500);
             }
+
+            // Remove all active sections.
+            $("."+_settings.focusClass).removeClass(_settings.focusClass);
+
+            // Otherwise, no action - follow the link :)
+            return;
         }
+
+        // Open the mega menu.
+        e.preventDefault();
+        e.stopPropagation();
+        $body.addClass(_settings.mobileMegaMenuClass);
+        $body.addClass(_settings.mobileMegaMenuOverflowClass);
+
+        // Remove other active sections.
+        $("." + _settings.focusClass).removeClass(_settings.focusClass);
+        $(this).addClass(_settings.focusClass);
     },
 
-    //If touch outside of the open menu on mobile - close it -
-    //Unless it"s a menu link to follow -
+    // If touch outside of the open menu on mobile,
+    // close it, unless it is a menu link to follow.
     onTouchOutsideOpenMobileMenu: function (e) {
         "use strict";
         var target = $(e.target);
 
         if (!target.is("a")) {
-            //trigger a click to close the menu -
+            // Trigger a click to close the menu.
             $("."+_settings.mainMenuToggleSelector).trigger("click");
 
-            //Remove listener for clicking anything other than the megamenu, to close it again -
+            // Remove listener for clicking anything other than the megamenu, to close it again.
             $html.off("click", _menuModule.onTouchOutsideOpenMobileMenu);
         }
     }

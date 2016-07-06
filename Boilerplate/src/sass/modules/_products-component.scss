@@ -35,7 +35,7 @@
         }
 
         // Compress the three-column product grid before it adapts to mobile.
-        @media (min-width: $breakpoint-medium) and (max-width: $breakpoint-larger) {
+        @include mq($from: tablet, $until: desktop) {
             &.grid-col-4-12 {
                 font-size: 90%;
                 padding: $pad--thin;

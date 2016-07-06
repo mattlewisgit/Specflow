@@ -3,7 +3,7 @@
 var _settings = {
     selector: ".js-expander-is-collapsible",
     activeClass: "is-active",
-    breakpointTest: Breakpoints.min.small.test
+    breakpoint: Breakpoints.min["mobile-landscape"]
 };
 
 var  _collapsibleModule = {
@@ -24,7 +24,7 @@ var  _collapsibleModule = {
         }
 
         // Bomb out if we should not be creating it.
-        if ($context.hasClass("expander--mobile") && _settings.breakpointTest()) {
+        if ($context.hasClass("expander--mobile") && _settings.breakpoint.test()) {
             return;
         }
 
@@ -71,7 +71,7 @@ var  _collapsibleModule = {
 
 var handleResize = function () {
     "use strict";
-    var method = _settings.breakpointTest() ? "_destroyCollapsible" : "_createCollapsible";
+    var method = _settings.breakpoint.test() ? "_destroyCollapsible" : "_createCollapsible";
     _collapsibleModule[method](_settings.selector + ".expander--mobile");
 };
 
@@ -84,7 +84,7 @@ var init = function () {
     // time the window resizes, which is the failover for old browsers.
     if (window.matchMedia) {
         return window
-            .matchMedia(Breakpoints.min.small.value)
+            .matchMedia(_settings.breakpoint.value)
             .addListener(handleResize);
     }
 

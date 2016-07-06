@@ -8,7 +8,7 @@
     using Sitecore.ContentSearch.Linq.Common;
     using Sitecore.ContentSearch.Security;
 
-    using Vitality.Website.Areas.Presales.Models.Literature;
+    using Vitality.Website.Areas.Presales.Handlers.Literature;
     using Vitality.Website.SC;
 
     public class SearchContextStub : IProviderSearchContext

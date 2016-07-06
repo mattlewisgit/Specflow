@@ -8,6 +8,7 @@
 
     using Vitality.Website.Areas.Presales.Controllers;
     using Vitality.Website.Areas.Presales.Handlers;
+    using Vitality.Website.Areas.Presales.Handlers.Literature;
     using Vitality.Website.UnitTests.TestDoubles;
 
     using Xunit;
