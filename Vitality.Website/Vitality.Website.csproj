@@ -60,6 +60,10 @@
       <HintPath>..\packages\Krusen.Sitecore.WebApi.1.0.0\lib\net45\Krusen.Sitecore.WebApi.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MediatR, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MediatR.2.1.0\lib\net45\MediatR.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Nancy, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nancy.0.17.1\lib\net40\Nancy.dll</HintPath>
@@ -73,8 +77,12 @@
       <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SimpleInjector, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
-      <HintPath>..\packages\SimpleInjector.3.1.2\lib\net45\SimpleInjector.dll</HintPath>
+    <Reference Include="SimpleInjector, Version=3.2.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.3.2.0\lib\net45\SimpleInjector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleInjector.Extensions.ExecutionContextScoping, Version=3.2.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Extensions.ExecutionContextScoping.3.2.0\lib\net45\SimpleInjector.Extensions.ExecutionContextScoping.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="SimpleInjector.Integration.Web, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
@@ -83,6 +91,10 @@
     </Reference>
     <Reference Include="SimpleInjector.Integration.Web.Mvc, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.Integration.Web.Mvc.3.1.2\lib\net40\SimpleInjector.Integration.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SimpleInjector.Integration.WebApi, Version=3.2.0.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleInjector.Integration.WebApi.3.2.0\lib\net45\SimpleInjector.Integration.WebApi.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Analytics, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -97,6 +109,7 @@
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.ContentSearch.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Sitecore.ContentSearch.Linq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Sitecore.ItemWebApi, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.ItemWebApi.dll</HintPath>
       <Private>True</Private>
@@ -118,6 +131,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Services.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Sitecore.Services.Infrastructure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Sitecore.Services.Infrastructure.Sitecore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Sitecore.Ship, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.dll</HintPath>
       <Private>True</Private>
@@ -138,11 +153,21 @@
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Net" />
     <Reference Include="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -195,6 +220,9 @@
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
     <Content Include="App_Config\Include\ship.config" />
     <Content Include="App_Config\Include\Custom\Krusen.Sitecore.WebApi.config" />
+    <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -267,8 +295,9 @@
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
     <Compile Include="Areas\Global\Models\Taxonomy.cs" />
-    <Compile Include="Areas\Presales\Models\Products\ProductPanel.cs" />
-    <Compile Include="Areas\Presales\Models\Products\ProductsComponent.cs" />
+    <Compile Include="Areas\Presales\Controllers\LiteratureLibraryController.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductPanel.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductsComponent.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IQuoteFooter.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IAppReferenceGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IBrowserLatencyGlobal.cs" />
@@ -302,6 +331,13 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Rewards\RewardsLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryComponent.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryListItem.cs" />
+    <Compile Include="Areas\Presales\Handlers\LiteratureDocumentDto.cs" />
+    <Compile Include="Areas\Presales\Handlers\LiteratureDocumentHandler.cs" />
+    <Compile Include="Areas\Presales\Handlers\LiteratureDocumentRequest.cs" />
+    <Compile Include="Areas\Presales\Handlers\LiteratureDocumentSummariesHandler.cs" />
+    <Compile Include="Areas\Presales\Handlers\LiteratureDocumentSummariesRequest.cs" />
+    <Compile Include="Areas\Presales\Handlers\LiteratureDocumentSummaryDto.cs" />
+    <Compile Include="Areas\Presales\Models\Literature\LiteratureDocumentSearchResult.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\CallToActionPanel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\PrimaryCallToAction.cs" />
@@ -313,6 +349,9 @@
     <Compile Include="Areas\Presales\RenderingTemplates\HomeHeroRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\RewardsLeaderRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\SummaryComponentRendering.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Literature\LiteratureCategory.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Literature\LiteratureDocument.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Literature\LiteratureLibrary.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\GlobalSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
@@ -417,7 +456,9 @@
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Analytics.config" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.config" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.DefaultConfigurations.config" />
-    <Content Include="App_Config\Include\Sitecore.ContentSearch.Lucene.DefaultIndexConfiguration.config" />
+    <Content Include="App_Config\Include\Sitecore.ContentSearch.Lucene.DefaultIndexConfiguration.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Lucene.Index.Analytics.config" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Lucene.Index.Core.config" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Lucene.Index.Master.config" />
@@ -587,7 +628,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\Presales\Controllers\" />
     <Folder Include="Areas\Presales\Views\Partners\" />
     <Folder Include="Controllers\" />
     <Folder Include="img\examples\" />

@@ -6,7 +6,7 @@
 
     public class LiteratureLibraryPage : SitecoreItem
     {
-        public new string Headline { get; set; }
+        public string Headline { get; set; }
 
         public string OpeningParagraph { get; set; }
 
