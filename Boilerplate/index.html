@@ -2,80 +2,126 @@
 <html xmlns="http://www.w3.org/1999/xhtml" class="flash csspointerevents svg flexbox cssgradients no-flexboxtweener no-touchevents target">
 <head>
     <title>Vitality Boilerplate | Home</title>
+    
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0" />
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600" />
     <link rel="stylesheet" type="text/css" href="/css/app-devel.css" />
     
     <!--[if lt IE 9]>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/aight/2.1.1/aight.min.js"></script>
     <![endif]-->
 </head>
 <body>
-    <main tabindex="-1">
-        <section class="vertical-flush">
-            <h1>Vitality Boilerplate Library</h1>
+    <div class="page">
+        <main id="main-content" tabindex="-1">
+            <section class="pinch">
+                <h1>Vitality Boilerplate Library</h1>
 
-            <h2>Global Settings</h2>
+                <h2>Global Settings</h2>
 
-            <ul>
-                <li><a href="global/lists.html">Lists</a></li>
-                <li><a href="global/table.html">Tables</a></li>
-                <li><a href="global/text.html">Text</a></li>
-            </ul>
+                <p>
+                    These settings are applied site-wide to all components.
+                </p>
 
-            <h2>Components</h2>
+                <ul>
+                    <li><a href="global/lists.html">Lists</a></li>
+                    <li><a href="global/table.html">Tables</a></li>
+                    <li><a href="global/text.html">Text</a></li>
+                </ul>
 
-            <ul>
-                <li>
-                    <a href="components/accordion.html">Accordion</a>
-                </li>
-                <li>
-                    <a href="components/benefit_leader.html">Benefit Leader</a>
-                </li>
-                <li>
-                    <a href="components/cards-tabbed.html">Cards Tabbed</a>
-                </li>
-                <li>
-                    <a href="components/cards_stacked.html">Cards Stacked</a>
-                </li>
-                <li>
-                    <a href="components/faq_leader.html">FAQ Leader</a>
-                </li>
-                <li>
-                    <a href="components/footer.html">Footer</a>
-                </li>
-                <li>
-                    <a href="components/home-hero.html">Home Hero</a>
-                </li>
-                <li>
-                    <a href="components/main_navigation.html">Main Navigation</a>
-                </li>
-                <li>
-                    <a href="components/partner_hero.html">Partner Hero</a>
-                </li>
-                <li>
-                    <a href="components/primary-cta.html">Primary CTA</a>
-                </li>
-                <li>
-                    <a href="components/product_hero.html">Product Hero</a>
-                </li>
-                <li>
-                    <a href="components/products_component.html">Products Component</a>
-                </li>
-                <li>
-                    <a href="components/quote-footer/">Quote Footer</a>
-                </li>
-                <li>
-                    <a href="components/rewards_leader.html">Rewards Leader</a>
-                </li>
-                <li>
-                    <a href="components/summary/">Summary</a>
-                </li>
-                <li>
-                    <a href="components/tabs.html">Tabs</a>
-                </li>
-            </ul>
-        </section>
-    </main>
+                <h2>Components</h2>
+
+                <p>
+                    Components are individual, targeted snippets of HTML, SASS (CSS) and sometimes JavaScript,
+                    that serve a particular purpose for communicating a type of information effectively.
+                </p>
+
+                <ul class="iconlist">
+                    <li class="iconlist__item">
+                        <a href="components/accordion.html">Accordion</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/benefit_leader.html">Benefit Leader</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/cards-tabbed.html">Cards Tabbed</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/cards_stacked.html">Cards Stacked</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/faq_leader.html">FAQ Leader</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/footer.html">Footer</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/home-hero.html">Home Hero</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/main_navigation.html">Main Navigation</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/partner_hero.html">Partner Hero</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/primary-cta.html">Primary CTA</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/product_hero.html">Product Hero</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/products_component.html">Products Component</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/quote-footer/">Quote Footer</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/rewards_leader.html">Rewards Leader</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/summary/">Summary</a>
+                    </li>
+                    <li class="iconlist__item">
+                        <a href="components/tabs.html">Tabs</a>
+                    </li>
+                </ul>
+
+                <h2>Pages</h2>
+
+                <p>
+                    Some pages are quite interactive, and contain communication between components and services.
+                    To reduce the reliance on the services existing, they are built here first and ported to a website later.
+                </p>
+
+                <ul>
+                    <li><a href="pages/health-adviser-sales-library.html">Health Adviser Sales Literature Library</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    
+    <script>function cdnizerLoad(u) { document.write('<scr' + 'ipt src="' + encodeURIComponent(u) + '"></scr' + 'ipt>'); }</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script>    if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script>if (!($.datepicker)) cdnizerLoad("/bower_components/jqueryui/jquery-ui.min.js");</script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.smartresize/0.1/jquery.debouncedresize.js"></script>
+    <script>if (!($.event.special.debouncedresize)) cdnizerLoad("/bower_components/jquery.smartresize/jquery.smartresize.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <script>if (!($(window).matchHeight)) cdnizerLoad("/bower_components/jquery-match-height/jquery.matchHeight-min.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+    <script>if (!(FastClick)) cdnizerLoad("/bower_components/fastclick/lib/fastclick.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>if (!(WOW)) cdnizerLoad("/bower_components/wowjs/dist/wow.min.js");</script>
+
+    <script type="text/javascript" src="/js/modernizr-custom.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+
+    <script type="text/javascript" src="/js/boilerplate.js"></script>
 </body>
 </html>
+
