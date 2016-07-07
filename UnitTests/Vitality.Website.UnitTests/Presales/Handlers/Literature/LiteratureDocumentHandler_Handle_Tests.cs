@@ -17,25 +17,25 @@
         }
 
         [Fact]
-        public void Should_return_null_when_no_documents_match_library_category_and_document()
+        public void Should_return_null_when_no_document_matches_library_category_and_title()
         {
             this.handler.Handle(new LiteratureDocumentRequest("sales-literature", SearchContextStub.MatchingCategory, SearchContextStub.NonMatchingTitle, false)).ShouldBeNull();
         }
 
         [Fact]
-        public void Should_return_document_with_matching_library_category_and_document()
+        public void Should_return_a_document_when_it_matches_library_category_and_title()
         {
             this.handler.Handle(new LiteratureDocumentRequest("sales-literature", SearchContextStub.MatchingCategory, SearchContextStub.MatchingTitle, false)).ShouldNotBeNull();
         }
 
         [Fact]
-        public void Should_return_null_when_matching_document_does_not_have_literature_document_template()
+        public void Should_return_null_when_a_matching_document_template_is_not_a_literature_document()
         {
             this.handler.Handle(new LiteratureDocumentRequest("sales-literature", SearchContextStub.MatchingCategory, SearchContextStub.NonMatchingTitle, false)).ShouldBeNull();
         }
 
         [Fact]
-        public void Should_include_documents_with_same_category_as_document_when_include_available_literature_true()
+        public void Should_include_documents_summaries_with_the_same_category_when_include_available_literature_true()
         {
             this.handler.Handle(new LiteratureDocumentRequest("sales-literature", SearchContextStub.MatchingCategory, SearchContextStub.MatchingTitle, true)).AvailableLiterature.ShouldNotBeEmpty();
         }

@@ -8,7 +8,7 @@
     {
         public readonly string Library;
         public readonly string Category;
-        public readonly string Document;
+        public readonly string Title;
         public readonly bool IncludeAvailableLiterature;
 
         public Guid DocumentId { get; set; }
@@ -16,12 +16,12 @@
         public LiteratureDocumentRequest(
             string library,
             string category,
-            string document,
+            string title,
             bool includeAvailableLiterature)
         {
             this.Library = library;
             this.Category = category;
-            this.Document = document;
+            this.Title = title;
             this.IncludeAvailableLiterature = includeAvailableLiterature;
         }
     }

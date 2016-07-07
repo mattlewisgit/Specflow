@@ -41,7 +41,7 @@
         }
 
         [Fact]
-        public void Should_not_contain_document_summaries_where_template_is_not_a_literature_document()
+        public void Should_not_contain_document_summaries_when_template_is_not_a_literature_document()
         {
             this.handler.Handle(new LiteratureDocumentSummariesRequest(SearchContextStub.MatchingLibrary, category: SearchContextStub.MatchingCategory)).ShouldNotContain(document => document.Title == SearchContextStub.NonMatchingTitle);
         }

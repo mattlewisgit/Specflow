@@ -37,19 +37,19 @@
         }
 
         [Fact]
-        public void Should_respond_404_not_found_when_no_documents_match_title()
+        public void Should_respond_404_not_found_when_no_documents_match_library_and_title()
         {
             this.controller.Search(SearchContextStub.MatchingLibrary, "Health-online").StatusCode.ShouldBe(HttpStatusCode.NotFound);
         }
 
         [Fact]
-        public void Should_respond_200_ok_when_documents_match_search_term()
+        public void Should_respond_200_ok_when_documents_match_library_and_title()
         {
             this.controller.Search(SearchContextStub.MatchingLibrary, "cover").StatusCode.ShouldBe(HttpStatusCode.OK);
         }
 
         [Fact]
-        public void Should_contain_an_array_of_matching_documents_in_response_body()
+        public void Should_contain_a_collection_of_matching_documents_in_the_response_body()
         {
             this.controller.Search(SearchContextStub.MatchingLibrary, "cover").Content.ReadAsAsync<IEnumerable<LiteratureDocumentSummaryDto>>().Result.ShouldNotBeEmpty();
         }

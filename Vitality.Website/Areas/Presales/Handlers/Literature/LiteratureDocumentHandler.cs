@@ -25,7 +25,7 @@
                 .FirstOrDefault(document => 
                     document.Library == request.Library && 
                     document.Category == request.Category &&
-                    document.Title == request.Document &&
+                    document.Title == request.Title &&
                     document.TemplateId == ItemConstants.Presales.Templates.Literature.Document.Id);
             var literatureDocument = LiteratureDocumentDto.From(searchResult);
 
