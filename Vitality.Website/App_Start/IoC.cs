@@ -6,7 +6,6 @@ namespace Vitality.Website.App_Start
     using System.Linq;
     using System.Reflection;
     using System.Web.Http;
-    using System.Web.Http.Dispatcher;
     using System.Web.Mvc;
 
     using Glass.Mapper.Sc;
