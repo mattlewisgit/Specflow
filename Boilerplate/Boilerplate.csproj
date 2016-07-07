@@ -254,7 +254,6 @@
     <Content Include="src\sass\modules\_feature-block.scss" />
     <Content Include="src\sass\modules\_filter-options.scss" />
     <Content Include="src\sass\modules\_iconlist.scss" />
-    <Content Include="src\sass\modules\_jquery-ui-datepicker.scss" />
     <Content Include="src\sass\modules\_media-object.scss" />
     <Content Include="src\sass\modules\_richtext.scss" />
     <Content Include="src\sass\modules\_social.scss" />
