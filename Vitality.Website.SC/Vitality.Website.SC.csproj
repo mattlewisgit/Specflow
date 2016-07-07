@@ -34,6 +34,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\HtmlAgilityPack.dll</HintPath>
     </Reference>
+    <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Lucene.Net.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Analytics, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Analytics.dll</HintPath>
       <Private>True</Private>
@@ -84,6 +88,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContentSearch\Analyzers\LowerCaseLetterAnalyzer.cs" />
+    <Compile Include="ContentSearch\ComputedFields\MediaItemReferenceUrlLink.cs" />
+    <Compile Include="ContentSearch\ComputedFields\AncestorField.cs" />
     <Compile Include="Events\ItemEventsHandler.cs" />
     <Compile Include="ItemConstants.cs" />
     <Compile Include="Pipelines\Publishing\GetItemReferences\AddDataSourceItemDescendants.cs" />
