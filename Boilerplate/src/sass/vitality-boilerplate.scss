@@ -21,6 +21,7 @@
 @import "base/fonts";
 @import "base/grids";
 @import "base/icons";
+@import "base/lists";
 @import "base/skip-nav";
 @import "base/sticky-footer";
 @import "base/type";
@@ -56,8 +57,5 @@
 @import "modules/summary";
 @import "modules/text-detail-block";
 @import "modules/video";
-
-@import "boilerplate/boilerplate";
-@import "boilerplate/swatches";
 
 @import "utils/media-print";

@@ -54,6 +54,8 @@
     <Content Include="components\tabs.html" />
     <Content Include="components\footer.html" />
     <Content Include="components\summary\summary-right.html" />
+    <Content Include="global\lists.html" />
+    <Content Include="global\text.html" />
     <Content Include="global\table.html" />
     <Content Include="components\product_hero.html" />
     <Content Include="components\cards-tabbed.html" />
@@ -65,6 +67,7 @@
     <Content Include="components\rewards_leader.html" />
     <Content Include="index.html" />
     <Content Include="components\main_navigation.html" />
+    <Content Include="pages\health-adviser-sales-library.html" />
     <Content Include="src\favicon-template.html" />
     <Content Include="gulpfile.js" />
     <Content Include="js\boilerplate.js" />
@@ -378,6 +381,8 @@
     <Content Include="config\htmlmin-config.json" />
     <Content Include="src\sass\modules\_home-hero.scss" />
     <Content Include="src\sass\app-devel.scss" />
+    <Content Include="src\sass\_rte-fixes.scss" />
+    <Content Include="src\sass\base\_lists.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
