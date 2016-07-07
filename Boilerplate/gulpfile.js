@@ -67,7 +67,8 @@ var paths = {
     html: [
         "index.html",
         "components/**/*.html",
-        "global/**/*.html"
+        "global/**/*.html",
+        "pages/**/*.html"
     ],
     img: {
         examples: {
