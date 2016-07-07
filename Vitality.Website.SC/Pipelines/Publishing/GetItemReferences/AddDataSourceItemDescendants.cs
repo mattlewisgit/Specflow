@@ -19,26 +19,23 @@ namespace Vitality.Website.SC.Pipelines.Publishing.GetItemReferences
         }
 
         protected override List<Item> GetItemReferences(PublishItemContext context)
-        {
-            // Get context items Related Items
-            var referredItem = context.Result.ReferredItems.Select(pc => context.PublishHelper.GetSourceItem(pc.ItemId)).ToArray();
+        { 
+            var referredDataSourceItems = GetCurrentPublishCandidateItems(context);
 
             var itemsToPublish = new List<Item>();
-            // Iterate over Related Items that are datasource items
-            foreach (var item in referredItem.Where(ItemIsDataSource))
+
+            foreach (var item in referredDataSourceItems.Where(ItemIsDataSource))
             {
-                // Add datasource items to publishing queue, if not already present (includes the items referrer items)
-                if (!referredItem.Contains(item) && !itemsToPublish.Contains(item))
+                if (!itemsToPublish.Contains(item))
                 {
-                    itemsToPublish.AddRange(GetLinkedItems(item));
+                    itemsToPublish.AddRange(GetLinkedDataSourceItems(item));
                 }
 
-                // Add Related Items child items to publishing queue, if not already present (includes the items referrer items)
                 foreach (Item child in item.Children)
                 {
-                    if (!referredItem.Contains(child) && !itemsToPublish.Contains(child))
+                    if (!referredDataSourceItems.Contains(child) && !itemsToPublish.Contains(child))
                     {
-                        itemsToPublish.AddRange(GetLinkedItems(child));
+                        itemsToPublish.AddRange(GetLinkedDataSourceItems(child));
                     }
                 }
             }
@@ -46,18 +43,25 @@ namespace Vitality.Website.SC.Pipelines.Publishing.GetItemReferences
             return itemsToPublish;
         }
 
-        private IEnumerable<Item> GetLinkedItems(Item contextItem)
+        private static Item[] GetCurrentPublishCandidateItems(PublishItemContext context)
         {
-            // Retrieve the items referrer items
-            var links = contextItem.Links.GetValidLinks();
-            // Return referrer items which are datasource items
-            return links.Select(link => contextItem.Database.GetItem(link.TargetItemID)).Where(targetItem => targetItem != null && ItemIsDataSource(targetItem));
+            return context.Result.ReferredItems.Select(publishCandidate => context.PublishHelper.GetSourceItem(publishCandidate.ItemId)).ToArray();
+        }
+
+        private IEnumerable<Item> GetLinkedDataSourceItems(Item contextItem)
+        {
+
+            return contextItem
+                .Links
+                .GetValidLinks()
+                .Select(link => contextItem.Database.GetItem(link.TargetItemID))
+                .Where(ItemIsDataSource);
         }
 
         private bool ItemIsDataSource(Item item)
         {
-            return item.Paths.FullPath.StartsWith(ItemConstants.Presales.Content.ContentFolder.Path) &&
-                   !pathsToIgnore.Any(path => item.Paths.FullPath.StartsWith(path));
+            return item != null && (item.Paths.FullPath.StartsWith(ItemConstants.Presales.Content.ContentFolder.Path) &&
+                                    !pathsToIgnore.Any(path => item.Paths.FullPath.StartsWith(path)));
         }
     }
 }
