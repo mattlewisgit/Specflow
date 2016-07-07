@@ -6,6 +6,8 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
     {
         public string Key { get; set; }
 
+        public string CategoryKey { get; set; }
+
         public string Title { get; set; }
 
         public static LiteratureDocumentSummaryDto From(LiteratureDocumentSearchResult searchResult)
@@ -13,6 +15,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
             return new LiteratureDocumentSummaryDto
                    {
                        Key = searchResult.Title.ToLowerHyphenatedString(),
+                       CategoryKey = searchResult.Category.ToLowerHyphenatedString(),
                        Title = searchResult.Title
                    };
         }
