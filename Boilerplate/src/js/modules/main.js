@@ -14,12 +14,6 @@ function _initVendor() {
     "use strict";
     FastClick.attach(document.body);
 
-    // Where JS is used, disable direct input to stop mobile keyboards.
-    var datePicker = $(".js-datepicker");
-    if (datePicker.length) {
-        datePicker.datepicker().attr("readonly", "true");
-    }
-
     // TableSaw responsive tables.
     if (!$("html").hasClass("disable-tablesaw")) {
         $(document).trigger("enhance.tablesaw");
