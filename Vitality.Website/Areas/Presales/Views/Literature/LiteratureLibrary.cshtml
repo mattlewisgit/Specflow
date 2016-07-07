@@ -1,4 +1,5 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.LiteratureLibraryPage>
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.LiteratureLibraryPage>
 
 <div class="grid ">
     <div class="grid-col-8-12">
@@ -37,8 +38,10 @@
         <h3>@Editable(Model, m => m.CategoriesHeadline)</h3>
         <div>
             <ul>
-                <li>Sales literature</li>
-                <li>Personal healthcare literure</li>
+            @foreach (var literatureCategory in this.LiteratureCategories())
+            {
+                <li>@Editable(literatureCategory, m => m.Title)</li>
+            }
             </ul>
         </div>
     </div>

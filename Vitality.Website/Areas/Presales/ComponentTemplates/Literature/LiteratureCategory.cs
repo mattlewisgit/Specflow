@@ -6,8 +6,8 @@
 
     public class LiteratureCategory : SitecoreItem
     {
-        public string Headline { get; set; }
+        public string Title { get; set; }
 
-        public IEnumerable<LiteratureDocument> Documents { get; set; }
+        /*public IEnumerable<LiteratureDocument> Documents { get; set; }*/
     }
 }

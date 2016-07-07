@@ -1,8 +1,11 @@
 ﻿namespace Vitality.Website.Areas.Presales.PageTemplates
 {
+    using Glass.Mapper.Sc.Configuration;
+    using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
 
     using Vitality.Website.Areas.Global.Models;
+    using Vitality.Website.Areas.Presales.ComponentTemplates.Literature;
 
     public class LiteratureLibraryPage : SitecoreItem
     {
@@ -27,5 +30,8 @@
         public string LiteratureHeadline { get; set; }
 
         public string SelectionHeadline { get; set; }
+
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public LiteratureLibrary LiteratureLibrary { get; set; }
     }
 }
