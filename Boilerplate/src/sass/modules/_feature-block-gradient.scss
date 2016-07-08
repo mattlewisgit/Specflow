@@ -3,9 +3,8 @@ $gradient-solid-to: 50%;
 $gradient-transparent-by: 100%;
 
 //Left side content by default -
-.feature-block-gradient {
-    @extend .burst;
-    position: relative;
+.feature-block-gradient {    
+    position: relative;    
 
     &__image {
         background-size: cover;
