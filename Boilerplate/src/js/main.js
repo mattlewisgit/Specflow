@@ -1,14 +1,16 @@
-var AccordionModule = require("./accordionModule");
-var AnimationDelayModule = require("./animationDelayModule");
-var Breakpoints = require("./breakpointsModule");
-var FilerModule = require("./filterModule");
-var MatchHeightsModule = require("./matchHeightsModule");
-var MatchWidthsModule = require("./matchWidthsModule");
-var MenuModule = require("./menuModule");
-var QuoteFooterModule = require("./quoteFooterModule");
-var SearchModule = require("./searchModule");
-var SocialShareModule = require("./socialShareModule");
-var TabsModule = require("./tabsModule");
+var HealthAdvisersLiteratureApp = require("./angular/healthAdvisersLiteratureApp");
+
+var AccordionModule = require("./modules/accordionModule");
+var AnimationDelayModule = require("./modules/animationDelayModule");
+var Breakpoints = require("./modules/breakpointsModule");
+var FilerModule = require("./modules/filterModule");
+var MatchHeightsModule = require("./modules/matchHeightsModule");
+var MatchWidthsModule = require("./modules/matchWidthsModule");
+var MenuModule = require("./modules/menuModule");
+var QuoteFooterModule = require("./modules/quoteFooterModule");
+var SearchModule = require("./modules/searchModule");
+var SocialShareModule = require("./modules/socialShareModule");
+var TabsModule = require("./modules/tabsModule");
 
 function _initVendor() {
     "use strict";

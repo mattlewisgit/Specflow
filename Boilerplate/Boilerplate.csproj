@@ -199,6 +199,7 @@
     <Content Include="src\img\logos\white\starbucks_white.png" />
     <Content Include="src\img\logos\white\virgin-active_white.png" />
     <Content Include="src\img\logos\white\weightwatchers_white.png" />
+    <Content Include="src\js\angular\healthAdvisersLiteratureApp.js" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
     <Content Include="src\js\modules\collapsibleModule.js" />
@@ -207,7 +208,7 @@
     <Content Include="src\js\modules\matchWidthsModule.js" />
     <Content Include="src\js\modules\filterModule.js" />
     <Content Include="src\js\modules\helpers.js" />
-    <Content Include="src\js\modules\main.js" />
+    <Content Include="src\js\main.js" />
     <Content Include="src\js\modules\matchHeightsModule.js" />
     <Content Include="src\js\modules\menuModule.js" />
     <Content Include="js\rAF.js" />

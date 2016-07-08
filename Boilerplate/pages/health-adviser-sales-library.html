@@ -34,7 +34,7 @@
                 
                 <h2>Example</h2>
 
-                <div class="example">
+                <div class="example" data-ng-app="HealthAdvisersSalesLiteratureApp">
                     <div class="grid">
                         <div class="grid-col-8-12">
                             <h1 class="text-flush-top">Sales Literature</h1>
@@ -46,7 +46,7 @@
                             </p>
 
                             <h2>Search</h2>
-                            
+
                             <div class="form">
                                 <input type="text" placeholder="Enter a search keyword" />
                             </div>
@@ -84,64 +84,36 @@
                     </div>
 
                     <div class="grid">
-                        <div class="grid-col-4-12">
+                        <div class="grid-col-4-12" ng-controller="ChooseLiteratureController">
                             <h3>Choose literature type</h3>
 
                             <ul class="list--buttons">
-                                <li>
-                                    <a href="#" class="button-list button-list--selected">
-                                        Sales literature
+                                <li ng-repeat="entry in types">
+                                    <a class="button-list">
+                                        {{entry.name}}
                                     </a>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="button-list">Personal healthcare literature</a>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="button-list">Business healthcare literature</a>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="button-list">Corporate healthcare literature</a>
                                 </li>
                             </ul>
                         </div>
-                        
-                        <div class="grid-col-4-12">
+
+                        <div class="grid-col-4-12" ng-controller="AvailableLiteratureController">
                             <h3>Available literature</h3>
 
                             <ul class="list--buttons">
-                                <li>
-                                    <a href="#" class="button-list button-list--selected">
-                                        Health and rewards partners
+                                <li ng-repeat="entry in literature">
+                                    <a class="button-list">
+                                        {{entry.name}}
                                     </a>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="button-list">Vitality GP Select</a>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="button-list">Vitality GP</a>
-                                </li>
-
-                                <li>
-                                    <a href="#" class="button-list">Hospital list</a>
-                                </li>
-                                        
-                                <li>
-                                    <a href="#" class="button-list">Discovery company profile</a>
                                 </li>
                             </ul>
                         </div>
-                        
-                        <div class="grid-col-4-12">
+
+                        <div class="grid-col-4-12" ng-controller="LiteratureDocumentController">
                             <h3>Your selection</h3>
 
                             <div class="preview-card">
                                 <div class="preview-card--header">
-                                    Healthy Living Rewards and Partners from VitalityHealth
+                                    {{document.name}}
                                 </div>
 
                                 <div class="preview-card--body">
@@ -160,13 +132,13 @@
                                     </div>
 
                                     <div class="preview-card--body__preview">
-                                        <img src="/src/img/examples/example-pdf.png" alt="Example PDF" />
+                                        <img ng-src="{{document.imageSource}}" alt="{{document.name}}" />
                                     </div>
 
                                     <div class="preview-card--body__text">
-                                        <p>Lorem ipsum descriptivio</p>
-                                        <p><b>&lt;CODE&gt;</b></p>
-                                        <p>&lt;Month Year&gt;</p>
+                                        <p>{{document.description}}</p>
+                                        <p><b>{{document.code}}</b></p>
+                                        <p>{{document.date}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -181,16 +153,20 @@
     </div>
 
     <script>function cdnizerLoad(u) { document.write('<scr' + 'ipt src="' + encodeURIComponent(u) + '"></scr' + 'ipt>'); }</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+    <script>    if (!(window.angular)) cdnizerLoad("/bower_components/angular/angular.min.js");</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-    <script>    if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
+    <script>if (!(window.jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.smartresize/0.1/jquery.debouncedresize.js"></script>
     <script>if (!($.event.special.debouncedresize)) cdnizerLoad("/bower_components/jquery.smartresize/jquery.smartresize.js");</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
     <script>if (!($(window).matchHeight)) cdnizerLoad("/bower_components/jquery-match-height/jquery.matchHeight-min.js");</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
-    <script>if (!(FastClick)) cdnizerLoad("/bower_components/fastclick/lib/fastclick.js");</script>
+    <script>if (!(window.FastClick)) cdnizerLoad("/bower_components/fastclick/lib/fastclick.js");</script>
+    <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw.js"></script>
+    <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw-init.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script>if (!(WOW)) cdnizerLoad("/bower_components/wowjs/dist/wow.min.js");</script>
+    <script>if (!(window.WOW)) cdnizerLoad("/bower_components/wowjs/dist/wow.min.js");</script>
 
     <script type="text/javascript" src="/js/modernizr-custom.js"></script>
     <script type="text/javascript" src="/js/polyfill-custom.js"></script>
