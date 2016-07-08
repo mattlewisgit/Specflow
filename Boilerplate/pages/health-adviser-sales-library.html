@@ -84,25 +84,29 @@
                     </div>
 
                     <div class="grid">
-                        <div class="grid-col-4-12" ng-controller="ChooseController">
+                        <div class="grid-col-4-12" ng-controller="ChooseController as chooseController">
                             <h3>Choose literature type</h3>
 
                             <ul class="list--buttons">
                                 <li ng-repeat="entry in types">
-                                    <a class="button-list" ng-class="{'button-list--selected': entry.IsSelected}">
+                                    <a class="button-list"
+                                       ng-class="{'button-list--selected': entry.IsSelected}"
+                                       ng-click="chooseController.loadType(entry)">
                                         {{entry.Name}}
                                     </a>
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="grid-col-4-12" ng-controller="AvailableController">
+                        <div class="grid-col-4-12" ng-controller="AvailableController as availableController">
                             <h3>Available literature</h3>
 
                             <ul class="list--buttons">
-                                <li ng-repeat="entry in literature">
-                                    <a class="button-list" ng-class="{'button-list--selected': entry.IsSelected}">
-                                        {{entry.Title}}
+                                <li ng-repeat="document in literature">
+                                    <a class="button-list"
+                                       ng-class="{'button-list--selected': document.IsSelected}"
+                                       ng-click="availableController.loadDocument(document)">
+                                        {{document.Title}}
                                     </a>
                                 </li>
                             </ul>
@@ -168,21 +172,23 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>if (!(window.WOW)) cdnizerLoad("/bower_components/wowjs/dist/wow.min.js");</script>
     
-    <script>
-        window.AvailableLiteratureTypes = [
-            {
-                Name: "Sales literature"
-            },
-            {
-                Name: "Personal healthcare literature",
-                "IsSelected": true
-            }
-        ];
-    </script>
-
     <script type="text/javascript" src="/js/modernizr-custom.js"></script>
     <script type="text/javascript" src="/js/polyfill-custom.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
+
+    <script>
+    var data = [
+        {
+            Name: "Sales literature"
+        },
+        {
+            Name: "Personal healthcare literature",
+            "IsSelected": true
+        }
+    ];
+
+    window.healthAdvisersSalesLiteratureApp.constant("literatureTypes", data);
+    </script>
 
     <script type="text/javascript" src="/js/boilerplate.js"></script>
     <script type="text/javascript" src="/bower_components/prism/prism.js"></script>
