@@ -84,36 +84,36 @@
                     </div>
 
                     <div class="grid">
-                        <div class="grid-col-4-12" ng-controller="ChooseLiteratureController">
+                        <div class="grid-col-4-12" ng-controller="ChooseController">
                             <h3>Choose literature type</h3>
 
                             <ul class="list--buttons">
                                 <li ng-repeat="entry in types">
-                                    <a class="button-list">
-                                        {{entry.name}}
+                                    <a class="button-list" ng-class="{'button-list--selected': entry.IsSelected}">
+                                        {{entry.Name}}
                                     </a>
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="grid-col-4-12" ng-controller="AvailableLiteratureController">
+                        <div class="grid-col-4-12" ng-controller="AvailableController">
                             <h3>Available literature</h3>
 
                             <ul class="list--buttons">
                                 <li ng-repeat="entry in literature">
-                                    <a class="button-list">
-                                        {{entry.name}}
+                                    <a class="button-list" ng-class="{'button-list--selected': entry.IsSelected}">
+                                        {{entry.Title}}
                                     </a>
                                 </li>
                             </ul>
                         </div>
 
-                        <div class="grid-col-4-12" ng-controller="LiteratureDocumentController">
+                        <div class="grid-col-4-12" ng-controller="DocumentController">
                             <h3>Your selection</h3>
 
                             <div class="preview-card">
                                 <div class="preview-card--header">
-                                    {{document.name}}
+                                    {{document.Title}}
                                 </div>
 
                                 <div class="preview-card--body">
@@ -132,13 +132,13 @@
                                     </div>
 
                                     <div class="preview-card--body__preview">
-                                        <img ng-src="{{document.imageSource}}" alt="{{document.name}}" />
+                                        <img ng-src="{{document.Thumbnail}}" alt="{{document.Title}}" />
                                     </div>
 
                                     <div class="preview-card--body__text">
-                                        <p>{{document.description}}</p>
-                                        <p><b>{{document.code}}</b></p>
-                                        <p>{{document.date}}</p>
+                                        <p>{{document.Description}}</p>
+                                        <p><b>{{document.Code}}</b></p>
+                                        <p>{{document.PublishDate | date : "d MMM yyyy"}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -167,6 +167,18 @@
     <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw-init.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>if (!(window.WOW)) cdnizerLoad("/bower_components/wowjs/dist/wow.min.js");</script>
+    
+    <script>
+        window.AvailableLiteratureTypes = [
+            {
+                Name: "Sales literature"
+            },
+            {
+                Name: "Personal healthcare literature",
+                "IsSelected": true
+            }
+        ];
+    </script>
 
     <script type="text/javascript" src="/js/modernizr-custom.js"></script>
     <script type="text/javascript" src="/js/polyfill-custom.js"></script>
