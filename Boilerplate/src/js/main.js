@@ -1,4 +1,4 @@
-var HealthAdvisersLiteratureApp = require("./angular/healthAdvisersLiteratureApp");
+require("./angular/healthAdvisersLiteratureApp");
 
 var AccordionModule = require("./modules/accordionModule");
 var AnimationDelayModule = require("./modules/animationDelayModule");

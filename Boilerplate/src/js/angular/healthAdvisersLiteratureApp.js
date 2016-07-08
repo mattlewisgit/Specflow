@@ -1,6 +1,7 @@
 ﻿angular
     .module("HealthAdvisersSalesLiteratureApp", [])
     .controller("ChooseLiteratureController", function ($scope) {
+        "use strict";
         $scope.types = [
             {
                 name: "Vitality GP"
@@ -11,6 +12,7 @@
         ];
     })
     .controller("AvailableLiteratureController", function ($scope) {
+        "use strict";
         $scope.literature = [
             {
                 name: "Health and rewards partners"
@@ -30,6 +32,7 @@
         ];
     })
     .controller("LiteratureDocumentController", function ($scope) {
+        "use strict";
         $scope.document = {
             code: "CODE",
             date: "12 July 2016",

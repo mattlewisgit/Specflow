@@ -22,6 +22,7 @@
     "varstmt": false,
     "predef": [
         "$",
+        "angular",
         "FastClick",
         "jQuery",
         "Modernizr",
