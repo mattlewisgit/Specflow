@@ -3,22 +3,21 @@
     "allowRev": true,
     "files": [
         {
-            "file": "/bower_components/jquery/dist/jquery.min.js",
-            "package": "jquery",
-            "comment": "Test for jQuery and not $, as Chrome has $ as a built-in!",
-            "test": "jQuery",
-            "cdn": "//cdnjs.cloudflare.com/ajax/libs/jquery/${version}/jquery.min.js"
+            "file": "/bower_components/angular/angular.min.js",
+            "package": "angular",
+            "test": "window.angular",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/angular.js/${version}/angular.min.js"
         },
         {
-            "file": "/bower_components/jqueryui/jquery-ui.min.js",
-            "package": "jqueryui",
-            "test": "$.datepicker",
-            "cdn": "//cdnjs.cloudflare.com/ajax/libs/jqueryui/${version}/jquery-ui.min.js"
+            "file": "/bower_components/jquery/dist/jquery.min.js",
+            "package": "jquery",
+            "test": "window.jQuery",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/jquery/${version}/jquery.min.js"
         },
         {
             "file": "/bower_components/wowjs/dist/wow.min.js",
             "package": "wowjs",
-            "test": "WOW",
+            "test": "window.WOW",
             "cdn": "//cdnjs.cloudflare.com/ajax/libs/wow/${version}/wow.min.js"
         },
         {
@@ -30,7 +29,7 @@
         {
             "file": "/bower_components/fastclick/lib/fastclick.js",
             "package": "fastclick",
-            "test": "FastClick",
+            "test": "window.FastClick",
             "cdn": "//cdnjs.cloudflare.com/ajax/libs/fastclick/${version}/fastclick.min.js"
         },
         {

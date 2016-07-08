@@ -29,11 +29,6 @@
         }
     }
 
-    // Match datepicker filed width to the datepicker widget.
-    input[type="text"].datepicker {
-        max-width: 215px;
-    }
-
     textarea {
         min-height: 10em;
         resize: vertical;
@@ -47,7 +42,6 @@
 
     &__field {
         margin-bottom: 1.75em;
-        max-width: 350px;
 
         &__description {
             position: relative;
