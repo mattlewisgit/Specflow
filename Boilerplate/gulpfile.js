@@ -67,7 +67,8 @@ var paths = {
     html: [
         "index.html",
         "components/**/*.html",
-        "global/**/*.html"
+        "global/**/*.html",
+        "pages/**/*.html"
     ],
     img: {
         examples: {
@@ -282,7 +283,7 @@ gulp.task(tasks.css, function () {
 gulp.task(tasks.js.devel, function () {
     del("./js/app.js");
 
-    return browserify("./src/js/modules/main.js")
+    return browserify("./src/js/main.js")
         .bundle()
         .pipe(source("app.js"))
         .pipe(gulp.dest("./js/"));
@@ -298,7 +299,6 @@ gulp.task(tasks.js.thirdParty, function () {
         .pipe(plugins.changed(paths.temp))
         .pipe(gulp.dest(paths.temp))
         .pipe(plugins.cdnizer(configs.cdnizer))
-        .pipe(plugins.htmlmin(configs.htmlMin))
         .pipe(gulp.dest(paths.templates.dest));
 
     return gulp.start(tasks.razor);
