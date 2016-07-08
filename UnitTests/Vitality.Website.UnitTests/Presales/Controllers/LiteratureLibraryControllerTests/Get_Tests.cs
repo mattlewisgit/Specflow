@@ -55,7 +55,7 @@
         }
 
         [Fact]
-        public void Should_contain_document_in_response_body_when_document_matches_library_category_and_title()
+        public void Should_contain_matching_document_in_the_response_body()
         {
             this.controller.Get("sales-literature", SearchContextStub.MatchingCategory, SearchContextStub.MatchingTitle).Content.ReadAsAsync<LiteratureDocumentDto>().Result.ShouldNotBeNull();
         }

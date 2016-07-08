@@ -43,23 +43,15 @@
         }
 
         [Fact]
-        public void Should_respond_200_ok_when_documents_match_library_category()
+        public void Should_respond_200_ok_when_documents_match_library_and_category()
         {
             this.controller.List(SearchContextStub.MatchingLibrary, SearchContextStub.MatchingCategory).StatusCode.ShouldBe(HttpStatusCode.OK);
         }
 
         [Fact]
-        public void Should_contain_an_array_of_matching_documents_in_response_body()
+        public void Should_contain_a_collection_of_matching_documents_in_the_response_body()
         {
             this.controller.List(SearchContextStub.MatchingLibrary, SearchContextStub.MatchingCategory).Content.ReadAsAsync<IEnumerable<LiteratureDocumentSummaryDto>>().Result.ShouldNotBeEmpty();
-        }
-
-        [Fact]
-        public void Should_not_contain_matching_results_when_document_template_is_not_a_literature_document()
-        {
-            this.controller.List(SearchContextStub.MatchingLibrary, SearchContextStub.MatchingCategory)
-                .Content.ReadAsAsync<IEnumerable<LiteratureDocumentSummaryDto>>()
-                .Result.ShouldNotContain(summary => summary.Title == SearchContextStub.NonMatchingTitle);
         }
     }
 }
