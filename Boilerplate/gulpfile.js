@@ -273,7 +273,7 @@ gulp.task(tasks.css, function () {
         tasks.sass.spritesheet.png,
         tasks.sass.spritesheet.svg,
         tasks.sass.json,
-        tasks.sass.lint,
+        // Disabling SASS lint until dynamic maps work! tasks.sass.lint,
         tasks.sass.devel,
         tasks.sass.build,
         tasks.sass.modernizr,
