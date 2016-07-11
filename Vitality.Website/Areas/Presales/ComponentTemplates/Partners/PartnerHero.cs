@@ -1,8 +1,9 @@
-﻿using Glass.Mapper.Sc.Fields;
-using Vitality.Website.Areas.Global.Models;
-
-namespace Vitality.Website.Areas.Presales.Models.Partners
+﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.Partners
 {
+    using Glass.Mapper.Sc.Fields;
+
+    using Vitality.Website.Areas.Global.Models;
+
     public class PartnerHero : SitecoreItem
     {
         public PartnerHero()

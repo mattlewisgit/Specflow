@@ -281,9 +281,9 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Rewards\RewardsLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryComponent.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryListItem.cs" />
-    <Compile Include="Areas\Presales\Models\Partners\PartnerHero.cs" />
-    <Compile Include="Areas\Presales\Models\Products\ProductPanel.cs" />
-    <Compile Include="Areas\Presales\Models\Products\ProductsComponent.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Partners\PartnerHero.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductPanel.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductsComponent.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\CallToActionPanel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\PrimaryCallToAction.cs" />
@@ -569,6 +569,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Presales\Controllers\" />
+    <Folder Include="Areas\Presales\Models\" />
     <Folder Include="img\examples\" />
   </ItemGroup>
   <ItemGroup>

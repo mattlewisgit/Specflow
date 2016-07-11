@@ -1,8 +1,9 @@
-﻿using Glass.Mapper.Sc.Fields;
-using Vitality.Website.Areas.Global.Models;
-
-namespace Vitality.Website.Areas.Presales.Models.Products
+﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.Products
 {
+    using Glass.Mapper.Sc.Fields;
+
+    using Vitality.Website.Areas.Global.Models;
+
     public class ProductPanel : SitecoreItem
     {
         public Image Image { get; set; }
