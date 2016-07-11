@@ -57,6 +57,7 @@ h3,
 h4,
 h5,
 h6,
+.h1-xlarge,
 .h1,
 .h2,
 .h3,
@@ -69,6 +70,11 @@ h6,
     margin-top: 0.75em;
     margin-bottom: 0.75em;
     color: $heading-color;
+}
+
+.h1-xlarge {
+    @include font-size($h1--large);
+    font-weight: 600;
 }
 
 h1,
@@ -104,6 +110,10 @@ h6,
 
 // Increase heading size on larger screens -
 @include mq($from: tablet) {
+    .h1-xlarge {
+        @include font-size($h1--xlarge);
+    }
+
     h1,
     .h1 {
         @include font-size($h1--large);

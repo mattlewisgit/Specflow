@@ -27,16 +27,23 @@
             <h2>Description</h2>
 
             <p>
-                The home hero banner is mroe prominent than other banners, and is able to embed and play video.
+                The home hero banner is more prominent than other banners, and is able to embed and play video.
             </p>
-            
+
+            <p>
+                <b>Note</b>: Although the second header is larger than the first, the order is still <i>h1</i>
+                then <i>h2</i>, as this is more semantically correct, and classes augment their styles.
+            </p>
+
+            <h2>Examples</h2>
             <h3>Light Image Only</h3>
             <h4>Demo</h4>
 
             <div class="example">
-                <div class="home-hero background-position-middle-right text-light" style="background-image: url('/img/examples/running-woman.jpg');">
-                    <h4>Health &amp; Life cover</h4>
-                    <h1>with Rewards</h1>
+                <div class="home-hero background-position-middle-right text-light"
+                     style="background-image: url('/img/examples/running-woman.jpg');">
+                    <h1 class="h4">Health &amp; Life cover</h1>
+                    <h2 class="h1-xlarge text-light">with Rewards</h2>
 
                     <p>
                         See how Vitality rewards you for getting healthy
@@ -47,18 +54,17 @@
             <h4>Markup</h4>
 
             <div class="vertical-flush">
-                <pre>
-                    <code class="language-markup line-numbers"></code>
-                </pre>
+                <pre><code class="language-markup line-numbers"></code></pre>
             </div>
-            
+
             <h3>Dark Image Only</h3>
             <h4>Demo</h4>
 
             <div class="example">
-                <div class="home-hero background-position-middle-left" style="background-image: url('/img/examples/tennis.jpg');">
-                    <h4>Health &amp; Life cover</h4>
-                    <h1>with Rewards</h1>
+                <div class="home-hero background-position-middle-left"
+                     style="background-image: url('/img/examples/tennis.jpg');">
+                    <h1 class="h4">Health &amp; Life cover</h1>
+                    <h2 class="h1-xlarge">with Rewards</h2>
 
                     <p>
                         See how Vitality rewards you for getting healthy
@@ -69,16 +75,14 @@
             <h4>Markup</h4>
 
             <div class="vertical-flush">
-                <pre>
-                <code class="language-markup line-numbers"></code>
-                </pre>
+                <pre><code class="language-markup line-numbers"></code></pre>
             </div>
         </section>
     </main>
 
     <script>function cdnizerLoad(u) { document.write('<scr' + 'ipt src="' + encodeURIComponent(u) + '"></scr' + 'ipt>'); }</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-    <script>    if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
+    <script>if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script>if (!($.datepicker)) cdnizerLoad("/bower_components/jqueryui/jquery-ui.min.js");</script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.smartresize/0.1/jquery.debouncedresize.js"></script>
