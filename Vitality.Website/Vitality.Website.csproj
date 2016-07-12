@@ -237,7 +237,9 @@
     <Content Include="css\sprite-generated.png" />
     <Content Include="img\spritesheets\svg-sprite.svg" />
     <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\GlassMapperSc.cs" />

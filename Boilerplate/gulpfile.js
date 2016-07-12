@@ -428,11 +428,11 @@ gulp.task(tasks.report, function () {
 
 gulp.task(tasks.watch, function () {
     gulp.watch(paths.js.src, [
-        tasks.js.build
+        tasks.js.devel
     ]);
 
     gulp.watch(paths.sass.src, [
-        tasks.sass.build
+        tasks.sass.devel
     ]);
 });
 

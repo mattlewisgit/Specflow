@@ -185,6 +185,10 @@ samp {
     @include font-size(1.2);
     display: block;
     font-family: monospace, monospace;
+
+    &.inline {
+        display: inline-block;
+    }
 }
 
 blockquote {

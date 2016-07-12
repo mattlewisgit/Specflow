@@ -74,3 +74,39 @@
         repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
         repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px);
 }
+
+// Custom grid example.
+.custom-grid {
+    @include outer-container;
+
+    .custom-col {
+        // 50% on small screens.
+        @include span-columns(6);
+        @include omega(2n);
+        background-color: rgba($tertiary-color, 0.2);
+        margin-top: $grid-margin-top;
+        padding: $pad--thin;
+
+        @include mq($from: tablet) {
+            // 25% on medium screens.
+            //Reset omega function http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat.
+            @include omega-reset(2n); 
+            @include span-columns(3);
+            @include omega(4n);
+        }
+
+        @include mq($from: desktop) {
+            // 16.66%.
+            @include omega-reset(4n);
+            @include span-columns(2);
+            @include omega(6n);
+        }
+
+        @include mq($from: max) {
+            // Back to 50%.
+            @include omega-reset(6n);
+            @include span-columns(6);
+            @include omega(2n);
+        }
+    }
+}
