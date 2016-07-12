@@ -20,9 +20,9 @@ Rich Text
 field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
 name: Source
 key: source
-content-length: 72
+content-length: 73
 
-/sitecore/system/Settings/Html Editor Profiles/Vitality Rich Text Medium
+/sitecore/system/Settings/Html Editor Profiles/Vitality Rich Text Limited
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
@@ -33,7 +33,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: b461d96c-3446-489f-9466-9182db3a1cb5
+revision: 2f9b8123-6adb-4714-9146-83d3b073794c
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b461d96c-3446-489f-9466-9182db3a1cb5
+2f9b8123-6adb-4714-9146-83d3b073794c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160711T153933Z
+20160712T102033Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

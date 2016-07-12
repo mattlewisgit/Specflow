@@ -15,6 +15,10 @@
             <h3 class="cta__header">
                 @Editable(panel, m => m.Icon)
                 @Editable(panel, m => m.Headline)
+                @if (this.ShowSecondLine(panel))
+                {
+                <br />@Editable(panel, m => m.Headline2)
+                }
             </h3>
             <p class="cta__body">
                 @Editable(panel, m => m.OpeningParagraph)
