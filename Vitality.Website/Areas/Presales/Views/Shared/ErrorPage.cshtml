@@ -1,6 +1,12 @@
 ﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.ErrorPage>
-              
-@Editable(Model, m => m.Headline)
-@Editable(Model, m => m.OpeningParagraph)
-@Editable(Model, m => m.CallToAction)
-@Editable(Model, m => m.BackgroundImage)
+<div class="example">
+    <div class="server-error">
+        <h1>@Editable(Model, m => m.Headline)</h1>
+        @Editable(Model, m => m.OpeningParagraph)
+        <div>
+            @Editable(Model, m => m.CallToAction1, new { @class = "box-button box-button--light box-button--rounded" })
+            @Editable(Model, m => m.CallToAction2, new { @class = "box-button box-button--light box-button--rounded" })
+        </div>
+        @Editable(Model, m => m.BackgroundImage)
+    </div>
+</div>

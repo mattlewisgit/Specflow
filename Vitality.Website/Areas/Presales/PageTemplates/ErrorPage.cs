@@ -10,7 +10,9 @@
 
         public string OpeningParagraph { get; set; }
 
-        public Link CallToAction { get; set; }
+        public Link CallToAction1 { get; set; }
+        
+        public Link CallToAction2 { get; set; }
 
         public Image BackgroundImage { get; set; }
     }
