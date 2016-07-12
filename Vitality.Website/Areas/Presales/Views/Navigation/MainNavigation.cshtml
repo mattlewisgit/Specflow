@@ -20,7 +20,7 @@
                         @RenderLink(navigationSection, item => item.SectionLink)
                     </li>
                 }
-                else
+                else if (navigationSection.SectionLink != null)
                 {
                     <li class="site-nav__item">
                         @RenderLink(navigationSection, item => item.SectionLink)

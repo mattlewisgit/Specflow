@@ -14,12 +14,15 @@
         @Html.Partial("/Areas/Presales/Views/Navigation/NavigationSubSection.cshtml", subSection)
     }
 
-    <li class="section-nav__item section-nav__item--phone section-nav__item--no-shadow">
-    @using (BeginRenderLink(Model, item => item.AdditionalLink, new { tel = Model.AdditionalLinkSubHeader }))
+    @if (Model.AdditionalLink != null)
     {
-        <span class="section-nav__phone-text text-icon--phone-dark">@Html.Raw(Model.AdditionalLink.Text)</span>
-        <span class="section-nav__phone-number">@Html.Raw(Model.AdditionalLinkSubHeader)</span>
-    }
-    </li>
 
+        <li class="section-nav__item section-nav__item--phone section-nav__item--no-shadow">
+            @using (BeginRenderLink(Model, item => item.AdditionalLink, new { tel = Model.AdditionalLinkSubHeader }))
+            {
+                <span class="section-nav__phone-text text-icon--phone-dark">@Html.Raw(Model.AdditionalLink.Text)</span>
+                <span class="section-nav__phone-number">@Html.Raw(Model.AdditionalLinkSubHeader)</span>
+            }
+        </li>
+    }
 </ul>
