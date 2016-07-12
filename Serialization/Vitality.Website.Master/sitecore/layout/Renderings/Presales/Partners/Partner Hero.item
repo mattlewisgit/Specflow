@@ -55,9 +55,9 @@ content-length: 1
 field: {308E88F5-CD6E-4F8F-BAFE-95A47DEDEFDC}
 name: Editable
 key: editable
-content-length: 0
+content-length: 1
 
-
+1
 ----field----
 field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
 name: Datasource Location
@@ -89,7 +89,7 @@ content-length: 58
 ----version----
 language: en
 version: 1
-revision: 541e71a8-5805-40eb-8427-923831354a4c
+revision: 1df3a8b4-61e9-46c1-bbab-f51cd2b924ef
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -104,14 +104,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-541e71a8-5805-40eb-8427-923831354a4c
+1df3a8b4-61e9-46c1-bbab-f51cd2b924ef
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160708T094643Z
+20160712T135456Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
