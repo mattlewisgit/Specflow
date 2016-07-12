@@ -25,6 +25,11 @@
                     public const string Path = "/sitecore/content/Presales/home";
                 }
 
+                public static class NotFound
+                {
+                    public static readonly Guid Id = Guid.Parse("{215F0A12-E4C8-4A68-9AF5-1D321E621E49}");
+                }
+
                 public static class ContentFolder
                 {
                     public const string Path = "/sitecore/content/Presales/Content";
