@@ -7,16 +7,12 @@
         text-align: center;
     }
 
-    // No need for margin on columns here.
-    [class*="grid-col-"] {
-        margin-top: 0;
+    .article-index--container {
+        margin-top: $pad--thin;
+        padding: 0 1%;
     }
 
-    &--container {
-        padding: 1% !important;
-    }
-
-    &--article {
+    .article-index--article {
         background-color: $highlight-color;
         margin: 0;
 
@@ -24,20 +20,26 @@
             color: $white;
         }
 
+        // Reduce the header font size to that of the body content.
         h3 {
             font-size: 100%;
         }
 
         // Cover the background and do not pad the image alternative.
-        &__image {
+        .article-index--article__image {
             background-size: cover;
 
             div {
                 padding: 0;
             }
+
+            // Reiterate full width to fix IE issue.
+            img {
+                width: 100%;
+            }
         }
 
-        &__content {
+        .article-index--article__content {
             padding: $pad;
         }
 
@@ -51,23 +53,43 @@
                 @include font-size($basesize);
             }
         }
+    }
+}
 
-        // Hide the background image for screens smaller than a tablet,
-        // as the img tag will be used instead and scale using the grid.
-        // Squeeze the content slightly, too.
-        @include mq($until: tablet) {
+// Hide the background image for screens smaller than a tablet,
+// as the img tag will be used instead and scale using the grid.
+// Squeeze the content slightly, too.
+@include mq($until: tablet) {
+    .article-index {
+        .article-index--article {
             h3, p {
                 margin: $pad--thin;
             }
 
-            &__image {
+            .article-index--article__image {
+                // Need important here to override inline style.
                 background: none !important;
-                padding: 0 !important;
+                margin: 0;
+                padding: 0;
             }
 
-            &__content {
+            .article-index--article__content {
+                margin-top: 0;
                 padding: $pad--thin;
             }
+        }
+    }
+}
+
+// Use flexbox to keep the article containers the same height.
+.flexbox {
+    .article-index {
+        .article-index--container {
+            align-content: stretch;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
         }
     }
 }
