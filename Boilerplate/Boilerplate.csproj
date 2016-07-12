@@ -56,6 +56,7 @@
     <Content Include="components\tabs.html" />
     <Content Include="components\footer.html" />
     <Content Include="components\summary\summary-right.html" />
+    <Content Include="global\grids.html" />
     <Content Include="global\lists.html" />
     <Content Include="global\forms.html" />
     <Content Include="global\buttons.html" />
@@ -387,6 +388,7 @@
     <Content Include="src\sass\_rte-fixes.scss" />
     <Content Include="src\sass\base\_lists.scss" />
     <Content Include="src\sass\modules\_preview-card.scss" />
+    <Content Include="src\sass\modules\_article-index.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
