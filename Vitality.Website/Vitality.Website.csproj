@@ -177,6 +177,7 @@
     </None>
     <Content Include="Areas\Presales\Views\CallToAction\PrimaryCallToAction.cshtml" />
     <Content Include="Areas\Presales\Views\Banners\HomeHero.cshtml" />
+    <Content Include="Areas\Presales\Views\Articles\ArticleIndex.cshtml" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
@@ -264,6 +265,8 @@
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterPage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IWebmasterToolsGlobal.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Articles\ArticleIndex.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Articles\ArticleItem.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Banners\HomeHero.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsStacked.cs" />

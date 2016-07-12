@@ -1,0 +1,21 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Articles.ArticleIndex>
+
+<div class="products-component text-light">
+    <div class="grid pinch">
+        <div style="background-color: black">
+            @Editable(x => x.Headline)
+        </div>
+        <div style="background-color: red">
+            @Editable(x => x.OpeningParagraph)
+        </div>
+        <div>
+            @foreach (var articleItem in Model.ArticleItems)
+            {
+                <div style="background-color: red">@Editable(articleItem, x => x.Image)</div>
+                <div style="background-color: yellow">@Editable(articleItem, x => x.Title)</div>
+                <div style="background-color: green">@Editable(articleItem, x => x.LeadIn)</div>
+                <div style="background-color: blue">@Editable(articleItem, x => x.Link)</div>
+            }
+        </div>
+    </div>
+</div>
