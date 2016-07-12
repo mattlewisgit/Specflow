@@ -13,9 +13,21 @@
     }
 
     .article-index--article {
+        // Avoid underlines for this component link.
+        a {
+            text-decoration: none;
+        }
+
         background-color: $highlight-color;
         margin: 0;
 
+        // Alter the background for the hover state.
+        transition: $delay--medium ease-in background-color;
+
+        &:hover {
+            background-color: $highlight-color--dark;
+        }
+        
         h3, p {
             color: $white;
         }
