@@ -1,0 +1,17 @@
+.article-index {
+    background-color: $secondary-background-color;
+    padding: $pad--thin;
+
+    h2 {
+        text-align: center;
+    }
+
+    .article {
+        background-color: $highlight-color;
+        margin: 0;
+
+        .image {
+            padding: 0;
+        }
+    }
+}

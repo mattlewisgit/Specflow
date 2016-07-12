@@ -42,6 +42,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="components\article-index.html" />
     <Content Include="components\preview-card.html" />
     <Content Include="components\primary-cta.html" />
     <Content Include="components\accordion.html" />
