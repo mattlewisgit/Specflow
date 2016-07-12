@@ -13,9 +13,16 @@ templatekey: Template field
 field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
 name: Type
 key: type
-content-length: 16
+content-length: 9
 
-Single-Line Text
+Rich Text
+----field----
+field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
+name: Source
+key: source
+content-length: 72
+
+/sitecore/system/Settings/Html Editor Profiles/Vitality Rich Text Medium
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
@@ -26,7 +33,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 4a825f59-f8f1-42d8-be17-40aa039bcf2e
+revision: 77603083-e1e0-48d2-bc69-03829163335d
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -55,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4a825f59-f8f1-42d8-be17-40aa039bcf2e
+77603083-e1e0-48d2-bc69-03829163335d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160509T134545Z
+20160712T094355Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
