@@ -8,7 +8,7 @@ using Sitecore.WordOCX;
 
 namespace Vitality.Website.SC.Pipelines.RenderField
 {
-    public class InjectTablesawStyles
+    public class InjectTablesawStylesOnRender
     {
         public void Process(RenderFieldArgs args)
         {
