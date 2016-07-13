@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {D50392F5-602B-4975-87FF-D126A7624F7B}
+database: master
+path: /sitecore/templates/Presales/Page Templates/Sitemap Page/__Standard Values
+parent: {A047426F-6BFF-4E2E-9FC5-96B4D8D7AE65}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {A047426F-6BFF-4E2E-9FC5-96B4D8D7AE65}
+templatekey: Sitemap Page
+
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{487B20F5-0959-4419-B030-D8E8C21120ED}
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 604
+
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{9739784C-FDA6-45F1-ADA4-A86F18E3D4A0}"><r ds="{CA82253A-AD79-4CE8-AB73-7E978819FE46}" id="{874D1721-7D2C-4934-A983-B70FD0AC1B35}" par="" ph="header" uid="{B73C367C-CC35-4EE2-B7F7-CA6164E76688}" /><r id="{BF71492E-474C-41CD-9EA5-328E5909AD50}" ph="" uid="{232C8FFC-DEAE-41A4-9266-FAA2BD93242E}" /><r id="{F643ED45-4AC0-4751-AF89-4F31755527B5}" ph="" uid="{981272DC-077A-4C6F-8295-714504CB57F2}" /><r id="{C64F0EB5-2BCF-43FF-82D4-2D5C92653A9C}" ph="" uid="{1FA2E4FD-EC06-426F-A6AA-271EE72CD28A}" /></d></r>
+----version----
+language: en
+version: 1
+revision: e3454389-1ab0-4e79-9797-ac9e4c499e7c
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160620T142215Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+e3454389-1ab0-4e79-9797-ac9e4c499e7c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160622T170257Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

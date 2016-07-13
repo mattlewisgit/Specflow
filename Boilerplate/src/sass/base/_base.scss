@@ -1,0 +1,83 @@
+// apply a natural box layout model to all elements, but allowing components to change
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    position: relative;
+}
+
+body {
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    height: 100%;
+    min-width: 300px;
+    width: 100%;
+}
+
+img,
+iframe {
+    max-width: 100%;
+}
+
+
+// Add some bottom margin to the final item in main,
+// Unless it has a vertical-flush class - used for feature blocks etc.
+main > *:last-child {
+    margin-bottom: $pad;
+
+    @include mq($from: tablet) {
+        margin-bottom: $pad--large;
+    }
+
+    &.vertical-flush {
+        margin-bottom: 0;
+    }
+}
+
+section,
+footer {
+    @extend .clearfix;
+    padding: 0 $pad;
+
+    @include mq($from: tablet) {
+        padding: 0 $pad--large;
+    }
+}
+
+
+//On screens over medium breakpoint - with JS enabled,
+//Hide the animated items initially for smoother animations.
+//For no-js, don't do this -
+
+@include mq($from: tablet) {
+    .js .js-animate-on-scroll {
+        visibility: hidden;
+    }
+
+    .no-js-animations .js-animate-on-scroll {
+        visibility: visible;
+    }
+}
+
+
+//Selection styles where available -
+::-moz-selection {
+    background-color: $highlight-color--light;
+    color: $white;
+}
+
+::selection {
+    background-color: $highlight-color--light;
+    color: $white;
+}

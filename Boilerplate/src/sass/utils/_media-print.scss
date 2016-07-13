@@ -1,0 +1,35 @@
+
+@media print {
+
+    header,
+    footer,
+    .log-in,
+    .search-panel {
+        display: none !important;
+    }
+
+    .js-animate-on-scroll {
+        visibility: visible !important;
+        transform: none !important;
+    }
+
+    .expander__content {
+        display: block !important;
+    }
+
+    * {
+        background: transparent !important;
+        color: $black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+}

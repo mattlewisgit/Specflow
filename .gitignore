@@ -161,7 +161,6 @@ ClientBin/
 *.pfx
 *.publishsettings
 node_modules/
-bower_components/
 
 # RIA/Silverlight projects
 Generated_Code/
@@ -237,3 +236,25 @@ Vitality.Website/webedit.css
 
 #Setup
 /install
+
+# Client-side build.
+Vitality.Website/css/**/*.css
+Vitality.Website/client_side/sass/*.css
+Vitality.Website/client_side/sass/*.map
+
+# Diffs.
+*.orig
+*.*~HEAD
+
+# Boilerplate.
+Boilerplate/favicon-data.json
+Boilerplate/favicon-template.html
+Boilerplate/tmp-*.*
+Boilerplate/bower_components
+Boilerplate/css/
+Boilerplate/dist/
+Boilerplate/images/
+Boilerplate/img/
+Boilerplate/js/
+Boilerplate/src/sass/generated/
+Boilerplate/tmp/

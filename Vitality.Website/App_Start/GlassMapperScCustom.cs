@@ -2,10 +2,13 @@ using Glass.Mapper.Configuration;
 using Glass.Mapper.IoC;
 using Glass.Mapper.Maps;
 using Glass.Mapper.Sc.IoC;
+using Vitality.Website.Areas.Presales.SettingsTemplates;
 using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
 
 namespace Vitality.Website.App_Start
 {
+    using Vitality.Website.Areas.Presales.PageTemplates;
+
     public static  class GlassMapperScCustom
     {
 		public static IDependencyResolver CreateResolver(){
@@ -13,7 +16,6 @@ namespace Vitality.Website.App_Start
 
 			var dependencyResolver = new DependencyResolver(config);
 			// add any changes to the standard resolver here
-
 			return dependencyResolver;
 		}
 
@@ -49,6 +51,8 @@ namespace Vitality.Website.App_Start
         {
 			// Add maps here
             // mapsConfigFactory.Add(() => new SeoMap());
+            mapsConfigFactory.Add(() => new BasePageConfig());
+            mapsConfigFactory.Add(() => new GlobalSettingsConfig());
         }
     }
 }

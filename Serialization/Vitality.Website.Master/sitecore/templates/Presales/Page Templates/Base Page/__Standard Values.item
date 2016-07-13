@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {862A2312-E822-4715-A763-067DA167DC28}
+database: master
+path: /sitecore/templates/Presales/Page Templates/Base Page/__Standard Values
+parent: {F208B3A5-D159-4F81-989C-4ACA52089997}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {F208B3A5-D159-4F81-989C-4ACA52089997}
+templatekey: Base Page
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 404
+
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{9739784C-FDA6-45F1-ADA4-A86F18E3D4A0}"><r ds="{CA82253A-AD79-4CE8-AB73-7E978819FE46}" id="{874D1721-7D2C-4934-A983-B70FD0AC1B35}" par="" ph="header" uid="{B73C367C-CC35-4EE2-B7F7-CA6164E76688}" /><r id="{F643ED45-4AC0-4751-AF89-4F31755527B5}" ph="" uid="{94FFEF72-C0B2-49EE-8461-0E18871E0902}" /></d></r>
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 0
+
+
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
+----version----
+language: en
+version: 1
+revision: cf84cc29-3790-496a-9c0c-6eb58584b40f
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160505T123819Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+cf84cc29-3790-496a-9c0c-6eb58584b40f
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160616T075916Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 0
+
+

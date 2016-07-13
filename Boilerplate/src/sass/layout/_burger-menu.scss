@@ -1,0 +1,53 @@
+.burger-menu {
+    //Var used in the burger menu -
+    $burger-size: 22px;
+
+    margin: 0 auto;
+    display: inline-block;
+    width: $burger-size * 1.2;
+    height: $burger-size;
+
+    span,
+    span:before,
+    span:after {
+        display: block;
+        width: 100%;
+        height: $burger-size / 5;
+        background: $grey;
+        transition: all 0.5s;
+        backface-visibility: hidden;
+    }
+
+    span {
+        position: relative;
+        margin: ($burger-size * 2 / 5) 0 0;
+    }
+
+    span:before,
+    span:after {
+        position: absolute;
+        content: "";
+    }
+
+    span:before {
+        top: $burger-size * -2 / 5;
+    }
+
+    span:after {
+        top: $burger-size * 2 / 5;
+    }
+
+    .mainmenu-open & {
+        span:before {
+            transform: translate(0, ($burger-size * 2 / 5)) rotate(-45deg);
+        }
+
+        span:after {
+            transform: translate(0, -($burger-size * 2 / 5)) rotate(45deg);
+        }
+
+        span {
+            background: transparent;
+        }
+    }
+}

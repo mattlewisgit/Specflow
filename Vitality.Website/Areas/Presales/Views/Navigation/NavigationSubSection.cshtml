@@ -1,0 +1,48 @@
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Navigation.NavigationSubSection>
+
+<li class="section-nav__item @this.MegaMenuCssClass()" >
+
+    @RenderLink(Model, item => item.SubSectionLink)
+
+    @if (this.CanShowMegaMenu())
+    {
+    <div class="megamenu">
+        <div class="megamenu__wrap">
+            <div class="megamenu__col ">
+                <p class="megamenu__heading">@Html.Raw(Model.MainMenuHeader)</p>
+                <a href="#" class="megamenu__back">@Html.Raw(Model.SubSectionLink.Text)</a>
+
+                <ul class="megamenu__list">
+                    @foreach (var mainMenuLink in Model.MainMenuLinks)
+                    {
+                        <li>@RenderLink(mainMenuLink, item => item.Link)</li>
+                    }
+                </ul>
+            </div>
+
+            <div class="megamenu__col megamenu__col--useful">
+                <p class="megamenu__heading">@Html.Raw(Model.AdditionalMenuHeader)</p>
+                <ul class="megamenu__list">
+                    @foreach (var additionalMenuLink in Model.AdditionalMenuLinks)
+                    {
+                        <li>@RenderLink(additionalMenuLink, item => item.Link)</li>
+                    }
+                </ul>
+            </div>
+
+            @if (Model.ShowFeature)
+            {
+            <div class="megamenu__col megamenu__col--feature">
+                <div class=" megamenu-feature">
+                    <h3 class="megamenu-feature__header">@Html.Raw(Model.FeatureHeader)</h3>
+                    <p class="megamenu-feature__body">@Html.Raw(Model.FeatureBody)</p>
+                    @RenderLink(Model, item => item.FeatureLink, new { @class = "box-button box-button--light megamenu-feature__button" })
+                </div>
+            </div>
+            }
+            
+        </div>
+    </div>
+    }
+</li>

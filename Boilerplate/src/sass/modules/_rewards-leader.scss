@@ -1,0 +1,60 @@
+.rewards_leader {
+    @include text-centre;
+    border: $pad solid $darken-medium;
+    box-sizing: border-box;
+    padding: $pad--large;
+
+    .box-button {
+        margin: 0;
+    }
+
+    .feature-block__content {
+        max-width: 100%;
+    }
+
+    .feature-block__image-list {
+        margin-bottom: $pad;
+
+        a {
+            color: transparent;
+
+            &:hover img {
+                animation-name: pulse;
+                animation-duration: 0.3s;
+                animation-direction: alternate;
+                animation-timing-function: linear;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        div {
+            > img, > a {
+                &:not(:last-child) {
+                    margin-right: $pad--large;
+                }
+            }
+        }
+
+        img {
+            max-height: 80px;
+        }
+    }
+}
+    
+.feature-block {
+    &--primary {
+        background: $primary-color;
+    }
+
+    &--secondary {
+        background: $secondary-color;
+    }
+
+    &--tertiary {
+        background: $tertiary-color;
+    }
+
+    &--dark {
+        background: $secondary-background-color;
+    }
+}

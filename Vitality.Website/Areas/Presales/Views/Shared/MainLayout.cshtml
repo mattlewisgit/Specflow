@@ -1,0 +1,59 @@
+﻿@using Sitecore.Mvc
+@{
+    var isEditing = Sitecore.Context.PageMode.IsExperienceEditor
+        || Sitecore.Context.PageMode.IsExperienceEditorEditing;
+}
+<!DOCTYPE html>
+<html class="@(isEditing ? "disable-tablesaw" : null)" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<head>
+    @Html.Sitecore().Placeholder("metadata")
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0" />
+
+    @Html.Partial("_Favicons")
+    @Html.Partial("_CriticalCss")
+
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/aight/2.1.1/aight.min.js"></script>
+    <![endif]-->
+
+    @if (isEditing)
+    {
+        <link rel="stylesheet" href="/css/experience_editor_fix.css" />
+    }
+    else
+    {
+        <link rel="stylesheet" type="text/css" href="/css/tablesaw.css" />
+    }
+    
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+</head>
+<body>
+    <div class="page">
+
+        <a href="#main-content" class="offscreen">Skip to Content</a>
+        @Html.Sitecore().Placeholder("header")
+
+        <main id="main-content" tabindex="-1">
+            <section class="vertical-flush">
+                @Html.Sitecore().Placeholder("PresalesContent")
+            </section>
+        </main>
+    </div>
+
+    @Html.Sitecore().Placeholder("footer")
+    @Html.Partial("_JsThirdParty")
+
+    @if (!isEditing)
+    {
+        <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw.js"></script>
+        <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw-init.js"></script>
+    }
+
+    <script type="text/javascript" src="/js/vitality-boilerplate-1.0.0.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+
+.media-object {
+    margin: $pad auto;
+
+    &__image {
+        text-align: center;
+        display: block;
+
+        > img {
+            max-width: 70%;
+        }
+    }
+}
+
+
+@include mq($from: tablet) {
+    .media-object {
+        display: table;
+        width: 100%;
+        margin: $pad--large auto;
+
+
+        &__image,
+        &__body {
+            text-align: left;
+            display: table-cell;
+            vertical-align: middle;
+
+            .media-object--top & {
+                vertical-align: top;
+            }
+
+            .media-object--bottom & {
+                vertical-align: bottom;
+            }
+        }
+
+        &__image {
+            padding-right: $pad--large;
+            width: 20%;
+
+            > img {
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+            }
+        }
+
+        &__body {
+            width: 75%;
+        }
+        // Reversed modifier -
+        &--right {
+            direction: rtl;
+
+            .media-object__body,
+            .media-object__image {
+                direction: ltr;
+            }
+
+            .media-object__image {
+                padding-right: 0;
+                padding-left: $pad--large;
+            }
+        }
+    }
+}

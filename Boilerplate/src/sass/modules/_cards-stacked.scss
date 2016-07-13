@@ -1,0 +1,19 @@
+// Set a default background colour, which enables the component
+// to be used without a background, particularly useful when editing.
+.cards-stacked {
+    background: $primary-background-color;
+}
+
+@include mq($until: mobile-landscape) {
+    .cards-stacked {
+        // Must force an override here,
+        // as the background imageis set on the element.
+        background: $primary-background-color !important;
+        color: $black;
+
+        .spotlight__heading, .spotlight__intro {
+            color: $black;
+        }
+    }
+}
+

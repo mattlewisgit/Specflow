@@ -1,0 +1,32 @@
+{
+    "bitwise": false,
+    "browser": true,
+    "curly": true,
+    "devel": false,
+    "eqeqeq": true,
+    "forin": true,
+    "freeze": true,
+    "futurehostile": true,
+    "maxcomplexity": 5,
+    "maxdepth": 4,
+    "maxparams": 4,
+    "maxstatements": 20,
+    "noarg": true,
+    "nocomma": true,
+    "nonbsp": true,
+    "nonew": true,
+    "shadow": "outer",
+    "strict": true,
+    "undef": true,
+    "unused": true,
+    "varstmt": false,
+    "predef": [
+        "$",
+        "FastClick",
+        "jQuery",
+        "Modernizr",
+        "module",
+        "require",
+        "WOW"
+    ]
+}

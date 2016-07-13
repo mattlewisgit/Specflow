@@ -1,0 +1,236 @@
+$menu-transition-time: 0.5s;
+
+.megamenu {
+    //display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    background-color: $white;
+
+    &__heading {
+        @include font-size(1.3);
+        display: none;
+        font-weight: 200;
+        text-transform: uppercase;
+        color: $body-color--alt;
+        letter-spacing: 0.1em;
+    }
+
+    &__list {
+        @extend .non-list;
+        padding: 0 20px;
+
+        li {
+            @extend .coverlink;
+            @extend .mobile-nav-link;
+        }
+
+        a {
+            padding: 1em;
+            text-decoration: none;
+        }
+    }
+    //Mobile back button -
+    &__back {
+        position: relative;
+        padding: 15px 0 16px 50px;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: $body-color;
+        // Underline
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            right: 20px;
+            height: 1px;
+            background-color: $outline-color;
+        }
+        // Left arrow icon -
+        &:after {
+            @include retina-sprite($sprite-arrow-left-grey-group);
+            content: "";
+            display: block;
+            position: absolute;
+            left: 20px;
+            top: calc(50% - 9px);
+        }
+
+        &:hover,
+        &:focus,
+        &.js-focus {
+            &:after {
+                @include retina-sprite($sprite-arrow-left-pink-group);
+            }
+        }
+    }
+
+    &__col--useful {
+        .megamenu__heading {
+            display: block;
+            padding: 10px 20px;
+            margin: 0;
+            background-color: $grey--light;
+        }
+    }
+}
+
+
+//Fix to stop megamenu abruptley disappearing when closing the mobile megamenu -
+.megamenu {
+    visibility: hidden;
+    transition: visibility 0s $menu-transition-time;
+}
+
+.section-nav__item--megamenu.js-focus {
+    .megamenu {
+        visibility: visible;
+        transition: visibility 0s 0s;
+    }
+}
+
+// Megamenu Feature
+.megamenu-feature {
+    position: relative;
+    display: none;
+    padding: 20px;
+    background-color: $primary-color;
+
+    &__header {
+        color: $white;
+        margin-top: 0;
+    }
+
+    &__body {
+        color: $white;
+    }
+
+    &__button {
+        margin-bottom: 0;
+    }
+    //Feature blocks with images display at larger screen sizes -
+    @include mq($from: wide) {
+        &--image {
+            padding-right: 30%;
+        }
+
+        &__image-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 30%;
+            width: calc(30% - 20px);
+            height: 100%;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+    }
+}
+
+//Mobile megamenu sliding functionality -
+.section-nav,
+.site-nav--small {
+    @include mq($until: tablet) {
+        transition: transform $menu-transition-time ease;
+
+        .megamenu-open & {
+            transform: translateX(-100%);
+        }
+    }
+}
+
+//
+// Desktop megamenu -
+//
+@include mq($from: tablet) {
+    .megamenu {
+        //Hide megamenus for the time being -
+        display: none;
+        visibility: visible;
+        transition: none;
+        top: 100%;
+        left: 0;
+        z-index: 1;
+        //Bottom drop shadow -
+        box-shadow: 0 20px 20px -14px $dropshadow-color;
+
+        &__heading {
+            display: block;
+        }
+
+        &__wrap {
+            @include outer-container;
+            width: 87.5%;
+            max-width: 1500px;
+        }
+
+        &__col {
+            @include span-columns(6);
+            @include omega(2n);
+            text-align: left;
+            padding: $pad;
+        }
+
+        &__list {
+            padding: 0;
+
+            li {
+                padding: 0;
+                border: 0;
+
+                a {
+                    padding: 0.5em 0;
+                }
+            }
+        }
+
+        &__back {
+            display: none;
+        }
+
+        &__col--useful {
+            .megamenu__heading {
+                padding: 0;
+                margin-top: 0.5em;
+                margin-bottom: 1em;
+                background-color: transparent;
+            }
+        }
+    }
+
+    //Show hide funcitons -
+    .section-nav__item--megamenu:hover,
+    .section-nav__item--megamenu:focus,
+    .section-nav__item--megamenu.js-focus {
+
+        .megamenu {
+            display: block;
+        }
+    }
+}
+
+@include mq($from: wide) {
+    .megamenu {
+        &__col {
+            @include span-columns(3);
+            @include omega-reset(2n);
+        }
+
+        &__col:first-child {
+            @include shift(1);
+        }
+
+        &__col--feature {
+            @include span-columns(5);
+        }
+    }
+
+    .megamenu-feature {
+        display: block;
+    }
+}

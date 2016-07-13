@@ -1,0 +1,107 @@
+----item----
+version: 1
+id: {5F16610E-4879-416D-9104-EFB56D687CC0}
+database: master
+path: /sitecore/layout/Renderings/Presales/Summary/Summary Component
+parent: {17928309-11B7-4AD8-AB3B-B39E9A8E9F71}
+name: Summary Component
+master: {00000000-0000-0000-0000-000000000000}
+template: {99F8905D-4A87-4EB8-9F8B-A9BEBFB3ADD6}
+templatekey: View rendering
+
+----field----
+field: {51B435BC-F7B9-478A-9C51-52916AF96FF5}
+name: Path
+key: path
+content-length: 53
+
+/Areas/Presales/Views/Summary/SummaryComponent.cshtml
+----field----
+field: {F869E724-0718-43E4-92A0-D612FE191CFB}
+name: Area
+key: area
+content-length: 8
+
+Presales
+----field----
+field: {7D24E54F-5C16-4314-90C9-6051AA1A7DA1}
+name: Parameters Template
+key: parameters template
+content-length: 38
+
+{7D52C634-D455-42EE-ADB6-17090ECFAFA9}
+----field----
+field: {3D08DB46-2267-41B0-BC52-BE69FD618633}
+name: Cacheable
+key: cacheable
+content-length: 1
+
+1
+----field----
+field: {8B6D532B-6128-4486-A044-CA06D90948BA}
+name: VaryByData
+key: varybydata
+content-length: 1
+
+1
+----field----
+field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
+name: Datasource Location
+key: datasource location
+content-length: 42
+
+/sitecore/content/Presales/Content/Summary
+----field----
+field: {1A7C85E5-DC0B-490D-9187-BB1DBCB4C72F}
+name: Datasource Template
+key: datasource template
+content-length: 74
+
+/sitecore/templates/Presales/Component Templates/Summary/Summary Component
+----field----
+field: {A2F5D9DF-8CBA-4A1D-99EB-51ACB94CB057}
+name: Page Editor Buttons
+key: page editor buttons
+content-length: 77
+
+{31A3A929-C599-4DD3-91A6-F4A9487CC8B7}|{6E281DBE-EA70-4F29-9045-265CA310C8F9}
+----field----
+field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
+name: __Thumbnail
+key: __thumbnail
+content-length: 58
+
+<image mediaid="{D755C235-8BF3-4A27-8C34-7665B6863932}" />
+----version----
+language: en
+version: 1
+revision: 2360f484-9182-4f04-a4da-daced7477aec
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160523T102824Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+2360f484-9182-4f04-a4da-daced7477aec
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160526T101756Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

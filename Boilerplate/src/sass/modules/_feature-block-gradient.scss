@@ -1,0 +1,272 @@
+//Variable to alter graident spread -
+$gradient-solid-to: 50%;
+$gradient-transparent-by: 100%;
+
+//Left side content by default -
+.feature-block-gradient {    
+    position: relative;    
+
+    &__image {
+        background-size: cover;
+        background-position: 50% 50%;
+        width: 100%;
+        height: 0%;
+        padding-top: 50%;
+        position: relative;
+    }
+
+    &__content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        //Remove top margin of first child -
+        > :first-child {
+            margin-top: 0;
+        }
+    }
+
+    &__content-container {
+        padding: $pad;
+    }
+    //color block -
+    &:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    //Right side content with --right modifier -
+    &--right {
+        @extend .feature-block-gradient;
+
+        .feature-block-gradient__content-container {
+            padding: $pad;
+        }
+    }
+    //Color modifiers -
+    &--primary {
+        &:before {
+            background-color: $primary-color;
+        }
+
+        .feature-block-gradient__content {
+            @extend .text-light;
+        }
+    }
+
+    &--secondary {
+        &:before {
+            background-color: $secondary-color;
+        }
+
+        .feature-block-gradient__content {
+            @extend .text-light;
+        }
+    }
+
+    &--tertiary {
+
+        &:before {
+            background-color: $tertiary-color;
+        }
+
+        .feature-block-gradient__content {
+            @extend .text-light;
+        }
+    }
+
+    &--highlight {
+        &:before {
+            background-color: $highlight-color;
+        }
+
+        .feature-block-gradient__content {
+            @extend .text-light;
+        }
+    }
+
+    &--light {
+        &:before {
+            background-color: $primary-background-color;
+        }
+
+        .feature-block-gradient__content {
+            @extend .text-dark;
+        }
+    }
+
+    &--dark {
+        &:before {
+            background-color: $secondary-background-color;
+        }
+
+        .feature-block-gradient__content {
+            @extend .text-light;
+        }
+    }
+}
+
+@include mq($from: tablet) {
+    .feature-block-gradient {
+        &__content-container {
+            padding: $pad--large;
+        }
+
+        &--right {
+            .feature-block-gradient__content-container {
+                padding: $pad--large;
+            }
+        }
+    }
+}
+
+@include mq($from: desktop) {
+
+    .feature-block-gradient {
+
+        &__image {
+            position: absolute;
+            z-index: 0;
+            height: 100%;
+            padding-top: 0;
+        }
+
+        &__content-container {
+            padding: $pad--large calc(50% + #{$pad--large}) $pad--large $pad--large;
+        }
+
+        &__content {
+            @include max-text-width;
+            z-index: 2;
+        }
+        //Gradient -
+        &:before {
+            //Fallback for no cssgradients support -
+            width: 50%;
+            z-index: 1;
+
+            .cssgradients & {
+                width: 100%;
+                background-color: transparent;
+                background-image: linear-gradient(to right, currentColor 50%, transparent 100%);
+            }
+        }
+        // --right modifier -
+        &--right {
+
+            &:before {
+                //Fallback for no cssgradients support -
+                left: auto;
+                right: 0;
+            }
+
+            .feature-block-gradient__content-container {
+                padding: $pad--large $pad--large $pad--large calc(50% + #{$pad--large});
+            }
+        }
+        //Color modifiers -
+        &--primary {
+
+            &:before {
+                //Fallback for no cssgradients support -
+                background-color: $primary-color;
+
+                .cssgradients & {
+                    background-color: transparent;
+                    background-image: linear-gradient(to right, $primary-color $gradient-solid-to, transparent $gradient-transparent-by);
+                }
+            }
+
+            &.feature-block-gradient--right:before {
+                background-image: linear-gradient(to left, $primary-color $gradient-solid-to, transparent $gradient-transparent-by);
+            }
+        }
+
+        &--secondary {
+
+            &:before {
+                //Fallback for no cssgradients support -
+                background-color: $secondary-color;
+
+                .cssgradients & {
+                    background-color: transparent;
+                    background-image: linear-gradient(to right, $secondary-color $gradient-solid-to, transparent $gradient-transparent-by);
+                }
+            }
+
+            &.feature-block-gradient--right:before {
+                background-image: linear-gradient(to left, $secondary-color $gradient-solid-to, transparent $gradient-transparent-by);
+            }
+        }
+
+        &--tertiary {
+
+            &:before {
+                //Fallback for no cssgradients support -
+                background-color: $tertiary-color;
+
+                .cssgradients & {
+                    background-color: transparent;
+                    background-image: linear-gradient(to right, $tertiary-color $gradient-solid-to, transparent $gradient-transparent-by);
+                }
+            }
+
+            &.feature-block-gradient--right:before {
+                background-image: linear-gradient(to left, $tertiary-color $gradient-solid-to, transparent $gradient-transparent-by);
+            }
+        }
+
+        &--highlight {
+
+            &:before {
+                //Fallback for no cssgradients support -
+                background-color: $highlight-color;
+
+                .cssgradients & {
+                    background-color: transparent;
+                    background-image: linear-gradient(to right, $highlight-color $gradient-solid-to, transparent $gradient-transparent-by);
+                }
+            }
+
+            &.feature-block-gradient--right:before {
+                background-image: linear-gradient(to left, $highlight-color $gradient-solid-to, transparent $gradient-transparent-by);
+            }
+        }
+
+        &--light {
+
+            &:before {
+                //Fallback for no cssgradients support -
+                background-color: $primary-background-color;
+
+                .cssgradients & {
+                    background-color: transparent;
+                    background-image: linear-gradient(to right, $primary-background-color $gradient-solid-to, transparent $gradient-transparent-by);
+                }
+            }
+
+            &.feature-block-gradient--right:before {
+                background-image: linear-gradient(to left, $primary-background-color $gradient-solid-to, transparent $gradient-transparent-by);
+            }
+        }
+
+        &--dark {
+
+            &:before {
+                //Fallback for no cssgradients support -
+                background-color: $secondary-background-color;
+
+                .cssgradients & {
+                    background-color: transparent;
+                    background-image: linear-gradient(to right, $secondary-background-color $gradient-solid-to, transparent $gradient-transparent-by);
+                }
+            }
+
+            &.feature-block-gradient--right:before {
+                background-image: linear-gradient(to left, $secondary-background-color $gradient-solid-to, transparent $gradient-transparent-by);
+            }
+        }
+    }
+}

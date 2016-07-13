@@ -1,0 +1,9 @@
+----role----
+name: sitecore\Sitecore Client Configuring
+
+----role-in-role----
+rolename: sitecore\Developer
+
+----role-in-role----
+rolename: sitecore\Sitecore Client Bucket Management
+

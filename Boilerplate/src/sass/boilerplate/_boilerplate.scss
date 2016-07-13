@@ -1,0 +1,76 @@
+@import "../base/vars";
+
+// CSS specific to the boilerplate demo.
+// Excluded from final production CSS.
+
+// Triangle callout util testing.
+.box-holder {
+    @extend .clearfix;
+    margin: 0 auto;
+
+    .flexbox & {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .no-flexbox & {
+        text-align: center;
+    }
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    margin: 80px auto;
+    position: relative;
+
+    .no-flexbox & {
+        display: inline-block;
+    }
+}
+
+.box--pink {
+    background-color: pink;
+
+    &.callout-tri--central-down {
+        @include triangle-callout--central-down(pink);
+    }
+
+    &.callout-tri--left-up {
+        @include triangle-callout--left-up(pink, 80px, 60px);
+    }
+}
+
+.box--green {
+    background-color: seagreen;
+
+    &.callout-tri--central-down {
+        @include triangle-callout--central-down(seagreen, 60px, 44px);
+    }
+
+    &.callout-tri--left-up {
+        @include triangle-callout--left-up(seagreen);
+    }
+}
+
+// Test for column animation delay utility.
+.animation-test {
+    padding-top: 50px;
+
+    .anim-test-box {
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0,0,255,0.2);
+        display: inline-block;
+        margin: 0 2px;
+    }
+}
+
+.test-background {
+    background-color: $primary-color;
+
+    background-image:
+        repeating-linear-gradient(transparent, transparent 50px,rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+        repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
+        repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px);
+}

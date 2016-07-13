@@ -1,0 +1,183 @@
+.page-footer {
+    @extend .clearfix;
+    width: 100%;
+    background-color: $tertiary-background-color;
+    padding: $pad;
+
+    &__grid {
+        @extend .clearfix;
+        @include outer-container;
+    }
+
+    &__header {
+        color: $white;
+        font-weight: 500;
+        margin-bottom: 0.5em;
+    }
+
+    &__logo {
+        text-align: center;
+    }
+
+    &__logo--small {
+        margin: 10px auto;
+    }
+
+    &__logo--large {
+        display: none;
+    }
+
+    &__logo-img {
+        display: block;
+        max-width: 100px;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    &__copyright {
+        @include font-size(1.3);
+        color: $body-color--alt;
+    }
+
+    &__links--small {
+        margin-bottom: 20px;
+    }
+    // Link lists -
+    &__list {
+        @extend .non-list;
+        margin-top: 0;
+
+        li {
+            line-height: 1;
+            margin-bottom: 0.5em;
+        }
+
+        a {
+            @include font-size(1.4);
+            color: $secondary-color;
+            text-decoration: none;
+            font-weight: 300;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &--helpful {
+            li {
+                width: 100%;
+                padding-right: 10px;
+            }
+        }
+    }
+
+    &__connect {
+        @extend .clearfix;
+    }
+
+    &__quote,
+    &__helpful,
+    &__connect .page-footer__header {
+        display: none;
+    }
+
+    .social-icons-list {
+        max-width: 225px;
+        margin: 0 auto;
+    }
+
+    @include mq($from: mobile-landscape) {
+        &__quote {
+            @include span-columns(4);
+        }
+
+        &__helpful {
+            @include span-columns(8);
+            @include omega();
+        }
+
+        &__connect {
+            width: 50%;
+            float: right;
+            margin-top: 20px;
+        }
+
+        &__logo--small {
+            width: 50%;
+            float: left;
+            margin-top: 20px;
+        }
+
+        &__connect .page-footer__header {
+            display: block;
+        }
+
+        .social-icons-list {
+            margin: 0;
+
+            img {
+                margin: 0;
+            }
+        }
+        //Hide the mobile accordion links & show the larger grid versions -
+        &__links--small {
+            display: none;
+        }
+
+        &__logo-img {
+            margin: 0;
+        }
+
+        &__logo {
+            text-align: left;
+        }
+        // Multiple columns of "helpful links"
+        &__list--helpful {
+            li {
+                width: 50%;
+                float: left;
+            }
+        }
+    }
+    // More padding and grid layout where possible -
+    @include mq($from: tablet) {
+        padding: $pad--large;
+
+        &__logo,
+        &__quote,
+        &__helpful,
+        &__connect {
+            margin-top: 0;
+        }
+
+        &__logo {
+            @include span-columns(3);
+        }
+
+        &__quote {
+            @include span-columns(2);
+        }
+
+        &__helpful {
+            @include span-columns(4);
+        }
+
+        &__connect {
+            @include span-columns(3);
+            @include omega();
+        }
+
+        &__copyright {
+            margin-top: 4em;
+            margin-bottom: 0;
+        }
+
+        &__logo--large {
+            display: block;
+        }
+
+        &__logo--small {
+            display: none;
+        }
+    }
+}

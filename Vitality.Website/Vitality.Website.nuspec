@@ -11,14 +11,19 @@
     <releaseNotes></releaseNotes>
   </metadata>
   <files>
-	<file src="_Tools\PackageInstaller.asmx" target="_Tools" />
-	<file src="App_Config\ConnectionStrings.config" target="App_Config" />
-	<file src="App_Config\**\*.*" target="App_Config" />
-	<file src="bin\**\*.dll" exclude="bin\**\Sitecore.*.dll;bin\**\System.*.dll" target="bin" />
-	<file src="Views\**\*.*" target="Views" />
-	<file src="Global.asax" />
-	<file src="packages.config" />
-	<file src="Web.config" />
-	<file src="Web.Release.config" />
+      <file src="App_Config\ConnectionStrings.config" target="App_Config" />
+      <file src="App_Config\**\*.*" target="App_Config" />
+      <file src="Areas\Presales\Views\**\*.*" target="Areas\Presales\Views" />
+      <file src="bower_components\**\*.css" target="bower_components" />
+      <file src="bower_components\**\*.js" target="bower_components" />
+      <file src="bin\**\*.dll" target="bin" />
+      <file src="bin\**\*.lic" target="bin" />
+      <file src="css\*.css" target="css" />
+      <file src="css\*.png" target="css" />
+      <file src="Global.asax" />
+      <file src="img\**\*.*" target="img" />
+      <file src="js\*.js" target="js" />
+      <file src="Web.config" />
+      <file src="Web.Release.config" />
   </files>
 </package>

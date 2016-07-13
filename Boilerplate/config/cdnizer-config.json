@@ -1,0 +1,52 @@
+﻿{
+    "allowMin": true,
+    "allowRev": true,
+    "files": [
+        {
+            "file": "/bower_components/angular/angular.min.js",
+            "package": "angular",
+            "test": "window.angular",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/angular.js/${version}/angular.min.js"
+        },
+        {
+            "file": "/bower_components/jquery/dist/jquery.min.js",
+            "package": "jquery",
+            "test": "window.jQuery",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/jquery/${version}/jquery.min.js"
+        },
+        {
+            "file": "/bower_components/wowjs/dist/wow.min.js",
+            "package": "wowjs",
+            "test": "window.WOW",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/wow/${version}/wow.min.js"
+        },
+        {
+            "file": "/bower_components/jquery-match-height/jquery.matchHeight-min.js",
+            "package": "jquery-match-height",
+            "test": "$(window).matchHeight",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/${version}/jquery.matchHeight-min.js"
+        },
+        {
+            "file": "/bower_components/fastclick/lib/fastclick.js",
+            "package": "fastclick",
+            "test": "window.FastClick",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/fastclick/${version}/fastclick.min.js"
+        },
+        {
+            "file": "/bower_components/jquery.smartresize/jquery.smartresize.js",
+            "package": "jquery.smartresize",
+            "test": "$.event.special.debouncedresize",
+            "cdn": "//cdn.jsdelivr.net/jquery.smartresize/0.1/jquery.debouncedresize.js"
+        },
+        {
+            "file": "/bower_components/animate.css/animate.min.css",
+            "package": "animate.css",
+            "cdn":  "//cdnjs.cloudflare.com/ajax/libs/animate.css/${version}/animate.css"
+        },
+        {
+            "file": "/bower_components/normalize.css/normalize.css",
+            "package": "normalize.css",
+            "cdn":  "//cdnjs.cloudflare.com/ajax/libs/normalize/${version}/normalize.min.css"
+        }
+    ]
+}

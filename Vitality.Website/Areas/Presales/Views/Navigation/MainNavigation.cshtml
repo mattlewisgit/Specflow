@@ -1,0 +1,210 @@
+﻿@using System.Web.Mvc.Html
+@using Vitality.Website.Areas.Global.Models
+@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Navigation.MainNavigation>
+
+<header class="page-header">
+
+    @Html.Partial("/Areas/Presales/Views/Navigation/MobileNavigation.cshtml", Model)
+
+    <!-- top-bar desktop - contains site nav -->
+    <div class="top-bar top-bar--large">
+
+        <ul class="site-nav">
+
+            @foreach (var navigationSection in Model.NavigationSections)
+            {
+                if (this.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()).Equals(navigationSection))
+                {
+                    <li class="site-nav__item is-active">
+                        @RenderLink(navigationSection, item => item.SectionLink)
+                    </li>
+                }
+                else
+                {
+                    <li class="site-nav__item">
+                        @RenderLink(navigationSection, item => item.SectionLink)
+                    </li>
+                }
+            }
+
+        </ul>
+
+        <ul class="utility-nav">
+
+            <li class="utility-nav__item utility-nav__item--search js-search-toggle">
+                @using (BeginRenderLink(Model, item => item.SearchPage))
+                {
+                    <img src="/img/search.svg" alt="Search">
+                    @Html.Raw(Model.SearchPage.Text)
+                }
+            </li>
+
+            <li class="utility-nav__item utility-nav__item--log-in js-log-in-toggle">
+                <a href="#">@Html.Raw(Model.LogInText)</a>
+
+                <!-- log in panel desktop -->
+                <div class="log-in log-in--large">
+                    <div class="log-in__content">
+                        <div class="log-in__links">
+                            @foreach (var loginLink in Model.LoginLinks)
+                            {
+                                @RenderLink(loginLink, m => m.Link, this.LoginLinkCssClass(loginLink))
+                            }
+                        </div>
+                    </div>
+                </div>
+                <!-- end log in panel desktop-->
+            </li>
+
+            <li class="utility-nav__item">
+                @RenderLink(Model, item => item.ContactUsPage)
+            </li>
+
+            <li class="utility-nav__item utility-nav__item--social">
+                <ul class="social-icons-list">
+
+                    @foreach (var socialLink in Model.SocialLinks)
+                    {
+                        <li class="social-icon">
+                            @using (BeginRenderLink(socialLink, item => item.Link))
+                            {
+                                @RenderImage(socialLink, item => item.Image, isEditable: false)
+                            }
+                        </li>
+                    }
+
+                </ul>
+            </li>
+        </ul>
+
+    </div><!-- end top-bar desktop-->
+    <!-- section-nav - for all sizes - contains megamenu -->
+    @Html.Partial("/Areas/Presales/Views/Navigation/NavigationSection.cshtml", this.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()))
+    <!-- end section-nav -->
+    <!-- site-nav for mobile, moved to botom of menu -->
+    <ul class="site-nav--small">
+
+        @foreach (var navigationSection in Model.NavigationSections)
+        {
+            if (this.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()).Equals(navigationSection))
+            {
+                <li class="site-nav__item is-active">
+                    @RenderLink(navigationSection, item => item.SectionLink)
+                </li>
+            }
+            else
+            {
+                <li class="site-nav__item">
+                    @RenderLink(navigationSection, item => item.SectionLink)
+                </li>
+            }
+        }
+
+        <li class="site-nav__item">
+            @RenderLink(Model, item => item.ContactUsPage)
+        </li>
+
+    </ul>
+
+</header>
+
+<!-- log in panel for mobile -->
+<div class="log-in log-in--small">
+    <div class="log-in__content">
+        <div class="log-in__links">
+            @foreach (var loginLink in Model.LoginLinks)
+            {
+                @RenderLink(loginLink, m => m.Link, this.LoginLinkCssClass(loginLink))
+            }
+        </div>
+    </div>
+</div>
+<!-- end log in panel mobile-->
+<!-- search panel for mobile -->
+<div class="search-panel">
+
+    <div class="search-panel__content pinch">
+
+        <div class="search-panel__header">
+
+            <p>Type anything to search Vitality</p>
+
+            <div class="search-panel__close-button js-search-close"><p>Close</p></div>
+
+        </div>
+
+        <div class="search-panel__search-field form">
+            <div class="form__field">
+                <input type="text" class="search-panel__search-input js-search-input" placeholder="Search...">
+            </div>
+
+            <div class="search-panel__search-details">
+                <p><span class="js-search-matches">X</span> results for <span class="search-string js-search-string">search term</span>.
+            </div>
+
+        </div>
+
+        <div class="search-panel__search-results">
+
+            <p class="search-results__header">Products (3)</p>
+
+            <ul class="search-results__list">
+
+                <li class="search-results__item">
+                    <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Health Insurance</a></h4>
+                    <p class="search-results__item-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, illo...
+                    </p>
+                </li>
+
+                <li class="search-results__item">
+                    <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Stay healthy at work</a></h4>
+                    <p class="search-results__item-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+                    </p>
+                </li>
+
+                <li class="search-results__item">
+                    <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Free Vitality healthcheck</a></h4>
+                    <p class="search-results__item-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non!...
+                    </p>
+                </li>
+
+            </ul>
+
+            <p class="search-results__header">Tools (3)</p>
+
+            <ul class="search-results__list">
+
+                <li class="search-results__item">
+                    <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Health Insurance</a></h4>
+                    <p class="search-results__item-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quos, dolorum molestiae ab cupiditate sunt maxime error, dolorem est labore veniam saepe quae asperiores sequi consequuntur consequatur assumenda nam voluptates amet totam. A optio iure modi maiores commodi, hic aspernatur...
+                    </p>
+                </li>
+
+                <li class="search-results__item">
+                    <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Stay healthy at work</a></h4>
+                    <p class="search-results__item-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates...
+                    </p>
+                </li>
+
+                <li class="search-results__item">
+                    <h4 class="search-results__item-header"><a href="/style-guide/Spotlight">Free Vitality healthcheck</a></h4>
+                    <p class="search-results__item-body">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non!...
+                    </p>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="search-panel__background-image" style="background-image: url('/img/search-background.png');">
+        </div>
+
+    </div>
+</div>
+<!-- end search panel mobile-->

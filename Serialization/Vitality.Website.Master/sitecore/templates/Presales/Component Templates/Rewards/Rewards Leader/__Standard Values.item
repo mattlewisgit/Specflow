@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {A3F26CA9-DE69-4E66-8C6B-950C5E90ECED}
+database: master
+path: /sitecore/templates/Presales/Component Templates/Rewards/Rewards Leader/__Standard Values
+parent: {5CDF9BF1-35E1-4E28-8718-21F6506D7AE5}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {5CDF9BF1-35E1-4E28-8718-21F6506D7AE5}
+templatekey: Rewards Leader
+
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{BDD88ED4-C40F-43A1-9900-572B18179434}
+----version----
+language: en
+version: 1
+revision: 2d1adbe4-41c1-4dbf-a099-8b353eef2059
+
+----field----
+field: {473D5805-93D0-4DBE-8C13-99A4D489AA12}
+name: Headline
+key: headline
+content-length: 5
+
+$name
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160509T102710Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+2d1adbe4-41c1-4dbf-a099-8b353eef2059
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160509T103605Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

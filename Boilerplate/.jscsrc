@@ -1,0 +1,24 @@
+{
+    "disallowKeywords": ["with"],
+    "disallowTrailingComma":  true,
+    "disallowTrailingWhitespace": true,
+    "requireCurlyBraces": [ "return", "continue", "break" ],
+    "requireSpaceBeforeObjectValues": true,
+    "requireSpaceBetweenArguments": true,
+    "requireSpacesInConditionalExpression": {
+        "afterTest": true,
+        "beforeConsequent": true,
+        "afterConsequent": true,
+        "beforeAlternate": true
+    },
+    "requireSpacesInForStatement": true,
+    "requireSpacesInFunctionExpression": {
+        "beforeOpeningCurlyBrace": true
+    },
+    "validateCommentPosition": {
+        "position": "above"
+    },
+    "validateIndentation": 4,
+    "validateParameterSeparator": ", ",
+    "validateQuoteMarks": "\""
+}

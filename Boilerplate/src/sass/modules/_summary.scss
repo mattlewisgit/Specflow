@@ -1,0 +1,103 @@
+@import "../base/vars";
+@import "../generated/sprite";
+@import "../generated/svg-sprite";
+@import "../utils/mixins";
+
+$_padding: 3%;
+
+@include mq($from: tablet) {
+    .summary.grid .grid-col-6-12 {
+        margin-right: 0;
+        width: $width--half;
+    }
+}
+
+.summary-left, .summary-right {
+    font-size: 90%;
+    line-height: 1.5;
+    padding: $_padding;
+}
+
+.summary-right {
+    &.feature-block-gradient__image {
+        position: relative;
+    }
+
+    .title h4, .content {
+        background: $darken-heavy;
+        margin: 0;
+    }
+
+    .title {
+        @include text-centre;
+
+        h4 {
+            @include tab-rounding;
+            display: inline-block;
+            font-size: 1.7rem;
+            padding: $_padding ($_padding + 1);
+        }
+    }
+
+    .content {
+        @include rounding;
+        padding: $_padding;
+
+        p {
+            margin: 0;
+
+            &:first-child {
+                padding-bottom: $_padding;
+            }
+        }
+
+        h6 {
+            font-weight: 600;
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        .iconlist__item {
+            $_padding-abs: 10px;
+            border-top: $dashed-border;
+            padding: $_padding-abs;
+            padding-left: $_padding-abs * 3;
+
+            &:before {
+                @include retina-sprite($sprite-tick-circle-teal-group);
+                top: 12px;
+            }
+        }
+
+        .iconlist--full .iconlist__item {
+            padding-right: 0;
+        }
+
+        @include mq($from: tablet) {
+            ul:not(.iconlist--full) {
+                $gap: 2%;
+
+                .iconlist__item {
+                    width: $width--half - $gap;
+
+                    &:nth-child(odd) {
+                        margin-right: $gap * 2;
+                    }
+                }
+            }
+        }
+
+        .cta {
+            @include text-centre;
+            padding-top: $_padding;
+            
+            a {
+                display: inline-block;
+                width: $width--near-max;
+            }
+        }
+    }
+}
