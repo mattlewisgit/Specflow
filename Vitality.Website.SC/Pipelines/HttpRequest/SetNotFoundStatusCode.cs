@@ -1,6 +1,7 @@
 ﻿namespace Vitality.Website.SC.Pipelines.HttpRequest
 {
-    using System;
+    using System.Net;
+    using System.Web;
 
     using Sitecore.Pipelines.HttpRequest;
 
@@ -8,7 +9,11 @@
     {
         public override void Process(HttpRequestArgs args)
         {
-            throw new NotImplementedException();
+            if (HttpContext.Current.Items[NotFoundItemResolver.ItemNotFound] != null && (bool)HttpContext.Current.Items[NotFoundItemResolver.ItemNotFound])
+            {
+                HttpContext.Current.Response.StatusCode = (int)HttpStatusCode.NotFound;
+                HttpContext.Current.Response.TrySkipIisCustomErrors = true;
+            }
         }
     }
 }
