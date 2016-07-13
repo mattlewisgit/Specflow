@@ -20,8 +20,8 @@
 
         public static NavigationSection GetActiveNavigationSection(this GlassView<MainNavigation> view, SitecoreItem contextItem)
         {
-            return view.Model.NavigationSections
-                .Where(item => contextItem.Url.StartsWith(item.SectionLink.Url))
+            return  view.Model.NavigationSections
+                .Where(item => item.SectionLink != null && contextItem.Url.StartsWith(item.SectionLink.Url))
                 .OrderByDescending(item => item.SectionLink.Url.Length)
                 .FirstOrDefault();
         }
