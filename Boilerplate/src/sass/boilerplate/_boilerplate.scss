@@ -1,5 +1,3 @@
-@import "../base/vars";
-
 // CSS specific to the boilerplate demo.
 // Excluded from final production CSS.
 
@@ -51,6 +49,11 @@
     &.callout-tri--left-up {
         @include triangle-callout--left-up(seagreen);
     }
+}
+
+.example--box {
+    background-color: $grey--light;
+    padding: $pad 0;
 }
 
 // Test for column animation delay utility.
