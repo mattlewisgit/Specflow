@@ -4,7 +4,7 @@
         || Sitecore.Context.PageMode.IsExperienceEditorEditing;
 }
 <!DOCTYPE html>
-<html class="@(isEditing ? "disable-tablesaw" : null)" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+<html class="@(isEditing ? "disable-tablesaw" : null)" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">
 <head>
     @Html.Sitecore().Placeholder("metadata")
 
@@ -34,7 +34,6 @@
 </head>
 <body>
     <div class="page">
-
         <a href="#main-content" class="offscreen">Skip to Content</a>
         @Html.Sitecore().Placeholder("header")
 
