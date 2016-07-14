@@ -203,6 +203,7 @@
     <Content Include="src\img\logos\white\weightwatchers_white.png" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
+    <Content Include="src\js\modules\cookieMessageModule.js" />
     <Content Include="src\js\modules\collapsibleModule.js" />
     <Content Include="src\js\modules\breakpointsModule.js" />
     <Content Include="src\js\modules\quoteFooterModule.js" />

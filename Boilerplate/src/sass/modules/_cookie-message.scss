@@ -1,7 +1,9 @@
 .cookie-message {
-    @extend .burst;
     @extend .text-light;
     background-color: $primary-color;
+
+    // Start hidden and let JavaScript determine whether it should be shown.
+    display: none;
 
     a, div, p {
         margin: 0;
@@ -15,6 +17,10 @@
         &:focus, &:hover {
             color: $secondary-color;
         }
+    }
+
+    .box-button {
+        cursor: pointer;
     }
 }
 
