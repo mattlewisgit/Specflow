@@ -7,7 +7,7 @@
     }
 
     &__header {
-        font-weight: 500;
+        @extend .font-weight--regular;
 
         img {
             display: inline-block;

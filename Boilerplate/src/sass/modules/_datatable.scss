@@ -17,9 +17,9 @@
     }
 
     tr {
+        @extend .font-weight--regular;
         background-color: $primary-background-color;
         color: $heading-color;
-        font-weight: 500;
         position: relative;
     }
 
@@ -27,13 +27,14 @@
         line-height: 1;
         vertical-align: middle;
     }
-    // Table saw media query for mobile layout tables -
+
+    // Table saw media query for mobile layout tables.
     @media (max-width: 40em) {
         td {
             text-align: left !important;
         }
     }
-    // Table saw media query for full layout tables -
+    // Table saw media query for full layout tables.
     @media (min-width: 40em) {
         th,
         td {

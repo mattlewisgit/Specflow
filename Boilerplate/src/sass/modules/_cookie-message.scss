@@ -1,0 +1,51 @@
+.cookie-message {
+    @extend .burst;
+    @extend .text-light;
+    background-color: $primary-color;
+
+    a, div, p {
+        margin: 0;
+    }
+
+    a {
+        width: 100%;
+    }
+
+    p a {
+        &:focus, &:hover {
+            color: $secondary-color;
+        }
+    }
+}
+
+// Use flexbox to vertically align the message and button cells...
+.flexbox {
+    .cookie-message {
+        .grid div {
+            align-content: stretch;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+// ... or cheat and add some message padding on older browsers!
+.no-flexbox {
+    .cookie-message {
+        p {
+            padding-top: $pad--thin;
+        }
+    }
+}
+
+// Reduce the vertical padding between
+// the message and button on smaller devices.
+@include mq($until: tablet) {
+    .cookie-message {
+        .grid div:last-child {
+            padding-top: 0;
+        }
+    }
+}

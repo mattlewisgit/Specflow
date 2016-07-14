@@ -10,8 +10,8 @@
     }
 
     &__header {
+        @extend .font-weight--regular;
         color: $white;
-        font-weight: 500;
         margin-bottom: 0.5em;
     }
 
@@ -53,10 +53,10 @@
         }
 
         a {
+            @extend .font-weight--light;
             @include font-size(1.4);
             color: $secondary-color;
             text-decoration: none;
-            font-weight: 300;
 
             &:hover {
                 text-decoration: underline;
