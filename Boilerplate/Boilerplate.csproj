@@ -389,6 +389,7 @@
     <Content Include="src\sass\base\_lists.scss" />
     <Content Include="src\sass\modules\_preview-card.scss" />
     <Content Include="src\sass\modules\_article-index.scss" />
+    <Content Include="src\sass\utils\_background-positions.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

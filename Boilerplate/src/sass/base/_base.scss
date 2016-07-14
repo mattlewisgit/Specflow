@@ -1,16 +1,13 @@
-// apply a natural box layout model to all elements, but allowing components to change
+// Apply a natural box layout model to all elements, but allowing components to change.
 html {
     box-sizing: border-box;
+    position: relative;
 }
 
 *,
 *:before,
 *:after {
     box-sizing: inherit;
-}
-
-html {
-    position: relative;
 }
 
 body {
@@ -29,7 +26,6 @@ img,
 iframe {
     max-width: 100%;
 }
-
 
 // Add some bottom margin to the final item in main,
 // Unless it has a vertical-flush class - used for feature blocks etc.
@@ -55,11 +51,9 @@ footer {
     }
 }
 
-
-//On screens over medium breakpoint - with JS enabled,
-//Hide the animated items initially for smoother animations.
-//For no-js, don't do this -
-
+// For tablet or larger, with JS enabled,
+// hide the animated items initially for smoother animations.
+// For no JS, don't do this.
 @include mq($from: tablet) {
     .js .js-animate-on-scroll {
         visibility: hidden;
@@ -70,14 +64,8 @@ footer {
     }
 }
 
-
-//Selection styles where available -
-::-moz-selection {
-    background-color: $highlight-color--light;
-    color: $white;
-}
-
-::selection {
+// Selection styles where available.
+::selection, ::-moz-selection {
     background-color: $highlight-color--light;
     color: $white;
 }

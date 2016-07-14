@@ -3,7 +3,6 @@
 
 .quote-footer {
     @include ensure-at-front;
-    
     bottom: 0;
     left: 0;
     position: fixed;
@@ -15,14 +14,14 @@
         color: $white;
         display: inline-block;
         margin: 0;
-        padding: $pad--thin 10%;
+        padding: $pad--thin $pad;
 
         a {
             cursor: pointer;
             display: none;
         }
 
-        @include mq($until: mobile-landscape) {
+        @include mq($until: tablet) {
             a, span {
                 @include font-size($font-small);
             }
@@ -53,7 +52,7 @@
             margin: $pad--xthin;
         }
 
-        @include mq($until: mobile-landscape) {
+        @include mq($until: tablet) {
             a {
                 @include font-size($font-small);
                 border-radius: 0;
