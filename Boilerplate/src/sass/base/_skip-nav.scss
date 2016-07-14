@@ -1,5 +1,6 @@
 //Skip nav
 a.offscreen {
+    @extend .font-weight--bold;
     @include font-size(1.7);
     position: absolute;
     left: -1000px;
@@ -8,7 +9,6 @@ a.offscreen {
     height: 1px;
     text-align: left;
     overflow: hidden;
-    font-weight: bold;
 
     &,
     &:hover,
