@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="Events\ItemEventsHandler.cs" />
     <Compile Include="ItemConstants.cs" />
+    <Compile Include="Pipelines\HttpRequest\CookieConsent.cs" />
     <Compile Include="Pipelines\Publishing\GetItemReferences\AddDataSourceItemDescendants.cs" />
     <Compile Include="Pipelines\Response\GetModel\GetQuoteFooterFallback.cs" />
     <Compile Include="Pipelines\Response\RenderRendering\VaryByAncestor.cs" />
