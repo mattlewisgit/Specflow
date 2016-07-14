@@ -15,3 +15,43 @@
         margin-bottom: $pad--large;
     }
 }
+
+// Use specificity to ensure mobile devices see full-width CTAs.
+@include mq($until: mobile-landscape) {
+    .flexbox {
+        .server-error {
+            .server-error--cta a {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    .server-error {
+        .server-error--cta a {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+}
+
+// Use flexbox to adjust the widths if Modernizr detects it.
+// If not, the JS match heights module should be applied.
+.flexbox {
+    .server-error {
+        &--cta {
+            align-content: stretch;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            a {
+                $_max-width: 200px;
+                flex: 1;
+                flex-basis: $_max-width;
+                max-width: $_max-width;
+            }
+        }
+    }
+}
