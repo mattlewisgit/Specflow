@@ -1,7 +1,7 @@
 var Breakpoints = require("./breakpointsModule");
 
 var settings = {
-    breakpoint: Breakpoints.max["mobile-landscape"],
+    breakpoint: Breakpoints.max.tablet,
     isCollapsed: false,
     isExpanded: false,
     footer: null,
