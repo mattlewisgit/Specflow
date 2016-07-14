@@ -103,9 +103,9 @@
         background-color: transparent;
 
         .expander__link {
+            @extend .font-weight--light;
             @include alpha-attribute(border-color, rgba($white, 0.4), $tertiary-background-color);
             color: $white;
-            font-weight: 300;
 
             &:focus,
             &:hover,
@@ -153,7 +153,7 @@
         }
 
         .expander__link {
-
+            @extend .font-weight--bold;
             @include font-size(1.6);
             color: $heading-color;
             text-decoration: none;
@@ -164,7 +164,6 @@
             border-top-color: transparent;
             border-right-color: $primary-color;
             padding: 30px;
-            font-weight: 700;
 
             &:focus,
             &:hover,
@@ -173,10 +172,8 @@
             }
 
             &.is-active {
-                border-bottom-color: $primary-color;
-                border-left-color: $primary-color;
+                border-color: $primary-color;
                 border-right-color: transparent;
-                border-top-color: $primary-color;
                 transition: border-left-color $_transition--long ease $_transition, border-bottom-color $_transition ease, border-top-color $_transition ease;
             }
         }

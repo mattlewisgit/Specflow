@@ -1,18 +1,15 @@
 ﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Navigation.MainNavigation>
 
-<!-- top-bar mobile -->
+@* top-bar mobile *@
 <div class="top-bar top-bar--small">
-
     <div class="top-bar__home">
-
         <a href="/">
             @RenderImage(Model, m => m.Logo, new { @class = "top-bar__logo" })
         </a>
-
     </div>
 
     <ul class="utility-nav--small">
-
+        @*
         <li class="utility-nav__item utility-nav__item--search js-search-toggle">
             <div class="utility-nav__inner">
                 @using (BeginRenderLink(Model, item => item.SearchPage))
@@ -22,29 +19,20 @@
                 }
             </div>
         </li>
-
+        *@
         <li class="utility-nav__item utility-nav__item--log-in js-log-in-toggle">
-
             <div class="utility-nav__inner ">
                 <img src="/img/log-in.svg" alt="Log in">
                 @Html.Raw(Model.LogInText)
             </div>
-
         </li>
 
         <li class="utility-nav__item utility-nav__item--menu js-main-menu-toggle">
-
             <div class="utility-nav__inner">
-
                 <div class="burger-menu"><span></span></div>
-
                 <span>Menu</span>
             </div>
-
         </li>
-
     </ul>
-
 </div>
-<!-- end top-bar mobile -->
-
+@* end top-bar mobile *@

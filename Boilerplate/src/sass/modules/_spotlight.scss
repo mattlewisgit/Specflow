@@ -79,11 +79,11 @@
     }
 
     &__heading {
+        @extend .font-weight--regular;
         @include font-size(1.8);
+        color: $grey;
         margin: 0.5em auto;
         text-transform: uppercase;
-        font-weight: 500;
-        color: $grey;
     }
 
     &__icon {

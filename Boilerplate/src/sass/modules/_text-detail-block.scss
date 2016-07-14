@@ -1,7 +1,7 @@
 .text-detail-block {
 
     &__heading {
-        font-weight: 600;
+        @extend .font-weight--semi-bold;
         margin-top: $pad;
         // Add nice header details in supported browsers.
         // flexboxtweener = IE10's odd Flexbox implementation, though works correctly here.

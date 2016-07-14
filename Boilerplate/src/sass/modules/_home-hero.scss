@@ -2,6 +2,7 @@
 @import "../utils/mixins";
 
 .home-hero {
+    @extend .burst;
     @include shadow--dark();
     @include text-centre();
     background-size: cover;

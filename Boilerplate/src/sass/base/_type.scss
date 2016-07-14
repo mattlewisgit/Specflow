@@ -5,9 +5,9 @@ html {
 }
 
 body {
+    @extend .font-weight--light;
     @include font-size($basesize);
     font-family: $font-body;
-    font-weight: 300;
     word-wrap: break-word;
     line-height: 1.7;
     color: $body-color;
@@ -16,13 +16,13 @@ body {
 }
 
 p {
-    margin-top: 0.5em;
     margin-bottom: 1em;
+    margin-top: 0.5em;
 }
 
 a {
+    @extend .font-weight--semi-bold;
     color: currentColor;
-    font-weight: bold;
 }
 
 a:focus,
@@ -64,23 +64,41 @@ h6,
 .h4,
 .h5,
 .h6 {
+    @extend .font-weight--light;
     line-height: 1;
     font-family: $font-heading;
-    font-weight: 300;
     margin-top: 0.75em;
     margin-bottom: 0.75em;
     color: $heading-color;
 }
 
+// Weights.
+.font-weight--light {
+    font-weight: $font-weight--light;
+}
+
+.font-weight--regular {
+    font-weight: $font-weight--regular;
+}
+
+.font-weight--semi-bold {
+    font-weight: $font-weight--semi-bold;
+}
+
+.font-weight--bold {
+    font-weight: $font-weight--bold;
+}
+
+// Headings.
 .h1-xlarge {
+    @extend .font-weight--semi-bold;
     @include font-size($h1--large);
-    font-weight: 600;
 }
 
 h1,
 .h1 {
+    @extend .font-weight--semi-bold;
     @include font-size($h1);
-    font-weight: 600;
 }
 
 h2,
@@ -148,7 +166,7 @@ h6,
 strong,
 .bold,
 b {
-    font-weight: bold;
+    @extend .font-weight--bold;
 }
 
 em,
@@ -197,13 +215,13 @@ blockquote {
     border-left: 3px solid $secondary-color;
 
     cite {
-        font-weight: 700;
+        @extend .font-weight--bold;
     }
 }
 
-//Definition list
+// Definition list.
 dt {
-    font-weight: 700;
+    @extend .font-weight--bold;
     text-decoration: underline;
     color: $heading-color;
 }
@@ -213,9 +231,9 @@ dd {
 }
 
 .paragraph-emphasis {
+    @extend .font-weight--semi-bold;
     @include font-size($paragraph-emphasis);
     color: $heading-color;
-    font-weight: 600;
 }
 
 .styled-ul {
@@ -251,8 +269,8 @@ dd {
         color: $heading-color;
 
         &:before {
+            @extend .font-weight--bold;
             width: 20px;
-            font-weight: 700;
             content: counter(item);
             position: absolute;
             top: 0;
