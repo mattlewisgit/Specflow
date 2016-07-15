@@ -1,0 +1,17 @@
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.AwardLeader>
+
+
+<div class="product-hero feature-block feature-block--primary pinch">
+    <div class="feature-block__content-container">
+        @Editable(Model, item => item.LeadIn)
+    </div>
+
+    <div class="feature-block__content-container">
+        @Editable(Model, item => item.Headline)
+    </div>
+
+    <div class="feature-block__content-container">
+        @Editable(Model, item => item.OpeningParagraph)
+    </div>
+</div>
