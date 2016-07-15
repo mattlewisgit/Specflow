@@ -60,6 +60,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales Rewrite Rules.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
