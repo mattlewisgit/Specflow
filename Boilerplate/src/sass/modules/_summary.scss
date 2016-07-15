@@ -52,7 +52,7 @@ $_padding: 3%;
         }
 
         h6 {
-            font-weight: 600;
+            @extend .font-weight--semi-bold;
             margin: 0;
         }
 
