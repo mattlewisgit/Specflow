@@ -295,6 +295,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqPreview.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
+    <Compile Include="Areas\Presales\RenderingTemplates\ArticleIndexRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\CardsStackedRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\HomeHeroRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\PartnerHeroRendering.cs" />
