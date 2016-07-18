@@ -94,8 +94,14 @@ var paths = {
         generated: "src/sass/generated",
         src: [
             "src/sass/**/*.scss",
+            // Ignore list.
+            // Cannot control generated source.
             "!src/sass/generated/*.scss",
+            // Add this back when SASS lint bug is fixed!
+            "!src/sass/utils/_background-positions.scss",
+            // One-off, very dynamic function set.
             "!src/sass/utils/_svg-template.scss",
+            // Do not lint vendor source.
             "!src/sass/vendor/**/*.scss"
         ],
         srcAll: "src/sass/**/*.scss"
@@ -127,6 +133,7 @@ var cdnReplacements = configs.cdnizer.files
 gulp.task(tasks.help, plugins.taskListing);
 
 gulp.task(tasks.js.lint, function () {
+    // utils\_background-positions.scss
     return gulp
         .src([paths.gulp, paths.js.src])
         .pipe(plugins.jscpd({

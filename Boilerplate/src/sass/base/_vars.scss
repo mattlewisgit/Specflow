@@ -23,14 +23,14 @@ $error-color: #ff6961;
 $lighten-percentage: 10%;
 $darken-percentage: 10%;
 
-//Light modifiers -
+// Light modifiers.
 $primary-color--light: lighten($primary-color, $lighten-percentage);
 $secondary-color--light: lighten($secondary-color, $lighten-percentage);
 $tertiary-color--light: lighten($tertiary-color, $lighten-percentage);
 $highlight-color--light: lighten($highlight-color, $lighten-percentage);
 $error-color--light: lighten($error-color, $lighten-percentage);
 
-//Dark modifiers -
+// Dark modifiers.
 $primary-color--dark: darken($primary-color, $darken-percentage);
 $secondary-color--dark: darken($secondary-color, $darken-percentage);
 $tertiary-color--dark: darken($tertiary-color, $darken-percentage);

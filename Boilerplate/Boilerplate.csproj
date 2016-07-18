@@ -45,6 +45,7 @@
     <Content Include="components\cookie-message\without-cookie.html" />
     <Content Include="components\cookie-message\with-cookie.html" />
     <Content Include="components\cookie-message\index.html" />
+    <Content Include="components\article-index.html" />
     <Content Include="components\preview-card.html" />
     <Content Include="components\primary-cta.html" />
     <Content Include="components\accordion.html" />
@@ -58,6 +59,7 @@
     <Content Include="components\tabs.html" />
     <Content Include="components\footer.html" />
     <Content Include="components\summary\summary-right.html" />
+    <Content Include="global\grids.html" />
     <Content Include="global\lists.html" />
     <Content Include="global\forms.html" />
     <Content Include="global\buttons.html" />
@@ -390,6 +392,7 @@
     <Content Include="src\sass\_rte-fixes.scss" />
     <Content Include="src\sass\base\_lists.scss" />
     <Content Include="src\sass\modules\_preview-card.scss" />
+    <Content Include="src\sass\modules\_article-index.scss" />
     <Content Include="src\sass\utils\_background-positions.scss" />
     <Content Include="src\sass\modules\_cookie-message.scss" />
     <None Include="Web.Debug.config">
