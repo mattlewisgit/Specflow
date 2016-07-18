@@ -18,8 +18,7 @@ namespace Vitality.Website.SC.Pipelines.RenderField
                 var renderings = Sitecore.Context.Item.Visualization.GetRenderings(Sitecore.Context.Device, false);
                 foreach (var rendering in renderings)
                 {
-                    ID datasourceId;
-                    if (!string.IsNullOrWhiteSpace(rendering.Settings.DataSource) && ID.TryParse(rendering.Settings.DataSource, out datasourceId) && datasourceId.Equals(args.Item.ID))
+                    if (!string.IsNullOrWhiteSpace(rendering.Settings.DataSource))
                     {
                         var nameValueCollection = WebUtil.ParseUrlParameters(rendering.Settings.Parameters);
                         if (!string.IsNullOrWhiteSpace(nameValueCollection["TableStyle"]))
