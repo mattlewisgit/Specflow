@@ -8,6 +8,7 @@
 @import "vendor/bourbon/bourbon";
 @import "vendor/neat/neat";
 
+@import "utils/background-positions";
 @import "utils/utils";
 @import "utils/triangle-callout";
 
@@ -34,6 +35,7 @@
 @import "layout/footer";
 
 @import "modules/article--heading-block";
+@import "modules/article-index";
 @import "modules/cards-stacked";
 @import "modules/cta";
 @import "modules/datatable";

@@ -1,4 +1,5 @@
 .rewards_leader {
+    @extend .pinch;
     @include text-centre;
     border: $pad solid $darken-medium;
     box-sizing: border-box;
