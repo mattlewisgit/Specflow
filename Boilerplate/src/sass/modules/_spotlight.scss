@@ -79,9 +79,9 @@
     }
 
     &__heading {
+        @extend .font-weight--regular;
         @include font-size($paragraph-emphasis);
         color: $grey;
-        font-weight: 500;
         line-height: 1.4;
         margin: 0.5em auto;
     }

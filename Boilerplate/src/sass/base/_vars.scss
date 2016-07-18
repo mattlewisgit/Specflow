@@ -23,14 +23,14 @@ $error-color: #ff6961;
 $lighten-percentage: 10%;
 $darken-percentage: 10%;
 
-//Light modifiers -
+// Light modifiers.
 $primary-color--light: lighten($primary-color, $lighten-percentage);
 $secondary-color--light: lighten($secondary-color, $lighten-percentage);
 $tertiary-color--light: lighten($tertiary-color, $lighten-percentage);
 $highlight-color--light: lighten($highlight-color, $lighten-percentage);
 $error-color--light: lighten($error-color, $lighten-percentage);
 
-//Dark modifiers -
+// Dark modifiers.
 $primary-color--dark: darken($primary-color, $darken-percentage);
 $secondary-color--dark: darken($secondary-color, $darken-percentage);
 $tertiary-color--dark: darken($tertiary-color, $darken-percentage);
@@ -109,6 +109,12 @@ $h5--large: 2;
 $h6--large: 1.8;
 
 $max-text-width: 485px;
+
+// Font weights.
+$font-weight--light: 300;
+$font-weight--regular: 400;
+$font-weight--semi-bold: 600;
+$font-weight--bold: 700;
 
 // /*-------------------------------------------------.
 // \    Config: Layout

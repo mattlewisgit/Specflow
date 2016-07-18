@@ -97,9 +97,9 @@ content-length: 0
 field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
 name: __Security
 key: __security
-content-length: 82
+content-length: 119
 
-ar|sitecore\Presales User|pe|+item:write|+item:create|pd|+item:write|+item:create|
+ar|sitecore\Presales User|pe|+item:write|+item:create|pd|+item:rename|+item:create|+item:write|+item:delete|+item:read|
 ----field----
 field: {56C15C6D-FD5A-40CA-BB37-64CEEC6A9BD5}
 name: __Archive date
@@ -138,8 +138,22 @@ content-length: 0
 ----version----
 language: en
 version: 1
-revision: 8740b776-f0f3-4b00-bf59-52ed6ddad9a3
+revision: ab3f5536-7f32-4d53-be19-732fb61bf92c
 
+----field----
+field: {A2ECDE95-3430-4A1D-904C-DD477C8A5BE1}
+name: ShowQuoteFooter
+key: showquotefooter
+content-length: 1
+
+1
+----field----
+field: {0358353D-AA7F-41EC-86A9-09B5EDE5F10A}
+name: QuoteFooterLinks
+key: quotefooterlinks
+content-length: 77
+
+{4793C190-2444-4B87-8203-AABF5EDEE342}|{20805009-0CFB-4E4A-BDB4-4C5759B0F6DD}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -202,14 +216,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8740b776-f0f3-4b00-bf59-52ed6ddad9a3
+ab3f5536-7f32-4d53-be19-732fb61bf92c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160616T145717Z
+20160715T143607Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

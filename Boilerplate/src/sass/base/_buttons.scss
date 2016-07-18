@@ -31,9 +31,9 @@
 
 // List buttons are flatter, hence the specific styling.
 .button-list {
+    @extend .font-weight--light;
     background: $primary-background-color;
     border: none;
-    font-weight: 300;
     transition: color 0.2s;
     
     &:focus, &:hover {
@@ -67,13 +67,13 @@
 .button-light,
 .button-internal,
 .button-step {
+    @extend .font-weight--semi-bold;
     @include alpha-attribute(border-color, rgba($black, 0.4), $white);
     display: inline-block;
     border-width: 5px;
     border-style: solid;
     border-radius: 4px;
     margin: 0 10px 10px 0;
-    font-weight: 600;
     background-color: $white;
 
     // Prevent background colour interfering with border opacity.
