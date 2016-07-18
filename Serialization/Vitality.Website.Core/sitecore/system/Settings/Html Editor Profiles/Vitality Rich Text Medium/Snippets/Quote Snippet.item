@@ -2,9 +2,9 @@
 version: 1
 id: {47F5F78B-8BAD-41D1-BA5A-BD0AA24C55EB}
 database: core
-path: /sitecore/system/Settings/Html Editor Profiles/Vitality Rich Text Medium/Snippets/Quotation
+path: /sitecore/system/Settings/Html Editor Profiles/Vitality Rich Text Medium/Snippets/Quote Snippet
 parent: {8F43FC87-6292-42BB-B851-22CC70EAB151}
-name: Quotation
+name: Quote Snippet
 master: {2C9E00E7-4A4F-42E8-9251-B50A3FDF356F}
 template: {3825FE6A-6CA1-489B-A7C9-C3B4B3B38272}
 templatekey: Html Editor Snippet
@@ -13,11 +13,11 @@ templatekey: Html Editor Snippet
 field: {7DFF83D2-E609-4C5F-99A9-13EC8536D65B}
 name: Value
 key: value
-content-length: 71
+content-length: 68
 
 <blockquote>
-    <p>Quote.</p>
-    <cite>Quotee</cite>
+    Quote.
+    <br><cite>Quotee</cite>
 </blockquote>
 ----version----
 language: da
@@ -144,15 +144,15 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: 00774fc8-1450-4714-9d8e-df2fd5ad9496
+revision: db02b7fd-a2ad-498a-a6bb-8cf9d47866ef
 
 ----field----
 field: {8E5179B0-2A09-4624-885D-619C0E3D0390}
 name: Header
 key: header
-content-length: 9
+content-length: 5
 
-Quotation
+Quote
 ----field----
 field: {C8F93AFE-BFD4-4E8F-9C61-152559854661}
 name: __Valid from
@@ -187,14 +187,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-00774fc8-1450-4714-9d8e-df2fd5ad9496
+db02b7fd-a2ad-498a-a6bb-8cf9d47866ef
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160711T153519Z
+20160718T160013Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
