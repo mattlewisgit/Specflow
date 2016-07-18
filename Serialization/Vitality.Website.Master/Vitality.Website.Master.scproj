@@ -2034,19 +2034,15 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Settings Templates\Cookie Settings\Cookie Consent.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Settings Templates\Cookie Settings\Cookie Message.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Settings Templates\Cookie Settings\Cookie Consent\AcceptText.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Settings Templates\Cookie Settings\Cookie Message\AcceptText.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Settings Templates\Cookie Settings\Cookie Consent\ExpirationInDays.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Settings Templates\Cookie Settings\Cookie Consent\Message.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Settings Templates\Cookie Settings\Cookie Message\Message.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>

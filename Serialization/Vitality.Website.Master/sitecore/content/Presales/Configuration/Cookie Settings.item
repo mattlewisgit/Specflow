@@ -12,15 +12,15 @@ templatekey: Cookie Settings
 ----version----
 language: en
 version: 1
-revision: ece85a7e-706d-4ad9-8996-5819abedaf85
+revision: ac0340c8-d8b4-414f-a118-4e7fedd8e5eb
 
 ----field----
 field: {F8AC694F-79DE-40F1-9943-6679A54D0F09}
 name: Message
 key: message
-content-length: 174
+content-length: 181
 
-Vitality.co.uk use <a href="~/link.aspx?_id=110D559FDEA542EA9C1C8A5DF7E70EF9&amp;_z=z">cookies</a> (small text files) to obtain your personal information and rule the planet.
+<p>Vitality.co.uk use <a href="~/link.aspx?_id=110D559FDEA542EA9C1C8A5DF7E70EF9&amp;_z=z">cookies</a> (small text files) to obtain your personal information and rule the planet.</p>
 ----field----
 field: {0B958EB3-E977-4630-B8F4-CDDC5A54FFD3}
 name: AcceptText
@@ -41,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ece85a7e-706d-4ad9-8996-5819abedaf85
+ac0340c8-d8b4-414f-a118-4e7fedd8e5eb
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160714T114517Z
+20160718T121235Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

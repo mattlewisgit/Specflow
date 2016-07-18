@@ -15,13 +15,6 @@ version: 1
 revision: f29f982d-7811-460b-b18f-cc38ac96816f
 
 ----field----
-field: {5DA6948B-78E5-44A4-88CA-587530FA64FE}
-name: ExpirationInDays
-key: expirationindays
-content-length: 3
-
-365
-----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
 key: __owner

@@ -2,9 +2,9 @@
 version: 1
 id: {0B385FCF-6C0B-4132-A9BC-EC39C21E8A25}
 database: master
-path: /sitecore/templates/Presales/Settings Templates/Cookie Settings/Cookie Consent
+path: /sitecore/templates/Presales/Settings Templates/Cookie Settings/Cookie Message
 parent: {1D6A6EF6-035A-4CC6-9F18-013EE8AF8ECE}
-name: Cookie Consent
+name: Cookie Message
 master: {00000000-0000-0000-0000-000000000000}
 template: {E269FBB5-3750-427A-9149-7AA950B49301}
 templatekey: Template section
@@ -12,7 +12,7 @@ templatekey: Template section
 ----version----
 language: en
 version: 1
-revision: 4e8e8769-14de-4dce-a77f-dd804066e5b4
+revision: 88bfa8f2-edaa-4699-b4ff-9c680a863017
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -34,14 +34,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4e8e8769-14de-4dce-a77f-dd804066e5b4
+88bfa8f2-edaa-4699-b4ff-9c680a863017
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160714T114833Z
+20160718T113528Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
