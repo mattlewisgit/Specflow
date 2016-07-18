@@ -20,5 +20,18 @@
         .spotlight__heading, .spotlight__intro {
             color: $black;
         }
+
+        // Ensure anchors can be seen against the light background.
+        .spotlight.text-light a {
+            color: $primary-color;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+
+        .spotlight__list {
+            margin-bottom: $pad;
+        }
     }
 }
