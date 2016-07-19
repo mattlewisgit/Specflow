@@ -1,0 +1,77 @@
+.article-snippet {
+    // Avoid underlines for this component link.
+    a {
+        text-decoration: none;
+    }
+
+    background-color: $highlight-color;
+    margin: 0;
+
+    // Alter the background for the hover state.
+    transition: $delay--medium ease-in background-color;
+
+    &:hover {
+        background-color: $highlight-color--dark;
+    }
+    
+    h3, p {
+        color: $white;
+    }
+
+    // Reduce the header font size to that of the body content.
+    h3 {
+        font-size: 100%;
+    }
+
+    // Cover the background and do not pad the image alternative.
+    .article-snippet--image {
+        background-size: cover;
+
+        div {
+            padding: 0;
+        }
+
+        // Reiterate full width to fix IE issue.
+        img {
+            width: 100%;
+        }
+    }
+
+    .article-snippet--content {
+        padding: $pad;
+    }
+
+    // Condense the fonts slightly on tablet.
+    @include mq($from: tablet, $until: desktop) {
+        h3 {
+            @include font-size($font-small);
+        }
+
+        p {
+            @include font-size($basesize);
+        }
+    }
+}
+
+// Hide the background image for screens smaller than a tablet,
+// as the img tag will be used instead and scale using the grid.
+// Squeeze the content slightly, too.
+@include mq($until: tablet) {
+    .article-snippet {
+        h3, p {
+            margin: $pad--thin;
+        }
+
+        .article-snippet--image {
+            // Need important here to override inline style.
+            background: none !important;
+            margin: 0;
+            padding: 0;
+        }
+
+        .article-snippet--content {
+            margin-top: 0;
+            padding: $pad--thin;
+        }
+    }
+}

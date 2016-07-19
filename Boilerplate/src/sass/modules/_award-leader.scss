@@ -1,0 +1,22 @@
+.award-leader {
+    // Use this in case a background image is not set inline.
+    background-color: $primary-background-color;
+    background-size: cover;
+
+    &--intro p {
+        margin: $pad--large 0;
+    }
+
+    .article-snippet:not(:last-child) {
+        margin-bottom: $pad--thin;
+    }
+}
+
+// Remove the background image on mobile.
+@include mq($until: tablet) {
+    .award-leader {
+        // Must force an override here, as the image is set inline.
+        background: $primary-background-color !important;
+        color: $black;
+    }
+}
