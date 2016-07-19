@@ -101,7 +101,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pipelines\RichTextEditor\SaveRichTextContent\InjectTableSawStylesTests.cs" />
+    <Compile Include="Pipelines\RenderField\TableSawHelper_AddTableAttributes_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\StringHelperTests.cs" />
   </ItemGroup>
