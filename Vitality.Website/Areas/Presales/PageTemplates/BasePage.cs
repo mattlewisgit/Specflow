@@ -19,7 +19,7 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
     using Vitality.Website.SC;
 
     public class BasePage : SitecoreItem, IQuoteFooter, IAppReferenceGlobal, IBrowserLatencyGlobal, IBrowserStylingGlobal, IDuplicateContentPage, IGoogleAuthorshipGlobal, IGoogleTagManagerGlobal,
-        IIndexationPage, IOpenGraphGlobal, IOpenGraphPage, IQubitOpenTagGlobal, IResponseTapGlobal, ISerpAppearancePage, ITwitterGlobal, ITwitterPage, IWebmasterToolsGlobal
+        IIndexationPage, IOpenGraphGlobal, IOpenGraphPage, IQubitOpenTagGlobal, ISerpAppearancePage, ITwitterGlobal, ITwitterPage, IWebmasterToolsGlobal
     {
         public bool ShowQuoteFooter { get; set; }
         public IEnumerable<LinkItem> QuoteFooterLinks { get; set; }
@@ -34,7 +34,7 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
         public string ApplicationName { get; set; }
         public string Canonical { get; set; }
         public string Publisher { get; set; }
-        public string GoogleTagManagerScript { get; set; }
+        public string GoogleTagManagerId { get; set; }
         public string Robots { get; set; }
         public string OpenGraphArticlePublisher { get; set; }
         public string OpenGraphIosAppId { get; set; }
@@ -45,8 +45,7 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
         public Image OpenGraphImage { get; set; }
         public string OpenGraphSiteName { get; set; }
         public string OpenGraphDescription { get; set; }
-        public string QubitOpenTagScript { get; set; }
-        public string ResponseTapScript { get; set; }
+        public string QubitOpenTagId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public string TwitterCard { get; set; }

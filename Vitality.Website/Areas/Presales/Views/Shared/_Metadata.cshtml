@@ -1,6 +1,10 @@
 ﻿@using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.BasePage>
 
+@if (!string.IsNullOrWhiteSpace(Model.QubitOpenTagId))
+{
+    <script src='@string.Format("//d3c3cq33003psk.cloudfront.net/opentag-{0}.js", Model.QubitOpenTagId)' async defer></script>
+}
 <title>@Model.Title</title>
 <meta name="description" content="@Model.Description"/>
 <meta property="og:title" content="@Model.OpenGraphTitle"/>
