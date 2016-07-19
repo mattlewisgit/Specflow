@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" class="disable-cookies">
 <head>
     <title>Vitality Boilerplate | Components | Cookie Message: Without Cookie</title>
 
@@ -44,8 +44,8 @@
             <h2>Description</h2>
 
             <p>
-                This example is used for testing, and shows the Cookie Message without any of the interaction,
-                or setting the cookie to prevent it from displaying again.
+                This example is used for testing, and shows the Cookie Message
+                <b>without</b> setting the cookie to prevent it from displaying again.
             </p>
 
             <h2>Example</h2>
@@ -70,6 +70,8 @@
     <script>if (!($.event.special.debouncedresize)) cdnizerLoad("/bower_components/jquery.smartresize/jquery.smartresize.js");</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
     <script>if (!($(window).matchHeight)) cdnizerLoad("/bower_components/jquery-match-height/jquery.matchHeight-min.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.2/js.cookie.min.js"></script>
+    <script>if(!(Cookies)) cdnizerLoad("/bower_components/js-cookie/src/js.cookie.js");</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
     <script>if (!(FastClick)) cdnizerLoad("/bower_components/fastclick/lib/fastclick.js");</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>

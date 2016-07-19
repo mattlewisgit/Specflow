@@ -21,34 +21,42 @@
     <![endif]-->
 </head>
 <body>
+    <div class="example">
+        <div class="cookie-message animated slideInDown">
+            <div class="grid">
+                <div class="grid-col-9-12">
+                    <p>
+                        Vitality.co.uk uses <a href="#">cookies</a> (small text files)
+                        to store information on your computer to give you the best experience.
+                    </p>
+                </div>
+
+                <div class="grid-col-3-12">
+                    <a class="box-button box-button--light box-button--rounded">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <main tabindex="-1">
         <section class="pinch">
             <h1>Cookie Message: With Cookie</h1>
             <h2>Description</h2>
 
             <p>
-                ...
+                This example displays the Cookie Message <b>and</b> sets the cookie
+                to prevent it from displaying again when closed.
+            </p>
+
+            <p>
+                <b>Note</b>: you can (selectively) clear cookies on different types of browser using these
+                <a href="http://www.wikihow.com/Clear-Your-Browser%27s-Cookies" target="_blank">instructions</a>.
             </p>
 
             <h2>Example</h2>
             <h3>Demo</h3>
-
-            <div class="example">
-                <div class="cookie-message">
-                    <div class="grid">
-                        <div class="grid-col-9-12">
-                            <p>
-                                Vitality.co.uk uses <a href="#">cookies</a> (small text files)
-                                to store information on your computer to give you the best experience.
-                            </p>
-                        </div>
-
-                        <div class="grid-col-3-12">
-                            <a href="#" class="box-button box-button--light box-button--rounded">Close</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+            <p>Look up!</p>
 
             <h3>Markup</h3>
 
@@ -67,6 +75,8 @@
     <script>if (!($.event.special.debouncedresize)) cdnizerLoad("/bower_components/jquery.smartresize/jquery.smartresize.js");</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
     <script>if (!($(window).matchHeight)) cdnizerLoad("/bower_components/jquery-match-height/jquery.matchHeight-min.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.2/js.cookie.min.js"></script>
+    <script>if(!(Cookies)) cdnizerLoad("/bower_components/js-cookie/src/js.cookie.js");</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
     <script>if (!(FastClick)) cdnizerLoad("/bower_components/fastclick/lib/fastclick.js");</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>

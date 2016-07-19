@@ -22,6 +22,10 @@
     .box-button {
         cursor: pointer;
     }
+
+    .grid {
+        max-width: 100%;
+    }
 }
 
 // Use flexbox to vertically align the message and button cells...

@@ -1,29 +1,31 @@
 ﻿var _container = null;
-var _cta = null;
+var _cookieKey = "hasReadCookieMessage";
+var _areCookiesDisabled = false;
 
 function init() {
     "use strict";
-    // Find the elements or bomb out if they are not present.
+    // Bomb out if there is no cookie container, or the cookie is set.
     _container = $(".cookie-message");
+    _areCookiesDisabled = $("html").hasClass("disable-cookies");
 
-    if (_container.length < 1) {
+    if (_container.length < 1 || (!_areCookiesDisabled && Cookies.get(_cookieKey))) {
         return;
     }
 
-    _cta = _container.find(".box-button");
-
-    // TODO Determine whether to continue based on a cookie.
     _container.show();
 
-    // Hide and set the cookie on close.
-    _cta.click(function() {
+    // *Only* hide and set the cookie on close.
+    _container.find(".box-button").click(function() {
         _container
             .removeClass("slideInDown")
             .addClass("slideOutUp");
 
         setTimeout(function () {
-            // TODO Set the cookie.
             _container.hide();
+
+            if (!_areCookiesDisabled) {
+                Cookies.set(_cookieKey, true);
+            }
         }, 500);
 
         return false;
