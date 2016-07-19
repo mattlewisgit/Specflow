@@ -69,6 +69,7 @@ $body-color--alt: #b3b3b3;
 $heading-color: $color-mono-3;
 
 $dropshadow-color: rgba($body-color, 0.25);
+$dropshadow-color-dark: rgba($body-color, 0.5);
 
 $_opacity: .8;
 $darken-light: rgba(255, 255, 255, $_opacity);

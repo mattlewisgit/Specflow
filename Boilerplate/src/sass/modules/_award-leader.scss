@@ -11,6 +11,14 @@
             p {
                 margin: $pad--large 0;
             }
+
+            // Ensure the imahes have space and are not too high.
+            .award-leader--intro__logos {
+                img {
+                    margin-right: $pad--xthin;
+                    max-height: 70px;
+                }
+            }
         }
 
         .award-leader--articles {
@@ -18,8 +26,13 @@
         }
     }
 
-    .article-snippet:not(:last-child) {
-        margin-bottom: $pad--thin;
+    // As the article snippet stack vertically, give them some space.
+    .article-snippet {
+        box-shadow: 0 0 $pad -2px $dropshadow-color-dark;
+
+        &:not(:last-child) {
+            margin-bottom: $pad--thin;
+        }
     }
 }
 
@@ -31,16 +44,17 @@
         color: $black;
 
         .grid-no-gutters {
+            // Let the grid sit flush with other components.
+            .award-leader--articles,
             .award-leader--intro {
+                margin-top: 0;
                 padding: $pad;
+            }
 
+            .award-leader--intro {
                 p {
                     margin: $pad 0;
                 }
-            }
-
-            .award-leader--articles {
-                padding: $pad;
             }
         }
     }
