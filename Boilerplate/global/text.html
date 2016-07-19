@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <title>Vitality Boilerplate | Global | Text</title>
 
@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0" />
 
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700" />
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="/css/app-devel.css" />
@@ -32,49 +32,15 @@
             </p>
 
             <h2>Examples</h2>
-            <h3>Headings and Copy</h3>
+            <h3>Plain Headings and Copy</h3>
             <h4>Demo</h4>
 
             <div class="example">
                 <h1>First Header h1</h1>
-
-                <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                    praesentium voluptatum deleniti atque corrupti quos.
-                </p>
-
                 <h2>Second Header h2</h2>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-
                 <h3>Third Header h3</h3>
-
-                <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-                    praesentium voluptatum deleniti atque corrupti quos dolores et quas
-                    molestias excepturi sint occaecati cupiditate non provident, similique sunt
-                    in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
-                </p>
-
                 <h4>Fourth Header h4</h4>
-
-                <p>
-                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                    consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
-                    ut labore et dolore magnam aliquam quaerat voluptatem.
-                </p>
-
                 <h5>Fifth Header h5</h5>
-
-                <p>
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                    doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-                    veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                </p>
-
                 <h6>Sixth Header h6</h6>
 
                 <p>
@@ -92,7 +58,54 @@
                 <h4>Markup</h4>
                 <pre><code class="language-markup line-numbers"></code></pre>
             </div>
-            
+
+            <h3>Headings with Classes</h3>
+
+            <div>
+                <b>Note</b>: heading sizes sometimes need to be adjusted with styles, as although it is
+                semantically accurate to have the headings in order &mdash; e.g. <pre class="inline">h1</pre> then
+                <pre class="inline">h2</pre> &mdash; you may need the child headers to appear larger than their headers.
+            </div>
+
+            <h4>Demo</h4>
+
+            <div class="example">
+                <h6 class="h1-xlarge">X-Large Header .h1-xlarge</h6>
+                <h6 class="h1">First Header .h1</h6>
+                <h6 class="h2">Second Header .h2</h6>
+                <h6 class="h3">Third Header .h3</h6>
+                <h6 class="h4">Fourth Header .h4</h6>
+                <h6 class="h5">Fifth Header .h5</h6>
+                <h1 class="h6">Sixth Header .h6</h1>
+            </div>
+
+            <div>
+                <h4>Markup</h4>
+                <pre><code class="language-markup line-numbers"></code></pre>
+            </div>
+
+            <h3>Font Weights</h3>
+
+            <div>
+                <b>Note</b>: these are usually applied in SASS, but can be added via classes as demonstrated below.
+                The weights deliberately match <b>only</b> those specified in the Google Fonts
+                stylesheet <pre class="inline">link</pre>, to render as cleanly as possible.
+            </div>
+
+            <h4>Demo</h4>
+
+            <div class="example">
+                <p class="font-weight--light">This is light text.</p>
+                <p class="font-weight--normal">This is normal text.</p>
+                <p class="font-weight--semi-bold">This is semi-bold text.</p>
+                <p class="font-weight--bold">This is bold text.</p>
+            </div>
+
+            <div>
+                <h4>Markup</h4>
+                <pre><code class="language-markup line-numbers"></code></pre>
+            </div>
+
             <h3>Links</h3>
             <h4>Demo</h4>
 
@@ -115,7 +128,7 @@
 
             <h3>Miscellanous</h3>
             <h4>Demo</h4>
-            
+
             <div class="example">
                 <ul>
                     <li>
@@ -135,7 +148,7 @@
                     </li>
 
                     <li>
-                        <time datetime="2013-09-07" pubdate>07 September 2013</time>
+                        <time datetime="2013-09-07">07 September 2013</time>
                     </li>
                 </ul>
 
@@ -143,6 +156,10 @@
                     This is inline text with <sub>subscript</sub>
                     and <sup>superscript</sup> elements.
                 </p>
+
+                <div>
+                    A code example: <pre class="inline">var strings = new List&lt;string&gt; { "Hello", "world!" };</pre>
+                </div>
 
                 <p>
                     <var>f</var>
@@ -171,7 +188,7 @@
             </div>
         </section>
     </main>
-    
+
     <script>function cdnizerLoad(u) { document.write('<scr' + 'ipt src="' + encodeURIComponent(u) + '"></scr' + 'ipt>'); }</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script>    if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
