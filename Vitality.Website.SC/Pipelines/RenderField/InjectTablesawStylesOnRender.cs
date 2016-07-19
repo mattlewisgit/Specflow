@@ -12,8 +12,9 @@ namespace Vitality.Website.SC.Pipelines.RenderField
     {
         public void Process(RenderFieldArgs args)
         {
+            var content = args.Result.FirstPart;
             Assert.ArgumentNotNull((object)args, "args");
-            if (args.FieldTypeKey == "rich text" && !string.IsNullOrWhiteSpace(args.Result.FirstPart))
+            if (args.FieldTypeKey == "rich text" && !string.IsNullOrWhiteSpace(content))
             {
                 var renderings = Sitecore.Context.Item.Visualization.GetRenderings(Sitecore.Context.Device, false);
                 foreach (var rendering in renderings)
@@ -28,11 +29,11 @@ namespace Vitality.Website.SC.Pipelines.RenderField
                             
                             if (tableStyle == "stack")
                             {
-                                args.Result.FirstPart = TableSawHelper.AddTableAttributes(TableSawArgs.Stack(args.Result.FirstPart));
+                                args.Result.FirstPart = TableSawHelper.AddTableAttributes(TableSawArgs.Stack(content));
                             }
                             else if (tableStyle == "swipe")
                             {
-                                args.Result.FirstPart = TableSawHelper.AddTableAttributes(TableSawArgs.Swipe(args.Result.FirstPart));
+                                args.Result.FirstPart = TableSawHelper.AddTableAttributes(TableSawArgs.Swipe(content));
                             }
                         }
                     }
