@@ -12,8 +12,51 @@ templatekey: Global Settings
 ----version----
 language: en
 version: 1
-revision: 110e9864-278d-4de5-9c2e-9d3cefb021d9
+revision: 24d630e0-eccd-4874-a566-ccf85b6c7e9b
 
+----field----
+field: {E670AD08-9370-4CE9-B2F4-553A6A13AD1D}
+name: JsonSchemaScript
+key: jsonschemascript
+content-length: 1304
+
+{
+  "@context": "http://schema.org",
+  "@type": "Corporation",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London, United Kingdom",
+    "postalCode": "EC3V 0XL",
+    "streetAddress": "70 Gracechurch Street"
+  },
+  "name": "Vitality",
+  "description": "Here at Vitality we provide award winning health and life insurance, encourage you to lead a healthier life and reward you for doing so.",
+  "contactPoint" : [
+    { "@type" : "ContactPoint",
+      "telephone" : "+44-808-252-0213",
+       "areaServed" : "GB",
+      "contactType" : "sales"
+    },
+    { "@type" : "ContactPoint",
+      "telephone" : "+44-845-602-4848",
+       "areaServed" : "GB",
+      "contactType" : "customer service"
+    } ],
+  "sameAs": [ "https://en.wikipedia.org/wiki/VitalityHealth",
+  "https://www.facebook.com/vitalityuk",
+  "https://www.facebook.com/VitalityUK",
+  "https://twitter.com/Vitality_uk",
+  "https://www.linkedin.com/company/vitality_uk",
+  "https://www.pinterest.com/vitalityuk/",
+  "https://instagram.com/vitality_uk/" ],
+  "url": "https://www.vitality.co.uk/",
+  "brand": "Vitality",
+  "email": "info@vitality.co.uk",
+  "foundingDate": "2007",
+  "logo": "https://www.vitality.co.uk/media online/presales/logos/vitality/vitality-logo.jpg"
+    }
+  ]
+}
 ----field----
 field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
 name: Title
@@ -86,6 +129,13 @@ key: publisher
 content-length: 45
 
 https://plus.google.com/111924979311472229172
+----field----
+field: {A57A11E0-7A1A-4D7B-96E5-EA2FDF771DFD}
+name: QubitOpenTagScript
+key: qubitopentagscript
+content-length: 93
+
+<script src='//d3c3cq33003psk.cloudfront.net/opentag-113020-1576301.js' async defer></script>
 ----field----
 field: {F95FCDCB-FF28-4AF9-88D5-BD76D30FD183}
 name: ResponseTapScript
@@ -210,13 +260,6 @@ content-length: 18
 
 Vitality UK Member
 ----field----
-field: {A57A11E0-7A1A-4D7B-96E5-EA2FDF771DFD}
-name: QubitOpenTagScript
-key: qubitopentagscript
-content-length: 93
-
-<script src='//d3c3cq33003psk.cloudfront.net/opentag-113020-1576301.js' async defer></script>
-----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
@@ -229,14 +272,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-110e9864-278d-4de5-9c2e-9d3cefb021d9
+24d630e0-eccd-4874-a566-ccf85b6c7e9b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160616T094825Z
+20160719T104547Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
