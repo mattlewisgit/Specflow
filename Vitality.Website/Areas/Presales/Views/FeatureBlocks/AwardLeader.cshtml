@@ -1,17 +1,66 @@
-﻿@using Vitality.Website.Extensions.Views
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using Sitecore.Mvc
+@using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.AwardLeader>
 
 
-<div class="product-hero feature-block feature-block--primary pinch">
-    <div class="feature-block__content-container">
-        @Editable(Model, item => item.LeadIn)
-    </div>
+<div class="products-component pinch">
+    @using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
+    {
+        <div class="grid">
+            <div class="grid-col-6-12" style="text-align: left">
 
-    <div class="feature-block__content-container">
-        @Editable(Model, item => item.Headline)
-    </div>
+                <h2>@Editable(Model, item => item.LeadIn)</h2>
 
-    <div class="feature-block__content-container">
-        @Editable(Model, item => item.OpeningParagraph)
-    </div>
+                <h1>@Editable(Model, item => item.Headline)</h1>
+
+                <h6>@Editable(Model, item => item.OpeningParagraph)</h6>
+
+                <div class="">
+                   @foreach (var awardLogos in Model.AwardLogos)
+                   {
+                       using (BeginEditFrame(awardLogos, "Edit Logo image", item => item.AwardImage))
+                       {
+                           using (this.BeginRenderLink(awardLogos, item => item.Link, isEditable: true))
+                           {
+                               @Editable(awardLogos, m => m.AwardImage)
+                           }
+                       }
+                   }c
+                </div>
+            </div>
+
+            <div class="grid-col-6-12">
+                @foreach (var articleItem in Model.ArticleItems)
+                {
+                    using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", articleItem.Path))
+                    {
+                        using (BeginEditFrame(articleItem, "Edit Background image", item => item.Image))
+                        {
+                            <div class="article-index--container">
+                                <div class="grid-no-gutters article-index--article">
+                                    <div class="grid-col-5-12 article-index--article__image background-position-middle-right" style="@this.BackgroundImage(articleItem)">
+                                        <div class="tablet-less-than">@Editable(articleItem, x => x.Image)</div>
+                                    </div>
+
+                                    <div class="grid-col-7-12 article-index--article__content">
+                                        @using (this.BeginRenderLink(articleItem, item => item.Link, isEditable: true))
+                                        {
+                                            <h3>
+                                                @Editable(articleItem, m => m.Title)
+                                            </h3>
+                                            <p class="h4">
+                                                @Editable(articleItem, m => m.LeadIn)
+                                            </p>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                }
+            </div>
+
+            </div>
+    }
 </div>
