@@ -3,8 +3,19 @@
     background-color: $primary-background-color;
     background-size: cover;
 
-    &--intro p {
-        margin: $pad--large 0;
+    // The padding below is set to align content to that of Benefit Leader.
+    .grid-no-gutters {
+        .award-leader--intro {
+            padding: $pad--large;
+
+            p {
+                margin: $pad--large 0;
+            }
+        }
+
+        .award-leader--articles {
+            padding: $pad--large;
+        }
     }
 
     .article-snippet:not(:last-child) {
@@ -12,11 +23,25 @@
     }
 }
 
-// Remove the background image on mobile.
+// Remove the background image on mobile and thin the padding.
 @include mq($until: tablet) {
     .award-leader {
         // Must force an override here, as the image is set inline.
         background: $primary-background-color !important;
         color: $black;
+
+        .grid-no-gutters {
+            .award-leader--intro {
+                padding: $pad;
+
+                p {
+                    margin: $pad 0;
+                }
+            }
+
+            .award-leader--articles {
+                padding: $pad;
+            }
+        }
     }
 }
