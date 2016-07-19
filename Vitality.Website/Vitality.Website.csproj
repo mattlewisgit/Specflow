@@ -172,11 +172,13 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
     <Content Include="App_Config\Include\ship.config" />
+    <Content Include="App_Config\Include\Sitecore.Media.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
     <Content Include="Areas\Presales\Views\CallToAction\PrimaryCallToAction.cshtml" />
     <Content Include="Areas\Presales\Views\Banners\HomeHero.cshtml" />
+    <Content Include="Areas\Presales\Views\Articles\ArticleIndex.cshtml" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
@@ -266,6 +268,8 @@
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterPage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IWebmasterToolsGlobal.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Articles\ArticleIndex.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Articles\ArticleItem.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Banners\HomeHero.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsStacked.cs" />
@@ -304,6 +308,7 @@
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Views\AwardLeaderExtensions.cs" />
+    <Compile Include="Extensions\Views\ArticleIndexExtensions.cs" />
     <Compile Include="Extensions\Views\MainNavigationExtensions.cs" />
     <Compile Include="Extensions\Views\CardsTabbedExtensions.cs" />
     <Compile Include="Extensions\Views\BasePageExtensions.cs" />
