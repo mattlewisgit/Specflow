@@ -48,7 +48,7 @@
 
         private bool RequestIsASitecoreClientRequest(HttpRequestArgs args)
         {
-            return args.LocalPath.StartsWith("/sitecore");
+            return args.LocalPath.ToLowerInvariant().StartsWith("/sitecore");
         }
 
         private bool RequestIsAPhysicalFileRequest(HttpRequestArgs args)
