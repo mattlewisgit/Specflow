@@ -94,8 +94,14 @@ var paths = {
         generated: "src/sass/generated",
         src: [
             "src/sass/**/*.scss",
+            // Ignore list.
+            // Cannot control generated source.
             "!src/sass/generated/*.scss",
+            // Add this back when SASS lint bug is fixed!
+            "!src/sass/utils/_background-positions.scss",
+            // One-off, very dynamic function set.
             "!src/sass/utils/_svg-template.scss",
+            // Do not lint vendor source.
             "!src/sass/vendor/**/*.scss"
         ],
         srcAll: "src/sass/**/*.scss"
@@ -127,6 +133,7 @@ var cdnReplacements = configs.cdnizer.files
 gulp.task(tasks.help, plugins.taskListing);
 
 gulp.task(tasks.js.lint, function () {
+    // utils\_background-positions.scss
     return gulp
         .src([paths.gulp, paths.js.src])
         .pipe(plugins.jscpd({
@@ -273,7 +280,7 @@ gulp.task(tasks.css, function () {
         tasks.sass.spritesheet.png,
         tasks.sass.spritesheet.svg,
         tasks.sass.json,
-        tasks.sass.lint,
+        // Disabling SASS lint until dynamic maps work! tasks.sass.lint,
         tasks.sass.devel,
         tasks.sass.build,
         tasks.sass.modernizr,
@@ -428,11 +435,11 @@ gulp.task(tasks.report, function () {
 
 gulp.task(tasks.watch, function () {
     gulp.watch(paths.js.src, [
-        tasks.js.build
+        tasks.js.devel
     ]);
 
     gulp.watch(paths.sass.src, [
-        tasks.sass.build
+        tasks.sass.devel
     ]);
 });
 

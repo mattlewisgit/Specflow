@@ -1,16 +1,13 @@
-// apply a natural box layout model to all elements, but allowing components to change
+// Apply a natural box layout model to all elements, but allowing components to change.
 html {
     box-sizing: border-box;
+    position: relative;
 }
 
 *,
 *:before,
 *:after {
     box-sizing: inherit;
-}
-
-html {
-    position: relative;
 }
 
 body {
@@ -30,7 +27,6 @@ iframe {
     max-width: 100%;
 }
 
-
 // Add some bottom margin to the final item in main,
 // Unless it has a vertical-flush class - used for feature blocks etc.
 main > *:last-child {
@@ -45,21 +41,35 @@ main > *:last-child {
     }
 }
 
-section,
-footer {
+// The section tag is used to housed the majority of the page content.
+// As such, only introduce side padding as device sizes increase,
+// to maximise the amount of content displayed comfortably on the screen. 
+section {
     @extend .clearfix;
-    padding: 0 $pad;
+    padding: 0;
 
     @include mq($from: tablet) {
+        padding: 0 $pad;
+    }
+
+    @include mq($from: desktop) {
         padding: 0 $pad--large;
     }
 }
 
+// Since the footer is full width, padding is used from mobile.
+footer {
+    @extend .clearfix;
+    padding: 0 $pad;
 
-//On screens over medium breakpoint - with JS enabled,
-//Hide the animated items initially for smoother animations.
-//For no-js, don't do this -
+    @include mq($from: desktop) {
+        padding: 0 $pad--large;
+    }
+}
 
+// For tablet or larger, with JS enabled,
+// hide the animated items initially for smoother animations.
+// For no JS, don't do this.
 @include mq($from: tablet) {
     .js .js-animate-on-scroll {
         visibility: hidden;
@@ -70,14 +80,8 @@ footer {
     }
 }
 
-
-//Selection styles where available -
-::-moz-selection {
-    background-color: $highlight-color--light;
-    color: $white;
-}
-
-::selection {
+// Selection styles where available.
+::selection, ::-moz-selection {
     background-color: $highlight-color--light;
     color: $white;
 }

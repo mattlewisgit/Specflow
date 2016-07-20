@@ -130,15 +130,14 @@
     }
 
     .utility-nav__item--search {
-
         @extend .coverlink;
 
         a,
         a:hover,
         a:focus,
         a.js-focus {
+            @extend .font-weight--regular;
             color: $body-color;
-            font-weight: normal;
         }
     }
 }
@@ -270,7 +269,7 @@
 .site-nav__item,
 .utility-nav__item {
     @extend .coverlink;
-    font-weight: 500;
+    @extend .font-weight--regular;
     color: $grey;
     display: inline-block;
     letter-spacing: 0.1em;
@@ -293,11 +292,12 @@
     &:focus {
         background-color: $white;
     }
-    //Variable font sizes -
+    
+    // Variable font sizes.
     a {
         @include mq($from: tablet) {
             @include font-size(1);
-            font-weight: 500;
+            font-weight: $font-weight--regular;
         }
 
         @include mq($from: desktop) {
@@ -351,7 +351,7 @@
     }
 
     a {
-        font-weight: 500;
+        @extend .font-weight--regular;
     }
 
     &:hover,
@@ -622,9 +622,9 @@
         border: 0;
 
         a {
+            @extend .font-weight--regular;
             @include font-size(1.3);
             padding: 10px;
-            font-weight: 500;
         }
 
         &.is-active {
