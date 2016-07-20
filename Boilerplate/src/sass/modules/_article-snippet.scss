@@ -23,9 +23,11 @@
         font-size: 100%;
     }
 
-    // Cover the background and do not pad the image alternative.
+    // Cover the background, do not pad the image alternative
+    // and ensure it is not too squashed on tablets.
     .article-snippet--image {
         background-size: cover;
+        min-width: 150px;
 
         div {
             padding: 0;

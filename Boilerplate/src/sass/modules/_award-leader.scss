@@ -12,7 +12,7 @@
                 margin: $pad--large 0;
             }
 
-            // Ensure the imahes have space and are not too high.
+            // Ensure the images have space and are not too high.
             .award-leader--intro__logos {
                 img {
                     margin-right: $pad--xthin;
@@ -55,6 +55,20 @@
                 p {
                     margin: $pad 0;
                 }
+            }
+        }
+    }
+}
+
+// Use flexbox to keep the article rows the same height.
+.flexbox {
+    .award-leader {
+        .award-leader--articles {
+            display: flex;
+            flex-direction: column;
+
+            .article-snippet {
+                flex: 1; 
             }
         }
     }
