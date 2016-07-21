@@ -14,7 +14,7 @@
 
                 <p>@Editable(Model, item => item.OpeningParagraph)</p>
 
-                @foreach (var awardLogos in Model.GetAwardLogos())
+                @foreach (var awardLogos in Model.AwardLogos)
                 {
                     using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", awardLogos.Path))
                     {
@@ -32,7 +32,7 @@
             </div>
 
             <div class="grid-col-6-12 award-leader--articles">
-                @foreach (var articleItem in Model.GetArticleItems())
+                @foreach (var articleItem in Model.ArticleItems)
                 {
                     using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", articleItem.Path))
                     {

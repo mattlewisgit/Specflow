@@ -9,6 +9,7 @@ using Vitality.Website.Areas.Presales.ComponentTemplates.Generic;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
 {
+    [SitecoreType(AutoMap = true)]
     public class AwardLeader : SitecoreItem
     {
         public AwardLeader()
@@ -24,14 +25,10 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
 
         public Image BackgroundImage { get; set; }
 
-        public IEnumerable<ArticleItem> GetArticleItems()
-        {
-            return GetChildren<ArticleItem>(Guid.Parse("972CA70E-945F-4D10-967B-FD622EF97D66"));
-        }
+        [SitecoreQuery("./*[@@templateid='{972CA70E-945F-4D10-967B-FD622EF97D66}']", IsRelative = true)]
+        public virtual IEnumerable<ArticleItem> ArticleItems { get; set; }
 
-        public IEnumerable<ImageLink> GetAwardLogos()
-        {
-            return GetChildren<ImageLink>(Guid.Parse("25EB72FE-6AE2-44E4-AC1E-9631E53D3AB0"));
-        }
+        [SitecoreQuery("./*[@@templateid='{25EB72FE-6AE2-44E4-AC1E-9631E53D3AB0}']", IsRelative = true)]
+        public virtual IEnumerable<ImageLink> AwardLogos { get; set; }
     }
 }
