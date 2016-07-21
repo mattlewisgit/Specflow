@@ -20,6 +20,11 @@ namespace Vitality.Website.Extensions.Views
             return 12 / view.Model.AwardLogos.Count();
         }
 
+        public static string BackgroundImage(this GlassView<AwardLeader> view)
+        {
+            return string.Format("background-image: url('{0}')", view.Model.BackgroundImage.Src);
+        }
+
         public static string BackgroundImage(this GlassView<AwardLeader> view, ArticleItem articleItem)
         {
             if (articleItem != null && articleItem.Image != null && !string.IsNullOrWhiteSpace(articleItem.Image.Src))

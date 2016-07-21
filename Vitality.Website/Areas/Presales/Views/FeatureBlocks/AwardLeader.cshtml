@@ -4,11 +4,11 @@
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.AwardLeader>
 
 
-<div class="award-leader pinch">
-    <div class="grid-no-gutters">
+@using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
+{
+    <div class="award-leader pinch" style="@this.BackgroundImage()">
+        <div class="grid-no-gutters">
 
-        @using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
-        {
             <div class="grid-col-6-12 award-leader--intro">
                 <h2>@Editable(Model, item => item.Headline)</h2>
 
@@ -59,6 +59,7 @@
                     }
                 }
             </div>
-        }
+
+        </div>
     </div>
-</div>
+}
