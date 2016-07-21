@@ -93,6 +93,16 @@
             @extend .text-light;
         }
     }
+
+     &--white {
+        .feature-block__content-container {
+            background-color: $white;
+        }
+
+        .feature-block__content {
+            @extend .text-dark;
+        }
+    }
 }
 
 @include mq($from: tablet) {

@@ -106,6 +106,16 @@ $gradient-transparent-by: 100%;
             @extend .text-light;
         }
     }
+
+    &--white {
+        &:before {
+            background-color: $white;
+        }
+
+        .feature-block-gradient__content {
+            @extend .text-dark;
+        }
+    }
 }
 
 @include mq($from: tablet) {
@@ -266,6 +276,23 @@ $gradient-transparent-by: 100%;
 
             &.feature-block-gradient--right:before {
                 background-image: linear-gradient(to left, $secondary-background-color $gradient-solid-to, transparent $gradient-transparent-by);
+            }
+        }
+
+        &--white {
+
+            &:before {
+                //Fallback for no cssgradients support -
+                background-color: $white;
+
+                .cssgradients & {
+                    background-color: transparent;
+                    background-image: linear-gradient(to right, $white $gradient-solid-to, transparent $gradient-transparent-by);
+                }
+            }
+
+            &.feature-block-gradient--right:before {
+                background-image: linear-gradient(to left, $white $gradient-solid-to, transparent $gradient-transparent-by);
             }
         }
     }
