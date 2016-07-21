@@ -9,10 +9,17 @@ master: {00000000-0000-0000-0000-000000000000}
 template: {50F3DEEA-566F-46A2-9C24-A2B4498CC742}
 templatekey: Global Settings
 
+----field----
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 197
+
+ar|sitecore\Presales Configuration Manager|pe|+item:create|+item:read|+item:rename|+item:delete|+item:write|+item:admin|pd|+item:create|+item:read|+item:rename|+item:delete|+item:write|+item:admin|
 ----version----
 language: en
 version: 1
-revision: 19322010-2374-43cb-bfff-85236177895d
+revision: 3144d901-df0c-4ffa-9095-e56ef554bae2
 
 ----field----
 field: {E670AD08-9370-4CE9-B2F4-553A6A13AD1D}
@@ -245,14 +252,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-19322010-2374-43cb-bfff-85236177895d
+3144d901-df0c-4ffa-9095-e56ef554bae2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160719T173336Z
+20160721T112918Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
