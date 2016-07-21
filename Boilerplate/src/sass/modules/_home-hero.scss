@@ -5,17 +5,38 @@
     @extend .burst;
     @include shadow--dark();
     @include text-centre();
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: $pad;
-    padding-top: $pad--large;
 
-    &.text-light {
-        @include shadow--light();
+    &--static {
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: $pad;
+        padding-top: $pad--large;
+        width: 100%;
 
-        // Use specificity to override header colour.
-        h1, h2, p {
-            color: $white;
+        &.text-light {
+            @include shadow--light();
+
+            // Use specificity to override header colour.
+            h1,
+            h2,
+            p {
+                color: $white;
+            }
+        }
+    }
+
+    // Relative so that the content and video sections can stack.
+    position: relative;
+
+    &.home-hero--video {
+        padding: 0;
+
+        .home-hero--static {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            z-index: 2;
         }
     }
 
