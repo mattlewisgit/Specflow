@@ -14,14 +14,11 @@
 
             // Ensure the images have space and are not too high.
             .award-leader--intro__logos {
-                a {
-                    // Inline block does not always work...
-                    float: left;
-                }
+                @include bounceLinkedImage();
 
-                img {
-                    margin-right: $pad--xthin;
-                    max-height: 70px;
+                a, img {
+                    // Inline block does not always work...
+                    display: inline-block;
                 }
             }
         }
@@ -67,13 +64,15 @@
 
 // Use flexbox to keep the article rows the same height.
 .flexbox {
-    .award-leader {
-        .award-leader--articles {
-            display: flex;
-            flex-direction: column;
+    @include mq($from: tablet) {
+        .award-leader {
+            .award-leader--articles {
+                display: flex;
+                flex-direction: column;
 
-            .article-snippet {
-                flex: 1; 
+                .article-snippet {
+                    flex: 1; 
+                }
             }
         }
     }
