@@ -14,21 +14,21 @@
 
                 <p>@Editable(Model, item => item.OpeningParagraph)</p>
 
-                @foreach (var awardLogos in Model.AwardLogos)
-                {
-                    using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", awardLogos.Path))
+                <div class="award-leader--intro__logos">
+                    @foreach (var awardLogos in Model.AwardLogos)
                     {
-                        using (BeginEditFrame(awardLogos, "Edit Logo", item => item.Image))
+                        using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", awardLogos.Path))
                         {
-                            <div class="award-leader--intro__logos">
-                                @using (BeginRenderLink(awardLogos, item => item.Link, isEditable: true))
+                            using (BeginEditFrame(awardLogos, "Edit Logo", item => item.Image))
+                            {
+                                using (BeginRenderLink(awardLogos, item => item.Link, isEditable: true))
                                 {
                                     @Editable(awardLogos, item => item.Image)
                                 }
-                            </div>
+                            }
                         }
                     }
-                }
+                </div>
             </div>
 
             <div class="grid-col-6-12 award-leader--articles">
