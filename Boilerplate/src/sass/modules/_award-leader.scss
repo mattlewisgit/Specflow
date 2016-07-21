@@ -14,6 +14,11 @@
 
             // Ensure the images have space and are not too high.
             .award-leader--intro__logos {
+                a {
+                    // Inline block does not always work...
+                    float: left;
+                }
+
                 img {
                     margin-right: $pad--xthin;
                     max-height: 70px;

@@ -276,6 +276,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsTabbed.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\AwardLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\ProductHero.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Generic\ArticleItem.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Content.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Tab.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\TabCollection.cs" />

@@ -4,63 +4,61 @@
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.AwardLeader>
 
 
-<div class="products-component pinch">
-    @using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
-    {
-        <div class="grid">
-            <div class="grid-col-6-12" style="text-align: left">
+<div class="award-leader pinch">
+    <div class="grid-no-gutters">
 
-                <h2>@Editable(Model, item => item.LeadIn)</h2>
+        @using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
+        {
+            <div class="grid-col-6-12 award-leader--intro">
+                <h2>@Editable(Model, item => item.Headline)</h2>
 
-                <h1>@Editable(Model, item => item.Headline)</h1>
+                <p>@Editable(Model, item => item.OpeningParagraph)</p>
 
-                <h6>@Editable(Model, item => item.OpeningParagraph)</h6>
-
-                <div class="">
-                   @foreach (var awardLogos in Model.AwardLogos)
-                   {
-                       using (BeginEditFrame(awardLogos, "Edit Logo image", item => item.AwardImage))
-                       {
-                           using (this.BeginRenderLink(awardLogos, item => item.Link, isEditable: true))
-                           {
-                               @Editable(awardLogos, m => m.AwardImage)
-                           }
-                       }
-                   }c
-                </div>
-            </div>
-
-            <div class="grid-col-6-12">
-                @foreach (var articleItem in Model.ArticleItems)
+                @foreach (var awardLogos in Model.GetAwardLogos())
                 {
-                    using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", articleItem.Path))
+                    using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", awardLogos.Path))
                     {
-                        using (BeginEditFrame(articleItem, "Edit Background image", item => item.Image))
+                        using (BeginEditFrame(awardLogos, "Edit Logo", item => item.Image))
                         {
-                            <div class="article-index--container">
-                                <div class="grid-no-gutters article-index--article">
-                                    <div class="grid-col-5-12 article-index--article__image background-position-middle-right" style="@this.BackgroundImage(articleItem)">
-                                        <div class="tablet-less-than">@Editable(articleItem, x => x.Image)</div>
-                                    </div>
-
-                                    <div class="grid-col-7-12 article-index--article__content">
-                                        @using (this.BeginRenderLink(articleItem, item => item.Link, isEditable: true))
-                                        {
-                                            <h3>
-                                                @Editable(articleItem, m => m.Title)
-                                            </h3>
-                                            <p class="h4">
-                                                @Editable(articleItem, m => m.LeadIn)
-                                            </p>
-                                        }
-                                    </div>
-                                </div>
+                            <div class="award-leader--intro__logos">
+                                @using (BeginRenderLink(awardLogos, item => item.Link, isEditable: true))
+                                {
+                                    @Editable(awardLogos, item => item.Image)
+                                }
                             </div>
                         }
                     }
                 }
             </div>
 
+            <div class="grid-col-6-12 award-leader--articles">
+                @foreach (var articleItem in Model.GetArticleItems())
+                {
+                    using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", articleItem.Path))
+                    {
+                        <div class="grid-no-gutters article-snippet">
+                            @using (BeginEditFrame(articleItem, "Edit Background image", item => item.Image))
+                            {
+                                <div class="grid-col-4-12 article-snippet--image background-position-middle" style="@this.BackgroundImage(articleItem)">
+                                    <div class="tablet-less-than">@Editable(articleItem, x => x.Image)</div>
+                                </div>
+
+                                <div class="grid-col-8-12 article-snippet--content">
+                                    @using (this.BeginRenderLink(articleItem, item => item.Link, isEditable: true))
+                                    {
+                                        <h3>
+                                            @Editable(articleItem, m => m.Title)
+                                        </h3>
+                                        <p class="h4">
+                                            @Editable(articleItem, m => m.LeadIn)
+                                        </p>
+                                    }
+                                </div>
+                            }
+                        </div>
+                    }
+                }
             </div>
-    }
+        }
+    </div>
 </div>

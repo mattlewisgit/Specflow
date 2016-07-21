@@ -5,6 +5,7 @@ using System.Web;
 using Glass.Mapper.Sc.Configuration.Attributes;
 using Glass.Mapper.Sc.Fields;
 using Vitality.Website.Areas.Global.Models;
+using Vitality.Website.Areas.Presales.ComponentTemplates.Generic;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
 {
@@ -23,38 +24,14 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
 
         public Image BackgroundImage { get; set; }
 
-        [SitecoreChildren]
-        public IEnumerable<ArticleItem> ArticleItems { get; set; }
-
-        [SitecoreChildren]
-        public IEnumerable<AwardLogo> AwardLogos { get; set; }
-    }
-
-    public class ArticleItem : SitecoreItem
-    {
-        public ArticleItem()
+        public IEnumerable<ArticleItem> GetArticleItems()
         {
-            Image = new Image();
+            return GetChildren<ArticleItem>(Guid.Parse("972CA70E-945F-4D10-967B-FD622EF97D66"));
         }
 
-        public Image Image { get; set; }
-
-        public string LeadIn { get; set; }
-
-        public string Title { get; set; }
-
-        public Link Link { get; set; }
-    }
-
-    public class AwardLogo : SitecoreItem
-    {
-        public AwardLogo()
+        public IEnumerable<ImageLink> GetAwardLogos()
         {
-            AwardImage = new Image();
+            return GetChildren<ImageLink>(Guid.Parse("25EB72FE-6AE2-44E4-AC1E-9631E53D3AB0"));
         }
-        public Image AwardImage { get; set; }
-
-        public Link Link { get; set; }
-
     }
 }

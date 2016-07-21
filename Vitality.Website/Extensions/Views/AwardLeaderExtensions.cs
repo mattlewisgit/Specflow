@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using Glass.Mapper.Sc.Web.Mvc;
 using Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks;
+using Vitality.Website.Areas.Presales.ComponentTemplates.Generic;
 
 namespace Vitality.Website.Extensions.Views
 {
@@ -11,12 +12,12 @@ namespace Vitality.Website.Extensions.Views
     {
         public static int NumberOfColumns(this GlassView<AwardLeader> view)
         {
-            return 12/view.Model.ArticleItems.Count();
+            return 12 / view.Model.GetArticleItems().Count();
         }
 
         public static int NumberOfAwardLogos(this GlassView<AwardLeader> view)
         {
-            return 12 / view.Model.AwardLogos.Count();
+            return 12 / view.Model.GetAwardLogos().Count();
         }
 
         public static string BackgroundImage(this GlassView<AwardLeader> view, ArticleItem articleItem)
@@ -30,7 +31,7 @@ namespace Vitality.Website.Extensions.Views
 
         public static string ColumnSplitOne(this GlassView<AwardLeader> view)
         {
-            if (view.Model.ArticleItems.Count() > 1)
+            if (view.Model.GetArticleItems().Count() > 1)
             {
                 return "grid-col-5-12";
             }
@@ -39,7 +40,7 @@ namespace Vitality.Website.Extensions.Views
 
         public static string ColumnSplitTwo(this GlassView<AwardLeader> view)
         {
-            if (view.Model.ArticleItems.Count() > 1)
+            if (view.Model.GetArticleItems().Count() > 1)
             {
                 return "grid-col-7-12";
             }
