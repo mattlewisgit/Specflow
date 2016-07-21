@@ -10,7 +10,7 @@ namespace Vitality.Website.Areas.Presales.SettingsTemplates
 
     [SitecoreType(Cachable = true)]
     public class GlobalSettings : SitecoreItem, IAppReferenceGlobal, IBrowserLatencyGlobal, IBrowserStylingGlobal, IDuplicateContentPage, IGoogleAuthorshipGlobal, IGoogleTagManagerGlobal,
-        IIndexationPage, IOpenGraphGlobal, IOpenGraphPage, IQubitOpenTagGlobal, IResponseTapGlobal, ISerpAppearancePage, ITwitterGlobal, ITwitterPage, IWebmasterToolsGlobal, IJsonSchemaGlobal
+        IIndexationPage, IOpenGraphGlobal, IOpenGraphPage, IQubitOpenTagGlobal, ISerpAppearancePage, ITwitterGlobal, ITwitterPage, IWebmasterToolsGlobal, IJsonSchemaGlobal
     {
         public string AppleITunesApp { get; set; }
         public string[] DnsPrefetch { get; set; }
