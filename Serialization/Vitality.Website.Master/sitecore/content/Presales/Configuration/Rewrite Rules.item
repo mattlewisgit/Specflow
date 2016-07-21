@@ -2,9 +2,9 @@
 version: 1
 id: {25178205-C920-4EE7-9A40-BEBED9F45FFF}
 database: master
-path: /sitecore/content/Presales Rewrite Rules
-parent: {0DE95AE4-41AB-4D01-9EB0-67441B7C2450}
-name: Presales Rewrite Rules
+path: /sitecore/content/Presales/Configuration/Rewrite Rules
+parent: {38D91B77-AA7E-4705-9045-C8451E08C1E8}
+name: Rewrite Rules
 master: {00000000-0000-0000-0000-000000000000}
 template: {CBE995D0-FCE0-4061-B807-B4BBC89962A7}
 templatekey: Redirect Folder
@@ -33,7 +33,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: db866e6e-3cc6-44d3-b311-f28afed4b829
+revision: 1f71f711-d36f-4c97-90a2-b805f3e9438e
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-db866e6e-3cc6-44d3-b311-f28afed4b829
+1f71f711-d36f-4c97-90a2-b805f3e9438e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160719T095204Z
+20160721T111430Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
