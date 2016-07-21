@@ -65,6 +65,18 @@
       <HintPath>..\packages\Nancy.Hosting.Aspnet.0.17.1\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NWebsec, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3613da5f958908a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NWebsec.4.2.0\lib\45\NWebsec.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NWebsec.Core, Version=1.5.0.0, Culture=neutral, PublicKeyToken=3613da5f958908a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NWebsec.Core.1.5.0\lib\45\NWebsec.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NWebsec.Mvc, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3613da5f958908a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NWebsec.Mvc.4.2.0\lib\45\NWebsec.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SimpleInjector, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.3.1.2\lib\net45\SimpleInjector.dll</HintPath>
       <Private>True</Private>
@@ -177,7 +189,6 @@
     </None>
     <Content Include="Areas\Presales\Views\CallToAction\PrimaryCallToAction.cshtml" />
     <Content Include="Areas\Presales\Views\Banners\HomeHero.cshtml" />
-    <Content Include="Areas\Presales\Views\Articles\ArticleIndex.cshtml" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
@@ -237,9 +248,7 @@
     <Content Include="css\sprite-generated.png" />
     <Content Include="img\spritesheets\svg-sprite.svg" />
     <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\GlassMapperSc.cs" />
@@ -251,7 +260,6 @@
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
     <Compile Include="Areas\Global\Models\Taxonomy.cs" />
-    <Compile Include="Areas\Presales\BaseTemplates\IJsonSchemaGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IQuoteFooter.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IAppReferenceGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IBrowserLatencyGlobal.cs" />
@@ -268,8 +276,6 @@
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterPage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IWebmasterToolsGlobal.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\Articles\ArticleIndex.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\Articles\ArticleItem.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Banners\HomeHero.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsStacked.cs" />
@@ -287,15 +293,14 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Rewards\RewardsLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryComponent.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryListItem.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\Partners\PartnerHero.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductPanel.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductsComponent.cs" />
+    <Compile Include="Areas\Presales\Models\Partners\PartnerHero.cs" />
+    <Compile Include="Areas\Presales\Models\Products\ProductPanel.cs" />
+    <Compile Include="Areas\Presales\Models\Products\ProductsComponent.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\CallToActionPanel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\PrimaryCallToAction.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqPreview.cs" />
-    <Compile Include="Areas\Presales\PageTemplates\ErrorPage.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\CardsStackedRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\HomeHeroRendering.cs" />
@@ -307,7 +312,6 @@
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
-    <Compile Include="Extensions\Views\ArticleIndexExtensions.cs" />
     <Compile Include="Extensions\Views\MainNavigationExtensions.cs" />
     <Compile Include="Extensions\Views\CardsTabbedExtensions.cs" />
     <Compile Include="Extensions\Views\BasePageExtensions.cs" />
@@ -568,7 +572,9 @@
     <Content Include="Areas\Presales\Views\Cards\CardsTabbed.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_Metadata.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_JsThirdParty.cshtml" />
-    <Content Include="Areas\Presales\Views\Shared\ErrorPage.cshtml" />
+    <None Include="NWebsecConfig\HttpHeaderSecurityModuleConfig.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -578,7 +584,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Presales\Controllers\" />
-    <Folder Include="Areas\Presales\Models\" />
     <Folder Include="img\examples\" />
   </ItemGroup>
   <ItemGroup>
