@@ -172,6 +172,7 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
     <Content Include="App_Config\Include\ship.config" />
+    <Content Include="App_Config\Include\Sitecore.Media.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -274,7 +275,9 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsStacked.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsTabbed.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\AwardLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\ProductHero.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Generic\ArticleItem.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Content.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Tab.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\TabCollection.cs" />
@@ -295,7 +298,6 @@
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\PrimaryCallToAction.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqPreview.cs" />
-    <Compile Include="Areas\Presales\PageTemplates\ErrorPage.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\CardsStackedRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\HomeHeroRendering.cs" />
@@ -307,6 +309,7 @@
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
+    <Compile Include="Extensions\Views\AwardLeaderExtensions.cs" />
     <Compile Include="Extensions\Views\ArticleIndexExtensions.cs" />
     <Compile Include="Extensions\Views\MainNavigationExtensions.cs" />
     <Compile Include="Extensions\Views\CardsTabbedExtensions.cs" />
@@ -568,7 +571,7 @@
     <Content Include="Areas\Presales\Views\Cards\CardsTabbed.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_Metadata.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_JsThirdParty.cshtml" />
-    <Content Include="Areas\Presales\Views\Shared\ErrorPage.cshtml" />
+    <Content Include="Areas\Presales\Views\FeatureBlocks\AwardLeader.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
