@@ -42,6 +42,9 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="components\cookie-message\without-cookie.html" />
+    <Content Include="components\cookie-message\with-cookie.html" />
+    <Content Include="components\cookie-message\index.html" />
     <Content Include="components\server-error.html" />
     <Content Include="components\article-index.html" />
     <Content Include="components\award-leader.html" />
@@ -205,6 +208,7 @@
     <Content Include="src\img\logos\white\weightwatchers_white.png" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
+    <Content Include="src\js\modules\cookieMessageModule.js" />
     <Content Include="src\js\modules\collapsibleModule.js" />
     <Content Include="src\js\modules\breakpointsModule.js" />
     <Content Include="src\js\modules\quoteFooterModule.js" />
@@ -394,6 +398,7 @@
     <Content Include="src\sass\modules\_server-error.scss" />
     <Content Include="src\sass\modules\_article-index.scss" />
     <Content Include="src\sass\utils\_background-positions.scss" />
+    <Content Include="src\sass\modules\_cookie-message.scss" />
     <Content Include="src\sass\modules\_award-leader.scss" />
     <Content Include="src\sass\modules\_article-snippet.scss" />
     <None Include="Web.Debug.config">
