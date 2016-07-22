@@ -237,10 +237,8 @@
     <Content Include="css\sprite-generated%402x.png" />
     <Content Include="css\sprite-generated.png" />
     <Content Include="img\spritesheets\svg-sprite.svg" />
-    <Content Include="img\stanley-oops.png" />
+    <Content Include="img\stanley-head.png" />
     <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
-    <Content Include="Pages\403.html" />
-    <Content Include="Pages\503.html" />
     <Content Include="Pages\500.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
