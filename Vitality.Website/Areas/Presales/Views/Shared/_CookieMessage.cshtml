@@ -3,15 +3,17 @@
 
 @if (this.ShowCookieMessage())
 {
-    <div class="cookie-message animated slideInDown">
+    <div class="cookie-message">
         <div class="grid">
             <div class="grid-col-9-12">
                 @Html.Raw(Model.Message)
             </div>
+            
             <div class="grid-col-3-12">
-                <a class="box-button box-button--light box-button--rounded">@Html.Raw(Model.AcceptText)</a>
+                <a class="box-button box-button--light box-button--rounded">
+                    @Html.Raw(Model.AcceptText)
+                </a>
             </div>
         </div>
     </div>
 }
-
