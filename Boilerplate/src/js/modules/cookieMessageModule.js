@@ -12,9 +12,14 @@ function init() {
         return;
     }
 
+    // Show the message and set the cookie.
     _container.show();
 
-    // *Only* hide and set the cookie on close.
+    if (!_areCookiesDisabled) {
+        Cookies.set(_cookieKey, true, { expires: 365 });
+    }
+
+    // Slide out and hide the message on close.
     _container.find(".box-button").click(function() {
         _container
             .removeClass("slideInDown")
@@ -22,10 +27,6 @@ function init() {
 
         setTimeout(function () {
             _container.hide();
-
-            if (!_areCookiesDisabled) {
-                Cookies.set(_cookieKey, true, { expires: 365 });
-            }
         }, 500);
 
         return false;
