@@ -45,7 +45,7 @@
 
         public static string ButtonStyle(this GlassView<BenefitLeader> view)
         {
-            if (BackgroundColour(view).EndsWith("light"))
+            if (BackgroundColour(view).EndsWith("light") || BackgroundColour(view).EndsWith("white"))
             {
                 return "box-button box-button--rounded";
             }

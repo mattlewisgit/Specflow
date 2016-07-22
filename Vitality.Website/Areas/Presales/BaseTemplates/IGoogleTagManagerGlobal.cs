@@ -8,6 +8,6 @@ namespace Vitality.Website.Areas.Presales.BaseTemplates
 {
     public interface IGoogleTagManagerGlobal
     {
-        string GoogleTagManagerScript { get; set; }
+        string GoogleTagManagerId { get; set; }
     }
 }

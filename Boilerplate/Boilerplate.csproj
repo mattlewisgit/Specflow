@@ -45,7 +45,9 @@
     <Content Include="components\cookie-message\without-cookie.html" />
     <Content Include="components\cookie-message\with-cookie.html" />
     <Content Include="components\cookie-message\index.html" />
+    <Content Include="components\server-error.html" />
     <Content Include="components\article-index.html" />
+    <Content Include="components\award-leader.html" />
     <Content Include="components\preview-card.html" />
     <Content Include="components\primary-cta.html" />
     <Content Include="components\accordion.html" />
@@ -79,6 +81,7 @@
     <Content Include="gulpfile.js" />
     <Content Include="js\boilerplate.js" />
     <Content Include="src\img\examples\example-pdf.png" />
+    <Content Include="src\img\examples\stanley-oops.png" />
     <Content Include="src\js-third-party.html" />
     <Content Include="src\images\arrow-down%402x.png" />
     <Content Include="src\images\arrow-down--grey%402x.png" />
@@ -392,9 +395,12 @@
     <Content Include="src\sass\_rte-fixes.scss" />
     <Content Include="src\sass\base\_lists.scss" />
     <Content Include="src\sass\modules\_preview-card.scss" />
+    <Content Include="src\sass\modules\_server-error.scss" />
     <Content Include="src\sass\modules\_article-index.scss" />
     <Content Include="src\sass\utils\_background-positions.scss" />
     <Content Include="src\sass\modules\_cookie-message.scss" />
+    <Content Include="src\sass\modules\_award-leader.scss" />
+    <Content Include="src\sass\modules\_article-snippet.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

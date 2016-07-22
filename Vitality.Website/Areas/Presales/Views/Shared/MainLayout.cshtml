@@ -9,10 +9,6 @@
 <head>
     @Html.Sitecore().Placeholder("metadata")
 
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0" />
-
     @Html.Partial("_Favicons")
     @Html.Partial("_CriticalCss")
 
@@ -28,12 +24,14 @@
     {
         <link rel="stylesheet" type="text/css" href="/css/tablesaw.css" />
     }
-    
+
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700" />
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
 </head>
+
 <body>
+    @Html.Sitecore().Placeholder("gtm")
     <div class="page">
         @Html.Partial("_CookieMessage", SitecoreContext.GetItem<CookieSettings>(ItemConstants.Presales.Content.Configuration.CookieSettings.Id))
 

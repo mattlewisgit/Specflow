@@ -9,7 +9,7 @@ body {
     @include font-size($basesize);
     font-family: $font-body;
     word-wrap: break-word;
-    line-height: 1.7;
+    line-height: $line-height--normal;
     color: $body-color;
     -webkit-font-smoothing: antialiased;
     text-shadow: 1px 1px 1px rgba($black, 0.004);
