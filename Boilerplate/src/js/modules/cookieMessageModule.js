@@ -8,7 +8,7 @@ function init() {
     _container = $(".cookie-message");
     _areCookiesDisabled = $("html").hasClass("disable-cookies");
 
-    if (_container.length < 1 || (!_areCookiesDisabled && Cookies.get(_cookieKey))) {
+    if (_container.length < 1 || (!_areCookiesDisabled && !!Cookies.get(_cookieKey))) {
         return;
     }
 
@@ -24,7 +24,7 @@ function init() {
             _container.hide();
 
             if (!_areCookiesDisabled) {
-                Cookies.set(_cookieKey, true);
+                Cookies.set(_cookieKey, true, { expires: 365 });
             }
         }, 500);
 
