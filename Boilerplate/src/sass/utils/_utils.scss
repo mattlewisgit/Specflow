@@ -111,11 +111,11 @@
 }
 
 .text-light * {
-    color: $white;
+    color: $white !important;
 }
 
 .text-dark * {
-    color: $heading-color;
+    color: $heading-color !important;
 }
 
 .coverlink {
