@@ -44,6 +44,7 @@
   <ItemGroup>
     <Content Include="components\server-error.html" />
     <Content Include="components\article-index.html" />
+    <Content Include="components\award-leader.html" />
     <Content Include="components\preview-card.html" />
     <Content Include="components\primary-cta.html" />
     <Content Include="components\accordion.html" />
@@ -393,6 +394,8 @@
     <Content Include="src\sass\modules\_server-error.scss" />
     <Content Include="src\sass\modules\_article-index.scss" />
     <Content Include="src\sass\utils\_background-positions.scss" />
+    <Content Include="src\sass\modules\_award-leader.scss" />
+    <Content Include="src\sass\modules\_article-snippet.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
