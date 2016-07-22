@@ -88,12 +88,6 @@
     }
 }
 
-@include mq($until: desktop) {
-    .partner-hero {
-        padding: 0 $pad;
-    }
-}
-
 @include mq($until: tablet) {
     .partner-hero--with-card {
         .partner-hero--headline {
