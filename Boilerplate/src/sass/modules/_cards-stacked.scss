@@ -1,19 +1,37 @@
 // Set a default background colour, which enables the component
 // to be used without a background, particularly useful when editing.
 .cards-stacked {
+    @extend .pinch;
     background: $primary-background-color;
+    padding: $pad;
+
+    .spotlight__list {
+        margin-bottom: $pad;
+    }
 }
 
+// Remove the background image on mobile.
 @include mq($until: mobile-landscape) {
     .cards-stacked {
-        // Must force an override here,
-        // as the background imageis set on the element.
+        // Must force an override here, as the image is set inline.
         background: $primary-background-color !important;
         color: $black;
 
         .spotlight__heading, .spotlight__intro {
             color: $black;
         }
+
+        // Ensure anchors can be seen against the light background.
+        .spotlight.text-light a {
+            color: $primary-color;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+
+        .spotlight__list {
+            margin-bottom: $pad;
+        }
     }
 }
-

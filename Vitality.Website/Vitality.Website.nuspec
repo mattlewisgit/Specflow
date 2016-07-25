@@ -13,6 +13,7 @@
   <files>
       <file src="App_Config\ConnectionStrings.config" target="App_Config" />
       <file src="App_Config\**\*.*" target="App_Config" />
+	  <file src="App_Data\license.xml" target="App_Data" />
       <file src="Areas\Presales\Views\**\*.*" target="Areas\Presales\Views" />
       <file src="bower_components\**\*.css" target="bower_components" />
       <file src="bower_components\**\*.js" target="bower_components" />
@@ -21,6 +22,7 @@
       <file src="css\*.css" target="css" />
       <file src="css\*.png" target="css" />
       <file src="Global.asax" />
+	  <file src="_Heartbeat.aspx" />
       <file src="img\**\*.*" target="img" />
       <file src="js\*.js" target="js" />
       <file src="Web.config" />

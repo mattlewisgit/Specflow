@@ -9,10 +9,17 @@ master: {00000000-0000-0000-0000-000000000000}
 template: {D0091E84-6C61-4A07-ABA0-FA764E993450}
 templatekey: Quote Footer
 
+----field----
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 120
+
+ar|sitecore\Presales Configuration Manager|pd|+item:create|+item:read|+item:rename|+item:delete|+item:write|+item:admin|
 ----version----
 language: en
 version: 1
-revision: 0248b838-5e39-4b05-9b37-0c3857fce905
+revision: 5052faad-9e14-491e-a867-07a3317c59ea
 
 ----field----
 field: {7B403971-C93A-4BFE-8BD1-5F7E2EB7A225}
@@ -34,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-0248b838-5e39-4b05-9b37-0c3857fce905
+5052faad-9e14-491e-a867-07a3317c59ea
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160614T161059Z
+20160721T113009Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

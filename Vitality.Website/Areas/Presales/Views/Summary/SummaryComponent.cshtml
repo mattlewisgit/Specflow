@@ -21,7 +21,7 @@
         <div class="content">
             @if (this.CanShowRightContentOpeningParagraph())
             {
-                <p>@Editable(Model, m => m.RightContentOpeningParagraph)</p>
+                @Editable(Model, m => m.RightContentOpeningParagraph)
             }
 
             @foreach (var summaryListItemsGroup in this.GroupSummaryListItems())

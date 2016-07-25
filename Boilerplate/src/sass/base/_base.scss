@@ -41,12 +41,28 @@ main > *:last-child {
     }
 }
 
-section,
+// The section tag is used to housed the majority of the page content.
+// As such, only introduce side padding as device sizes increase,
+// to maximise the amount of content displayed comfortably on the screen. 
+section {
+    @extend .clearfix;
+    padding: 0;
+
+    @include mq($from: tablet) {
+        padding: 0 $pad;
+    }
+
+    @include mq($from: desktop) {
+        padding: 0 $pad--large;
+    }
+}
+
+// Since the footer is full width, padding is used from mobile.
 footer {
     @extend .clearfix;
     padding: 0 $pad;
 
-    @include mq($from: tablet) {
+    @include mq($from: desktop) {
         padding: 0 $pad--large;
     }
 }

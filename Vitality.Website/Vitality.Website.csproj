@@ -251,6 +251,7 @@
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
     <Compile Include="Areas\Global\Models\SitecoreItem.cs" />
     <Compile Include="Areas\Global\Models\Taxonomy.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IJsonSchemaGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IQuoteFooter.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IAppReferenceGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IBrowserLatencyGlobal.cs" />
@@ -262,7 +263,6 @@
     <Compile Include="Areas\Presales\BaseTemplates\IOpenGraphGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IOpenGraphPage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IQubitOpenTagGlobal.cs" />
-    <Compile Include="Areas\Presales\BaseTemplates\IResponseTapGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ISerpAppearancePage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterPage.cs" />
@@ -273,7 +273,9 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsStacked.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsTabbed.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\AwardLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\ProductHero.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Generic\ArticleItem.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Content.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Tab.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\TabCollection.cs" />
@@ -294,6 +296,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\PrimaryCallToAction.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqPreview.cs" />
+    <Compile Include="Areas\Presales\PageTemplates\ErrorPage.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\ArticleIndexRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\CardsStackedRendering.cs" />
@@ -301,11 +304,14 @@
     <Compile Include="Areas\Presales\RenderingTemplates\PartnerHeroRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\RewardsLeaderRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\SummaryComponentRendering.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\CookieSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\GlobalSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
+    <Compile Include="Extensions\Views\CookieMessageExtensions.cs" />
+    <Compile Include="Extensions\Views\AwardLeaderExtensions.cs" />
     <Compile Include="Extensions\Views\ArticleIndexExtensions.cs" />
     <Compile Include="Extensions\Views\MainNavigationExtensions.cs" />
     <Compile Include="Extensions\Views\CardsTabbedExtensions.cs" />
@@ -567,6 +573,10 @@
     <Content Include="Areas\Presales\Views\Cards\CardsTabbed.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_Metadata.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_JsThirdParty.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\_CookieMessage.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\ErrorPage.cshtml" />
+     <Content Include="Areas\Presales\Views\Shared\_GoogleTagManager.cshtml" />
+     <Content Include="Areas\Presales\Views\FeatureBlocks\AwardLeader.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

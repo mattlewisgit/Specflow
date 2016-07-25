@@ -11,9 +11,7 @@
                     <div>
                         @Editable(panel, m => m.Image)
                     </div>
-                    <p>
-                        @Editable(panel, m => m.OpeningParagraph)
-                    </p>
+                    @Editable(panel, m => m.OpeningParagraph)
 
                     @Editable(panel, m => m.CallToAction, new { @class = "button-cta" })
                 </div>
