@@ -1,11 +1,11 @@
-﻿@using NWebsec.Mvc.HttpHeaders.Csp
+﻿@using System.Web.Mvc.Html
 @using Sitecore.Mvc
-@{
-    var isEditing = Sitecore.Context.PageMode.IsExperienceEditor
-        || Sitecore.Context.PageMode.IsExperienceEditorEditing;
-}
+@using Vitality.Website.Areas.Presales.SettingsTemplates
+@using Vitality.Website.SC
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.BasePage>
+
 <!DOCTYPE html>
-<html class="@(isEditing ? "disable-tablesaw" : null)" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">
+<html class="@(IsInEditingMode ? "disable-tablesaw" : null)" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">
 <head>
     @Html.Sitecore().Placeholder("metadata")
 
@@ -16,7 +16,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/aight/2.1.1/aight.min.js"></script>
     <![endif]-->
 
-    @if (isEditing)
+    @if (IsInEditingMode)
     {
         <link rel="stylesheet" href="/css/experience_editor_fix.css" />
     }
@@ -24,13 +24,17 @@
     {
         <link rel="stylesheet" type="text/css" href="/css/tablesaw.css" />
     }
-    
+
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700" />
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
 </head>
+
 <body>
+    @Html.Sitecore().Placeholder("gtm")
     <div class="page">
+        @Html.Partial("_CookieMessage", SitecoreContext.GetItem<CookieSettings>(ItemConstants.Presales.Content.Configuration.CookieSettings.Id))
+
         <a href="#main-content" class="offscreen">Skip to Content</a>
         @Html.Sitecore().Placeholder("header")
 
@@ -44,7 +48,7 @@
     @Html.Sitecore().Placeholder("footer")
     @Html.Partial("_JsThirdParty")
 
-    @if (!isEditing)
+    @if (!IsInEditingMode)
     {
         <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw.js"></script>
         <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw-init.js"></script>

@@ -22,6 +22,7 @@
       <file src="css\*.css" target="css" />
       <file src="css\*.png" target="css" />
       <file src="Global.asax" />
+	  <file src="_Heartbeat.aspx" />
       <file src="img\**\*.*" target="img" />
       <file src="js\*.js" target="js" />
       <file src="Web.config" />
