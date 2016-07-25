@@ -14,19 +14,8 @@
     }
 
     .feature-block__image-list {
+        @include bounceLinkedImage();
         margin-bottom: $pad;
-
-        a {
-            color: transparent;
-
-            &:hover img {
-                animation-name: pulse;
-                animation-duration: 0.3s;
-                animation-direction: alternate;
-                animation-timing-function: linear;
-                animation-fill-mode: forwards;
-            }
-        }
 
         div {
             > img, > a {

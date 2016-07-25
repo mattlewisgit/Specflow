@@ -1,4 +1,8 @@
-﻿namespace Vitality.Website.Areas.Global.Models
+﻿using System.Collections.Generic;
+using System.Linq;
+using Glass.Mapper.Sc;
+
+namespace Vitality.Website.Areas.Global.Models
 {
     using System;
 

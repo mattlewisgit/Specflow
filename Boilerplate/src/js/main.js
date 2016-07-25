@@ -1,6 +1,7 @@
 var AccordionModule = require("./modules/accordionModule");
 var AnimationDelayModule = require("./modules/animationDelayModule");
 var Breakpoints = require("./modules/breakpointsModule");
+var CookieMessageModule = require("./modules/cookieMessageModule");
 var FilerModule = require("./modules/filterModule");
 var HomeHeroModule = require("./modules/homeHeroModule");
 var MatchHeightsModule = require("./modules/matchHeightsModule");
@@ -44,6 +45,7 @@ function _initCustom(wow) {
     SocialShareModule.init();
 
     AccordionModule.init();
+    CookieMessageModule.init();
     HomeHeroModule.init();
     TabsModule.init();
 

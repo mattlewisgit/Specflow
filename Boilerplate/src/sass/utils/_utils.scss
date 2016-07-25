@@ -42,8 +42,8 @@
 }
 
 .burst {
-    margin: 0 #{-$pad};
-    width: calc(100% + #{$pad + $pad});
+    margin: 0;
+    width: 100%;
 
     @include mq($from: tablet) {
         margin: 0 #{-$pad--large};

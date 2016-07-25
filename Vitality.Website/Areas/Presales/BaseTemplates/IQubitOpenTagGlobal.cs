@@ -8,6 +8,6 @@ namespace Vitality.Website.Areas.Presales.BaseTemplates
 {
     public interface IQubitOpenTagGlobal
     {
-        string QubitOpenTagScript { get; set; }
+        string QubitOpenTagId { get; set; }
     }
 }

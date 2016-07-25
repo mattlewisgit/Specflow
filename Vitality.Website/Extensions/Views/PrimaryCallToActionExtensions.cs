@@ -17,5 +17,10 @@
         {
             return view.Model.Panels.Count();
         }
+
+        public static bool ShowSecondLine(this GlassView<PrimaryCallToAction> view, CallToActionPanel panel)
+        {
+            return view.IsInEditingMode || !string.IsNullOrWhiteSpace(panel.Headline2);
+        }
     }
 }
