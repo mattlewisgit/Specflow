@@ -22,7 +22,11 @@ function _enhanceHero(i, el) {
 
         events: {
             // Remove the video container and play button on fail.
-            onError: function() {
+            onError: function(error) {
+                // An error here is likely to due to a prolem with the requested video itself.
+                // For example, the original video ID was 1ER-hNTUVz4, which was made private,
+                // and resulted in unhelpful, unrelated errors such as:
+                // "Failed to execute 'postMessage' on 'DOMWindow': target/origin mismatch".
                 hero.find(".video--responsive").remove();
                 playButton.remove();
             },
@@ -52,7 +56,7 @@ function _enhanceHero(i, el) {
     });
 }
 
-function init() {
+function _init() {
     "use strict";
     var heroes = $(".home-hero--video");
 
@@ -73,5 +77,5 @@ function init() {
 }
 
 module.exports = {
-    init: init
+    init: _init
 };

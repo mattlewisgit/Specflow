@@ -40,6 +40,12 @@
         }
     }
 
+    .home-hero--static__play {
+        @extend .svg-svg--button-video-play;
+        cursor: pointer;
+        margin: auto;
+    }
+
     h2 {
          margin: $pad--thin 0 $pad--xxlarge;
     }
