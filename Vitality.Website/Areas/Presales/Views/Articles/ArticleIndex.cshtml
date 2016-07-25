@@ -16,11 +16,11 @@
                 <div class="grid-col-@this.NumberOfColumns()-12 article-index--container">
                     @using (BeginEditFrame(articleItem, "Edit Background image", item => item.Image))
                     {
-                        <div class="grid-no-gutters article-index--article">
-                            <div class="@this.ColumnSplitOne() article-index--article__image @this.ImageRelativePosition(articleItem)" style="@this.BackgroundImage(articleItem)">
+                        <div class="grid-no-gutters article-snippet">
+                            <div class="@this.ColumnSplitOne() article-snippet--image @this.ImageRelativePosition(articleItem)" style="@this.BackgroundImage(articleItem)">
                                 <div class="tablet-less-than">@Editable(articleItem, x => x.Image)</div>
                             </div>
-                            <div class="@this.ColumnSplitTwo() article-index--article__content">
+                            <div class="@this.ColumnSplitTwo() article-snippet--content">
                                 @using (BeginRenderLink(articleItem, item => item.Link, isEditable: true))
                                 {
                                     <h3>
