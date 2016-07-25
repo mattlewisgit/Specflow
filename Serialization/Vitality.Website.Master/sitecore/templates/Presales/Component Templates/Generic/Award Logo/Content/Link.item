@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {F95FCDCB-FF28-4AF9-88D5-BD76D30FD183}
+id: {3CF541AC-8F13-49B2-949F-B49B719E006F}
 database: master
-path: /sitecore/templates/Presales/Base Templates/_ResponseTapGlobal/Meta Fields/ResponseTapScript
-parent: {99DF42E9-7DEE-48AB-B0DA-741FC8842052}
-name: ResponseTapScript
+path: /sitecore/templates/Presales/Component Templates/Generic/Award Logo/Content/Link
+parent: {B075B834-CA8D-444F-ADB9-7CDB9F3775FF}
+name: Link
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -13,49 +13,49 @@ templatekey: Template field
 field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
 name: Type
 key: type
-content-length: 15
+content-length: 12
 
-Multi-Line Text
+General Link
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
 key: __sortorder
 content-length: 3
 
-100
+200
 ----version----
 language: en
 version: 1
-revision: dc4d6148-1cec-4119-8241-f48ff9b51342
+revision: 53bafd66-dd94-48f9-aeab-b6758edd0d30
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 19
+content-length: 4
 
-Response Tap Script
+Link
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160614T160031Z
+20160718T083350Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-dc4d6148-1cec-4119-8241-f48ff9b51342
+53bafd66-dd94-48f9-aeab-b6758edd0d30
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T085143Z
+20160718T142911Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

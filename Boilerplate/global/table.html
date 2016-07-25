@@ -23,7 +23,7 @@
 </head>
 <body>
     <main tabindex="-1">
-        <section class="vertical-flush">
+        <section class="pinch">
             <h1>Tables</h1>
             <h2>Description</h2>
 
@@ -34,36 +34,42 @@
             </p>
 
             <h2>Examples</h2>
-
-            <h3>Stacked</h3>
-            
+            <h3>Stacked: Simple Content with Header</h3>
             <h4>Demo</h4>
 
             <div class="example">
-                <table class="data-table tablesaw tablesaw-stack"
-                       data-tablesaw-mode="stack">
+                <table class="data-table tablesaw tablesaw-stack" data-tablesaw-mode="stack">
                     <thead>
                         <tr>
-                            <th>Screen name</th>
-                            <th>Retail price</th>
-                            <th>Your price</th>
+                            <th>Package</th>
+                            <th>Retail Price</th>
+                            <th>Vitality Member Price</th>
                         </tr>
                     </thead>
+
                     <tbody>
+                        <tr>
+                            <td>Prevention Plus</td>
+                            <td>£99</td>
+                            <td><b>£49.50</b></td>
+                        </tr>
+
                         <tr>
                             <td>Active</td>
                             <td>£129</td>
-                            <td>£64.50</td>
+                            <td><b>£64.50</b></td>
                         </tr>
+
                         <tr>
                             <td>Core</td>
                             <td>£169</td>
-                            <td>£84.50</td>
+                            <td><b>£84.50</b></td>
                         </tr>
+
                         <tr>
                             <td>Executive</td>
                             <td>£249</td>
-                            <td>£124.50</td>
+                            <td><b>£124.50</b></td>
                         </tr>
                     </tbody>
                 </table>
@@ -71,14 +77,141 @@
 
             <div>
                 <h4>Markup</h4>
+                <pre><code class="language-markup line-numbers"></code></pre>
+            </div>
 
-                <pre>
-                    <code class="language-markup line-numbers"></code>
-                </pre>
+            <h3>Stacked: Complex Content without Header</h3>
+            <h4>Demo</h4>
+
+            <div class="example">
+                <table class="data-table tablesaw tablesaw-stack" data-tablesaw-mode="stack" summary="A list of other benefits.">
+                    <tbody>
+                        <tr>
+                            <td><b>Assistance at Home</b></td>
+                            <td colspan="2">
+                                We give you the help you need to recover in the comfort of your own home. If you've been in hospital
+                                for more than three days, for any eligible condition on the plan, you'll receive help at home once
+                                you're discharged for things like personal care, help with getting washed and dressed and domestic
+                                duties such as general tidying and changing bed linen.
+                            </td>
+                            <td>
+                                Subject to a needs assessment, you can receive up to 28 hours' care per claim. If you make more than
+                                one claim in a plan year, a maximum of 84 hours' care in total applies.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>NHS Hospital Cash Benefit</b></td>
+                            <td colspan="2">
+                                If you choose to be treated on the NHS, rather than privately through your plan, we give you a cash amount.
+                            </td>
+                            <td>
+                                &pound;250 per night (up to a maximum of &pound;2,000) for in-patient treatment and &pound;125 per day
+                                (up to a maximum of &pound;500) for day-patient treatment.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Home Nursing</b></td>
+                            <td colspan="2">
+                                To help you get you back on your feet after a stay in hospital. If your consultant recommends
+                                home nursing instead of more in-patient treatment, we pay for it.
+                            </td>
+                            <td>Full cover</td>
+                        </tr>
+                        <tr>
+                            <td><b>Private ambulance</b></td>
+                            <td colspan="2">
+                                The use of a private ambulance for transfer between hospitals, whether NHS or private,
+                                if a consultant says it's medically necessary.
+                            </td>
+                            <td>Full cover</td>
+                        </tr>
+                        <tr>
+                            <td><b>Private Ambulance</b></td>
+                            <td colspan="2">
+                                The use of a private ambulance for transfer between hospitals, whether NHS or private,
+                                if a consultant says it's medically necessary.
+                            </td>
+                            <td>Full cover</td>
+                        </tr>
+                        <tr>
+                            <td><b>Oral Surgery</b></td>
+                            <td colspan="2">
+                                The surgical removal of impacted or buried teeth, complicated roots,
+                                surgical drainage of a facial swelling, removal of jaw cysts and apicectomy. If you have an accident,
+                                we can also cover some kinds of dental surgery.
+                            </td>
+                            <td>Full cover in specified circumstances</td>
+                        </tr>
+                        <tr>
+                            <td><b>Pregnancy Complications</b></td>
+                            <td colspan="2">
+                                We cover in-patient and day-patient treatment if you suffer from ectopic pregnancy, miscarriage,
+                                missed abortion, stillbirth, post-partum haemorrhage, retained placental membrane and hydatidiform mole.
+                            </td>
+                            <td>Full cover for specified procedures</td>
+                        </tr>
+                        <tr>
+                            <td><b>Parent Accommodation</b></td>
+                            <td colspan="2">
+                                If you have a child under 14 on your plan and they need to stay overnight in hospital, we pay for hospital 
+                                ccommodation so that a parent can stay with them.</td>
+                            <td>Full cover</td>
+                        </tr>
+                        <tr>
+                            <td><b>Childbirth Cash Benefit</b></td>
+                            <td colspan="2">
+                                As long as you've had your plan for 10 months, we'll give you a cash payment following the birth or adoption
+                                of a child. We pay once per child, even if both parents are covered by the plan. The 10-month waiting
+                                period doesn't apply to adoption.
+                            </td>
+                            <td>&pound;100 per child</td>
+                        </tr>
+                        <tr>
+                            <td><b>Weight loss surgery</b></td>
+                            <td colspan="2">
+                                If you have a BMI of 35 or greater (with co-morbidity) or BMI 40+ (with no co-morbidity), we cover gastric
+                                banding and a gastric bypass subject to clinical approval.
+                            </td>
+                            <td>
+                                You'll need to pay a 25% contribution to the
+                                cost of consultations and package of treatment.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="5"><b>Corrective Surgeries</b></td>
+                            <td>Procedures covered</td>
+                            <td>Eligibility criteria</td>
+                            <td rowspan="5">
+                                You'll need to pay a 25% contribution to the cost
+                                of consultations and package of treatment.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Removal of port wine birthmarks on the face</td>
+                            <td>Age &lt; 5 years to a maximum of 10</td>
+                        </tr>
+                        <tr>
+                            <td>Ear reshaping (otoplasty)</td>
+                            <td>Age 5-14 years</td>
+                        </tr>
+                        <tr>
+                            <td>Breast reduction</td>
+                            <td>BMI &lt; 27 and under 21 years of age</td>
+                        </tr>
+                        <tr>
+                            <td>Gynaecomastia</td>
+                            <td>BMI &lt; 27 and under 21 years of age</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <h4>Markup</h4>
+                <pre><code class="language-markup line-numbers"></code></pre>
             </div>
 
             <h3>Swipe</h3>
-            
             <h4>Demo</h4>
 
             <div class="example">

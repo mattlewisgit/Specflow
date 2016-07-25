@@ -37,6 +37,8 @@
 // where the question grids stack.
 @include mq($until: tablet) {
     .faq_leader {
+        padding: $pad;
+
         [class*="grid-col-"] {
             padding: $pad--xthin 0;
         }

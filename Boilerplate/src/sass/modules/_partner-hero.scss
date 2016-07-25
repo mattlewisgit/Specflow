@@ -3,16 +3,22 @@
 
 .partner-hero {
     @extend .burst;
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
     
     &--headline {
         display: block;
         margin: 0 auto;
-        padding: $pad--xxlarge $pad;
+
+        // This should be rebuilt with flex in the future...
+        padding: 135px $pad;
 
         &.text-light {
             @include shadow--light();
+
+            h1, h2, p {
+                color: $white;
+            }
         }
 
         &.text-dark {
@@ -21,24 +27,25 @@
 
         h1 {
             @extend .font-weight--light;
-            @include font-size($h3--large);
+            @extend .h3;
             margin: $pad--xthin 0;
         }
 
         h2 {
             @extend .font-weight--semi-bold;
-            @include font-size($h2--xlarge);
+            @extend .h1-xlarge;
             margin: $pad--xthin 0;
         }
 
         p {
-            @include font-size($h4--large);
+            @extend .h4;
             margin: $pad--xthin 0;
         }
     }
 
     &--right {
         margin: $pad--large;
+        margin-bottom: 0;
     }
 
     &--card {
@@ -82,7 +89,7 @@
 }
 
 @include mq($until: tablet) {
-    .partner-hero.partner-hero--with-card {
+    .partner-hero--with-card {
         .partner-hero--headline {
             display: none;
         }
