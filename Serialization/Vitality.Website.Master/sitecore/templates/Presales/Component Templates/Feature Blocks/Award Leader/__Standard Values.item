@@ -1,25 +1,25 @@
 ----item----
 version: 1
-id: {47E9869E-111B-42FB-80AC-4CCBA2801695}
+id: {E2AD8604-782D-4700-A88B-56D775FA237A}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Article/Article Index/__Standard Values
-parent: {C4FA053C-ABF0-416E-A290-40589EB293DE}
+path: /sitecore/templates/Presales/Component Templates/Feature Blocks/Award Leader/__Standard Values
+parent: {056C6833-9BE7-418D-A47B-CCD697D9EDA3}
 name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {C4FA053C-ABF0-416E-A290-40589EB293DE}
-templatekey: Article Index
+template: {056C6833-9BE7-418D-A47B-CCD697D9EDA3}
+templatekey: Award Leader
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
 name: __Masters
 key: __masters
-content-length: 38
+content-length: 77
 
-{972CA70E-945F-4D10-967B-FD622EF97D66}
+{25EB72FE-6AE2-44E4-AC1E-9631E53D3AB0}|{972CA70E-945F-4D10-967B-FD622EF97D66}
 ----version----
 language: en
 version: 1
-revision: 514f3a91-74e4-4a59-9e45-e5890796d2c0
+revision: c14c8fd2-eb08-4305-bb60-d95bddca1dda
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -34,7 +34,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160712T121847Z
+20160715T151911Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-514f3a91-74e4-4a59-9e45-e5890796d2c0
+c14c8fd2-eb08-4305-bb60-d95bddca1dda
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160725T092132Z
+20160725T091341Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
