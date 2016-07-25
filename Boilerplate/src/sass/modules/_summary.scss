@@ -28,6 +28,10 @@ $_padding: 3%;
         margin: 0;
     }
 
+    .summary-right--content__body {
+        @extend p;
+    }
+
     .title {
         @include text-centre;
 

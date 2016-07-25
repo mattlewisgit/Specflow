@@ -25,6 +25,10 @@
         > :first-child {
             margin-top: 0;
         }
+
+        .feature-block__content--body {
+            @extend p;
+        }
     }
     //Right side content with --right modifier -
     &--right {
