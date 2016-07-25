@@ -37,7 +37,6 @@ var tasks = {
     },
     razor: "razor",
     report: "report",
-    resize: "resize",
     sass: {
         build: "sass:build",
         critical: "sass:critical",
@@ -121,7 +120,6 @@ var configs = {
     cssnano: require("./config/cssnano-config.json"),
     favicon: require("./config/favicon-config.json"),
     htmlMin: require("./config/htmlmin-config.json"),
-    imageResize: require("./config/image-resize-config.json"),
     "package": require("./package.json"),
     sizeReport: require("./config/sizereport-config.json"),
     svgSprite: require("./config/svgsprite-config.json")
