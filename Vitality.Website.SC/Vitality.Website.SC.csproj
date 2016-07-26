@@ -87,6 +87,7 @@
     <Compile Include="Events\ItemEventsHandler.cs" />
     <Compile Include="ItemConstants.cs" />
     <Compile Include="Pipelines\HttpRequest\NotFoundItemResolver.cs" />
+    <Compile Include="Pipelines\HttpRequest\RobotsFieGenerator.cs" />
     <Compile Include="Pipelines\HttpRequest\SetNotFoundStatusCode.cs" />
     <Compile Include="Pipelines\Publishing\GetItemReferences\AddDataSourceItemDescendants.cs" />
     <Compile Include="Pipelines\RenderField\InjectTablesawStylesOnRender.cs" />
