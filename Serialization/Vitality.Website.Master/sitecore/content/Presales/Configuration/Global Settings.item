@@ -19,7 +19,7 @@ ar|sitecore\Presales Configuration Manager|pe|+item:create|+item:read|+item:rena
 ----version----
 language: en
 version: 1
-revision: 3144d901-df0c-4ffa-9095-e56ef554bae2
+revision: 7d77a2ea-ed67-4af3-aa45-00d51a187a02
 
 ----field----
 field: {E670AD08-9370-4CE9-B2F4-553A6A13AD1D}
@@ -191,6 +191,14 @@ content-length: 12
 
 Global Title
 ----field----
+field: {B5D14F45-8826-45AC-8EFD-2A4D86F6C354}
+name: RobotsTxt
+key: robotstxt
+content-length: 25
+
+User-agent: *
+Disallow:*
+----field----
 field: {561B1E66-C616-439B-AB2A-C9E0EA7B44C3}
 name: TwitterAppIPhoneName
 key: twitterappiphonename
@@ -252,18 +260,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3144d901-df0c-4ffa-9095-e56ef554bae2
+7d77a2ea-ed67-4af3-aa45-00d51a187a02
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160721T112918Z
+20160726T204550Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin
