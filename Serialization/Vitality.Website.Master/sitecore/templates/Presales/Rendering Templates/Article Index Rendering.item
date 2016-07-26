@@ -1,40 +1,40 @@
 ----item----
 version: 1
-id: {47E9869E-111B-42FB-80AC-4CCBA2801695}
+id: {441108C5-0850-49B8-B169-06612AB75B3A}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Article/Article Index/__Standard Values
-parent: {C4FA053C-ABF0-416E-A290-40589EB293DE}
-name: __Standard Values
+path: /sitecore/templates/Presales/Rendering Templates/Article Index Rendering
+parent: {F60AB061-3632-44BC-855A-97A5E9031203}
+name: Article Index Rendering
 master: {00000000-0000-0000-0000-000000000000}
-template: {C4FA053C-ABF0-416E-A290-40589EB293DE}
-templatekey: Article Index
+template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
+templatekey: Template
 
 ----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
+field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
+name: __Base template
+key: __base template
+content-length: 77
+
+{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{8CA06D6A-B353-44E8-BC31-B528C7306971}
+----field----
+field: {F7D48A55-2158-4F02-9356-756654404F73}
+name: __Standard values
+key: __standard values
 content-length: 38
 
-{972CA70E-945F-4D10-967B-FD622EF97D66}
+{5050BDF6-8B90-4FB4-9011-BC447FC4F7A4}
 ----version----
 language: en
 version: 1
-revision: 514f3a91-74e4-4a59-9e45-e5890796d2c0
+revision: c0875a1c-ab5f-49d2-a0c8-1da0a85125b0
 
-----field----
-field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
-name: __Owner
-key: __owner
-content-length: 14
-
-sitecore\admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160712T121847Z
+20160714T143056Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-514f3a91-74e4-4a59-9e45-e5890796d2c0
+c0875a1c-ab5f-49d2-a0c8-1da0a85125b0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160725T092132Z
+20160725T130923Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

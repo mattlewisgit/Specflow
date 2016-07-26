@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Glass.Mapper.Sc.Web.Mvc;
 using Vitality.Website.Areas.Presales.ComponentTemplates.Articles;
+using Vitality.Website.Areas.Presales.RenderingTemplates;
 
 namespace Vitality.Website.Extensions.Views
 {
@@ -20,6 +21,15 @@ namespace Vitality.Website.Extensions.Views
             return "";
         }
 
+        public static string ImageRelativePosition(this GlassView<ArticleIndex> view, ArticleItem articleItem)
+        {
+            if (Parameters(view).ImageRelativePosition != null)
+            {
+                return Parameters(view).ImageRelativePosition.Value;
+            }
+            return string.Empty;
+        }
+
         public static string ColumnSplitOne(this GlassView<ArticleIndex> view)
         {
             if (view.Model.ArticleItems.Count() > 1)
@@ -36,6 +46,11 @@ namespace Vitality.Website.Extensions.Views
                 return "grid-col-7-12";
             }
             return "grid-col-8-12";
+        }
+
+        private static ArticleIndexRendering Parameters(this GlassView<ArticleIndex> view)
+        {
+            return view.GetRenderingParameters<ArticleIndexRendering>();
         }
     }
 }
