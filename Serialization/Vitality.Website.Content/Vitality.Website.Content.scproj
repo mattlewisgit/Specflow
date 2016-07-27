@@ -102,6 +102,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Articles.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Banners.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
