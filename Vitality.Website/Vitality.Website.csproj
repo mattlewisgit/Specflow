@@ -197,6 +197,7 @@
     <Content Include="css\rich-text-editor-1.0.0.min.css" />
     <Content Include="css\tablesaw.css" />
     <Content Include="css\vitality-boilerplate-1.0.0.min.css" />
+    <Content Include="Error.html" />
     <Content Include="Global.asax" />
     <Content Include="images\sprite-generated%402x.png" />
     <Content Include="images\sprite-generated.png" />
@@ -236,6 +237,8 @@
     <Content Include="css\sprite-generated%402x.png" />
     <Content Include="css\sprite-generated.png" />
     <Content Include="img\spritesheets\svg-sprite.svg" />
+    <Content Include="img\stanley-head.png" />
+    <Content Include="img\vitality-logo--white.svg" />
     <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -493,7 +496,9 @@
     <Content Include="App_Config\Include\Sitecore.Xdb.Remote.Client.MarketingAssets.config.disabled" />
     <Content Include="App_Config\Include\Sitecore.Xdb.Remote.Server.config.disabled" />
     <Content Include="App_Config\Include\Sitecore.Xdb.Remote.Server.MarketingAssets.config.disabled" />
-    <Content Include="App_Config\Include\SitecoreSettings.config.example" />
+    <Content Include="App_Config\Include\SitecoreSettings.config.example">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\Include\SiteDefinition.config.example" />
     <Content Include="App_Config\Include\Social\Sitecore.Social.config" />
     <Content Include="App_Config\Include\Social\Sitecore.Social.ExperienceProfile.config" />
