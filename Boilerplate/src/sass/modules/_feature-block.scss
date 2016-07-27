@@ -25,10 +25,18 @@
         > :first-child {
             margin-top: 0;
         }
+
+        h2 {
+            @extend .h3;
+        }
     }
 
     &__content--body {
         @extend p;
+    }
+
+    &__content--title {
+        line-height: $line-height--small;
     }
 
     //Right side content with --right modifier -
@@ -38,8 +46,11 @@
             padding: $pad;
         }
     }
+
     //Color modifiers -
     &--primary {
+        background: $primary-color;
+
         .feature-block__content-container {
             background-color: $primary-color;
         }
@@ -50,6 +61,8 @@
     }
 
     &--secondary {
+        background: $secondary-color;
+
         .feature-block__content-container {
             background-color: $secondary-color;
         }
@@ -60,6 +73,8 @@
     }
 
     &--tertiary {
+        background: $tertiary-color;
+
         .feature-block__content-container {
             background-color: $tertiary-color;
         }
@@ -90,6 +105,8 @@
     }
 
     &--dark {
+        background: $secondary-background-color;
+
         .feature-block__content-container {
             background-color: $secondary-background-color;
         }

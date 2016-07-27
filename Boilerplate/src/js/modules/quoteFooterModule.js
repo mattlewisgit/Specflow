@@ -20,7 +20,7 @@ var settings = {
         }
 
         settings.footerBody = $(".quote-footer--body");
-        settings.footerHeader = settings.footer.find("h6");
+        settings.footerHeader = settings.footer.find(".quote-footer--tab");
         settings.pageFooter = $("footer:last-of-type");
 
         // If only a single button is present,
