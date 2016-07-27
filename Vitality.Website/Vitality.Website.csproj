@@ -172,12 +172,26 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
     <Content Include="App_Config\Include\ship.config" />
+    <Content Include="App_Config\Commands.config" />
+    <Content Include="App_Config\FieldTypes.config" />
+    <Content Include="App_Config\Icons.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
     <Content Include="Areas\Presales\Views\CallToAction\PrimaryCallToAction.cshtml" />
     <Content Include="Areas\Presales\Views\Banners\HomeHero.cshtml" />
     <Content Include="Areas\Presales\Views\Articles\ArticleIndex.cshtml" />
+    <Content Include="App_Config\Prefetch\Common.config" />
+    <Content Include="App_Config\Prefetch\Core.config" />
+    <Content Include="App_Config\Prefetch\Master.config" />
+    <Content Include="App_Config\Prefetch\Webdb.config" />
+    <Content Include="App_Config\Security\Domains.config" />
+    <Content Include="App_Config\Security\GlobalRoles.config" />
+    <Content Include="App_Config\LanguageDefinitions.config" />
+    <Content Include="App_Config\MimeTypes.config" />
+    <Content Include="App_Config\Portraits.config" />
+    <Content Include="App_Config\Prototypes.config" />
+    <Content Include="App_Config\XamlSharp.config" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
@@ -575,8 +589,8 @@
     <Content Include="Areas\Presales\Views\Shared\_JsThirdParty.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_CookieMessage.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\ErrorPage.cshtml" />
-     <Content Include="Areas\Presales\Views\Shared\_GoogleTagManager.cshtml" />
-     <Content Include="Areas\Presales\Views\FeatureBlocks\AwardLeader.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\_GoogleTagManager.cshtml" />
+    <Content Include="Areas\Presales\Views\FeatureBlocks\AwardLeader.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
