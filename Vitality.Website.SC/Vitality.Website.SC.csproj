@@ -84,6 +84,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\GenerateSitemaps.cs" />
     <Compile Include="Events\ItemEventsHandler.cs" />
     <Compile Include="ItemConstants.cs" />
     <Compile Include="Pipelines\HttpRequest\NotFoundItemResolver.cs" />
