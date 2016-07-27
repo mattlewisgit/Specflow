@@ -37,7 +37,6 @@
                 if (globalSettingsItem != null)
                 {
                     var robotsTxtFieldName = "RobotsTxt";
-                    robotsTxtContent = globalSettingsItem.Fields[robotsTxtFieldName].Value;
                     if ((globalSettingsItem.Fields[robotsTxtFieldName] != null) &&
                         (!string.IsNullOrEmpty(globalSettingsItem.Fields[robotsTxtFieldName].Value)))
                     {
