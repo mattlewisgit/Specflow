@@ -12,8 +12,13 @@
                     {
                         <h6>@Editable(Model, item => item.LeadIn)</h6>
                     }
+
                     <h3>@Editable(Model, item => item.Headline)</h3>
-                    <p>@Editable(Model, item => item.Body)</p>
+
+                    <div class="feature-block__content--body">
+                        @Editable(Model, item => item.Body)
+                    </div>
+
                     @Editable(Model, item => item.CallToAction, new { @class = this.ButtonStyle() })
                 </div>
             </div>

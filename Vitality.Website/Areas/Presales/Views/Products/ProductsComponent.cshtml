@@ -8,12 +8,11 @@
             using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", panel.Path))
             {
                 <div class="products-component--panel grid-col-@this.NumberOfColumns()-12">
-                    <div>
-                        @Editable(panel, m => m.Image)
-                    </div>
-                    <p>
+                    <div>@Editable(panel, m => m.Image)</div>
+
+                    <div class="products-component--panel__body">
                         @Editable(panel, m => m.OpeningParagraph)
-                    </p>
+                    </div>
 
                     @Editable(panel, m => m.CallToAction, new { @class = "button-cta" })
                 </div>

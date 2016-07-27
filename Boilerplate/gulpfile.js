@@ -37,7 +37,6 @@ var tasks = {
     },
     razor: "razor",
     report: "report",
-    resize: "resize",
     sass: {
         build: "sass:build",
         critical: "sass:critical",
@@ -121,7 +120,6 @@ var configs = {
     cssnano: require("./config/cssnano-config.json"),
     favicon: require("./config/favicon-config.json"),
     htmlMin: require("./config/htmlmin-config.json"),
-    imageResize: require("./config/image-resize-config.json"),
     "package": require("./package.json"),
     sizeReport: require("./config/sizereport-config.json"),
     svgSprite: require("./config/svgsprite-config.json")
@@ -252,7 +250,7 @@ gulp.task(tasks.sass.critical, function () {
     // Use all the breakpoints to generate the critical CSS for each media query.
     // The height is not important here, so use an estimate.
     var dimensions = Object.keys(configs.breakpoints).map(function(key) {
-        var width = configs.breakpoints[key];
+        var width = parseInt(configs.breakpoints[key].replace("px", ""));
 
         return {
             height: width * 0.6,
@@ -428,7 +426,8 @@ gulp.task(tasks.favicon.checkForUpdate, function () {
 gulp.task(tasks.report, function () {
     return gulp
         .src([
-            paths.dist + "/" + paths.baseAssetName + "*.*"
+            paths.dist + "/" + paths.baseAssetName + "*.*",
+            paths.templates.dest + "*.html"
         ])
         .pipe(plugins.sizereport(configs.sizeReport));
 });

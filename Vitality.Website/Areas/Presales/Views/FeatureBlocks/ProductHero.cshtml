@@ -2,18 +2,21 @@
 @using Vitality.Website.Extensions.Views
 @inherits GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.ProductHero>
 
-    <div class="product-hero feature-block feature-block--primary pinch">
-        <div class="feature-block__image">
-            @Editable(Model, item => item.VitalityLogo)
-        </div>
+<div class="product-hero feature-block feature-block--primary">
+    <div class="feature-block__image">
+        @Editable(Model, item => item.VitalityLogo)
+    </div>
 
-        <div class="feature-block__content-container">
-            <div class="feature-block__content">
-
-                @Editable(Model, item => item.Image, new { @class = "lead-in" })
-                <h1>@Editable(Model, item => item.Headline)</h1>
-                <p>@Editable(Model, item => item.Body)</p>
-                @Editable(Model, item => item.CallToAction, new { @class = this.ButtonClass() })
+    <div class="feature-block__content-container">
+        <div class="feature-block__content">
+            @Editable(Model, item => item.Image, new { @class = "lead-in" })
+            <h1>@Editable(Model, item => item.Headline)</h1>
+            
+            <div class="feature-block__content-body">
+                @Editable(Model, item => item.Body)
             </div>
+
+            @Editable(Model, item => item.CallToAction, new { @class = this.ButtonClass() })
         </div>
     </div>
+</div>

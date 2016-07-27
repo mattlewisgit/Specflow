@@ -1,13 +1,22 @@
 .data-table, .data-table.tablesaw {
-    position: relative;
     background: $white;
     border-collapse: collapse;
-    width: 100%;
+    position: relative;
     margin: $pad 0;
+    width: 100%;
+
+    td,
+    th {
+        // Border display fix for Firefox.
+        background-clip: padding-box;
+
+        line-height: $line-height--normal;
+        padding: $pad !important;
+        text-align: left !important;
+    }
 
     thead {
         th {
-            @include font-size(2);
             background-color: $secondary-background-color;
             color: $white;
             font-weight: normal;
@@ -24,24 +33,27 @@
     }
 
     td {
-        line-height: 1;
-        vertical-align: middle;
+        @include font-size($basesize);
+        vertical-align: top;
+    }
+
+    .tablesaw-cell-label {
+        @include font-size($font-small);
+        color: $secondary-background-color;
+        font-weight: $font-weight--regular;
+        margin-top: 2px;
     }
 
     // Table saw media query for mobile layout tables.
     @media (max-width: 40em) {
-        td {
-            text-align: left !important;
-        }
-    }
-    // Table saw media query for full layout tables.
-    @media (min-width: 40em) {
         th,
         td {
-            text-align: left;
-            padding: 20px;
+            padding: $pad--thin !important;
         }
-
+    }
+    
+    // Table saw media query for full layout tables.
+    @media (min-width: 40em) {
         tbody tr:first-child {
             td {
                 border-top: 0;

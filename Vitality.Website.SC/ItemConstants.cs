@@ -41,6 +41,11 @@
                     {
                         public static readonly Guid Id = Guid.Parse("{578F19B0-CEF6-4B29-AB9F-45BF82417DF4}");
                     }
+
+                    public static class CookieSettings
+                    {
+                        public static readonly Guid Id = Guid.Parse("{A9A1E5B1-24E9-4ACF-AB42-DEA0688041BD}");
+                    }
                 }
             }
 

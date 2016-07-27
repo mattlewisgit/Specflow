@@ -1,6 +1,7 @@
 var AccordionModule = require("./modules/accordionModule");
 var AnimationDelayModule = require("./modules/animationDelayModule");
 var Breakpoints = require("./modules/breakpointsModule");
+var CookieMessageModule = require("./modules/cookieMessageModule");
 var FilerModule = require("./modules/filterModule");
 var MatchHeightsModule = require("./modules/matchHeightsModule");
 var MatchWidthsModule = require("./modules/matchWidthsModule");
@@ -43,6 +44,7 @@ function _initCustom(wow) {
     SocialShareModule.init();
 
     AccordionModule.init();
+    CookieMessageModule.init();
     TabsModule.init();
 
     // Check for filterable content with the animation instance.

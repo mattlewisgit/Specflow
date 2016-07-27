@@ -10,6 +10,8 @@
 
         public string Headline { get; set; }
 
+        public string Headline2 { get; set; }
+
         public string OpeningParagraph { get; set; }
 
         public Link CallToAction { get; set; }

@@ -9,19 +9,33 @@
         color: $grey;
     }
 
+    .feature-block__content-body {
+        @extend p;
+    }
+
     .feature-block__image {
         background: $primary-color;
         padding-top: 0;
         text-align: center;
     }
 
-    @include mq($from: desktop) {
+    .lead-in {
+        height: 70px;
+    }
+}
+
+// Scale and centre the image on larger devices.
+@include mq($from: desktop) {
+    .product-hero {
         .feature-block__image img {
             @include scale-and-centre(100%);
         }
     }
+}
 
-    .lead-in {
-        height: 70px;
+// Stop negative margin on small devices.
+@include mq($until: tablet) {
+    .product-hero {
+        margin: 0;
     }
 }

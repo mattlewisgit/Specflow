@@ -26,6 +26,11 @@
             margin-top: 0;
         }
     }
+
+    &__content--body {
+        @extend p;
+    }
+
     //Right side content with --right modifier -
     &--right {
 
@@ -91,6 +96,16 @@
 
         .feature-block__content {
             @extend .text-light;
+        }
+    }
+
+     &--white {
+        .feature-block__content-container {
+            background-color: $white;
+        }
+
+        .feature-block__content {
+            @extend .text-dark;
         }
     }
 }
