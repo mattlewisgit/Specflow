@@ -250,7 +250,7 @@ gulp.task(tasks.sass.critical, function () {
     // Use all the breakpoints to generate the critical CSS for each media query.
     // The height is not important here, so use an estimate.
     var dimensions = Object.keys(configs.breakpoints).map(function(key) {
-        var width = configs.breakpoints[key];
+        var width = parseInt(configs.breakpoints[key].replace("px", ""));
 
         return {
             height: width * 0.6,
@@ -426,7 +426,8 @@ gulp.task(tasks.favicon.checkForUpdate, function () {
 gulp.task(tasks.report, function () {
     return gulp
         .src([
-            paths.dist + "/" + paths.baseAssetName + "*.*"
+            paths.dist + "/" + paths.baseAssetName + "*.*",
+            paths.templates.dest + "*.html"
         ])
         .pipe(plugins.sizereport(configs.sizeReport));
 });
