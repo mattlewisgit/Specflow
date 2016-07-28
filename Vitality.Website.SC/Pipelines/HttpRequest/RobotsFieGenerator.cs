@@ -34,7 +34,7 @@
 
             if (Sitecore.Context.Site != null && Sitecore.Context.Database != null)
             {
-                var globalSettingsItem = Sitecore.Context.Database.GetItem(new Sitecore.Data.ID(Presales.Content.Configuration.GlobalSettings.Id));
+                var globalSettingsItem = Sitecore.Context.Database.GetItem(Presales.Content.Configuration.GlobalSettings.SitecoreId);
 
                 if (globalSettingsItem != null)
                 {                  
