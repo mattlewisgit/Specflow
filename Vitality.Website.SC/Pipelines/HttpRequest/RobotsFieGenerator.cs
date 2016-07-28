@@ -23,7 +23,7 @@
 
             var requestUrl = context.Request.Url.ToString();
 
-            if (string.IsNullOrEmpty(requestUrl) || !requestUrl.ToLower().EndsWith("robots.txt"))
+            if (string.IsNullOrEmpty(requestUrl) || !requestUrl.EndsWith("robots.txt", StringComparison.InvariantCultureIgnoreCase))
             {
                 return;
             }
