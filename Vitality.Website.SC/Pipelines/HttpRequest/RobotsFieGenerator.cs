@@ -38,11 +38,10 @@
 
                 if (globalSettingsItem != null)
                 {                  
-                    var robotsTxtField = globalSettingsItem.Fields[RobotsTxtFieldName];
-                    if ((robotsTxtField!= null) &&
-                        (!string.IsNullOrEmpty(robotsTxtField.Value)))
+                    var robotsTxtField = globalSettingsItem[RobotsTxtFieldName];
+                    if (!string.IsNullOrEmpty(robotsTxtField))
                     {
-                        robotsTxtContent = robotsTxtField.Value;
+                        robotsTxtContent = robotsTxtField;
                     }
                 }
             }
