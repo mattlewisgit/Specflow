@@ -5,7 +5,10 @@
 <div class="feature-block feature-block--@this.BackgroundColour() rewards_leader">
     <div class="feature-block__content">
         <h3>@Editable(Model, item => item.Headline)</h3>
-        @Editable(Model, item => item.OpeningParagraph)
+        
+        <div class="feature-block__content--body">
+            @Editable(Model, item => item.OpeningParagraph)
+        </div>
 
         <div class="feature-block__image-list">
             @foreach (var rows in Model.Rewards.GroupIntoRows(this.IconsPerRow()))

@@ -80,8 +80,10 @@
     <Content Include="src\favicon-template.html" />
     <Content Include="gulpfile.js" />
     <Content Include="js\boilerplate.js" />
+    <Content Include="src\img\examples\award-leader-background-light.jpg" />
     <Content Include="src\img\examples\example-pdf.png" />
     <Content Include="src\img\examples\stanley-oops.png" />
+    <Content Include="src\img\logos\defacto-logo.png" />
     <Content Include="src\js-third-party.html" />
     <Content Include="src\images\arrow-down%402x.png" />
     <Content Include="src\images\arrow-down--grey%402x.png" />
@@ -381,7 +383,6 @@
     <Content Include=".bowerrc" />
     <Content Include="config\cssnano-config.json" />
     <Content Include="config\favicon-config.json" />
-    <Content Include="config\image-resize-config.json" />
     <Content Include="config\svgsprite-config.json" />
     <Content Include="src\js\breakpoints.json" />
     <Content Include="src\sass\modules\_quote-footer.scss" />
@@ -401,6 +402,7 @@
     <Content Include="src\sass\modules\_cookie-message.scss" />
     <Content Include="src\sass\modules\_award-leader.scss" />
     <Content Include="src\sass\modules\_article-snippet.scss" />
+    <Content Include="config\sizereport-config.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

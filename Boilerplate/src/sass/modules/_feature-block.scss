@@ -26,6 +26,11 @@
             margin-top: 0;
         }
     }
+
+    &__content--body {
+        @extend p;
+    }
+
     //Right side content with --right modifier -
     &--right {
 
