@@ -12,6 +12,8 @@
     /// </remarks>
     public class RobotsFileGenerator : HttpRequestProcessor
     {
+        private const string RobotsTxtFieldName = "RobotsTxt";
+
         public override void Process(HttpRequestArgs args)
         {
             var context = HttpContext.Current;
@@ -35,12 +37,12 @@
                 var globalSettingsItem = Sitecore.Context.Database.GetItem(new Sitecore.Data.ID(Presales.Content.Configuration.GlobalSettings.Id));
 
                 if (globalSettingsItem != null)
-                {
-                    var robotsTxtFieldName = "RobotsTxt";
-                    if ((globalSettingsItem.Fields[robotsTxtFieldName] != null) &&
-                        (!string.IsNullOrEmpty(globalSettingsItem.Fields[robotsTxtFieldName].Value)))
+                {                  
+                    var robotsTxtField = globalSettingsItem.Fields[RobotsTxtFieldName];
+                    if ((robotsTxtField!= null) &&
+                        (!string.IsNullOrEmpty(robotsTxtField.Value)))
                     {
-                        robotsTxtContent = globalSettingsItem.Fields[robotsTxtFieldName].Value;
+                        robotsTxtContent = robotsTxtField.Value;
                     }
                 }
             }
