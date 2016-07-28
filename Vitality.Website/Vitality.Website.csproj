@@ -172,12 +172,26 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
     <Content Include="App_Config\Include\ship.config" />
+    <Content Include="App_Config\Commands.config" />
+    <Content Include="App_Config\FieldTypes.config" />
+    <Content Include="App_Config\Icons.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
     <Content Include="Areas\Presales\Views\CallToAction\PrimaryCallToAction.cshtml" />
     <Content Include="Areas\Presales\Views\Banners\HomeHero.cshtml" />
     <Content Include="Areas\Presales\Views\Articles\ArticleIndex.cshtml" />
+    <Content Include="App_Config\Prefetch\Common.config" />
+    <Content Include="App_Config\Prefetch\Core.config" />
+    <Content Include="App_Config\Prefetch\Master.config" />
+    <Content Include="App_Config\Prefetch\Webdb.config" />
+    <Content Include="App_Config\Security\Domains.config" />
+    <Content Include="App_Config\Security\GlobalRoles.config" />
+    <Content Include="App_Config\LanguageDefinitions.config" />
+    <Content Include="App_Config\MimeTypes.config" />
+    <Content Include="App_Config\Portraits.config" />
+    <Content Include="App_Config\Prototypes.config" />
+    <Content Include="App_Config\XamlSharp.config" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
@@ -197,6 +211,7 @@
     <Content Include="css\rich-text-editor-1.0.0.min.css" />
     <Content Include="css\tablesaw.css" />
     <Content Include="css\vitality-boilerplate-1.0.0.min.css" />
+    <Content Include="Error.html" />
     <Content Include="Global.asax" />
     <Content Include="images\sprite-generated%402x.png" />
     <Content Include="images\sprite-generated.png" />
@@ -236,6 +251,8 @@
     <Content Include="css\sprite-generated%402x.png" />
     <Content Include="css\sprite-generated.png" />
     <Content Include="img\spritesheets\svg-sprite.svg" />
+    <Content Include="img\stanley-head.png" />
+    <Content Include="img\vitality-logo--white.svg" />
     <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -298,6 +315,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqPreview.cs" />
     <Compile Include="Areas\Presales\PageTemplates\ErrorPage.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
+    <Compile Include="Areas\Presales\RenderingTemplates\ArticleIndexRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\CardsStackedRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\HomeHeroRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\PartnerHeroRendering.cs" />
@@ -492,7 +510,9 @@
     <Content Include="App_Config\Include\Sitecore.Xdb.Remote.Client.MarketingAssets.config.disabled" />
     <Content Include="App_Config\Include\Sitecore.Xdb.Remote.Server.config.disabled" />
     <Content Include="App_Config\Include\Sitecore.Xdb.Remote.Server.MarketingAssets.config.disabled" />
-    <Content Include="App_Config\Include\SitecoreSettings.config.example" />
+    <Content Include="App_Config\Include\SitecoreSettings.config.example">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\Include\SiteDefinition.config.example" />
     <Content Include="App_Config\Include\Social\Sitecore.Social.config" />
     <Content Include="App_Config\Include\Social\Sitecore.Social.ExperienceProfile.config" />
@@ -574,8 +594,8 @@
     <Content Include="Areas\Presales\Views\Shared\_JsThirdParty.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_CookieMessage.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\ErrorPage.cshtml" />
-     <Content Include="Areas\Presales\Views\Shared\_GoogleTagManager.cshtml" />
-     <Content Include="Areas\Presales\Views\FeatureBlocks\AwardLeader.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\_GoogleTagManager.cshtml" />
+    <Content Include="Areas\Presales\Views\FeatureBlocks\AwardLeader.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

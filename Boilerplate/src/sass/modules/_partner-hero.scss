@@ -37,7 +37,8 @@
             margin: $pad--xthin 0;
         }
 
-        p {
+        .partner-hero--headline__body {
+            @extend p;
             @extend .h4;
             margin: $pad--xthin 0;
         }
