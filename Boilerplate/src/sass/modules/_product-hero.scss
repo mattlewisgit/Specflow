@@ -9,6 +9,10 @@
         color: $grey;
     }
 
+    .feature-block__content-body {
+        @extend p;
+    }
+
     .feature-block__image {
         background: $primary-color;
         padding-top: 0;

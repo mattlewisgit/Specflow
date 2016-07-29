@@ -9,7 +9,10 @@
             <div class="partner-hero--headline @this.ColumnSpan() @this.FontTheme()">
                 <h1>@Editable(Model, item => item.Headline1)</h1>
                 <h2>@Editable(Model, item => item.Headline2)</h2>
-                @Editable(Model, item => item.OpeningParagraph)
+
+                <div class="partner-hero--headline__body">
+                    @Editable(Model, item => item.OpeningParagraph)
+                </div>
             </div>
 
             @if (this.ShowPartnerCard())

@@ -13,9 +13,9 @@ templatekey: Template
 field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
 name: __Base template
 key: __base template
-content-length: 77
+content-length: 38
 
-{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{11032DB1-B1D5-4158-8A20-51100C469A3C}
+{1930BBEB-7805-471A-A3BE-4858AC7CF696}
 ----field----
 field: {F7D48A55-2158-4F02-9356-756654404F73}
 name: __Standard values
@@ -33,7 +33,7 @@ Apps/16x16/awards.png
 ----version----
 language: en
 version: 1
-revision: 3919701f-d85a-4459-a0a6-9e1e07c113de
+revision: d026bdea-f404-4075-9b12-0596d5c43086
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3919701f-d85a-4459-a0a6-9e1e07c113de
+d026bdea-f404-4075-9b12-0596d5c43086
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160718T085038Z
+20160725T091341Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
