@@ -27,6 +27,8 @@
     <file src="img\**\*.*" target="img" />
     <file src="js\*.js" target="js" />
     <file src="Web.config" />
+    <file src="Web.CD.config" />
+    <file src="Web.CMS.config" />
     <file src="Web.Release.config" />
   </files>
 </package>
