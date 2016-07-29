@@ -175,6 +175,7 @@
     <Content Include="App_Config\Commands.config" />
     <Content Include="App_Config\FieldTypes.config" />
     <Content Include="App_Config\Icons.config" />
+    <Content Include="App_Config\Include\Vitality\Vitality.Agents.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -488,7 +489,9 @@
     <Content Include="App_Config\Include\Sitecore.PathAnalyzer.Services.RemoteServer.config.disabled" />
     <Content Include="App_Config\Include\Sitecore.PathAnalyzer.StorageProviders.config" />
     <Content Include="App_Config\Include\Sitecore.PipelineProfiling.config.disabled" />
-    <Content Include="App_Config\Include\Sitecore.Processing.config" />
+    <Content Include="App_Config\Include\Sitecore.Processing.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\Include\Sitecore.Publishing.DedicatedInstance.config.example" />
     <Content Include="App_Config\Include\Sitecore.Publishing.EventProvider.Async.config.disabled" />
     <Content Include="App_Config\Include\Sitecore.Publishing.Optimizations.config.example" />
