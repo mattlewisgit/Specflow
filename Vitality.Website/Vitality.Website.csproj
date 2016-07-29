@@ -282,6 +282,7 @@
     <Compile Include="Areas\Presales\BaseTemplates\IOpenGraphPage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IQubitOpenTagGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ISerpAppearancePage.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\ISitemap.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterPage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IWebmasterToolsGlobal.cs" />
