@@ -223,7 +223,7 @@
     <Content Include="css\rich-text-editor-1.0.0.min.css" />
     <Content Include="css\tablesaw.css" />
     <Content Include="css\vitality-boilerplate-1.0.0.min.css" />
-    <Content Include="Error.html" />
+    <Content Include="error.html" />
     <Content Include="Global.asax" />
     <Content Include="images\sprite-generated%402x.png" />
     <Content Include="images\sprite-generated.png" />

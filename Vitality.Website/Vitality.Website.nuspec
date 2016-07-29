@@ -21,6 +21,7 @@
     <file src="bin\**\*.lic" target="bin" />
     <file src="css\*.css" target="css" />
     <file src="css\*.png" target="css" />
+    <file src="error.html" />
     <file src="Global.asax" />
     <file src="_Heartbeat.aspx" />
     <file src="img\**\*.*" target="img" />
@@ -29,6 +30,5 @@
     <file src="Web.CD.config" />
     <file src="Web.CMS.config" />
     <file src="Web.Release.config" />
-    <file src="Error.html" />
   </files>
 </package>
