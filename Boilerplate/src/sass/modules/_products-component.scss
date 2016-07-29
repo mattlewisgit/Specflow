@@ -34,6 +34,10 @@
             margin: $pad--thin;
         }
 
+        .products-component--panel__body {
+            @extend p;
+        }
+
         // Compress the three-column product grid before it adapts to mobile.
         @include mq($from: tablet, $until: desktop) {
             &.grid-col-4-12 {

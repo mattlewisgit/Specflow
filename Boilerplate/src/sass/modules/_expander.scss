@@ -4,6 +4,7 @@
 
 .expander {
     @extend .clearfix;
+    @extend .pinch;
     $_transition: 0.2s;
     $_transition--long: $_transition * 2;
 

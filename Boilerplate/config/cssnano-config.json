@@ -3,7 +3,7 @@
         "add": true,
         "browsers": [
             "last 3 versions",
-            "ie > 7"
+            "ie > 8"
         ],
         "cascade": false
     },
