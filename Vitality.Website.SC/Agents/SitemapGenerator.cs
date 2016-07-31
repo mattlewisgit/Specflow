@@ -10,19 +10,15 @@ using Sitecore.Data;
 using Sitecore.Diagnostics;
 using Sitecore.Jobs;
 using System.Collections;
+using System.Web;
 using Sitecore.ContentSearch.Utilities;
+using Sitecore.Data.Fields;
+using Sitecore.Links;
+using Sitecore.Web;
+using Vitality.Website.SC.Utilities.Sitemap;
 
 namespace Vitality.Website.SC.Agents
 {
-    public static class SitemapSettings
-    {
-        public static readonly string HideFromSitemap = "HideFromSitemap";
-        public static readonly string InheritSitemapSettings = "InheritSitemapSettings";
-        public static readonly string Sitemap = "Sitemap";
-        public static readonly string ChangeFrequency = "ChangeFrequency";
-        public static readonly string Priority = "Priority";
-    }
-
     public class SitemapGenerator
     {
         private readonly string databaseName;
@@ -52,13 +48,13 @@ namespace Vitality.Website.SC.Agents
         public void Run()
         {
             /*
-             * get child pages (page sections) - where hide from sitemap == false
-             * build list of unique sitemaps
-             * get all descendents of page section - where hide from sitemap == false
-             * retrieve most recent published date
-             * compare with lastmod date of sitemap index file
-             * if any page newer, regenerate entire sitemap
-             * update sitemap index file lastmod date
+             * 1. get child pages (page sections) - where hide from sitemap == false
+             * 2. build list of unique sitemaps
+             * 3. get all descendents of page section - where hide from sitemap == false
+             * 4. retrieve most recent published date
+             * 5. compare with lastmod date of sitemap index file
+             * 6. if any page newer, regenerate entire sitemap
+             * 7. update sitemap index file lastmod date
              */
 
             var homeItem = Database.GetItem(new ID(ItemConstants.Presales.Content.Home.Id));
@@ -68,8 +64,107 @@ namespace Vitality.Website.SC.Agents
                 throw new ArgumentException("Home item not found.");
             }
 
-            var sectionPages = homeItem.Children.Where(p => p.Fields[SitemapSettings.HideFromSitemap] != null && !IsChecked(p.Fields[SitemapSettings.HideFromSitemap].Value));
+            // gzip files before saving
+            // save lastmod in date format: 2016-07-26T07:00:00+00:00
 
+            SitemapIndexModel sitemapIndexFile = SitemapHelper<SitemapIndexModel>.ReadSitemapFromDisk(ItemConstants.Presales.Content.SitemapSettings.IndexFile);
+
+            string hideFromSitemap = ItemConstants.Presales.Content.SitemapSettings.HideFromSitemapField;
+            string sitemap = ItemConstants.Presales.Content.SitemapSettings.SitemapField;
+
+            // 1
+            var sectionPages = homeItem.Children.Where(
+                p => p.Fields[hideFromSitemap] != null && !IsChecked(p.Fields[hideFromSitemap].Value) && !string.IsNullOrWhiteSpace(p.Fields[sitemap].Value))
+                .Select(GetSitemapSettings);
+            
+            var sectionPagesCollection = sectionPages as IList<SitemapSettings> ?? sectionPages.ToList();
+
+            // Clear any sitemaps from index file that are no longer referenced
+            var allSitemaps =
+                sectionPagesCollection.Select(
+                    p => string.Format("http://dev.vitality.co.uk/{0}.xml.gz", Database.GetItem(p.SitemapItemId).Fields["Value"].Value));
+
+            sitemapIndexFile.Sitemaps.RemoveAll(p => !allSitemaps.Contains(p.Location));
+
+            // 2
+            //var sitemapItems = sectionPages.Select(p => p.Sitemap).Distinct();
+
+            // update sitemapindex item lastmod date after updating each sitemap. also set global flag that index file needs regenerating
+
+            // iterate over collection that contains:
+            // page url
+            // sitemap name
+            // sitemap settings
+
+            //3 get all descendents of page section - where hide from sitemap == false
+            foreach (var sectionPage in sectionPagesCollection)
+            {
+                var sectionChildPages = sectionPage.Item.Axes.GetDescendants()
+                    .Where(p => !IsChecked(p.Fields[hideFromSitemap].Value));
+
+                if (sectionChildPages.Any())
+                {
+                    var sitemapName = string.Format("{0}.xml.gz", Database.GetItem(sectionPage.SitemapItemId).Fields["Value"].Value);
+                    var sitemapUrl = string.Format("{0}{1}", "http://dev.vitality.co.uk/", sitemapName);
+                    string domainUrl2 = WebUtil.GetHostName();
+
+                    // get sitemap lastmod date from index file
+
+                    DateTime sitemapLastModified = DateTime.MinValue;
+
+                    if (sitemapIndexFile != null && sitemapIndexFile.Sitemaps != null && sitemapIndexFile.Sitemaps.Any(p => p.Location.Equals(sitemapUrl)))
+                    {
+                        sitemapLastModified = DateTime.Parse(sitemapIndexFile.Sitemaps.FirstOrDefault(p => p.Location.Equals(sitemapUrl)).LastModified);
+                    }                        
+
+                    // 4 retrieve most recent published date
+                    var lastPublished = sectionChildPages.Max(p => p.Statistics.Updated);
+                    // 5. compare with lastmod date of sitemap index file
+                    if (lastPublished > sitemapLastModified)
+                    {
+                        BuildSiteMap(sectionChildPages, sitemapName);
+
+                        // TODO: dev.vitality hard coded
+                        // TODO: gzip sitemap files
+                    }
+
+                    // Update index file
+                    var sitemapIndexRow =
+                        sitemapIndexFile.Sitemaps.FirstOrDefault(
+                            p => p.Location.ToLowerInvariant() == sitemapUrl.ToLowerInvariant());
+
+                    string dateTime = DateTime.Now.ToString("yyyy-MM-dd" + "T" + "hh:mm:ss");
+                    if (sitemapIndexRow == null)
+                    {
+                        sitemapIndexFile.Sitemaps.Add(new SitemapIndexesModel {Location = sitemapUrl, LastModified = dateTime});
+                    }
+                    else
+                    {
+                        sitemapIndexRow.LastModified = dateTime;
+                    }
+
+                    SitemapHelper<SitemapIndexModel>.SaveSitemapToDisk(sitemapIndexFile, ItemConstants.Presales.Content.SitemapSettings.IndexFile);
+                }
+            }
+        }
+
+        private void BuildSiteMap(IEnumerable<Item> sectionChildPages, string sitemapName)
+        {
+            SitemapModel model = new SitemapModel();
+            model.SchemaLocation = "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd";
+
+            foreach (var page in sectionChildPages)
+            {
+                var sitemapModel = GetSitemapSettings(page);
+                model.Urls.Add(new SitemapUrlModel
+                {
+                    Location = sitemapModel.PageUrl.EndsWith("/") ? sitemapModel.PageUrl : sitemapModel.PageUrl + "/",
+                    ChangeFrequency = sitemapModel.ChangeFrequency,
+                    Priority = sitemapModel.Priority
+                });
+            }
+
+            SitemapHelper<SitemapModel>.SaveSitemapToDisk(model, sitemapName);
         }
 
         private bool IsChecked(string value)
@@ -77,15 +172,34 @@ namespace Vitality.Website.SC.Agents
             return !string.IsNullOrWhiteSpace(value) && value == "1";
         }
 
-        private Item GetSitemapSettings(Item item)
+        private SitemapSettings GetSitemapSettings(Item item)
         {
-            var contextItem = item;
-            while (contextItem[SitemapSettings.InheritSitemapSettings] == "1" && contextItem.ID.Guid != ItemConstants.Presales.Content.Home.Id)
+            string itemUrl = LinkManager.GetItemUrl(item);
+
+            // retrieve inherited settings if required
+            while (item[ItemConstants.Presales.Content.SitemapSettings.InheritSitemapSettingsField] == "1" && item.ID.Guid != ItemConstants.Presales.Content.Home.Id && item.ParentID.Guid != ItemConstants.Presales.Content.Home.Id)
             {
-                contextItem = contextItem.Parent;
+                item = item.Parent;
+            }
+           
+            return new SitemapSettings
+            {
+                Item = item,
+                PageUrl = itemUrl,
+                ChangeFrequency = Database.GetItem(item.Fields[ItemConstants.Presales.Content.SitemapSettings.ChangeFrequencyField].Value).Fields["Value"].Value,
+                Priority = item.Fields[ItemConstants.Presales.Content.SitemapSettings.PriorityField].Value,
+                SitemapItemId = GetPageSectionItem(item).Fields[ItemConstants.Presales.Content.SitemapSettings.SitemapField].Value
+            };
+        }
+
+        private Item GetPageSectionItem(Item item)
+        {
+            while (item.ParentID.Guid != ItemConstants.Presales.Content.Home.Id && item.ID.Guid != ItemConstants.Presales.Content.Home.Id)
+            {
+                item = item.Parent;
             }
 
-            return contextItem;
+            return item;
         }
 
         public void Execute(Item[] items, Sitecore.Tasks.CommandItem command, Sitecore.Tasks.ScheduleItem schedule)

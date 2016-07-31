@@ -13,9 +13,16 @@ templatekey: Template field
 field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
 name: Type
 key: type
-content-length: 6
+content-length: 8
 
-Number
+Droplink
+----field----
+field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
+name: Source
+key: source
+content-length: 59
+
+/sitecore/content/Presales/Configuration/Sitemap Priorities
 ----field----
 field: {B118496A-0F78-4A27-B55F-0A6C4B0B0FE1}
 name: Default value
@@ -33,7 +40,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 201c1885-7e35-4a91-bb86-3038c3e0337e
+revision: 95f146ce-7d78-4751-9ada-b67318c5f04d
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -55,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-201c1885-7e35-4a91-bb86-3038c3e0337e
+95f146ce-7d78-4751-9ada-b67318c5f04d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160727T195608Z
+20160731T000000Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
