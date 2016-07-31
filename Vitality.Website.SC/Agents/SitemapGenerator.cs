@@ -1,34 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Sitecore.Data.Items;
-using Sitecore;
 using Sitecore.Configuration;
 using Sitecore.Data;
 using Sitecore.Diagnostics;
-using Sitecore.Jobs;
-using System.Collections;
 using System.Web;
-using Sitecore.ContentSearch.Utilities;
-using Sitecore.Data.Fields;
 using Sitecore.Links;
-using Sitecore.Web;
 using Vitality.Website.SC.Utilities.Sitemap;
+using System.IO;
 
 namespace Vitality.Website.SC.Agents
 {
+    /// <summary>
+    /// Generates sitemaps and sitemap index file.
+    /// </summary>
     public class SitemapGenerator
     {
         private readonly string databaseName;
         
-        /// <summary>
-        /// Gets the database.
-        /// </summary>
-        /// <value>
-        /// The database.
-        /// </value>
         public Database Database
         {
             get
@@ -47,16 +37,6 @@ namespace Vitality.Website.SC.Agents
 
         public void Run()
         {
-            /*
-             * 1. get child pages (page sections) - where hide from sitemap == false
-             * 2. build list of unique sitemaps
-             * 3. get all descendents of page section - where hide from sitemap == false
-             * 4. retrieve most recent published date
-             * 5. compare with lastmod date of sitemap index file
-             * 6. if any page newer, regenerate entire sitemap
-             * 7. update sitemap index file lastmod date
-             */
-
             var homeItem = Database.GetItem(new ID(ItemConstants.Presales.Content.Home.Id));
 
             if (homeItem == null)
@@ -64,71 +44,61 @@ namespace Vitality.Website.SC.Agents
                 throw new ArgumentException("Home item not found.");
             }
 
-            // gzip files before saving
-            // save lastmod in date format: 2016-07-26T07:00:00+00:00
-
+            // Read sitemap index file from disk
             SitemapIndexModel sitemapIndexFile = SitemapHelper<SitemapIndexModel>.ReadSitemapFromDisk(ItemConstants.Presales.Content.SitemapSettings.IndexFile);
+            sitemapIndexFile = sitemapIndexFile ?? new SitemapIndexModel();
 
-            string hideFromSitemap = ItemConstants.Presales.Content.SitemapSettings.HideFromSitemapField;
-            string sitemap = ItemConstants.Presales.Content.SitemapSettings.SitemapField;
-
-            // 1
+            // Retrieve all top level pages that have an associated sitemap.
             var sectionPages = homeItem.Children.Where(
-                p => p.Fields[hideFromSitemap] != null && !IsChecked(p.Fields[hideFromSitemap].Value) && !string.IsNullOrWhiteSpace(p.Fields[sitemap].Value))
+                p => p.Fields[ItemConstants.Presales.Content.SitemapSettings.HideFromSitemapField] != null 
+                    && !IsChecked(p.Fields[ItemConstants.Presales.Content.SitemapSettings.HideFromSitemapField].Value) 
+                    && !string.IsNullOrWhiteSpace(p.Fields[ItemConstants.Presales.Content.SitemapSettings.SitemapField].Value))
                 .Select(GetSitemapSettings);
             
             var sectionPagesCollection = sectionPages as IList<SitemapSettings> ?? sectionPages.ToList();
 
-            // Clear any sitemaps from index file that are no longer referenced
+            var itemUri = new Uri(LinkManager.GetItemUrl(homeItem));
+            var domainUrl = string.Format("{0}://{1}/", itemUri.Scheme, itemUri.Host);
+
+            // Retrieve all used sitemaps.
             var allSitemaps =
                 sectionPagesCollection.Select(
-                    p => string.Format("http://dev.vitality.co.uk/{0}.xml.gz", Database.GetItem(p.SitemapItemId).Fields["Value"].Value));
+                    p => string.Format("{0}{1}.xml.gz", domainUrl, Database.GetItem(p.SitemapItemId).Fields["Value"].Value));
 
+            // Remove any existing sitemaps from index file that are no longer referenced.
             sitemapIndexFile.Sitemaps.RemoveAll(p => !allSitemaps.Contains(p.Location));
 
-            // 2
-            //var sitemapItems = sectionPages.Select(p => p.Sitemap).Distinct();
-
-            // update sitemapindex item lastmod date after updating each sitemap. also set global flag that index file needs regenerating
-
-            // iterate over collection that contains:
-            // page url
-            // sitemap name
-            // sitemap settings
-
-            //3 get all descendents of page section - where hide from sitemap == false
             foreach (var sectionPage in sectionPagesCollection)
             {
+                // Retrieve all pages which will be used to populate sitemap.
                 var sectionChildPages = sectionPage.Item.Axes.GetDescendants()
-                    .Where(p => !IsChecked(p.Fields[hideFromSitemap].Value));
+                    .Where(p => !IsChecked(p.Fields[ItemConstants.Presales.Content.SitemapSettings.HideFromSitemapField].Value));
 
                 if (sectionChildPages.Any())
                 {
                     var sitemapName = string.Format("{0}.xml.gz", Database.GetItem(sectionPage.SitemapItemId).Fields["Value"].Value);
-                    var sitemapUrl = string.Format("{0}{1}", "http://dev.vitality.co.uk/", sitemapName);
-                    string domainUrl2 = WebUtil.GetHostName();
-
-                    // get sitemap lastmod date from index file
+                    var sitemapUrl = string.Format("{0}{1}", domainUrl, sitemapName);
 
                     DateTime sitemapLastModified = DateTime.MinValue;
 
                     if (sitemapIndexFile != null && sitemapIndexFile.Sitemaps != null && sitemapIndexFile.Sitemaps.Any(p => p.Location.Equals(sitemapUrl)))
                     {
+                        // Retrieve lastmod date of sitemap from index file.
                         sitemapLastModified = DateTime.Parse(sitemapIndexFile.Sitemaps.FirstOrDefault(p => p.Location.Equals(sitemapUrl)).LastModified);
                     }                        
 
-                    // 4 retrieve most recent published date
+                    // Retrieve most recent published date of child pages.
                     var lastPublished = sectionChildPages.Max(p => p.Statistics.Updated);
-                    // 5. compare with lastmod date of sitemap index file
-                    if (lastPublished > sitemapLastModified)
+                    
+                    string xmlFile = string.Format("{0}{1}", HttpRuntime.AppDomainAppPath, sitemapName);
+
+                    // Regenerate sitemap if new published content exists.
+                    if ((lastPublished > sitemapLastModified) || !File.Exists(xmlFile))
                     {
                         BuildSiteMap(sectionChildPages, sitemapName);
-
-                        // TODO: dev.vitality hard coded
-                        // TODO: gzip sitemap files
                     }
 
-                    // Update index file
+                    // Update sitemaps lastmod date within index file.
                     var sitemapIndexRow =
                         sitemapIndexFile.Sitemaps.FirstOrDefault(
                             p => p.Location.ToLowerInvariant() == sitemapUrl.ToLowerInvariant());
@@ -143,11 +113,23 @@ namespace Vitality.Website.SC.Agents
                         sitemapIndexRow.LastModified = dateTime;
                     }
 
-                    SitemapHelper<SitemapIndexModel>.SaveSitemapToDisk(sitemapIndexFile, ItemConstants.Presales.Content.SitemapSettings.IndexFile);
+                    // Save changes to sitemap index file.
+                    SitemapHelper<SitemapIndexModel>.SaveSitemapToDisk(sitemapIndexFile, ItemConstants.Presales.Content.SitemapSettings.IndexFile, false);
                 }
+            }
+
+            // Ensure sitemap index file exists.
+            if (!File.Exists(string.Format("{0}{1}", HttpRuntime.AppDomainAppPath, sitemapIndexFile)))
+            {
+                SitemapHelper<SitemapIndexModel>.SaveSitemapToDisk(sitemapIndexFile, ItemConstants.Presales.Content.SitemapSettings.IndexFile, false);
             }
         }
 
+        /// <summary>
+        /// Generates sitemap file and saves to disk.
+        /// </summary>
+        /// <param name="sectionChildPages">Items used to populate sitemap.</param>
+        /// <param name="sitemapName">Sitemap filename.</param>
         private void BuildSiteMap(IEnumerable<Item> sectionChildPages, string sitemapName)
         {
             SitemapModel model = new SitemapModel();
@@ -164,7 +146,7 @@ namespace Vitality.Website.SC.Agents
                 });
             }
 
-            SitemapHelper<SitemapModel>.SaveSitemapToDisk(model, sitemapName);
+            SitemapHelper<SitemapModel>.SaveSitemapToDisk(model, sitemapName, true);
         }
 
         private bool IsChecked(string value)
@@ -172,6 +154,11 @@ namespace Vitality.Website.SC.Agents
             return !string.IsNullOrWhiteSpace(value) && value == "1";
         }
 
+        /// <summary>
+        /// Casts Item to SitemapSettings.
+        /// </summary>
+        /// <param name="item">Item to cast.</param>
+        /// <returns>SitemapSettings object.</returns>
         private SitemapSettings GetSitemapSettings(Item item)
         {
             string itemUrl = LinkManager.GetItemUrl(item);
@@ -192,6 +179,11 @@ namespace Vitality.Website.SC.Agents
             };
         }
 
+        /// <summary>
+        /// Retrieves top level page item.
+        /// </summary>
+        /// <param name="item">Current context item.</param>
+        /// <returns></returns>
         private Item GetPageSectionItem(Item item)
         {
             while (item.ParentID.Guid != ItemConstants.Presales.Content.Home.Id && item.ID.Guid != ItemConstants.Presales.Content.Home.Id)
@@ -200,63 +192,6 @@ namespace Vitality.Website.SC.Agents
             }
 
             return item;
-        }
-
-        public void Execute(Item[] items, Sitecore.Tasks.CommandItem command, Sitecore.Tasks.ScheduleItem schedule)
-        {
-            Sitecore.Diagnostics.Log.Info("Generating Sitemaps...", this);
-
-            // Use XmlDocument & StreamWriter
-            // either pass all items in via query or just home item and query from there
-            // command not getting executed
-            // will task run on both CD servers? no need to run on CM server
-
-            /*
-            XmlDocument doc = new XmlDocument();
-            XmlNode newChild1 = (XmlNode)doc.CreateXmlDeclaration("1.0", "UTF-8", (string)null);
-            doc.AppendChild(newChild1);
-            XmlNode newChild2 = (XmlNode)doc.CreateElement("sitemapindex");
-            XmlAttribute attribute = doc.CreateAttribute("xmlns");
-            attribute.Value = SitemapManagerConfiguration.XmlnsTpl;
-            newChild2.Attributes.Append(attribute);
-            doc.AppendChild(newChild2);
-            foreach (DictionaryEntry dictionaryEntry in SitemapManager.m_Sites)
-            {
-                Site site = SiteManager.GetSite(dictionaryEntry.Key.ToString());
-                string str = dictionaryEntry.Value.ToString();
-                string serverUrlBySite = SitemapManagerConfiguration.GetServerUrlBySite(site.Name);
-                doc = this.BuildSitemapIndexItem(doc, string.Format("{0}/{1}", (object)serverUrlBySite, (object)str));
-            }
-            return doc.OuterXml;
-
-            string strSiteLanguage = "";
-            site.Properties.TryGetValue("language", out strSiteLanguage);
-            XmlDocument doc = new XmlDocument();
-            XmlNode newChild1 = (XmlNode)doc.CreateXmlDeclaration("1.0", "UTF-8", (string)null);
-            doc.AppendChild(newChild1);
-            XmlNode newChild2 = (XmlNode)doc.CreateElement("urlset");
-            XmlAttribute attribute = doc.CreateAttribute("xmlns");
-            attribute.Value = SitemapManagerConfiguration.XmlnsTpl;
-            newChild2.Attributes.Append(attribute);
-            doc.AppendChild(newChild2);
-            foreach (Item obj in items)
-            {
-                Language language = Enumerable.FirstOrDefault<Language>((IEnumerable<Language>)obj.Languages, (Func<Language, bool>)(i => i.Name.ToLower().Equals(strSiteLanguage.ToLower())));
-                if (language != (Language)null && Enumerable.Any<Sitecore.Data.Version>((IEnumerable<Sitecore.Data.Version>)ItemManager.GetVersions(obj, language)))
-                {
-                    string url = SitemapManager.HtmlEncode(this.GetItemUrl(obj, site));
-                    doc = this.BuildSitemapItem(doc, obj, site, url);
-                }
-            }
-            return doc.OuterXml;
-
-
-            string str = this.BuildSitemapXML(sitemapItems, site1, site2);
-            StreamWriter streamWriter = new StreamWriter(path, false);
-            streamWriter.Write(str);
-            streamWriter.Close();
-            */
-            Sitecore.Diagnostics.Log.Info("Generating Sitemaps Completed.", this);
         }
     }
 }

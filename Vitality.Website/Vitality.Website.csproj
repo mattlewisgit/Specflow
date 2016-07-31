@@ -175,7 +175,9 @@
     <Content Include="App_Config\Commands.config" />
     <Content Include="App_Config\FieldTypes.config" />
     <Content Include="App_Config\Icons.config" />
-    <Content Include="App_Config\Include\Vitality\Vitality.Agents.config" />
+    <Content Include="App_Config\Include\Vitality\Vitality.Agents.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
