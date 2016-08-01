@@ -35,7 +35,7 @@ namespace Vitality.Website.SC.Utilities.Sitemap
                         {
                             using (var writer = XmlWriter.Create(gz, xmlWriterSetting))
                             {
-                                writer.WriteString(xmlContent);
+                                writer.WriteString(HttpUtility.HtmlDecode(xmlContent));
                                 fs.Flush();
                             }
                         }

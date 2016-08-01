@@ -72,7 +72,10 @@ namespace Vitality.Website.SC.Agents
             {
                 // Retrieve all pages which will be used to populate sitemap.
                 var sectionChildPages = sectionPage.Item.Axes.GetDescendants()
-                    .Where(p => !IsChecked(p.Fields[ItemConstants.Presales.Content.SitemapSettings.HideFromSitemapField].Value));
+                    .Where(p => !IsChecked(p.Fields[ItemConstants.Presales.Content.SitemapSettings.HideFromSitemapField].Value)).ToList();
+
+                // Add current page to page collection.
+                sectionChildPages.Add(sectionPage.Item);
 
                 if (sectionChildPages.Any())
                 {
