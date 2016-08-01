@@ -56,6 +56,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Glass.Mapper.Sc.4.0.11.63\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="Hi.UrlRewrite, Version=1.8.5779.17263, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\URL.Rewrite.1.8.0\lib\Hi.UrlRewrite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Nancy, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nancy.0.17.1\lib\net40\Nancy.dll</HintPath>
@@ -266,6 +270,43 @@
     <Content Include="img\stanley-head.png" />
     <Content Include="img\vitality-logo--white.svg" />
     <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\css\experience-explorer-global-header.css" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\css\experience-explorer-iframe-editor.css" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\css\experience-explorer-iframe-viewer.css" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\css\experience-explorer-iframe.css" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\css\experience-explorer.css" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\experience-explorer-iframe.min.js" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\experience-explorer-iframe.min.js.map" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\experience-explorer.min.js" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\experience-explorer.min.js.map" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\bullet_circle_green.png" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\bullet_circle_red.png" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\bullet_circle_yellow.png" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\check-icon.gif" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\con-tick.png" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\default.jpg" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\element_selection.png" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\fixed-mode.png" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\journey-mode.png" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\loading.gif" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\mode.png" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\no-image.jpg" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\sc-edit.png" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\star.png" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\images\views.png" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\vendors.min.js" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\vendors.min.js.map" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Assets\vendors\jquery-ui\css\jquery-ui-1.9.1.custom.css" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Commands\ExplorerMode.js" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Controls\ExpEditor.aspx" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Controls\ExpExplorerExtender.ascx" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Controls\ExpFooter.ascx" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Controls\ExpHeader.ascx" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Controls\ExpViewer.aspx" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Controls\GlobalHeader.ascx" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Dialogs\SelectUser.xaml.xml" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Services\ContentService.asmx" />
+    <Content Include="sitecore modules\Web\ExperienceExplorer\Services\Service.asmx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -626,6 +667,7 @@
     <Folder Include="Areas\Presales\Controllers\" />
     <Folder Include="Areas\Presales\Models\" />
     <Folder Include="img\examples\" />
+    <Folder Include="sitecore modules\debug\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vitality.Website.SC\Vitality.Website.SC.csproj">
