@@ -7,8 +7,8 @@
     <div class="partner-hero @this.PartnerWithCardClass() @this.ImageRelativePosition()" style="@this.BackgroundImage()">
         <div class="grid">
             <div class="partner-hero--headline @this.ColumnSpan() @this.FontTheme()">
-                <h1>@Editable(Model, item => item.Headline1)</h1>
-                <h2>@Editable(Model, item => item.Headline2)</h2>
+                <p class="partner-hero--headline__intro">@Editable(Model, item => item.Headline1)</p>
+                <h1>@Editable(Model, item => item.Headline2)</h1>
 
                 <div class="partner-hero--headline__body">
                     @Editable(Model, item => item.OpeningParagraph)
@@ -24,7 +24,7 @@
                         </div>
 
                         <div class="partner-hero--card__top">
-                            <h6>@Editable(Model, item => item.PartnerName)</h6>
+                            <p class="partner-hero--card__top--intro">@Editable(Model, item => item.PartnerName)</p>
                             <hr />
                             <p>@Editable(Model, item => item.Line)</p>
                         </div>
