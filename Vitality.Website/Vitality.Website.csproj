@@ -19,7 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <NuGetPackageImportStamp>4be50b5a</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>e79f5d81</NuGetPackageImportStamp>
     <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -55,6 +55,10 @@
     <Reference Include="Glass.Mapper.Sc.Mvc, Version=4.0.11.63, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Glass.Mapper.Sc.4.0.11.63\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Hi.UrlRewrite, Version=1.8.5779.17263, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\URL.Rewrite.1.8.0\lib\Hi.UrlRewrite.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Nancy, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -187,6 +191,10 @@
     <Content Include="App_Config\Commands.config" />
     <Content Include="App_Config\FieldTypes.config" />
     <Content Include="App_Config\Icons.config" />
+    <Content Include="App_Config\Include\Hi.UrlRewrite.Prefetch.Web.config" />
+    <Content Include="App_Config\Include\Hi.UrlRewrite.Prefetch.Master.config" />
+    <Content Include="App_Config\Include\Hi.UrlRewrite.config" />
+    <Content Include="App_Config\Include\Hi.UrlRewrite.Aggregation.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -266,6 +274,22 @@
     <Content Include="img\stanley-head.png" />
     <Content Include="img\vitality-logo--white.svg" />
     <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Content\app.css" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.css" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.min.css" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap.css" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap.min.css" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Default.aspx" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\app.js" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\bootstrap.js" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\bootstrap.min.js" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\jquery-1.10.2.js" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\jquery-1.10.2.min.js" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\jquery-1.9.0.js" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\jquery-1.9.0.min.js" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\npm.js" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\UrlRewriter.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -609,6 +633,13 @@
     <Content Include="Areas\Presales\Views\Shared\_GoogleTagManager.cshtml" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\AwardLeader.cshtml" />
     <None Include="Properties\PublishProfiles\test.pubxml" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\jquery-1.9.0.min.map" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\jquery-1.10.2.min.map" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.css.map" />
+    <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap.css.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
