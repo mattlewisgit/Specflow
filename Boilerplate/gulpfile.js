@@ -450,7 +450,10 @@ gulp.task(tasks.watch, function () {
 gulp.task(tasks.serve, function() {
     browserSync({
         server: {
-            baseDir: paths.base
+            baseDir: paths.base,
+            serveStaticOptions: {
+                extensions: ["html"]
+            }
         }
     });
 

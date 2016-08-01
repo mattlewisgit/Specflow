@@ -29,6 +29,7 @@
     position: relative;
 
     &.home-hero--video {
+        cursor: pointer;
         padding: 0;
 
         .home-hero--static {
@@ -37,13 +38,11 @@
             position: absolute;
             top: 0;
             z-index: 2;
-        }
-    }
 
-    .home-hero--static__play {
-        @extend .svg-svg--button-video-play;
-        cursor: pointer;
-        margin: auto;
+            .home-hero--static__button {
+                margin: auto;
+            }
+        }
     }
 
     h2 {
