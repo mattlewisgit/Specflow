@@ -75,7 +75,7 @@ namespace Vitality.Website.SC.Agents
                     .Where(p => !IsChecked(p.Fields[ItemConstants.Presales.Content.SitemapSettings.HideFromSitemapField].Value)).ToList();
 
                 // Add current page to page collection.
-                sectionChildPages.Add(sectionPage.Item);
+                sectionChildPages.Insert(0, sectionPage.Item);
 
                 if (sectionChildPages.Any())
                 {
