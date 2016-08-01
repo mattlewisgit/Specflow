@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Glass.Mapper.Sc.Web.Mvc;
 using Vitality.Website.Areas.Presales.ComponentTemplates.Articles;
 using Vitality.Website.Areas.Presales.RenderingTemplates;
@@ -7,9 +8,9 @@ namespace Vitality.Website.Extensions.Views
 {
     public static class ArticleIndexExtensions
     {
-        public static int NumberOfColumns(this GlassView<ArticleIndex> view)
+        public static int NumberOfColumns(this GlassView<ArticleIndex> view, IEnumerable<ArticleItem> articleItems )
         {
-            return 12 / view.Model.ArticleItems.Count();
+            return 12 / articleItems.Count();
         }
 
         public static string BackgroundImage(this GlassView<ArticleIndex> view, ArticleItem articleItem)
@@ -30,18 +31,18 @@ namespace Vitality.Website.Extensions.Views
             return string.Empty;
         }
 
-        public static string ColumnSplitOne(this GlassView<ArticleIndex> view)
+        public static string ColumnSplitOne(this GlassView<ArticleIndex> view, IEnumerable<ArticleItem> articleItems)
         {
-            if (view.Model.ArticleItems.Count() > 1)
+            if (articleItems.Count() > 1)
             {
                 return "grid-col-5-12";
             }
             return "grid-col-4-12";
         }
 
-        public static string ColumnSplitTwo(this GlassView<ArticleIndex> view)
+        public static string ColumnSplitTwo(this GlassView<ArticleIndex> view, IEnumerable<ArticleItem> articleItems)
         {
-            if (view.Model.ArticleItems.Count() > 1)
+            if (articleItems.Count() > 1)
             {
                 return "grid-col-7-12";
             }
@@ -51,6 +52,15 @@ namespace Vitality.Website.Extensions.Views
         private static ArticleIndexRendering Parameters(this GlassView<ArticleIndex> view)
         {
             return view.GetRenderingParameters<ArticleIndexRendering>();
+        }
+
+        public static IEnumerable<IEnumerable<T>> SplitBy<T>(this IEnumerable<T> source, int splitSize)
+        {
+            return source
+                .Select((x, i) => new { Index = i, Value = x })
+                .GroupBy(x => x.Index / splitSize)
+                .Select(x => x.Select(v => v.Value).ToList())
+                .ToList();
         }
     }
 }
