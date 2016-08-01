@@ -16,7 +16,7 @@
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         LinkItem Sitemap { get; set; }
 
-        float ChangeFrequency { get; set; }
+        string ChangeFrequency { get; set; }
 
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         LinkItem Priority { get; set; }

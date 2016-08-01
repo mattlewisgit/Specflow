@@ -61,7 +61,7 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
         public bool InheritSitemapSettings { get; set; }
         public bool HideFromSitemap { get; set; }
         public LinkItem Sitemap { get; set; }
-        public float ChangeFrequency { get; set; }
+        public string ChangeFrequency { get; set; }
         public LinkItem Priority { get; set; }        
     }
 
