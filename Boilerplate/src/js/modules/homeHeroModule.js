@@ -56,38 +56,41 @@ function _enhanceHero(i, el) {
     var player = null;
 
     // Functions.
+    function __hoverIn() {
+        // Only fade in if we are currently playing.
+        if (player.getPlayerState() !== YouTubePlayerAPI.playerStates.playing)
+        {
+            return;
+        }
+
+        _fadeIn(button);
+    }
+
+    function __hoverOut() {
+        // Only fade out if we are currently playing.
+        if (player.getPlayerState() !== YouTubePlayerAPI.playerStates.playing)
+        {
+            return;
+        }
+
+        _fadeOut(button);
+    }
+
     function __play() {
-        player.playVideo();
         fadedElements.forEach(_fadeOut);
 
+        // Wait for the element to fade out.
         setTimeout(function() {
             button
                 .removeClass(_classes.button.play)
                 .addClass(_classes.button.pause);
 
-            overlay.css("background-image", "none");
+            // Play now to pick up from where we left off.
+            player.playVideo();
 
-            overlay.hover(
-                // Hover in.
-                function() {
-                    // Only fade in if we are currently playing.
-                    if (player.getPlayerState() !== YouTubePlayerAPI.playerStates.playing)
-                    {
-                        return;
-                    }
-
-                    _fadeIn(button);
-                },
-                // Hover out.
-                function() {
-                    // Only fade out if we are currently playing.
-                    if (player.getPlayerState() !== YouTubePlayerAPI.playerStates.playing)
-                    {
-                        return;
-                    }
-
-                    _fadeOut(button);
-                });
+            overlay
+                .css("background-image", "none")
+                .hover(__hoverIn, __hoverOut);
         }, _timeoutDuration);
     }
 
@@ -120,6 +123,7 @@ function _enhanceHero(i, el) {
             },
 
             onReady: function() {
+                // Use .mute() now in the future if sound should be disabled.
                 overlay.click(function() {
                     // If the video is playing, pause it,
                     // otherwise always try to play it.

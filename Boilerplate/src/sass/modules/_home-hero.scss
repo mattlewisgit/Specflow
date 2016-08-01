@@ -6,12 +6,42 @@
     @include shadow--dark();
     @include text-centre();
 
+    h1,
+    h2,
+    p {
+        margin: $pad--thin 0;
+    }
+
     &--static {
         background-size: cover;
         background-repeat: no-repeat;
-        padding: $pad;
-        padding-top: $pad--large;
+        height: 100%;
+        padding: $pad--xlarge;
+        white-space: nowrap;
         width: 100%;
+
+        // Responsive vertical centre via a pseudo element.
+        // https://css-tricks.com/centering-in-the-unknown/
+        &::before {
+            content: "";
+            display: inline-block;
+
+            // Stretch the line height.
+            height: 100%; 
+
+            // Adjust for white space between the
+            // pseudo element and the next sibling.
+            margin-right: -0.25em;
+
+            vertical-align: middle;
+            width: 0;
+        }
+
+        .home-hero--static__container {
+            display: inline-block;
+            vertical-align: middle;
+            white-space: normal;
+        }
 
         &.text-light {
             @include shadow--light();
@@ -46,13 +76,34 @@
     }
 
     h2 {
-         margin: $pad--thin 0 $pad--xxlarge;
+         margin: $pad--thin;
+    }
+
+    // Reduce the button icon on mobile.
+    @include mq($until: mobile-landscape) {
+        .home-hero--static {
+            .home-hero--static__button {
+                zoom: 0.6;
+            }
+        }
     }
 
     // Reduce the padding for smaller devices.
     @include mq($until: tablet) {
-        h2 {
-             margin: $pad--thin 0 $pad--large;
+        .home-hero--static {
+            padding: $pad--large;
+
+            .home-hero--static__button {
+                zoom: 0.75;
+            }
         }
+
+        h2 {
+             margin: $pad--thin 0;
+        }
+    }
+
+    @include mq($from: desktop) {
+        min-height: 540px
     }
 }

@@ -1,3 +1,4 @@
+// https://developers.google.com/youtube/player_parameters
 module.exports = {
     playerStates: {
         unstarted: -1,
