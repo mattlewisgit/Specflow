@@ -12,7 +12,7 @@ var _classes = {
     }
 };
 
-var _timeoutDuration = 1000;
+var _timeoutDuration = 750;
 
 function _fadeOut(element) {
     "use strict";
@@ -30,6 +30,8 @@ function _fadeIn(element) {
 
 function _enhanceHero(i, el) {
     "use strict";
+
+    // State.
     // Replace the container with a player iframe,
     // using the video data attribute as the ID.
     var hero = $(el);
@@ -51,46 +53,57 @@ function _enhanceHero(i, el) {
         element.addClass("animated");
     });
 
-    function __play(player) {
+    var player = null;
+
+    // Functions.
+    function __play() {
         player.playVideo();
         fadedElements.forEach(_fadeOut);
 
         setTimeout(function() {
+            button
+                .removeClass(_classes.button.play)
+                .addClass(_classes.button.pause);
+
             overlay.css("background-image", "none");
 
             overlay.hover(
                 // Hover in.
                 function() {
-                    _fadeIn(button)
-                        .removeClass(_classes.button.play)
-                        .addClass(_classes.button.pause);
+                    // Only fade in if we are currently playing.
+                    if (player.getPlayerState() !== YouTubePlayerAPI.playerStates.playing)
+                    {
+                        return;
+                    }
+
+                    _fadeIn(button);
                 },
                 // Hover out.
                 function() {
-                    // Fade out the pause button.
-                    _fadeOut(button);
+                    // Only fade out if we are currently playing.
+                    if (player.getPlayerState() !== YouTubePlayerAPI.playerStates.playing)
+                    {
+                        return;
+                    }
 
-                    // Convert back to a play button after animation.
-                    setTimeout(function() {
-                        button
-                            .removeClass(_classes.button.pause)
-                            .addClass(_classes.button.play);
-                    }, _timeoutDuration);
+                    _fadeOut(button);
                 });
         }, _timeoutDuration);
     }
 
-    function __pause(player) {
-        _fadeIn(button)
+    function __pause() {
+        button
             .removeClass(_classes.button.pause)
             .addClass(_classes.button.play);
 
         fadedElements.forEach(_fadeIn);
+
         player.pauseVideo();
         overlay.css("background-image", backgroundImage);
     }
 
-    new YT.Player(videoContainer[0], {
+    // Create the player!
+    player = new YT.Player(videoContainer[0], {
         playerVars: YouTubeAPIBaseConfig,
         videoId: videoId,
         width: "100%",
@@ -106,9 +119,7 @@ function _enhanceHero(i, el) {
                 button.remove();
             },
 
-            onReady: function(e) {
-                var player = e.target;
-
+            onReady: function() {
                 overlay.click(function() {
                     // If the video is playing, pause it,
                     // otherwise always try to play it.
