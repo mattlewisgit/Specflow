@@ -99,3 +99,17 @@ $_border-radius: 5px;
     top: $scale-centre;
     transform: translateX(-$scale-centre) translateY(-$scale-centre);
 }
+
+@mixin bounceLinkedImage() {
+    a {
+        color: transparent;
+
+        &:hover img {
+            animation-name: pulse;
+            animation-duration: 0.3s;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+    }
+}

@@ -1,29 +1,27 @@
 ﻿@using Vitality.Website.Extensions
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FAQ.FaqLeader>
 
-<div class="faq_leader pinch">
+<div class="faq_leader">
     <div class="header">
         <h2>@Editable(Model, m => m.Headline)</h2>
-        <p class="paragraph-emphasis">@Editable(Model, m => m.OpeningParagraph)</p>
+        <div class="paragraph-emphasis">@Editable(Model, m => m.OpeningParagraph)</div>
     </div>
 
     <div class="faqs">
         @foreach (var row in Model.Questions.GroupIntoRows(2))
         {
-            <div class="grid">
-            @foreach (var questionAnswer in row)
-            {
-                using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", questionAnswer.Path))
+            <div class="grid-no-gutters">
+                @foreach (var questionAnswer in row)
                 {
-                    <div class="grid-col-1-@row.Count()">
-                        <h6 class="text-detail-block__heading">@Editable(questionAnswer, m => m.QuestionText)</h6>
-                        <div>@Editable(questionAnswer, m => m.AnswerText)</div>
-                        <p>
-                            @Editable(questionAnswer, m => m.ReadMoreLink)
-                        </p>
-                    </div>
+                    using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", questionAnswer.Path))
+                    {
+                        <div class="grid-col-1-@row.Count()">
+                            <h6 class="text-detail-block__heading">@Editable(questionAnswer, m => m.QuestionText)</h6>
+                            <div>@Editable(questionAnswer, m => m.AnswerText)</div>
+                            <p>@Editable(questionAnswer, m => m.ReadMoreLink)</p>
+                        </div>
+                    }
                 }
-            }
             </div>
         }
     </div>

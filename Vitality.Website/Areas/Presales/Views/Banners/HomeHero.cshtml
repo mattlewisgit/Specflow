@@ -4,8 +4,8 @@
 @using (BeginEditFrame(Model, "Edit background image", m => m.PosterImage))
 {
     <div class="home-hero @this.ImageRelativePosition() @this.FontTheme()" style="@this.BackgroundImage()">
-        <h4>@Editable(Model, m => m.Headline)</h4>
-        <h1>@Editable(Model, m => m.SecondHeadline)</h1>
+        <h1 class="h4">@Editable(Model, m => m.Headline)</h1>
+        <h2 class="h1-xlarge">@Editable(Model, m => m.SecondHeadline)</h2>
         <p>
             @Editable(Model, m => m.OpeningParagraph)
         </p>

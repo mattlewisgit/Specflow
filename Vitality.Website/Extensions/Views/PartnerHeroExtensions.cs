@@ -1,8 +1,8 @@
 ﻿using Glass.Mapper.Sc.Web.Mvc;
-using Vitality.Website.Areas.Presales.Models.Partners;
 
 namespace Vitality.Website.Extensions.Views
 {
+    using Vitality.Website.Areas.Presales.ComponentTemplates.Partners;
     using Vitality.Website.Areas.Presales.RenderingTemplates;
 
     public static class PartnerHeroExtensions

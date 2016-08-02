@@ -1,0 +1,27 @@
+.article-index {
+    background-color: $secondary-background-color;
+    padding: $pad--thin;
+
+    h2, .spotlight__intro {
+        color: $white;
+        text-align: center;
+    }
+
+    .article-index--container {
+        margin-top: $pad--thin;
+        padding: 0 1%;
+    }    
+}
+
+// Use flexbox to keep the article containers the same height.
+.flexbox {
+    .article-index {
+        .article-index--container {
+            align-content: stretch;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="em">
 <head>
     <title>Vitality Boilerplate | Components | Cards Stacked</title>
 
@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0" />
 
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700" />
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="/css/app-devel.css" />
@@ -22,7 +22,7 @@
 </head>
 <body>
     <main tabindex="-1">
-        <section class="vertical-flush">
+        <section class="pinch">
             <h1>Cards Stacked</h1>
             <h2>Description</h2>
 
@@ -32,17 +32,18 @@
             </p>
 
             <h2>Examples</h2>
-
-            <h3>Image</h3>
+            <h3>Icon Cards with Background Image</h3>
+            <h4>Demo</h4>
 
             <div class="example">
-                <section class="cards-stacked background-position-top-right"
+                <div class="cards-stacked background-position-top-right"
                          style="background-size:cover; background-image: url('/img/examples/cyclist.jpg');">
-                    <div class="spotlight pinch text-light">
-                        <h4 class="spotlight__heading">Why choose vitality?</h4>
+                    <div class="spotlight text-light">
+                        <h4 class="spotlight__heading">Why choose Vitality?</h4>
 
                         <p class="spotlight__intro">
-                            Comprehensive cover, access to healthcare &amp; huge rewards for our Health &amp; Life Insurance customers
+                            Comprehensive cover, access to healthcare &amp; huge
+                            <a href="#">rewards</a> for our Health &amp; Life Insurance customers
                         </p>
 
                         <ul class="spotlight__list">
@@ -52,7 +53,7 @@
                                         <p class="spotlight-item__heading">
                                             Comprehensive Cover
                                         </p>
-
+                                        
                                         <div class="spotlight-item__icon">
                                             <img src="/img/examples/clipboard-icon.png" alt="Clipboard" />
                                         </div>
@@ -148,24 +149,22 @@
                             </li>
                         </ul>
                     </div>
-                </section>
+                </div>
             </div>
 
             <div>
-                <h2>Markup</h2>
-
-                <pre>
-                    <code class="language-markup line-numbers"></code>
-                </pre>
+                <h4>Markup</h4>
+                <pre><code class="language-markup line-numbers"></code></pre>
             </div>
 
-            <h3>Alternative Card Style</h3>
+            <h3>Image Cards with Background Image</h3>
+            <h4>Demo</h4>
 
             <div class="example">
-                <section class="cards-stacked background-position-top-right"
+                <div class="cards-stacked background-position-top-right"
                          style="background-size:cover; background-image: url('/img/examples/cyclist.jpg');">
-                    <div class="spotlight pinch text-light">
-                        <h4 class="spotlight__heading">Why choose vitality?</h4>
+                    <div class="spotlight text-light">
+                        <h4 class="spotlight__heading">Why choose Vitality?</h4>
 
                         <p class="spotlight__intro">
                             Comprehensive cover, access to healthcare &amp; huge rewards for our Health &amp; Life Insurance customers
@@ -180,43 +179,20 @@
                                         </div>
 
                                         <p class="spotlight-item__heading">
-                                            Spotlight heading
+                                            Cover for just me
                                         </p>
 
                                         <div class="spotlight-item__content">
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur.
+                                                Explore the best protection options for singles.
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="spotlight-item__cta">
-                                        <a href="#" class="emphasis-link">Here is an emphasis-link</a>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="spotlight__list-item">
-                                <div class="spotlight-item">
-                                    <div class="spotlight-item__top-content">
-                                        <div class="spotlight-item__intro-image burst">
-                                            <img src="/img/examples/running-man.jpg" alt="Running man" />
-                                        </div>
-
-                                        <p class="spotlight-item__heading">
-                                            Spotlight heading
-                                        </p>
-
-                                        <div class="spotlight-item__content">
-                                            <p>
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                                Repudiandae iste obcaecati corrupti doloremque! Accusantium.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="spotlight-item__cta">
-                                        <a href="#" class="emphasis-link">Here is an emphasis-link</a>
+                                        <a href="#" class="emphasis-link">
+                                            Learn more
+                                        </a>
                                     </div>
                                 </div>
                             </li>
@@ -229,40 +205,66 @@
                                         </div>
 
                                         <p class="spotlight-item__heading">
-                                            Spotlight heading
+                                            Cover for me, my partner, and our little family
                                         </p>
 
                                         <div class="spotlight-item__content">
                                             <p>
-                                                Lorem ipsum dolor sit amet, consectetur.
+                                                Explore the best protection options for couples.
                                             </p>
                                         </div>
                                     </div>
 
                                     <div class="spotlight-item__cta">
-                                        <a href="#" class="emphasis-link">Here is an emphasis-link</a>
+                                        <a href="#" class="emphasis-link">
+                                            Learn more
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="spotlight__list-item">
+                                <div class="spotlight-item">
+                                    <div class="spotlight-item__top-content">
+                                        <div class="spotlight-item__intro-image burst">
+                                            <img src="/img/examples/running-man.jpg" alt="Running man" />
+                                        </div>
+
+                                        <p class="spotlight-item__heading">
+                                            Cover for me and my family
+                                        </p>
+
+                                        <div class="spotlight-item__content">
+                                            <p>
+                                                Explore the best protection options for families.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="spotlight-item__cta">
+                                        <a href="#" class="emphasis-link">
+                                            Learn more
+                                        </a>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
-                </section>
+                </div>
             </div>
 
             <div>
-                <h2>Markup</h2>
-
-                <pre>
-                    <code class="language-markup line-numbers"></code>
-                </pre>
+                <h4>Markup</h4>
+                <pre><code class="language-markup line-numbers"></code></pre>
             </div>
 
-            <h3>Without Image</h3>
+            <h3>Icon Cards without Background Image</h3>
+            <h4>Demo</h4>
 
             <div class="example">
-                <section class="cards-stacked text-dark">
-                    <div class="spotlight pinch text-light">
-                        <h4 class="spotlight__heading">Why choose vitality?</h4>
+                <div class="cards-stacked text-dark">
+                    <div class="spotlight text-light">
+                        <h4 class="spotlight__heading">Why choose Vitality?</h4>
 
                         <p class="spotlight__intro">
                             Comprehensive cover, access to healthcare &amp; huge rewards for our Health &amp; Life Insurance customers
@@ -343,50 +345,21 @@
                                     </div>
                                 </div>
                             </li>
-
-                            <li class="spotlight__list-item">
-                                <div class="spotlight-item">
-                                    <div class="spotlight-item__top-content">
-                                        <p class="spotlight-item__heading">
-                                            Huge Rewards
-                                        </p>
-
-                                        <div class="spotlight-item__icon">
-                                            <img src="/img/examples/heart-icon.png" alt="Heart" />
-                                        </div>
-
-                                        <div class="spotlight-item__content">
-                                            <p>
-                                                Minima perferendis id, voluptas incidunt maxime eius velit
-                                                laboriosam rem numquam modi aspernatur enim, officia amet aut,
-                                                nemo fugiat saepe adipisci commodi!
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="spotlight-item__cta">
-                                        <a href="#" class="emphasis-link">Here is an emphasis-link</a>
-                                    </div>
-                                </div>
-                            </li>
                         </ul>
                     </div>
-                </section>
+                </div>
             </div>
 
             <div>
-                <h2>Markup</h2>
-
-                <pre>
-                    <code class="language-markup line-numbers"></code>
-                </pre>
+                <h4>Markup</h4>
+                <pre><code class="language-markup line-numbers"></code></pre>
             </div>
         </section>
     </main>
 
     <script>function cdnizerLoad(u) { document.write('<scr' + 'ipt src="' + encodeURIComponent(u) + '"></scr' + 'ipt>'); }</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-    <script>    if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
+    <script>if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script>if (!($.datepicker)) cdnizerLoad("/bower_components/jqueryui/jquery-ui.min.js");</script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.smartresize/0.1/jquery.debouncedresize.js"></script>

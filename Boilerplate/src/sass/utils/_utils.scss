@@ -42,8 +42,8 @@
 }
 
 .burst {
-    margin: 0 #{-$pad};
-    width: calc(100% + #{$pad + $pad});
+    margin: 0;
+    width: 100%;
 
     @include mq($from: tablet) {
         margin: 0 #{-$pad--large};
@@ -131,156 +131,17 @@
 }
 
 // Hide at various sizes.
-.mobile-and-up {
-    @include mq($until: mobile) {
-        display: none;
+// Loop over each breakpoints and create less than or greater than hider classes.
+@each $breakpoint-name, $breakpoint-value in $mq-breakpoints {
+    .#{$breakpoint-name}-less-than {
+        @include mq($from: $breakpoint-name) {
+            display: none !important;
+        }
     }
-}
 
-.mobile-landscape-and-up {
-    @include mq($until: mobile-landscape) {
-        display: none;
+    .#{$breakpoint-name}-and-up {
+        @include mq($until: $breakpoint-name) {
+            display: none !important;
+        }
     }
-}
-
-.tablet-and-up {
-    @include mq($until: tablet) {
-        display: none;
-    }
-}
-
-.desktop-and-up {
-    @include mq($until: desktop) {
-        display: none;
-    }
-}
-
-.wide-and-up {
-    @include mq($until: wide) {
-        display: none;
-    }
-}
-
-.max-and-up {
-    @include mq($until: max) {
-        display: none;
-    }
-}
-
-.mobile-less-than {
-    @include mq($from: mobile) {
-        display: none;
-    }
-}
-
-.mobile-landscape-less-than {
-    @include mq($from: mobile-landscape) {
-        display: none;
-    }
-}
-
-.tablet-less-than {
-    @include mq($from: tablet) {
-        display: none;
-    }
-}
-
-.desktop-less-than {
-    @include mq($from: desktop) {
-        display: none;
-    }
-}
-
-.wide-less-than {
-    @include mq($from: wide) {
-        display: none;
-    }
-}
-
-.max-less-than {
-    @include mq($from: max) {
-        display: none;
-    }
-}
-
-
-// Background positions.
-$bg-top: 15%;
-$bg-middle: 50%;
-$bg-left: 15%;
-$bg-right: 85%;
-$bg-bottom: 85%;
-
-// Relative.
-.background-position-top-left {
-    background-position: $bg-left $bg-top !important;
-}
-
-.background-position-top-middle {
-    background-position: $bg-middle $bg-top !important;
-}
-
-.background-position-top-right {
-    background-position: $bg-right $bg-top !important;
-}
-
-.background-position-middle-left {
-    background-position: $bg-left $bg-middle !important;
-}
-
-.background-position-middle {
-    background-position: $bg-middle !important;
-}
-
-.background-position-middle-right {
-    background-position: $bg-right $bg-middle !important;
-}
-
-.background-position-bottom-left {
-    background-position: $bg-left $bg-bottom !important;
-}
-
-.background-position-bottom-middle {
-    background-position: $bg-middle $bg-bottom !important;
-}
-
-.background-position-bottom-right {
-    background-position: $bg-right $bg-bottom !important;
-}
-
-// Absolute.
-.background-position-abs-top-left {
-    background-position: top left !important;
-}
-
-.background-position-abs-top-middle {
-    background-position: top center !important;
-}
-
-.background-position-abs-top-right {
-    background-position: top right !important;
-}
-
-.background-position-abs-middle-left {
-    background-position: center left !important;
-}
-
-.background-position-abs-middle {
-    background-position: center !important;
-}
-
-.background-position-abs-middle-right {
-    background-position: center right !important;
-}
-
-.background-position-abs-bottom-left {
-    background-position: bottom left !important;
-}
-
-.background-position-abs-bottom-middle {
-    background-position: bottom center !important;
-}
-
-.background-position-abs-bottom-right {
-    background-position: bottom right !important;
 }

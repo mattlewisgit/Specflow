@@ -17,9 +17,9 @@ namespace Vitality.Website.SC.Pipelines.Publishing.GetItemReferences
         {
             pathsToIgnore.Add(path);
         }
-
+                   
         protected override List<Item> GetItemReferences(PublishItemContext context)
-        { 
+        {
             var referredDataSourceItems = GetCurrentPublishCandidateItems(context);
 
             var itemsToPublish = new List<Item>();
@@ -33,6 +33,7 @@ namespace Vitality.Website.SC.Pipelines.Publishing.GetItemReferences
 
                 foreach (Item child in item.Children)
                 {
+                    itemsToPublish.Add(child);
                     if (!referredDataSourceItems.Contains(child) && !itemsToPublish.Contains(child))
                     {
                         itemsToPublish.AddRange(GetLinkedDataSourceItems(child));

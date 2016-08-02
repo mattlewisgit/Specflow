@@ -1,5 +1,5 @@
 ﻿@using Vitality.Website.Extensions.Views
-@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.Models.Products.ProductsComponent>
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Products.ProductsComponent>
 
 <div class="products-component text-light">
     <div class="grid pinch">
@@ -11,9 +11,7 @@
                     <div>
                         @Editable(panel, m => m.Image)
                     </div>
-                    <p>
-                        @Editable(panel, m => m.OpeningParagraph)
-                    </p>
+                    @Editable(panel, m => m.OpeningParagraph)
 
                     @Editable(panel, m => m.CallToAction, new { @class = "button-cta" })
                 </div>

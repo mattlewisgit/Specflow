@@ -14,9 +14,9 @@
     }
 
     &__header {
+        @extend .font-weight--regular;
         @include font-size(1.4);
         color: $grey;
-        font-weight: 500;
 
         p {
             margin-bottom: 0;
@@ -32,8 +32,8 @@
         }
 
         .search-panel__search-details {
+            @extend .font-weight--regular;
             display: none;
-            font-weight: 500;
         }
 
         .search-string {
@@ -61,8 +61,8 @@
     .search-results {
 
         &__header {
+            @extend .font-weight--regular;
             color: $primary-color;
-            font-weight: 500;
         }
 
         &__list {
@@ -79,15 +79,15 @@
         }
 
         &__item-header {
+            @extend .font-weight--regular;
             @include font-size(1.8);
             color: $grey;
-            font-weight: 500;
         }
 
         &__item-body {
+            @extend .font-weight--regular;
             @include font-size(1.4);
             color: $grey;
-            font-weight: 500;
         }
 
         &__background-image {

@@ -27,6 +27,12 @@
             "cdn": "//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/${version}/jquery.matchHeight-min.js"
         },
         {
+            "file": "/bower_components/js-cookie/src/js.cookie.js",
+            "package": "js-cookie",
+            "test": "Cookies",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/js-cookie/${version}/js.cookie.min.js"
+        },
+        {
             "file": "/bower_components/fastclick/lib/fastclick.js",
             "package": "fastclick",
             "test": "window.FastClick",
