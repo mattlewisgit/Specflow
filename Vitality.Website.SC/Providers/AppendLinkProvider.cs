@@ -17,7 +17,7 @@ namespace Vitality.Website.SC.Providers
             return new AppendLinkBuilder(options);
         }
 
-        private class AppendLinkBuilder : LinkBuilder
+        public class AppendLinkBuilder : LinkBuilder
         {
             public AppendLinkBuilder(UrlOptions options): base(options)
             {
@@ -50,7 +50,7 @@ namespace Vitality.Website.SC.Providers
                 return HandleSlash(url);
             }
 
-            private string HandleSlash(string url)
+            public static string HandleSlash(string url)
             {
                 if (string.IsNullOrWhiteSpace(url) || url.EndsWith("/"))
                 {
