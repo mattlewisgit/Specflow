@@ -25,16 +25,26 @@ namespace Vitality.Website.SC.Providers
             protected override string BuildItemUrl(Item item)
             {
                 Assert.ArgumentNotNull((object)item, "item");
-                SiteInfo siteInfo = this.ResolveTargetSite(item);
-                string itemPathElement = this.GetItemPathElement(item, siteInfo);
+                var siteInfo = this.ResolveTargetSite(item);
+                var itemPathElement = this.GetItemPathElement(item, siteInfo);
+
                 if (itemPathElement.Length == 0)
+                {
                     return string.Empty;
-                string serverUrlElement = this.GetServerUrlElement(siteInfo);
-                string url; 
-                
-                if (siteInfo != null)
-                    url = HandleSlash(this.BuildItemUrl(serverUrlElement, itemPathElement, siteInfo.VirtualFolder));
-                url = HandleSlash(this.BuildItemUrl(serverUrlElement, itemPathElement));
+                }
+
+                var serverUrlElement = this.GetServerUrlElement(siteInfo);
+
+                string url;
+
+                if (siteInfo == null)
+                {
+                    url = this.BuildItemUrl(serverUrlElement, itemPathElement);
+                }
+                else
+                {
+                    url = this.BuildItemUrl(serverUrlElement, itemPathElement, siteInfo.VirtualFolder);
+                }
 
                 return this.HandleSlash(url);
             }
@@ -42,11 +52,15 @@ namespace Vitality.Website.SC.Providers
             private string HandleSlash(string url)
             {
                 if (string.IsNullOrWhiteSpace(url) || url.EndsWith("/"))
+                {
                     return url;
+                }
 
                 var uri = new Uri(url);
                 if (Path.HasExtension(uri.AbsoluteUri))
+                {
                     return url;
+                }
 
                 //if a query string present add the slash before it
                 var slashPosition = url.IndexOf("?");
