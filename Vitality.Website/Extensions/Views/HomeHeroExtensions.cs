@@ -29,22 +29,5 @@
             }
             return string.Empty;
         }
-        
-        public static string VideoTheme(this GlassView<HomeHero> view)
-        {
-            var videoTheme = "";
-
-            if (DisplayPlayButton(view))
-            {
-                videoTheme = "home-hero--video";
-            }
-
-            return videoTheme;
-        }
-
-        public static bool DisplayPlayButton(this GlassView<HomeHero> view)
-        {
-            return !string.IsNullOrEmpty(view.Model.VideoId) || !string.IsNullOrWhiteSpace(view.Model.VideoId);
-        }
     }
 }
