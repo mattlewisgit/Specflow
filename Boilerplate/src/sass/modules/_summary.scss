@@ -12,10 +12,17 @@ $_padding: 3%;
     }
 }
 
-.summary-left, .summary-right {
+.summary-left,
+.summary-right {
     font-size: 90%;
     line-height: 1.5;
     padding: $_padding;
+}
+
+.summary-left {
+    &--lead-in {
+        @extend .h6;
+    }
 }
 
 .summary-right {
@@ -23,7 +30,8 @@ $_padding: 3%;
         position: relative;
     }
 
-    .title h4, .content {
+    .title p,
+    .content {
         background: $darken-heavy;
         margin: 0;
     }
@@ -35,8 +43,10 @@ $_padding: 3%;
     .title {
         @include text-centre;
 
-        h4 {
+        p {
+            @extend .h6;
             @include tab-rounding;
+            color: $white;
             display: inline-block;
             font-size: 1.7rem;
             padding: $_padding ($_padding + 1);
@@ -55,8 +65,10 @@ $_padding: 3%;
             }
         }
 
-        h6 {
+        h4 {
             @extend .font-weight--semi-bold;
+            @extend .h6;
+            color: $white;
             margin: 0;
         }
 
