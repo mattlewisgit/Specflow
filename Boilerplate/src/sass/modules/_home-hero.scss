@@ -79,13 +79,9 @@
          margin: $pad--thin;
     }
 
-    // Reduce the button icon on mobile.
-    @include mq($until: mobile-landscape) {
-        .home-hero--static {
-            .home-hero--static__button {
-                zoom: 0.6;
-            }
-        }
+    // Media queries: largest to smallest order is important!
+    @include mq($from: desktop) {
+        min-height: 540px
     }
 
     // Reduce the padding for smaller devices.
@@ -103,7 +99,12 @@
         }
     }
 
-    @include mq($from: desktop) {
-        min-height: 540px
+    // Reduce the button icon on mobile.
+    @include mq($until: mobile-landscape) {
+        .home-hero--static {
+            .home-hero--static__button {
+                zoom: 0.6;
+            }
+        }
     }
 }
