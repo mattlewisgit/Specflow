@@ -3,50 +3,51 @@
 
 using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
+using Sitecore.Links;
 using Sitecore.Web;
 using System;
 using System.IO;
 
 namespace Vitality.Website.SC.Providers
 {
-    public class LinkProvider : Sitecore.Links.LinkProvider
+    public class AppendLinkProvider : LinkProvider
     {
-        protected override Sitecore.Links.LinkProvider.LinkBuilder CreateLinkBuilder(Sitecore.Links.UrlOptions options)
+        protected override LinkBuilder CreateLinkBuilder(UrlOptions options)
         {
-            return new LinkBuilder(options);
+            return new AppendLinkBuilder(options);
         }
 
-        public new class LinkBuilder : Sitecore.Links.LinkProvider.LinkBuilder
+        private class AppendLinkBuilder : LinkBuilder
         {
-            public LinkBuilder(Sitecore.Links.UrlOptions options): base(options)
+            public AppendLinkBuilder(UrlOptions options): base(options)
             {
             }
 
             protected override string BuildItemUrl(Item item)
             {
                 Assert.ArgumentNotNull((object)item, "item");
-                var siteInfo = this.ResolveTargetSite(item);
-                var itemPathElement = this.GetItemPathElement(item, siteInfo);
+                var siteInfo = ResolveTargetSite(item);
+                var itemPathElement = GetItemPathElement(item, siteInfo);
 
                 if (itemPathElement.Length == 0)
                 {
                     return string.Empty;
                 }
 
-                var serverUrlElement = this.GetServerUrlElement(siteInfo);
+                var serverUrlElement = GetServerUrlElement(siteInfo);
 
                 string url;
 
                 if (siteInfo == null)
                 {
-                    url = this.BuildItemUrl(serverUrlElement, itemPathElement);
+                    url = BuildItemUrl(serverUrlElement, itemPathElement);
                 }
                 else
                 {
-                    url = this.BuildItemUrl(serverUrlElement, itemPathElement, siteInfo.VirtualFolder);
+                    url = BuildItemUrl(serverUrlElement, itemPathElement, siteInfo.VirtualFolder);
                 }
 
-                return this.HandleSlash(url);
+                return HandleSlash(url);
             }
 
             private string HandleSlash(string url)
