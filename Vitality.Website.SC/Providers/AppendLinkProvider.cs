@@ -63,6 +63,20 @@ namespace Vitality.Website.SC.Providers
                     return url;
                 }
 
+                var slashPosition = GetSlashPosition(url);
+
+                var prefix = url.Substring(0, slashPosition);
+
+                if (!prefix.EndsWith("/"))
+                {
+                    url = string.Format("{0}/{1}", prefix ,url.Substring(slashPosition));
+                }
+
+                return url;
+            }
+
+            private static int GetSlashPosition(string url)
+            {
                 //if a query string present add the slash before it
                 var slashPosition = url.IndexOf("?");
 
@@ -75,15 +89,7 @@ namespace Vitality.Website.SC.Providers
                         slashPosition = url.Length;
                     }
                 }
-
-                var prefix = url.Substring(0, slashPosition);
-
-                if (!prefix.EndsWith("/"))
-                {
-                    url = string.Format("{0}/{1}", prefix ,url.Substring(slashPosition));
-                }
-
-                return url;
+                return slashPosition;
             }
         }
     }
