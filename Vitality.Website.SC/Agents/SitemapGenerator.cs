@@ -65,8 +65,10 @@ namespace Vitality.Website.SC.Agents
                 sectionPagesCollection.Select(
                     p => string.Format("{0}{1}.xml.gz", domainUrl, Database.GetItem(p.SitemapItemId).Fields["Value"].Value));
 
+            var sitemaps = sitemapIndexFile.Sitemaps;
+
             // Remove any existing sitemaps from index file that are no longer referenced.
-            sitemapIndexFile.Sitemaps.RemoveAll(p => !allSitemaps.Contains(p.Location));
+            sitemaps.RemoveAll(p => !allSitemaps.Contains(p.Location));
 
             foreach (var sectionPage in sectionPagesCollection)
             {
@@ -79,16 +81,16 @@ namespace Vitality.Website.SC.Agents
 
                 if (sectionChildPages.Any())
                 {
-                    var sitemapName = string.Format("{0}.xml.gz", Database.GetItem(sectionPage.SitemapItemId).Fields["Value"].Value);
-                    var sitemapUrl = string.Format("{0}{1}", domainUrl, sitemapName);
+                    var sitemapName = string.Format("{0}.xml", Database.GetItem(sectionPage.SitemapItemId).Fields["Value"].Value);
+                    var sitemapUrl = string.Format("{0}{1}", domainUrl, sitemapName + ".gz");
 
                     DateTime sitemapLastModified = DateTime.MinValue;
 
-                    if (sitemapIndexFile != null && sitemapIndexFile.Sitemaps != null && sitemapIndexFile.Sitemaps.Any(p => p.Location.Equals(sitemapUrl)))
-                    {
                         // Retrieve lastmod date of sitemap from index file.
-                        sitemapLastModified = DateTime.Parse(sitemapIndexFile.Sitemaps.FirstOrDefault(p => p.Location.Equals(sitemapUrl)).LastModified);
-                    }                        
+                    var sitemapIndexesModel = sitemaps.FirstOrDefault(p => p.Location.Equals(sitemapUrl));
+                        if (sitemapIndexesModel != null)
+                            sitemapLastModified = DateTime.Parse(sitemapIndexesModel.LastModified);
+
 
                     // Retrieve most recent published date of child pages.
                     var lastPublished = sectionChildPages.Max(p => p.Statistics.Updated);
@@ -103,13 +105,14 @@ namespace Vitality.Website.SC.Agents
 
                     // Update sitemaps lastmod date within index file.
                     var sitemapIndexRow =
-                        sitemapIndexFile.Sitemaps.FirstOrDefault(
-                            p => p.Location.ToLowerInvariant() == sitemapUrl.ToLowerInvariant());
+                        sitemaps.FirstOrDefault(
+                            p => string.Equals(p.Location, sitemapUrl,
+                                StringComparison.OrdinalIgnoreCase));
 
                     string dateTime = DateTime.Now.ToString("yyyy-MM-dd" + "T" + "hh:mm:ss");
                     if (sitemapIndexRow == null)
                     {
-                        sitemapIndexFile.Sitemaps.Add(new SitemapIndexesModel {Location = sitemapUrl, LastModified = dateTime});
+                        sitemaps.Add(new SitemapIndexesModel { Location = sitemapUrl, LastModified = dateTime });
                     }
                     else
                     {

@@ -10,7 +10,7 @@ namespace Vitality.Website.SC.Utilities.Sitemap
     {
         public static void SaveSitemapToDisk(T model, string sitemapName, bool compress)
         {
-            XmlSerializer serializer = new XmlSerializer(typeof(T));
+            var serializer = new XmlSerializer(typeof (T));
 
             var xmlWriterSetting = new XmlWriterSettings()
             {
@@ -20,33 +20,26 @@ namespace Vitality.Website.SC.Utilities.Sitemap
                 ConformanceLevel = ConformanceLevel.Auto
             };
 
-            string xmlFile = string.Format("{0}{1}", HttpRuntime.AppDomainAppPath, sitemapName);
+            var xmlFile = string.Format("{0}{1}", HttpRuntime.AppDomainAppPath, sitemapName);
+
+            using (var writer = XmlWriter.Create(xmlFile, xmlWriterSetting))
+            {
+                serializer.Serialize(writer, model);
+            }
 
             if (compress)
             {
-                using (StringWriter textWriter = new StringWriter())
+                using (var fs = File.OpenRead(xmlFile))
                 {
-                    serializer.Serialize(textWriter, model);
-                    string xmlContent = textWriter.ToString();
-
-                    using (var fs = File.Create(xmlFile))
+                    using (var compressedFileStream = File.Create(xmlFile + ".gz"))
                     {
-                        using (var gz = new GZipStream(fs, CompressionMode.Compress))
+                        using (var compressionStream = new GZipStream(compressedFileStream,
+                            CompressionMode.Compress))
                         {
-                            using (var writer = XmlWriter.Create(gz, xmlWriterSetting))
-                            {
-                                writer.WriteString(HttpUtility.HtmlDecode(xmlContent));
-                                fs.Flush();
-                            }
+                            fs.CopyTo(compressionStream);
+
                         }
                     }
-                }
-            }
-            else
-            {
-                using (XmlWriter writer = XmlWriter.Create(xmlFile, xmlWriterSetting))
-                {
-                    serializer.Serialize(writer, model);
                 }
             }
         }
