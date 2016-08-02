@@ -1,4 +1,4 @@
-//Grid item top margin - based on gutter scaling var
+// Grid item top margin - based on gutter scaling variable.
 $grid-margin-top: 2.3576515979%;
 
 .grid,
@@ -23,7 +23,6 @@ $grid-margin-top: 2.3576515979%;
 }
 
 @include mq($from: tablet) {
-
     .grid,
     .grid-no-gutters {
         display: flex;
@@ -102,14 +101,12 @@ $grid-margin-top: 2.3576515979%;
         }
     }
 
-    // no gutters -
-
+    // No gutters.
     .grid-no-gutters {
-
         @include fill-parent;
 
         [class*="grid-col-"] {
-            @include pad();
+            @include pad;
             margin-top: 0;
             float: left;
 

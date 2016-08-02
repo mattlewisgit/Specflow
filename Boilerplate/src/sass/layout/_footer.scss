@@ -42,7 +42,8 @@
     &__links--small {
         margin-bottom: 20px;
     }
-    // Link lists -
+
+    // Link lists.
     &__list {
         @extend .non-list;
         margin-top: 0;
@@ -93,7 +94,7 @@
 
         &__helpful {
             @include span-columns(8);
-            @include omega();
+            @include omega;
         }
 
         &__connect {
@@ -119,7 +120,8 @@
                 margin: 0;
             }
         }
-        //Hide the mobile accordion links & show the larger grid versions -
+
+        // Hide the mobile accordion links and show the larger grid versions.
         &__links--small {
             display: none;
         }
@@ -131,7 +133,8 @@
         &__logo {
             text-align: left;
         }
-        // Multiple columns of "helpful links"
+
+        // Multiple columns of helpful links.
         &__list--helpful {
             li {
                 width: 50%;
@@ -139,7 +142,8 @@
             }
         }
     }
-    // More padding and grid layout where possible -
+
+    // More padding and grid layout where possible.
     @include mq($from: tablet) {
         padding: $pad--large;
 
@@ -164,7 +168,7 @@
 
         &__connect {
             @include span-columns(3);
-            @include omega();
+            @include omega;
         }
 
         &__copyright {

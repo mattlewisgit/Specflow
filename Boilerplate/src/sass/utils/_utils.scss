@@ -5,13 +5,13 @@
 // Utils
 //
 
-.clearfix:before,
-.clearfix:after {
-    display: table;
+.clearfix::before,
+.clearfix::after {
     content: "";
+    display: table;
 }
 
-.clearfix:after {
+.clearfix::after {
     clear: both;
 }
 

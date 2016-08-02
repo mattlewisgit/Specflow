@@ -36,7 +36,7 @@ a.js-focus {
     text-decoration: none;
     color: $primary-color;
 
-    &:after {
+    &::after {
         content: "";
         display: block;
         position: absolute;
@@ -215,7 +215,7 @@ dt {
 }
 
 dd {
-    margin: 0 0 0.5em 0;
+    margin: 0 0 0.5em;
 }
 
 .paragraph-emphasis {
@@ -233,7 +233,7 @@ dd {
         position: relative;
         color: $heading-color;
 
-        &:before {
+        &::before {
             content: "";
             position: absolute;
             top: 8px;
@@ -256,7 +256,7 @@ dd {
         position: relative;
         color: $heading-color;
 
-        &:before {
+        &::before {
             @extend .font-weight--bold;
             width: 20px;
             content: counter(item);

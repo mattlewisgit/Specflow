@@ -30,7 +30,8 @@ $menu-transition-time: 0.5s;
             text-decoration: none;
         }
     }
-    //Mobile back button -
+
+    // Mobile back button.
     &__back {
         position: relative;
         padding: 15px 0 16px 50px;
@@ -39,8 +40,9 @@ $menu-transition-time: 0.5s;
         height: 100%;
         text-decoration: none;
         color: $body-color;
-        // Underline
-        &:before {
+
+        // Underline.
+        &::before {
             content: "";
             display: block;
             position: absolute;
@@ -50,8 +52,9 @@ $menu-transition-time: 0.5s;
             height: 1px;
             background-color: $outline-color;
         }
-        // Left arrow icon -
-        &:after {
+
+        // Left arrow icon.
+        &::after {
             @include retina-sprite($sprite-arrow-left-grey-group);
             content: "";
             display: block;
@@ -63,7 +66,7 @@ $menu-transition-time: 0.5s;
         &:hover,
         &:focus,
         &.js-focus {
-            &:after {
+            &::after {
                 @include retina-sprite($sprite-arrow-left-pink-group);
             }
         }
@@ -80,7 +83,7 @@ $menu-transition-time: 0.5s;
 }
 
 
-//Fix to stop megamenu abruptley disappearing when closing the mobile megamenu -
+// Fix to stop megamenu abruptley disappearing when closing the mobile megamenu.
 .megamenu {
     visibility: hidden;
     transition: visibility 0s $menu-transition-time;
@@ -93,7 +96,7 @@ $menu-transition-time: 0.5s;
     }
 }
 
-// Megamenu Feature
+// Megamenu feature.
 .megamenu-feature {
     position: relative;
     display: none;
@@ -112,7 +115,8 @@ $menu-transition-time: 0.5s;
     &__button {
         margin-bottom: 0;
     }
-    //Feature blocks with images display at larger screen sizes -
+
+    // Feature blocks with images display at larger screen sizes.
     @include mq($from: wide) {
         &--image {
             padding-right: 30%;
@@ -131,7 +135,7 @@ $menu-transition-time: 0.5s;
     }
 }
 
-//Mobile megamenu sliding functionality -
+// Mobile megamenu sliding functionality.
 .section-nav,
 .site-nav--small {
     @include mq($until: tablet) {
@@ -143,20 +147,19 @@ $menu-transition-time: 0.5s;
     }
 }
 
-//
-// Desktop megamenu -
-//
+// Desktop megamenu.
 @include mq($from: tablet) {
     .megamenu {
-        //Hide megamenus for the time being -
+        // Hide megamenus for the time being.
         display: none;
         visibility: visible;
         transition: none;
         top: 100%;
         left: 0;
         z-index: 1;
-        //Bottom drop shadow -
-        box-shadow: 0 20px 20px -14px $dropshadow-color;
+
+        // Bottom drop shadow.
+        box-shadow: 0 $pad $pad -14px $dropshadow-color;
 
         &__heading {
             display: block;
@@ -202,7 +205,7 @@ $menu-transition-time: 0.5s;
         }
     }
 
-    //Show hide funcitons -
+    // Show hide functions.
     .section-nav__item--megamenu:hover,
     .section-nav__item--megamenu:focus,
     .section-nav__item--megamenu.js-focus {

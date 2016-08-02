@@ -26,7 +26,7 @@
             justify-content: center;
 
             // Add the middle border line.
-            &:after {
+            &::after {
                 content: "";
                 width: 1px;
                 height: 100%;
@@ -42,7 +42,7 @@
 
         // Remove the middle border line for the last column.
         [class*="grid-col-"]:last-of-type {
-            &:after {
+            &::after {
                 content: none;
             }
         }
