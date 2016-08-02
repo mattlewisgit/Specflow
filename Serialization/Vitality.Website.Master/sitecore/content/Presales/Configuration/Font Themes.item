@@ -27,13 +27,13 @@ content-length: 38
 field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
 name: __Security
 key: __security
-content-length: 120
+content-length: 147
 
-ar|sitecore\Presales Configuration Manager|pd|+item:create|+item:read|+item:rename|+item:delete|+item:write|+item:admin|
+ar|sitecore\Presales Configuration Manager|pe|+item:read|+item:create|pd|+item:create|+item:read|+item:rename|+item:delete|+item:write|+item:admin|
 ----version----
 language: en
 version: 1
-revision: a31e32db-a8be-4535-8cf2-c70be7170bf5
+revision: 1278ecbd-5dc5-4be0-98a3-309b7f41f35a
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a31e32db-a8be-4535-8cf2-c70be7170bf5
+1278ecbd-5dc5-4be0-98a3-309b7f41f35a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160721T112902Z
+20160802T092147Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
