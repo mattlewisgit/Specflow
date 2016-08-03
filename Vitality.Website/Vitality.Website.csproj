@@ -195,6 +195,9 @@
     <Content Include="App_Config\Include\Hi.UrlRewrite.Prefetch.Master.config" />
     <Content Include="App_Config\Include\Hi.UrlRewrite.config" />
     <Content Include="App_Config\Include\Hi.UrlRewrite.Aggregation.config" />
+    <Content Include="App_Config\Include\Vitality\Vitality.Agents.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -317,6 +320,7 @@
     <Compile Include="Areas\Presales\BaseTemplates\IOpenGraphPage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IQubitOpenTagGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ISerpAppearancePage.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\ISitemap.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterGlobal.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\ITwitterPage.cs" />
     <Compile Include="Areas\Presales\BaseTemplates\IWebmasterToolsGlobal.cs" />
@@ -524,7 +528,9 @@
     <Content Include="App_Config\Include\Sitecore.PathAnalyzer.Services.RemoteServer.config.disabled" />
     <Content Include="App_Config\Include\Sitecore.PathAnalyzer.StorageProviders.config" />
     <Content Include="App_Config\Include\Sitecore.PipelineProfiling.config.disabled" />
-    <Content Include="App_Config\Include\Sitecore.Processing.config" />
+    <Content Include="App_Config\Include\Sitecore.Processing.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\Include\Sitecore.Publishing.DedicatedInstance.config.example" />
     <Content Include="App_Config\Include\Sitecore.Publishing.EventProvider.Async.config.disabled" />
     <Content Include="App_Config\Include\Sitecore.Publishing.Optimizations.config.example" />
