@@ -1,12 +1,12 @@
 var _settings = {
     searchInputClass: ".js-search-input",
-    searchStringOutput: ".js-search-string",
-    searchMatchesOutput: ".js-search-matches"
+    searchMatchesOutput: ".js-search-matches",
+    searchStringOutput: ".js-search-string"
 };
 
 var $searchInput;
-var $searchOutput;
 var $searchMatches;
+var $searchOutput;
 
 var _searchModule = {
     init: function () {
@@ -19,7 +19,6 @@ var _searchModule = {
 
             $(".search-panel__search-results").show();
             $(".search-panel__search-details").show();
-
         });
 
         // Prevent scrolling of the large input text.
@@ -31,15 +30,13 @@ var _searchModule = {
     }
 };
 
-var init = function () {
-    "use strict";
-    $searchInput = $(_settings.searchInputClass);
-    $searchOutput = $(_settings.searchStringOutput);
-    $searchMatches = $(_settings.searchMatchesOutput);
-
-    _searchModule.init();
-};
-
 module.exports = {
-    init: init
+    init: function () {
+        "use strict";
+        $searchInput = $(_settings.searchInputClass);
+        $searchOutput = $(_settings.searchStringOutput);
+        $searchMatches = $(_settings.searchMatchesOutput);
+
+        _searchModule.init();
+    }
 };

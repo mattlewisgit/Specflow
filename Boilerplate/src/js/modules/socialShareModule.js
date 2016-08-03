@@ -24,16 +24,14 @@ var _socialShareModule = {
     }
 };
 
-var init = function () {
-    "use strict";
-    var $shareComponents = $(_settings.socialSharingLinkSelector);
-
-    $shareComponents.on("click", function (e) {
-        e.preventDefault();
-        _socialShareModule.configureShareData($(this));
-    });
-};
-
 module.exports = {
-    init: init
+    init: function () {
+        "use strict";
+        var $shareComponents = $(_settings.socialSharingLinkSelector);
+
+        $shareComponents.on("click", function (e) {
+            e.preventDefault();
+            _socialShareModule.configureShareData($(this));
+        });
+    }
 };
