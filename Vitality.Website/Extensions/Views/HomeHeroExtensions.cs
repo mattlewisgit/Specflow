@@ -32,14 +32,7 @@
         
         public static string VideoTheme(this GlassView<HomeHero> view)
         {
-            var videoTheme = "";
-
-            if (DisplayPlayButton(view))
-            {
-                videoTheme = "home-hero--video";
-            }
-
-            return videoTheme;
+            return DisplayPlayButton(view) ? "home-hero--video" : string.Empty;
         }
 
         public static bool DisplayPlayButton(this GlassView<HomeHero> view)
