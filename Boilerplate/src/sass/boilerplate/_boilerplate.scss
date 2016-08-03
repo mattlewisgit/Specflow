@@ -17,10 +17,10 @@
 }
 
 .box {
-    width: 200px;
     height: 200px;
     margin: 80px auto;
     position: relative;
+    width: 200px;
 
     .no-flexbox & {
         display: inline-block;
@@ -28,7 +28,7 @@
 }
 
 .box--pink {
-    background-color: pink;
+    background-color: $primary-color;
 
     &.callout-tri--central-down {
         @include triangle-callout--central-down(pink);
@@ -40,7 +40,7 @@
 }
 
 .box--green {
-    background-color: seagreen;
+    background-color: $secondary-color;
 
     &.callout-tri--central-down {
         @include triangle-callout--central-down(seagreen, 60px, 44px);
@@ -63,7 +63,7 @@
     .anim-test-box {
         width: 100px;
         height: 100px;
-        background-color: rgba(0,0,255,0.2);
+        background-color: rgba(0, 0, 255, 0.2);
         display: inline-block;
         margin: 0 2px;
     }
@@ -71,11 +71,15 @@
 
 .test-background {
     background-color: $primary-color;
+    $_colour: rgba(0, 0, 0, 0.4);
+    $_colour-two: rgba(0, 0, 0, 0.2);
+    $_colour-three: rgba(0, 0, 0, 0.5);
+    $_colour-four: rgba(255, 255, 255, 0.2);
 
     background-image:
-        repeating-linear-gradient(transparent, transparent 50px,rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
-        repeating-linear-gradient(270deg, transparent, transparent 50px, rgba(0,0,0,.4) 50px, rgba(0,0,0,.4) 53px, transparent 53px, transparent 63px, rgba(0,0,0,.4) 63px, rgba(0,0,0,.4) 66px, transparent 66px, transparent 116px, rgba(0,0,0,.5) 116px, rgba(0,0,0,.5) 166px, rgba(255,255,255,.2) 166px, rgba(255,255,255,.2) 169px, rgba(0,0,0,.5) 169px, rgba(0,0,0,.5) 179px, rgba(255,255,255,.2) 179px, rgba(255,255,255,.2) 182px, rgba(0,0,0,.5) 182px, rgba(0,0,0,.5) 232px, transparent 232px),
-        repeating-linear-gradient(125deg, transparent, transparent 2px, rgba(0,0,0,.2) 2px, rgba(0,0,0,.2) 3px, transparent 3px, transparent 5px, rgba(0,0,0,.2) 5px);
+    repeating-linear-gradient(transparent, transparent 50px, $_colour 50px, $_colour 53px, transparent 53px, transparent 63px, $_colour 63px, $_colour 66px, transparent 66px, transparent 116px, $_colour-three 116px, $_colour-three 166px, $_colour-four 166px, $_colour-four 169px, $_colour-three 169px, $_colour-three 179px, $_colour-four 179px, $_colour-four 182px, $_colour-three 182px, $_colour-three 232px, transparent 232px),
+    repeating-linear-gradient(270deg, transparent, transparent 50px, $_colour 50px, $_colour 53px, transparent 53px, transparent 63px, $_colour 63px, $_colour 66px, transparent 66px, transparent 116px, $_colour-three 116px, $_colour-three 166px, $_colour-four 166px, $_colour-four 169px, $_colour-three 169px, $_colour-three 179px, $_colour-four 179px, $_colour-four 182px, $_colour-three 182px, $_colour-three 232px, transparent 232px),
+    repeating-linear-gradient(125deg, transparent, transparent 2px, $_colour-two 2px, $_colour-two 3px, transparent 3px, transparent 5px, $_colour-two 5px);
 }
 
 // Custom grid example.
@@ -92,8 +96,9 @@
 
         @include mq($from: tablet) {
             // 25% on medium screens.
-            //Reset omega function http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat.
-            @include omega-reset(2n); 
+            // Reset omega function.
+            // http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat.
+            @include omega-reset(2n);
             @include span-columns(3);
             @include omega(4n);
         }

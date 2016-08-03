@@ -1,8 +1,6 @@
-
 @media print {
-
-    header,
     footer,
+    header,
     .log-in,
     .search-panel {
         display: none !important;
@@ -29,7 +27,7 @@
         text-decoration: underline;
     }
 
-    a[href]:after {
+    a[href]::after {
         content: " (" attr(href) ")";
     }
 }

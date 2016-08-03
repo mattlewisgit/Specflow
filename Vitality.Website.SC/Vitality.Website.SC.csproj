@@ -106,7 +106,7 @@
     <Compile Include="Utilities\Sitemap\SitemapSettings.cs" />
     <Compile Include="Utilities\Sitemap\SitemapUrlModel.cs" />
     <Compile Include="Utilities\StringHelper.cs" />
-    <Compile Include="Providers\LinkProvider.cs" />
+    <Compile Include="Providers\AppendLinkProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -86,7 +86,7 @@
     }
 
     &--primary-inverse {
-       @include _inverse-button($primary-color);
+        @include _inverse-button($primary-color);
     }
 
     &--secondary {

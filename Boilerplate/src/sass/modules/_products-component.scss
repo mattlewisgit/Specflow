@@ -1,7 +1,7 @@
 .products-component {
     padding: $pad--thin;
     text-align: center;
-    
+
     img {
         width: 100%;
     }
@@ -22,7 +22,7 @@
         // as this will ensure they are spaced evenly for mobile.
         padding-top: 0;
 
-        [class*=grid-col-] {
+        [class*="grid-col-"] {
             margin-top: $pad--thin;
         }
     }
@@ -61,7 +61,7 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-           
+
         .button-cta {
             align-self: flex-end;
         }

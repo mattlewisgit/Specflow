@@ -1,5 +1,5 @@
 @mixin triangle-callout--central-down($tri-color: currentColor, $tri-width: 30px, $tri-height: 22px) {
-    &:after {
+    &::after {
         content: "";
         display: block;
         position: absolute;
@@ -16,7 +16,7 @@
 }
 
 @mixin triangle-callout--central-top($tri-color: currentColor, $tri-width: 30px, $tri-height: 22px) {
-    &:after {
+    &::after {
         border-left: #{$tri-width / 2} solid transparent;
         border-right: #{$tri-width / 2} solid transparent;
         border-top: $tri-height solid $tri-color;
@@ -33,7 +33,7 @@
 }
 
 @mixin triangle-callout--left-up($tri-color: currentColor, $tri-width: 40px, $tri-height: 30px) {
-    &:before {
+    &::before {
         content: "";
         display: block;
         position: absolute;
