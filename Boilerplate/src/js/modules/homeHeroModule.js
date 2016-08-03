@@ -49,7 +49,7 @@ function _enhanceHero(i, el) {
     // Set the element to always animate.
     var fadedElements = [header, paragraph, button];
 
-    fadedElements.forEach(function(element) {
+    fadedElements.forEach(function (element) {
         element.addClass("animated");
     });
 
@@ -58,8 +58,7 @@ function _enhanceHero(i, el) {
     // Functions.
     function __hoverIn() {
         // Only fade in if we are currently playing.
-        if (player.getPlayerState() !== YouTubePlayerAPI.playerStates.playing)
-        {
+        if (player.getPlayerState() !== YouTubePlayerAPI.playerStates.playing) {
             return;
         }
 
@@ -68,8 +67,7 @@ function _enhanceHero(i, el) {
 
     function __hoverOut() {
         // Only fade out if we are currently playing.
-        if (player.getPlayerState() !== YouTubePlayerAPI.playerStates.playing)
-        {
+        if (player.getPlayerState() !== YouTubePlayerAPI.playerStates.playing) {
             return;
         }
 
@@ -80,7 +78,7 @@ function _enhanceHero(i, el) {
         fadedElements.forEach(_fadeOut);
 
         // Wait for the element to fade out.
-        setTimeout(function() {
+        setTimeout(function () {
             button
                 .removeClass(_classes.button.play)
                 .addClass(_classes.button.pause);
@@ -107,13 +105,9 @@ function _enhanceHero(i, el) {
 
     // Create the player!
     player = new YT.Player(videoContainer[0], {
-        playerVars: YouTubeAPIBaseConfig,
-        videoId: videoId,
-        width: "100%",
-
         events: {
             // Remove the video container and button on fail.
-            onError: function() {
+            onError: function () {
                 // An error here is likely to due to a prolem with the requested video itself.
                 // For example, the original video ID was 1ER-hNTUVz4, which was made private,
                 // and resulted in unhelpful, unrelated errors such as:
@@ -122,12 +116,12 @@ function _enhanceHero(i, el) {
                 button.remove();
             },
 
-            onReady: function() {
+            onReady: function () {
                 // Use .mute() now in the future if sound should be disabled.
-                overlay.click(function() {
+                overlay.click(function () {
                     // If the video is playing, pause it,
                     // otherwise always try to play it.
-                    switch(player.getPlayerState()) {
+                    switch (player.getPlayerState()) {
                         case YouTubePlayerAPI.playerStates.playing:
                             __pause(player);
                             break;
@@ -137,7 +131,11 @@ function _enhanceHero(i, el) {
                     }
                 });
             }
-        }
+        },
+
+        playerVars: YouTubeAPIBaseConfig,
+        videoId: videoId,
+        width: "100%"
     });
 }
 
@@ -156,7 +154,7 @@ function _init() {
         .before($("<script>").attr("src", "//www.youtube.com/player_api"));
 
     // Register a global function called by YouTube.
-    window.onYouTubePlayerAPIReady = function() {
+    window.onYouTubePlayerAPIReady = function () {
         heroes.each(_enhanceHero);
     };
 }
