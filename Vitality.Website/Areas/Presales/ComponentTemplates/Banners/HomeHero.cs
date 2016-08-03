@@ -1,4 +1,6 @@
-﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.Banners
+﻿using System;
+
+namespace Vitality.Website.Areas.Presales.ComponentTemplates.Banners
 {
     using Glass.Mapper.Sc.Fields;
 
@@ -18,5 +20,7 @@
         public string SecondHeadline { get; set; }
 
         public string OpeningParagraph { get; set; }
+
+        public string VideoId { get; set; }
     }
 }

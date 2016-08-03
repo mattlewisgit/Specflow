@@ -29,5 +29,15 @@
             }
             return string.Empty;
         }
+        
+        public static string VideoTheme(this GlassView<HomeHero> view)
+        {
+            return DisplayPlayButton(view) ? "home-hero--video" : string.Empty;
+        }
+
+        public static bool DisplayPlayButton(this GlassView<HomeHero> view)
+        {
+            return !string.IsNullOrEmpty(view.Model.VideoId) || !string.IsNullOrWhiteSpace(view.Model.VideoId);
+        }
     }
 }
