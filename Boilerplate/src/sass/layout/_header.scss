@@ -482,15 +482,15 @@
                 }
             }
 
-            // Min width for the logo link item.
             &--home {
                 min-width: 135px;
 
                 img {
-                    width: 100%;
-                    height: 100%;
+                    // Deliberately omitting a min-height,
+                    // as Safari on all iOS devices will not render the logo!
                     max-height: 100px;
                     max-width: 100px;
+                    width: 100%;
                 }
             }
 
