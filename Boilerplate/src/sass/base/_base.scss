@@ -5,8 +5,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -81,7 +81,8 @@ footer {
 }
 
 // Selection styles where available.
-::selection, ::-moz-selection {
+::selection,
+::-moz-selection {
     background-color: $highlight-color--light;
     color: $white;
 }

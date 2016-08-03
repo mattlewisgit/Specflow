@@ -12,7 +12,8 @@ $_padding: 3%;
     }
 }
 
-.summary-left, .summary-right {
+.summary-left,
+.summary-right {
     font-size: 90%;
     line-height: 1.5;
     padding: $_padding;
@@ -23,7 +24,8 @@ $_padding: 3%;
         position: relative;
     }
 
-    .title h4, .content {
+    .content,
+    .title h4 {
         background: $darken-heavy;
         margin: 0;
     }
@@ -70,7 +72,7 @@ $_padding: 3%;
             padding: $_padding-abs;
             padding-left: $_padding-abs * 3;
 
-            &:before {
+            &::before {
                 @include retina-sprite($sprite-tick-circle-teal-group);
                 top: 12px;
             }
@@ -97,7 +99,7 @@ $_padding: 3%;
         .cta {
             @include text-centre;
             padding-top: $_padding;
-            
+
             a {
                 display: inline-block;
                 width: $width--near-max;

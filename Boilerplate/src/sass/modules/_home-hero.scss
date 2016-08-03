@@ -3,108 +3,30 @@
 
 .home-hero {
     @extend .burst;
-    @include shadow--dark();
-    @include text-centre();
+    @include shadow--dark;
+    @include text-centre;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: $pad;
+    padding-top: $pad--large;
 
-    h1,
-    h2,
-    p {
-        margin: $pad--thin 0;
-    }
+    &.text-light {
+        @include shadow--light;
 
-    &--static {
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100%;
-        padding: $pad--xlarge;
-        white-space: nowrap;
-        width: 100%;
-
-        // Responsive vertical centre via a pseudo element.
-        // https://css-tricks.com/centering-in-the-unknown/
-        &::before {
-            content: "";
-            display: inline-block;
-
-            // Stretch the line height.
-            height: 100%; 
-
-            // Adjust for white space between the
-            // pseudo element and the next sibling.
-            margin-right: -0.25em;
-
-            vertical-align: middle;
-            width: 0;
-        }
-
-        .home-hero--static__container {
-            display: inline-block;
-            vertical-align: middle;
-            white-space: normal;
-        }
-
-        &.text-light {
-            @include shadow--light();
-
-            // Use specificity to override header colour.
-            h1,
-            h2,
-            p {
-                color: $white;
-            }
-        }
-    }
-
-    // Relative so that the content and video sections can stack.
-    position: relative;
-
-    &.home-hero--video {
-        cursor: pointer;
-        padding: 0;
-
-        .home-hero--static {
-            height: 100%;
-            left: 0;
-            position: absolute;
-            top: 0;
-            z-index: 2;
-
-            .home-hero--static__button {
-                margin: auto;
-            }
+        // Use specificity to override header colour.
+        h1, h2, p {
+            color: $white;
         }
     }
 
     h2 {
-         margin: $pad--thin;
-    }
-
-    // Media queries: largest to smallest order is important!
-    @include mq($from: desktop) {
-        min-height: 540px
+        margin: $pad--thin 0 $pad--xxlarge;
     }
 
     // Reduce the padding for smaller devices.
     @include mq($until: tablet) {
-        .home-hero--static {
-            padding: $pad--large;
-
-            .home-hero--static__button {
-                zoom: 0.75;
-            }
-        }
-
         h2 {
-             margin: $pad--thin 0;
-        }
-    }
-
-    // Reduce the button icon on mobile.
-    @include mq($until: mobile-landscape) {
-        .home-hero--static {
-            .home-hero--static__button {
-                zoom: 0.6;
-            }
+            margin: $pad--thin 0 $pad--large;
         }
     }
 }

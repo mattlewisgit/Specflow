@@ -33,21 +33,23 @@
 .button-list {
     @extend .font-weight--light;
     background: $primary-background-color;
-    border: none;
+    border: 0;
     transition: color 0.2s;
-    
-    &:focus, &:hover {
+
+    &:focus,
+    &:hover {
         color: $primary-color;
     }
 
     &--selected {
         cursor: not-allowed;
 
-        &:focus, &:hover {
+        &:focus,
+        &:hover {
             color: $body-color;
         }
 
-        &:before {
+        &::before {
             @include retina-sprite($sprite-button-arrow-right-group);
             background-color: $body-color;
             content: "";
@@ -57,8 +59,8 @@
             position: absolute;
             right: 15px;
             top: 12px;
-            top: calc(50% - 10px);
-            width: 20px;
+            top: calc(50% - $pad--thin);
+            width: $pad;
         }
     }
 }
@@ -73,7 +75,7 @@
     border-width: 5px;
     border-style: solid;
     border-radius: 4px;
-    margin: 0 10px 10px 0;
+    margin: 0 $pad--thin $pad--thin 0;
     background-color: $white;
 
     // Prevent background colour interfering with border opacity.
@@ -81,6 +83,7 @@
 
     // Animate the border and text colour on hover.
     transition: border-color 0.4s, color 0.2s;
+
     &:hover,
     &:focus {
         @include alpha-attribute(border-color, rgba($black, 0.6), $white);
@@ -88,13 +91,12 @@
     }
 
     // Circle and arrow icon.
-    &:before {
-
+    &::before {
         @include retina-sprite($sprite-button-arrow-right-group);
         content: "";
         display: block;
-        width: 20px;
-        height: 20px;
+        width: $pad;
+        height: $pad;
         position: absolute;
         top: 12px;
         top: calc(50% - 10px);
@@ -103,13 +105,15 @@
         background-color: $primary-color;
         transition: transform 0.4s, background-color 0.4s; //Circle Hover effect where possible
     }
-    //Circle Hover effect -
-    &:hover:before,
-    &:focus:before {
+
+    // Circle hover effect.
+    &:hover::before,
+    &:focus::before {
         transform: translateX(2px);
     }
-    // Right hand box & keyline -
-    &:after {
+
+    // Right hand box and keyline.
+    &::after {
         content: "";
         display: block;
         width: 50px;
@@ -117,35 +121,34 @@
         position: absolute;
         top: 0;
         right: 0;
-        border-left: 1px solid $color-mono-13;
-        border-left: 1px solid rgba(0,0,0,0.2);
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
     }
-    //
-    //  Modifier: Disabled
-    //
+
+    // Modifier: disabled.
     &--disabled {
-        @include disabled-button-text();
+        @include disabled-button-text;
         cursor: not-allowed;
         background-color: $color-mono-14;
 
-        &:before {
+        &::before {
             background-color: $primary-color--light;
         }
-        //No border or icon animations on the disabled buttons -
+
+        // No border or icon animations on the disabled buttons,
         &:hover,
         &:focus {
             @include alpha-attribute(border-color, rgba($black, 0.4), $white);
         }
 
-        &:hover:before,
-        &:focus:before {
+        &:hover::before,
+        &:focus::before {
             transform: none;
             background-color: $primary-color--light;
         }
 
-        &:before,
-        &:hover:before,
-        &:focus:before {
+        &::before,
+        &:hover::before,
+        &:focus::before {
             @include alpha-attribute(background-color, rgba($black, 0.4), $white);
         }
     }
@@ -156,13 +159,13 @@
 //
 
 .button-internal {
-    &:before {
+    &::before {
         // Downwards pointing arrow -
         @include retina-sprite($sprite-button-arrow-down-group);
     }
 
-    &:hover:before,
-    &:focus:before {
+    &:hover::before,
+    &:focus::before {
         // Icon animation down rather than right -
         transform: translateY(2px);
     }
@@ -173,15 +176,14 @@
     text-transform: normal;
 
     &--disabled {
+        @include disabled-button-text;
 
-        @include disabled-button-text();
-
-        &:before {
+        &::before {
             background-color: $color-mono-11;
         }
 
-        &:hover:before,
-        &:focus:before {
+        &:hover::before,
+        &:focus::before {
             transform: none;
             background-color: $color-mono-11;
         }
@@ -189,13 +191,12 @@
 }
 
 .button-light {
-    &:before {
+    &::before {
         @include alpha-attribute(background-color, rgba($black, 0.4), $white);
     }
 
-
-    &:hover:before,
-    &:focus:before {
+    &:hover::before,
+    &:focus::before {
         @include alpha-attribute(background-color, rgba($black, 0.6), $white);
     }
 }
@@ -207,7 +208,7 @@
     color: $white;
     background-color: $primary-color;
 
-    &:before {
+    &::before {
         @include alpha-attribute(background-color, rgba($black, 0.4), $white);
     }
 
@@ -216,21 +217,20 @@
         color: $white;
     }
 
-    &:hover:before,
-    &:focus:before {
+    &:hover::before,
+    &:focus::before {
         @include alpha-attribute(background-color, rgba($black, 0.6), $white);
     }
 
     &--disabled {
+        @include disabled-button-text;
 
-        @include disabled-button-text();
-
-        &:before {
+        &::before {
             @include alpha-attribute(background-color, rgba($black, 0.2), $white);
         }
 
-        &:hover:before,
-        &:focus:before {
+        &:hover::before,
+        &:focus::before {
             @include alpha-attribute(background-color, rgba($black, 0.2), $white);
             transform: none;
         }
