@@ -9,6 +9,7 @@ using System.Web;
 using Sitecore.Links;
 using Vitality.Website.SC.Utilities.Sitemap;
 using System.IO;
+using Sitecore.Sites;
 
 namespace Vitality.Website.SC.Agents
 {
@@ -78,6 +79,9 @@ namespace Vitality.Website.SC.Agents
 
                 // Add current page to page collection.
                 sectionChildPages.Insert(0, sectionPage.Item);
+
+                // Add home page to page collection.
+                sectionChildPages.Insert(0, homeItem);
 
                 if (sectionChildPages.Any())
                 {
@@ -167,7 +171,12 @@ namespace Vitality.Website.SC.Agents
         /// <returns>SitemapSettings object.</returns>
         private SitemapSettings GetSitemapSettings(Item item)
         {
-            string itemUrl = LinkManager.GetItemUrl(item);
+            string itemUrl;
+            using (Sitecore.Sites.SiteContextSwitcher switcher = new SiteContextSwitcher(Sitecore.Configuration.Factory.GetSite("presales")))
+            {
+                itemUrl = LinkManager.GetItemUrl(item,
+                    new UrlOptions {AlwaysIncludeServerUrl = true, LanguageEmbedding = LanguageEmbedding.Never});
+            }
 
             // retrieve inherited settings if required
             while (item[ItemConstants.Presales.Content.SitemapSettings.InheritSitemapSettingsField] == "1" && item.ID.Guid != ItemConstants.Presales.Content.Home.Id && item.ParentID.Guid != ItemConstants.Presales.Content.Home.Id)
