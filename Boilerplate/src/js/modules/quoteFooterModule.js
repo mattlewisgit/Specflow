@@ -30,11 +30,11 @@ function _adapt(mql) {
         if (!settings.isCollapsed) {
             // Cache the collapsed state and hide.
             settings.isCollapsed = true;
-            settings.hide();
+            _hide();
         }
     } else {
         settings.isCollapsed = false;
-        settings.show();
+        _show();
     }
 }
 
@@ -86,7 +86,7 @@ module.exports = {
         // hide the tab and permanently show the button.
         if (settings.footerBody.children().length < 2) {
             settings.footerHeader.hide();
-            return settings.show();
+            return _show();
         }
 
         // For multiple buttons, register events and adapt the footer.
