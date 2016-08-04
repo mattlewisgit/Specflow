@@ -24,7 +24,7 @@
                                     @if (this.ImageOnTop())
                                     {
                                         <div class="spotlight-item__intro-image burst">
-                                            @Editable(card, item => item.Icon)
+                                            @Editable(card, item => item.Icon, new { w = 388 })
                                         </div>
 
                                         <p class="spotlight-item__heading">
@@ -38,7 +38,7 @@
                                         </p>
                                         
                                         <div class="spotlight-item__icon">
-                                            @Editable(card, item => item.Icon)
+                                            @Editable(card, item => item.Icon, new { w = 388 })
                                         </div>
                                     }
 
