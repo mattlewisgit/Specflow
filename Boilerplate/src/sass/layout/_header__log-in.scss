@@ -16,19 +16,22 @@
         height: 90px;
         background-color: $primary-color;
         overflow: hidden;
-        //To make overflow clipping work on transform anim below -
+        // To make overflow clipping work on transform animation below.
         transform: translateZ(0);
 
         img {
             max-width: 90px;
             max-height: 90px;
+            // Animate out: easeInQuad.
             transform: translateY(90px);
-            transition: transform 0.5s 0s cubic-bezier(0.55, 0.085, 0.68, 0.53); // anim out - easeInQuad
+            transition: transform 0.5s 0s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+
             .log-in-open &,
             .utility-nav__item:hover .log-in--large &,
             .utility-nav__item:focus .log-in--large &,
             .utility-nav__item.is-active .log-in--large & {
-                transition: transform 0.5s 0.4s cubic-bezier(0.19, 1, 0.22, 1); // anim in - easeOutExpo
+                // Animate in: easeOutExpo.
+                transition: transform 0.5s 0.4s cubic-bezier(0.19, 1, 0.22, 1);
                 transform: translateY(0);
             }
         }

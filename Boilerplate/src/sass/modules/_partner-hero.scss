@@ -5,7 +5,7 @@
     @extend .burst;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     &--headline {
         display: block;
         margin: 0 auto;
@@ -14,7 +14,7 @@
         padding: 135px $pad;
 
         &.text-light {
-            @include shadow--light();
+            @include shadow--light;
 
             h1, h2, p {
                 color: $white;
@@ -22,7 +22,7 @@
         }
 
         &.text-dark {
-            @include shadow--dark();
+            @include shadow--dark;
         }
 
         .partner-hero--headline__intro {

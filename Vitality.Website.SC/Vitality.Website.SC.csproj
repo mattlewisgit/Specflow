@@ -85,6 +85,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agents\SitemapGenerator.cs" />
     <Compile Include="Events\ItemEventsHandler.cs" />
     <Compile Include="ItemConstants.cs" />
     <Compile Include="Pipelines\HttpRequest\NotFoundItemResolver.cs" />
@@ -98,8 +99,14 @@
     <Compile Include="Pipelines\Response\RenderRendering\VaryByAncestor.cs" />
     <Compile Include="Pipelines\RichTextEditor\SaveRichTextContent\InjectTableSawStylesOnCloseDialog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Providers\LinkProvider.cs" />
+    <Compile Include="Utilities\Sitemap\SitemapHelper.cs" />
+    <Compile Include="Utilities\Sitemap\SitemapIndexesModel.cs" />
+    <Compile Include="Utilities\Sitemap\SitemapIndexModel.cs" />
+    <Compile Include="Utilities\Sitemap\SitemapModel.cs" />
+    <Compile Include="Utilities\Sitemap\SitemapSettings.cs" />
+    <Compile Include="Utilities\Sitemap\SitemapUrlModel.cs" />
     <Compile Include="Utilities\StringHelper.cs" />
+    <Compile Include="Providers\AppendLinkProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

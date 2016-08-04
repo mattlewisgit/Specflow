@@ -11,7 +11,7 @@
         <ul class="site-nav">
             @foreach (var navigationSection in Model.NavigationSections)
             {
-                if (this.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()).Equals(navigationSection))
+                if (this.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()).Equals(navigationSection) && navigationSection.SectionLink != null)
                 {
                     <li class="site-nav__item is-active">
                         @RenderLink(navigationSection, item => item.SectionLink)

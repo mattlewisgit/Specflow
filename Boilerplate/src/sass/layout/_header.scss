@@ -1,5 +1,3 @@
-
-
 // Structure -
 
 // Top Bar -
@@ -118,10 +116,10 @@
         img,
         svg {
             display: block;
-            max-width: 100%;
-            max-height: 100%;
             height: 22px;
-            margin: auto auto 5px auto;
+            margin: auto auto 5px;
+            max-height: 100%;
+            max-width: 100%;
         }
 
         span {
@@ -168,7 +166,7 @@
         }
     }
 
-    //Desktop log in item -
+    // Desktop log in item.
     .utility-nav__item--log-in {
         position: relative;
 
@@ -176,7 +174,7 @@
             padding-right: 26px;
         }
 
-        &:after {
+        &::after {
             @include retina-sprite($sprite-arrow-down-grey-group);
             display: block;
             content: "";
@@ -191,7 +189,7 @@
         &:focus,
         .log-in-open & {
 
-            &:after {
+            &::after {
                 @include retina-sprite($sprite-arrow-down-pink-group);
                 transform: translateY(-1px)rotate(180deg);
             }
@@ -239,7 +237,7 @@
         width: 33%;
         background-color: $white;
         transition: background-color 0.5s ease;
-        
+
         // Permanent hover states for log in and nav states.
         .search-open & {
             &--log-in,
@@ -292,7 +290,7 @@
     &:focus {
         background-color: $white;
     }
-    
+
     // Variable font sizes.
     a {
         @include mq($from: tablet) {
@@ -311,10 +309,7 @@
     }
 }
 
-//
-// Site nav desktop -
-//
-
+// Site nav desktop.
 .site-nav {
     @extend .non-list;
     @extend .clearfix;
@@ -324,10 +319,7 @@
 }
 
 
-//
-// Section Nav
-//
-
+// Section nav.
 .mobile-nav-link {
     @include font-size(1.8);
     width: 100%;
@@ -376,13 +368,16 @@
     .section-nav__item {
 
         @extend .mobile-nav-link;
-        //Hide the border top of the 2nd child - 1st child is the hidden brand logo-
+
+        // Hide the border top of the second child.
+        // The first child is the hidden brand logo.
         &:nth-child(2) {
             border-top: 0;
         }
-        // Right arrow icon -
+
+        // Right arrow icon.
         &--megamenu {
-            > a:after {
+            > a::after {
                 @include retina-sprite($sprite-arrow-right-grey-group);
                 content: "";
                 display: block;
@@ -394,7 +389,7 @@
             &:hover,
             &:focus,
             &.js-focus {
-                > a:after {
+                > a::after {
                     @include retina-sprite($sprite-arrow-right-pink-group);
                 }
             }
@@ -426,10 +421,9 @@
 
     @include mq($from: tablet) {
         display: flex;
-        position: relative;
         padding: 0;
-        //Bottom drop shadow -
-        //box-shadow: 0 0 20px -2px $dropshadow-color;
+        position: relative;
+
         .section-nav__item {
             text-align: center;
             flex: 1 0 auto;
@@ -445,7 +439,8 @@
                 justify-content: center;
                 padding: 10px;
                 line-height: 1.25;
-                //Variable font sizes -
+
+                // Variable font sizes.
                 @include mq($from: tablet) {
                     @include font-size(1.6);
                 }
@@ -453,12 +448,13 @@
                 @include mq($from: desktop) {
                     @include font-size(1.8);
                 }
-                //Fake the drop shadow - where it won't interfere with the buttons -
+
+                // Fake the drop shadow, where it will not interfere with the buttons.
                 .csspointerevents & {
-                    //The horizontal spread of the nav drop shadows -
+                    // The horizontal spread of the nav drop shadows.
                     $dropshadow-spread: 2.9px;
 
-                    &:before {
+                    &::before {
                         opacity: 0;
                         transition: opacity 0.2s;
                         content: "";
@@ -478,28 +474,29 @@
             &:hover,
             &:focus,
             &.js-focus {
-                //Show the drop shadow -
+                // Show the drop shadow.
                 .csspointerevents & {
-                    > a:before {
+                    > a::before {
                         opacity: 1;
                     }
                 }
             }
-            //Min width for the logo link item-
+
             &--home {
                 min-width: 135px;
 
                 img {
-                    width: 100%;
-                    height: 100%;
+                    // Deliberately omitting a min-height,
+                    // as Safari on all iOS devices will not render the logo!
                     max-height: 100px;
                     max-width: 100px;
+                    width: 100%;
                 }
             }
 
             &--megamenu {
-                // Down arrow icon -
-                > a:after {
+                // Down arrow icon.
+                > a::after {
                     @include retina-sprite($sprite-arrow-down-grey-group);
                     content: "";
                     display: block;
@@ -516,24 +513,27 @@
                 &.js-focus {
                     border-bottom: 1px solid transparent;
 
-                    > a:after {
+                    > a::after {
                         @include retina-sprite($sprite-arrow-down-pink-group);
                     }
                 }
             }
         }
-        //Section nav items have an option to not have the hover shadow -
+
+        // Section nav items have an option to not have the hover shadow.
         .csspointerevents & {
             .section-nav__item--no-shadow {
-                > a:before {
+                > a::before {
                     content: none;
                 }
             }
         }
-        //Custom hover effect for the home button -
+
+        // Custom hover effect for the home button.
         .section-nav__item--home {
             img {
-                transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); //Ease out back
+                // Ease out back.
+                transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             }
 
             &:hover,
@@ -544,7 +544,8 @@
                 }
             }
         }
-        // IE9 & 10 nav - tables used where flexbox not suported -
+
+        // IE9 & 10 nav - tables used where flexbox not suported.
         .no-flexbox & {
             position: relative;
             height: 100px;
@@ -566,8 +567,9 @@
                     &.megamenu__back {
                         display: none;
                     }
-                    //IE absolute position in tablecell fix -
-                    &:after {
+
+                    // IE absolute position in tablecell fix.
+                    &::after {
                         top: 50px;
                     }
                 }
@@ -591,26 +593,19 @@
     }
 }
 
-//Home & contact on larger screens only -
+// Home and contact on larger screens only.
 .section-nav {
     .section-nav__item--home {
         @extend .tablet-and-up;
     }
 }
 
-//
-// Desktop megamenu - see header_megamenu partial
-//
-
-
-//
-// Site nav mobile -
-//
-
+// Desktop megamenu - see header_megamenu partial.
+// Site nav mobile.
 .site-nav--small {
     @extend .tablet-less-than;
     @extend .non-list;
-    padding: 10px 0;
+    padding: $pad--thin 0;
     background-color: $grey--light;
     font-size: 0;
 
@@ -624,7 +619,7 @@
         a {
             @extend .font-weight--regular;
             @include font-size(1.3);
-            padding: 10px;
+            padding: $pad--thin;
         }
 
         &.is-active {
@@ -633,8 +628,7 @@
     }
 }
 
-
-//Mobile toggle -
+// Mobile toggle.
 @include mq($until: tablet) {
     .page-header {
         max-height: 81px;
@@ -643,7 +637,9 @@
 
         .mainmenu-open & {
             transition: max-height 0.75s ease;
-            max-height: 1000px; // Nasty magic number max height - do nice VH fix?
+
+            // Nasty magic number max height - do nice VH fix?
+            max-height: 1000px;
             max-height: calc(100vh - 80px);
         }
 
@@ -652,17 +648,16 @@
         }
     }
 
-    //Drop shadow items -
-
+    // Drop shadow items.
     .megamenu,
     .search-panel,
     .page-header,
     .log-in--small {
-        //Bottom drop shadow -
-        box-shadow: 0 0 20px -2px $dropshadow-color;
+        // Bottom drop shadow.
+        box-shadow: 0 0 $pad -2px $dropshadow-color;
     }
 
-    // Hide the top bar shadow when the sub-sections are open -
+    // Hide the top bar shadow when the sub-sections are open.
     .log-in-open,
     .search-open {
         .page-header {
@@ -671,7 +666,7 @@
     }
 }
 
-//Desktop sticky nav -
+// Desktop sticky nav.
 @include mq($from: tablet) {
     .js-fixed-position-nav {
         padding-top: 151px;
@@ -685,6 +680,6 @@
     }
 
     .page-header {
-        box-shadow: 0 0 20px -2px $dropshadow-color;
+        box-shadow: 0 0 $pad -2px $dropshadow-color;
     }
 }

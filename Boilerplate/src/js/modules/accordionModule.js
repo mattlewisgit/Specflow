@@ -1,30 +1,42 @@
 ﻿var Collapsible = require("./collapsibleModule");
 
-//vars -
 var _settings = {
-    selector: ".js-expander-is-accordion",
     activeClass: "is-active",
     breakpoint: "medium",
-    openFirstAccordionOption: false
+    openFirstAccordionOption: false,
+    selector: ".js-expander-is-accordion"
 };
 
 var _globals = {
     userInteracted: false
 };
 
-//functions -
 var _accordionModule = {
-    _showActiveContent: function () {
+    _createAccordion: function (context) {
         "use strict";
-        // set default for links
-        if ($(".expander__link." + _settings.activeClass, _settings.selector).length === 0){
-            $(".expander__link", _settings.selector).first().addClass(_settings.activeClass);
+        var contextSelector = context || _settings.selector;
+
+        // Set the default content to be open if required.
+        if (_settings.openFirstAccordionOption) {
+            this._showActiveContent();
         }
 
-        // set default for content
-        if ($(".expander__content." + _settings.activeClass, _settings.selector).length === 0){
-            $(".expander__content", _settings.selector).first().addClass(_settings.activeClass);
-        }
+        Collapsible.createCollapsible(contextSelector, function ($target) {
+            // User has interacted.
+            _globals.userInteracted = true;
+
+            var content = $target.attr("href");
+
+            // Generator other active content selector.
+            var otherActiveContentSelector = ".expander__content." + _settings.activeClass;
+
+            // Hide other active content areas.
+            $(otherActiveContentSelector, contextSelector).not(content)
+                .stop()
+                .slideUp("fast", function () {
+                    $(this).removeClass(_settings.activeClass).removeAttr("style");
+                });
+        });
     },
 
     _hideActiveContent: function () {
@@ -32,40 +44,26 @@ var _accordionModule = {
         var compoundLinkSelector = ".expander__link" + "." + _settings.activeClass;
         var compoundContentSelector = ".expander__content" + "." + _settings.activeClass;
 
-        // remove defaults
+        // Remove defaults.
         $(compoundLinkSelector, _settings.selector).removeClass(_settings.activeClass);
         $(compoundContentSelector, _settings.selector).removeClass(_settings.activeClass);
     },
 
-    _createAccordion: function (context) {
+    _showActiveContent: function () {
         "use strict";
-        var contextSelector = context || _settings.selector;
-
-        // set the default content to be open if required
-        if (_settings.openFirstAccordionOption) {
-            this._showActiveContent();
+        // Set default for links.
+        if ($(".expander__link." + _settings.activeClass, _settings.selector).length === 0) {
+            $(".expander__link", _settings.selector).first().addClass(_settings.activeClass);
         }
 
-        Collapsible.createCollapsible(contextSelector, function ($target) {
-            // user has interacted
-            _globals.userInteracted = true;
-
-            var content = $target.attr("href");
-
-            // generator other active content selector
-            var otherActiveContentSelector = ".expander__content." + _settings.activeClass;
-
-            // hide other active content areas
-            $(otherActiveContentSelector, contextSelector).not(content)
-                .stop()
-                .slideUp("fast", function () {
-                    $(this).removeClass(_settings.activeClass).removeAttr("style");
-                });
-        });
+        // Set default for content.
+        if ($(".expander__content." + _settings.activeClass, _settings.selector).length === 0) {
+            $(".expander__content", _settings.selector).first().addClass(_settings.activeClass);
+        }
     }
 };
 
 module.exports = {
-    init: _accordionModule._createAccordion,
-    createAccordion: _accordionModule._createAccordion
+    createAccordion: _accordionModule._createAccordion,
+    init: _accordionModule._createAccordion
 };

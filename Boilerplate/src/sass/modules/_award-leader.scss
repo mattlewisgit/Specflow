@@ -14,7 +14,7 @@
 
             // Ensure the images have space and are not too high.
             .award-leader--intro__logos {
-                @include bounceLinkedImage();
+                @include bounce-linked-image;
 
                 a, img {
                     // Inline block does not always work...
@@ -71,7 +71,7 @@
                 flex-direction: column;
 
                 .article-snippet {
-                    flex: 1; 
+                    flex: 1;
                 }
             }
         }

@@ -32,7 +32,7 @@ function init() {
     }
 
     // Hide the message and stop it from being shown again on accept.
-    _container.find(".box-button").click(function() {
+    _container.find(".box-button").click(function () {
         _container
             .addClass("animated")
             .removeClass("slideInDown")
