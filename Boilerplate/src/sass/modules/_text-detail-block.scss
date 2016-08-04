@@ -1,6 +1,7 @@
 .text-detail-block {
     &__heading {
         @extend .font-weight--semi-bold;
+        @extend .h6;
         margin-top: $pad;
 
         // Add nice header details in supported browsers.

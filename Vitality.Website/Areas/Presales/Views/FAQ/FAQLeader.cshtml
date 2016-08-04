@@ -16,7 +16,7 @@
                     using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", questionAnswer.Path))
                     {
                         <div class="grid-col-1-@row.Count()">
-                            <h6 class="text-detail-block__heading">@Editable(questionAnswer, m => m.QuestionText)</h6>
+                            <h3 class="text-detail-block__heading">@Editable(questionAnswer, m => m.QuestionText)</h3>
                             <div>@Editable(questionAnswer, m => m.AnswerText)</div>
                             <p>@Editable(questionAnswer, m => m.ReadMoreLink)</p>
                         </div>

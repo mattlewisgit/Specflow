@@ -1,7 +1,7 @@
 ﻿@using Vitality.Website.Extensions
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Generic.TabCollection>
 
-<h2>@Editable(Model, m => m.Heading)</h2>
+<h3>@Editable(Model, m => m.Heading)</h3>
 <div class="expander expander--with-style expander--horizontal js-expander-is-switchable">
     @foreach (var tab in Model.Tabs)
     {
