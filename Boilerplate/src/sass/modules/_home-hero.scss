@@ -103,7 +103,15 @@
         }
     }
 
+    // Set a large default height for larger devices.
     @include mq($from: desktop) {
-        min-height: 540px;
+        .home-hero--static {
+            $_max-height: 540px;
+            min-height: $_max-height;
+
+            &::before {
+                min-height: $_max-height;
+            }
+        }
     }
 }
