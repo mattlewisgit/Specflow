@@ -4,6 +4,7 @@
       <site name="presales"
             set:hostName="#{Vitality.Website.HostName}"
             set:cacheHtml="true"
+            set:scheme="#{Vitality.Website.Protocol}"
             set:htmlCacheSize="100MB"
             set:cacheRenderingParameters="true"
             set:renderingParametersCacheSize="20MB" />
