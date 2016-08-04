@@ -10,10 +10,10 @@
                 <div class="@this.CssClass()__content">
                     @if (IsInEditingMode || !string.IsNullOrWhiteSpace(Model.LeadIn))
                     {
-                        <h6>@Editable(Model, item => item.LeadIn)</h6>
+                        <p class="feature-block__content--title">@Editable(Model, item => item.LeadIn)</p>
                     }
 
-                    <h3>@Editable(Model, item => item.Headline)</h3>
+                    <h2>@Editable(Model, item => item.Headline)</h2>
 
                     <div class="feature-block__content--body">
                         @Editable(Model, item => item.Body)
