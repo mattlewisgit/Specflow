@@ -31,9 +31,19 @@ namespace Vitality.Website.SC.Agents.Sitemaps
             var publishedDate = item.Statistics.Updated;
             var hideFromSitemap = item[HideFromSitemapField] == "1";
 
+            if (hideFromSitemap)
+            {
+                return new SitemapSettings {HideFromSitemap = true};
+            }
+
             while (item[InheritSitemapSettingsField] == "1" && item.ID.Guid != ItemConstants.Presales.Content.Home.Id)
             {
                 item = item.Parent;
+            }
+
+            if (string.IsNullOrWhiteSpace(item[ChangeFrequencyField]) || string.IsNullOrWhiteSpace(item[SitemapField]))
+            {
+                return new SitemapSettings { HideFromSitemap = true };
             }
 
             return new SitemapSettings
@@ -43,7 +53,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
                 Priority = item[PriorityField],
                 SitemapName = item.Database.GetItem(item[SitemapField]).Fields["Value"].Value,
                 PublishedDate = publishedDate,
-                HideFromSitemap = hideFromSitemap
+                HideFromSitemap = false
             };
         }
     }
