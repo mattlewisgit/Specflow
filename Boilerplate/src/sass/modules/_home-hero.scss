@@ -49,6 +49,12 @@
             display: inline-block;
             vertical-align: middle;
             white-space: normal;
+
+            h1 {
+                @extend .font-weight--semi-bold;
+                @extend .h1-xlarge;
+                margin: $pad--xthin 0;
+            }
         }
 
         &.text-light {
