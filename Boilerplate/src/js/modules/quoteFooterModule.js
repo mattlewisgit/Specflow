@@ -30,11 +30,11 @@ function _adapt(mql) {
         if (!settings.isCollapsed) {
             // Cache the collapsed state and hide.
             settings.isCollapsed = true;
-            settings.hide();
+            _hide();
         }
     } else {
         settings.isCollapsed = false;
-        settings.show();
+        _show();
     }
 }
 
@@ -79,14 +79,14 @@ module.exports = {
         }
 
         settings.footerBody = $(".quote-footer--body");
-        settings.footerHeader = settings.footer.find("h6");
+        settings.footerHeader = settings.footer.find(".quote-footer--tab");
         settings.pageFooter = $("footer:last-of-type");
 
         // If only a single button is present,
         // hide the tab and permanently show the button.
         if (settings.footerBody.children().length < 2) {
             settings.footerHeader.hide();
-            return settings.show();
+            return _show();
         }
 
         // For multiple buttons, register events and adapt the footer.

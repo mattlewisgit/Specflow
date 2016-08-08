@@ -4,7 +4,7 @@ using System.Web;
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Vitality.Website.SC.Utilities.Sitemap
+namespace Vitality.Website.SC.Agents.Sitemaps
 {
     public class SitemapHelper<T>
     {

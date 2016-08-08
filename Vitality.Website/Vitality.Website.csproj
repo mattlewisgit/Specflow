@@ -198,6 +198,7 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Agents.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled" />
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -274,7 +275,7 @@
     <Content Include="css\sprite-generated%402x.png" />
     <Content Include="css\sprite-generated.png" />
     <Content Include="img\spritesheets\svg-sprite.svg" />
-    <Content Include="img\stanley-head.png" />
+    <Content Include="img\stanley-peering-min.png" />
     <Content Include="img\vitality-logo--white.svg" />
     <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\app.css" />
