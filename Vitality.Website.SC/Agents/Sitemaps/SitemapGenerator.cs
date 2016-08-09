@@ -13,6 +13,8 @@ namespace Vitality.Website.SC.Agents.Sitemaps
     /// </summary>
     public class SitemapGenerator
     {
+        public const string Name = "SitemapGenerator";
+
         private readonly Database database;
         private SitemapIndex sitemapIndex;
 

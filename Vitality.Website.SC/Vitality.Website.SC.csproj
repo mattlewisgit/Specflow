@@ -77,6 +77,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -89,6 +90,7 @@
     <Compile Include="Agents\Sitemaps\SitemapGenerator.cs" />
     <Compile Include="Agents\Sitemaps\SitemapIndex.cs" />
     <Compile Include="Events\ItemEventsHandler.cs" />
+    <Compile Include="Agents\Sitemaps\InitializeSitemap.cs" />
     <Compile Include="ItemConstants.cs" />
     <Compile Include="Pipelines\HttpRequest\NotFoundItemResolver.cs" />
     <Compile Include="Pipelines\HttpRequest\RobotsFileGenerator.cs" />
@@ -114,9 +116,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
