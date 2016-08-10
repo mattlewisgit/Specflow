@@ -20,7 +20,7 @@
                         {
                             <div class="grid-no-gutters article-snippet">
                                 <div class="@this.ColumnSplitOne(articleItems) article-snippet--image @this.ImageRelativePosition(articleItem)" style="@this.BackgroundImage(articleItem)">
-                                    <div class="tablet-less-than">@Editable(articleItem, x => x.Image, new { w = 720 })</div>
+                                    <div class="tablet-less-than">@Editable(articleItem, x => x.Image, new { mw = 720 })</div>
                                 </div>
                                 <div class="@this.ColumnSplitTwo(articleItems) article-snippet--content">
                                     @using (BeginRenderLink(articleItem, item => item.Link, isEditable: true))

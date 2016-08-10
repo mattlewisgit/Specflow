@@ -10,11 +10,11 @@
             var src = new UrlBuilder(image.Src);
             if (height > 0)
             {
-                src.AddToQueryString("h", height.ToString());
+                src.AddToQueryString("mh", height.ToString());
             }
             if (width > 0)
             {
-                src.AddToQueryString("w", width.ToString());
+                src.AddToQueryString("mw", width.ToString());
             }
             return Sitecore.Resources.Media.HashingUtils.ProtectAssetUrl(src.ToString());
         }

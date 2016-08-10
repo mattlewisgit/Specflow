@@ -38,7 +38,7 @@
                             @using (BeginEditFrame(articleItem, "Edit Background image", item => item.Image))
                             {
                                 <div class="grid-col-4-12 article-snippet--image background-position-middle" style="@this.BackgroundImage(articleItem)">
-                                    <div class="tablet-less-than">@Editable(articleItem, x => x.Image, new { w = 720 })</div>
+                                    <div class="tablet-less-than">@Editable(articleItem, x => x.Image, new { mw = 720 })</div>
                                 </div>
 
                                 <div class="grid-col-8-12 article-snippet--content">
