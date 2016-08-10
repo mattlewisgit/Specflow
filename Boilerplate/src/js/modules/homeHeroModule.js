@@ -54,6 +54,9 @@ function _enhanceHero(i, el) {
     });
 
     var player = null;
+    var isIos = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i) !== null;
+    var isAndroid = navigator.userAgent.match(/(Android)/i) !== null;
+    var previousStatus = null;
 
     // Functions.
     function __hoverIn() {
@@ -83,8 +86,10 @@ function _enhanceHero(i, el) {
                 .removeClass(_classes.button.play)
                 .addClass(_classes.button.pause);
 
-            // Play now to pick up from where we left off.
-            player.playVideo();
+            if (!(isIos || isAndroid)) {
+                // Play now to pick up from where we left off.
+                player.playVideo();
+            }
 
             overlay
                 .css("background-image", "none")
@@ -99,8 +104,35 @@ function _enhanceHero(i, el) {
 
         fadedElements.forEach(_fadeIn);
 
-        player.pauseVideo();
+        if (!(isIos || isAndroid)) {
+            player.pauseVideo();
+        }
+
         overlay.css("background-image", backgroundImage);
+    }
+
+    function __changePlayerState(e) {
+        // If it is Android, getPlayerState() returns the state after the click event. 
+        previousStatus = isAndroid ? previousStatus : player.getPlayerState();
+        // If the video is playing, pause it,
+        // otherwise always try to play it.
+        // When playing after paused on iOS, preventDefault has to be on to get background image back on display
+        switch (previousStatus) {
+            case YouTubePlayerAPI.playerStates.playing:
+                __pause(player);
+                break;
+            case YouTubePlayerAPI.playerStates.unstarted:
+                __play(player);
+                break;
+            default:
+                if (isIos) {
+                    e.preventDefault();
+                }
+
+                __play(player);
+                break;
+        }
+        previousStatus = player.getPlayerState();
     }
 
     // Create the player!
@@ -117,19 +149,14 @@ function _enhanceHero(i, el) {
             },
 
             onReady: function () {
-                // Use .mute() now in the future if sound should be disabled.
-                overlay.click(function () {
-                    // If the video is playing, pause it,
-                    // otherwise always try to play it.
-                    switch (player.getPlayerState()) {
-                        case YouTubePlayerAPI.playerStates.playing:
-                            __pause(player);
-                            break;
-                        default:
-                            __play(player);
-                            break;
-                    }
-                });
+                // Disable overlay click events on iOs and Android
+                if (isIos || isAndroid) {
+                    overlay.css("pointer-events", "none");
+                    player.addEventListener("onStateChange", __changePlayerState);
+                } else {
+                    // Use .mute() now in the future if sound should be disabled.
+                    overlay.click(__changePlayerState);
+                }
             }
         },
 
