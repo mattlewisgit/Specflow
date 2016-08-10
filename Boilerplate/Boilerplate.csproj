@@ -211,6 +211,7 @@
     <Content Include="src\img\logos\white\virgin-active_white.png" />
     <Content Include="src\img\logos\white\weightwatchers_white.png" />
     <Content Include="src\js\api\youtube-player-api.js" />
+    <Content Include="src\js\helpers\homeHeroHelper.js" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
     <Content Include="src\js\modules\cookieMessageModule.js" />

@@ -1,32 +1,8 @@
 var YouTubeAPIBaseConfig = require("../config/youtube-api-base-config.json");
 var YouTubePlayerAPI = require("../api/youtube-player-api");
-
-var _classes = {
-    button: {
-        pause: "svg-svg--button-video-pause",
-        play: "svg-svg--button-video-play"
-    },
-    fade: {
-        in: "fadeIn",
-        out: "fadeOut"
-    }
-};
+var HomeHeroHelper = require("../helpers/homeHeroHelper");
 
 var _timeoutDuration = 750;
-
-function _fadeOut(element) {
-    "use strict";
-    return element && element
-        .removeClass(_classes.fade.in)
-        .addClass(_classes.fade.out);
-}
-
-function _fadeIn(element) {
-    "use strict";
-    return element && element
-        .removeClass(_classes.fade.out)
-        .addClass(_classes.fade.in);
-}
 
 function _enhanceHero(i, el) {
     "use strict";
@@ -65,7 +41,7 @@ function _enhanceHero(i, el) {
             return;
         }
 
-        _fadeIn(button);
+        HomeHeroHelper.fadeIn(button);
     }
 
     function __hoverOut() {
@@ -74,17 +50,17 @@ function _enhanceHero(i, el) {
             return;
         }
 
-        _fadeOut(button);
+        HomeHeroHelper.fadeOut(button);
     }
 
     function __play() {
-        fadedElements.forEach(_fadeOut);
+        fadedElements.forEach(HomeHeroHelper.fadeOut);
 
         // Wait for the element to fade out.
         setTimeout(function () {
             button
-                .removeClass(_classes.button.play)
-                .addClass(_classes.button.pause);
+                .removeClass(HomeHeroHelper.button.play)
+                .addClass(HomeHeroHelper.button.pause);
 
             if (!(isIos || isAndroid)) {
                 // Play now to pick up from where we left off.
@@ -99,10 +75,10 @@ function _enhanceHero(i, el) {
 
     function __pause() {
         button
-            .removeClass(_classes.button.pause)
-            .addClass(_classes.button.play);
+            .removeClass(HomeHeroHelper.button.pause)
+            .addClass(HomeHeroHelper.button.play);
 
-        fadedElements.forEach(_fadeIn);
+        fadedElements.forEach(HomeHeroHelper.fadeIn);
 
         if (!(isIos || isAndroid)) {
             player.pauseVideo();
@@ -112,11 +88,12 @@ function _enhanceHero(i, el) {
     }
 
     function __changePlayerState(e) {
-        // If it is Android, getPlayerState() returns the state after the click event. 
+        // If it is Android, getPlayerState() returns the state after the click event.
         previousStatus = isAndroid ? previousStatus : player.getPlayerState();
         // If the video is playing, pause it,
         // otherwise always try to play it.
-        // When playing after paused on iOS, preventDefault has to be on to get background image back on display
+        // When playing after paused on iOS, preventDefault has to be called
+        // to get background image back on display
         switch (previousStatus) {
             case YouTubePlayerAPI.playerStates.playing:
                 __pause(player);
