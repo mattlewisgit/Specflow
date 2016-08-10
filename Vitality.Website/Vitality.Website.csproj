@@ -198,6 +198,10 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Agents.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled" />
+    <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -366,6 +370,7 @@
     <Compile Include="Areas\Presales\SettingsTemplates\GlobalSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\ImageExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Views\CookieMessageExtensions.cs" />
     <Compile Include="Extensions\Views\AwardLeaderExtensions.cs" />
@@ -394,6 +399,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+	<Content Include="App_Config\ConnectionStrings.CMS.config">
+      <DependentUpon>App_Config\ConnectionStrings.config</DependentUpon>
+    </Content>
+    <Content Include="App_Config\ConnectionStrings.CD.config">
+      <DependentUpon>App_Config\ConnectionStrings.config</DependentUpon>
+    </Content>
     <Content Include="App_Config\ConnectionStrings.config" />
     <Content Include="App_Config\Sitecore.config">
       <SubType>Designer</SubType>
