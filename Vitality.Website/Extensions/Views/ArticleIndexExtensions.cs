@@ -17,7 +17,7 @@ namespace Vitality.Website.Extensions.Views
         {
             if (articleItem != null && articleItem.Image != null && !string.IsNullOrWhiteSpace(articleItem.Image.Src))
             {
-                return string.Format("background-image: url('{0}')", articleItem.Image.Src);
+                return string.Format("background-image: url('{0}')", articleItem.Image.ProtectedSrc(width: 388));
             }
             return "";
         }
