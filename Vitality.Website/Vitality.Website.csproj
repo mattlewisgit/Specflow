@@ -370,6 +370,7 @@
     <Compile Include="Areas\Presales\SettingsTemplates\GlobalSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\ImageExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\Views\CookieMessageExtensions.cs" />
     <Compile Include="Extensions\Views\AwardLeaderExtensions.cs" />
