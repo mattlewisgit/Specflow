@@ -399,12 +399,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-	<Content Include="App_Config\ConnectionStrings.CMS.config">
-      <DependentUpon>App_Config\ConnectionStrings.config</DependentUpon>
-    </Content>
-    <Content Include="App_Config\ConnectionStrings.CD.config">
-      <DependentUpon>App_Config\ConnectionStrings.config</DependentUpon>
-    </Content>
     <Content Include="App_Config\ConnectionStrings.config" />
     <Content Include="App_Config\Sitecore.config">
       <SubType>Designer</SubType>
