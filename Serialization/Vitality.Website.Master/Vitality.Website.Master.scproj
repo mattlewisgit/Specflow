@@ -1984,6 +1984,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Analytics\Page Events\UrlRewrite Redirect.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings\Rules.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>

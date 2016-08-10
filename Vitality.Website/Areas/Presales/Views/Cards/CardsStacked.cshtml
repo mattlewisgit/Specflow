@@ -5,9 +5,9 @@
 {
     <div class="cards-stacked @this.BackgroundClass()" style="@this.BackgroundStyle()">
         <div class="spotlight text-light">
-            <h4 class="spotlight__heading">
+            <h2 class="spotlight__heading">
                 @Editable(Model, item => item.Headline)
-            </h4>
+            </h2>
 
             <div class="spotlight__intro">
                 @Editable(Model, item => item.OpeningParagraph)
@@ -24,21 +24,21 @@
                                     @if (this.ImageOnTop())
                                     {
                                         <div class="spotlight-item__intro-image burst">
-                                            @Editable(card, item => item.Icon)
+                                            @Editable(card, item => item.Icon, new { mw = 388 })
                                         </div>
 
-                                        <p class="spotlight-item__heading">
+                                        <h3 class="spotlight-item__heading">
                                             @Editable(card, item => item.Title)
-                                        </p>
+                                        </h3>
                                     }
                                     else
                                     {
-                                        <p class="spotlight-item__heading">
+                                        <h3 class="spotlight-item__heading">
                                             @Editable(card, item => item.Title)
-                                        </p>
+                                        </h3>
                                         
                                         <div class="spotlight-item__icon">
-                                            @Editable(card, item => item.Icon)
+                                            @Editable(card, item => item.Icon, new { mw = 388 })
                                         </div>
                                     }
 

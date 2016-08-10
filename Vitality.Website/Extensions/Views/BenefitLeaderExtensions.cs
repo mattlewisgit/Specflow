@@ -54,7 +54,7 @@
 
         public static string BackgroundImage(this GlassView<BenefitLeader> view)
         {
-            return string.Format("background-image: url('{0}')", view.Model.BackgroundImage.Src);
+            return string.Format("background-image: url('{0}')", view.Model.BackgroundImage.ProtectedSrc(width:1200));
         }
 
         private static BenefitLeaderRendering Parameters(this GlassView<BenefitLeader> view)

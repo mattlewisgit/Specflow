@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml.Serialization;
 
-namespace Vitality.Website.SC.Utilities.Sitemap
+namespace Vitality.Website.SC.Agents.Sitemaps
 {
     [Serializable()]
     public class SitemapIndexesModel : IEquatable<SitemapIndexesModel>

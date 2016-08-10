@@ -48,16 +48,11 @@
                     {
                         public static readonly Guid Id = Guid.Parse("{A9A1E5B1-24E9-4ACF-AB42-DEA0688041BD}");
                     }
-                }
 
-                public static class SitemapSettings
-                {
-                    public static readonly string HideFromSitemapField = "HideFromSitemap";
-                    public static readonly string InheritSitemapSettingsField = "InheritSitemapSettings";
-                    public static readonly string SitemapField = "Sitemap";
-                    public static readonly string ChangeFrequencyField = "ChangeFrequency";
-                    public static readonly string PriorityField = "Priority";
-                    public static readonly string IndexFile = "sitemapindex.xml";
+                    public static class Sitemaps
+                    {
+                        public static readonly Guid Id = Guid.Parse("{14765AD6-C2BE-43E5-961A-AFA2A08F91C7}");
+                    }
                 }
             }
 

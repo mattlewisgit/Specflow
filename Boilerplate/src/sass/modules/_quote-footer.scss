@@ -9,10 +9,11 @@
     right: 0;
     text-align: center;
 
-    h6 {
+    &--tab {
         @include tab-rounding;
         color: $white;
         display: inline-block;
+        line-height: $line-height--small;
         margin: 0;
         padding: $pad--thin $pad;
 
@@ -36,7 +37,8 @@
         }
     }
 
-    h6, &--body {
+    &--body,
+    &--tab {
         background-color: $darken-heavy;
     }
 
