@@ -30,8 +30,10 @@ function _enhanceHero(i, el) {
     });
 
     var player = null;
-    var isIos = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)/i) !== null;
-    var isAndroid = navigator.userAgent.match(/(Android)/i) !== null;
+    // IPhone plays the video in its own player
+    var isIPhone = navigator.userAgent.match(/(iPhone)|(iPod)/i) !== null;
+    var isAndroidAndIpad = navigator.userAgent.match(/(iPad)|(Android)/i) !== null;
+
     var previousStatus = null;
 
     // Functions.
@@ -62,7 +64,7 @@ function _enhanceHero(i, el) {
                 .removeClass(HomeHeroHelper.button.play)
                 .addClass(HomeHeroHelper.button.pause);
 
-            if (!(isIos || isAndroid)) {
+            if (!(isIPhone || isAndroidAndIpad)) {
                 // Play now to pick up from where we left off.
                 player.playVideo();
             }
@@ -80,7 +82,7 @@ function _enhanceHero(i, el) {
 
         fadedElements.forEach(HomeHeroHelper.fadeIn);
 
-        if (!(isIos || isAndroid)) {
+        if (!(isIPhone || isAndroidAndIpad)) {
             player.pauseVideo();
         }
 
@@ -89,7 +91,7 @@ function _enhanceHero(i, el) {
 
     function __changePlayerState(e) {
         // If it is Android, getPlayerState() returns the state after the click event.
-        previousStatus = isAndroid ? previousStatus : player.getPlayerState();
+        previousStatus = isAndroidAndIpad ? previousStatus : player.getPlayerState();
         // If the video is playing, pause it,
         // otherwise always try to play it.
         // When playing after paused on iOS, preventDefault has to be called
@@ -102,7 +104,7 @@ function _enhanceHero(i, el) {
                 __play(player);
                 break;
             default:
-                if (isIos) {
+                if (isIPhone) {
                     e.preventDefault();
                 }
 
@@ -127,7 +129,7 @@ function _enhanceHero(i, el) {
 
             onReady: function () {
                 // Disable overlay click events on iOs and Android
-                if (isIos || isAndroid) {
+                if (isIPhone || isAndroidAndIpad) {
                     overlay.css("pointer-events", "none");
                     player.addEventListener("onStateChange", __changePlayerState);
                 } else {
