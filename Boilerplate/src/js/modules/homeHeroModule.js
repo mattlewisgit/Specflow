@@ -1,6 +1,5 @@
 // jscs:disable maximumNumberOfLines
 var YouTubeAPIBaseConfig = require("../config/youtube-api-base-config.json");
-var YouTubePlayerAPI = require("../api/youtube-player-api");
 
 var _classes = {
     button: {
@@ -64,7 +63,7 @@ function _enhanceHero(i, el) {
     // Functions.
     function __hoverIn() {
         // Only fade in if we are currently playing.
-        if (player.getPlayerState() !== YouTubePlayerAPI.playerStates.playing) {
+        if (player.getPlayerState() !== YT.PlayerState.PLAYING) {
             return;
         }
 
@@ -73,7 +72,7 @@ function _enhanceHero(i, el) {
 
     function __hoverOut() {
         // Only fade out if we are currently playing.
-        if (player.getPlayerState() !== YouTubePlayerAPI.playerStates.playing) {
+        if (player.getPlayerState() !== YT.PlayerState.PLAYING) {
             return;
         }
 
@@ -122,10 +121,10 @@ function _enhanceHero(i, el) {
         // When playing after paused on iOS, preventDefault has to be called
         // to get background image back on display
         switch (previousStatus) {
-            case YouTubePlayerAPI.playerStates.playing:
+            case YT.PlayerState.PLAYING:
                 __pause(player);
                 break;
-            case YouTubePlayerAPI.playerStates.unstarted:
+            case YT.PlayerState.UNSTARTED:
                 __play(player);
                 break;
             default:
