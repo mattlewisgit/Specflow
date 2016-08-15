@@ -1,8 +1,33 @@
+// jscs:disable maximumNumberOfLines
 var YouTubeAPIBaseConfig = require("../config/youtube-api-base-config.json");
 var YouTubePlayerAPI = require("../api/youtube-player-api");
-var HomeHeroHelper = require("../helpers/homeHeroHelper");
+
+var _classes = {
+    button: {
+        pause: "svg-svg--button-video-pause",
+        play: "svg-svg--button-video-play"
+    },
+    fade: {
+        in: "fadeIn",
+        out: "fadeOut"
+    }
+};
 
 var _timeoutDuration = 750;
+
+function _fadeOut(element) {
+    "use strict";
+    return element && element
+        .removeClass(_classes.fade.in)
+        .addClass(_classes.fade.out);
+}
+
+function _fadeIn(element) {
+    "use strict";
+    return element && element
+        .removeClass(_classes.fade.out)
+        .addClass(_classes.fade.in);
+}
 
 function _enhanceHero(i, el) {
     "use strict";
@@ -43,7 +68,7 @@ function _enhanceHero(i, el) {
             return;
         }
 
-        HomeHeroHelper.fadeIn(button);
+        _fadeIn(button);
     }
 
     function __hoverOut() {
@@ -52,17 +77,17 @@ function _enhanceHero(i, el) {
             return;
         }
 
-        HomeHeroHelper.fadeOut(button);
+        _fadeOut(button);
     }
 
     function __play() {
-        fadedElements.forEach(HomeHeroHelper.fadeOut);
+        fadedElements.forEach(_fadeOut);
 
         // Wait for the element to fade out.
         setTimeout(function () {
             button
-                .removeClass(HomeHeroHelper.button.play)
-                .addClass(HomeHeroHelper.button.pause);
+                .removeClass(_classes.button.play)
+                .addClass(_classes.button.pause);
 
             if (!(isIPhone || isAndroidAndIpad)) {
                 // Play now to pick up from where we left off.
@@ -77,10 +102,10 @@ function _enhanceHero(i, el) {
 
     function __pause() {
         button
-            .removeClass(HomeHeroHelper.button.pause)
-            .addClass(HomeHeroHelper.button.play);
+            .removeClass(_classes.button.pause)
+            .addClass(_classes.button.play);
 
-        fadedElements.forEach(HomeHeroHelper.fadeIn);
+        fadedElements.forEach(_classes.fadeIn);
 
         if (!(isIPhone || isAndroidAndIpad)) {
             player.pauseVideo();
