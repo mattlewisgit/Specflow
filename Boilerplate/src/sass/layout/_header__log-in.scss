@@ -94,7 +94,7 @@
     .log-in {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.75s ease;
+        transition: max-height $delay--long ease;
 
         .log-in-open & {
             max-height: 750px;

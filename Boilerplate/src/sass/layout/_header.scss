@@ -633,14 +633,12 @@
     .page-header {
         max-height: 81px;
         overflow: hidden;
-        transition: max-height 0.75s ease;
+        transition: max-height $delay--long ease;
 
         .mainmenu-open & {
-            transition: max-height 0.75s ease;
-
-            // Nasty magic number max height - do nice VH fix?
+            // Nasty magic number max height; using calc with VH does not work.
             max-height: 1000px;
-            max-height: calc(100vh - 80px);
+            transition: max-height $delay--long ease;
         }
 
         .megamenu-overflow & {
