@@ -55,8 +55,9 @@ function _enhanceHero(i, el) {
 
     var player = null;
     // IPhone plays the video in its own player
-    var isIPhone = navigator.userAgent.match(/(iPhone)|(iPod)/i) !== null;
-    var isAndroidAndIpad = navigator.userAgent.match(/(iPad)|(Android)/i) !== null;
+    var isIPhone = !!navigator.userAgent.match(/(iPhone)|(iPod)/i);
+    // Android and iPad plays inside the browser, therefore treated differently
+    var isAndroidAndIpad = !!navigator.userAgent.match(/(iPad)|(Android)/i);
 
     var previousStatus = null;
 
@@ -104,7 +105,7 @@ function _enhanceHero(i, el) {
             .removeClass(_classes.button.pause)
             .addClass(_classes.button.play);
 
-        fadedElements.forEach(_classes.fadeIn);
+        fadedElements.forEach(_fadeIn);
 
         if (!(isIPhone || isAndroidAndIpad)) {
             player.pauseVideo();
@@ -114,7 +115,7 @@ function _enhanceHero(i, el) {
     }
 
     function __changePlayerState(e) {
-        // If it is Android, getPlayerState() returns the state after the click event.
+        // If it is Android and iPad, getPlayerState() returns the state after the click event.
         previousStatus = isAndroidAndIpad ? previousStatus : player.getPlayerState();
         // If the video is playing, pause it,
         // otherwise always try to play it.
@@ -128,6 +129,8 @@ function _enhanceHero(i, el) {
                 __play(player);
                 break;
             default:
+                // If preventDefault is not called for iPhone
+                // it displays the overlay and get rid of it soon after
                 if (isIPhone) {
                     e.preventDefault();
                 }
@@ -152,7 +155,9 @@ function _enhanceHero(i, el) {
             },
 
             onReady: function () {
-                // Disable overlay click events on iOs and Android
+                // Disable overlay click events for mobile environment
+                // Can't do this for normal browsers due to pausing delay
+                // And pause button not displaying while playing
                 if (isIPhone || isAndroidAndIpad) {
                     overlay.css("pointer-events", "none");
                     player.addEventListener("onStateChange", __changePlayerState);
