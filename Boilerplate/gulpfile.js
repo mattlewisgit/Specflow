@@ -136,6 +136,8 @@ gulp.task(tasks.help, plugins.taskListing);
 gulp.task(tasks.js.lint, function () {
     return gulp
         .src([paths.gulp, paths.js.src])
+        .pipe(plugins.changed(paths.temp))
+        .pipe(gulp.dest(paths.temp))
         .pipe(plugins.jscpd({
             "min-lines": 10,
             verbose: true
@@ -150,6 +152,8 @@ gulp.task(tasks.js.lint, function () {
 gulp.task(tasks.sass.lint, function () {
     return gulp
         .src(paths.sass.src)
+        .pipe(plugins.changed(paths.temp))
+        .pipe(gulp.dest(paths.temp))
         .pipe(plugins.sassLint())
         .pipe(plugins.sassLint.format())
         .pipe(plugins.sassLint.failOnError());
@@ -169,7 +173,6 @@ gulp.task(tasks.clean, function () {
 gulp.task(tasks.images, function () {
     return gulp
         .src(paths.img.examples.src)
-        .pipe(plugins.changed(paths.img.examples.src))
         .pipe(plugins.imagemin())
         .pipe(gulp.dest(paths.img.examples.dest));
 });
@@ -196,8 +199,6 @@ gulp.task(tasks.sass.json, function () {
 gulp.task(tasks.sass.spritesheet.png, function () {
     var spriteData = gulp
         .src(paths.img.spritesheets.pngSrc)
-        .pipe(plugins.changed(paths.temp))
-        .pipe(gulp.dest(paths.temp))
         .pipe(plugins.spritesmith({
             cssName: "_sprite.scss",
             cssVarMap: function (sprite) {
@@ -206,7 +207,7 @@ gulp.task(tasks.sass.spritesheet.png, function () {
             imgName: "sprite-generated.png",
             padding: 5,
             retinaImgName: "sprite-generated@2x.png",
-            retinaSrcFilter: "tmp/**/*@2x.png"
+            retinaSrcFilter: "src/images/**/*@2x.png"
         }));
 
     spriteData.img
@@ -214,13 +215,12 @@ gulp.task(tasks.sass.spritesheet.png, function () {
         .pipe(plugins.imagemin())
         .pipe(gulp.dest(paths.img.spritesheets.dest));
 
-    spriteData.css.pipe(gulp.dest(paths.sass.generated));
+    return spriteData.css.pipe(gulp.dest(paths.sass.generated));
 });
 
 gulp.task(tasks.sass.spritesheet.svg, function () {
     return gulp
         .src(paths.img.spritesheets.svgSrc)
-        .pipe(plugins.changed(paths.temp))
         .pipe(gulp.dest(paths.temp))
         .pipe(plugins.svgSprite(configs.svgSprite))
         .pipe(gulp.dest(paths.base));
@@ -280,7 +280,7 @@ gulp.task(tasks.css, function () {
         tasks.sass.spritesheet.png,
         tasks.sass.spritesheet.svg,
         tasks.sass.json,
-        // Disabling SASS lint until dynamic maps work! tasks.sass.lint,
+        tasks.sass.lint,
         tasks.sass.devel,
         tasks.sass.build,
         tasks.sass.modernizr,
@@ -355,6 +355,8 @@ gulp.task(
 gulp.task(tasks.html, function () {
     return gulp
         .src(paths.html)
+        .pipe(plugins.changed(paths.temp))
+        .pipe(gulp.dest(paths.temp))
         .pipe(plugins.htmlhint(".htmlhintrc"))
         .pipe(plugins.htmlhint.reporter("htmlhint-stylish"))
         .pipe(plugins.htmlhint.failReporter());
