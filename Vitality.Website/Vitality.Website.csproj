@@ -199,9 +199,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled" />
-    <None Include="App_Config\Include\Z.SwitchMasterToWeb\Vitality.SwitchMasterToWeb.config.example">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -222,6 +219,7 @@
     <Content Include="App_Config\Portraits.config" />
     <Content Include="App_Config\Prototypes.config" />
     <Content Include="App_Config\XamlSharp.config" />
+    <Content Include="App_Config\Include\Vitality\Vitality.Settings.config" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
@@ -402,6 +400,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="App_Config\ConnectionStrings.CMS.config">
+      <DependentUpon>App_Config\ConnectionStrings.config</DependentUpon>
+    </Content>
+    <Content Include="App_Config\ConnectionStrings.CD.config">
+      <DependentUpon>App_Config\ConnectionStrings.config</DependentUpon>
+    </Content>
     <Content Include="App_Config\ConnectionStrings.config" />
     <Content Include="App_Config\Sitecore.config">
       <SubType>Designer</SubType>
