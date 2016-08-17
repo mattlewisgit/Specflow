@@ -1,5 +1,6 @@
 ﻿namespace Vitality.Website.SC
 {
+    using Sitecore.Data;
     using System;
 
     public static class ItemConstants
@@ -40,11 +41,17 @@
                     public static class GlobalSettings
                     {
                         public static readonly Guid Id = Guid.Parse("{578F19B0-CEF6-4B29-AB9F-45BF82417DF4}");
+                        public static readonly ID SitecoreId = new ID((Id)); 
                     }
 
                     public static class CookieSettings
                     {
                         public static readonly Guid Id = Guid.Parse("{A9A1E5B1-24E9-4ACF-AB42-DEA0688041BD}");
+                    }
+
+                    public static class Sitemaps
+                    {
+                        public static readonly Guid Id = Guid.Parse("{14765AD6-C2BE-43E5-961A-AFA2A08F91C7}");
                     }
                 }
             }

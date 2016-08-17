@@ -1,4 +1,4 @@
-//Left side content by default -
+// Left side content by default.
 .feature-block {
     @extend .clearfix;
     position: relative;
@@ -21,19 +21,25 @@
         height: 100%;
         color: $body-color;
         position: relative;
-        //Remove top margin of first child -
+
+        // Remove the top margin of first child.
         > :first-child {
             margin-top: 0;
         }
     }
-    //Right side content with --right modifier -
-    &--right {
 
+    &__content--body {
+        @extend p;
+    }
+
+    // Right side content with.
+    &--right {
         .feature-block__content-container {
             padding: $pad;
         }
     }
-    //Color modifiers -
+
+    // Colour modifiers.
     &--primary {
         .feature-block__content-container {
             background-color: $primary-color;
@@ -94,7 +100,7 @@
         }
     }
 
-     &--white {
+    &--white {
         .feature-block__content-container {
             background-color: $white;
         }
@@ -120,9 +126,7 @@
 }
 
 @include mq($from: desktop) {
-
     .feature-block {
-
         &__image {
             position: absolute;
             right: 0;
@@ -142,7 +146,8 @@
         &__content {
             @include max-text-width;
             margin: 0 auto;
-            //Remove top margin of first child -
+
+            // Remove the top margin of first child.
             > :first-child {
                 margin-top: 0;
             }

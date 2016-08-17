@@ -3,6 +3,7 @@
     @extend .text-center;
     @extend .text-light;
     background-color: $primary-color;
+    height: 100%;
     padding: $pad--large;
     padding-bottom: 0;
 
@@ -11,8 +12,15 @@
         vertical-align: bottom;
     }
 
-    p {
+    &--detail {
+        @extend p;
         margin-bottom: $pad--large;
+    }
+
+    .page-bottom {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
     }
 }
 

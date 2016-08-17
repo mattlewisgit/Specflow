@@ -1,9 +1,7 @@
-//
-//   Expander (toggling content)
-//
-
+// Expander for toggling content.
 .expander {
     @extend .clearfix;
+    @extend .pinch;
     $_transition: 0.2s;
     $_transition--long: $_transition * 2;
 
@@ -14,9 +12,8 @@
     &__menu {
         @extend .non-list;
     }
-    //
-    //  Modifier: Apply display properties when initialized
-    //
+
+    // Modifier: apply display properties when initialised.
     &--init {
 
         .expander__link {
@@ -26,7 +23,8 @@
 
         .expander__content {
             display: none;
-            // [for shame] fix for safari - content breaking out of collapsible on render */
+
+            // [for shame] fix for safari: content breaking out of collapsible on render.
             p {
                 display: block;
                 max-width: 100%;
@@ -37,13 +35,10 @@
             }
         }
     }
-    //
-    //  Modifier: Accordion
-    //
+
+    // Modifier: accordion.
     &--collapsible {
-
         .expander__link {
-
             @include font-size(1.8);
             color: $heading-color;
             text-decoration: none;
@@ -66,10 +61,10 @@
         }
 
         .expander__content {
-            padding: 0 $pad $pad $pad;
+            padding: 0 $pad $pad;
 
             @include mq($from: desktop) {
-                padding: 0 30px 30px 30px;
+                padding: 0 30px 30px;
             }
         }
     }
@@ -77,8 +72,9 @@
     &--collapsible.expander--init {
         .expander__link {
             position: relative;
-            //Accordion down arrow -
-            &:after {
+
+            // Accordion down arrow.
+            &::after {
                 @include retina-sprite($sprite-arrow-down-group);
                 transform: translate(0, -50%);
                 content: "";
@@ -89,15 +85,14 @@
             }
 
             &.is-active {
-                &:after {
+                &::after {
                     transform: translate(0, -50%) rotate(180deg);
                 }
             }
         }
     }
-    //
-    //  Modifier: dark - used in footer
-    //
+
+    // Modifier: dark - used in footer.
     &--dark.expander--collapsible.expander--init {
         @include alpha-attribute(border-color, rgba($white, 0.4), $tertiary-background-color);
         background-color: transparent;
@@ -112,23 +107,25 @@
             &.is-active {
                 color: $white;
             }
-            //Accordion down arrow -
-            &:after {
+
+            // Accordion down arrow.
+            &::after {
                 @include retina-sprite($sprite-arrow-down-light-group);
             }
         }
     }
-    //
-    //  Modifier: Tabs
-    //
+
+    // Modifier: tabs.
     &--tabs {
-        //Make sure content block is always as long as the tabs
+        // Make sure content block is always as long as the tabs.
         display: flex;
 
         .expander__menu {
             position: relative;
             z-index: 1;
-            left: 1px; // cover the border-left on the content panel
+
+            // Cover the border-left on the content panel.
+            left: 1px;
         }
 
         .expander__content {
@@ -202,17 +199,16 @@
             float: left;
         }
     }
-    //
-    //  Modifier: Tabs - horisontal
-    //
+
+    // Modifier: tabs - horizontal.
     &--tabs.expander--horizontal {
         border: 0;
         display: block;
 
         .expander__menu {
+            display: table;
             left: 0;
             top: 1px;
-            display: table;
         }
 
         .expander__item {
@@ -251,7 +247,7 @@
                 transition: border-left-color $_transition--long ease, border-right-color $_transition--long ease;
                 z-index: 2;
 
-                &:before {
+                &::before {
                     content: "";
                     display: block;
                     position: absolute;
@@ -268,9 +264,8 @@
             }
         }
     }
-    //
-    //  Modifier: Tabs - minimal
-    //
+
+    // Modifier: tabs - minimal.
     &--tabs.expander--minimal {
         border: 0;
         display: block;
@@ -278,7 +273,7 @@
         .expander__menu {
             left: 0;
             display: block;
-            padding: 0 0 10px 0;
+            padding: 0 0 10px;
             border-bottom: 2px solid $grey--light;
             font-size: 0;
         }
@@ -292,7 +287,7 @@
             padding: 10px 10px 10px 0;
             position: relative;
 
-            &:after {
+            &::after {
                 content: "";
                 display: block;
                 position: absolute;
@@ -305,7 +300,7 @@
                 transition: transform $_transition--long ease;
             }
 
-            &.is-active:after {
+            &.is-active::after {
                 transform: scaleX(1);
             }
         }
@@ -340,7 +335,7 @@
                 border: 0;
                 z-index: 2;
 
-                &:before {
+                &::before {
                     content: none;
                 }
             }

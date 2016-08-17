@@ -2,9 +2,9 @@
 var Breakpoints = require("./breakpointsModule");
 
 var _settings = {
-    selector: ".js-expander-is-switchable",
+    activeClass: "is-active",
     menuClass: ".expander__menu",
-    activeClass: "is-active"
+    selector: ".js-expander-is-switchable"
 };
 
 var _globals = {
@@ -13,11 +13,11 @@ var _globals = {
 
 var _tabModules = [];
 
-var TabModule = function (tabModuleDomElement) {
+function TabModule(tabModuleDomElement) {
     "use strict";
     var $thisTabModule = tabModuleDomElement;
 
-    var _setDefaultContent = function () {
+    function _setDefaultContent() {
         // Set the default for links.
         if ($(".expander__link." + _settings.activeClass, $thisTabModule).length === 0) {
             $(".expander__link", $thisTabModule).first().addClass(_settings.activeClass);
@@ -27,28 +27,33 @@ var TabModule = function (tabModuleDomElement) {
         if ($(".expander__content." + _settings.activeClass, $thisTabModule).length === 0) {
             $(".expander__content", $thisTabModule).first().addClass(_settings.activeClass);
         }
-    };
+    }
 
-    var _tabClick = function(e) {
+    function _tabClick(e) {
         e.preventDefault();
         var link = $(e.target);
 
-        // switch the current link
+        // Switch the current link.
         link.addClass(_settings.activeClass);
-        $(".expander__link", $thisTabModule).not(link).removeClass(_settings.activeClass);
+
+        $(".expander__link", $thisTabModule)
+            .not(link)
+            .removeClass(_settings.activeClass);
 
         var content = link.attr("href");
 
-        // hide other active content areas
-        $(".expander__content", $thisTabModule).not(content).removeClass(_settings.activeClass);
+        // Hide other active content areas.
+        $(".expander__content", $thisTabModule)
+            .not(content)
+            .removeClass(_settings.activeClass);
 
-        // set the active content area
+        // Set the active content area.
         $(content).addClass(_settings.activeClass);
 
         return false;
-    };
+    }
 
-    var _createTabs = function () {
+    function _createTabs() {
         // Create the menu to hold the tabs.
         var $menu = $("<ul />", {
             "class": _settings.menuClass.replace(".", "")
@@ -70,14 +75,14 @@ var TabModule = function (tabModuleDomElement) {
         $thisTabModule
             .removeClass("expander--collapsible  expander--init")
             .addClass("expander--tabs  expander--init");
-    };
+    }
 
-    var _createAccordion = function () {
+    function _createAccordion() {
         Accordion.createAccordion($thisTabModule);
         $thisTabModule.removeClass("expander--tabs");
-    };
+    }
 
-    var _switchToAccordion = function () {
+    function _switchToAccordion() {
         var $menu = $(_settings.menuClass, $thisTabModule);
 
         $(".expander__link", $menu).each(function () {
@@ -89,20 +94,20 @@ var TabModule = function (tabModuleDomElement) {
 
         $menu.remove();
         _createAccordion();
-    };
+    }
 
-    var _isAccordionState = function () {
+    function _isAccordionState() {
         // Based on existence of tab menu markup.
         return $thisTabModule.find(_settings.menuClass).length === 0;
-    };
+    }
 
     this.switchToTabs = _createTabs;
     this.switchToAccordion = _switchToAccordion;
     this.createAccordion = _createAccordion;
     this.isAccordionState = _isAccordionState;
-};
+}
 
-var _handleResize = function () {
+function _handleResize() {
     "use strict";
     // Check whether to do anything.
     if (!_globals.isAvailable) {
@@ -118,9 +123,9 @@ var _handleResize = function () {
             tab.switchToAccordion();
         }
     });
-};
+}
 
-var init = function () {
+function init() {
     "use strict";
     // Ignore if no tabs are present.
     if ($(_settings.selector).length < 1) {
@@ -151,7 +156,7 @@ var init = function () {
     }
 
     return $(window).resize(_handleResize);
-};
+}
 
 module.exports = {
     init: init

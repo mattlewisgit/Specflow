@@ -14,7 +14,7 @@
     }
 
     .feature-block__image-list {
-        @include bounceLinkedImage();
+        @include bounce-linked-image;
         margin-bottom: $pad;
 
         div {
@@ -30,7 +30,7 @@
         }
     }
 }
-    
+
 .feature-block {
     &--primary {
         background: $primary-color;

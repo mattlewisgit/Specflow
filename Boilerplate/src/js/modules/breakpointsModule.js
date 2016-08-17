@@ -16,14 +16,14 @@ $.each(data, function (name, value) {
     // as they need to be evaluated each time, not precalculated.
     // e.g. breakpoints.max.desktop.test()
     breakpoints.max[name] = {
-        test: function() {
+        test: function () {
             return Modernizr.mq(max);
         },
         value: max
     };
 
     breakpoints.min[name] = {
-        test: function() {
+        test: function () {
             return Modernizr.mq(min);
         },
         value: min

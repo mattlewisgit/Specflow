@@ -3,30 +3,124 @@
 
 .home-hero {
     @extend .burst;
-    @include shadow--dark();
-    @include text-centre();
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: $pad;
-    padding-top: $pad--large;
+    @include shadow--dark;
+    @include text-centre;
 
-    &.text-light {
-        @include shadow--light();
+    h1,
+    h2,
+    p {
+        margin: $pad--thin 0;
+    }
 
-        // Use specificity to override header colour.
-        h1, h2, p {
-            color: $white;
+    h1 {
+        @extend .h4;
+    }
+
+    h2 {
+        @extend .h1-xlarge;
+    }
+
+    &--static {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        padding: $pad--xlarge;
+        white-space: nowrap;
+        width: 100%;
+
+        // Responsive vertical centre via a pseudo element.
+        // https://css-tricks.com/centering-in-the-unknown/
+        &::before {
+            content: "";
+            display: inline-block;
+
+            // Stretch the line height.
+            height: 100%;
+
+            // Adjust for white space between the
+            // pseudo element and the next sibling.
+            margin-right: -0.25em;
+
+            vertical-align: middle;
+            width: 0;
+        }
+
+        .home-hero--static__container {
+            display: inline-block;
+            vertical-align: middle;
+            white-space: normal;
+
+            h1 {
+                @extend .font-weight--semi-bold;
+                @extend .h1-xlarge;
+                margin: $pad--xthin 0;
+            }
+        }
+
+        &.text-light {
+            @include shadow--light;
+
+            // Use specificity to override header colour.
+            h1,
+            h2,
+            p {
+                color: $white;
+            }
+        }
+    }
+
+    // Relative so that the content and video sections can stack.
+    position: relative;
+
+    &.home-hero--video {
+        cursor: pointer;
+        overflow-y: hidden;
+        padding: 0;
+
+        .home-hero--static {
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            z-index: 2;
+
+            .home-hero--static__button {
+                margin: auto;
+            }
         }
     }
 
     h2 {
-         margin: $pad--thin 0 $pad--xxlarge;
+        margin: $pad--thin;
     }
 
     // Reduce the padding for smaller devices.
     @include mq($until: tablet) {
+        .home-hero--static {
+            padding: $pad--large;
+
+            .home-hero--static__button {
+                zoom: 0.75;
+            }
+        }
+
         h2 {
-             margin: $pad--thin 0 $pad--large;
+            margin: $pad--thin 0;
+        }
+    }
+
+    // Condense as much as possible on mobile.
+    @include mq($until: mobile-landscape) {
+        h2 {
+            @include font-size($h2);
+        }
+
+        .home-hero--static {
+            padding: $pad--thin;
+
+            .home-hero--static__button {
+                zoom: 0.5;
+            }
         }
     }
 }

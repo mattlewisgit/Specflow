@@ -5,7 +5,7 @@
     @extend .burst;
     background-repeat: no-repeat;
     background-size: cover;
-    
+
     &--headline {
         display: block;
         margin: 0 auto;
@@ -14,7 +14,7 @@
         padding: 135px $pad;
 
         &.text-light {
-            @include shadow--light();
+            @include shadow--light;
 
             h1, h2, p {
                 color: $white;
@@ -22,22 +22,23 @@
         }
 
         &.text-dark {
-            @include shadow--dark();
+            @include shadow--dark;
         }
 
-        h1 {
+        .partner-hero--headline__intro {
             @extend .font-weight--light;
             @extend .h3;
             margin: $pad--xthin 0;
         }
 
-        h2 {
+        h1 {
             @extend .font-weight--semi-bold;
             @extend .h1-xlarge;
             margin: $pad--xthin 0;
         }
 
-        p {
+        .partner-hero--headline__body {
+            @extend p;
             @extend .h4;
             margin: $pad--xthin 0;
         }
@@ -57,7 +58,8 @@
         text-align: center;
 
         &__top {
-            h6 {
+            .partner-hero--card__top--intro {
+                @extend .h6;
                 text-transform: uppercase;
             }
 
@@ -80,14 +82,29 @@
             // Ensure the arrow positions correctly.
             position: relative;
 
-            h1, h2, h3, h4, h5, h6, p {
-                @extend .font-weight--regular;
+            p {
+                line-height: $line-height--small;
                 margin: 0;
+            }
+
+            .partner-hero--card__bottom--saving {
+                @extend .font-weight--semi-bold;
+                @include font-size($h1--large);
             }
         }
     }
 }
 
+// Frustrating fix for bizarre lack of padding between certain breakpoints.
+@include mq($from: mobile-landscape, $until: desktop) {
+    .partner-hero--with-card {
+        .partner-hero--headline {
+            padding-left: $pad--large;
+        }
+    }
+}
+
+// Only use a full-width card on smaller devices.
 @include mq($until: tablet) {
     .partner-hero--with-card {
         .partner-hero--headline {

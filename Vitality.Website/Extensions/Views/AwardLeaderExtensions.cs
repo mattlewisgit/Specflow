@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
+
 using Glass.Mapper.Sc.Web.Mvc;
 using Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks;
 using Vitality.Website.Areas.Presales.ComponentTemplates.Generic;
@@ -22,14 +20,14 @@ namespace Vitality.Website.Extensions.Views
 
         public static string BackgroundImage(this GlassView<AwardLeader> view)
         {
-            return string.Format("background-image: url('{0}')", view.Model.BackgroundImage.Src);
+            return string.Format("background-image: url('{0}')", view.Model.BackgroundImage.ProtectedSrc(width:1200));
         }
 
         public static string BackgroundImage(this GlassView<AwardLeader> view, ArticleItem articleItem)
         {
             if (articleItem != null && articleItem.Image != null && !string.IsNullOrWhiteSpace(articleItem.Image.Src))
             {
-                return string.Format("background-image: url('{0}')", articleItem.Image.Src);
+                return string.Format("background-image: url('{0}')", articleItem.Image.ProtectedSrc(width: 388));
             }
             return "";
         }

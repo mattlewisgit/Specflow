@@ -130,7 +130,7 @@
 
         &__close-button {
             @include retina-sprite($sprite-close-icon-group);
-            @include hide-text();
+            @include hide-text;
             display: block;
             position: absolute;
             top: 0;
@@ -159,9 +159,9 @@
         &__search-results {
             width: 50%;
         }
-        // When there is enough vertical room - show the serach background -
-        @media only screen and (min-height : 650px) {
 
+        // When there is enough vertical room, show the search background.
+        @media only screen and (min-height: 650px) {
             &__background-image {
                 display: block;
                 pointer-events: none;
@@ -172,11 +172,11 @@
                 width: 42%;
                 height: 50%;
                 opacity: 0.2;
-                background-size: contain;
                 background-position: 100% 100%;
                 background-repeat: no-repeat;
-                //Image set through markup to allows CMS control of image -
-                //background-image: url(/media/000/search-background.png);
+                background-size: contain;
+
+                // Image set through markup to allows CMS control of image.
                 transition: right 0s 1s;
 
                 .search-open & {
@@ -187,11 +187,13 @@
         }
     }
 
-    //When the full screen search is open - disable scrolling on the body -
-    body.search-open {
-        position: fixed;
-        overflow-y: hidden;
-        width: 100%;
+    // When the full screen search is open, disable scrolling on the body.
+    body {
+        &.search-open {
+            overflow-y: hidden;
+            position: fixed;
+            width: 100%;
+        }
     }
 }
 
@@ -200,7 +202,7 @@
     .search-panel {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.75s ease;
+        transition: max-height $delay--long ease;
 
         .search-open & {
             max-height: 1000px;

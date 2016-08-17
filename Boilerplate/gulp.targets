@@ -3,6 +3,7 @@
     <Target Name="Build">
         <Exec WorkingDirectory="$(ProjectDir)" Command="npm install" />  
         <Exec WorkingDirectory="$(ProjectDir)" Command="npm run bower install" />
+        <Exec WorkingDirectory="$(ProjectDir)" Command="npm run gulp clean" />
         <Exec WorkingDirectory="$(ProjectDir)" Command="npm run gulp sass:spritesheet-png" />
         <Exec WorkingDirectory="$(ProjectDir)" Command="npm run gulp sass:spritesheet-svg" />
         <Exec WorkingDirectory="$(ProjectDir)" Command="npm run gulp" />

@@ -1,4 +1,3 @@
-// //Sticky footer
 body {
     display: flex;
     flex-direction: column;
@@ -14,7 +13,7 @@ body {
     width: 100%;
 }
 
-.page:after {
+.page::after {
     content: "\00a0"; // &nbsp;
     display: block;
     height: 0;

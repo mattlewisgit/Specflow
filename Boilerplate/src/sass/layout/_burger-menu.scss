@@ -1,15 +1,14 @@
 .burger-menu {
-    //Var used in the burger menu -
     $burger-size: 22px;
 
-    margin: 0 auto;
     display: inline-block;
-    width: $burger-size * 1.2;
     height: $burger-size;
+    margin: 0 auto;
+    width: $burger-size * 1.2;
 
     span,
-    span:before,
-    span:after {
+    span::before,
+    span::after {
         display: block;
         width: 100%;
         height: $burger-size / 5;
@@ -23,26 +22,26 @@
         margin: ($burger-size * 2 / 5) 0 0;
     }
 
-    span:before,
-    span:after {
-        position: absolute;
+    span::before,
+    span::after {
         content: "";
+        position: absolute;
     }
 
-    span:before {
+    span::before {
         top: $burger-size * -2 / 5;
     }
 
-    span:after {
+    span::after {
         top: $burger-size * 2 / 5;
     }
 
     .mainmenu-open & {
-        span:before {
+        span::before {
             transform: translate(0, ($burger-size * 2 / 5)) rotate(-45deg);
         }
 
-        span:after {
+        span::after {
             transform: translate(0, -($burger-size * 2 / 5)) rotate(45deg);
         }
 
