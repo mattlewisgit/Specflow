@@ -120,7 +120,7 @@ function _enhanceHero(i, el) {
         // If the video is playing, pause it,
         // otherwise always try to play it.
         // When playing after paused on iOS, preventDefault has to be called
-        // to get background image back on display
+        // to get overlay back on display
         switch (previousStatus) {
             case YT.PlayerState.PLAYING:
                 __pause(player);
