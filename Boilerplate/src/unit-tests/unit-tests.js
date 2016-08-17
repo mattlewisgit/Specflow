@@ -2,4 +2,4 @@
 QUnit.config.noglobals = false;
 QUnit.config.notrycatch = false;
 
-var Breakpoints = require("./modules/breakpointsModuleTest");
+require("./modules/breakpointsModuleTest");
