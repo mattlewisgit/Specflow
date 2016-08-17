@@ -219,7 +219,6 @@
     <Content Include="App_Config\Portraits.config" />
     <Content Include="App_Config\Prototypes.config" />
     <Content Include="App_Config\XamlSharp.config" />
-    <Content Include="App_Config\Include\Vitality\Vitality.Settings.config" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
