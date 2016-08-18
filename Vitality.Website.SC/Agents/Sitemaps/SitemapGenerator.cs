@@ -38,7 +38,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
                 baseUrl = LinkManager.GetItemUrl(homeItem, new UrlOptions { AlwaysIncludeServerUrl = true, LanguageEmbedding = LanguageEmbedding.Never });
             }
 
-            sitemapIndex = new SitemapIndex(baseUrl, database.GetItem(new ID(ItemConstants.Presales.Content.Configuration.Sitemaps.Id)).Children);
+            sitemapIndex = new SitemapIndex(baseUrl, database.GetItem(new ID(ItemConstants.Presales.Content.Configuration.Sitemaps.Path)).Children);
 
             RecurseContentTree(homeItem);
 

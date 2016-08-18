@@ -9,7 +9,7 @@ namespace Vitality.Website.Areas.Presales.SettingsTemplates
     using Glass.Mapper.Sc.Maps;
 
     [SitecoreType(Cachable = true)]
-    public class GlobalSettings : SitecoreItem, IAppReferenceGlobal, IBrowserLatencyGlobal, IBrowserStylingGlobal, IDuplicateContentPage, IGoogleAuthorshipGlobal, IGoogleTagManagerGlobal,
+    public class SiteSettings : SitecoreItem, IAppReferenceGlobal, IBrowserLatencyGlobal, IBrowserStylingGlobal, IDuplicateContentPage, IGoogleAuthorshipGlobal, IGoogleTagManagerGlobal,
         IIndexationPage, IOpenGraphGlobal, IOpenGraphPage, IQubitOpenTagGlobal, ISerpAppearancePage, ITwitterGlobal, ITwitterPage, IWebmasterToolsGlobal, IJsonSchemaGlobal
     {
         public string AppleITunesApp { get; set; }
@@ -43,7 +43,7 @@ namespace Vitality.Website.Areas.Presales.SettingsTemplates
         public string JsonSchemaScript { get; set; }
     }
 
-    public class GlobalSettingsConfig : SitecoreGlassMap<GlobalSettings>
+    public class SiteSettingsConfig : SitecoreGlassMap<SiteSettings>
     {
         public override void Configure()
         {

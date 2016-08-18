@@ -72,33 +72,33 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
             this.Map(
                 x => x.AutoMap(),
                 x => x.Delegate(footer => footer.Headline).GetValue(
-                    context => context.Service.GetItem<QuoteFooter>(ItemConstants.Presales.Content.Configuration.QuoteFooter.Id).Headline)
+                    context => context.Service.GetItem<QuoteFooter>(ItemConstants.Presales.Content.Configuration.QuoteFooter.Path).Headline)
                 );
 
             var properties = typeof(BasePage).GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
 
             foreach (var property in properties)
             {
-                if (typeof(GlobalSettings).GetProperty(property.Name) == null)
+                if (typeof(SiteSettings).GetProperty(property.Name) == null)
                 {
                     continue;
                 }
 
                 string fieldName = property.Name;
                 var basePageProperty = this.BuildPropertyAccess<BasePage>(fieldName);
-                var globalSettingsProperty = this.BuildPropertyAccess<GlobalSettings>(fieldName).Compile();
+                var siteSettingsProperty = this.BuildPropertyAccess<SiteSettings>(fieldName).Compile();
 
                 if (property.PropertyType == typeof(string))
                 {
-                    this.Map(x => x.Delegate(basePageProperty).GetValue(context => this.StringWithFallback(context, fieldName, globalSettingsProperty)));
+                    this.Map(x => x.Delegate(basePageProperty).GetValue(context => this.StringWithFallback(context, fieldName, siteSettingsProperty)));
                 }
                 else if (property.PropertyType == typeof(string[]))
                 {
-                    this.Map(x => x.Delegate(basePageProperty).GetValue(context => this.StringArrayWithFallback(context, fieldName, globalSettingsProperty)));
+                    this.Map(x => x.Delegate(basePageProperty).GetValue(context => this.StringArrayWithFallback(context, fieldName, siteSettingsProperty)));
                 }
                 else if (property.PropertyType == typeof(Image))
                 {
-                    this.Map(x => x.Delegate(basePageProperty).GetValue(context => this.ImageWithFallback(context, fieldName, globalSettingsProperty)));
+                    this.Map(x => x.Delegate(basePageProperty).GetValue(context => this.ImageWithFallback(context, fieldName, siteSettingsProperty)));
                 }
             }
         }
@@ -112,38 +112,38 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
             return Expression.Lambda<Func<T, object>>(convertToObject, basePage);
         }
 
-        private object StringWithFallback(SitecoreDataMappingContext context, string property, Func<GlobalSettings, object> globalSettingsProperty)
+        private object StringWithFallback(SitecoreDataMappingContext context, string property, Func<SiteSettings, object> siteSettingsProperty)
         {
             if (!string.IsNullOrWhiteSpace(context.Item[property]))
             {
                 return context.Item[property];
             }
-            return this.GetFallbackValue(context.Service, globalSettingsProperty);
+            return this.GetFallbackValue(context.Service, siteSettingsProperty);
         }
 
-        private object StringArrayWithFallback(SitecoreDataMappingContext context, string property, Func<GlobalSettings, object> globalSettingsProperty)
+        private object StringArrayWithFallback(SitecoreDataMappingContext context, string property, Func<SiteSettings, object> siteSettingsProperty)
         {
             if (!string.IsNullOrWhiteSpace(context.Item[property]))
             {
                 return context.Item[property].Split('|');
             }
-            return this.GetFallbackValue(context.Service, globalSettingsProperty);
+            return this.GetFallbackValue(context.Service, siteSettingsProperty);
         }
 
-        private object ImageWithFallback(SitecoreDataMappingContext context, string property, Func<GlobalSettings, object> globalSettingsProperty)
+        private object ImageWithFallback(SitecoreDataMappingContext context, string property, Func<SiteSettings, object> siteSettingsProperty)
         {
             ImageField field = context.Item.Fields[property];
             var image = new Image();
-            if (field.InnerField.HasValue)
+            if (field != null && field.InnerField.HasValue)
             {
                 Glass.Mapper.Sc.DataMappers.SitecoreFieldImageMapper.MapToImage(image, field);
             }
-            return this.GetFallbackValue(context.Service, globalSettingsProperty) ?? image;
+            return this.GetFallbackValue(context.Service, siteSettingsProperty) ?? image;
         }
 
-        private object GetFallbackValue(ISitecoreService service, Func<GlobalSettings, object> getFallbackValue)
+        private object GetFallbackValue(ISitecoreService service, Func<SiteSettings, object> getFallbackValue)
         {
-            var fallbackSettings = service.GetItem<GlobalSettings>(ItemConstants.Presales.Content.Configuration.GlobalSettings.Id);
+            var fallbackSettings = service.GetItem<SiteSettings>(ItemConstants.Presales.Content.Configuration.SiteSettings.Path);
             return getFallbackValue(fallbackSettings);
         }
     }
