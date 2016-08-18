@@ -2,7 +2,7 @@ var AccordionModule = require("./modules/accordionModule");
 var AnimationDelayModule = require("./modules/animationDelayModule");
 var Breakpoints = require("./modules/breakpointsModule");
 var CookieMessageModule = require("./modules/cookieMessageModule");
-var FilerModule = require("./modules/filterModule");
+var FilterModule = require("./modules/filterModule");
 var HomeHeroModule = require("./modules/homeHeroModule");
 var MatchHeightsModule = require("./modules/matchHeightsModule");
 var MatchWidthsModule = require("./modules/matchWidthsModule");
@@ -50,7 +50,7 @@ function _initCustom(wow) {
     TabsModule.init();
 
     // Check for filterable content with the animation instance.
-    FilerModule.init(wow);
+    FilterModule.init(wow);
 
     // Match sizes.
     MatchHeightsModule.init();

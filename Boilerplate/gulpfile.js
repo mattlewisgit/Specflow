@@ -34,7 +34,8 @@ var tasks = {
         devel: "js:devel",
         lint: "js:lint",
         polyfill: "js:polyfill",
-        thirdParty: "js:third-party"
+        thirdParty: "js:third-party",
+        unitTests: "js:unit-tests"
     },
     razor: "razor",
     report: "report",
@@ -88,7 +89,8 @@ var paths = {
         modernizr: "modernizr-custom.js",
         polyfill: "polyfill-custom.js",
         src: "src/js/**/*.js",
-        thirdPartyTemplate: "src/js-third-party.html"
+        thirdPartyTemplate: "src/js-third-party.html",
+        unitTests: "src/unit-tests/**/*.js"
     },
     sass: {
         generated: "src/sass/generated",
@@ -112,7 +114,6 @@ var paths = {
         dest: "dist/templates/",
         src: "src/templates/"
     }
-
 };
 
 var configs = {
@@ -135,7 +136,7 @@ gulp.task(tasks.help, plugins.taskListing);
 
 gulp.task(tasks.js.lint, function () {
     return gulp
-        .src([paths.gulp, paths.js.src])
+        .src([paths.gulp, paths.js.src, paths.js.unitTests])
         .pipe(plugins.changed(paths.temp))
         .pipe(gulp.dest(paths.temp))
         .pipe(plugins.jscpd({
@@ -293,6 +294,15 @@ gulp.task(tasks.js.devel, function () {
     return browserify("./src/js/main.js")
         .bundle()
         .pipe(source("app.js"))
+        .pipe(gulp.dest("./js/"));
+});
+
+gulp.task(tasks.js.unitTests, function () {
+    del("./js/unit-tests.js");
+
+    return browserify("./src/unit-tests/unit-tests.js")
+        .bundle()
+        .pipe(source("unit-tests.js"))
         .pipe(gulp.dest("./js/"));
 });
 
@@ -472,9 +482,9 @@ gulp.task(tasks.serve, function () {
     gulp.watch(paths.html, options, browserSync.reload);
 
     gulp.watch(
-        [paths.js.src],
+        [paths.js.src, paths.js.unitTests],
         options,
-        [tasks.js.devel, browserSync.reload]);
+        [tasks.js.devel, tasks.js.unitTests, browserSync.reload]);
 
     gulp.watch(
         [paths.sass.srcAll],

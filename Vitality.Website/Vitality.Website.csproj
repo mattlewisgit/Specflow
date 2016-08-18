@@ -198,7 +198,11 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Agents.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled" />
+    <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\Include\Vitality\Vitality.Eventing.config.disabled" />
+    <Content Include="App_Config\Include\Vitality\Vitality.LinkDatabase.config.disabled" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -219,9 +223,6 @@
     <Content Include="App_Config\Portraits.config" />
     <Content Include="App_Config\Prototypes.config" />
     <Content Include="App_Config\XamlSharp.config" />
-    <None Include="App_Config\Include\Vitality\Vitality.Settings.config.disabled">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
@@ -370,7 +371,7 @@
     <Compile Include="Areas\Presales\RenderingTemplates\SummaryComponentRendering.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\CookieSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
-    <Compile Include="Areas\Presales\SettingsTemplates\SiteSettings.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\GlobalSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\ImageExtensions.cs" />
