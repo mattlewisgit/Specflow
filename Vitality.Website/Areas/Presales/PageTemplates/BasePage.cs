@@ -134,7 +134,7 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
         {
             ImageField field = context.Item.Fields[property];
             var image = new Image();
-            if (field != null && field.InnerField.HasValue)
+            if (field.InnerField.HasValue)
             {
                 Glass.Mapper.Sc.DataMappers.SitecoreFieldImageMapper.MapToImage(image, field);
             }

@@ -26,7 +26,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
 
         public void Run()
         {
-            var homeItem = database.GetItem(new ID(ItemConstants.Presales.Content.Home.Id));
+            var homeItem = database.GetItem(new ID(ItemConstants.Presales.Content.Home.Path));
             if (homeItem == null)
             {
                 throw new ArgumentException("Home item not found.");

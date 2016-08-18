@@ -36,7 +36,8 @@ namespace Vitality.Website.SC.Agents.Sitemaps
                 return new SitemapSettings {HideFromSitemap = true};
             }
 
-            while (item[InheritSitemapSettingsField] == "1" && item.ID.Guid != ItemConstants.Presales.Content.Home.Id)
+            while (item[InheritSitemapSettingsField] == "1" && 
+                !string.Equals(item.Paths.Path,ItemConstants.Presales.Content.Home.Path, StringComparison.InvariantCultureIgnoreCase))
             {
                 item = item.Parent;
             }
