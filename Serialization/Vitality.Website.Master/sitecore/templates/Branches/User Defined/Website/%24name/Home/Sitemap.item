@@ -2,9 +2,9 @@
 version: 1
 id: {A5163761-7C87-4F62-8669-C3DA0BEDE2A9}
 database: master
-path: /sitecore/templates/Branches/User Defined/Website/$name/Home/Sitemap
+path: /sitecore/templates/Branches/User Defined/Website/$name/home/sitemap
 parent: {BCC7EF1E-8910-4F92-8880-E5286C8F514F}
-name: Sitemap
+name: sitemap
 master: {00000000-0000-0000-0000-000000000000}
 template: {A047426F-6BFF-4E2E-9FC5-96B4D8D7AE65}
 templatekey: Sitemap Page
@@ -12,8 +12,15 @@ templatekey: Sitemap Page
 ----version----
 language: en
 version: 1
-revision: 82b82b7a-02be-49ed-99a4-792764899af9
+revision: 8dfac95e-09f6-4e96-80b4-5e26d6afbafe
 
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 7
+
+Sitemap
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -27,14 +34,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-82b82b7a-02be-49ed-99a4-792764899af9
+8dfac95e-09f6-4e96-80b4-5e26d6afbafe
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160816T135426Z
+20160819T092654Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
