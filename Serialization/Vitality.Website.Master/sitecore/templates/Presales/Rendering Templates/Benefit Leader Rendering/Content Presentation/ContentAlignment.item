@@ -20,9 +20,9 @@ Droplink
 field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
 name: Source
 key: source
-content-length: 59
+content-length: 57
 
-/sitecore/content/Presales/Configuration/Content Alignments
+/sitecore/Content/Global Configuration/Content Alignments
 ----field----
 field: {B118496A-0F78-4A27-B55F-0A6C4B0B0FE1}
 name: Default value
@@ -47,7 +47,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 2f295606-b1d9-4944-af8c-b8d8dca8049e
+revision: 9b530a0a-f1e1-4f6a-aeed-972e63506342
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -76,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-2f295606-b1d9-4944-af8c-b8d8dca8049e
+9b530a0a-f1e1-4f6a-aeed-972e63506342
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160630T103551Z
+20160822T151917Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
