@@ -102,7 +102,6 @@
     <Compile Include="Pipelines\HttpRequest\SetNotFoundStatusCode.cs" />
     <Compile Include="Pipelines\Publishing\GetItemReferences\AddDataSourceItemDescendants.cs" />
     <Compile Include="Pipelines\RenderField\InjectTablesawStylesOnRender.cs" />
-    <Compile Include="Pipelines\RenderField\QueryableDatasourceLocation.cs" />
     <Compile Include="Pipelines\RenderField\TableSawArgs.cs" />
     <Compile Include="Pipelines\RenderField\TableSawHelper.cs" />
     <Compile Include="Pipelines\Response\GetModel\GetQuoteFooterFallback.cs" />
