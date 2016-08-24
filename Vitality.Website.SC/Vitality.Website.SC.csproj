@@ -115,6 +115,7 @@
     <Compile Include="Agents\Sitemaps\SitemapSettings.cs" />
     <Compile Include="Agents\Sitemaps\SitemapUrlModel.cs" />
     <Compile Include="Providers\MediaProvider.cs" />
+    <Compile Include="Utilities\SiteInfoHelper.cs" />
     <Compile Include="Utilities\StringHelper.cs" />
     <Compile Include="Providers\AppendLinkProvider.cs" />
   </ItemGroup>

@@ -35,7 +35,7 @@ namespace Vitality.Website.SC
 
                 public static class ContentFolder
                 {
-                    public static string Path => GetItemFullPath("/Content");
+                    public static string RelativePath = "/Content";
                 }
 
                 public static class Configuration
