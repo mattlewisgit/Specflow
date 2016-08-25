@@ -2,9 +2,9 @@
 version: 1
 id: {A5E99666-9CB5-46C0-89A2-74EDB1DE20BB}
 database: master
-path: /sitecore/content/Advisers/Content/Patners
+path: /sitecore/content/Advisers/Content/Partners
 parent: {C2912188-A5EF-417E-9317-415F1259BA4D}
-name: Patners
+name: Partners
 master: {30379927-A49A-4654-8C27-30CD546273E4}
 template: {7C96FFFF-DA60-44F1-BC58-2E4315D2F483}
 templatekey: Datasource Folder
@@ -26,7 +26,7 @@ content-length: 0
 ----version----
 language: en
 version: 1
-revision: 222d4118-3845-408a-a9bb-5b0c6767821a
+revision: a9334d0e-4fb9-475d-904c-5075ac25087d
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -48,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-222d4118-3845-408a-a9bb-5b0c6767821a
+a9334d0e-4fb9-475d-904c-5075ac25087d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160816T155611Z
+20160825T123128Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
