@@ -16,10 +16,17 @@ key: __icon
 content-length: 32
 
 People/32x32/goblet_gold_add.png
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 77
+
+{4902517E-93B7-41B5-BCC4-387E1D0304A7}|{5CDF9BF1-35E1-4E28-8718-21F6506D7AE5}
 ----version----
 language: en
 version: 1
-revision: 12b2d148-9ddf-46b8-809a-5a6947a50158
+revision: 6cd2d1ea-e89d-4153-a3bd-7138e050e948
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -41,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-12b2d148-9ddf-46b8-809a-5a6947a50158
+6cd2d1ea-e89d-4153-a3bd-7138e050e948
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160816T154927Z
+20160825T153000Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
