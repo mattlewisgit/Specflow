@@ -8,6 +8,8 @@ namespace Vitality.Website.SC.Agents.Sitemaps
 {
     public class SitemapHelper<T>
     {
+        private const string SiteMapLocation = "sitemaps";
+
         public static void SaveSitemapToDisk(T model, string sitemapName, bool compress)
         {
             var serializer = new XmlSerializer(typeof (T));
@@ -20,7 +22,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
                 ConformanceLevel = ConformanceLevel.Auto
             };
 
-            var xmlFile = string.Format("{0}{1}", HttpRuntime.AppDomainAppPath, sitemapName);
+            var xmlFile = string.Format("{0}{1}\\{2}", HttpRuntime.AppDomainAppPath, SiteMapLocation, sitemapName);
 
             using (var writer = XmlWriter.Create(xmlFile, xmlWriterSetting))
             {
@@ -47,8 +49,8 @@ namespace Vitality.Website.SC.Agents.Sitemaps
         public static T ReadSitemapFromDisk(string sitemapName)
         {
             T model = default(T);
-
-            string xmlFile = string.Format("{0}{1}", HttpRuntime.AppDomainAppPath, sitemapName);
+            
+            var xmlFile = string.Format("{0}{1}\\{2}", HttpRuntime.AppDomainAppPath, SiteMapLocation, sitemapName);
 
             if (File.Exists(xmlFile))
             {
