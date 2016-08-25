@@ -2,9 +2,9 @@
 version: 1
 id: {354F9059-3943-4418-B595-D30EA7CEAE8D}
 database: master
-path: /sitecore/templates/Branches/User Defined/Website/$name/Content/Patners
+path: /sitecore/templates/Branches/User Defined/Website/$name/Content/Partners
 parent: {C9D7E3C9-26A1-4DF3-9F3A-83C4539E16D0}
-name: Patners
+name: Partners
 master: {00000000-0000-0000-0000-000000000000}
 template: {7C96FFFF-DA60-44F1-BC58-2E4315D2F483}
 templatekey: Datasource Folder
@@ -19,7 +19,7 @@ People/32x32/users1.png
 ----version----
 language: en
 version: 1
-revision: f2dd50d3-5418-43ea-acf5-aa759a0c95d5
+revision: e2c0a699-523b-4183-8b65-d28d0c6b72f0
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -41,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f2dd50d3-5418-43ea-acf5-aa759a0c95d5
+e2c0a699-523b-4183-8b65-d28d0c6b72f0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160816T154632Z
+20160825T123153Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
