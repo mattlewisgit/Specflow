@@ -19,11 +19,11 @@ namespace Vitality.Website.SC.Agents.Sitemaps
             sitemapIndexFile = SitemapHelper<SitemapIndexModel>.ReadSitemapFromDisk(IndexFile) ?? new SitemapIndexModel();
         }
 
-        public void Build(string site)
+        public void Build(string website)
         {
             foreach (var sitemap in sitemaps)
             {
-                var presales = Sitecore.Configuration.Factory.GetSite(site);
+                var presales = Sitecore.Configuration.Factory.GetSite(website);
 
                 var domainUrl = string.Format("{0}://{1}/", presales.SiteInfo.Scheme, presales.SiteInfo.HostName);
                 var sitemapUrl = string.Format("{0}{1}", domainUrl, sitemap.Name + ".xml.gz");
@@ -45,12 +45,12 @@ namespace Vitality.Website.SC.Agents.Sitemaps
                     }
                     sitemapIndexFile.Sitemaps.Add(sitemapIndexes);
 
-                    sitemap.BuildSitemap();
+                    sitemap.BuildSitemap(website);
                 }
             }
 
             //Update the file name to reflect the current site
-            IndexFile = string.Format("{0}_{1}", site, IndexFile);
+            IndexFile = $"{website}_{IndexFile}";
 
             SitemapHelper<SitemapIndexModel>.SaveSitemapToDisk(sitemapIndexFile, IndexFile, false);
         }

@@ -19,18 +19,25 @@ namespace Vitality.Website.Handlers
 
             var xmlFile = string.Format("{0}{1}//{2}{3}", HttpRuntime.AppDomainAppPath, SiteMapLocation, subdomain + "_", context.Request.Url.Segments[1]);
 
-
             FileStream xmlFileStream = new FileStream(xmlFile, FileMode.Open, FileAccess.Read, FileShare.Read);
 
-            XmlDocument doc = new XmlDocument();
-            doc.Load(xmlFileStream);
+            if (context.Request.CurrentExecutionFilePathExtension == ".xml")
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(xmlFileStream);
 
-            context.Response.ContentType = "text/xml";
-            context.Response.ContentEncoding = System.Text.Encoding.UTF8;
-            context.Response.Expires = -1;
-            context.Response.Cache.SetAllowResponseInBrowserHistory(true);
+                context.Response.ContentType = "text/xml";
+                context.Response.ContentEncoding = System.Text.Encoding.UTF8;
+                context.Response.Expires = -1;
+                context.Response.Cache.SetAllowResponseInBrowserHistory(true);
 
-            doc.Save(context.Response.Output);
+                doc.Save(context.Response.Output);
+            }
+            else if (context.Request.CurrentExecutionFilePathExtension == ".gz")
+            {
+                context.Response.ContentType = "application/octet-stream";
+                context.Response.WriteFile(xmlFile);
+            }
         }
 
         public bool IsReusable { get; }

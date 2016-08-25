@@ -21,7 +21,12 @@ namespace Vitality.Website.SC.Agents.Sitemaps
 
         public static SitemapSettings From(Item item, string baseUrl)
         {
-            string itemUrl = baseUrl;
+            var relativePath = item.Paths.ContentPath.Remove(0, "/presales/home".Length);
+            if (relativePath.Length > 0)
+            {
+                relativePath = relativePath.Remove(0, 1) + "/";
+            }
+            string itemUrl = baseUrl + relativePath;
 
             var publishedDate = item.Statistics.Updated;
             var hideFromSitemap = item[HideFromSitemapField] == "1";

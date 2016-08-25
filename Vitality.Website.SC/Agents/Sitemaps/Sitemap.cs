@@ -25,7 +25,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
             pages.Add(sitemapSettings);
         }
 
-        public void BuildSitemap()
+        public void BuildSitemap(string website)
         {
             var model = new SitemapModel
             {
@@ -42,7 +42,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
                 });
             }
 
-            SitemapHelper<SitemapModel>.SaveSitemapToDisk(model, string.Format("{0}.xml", Name), true);
+            SitemapHelper<SitemapModel>.SaveSitemapToDisk(model, $"{website}_{Name}.xml", true);
         }
     }
 }
