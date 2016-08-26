@@ -1,5 +1,7 @@
 ﻿using System;
+using Sitecore.Configuration;
 using Sitecore.Data.Items;
+using Sitecore.Sites;
 
 namespace Vitality.Website.SC.Agents.Sitemaps
 {
@@ -19,15 +21,17 @@ namespace Vitality.Website.SC.Agents.Sitemaps
         public string Priority { get; set; }
         public DateTime PublishedDate { get; set; }
 
-        public static SitemapSettings From(Item item, string baseUrl)
+        public static SitemapSettings From(Item item, string baseUrl, string subdomain)
         {
-            var relativePath = item.Paths.ContentPath.Remove(0, "/presales/home".Length);
-            if (relativePath.Length > 0)
-            {
-                relativePath = relativePath.Remove(0, 1) + "/";
-            }
-            string itemUrl = baseUrl + relativePath;
+            string itemUrl = "";
 
+            using (new SiteContextSwitcher(Factory.GetSite(subdomain)))
+            {
+                itemUrl = item.Paths.Path.ToLower();
+                itemUrl = itemUrl.Replace(Sitecore.Context.Data.Site.RootPath.ToLower(), "");
+                itemUrl = itemUrl.Replace(Sitecore.Context.Data.Site.StartItem.ToLower(), "");
+            }
+            
             var publishedDate = item.Statistics.Updated;
             var hideFromSitemap = item[HideFromSitemapField] == "1";
 
