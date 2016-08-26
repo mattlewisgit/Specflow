@@ -31,7 +31,9 @@ namespace Vitality.Website.SC.Agents.Sitemaps
                 itemUrl = itemUrl.Replace(Sitecore.Context.Data.Site.RootPath.ToLower(), "");
                 itemUrl = itemUrl.Replace(Sitecore.Context.Data.Site.StartItem.ToLower(), "");
             }
-            
+
+            itemUrl = baseUrl + itemUrl;
+
             var publishedDate = item.Statistics.Updated;
             var hideFromSitemap = item[HideFromSitemapField] == "1";
 

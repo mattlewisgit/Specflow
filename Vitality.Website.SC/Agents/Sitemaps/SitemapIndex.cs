@@ -55,9 +55,9 @@ namespace Vitality.Website.SC.Agents.Sitemaps
             SitemapHelper<SitemapIndexModel>.SaveSitemapToDisk(sitemapIndexFile, IndexFile, false);
         }
 
-        public void AddToRelativeSitemap(Item item)
+        public void AddToRelativeSitemap(Item item, string subdomain)
         {
-            var sitemapItem = SitemapSettings.From(item, baseUrl);
+            var sitemapItem = SitemapSettings.From(item, baseUrl, subdomain);
             if (sitemapItem.HideFromSitemap)
             {
                 return;

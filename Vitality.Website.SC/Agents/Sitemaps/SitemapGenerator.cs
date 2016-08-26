@@ -50,7 +50,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
 
         private void RecurseContentTree(Item item)
         {
-            sitemapIndex.AddToRelativeSitemap(item);
+            sitemapIndex.AddToRelativeSitemap(item, subdomain);
 
             if (item.HasChildren)
             {
