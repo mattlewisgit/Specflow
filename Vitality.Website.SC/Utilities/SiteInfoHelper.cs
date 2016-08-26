@@ -7,9 +7,9 @@ namespace Vitality.Website.SC.Utilities
 {
     public static class SiteInfoHelper
     {
-        public static IEnumerable<SiteInfo> GetSiteInfoList()
+        public static IEnumerable<SiteInfo> RemoveSitecoreShellSiteInfos(this List<SiteInfo> siteInfoList)
         {
-            return Sitecore.Configuration.Factory.GetSiteInfoList().Where(siteInfo =>
+            return siteInfoList.Where(siteInfo =>
                 !string.Equals(siteInfo.Domain, "sitecore", StringComparison.InvariantCultureIgnoreCase)
                 && !string.IsNullOrEmpty(siteInfo.Domain));
         }

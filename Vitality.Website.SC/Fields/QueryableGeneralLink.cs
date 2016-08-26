@@ -38,7 +38,7 @@ namespace Vitality.Website.SC.Fields
             }
         }
 
-        private string ResolveQuery(string query)
+        public string ResolveQuery(string query)
         {
             query = query.Substring(QueryStartText.Length);
             var contextItem = Sitecore.Context.ContentDatabase.Items[ItemId];

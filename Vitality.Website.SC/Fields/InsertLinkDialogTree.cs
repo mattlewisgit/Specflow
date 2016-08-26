@@ -1,5 +1,6 @@
 ﻿/* Extracted from https://github.com/rahm0277/SC-MS-CustomFields */
 
+using System;
 using Sitecore;
 using Sitecore.Configuration;
 using Sitecore.Data;
@@ -11,6 +12,7 @@ using Sitecore.Web.PageCodes;
 using System.Net;
 using System.Xml.Linq;
 using Sitecore.Mvc.Presentation;
+using Vitality.Website.SC.Utilities;
 
 namespace Vitality.Website.SC.Fields
 {
@@ -60,23 +62,26 @@ namespace Vitality.Website.SC.Fields
             {
                 TreeView.Parameters["RootItem"] = queryStringRoot;
             }
-            InsertAnchorButton.Parameters["Click"] = string.Format(InsertAnchorButton.Parameters["Click"],
-                (object) WebUtility.UrlEncode(queryStringRoot), (object) WebUtility.UrlEncode(queryStringHdl));
-            InsertEmailButton.Parameters["Click"] = string.Format(InsertEmailButton.Parameters["Click"],
-                (object) WebUtility.UrlEncode(queryStringRoot), (object) WebUtility.UrlEncode(queryStringHdl));
-            ListViewToggleButton.Parameters["Click"] = string.Format(
-                ListViewToggleButton.Parameters["Click"], (object) WebUtility.UrlEncode(queryStringRoot),
-                (object) WebUtility.UrlEncode(queryStringHdl));
+            
+            Func<Rendering, string> formatClickParmeters = (clickedButton) =>
+            string.Format(InsertAnchorButton.Parameters["Click"],
+                WebUtility.UrlEncode(queryStringRoot),WebUtility.UrlEncode(queryStringHdl));
+
+            formatClickParmeters(InsertAnchorButton);
+            formatClickParmeters(InsertEmailButton);
+            formatClickParmeters(ListViewToggleButton);
     
             var text = string.Empty;
-            if (queryStringHdl != string.Empty)
+            if (!string.IsNullOrEmpty(queryStringHdl))
             {
                 text = UrlHandle.Get()["va"];
             }
-            if (text == string.Empty)
+
+            if (string.IsNullOrEmpty(string.Empty))
             {
                 return;
             }
+
             var element = XElement.Parse(text);
             if (GetXmlAttributeValue(element, "linktype") != "internal")
             {
@@ -85,18 +90,15 @@ namespace Vitality.Website.SC.Fields
 
             if (!string.IsNullOrEmpty(GetXmlAttributeValue(element, "id")))
             {
-                var contextItem =
-                    ((Database) ClientHost.Databases.ContentDatabase).GetItem(queryStringRoot ?? string.Empty) ??
-                    ((Database) ClientHost.Databases.ContentDatabase).GetRootItem();
-                var linkedItem =
-                    (Item)
-                        SelectMediaDialog.GetMediaItemFromQueryString(
+                var database = ClientHost.Databases.ContentDatabase;
+                var contextItem = database.GetItem(queryStringRoot ?? string.Empty) ?? database.GetRootItem();
+                var linkedItem = SelectMediaDialog.GetMediaItemFromQueryString(
                             GetXmlAttributeValue(element, "id"));
-                if (contextItem != null && linkedItem != null &&
-                    linkedItem.Paths.LongID.StartsWith(contextItem.Paths.LongID))
-                    TreeView.Parameters["PreLoadPath"] = contextItem.ID +
-                                                         linkedItem.Paths.LongID.Substring(
-                                                             contextItem.Paths.LongID.Length);
+
+                if (contextItem != null && linkedItem != null && linkedItem.PathStartsWith(contextItem))
+                {
+                    TreeView.Parameters["PreLoadPath"] = contextItem.ID + linkedItem.GetRelativePath(contextItem);
+                }
             }
             TextDescription.Parameters["Text"] = GetXmlAttributeValue(element, "text");
             AltText.Parameters["Text"] = GetXmlAttributeValue(element, "title");
