@@ -14,8 +14,6 @@ namespace Vitality.Website.SC.Agents.Sitemaps
     /// </summary>
     public class SitemapGenerator
     {
-        
-
         private readonly Database database;
         private SitemapIndex sitemapIndex;
         private readonly string subdomain; 

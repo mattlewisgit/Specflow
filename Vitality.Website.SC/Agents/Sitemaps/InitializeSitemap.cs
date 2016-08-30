@@ -20,11 +20,11 @@ namespace Vitality.Website.SC.Agents.Sitemaps
             foreach (XmlNode node in Factory.GetConfigNodes("scheduling/agent"))
             {
                 object obj = Factory.CreateObject(node, true);
-                string name = XmlUtil.GetAttribute("name", node);
+                var name = XmlUtil.GetAttribute("name", node);
                 
                 if (Names.Contains(name.ToLower()))
                 {
-                    string method = XmlUtil.GetAttribute("method", node);
+                    var method = XmlUtil.GetAttribute("method", node);
 
                     var options = new JobOptions(name, "", "scheduler", obj, method)
                     {

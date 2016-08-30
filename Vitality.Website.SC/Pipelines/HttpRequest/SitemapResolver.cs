@@ -22,10 +22,10 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
             {
                 context.Response.ClearContent();
 
-                FileStream xmlFileStream = new FileStream(ReformatXmlFile(args, subdomain), FileMode.Open, FileAccess.Read, FileShare.Read);
+                var xmlFileStream = new FileStream(ReformatXmlFile(args, subdomain), FileMode.Open, FileAccess.Read, FileShare.Read);
                 
                 //xml.
-                XmlDocument doc = new XmlDocument();
+                var doc = new XmlDocument();
                 doc.Load(xmlFileStream);
 
                 context.Response.ContentType = "text/xml";
@@ -53,10 +53,10 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
         {
             if (url.HostNameType == UriHostNameType.Dns)
             {
-                string host = url.Host;
+                var host = url.Host;
 
                 var nodes = host.Split('.');
-                int startNode = 0;
+                var startNode = 0;
                 if (nodes[0] == "www") startNode = 1;
 
                 return string.Format("{0}", nodes[startNode]);
