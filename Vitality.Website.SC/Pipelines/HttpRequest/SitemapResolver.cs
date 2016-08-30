@@ -1,7 +1,9 @@
 ﻿using System;
 using System.IO;
+using System.Linq;
 using System.Web;
 using System.Xml;
+using System.Xml.Linq;
 using Sitecore.Pipelines.HttpRequest;
 
 namespace Vitality.Website.SC.Pipelines.HttpRequest
@@ -12,32 +14,39 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
 
         public override void Process(HttpRequestArgs args)
         {
-
-            var requestedSite = HttpContext.Current.Request.Url.Host.ToLower();
-
-            var subdomain = GetSubDomain(HttpContext.Current.Request.Url);
-
-            var xmlFile = string.Format("{0}{1}//{2}{3}", HttpRuntime.AppDomainAppPath, SiteMapLocation, subdomain + "_", HttpContext.Current.Request.Url.Segments[1]);
-
-            FileStream xmlFileStream = new FileStream(xmlFile, FileMode.Open, FileAccess.Read, FileShare.Read);
-
-            if (HttpContext.Current.Request.CurrentExecutionFilePathExtension == ".xml")
+            var context = HttpContext.Current;
+            
+            var subdomain = GetSubDomain(context.Request.Url);
+            
+            if (context.Request.CurrentExecutionFilePathExtension == ".xml")
             {
+                context.Response.ClearContent();
+
+                FileStream xmlFileStream = new FileStream(ReformatXmlFile(args, subdomain), FileMode.Open, FileAccess.Read, FileShare.Read);
+                
+                //xml.
                 XmlDocument doc = new XmlDocument();
                 doc.Load(xmlFileStream);
 
-                HttpContext.Current.Response.ContentType = "text/xml";
-                HttpContext.Current.Response.ContentEncoding = System.Text.Encoding.UTF8;
-                HttpContext.Current.Response.Expires = -1;
-                HttpContext.Current.Response.Cache.SetAllowResponseInBrowserHistory(true);
+                context.Response.ContentType = "text/xml";
+                context.Response.ContentEncoding = System.Text.Encoding.UTF8;
+                context.Response.Expires = -1;
+                context.Response.Cache.SetAllowResponseInBrowserHistory(true);
+                
+                doc.Save(context.Response.Output);
 
-                doc.Save(HttpContext.Current.Response.Output);
+                context.Response.End();
             }
-            else if (HttpContext.Current.Request.CurrentExecutionFilePathExtension == ".gz")
+            else if (context.Request.CurrentExecutionFilePathExtension == ".gz")
             {
-                HttpContext.Current.Response.ContentType = "application/octet-stream";
-                HttpContext.Current.Response.WriteFile(xmlFile);
+                context.Response.ContentType = "application/octet-stream";
+                context.Response.WriteFile(ReformatXmlFile(args, subdomain));
             }
+        }
+
+        private static string ReformatXmlFile(HttpRequestArgs args, string subdomain)
+        {
+            return string.Format("{0}{1}//{2}{3}", HttpRuntime.AppDomainAppPath, SiteMapLocation, subdomain + "_", args.Context.Request.Url.Segments[1]);
         }
 
         private static string GetSubDomain(Uri url)
