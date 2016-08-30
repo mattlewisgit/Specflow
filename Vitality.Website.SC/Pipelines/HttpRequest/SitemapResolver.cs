@@ -18,7 +18,7 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
             
             var subdomain = GetSubDomain(context.Request.Url);
             
-            if (context.Request.CurrentExecutionFilePathExtension == ".xml")
+            if (string.Equals(context.Request.CurrentExecutionFilePathExtension,".xml", StringComparison.InvariantCultureIgnoreCase))
             {
                 context.Response.ClearContent();
 
@@ -37,7 +37,7 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
 
                 context.Response.End();
             }
-            else if (context.Request.CurrentExecutionFilePathExtension == ".gz")
+            else if (string.Equals(context.Request.CurrentExecutionFilePathExtension, ".gz",StringComparison.InvariantCultureIgnoreCase))
             {
                 context.Response.ContentType = "application/octet-stream";
                 context.Response.WriteFile(ReformatXmlFile(args, subdomain));
@@ -57,7 +57,10 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
 
                 var nodes = host.Split('.');
                 var startNode = 0;
-                if (nodes[0] == "www") startNode = 1;
+                if (string.Equals(nodes[0], "www" , StringComparison.InvariantCultureIgnoreCase))
+                {
+                    startNode = 1;
+                }
 
                 return string.Format("{0}", nodes[startNode]);
             }
