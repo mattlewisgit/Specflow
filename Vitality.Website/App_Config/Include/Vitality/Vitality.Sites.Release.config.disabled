@@ -2,13 +2,21 @@
   <sitecore>
     <sites>
       <site name="presales"
-            set:hostName="#{Vitality.Website.HostName}"
+            set:hostName="#{Vitality.Website.PresalesHostName}"
             set:cacheHtml="true"
             set:database="#{Vitality.Website.Database}"
             set:scheme="#{Vitality.Website.Protocol}"
             set:htmlCacheSize="100MB"
             set:cacheRenderingParameters="true"
             set:renderingParametersCacheSize="20MB" />
+      <site name="advisers"
+           set:hostName="#{Vitality.Website.AdvisersHostName}"
+           set:cacheHtml="true"
+           set:database="#{Vitality.Website.Database}"
+           set:scheme="#{Vitality.Website.Protocol}"
+           set:htmlCacheSize="100MB"
+           set:cacheRenderingParameters="true"
+           set:renderingParametersCacheSize="20MB" />
     </sites>
     <databases>
       <database id="web">

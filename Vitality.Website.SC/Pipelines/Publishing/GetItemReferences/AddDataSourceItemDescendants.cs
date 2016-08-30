@@ -15,7 +15,7 @@ namespace Vitality.Website.SC.Pipelines.Publishing.GetItemReferences
     public class AddDataSourceItemDescendants : GetItemReferencesProcessor
     {
         private readonly List<string> pathsToIgnore = new List<string>();
-        private readonly IEnumerable<SiteInfo> _siteInfoList= SiteInfoHelper.GetSiteInfoList();
+        private readonly IEnumerable<SiteInfo> _siteInfoList= Sitecore.Configuration.Factory.GetSiteInfoList().RemoveSitecoreShellSiteInfos();
         public void AddPath(string path)
         {
             pathsToIgnore.Add(path);
