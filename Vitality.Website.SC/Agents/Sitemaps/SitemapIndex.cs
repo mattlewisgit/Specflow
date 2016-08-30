@@ -10,7 +10,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
         private readonly string baseUrl;
         private readonly List<Sitemap> sitemaps;
         private readonly SitemapIndexModel sitemapIndexFile;
-        private const string IndexFile = "sitemapindex.xml";
+        private string IndexFile = "sitemapindex.xml";
 
         public SitemapIndex(string baseUrl, IEnumerable<Item> sitemaps)
         {
@@ -19,11 +19,11 @@ namespace Vitality.Website.SC.Agents.Sitemaps
             sitemapIndexFile = SitemapHelper<SitemapIndexModel>.ReadSitemapFromDisk(IndexFile) ?? new SitemapIndexModel();
         }
 
-        public void Build()
+        public void Build(string website)
         {
             foreach (var sitemap in sitemaps)
             {
-                var presales = Sitecore.Configuration.Factory.GetSite("presales");
+                var presales = Sitecore.Configuration.Factory.GetSite(website);
 
                 var domainUrl = string.Format("{0}://{1}/", presales.SiteInfo.Scheme, presales.SiteInfo.HostName);
                 var sitemapUrl = string.Format("{0}{1}", domainUrl, sitemap.Name + ".xml.gz");
@@ -45,16 +45,19 @@ namespace Vitality.Website.SC.Agents.Sitemaps
                     }
                     sitemapIndexFile.Sitemaps.Add(sitemapIndexes);
 
-                    sitemap.BuildSitemap();
+                    sitemap.BuildSitemap(website);
                 }
             }
+
+            //Update the file name to reflect the current site
+            IndexFile = string.Format("{0}_{1}", website, IndexFile);
 
             SitemapHelper<SitemapIndexModel>.SaveSitemapToDisk(sitemapIndexFile, IndexFile, false);
         }
 
-        public void AddToRelativeSitemap(Item item)
+        public void AddToRelativeSitemap(Item item, string subdomain)
         {
-            var sitemapItem = SitemapSettings.From(item, baseUrl);
+            var sitemapItem = SitemapSettings.From(item, baseUrl, subdomain);
             if (sitemapItem.HideFromSitemap)
             {
                 return;

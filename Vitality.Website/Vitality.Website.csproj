@@ -680,6 +680,7 @@
     <Folder Include="Areas\Presales\Controllers\" />
     <Folder Include="Areas\Presales\Models\" />
     <Folder Include="img\examples\" />
+    <Folder Include="sitemaps\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vitality.Website.SC\Vitality.Website.SC.csproj">
