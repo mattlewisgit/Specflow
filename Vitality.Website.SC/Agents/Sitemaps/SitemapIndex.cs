@@ -50,7 +50,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
             }
 
             //Update the file name to reflect the current site
-            IndexFile = $"{website}_{IndexFile}";
+            IndexFile = string.Format("{0}_{1}", website, IndexFile);
 
             SitemapHelper<SitemapIndexModel>.SaveSitemapToDisk(sitemapIndexFile, IndexFile, false);
         }
