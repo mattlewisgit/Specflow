@@ -194,6 +194,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Field types\List Types\SiteDroplist.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Settings.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
