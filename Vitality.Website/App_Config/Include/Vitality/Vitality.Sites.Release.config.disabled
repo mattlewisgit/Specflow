@@ -2,7 +2,7 @@
   <sitecore>
     <sites>
       <site name="presales"
-            set:hostName="#{Vitality.Website.HostName}"
+            set:hostName="#{Vitality.Website.PresalesHostName}"
             set:cacheHtml="true"
             set:database="#{Vitality.Website.Database}"
             set:scheme="#{Vitality.Website.Protocol}"
