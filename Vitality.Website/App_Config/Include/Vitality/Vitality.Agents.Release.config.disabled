@@ -1,7 +1,9 @@
 ﻿<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:set="http://www.sitecore.net/xmlconfig/set/">
     <sitecore>
         <scheduling>
-            <agent type="Vitality.Website.SC.Agents.Sitemaps.SitemapGenerator, Vitality.Website.SC" set:interval="#{Vitality.Website.SitemapSchedule}"/>            
+            <agent type="Vitality.Website.SC.Agents.Sitemaps.SitemapGenerator, Vitality.Website.SC" set:interval="#{Vitality.Website.SitemapSchedule}"/>
+            <agent type="Sitecore.Tasks.CleanupHistory" set:interval="#{Vitality.Website.CleanupHistory}"/>
+            <agent type="Sitecore.Tasks.CleanupPublishQueue, Sitecore.Kernel" set:interval="#{Vitality.Website.CleanupPublishQueue}"/>
         </scheduling>
     </sitecore>
 </configuration>
