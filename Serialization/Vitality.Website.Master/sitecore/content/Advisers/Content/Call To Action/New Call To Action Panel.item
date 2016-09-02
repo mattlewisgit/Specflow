@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {06F805D6-2ACB-497D-AF41-74A54C02F370}
+database: master
+path: /sitecore/content/Advisers/Content/Call To Action/New Call To Action Panel
+parent: {05680529-31A5-4D68-A944-C2DFC5306B33}
+name: New Call To Action Panel
+master: {00000000-0000-0000-0000-000000000000}
+template: {1B6BD083-B9CA-44F6-8B2D-F742FCAFF3E4}
+templatekey: Call To Action Panel
+
+----version----
+language: en
+version: 1
+revision: 685948ad-84ec-4cb8-aaa1-21234ab61f57
+
+----field----
+field: {448B79B6-D57E-416F-AF3E-CF4202E2F0ED}
+name: Headline
+key: headline
+content-length: 24
+
+New Call To Action Panel
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160822T120026Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+685948ad-84ec-4cb8-aaa1-21234ab61f57
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160822T120026Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

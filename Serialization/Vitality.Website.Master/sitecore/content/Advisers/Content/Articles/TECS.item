@@ -1,47 +1,54 @@
 ----item----
 version: 1
-id: {C49B0E65-AE94-42EC-B091-3FD4D77B89E8}
+id: {F9ED1AD4-B4B5-4B2F-9201-8CB04F08419C}
 database: master
-path: /sitecore/content/Presales/home/Test Version Issue
-parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
-name: Test Version Issue
+path: /sitecore/content/Advisers/Content/Articles/TECS
+parent: {31A2E4EC-131F-4B92-92DF-8908098308C7}
+name: TECS
 master: {00000000-0000-0000-0000-000000000000}
-template: {EAE876EB-8043-4F1B-95C4-C015EAE09215}
-templatekey: Product Overview Page
+template: {C4FA053C-ABF0-416E-A290-40589EB293DE}
+templatekey: Article Index
 
-----field----
-field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
-name: __Workflow
-key: __workflow
-content-length: 38
-
-{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: 885ebda7-387a-4206-87b0-737747f961d7
+revision: 2522ee9b-e2fe-453a-8139-bccfbe2a4b89
 
+----field----
+field: {6AA53A9E-BAA7-4B6D-926B-B60DB2385697}
+name: Headline
+key: headline
+content-length: 11
+
+xzzxcxzcxzc
+----field----
+field: {660A8D85-AF65-4A44-B7A6-DD7B504AFCE3}
+name: OpeningParagraph
+key: openingparagraph
+content-length: 9
+
+z\x\zxzx\
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160901T111255Z
+20160826T092457Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-885ebda7-387a-4206-87b0-737747f961d7
+2522ee9b-e2fe-453a-8139-bccfbe2a4b89
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160901T111312Z
+20160826T092528Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -49,13 +56,6 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
-----field----
-field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
-name: __Workflow state
-key: __workflow state
-content-length: 38
-
-{BBC08507-1651-4F93-804C-AF45D7A30D0C}
 ----field----
 field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
 name: __Lock
