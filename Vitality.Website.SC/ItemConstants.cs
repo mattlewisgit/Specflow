@@ -30,6 +30,7 @@ namespace Vitality.Website.SC
             {
                 public static class Home
                 {
+                    public static string RelativePath = "/home";
                     public static string Path
                     {
                         get { return Context.Site.StartPath; }
