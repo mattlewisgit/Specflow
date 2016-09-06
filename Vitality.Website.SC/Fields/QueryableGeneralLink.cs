@@ -2,12 +2,12 @@
 using Sitecore.Diagnostics;
 using System;
 using Sitecore.Shell.Applications.ContentEditor;
+using Vitality.Website.SC.Utilities;
 
 namespace Vitality.Website.SC.Fields
 {
     public class QueryableGeneralLink : Link
     {
-        private const string QueryStartText = "query:";
         private string _itemId;
 
         public string ItemId
@@ -27,23 +27,22 @@ namespace Vitality.Website.SC.Fields
             {
                 var dataSource = StringUtil
                     .ExtractParameter("DataSource", value).Trim();
-                if (dataSource.StartsWith(QueryStartText, StringComparison.InvariantCultureIgnoreCase))
+
+                if (dataSource.StartsWith(QueryHelper.QueryStartText, StringComparison.InvariantCultureIgnoreCase))
                 {
                     base.Source = value.Replace(dataSource, ResolveQuery(dataSource));
                 }
                 else
                 {
-                    base.Source = value.StartsWith(QueryStartText) ? ResolveQuery(value) : value;
+                    base.Source = value.StartsWith(QueryHelper.QueryStartText) ? ResolveQuery(value) : value;
                 }
             }
         }
 
         public string ResolveQuery(string query)
         {
-            query = query.Substring(QueryStartText.Length);
             var contextItem = Sitecore.Context.ContentDatabase.Items[ItemId];
-            var queryItem = contextItem.Axes.SelectSingleItem(query);
-            return queryItem != null ? queryItem.Paths.FullPath : string.Empty;
+            return query.ResolveQuery(contextItem.Axes);
         }
     }
 }
