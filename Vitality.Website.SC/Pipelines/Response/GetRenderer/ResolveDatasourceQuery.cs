@@ -8,9 +8,10 @@ namespace Vitality.Website.SC.Pipelines.Response.GetRenderer
     {
         public override void Process(GetRendererArgs args)
         {
-            if (args.Rendering.DataSource.StartsWith(QueryHelper.QueryStartText, StringComparison.InvariantCultureIgnoreCase))
+            var dataSource = args.Rendering.DataSource;
+            if (dataSource.StartsWith(QueryHelper.QueryStartText, StringComparison.InvariantCultureIgnoreCase))
             {
-                args.Rendering.DataSource = args.Rendering.DataSource.ResolveQuery(args.PageContext.Item.Axes);
+                args.Rendering.DataSource = dataSource.ResolveQuery(args.PageContext.Item.Axes);
             }
         }
     }
