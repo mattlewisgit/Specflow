@@ -93,6 +93,9 @@
     <Compile Include="Agents\Sitemaps\Sitemap.cs" />
     <Compile Include="Agents\Sitemaps\SitemapGenerator.cs" />
     <Compile Include="Agents\Sitemaps\SitemapIndex.cs" />
+    <Compile Include="ContentSearch\Analyzers\LowerCaseLetterAnalyzer.cs" />
+    <Compile Include="ContentSearch\ComputedFields\AncestorField.cs" />
+    <Compile Include="ContentSearch\ComputedFields\MediaItemReferenceUrlLink.cs" />
     <Compile Include="Events\ItemEventsHandler.cs" />
     <Compile Include="Agents\Sitemaps\InitializeSitemap.cs" />
     <Compile Include="ItemConstants.cs" />

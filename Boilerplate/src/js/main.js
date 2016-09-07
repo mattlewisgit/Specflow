@@ -1,3 +1,5 @@
+require("./angular/healthAdvisersLiteratureApp");
+
 var AccordionModule = require("./modules/accordionModule");
 var AnimationDelayModule = require("./modules/animationDelayModule");
 var Breakpoints = require("./modules/breakpointsModule");
@@ -65,5 +67,3 @@ $(document).ready(function () {
     "use strict";
     _initCustom(_initVendor());
 });
-
-require("./angular/healthAdvisersLiteratureApp");

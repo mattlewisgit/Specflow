@@ -27,8 +27,6 @@ namespace Vitality.Website.App_Start
     {
         private static Container container;
 
-        public static Container Container { get { return container; } }
-
         public void Process(PipelineArgs args)
         {
             container = new Container();
