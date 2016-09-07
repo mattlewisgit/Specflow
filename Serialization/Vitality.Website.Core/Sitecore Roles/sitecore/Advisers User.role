@@ -1,0 +1,6 @@
+----role----
+name: sitecore\Advisers User
+
+----role-in-role----
+rolename: sitecore\Vitality Users
+

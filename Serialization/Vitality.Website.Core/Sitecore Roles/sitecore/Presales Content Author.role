@@ -1,3 +1,6 @@
 ----role----
 name: sitecore\Presales Content Author
 
+----role-in-role----
+rolename: sitecore\Advisers User
+

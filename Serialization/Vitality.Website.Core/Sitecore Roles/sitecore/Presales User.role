@@ -10,3 +10,6 @@ rolename: sitecore\Presales Content Author
 ----role-in-role----
 rolename: sitecore\Presales Content Manager
 
+----role-in-role----
+rolename: sitecore\Vitality Users
+
