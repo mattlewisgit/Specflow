@@ -4,8 +4,7 @@ var _cookieSeenKey = "hasSeenCookieMessage";
 var _areCookiesDisabled = false;
 
 var _expiry = {
-    expires: 365,
-    secure: true
+    expires: 365
 };
 
 function init() {
