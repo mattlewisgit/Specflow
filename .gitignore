@@ -204,7 +204,7 @@ FakesAssemblies/
 
 TestResults/
 Vitality.Website/sitecore/
-Vitality.Website/sitecore modules/
+Vitality.Website/sitecore modules/Web/
 Vitality.Website/sitecore_files/
 Vitality.Website/temp/
 
@@ -220,7 +220,13 @@ Vitality.Website/App_Config/**/*.txt
 Vitality.Website/App_Config/Prefetch
 Vitality.Website/App_Config/Security
 !Vitality.Website/App_Config/ConnectionStrings.config
-Vitality.Website/App_Data/
+Vitality.Website/App_Data/diagnostics/
+Vitality.Website/App_Data/indexes/
+Vitality.Website/App_Data/logs/
+Vitality.Website/App_Data/MediaCache/
+Vitality.Website/App_Data/packages/
+Vitality.Website/App_Data/serialization/
+Vitality.Website/App_Data/viewstate/
 Vitality.Website/Areas/Social/
 Vitality.Website/Artifacts/
 Vitality.Website/Default.aspx

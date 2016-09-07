@@ -5,56 +5,58 @@
     <div class="summary-left grid-col-6-12">
         @if (this.CanShowLeadIn())
         {
-        <h6>@Editable(Model, m => m.LeftContentLeadIn)</h6>
+            <p class="summary-left--lead-in">@Editable(Model, m => m.LeftContentLeadIn)</p>
         }
-        <h1>@Editable(Model, m => m.LeftContentHeadline)</h1>
+        <h2>@Editable(Model, m => m.LeftContentHeadline)</h2>
 
         <div>@Editable(Model, m => m.LeftContentBody)</div>
     </div>
     @using (BeginEditFrame(Model, "Edit background image", m => m.BackgroundImage))
     {
-    <div class="summary-right feature-block-gradient__image @this.BackgroundPosition() text-light grid-col-6-12" style="@this.BackgroundImage()">
-        <div class="title">
-            <h4>@Editable(Model, m => m.RightContentHeadline)</h4>
-        </div>
+        <div class="summary-right feature-block-gradient__image @this.BackgroundPosition() text-light grid-col-6-12" style="@this.BackgroundImage()">
+            <div class="title">
+                <p>@Editable(Model, m => m.RightContentHeadline)</p>
+            </div>
 
-        <div class="content">
-            @if (this.CanShowRightContentOpeningParagraph())
-            {
-                <p>@Editable(Model, m => m.RightContentOpeningParagraph)</p>
-            }
+            <div class="content">
+                @if (this.CanShowRightContentOpeningParagraph())
+                {
+                    <div class="summary-right--content__body">
+                        @Editable(Model, m => m.RightContentOpeningParagraph)
+                    </div>
+                }
 
-            @foreach (var summaryListItemsGroup in this.GroupSummaryListItems())
-            {
-                <ul class="iconlist iconlist--check @this.SummaryListClass(summaryListItemsGroup.Key)">
-                    @foreach (var summaryListItem in summaryListItemsGroup)
-                    {
-                        using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", summaryListItem.Path))
+                @foreach (var summaryListItemsGroup in this.GroupSummaryListItems())
+                {
+                    <ul class="iconlist iconlist--check @this.SummaryListClass(summaryListItemsGroup.Key)">
+                        @foreach (var summaryListItem in summaryListItemsGroup)
                         {
-                            <li class="iconlist__item">
-                                @if (summaryListItem.IsShortListItem)
-                                {
-                                    @Editable(summaryListItem, m => m.Title)
-                                }
-                                else
-                                {
-                                    <h6>@Editable(summaryListItem, m => m.Title)</h6>
+                            using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", summaryListItem.Path))
+                            {
+                                <li class="iconlist__item">
+                                    @if (summaryListItem.IsShortListItem)
+                                    {
+                                        @Editable(summaryListItem, m => m.Title)
+                                    }
+                                    else
+                                    {
+                                        <h6>@Editable(summaryListItem, m => m.Title)</h6>
 
-                                    <p>@Editable(summaryListItem, m => m.Body)</p>
-                                }
-                            </li>
+                                        <p>@Editable(summaryListItem, m => m.Body)</p>
+                                    }
+                                </li>
+                            }
                         }
-                    }
-                </ul>
-            }
+                    </ul>
+                }
 
-            @if (this.CanShowCallToAction())
-            {
-                <div class="cta">
-                    @Editable(Model, m => m.CallToAction, new { @class = "box-button box-button--light box-button--rounded" })
-                </div>
-            }
+                @if (this.CanShowCallToAction())
+                {
+                    <div class="cta">
+                        @Editable(Model, m => m.CallToAction, new { @class = "box-button box-button--light box-button--rounded" })
+                    </div>
+                }
+            </div>
         </div>
-    </div>
     }
 </div>

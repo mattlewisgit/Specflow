@@ -54,14 +54,14 @@
 
         // Styled select boxes.
         &__input--select {
-            // If the browser supports css pointer events, restyle the.
+            // If the browser supports CSS pointer events, restyle it.
             .csspointerevents & {
                 select {
                     position: relative;
                     padding-right: 32px;
-                    
-                    //Hide default down arrow.
-                    // autoprefixer will not add this and we still need it.
+
+                    // Hide default down arrow.
+                    // Autoprefixer will not add this and we still need it.
                     -webkit-appearance: none;
                     appearance: none;
                     -moz-appearance: none;
@@ -74,7 +74,7 @@
                     display: none;
                 }
 
-                &:before {
+                &::before {
                     @include retina-sprite($sprite-arrow-down-group);
                     content: "";
                     display: block;
@@ -108,7 +108,7 @@
                     cursor: pointer;
                 }
 
-                ~ label:before {
+                ~ label::before {
                     @include rounding;
                     content: "";
                     display: block;
@@ -125,10 +125,10 @@
                     border: 1px solid $black;
                 }
 
-                &:checked ~ label:after {
+                &:checked ~ label::after {
                     // Tick.
+                    @extend .font-weight--semi-bold;
                     content: "\2713";
-                    font-weight: 600;
                     color: $primary-color;
                     top: -9px;
                     left: 3px;
@@ -141,7 +141,7 @@
                     text-shadow: - $shadow-spread - $shadow-spread 0 $white, $shadow-spread - $shadow-spread 0 $white, - $shadow-spread $shadow-spread 0 $white, $shadow-spread $shadow-spread 0 $white;
                 }
 
-                &:checked ~ label:before {
+                &:checked ~ label::before {
                     border-color: $primary-color;
                 }
             }
@@ -149,7 +149,7 @@
 
         // Styled radio buttons specific.
         &__input--checkbox input[type="radio"] {
-            ~ label:before {
+            ~ label::before {
                 left: 0;
                 top: 5px;
                 border-radius: 50%;
@@ -162,9 +162,9 @@
         }
 
         &__error {
-            margin-top: 4px;
-            font-weight: 700;
+            @extend .font-weight--bold;
             color: $error-color;
+            margin-top: 4px;
 
             p {
                 margin-top: 0;

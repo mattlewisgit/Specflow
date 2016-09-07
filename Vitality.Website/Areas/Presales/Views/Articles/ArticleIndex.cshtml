@@ -1,0 +1,43 @@
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Articles.ArticleIndex>
+
+<div class="article-index pinch">
+    <h2>@Editable(x => x.Headline)</h2>
+
+    <p class="spotlight__intro">
+        @Editable(x => x.OpeningParagraph)
+    </p>
+
+    @foreach (var articleItems in Model.ArticleItems.SplitBy(2))
+    {
+        <div class="grid-no-gutters">
+            @foreach (var articleItem in articleItems)
+            {
+                using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", articleItem.Path))
+                {
+                    <div class="grid-col-@this.NumberOfColumns(articleItems)-12 article-index--container">
+                        @using (BeginEditFrame(articleItem, "Edit Background image", item => item.Image))
+                        {
+                            <div class="grid-no-gutters article-snippet">
+                                <div class="@this.ColumnSplitOne(articleItems) article-snippet--image @this.ImageRelativePosition(articleItem)" style="@this.BackgroundImage(articleItem)">
+                                    <div class="tablet-less-than">@Editable(articleItem, x => x.Image, new { mw = 720 })</div>
+                                </div>
+                                <div class="@this.ColumnSplitTwo(articleItems) article-snippet--content">
+                                    @using (BeginRenderLink(articleItem, item => item.Link, isEditable: true))
+                                    {
+                                        <h3>
+                                            @Editable(articleItem, x => x.Title)
+                                        </h3>
+                                        <p class="h4">
+                                            @Editable(articleItem, x => x.LeadIn)
+                                        </p>
+                                    }
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            }
+        </div>
+    }
+</div>

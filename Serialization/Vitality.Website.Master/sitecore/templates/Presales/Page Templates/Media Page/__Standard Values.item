@@ -16,6 +16,7 @@ key: __masters
 content-length: 38
 
 {487B20F5-0959-4419-B030-D8E8C21120ED}
+<<<<<<< HEAD
 ----field----
 field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
 name: __Renderings
@@ -34,6 +35,12 @@ name: __Final Renderings
 key: __final renderings
 content-length: 0
 
+=======
+----version----
+language: en
+version: 1
+revision: 3d29d63f-fb90-4dab-88ba-209a0e7d87c2
+>>>>>>> develop
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -62,14 +69,22 @@ name: __Revision
 key: __revision
 content-length: 36
 
+<<<<<<< HEAD
 3fd943ae-ae1b-47b8-a735-7936f8638bb1
+=======
+3d29d63f-fb90-4dab-88ba-209a0e7d87c2
+>>>>>>> develop
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
+<<<<<<< HEAD
 20160630T152239Z
+=======
+20160802T085332Z
+>>>>>>> develop
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

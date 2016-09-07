@@ -45,7 +45,7 @@
 
         public static string ButtonStyle(this GlassView<BenefitLeader> view)
         {
-            if (BackgroundColour(view).EndsWith("light"))
+            if (BackgroundColour(view).EndsWith("light") || BackgroundColour(view).EndsWith("white"))
             {
                 return "box-button box-button--rounded";
             }
@@ -54,7 +54,7 @@
 
         public static string BackgroundImage(this GlassView<BenefitLeader> view)
         {
-            return string.Format("background-image: url('{0}')", view.Model.BackgroundImage.Src);
+            return string.Format("background-image: url('{0}')", view.Model.BackgroundImage.ProtectedSrc(width:1200));
         }
 
         private static BenefitLeaderRendering Parameters(this GlassView<BenefitLeader> view)

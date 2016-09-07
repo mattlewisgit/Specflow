@@ -1,19 +1,18 @@
 .cta {
-    text-align: center;
     color: $heading-color;
+    text-align: center;
 
     .grid-module {
         @include max-text-width;
     }
 
     &__header {
-        font-weight: 500;
+        @extend .h3;
 
         img {
             display: inline-block;
             max-height: 3.2rem;
             vertical-align: top;
-            width: 10%;
         }
     }
 
@@ -27,7 +26,7 @@
             justify-content: center;
 
             // Add the middle border line.
-            &:after {
+            &::after {
                 content: "";
                 width: 1px;
                 height: 100%;
@@ -43,7 +42,7 @@
 
         // Remove the middle border line for the last column.
         [class*="grid-col-"]:last-of-type {
-            &:after {
+            &::after {
                 content: none;
             }
         }

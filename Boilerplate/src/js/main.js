@@ -1,9 +1,9 @@
-require("./angular/healthAdvisersLiteratureApp");
-
 var AccordionModule = require("./modules/accordionModule");
 var AnimationDelayModule = require("./modules/animationDelayModule");
 var Breakpoints = require("./modules/breakpointsModule");
-var FilerModule = require("./modules/filterModule");
+var CookieMessageModule = require("./modules/cookieMessageModule");
+var FilterModule = require("./modules/filterModule");
+var HomeHeroModule = require("./modules/homeHeroModule");
 var MatchHeightsModule = require("./modules/matchHeightsModule");
 var MatchWidthsModule = require("./modules/matchWidthsModule");
 var MenuModule = require("./modules/menuModule");
@@ -45,10 +45,12 @@ function _initCustom(wow) {
     SocialShareModule.init();
 
     AccordionModule.init();
+    CookieMessageModule.init();
+    HomeHeroModule.init();
     TabsModule.init();
 
     // Check for filterable content with the animation instance.
-    FilerModule.init(wow);
+    FilterModule.init(wow);
 
     // Match sizes.
     MatchHeightsModule.init();
@@ -63,3 +65,5 @@ $(document).ready(function () {
     "use strict";
     _initCustom(_initVendor());
 });
+
+require("./angular/healthAdvisersLiteratureApp");

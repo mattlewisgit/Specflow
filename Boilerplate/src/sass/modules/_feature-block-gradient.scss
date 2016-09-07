@@ -1,10 +1,9 @@
-//Variable to alter graident spread -
+// Variable to alter graident spread.
 $gradient-solid-to: 50%;
 $gradient-transparent-by: 100%;
 
-//Left side content by default -
+// Left side content by default.
 .feature-block-gradient {
-    @extend .burst;
     position: relative;
 
     &__image {
@@ -20,7 +19,7 @@ $gradient-transparent-by: 100%;
         width: 100%;
         height: 100%;
         position: relative;
-        //Remove top margin of first child -
+
         > :first-child {
             margin-top: 0;
         }
@@ -29,8 +28,9 @@ $gradient-transparent-by: 100%;
     &__content-container {
         padding: $pad;
     }
-    //color block -
-    &:before {
+
+    // Colour block.
+    &::before {
         content: "";
         width: 100%;
         height: 100%;
@@ -38,7 +38,8 @@ $gradient-transparent-by: 100%;
         top: 0;
         left: 0;
     }
-    //Right side content with --right modifier -
+
+    // Right side content.
     &--right {
         @extend .feature-block-gradient;
 
@@ -46,9 +47,10 @@ $gradient-transparent-by: 100%;
             padding: $pad;
         }
     }
-    //Color modifiers -
+
+    // Colour modifiers.
     &--primary {
-        &:before {
+        &::before {
             background-color: $primary-color;
         }
 
@@ -58,7 +60,7 @@ $gradient-transparent-by: 100%;
     }
 
     &--secondary {
-        &:before {
+        &::before {
             background-color: $secondary-color;
         }
 
@@ -69,7 +71,7 @@ $gradient-transparent-by: 100%;
 
     &--tertiary {
 
-        &:before {
+        &::before {
             background-color: $tertiary-color;
         }
 
@@ -79,7 +81,7 @@ $gradient-transparent-by: 100%;
     }
 
     &--highlight {
-        &:before {
+        &::before {
             background-color: $highlight-color;
         }
 
@@ -89,7 +91,7 @@ $gradient-transparent-by: 100%;
     }
 
     &--light {
-        &:before {
+        &::before {
             background-color: $primary-background-color;
         }
 
@@ -99,12 +101,22 @@ $gradient-transparent-by: 100%;
     }
 
     &--dark {
-        &:before {
+        &::before {
             background-color: $secondary-background-color;
         }
 
         .feature-block-gradient__content {
             @extend .text-light;
+        }
+    }
+
+    &--white {
+        &::before {
+            background-color: $white;
+        }
+
+        .feature-block-gradient__content {
+            @extend .text-dark;
         }
     }
 }
@@ -142,9 +154,10 @@ $gradient-transparent-by: 100%;
             @include max-text-width;
             z-index: 2;
         }
-        //Gradient -
-        &:before {
-            //Fallback for no cssgradients support -
+
+        // Gradient.
+        &::before {
+            // Fallback for no cssgradients support.
             width: 50%;
             z-index: 1;
 
@@ -154,24 +167,25 @@ $gradient-transparent-by: 100%;
                 background-image: linear-gradient(to right, currentColor 50%, transparent 100%);
             }
         }
-        // --right modifier -
-        &--right {
 
-            &:before {
-                //Fallback for no cssgradients support -
+        // Right modifier.
+        &--right {
+            &::before {
+                // Fallback for no cssgradients support.
                 left: auto;
                 right: 0;
             }
 
             .feature-block-gradient__content-container {
-                padding: $pad--large $pad--large $pad--large calc(50% + #{$pad--large});
+                padding: $pad--large;
+                padding-left: calc(50% + #{$pad--large});
             }
         }
-        //Color modifiers -
-        &--primary {
 
-            &:before {
-                //Fallback for no cssgradients support -
+        // Colour modifiers.
+        &--primary {
+            &::before {
+                // Fallback for no cssgradients support.
                 background-color: $primary-color;
 
                 .cssgradients & {
@@ -180,15 +194,14 @@ $gradient-transparent-by: 100%;
                 }
             }
 
-            &.feature-block-gradient--right:before {
+            &.feature-block-gradient--right::before {
                 background-image: linear-gradient(to left, $primary-color $gradient-solid-to, transparent $gradient-transparent-by);
             }
         }
 
         &--secondary {
-
-            &:before {
-                //Fallback for no cssgradients support -
+            &::before {
+                // Fallback for no cssgradients support.
                 background-color: $secondary-color;
 
                 .cssgradients & {
@@ -197,15 +210,14 @@ $gradient-transparent-by: 100%;
                 }
             }
 
-            &.feature-block-gradient--right:before {
+            &.feature-block-gradient--right::before {
                 background-image: linear-gradient(to left, $secondary-color $gradient-solid-to, transparent $gradient-transparent-by);
             }
         }
 
         &--tertiary {
-
-            &:before {
-                //Fallback for no cssgradients support -
+            &::before {
+                // Fallback for no cssgradients support.
                 background-color: $tertiary-color;
 
                 .cssgradients & {
@@ -214,15 +226,14 @@ $gradient-transparent-by: 100%;
                 }
             }
 
-            &.feature-block-gradient--right:before {
+            &.feature-block-gradient--right::before {
                 background-image: linear-gradient(to left, $tertiary-color $gradient-solid-to, transparent $gradient-transparent-by);
             }
         }
 
         &--highlight {
-
-            &:before {
-                //Fallback for no cssgradients support -
+            &::before {
+                // Fallback for no cssgradients support.
                 background-color: $highlight-color;
 
                 .cssgradients & {
@@ -231,15 +242,14 @@ $gradient-transparent-by: 100%;
                 }
             }
 
-            &.feature-block-gradient--right:before {
+            &.feature-block-gradient--right::before {
                 background-image: linear-gradient(to left, $highlight-color $gradient-solid-to, transparent $gradient-transparent-by);
             }
         }
 
         &--light {
-
-            &:before {
-                //Fallback for no cssgradients support -
+            &::before {
+                // Fallback for no cssgradients support.
                 background-color: $primary-background-color;
 
                 .cssgradients & {
@@ -248,15 +258,14 @@ $gradient-transparent-by: 100%;
                 }
             }
 
-            &.feature-block-gradient--right:before {
+            &.feature-block-gradient--right::before {
                 background-image: linear-gradient(to left, $primary-background-color $gradient-solid-to, transparent $gradient-transparent-by);
             }
         }
 
         &--dark {
-
-            &:before {
-                //Fallback for no cssgradients support -
+            &::before {
+                // Fallback for no cssgradients support.
                 background-color: $secondary-background-color;
 
                 .cssgradients & {
@@ -265,8 +274,24 @@ $gradient-transparent-by: 100%;
                 }
             }
 
-            &.feature-block-gradient--right:before {
+            &.feature-block-gradient--right::before {
                 background-image: linear-gradient(to left, $secondary-background-color $gradient-solid-to, transparent $gradient-transparent-by);
+            }
+        }
+
+        &--white {
+            &::before {
+                // Fallback for no cssgradients support.
+                background-color: $white;
+
+                .cssgradients & {
+                    background-color: transparent;
+                    background-image: linear-gradient(to right, $white $gradient-solid-to, transparent $gradient-transparent-by);
+                }
+            }
+
+            &.feature-block-gradient--right::before {
+                background-image: linear-gradient(to left, $white $gradient-solid-to, transparent $gradient-transparent-by);
             }
         }
     }

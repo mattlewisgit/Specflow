@@ -1,3 +1,4 @@
+// jscs:disable maximumNumberOfLines
 // jshint strict: false
 
 var browserify = require("browserify");
@@ -33,11 +34,11 @@ var tasks = {
         devel: "js:devel",
         lint: "js:lint",
         polyfill: "js:polyfill",
-        thirdParty: "js:third-party"
+        thirdParty: "js:third-party",
+        unitTests: "js:unit-tests"
     },
     razor: "razor",
     report: "report",
-    resize: "resize",
     sass: {
         build: "sass:build",
         critical: "sass:critical",
@@ -57,8 +58,8 @@ var tasks = {
 var paths = {
     base: ".",
     baseAssetName: "vitality-boilerplate-",
-    css: "css",
     critical: "critical-css.html",
+    css: "css",
     dist: "dist",
     favicon: {
         template: "src/favicon-template.html"
@@ -76,7 +77,7 @@ var paths = {
             src: "src/img/examples/**/*"
         },
         spritesheets: {
-            // TODO move to "img/spritesheets"
+            // Move to "img/spritesheets"
             dest: "css",
             pngSrc: "src/images/**/*.png",
             svgSrc: "src/images/**/*.svg"
@@ -88,14 +89,21 @@ var paths = {
         modernizr: "modernizr-custom.js",
         polyfill: "polyfill-custom.js",
         src: "src/js/**/*.js",
-        thirdPartyTemplate: "src/js-third-party.html"
+        thirdPartyTemplate: "src/js-third-party.html",
+        unitTests: "src/unit-tests/**/*.js"
     },
     sass: {
         generated: "src/sass/generated",
         src: [
             "src/sass/**/*.scss",
+            // Ignore list.
+            // Cannot control generated source.
             "!src/sass/generated/*.scss",
+            // Add this back when SASS lint bug is fixed!
+            "!src/sass/utils/_background-positions.scss",
+            // One-off, very dynamic function set.
             "!src/sass/utils/_svg-template.scss",
+            // Do not lint vendor source.
             "!src/sass/vendor/**/*.scss"
         ],
         srcAll: "src/sass/**/*.scss"
@@ -106,7 +114,6 @@ var paths = {
         dest: "dist/templates/",
         src: "src/templates/"
     }
-
 };
 
 var configs = {
@@ -115,20 +122,23 @@ var configs = {
     cssnano: require("./config/cssnano-config.json"),
     favicon: require("./config/favicon-config.json"),
     htmlMin: require("./config/htmlmin-config.json"),
-    imageResize: require("./config/image-resize-config.json"),
     "package": require("./package.json"),
     sizeReport: require("./config/sizereport-config.json"),
     svgSprite: require("./config/svgsprite-config.json")
 };
 
 var cdnReplacements = configs.cdnizer.files
-    .map(function (file) { return "./" + file.file; });
+    .map(function (file) {
+        return "./" + file.file;
+    });
 
 gulp.task(tasks.help, plugins.taskListing);
 
 gulp.task(tasks.js.lint, function () {
     return gulp
-        .src([paths.gulp, paths.js.src])
+        .src([paths.gulp, paths.js.src, paths.js.unitTests])
+        .pipe(plugins.changed(paths.temp))
+        .pipe(gulp.dest(paths.temp))
         .pipe(plugins.jscpd({
             "min-lines": 10,
             verbose: true
@@ -143,6 +153,8 @@ gulp.task(tasks.js.lint, function () {
 gulp.task(tasks.sass.lint, function () {
     return gulp
         .src(paths.sass.src)
+        .pipe(plugins.changed(paths.temp))
+        .pipe(gulp.dest(paths.temp))
         .pipe(plugins.sassLint())
         .pipe(plugins.sassLint.format())
         .pipe(plugins.sassLint.failOnError());
@@ -159,10 +171,9 @@ gulp.task(tasks.clean, function () {
     ]);
 });
 
-gulp.task(tasks.images, function() {
+gulp.task(tasks.images, function () {
     return gulp
         .src(paths.img.examples.src)
-        .pipe(plugins.changed(paths.img.examples.src))
         .pipe(plugins.imagemin())
         .pipe(gulp.dest(paths.img.examples.dest));
 });
@@ -189,17 +200,15 @@ gulp.task(tasks.sass.json, function () {
 gulp.task(tasks.sass.spritesheet.png, function () {
     var spriteData = gulp
         .src(paths.img.spritesheets.pngSrc)
-        .pipe(plugins.changed(paths.temp))
-        .pipe(gulp.dest(paths.temp))
         .pipe(plugins.spritesmith({
-            retinaSrcFilter: "tmp/**/*@2x.png",
-            imgName: "sprite-generated.png",
-            retinaImgName: "sprite-generated@2x.png",
             cssName: "_sprite.scss",
-            padding: 5,
             cssVarMap: function (sprite) {
                 sprite.name = "sprite_" + sprite.name;
-            }
+            },
+            imgName: "sprite-generated.png",
+            padding: 5,
+            retinaImgName: "sprite-generated@2x.png",
+            retinaSrcFilter: "src/images/**/*@2x.png"
         }));
 
     spriteData.img
@@ -207,13 +216,12 @@ gulp.task(tasks.sass.spritesheet.png, function () {
         .pipe(plugins.imagemin())
         .pipe(gulp.dest(paths.img.spritesheets.dest));
 
-    spriteData.css.pipe(gulp.dest(paths.sass.generated));
+    return spriteData.css.pipe(gulp.dest(paths.sass.generated));
 });
 
 gulp.task(tasks.sass.spritesheet.svg, function () {
     return gulp
         .src(paths.img.spritesheets.svgSrc)
-        .pipe(plugins.changed(paths.temp))
         .pipe(gulp.dest(paths.temp))
         .pipe(plugins.svgSprite(configs.svgSprite))
         .pipe(gulp.dest(paths.base));
@@ -244,8 +252,8 @@ gulp.task(tasks.sass.build, function () {
 gulp.task(tasks.sass.critical, function () {
     // Use all the breakpoints to generate the critical CSS for each media query.
     // The height is not important here, so use an estimate.
-    var dimensions = Object.keys(configs.breakpoints).map(function(key) {
-        var width = configs.breakpoints[key];
+    var dimensions = Object.keys(configs.breakpoints).map(function (key) {
+        var width = parseInt(configs.breakpoints[key].replace("px", ""));
 
         return {
             height: width * 0.6,
@@ -254,10 +262,10 @@ gulp.task(tasks.sass.critical, function () {
     });
 
     critical.generate({
-        inline: true,
         base: ".",
         dest: paths.templates.dest + paths.critical,
         dimensions: dimensions,
+        inline: true,
         src: paths.templates.src + paths.critical
     }, function () {
         gulp.start(tasks.razor);
@@ -289,9 +297,20 @@ gulp.task(tasks.js.devel, function () {
         .pipe(gulp.dest("./js/"));
 });
 
+gulp.task(tasks.js.unitTests, function () {
+    del("./js/unit-tests.js");
+
+    return browserify("./src/unit-tests/unit-tests.js")
+        .bundle()
+        .pipe(source("unit-tests.js"))
+        .pipe(gulp.dest("./js/"));
+});
+
 gulp.task(tasks.js.thirdParty, function () {
     gulp
-        .src(cdnReplacements, { base: "." })
+        .src(cdnReplacements, {
+            base: "."
+        })
         .pipe(gulp.dest("dist"));
 
     gulp
@@ -308,7 +327,7 @@ gulp.task(tasks.js.polyfill, function () {
     // Copy the bower failover JS paths only and add the app.
     var allJs = cdnReplacements
         .splice(0)
-        .filter(function(fileConfig) {
+        .filter(function (fileConfig) {
             return fileConfig.test;
         });
 
@@ -346,6 +365,8 @@ gulp.task(
 gulp.task(tasks.html, function () {
     return gulp
         .src(paths.html)
+        .pipe(plugins.changed(paths.temp))
+        .pipe(gulp.dest(paths.temp))
         .pipe(plugins.htmlhint(".htmlhintrc"))
         .pipe(plugins.htmlhint.reporter("htmlhint-stylish"))
         .pipe(plugins.htmlhint.failReporter());
@@ -380,10 +401,15 @@ function asRazorPartialName(filename) {
         .replace(/ /g, "");
 }
 
+// Creates razor versions of the templates.
+// Does this by renaming to a .NET-friendly format,
+// and replacing tags and adding NWebsec tags.
 gulp.task(tasks.razor, function () {
     gulp
         .src(paths.templates.dest + "*.html")
         .pipe(plugins.replace("@", "@@"))
+        .pipe(plugins.replace("<script", "<script @Html.CspScriptNonce()"))
+        .pipe(plugins.replace("<link", "<link @Html.CspScriptNonce()"))
         .pipe(plugins.rename(function (path) {
             path.basename = asRazorPartialName(path.basename);
             path.extname = ".cshtml";
@@ -392,12 +418,13 @@ gulp.task(tasks.razor, function () {
 });
 
 // Favicon tasks, deliberately separate to the main build.
-// TODO Conditionally run these!
+// Conditionally run these!
 gulp.task(tasks.favicon.build, function () {
     plugins.realFavicon.generateFavicon(configs.favicon);
 });
 
 gulp.task(tasks.favicon.template, function () {
+    // jscs:disable requireCamelCaseOrUpperCaseIdentifiers
     return gulp
         .src(paths.favicon.template)
         .pipe(plugins.realFavicon.injectFaviconMarkups
@@ -405,6 +432,7 @@ gulp.task(tasks.favicon.template, function () {
                 .readFileSync(configs.favicon.markupFile))
                 .favicon.html_code))
         .pipe(gulp.dest(paths.base));
+    // jscs:enable requireCamelCaseOrUpperCaseIdentifiers
 });
 
 gulp.task(tasks.favicon.checkForUpdate, function () {
@@ -421,40 +449,45 @@ gulp.task(tasks.favicon.checkForUpdate, function () {
 gulp.task(tasks.report, function () {
     return gulp
         .src([
-            paths.dist + "/" + paths.baseAssetName + "*.*"
+            paths.dist + "/" + paths.baseAssetName + "*.*",
+            paths.templates.dest + "*.html"
         ])
         .pipe(plugins.sizereport(configs.sizeReport));
 });
 
 gulp.task(tasks.watch, function () {
     gulp.watch(paths.js.src, [
-        tasks.js.build
+        tasks.js.devel
     ]);
 
     gulp.watch(paths.sass.src, [
-        tasks.sass.build
+        tasks.sass.devel
     ]);
 });
 
-gulp.task(tasks.serve, function() {
+gulp.task(tasks.serve, function () {
     browserSync({
         server: {
-            baseDir: paths.base
+            baseDir: paths.base,
+            serveStaticOptions: {
+                extensions: ["html"]
+            }
         }
     });
 
-    gulp.watch(
-        paths.html,
-        { cwd: paths.base },
-        browserSync.reload);
+    var options = {
+        cwd: paths.base
+    };
+
+    gulp.watch(paths.html, options, browserSync.reload);
 
     gulp.watch(
-        [paths.js.src],
-        { cwd: paths.base },
-        [tasks.js.devel, browserSync.reload]);
+        [paths.js.src, paths.js.unitTests],
+        options,
+        [tasks.js.devel, tasks.js.unitTests, browserSync.reload]);
 
     gulp.watch(
         [paths.sass.srcAll],
-        { cwd: paths.base },
+        options,
         [tasks.sass.devel, browserSync.reload]);
 });

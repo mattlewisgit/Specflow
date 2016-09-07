@@ -4,34 +4,30 @@
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Navigation.MainNavigation>
 
 <header class="page-header">
-
     @Html.Partial("/Areas/Presales/Views/Navigation/MobileNavigation.cshtml", Model)
 
-    <!-- top-bar desktop - contains site nav -->
+    @* top-bar desktop - contains site nav *@
     <div class="top-bar top-bar--large">
-
         <ul class="site-nav">
-
             @foreach (var navigationSection in Model.NavigationSections)
             {
-                if (this.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()).Equals(navigationSection))
+                if (this.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()).Equals(navigationSection) && navigationSection.SectionLink != null)
                 {
                     <li class="site-nav__item is-active">
                         @RenderLink(navigationSection, item => item.SectionLink)
                     </li>
                 }
-                else
+                else if (navigationSection.SectionLink != null)
                 {
                     <li class="site-nav__item">
                         @RenderLink(navigationSection, item => item.SectionLink)
                     </li>
                 }
             }
-
         </ul>
 
         <ul class="utility-nav">
-
+            @*
             <li class="utility-nav__item utility-nav__item--search js-search-toggle">
                 @using (BeginRenderLink(Model, item => item.SearchPage))
                 {
@@ -39,11 +35,11 @@
                     @Html.Raw(Model.SearchPage.Text)
                 }
             </li>
-
+            *@
             <li class="utility-nav__item utility-nav__item--log-in js-log-in-toggle">
                 <a href="#">@Html.Raw(Model.LogInText)</a>
 
-                <!-- log in panel desktop -->
+                @* log in panel desktop *@
                 <div class="log-in log-in--large">
                     <div class="log-in__content">
                         <div class="log-in__links">
@@ -54,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- end log in panel desktop-->
+                @* end log in panel desktop *@
             </li>
 
             <li class="utility-nav__item">
@@ -63,7 +59,6 @@
 
             <li class="utility-nav__item utility-nav__item--social">
                 <ul class="social-icons-list">
-
                     @foreach (var socialLink in Model.SocialLinks)
                     {
                         <li class="social-icon">
@@ -73,27 +68,27 @@
                             }
                         </li>
                     }
-
                 </ul>
             </li>
         </ul>
+    </div>
+    @* end top-bar desktop *@
 
-    </div><!-- end top-bar desktop-->
-    <!-- section-nav - for all sizes - contains megamenu -->
+    @* section-nav - for all sizes - contains megamenu *@
     @Html.Partial("/Areas/Presales/Views/Navigation/NavigationSection.cshtml", this.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()))
-    <!-- end section-nav -->
-    <!-- site-nav for mobile, moved to botom of menu -->
-    <ul class="site-nav--small">
+    @* end section-nav *@
 
+    @* site-nav for mobile, moved to botom of menu *@
+    <ul class="site-nav--small">
         @foreach (var navigationSection in Model.NavigationSections)
         {
-            if (this.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()).Equals(navigationSection))
+            if (this.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()).Equals(navigationSection) && navigationSection.SectionLink != null)
             {
                 <li class="site-nav__item is-active">
                     @RenderLink(navigationSection, item => item.SectionLink)
                 </li>
             }
-            else
+            else if(navigationSection.SectionLink != null)
             {
                 <li class="site-nav__item">
                     @RenderLink(navigationSection, item => item.SectionLink)
@@ -101,15 +96,16 @@
             }
         }
 
-        <li class="site-nav__item">
-            @RenderLink(Model, item => item.ContactUsPage)
-        </li>
-
+        @if (Model.ContactUsPage != null)
+        {
+            <li class="site-nav__item">
+                @RenderLink(Model, item => item.ContactUsPage)
+            </li>
+        }
     </ul>
-
 </header>
 
-<!-- log in panel for mobile -->
+@* log in panel for mobile *@
 <div class="log-in log-in--small">
     <div class="log-in__content">
         <div class="log-in__links">
@@ -120,8 +116,9 @@
         </div>
     </div>
 </div>
-<!-- end log in panel mobile-->
-<!-- search panel for mobile -->
+@* end log in panel mobile*@
+
+@* search panel for mobile
 <div class="search-panel">
 
     <div class="search-panel__content pinch">
@@ -198,13 +195,11 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non!...
                     </p>
                 </li>
-
             </ul>
         </div>
 
-        <div class="search-panel__background-image" style="background-image: url('/img/search-background.png');">
-        </div>
-
+        <div class="search-panel__background-image" style="background-image: url('/img/search-background.png');"></div>
     </div>
 </div>
-<!-- end search panel mobile-->
+*@
+@* end search panel mobile*@

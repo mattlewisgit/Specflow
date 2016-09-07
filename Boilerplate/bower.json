@@ -1,34 +1,37 @@
 {
-    "name": "vitality.boilerplate",
-    "description": "Vitality Boilerplate",
-    "main": "",
-    "authors": [
-        "Digital Operations <digital_operations@vitality.co.uk>"
-    ],
-    "license": "Vitality",
-    "moduleType": [
-        "amd"
-    ],
-    "homepage": "https://www.vitality.co.uk/",
-    "private": true,
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "dependencies": {
-        "angular": "1.5.7",
-        "animate.css": "3.5.1",
-        "fastclick": "1.0.6",
-        "jquery": "2.2.3",
-        "jquery-match-height": "0.7.0",
-        "jquery.smartresize": "1.0.0",
-        "normalize.css": "4.2.0",
-        "prism": "1.5.1",
-        "sass-mq": "3.2.9",
-        "tablesaw": "2.0.3",
-        "wowjs": "1.1.2"
-    }
+  "name": "vitality.boilerplate",
+  "description": "Vitality Boilerplate",
+  "main": "",
+  "authors": [
+    "Digital Operations <digital_operations@vitality.co.uk>"
+  ],
+  "license": "Vitality",
+  "moduleType": [
+    "amd"
+  ],
+  "homepage": "https://www.vitality.co.uk/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "3.5.x",
+    "fastclick": "1.0.x",
+    "jquery": "2.2.x",
+    "jquery-match-height": "0.7.x",
+    "jquery.smartresize": "1.0.x",
+    "js-cookie": "2.1.x",
+    "normalize.css": "4.2.x",
+    "sass-mq": "3.2.x",
+    "tablesaw": "2.0.x",
+    "wowjs": "1.1.x"
+  },
+  "devDependencies": {
+    "prism": "1.5.x",
+    "qunit": "2.0.x"
+  }
 }

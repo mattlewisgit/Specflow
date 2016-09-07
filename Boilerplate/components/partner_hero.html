@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0" />
 
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700" />
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="/css/app-devel.css" />
@@ -22,7 +22,7 @@
 </head>
 <body>
     <main tabindex="-1">
-        <section>
+        <section class="pinch">
             <h1>Partner Hero</h1>
             <h2>Description</h2>
 
@@ -35,9 +35,15 @@
                 <div class="partner-hero partner-hero--with-card background-position-middle-left" style="background-image: url(/img/examples/cyclist.jpg);">
                     <div class="grid">
                         <div class="partner-hero--headline grid-col-6-12 text-light">
-                            <h1>Vitality Partner</h1>
-                            <h2>Starbucks</h2>
-                            <p>Better coffee with Vitality</p>
+                            <p class="partner-hero--headline__intro">
+                                Vitality Partner
+                            </p>
+
+                            <h1>Starbucks</h1>
+                            
+                            <div class="partner-hero--headline__body">
+                                Better coffee with Vitality
+                            </div>
                         </div>
 
                         <div class="grid-col-6-12 partner-hero--right">
@@ -47,16 +53,14 @@
                                 </div>
 
                                 <div class="partner-hero--card__top">
-                                    <h6>Starbucks</h6>
-
+                                    <p class="partner-hero--card__top--intro">Starbucks</p>
                                     <hr />
-
                                     <p>1 x free coffee per week</p>
                                 </div>
 
                                 <div class="partner-hero--card__bottom text-light">
                                     <p>YOU COULD SAVE</p>
-                                    <h1>£260</h1>
+                                    <p class="partner-hero--card__bottom--saving">£260</p>
                                     <p>PER YEAR</p>
                                 </div>
                             </div>
@@ -65,11 +69,10 @@
                 </div>
             </div>
 
-            <div class="vertical-flush">
+            <div>
                 <h2>Markup</h2>
                 <pre><code class="language-markup line-numbers"></code></pre>
             </div>
-
 
             <h3>Example 2</h3>
 
@@ -77,15 +80,21 @@
                 <div class="partner-hero background-position-middle-left" style="background-image: url(/img/examples/family.jpg);">
                     <div class="grid">
                         <div class="partner-hero--headline grid-col-12-12 text-dark">
-                            <h1>Vitality Partner</h1>
-                            <h2>Starbucks</h2>
-                            <p>Better coffee with Vitality</p>
+                            <p class="partner-hero--headline__intro">
+                                Vitality Partner
+                            </p>
+
+                            <h1>Starbucks</h1>
+                            
+                            <div class="partner-hero--headline__body">
+                                Better coffee with Vitality
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="vertical-flush">
+            <div>
                 <h2>Markup</h2>
                 <pre><code class="language-markup line-numbers"></code></pre>
             </div>
@@ -94,7 +103,7 @@
 
     <script>function cdnizerLoad(u) { document.write('<scr' + 'ipt src="' + encodeURIComponent(u) + '"></scr' + 'ipt>'); }</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-    <script>    if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
+    <script>if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script>if (!($.datepicker)) cdnizerLoad("/bower_components/jqueryui/jquery-ui.min.js");</script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.smartresize/0.1/jquery.debouncedresize.js"></script>

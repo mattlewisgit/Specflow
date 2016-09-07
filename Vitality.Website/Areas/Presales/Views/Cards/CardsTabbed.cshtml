@@ -3,18 +3,22 @@
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Cards.CardsTabbed>
 
 <div class="js-filter-section">
-    <div class="spotlight spotlight--max-3 pinch">
-        <h4 class="spotlight__heading">@Editable(Model, m => m.Headline)</h4>
+    <div class="cards-tabbed spotlight spotlight--max-3">
+        <h2 class="spotlight__heading">@Editable(Model, m => m.Headline)</h2>
         <p class="spotlight__intro">@Editable(Model, m => m.OpeningParagraph)</p>
 
         <ul class="filter-list js-filter-options">
             <li class="filter-list__item js-filter-options__item js-filter-options__item--default">
-                <a class="js-focus" href="#" data-filter="all">@Editable(Model, m => m.AllCategoriesText)</a>
+                <a class="js-focus" role="button" data-filter="all">
+                    @Editable(Model, m => m.AllCategoriesText)
+                </a>
             </li>
         @foreach (var category in Model.Categories)
         {
             <li class="filter-list__item js-filter-options__item">
-                <a href="#" data-filter="@Html.Raw(category.Name.ToLowerHyphenatedString())">@Html.Raw(category.Title)</a>
+                <a role="button" data-filter="@Html.Raw(category.Name.ToLowerHyphenatedString())">
+                    @Html.Raw(category.Title)
+                </a>
             </li>
         }
         </ul>
@@ -32,19 +36,18 @@
                     <div class="spotlight-item js-match-height--2">
                         <div class="spotlight-item__top-content js-match-height">
                             <div class="spotlight-item__intro-image burst">
-                                @Editable(partnerCard, m => m.Image, new { w = 305, h = 175 })
+                                @Editable(partnerCard, m => m.Image, new { mw = 388 })
                             </div>
 
                             <div class="spotlight-item__logo">
-                                <a href="#">
-                                    @Editable(partnerCard, m => m.Logo, new { mw = 200, mh = 100 })
-                                </a>
+                                @Editable(partnerCard, m => m.Logo, new { mw = 200 })
                             </div>
 
-                            <h3 class="spotlight-item__heading">@Editable(partnerCard, m => m.Headline)</h3>
+                            <p class="spotlight-item__heading">@Editable(partnerCard, m => m.Headline)</p>
 
                             <div class="spotlight-item__content">@Editable(partnerCard, m => m.OpeningParagraph)</div>
                         </div>
+
                         <div class="spotlight-item__cta">
                             @Editable(partnerCard, m => m.CallToAction, new { @class = "emphasis-link" })
                         </div>

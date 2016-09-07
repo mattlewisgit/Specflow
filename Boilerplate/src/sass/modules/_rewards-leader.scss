@@ -1,4 +1,5 @@
 .rewards_leader {
+    @extend .pinch;
     @include text-centre;
     border: $pad solid $darken-medium;
     box-sizing: border-box;
@@ -13,19 +14,8 @@
     }
 
     .feature-block__image-list {
+        @include bounce-linked-image;
         margin-bottom: $pad;
-
-        a {
-            color: transparent;
-
-            &:hover img {
-                animation-name: pulse;
-                animation-duration: 0.3s;
-                animation-direction: alternate;
-                animation-timing-function: linear;
-                animation-fill-mode: forwards;
-            }
-        }
 
         div {
             > img, > a {
@@ -40,7 +30,7 @@
         }
     }
 }
-    
+
 .feature-block {
     &--primary {
         background: $primary-color;

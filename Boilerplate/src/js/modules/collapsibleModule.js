@@ -1,17 +1,17 @@
 ﻿var Breakpoints = require("./breakpointsModule");
 
 var _settings = {
-    selector: ".js-expander-is-collapsible",
     activeClass: "is-active",
-    breakpoint: Breakpoints.min["mobile-landscape"]
+    breakpoint: Breakpoints.min["mobile-landscape"],
+    selector: ".js-expander-is-collapsible"
 };
 
-var  _collapsibleModule = {
-    _destroyCollapsible: function (context) {
+var _collapsibleModule = {
+    _createAllCollapsibles: function () {
         "use strict";
-        var contextSelector = context || _settings.selector;
-        $(".expander__link", contextSelector).unbind("click");
-        $(contextSelector).removeClass("expander--collapsible  expander--init");
+        $(_settings.selector).each(function () {
+            _collapsibleModule._createCollapsible($(this));
+        });
     },
 
     _createCollapsible: function (context, onBeforeSlideDown) {
@@ -19,7 +19,7 @@ var  _collapsibleModule = {
         var $context = context ? $(context) : $(_settings.selector);
 
         // Bomb out if it is already set up.
-        if ($context.hasClass("expander--collapsible")){
+        if ($context.hasClass("expander--collapsible")) {
             return;
         }
 
@@ -34,8 +34,8 @@ var  _collapsibleModule = {
             var content = $link.attr("href");
 
             if ($link.hasClass(_settings.activeClass)) {
-                // set the active content area
-                $(content).stop().slideUp("fast", function() {
+                // Set the active content area.
+                $(content).stop().slideUp("fast", function () {
                     $(this).removeClass(_settings.activeClass).removeAttr("style");
                     $link.removeClass(_settings.activeClass);
                 });
@@ -43,7 +43,7 @@ var  _collapsibleModule = {
                 return false;
             }
 
-            // switch the current link
+            // Switch the current link.
             $link.addClass(_settings.activeClass);
             $(".expander__link", $context).not($link).removeClass(_settings.activeClass);
 
@@ -61,21 +61,21 @@ var  _collapsibleModule = {
         $context.addClass("expander--collapsible  expander--init");
     },
 
-    _createAllCollapsibles: function () {
+    _destroyCollapsible: function (context) {
         "use strict";
-        $(_settings.selector).each(function () {
-            _collapsibleModule._createCollapsible($(this));
-        });
+        var contextSelector = context || _settings.selector;
+        $(".expander__link", contextSelector).unbind("click");
+        $(contextSelector).removeClass("expander--collapsible  expander--init");
     }
 };
 
-var handleResize = function () {
+function handleResize() {
     "use strict";
     var method = _settings.breakpoint.test() ? "_destroyCollapsible" : "_createCollapsible";
     _collapsibleModule[method](_settings.selector + ".expander--mobile");
-};
+}
 
-var init = function () {
+function init() {
     "use strict";
     _collapsibleModule._createAllCollapsibles();
 
@@ -89,9 +89,9 @@ var init = function () {
     }
 
     return $(window).resize(handleResize);
-};
+}
 
 module.exports = {
-    init: init,
-    createCollapsible: _collapsibleModule._createCollapsible
+    createCollapsible: _collapsibleModule._createCollapsible,
+    init: init
 };

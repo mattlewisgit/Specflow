@@ -1,7 +1,7 @@
 /*
  * Utility to set animaiton delays based on column position,
  * so elements animate in with the correct delay for variable column widths.
-*/
+ */
 var Breakpoints = require("./breakpointsModule");
 
 var _settings = {
@@ -12,7 +12,7 @@ var BASE_ANIMATION_DELAY = 0.5;
 var COLUMN_ANIMAITON_DELAY_STEP = 0.2;
 
 var $animationElements;
-var prevElTop =  0;
+var prevElTop = 0;
 var count = 0;
 
 var _animationDelayMod = {
@@ -25,6 +25,7 @@ var _animationDelayMod = {
 
     setDelays: function () {
         "use strict";
+
         if (!Breakpoints.min.tablet.test()) {
             return;
         }

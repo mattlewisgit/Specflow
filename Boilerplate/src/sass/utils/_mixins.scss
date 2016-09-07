@@ -1,36 +1,34 @@
-//Fonts to rems with pixel fallback -
+// Fonts to rems.
 @mixin font-size($size-value: 1.6) {
-    font-size: ($size-value * 10) + px;
     font-size: $size-value + rem;
 }
 
-//Background transparency with fallback -
+// Background transparency.
 @mixin background-opacity($color, $opacity: 0.3) {
-    background: $color; // The Fallback
     background: rgba($color, $opacity);
 }
 
-//Pixels to ems for zoom-able media queries.
+// Pixels to ems for zoomable media queries.
 @function em($pixels) {
-    @return #{$pixels / ($basesize * 10)}em
+    @return #{$pixels / ($basesize * 10)}em;
 }
 
-//Styling for placeholder text -
+// Styling for placeholder text.
 @mixin placeholder-text {
     ::-webkit-input-placeholder {
-        @content
+        @content;
     }
 
     :-moz-placeholder {
-        @content
+        @content;
     }
 
     ::-moz-placeholder {
-        @content
+        @content;
     }
 
     :-ms-input-placeholder {
-        @content
+        @content;
     }
 }
 
@@ -54,7 +52,7 @@ $_border-radius: 5px;
 }
 
 @mixin hide-text2 {
-    font: 0/0 serif;
+    font: 0 / 0 serif;
     text-shadow: none;
     color: transparent;
 }
@@ -81,11 +79,11 @@ $_border-radius: 5px;
     text-shadow: 0 0 $pad--thin $darken-heavy;
 }
 
-@mixin text-centre() {
+@mixin text-centre {
     text-align: center;
 }
 
-@mixin wide-padding() {
+@mixin wide-padding {
     padding-left: $pad--large;
     padding-right: $pad--large;
 }
@@ -98,4 +96,18 @@ $_border-radius: 5px;
     position: absolute;
     top: $scale-centre;
     transform: translateX(-$scale-centre) translateY(-$scale-centre);
+}
+
+@mixin bounce-linked-image {
+    a {
+        color: transparent;
+
+        &:hover img {
+            animation-name: pulse;
+            animation-duration: 0.3s;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+    }
 }

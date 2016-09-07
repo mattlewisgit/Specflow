@@ -12,10 +12,17 @@ $_padding: 3%;
     }
 }
 
-.summary-left, .summary-right {
+.summary-left,
+.summary-right {
     font-size: 90%;
     line-height: 1.5;
     padding: $_padding;
+}
+
+.summary-left {
+    &--lead-in {
+        @extend .h6;
+    }
 }
 
 .summary-right {
@@ -23,16 +30,23 @@ $_padding: 3%;
         position: relative;
     }
 
-    .title h4, .content {
+    .content,
+    .title p {
         background: $darken-heavy;
         margin: 0;
+    }
+
+    .summary-right--content__body {
+        @extend p;
     }
 
     .title {
         @include text-centre;
 
-        h4 {
+        p {
+            @extend .h6;
             @include tab-rounding;
+            color: $white;
             display: inline-block;
             font-size: 1.7rem;
             padding: $_padding ($_padding + 1);
@@ -51,8 +65,10 @@ $_padding: 3%;
             }
         }
 
-        h6 {
-            font-weight: 600;
+        h4 {
+            @extend .font-weight--semi-bold;
+            @extend .h6;
+            color: $white;
             margin: 0;
         }
 
@@ -66,7 +82,7 @@ $_padding: 3%;
             padding: $_padding-abs;
             padding-left: $_padding-abs * 3;
 
-            &:before {
+            &::before {
                 @include retina-sprite($sprite-tick-circle-teal-group);
                 top: 12px;
             }
@@ -93,7 +109,7 @@ $_padding: 3%;
         .cta {
             @include text-centre;
             padding-top: $_padding;
-            
+
             a {
                 display: inline-block;
                 width: $width--near-max;

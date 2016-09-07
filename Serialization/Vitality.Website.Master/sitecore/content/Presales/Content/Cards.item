@@ -27,13 +27,13 @@ content-length: 116
 field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
 name: __Security
 key: __security
-content-length: 118
+content-length: 119
 
-ar|sitecore\Presales User|pe|+item:read|+item:create|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
+ar|sitecore\Presales User|pe|+item:write|+item:create|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
 ----version----
 language: en
 version: 1
-revision: c9d5e9a3-b222-4573-a9d7-82cfb9bee22c
+revision: 2e8d0e98-e0c9-4c8a-ba8f-4db2fb2755e8
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c9d5e9a3-b222-4573-a9d7-82cfb9bee22c
+2e8d0e98-e0c9-4c8a-ba8f-4db2fb2755e8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160622T103729Z
+20160715T143906Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

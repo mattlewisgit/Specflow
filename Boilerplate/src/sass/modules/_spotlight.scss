@@ -3,23 +3,22 @@
         text-align: center;
         width: 100% !important;
     }
-    
+
     &__heading {
-        @include font-size(4.8);
-        text-transform: uppercase;
+        @include font-size($h1--large);
         text-align: center;
     }
 
     &__intro {
-        @include font-size(2);
+        @include font-size($h4);
         text-align: center;
     }
 
     &__list {
         @extend .non-list;
-        text-align: center;
         font-size: 0;
         margin: $pad auto;
+        text-align: center;
 
         @include mq($from: tablet) {
             margin: $pad--large auto;
@@ -29,11 +28,11 @@
     &__list-item {
         @include font-size($basesize);
         display: inline-block;
-        vertical-align: top;
-        padding: 10px;
-        position: relative;
-        z-index: 2;
         max-width: 300px;
+        padding: $pad--thin;
+        position: relative;
+        vertical-align: top;
+        z-index: 2;
 
         @include mq($from: tablet) {
             max-width: none;
@@ -61,15 +60,16 @@
 }
 
 .spotlight-item {
-    padding: 10px;
+    padding: $pad--thin;
     background-color: $white;
-    box-shadow: 0 0 20px -2px $dropshadow-color;
+    box-shadow: 0 0 $pad -2px $dropshadow-color;
 
     &__intro-image {
         &.burst {
-            overflow-y: hidden;
-            margin: -10px -10px 0 -10px;
+            margin: -$pad--thin;
+            margin-bottom: 0;
             max-height: 200px;
+            overflow-y: hidden;
             width: calc(100% + 20px);
 
             img {
@@ -79,37 +79,21 @@
     }
 
     &__heading {
-        @include font-size(1.8);
-        margin: 0.5em auto;
-        text-transform: uppercase;
-        font-weight: 500;
+        @extend .font-weight--regular;
+        @include font-size($paragraph-emphasis);
         color: $grey;
+        line-height: 1.4;
+        margin: 0.5em auto;
     }
 
     &__icon {
         img {
             display: block;
-            margin: 10px auto;
+            margin: $pad--thin auto;
         }
     }
 
-    &__logo {
-        background-color: $white;
-        border: $pad--xthin solid $white;
-        border-radius: $pad--thin;
-        line-height: 0;
-        margin: 0 auto;
-        margin-top: -54px;
-        padding: $pad--thin;
-        position: relative;
-        width: 60%;
-
-        img {
-            margin: 0;
-            max-height: 50px;
-        }
-    }
-        
+    &__logo,
     &__logo--large {
         background-color: $white;
         border: $pad--xthin solid $white;
@@ -120,7 +104,16 @@
         padding: $pad--thin;
         position: relative;
         width: 60%;
+    }
 
+    &__logo {
+        img {
+            margin: 0;
+            max-height: 50px;
+        }
+    }
+
+    &__logo--large {
         img {
             margin: 0 auto;
             max-height: 80px;
@@ -130,7 +123,7 @@
     &__content,
     &__cta {
 
-        @include font-size(1.4);
+        @include font-size($font-small);
         color: $body-color;
 
         p {
@@ -138,11 +131,34 @@
         }
 
         .emphasis-link {
-            margin: 0 auto 10px auto;
+            margin: 0 auto $pad--thin;
         }
     }
 
     &__cta {
-        padding: 20px 0 10px 0;
+        padding: $pad 0 $pad--thin;
+    }
+}
+
+// Reduce the font sizes on smaller devices.
+@include mq($until: mobile-landscape) {
+    .spotlight {
+        .spotlight__heading {
+            @include font-size($h1);
+        }
+
+        .spotlight__intro {
+            @include font-size($paragraph-emphasis);
+        }
+    }
+}
+
+// Let the cards go full width on mobile.
+@include mq($until: mobile-landscape) {
+    .spotlight {
+        .spotlight__list-item {
+            max-width: 100%;
+            width: 100%;
+        }
     }
 }

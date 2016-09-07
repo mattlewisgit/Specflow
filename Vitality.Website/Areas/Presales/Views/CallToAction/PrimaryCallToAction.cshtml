@@ -1,7 +1,7 @@
 ﻿@using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.CallToAction.PrimaryCallToAction>
 
-<div class="cta grid grid-gutters">
+<div class="cta grid">
     @if (this.DisplayInsertMessage())
     {
         <h2>Insert Call To Action Panels Here</h2>
@@ -12,10 +12,14 @@
         @using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", panel.Path))
         {
         <div class="grid-module">
-            <h3 class="cta__header">
+            <strong class="cta__header">
                 @Editable(panel, m => m.Icon)
                 @Editable(panel, m => m.Headline)
-            </h3>
+                @if (this.ShowSecondLine(panel))
+                {
+                <br />@Editable(panel, m => m.Headline2)
+                }
+            </strong>
             <p class="cta__body">
                 @Editable(panel, m => m.OpeningParagraph)
             </p>

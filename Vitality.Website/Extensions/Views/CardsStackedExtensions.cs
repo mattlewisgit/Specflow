@@ -20,7 +20,7 @@
         {
             if (!string.IsNullOrWhiteSpace(view.Model.BackgroundImage.Src))
             {
-                return "background-size: cover; background-image: url(" + view.Model.BackgroundImage.Src + ");";
+                return "background-size: cover; background-image: url('" + view.Model.BackgroundImage.ProtectedSrc(width:1200) + "');";
             }
             return string.Empty;
         }

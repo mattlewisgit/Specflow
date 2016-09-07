@@ -1,37 +1,37 @@
 .filter-list {
-
     @extend .non-list;
-    //Hide the filter list if JS not enabled -
+
+    // Hide the filter list if JS is not enabled.
     .no-js & {
         display: none;
     }
 
     &__item {
         a {
+            cursor: pointer;
             text-decoration: none;
         }
     }
 }
 
-//Hide the filter section details until it has been filtered -
+// Hide the filter section details until it has been filtered.
 .filter-section__details {
     opacity: 0;
 }
 
 @include mq($from: tablet) {
-
     .filter-list {
         border-bottom: 2px solid $grey--light;
-        margin: 10px;
+        margin: $pad--thin;
 
         &__item {
             display: inline-block;
-            margin: 10px 20px 10px 0;
+            margin: $pad--thin $pad $pad--thin 0;
 
             a {
                 position: relative;
 
-                &:after {
+                &::after {
                     content: "";
                     display: block;
                     position: absolute;
@@ -44,7 +44,7 @@
                     transition: transform 0.5s ease;
                 }
 
-                &.js-focus:after {
+                &.js-focus::after {
                     transform: scaleX(1);
                 }
             }

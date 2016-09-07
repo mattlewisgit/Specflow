@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0" />
 
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,500,600" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700" />
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="/css/app-devel.css" />
@@ -33,37 +33,55 @@
 
             <h2>Examples</h2>
 
-            <h3>Image Left</h3>
+            <h3>Image Left and Image Right with Gradient</h3>
 
             <h4>Demo</h4>
 
             <div class="vertical-flush example">
-                <div class="feature-block feature-block--primary feature-block--right">
+                <div class="feature-block feature-block--primary feature-block--right pinch">
                     <div class="feature-block__image"
                          style="background-image: url('/img/examples/family.jpg');"></div>
 
                     <div class="feature-block__content-container">
                         <div class="feature-block__content">
-                            <h6>Flexible Cover Options</h6>
+                            <p class="feature-block__content--title">Flexible Cover Options</p>
 
-                            <h3>Boost Core Cover with flexible cover choices</h3>
+                            <h2>Boost Core Cover with flexible cover choices</h2>
 
-                            <p>
+                            <div class="feature-block__content--body">
                                 Everyone's needs and budgets are different. So you can choose from a
                                 range of health cover options to create a plan that's just right for you.
-                            </p>
+                            </div>
 
                             <a href="#" class="box-button box-button--light box-button--rounded">View cover options</a>
                         </div>
                     </div>
                 </div>
+                
+                <div class="feature-block-gradient feature-block-gradient--secondary pinch">
+                    <div class="feature-block-gradient__image background-position-middle-right"
+                         style="background-image: url('/img/examples//cyclist.jpg');"></div>
+
+                    <div class="feature-block-gradient__content-container">
+                        <div class="feature-block-gradient__content">
+                            <h2>Choose where you get treatment</h2>
+
+                            <div class="feature-block__content--body">
+                                You can choose Vitality GP Select, which means a Vitality GP will determine
+                                your treatment pathway, or you can choose from three different hospital lists
+                                depending on where you live and how much you want to pay.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
 
             <h4>Markup</h4>
 
             <div class="vertical-flush">
                 <pre>
-                    <code class="language-markup line-numbers"></code>
+                <code class="language-markup line-numbers"></code>
                     </pre>
             </div>
 
@@ -71,20 +89,20 @@
 
             <h4>Demo</h4>
 
-            <div class="vertical-flush example">
-                <div class="feature-block-gradient feature-block-gradient--secondary">
+            <div class="example">
+                <div class="feature-block-gradient feature-block-gradient--secondary pinch">
                     <div class="feature-block-gradient__image background-position-middle-right"
                          style="background-image: url('/img/examples//cyclist.jpg');"></div>
 
                     <div class="feature-block-gradient__content-container">
                         <div class="feature-block-gradient__content">
-                            <h3>Choose where you get treatment</h3>
+                            <h2>Choose where you get treatment</h2>
 
-                            <p>
+                            <div class="feature-block__content--body">
                                 You can choose Vitality GP Select, which means a Vitality GP will determine
                                 your treatment pathway, or you can choose from three different hospital lists
                                 depending on where you live and how much you want to pay.
-                            </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -93,33 +111,29 @@
             <h4>Markup</h4>
 
             <div class="vertical-flush">
-                <p>
-                    Note: the <b>cssgradients</b> class must be applied to the <b>html</b> tag.
-                </p>
-
-                <pre>
-                    <code class="language-markup line-numbers"></code>
-                </pre>
+                <pre><code class="language-markup line-numbers"></code></pre>
             </div>
 
             <h3>Image Right with Light Gradient</h3>
 
             <h4>Demo</h4>
 
-            <div class="vertical-flush example">
-                <div class="feature-block-gradient feature-block-gradient--light">
+            <div class="example">
+                <div class="feature-block-gradient feature-block-gradient--light pinch">
                     <div class="feature-block-gradient__image background-position-middle-right"
                          style="background-image: url('/img/examples/cyclist.jpg');"></div>
 
                     <div class="feature-block-gradient__content-container">
                         <div class="feature-block-gradient__content">
-                            <h3>Choose where you get treatment</h3>
+                            <h2>Choose where you get treatment</h2>
 
-                            <p>
+                            <div class="feature-block__content--body">
                                 You can choose Vitality GP Select, which means a Vitality GP will determine
                                 your treatment pathway, or you can choose from three different hospital lists
                                 depending on where you live and how much you want to pay.
-                            </p>
+                            </div>
+                            
+                            <a href="#" class="box-button box-button--rounded">View cover options</a>
                         </div>
                     </div>
                 </div>
@@ -128,20 +142,46 @@
             <h4>Markup</h4>
 
             <div class="vertical-flush">
-                <p>
-                    Note: the <b>cssgradients</b> class must be applied to the <b>html</b> tag.
-                </p>
-
-                <pre>
-                    <code class="language-markup line-numbers"></code>
-                </pre>
+                <pre><code class="language-markup line-numbers"></code></pre>
             </div>
+
+            <h3>Image Right with White background colour</h3>
+
+            <h4>Demo</h4>
+
+            <div class="example">
+                <div class="feature-block-gradient feature-block-gradient--white pinch">
+                    <div class="feature-block-gradient__image background-position-middle-right"
+                         style="background-image: url('/img/examples/cyclist.jpg');"></div>
+
+                    <div class="feature-block-gradient__content-container">
+                        <div class="feature-block-gradient__content">
+                            <h2>Choose where you get treatment</h2>
+
+                            <div class="feature-block__content--body">
+                                You can choose Vitality GP Select, which means a Vitality GP will determine
+                                your treatment pathway, or you can choose from three different hospital lists
+                                depending on where you live and how much you want to pay.
+                            </div>
+
+                            <a href="#" class="box-button box-button--rounded">View cover options</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4>Markup</h4>
+
+            <div class="vertical-flush">
+                <pre><code class="language-markup line-numbers"></code></pre>
+            </div>
+
         </section>
     </main>
 
     <script>function cdnizerLoad(u) { document.write('<scr' + 'ipt src="' + encodeURIComponent(u) + '"></scr' + 'ipt>'); }</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-    <script>    if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
+    <script>if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script>if (!($.datepicker)) cdnizerLoad("/bower_components/jqueryui/jquery-ui.min.js");</script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.smartresize/0.1/jquery.debouncedresize.js"></script>
