@@ -883,7 +883,6 @@
     <SitecoreRole Include="Sitecore Roles\sitecore\Social Message Workflow Editor.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Social Message Workflow Reviewer.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Twitter Message Reviewer.role" />
-    <SitecoreRole Include="Sitecore Roles\sitecore\Vitality Users.role" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
 </Project>
