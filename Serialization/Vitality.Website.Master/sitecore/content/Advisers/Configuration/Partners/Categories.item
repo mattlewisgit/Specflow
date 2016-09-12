@@ -1,39 +1,32 @@
 ----item----
 version: 1
-id: {31A2E4EC-131F-4B92-92DF-8908098308C7}
+id: {CEEDD88F-05A3-4A87-BDF0-59694C466948}
 database: master
-path: /sitecore/content/Advisers/Content/Articles
-parent: {C2912188-A5EF-417E-9317-415F1259BA4D}
-name: Articles
-master: {30379927-A49A-4654-8C27-30CD546273E4}
-template: {7C96FFFF-DA60-44F1-BC58-2E4315D2F483}
-templatekey: Datasource Folder
+path: /sitecore/content/Advisers/Configuration/Partners/Categories
+parent: {898CC627-8CAE-4E49-ACC0-41B9E91BFB80}
+name: Categories
+master: {00000000-0000-0000-0000-000000000000}
+template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
+templatekey: Folder
 
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
-content-length: 22
+content-length: 27
 
-Office/32x32/books.png
+Apps/32x32/Folder-Close.png
 ----field----
-field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
-name: __Originator
-key: __originator
-content-length: 0
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
 
-
-----field----
-field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
-name: __Security
-key: __security
-content-length: 118
-
-ar|sitecore\Advisers User|pe|+item:read|+item:create|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
+{57BC115E-A8B8-4FA7-A378-F9D8A5F1EE38}
 ----version----
 language: en
 version: 1
-revision: 66e6fe56-36fb-4262-bea0-eb026c5240cc
+revision: 10e652dc-7ae5-4c4f-8968-25cf1aa5879b
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -41,7 +34,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160816T155611Z
+20160907T130813Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-66e6fe56-36fb-4262-bea0-eb026c5240cc
+10e652dc-7ae5-4c4f-8968-25cf1aa5879b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160912T095232Z
+20160907T131143Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
