@@ -841,6 +841,7 @@
   <ItemGroup>
     <SitecoreRole Include="Sitecore Roles\default\Everyone.role" />
     <SitecoreRole Include="Sitecore Roles\extranet\Everyone.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Advisers User.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Analytics Advanced Testing.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Analytics Content Profiling.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Analytics Maintaining.role" />
@@ -856,6 +857,7 @@
     <SitecoreRole Include="Sitecore Roles\sitecore\Facebook Message Reviewer.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\List Manager Editors.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Presales Admin.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Presales Configuration Manager.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Presales Content Author.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Presales Content Manager.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Presales User.role" />
@@ -881,6 +883,7 @@
     <SitecoreRole Include="Sitecore Roles\sitecore\Social Message Workflow Editor.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Social Message Workflow Reviewer.role" />
     <SitecoreRole Include="Sitecore Roles\sitecore\Twitter Message Reviewer.role" />
+    <SitecoreRole Include="Sitecore Roles\sitecore\Vitality Users.role" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
 </Project>

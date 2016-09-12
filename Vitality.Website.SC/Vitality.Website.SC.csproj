@@ -105,6 +105,7 @@
     <Compile Include="Pipelines\RenderField\TableSawArgs.cs" />
     <Compile Include="Pipelines\RenderField\TableSawHelper.cs" />
     <Compile Include="Pipelines\Response\GetModel\GetQuoteFooterFallback.cs" />
+    <Compile Include="Pipelines\Response\GetRenderer\ResolveDatasourceQuery.cs" />
     <Compile Include="Pipelines\Response\RenderRendering\VaryByAncestor.cs" />
     <Compile Include="Pipelines\RichTextEditor\SaveRichTextContent\InjectTableSawStylesOnCloseDialog.cs" />
     <Compile Include="Pipelines\HttpRequest\SitemapResolver.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Agents\Sitemaps\SitemapSettings.cs" />
     <Compile Include="Agents\Sitemaps\SitemapUrlModel.cs" />
     <Compile Include="Providers\MediaProvider.cs" />
+    <Compile Include="Utilities\QueryHelper.cs" />
     <Compile Include="Utilities\SitecoreDataItemHelper.cs" />
     <Compile Include="Utilities\SiteInfoHelper.cs" />
     <Compile Include="Utilities\StringHelper.cs" />
