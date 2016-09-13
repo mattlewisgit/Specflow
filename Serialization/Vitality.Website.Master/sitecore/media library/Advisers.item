@@ -9,10 +9,17 @@ master: {00000000-0000-0000-0000-000000000000}
 template: {FE5DD826-48C6-436D-B87A-7C4210C7413B}
 templatekey: Media folder
 
+----field----
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 156
+
+ar|sitecore\Advisers User|pe|+item:read|+item:create|pd|+item:rename|+item:write|+item:read|+item:delete|+item:create|ar|sitecore\Presales User|pe|!*|pd|!*|
 ----version----
 language: en
 version: 1
-revision: 4d05ff04-10b8-4a67-8563-82ada378c031
+revision: 02c98118-9419-42d1-95eb-99849bf0ce1b
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -34,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4d05ff04-10b8-4a67-8563-82ada378c031
+02c98118-9419-42d1-95eb-99849bf0ce1b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160902T082601Z
+20160913T083430Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
