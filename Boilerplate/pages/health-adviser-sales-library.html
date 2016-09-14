@@ -39,22 +39,8 @@
                             Ut voluptatem non consequatur ad id pariatur modi.
                         </p>
 
-                        <h2>Search</h2>
-
-                        <div class="form" ng-controller="SearchController as searchController">
-                            <input type="text"
-                                   placeholder="Enter a search keyword"
-                                   ng-model="searchText"
-                                   ng-change="searchController.search(searchText)" />
-                            
-                            <ul class="dropdown" ng-hide="!documents.length">
-                                <li ng-repeat="document in documents"
-                                    ng-click="searchController.select(document)"
-                                    ng-class="{active : isCurrent($index)}">
-                                    {{document.Title}}
-                                </li>
-                            </ul>
-                        </div>
+                        <h2>Search</h2>                        
+                        <input type="text" placeholder="Enter a search keyword..." typeahead />
                     </div>
 
                     <div class="grid-col-4-12 tablet-and-up">
@@ -173,6 +159,8 @@
     <script>if (!(window.FastClick)) cdnizerLoad("/bower_components/fastclick/lib/fastclick.js");</script>
     <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw.js"></script>
     <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw-init.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
+    <script>if (!($('body').typeahead)) cdnizerLoad("/bower_components/typeahead.js/dist/typeahead.jquery.min.js");</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>if (!(window.WOW)) cdnizerLoad("/bower_components/wowjs/dist/wow.min.js");</script>
 

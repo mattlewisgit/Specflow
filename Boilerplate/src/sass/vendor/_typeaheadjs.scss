@@ -1,0 +1,33 @@
+.twitter-typeahead {
+    width: 100%;
+
+    .tt-input {
+        @include rounding;
+        box-shadow: inset 0 1px 2px rgba($black, 0.05);
+        border: 1px solid $color-mono-12;
+        outline: none;
+        padding: $pad--xthin $pad--thin;
+        width: 100%;
+    }
+
+    .tt-menu {
+        width: 100%;
+    }
+
+    .tt-dataset {
+        @include rounding;
+        border: 1px solid $color-mono-12;
+        width: 100%;
+
+        .tt-selectable,
+        .tt-suggestion {
+            cursor: pointer;
+            padding: $pad--thin;
+            width: 100%;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 ﻿function randomDate(start, end) {
+    "use strict";
     end = end || new Date();
     start = start || new Date(end.getFullYear() - 1, end.getMonth(), end.getDate());
     return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
@@ -17,17 +18,6 @@ var mockData = {
             Thumbnail: "/src/img/examples/example-pdf.png",
             Title: "Business Healthcare sales aid"
         },
-        "guide-to-healthy-living-rewards-and-partners-january-2015": {
-            AvailableLiterature: [],
-            Category: "Business healthcare literature",
-            Code: "PHU1294A",
-            Description: "Health and Reward partners with VitalityHealth",
-            Document: "dev.vitality.co.uk/-/media/Presales/pdf/Development/PHF-sales-aid-v2.ashx",
-            Key: "guide-to-healthy-living-rewards-and-partners-january-2015",
-            PublishDate: randomDate().toJSON(),
-            Thumbnail: "/src/img/examples/example-pdf.png",
-            Title: "Health and Reward partners"
-        },
         "guide-to-cover---personal-healthcare-2015": {
             AvailableLiterature: [],
             Category: "Personal healthcare literature",
@@ -38,6 +28,17 @@ var mockData = {
             PublishDate: randomDate().toJSON(),
             Thumbnail: "/src/img/examples/example-pdf.png",
             Title: "Personal Healthcare sales aid"
+        },
+        "guide-to-healthy-living-rewards-and-partners-january-2015": {
+            AvailableLiterature: [],
+            Category: "Business healthcare literature",
+            Code: "PHU1294A",
+            Description: "Health and Reward partners with VitalityHealth",
+            Document: "dev.vitality.co.uk/-/media/Presales/pdf/Development/PHF-sales-aid-v2.ashx",
+            Key: "guide-to-healthy-living-rewards-and-partners-january-2015",
+            PublishDate: randomDate().toJSON(),
+            Thumbnail: "/src/img/examples/example-pdf.png",
+            Title: "Health and Reward partners"
         }
     },
     literature: {
@@ -66,6 +67,7 @@ var mockData = {
 angular
     .module("LiteratureLibraryService", [])
     .service("LiteratureLibraryService", function () {
+        "use strict";
         var currentDocument = {};
 
         this.currentDocument = function () {
@@ -80,7 +82,7 @@ angular
             return mockData.literature[name];
         };
 
-        this.searchDocuments = function(text) {
+        this.searchDocuments = function (text) {
             return Object.keys(mockData.documents)
                 .map(function (key) {
                     return mockData.documents[key];
@@ -89,4 +91,4 @@ angular
                     return document.Title.toLowerCase().indexOf(text) > -1;
                 });
         };
-});
+    });

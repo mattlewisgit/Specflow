@@ -415,7 +415,7 @@
     <Content Include="src\sass\modules\_article-snippet.scss" />
     <Content Include="config\sizereport-config.json" />
     <Content Include="src\js\config\youtube-api-base-config.json" />
-    <Content Include="src\sass\base\_dropdown.scss" />
+    <Content Include="src\sass\vendor\_typeaheadjs.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

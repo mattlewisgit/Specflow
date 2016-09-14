@@ -5,6 +5,7 @@
 
 @import "base/vars";
 
+@import "vendor/typeaheadjs";
 @import "vendor/bourbon/bourbon";
 @import "vendor/neat/neat";
 
@@ -18,7 +19,6 @@
 @import "base/base";
 @import "base/buttons";
 @import "base/box-buttons";
-@import "base/dropdown";
 @import "base/forms";
 @import "base/fonts";
 @import "base/grids";
