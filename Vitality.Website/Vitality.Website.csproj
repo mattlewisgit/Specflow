@@ -201,6 +201,7 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\Vitality\Vitality.Handlers" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>

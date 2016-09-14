@@ -1,0 +1,7 @@
+﻿<?xml version="1.0"?>
+<configuration>
+    <system.webServer>
+        <add name="CaptchaImage" verb="*" path="CaptchaImage.axd" type="Sitecore.Form.Core.Pipeline.RequestProcessor.CaptchaResolver, Sitecore.Forms.Core" />
+        <add name="CaptchaAudio" verb="*" path="CaptchaAudio.axd" type="Sitecore.Form.Core.Pipeline.RequestProcessor.CaptchaResolver, Sitecore.Forms.Core" />
+    </system.webServer>
+</configuration>
