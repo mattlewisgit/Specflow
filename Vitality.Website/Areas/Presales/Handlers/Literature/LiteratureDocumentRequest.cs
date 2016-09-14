@@ -1,10 +1,12 @@
-﻿namespace Vitality.Website.Areas.Presales.Handlers.Literature
+﻿using System.Collections.Generic;
+
+namespace Vitality.Website.Areas.Presales.Handlers.Literature
 {
     using System;
 
     using MediatR;
 
-    public class LiteratureDocumentRequest : IRequest<LiteratureDocumentDto>
+    public class LiteratureDocumentRequest : IRequest<LiteratureDocumentDto>, IRequest<IEnumerable<LiteratureDocumentDto>>
     {
         public readonly string Library;
         public readonly string Category;
@@ -23,6 +25,11 @@
             this.Category = category;
             this.Title = title;
             this.IncludeAvailableLiterature = includeAvailableLiterature;
+        }
+
+        public LiteratureDocumentRequest(string library)
+        {
+            this.Library = library;
         }
     }
 }

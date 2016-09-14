@@ -49,6 +49,20 @@
         }
 
         [HttpGet]
+        [Route("api/literature/{library}")]
+        public HttpResponseMessage List(string library)
+        {
+            if (string.IsNullOrWhiteSpace(library))
+            {
+                return new HttpResponseMessage(HttpStatusCode.BadRequest);
+            }
+
+            return this.GetResponse<LiteratureDocumentRequest, IEnumerable<LiteratureDocumentDto>>(
+                new LiteratureDocumentRequest(library),
+                documents => documents.Any());
+        }
+
+        [HttpGet]
         [Route("api/literature/{library}/{category}")]
         public HttpResponseMessage List(string library, string category)
         {
