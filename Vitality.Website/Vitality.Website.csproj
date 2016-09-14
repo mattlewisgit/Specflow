@@ -420,6 +420,7 @@
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentDto.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentRequest.cs" />
+    <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentRootHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSearchResult.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummariesHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummariesRequest.cs" />
