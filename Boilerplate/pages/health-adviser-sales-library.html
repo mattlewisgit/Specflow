@@ -41,8 +41,19 @@
 
                         <h2>Search</h2>
 
-                        <div class="form">
-                            <input type="text" placeholder="Enter a search keyword" />
+                        <div class="form" ng-controller="SearchController as searchController">
+                            <input type="text"
+                                   placeholder="Enter a search keyword"
+                                   ng-model="searchText"
+                                   ng-change="searchController.search(searchText)" />
+                            
+                            <ul class="dropdown" ng-hide="!documents.length">
+                                <li ng-repeat="document in documents"
+                                    ng-click="searchController.select(document)"
+                                    ng-class="{active : isCurrent($index)}">
+                                    {{document.Title}}
+                                </li>
+                            </ul>
                         </div>
                     </div>
 

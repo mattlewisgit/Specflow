@@ -12,6 +12,7 @@ var mockData = {
             Code: "PHU1294A",
             Description: "Business Healthcare with VitalityHealth",
             Document: "dev.vitality.co.uk/-/media/Presales/pdf/Development/PHF-sales-aid-v2.ashx",
+            Key: "guide-to-cover---business-healthcare-2015",
             PublishDate: randomDate().toJSON(),
             Thumbnail: "/src/img/examples/example-pdf.png",
             Title: "Business Healthcare sales aid"
@@ -22,6 +23,7 @@ var mockData = {
             Code: "PHU1294A",
             Description: "Health and Reward partners with VitalityHealth",
             Document: "dev.vitality.co.uk/-/media/Presales/pdf/Development/PHF-sales-aid-v2.ashx",
+            Key: "guide-to-healthy-living-rewards-and-partners-january-2015",
             PublishDate: randomDate().toJSON(),
             Thumbnail: "/src/img/examples/example-pdf.png",
             Title: "Health and Reward partners"
@@ -32,6 +34,7 @@ var mockData = {
             Code: "PHU1294A",
             Description: "Personal Healthcare with VitalityHealth",
             Document: "dev.vitality.co.uk/-/media/Presales/pdf/Development/PHF-sales-aid-v2.ashx",
+            Key: "guide-to-cover---personal-healthcare-2015",
             PublishDate: randomDate().toJSON(),
             Thumbnail: "/src/img/examples/example-pdf.png",
             Title: "Personal Healthcare sales aid"
@@ -73,7 +76,17 @@ angular
             return (currentDocument = mockData.documents[key]);
         };
 
-        this.getLiterature = function(name) {
+        this.getLiterature = function (name) {
             return mockData.literature[name];
         };
-    });
+
+        this.searchDocuments = function(text) {
+            return Object.keys(mockData.documents)
+                .map(function (key) {
+                    return mockData.documents[key];
+                })
+                .filter(function (document) {
+                    return document.Title.toLowerCase().indexOf(text) > -1;
+                });
+        };
+});

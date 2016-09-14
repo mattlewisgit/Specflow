@@ -1,10 +1,23 @@
 ﻿var events = {
-    documentedSelected: "documentedSelected",
+    typeSelecteddocumentedSelected: "documentedSelected",
     typeSelected: "typeSelected"
 };
 
 window.healthAdvisersSalesLiteratureApp = angular
     .module("HealthAdvisersSalesLiteratureApp", ["LiteratureLibraryService"])
+    .controller("SearchController", ["$scope", "$rootScope", "LiteratureLibraryService",
+        function ($scope, $rootScope, LiteratureLibraryService) {
+            "use strict";
+
+            this.search = function (text) {
+                $scope.documents = LiteratureLibraryService.searchDocuments(text);
+            };
+
+            this.select = function (document) {
+                $rootScope.$broadcast(events.documentedSelected, document);
+                $rootScope.$broadcast(events.typeSelected);
+            };
+        }])
     .controller("ChooseController", ["$scope", "$rootScope", "literatureTypes",
         function ($scope, $rootScope, literatureTypes) {
             "use strict";
@@ -25,6 +38,11 @@ window.healthAdvisersSalesLiteratureApp = angular
         function ($scope, $rootScope, LiteratureLibraryService) {
             "use strict";
             $rootScope.$on(events.typeSelected, function (event, literatureType) {
+                // Clear out the literature if none provided.
+                if (!literatureType) {
+                    return $scope.literature = [];
+                }
+
                 // Fetch the data.
                 $scope.literature = LiteratureLibraryService.getLiterature(literatureType.Name);
 
@@ -51,4 +69,3 @@ window.healthAdvisersSalesLiteratureApp = angular
                 $scope.document = LiteratureLibraryService.getDocument(document.Key);
             });
         }]);
- 
