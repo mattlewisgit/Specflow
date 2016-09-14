@@ -215,6 +215,7 @@
     <Content Include="src\img\logos\white\virgin-active_white.png" />
     <Content Include="src\img\logos\white\weightwatchers_white.png" />
     <Content Include="src\js\angular\healthAdvisersLiteratureApp.js" />
+    <Content Include="src\js\angular\literatureLibraryServiceMock.js" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
     <Content Include="src\js\modules\cookieMessageModule.js" />
@@ -414,6 +415,7 @@
     <Content Include="src\sass\modules\_article-snippet.scss" />
     <Content Include="config\sizereport-config.json" />
     <Content Include="src\js\config\youtube-api-base-config.json" />
+    <Content Include="src\sass\vendor\_typeaheadjs.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
