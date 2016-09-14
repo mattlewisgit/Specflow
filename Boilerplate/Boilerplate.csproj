@@ -49,7 +49,6 @@
     <Content Include="components\article-index.html" />
     <Content Include="components\award-leader.html" />
     <Content Include="components\preview-card.html" />
-    <Content Include="components\preview-card.html" />
     <Content Include="components\primary-cta.html" />
     <Content Include="components\accordion.html" />
     <Content Include="components\products_component.html" />
