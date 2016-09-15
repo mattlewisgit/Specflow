@@ -1,0 +1,255 @@
+----item----
+version: 1
+id: {770FCDF4-F172-4B40-B06C-D8784F8DFF6E}
+database: master
+path: /sitecore/system/Modules/Web Forms for Marketers/Settings/Meta data/Mvc Validation Error Messages/String Length
+parent: {77F244BF-A649-47F1-A3FB-23E980443CBC}
+name: String Length
+master: {00000000-0000-0000-0000-000000000000}
+template: {B4821C0A-57C6-43B5-BC48-BABF3F74E178}
+templatekey: Text
+
+----field----
+field: {52899A1F-EE83-47E9-BECF-84F76C7F1DA7}
+name: Key
+key: key
+content-length: 28
+
+DynamicStringLengthAttribute
+----version----
+language: da
+version: 1
+revision: 580424c0-985b-4642-81a4-1b89c81d53cf
+
+----field----
+field: {16BEBE74-CF50-49C5-A069-05769CB10599}
+name: Value
+key: value
+content-length: 88
+
+Feltet {0} skal være en streng med en længde på mindst {1} og en maksimal længde på {2}.
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 13
+
+Streng længde
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154156Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+580424c0-985b-4642-81a4-1b89c81d53cf
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154156Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: de-DE
+version: 1
+revision: 1e282ffe-3495-47ca-9489-e31dfc87ed39
+
+----field----
+field: {16BEBE74-CF50-49C5-A069-05769CB10599}
+name: Value
+key: value
+content-length: 96
+
+Das {0} Feld muss ein String mit einer Mindestlänge von {1} und einer Maximallänge von {2} sein.
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 12
+
+String Länge
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154559Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+1e282ffe-3495-47ca-9489-e31dfc87ed39
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154559Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: en
+version: 1
+revision: 138439d7-006b-4593-aa51-1f1961e9f371
+
+----field----
+field: {16BEBE74-CF50-49C5-A069-05769CB10599}
+name: Value
+key: value
+content-length: 88
+
+The {0} field must be a string with a minimum length of {1} and a maximum length of {2}.
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20150402T134021
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+138439d7-006b-4593-aa51-1f1961e9f371
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160125T163407Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: ja-JP
+version: 1
+revision: 4db88ecd-497b-40ec-a5ae-8ecbb8529381
+
+----field----
+field: {16BEBE74-CF50-49C5-A069-05769CB10599}
+name: Value
+key: value
+content-length: 34
+
+{0} フィールドには最低 {1} 文字、最大 {2} 文字必要です
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 4
+
+文字列長
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154809Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+4db88ecd-497b-40ec-a5ae-8ecbb8529381
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154809Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

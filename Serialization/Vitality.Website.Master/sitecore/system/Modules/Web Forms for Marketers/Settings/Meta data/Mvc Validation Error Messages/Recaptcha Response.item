@@ -1,0 +1,255 @@
+----item----
+version: 1
+id: {3F818EE1-B7F3-41B1-9896-2C7413FAE39D}
+database: master
+path: /sitecore/system/Modules/Web Forms for Marketers/Settings/Meta data/Mvc Validation Error Messages/Recaptcha Response
+parent: {77F244BF-A649-47F1-A3FB-23E980443CBC}
+name: Recaptcha Response
+master: {00000000-0000-0000-0000-000000000000}
+template: {B4821C0A-57C6-43B5-BC48-BABF3F74E178}
+templatekey: Text
+
+----field----
+field: {52899A1F-EE83-47E9-BECF-84F76C7F1DA7}
+name: Key
+key: key
+content-length: 35
+
+RecaptchaResponseValidatorAttribute
+----version----
+language: da
+version: 1
+revision: a7e6572e-e52d-434a-92da-d526f6ee926c
+
+----field----
+field: {16BEBE74-CF50-49C5-A069-05769CB10599}
+name: Value
+key: value
+content-length: 140
+
+Den indtastede tekst stemmer ikke overens med de tegn, der er vist i feltet. Prøv igen, eller klik på Opdater for at få vist nogle nye tegn.
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 18
+
+Recaptcha Response
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154123Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+a7e6572e-e52d-434a-92da-d526f6ee926c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154123Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: de-DE
+version: 1
+revision: 430222dc-1f50-404a-b78a-ddf003bc54b5
+
+----field----
+field: {16BEBE74-CF50-49C5-A069-05769CB10599}
+name: Value
+key: value
+content-length: 169
+
+Der Text, den Sie eingegeben haben passt nicht zu den  Zeichen im Feld. Versuchen Sie es erneut oder klicken Sie auf aktualisieren, um andere Zeichen anzeigen zu lassen.
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 17
+
+Recaptcha Antwort
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154540Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+430222dc-1f50-404a-b78a-ddf003bc54b5
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154540Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: en
+version: 1
+revision: f73c559d-ecfd-42d9-b0b5-a8d576d9d545
+
+----field----
+field: {16BEBE74-CF50-49C5-A069-05769CB10599}
+name: Value
+key: value
+content-length: 135
+
+The text you typed does not match the characters shown in the box. Try again or click refresh to display a different set of characters.
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20150402T133909
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+f73c559d-ecfd-42d9-b0b5-a8d576d9d545
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20150402T133918:635635787580086484
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: ja-JP
+version: 1
+revision: 442c0f50-8f9f-406f-8476-91df57b7b399
+
+----field----
+field: {16BEBE74-CF50-49C5-A069-05769CB10599}
+name: Value
+key: value
+content-length: 71
+
+あなたが入力したテキストはボックスに表示されている文字と一致しません。再度試すか、または [更新] をクリックして別の文字セットを表示します。
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 15
+
+Recaptcha レスポンス
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154750Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+442c0f50-8f9f-406f-8476-91df57b7b399
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154750Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

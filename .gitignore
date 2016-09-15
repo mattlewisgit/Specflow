@@ -204,6 +204,7 @@ FakesAssemblies/
 
 TestResults/
 Vitality.Website/sitecore/
+Vitality.Website/sitecore modules/Shell/
 Vitality.Website/sitecore modules/Web/
 Vitality.Website/sitecore_files/
 Vitality.Website/temp/
@@ -229,6 +230,7 @@ Vitality.Website/App_Data/serialization/
 Vitality.Website/App_Data/viewstate/
 Vitality.Website/Areas/Social/
 Vitality.Website/Artifacts/
+Vitality.Website/Data/
 Vitality.Website/Default.aspx
 Vitality.Website/default.css
 Vitality.Website/default.htm.sitedown
