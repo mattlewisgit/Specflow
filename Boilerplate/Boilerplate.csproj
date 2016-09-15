@@ -45,6 +45,7 @@
     <Content Include="components\cookie-message\without-cookie.html" />
     <Content Include="components\cookie-message\with-cookie.html" />
     <Content Include="components\cookie-message\index.html" />
+    <Content Include="components\typeahead.html" />
     <Content Include="components\server-error.html" />
     <Content Include="components\article-index.html" />
     <Content Include="components\award-leader.html" />
