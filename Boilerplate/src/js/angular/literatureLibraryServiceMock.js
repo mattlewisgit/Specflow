@@ -1,46 +1,83 @@
-﻿function randomDate(start, end) {
-    "use strict";
-    end = end || new Date();
-    start = start || new Date(end.getFullYear() - 1, end.getMonth(), end.getDate());
-    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-}
-
-var mockData = {
-    documents: {
-        "guide-to-cover---business-healthcare-2015": {
-            AvailableLiterature: [],
-            Category: "Business healthcare literature",
-            Code: "PHU1294A",
-            Description: "Business Healthcare with VitalityHealth",
-            Document: "dev.vitality.co.uk/-/media/Presales/pdf/Development/PHF-sales-aid-v2.ashx",
-            Key: "guide-to-cover---business-healthcare-2015",
-            PublishDate: randomDate().toJSON(),
-            Thumbnail: "/src/img/examples/example-pdf.png",
-            Title: "Business Healthcare sales aid"
+﻿var mockData = {
+    documents: [
+        {
+            "Title": "Vitality GP Select",
+            "Description": "Vitality GP Select with VitalityHealth",
+            "PublishDate": "2016-06-01T23:00:00Z",
+            "Document": "dev.vitality.co.uk/media-online/presales/pdf/development/guide-to-business-healthcare---january-2015-print-friendly.pdf",
+            "Thumbnail": "dev.vitality.co.uk/media-online/presales/pdf/development/client_fic.gif",
+            "Code": "PHU1234",
+            "Category": "Sales Literature",
+            "Key": "vitality-gp-select",
+            "AvailableLiterature": []
         },
-        "guide-to-cover---personal-healthcare-2015": {
-            AvailableLiterature: [],
-            Category: "Personal healthcare literature",
-            Code: "PHU1294A",
-            Description: "Personal Healthcare with VitalityHealth",
-            Document: "dev.vitality.co.uk/-/media/Presales/pdf/Development/PHF-sales-aid-v2.ashx",
-            Key: "guide-to-cover---personal-healthcare-2015",
-            PublishDate: randomDate().toJSON(),
-            Thumbnail: "/src/img/examples/example-pdf.png",
-            Title: "Personal Healthcare sales aid"
+        {
+            "Title": "Vitality GP",
+            "Description": "Vitality GP with VitalityHealth",
+            "PublishDate": "2016-07-06T23:00:00Z",
+            "Document": "dev.vitality.co.uk/media-online/presales/pdf/development/phf-sales-aid-v2.pdf",
+            "Thumbnail": "dev.vitality.co.uk/media-online/presales/pdf/development/essentials_life_policysum.gif",
+            "Code": "PHU1294A",
+            "Category": "Sales Literature",
+            "Key": "vitality-gp",
+            "AvailableLiterature": []
         },
-        "guide-to-healthy-living-rewards-and-partners-january-2015": {
-            AvailableLiterature: [],
-            Category: "Business healthcare literature",
-            Code: "PHU1294A",
-            Description: "Health and Reward partners with VitalityHealth",
-            Document: "dev.vitality.co.uk/-/media/Presales/pdf/Development/PHF-sales-aid-v2.ashx",
-            Key: "guide-to-healthy-living-rewards-and-partners-january-2015",
-            PublishDate: randomDate().toJSON(),
-            Thumbnail: "/src/img/examples/example-pdf.png",
-            Title: "Health and Reward partners"
+        {
+            "Title": "Health and rewards partners",
+            "Description": "Health and rewards partners with VitalityHealth",
+            "PublishDate": "2016-06-01T23:00:00Z",
+            "Document": "dev.vitality.co.uk/media-online/presales/pdf/development/business-healthcare-sales-aid---january-2015.pdf",
+            "Thumbnail": "dev.vitality.co.uk/media-online/presales/pdf/development/adviser_education.gif",
+            "Code": "PHU1234",
+            "Category": "Sales Literature",
+            "Key": "health-and-rewards-partners",
+            "AvailableLiterature": []
+        },
+        {
+            "Title": "Personal Healthcare sales aid",
+            "Description": "Personal Healthcare with VitalityHealth",
+            "PublishDate": "2016-07-06T23:00:00Z",
+            "Document": "dev.vitality.co.uk/media-online/presales/pdf/development/phf-sales-aid-v2.pdf",
+            "Thumbnail": "dev.vitality.co.uk/media-online/presales/pdf/development/essentials_life_policysum.gif",
+            "Code": "PHU1294A",
+            "Category": "Personal healthcare literature",
+            "Key": "personal-healthcare-sales-aid",
+            "AvailableLiterature": []
+        },
+        {
+            "Title": "Guide to Cover - Personal Healthcare 2015",
+            "Description": "Personal Healthcare with VitalityHealth",
+            "PublishDate": "2016-06-01T23:00:00Z",
+            "Document": "dev.vitality.co.uk/media-online/presales/pdf/development/business-healthcare-sales-aid---january-2015.pdf",
+            "Thumbnail": "dev.vitality.co.uk/media-online/presales/pdf/development/adviser_education.gif",
+            "Code": "PHU1234",
+            "Category": "Personal healthcare literature",
+            "Key": "guide-to-cover---personal-healthcare-2015",
+            "AvailableLiterature": []
+        },
+        {
+            "Title": "Guide to Cover - Business Healthcare 2015",
+            "Description": "Business Healthcare with VitalityHealth",
+            "PublishDate": "2016-06-01T23:00:00Z",
+            "Document": "dev.vitality.co.uk/media-online/presales/pdf/development/business-healthcare-sales-aid---january-2015.pdf",
+            "Thumbnail": "dev.vitality.co.uk/media-online/presales/pdf/development/wol_faq_thumb.jpg",
+            "Code": "PHU1234",
+            "Category": "Business and Corporate Healthcare Literature",
+            "Key": "guide-to-cover---business-healthcare-2015",
+            "AvailableLiterature": []
+        },
+        {
+            "Title": "Business Healthcare sales aid",
+            "Description": "Business Healthcare with VitalityHealth",
+            "PublishDate": "2016-07-06T23:00:00Z",
+            "Document": "dev.vitality.co.uk/media-online/presales/pdf/development/phf-sales-aid-v2.pdf",
+            "Thumbnail": "dev.vitality.co.uk/media-online/presales/pdf/development/mortgage_plus_planprov.gif",
+            "Code": "PHU1294A",
+            "Category": "Business and Corporate Healthcare Literature",
+            "Key": "business-healthcare-sales-aid",
+            "AvailableLiterature": []
         }
-    },
+    ],
     literature: {
         "Personal healthcare literature": [
             {
@@ -75,7 +112,9 @@ angular
         };
 
         this.getDocument = function (key) {
-            return (currentDocument = mockData.documents[key]);
+            return (currentDocument = mockData.documents.filter(function (document) {
+                return document.Key === key;
+            })[0]);
         };
 
         this.getLiterature = function (name) {
@@ -83,12 +122,8 @@ angular
         };
 
         this.searchDocuments = function (text) {
-            return Object.keys(mockData.documents)
-                .map(function (key) {
-                    return mockData.documents[key];
-                })
-                .filter(function (document) {
-                    return document.Title.toLowerCase().indexOf(text) > -1;
-                });
+            return mockData.documents.filter(function (document) {
+                return document.Title.toLowerCase().indexOf(text) > -1;
+            });
         };
     });

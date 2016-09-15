@@ -16,6 +16,7 @@
 
     .tt-dataset {
         @include rounding;
+        background: $white;
         border: 1px solid $color-mono-12;
         width: 100%;
 
