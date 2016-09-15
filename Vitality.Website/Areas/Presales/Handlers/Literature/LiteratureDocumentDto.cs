@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Vitality.Website.Extensions;
 
 namespace Vitality.Website.Areas.Presales.Handlers.Literature
 {
@@ -21,6 +22,8 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
 
         public string Category { get; set; }
 
+        public string Key { get; set; }
+
         public LiteratureDocumentSummaryDto[] AvailableLiterature { get; set; }
         
         public static IEnumerable<LiteratureDocumentDto> From(IEnumerable<LiteratureDocumentSearchResult> searchResult1)
@@ -34,6 +37,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
                 Thumbnail = searchResult.Thumbnail,
                 PublishDate = searchResult.PublishDate,
                 Category = searchResult.Category,
+                Key = searchResult.Title.ToLowerHyphenatedString(),
                 AvailableLiterature = new LiteratureDocumentSummaryDto[0]
             }).ToList();
 
