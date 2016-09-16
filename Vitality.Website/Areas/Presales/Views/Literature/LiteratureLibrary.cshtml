@@ -1,65 +1,117 @@
-﻿@using Vitality.Website.Extensions.Views
-@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.LiteratureLibraryPage>
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.LiteratureLibraryPage>
 
-<div class="grid" data-ng-app="HealthAdvisersSalesLiteratureApp">
-    <div class="grid-col-8-12">
-        <h1 class="text-flush-top">@Editable(Model, m => m.Headline)</h1>
-        <p>@Editable(Model, m => m.OpeningParagraph)</p>
-        <h2>@Editable(Model, m => m.SearchHeadline)</h2>
-        <input type="search" placeholder="@Html.Raw(Model.SearchPlaceholderText)" />
-    </div>
-    <div class="grid-col-4-12 tablet-and-up">
-        <div class="spotlight">
-            <div class="spotlight__list-item spotlight__standalone">
-                <div class="spotlight-item">
-                    <div class="spotlight-item__top-content">
-                        <div class="spotlight-item__intro-image burst">
-                            @Editable(Model, m => m.CardImage, new { w = 320 })
-                        </div>
-                        <p class="spotlight-item__heading">
-                            @Editable(Model, m => m.CardHeadline)
-                        </p>
-                        <div class="spotlight-item__content">
-                            <p>
-                                @Editable(Model, m => m.CardOpeningParagraph)
+<div class="example" data-ng-app="HealthAdvisersSalesLiteratureApp">
+    <div class="grid">
+        <div class="grid-col-8-12">
+            <h1 class="text-flush-top">@Editable(Model, m => m.Headline)</h1>
+            <p>@Editable(Model, m => m.OpeningParagraph)</p>
+            <h2>@Editable(Model, m => m.SearchHeadline)</h2>
+            <input type="text" placeholder="@Html.Raw(Model.SearchPlaceholderText)" typeahead />
+        </div>
+
+        <div class="grid-col-4-12 tablet-and-up">
+            <div class="spotlight">
+                <div class="spotlight__list-item spotlight__standalone">
+                    <div class="spotlight-item">
+                        <div class="spotlight-item__top-content">
+                            <div class="spotlight-item__intro-image burst">
+                                @Editable(Model, m => m.CardImage, new { w = 320 })
+                            </div>
+                            <p class="spotlight-item__heading">
+                                @Editable(Model, m => m.CardHeadline)
                             </p>
+                            <div class="spotlight-item__content">
+                                <p>
+                                    @Editable(Model, m => m.CardOpeningParagraph)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="spotlight-item__cta">
+                            @Editable(Model, m => m.CardLink)
                         </div>
                     </div>
-                    <div class="spotlight-item__cta">
-                        @Editable(Model, m => m.CardLink)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="grid-col-4-12" ng-controller="ChooseController as chooseController">
+            <h3>@Editable(Model, m => m.CategoriesHeadline)</h3>
+
+            <ul class="list--buttons">
+                <li ng-repeat="entry in types">
+                    <a class="button-list"
+                       ng-class="{'button-list--selected': entry.IsSelected}"
+                       ng-click="chooseController.loadType(entry)">
+                        {{entry.Name}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="grid-col-4-12" ng-controller="AvailableController as availableController">
+            <h3>@Editable(Model, m => m.LiteratureHeadline)</h3>
+
+            <ul class="list--buttons">
+                <li ng-repeat="document in literature">
+                    <a class="button-list"
+                       ng-class="{'button-list--selected': document.IsSelected}"
+                       ng-click="availableController.loadDocument(document)">
+                        {{document.Title}}
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="grid-col-4-12" ng-controller="DocumentController">
+            <h3>@Editable(Model, m => m.SelectionHeadline)</h3>
+
+            <div class="preview-card" ng-if="document">
+                <div class="preview-card--header">
+                    {{document.Title}}
+                </div>
+
+                <div class="preview-card--body">
+                    <div class="preview-card--body__buttons">
+                        <div>
+                            <a href="#" class="box-button box-button--secondary box-button--rounded box-button--full-width">
+                                Download
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="#" class="box-button box-button--secondary-inverse box-button--rounded box-button--full-width">
+                                Email
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="preview-card--body__preview">
+                        <img ng-src="{{document.Thumbnail}}" alt="{{document.Title}}" />
+                    </div>
+
+                    <div class="preview-card--body__text">
+                        <p>{{document.Description}}</p>
+                        <p><b>{{document.Code}}</b></p>
+                        <p>{{document.PublishDate | date : "d MMM yyyy"}}</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div class="grid">
-    <div class="grid-col-4-12" ng-controller="LiteratureLibraryController as chooseController">
-        <h3>@Editable(Model, m => m.CategoriesHeadline)</h3>
-        <div>
-            <ul>
-                @foreach (var literatureCategory in this.LiteratureCategories())
-                {
-                    <li>@Editable(literatureCategory, m => m.Title)</li>
-                }
-            </ul>
-        </div>
-    </div>
-    <div class="grid-col-4-12">
-        <h3>@Editable(Model, m => m.LiteratureHeadline)</h3>
-        <div>
-            <ul>
-                <li>Health and rewards partners</li>
-                <li>Vitality GP Select</li>
-            </ul>
-        </div>
-    </div>
-    <div class="grid-col-4-12">
-        <h3>@Editable(Model, m => m.SelectionHeadline)</h3>
-        <div>
-            <h4>Vitality GP Select</h4>
-            <a href="#" class="box-button box-button--rounded box-button--secondary">Download</a><a href="#" class="box-button box-button--rounded box-button--secondary">Email</a>
-            <p>Some descriptions</p>
-        </div>
-    </div>
-</div>
+
+<script>
+    var data = [
+        {
+            Name: "Sales literature"
+        },
+        {
+            Name: "Personal healthcare literature"
+        }
+    ];
+
+    window.angularData = window.angularData || {};
+    window.angularData.literatureTypes = data;
+</script>

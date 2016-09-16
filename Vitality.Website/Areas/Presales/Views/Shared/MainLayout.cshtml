@@ -12,10 +12,6 @@
     @Html.Partial("_Favicons")
     @*Html.Partial("_CriticalCss")*@
 
-    <!--[if lt IE 9]>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/aight/2.1.1/aight.min.js"></script>
-    <![endif]-->
-
     @if (IsInEditingMode)
     {
         <link rel="stylesheet" href="/css/experience_editor_fix.css" />
@@ -54,6 +50,10 @@
         <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw.js"></script>
         <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw-init.js"></script>
     }
+
+    @* TODO Bundle! *@
+    <script type="text/javascript" src="/js/literatureLibraryService.js"></script>
+    <script type="text/javascript" src="/js/healthAdvisersLiteratureApp.js"></script>
 
     <script type="text/javascript" src="/js/vitality-boilerplate-1.0.0.min.js"></script>
 </body>
