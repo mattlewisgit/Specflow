@@ -1,11 +1,16 @@
-# EditorConfig is awesome: http://EditorConfig.org
-
-# top-most EditorConfig file
+# http://EditorConfig.org
 root = true
 
-# Unix-style newlines with a newline ending every file
+# Defaults for all file types.
 [*]
 end_of_line = lf
-indent_style = space
 indent_size = 4
+indent_style = space
 insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Use two-space indentation for Bower and NPM definitions,
+# as updates to them via either package manager enforce
+# two spaces, and just cause confusion in version control changes.
+[{bower.json,package.json}]
+indent_size = 2

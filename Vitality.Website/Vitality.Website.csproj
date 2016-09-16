@@ -198,7 +198,9 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Agents.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled" />
+    <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -367,7 +369,7 @@
     <Compile Include="Areas\Presales\RenderingTemplates\SummaryComponentRendering.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\CookieSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
-    <Compile Include="Areas\Presales\SettingsTemplates\GlobalSettings.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\SiteSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\ImageExtensions.cs" />
@@ -670,6 +672,7 @@
     <Folder Include="Areas\Presales\Controllers\" />
     <Folder Include="Areas\Presales\Models\" />
     <Folder Include="img\examples\" />
+    <Folder Include="sitemaps\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vitality.Website.SC\Vitality.Website.SC.csproj">

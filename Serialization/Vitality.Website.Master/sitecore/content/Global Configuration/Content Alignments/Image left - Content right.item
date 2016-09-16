@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {4C1E4C72-8316-4343-BE9F-867DC473456C}
+database: master
+path: /sitecore/content/Global Configuration/Content Alignments/Image left - Content right
+parent: {43A63456-A2CF-40F9-8D24-3AB5F43A8280}
+name: Image left - Content right
+master: {00000000-0000-0000-0000-000000000000}
+template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
+templatekey: Key Value Pair
+
+----version----
+language: en
+version: 1
+revision: 9a629af8-cec3-48c6-97a4-f1c624da0f17
+
+----field----
+field: {C01F61CF-8603-4C48-A96A-EFDDDFEB52ED}
+name: Value
+key: value
+content-length: 5
+
+right
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160525T100403Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9a629af8-cec3-48c6-97a4-f1c624da0f17
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160525T124204Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

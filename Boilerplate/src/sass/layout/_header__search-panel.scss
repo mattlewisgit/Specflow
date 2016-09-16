@@ -202,7 +202,7 @@
     .search-panel {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.75s ease;
+        transition: max-height $delay--long ease;
 
         .search-open & {
             max-height: 1000px;

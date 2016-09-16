@@ -1,0 +1,32 @@
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:set="http://www.sitecore.net/xmlconfig/set/">
+  <sitecore>
+    <scheduling>
+      <agent type="Sitecore.Tasks.DatabaseAgent" name="Master_Database_Agent" method="Run" patch:source="Sitecore.Processing.config" interval="00:10:00">
+        <patch:delete />
+      </agent>
+    </scheduling>
+    <marketingDefinitions>
+      <itemRepositoriesDatabase>web</itemRepositoriesDatabase>
+      <searchIndexName>sitecore_marketingdefinitions_web</searchIndexName>
+    </marketingDefinitions>
+    <contentSearch>
+      <configuration>
+        <indexes>
+          <index id="sitecore_marketingdefinitions_master" type="Sitecore.ContentSearch.LuceneProvider.LuceneIndex, Sitecore.ContentSearch.LuceneProvider" patch:source="Sitecore.Marketing.Lucene.Index.Master.config">
+            <patch:delete />
+          </index>
+          <index id="sitecore_list_index" type="Sitecore.ContentSearch.LuceneProvider.LuceneIndex, Sitecore.ContentSearch.LuceneProvider" patch:source="Sitecore.ListManagement.Lucene.Index.List.config">
+            <strategies>
+              <strategy ref="contentSearch/indexConfigurations/indexUpdateStrategies/onPublishEndAsync" patch:instead="strategy[@ref='contentSearch/indexConfigurations/indexUpdateStrategies/syncMaster']"/>
+            </strategies>
+            <locations hint="list:AddCrawler">
+              <crawler type="Sitecore.ContentSearch.SitecoreItemCrawler, Sitecore.ContentSearch">
+                <Database>web</Database>
+              </crawler>
+            </locations>
+          </index>
+        </indexes>
+      </configuration>
+    </contentSearch>
+  </sitecore>
+</configuration>

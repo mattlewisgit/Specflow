@@ -27,6 +27,7 @@
         "jQuery",
         "Modernizr",
         "module",
+        "QUnit",
         "require",
         "WOW",
         "YT"
