@@ -4,3 +4,6 @@ name: sitecore\Sitecore Local Administrators
 ----role-in-role----
 rolename: sitecore\Presales Admin
 
+----role-in-role----
+rolename: sitecore\Vitality Admin
+
