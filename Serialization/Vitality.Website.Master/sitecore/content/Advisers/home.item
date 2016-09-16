@@ -31,6 +31,13 @@ content-length: 186
 
 <r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{B73C367C-CC35-4EE2-B7F7-CA6164E76688}" s:ds="{8BDA910D-1CE5-44CE-9FA8-84006F5CC7EA}" /></d></r>
 ----field----
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 130
+
+ar|sitecore\Advisers User|pe|+item:create|+item:write|+item:read|pd|+item:rename|+item:write|+item:read|+item:delete|+item:create|
+----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
 name: __Workflow
 key: __workflow
@@ -40,7 +47,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 075b601d-19a8-48eb-965c-b22653b16de8
+revision: e98225f9-0e28-43cc-9ec2-e2efad828440
 
 ----field----
 field: {6327BB53-43BC-4B71-8D37-31543CBB6703}
@@ -104,14 +111,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-075b601d-19a8-48eb-965c-b22653b16de8
+e98225f9-0e28-43cc-9ec2-e2efad828440
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160826T092528Z
+20160914T133045Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

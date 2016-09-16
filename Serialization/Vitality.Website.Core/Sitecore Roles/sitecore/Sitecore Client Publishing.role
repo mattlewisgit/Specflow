@@ -4,3 +4,6 @@ name: sitecore\Sitecore Client Publishing
 ----role-in-role----
 rolename: sitecore\Sitecore Client Advanced Publishing
 
+----role-in-role----
+rolename: sitecore\Vitality Content Manager
+
