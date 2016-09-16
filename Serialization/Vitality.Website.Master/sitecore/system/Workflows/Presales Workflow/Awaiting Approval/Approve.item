@@ -29,7 +29,7 @@ name: __Security
 key: __security
 content-length: 65
 
-ar|sitecore\Presales Content Manager|pe|+workflowCommand:execute|
+ar|sitecore\Vitality Content Manager|pe|+workflowCommand:execute|
 ----version----
 language: da
 version: 1
@@ -141,7 +141,7 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: e15d5b57-d91a-402c-83e2-318ce1cc5f6f
+revision: f7041958-d7dd-4753-8cc3-19fca0617afd
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -170,14 +170,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e15d5b57-d91a-402c-83e2-318ce1cc5f6f
+f7041958-d7dd-4753-8cc3-19fca0617afd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160518T111928Z
+20160915T112111Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

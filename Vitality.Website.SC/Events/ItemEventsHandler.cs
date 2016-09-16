@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using Sitecore.Web;
 
 namespace Vitality.Website.SC.Events
 {
@@ -12,7 +14,7 @@ namespace Vitality.Website.SC.Events
     public class ItemEventsHandler
     {
         private static readonly ID fieldTemplateId = new ID("{455A3E98-A627-4B40-8035-E683A0331AC7}");
-
+        private static readonly IEnumerable<SiteInfo> siteInfoList = Sitecore.Configuration.Factory.GetSiteInfoList().RemoveSitecoreShellSiteInfos();
         public void SetSeoFriendlyItemName(object sender, EventArgs args)
         {
             var item = this.GetItem(args);
@@ -62,8 +64,14 @@ namespace Vitality.Website.SC.Events
 
         private static bool ItemIsMasterDatabaseContentPage(Item item)
         {
-            return item != null && item.Database.Name == "master" 
-                && item.Paths.FullPath.StartsWith(ItemConstants.Presales.Content.Home.Path, StringComparison.OrdinalIgnoreCase);
+            if (item == null || !string.Equals(item.Database.Name, "master", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return false;
+            }
+            var currentSiteContentStartPath = item.GetSiteContentStartPath(siteInfoList);
+            return item.Paths.FullPath.StartsWith(
+                currentSiteContentStartPath + ItemConstants.Presales.Content.Home.RelativePath,
+                StringComparison.InvariantCultureIgnoreCase);
         }
 
         private static bool ItemIsMasterDatabaseTemplateField(Item item)

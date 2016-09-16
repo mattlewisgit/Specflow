@@ -20,9 +20,9 @@ Multilist
 field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
 name: Source
 key: source
-content-length: 60
+content-length: 89
 
-/sitecore/content/Presales/Configuration/Partners/Categories
+query:./ancestor-or-self::*[@@templatename='Website']/Configuration/Partners/Categories/*
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
@@ -33,7 +33,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 18e60760-010b-4e72-a362-4e442696c32f
+revision: 24bf2b8b-173c-4858-8200-3d229061c0fb
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-18e60760-010b-4e72-a362-4e442696c32f
+24bf2b8b-173c-4858-8200-3d229061c0fb
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160622T115915Z
+20160822T143315Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
