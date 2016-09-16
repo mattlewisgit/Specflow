@@ -1,0 +1,318 @@
+----item----
+version: 1
+id: {850B52F1-FBE5-4A89-998C-32DAD0364ABE}
+database: master
+path: /sitecore/system/Modules/Web Forms for Marketers/Settings/Actions/Save Actions/Create User
+parent: {E5EABB1F-40BC-45BB-8D87-3B6C239B521B}
+name: Create User
+master: {00000000-0000-0000-0000-000000000000}
+template: {E01318E7-CEED-4EA4-B107-1B8FAC3A3DB8}
+templatekey: Submit Action
+
+----field----
+field: {2A29BFAC-1CD0-4AC9-9053-19BE2473200D}
+name: Assembly
+key: assembly
+content-length: 21
+
+Sitecore.Forms.Custom
+----field----
+field: {F062D792-ECDE-41EB-811F-9CC68F7B4082}
+name: Class
+key: class
+content-length: 31
+
+Sitecore.Form.Submit.CreateUser
+----field----
+field: {D9B5A805-6623-4603-BC51-D838120B9B54}
+name: Parameters
+key: parameters
+content-length: 83
+
+<DefaultProfileItemId>{38F813E8-8787-4CE5-B13F-6D0C554E7927}</DefaultProfileItemId>
+----field----
+field: {055928E5-9FD4-45DE-97CD-0B595025B175}
+name: Client Action
+key: client action
+content-length: 1
+
+1
+----field----
+field: {A95C414D-B036-4E1B-B298-86DED562F411}
+name: Editor
+key: editor
+content-length: 70
+
+/sitecore/shell/~/xaml/Sitecore.Forms.Shell.UI.Dialogs.CreateUser.aspx
+----field----
+field: {0945CEEF-01EE-460B-8DF6-4A0D0A441231}
+name: QueryString
+key: querystring
+content-length: 0
+
+
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 26
+
+People/32x32/user1_new.png
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+300
+----field----
+field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
+name: __Originator
+key: __originator
+content-length: 0
+
+
+----field----
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 118
+
+ar|sitecore\Sitecore Client Securing|pe|+item:read|pd|+item:read|ar|sitecore\Sitecore Client Forms Author|pe|!*|pd|!*|
+----version----
+language: da
+version: 1
+revision: 46fa2f36-f82f-4072-8cba-728d9d0f321e
+
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 12
+
+Opret bruger
+----field----
+field: {9541E67D-CE8C-4225-803D-33F7F29F09EF}
+name: __Short description
+key: __short description
+content-length: 18
+
+Opret en ny bruger
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154203Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+46fa2f36-f82f-4072-8cba-728d9d0f321e
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154203Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: de-DE
+version: 1
+revision: d51fa2b7-3d1a-455f-a019-dea7300734f1
+
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 18
+
+Benutzer erstellen
+----field----
+field: {9541E67D-CE8C-4225-803D-33F7F29F09EF}
+name: __Short description
+key: __short description
+content-length: 24
+
+Neuen Benutzer erstellen
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154602Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d51fa2b7-3d1a-455f-a019-dea7300734f1
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154603Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: en
+version: 1
+revision: 71077341-1d9b-4d7f-be6b-f51e018d929c
+
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 11
+
+Create User
+----field----
+field: {9541E67D-CE8C-4225-803D-33F7F29F09EF}
+name: __Short description
+key: __short description
+content-length: 17
+
+Create a new user
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20090917T154500
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 18
+
+sitecore\Anonymous
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+71077341-1d9b-4d7f-be6b-f51e018d929c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20100218T173754:634021114742500000
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: ja-JP
+version: 1
+revision: a922ee9f-fdb6-4779-a156-5153fc9d9b0c
+
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 7
+
+ユーザーの作成
+----field----
+field: {9541E67D-CE8C-4225-803D-33F7F29F09EF}
+name: __Short description
+key: __short description
+content-length: 10
+
+新しいユーザーを作成
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154814Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+a922ee9f-fdb6-4779-a156-5153fc9d9b0c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154814Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

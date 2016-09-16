@@ -1,0 +1,446 @@
+----item----
+version: 1
+id: {65D374A2-FEA3-464B-975F-BE2A37DE7B49}
+database: master
+path: /sitecore/system/Modules/Web Forms for Marketers/Sample forms/Tell a Friend
+parent: {4F42E032-6174-4A79-B3B0-5056494D6B39}
+name: Tell a Friend
+master: {00000000-0000-0000-0000-000000000000}
+template: {FFB1DA32-2764-47DB-83B0-95B843546A7E}
+templatekey: Form
+
+----field----
+field: {A42052F7-6C18-424A-A2A1-7A72054CB1A6}
+name: Show Title
+key: show title
+content-length: 1
+
+1
+----field----
+field: {46FB324A-9741-43BD-A0C9-5081A39D40AA}
+name: Show Introduction
+key: show introduction
+content-length: 1
+
+0
+----field----
+field: {FAEACD39-B059-4F46-BEC4-74BA468A97B8}
+name: Show Footer
+key: show footer
+content-length: 1
+
+0
+----field----
+field: {A7F779B9-5FCF-45CC-866B-7C973F5C4FAC}
+name: Save Actions
+key: save actions
+content-length: 680
+
+<?xml version="1.0" encoding="utf-16"?>
+<li xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <g id="{E5EABB1F-40BC-45BB-8D87-3B6C239B521B}" displayName="Actions" onclick="javascript:return scForm.postEvent(this,event,'forms:addaction')">
+    <li id="{E132E99B-1B9A-41FA-B0E7-418131011B42}" unicid="9FF6586BE05B4A9B9032444AD033388A">
+      <parameters>&amp;lt;from&amp;gt;{595E01B2-4B6C-4AFD-818C-6CA7A5682E30}&amp;lt;/from&amp;gt;&amp;lt;to&amp;gt;{0BE85570-04E7-41B0-977B-9948CB6B223E}&amp;lt;/to&amp;gt;&amp;lt;mail&amp;gt;{5E09139B-EC54-452B-9E4C-0630C4C29007}&amp;lt;/mail&amp;gt;</parameters>
+    </li>
+  </g>
+</li>
+----field----
+field: {AF08C32B-F101-44A4-BAAE-677383E8EB02}
+name: Check Actions
+key: check actions
+content-length: 363
+
+<?xml version="1.0" encoding="utf-16"?><li xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  <g id="{10FE9225-5E6C-4896-9CD2-880D6D48C4CC}" displayName="Check Actions">    <li id="{2D5B5061-747A-4477-BD41-E746EAFEB231}" unicid="89F18F7C96F4469A9470057CE421A115">     <parameters></parameters>    </li>  </g></li>
+----field----
+field: {B0A67B2A-8B07-4E0B-8809-69F751709806}
+name: __Tracking
+key: __tracking
+content-length: 735
+
+<tracking><event name="Submit Success Event" id="{2FF08489-2A47-4F04-8D8E-0C25A294B2C4}" /><event name="Form Submit" id="{A2C2CF51-9360-4084-9BA0-1A15F1A41096}" /><event name="Field Completed" id="{F0113A93-570A-4F69-8C7C-BA08037D1E34}" /><event name="Field Not Completed" id="{7E86B2F5-ACEC-4C60-8922-4EB5AE5D9874}" /><event name="Field Out of Boundary" id="{F3D7B20C-675C-4707-84CC-5E5B4481B0EE}" /><event name="Form Check Action Error" id="{7144C4C9-E56A-4529-B3C1-A1DEDC454AB8}" /><event name="Form Save Action Failure" id="{DE302E25-E5AF-465E-8BB1-5C3E8145615D}" /><event name="Invalid Field Syntax" id="{844BBD40-91F6-42CE-8823-5EA4D089ECA2}" /><event name="Tell a Friend" id="{60D7D87D-EF7B-4B66-ACC6-3689FCFB10E9}"/></tracking>
+----version----
+language: da
+version: 1
+revision: 437be773-c924-481c-a00d-145ae13bfe9a
+
+----field----
+field: {86D6A401-5A20-49C9-A2F8-0312398EE946}
+name: Title
+key: title
+content-length: 10
+
+Tip en ven
+----field----
+field: {0F2414BD-A95D-419C-A238-A6637A3FAB76}
+name: Introduction
+key: introduction
+content-length: 155
+
+<p>Den tekst, du indtaster her, vises lige under formularens navn. Det kan for eksempel være en beskrivelse, nogle anvisninger eller andre oplysninger.</p>
+----field----
+field: {95968A5A-DB52-4F50-B471-C6C7DA81F7E8}
+name: Footer
+key: footer
+content-length: 69
+
+<p>Den tekst, du indtaster her, vises i slutningen af formularen.</p>
+----field----
+field: {B71296B6-32B9-4703-A8CB-FB7437271103}
+name: Name
+key: name
+content-length: 27
+
+Ja, send et tip til min ven
+----field----
+field: {4E2DC894-59A2-49BB-A49C-562F611169A2}
+name: Success Message
+key: success message
+content-length: 100
+
+Tak, fordi du sendte din ven et tip! Vi sætter pris på, at du benyttede vores "Tip en ven"-formular.
+----field----
+field: {53AFF40D-E61F-43DC-96D6-A5C7F4882E20}
+name: Save Action Failed Message
+key: save action failed message
+content-length: 110
+
+Der opstod et teknisk problem, da vi behandlede din anmodning. Dine data er muligvis ikke blevet gemt korrekt.
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 10
+
+Tip en ven
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154145Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+437be773-c924-481c-a00d-145ae13bfe9a
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154145Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: de-DE
+version: 1
+revision: d3d981b3-80fc-473e-bab8-a8432baee65f
+
+----field----
+field: {86D6A401-5A20-49C9-A2F8-0312398EE946}
+name: Title
+key: title
+content-length: 13
+
+Tell a Friend
+----field----
+field: {0F2414BD-A95D-419C-A238-A6637A3FAB76}
+name: Introduction
+key: introduction
+content-length: 166
+
+<p>Der hier eingegebene Text wird direkt unter dem Formularnamen angezeigt. Dies können zum Beispiel Beschreibungen, Instruktionen oder andere Informationen sein.</p>
+----field----
+field: {95968A5A-DB52-4F50-B471-C6C7DA81F7E8}
+name: Footer
+key: footer
+content-length: 70
+
+<p>Der hier eingegebene Text wird am Ende des Formulars angezeigt.</p>
+----field----
+field: {B71296B6-32B9-4703-A8CB-FB7437271103}
+name: Name
+key: name
+content-length: 30
+
+Ja, mit meinen Freunden teilen
+----field----
+field: {4E2DC894-59A2-49BB-A49C-562F611169A2}
+name: Success Message
+key: success message
+content-length: 127
+
+Danke, dass Sie dies einem Freund empfohlen haben! Wir schätzen es sehr, dass Sie unser 'Tell a Friend' Formular benutzt haben.
+----field----
+field: {53AFF40D-E61F-43DC-96D6-A5C7F4882E20}
+name: Save Action Failed Message
+key: save action failed message
+content-length: 146
+
+Während der Bearbeitung Ihrer Anfrage ist es zu technischen Schwierigkeiten gekommen. Ihre Daten wurden unter Umständen nicht korrekt gespeichert.
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 13
+
+Tell a Friend
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 35
+
+20141119T105425:635519912653426590Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d3d981b3-80fc-473e-bab8-a8432baee65f
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154553Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: en
+version: 1
+revision: 442b485e-61ff-4ead-b686-f73dc356988b
+
+----field----
+field: {86D6A401-5A20-49C9-A2F8-0312398EE946}
+name: Title
+key: title
+content-length: 13
+
+Tell a Friend
+----field----
+field: {0F2414BD-A95D-419C-A238-A6637A3FAB76}
+name: Introduction
+key: introduction
+content-length: 165
+
+		<p>The text you enter here is displayed directly below the form name. This could be, for example, a description, some instructions, or any other information.</p>
+
+----field----
+field: {95968A5A-DB52-4F50-B471-C6C7DA81F7E8}
+name: Footer
+key: footer
+content-length: 71
+
+		<p>The text you enter here is displayed at the end of the form.</p>
+
+----field----
+field: {B71296B6-32B9-4703-A8CB-FB7437271103}
+name: Name
+key: name
+content-length: 25
+
+Yes, Share With My Friend
+----field----
+field: {4E2DC894-59A2-49BB-A49C-562F611169A2}
+name: Success Message
+key: success message
+content-length: 78
+
+Thanks for Telling a Friend! We appreciate you using our 'Tell a Friend' form.
+----field----
+field: {9C4C1994-5140-49D3-BAD7-DB997816F816}
+name: Success Page
+key: success page
+content-length: 52
+
+<link id="{00000000-0000-0000-0000-000000000000}" />
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 13
+
+Tell a Friend
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 18
+
+sitecore\Anonymous
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20080617T131300
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+442b485e-61ff-4ead-b686-f73dc356988b
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 35
+
+20141128T082118:635527596785547850Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: ja-JP
+version: 1
+revision: ce0fbf2c-efe4-42d3-9fa7-8c25f86a3aea
+
+----field----
+field: {86D6A401-5A20-49C9-A2F8-0312398EE946}
+name: Title
+key: title
+content-length: 6
+
+友人に教える
+----field----
+field: {0F2414BD-A95D-419C-A238-A6637A3FAB76}
+name: Introduction
+key: introduction
+content-length: 64
+
+<p>ここで入力したテキストは、フォーム名の直後に表示されます。これはたとえば、説明、指示、またはその他の情報などです。</p>
+----field----
+field: {95968A5A-DB52-4F50-B471-C6C7DA81F7E8}
+name: Footer
+key: footer
+content-length: 37
+
+<p>ここで入力したテキストは、このフォームの末尾に表示されます。</p>
+----field----
+field: {B71296B6-32B9-4703-A8CB-FB7437271103}
+name: Name
+key: name
+content-length: 11
+
+はい、友人と共有します
+----field----
+field: {4E2DC894-59A2-49BB-A49C-562F611169A2}
+name: Success Message
+key: success message
+content-length: 41
+
+友人へのご紹介ありがとうございます。「友人に教える」フォームのご利用に感謝します。
+----field----
+field: {53AFF40D-E61F-43DC-96D6-A5C7F4882E20}
+name: Save Action Failed Message
+key: save action failed message
+content-length: 45
+
+要求の処理中に技術上の問題が発生しました。データが正常に保存されていない可能性があります。
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 6
+
+友達に教える
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 35
+
+20141119T105611:635519913715146590Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+ce0fbf2c-efe4-42d3-9fa7-8c25f86a3aea
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154803Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

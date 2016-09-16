@@ -1,0 +1,255 @@
+----item----
+version: 1
+id: {547991E1-C890-47EF-B310-10C46A114CEE}
+database: master
+path: /sitecore/system/Modules/Web Forms for Marketers/Settings/Meta data/Options/Submit Error
+parent: {A3D1F495-9566-4C4C-A286-A3AAB62F11C3}
+name: Submit Error
+master: {00000000-0000-0000-0000-000000000000}
+template: {6EACF76A-0DA3-4FA4-8E51-1B428A2492DA}
+templatekey: Detailed item
+
+----version----
+language: da
+version: 1
+revision: 8d5c158c-3771-40a6-9a6e-acfc6dd1dd2f
+
+----field----
+field: {A8EBF402-D875-41B6-AE1F-7B480C7C1C8E}
+name: Value
+key: value
+content-length: 110
+
+Der opstod et teknisk problem, da vi behandlede din anmodning. Dine data er muligvis ikke blevet gemt korrekt.
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 15
+
+Afsendelsesfejl
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154132Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+8d5c158c-3771-40a6-9a6e-acfc6dd1dd2f
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154133Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: de-DE
+version: 1
+revision: 4517f32e-ecdd-4907-a5c7-1c73e0c92bdf
+
+----field----
+field: {A8EBF402-D875-41B6-AE1F-7B480C7C1C8E}
+name: Value
+key: value
+content-length: 146
+
+Während der Bearbeitung Ihrer Anfrage ist es zu technischen Schwierigkeiten gekommen. Ihre Daten wurden unter Umständen nicht korrekt gespeichert.
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 13
+
+Senden Fehler
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154545Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+4517f32e-ecdd-4907-a5c7-1c73e0c92bdf
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154545Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: en
+version: 1
+revision: 95fbf5d1-43ff-4652-b66f-ed14e3207bc6
+
+----field----
+field: {A8EBF402-D875-41B6-AE1F-7B480C7C1C8E}
+name: Value
+key: value
+content-length: 113
+
+We experienced a technical difficulty while processing your request. Your data may not have been correctly saved.
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 12
+
+Submit Error
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20090806T092228
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+95fbf5d1-43ff-4652-b66f-ed14e3207bc6
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20100211T132739:634014916596562500
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: ja-JP
+version: 1
+revision: 6300f88d-4ee7-4505-87ba-ff15ea5a5fcd
+
+----field----
+field: {A8EBF402-D875-41B6-AE1F-7B480C7C1C8E}
+name: Value
+key: value
+content-length: 45
+
+要求の処理中に技術上の問題が発生しました。データが正常に保存されていない可能性があります。
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 5
+
+送信エラー
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154755Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+6300f88d-4ee7-4505-87ba-ff15ea5a5fcd
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154755Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

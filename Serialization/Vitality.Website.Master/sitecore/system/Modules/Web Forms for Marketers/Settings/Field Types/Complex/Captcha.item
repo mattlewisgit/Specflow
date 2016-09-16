@@ -1,0 +1,290 @@
+----item----
+version: 1
+id: {7FB270BE-FEFC-49C3-8CB4-947878C099E5}
+database: master
+path: /sitecore/system/Modules/Web Forms for Marketers/Settings/Field Types/Complex/Captcha
+parent: {15BDE7E1-ED49-4BA6-8F7D-1459338A61E7}
+name: Captcha
+master: {00000000-0000-0000-0000-000000000000}
+template: {ECF6562F-91E7-4D79-B416-0DB3C2DBF67B}
+templatekey: Field Type
+
+----field----
+field: {C117FA3E-2A0C-45EC-894D-2D5A2A8AFD1F}
+name: MVC Type
+key: mvc type
+content-length: 70
+
+Sitecore.Forms.Mvc.ViewModels.Fields.RecaptchaField,Sitecore.Forms.Mvc
+----field----
+field: {DAE0EAAD-8391-401A-A227-2F42595973EE}
+name: Required
+key: required
+content-length: 1
+
+1
+----field----
+field: {0C81192B-BE98-4033-8748-1296B2BCBC2F}
+name: Validation
+key: validation
+content-length: 155
+
+{1456F959-8824-4139-A660-751D314ED5F2}|{18C8FCF4-61CA-4B2B-946A-7A7249398932}|{F0F031B1-42D4-459F-A4E5-00586B0ED8B4}|{A4B230A0-5946-46D3-B99E-966271B3AE45}
+----field----
+field: {BEBF3DEB-77AC-4A49-BDC7-894249837CCE}
+name: User Control
+key: user control
+content-length: 73
+
+/sitecore modules/web/Web Forms for Marketers/UI/UserControl/Captcha.ascx
+----field----
+field: {8ACC62C5-3B04-413C-85D7-429D982E6A6D}
+name: Deny Tag
+key: deny tag
+content-length: 1
+
+1
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 35
+
+Control/32x32/color_palette_b_h.png
+----version----
+language: da
+version: 1
+revision: 38463acb-4165-46d0-8d1d-709de73cad9b
+
+----field----
+field: {26CDC7C2-5307-4591-A7F9-5C034A05630A}
+name: Localized Parameters
+key: localized parameters
+content-length: 119
+
+<RecaptchaValidatorError> For at forbedre sikkerheden, skal du indtaste de viste tegn vist. </ RecaptchaValidatorError>
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 7
+
+Captcha
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154200Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+38463acb-4165-46d0-8d1d-709de73cad9b
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154200Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: de-DE
+version: 1
+revision: 30afb149-9320-4872-849d-0d59af5c9626
+
+----field----
+field: {26CDC7C2-5307-4591-A7F9-5C034A05630A}
+name: Localized Parameters
+key: localized parameters
+content-length: 128
+
+<RecaptchaValidatorError>Zur Verbesserung der Sicherheit, geben Sie bitte die angegebenen Zeichen ein.</RecaptchaValidatorError>
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 7
+
+Captcha
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154600Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+30afb149-9320-4872-849d-0d59af5c9626
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154600Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: en
+version: 1
+revision: fdcd28dd-187c-4f75-be01-969e0a4fe1e1
+
+----field----
+field: {26CDC7C2-5307-4591-A7F9-5C034A05630A}
+name: Localized Parameters
+key: localized parameters
+content-length: 106
+
+<RecaptchaValidatorError>To improve security, please enter the characters shown.</RecaptchaValidatorError>
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 7
+
+Captcha
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20090911T181058
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 18
+
+sitecore\Anonymous
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+fdcd28dd-187c-4f75-be01-969e0a4fe1e1
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160125T161736Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----version----
+language: ja-JP
+version: 1
+revision: eafc4d99-d45b-4729-9dce-812d29d58878
+
+----field----
+field: {26CDC7C2-5307-4591-A7F9-5C034A05630A}
+name: Localized Parameters
+key: localized parameters
+content-length: 80
+
+<RecaptchaValidatorError>セキュリティ強化のために、表示される文字を入力してください</RecaptchaValidatorError>
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 5
+
+キャプチャ
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160912T154811Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+eafc4d99-d45b-4729-9dce-812d29d58878
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160912T154811Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
