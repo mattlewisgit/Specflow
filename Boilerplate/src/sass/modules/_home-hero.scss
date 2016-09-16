@@ -18,13 +18,14 @@
 
     h2 {
         @extend .h1-xlarge;
+        margin: $pad--thin;
     }
 
     &--static {
         background-size: cover;
         background-repeat: no-repeat;
         height: 100%;
-        padding: $pad--xlarge;
+        padding: $pad--large;
         white-space: nowrap;
         width: 100%;
 
@@ -74,6 +75,7 @@
 
     &.home-hero--video {
         cursor: pointer;
+        max-height: 500px;
         overflow-y: hidden;
         padding: 0;
 
@@ -90,15 +92,9 @@
         }
     }
 
-    h2 {
-        margin: $pad--thin;
-    }
-
     // Reduce the padding for smaller devices.
     @include mq($until: tablet) {
         .home-hero--static {
-            padding: $pad--large;
-
             .home-hero--static__button {
                 zoom: 0.75;
             }
@@ -120,6 +116,16 @@
 
             .home-hero--static__button {
                 zoom: 0.5;
+            }
+        }
+    }
+
+    // Hack value to vertically centre the video when masked 
+    // by the parent element, thanks to its maximum height...
+    @include mq($from: tablet) {
+        &.home-hero--video {
+            .video--responsive {
+                top: -80px;
             }
         }
     }
