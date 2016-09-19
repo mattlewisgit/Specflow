@@ -17,63 +17,9 @@ content-length: 1
 
 0
 ----version----
-language: da
-version: 1
-revision: 2b440865-72c7-4dab-ace3-6d4ff8249d4c
-
-----field----
-field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
-name: __Display name
-key: __display name
-content-length: 11
-
-ChartFields
-----field----
-field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
-name: __Owner
-key: __owner
-content-length: 14
-
-sitecore\admin
-----field----
-field: {25BED78C-4957-4165-998A-CA1B52F67497}
-name: __Created
-key: __created
-content-length: 16
-
-20160912T153945Z
-----field----
-field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
-name: __Created by
-key: __created by
-content-length: 14
-
-sitecore\admin
-----field----
-field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
-name: __Revision
-key: __revision
-content-length: 36
-
-2b440865-72c7-4dab-ace3-6d4ff8249d4c
-----field----
-field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
-name: __Updated
-key: __updated
-content-length: 16
-
-20160912T153945Z
-----field----
-field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
-name: __Updated by
-key: __updated by
-content-length: 14
-
-sitecore\admin
-----version----
 language: de-DE
 version: 1
-revision: 35cb7976-35be-4e18-bcd3-4cb5608989b8
+revision: 4af79a66-10d4-41e3-a3d9-6ad0b8992bc2
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
@@ -81,7 +27,7 @@ name: __Display name
 key: __display name
 content-length: 14
 
-Tabellenfelder
+Diagrammfelder
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -109,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-35cb7976-35be-4e18-bcd3-4cb5608989b8
+4af79a66-10d4-41e3-a3d9-6ad0b8992bc2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 16
+content-length: 35
 
-20160912T154505Z
+20141113T023824:635514431043124112Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -174,15 +120,15 @@ sitecore\admin
 ----version----
 language: ja-JP
 version: 1
-revision: ce7e975c-0c3d-4d3e-be3b-edf758b3e2a6
+revision: 07f6d2b7-5c20-49e8-bd29-e013ed5086ff
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 10
+content-length: 9
 
-チャート フィールド
+グラフ フィールド
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -210,14 +156,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ce7e975c-0c3d-4d3e-be3b-edf758b3e2a6
+07f6d2b7-5c20-49e8-bd29-e013ed5086ff
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 16
+content-length: 35
 
-20160912T154712Z
+20141113T030150:635514445102100770Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

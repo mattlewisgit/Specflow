@@ -51,15 +51,15 @@ content-length: 3
 ----version----
 language: da
 version: 1
-revision: a789d6dc-db3f-42e8-81d2-f84648cdb4f1
+revision: a827cdb9-9d06-4a91-b8c6-cf164458d690
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 33
+content-length: 17
 
-Statistik over formularafsendelse
+Formularstatistik
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -87,14 +87,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a789d6dc-db3f-42e8-81d2-f84648cdb4f1
+a827cdb9-9d06-4a91-b8c6-cf164458d690
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 16
+content-length: 35
 
-20160912T154315Z
+20141021T115022:635494890226966673Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -105,15 +105,15 @@ sitecore\admin
 ----version----
 language: de-DE
 version: 1
-revision: 6c0a586e-eb95-4020-86ac-24e6bfbed9e3
+revision: 791bf096-ec6c-4aa6-bdab-0f17dc1361ba
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 29
+content-length: 19
 
-Formulareinreichung Statistik
+Formularstatistiken
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -141,14 +141,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6c0a586e-eb95-4020-86ac-24e6bfbed9e3
+791bf096-ec6c-4aa6-bdab-0f17dc1361ba
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 16
+content-length: 35
 
-20160912T154639Z
+20141021T115225:635494891450649029Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -213,15 +213,15 @@ sitecore\admin
 ----version----
 language: ja-JP
 version: 1
-revision: 5a7cd87e-2ec1-4af7-8dc9-4c6975bef92a
+revision: 465fbe5b-0038-4d95-b1cb-da934fe9b097
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 12
+content-length: 9
 
-フォームの送信の統計情報
+フォームの統計情報
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -249,14 +249,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5a7cd87e-2ec1-4af7-8dc9-4c6975bef92a
+465fbe5b-0038-4d95-b1cb-da934fe9b097
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 16
+content-length: 35
 
-20160912T154852Z
+20141021T115354:635494892341358091Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

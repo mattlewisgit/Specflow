@@ -53,15 +53,15 @@ content-length: 3
 ----version----
 language: da
 version: 1
-revision: 6981c490-ba9f-4f2e-b9ce-3dcbe51ce5f3
+revision: 54bc99f1-e59f-41eb-96f0-07e8a65c4aeb
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 12
+content-length: 28
 
-Formulardata
+Antal af afsendte formularer
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -89,14 +89,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6981c490-ba9f-4f2e-b9ce-3dcbe51ce5f3
+54bc99f1-e59f-41eb-96f0-07e8a65c4aeb
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 16
+content-length: 35
 
-20160912T154245Z
+20141021T114938:635494889780442025Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -107,15 +107,15 @@ sitecore\admin
 ----version----
 language: de-DE
 version: 1
-revision: e3a0c0ca-82cc-43a3-b78a-1e211146e37b
+revision: 8935744d-3d12-48a8-8996-583cb4c1d633
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 13
+content-length: 32
 
-Formulardaten
+Formularabsendung Erfolgszählung
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -143,14 +143,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e3a0c0ca-82cc-43a3-b78a-1e211146e37b
+8935744d-3d12-48a8-8996-583cb4c1d633
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 16
+content-length: 35
 
-20160912T154623Z
+20141119T105413:635519912537076590Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -215,15 +215,15 @@ sitecore\admin
 ----version----
 language: ja-JP
 version: 1
-revision: 22a41450-7cce-41a9-ba00-857666a9b4de
+revision: eb80ae84-0c8e-4d14-9745-6646e38a0b41
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 8
+content-length: 14
 
-フォーム データ
+フォームが正常に送信された数
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -251,14 +251,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-22a41450-7cce-41a9-ba00-857666a9b4de
+eb80ae84-0c8e-4d14-9745-6646e38a0b41
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 16
+content-length: 35
 
-20160912T154834Z
+20141119T105559:635519913594266590Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

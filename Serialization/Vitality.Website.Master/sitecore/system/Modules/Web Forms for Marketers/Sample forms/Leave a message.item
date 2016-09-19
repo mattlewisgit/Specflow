@@ -265,105 +265,9 @@ content-length: 0
 
 
 ----version----
-language: da
-version: 1
-revision: eae71a92-50c8-42c8-ba8b-feb1cdf5fc32
-
-----field----
-field: {86D6A401-5A20-49C9-A2F8-0312398EE946}
-name: Title
-key: title
-content-length: 13
-
-Læg en besked
-----field----
-field: {0F2414BD-A95D-419C-A238-A6637A3FAB76}
-name: Introduction
-key: introduction
-content-length: 49
-
-Send os din feedback ved hjælp af denne formular.
-----field----
-field: {95968A5A-DB52-4F50-B471-C6C7DA81F7E8}
-name: Footer
-key: footer
-content-length: 211
-
-Anvend denne egenskab til at vise en kort beskrivelse eller eventuelle anvisninger, noter eller retningslinjer, som brugeren skal læse, når formularen udfyldes. Den vil blive vist lige under formularens indhold.
-----field----
-field: {B71296B6-32B9-4703-A8CB-FB7437271103}
-name: Name
-key: name
-content-length: 10
-
-Kontakt os
-----field----
-field: {4E2DC894-59A2-49BB-A49C-562F611169A2}
-name: Success Message
-key: success message
-content-length: 139
-
-Tak, fordi du kontaktede os. En af vores repræsentanter vil kontakte dig inden for kort tid. I mellemtiden håber vi, at du nyder dit besøg.
-----field----
-field: {53AFF40D-E61F-43DC-96D6-A5C7F4882E20}
-name: Save Action Failed Message
-key: save action failed message
-content-length: 110
-
-Der opstod et teknisk problem, da vi behandlede din anmodning. Dine data er muligvis ikke blevet gemt korrekt.
-----field----
-field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
-name: __Display name
-key: __display name
-content-length: 19
-
-Skriv en meddelelse
-----field----
-field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
-name: __Owner
-key: __owner
-content-length: 14
-
-sitecore\admin
-----field----
-field: {25BED78C-4957-4165-998A-CA1B52F67497}
-name: __Created
-key: __created
-content-length: 16
-
-20160912T154305Z
-----field----
-field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
-name: __Created by
-key: __created by
-content-length: 14
-
-sitecore\admin
-----field----
-field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
-name: __Revision
-key: __revision
-content-length: 36
-
-eae71a92-50c8-42c8-ba8b-feb1cdf5fc32
-----field----
-field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
-name: __Updated
-key: __updated
-content-length: 16
-
-20160912T154306Z
-----field----
-field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
-name: __Updated by
-key: __updated by
-content-length: 14
-
-sitecore\admin
-----version----
 language: de-DE
 version: 1
-revision: b2c7ec33-ea47-4447-bf51-74acde34ab36
+revision: 14672756-49cc-4435-891a-1d0581834b85
 
 ----field----
 field: {86D6A401-5A20-49C9-A2F8-0312398EE946}
@@ -441,14 +345,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b2c7ec33-ea47-4447-bf51-74acde34ab36
+14672756-49cc-4435-891a-1d0581834b85
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 16
+content-length: 35
 
-20160912T154634Z
+20141119T105444:635519912846126590Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -625,7 +529,7 @@ content-length: 0
 ----version----
 language: ja-JP
 version: 1
-revision: 7ebfc2bb-e324-437e-9736-c9886a0bfbed
+revision: 74f480b2-933e-4256-be92-d1a6f8561980
 
 ----field----
 field: {86D6A401-5A20-49C9-A2F8-0312398EE946}
@@ -703,14 +607,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7ebfc2bb-e324-437e-9736-c9886a0bfbed
+74f480b2-933e-4256-be92-d1a6f8561980
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 16
+content-length: 35
 
-20160912T154846Z
+20141119T105634:635519913944266590Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

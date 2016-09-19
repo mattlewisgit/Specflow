@@ -62,105 +62,9 @@ content-length: 316
 
 <?xml version="1.0" encoding="utf-16"?><r xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l=""><p uid="{87057590-3538-4D16-8A97-5BCD5330DBDD}" key="Content" md="/sitecore/layout/placeholder settings/content" /></d></r>
 ----version----
-language: da
-version: 1
-revision: 7fbdb009-adba-4571-8a86-f34b778a2dd9
-
-----field----
-field: {86D6A401-5A20-49C9-A2F8-0312398EE946}
-name: Title
-key: title
-content-length: 20
-
-Betal med kreditkort
-----field----
-field: {0F2414BD-A95D-419C-A238-A6637A3FAB76}
-name: Introduction
-key: introduction
-content-length: 44
-
-<p>Indtast dine betalingskortoplysninger</p>
-----field----
-field: {95968A5A-DB52-4F50-B471-C6C7DA81F7E8}
-name: Footer
-key: footer
-content-length: 69
-
-<p>Den tekst, du indtaster her, vises i slutningen af formularen.</p>
-----field----
-field: {B71296B6-32B9-4703-A8CB-FB7437271103}
-name: Name
-key: name
-content-length: 8
-
-Betal nu
-----field----
-field: {4E2DC894-59A2-49BB-A49C-562F611169A2}
-name: Success Message
-key: success message
-content-length: 34
-
-Tak, fordi du udfyldte formularen.
-----field----
-field: {53AFF40D-E61F-43DC-96D6-A5C7F4882E20}
-name: Save Action Failed Message
-key: save action failed message
-content-length: 110
-
-Der opstod et teknisk problem, da vi behandlede din anmodning. Dine data er muligvis ikke blevet gemt korrekt.
-----field----
-field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
-name: __Display name
-key: __display name
-content-length: 20
-
-Betal med kreditkort
-----field----
-field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
-name: __Owner
-key: __owner
-content-length: 14
-
-sitecore\admin
-----field----
-field: {25BED78C-4957-4165-998A-CA1B52F67497}
-name: __Created
-key: __created
-content-length: 16
-
-20160912T154152Z
-----field----
-field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
-name: __Created by
-key: __created by
-content-length: 14
-
-sitecore\admin
-----field----
-field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
-name: __Revision
-key: __revision
-content-length: 36
-
-7fbdb009-adba-4571-8a86-f34b778a2dd9
-----field----
-field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
-name: __Updated
-key: __updated
-content-length: 16
-
-20160912T154152Z
-----field----
-field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
-name: __Updated by
-key: __updated by
-content-length: 14
-
-sitecore\admin
-----version----
 language: de-DE
 version: 1
-revision: a5bf8433-4c2a-44aa-93c2-ea06bbb4a920
+revision: af68ee83-c8a0-490b-9f18-914789d8f21d
 
 ----field----
 field: {86D6A401-5A20-49C9-A2F8-0312398EE946}
@@ -238,14 +142,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a5bf8433-4c2a-44aa-93c2-ea06bbb4a920
+af68ee83-c8a0-490b-9f18-914789d8f21d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 16
+content-length: 35
 
-20160912T154556Z
+20141119T105427:635519912673576590Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -340,7 +244,7 @@ sitecore\admin
 ----version----
 language: ja-JP
 version: 1
-revision: 6e9c2977-f2c7-4cc1-8eae-c4df603dc80b
+revision: cee9ea67-1253-401e-b1a9-a5df8762857a
 
 ----field----
 field: {86D6A401-5A20-49C9-A2F8-0312398EE946}
@@ -418,14 +322,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6e9c2977-f2c7-4cc1-8eae-c4df603dc80b
+cee9ea67-1253-401e-b1a9-a5df8762857a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 16
+content-length: 35
 
-20160912T154807Z
+20141119T105613:635519913734186590Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
