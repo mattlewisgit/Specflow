@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {957CDFD2-1E18-43BB-828D-4E690B1B3F98}
+database: master
+path: /sitecore/content/Presales/Content/Literature Libraries/Sales Literature/Personal healthcare literature
+parent: {FD049757-2846-4592-B45B-E889F1427B97}
+name: Personal healthcare literature
+master: {00000000-0000-0000-0000-000000000000}
+template: {73424C35-E196-41C6-87F5-8D52F25D5527}
+templatekey: Literature Category
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+200
+----version----
+language: en
+version: 1
+revision: 453a0563-adc4-4131-aca9-2bd2a1bf6b95
+
+----field----
+field: {4B06C6D8-BF43-49A2-94C5-6E7B9D57585A}
+name: Title
+key: title
+content-length: 30
+
+Personal healthcare literature
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160701T143830Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+453a0563-adc4-4131-aca9-2bd2a1bf6b95
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160707T151334Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

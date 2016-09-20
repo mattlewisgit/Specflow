@@ -1,0 +1,149 @@
+----item----
+version: 1
+id: {5170D075-7249-4C89-8F60-5D8D9A4182A5}
+database: master
+path: /sitecore/content/Presales/home/ll3
+parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
+name: ll3
+master: {00000000-0000-0000-0000-000000000000}
+template: {0160CD5B-71AD-4C17-AD40-93699FB4035F}
+templatekey: Literature Library Page
+
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
+----version----
+language: en
+version: 1
+revision: ee369d79-5133-46de-ade3-34b1a3d6e11d
+
+----field----
+field: {5A0D2A71-2CDB-4948-B13E-53CF5D262442}
+name: Headline
+key: headline
+content-length: 16
+
+Sales Literature
+----field----
+field: {B42FCED4-C505-445B-99E9-5C19E5262955}
+name: OpeningParagraph
+key: openingparagraph
+content-length: 444
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+----field----
+field: {5B82F13F-BB14-465B-A832-F62F297BA009}
+name: CardHeadline
+key: cardheadline
+content-length: 17
+
+MEMBER LITERATURE
+----field----
+field: {A9809291-5B94-46D9-998E-6C0241B5AFC4}
+name: CardOpeningParagraph
+key: cardopeningparagraph
+content-length: 55
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit
+----field----
+field: {BF859918-1E94-484C-9CD2-0A41154743A3}
+name: CardLink
+key: cardlink
+content-length: 127
+
+<link linktype="internal" text="View member literature" querystring="" target="" id="{57290607-549A-4ADB-86AA-6561AC8BACDE}" />
+----field----
+field: {AD0D8F62-7040-4323-9352-006A0206DD25}
+name: CardImage
+key: cardimage
+content-length: 58
+
+<image mediaid="{E1F991C6-62E6-4650-9347-3015DE8D2A7D}" />
+----field----
+field: {A3270FD7-AEE1-4417-B056-E4FF3F2CF14C}
+name: SearchHeadline
+key: searchheadline
+content-length: 6
+
+Search
+----field----
+field: {B194B613-B412-43C3-A200-DA06B708F7EC}
+name: SearchPlaceholderText
+key: searchplaceholdertext
+content-length: 20
+
+Enter search keyword
+----field----
+field: {1B11E66B-5678-44F9-B072-283B77E0A3DA}
+name: CategoriesHeadline
+key: categoriesheadline
+content-length: 22
+
+Choose literature type
+----field----
+field: {568870EB-D0DE-4738-85FE-D7871EC58F3F}
+name: LiteratureHeadline
+key: literatureheadline
+content-length: 20
+
+Available literature
+----field----
+field: {21FD1237-DF45-4BAB-9FDB-594984D3B2FB}
+name: SelectionHeadline
+key: selectionheadline
+content-length: 14
+
+Your selection
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 284
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{245E55E4-EACD-4DD1-AE79-6E95F39166E7}" s:ph="footer" /><r uid="{380B7CF8-798C-4810-911C-1948CA0A80B1}" s:ph="footer" /><r uid="{7D81392A-898D-4706-B02D-BF657BDC1AFD}" s:ph="metadata" /></d></r>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160919T141319Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+ee369d79-5133-46de-ade3-34b1a3d6e11d
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160919T144748Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

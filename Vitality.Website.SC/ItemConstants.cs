@@ -91,6 +91,14 @@ namespace Vitality.Website.SC
 
             public static class Templates
             {
+                public static class Literature
+                {
+                    public static class Document
+                    {
+                        public static readonly Guid Id = Guid.Parse("7270914B-2ED9-4840-A8F9-2C1688DC1F55");
+                    }
+                }
+
                 public static class NavigationSection
                 {
                     public const string Id = "{EDCF6697-B4B9-48CC-BAC2-2DDE182DC317}";

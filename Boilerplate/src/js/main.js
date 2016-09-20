@@ -1,3 +1,5 @@
+require("./angular/healthAdvisersLiteratureApp");
+
 var AccordionModule = require("./modules/accordionModule");
 var AnimationDelayModule = require("./modules/animationDelayModule");
 var Breakpoints = require("./modules/breakpointsModule");
