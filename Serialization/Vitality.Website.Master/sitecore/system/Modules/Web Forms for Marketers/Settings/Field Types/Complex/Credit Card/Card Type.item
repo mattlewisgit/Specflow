@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {9363CAEF-D74C-4937-A2E9-39599455C727}
+database: master
+path: /sitecore/system/Modules/Web Forms for Marketers/Settings/Field Types/Complex/Credit Card/Card Type
+parent: {CBB8A16B-A726-4445-99E8-4D835AE1F735}
+name: Card Type
+master: {00000000-0000-0000-0000-000000000000}
+template: {AD0D7DA3-E540-4B50-8E12-B1E309BADF57}
+templatekey: Sub Field
+
+----field----
+field: {E7CED682-9019-4DC4-AD81-54E9DD23273C}
+name: Title Property
+key: title property
+content-length: 13
+
+CardTypeTitle
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 1
+
+0
+----version----
+language: en
+version: 1
+revision: 243f51ed-d6be-4a1f-98b2-1f4e6d91935b
+
+----field----
+field: {487AA29C-738F-40D9-9826-123E3408AF58}
+name: Default Title
+key: default title
+content-length: 9
+
+Card Type
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 9
+
+Card type
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20090730T102417Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+243f51ed-d6be-4a1f-98b2-1f4e6d91935b
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160126T124042Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

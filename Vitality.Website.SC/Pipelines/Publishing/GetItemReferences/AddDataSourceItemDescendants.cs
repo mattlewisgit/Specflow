@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Sitecore;
@@ -6,13 +7,15 @@ using Sitecore.Data.Items;
 using Sitecore.Links;
 using Sitecore.Publishing.Pipelines.GetItemReferences;
 using Sitecore.Publishing.Pipelines.PublishItem;
+using Sitecore.Web;
+using Vitality.Website.SC.Utilities;
 
 namespace Vitality.Website.SC.Pipelines.Publishing.GetItemReferences
 {
     public class AddDataSourceItemDescendants : GetItemReferencesProcessor
     {
         private readonly List<string> pathsToIgnore = new List<string>();
-
+        private readonly IEnumerable<SiteInfo> _siteInfoList= Sitecore.Configuration.Factory.GetSiteInfoList().RemoveSitecoreShellSiteInfos();
         public void AddPath(string path)
         {
             pathsToIgnore.Add(path);
@@ -21,7 +24,6 @@ namespace Vitality.Website.SC.Pipelines.Publishing.GetItemReferences
         protected override List<Item> GetItemReferences(PublishItemContext context)
         {
             var referredDataSourceItems = GetCurrentPublishCandidateItems(context);
-
             var itemsToPublish = new List<Item>();
 
             foreach (var item in referredDataSourceItems.Where(ItemIsDataSource))
@@ -51,7 +53,6 @@ namespace Vitality.Website.SC.Pipelines.Publishing.GetItemReferences
 
         private IEnumerable<Item> GetLinkedDataSourceItems(Item contextItem)
         {
-
             return contextItem
                 .Links
                 .GetValidLinks()
@@ -61,8 +62,12 @@ namespace Vitality.Website.SC.Pipelines.Publishing.GetItemReferences
 
         private bool ItemIsDataSource(Item item)
         {
-            return item != null && (item.Paths.FullPath.StartsWith(ItemConstants.Presales.Content.ContentFolder.Path) &&
-                                    !pathsToIgnore.Any(path => item.Paths.FullPath.StartsWith(path)));
+            var currentSiteContentStartPath = item.GetSiteContentStartPath(_siteInfoList);
+            return item.Paths.FullPath.StartsWith(
+                currentSiteContentStartPath + ItemConstants.Presales.Content.ContentFolder.RelativePath,
+                StringComparison.InvariantCultureIgnoreCase) &&
+                !pathsToIgnore.Any(path => item.Paths.FullPath.StartsWith(currentSiteContentStartPath + path,
+                StringComparison.InvariantCultureIgnoreCase));
         }
     }
 }

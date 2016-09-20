@@ -30,7 +30,7 @@
 <body>
     @Html.Sitecore().Placeholder("gtm")
     <div class="page">
-        @Html.Partial("_CookieMessage", SitecoreContext.GetItem<CookieSettings>(ItemConstants.Presales.Content.Configuration.CookieSettings.Id))
+        @Html.Partial("_CookieMessage", SitecoreContext.GetItem<CookieSettings>(ItemConstants.Presales.Content.Configuration.CookieSettings.Path))
 
         <a href="#main-content" class="offscreen">Skip to Content</a>
         @Html.Sitecore().Placeholder("header")

@@ -20,9 +20,9 @@ Droplink
 field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
 name: Source
 key: source
-content-length: 65
+content-length: 63
 
-/sitecore/content/Presales/Configuration/Image Relative Positions
+/sitecore/Content/Global Configuration/Image Relative Positions
 ----field----
 field: {B118496A-0F78-4A27-B55F-0A6C4B0B0FE1}
 name: Default value
@@ -40,7 +40,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: f625cae1-fb21-4db4-a965-a235bcbcb997
+revision: 3ca1ad31-b62c-40f0-acad-4ab0789ab099
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -69,14 +69,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f625cae1-fb21-4db4-a965-a235bcbcb997
+3ca1ad31-b62c-40f0-acad-4ab0789ab099
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160630T103551Z
+20160822T151917Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

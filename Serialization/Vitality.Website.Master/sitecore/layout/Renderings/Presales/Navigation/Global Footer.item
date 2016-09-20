@@ -34,9 +34,9 @@ footer
 field: {2E51DF70-D3E4-458C-B03A-95C734DD39E7}
 name: Data source
 key: data source
-content-length: 59
+content-length: 86
 
-/sitecore/content/Presales/Content/Navigation/Global Footer
+query:./ancestor-or-self::*[@@templatename='Website']/Content/Navigation/Global Footer
 ----field----
 field: {3D08DB46-2267-41B0-BC52-BE69FD618633}
 name: Cacheable
@@ -54,7 +54,7 @@ content-length: 1
 ----version----
 language: en
 version: 1
-revision: 1cbc1fe6-8363-4ea1-9f8b-a9aa8f5ce387
+revision: e906a214-1571-4ab6-9cfb-8a70f9a1f61b
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -69,14 +69,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-1cbc1fe6-8363-4ea1-9f8b-a9aa8f5ce387
+e906a214-1571-4ab6-9cfb-8a70f9a1f61b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160601T122915Z
+20160906T150614Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

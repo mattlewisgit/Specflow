@@ -7,11 +7,25 @@ using Sitecore.Links;
 using Sitecore.Web;
 using System;
 using System.IO;
+using Sitecore.Configuration;
 
 namespace Vitality.Website.SC.Providers
 {
     public class AppendLinkProvider : LinkProvider
     {
+        /// <summary>
+        /// There is a known issues of sitecore doesn't apply siteResolving property for Link Manager
+        /// http://stackoverflow.com/questions/29774360/sitecore-link-manager-url-options-site-resolving-is-not-set
+        /// Therefore it needs to be applied here
+        /// </summary>
+        /// <returns>UrlOptions</returns>
+        public override UrlOptions GetDefaultUrlOptions()
+        {
+            var urlOptions = base.GetDefaultUrlOptions();
+            urlOptions.SiteResolving = Settings.Rendering.SiteResolving;
+            return urlOptions;
+        }
+
         protected override LinkBuilder CreateLinkBuilder(UrlOptions options)
         {
             return new AppendLinkBuilder(options);
