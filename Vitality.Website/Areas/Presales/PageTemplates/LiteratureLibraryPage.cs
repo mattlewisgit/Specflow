@@ -31,6 +31,10 @@
 
         public string SelectionHeadline { get; set; }
 
+        public string DownloadLinkText { get; set; }
+
+        public string EmailLinkText { get; set; }
+
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public LiteratureLibrary LiteratureLibrary { get; set; }
     }

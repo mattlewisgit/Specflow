@@ -76,13 +76,13 @@
                     <div class="preview-card--body__buttons">
                         <div>
                             <a href="#" class="box-button box-button--secondary box-button--rounded box-button--full-width">
-                                Download
+                                @Editable(Model, m => m.DownloadLinkText)
                             </a>
                         </div>
 
                         <div>
                             <a href="#" class="box-button box-button--secondary-inverse box-button--rounded box-button--full-width">
-                                Email
+                                @Editable(Model, m => m.EmailLinkText)
                             </a>
                         </div>
                     </div>
