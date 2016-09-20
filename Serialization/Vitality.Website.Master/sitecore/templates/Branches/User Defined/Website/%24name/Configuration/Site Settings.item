@@ -1,0 +1,44 @@
+----item----
+version: 1
+id: {0FF12E8F-7B75-484E-AEB6-8828E1FE770D}
+database: master
+path: /sitecore/templates/Branches/User Defined/Website/$name/Configuration/Site Settings
+parent: {F24B57AB-6F3C-489C-90A4-7A26C878DB7F}
+name: Site Settings
+master: {00000000-0000-0000-0000-000000000000}
+template: {50F3DEEA-566F-46A2-9C24-A2B4498CC742}
+templatekey: Site Settings
+
+----version----
+language: en
+version: 1
+revision: c70727a8-ad85-4aa2-825d-9c125cd83aac
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160816T141106Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c70727a8-ad85-4aa2-825d-9c125cd83aac
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160816T141106Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

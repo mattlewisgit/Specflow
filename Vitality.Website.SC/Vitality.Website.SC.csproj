@@ -66,6 +66,9 @@
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\sitecore.nexus.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Sitecore.Speak.Applications">
+      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Speak.Applications.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Speak.Client, Version=2.0.812.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Speak.Client.dll</HintPath>
       <Private>True</Private>
@@ -91,6 +94,8 @@
     <Compile Include="Agents\Sitemaps\SitemapIndex.cs" />
     <Compile Include="Events\ItemEventsHandler.cs" />
     <Compile Include="Agents\Sitemaps\InitializeSitemap.cs" />
+    <Compile Include="Fields\InsertLinkDialogTree.cs" />
+    <Compile Include="Fields\QueryableGeneralLink.cs" />
     <Compile Include="ItemConstants.cs" />
     <Compile Include="Pipelines\HttpRequest\NotFoundItemResolver.cs" />
     <Compile Include="Pipelines\HttpRequest\RobotsFileGenerator.cs" />
@@ -102,6 +107,7 @@
     <Compile Include="Pipelines\Response\GetModel\GetQuoteFooterFallback.cs" />
     <Compile Include="Pipelines\Response\RenderRendering\VaryByAncestor.cs" />
     <Compile Include="Pipelines\RichTextEditor\SaveRichTextContent\InjectTableSawStylesOnCloseDialog.cs" />
+    <Compile Include="Pipelines\HttpRequest\SitemapResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Agents\Sitemaps\SitemapHelper.cs" />
     <Compile Include="Agents\Sitemaps\SitemapIndexesModel.cs" />
@@ -110,6 +116,8 @@
     <Compile Include="Agents\Sitemaps\SitemapSettings.cs" />
     <Compile Include="Agents\Sitemaps\SitemapUrlModel.cs" />
     <Compile Include="Providers\MediaProvider.cs" />
+    <Compile Include="Utilities\SitecoreDataItemHelper.cs" />
+    <Compile Include="Utilities\SiteInfoHelper.cs" />
     <Compile Include="Utilities\StringHelper.cs" />
     <Compile Include="Providers\AppendLinkProvider.cs" />
   </ItemGroup>
