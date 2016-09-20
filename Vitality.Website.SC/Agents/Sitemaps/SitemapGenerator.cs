@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Sitecore.Configuration;
 using Sitecore.Data;
 using Sitecore.Data.Items;
@@ -13,41 +14,42 @@ namespace Vitality.Website.SC.Agents.Sitemaps
     /// </summary>
     public class SitemapGenerator
     {
-        public const string Name = "SitemapGenerator";
-
         private readonly Database database;
         private SitemapIndex sitemapIndex;
+        private readonly string subdomain; 
 
-        public SitemapGenerator(string databaseName)
+        public SitemapGenerator(string databaseName, string subdomainName)
         {
             Error.AssertString(databaseName, "databaseName", false);
-            this.database = Factory.GetDatabase(databaseName);
+            database = Factory.GetDatabase(databaseName);
+            subdomain = subdomainName;
         }
 
         public void Run()
-        {
-            var homeItem = database.GetItem(new ID(ItemConstants.Presales.Content.Home.Id));
-            if (homeItem == null)
+        {   
+            using (new SiteContextSwitcher(Factory.GetSite(subdomain)))
             {
-                throw new ArgumentException("Home item not found.");
+                var path = Sitecore.Context.Site.StartPath;
+                var homeItem = database.GetItem(path);
+
+                if (homeItem == null)
+                {
+                    throw new ArgumentException("Home item not found.");
+                }
+
+                var baseUrl = LinkManager.GetItemUrl(homeItem, new UrlOptions { AlwaysIncludeServerUrl = true, LanguageEmbedding = LanguageEmbedding.Never });
+                
+                sitemapIndex = new SitemapIndex(baseUrl, database.GetItem(ItemConstants.Presales.Content.Configuration.Sitemaps.Path).Children);
+
+                RecurseContentTree(homeItem);
+
+                sitemapIndex.Build(subdomain);
             }
-
-            string baseUrl;
-            using (new SiteContextSwitcher(Factory.GetSite("presales")))
-            {
-                baseUrl = LinkManager.GetItemUrl(homeItem, new UrlOptions { AlwaysIncludeServerUrl = true, LanguageEmbedding = LanguageEmbedding.Never });
-            }
-
-            sitemapIndex = new SitemapIndex(baseUrl, database.GetItem(new ID(ItemConstants.Presales.Content.Configuration.Sitemaps.Id)).Children);
-
-            RecurseContentTree(homeItem);
-
-            sitemapIndex.Build();
         }
 
         private void RecurseContentTree(Item item)
         {
-            sitemapIndex.AddToRelativeSitemap(item);
+            sitemapIndex.AddToRelativeSitemap(item, subdomain);
 
             if (item.HasChildren)
             {

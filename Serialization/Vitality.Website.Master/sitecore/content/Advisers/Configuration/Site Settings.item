@@ -1,0 +1,254 @@
+----item----
+version: 1
+id: {7CACA360-7D11-4A92-8CBF-B82477E5A0B3}
+database: master
+path: /sitecore/content/Advisers/Configuration/Site Settings
+parent: {0A24FEAE-BC73-47D1-8332-08AE1EDDF185}
+name: Site Settings
+master: {30379927-A49A-4654-8C27-30CD546273E4}
+template: {50F3DEEA-566F-46A2-9C24-A2B4498CC742}
+templatekey: Site Settings
+
+----field----
+field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
+name: __Originator
+key: __originator
+content-length: 0
+
+
+----version----
+language: en
+version: 1
+revision: d011e7e1-da91-4192-9cb3-72f68f022ed1
+
+----field----
+field: {E670AD08-9370-4CE9-B2F4-553A6A13AD1D}
+name: JsonSchemaScript
+key: jsonschemascript
+content-length: 1302
+
+{
+  "@context": "http://schema.org",
+  "@type": "Corporation",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London, United Kingdom",
+    "postalCode": "EC3V 0XL",
+    "streetAddress": "70 Gracechurch Street"
+  },
+  "name": "Vitality",
+  "description": "Here at Vitality we provide award winning health and life insurance, encourage you to lead a healthier life and reward you for doing so.",
+  "contactPoint" : [
+    { "@type" : "ContactPoint",
+      "telephone" : "+44-808-252-0213",
+       "areaServed" : "GB",
+      "contactType" : "sales"
+    },
+    { "@type" : "ContactPoint",
+      "telephone" : "+44-845-602-4848",
+       "areaServed" : "GB",
+      "contactType" : "customer service"
+    } ],
+  "sameAs": [ "https://en.wikipedia.org/wiki/VitalityHealth",
+  "https://www.facebook.com/vitalityuk",
+  "https://www.facebook.com/VitalityUK",
+  "https://twitter.com/Vitality_uk",
+  "https://www.linkedin.com/company/vitality_uk",
+  "https://www.pinterest.com/vitalityuk/",
+  "https://instagram.com/vitality_uk/" ],
+  "url": "https://www.vitality.co.uk/",
+  "brand": "Vitality",
+  "email": "info@vitality.co.uk",
+  "foundingDate": "2007",
+  "logo": "https://www.vitality.co.uk/media online/presales/logos/vitality/vitality-logo.jpg"
+    }
+  ]}
+----field----
+field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
+name: Title
+key: title
+content-length: 12
+
+Global Title
+----field----
+field: {C8EFCBF9-6A29-4CAD-B0FC-7A755635D9C9}
+name: AppleITunesApp
+key: appleitunesapp
+content-length: 16
+
+app-id=794024908
+----field----
+field: {A9ADDED7-AA84-45E3-BCEE-C22B5815F6AD}
+name: Canonical
+key: canonical
+content-length: 1
+
+#
+----field----
+field: {503DBB8D-A5C9-4ECF-9EAA-B3F8904567F4}
+name: Description
+key: description
+content-length: 18
+
+Global Description
+----field----
+field: {CCFF493E-3EBF-4E9F-925A-898207B6CDA0}
+name: GoogleTagManagerId
+key: googletagmanagerid
+content-length: 10
+
+GTM-W2D82W
+----field----
+field: {89ECBE1C-DBA0-419D-8DFA-03738768CF00}
+name: OpenGraphTitle
+key: opengraphtitle
+content-length: 40
+
+Should come from meta <title> by default
+----field----
+field: {61CFE300-BA96-4741-9BC7-D9592869AB9C}
+name: Publisher
+key: publisher
+content-length: 45
+
+https://plus.google.com/111924979311472229172
+----field----
+field: {A57A11E0-7A1A-4D7B-96E5-EA2FDF771DFD}
+name: QubitOpenTagId
+key: qubitopentagid
+content-length: 14
+
+113020-1576301
+----field----
+field: {6327BB53-43BC-4B71-8D37-31543CBB6703}
+name: Robots
+key: robots
+content-length: 15
+
+noindex, follow
+----field----
+field: {757F1240-B57D-4E4F-A8C6-214D532F929E}
+name: TwitterCard
+key: twittercard
+content-length: 19
+
+summary_large_image
+----field----
+field: {7617A9BA-718F-494B-AC38-0CAB4E8243E0}
+name: TwitterSite
+key: twittersite
+content-length: 12
+
+@Vitality_UK
+----field----
+field: {DB079977-A8F4-4430-AFDB-FFA811FFCFB8}
+name: ApplicationName
+key: applicationname
+content-length: 18
+
+Vitality UK Member
+----field----
+field: {BAAA1A3F-F2FE-471C-909D-D3835C8FD69B}
+name: OpenGraphUrl
+key: opengraphurl
+content-length: 44
+
+Should come from url of canonical by default
+----field----
+field: {91D82E56-0239-4B54-A5E7-DC08FB0D1A42}
+name: TwitterAppIPhoneId
+key: twitterappiphoneid
+content-length: 9
+
+794024908
+----field----
+field: {4E2F6806-3219-45D0-95F7-28000CA59900}
+name: TwitterTitle
+key: twittertitle
+content-length: 12
+
+Global Title
+----field----
+field: {561B1E66-C616-439B-AB2A-C9E0EA7B44C3}
+name: TwitterAppIPhoneName
+key: twitterappiphonename
+content-length: 18
+
+Vitality UK Member
+----field----
+field: {D58FB095-D442-4F40-B456-BB90C7C34C30}
+name: TwitterDescription
+key: twitterdescription
+content-length: 50
+
+Should come from meta description field by default
+----field----
+field: {89F047C7-03A3-43C8-8F77-D1A96D550C4D}
+name: OpenGraphSiteName
+key: opengraphsitename
+content-length: 34
+
+Vitality Health and Life Insurance
+----field----
+field: {DC5AF0D9-4D11-4D47-998E-37F2F05E7B0E}
+name: TwitterImage
+key: twitterimage
+content-length: 0
+
+
+----field----
+field: {2826015C-5351-4436-936F-95789F446B8F}
+name: OpenGraphArticlePublisher
+key: opengrapharticlepublisher
+content-length: 36
+
+https://www.facebook.com/VitalityUK/
+----field----
+field: {6DE56FCA-4F17-4E2E-8B9A-F15671E66FE2}
+name: OpenGraphDescription
+key: opengraphdescription
+content-length: 50
+
+Should come from meta description field by default
+----field----
+field: {77D73C04-1867-4BC8-BB67-7E9577370524}
+name: OpenGraphIosAppId
+key: opengraphiosappid
+content-length: 9
+
+794024908
+----field----
+field: {AF1574BC-B458-4169-BA52-2EF88D5573E0}
+name: OpenGraphIosAppName
+key: opengraphiosappname
+content-length: 18
+
+Vitality UK Member
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160816T155610Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d011e7e1-da91-4192-9cb3-72f68f022ed1
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160920T100522Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

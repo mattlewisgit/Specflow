@@ -20,9 +20,9 @@ Droplink
 field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
 name: Source
 key: source
-content-length: 52
+content-length: 50
 
-/sitecore/content/Presales/Configuration/Font Themes
+/sitecore/Content/Global Configuration/Font Themes
 ----field----
 field: {B118496A-0F78-4A27-B55F-0A6C4B0B0FE1}
 name: Default value
@@ -47,7 +47,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 57970e32-3f90-4214-bdc4-8f76e6f9bd07
+revision: 6f6a8e90-9ea4-46f8-8e83-7c0019ed8776
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -76,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-57970e32-3f90-4214-bdc4-8f76e6f9bd07
+6f6a8e90-9ea4-46f8-8e83-7c0019ed8776
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160630T103600Z
+20160822T152023Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

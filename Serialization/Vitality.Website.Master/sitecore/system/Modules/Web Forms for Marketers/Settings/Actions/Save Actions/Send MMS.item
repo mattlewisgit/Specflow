@@ -1,0 +1,114 @@
+----item----
+version: 1
+id: {39102BB6-15AF-4318-B728-FF96A5A53539}
+database: master
+path: /sitecore/system/Modules/Web Forms for Marketers/Settings/Actions/Save Actions/Send MMS
+parent: {E5EABB1F-40BC-45BB-8D87-3B6C239B521B}
+name: Send MMS
+master: {00000000-0000-0000-0000-000000000000}
+template: {E01318E7-CEED-4EA4-B107-1B8FAC3A3DB8}
+templatekey: Submit Action
+
+----field----
+field: {094228C3-C782-45EA-B753-01CD81597BA3}
+name: Factory Object Name
+key: factory object name
+content-length: 34
+
+/sitecore/wffm/actions/sendMessage
+----field----
+field: {D9B5A805-6623-4603-BC51-D838120B9B54}
+name: Parameters
+key: parameters
+content-length: 113
+
+<Host>example.host</Host><From>example@mail.net</From><MessageType>MMS</MessageType><IsBodyHtml>true</IsBodyHtml>
+----field----
+field: {A95C414D-B036-4E1B-B298-86DED562F411}
+name: Editor
+key: editor
+content-length: 67
+
+/sitecore/shell/~/xaml/Sitecore.Forms.Shell.UI.Dialogs.SendMMS.aspx
+----field----
+field: {0945CEEF-01EE-460B-8DF6-4A0D0A441231}
+name: QueryString
+key: querystring
+content-length: 11
+
+w=600&h=760
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 35
+
+Applications/32x32/document_cup.png
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+1150
+----field----
+field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
+name: __Originator
+key: __originator
+content-length: 0
+
+
+----version----
+language: en
+version: 1
+revision: 6f7f5f9a-b32e-4129-a619-bc8f6bafaf84
+
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 8
+
+Send MMS
+----field----
+field: {9541E67D-CE8C-4225-803D-33F7F29F09EF}
+name: __Short description
+key: __short description
+content-length: 33
+
+Send an MMS to a telephone number
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20100105T110000Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 18
+
+sitecore\Anonymous
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+6f7f5f9a-b32e-4129-a619-bc8f6bafaf84
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160104T151711Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

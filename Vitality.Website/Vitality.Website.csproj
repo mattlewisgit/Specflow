@@ -186,6 +186,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Config\Include\Captcha.config" />
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
     <Content Include="App_Config\Include\ship.config" />
     <Content Include="App_Config\Commands.config" />
@@ -201,6 +202,16 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\Vitality\Vitality.Handlers" />
+    <Content Include="App_Config\Include\Sitecore.Forms.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\Include\Sitecore.Forms.Xtune.CD.config.disabled" />
+    <Content Include="App_Config\Include\Sitecore.MvcForms.config" />
+    <Content Include="App_Config\Include\Sitecore.WFFM.Analytics.config" />
+    <Content Include="App_Config\Include\Sitecore.WFFM.Dependencies.config" />
+    <Content Include="App_Config\Include\Sitecore.WFFM.Services.config" />
+    <Content Include="App_Config\Include\Sitecore.WFFM.Speak.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -221,6 +232,7 @@
     <Content Include="App_Config\Portraits.config" />
     <Content Include="App_Config\Prototypes.config" />
     <Content Include="App_Config\XamlSharp.config" />
+    <Content Include="App_Config\Include\Vitality\Vitality.WFFM.config" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
@@ -283,22 +295,6 @@
     <Content Include="img\stanley-peering-min.png" />
     <Content Include="img\vitality-logo--white.svg" />
     <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Content\app.css" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.css" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.min.css" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap.css" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap.min.css" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Default.aspx" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\app.js" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\bootstrap.js" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\bootstrap.min.js" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\jquery-1.10.2.js" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\jquery-1.10.2.min.js" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\jquery-1.9.0.js" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\jquery-1.9.0.min.js" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\npm.js" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\UrlRewriter.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -369,7 +365,7 @@
     <Compile Include="Areas\Presales\RenderingTemplates\SummaryComponentRendering.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\CookieSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
-    <Compile Include="Areas\Presales\SettingsTemplates\GlobalSettings.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\SiteSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\ImageExtensions.cs" />
@@ -401,12 +397,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="App_Config\ConnectionStrings.CMS.config">
-      <DependentUpon>App_Config\ConnectionStrings.config</DependentUpon>
-    </Content>
-    <Content Include="App_Config\ConnectionStrings.CD.config">
-      <DependentUpon>App_Config\ConnectionStrings.config</DependentUpon>
-    </Content>
     <Content Include="App_Config\ConnectionStrings.config" />
     <Content Include="App_Config\Sitecore.config">
       <SubType>Designer</SubType>
@@ -652,13 +642,23 @@
     <Content Include="Areas\Presales\Views\Shared\_GoogleTagManager.cshtml" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\AwardLeader.cshtml" />
     <None Include="Properties\PublishProfiles\test.pubxml" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\jquery-1.9.0.min.map" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Scripts\jquery-1.10.2.min.map" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.css.map" />
-    <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap.css.map" />
+    <Content Include="Views\Form\EditorTemplates\CheckboxField.cshtml" />
+    <Content Include="Views\Form\EditorTemplates\CheckboxListField.cshtml" />
+    <Content Include="Views\Form\EditorTemplates\DateField.cshtml" />
+    <Content Include="Views\Form\EditorTemplates\DatePickerField.cshtml" />
+    <Content Include="Views\Form\EditorTemplates\DropListField.cshtml" />
+    <Content Include="Views\Form\EditorTemplates\FieldViewModel.cshtml" />
+    <Content Include="Views\Form\EditorTemplates\FileUploadField.cshtml" />
+    <Content Include="Views\Form\EditorTemplates\FormViewModel.cshtml" />
+    <Content Include="Views\Form\EditorTemplates\ListBoxField.cshtml" />
+    <Content Include="Views\Form\EditorTemplates\MultipleLineTextField.cshtml" />
+    <Content Include="Views\Form\EditorTemplates\PasswordConfirmationField.cshtml" />
+    <Content Include="Views\Form\EditorTemplates\RadioListField.cshtml" />
+    <Content Include="Views\Form\EditorTemplates\RecaptchaField.cshtml" />
+    <Content Include="Views\Form\EditorTemplates\SectionViewModel.cshtml" />
+    <Content Include="Views\Form\Index.cshtml" />
+    <Content Include="Views\Form\SuccessRedirect.cshtml" />
+    <Content Include="Views\Form\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -678,6 +678,7 @@
     <Folder Include="Areas\Presales\Controllers\" />
     <Folder Include="Areas\Presales\Models\" />
     <Folder Include="img\examples\" />
+    <Folder Include="sitemaps\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Vitality.Website.SC\Vitality.Website.SC.csproj">

@@ -2,8 +2,14 @@
 name: sitecore\Designer
 
 ----role-in-role----
+rolename: sitecore\Advisers User
+
+----role-in-role----
 rolename: sitecore\Developer
 
 ----role-in-role----
 rolename: sitecore\Presales Content Author
+
+----role-in-role----
+rolename: sitecore\Presales User
 

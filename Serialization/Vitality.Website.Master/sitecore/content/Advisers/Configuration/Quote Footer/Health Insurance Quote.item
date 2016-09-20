@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {2B99C2E1-689C-46B1-9751-CEDEB620537A}
+database: master
+path: /sitecore/content/Advisers/Configuration/Quote Footer/Health Insurance Quote
+parent: {4282E4F7-CBB0-4AA4-B699-F41676C29E59}
+name: Health Insurance Quote
+master: {00000000-0000-0000-0000-000000000000}
+template: {86112F62-773D-464C-AEE7-F6E86CEC4A11}
+templatekey: Link
+
+----version----
+language: en
+version: 1
+revision: 2e848995-ce4f-4d33-b60e-5f383c9ebefa
+
+----field----
+field: {89E4692B-40AF-44F4-ABD6-347753F08243}
+name: Link
+key: link
+content-length: 142
+
+<link id="{B748A43A-D427-4627-A105-E40E8F0E62E5}" querystring="" text="" title="" class="" url="/Advisers/home/Sitemap" linktype="internal" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160817T152740Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+2e848995-ce4f-4d33-b60e-5f383c9ebefa
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160818T092140Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
