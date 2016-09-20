@@ -27,24 +27,8 @@
             {
                 return null;
             }
-
-            MediaItem mediaItem = null;
-            if (field.TypeKey == "image")
-            {
-                var image = (ImageField)field;
-                if (image != null)
-                {
-                    mediaItem = image.MediaItem;
-                }
-            }
-            else if (field.TypeKey == "general link")
-            {
-                var mediaLink = (LinkField)field;
-                if (mediaLink != null)
-                {
-                    mediaItem = Database.GetDatabase("web").GetItem(mediaLink.TargetID);
-                }
-            }
+            
+            var mediaItem = GetMediaItem(field);
 
             if (mediaItem != null)
             {
@@ -63,5 +47,28 @@
         public string FieldName { get; set; }
 
         public string ReturnType { get; set; }
+
+        private static MediaItem GetMediaItem(Field field)
+        {
+            MediaItem mediaItem = null;
+            switch (field.TypeKey)
+            {
+                case "image":
+                    var image = (ImageField)field;
+                    if (image != null)
+                    {
+                        mediaItem = image.MediaItem;
+                    }
+                    break;
+                case "general link":
+                    var mediaLink = (LinkField)field;
+                    if (mediaLink != null)
+                    {
+                        mediaItem = Database.GetDatabase("web").GetItem(mediaLink.TargetID);
+                    }
+                    break;
+            }
+            return mediaItem;
+        }
     }
 }
