@@ -16,7 +16,7 @@
             this.handler = new LiteratureDocumentHandler(index => new SearchContextStub());
         }
 
-        //[Fact]
+        [Fact(Skip = "No longer valid")] 
         public void Should_return_null_when_no_document_matches_library_category_and_title()
         {
             this.handler.Handle(new LiteratureDocumentRequest("sales-literature", SearchContextStub.MatchingCategory, SearchContextStub.NonMatchingTitle, false)).ShouldBeNull();
@@ -28,7 +28,7 @@
             this.handler.Handle(new LiteratureDocumentRequest("sales-literature", SearchContextStub.MatchingCategory, SearchContextStub.MatchingTitle, false)).ShouldNotBeNull();
         }
 
-        //[Fact]
+        [Fact(Skip = "No longer valid")]
         public void Should_return_null_when_a_matching_document_template_is_not_a_literature_document()
         {
             this.handler.Handle(new LiteratureDocumentRequest("sales-literature", SearchContextStub.MatchingCategory, SearchContextStub.NonMatchingTitle, false)).ShouldBeNull();
