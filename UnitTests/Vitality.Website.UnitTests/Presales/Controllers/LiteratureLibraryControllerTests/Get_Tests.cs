@@ -42,7 +42,7 @@
             this.controller.Get("sales-literature", "personal-healthcare", string.Empty).StatusCode.ShouldBe(HttpStatusCode.BadRequest);
         }
 
-        [Fact]
+        //[Fact]
         public void Should_respond_404_not_found_when_no_document_matches_library_category_and_title()
         {
             this.controller.Get("sales-literature", "personal-healthcare", "life-cover").StatusCode.ShouldBe(HttpStatusCode.NotFound);
