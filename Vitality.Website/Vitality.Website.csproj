@@ -60,6 +60,10 @@
       <HintPath>..\packages\URL.Rewrite.1.8.0\lib\Hi.UrlRewrite.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Krusen.Sitecore.WebApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Krusen.Sitecore.WebApi.1.0.0\lib\net45\Krusen.Sitecore.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Nancy, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nancy.0.17.1\lib\net40\Nancy.dll</HintPath>

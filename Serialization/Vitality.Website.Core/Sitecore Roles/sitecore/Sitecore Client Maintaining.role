@@ -2,5 +2,11 @@
 name: sitecore\Sitecore Client Maintaining
 
 ----role-in-role----
+rolename: sitecore\Advisers User
+
+----role-in-role----
 rolename: sitecore\Developer
+
+----role-in-role----
+rolename: sitecore\Presales User
 
