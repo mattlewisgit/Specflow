@@ -19,13 +19,13 @@ content-length: 0
 ----version----
 language: en
 version: 1
-revision: d1e53b8a-7836-46eb-8423-18955e1c8d79
+revision: d011e7e1-da91-4192-9cb3-72f68f022ed1
 
 ----field----
 field: {E670AD08-9370-4CE9-B2F4-553A6A13AD1D}
 name: JsonSchemaScript
 key: jsonschemascript
-content-length: 1304
+content-length: 1302
 
 {
   "@context": "http://schema.org",
@@ -62,8 +62,7 @@ content-length: 1304
   "foundingDate": "2007",
   "logo": "https://www.vitality.co.uk/media online/presales/logos/vitality/vitality-logo.jpg"
     }
-  ]
-}
+  ]}
 ----field----
 field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
 name: Title
@@ -238,14 +237,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d1e53b8a-7836-46eb-8423-18955e1c8d79
+d011e7e1-da91-4192-9cb3-72f68f022ed1
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160818T084132Z
+20160920T100522Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -45,6 +45,7 @@
     <Content Include="components\cookie-message\without-cookie.html" />
     <Content Include="components\cookie-message\with-cookie.html" />
     <Content Include="components\cookie-message\index.html" />
+    <Content Include="components\typeahead.html" />
     <Content Include="components\server-error.html" />
     <Content Include="components\article-index.html" />
     <Content Include="components\award-leader.html" />
@@ -78,9 +79,11 @@
     <Content Include="index.html" />
     <Content Include="components\main_navigation.html" />
     <Content Include="robots.txt" />
+    <Content Include="pages\health-adviser-sales-library.html" />
     <Content Include="src\favicon-template.html" />
     <Content Include="gulpfile.js" />
     <Content Include="js\boilerplate.js" />
+    <Content Include="src\img\examples\example-pdf.png" />
     <Content Include="src\images\svg\button-video-pause.svg" />
     <Content Include="src\images\svg\button-video-play.svg" />
     <Content Include="src\img\examples\award-leader-background-light.jpg" />
@@ -211,6 +214,8 @@
     <Content Include="src\img\logos\white\starbucks_white.png" />
     <Content Include="src\img\logos\white\virgin-active_white.png" />
     <Content Include="src\img\logos\white\weightwatchers_white.png" />
+    <Content Include="src\js\angular\healthAdvisersLiteratureApp.js" />
+    <Content Include="src\js\mocks\literatureLibraryServiceMock.js" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
     <Content Include="src\js\modules\cookieMessageModule.js" />
@@ -400,6 +405,8 @@
     <Content Include="src\sass\_rte-fixes.scss" />
     <Content Include="src\sass\base\_lists.scss" />
     <Content Include="src\sass\modules\_preview-card.scss" />
+    <Content Include="src\sass\base\_lists.scss" />
+    <Content Include="src\sass\modules\_preview-card.scss" />
     <Content Include="src\sass\modules\_server-error.scss" />
     <Content Include="src\sass\modules\_article-index.scss" />
     <Content Include="src\sass\utils\_background-positions.scss" />
@@ -408,6 +415,7 @@
     <Content Include="src\sass\modules\_article-snippet.scss" />
     <Content Include="config\sizereport-config.json" />
     <Content Include="src\js\config\youtube-api-base-config.json" />
+    <Content Include="src\sass\vendor\_typeaheadjs.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

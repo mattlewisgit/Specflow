@@ -1,0 +1,107 @@
+----item----
+version: 1
+id: {5D54629B-25A4-4107-B614-26F504830335}
+database: master
+path: /sitecore/system/Modules/Web Forms for Marketers/Settings/Actions/Save Actions/Update Contact Details
+parent: {E5EABB1F-40BC-45BB-8D87-3B6C239B521B}
+name: Update Contact Details
+master: {9D2B5542-F674-44A3-B607-947BFABDA5B2}
+template: {E01318E7-CEED-4EA4-B107-1B8FAC3A3DB8}
+templatekey: Submit Action
+
+----field----
+field: {094228C3-C782-45EA-B753-01CD81597BA3}
+name: Factory Object Name
+key: factory object name
+content-length: 43
+
+/sitecore/wffm/actions/updateContactDetails
+----field----
+field: {2A29BFAC-1CD0-4AC9-9053-19BE2473200D}
+name: Assembly
+key: assembly
+content-length: 0
+
+
+----field----
+field: {F062D792-ECDE-41EB-811F-9CC68F7B4082}
+name: Class
+key: class
+content-length: 0
+
+
+----field----
+field: {055928E5-9FD4-45DE-97CD-0B595025B175}
+name: Client Action
+key: client action
+content-length: 1
+
+1
+----field----
+field: {A95C414D-B036-4E1B-B298-86DED562F411}
+name: Editor
+key: editor
+content-length: 80
+
+/sitecore/shell/~/xaml/Sitecore.Forms.Shell.UI.Dialogs.UpdateContactDetails.aspx
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 19
+
+apps/32x32/book.png
+----field----
+field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
+name: __Originator
+key: __originator
+content-length: 0
+
+
+----version----
+language: en
+version: 1
+revision: 4508f5b2-92aa-4b05-ade5-02dce1619831
+
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 22
+
+Update Contact Details
+----field----
+field: {9541E67D-CE8C-4225-803D-33F7F29F09EF}
+name: __Short description
+key: __short description
+content-length: 46
+
+Updates the contact details of logged in users
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20140711T120753Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+4508f5b2-92aa-4b05-ade5-02dce1619831
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20151210T130959Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

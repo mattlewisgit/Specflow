@@ -88,7 +88,10 @@ var paths = {
         dest: "js/",
         modernizr: "modernizr-custom.js",
         polyfill: "polyfill-custom.js",
-        src: "src/js/**/*.js",
+        src: [
+            "src/js/**/*.js",
+            "!src/js/mocks/*.js*/"
+        ],
         thirdPartyTemplate: "src/js-third-party.html",
         unitTests: "src/unit-tests/**/*.js"
     },
@@ -135,8 +138,12 @@ var cdnReplacements = configs.cdnizer.files
 gulp.task(tasks.help, plugins.taskListing);
 
 gulp.task(tasks.js.lint, function () {
+    var jsPaths = paths.js.src.splice(0);
+    jsPaths.push(paths.gulp);
+    jsPaths.push(paths.js.unitTests);
+
     return gulp
-        .src([paths.gulp, paths.js.src, paths.js.unitTests])
+        .src(jsPaths)
         .pipe(plugins.changed(paths.temp))
         .pipe(gulp.dest(paths.temp))
         .pipe(plugins.jscpd({
@@ -331,7 +338,7 @@ gulp.task(tasks.js.polyfill, function () {
             return fileConfig.test;
         });
 
-    allJs.push(paths.js.src);
+    allJs.concat(paths.js.src);
 
     return gulp
         .src(allJs)
@@ -480,9 +487,11 @@ gulp.task(tasks.serve, function () {
     };
 
     gulp.watch(paths.html, options, browserSync.reload);
+    var jsPaths = paths.js.src.splice(0);
+    jsPaths.push(paths.js.unitTests);
 
     gulp.watch(
-        [paths.js.src, paths.js.unitTests],
+        jsPaths,
         options,
         [tasks.js.devel, tasks.js.unitTests, browserSync.reload]);
 

@@ -36,11 +36,11 @@
                                 <li class="iconlist__item">
                                     @if (summaryListItem.IsShortListItem)
                                     {
-                                        @Editable(summaryListItem, m => m.Title)
+                                        <h4>@Editable(summaryListItem, m => m.Title)</h4>
                                     }
                                     else
                                     {
-                                        <h6>@Editable(summaryListItem, m => m.Title)</h6>
+                                        <h4>@Editable(summaryListItem, m => m.Title)</h4>
 
                                         <p>@Editable(summaryListItem, m => m.Body)</p>
                                     }

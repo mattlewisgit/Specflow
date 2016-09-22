@@ -19,13 +19,13 @@ ar|sitecore\Presales Configuration Manager|pe|+item:create|+item:read|+item:rena
 ----version----
 language: en
 version: 1
-revision: adc62961-79fb-491b-bbeb-4fa90e63af31
+revision: 1b3dd0af-f3f9-4366-84df-d79339f261bf
 
 ----field----
 field: {E670AD08-9370-4CE9-B2F4-553A6A13AD1D}
 name: JsonSchemaScript
 key: jsonschemascript
-content-length: 1304
+content-length: 1302
 
 {
   "@context": "http://schema.org",
@@ -62,8 +62,7 @@ content-length: 1304
   "foundingDate": "2007",
   "logo": "https://www.vitality.co.uk/media online/presales/logos/vitality/vitality-logo.jpg"
     }
-  ]
-}
+  ]}
 ----field----
 field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
 name: Title
@@ -252,14 +251,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-adc62961-79fb-491b-bbeb-4fa90e63af31
+1b3dd0af-f3f9-4366-84df-d79339f261bf
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160817T111401Z
+20160920T100536Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
