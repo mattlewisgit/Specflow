@@ -34,9 +34,9 @@ content-length: 38
 field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
 name: __Security
 key: __security
-content-length: 0
+content-length: 141
 
-
+ar|sitecore\Vitality Configuration Manager|pe|+workflowCommand:execute|+workflowState:write|pd|+workflowCommand:execute|+workflowState:write|
 ----version----
 language: da
 version: 1
@@ -148,7 +148,7 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: df98346c-8e17-43c7-a4dc-1cfc3bad76a1
+revision: e2da68e7-7d87-4afa-95ea-5b70218918d8
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -177,14 +177,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-df98346c-8e17-43c7-a4dc-1cfc3bad76a1
+e2da68e7-7d87-4afa-95ea-5b70218918d8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160915T112246Z
+20160922T111620Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
