@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {A9809291-5B94-46D9-998E-6C0241B5AFC4}
+id: {784C5CA8-39EE-42CB-9588-24083EA356D2}
 database: master
-path: /sitecore/templates/Presales/Page Templates/Literature Library Page/Content/CardOpeningParagraph
+path: /sitecore/templates/Presales/Page Templates/Literature Library Page/Content/EmailLinkText
 parent: {DB94E8C4-1883-4E0E-AAC9-B348AE83A5EC}
-name: CardOpeningParagraph
+name: EmailLinkText
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -22,40 +22,40 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-400
+800
 ----version----
 language: en
 version: 1
-revision: b961f840-8b5a-429d-a011-760e067c20a5
+revision: 4145434e-e336-4939-8e0a-678459096f61
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 22
+content-length: 15
 
-Card Opening Paragraph
+Email Link Text
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160630T152650Z
+20160920T155120Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-b961f840-8b5a-429d-a011-760e067c20a5
+4145434e-e336-4939-8e0a-678459096f61
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160923T135748Z
+20160923T135749Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
