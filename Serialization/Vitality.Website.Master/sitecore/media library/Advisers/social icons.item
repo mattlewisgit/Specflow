@@ -1,18 +1,25 @@
 ----item----
 version: 1
-id: {7098D761-9F3B-487F-90B2-149A10887619}
+id: {827ECE64-3F69-43C4-9052-B5718DCDDE91}
 database: master
-path: /sitecore/media library/Advisers/System/Components
-parent: {4D67F0C6-1F87-4047-BBF0-B62C074F68C4}
-name: Components
+path: /sitecore/media library/Advisers/social icons
+parent: {DD522B88-4C13-4648-B243-B7C1D426186A}
+name: social icons
 master: {00000000-0000-0000-0000-000000000000}
 template: {FE5DD826-48C6-436D-B87A-7C4210C7413B}
 templatekey: Media folder
 
+----field----
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 118
+
+ar|sitecore\Presales User|pe|+item:read|+item:create|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
 ----version----
 language: en
 version: 1
-revision: 41cc04e7-d8a6-47a1-98a2-6dce5f933f59
+revision: f789dc3b-4b5d-4f4c-857c-8926a0cf2842
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -20,7 +27,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20160506T135816Z
+20160503T092835Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -34,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-41cc04e7-d8a6-47a1-98a2-6dce5f933f59
+f789dc3b-4b5d-4f4c-857c-8926a0cf2842
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160506T135816Z
+20160518T105704Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
