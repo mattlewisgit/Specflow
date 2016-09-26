@@ -18,7 +18,7 @@ revision: 19420104-6edc-4071-a299-de4704c31925
 field: {35B57356-DA32-4179-AFD5-3A74F13831B9}
 name: RichText
 key: richtext
-content-length: 2480
+content-length: 2424
 
 <table summary="This is a summary" style="width: 590px; height: 74px;" class="data-table tablesaw tablesaw-stack" data-tablesaw-mode="stack">
     <caption><strong>This is a heading</strong></caption>
