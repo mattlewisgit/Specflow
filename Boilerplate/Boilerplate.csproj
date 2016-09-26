@@ -417,6 +417,7 @@
     <Content Include="config\sizereport-config.json" />
     <Content Include="src\js\config\youtube-api-base-config.json" />
     <Content Include="src\sass\vendor\_typeaheadjs.scss" />
+    <Content Include="src\js\config\moment-api.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

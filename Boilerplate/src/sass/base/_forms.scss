@@ -53,7 +53,9 @@
 
             &--inline {
                 // Unfortunately, need this to easily override a grid...
-                padding-top: $pad--large !important;
+                // This is also really a fudge to line up with items that use
+                // labels so that the inputs line up correctly...
+                padding-top: ($pad--large + 4) !important;
             }
         }
 
