@@ -35,6 +35,30 @@ window.healthAdvisersSalesLiteratureApp = angular
             };
         }
     ])
+    .controller("DateController", [
+        "$scope",
+        "$rootScope",
+        "LiteratureLibraryService",
+        function ($scope, $rootScope, LiteratureLibraryService) {
+            "use strict";
+            // Initialise the date model with today.
+            var today = new Date();
+
+            $scope.filterDate = {
+                "day": today.getDate(),
+                "month": today.getMonth() + 1,
+                "year": today.getFullYear()
+            };
+
+            // Broadcast the type and update the view state.
+            $scope.filterAction = function (filterDate) {
+                debugger;
+                var actualDate = new Date(filterDate.year, filterDate.month - 1, filterDate.day);
+                // TODO Use Moment.js to validate
+                // TODO Fire a new broadcast event and filter the docs
+            };
+        }
+    ])
     .controller("ChooseController", [
         "$scope",
         "$rootScope",

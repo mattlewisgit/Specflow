@@ -50,6 +50,11 @@
 
         &__input {
             position: relative;
+
+            &--inline {
+                // Unfortunately, need this to easily override a grid...
+                padding-top: $pad--large !important;
+            }
         }
 
         // Styled select boxes.
@@ -91,6 +96,12 @@
 
         // Styled submit button.
         &__input--submit {
+            &--inline {
+                $_pad: $pad--thin * 0.7;
+                padding-bottom: $_pad;
+                padding-top: $_pad;
+            }
+
             input[type="submit"]:hover {
                 background-color: $color-mono-3;
                 color: $white;
