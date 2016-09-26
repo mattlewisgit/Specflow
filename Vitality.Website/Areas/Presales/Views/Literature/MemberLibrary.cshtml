@@ -1,17 +1,18 @@
 ﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.LiteratureLibraryPage>
 
 <div class="example" data-ng-app="HealthAdvisersSalesLiteratureApp">
-    <div class="grid">
+    <div class="grid grid-no-gutters">
         <div class="grid-col-8-12">
             <h1 class="text-flush-top">@Editable(Model, m => m.Headline)</h1>
             <p>@Editable(Model, m => m.OpeningParagraph)</p>
             <h2>@Editable(Model, m => m.SearchHeadline)</h2>
+            <div>Example: 6 8 2015</div>
 
             <div class="grid-no-gutters form" ng-controller="DateController as dateController">
                 <form name="dateForm">
                     <div class="grid-col-3-12 form__field" ng-class="(dateForm.day.$invalid) ? 'is-invalid' : ''">
                         <label for="day">Day</label>
-                        <input id="day" name="day" ng-model="filterDate.day" type="number" placeholder="DD" />
+                        <input id="day" name="day" ng-model="filterDate.day" type="number" placeholder="DD">
 
                         <div ng-show="dateForm.day.$invalid" class="form__field__error">
                             <p>Please enter a valid day</p>
@@ -24,7 +25,7 @@
 
                     <div class="grid-col-3-12 form__field">
                         <label for="month">Month</label>
-                        <input id="month" name="month" ng-model="filterDate.month" type="number" placeholder="MM" />
+                        <input id="month" name="month" ng-model="filterDate.month" type="number" placeholder="MM">
 
                         <div ng-show="dateForm.month.$invalid" class="form__field__error">
                             <p>Please enter a valid month</p>
@@ -33,16 +34,17 @@
 
                     <div class="grid-col-3-12 form__field">
                         <label for="year">Year</label>
-                        <input id="year" name="year" ng-model="filterDate.year" type="number" placeholder="YYYY" />
+                        <input id="year" name="year" ng-model="filterDate.year" type="number" placeholder="YYYY">
                     </div>
 
                     <div class="grid-col-2-12 form__field__input--inline">
-                        <input type="submit" ng-click="filterAction(dateForm, filterDate)" value="Submit"
-                               class="box-button box-button--secondary box-button--rounded form__field__input--submit--inline" />
+                        <input type="submit" ng-click="filterAction(dateForm, filterDate)" value="Submit" class="box-button box-button--secondary box-button--rounded form__field__input--submit--inline">
                     </div>
                 </form>
             </div>
+
         </div>
+
 
         <div class="grid-col-4-12 tablet-and-up">
             <div class="spotlight">
@@ -50,7 +52,7 @@
                     <div class="spotlight-item">
                         <div class="spotlight-item__top-content">
                             <div class="spotlight-item__intro-image burst">
-                                @Editable(Model, m => m.CardImage, new { w = 320 })
+                                @Editable(Model, m => m.CardImage, new {w = 320})
                             </div>
                             <p class="spotlight-item__heading">
                                 @Editable(Model, m => m.CardHeadline)
@@ -68,9 +70,10 @@
                 </div>
             </div>
         </div>
+
     </div>
 
-    <div class="grid">
+        <div class="grid">
         <div class="grid-col-4-12" ng-controller="ChooseController as chooseController">
             <h3>@Editable(Model, m => m.CategoriesHeadline)</h3>
 
@@ -140,7 +143,7 @@
 <script>
     var data = [
         {
-            Name: "Sales literature"
+            Name: "Personal healthcare"
         },
         {
             Name: "Personal healthcare literature"

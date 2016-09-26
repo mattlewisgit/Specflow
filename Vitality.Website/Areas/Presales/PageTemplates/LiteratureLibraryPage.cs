@@ -1,4 +1,6 @@
-﻿namespace Vitality.Website.Areas.Presales.PageTemplates
+﻿using System;
+
+namespace Vitality.Website.Areas.Presales.PageTemplates
 {
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
@@ -26,6 +28,8 @@
         public string SearchPlaceholderText { get; set; }
 
         public string CategoriesHeadline { get; set; }
+
+        public DateTime EffectivePlanDate { get; set; }
 
         public string LiteratureHeadline { get; set; }
 
