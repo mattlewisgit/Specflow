@@ -24,6 +24,8 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
 
         public string Key { get; set; }
 
+        public DateTime EffectivePlanDate { get; set; }
+
         public LiteratureDocumentSummaryDto[] AvailableLiterature { get; set; }
         
         public static IEnumerable<LiteratureDocumentDto> From(IEnumerable<LiteratureDocumentSearchResult> searchResult1)
@@ -38,6 +40,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
                 PublishDate = searchResult.PublishDate,
                 Category = searchResult.Category,
                 Key = searchResult.Title.ToLowerHyphenatedString(),
+                EffectivePlanDate = searchResult.EffectivePlanDate,
                 AvailableLiterature = new LiteratureDocumentSummaryDto[0]
             }).ToList();
 

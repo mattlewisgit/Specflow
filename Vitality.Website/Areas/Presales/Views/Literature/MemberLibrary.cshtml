@@ -73,7 +73,7 @@
 
     </div>
 
-        <div class="grid">
+    <div class="grid">
         <div class="grid-col-4-12" ng-controller="ChooseController as chooseController">
             <h3>@Editable(Model, m => m.CategoriesHeadline)</h3>
 
@@ -126,12 +126,13 @@
                     </div>
 
                     <div class="preview-card--body__preview">
-                        <img ng-src="{{document.Thumbnail}}" alt="{{document.Title}}" />
+                        <img ng-src="{{document.Thumbnail}}" alt="{{document.Title}}"/>
                     </div>
 
                     <div class="preview-card--body__text">
                         <p>{{document.Description}}</p>
-                        <p><b>{{document.Code}}</b></p>
+                        <p><b>{{document.Code}}</b>
+                        </p>
                         <p>{{document.PublishDate | date : "d MMM yyyy"}}</p>
                     </div>
                 </div>
