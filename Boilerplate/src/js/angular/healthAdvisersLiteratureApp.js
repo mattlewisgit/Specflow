@@ -38,10 +38,10 @@ window.healthAdvisersSalesLiteratureApp = angular
     .controller("ChooseController", [
         "$scope",
         "$rootScope",
-        "literatureTypes",
-        function ($scope, $rootScope, literatureTypes) {
+        "LiteratureLibraryService",
+        function ($scope, $rootScope, LiteratureLibraryService) {
             "use strict";
-            $scope.types = literatureTypes;
+            $scope.types = LiteratureLibraryService.getCategories();
 
             // Broadcast the type and update the view state.
             this.loadType = function (typeToLoad) {

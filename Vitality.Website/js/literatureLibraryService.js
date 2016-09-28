@@ -5,6 +5,7 @@
         function ($http) {
             "use strict";
             var baseUrl = "/api/literature/";
+            var cachedCategories = [];
             var cachedDocuments = [];
             var currentDocument = {};
 
@@ -31,15 +32,23 @@
                 }
             };
 
-            this.getLiterature = function (name, callback) {
-                $http
-                   .get(baseUrl + "sales-literature/" + name)
-                   .error(function () {
-                       debugger;
-                   })
-                   .then(function (response) {
-                       callback(response.data);
-                   });
+            this.getCategories = function () {
+                // Finds every unique category name from the list of documents,
+                // and returns a list of objects with those names and a default,
+                // deselected flag, then caches the result!
+                return (cachedCategories.length > 0 && cachedCategories) ||
+                    (cachedCategories = Object
+                        .keys(cachedDocuments.reduce(function (aggregate, document) {
+                            // Use an object so that the key name is unique.
+                            aggregate[document.Category] = true;
+                            return aggregate;
+                        }, {})))
+                        .map(function (name) {
+                            return {
+                                Name: name,
+                                IsSelected: false
+                            };
+                        });
             };
 
             this.searchDocuments = function (text) {
