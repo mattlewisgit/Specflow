@@ -1,54 +1,61 @@
 ----item----
 version: 1
-id: {089A6462-CF2D-4053-A213-41A21D333703}
+id: {63AD6DA4-19C7-4BAC-8805-F9C98BA550F6}
 database: master
-path: /sitecore/content/Presales/Content/Literature Libraries/Sales Literature/Business and Corporate Healthcare Literature
-parent: {FD049757-2846-4592-B45B-E889F1427B97}
-name: Business and Corporate Healthcare Literature
+path: /sitecore/templates/Presales/Page Templates/Literature Library Page/Content/DownloadLinkText
+parent: {DB94E8C4-1883-4E0E-AAC9-B348AE83A5EC}
+name: DownloadLinkText
 master: {00000000-0000-0000-0000-000000000000}
-template: {73424C35-E196-41C6-87F5-8D52F25D5527}
-templatekey: Literature Category
+template: {455A3E98-A627-4B40-8035-E683A0331AC7}
+templatekey: Template field
 
+----field----
+field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
+name: Type
+key: type
+content-length: 16
+
+Single-Line Text
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
 key: __sortorder
 content-length: 3
 
-300
+700
 ----version----
 language: en
 version: 1
-revision: ff4da71d-2a05-472f-90a6-47332e3d0c47
+revision: 1b86c57a-3e35-45d5-98bf-e8fa02cb2df2
 
 ----field----
-field: {4B06C6D8-BF43-49A2-94C5-6E7B9D57585A}
+field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 44
+content-length: 18
 
-Business and Corporate Healthcare Literature
+Download Link Text
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160701T143830Z
+20160920T155120Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-ff4da71d-2a05-472f-90a6-47332e3d0c47
+1b86c57a-3e35-45d5-98bf-e8fa02cb2df2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160707T151403Z
+20160923T135749Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

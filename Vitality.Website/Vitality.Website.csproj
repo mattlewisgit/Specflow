@@ -40,6 +40,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxMin, Version=4.0.202.1, Culture=neutral, PublicKeyToken=24297a69a7eae424, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.WFFM.8.1.160304\lib\AjaxMin.dll</HintPath>
+    </Reference>
     <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
       <Private>True</Private>
@@ -69,6 +73,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MSCaptcha, Version=4.0.4250.31585, Culture=neutral, PublicKeyToken=b9ff12f28cdcf412, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.WFFM.8.1.160304\lib\MSCaptcha.dll</HintPath>
+    </Reference>
     <Reference Include="Nancy, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nancy.0.17.1\lib\net40\Nancy.dll</HintPath>
       <Private>True</Private>
@@ -126,6 +134,18 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.ContentSearch.Linq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Sitecore.Forms.Core, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.WFFM.8.1.160304\lib\Sitecore.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Forms.Custom, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.WFFM.8.1.160304\lib\Sitecore.Forms.Custom.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.Forms.Mvc, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.WFFM.8.1.160304\lib\Sitecore.Forms.Mvc.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.ItemWebApi, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.ItemWebApi.dll</HintPath>
       <Private>True</Private>
@@ -165,6 +185,34 @@
     <Reference Include="Sitecore.Web, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Web.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.WFFM, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.WFFM.8.1.160304\lib\Sitecore.WFFM.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.WFFM.Abstractions, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.WFFM.8.1.160304\lib\Sitecore.WFFM.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.WFFM.Actions, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.WFFM.8.1.160304\lib\Sitecore.WFFM.Actions.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.WFFM.Analytics, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.WFFM.8.1.160304\lib\Sitecore.WFFM.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.WFFM.Client, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.WFFM.8.1.160304\lib\Sitecore.WFFM.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.WFFM.Services, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.WFFM.8.1.160304\lib\Sitecore.WFFM.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Sitecore.WFFM.Speak, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.WFFM.8.1.160304\lib\Sitecore.WFFM.Speak.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -333,6 +381,110 @@
     <Content Include="js\healthAdvisersLiteratureApp.js" />
     <Content Include="js\literatureLibraryService.js" />
     <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\constituent\AutomationStateList.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\constituent\CommandItem.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\constituent\EmptyFormMessage.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\constituent\FieldButtons.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\constituent\FormGallery.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\constituent\FormRichEditField.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\constituent\FormsDesigner.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\constituent\FormSettingsDesigner.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\constituent\GlobalForm.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\constituent\GroupListField.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\constituent\LayoutFieldDevice.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\constituent\ListItem.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\constituent\PlaceholderList.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\constituent\WelcomeButton.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\Gallery\Gallery.SubmitAction.Option.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\Gallery\Gallery.SubmitActions.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\Html\ALink.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\Html\FieldSet.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\Html\Html.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\Html\InlineButton.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\Html\RichTextBorder.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\Html\TextArea.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\Html\ToolbarDropDown.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Controls\Html\VISplitter.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\CreateFormWizard.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\AddContactToContactList.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\CampaignEditor.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\ChangePassword.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\CheckUserPassword.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\CreateUser.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\EditRoleMemebrship.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\EnrollInEngagementPlan.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\EvilRobotDetection.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\MappingField.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\MappingTemplate.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\RegisterConversion.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\SendEmail.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\SendMms.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\SendSms.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\SendStandardMessage.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\SubmitActions.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\Subscription.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\SuccessEditor.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\UpdateContactDetails.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\UserExists.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\UserInRole.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\UserLogin.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\UserLoginWithPassword.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Common\CustomizeAnalyticsWizard.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Common\SaveToAscxPriview.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Common\SelectAutomationState.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Common\SelectFields.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Common\SelectForm.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Common\SelectPage.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Common\SelectRole.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Common\SelectStandardMessage.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Field types\ListItemsEditor.xaml.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Template\CustomizeTreeListDialog.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Template\SelectTemplate.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\FormsDesigner.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\images\arrow.png" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\images\clear.png" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\images\delete2.png" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\images\down.png" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\images\element_add.png" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\images\filler_blue_one.png" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\images\filler_green_one.png" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\images\header.png" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\images\spinner.gif" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\images\up.png" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\InsertFormWizard.xml" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\ControlledChecklist.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\DateUtils.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\DragDrop.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\Draggable.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\FormsWebEdit.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquery-1.5.min.js" />
+    <None Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquery-2.1.1.intellisense.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquery-2.1.1.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquery-2.1.1.min.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquery-ui-1.11.1.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquery-ui.min-1.11.1.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquery.cookie.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquery.dynatree-1.2.4.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquery.dynatree.min.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquery.list-view.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquery.livequery.min.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquery.numeric.pack.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquery.tmpl.min.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquery.watermark.custom.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\jquerymobile.min.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\MessagePreview.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\OverflowController.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\sc.controls.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\Sitecore.AttributeCollection.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\Sitecore.EmailEditor.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\Sitecore.FormBuilder.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\Sitecore.Forms.ListItemsEditor.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\Sitecore.Forms.PopupMenu.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\Sitecore.Parser.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\Sitecore.PlaceholderManager.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\Sitecore.PropertiesBuilder.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\Utils.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\script\Validator.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -447,7 +599,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\ConnectionStrings.config" />
     <Content Include="App_Config\Sitecore.config">
       <SubType>Designer</SubType>
