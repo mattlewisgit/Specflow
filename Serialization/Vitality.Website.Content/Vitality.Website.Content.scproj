@@ -601,7 +601,6 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\media library\Presales\Components\ba_white.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
-      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\media library\Presales\Components\cineworld_white.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
