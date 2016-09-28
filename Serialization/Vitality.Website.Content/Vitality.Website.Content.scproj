@@ -608,7 +608,6 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\media library\Presales\Components\evans_white.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
-      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\media library\Presales\Components\garmin_white.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
