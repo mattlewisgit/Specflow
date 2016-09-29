@@ -2,6 +2,7 @@
     .module("LiteratureLibraryService", [])
     .service("LiteratureLibraryService", [
         "$http",
+        "$window",
         function ($http) {
             "use strict";
             var baseUrl = "/api/literature/";
@@ -33,9 +34,9 @@
                 }
 
                 $http
-                   .get(baseUrl + "sales-literature")
+                   .get(baseUrl + window.angularData.literaturePath)
                    .error(function () {
-                       debugger;
+                       // ...
                    })
                    .then(function (response) {
                        cachedDocuments = response.data;
