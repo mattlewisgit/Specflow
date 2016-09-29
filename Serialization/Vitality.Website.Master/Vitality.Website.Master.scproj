@@ -5276,7 +5276,6 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Sales Literature Library Page\__Standard Values.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
-      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Sales Literature Library Page\Content.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
