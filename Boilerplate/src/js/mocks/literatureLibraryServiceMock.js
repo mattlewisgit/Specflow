@@ -99,11 +99,11 @@ angular
             return currentDocument;
         };
 
-        this.getCategories = function () {
+        this.getCategories = function (callback) {
             // Finds every unique category name from the list of documents,
             // and returns a list of objects with those names and a default,
             // deselected flag, then caches the result!
-            return (categories.length > 0 && categories) ||
+            callback((categories.length > 0 && categories) ||
                 (categories = Object
                     .keys(mockData.documents.reduce(function (aggregate, document) {
                         // Use an object so that the key name is unique.
@@ -115,13 +115,19 @@ angular
                             Name: name,
                             IsSelected: false
                         };
-                    });
+                    }));
         };
 
         this.getDocument = function (key) {
             return (currentDocument = mockData.documents.filter(function (document) {
                 return document.Key === key;
             })[0]);
+        };
+
+        this.getDocuments = function (category) {
+            return (currentDocument = mockData.documents.filter(function (document) {
+                return document.Category === category;
+            }));
         };
 
         this.getLiterature = function (category) {

@@ -2,12 +2,12 @@
 version: 1
 id: {F469F321-8B25-40AC-86FE-A04BD316B28B}
 database: master
-path: /sitecore/templates/Presales/Page Templates/Literature Library Page/__Standard Values
+path: /sitecore/templates/Presales/Page Templates/Sales Literature Library Page/__Standard Values
 parent: {0160CD5B-71AD-4C17-AD40-93699FB4035F}
 name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {0160CD5B-71AD-4C17-AD40-93699FB4035F}
-templatekey: Literature Library Page
+templatekey: Sales Literature Library Page
 
 ----field----
 field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
