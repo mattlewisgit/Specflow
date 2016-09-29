@@ -2,7 +2,11 @@
 version: 1
 id: {C2524975-BB29-433B-A528-D925EF6C44EE}
 database: master
+<<<<<<< HEAD
 path: /sitecore/media library/Presales/Components/evans_white
+=======
+path: /sitecore/media library/presales/components/evans_white
+>>>>>>> d43dd5b96c979b07f1413af866930b625bb8fe1a
 parent: {5C450172-7FEE-4F80-B107-BBC6C1B9A44D}
 name: evans_white
 master: {00000000-0000-0000-0000-000000000000}
