@@ -85,10 +85,12 @@ window.healthAdvisersSalesLiteratureApp = angular
     .controller("ChooseController", [
         "$scope",
         "$rootScope",
-        "literatureTypes",
-        function ($scope, $rootScope, literatureTypes) {
+        "LiteratureLibraryService",
+        function ($scope, $rootScope, LiteratureLibraryService) {
             "use strict";
-            $scope.types = literatureTypes;
+            LiteratureLibraryService.getCategories(function (categories) {
+                $scope.types = categories;
+            });
 
             // Broadcast the type and update the view state.
             this.loadType = function (typeToLoad) {
@@ -115,7 +117,7 @@ window.healthAdvisersSalesLiteratureApp = angular
                 }
 
                 // Fetch the data.
-                $scope.literature = LiteratureLibraryService.getLiterature(literatureType.Name);
+                $scope.literature = LiteratureLibraryService.getDocuments(literatureType.Name);
 
                 // Deselect all of the documents.
                 $scope.literature.forEach(function (document) {

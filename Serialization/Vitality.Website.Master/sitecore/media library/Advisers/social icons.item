@@ -1,40 +1,33 @@
 ----item----
 version: 1
-id: {FF0BC016-2D01-4F55-A020-EF6FC2FE7559}
+id: {827ECE64-3F69-43C4-9052-B5718DCDDE91}
 database: master
-path: /sitecore/system/Settings/Rules/Insert Options/Rules
-parent: {949DFD54-3A60-41D1-A05B-826783FD501F}
-name: Rules
+path: /sitecore/media library/Advisers/social icons
+parent: {DD522B88-4C13-4648-B243-B7C1D426186A}
+name: social icons
 master: {00000000-0000-0000-0000-000000000000}
-template: {8EA2CF67-4250-47A2-AECA-4F70FD200DC7}
-templatekey: Rules Folder
+template: {FE5DD826-48C6-436D-B87A-7C4210C7413B}
+templatekey: Media folder
 
 ----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
-content-length: 38
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 118
 
-{664E5035-EB8C-4BA1-9731-A098FCC9127A}
+ar|sitecore\Presales User|pe|+item:read|+item:create|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
 ----version----
 language: en
 version: 1
-revision: 69879a71-5ce6-4b59-a4d3-c8ace7367dec
+revision: f789dc3b-4b5d-4f4c-857c-8926a0cf2842
 
-----field----
-field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
-name: __Owner
-key: __owner
-content-length: 14
-
-sitecore\admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
-content-length: 15
+content-length: 16
 
-20080925T121208
+20160503T092835Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-69879a71-5ce6-4b59-a4d3-c8ace7367dec
+f789dc3b-4b5d-4f4c-857c-8926a0cf2842
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 16
 
-20120906T114409:634825286494672868
+20160518T105704Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
