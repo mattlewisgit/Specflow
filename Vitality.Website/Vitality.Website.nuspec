@@ -26,10 +26,6 @@
     <file src="_Heartbeat.aspx" />
     <file src="img\**\*.*" target="img" />
     <file src="js\*.js" target="js" />
-    <file src="sitecore\Shell\Applications\Modules\Web Forms for Marketers\**\*.*" target="sitecore\Shell\Applications\Modules\Web Forms for Marketers" />
-    <file src="sitecore modules\Shell\UrlRewrite\**\*.*" target="sitecore modules\Shell\UrlRewrite" />
-    <file src="sitecore modules\Shell\Web Forms for Marketers\**\*.*" target="sitecore modules\Shell\Web Forms for Marketers" />
-    <file src="sitecore modules\Web\Web Forms for Marketers\**\*.*" target="sitecore modules\Web\Web Forms for Marketers" />
     <file src="Views\Form\**\*.*" target="Views\Form" />
     <file src="Web.config" />
     <file src="Web.CD.config" />
