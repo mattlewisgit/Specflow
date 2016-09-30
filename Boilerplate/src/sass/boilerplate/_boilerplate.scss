@@ -27,7 +27,7 @@
     }
 }
 
-$_colourMap: (
+$_colour-map: (
     primary-color: $primary-color,
     secondary-color: $secondary-color,
     tertiary-color: $tertiary-color,
@@ -66,7 +66,7 @@ $_colourMap: (
     color-mono-1: $color-mono-1
 );
 
-@each $name, $colour in $_colourMap {
+@each $name, $colour in $_colour-map {
     .box--#{$name} {
         background-color: $colour;
     }
