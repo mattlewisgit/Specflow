@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {B42FCED4-C505-445B-99E9-5C19E5262955}
+id: {65DC4D1A-DA76-425A-9975-A06F76BED0DB}
 database: master
-path: /sitecore/templates/Presales/Page Templates/Sales Literature Library Page/Content/OpeningParagraph
-parent: {DB94E8C4-1883-4E0E-AAC9-B348AE83A5EC}
-name: OpeningParagraph
+path: /sitecore/templates/Presales/Page Templates/Member Literature Library Page/Content/DownloadLinkText
+parent: {DE5DE737-F4C8-46E9-8BFA-8D112834E02D}
+name: DownloadLinkText
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -22,40 +22,40 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-200
+700
 ----version----
 language: en
 version: 1
-revision: 511d59d3-1bf0-487b-989e-e3167fbe5b3e
+revision: 90c0b686-d7ac-452c-9fdf-8091d37232bc
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 17
+content-length: 18
 
-Opening Paragraph
+Download Link Text
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160630T152650Z
+20160920T155120Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-511d59d3-1bf0-487b-989e-e3167fbe5b3e
+90c0b686-d7ac-452c-9fdf-8091d37232bc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160923T135748Z
+20160930T103415Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

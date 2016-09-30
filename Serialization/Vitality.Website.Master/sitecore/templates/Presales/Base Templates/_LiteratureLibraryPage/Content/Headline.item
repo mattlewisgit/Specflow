@@ -1,9 +1,9 @@
 ----item----
 version: 1
-id: {5A0D2A71-2CDB-4948-B13E-53CF5D262442}
+id: {93334BBA-ED1B-4C1A-9377-D60DB8F96BFB}
 database: master
-path: /sitecore/templates/Presales/Page Templates/Sales Literature Library Page/Content/Headline
-parent: {DB94E8C4-1883-4E0E-AAC9-B348AE83A5EC}
+path: /sitecore/templates/Presales/Base Templates/_LiteratureLibraryPage/Content/Headline
+parent: {51D3AE8B-7072-499E-B7BF-743DA40EA3E1}
 name: Headline
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
@@ -26,7 +26,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 40226e1c-d03c-4bde-a6d6-370d9156b587
+revision: cf6c9e77-75cc-4167-bd90-3f54e374bc45
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -41,21 +41,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20160630T152650Z
+20160928T143349Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-40226e1c-d03c-4bde-a6d6-370d9156b587
+cf6c9e77-75cc-4167-bd90-3f54e374bc45
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160923T135748Z
+20160928T150805Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

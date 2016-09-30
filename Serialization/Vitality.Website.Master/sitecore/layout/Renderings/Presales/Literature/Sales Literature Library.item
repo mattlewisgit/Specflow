@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {40121DA1-1356-4AAE-87BF-B0BCFB8E2C08}
+id: {DEDA1767-7339-4970-8E5A-F791CD3555FB}
 database: master
-path: /sitecore/layout/Renderings/Presales/Literature/Literature Library
+path: /sitecore/layout/Renderings/Presales/Literature/Sales Literature Library
 parent: {A820D005-A4EF-4659-8919-976DECDE320C}
-name: Literature Library
+name: Sales Literature Library
 master: {00000000-0000-0000-0000-000000000000}
 template: {99F8905D-4A87-4EB8-9F8B-A9BEBFB3ADD6}
 templatekey: View rendering
@@ -24,6 +24,13 @@ content-length: 8
 
 Presales
 ----field----
+field: {F4069D71-74D7-4422-941D-54B517CF3001}
+name: Placeholder
+key: placeholder
+content-length: 15
+
+PresalesContent
+----field----
 field: {3D08DB46-2267-41B0-BC52-BE69FD618633}
 name: Cacheable
 key: cacheable
@@ -37,17 +44,10 @@ key: varybydata
 content-length: 1
 
 1
-----field----
-field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
-name: __Thumbnail
-key: __thumbnail
-content-length: 58
-
-<image mediaid="{199B9215-86B3-4BB1-A710-C04E59D004C7}" />
 ----version----
 language: en
 version: 1
-revision: 7ca114b6-9c3a-4f87-b1dd-b3564a433531
+revision: e855bf9c-6abd-4038-8b50-1e23c6e900bd
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -55,21 +55,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20160701T102628Z
+20160930T100055Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-7ca114b6-9c3a-4f87-b1dd-b3564a433531
+e855bf9c-6abd-4038-8b50-1e23c6e900bd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160912T150736Z
+20160930T100632Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
