@@ -294,7 +294,6 @@
     <Content Include="App_Config\Include\Sitecore.WFFM.Dependencies.config" />
     <Content Include="App_Config\Include\Sitecore.WFFM.Services.config" />
     <Content Include="App_Config\Include\Sitecore.WFFM.Speak.config" />
-    <Content Include="App_Config\Include\Custom\Krusen.Sitecore.WebApi.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
@@ -777,6 +776,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Config\Include\Custom\" />
     <Folder Include="Areas\Presales\Models\" />
     <Folder Include="img\examples\" />
     <Folder Include="sitecore\" />

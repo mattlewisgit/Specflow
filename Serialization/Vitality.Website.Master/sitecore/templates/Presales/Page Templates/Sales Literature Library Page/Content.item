@@ -2,7 +2,7 @@
 version: 1
 id: {DB94E8C4-1883-4E0E-AAC9-B348AE83A5EC}
 database: master
-path: /sitecore/templates/Presales/Page Templates/Literature Library Page/Content
+path: /sitecore/templates/Presales/Page Templates/Sales Literature Library Page/Content
 parent: {0160CD5B-71AD-4C17-AD40-93699FB4035F}
 name: Content
 master: {00000000-0000-0000-0000-000000000000}
@@ -12,7 +12,7 @@ templatekey: Template section
 ----version----
 language: en
 version: 1
-revision: 83841493-4477-4143-9894-a19d60c688d8
+revision: a7a94972-1da5-42eb-9ba8-9f2bacec273c
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -34,14 +34,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-83841493-4477-4143-9894-a19d60c688d8
+a7a94972-1da5-42eb-9ba8-9f2bacec273c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160920T174220Z
+20160923T135748Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
