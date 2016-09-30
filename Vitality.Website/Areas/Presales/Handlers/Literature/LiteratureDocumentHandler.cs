@@ -1,4 +1,6 @@
-﻿namespace Vitality.Website.Areas.Presales.Handlers.Literature
+﻿using System.Collections.Generic;
+
+namespace Vitality.Website.Areas.Presales.Handlers.Literature
 {
     using System;
     using System.Linq;
@@ -27,14 +29,17 @@
                     document.Category == request.Category &&
                     document.Title == request.Title &&
                     document.TemplateId == ItemConstants.Presales.Templates.Literature.Document.Id);
-            var literatureDocument = LiteratureDocumentDto.From(searchResult);
+            var literatureDocument = LiteratureDocumentDto.From(new List<LiteratureDocumentSearchResult>{searchResult}).FirstOrDefault();
 
             if (request.IncludeAvailableLiterature)
             {
-                literatureDocument.AvailableLiterature = this.searchContext.GetQueryable<LiteratureDocumentSearchResult>()
-                        .Where(document => document.Category == searchResult.Category && document.Library == searchResult.Library)
-                        .Select(LiteratureDocumentSummaryDto.From)
-                        .ToArray();
+                if (literatureDocument != null)
+                {
+                    literatureDocument.AvailableLiterature = searchContext.GetQueryable<LiteratureDocumentSearchResult>()
+                            .Where(document => document.Category == searchResult.Category && document.Library == searchResult.Library)
+                            .Select(LiteratureDocumentSummaryDto.From)
+                            .ToArray();
+                }
             }
 
             return literatureDocument;

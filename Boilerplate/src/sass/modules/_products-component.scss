@@ -12,6 +12,11 @@
 
         // Stop the CTA from flexbox interfering on widescreen!
         width: 100%;
+
+        // Remove padding entirely on small devices.
+        @include mq($until: mobile-landscape) {
+            padding: 0;
+        }
     }
 
     .grid {

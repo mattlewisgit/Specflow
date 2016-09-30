@@ -8,10 +8,13 @@
             <h2 class="spotlight__heading">
                 @Editable(Model, item => item.Headline)
             </h2>
-
-            <div class="spotlight__intro">
-                @Editable(Model, item => item.OpeningParagraph)
-            </div>
+            
+            @if (IsInEditingMode || !string.IsNullOrEmpty(Model.OpeningParagraph))
+            {
+                <div class="spotlight__intro">
+                    @Editable(Model, item => item.OpeningParagraph)
+                </div>
+            }
 
             <ul class="spotlight__list">
                 @foreach (var card in Model.Cards)

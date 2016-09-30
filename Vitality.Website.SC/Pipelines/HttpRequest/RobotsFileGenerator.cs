@@ -33,11 +33,11 @@
 
             if (Sitecore.Context.Site != null && Sitecore.Context.Database != null)
             {
-                var globalSettingsItem = Sitecore.Context.Database.GetItem(ItemConstants.Presales.Content.Configuration.GlobalSettings.SitecoreId);
+                var siteSettingsItem = Sitecore.Context.Database.GetItem(ItemConstants.Presales.Content.Configuration.SiteSettings.Path);
 
-                if (globalSettingsItem != null)
+                if (siteSettingsItem != null)
                 {                  
-                    var robotsTxtField = globalSettingsItem[RobotsTxtFieldName];
+                    var robotsTxtField = siteSettingsItem[RobotsTxtFieldName];
                     if (!string.IsNullOrEmpty(robotsTxtField))
                     {
                         robotsTxtContent = robotsTxtField;

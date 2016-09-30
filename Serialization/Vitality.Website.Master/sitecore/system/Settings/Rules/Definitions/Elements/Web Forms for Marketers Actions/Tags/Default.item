@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {7FEF0C5C-6442-46C7-9656-E97DE0FE48C1}
+database: master
+path: /sitecore/system/Settings/Rules/Definitions/Elements/Web Forms for Marketers Actions/Tags/Default
+parent: {08FD09A4-D5F9-45BA-AB4B-73FEFD605440}
+name: Default
+master: {9A72C539-DBF8-4DAD-96D3-A298FC04ADD6}
+template: {854BA861-63EA-4A0C-8C7B-541E9A7EC4C1}
+templatekey: Tags Definition
+
+----field----
+field: {42F77151-098F-496A-94CF-590B7EDEEABE}
+name: Tags
+key: tags
+content-length: 38
+
+{51F2DC20-5DF3-4C65-AFB2-0A075267999F}
+----field----
+field: {F6D8A61C-2F84-4401-BD24-52D2068172BC}
+name: __Originator
+key: __originator
+content-length: 0
+
+
+----version----
+language: en
+version: 1
+revision: bdb6bf5c-de26-4872-b737-80bf54a9cfc9
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20131120T123136
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+bdb6bf5c-de26-4872-b737-80bf54a9cfc9
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20131120T130730:635205496500373635
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

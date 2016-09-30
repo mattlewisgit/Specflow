@@ -1,0 +1,84 @@
+----item----
+version: 1
+id: {217433F3-45A1-447E-809D-ABDF685C6B44}
+database: core
+path: /sitecore/client/Applications/WFFM/Pages/FormReport/PageSettings/TabControl/Summary
+parent: {37588A6A-77C2-4D7F-AA85-93CCACED07E4}
+name: Summary
+master: {00000000-0000-0000-0000-000000000000}
+template: {F62B4CD7-754C-4461-810F-2B6BD2C92A0D}
+templatekey: Tab
+
+----field----
+field: {DEAB3795-056F-4421-ADF0-758844461B72}
+name: Placeholder Name
+key: placeholder name
+content-length: 7
+
+Summary
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+-100
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 2256
+
+<r>
+  <d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}">
+    <r id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}" par="Id=SummaryTabBorder" uid="{CD13DAB7-6354-4135-A676-6F8B62DAB450}" />
+    <r ds="{4F382189-E7AA-4148-B86D-D8CF04E28CBE}" id="{442BD093-FBAD-4E36-BC08-489E16C82D08}" par="Id=FormResponsesAccordion&amp;IsCollapsible=1" ph="SummaryTabBorder.Content" uid="{041ED9C7-8F48-4F01-9172-259B519D03DD}" />
+    <r id="{C4393722-39FA-4869-9582-3A8EB8983A0D}" par="Id=FormResponsesRow" ph="FormResponsesAccordion.Body" uid="{763016C8-2050-4635-9872-48B940C593F8}" />
+    <r id="{66EA0DE0-6B01-4A24-BC36-2ADFC6118EE2}" par="Id=FormResponsesDataSource" ph="FormResponsesAccordion.Body" uid="{8CD9B664-5F3A-45BA-A0F9-A30F7C86A1F5}" />
+    <r id="{F6C9F461-FCAF-47DC-AA01-C8C64C2EFFB8}" par="Id=AccordionBorder" ph="FormResponsesAccordion.Body" uid="{51CA92A2-CAC0-4CD3-8028-FB071368EEBD}" />
+    <r id="{A3603FDC-240E-481F-AE0C-4507870798AE}" par="Id=FormFieldsBarChart&amp;ShowLegend=True&amp;ShowPointMarker=1&amp;ShowAxis=True&amp;CategoryChartField=%7b15F9335D-773D-43D9-89EE-46DB6D7233ED%7d&amp;SeriesChartField=%7bA1DDFF54-CB49-4EAC-81D9-C13298E31F95%7d&amp;ValueChartFields=%7b724A8951-0F53-4CEA-88B7-07F26818AD1C%7d&amp;ShowValues=True&amp;Data=%7bBinding+FormResponsesDataSource.Items%7d" ph="AccordionBorder.Content" uid="{2C8DC7E9-EE2A-420F-BD73-B4A0C4B074CB}" />
+    <r id="{054CA6D7-125D-46D0-957C-D38A26190274}" par="Id=DetailedFieldsReportSmartPanel" uid="{7E71A253-E0DF-4B9A-B6E6-4EEF2971CD0A}" />
+    <r id="{A3603FDC-240E-481F-AE0C-4507870798AE}" par="DisableSelection=1&amp;Id=FieldDetailsBarChart&amp;ShowLegend=False&amp;ShowAxis=True&amp;CategoryChartField=%7b15F9335D-773D-43D9-89EE-46DB6D7233ED%7d&amp;SeriesChartField=%7bA1DDFF54-CB49-4EAC-81D9-C13298E31F95%7d&amp;ValueChartFields=%7b724A8951-0F53-4CEA-88B7-07F26818AD1C%7d&amp;ShowValues=True&amp;Data=%7bBinding+FormResponsesDataSource.SelectedSegmentData%7d" ph="DetailedFieldsReportSmartPanel.Content" uid="{004DF1C4-CF09-4A4E-99FE-77CE4362CE0C}" />
+    <r ds="{D7B3EB99-A4CA-4F43-A455-98D942317139}" id="{7717EB6C-9F90-4C58-826D-5E87722A0318}" par="Id=SmartPanelTitle" ph="DetailedFieldsReportSmartPanel.Header" uid="{9C622D9F-1946-4C82-A604-A138F89A79D3}" />
+  </d>
+</r>
+----version----
+language: en
+version: 1
+revision: 770c2648-8139-4635-a6cb-620879e90d93
+
+----field----
+field: {AEA872FB-AA91-4D1A-B877-3CA6FBBB4FD4}
+name: Header
+key: header
+content-length: 5
+
+$name
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+00010101T000000
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+770c2648-8139-4635-a6cb-620879e90d93
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 35
+
+20141120T100648:635520748084355213Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

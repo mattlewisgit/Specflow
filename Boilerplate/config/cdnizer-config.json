@@ -45,6 +45,12 @@
             "cdn": "//cdn.jsdelivr.net/jquery.smartresize/0.1/jquery.debouncedresize.js"
         },
         {
+            "file": "/bower_components/typeahead.js/dist/typeahead.jquery.min.js",
+            "package": "typeahead.js",
+            "test": "$('body').typeahead",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/typeahead.js/${version}/typeahead.jquery.min.js"
+        },
+        {
             "file": "/bower_components/animate.css/animate.min.css",
             "package": "animate.css",
             "cdn":  "//cdnjs.cloudflare.com/ajax/libs/animate.css/${version}/animate.css"
@@ -52,7 +58,7 @@
         {
             "file": "/bower_components/normalize.css/normalize.css",
             "package": "normalize.css",
-            "cdn":  "//cdnjs.cloudflare.com/ajax/libs/normalize/${version}/normalize.min.css"
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/normalize/${version}/normalize.min.css"
         }
     ]
 }
