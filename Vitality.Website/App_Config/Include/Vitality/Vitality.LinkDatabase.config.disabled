@@ -1,7 +1,0 @@
-﻿<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:set="http://www.sitecore.net/xmlconfig/set/">
-    <sitecore>
-        <LinkDatabase type="Sitecore.Data.$(database).$(database)LinkDatabase, Sitecore.Kernel">
-            <param set:connectionStringName="#{Vitality.Website.LinkDatabase}" />
-        </LinkDatabase>
-    </sitecore>
-</configuration>

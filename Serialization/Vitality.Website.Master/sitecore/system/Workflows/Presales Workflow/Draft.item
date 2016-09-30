@@ -36,7 +36,7 @@ name: __Security
 key: __security
 content-length: 130
 
-ar|sitecore\Sitecore Client Authoring|pd|+workflowState:delete|+workflowState:write|pe|+workflowState:delete|+workflowState:write|
+ar|sitecore\Sitecore Client Authoring|pe|+workflowState:write|+workflowState:delete|pd|+workflowState:write|+workflowState:delete|
 ----version----
 language: da
 version: 1
@@ -148,7 +148,7 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: 13333d94-2475-4b4e-bef0-b37e276e7eea
+revision: 6a9219ff-3a9d-425a-a9c5-c966b3b5b878
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
@@ -184,14 +184,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-13333d94-2475-4b4e-bef0-b37e276e7eea
+6a9219ff-3a9d-425a-a9c5-c966b3b5b878
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 16
 
-20080313T152341:633410186213024563
+20160922T111701Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

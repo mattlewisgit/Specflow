@@ -7,6 +7,3 @@ rolename: sitecore\Author
 ----role-in-role----
 rolename: sitecore\List Manager Editors
 
-----role-in-role----
-rolename: sitecore\Presales User
-

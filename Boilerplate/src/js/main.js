@@ -1,3 +1,5 @@
+require("./angular/healthAdvisersLiteratureApp");
+
 var AccordionModule = require("./modules/accordionModule");
 var AnimationDelayModule = require("./modules/animationDelayModule");
 var Breakpoints = require("./modules/breakpointsModule");
@@ -22,20 +24,18 @@ function _initVendor() {
     }
 
     // Add WOW for larger screens.
-    var wow;
-
     if (Breakpoints.min.tablet.test()) {
-        wow = new WOW({
+        var wow = new WOW({
             boxClass: "animate-on-scroll"
         });
 
         wow.init();
-    } else {
-        // Add a class showing that the animation library has not been initialised.
-        $("html").addClass("no-js-animations");
+        return wow;
     }
 
-    return wow;
+    // Add a class showing that the animation library has not been initialised.
+    $("html").addClass("no-js-animations");
+    return null;
 }
 
 function _initCustom(wow) {

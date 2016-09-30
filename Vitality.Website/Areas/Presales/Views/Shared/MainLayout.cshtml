@@ -12,10 +12,6 @@
     @Html.Partial("_Favicons")
     @*Html.Partial("_CriticalCss")*@
 
-    <!--[if lt IE 9]>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/aight/2.1.1/aight.min.js"></script>
-    <![endif]-->
-
     @if (IsInEditingMode)
     {
         <link rel="stylesheet" href="/css/experience_editor_fix.css" />
@@ -34,7 +30,7 @@
 <body>
     @Html.Sitecore().Placeholder("gtm")
     <div class="page">
-        @Html.Partial("_CookieMessage", SitecoreContext.GetItem<CookieSettings>(ItemConstants.Presales.Content.Configuration.CookieSettings.Id))
+        @Html.Partial("_CookieMessage", SitecoreContext.GetItem<CookieSettings>(ItemConstants.Presales.Content.Configuration.CookieSettings.Path))
 
         <a href="#main-content" class="offscreen">Skip to Content</a>
         @Html.Sitecore().Placeholder("header")
@@ -55,6 +51,8 @@
         <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw-init.js"></script>
     }
 
+    @* TODO Bundle and minify the Angular data services. *@
+    <script type="text/javascript" src="/js/literatureLibraryService.js"></script>
     <script type="text/javascript" src="/js/vitality-boilerplate-1.0.0.min.js"></script>
 </body>
 </html>

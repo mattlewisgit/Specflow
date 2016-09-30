@@ -52,7 +52,7 @@ namespace Vitality.Website.App_Start
 			// Add maps here
             // mapsConfigFactory.Add(() => new SeoMap());
             mapsConfigFactory.Add(() => new BasePageConfig());
-            mapsConfigFactory.Add(() => new GlobalSettingsConfig());
+            mapsConfigFactory.Add(() => new SiteSettingsConfig());
         }
     }
 }

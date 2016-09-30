@@ -12,7 +12,7 @@ templatekey: Content
 ----version----
 language: en
 version: 1
-revision: 928d7800-17a1-45e4-87e0-6270a5271bb5
+revision: 
 
 ----field----
 field: {35B57356-DA32-4179-AFD5-3A74F13831B9}
@@ -42,41 +42,3 @@ Nulla lorem dolor, faucibus non accumsan sit amet, dignissim sit amet mauris. In
 <a href="#" class="emphasis-link">                            Get a quote                        </a>                    </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-----field----
-field: {25BED78C-4957-4165-998A-CA1B52F67497}
-name: __Created
-key: __created
-content-length: 16
-
-20160617T135316Z
-----field----
-field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
-name: __Revision
-key: __revision
-content-length: 36
-
-928d7800-17a1-45e4-87e0-6270a5271bb5
-----field----
-field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
-name: __Updated
-key: __updated
-content-length: 16
-
-20160617T145912Z
-----field----
-field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
-name: __Updated by
-key: __updated by
-content-length: 14
-
-sitecore\admin
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />

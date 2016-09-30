@@ -20,9 +20,9 @@ Droplink
 field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
 name: Source
 key: source
-content-length: 65
+content-length: 63
 
-/sitecore/content/Presales/Configuration/Image Relative Positions
+/sitecore/Content/Global Configuration/Image Relative Positions
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
@@ -33,7 +33,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 32706bc5-8fa5-405b-a9fd-0404d4d1788e
+revision: 4c0ec341-b6c6-421e-8ad6-97da43d3444a
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-32706bc5-8fa5-405b-a9fd-0404d4d1788e
+4c0ec341-b6c6-421e-8ad6-97da43d3444a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160630T103623Z
+20160822T152104Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

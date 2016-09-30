@@ -1,5 +1,7 @@
 ﻿using System;
+using Sitecore.Configuration;
 using Sitecore.Data.Items;
+using Sitecore.Sites;
 
 namespace Vitality.Website.SC.Agents.Sitemaps
 {
@@ -19,14 +21,18 @@ namespace Vitality.Website.SC.Agents.Sitemaps
         public string Priority { get; set; }
         public DateTime PublishedDate { get; set; }
 
-        public static SitemapSettings From(Item item, string baseUrl)
+        public static SitemapSettings From(Item item, string baseUrl, string subdomain)
         {
-            var relativePath = item.Paths.ContentPath.Remove(0, "/presales/home".Length);
-            if (relativePath.Length > 0)
+            string itemUrl = "";
+
+            using (new SiteContextSwitcher(Factory.GetSite(subdomain)))
             {
-                relativePath = relativePath.Remove(0, 1) + "/";
+                itemUrl = item.Paths.Path.ToLower();
+                itemUrl = itemUrl.Replace(Sitecore.Context.Data.Site.RootPath.ToLower(), "");
+                itemUrl = itemUrl.Replace(Sitecore.Context.Data.Site.StartItem.ToLower(), "");
             }
-            string itemUrl = baseUrl + relativePath;
+
+            itemUrl = baseUrl + itemUrl;
 
             var publishedDate = item.Statistics.Updated;
             var hideFromSitemap = item[HideFromSitemapField] == "1";
@@ -36,7 +42,8 @@ namespace Vitality.Website.SC.Agents.Sitemaps
                 return new SitemapSettings {HideFromSitemap = true};
             }
 
-            while (item[InheritSitemapSettingsField] == "1" && item.ID.Guid != ItemConstants.Presales.Content.Home.Id)
+            while (item[InheritSitemapSettingsField] == "1" && 
+                !string.Equals(item.Paths.Path,ItemConstants.Presales.Content.Home.Path, StringComparison.InvariantCultureIgnoreCase))
             {
                 item = item.Parent;
             }
@@ -51,7 +58,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
                 PageUrl = itemUrl,
                 ChangeFrequency = item.Database.GetItem(item[ChangeFrequencyField]).Fields["Value"].Value,
                 Priority = item[PriorityField],
-                SitemapName = item.Database.GetItem(item[SitemapField]).Fields["Value"].Value,
+                SitemapName = item.Database.GetItem(item[SitemapField]) != null ? item.Database.GetItem(item[SitemapField]).Fields["Value"].Value : "",
                 PublishedDate = publishedDate,
                 HideFromSitemap = false
             };
