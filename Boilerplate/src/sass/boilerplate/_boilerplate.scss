@@ -17,37 +17,58 @@
 }
 
 .box {
-    height: 200px;
-    margin: 80px auto;
+    height: $pad--xxlarge;
+    margin: $pad--large auto;
     position: relative;
-    width: 200px;
+    width: $pad--xxlarge;
 
     .no-flexbox & {
         display: inline-block;
     }
 }
 
-.box--pink {
-    background-color: $primary-color;
+$_colourMap: (
+    primary-color: $primary-color,
+    secondary-color: $secondary-color,
+    tertiary-color: $tertiary-color,
+    highlight-color: $highlight-color,
+    primary-background-color: $primary-background-color,
+    secondary-background-color: $secondary-background-color,
+    tertiary-background-color: $tertiary-background-color,
+    error-color: $error-color,
+    primary-color--light: $primary-color--light,
+    secondary-color--light: $secondary-color--light,
+    tertiary-color--light: $tertiary-color--light,
+    highlight-color--light: $highlight-color--light,
+    error-color--light: $error-color--light,
+    primary-color--dark: $primary-color--dark,
+    secondary-color--dark: $secondary-color--dark,
+    tertiary-color--dark: $tertiary-color--dark,
+    highlight-color--dark: $highlight-color--dark,
+    error-color--dark: $error-color--dark,
+    grey: $grey,
+    grey--light: $grey--light,
+    black: $black,
+    white: $white,
+    color-mono-14: $color-mono-14,
+    color-mono-13: $color-mono-13,
+    color-mono-12: $color-mono-12,
+    color-mono-11: $color-mono-11,
+    color-mono-10: $color-mono-10,
+    color-mono-9: $color-mono-9,
+    color-mono-8: $color-mono-8,
+    color-mono-7: $color-mono-7,
+    color-mono-6: $color-mono-6,
+    color-mono-5: $color-mono-5,
+    color-mono-4: $color-mono-4,
+    color-mono-3: $color-mono-3,
+    color-mono-2: $color-mono-2,
+    color-mono-1: $color-mono-1
+);
 
-    &.callout-tri--central-down {
-        @include triangle-callout--central-down(pink);
-    }
-
-    &.callout-tri--left-up {
-        @include triangle-callout--left-up(pink, 80px, 60px);
-    }
-}
-
-.box--green {
-    background-color: $secondary-color;
-
-    &.callout-tri--central-down {
-        @include triangle-callout--central-down(seagreen, 60px, 44px);
-    }
-
-    &.callout-tri--left-up {
-        @include triangle-callout--left-up(seagreen);
+@each $name, $colour in $_colourMap {
+    .box--#{$name} {
+        background-color: $colour;
     }
 }
 

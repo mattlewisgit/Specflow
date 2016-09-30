@@ -24,6 +24,9 @@ window.healthAdvisersSalesLiteratureApp = angular
                             name: "literature",
                             source: function (text, callback) {
                                 callback(LiteratureLibraryService.searchDocuments(text));
+                            },
+                            templates: {
+                                notFound: "<div class=\"tt-no-results\">Sorry, there are no matching documents.</div>"
                             }
                         })
                         .bind("typeahead:select", function (event, document) {
