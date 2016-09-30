@@ -377,7 +377,6 @@
     <Content Include="img\spritesheets\svg-sprite.svg" />
     <Content Include="img\stanley-peering-min.png" />
     <Content Include="img\vitality-logo--white.svg" />
-    <Content Include="js\healthAdvisersLiteratureApp.js" />
     <Content Include="js\literatureLibraryService.js" />
     <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
     <Content Include="Web.config">

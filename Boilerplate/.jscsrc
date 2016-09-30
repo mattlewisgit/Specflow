@@ -27,10 +27,6 @@
     "disallowNotOperatorsInConditionals": false,
     "disallowObjectKeysOnNewLine": false,
     "disallowOperatorBeforeLineBreak": [
-        "+",
-        "-",
-        "/",
-        "*",
         "."
     ],
     "disallowPaddingNewLinesAfterBlocks": false,

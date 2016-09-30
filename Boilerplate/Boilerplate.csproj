@@ -62,6 +62,7 @@
     <Content Include="components\tabs.html" />
     <Content Include="components\footer.html" />
     <Content Include="components\summary\summary-right.html" />
+    <Content Include="global\colours.html" />
     <Content Include="global\grids.html" />
     <Content Include="global\lists.html" />
     <Content Include="global\forms.html" />
