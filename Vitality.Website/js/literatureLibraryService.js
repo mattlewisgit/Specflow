@@ -41,7 +41,13 @@
                    .then(function (response) {
                        cachedDocuments = response.data;
 
-                        cachedCategories = Object
+                       cachedDocuments.forEach(function (document) {
+                           if (document.EffectivePlanDate) {
+                               document.EffectivePlanDate = new Date(document.EffectivePlanDate);
+                           }
+                       });
+
+                       cachedCategories = Object
                             .keys(cachedDocuments.reduce(function(aggregate, document) {
                                 // Use an object so that the key name is unique.
                                 aggregate[document.Category] = true;
@@ -63,6 +69,13 @@
                 return cachedDocuments.filter(function (document) {
                     return document.Category === category;
                 }); 
+            };
+
+            this.filterByDate = function (filterDate) {
+                return cachedDocuments.filter(function (document) {
+                    var planDate = document.EffectivePlanDate;
+                    return planDate && planDate >= filterDate;
+                });
             };
 
             this.searchDocuments = function (text) {

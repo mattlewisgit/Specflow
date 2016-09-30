@@ -130,10 +130,11 @@ angular
             }));
         };
 
-        this.getLiterature = function (category) {
-            return mockData.documents.filter(function (document) {
+        this.getLiterature = function(category) {
+            return mockData.documents.filter(function(document) {
                 return document.Category === category;
             });
+        };
 
         this.filterByDate = function (filterDate) {
             return mockData.documents.filter(function (document) {
