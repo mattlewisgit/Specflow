@@ -294,7 +294,6 @@
     <Content Include="App_Config\Include\Sitecore.WFFM.Dependencies.config" />
     <Content Include="App_Config\Include\Sitecore.WFFM.Services.config" />
     <Content Include="App_Config\Include\Sitecore.WFFM.Speak.config" />
-    <Content Include="App_Config\Include\Custom\Krusen.Sitecore.WebApi.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
@@ -378,7 +377,6 @@
     <Content Include="img\spritesheets\svg-sprite.svg" />
     <Content Include="img\stanley-peering-min.png" />
     <Content Include="img\vitality-logo--white.svg" />
-    <Content Include="js\healthAdvisersLiteratureApp.js" />
     <Content Include="js\literatureLibraryService.js" />
     <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
     <Content Include="Web.config">
@@ -495,7 +493,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\ConnectionStrings.config" />
     <Content Include="App_Config\Sitecore.config">
       <SubType>Designer</SubType>
@@ -776,8 +776,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Config\Include\Custom\" />
     <Folder Include="Areas\Presales\Models\" />
     <Folder Include="img\examples\" />
+    <Folder Include="sitecore\" />
     <Folder Include="sitemaps\" />
   </ItemGroup>
   <ItemGroup>
