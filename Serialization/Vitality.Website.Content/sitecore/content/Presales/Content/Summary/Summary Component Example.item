@@ -12,15 +12,15 @@ templatekey: Summary Component
 ----version----
 language: en
 version: 1
-revision: 9f70793b-01e7-4019-8c0d-6e8220703ab7
+revision: 82654726-9fa7-40c8-a8c4-2828b37e1d77
 
 ----field----
 field: {E930F63B-29D7-4E0C-8635-08CC0851DCF2}
 name: LeftContentLeadIn
 key: leftcontentleadin
-content-length: 50
+content-length: 10
 
-Cut the cheese hard cheese dolcelatte cheeseburger
+Core Cover
 ----field----
 field: {DA14C604-EF37-4F40-BCA6-3B48922765AA}
 name: LeftContentHeadline
@@ -32,7 +32,7 @@ Everyone loves swiss cheese strings
 field: {7C2B937D-418F-4E5D-AF32-49E14DA223A2}
 name: LeftContentBody
 key: leftcontentbody
-content-length: 655
+content-length: 654
 
 <p>Lancashire camembert de normandie hard cheese. Pecorino boursin jarlsberg red leicester blue castello cauliflower cheese port-salut cheesy grin. Croque monsieur emmental lancashire cheese and biscuits swiss macaroni cheese pepper jack fromage frais. Cheesy grin feta ricotta gouda cheesy grin parmesan the big cheese stilton. Macaroni cheese cheesecake.</p>
 <p>Danish fontina cauliflower cheese stinking bishop. Halloumi say cheese boursin macaroni cheese cheesy grin jarlsberg taleggio cream cheese. Roquefort paneer camembert de normandie rubber cheese pepper jack port-salut boursin edam. Mascarpone roquefort who moved my cheese cheese slices.</p>
@@ -77,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9f70793b-01e7-4019-8c0d-6e8220703ab7
+82654726-9fa7-40c8-a8c4-2828b37e1d77
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T134945Z
+20160810T100331Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -6,42 +6,7 @@
             <h1 class="text-flush-top">@Editable(Model, m => m.Headline)</h1>
             <p>@Editable(Model, m => m.OpeningParagraph)</p>
             <h2>@Editable(Model, m => m.SearchHeadline)</h2>
-
-            <div class="grid-no-gutters form" ng-controller="DateController as dateController">
-                <form name="dateForm">
-                    <div class="grid-col-3-12 form__field" ng-class="(dateForm.day.$invalid) ? 'is-invalid' : ''">
-                        <label for="day">Day</label>
-                        <input id="day" name="day" ng-model="filterDate.day" type="number" placeholder="DD" />
-
-                        <div ng-show="dateForm.day.$invalid" class="form__field__error">
-                            <p>Please enter a valid day</p>
-                        </div>
-
-                        <div ng-show="dateForm.filterDate.$invalid" class="form__field__error">
-                            <p>There is a problem with the date</p>
-                        </div>
-                    </div>
-
-                    <div class="grid-col-3-12 form__field">
-                        <label for="month">Month</label>
-                        <input id="month" name="month" ng-model="filterDate.month" type="number" placeholder="MM" />
-
-                        <div ng-show="dateForm.month.$invalid" class="form__field__error">
-                            <p>Please enter a valid month</p>
-                        </div>
-                    </div>
-
-                    <div class="grid-col-3-12 form__field">
-                        <label for="year">Year</label>
-                        <input id="year" name="year" ng-model="filterDate.year" type="number" placeholder="YYYY" />
-                    </div>
-
-                    <div class="grid-col-2-12 form__field__input--inline">
-                        <input type="submit" ng-click="filterAction(dateForm, filterDate)" value="Submit"
-                               class="box-button box-button--secondary box-button--rounded form__field__input--submit--inline" />
-                    </div>
-                </form>
-            </div>
+            <input type="search" placeholder="@Html.Raw(Model.SearchPlaceholderText)" />    
         </div>
 
         <div class="grid-col-4-12 tablet-and-up">
@@ -110,13 +75,13 @@
                 <div class="preview-card--body">
                     <div class="preview-card--body__buttons">
                         <div>
-                            <a href="#" class="box-button box-button--secondary box-button--rounded box-button--full-width">
+                            <a href="{{document.Document}}" class="box-button box-button--secondary box-button--rounded box-button--full-width">
                                 @Editable(Model, m => m.DownloadLinkText)
                             </a>
                         </div>
 
                         <div>
-                            <a href="#" class="box-button box-button--secondary-inverse box-button--rounded box-button--full-width">
+                            <a href="mailto:test@mail.com?body={{document.Document}}" class="box-button box-button--secondary-inverse box-button--rounded box-button--full-width">
                                 @Editable(Model, m => m.EmailLinkText)
                             </a>
                         </div>
@@ -136,3 +101,8 @@
         </div>
     </div>
 </div>
+
+<script>
+    window.angularData = window.angularData || {};
+    window.angularData.literaturePath = "sales - literature";
+</script>
