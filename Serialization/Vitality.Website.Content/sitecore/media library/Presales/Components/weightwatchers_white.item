@@ -2,7 +2,11 @@
 version: 1
 id: {28487FF9-DF12-4851-9D88-3C6047D04C36}
 database: master
+<<<<<<< HEAD
+path: /sitecore/media library/Presales/Components/weightwatchers_white
+=======
 path: /sitecore/media library/presales/components/weightwatchers_white
+>>>>>>> d43dd5b96c979b07f1413af866930b625bb8fe1a
 parent: {5C450172-7FEE-4F80-B107-BBC6C1B9A44D}
 name: weightwatchers_white
 master: {00000000-0000-0000-0000-000000000000}

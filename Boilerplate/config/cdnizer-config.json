@@ -45,6 +45,12 @@
             "cdn": "//cdn.jsdelivr.net/jquery.smartresize/0.1/jquery.debouncedresize.js"
         },
         {
+            "file": "/bower_components/moment/min/moment.min.js",
+            "package": "moment",
+            "test": "moment",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/moment.js/${version}/moment.min.js"
+        },
+        {
             "file": "/bower_components/typeahead.js/dist/typeahead.jquery.min.js",
             "package": "typeahead.js",
             "test": "$('body').typeahead",

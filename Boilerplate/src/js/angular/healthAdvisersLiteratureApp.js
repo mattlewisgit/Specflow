@@ -1,4 +1,8 @@
-﻿var events = {
+﻿// jscs:disable maximumNumberOfLines
+var MomentApi = require("../config/moment-api.json");
+
+var events = {
+    dateFilter: "dateFilter",
     documentedSelected: "documentedSelected",
     typeSelected: "typeSelected"
 };
@@ -36,6 +40,49 @@ window.healthAdvisersSalesLiteratureApp = angular
                         });
                 },
                 restrict: "A"
+            };
+        }
+    ])
+    .controller("DateController", [
+        "$scope",
+        "$rootScope",
+        function ($scope, $rootScope) {
+            "use strict";
+            // Initialise the date model with today.
+            var today = new Date();
+
+            $scope.filterDate = {
+                day: today.getDate(),
+                month: today.getMonth() + 1,
+                year: today.getFullYear()
+            };
+
+            $scope.filterAction = function (dateForm, filterDate) {
+                // Generate a date.
+                var actualDate = moment([filterDate.year, filterDate.month - 1, filterDate.day]);
+
+                // Reset the validity.
+                dateForm.$setValidity("filterDate", true);
+                dateForm.day.$setValidity("day", true);
+                dateForm.month.$setValidity("month", true);
+
+                // Check for validity and show the first date error where possible.
+                if (!actualDate.isValid()) {
+                    switch (actualDate.invalidAt()) {
+                        case MomentApi.invalidAtUnit.months:
+                            dateForm.month.$setValidity("month", false);
+                            return;
+                        case MomentApi.invalidAtUnit.days:
+                            dateForm.day.$setValidity("day", false);
+                            return;
+                        default:
+                            dateForm.$setValidity("filterDate", false);
+                            return;
+                    }
+                }
+
+                // Broadcast the filter event.
+                $rootScope.$broadcast(events.dateFilter, actualDate);
             };
         }
     ])
@@ -82,6 +129,21 @@ window.healthAdvisersSalesLiteratureApp = angular
                 });
             });
 
+            $rootScope.$on(events.dateFilter, function (event, filterDate) {
+                // Ignore if the date is empty.
+                if (!filterDate) {
+                    return;
+                }
+
+                // Fetch the data.
+                $scope.literature = LiteratureLibraryService.filterByDate(filterDate);
+
+                // Deselect all of the documents.
+                $scope.literature.forEach(function (document) {
+                    document.IsSelected = false;
+                });
+            });
+
             // Broadcast the selected document and update the view state.
             this.loadDocument = function (documentToLoad) {
                 $rootScope.$broadcast(events.documentedSelected, documentToLoad);
@@ -103,7 +165,12 @@ window.healthAdvisersSalesLiteratureApp = angular
                 $scope.document = LiteratureLibraryService.getDocument(document.Key);
 
                 // Force apply, as the typeahead jQuery event mode update may not re-render!
-                $scope.$apply();
+                // Note this is an anti-pattern and would be resolved by integrating typeahead.js
+                // correctly with Angular:
+                // https://github.com/angular/angular.js/wiki/Anti-Patterns
+                if (!$scope.$$phase) {
+                    $scope.$apply();
+                }
             });
         }
     ]);

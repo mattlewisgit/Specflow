@@ -32,6 +32,9 @@
         [IndexField("category")]
         public virtual string Category { get; set; }
 
+        [IndexField("effectiveplandate")]
+        public virtual DateTime EffectivePlanDate { get; set; }
+
         [IndexField("_template")]
         [TypeConverter(typeof(IndexFieldGuidValueConverter))]
         public virtual Guid TemplateId { get; set; }

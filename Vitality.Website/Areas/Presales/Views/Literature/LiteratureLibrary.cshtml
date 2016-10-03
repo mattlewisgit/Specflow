@@ -6,7 +6,7 @@
             <h1 class="text-flush-top">@Editable(Model, m => m.Headline)</h1>
             <p>@Editable(Model, m => m.OpeningParagraph)</p>
             <h2>@Editable(Model, m => m.SearchHeadline)</h2>
-            <input type="text" placeholder="@Html.Raw(Model.SearchPlaceholderText)" typeahead />
+            <input type="search" placeholder="@Html.Raw(Model.SearchPlaceholderText)" data-typeahead />
         </div>
 
         <div class="grid-col-4-12 tablet-and-up">
@@ -75,13 +75,13 @@
                 <div class="preview-card--body">
                     <div class="preview-card--body__buttons">
                         <div>
-                            <a href="#" class="box-button box-button--secondary box-button--rounded box-button--full-width">
+                            <a href="{{document.Document}}" class="box-button box-button--secondary box-button--rounded box-button--full-width">
                                 @Editable(Model, m => m.DownloadLinkText)
                             </a>
                         </div>
 
                         <div>
-                            <a href="#" class="box-button box-button--secondary-inverse box-button--rounded box-button--full-width">
+                            <a href="mailto:?subject={{document.Title}}&body={{document.Document}}" class="box-button box-button--secondary-inverse box-button--rounded box-button--full-width">
                                 @Editable(Model, m => m.EmailLinkText)
                             </a>
                         </div>
@@ -101,3 +101,8 @@
         </div>
     </div>
 </div>
+
+<script>
+    window.angularData = window.angularData || {};
+    window.angularData.literaturePath = "sales - literature";
+</script>
