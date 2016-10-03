@@ -2,9 +2,9 @@
 version: 1
 id: {0160CD5B-71AD-4C17-AD40-93699FB4035F}
 database: master
-path: /sitecore/templates/Presales/Page Templates/Literature Library Page
+path: /sitecore/templates/Presales/Page Templates/Sales Literature Library Page
 parent: {B2AD4D9A-BD16-4ADD-B01D-E2911328525B}
-name: Literature Library Page
+name: Sales Literature Library Page
 master: {00000000-0000-0000-0000-000000000000}
 template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
 templatekey: Template
@@ -13,9 +13,9 @@ templatekey: Template
 field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
 name: __Base template
 key: __base template
-content-length: 77
+content-length: 116
 
-{F208B3A5-D159-4F81-989C-4ACA52089997}|{1930BBEB-7805-471A-A3BE-4858AC7CF696}
+{F208B3A5-D159-4F81-989C-4ACA52089997}|{1930BBEB-7805-471A-A3BE-4858AC7CF696}|{FCDEC6D1-6C3C-4D52-8574-AA5145B3E882}
 ----field----
 field: {F7D48A55-2158-4F02-9356-756654404F73}
 name: __Standard values
@@ -33,7 +33,7 @@ People/32x32/books.png
 ----version----
 language: en
 version: 1
-revision: 7d923d8c-3a5d-487e-9d6d-838b3555f7d9
+revision: 13892412-f77d-4313-8ced-eb1149db357f
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7d923d8c-3a5d-487e-9d6d-838b3555f7d9
+13892412-f77d-4313-8ced-eb1149db357f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160630T153002Z
+20160930T101521Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
