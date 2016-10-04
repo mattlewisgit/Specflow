@@ -44,32 +44,39 @@ key: page editor buttons
 content-length: 38
 
 {F53C5936-D9A8-4704-8859-6AD97D409541}
+----field----
+field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
+name: __Thumbnail
+key: __thumbnail
+content-length: 58
+
+<image mediaid="{906A4E09-A8F8-4648-825D-EC1FE2516355}" />
 ----version----
 language: en
 version: 1
-revision: 92061398-961a-4c66-8f29-1e5fcc4a758b
+revision: 35a5139f-6ef1-451c-b4b5-26142043d1dc
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
-content-length: 15
+content-length: 16
 
-20140130T132135
+20140130T132135Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-92061398-961a-4c66-8f29-1e5fcc4a758b
+35a5139f-6ef1-451c-b4b5-26142043d1dc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
-content-length: 34
+content-length: 16
 
-20140806T155251:635429371712405505
+20161003T153310Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
