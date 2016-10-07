@@ -50,6 +50,9 @@
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.ContentSearch.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Sitecore.Forms.Core">
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.160304\lib\Sitecore.Forms.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.ItemWebApi, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.ItemWebApi.dll</HintPath>
       <Private>True</Private>
@@ -80,6 +83,10 @@
     <Reference Include="Sitecore.Web, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Web.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.WFFM.Abstractions, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.160304\lib\Sitecore.WFFM.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -129,11 +136,12 @@
     <Compile Include="Utilities\SiteInfoHelper.cs" />
     <Compile Include="Utilities\StringHelper.cs" />
     <Compile Include="Providers\AppendLinkProvider.cs" />
+    <Compile Include="WFFM\SaveActions\CallProSaveAction.cs" />
+    <Compile Include="WFFM\SaveActions\CallProSchema.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
