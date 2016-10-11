@@ -148,11 +148,12 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="preview-card--body__preview" data-ng-cloak>
+
+                                <div class="preview-card--body__preview" data-ng-show="document.Thumbnail" data-ng-cloak>
                                     <img ng-src="{{document.Thumbnail}}" alt="{{document.Title}}" />
                                 </div>
                                 <div class="preview-card--body__text" data-ng-cloak>
-                                    <p>{{document.Description}}</p>
+                                    <p data-ng-bind="document.Description"></p>
                                     <p><b>{{document.Code}}</b></p>
                                     <p>{{document.PublishDate | date : "d MMM yyyy"}}</p>
                                 </div>

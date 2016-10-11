@@ -1,28 +1,28 @@
 ﻿// jscs:disable maximumLineLength
 var mockData = {
     documents: [
+        // Deliberately missing the Thumbnail and Description attributes.
         {
             AvailableLiterature: [],
             Category: "Sales Literature",
             Code: "PHU1234",
-            Description: "Vitality GP Select with VitalityHealth",
             Document: "http://dev.vitality.co.uk/media-online/presales/pdf/development/guide-to-business-healthcare---january-2015-print-friendly.pdf",
             EffectivePlanDate: new Date("2015-07-06T23:00:00Z"),
             Key: "vitality-gp-select",
             PublishDate: "2016-06-01T23:00:00Z",
-            Thumbnail: "/src/img/examples/example-pdf.png",
             Title: "Vitality GP Select"
         },
         {
+            // Deliberately empty Thumbnail and Description attributes.
             AvailableLiterature: [],
             Category: "Sales Literature",
             Code: "PHU1294A",
-            Description: "Vitality GP with VitalityHealth",
+            Description: "",
             Document: "http://dev.vitality.co.uk/media-online/presales/pdf/development/phf-sales-aid-v2.pdf",
             EffectivePlanDate: new Date("2016-01-06T23:00:00Z"),
             Key: "vitality-gp",
             PublishDate: "2016-07-06T23:00:00Z",
-            Thumbnail: "/src/img/examples/example-pdf.png",
+            Thumbnail: "",
             Title: "Vitality GP"
         },
         {
