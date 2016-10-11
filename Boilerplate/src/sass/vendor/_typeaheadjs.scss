@@ -15,11 +15,30 @@
     }
 
     .tt-dataset {
+        @mixin _highlight() {
+            background: $primary-background-color;
+            color: $primary-color;
+        }
+
         @include rounding;
         background: $white;
         border: 1px solid $color-mono-12;
         width: 100%;
 
+        // No results.
+        .tt-no-results {
+            color: $error-color--dark;
+            cursor: not-allowed;
+            padding: $pad--thin;
+        }
+
+        // Highlight when a user navigates results using a keyboard.
+        .tt-cursor {
+            @include _highlight();
+        }
+            
+
+        // Each result.
         .tt-selectable,
         .tt-suggestion {
             cursor: pointer;
@@ -27,7 +46,7 @@
             width: 100%;
 
             &:hover {
-                color: $primary-color;
+                @include _highlight();
             }
         }
     }

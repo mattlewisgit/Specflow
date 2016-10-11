@@ -10,6 +10,11 @@
             var cachedDocuments = [];
             var currentDocument = {};
 
+            var documentProperties = {
+                Category: "Category",
+                Title: "Title"
+            };
+
             this.currentDocument = function () {
                 return currentDocument;
             };
@@ -54,6 +59,7 @@
                                 return aggregate;
                             },
                             {}))
+                           .sort()
                             .map(function(name) {
                                 return {
                                     Name: name,
@@ -66,22 +72,24 @@
             };
 
             this.getDocuments = function (category) {
-                return cachedDocuments.filter(function (document) {
+                return _.sortBy(cachedDocuments.filter(function (document) {
                     return document.Category === category;
-                }); 
+                }), documentProperties.Title);
             };
 
             this.filterByDate = function (filterDate) {
-                return cachedDocuments.filter(function (document) {
+                return _.sortBy(cachedDocuments.filter(function (document) {
                     var planDate = document.EffectivePlanDate;
                     return planDate && planDate >= filterDate;
-                });
+                }), documentProperties.Title);
             };
 
             this.searchDocuments = function (text) {
-                return cachedDocuments.filter(function (document) {
+                text = (text || "").toLowerCase();
+
+                return _.sortBy(cachedDocuments.filter(function (document) {
                     return document.Title.toLowerCase().indexOf(text) > -1;
-                });
+                }), documentProperties.Title);
             };
         }
     ]);

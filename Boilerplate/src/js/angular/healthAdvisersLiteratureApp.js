@@ -28,6 +28,10 @@ window.healthAdvisersSalesLiteratureApp = angular
                             name: "literature",
                             source: function (text, callback) {
                                 callback(LiteratureLibraryService.searchDocuments(text));
+                            },
+                            templates: {
+                                notFound: "<div class=\"tt-no-results\">" +
+                                    "Sorry, there are no matching documents.</div>"
                             }
                         })
                         .bind("typeahead:select", function (event, document) {
@@ -92,6 +96,20 @@ window.healthAdvisersSalesLiteratureApp = angular
                 $scope.types = categories;
             });
 
+            // Update the current selected category when a document is searched.
+            $rootScope.$on(events.documentedSelected, function (event, document) {
+                if (!document) {
+                    return;
+                }
+
+                var category = document.Category;
+
+                $scope.types.forEach(function (literatureType) {
+                    literatureType.IsSelected =
+                        (literatureType.Name === category);
+                });
+            });
+
             // Broadcast the type and update the view state.
             this.loadType = function (typeToLoad) {
                 $rootScope.$broadcast(events.typeSelected, typeToLoad);
@@ -110,6 +128,23 @@ window.healthAdvisersSalesLiteratureApp = angular
         "LiteratureLibraryService",
         function ($scope, $rootScope, LiteratureLibraryService) {
             "use strict";
+            // Update the current literature list and
+            // selected literature when a document is searched.
+            $rootScope.$on(events.documentedSelected, function (event, document) {
+                if (!document) {
+                    return;
+                }
+
+                $scope.literature = LiteratureLibraryService.getDocuments(document.Category);
+
+                // Show only the current document as selected.
+                var title = document.Title;
+
+                $scope.literature.forEach(function (lit) {
+                    lit.IsSelected = (lit.Title === title);
+                });
+            });
+
             $rootScope.$on(events.typeSelected, function (event, literatureType) {
                 // Clear out the literature if none provided.
                 if (!literatureType) {
@@ -146,7 +181,7 @@ window.healthAdvisersSalesLiteratureApp = angular
                 var documentToLoadKey = documentToLoad.Key;
 
                 $scope.literature.forEach(function (document) {
-                    document.IsSelected = document.Key === documentToLoadKey;
+                    document.IsSelected = (document.Key === documentToLoadKey);
                 });
             };
         }
