@@ -95,6 +95,11 @@ angular
         var categories = [];
         var currentDocument = {};
 
+        var documentProperties = {
+            Category: "Category",
+            Title: "Title"
+        };
+
         this.currentDocument = function () {
             return currentDocument;
         };
@@ -110,6 +115,7 @@ angular
                         aggregate[document.Category] = true;
                         return aggregate;
                     }, {})))
+                    .sort()
                     .map(function(name) {
                         return {
                             Name: name,
@@ -125,27 +131,29 @@ angular
         };
 
         this.getDocuments = function (category) {
-            return (currentDocument = mockData.documents.filter(function (document) {
+            return _.sortBy(mockData.documents.filter(function (document) {
                 return document.Category === category;
-            }));
+            }), documentProperties.Title);
         };
 
         this.getLiterature = function(category) {
-            return mockData.documents.filter(function(document) {
+            return _.sortBy(mockData.documents.filter(function(document) {
                 return document.Category === category;
-            });
+            }), documentProperties.Category);
         };
 
         this.filterByDate = function (filterDate) {
-            return mockData.documents.filter(function (document) {
+            return _.sortBy(mockData.documents.filter(function (document) {
                 var planDate = document.EffectivePlanDate;
                 return planDate && planDate > filterDate;
-            });
+            }), documentProperties.Title);
         };
 
         this.searchDocuments = function (text) {
-            return mockData.documents.filter(function (document) {
+            text = (text || "").toLowerCase();
+
+            return _.sortBy(mockData.documents.filter(function (document) {
                 return document.Title.toLowerCase().indexOf(text) > -1;
-            });
+            }), documentProperties.Title);
         };
     });
