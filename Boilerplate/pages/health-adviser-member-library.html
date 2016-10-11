@@ -56,7 +56,7 @@
                                 <div class="grid-col-3-12 form__field">
                                     <label for="month">Month</label>
                                     <input id="month" name="month" ng-model="filterDate.month" type="number" pattern="\d*" placeholder="MM" />
-                                    
+
                                     <div ng-show="dateForm.month.$invalid" class="form__field__error">
                                         <p>Please enter a valid month</p>
                                     </div>
@@ -108,10 +108,10 @@
                         <ul class="list--buttons">
                             <li ng-repeat="entry in types">
                                 <a class="button-list"
-                                   data-ng-cloak
-                                   ng-class="{'button-list--selected': entry.IsSelected}"
-                                   ng-click="chooseController.loadType(entry)">
-                                    {{entry.Name}}
+                                   data-ng-bind="entry.Name"
+                                   data-ng-class="{'button-list--selected': entry.IsSelected}"
+                                   data-ng-click="chooseController.loadType(entry)"
+                                   data-ng-cloak>
                                 </a>
                             </li>
                         </ul>
@@ -119,12 +119,15 @@
                     <div class="grid-col-4-12" ng-controller="AvailableController as availableController">
                         <h3>Available literature</h3>
                         <ul class="list--buttons">
+                            <li ng-show="showNoDocsFromSearchMessage">
+                                Sorry, no documents match that search.
+                            </li>
                             <li ng-repeat="document in literature">
                                 <a class="button-list"
-                                   data-ng-cloak
-                                   ng-class="{'button-list--selected': document.IsSelected}"
-                                   ng-click="availableController.loadDocument(document)">
-                                    {{document.Title}}
+                                   data-ng-bind="document.Title"
+                                   data-ng-class="{'button-list--selected': document.IsSelected}"
+                                   data-ng-click="availableController.loadDocument(document)"
+                                   data-ng-cloak>
                                 </a>
                             </li>
                         </ul>
@@ -132,9 +135,8 @@
                     <div class="grid-col-4-12" ng-controller="DocumentController">
                         <h3>Your selection</h3>
                         <div class="preview-card" ng-if="document">
-                            <div class="preview-card--header">
-                                {{document.Title}}
-                            </div>
+                            <div class="preview-card--header" data-ng-bind="document.Title"></div>
+
                             <div class="preview-card--body">
                                 <div class="preview-card--body__buttons">
                                     <div>
@@ -154,7 +156,7 @@
                                 </div>
                                 <div class="preview-card--body__text" data-ng-cloak>
                                     <p data-ng-bind="document.Description"></p>
-                                    <p><b>{{document.Code}}</b></p>
+                                    <p><b data-ng-bind="document.Code"></b></p>
                                     <p>{{document.PublishDate | date : "d MMM yyyy"}}</p>
                                 </div>
                             </div>

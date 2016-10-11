@@ -80,8 +80,9 @@
             <ul class="list--buttons">
                 <li ng-repeat="entry in types">
                     <a class="button-list"
-                       ng-class="{'button-list--selected': entry.IsSelected}"
-                       ng-click="chooseController.loadType(entry)">
+                       data-ng-cloak
+                       data-ng-class="{'button-list--selected': entry.IsSelected}"
+                       data-ng-click="chooseController.loadType(entry)">
                         {{entry.Name}}
                     </a>
                 </li>
@@ -92,10 +93,14 @@
             <h3>@Editable(Model, m => m.LiteratureHeadline)</h3>
 
             <ul class="list--buttons">
+                <li ng-show="showNoDocsFromSearchMessage">
+                    Sorry, no documents match that search.
+                </li>
                 <li ng-repeat="document in literature">
                     <a class="button-list"
-                       ng-class="{'button-list--selected': document.IsSelected}"
-                       ng-click="availableController.loadDocument(document)">
+                       data-ng-cloak
+                       data-ng-class="{'button-list--selected': document.IsSelected}"
+                       data-ng-click="availableController.loadDocument(document)">
                         {{document.Title}}
                     </a>
                 </li>
@@ -106,9 +111,7 @@
             <h3>@Editable(Model, m => m.SelectionHeadline)</h3>
 
             <div class="preview-card" ng-if="document">
-                <div class="preview-card--header">
-                    {{document.Title}}
-                </div>
+                <div class="preview-card--header" ng-bind="document.Title"></div>
 
                 <div class="preview-card--body">
                     <div class="preview-card--body__buttons">
@@ -125,12 +128,12 @@
                         </div>
                     </div>
 
-                    <div class="preview-card--body__preview">
-                        <img ng-src="{{document.Thumbnail}}" alt="{{document.Title}}"/>
+                    <div class="preview-card--body__preview" data-ng-show="document.Thumbnail" data-ng-cloak>
+                        <img ng-src="{{document.Thumbnail}}" alt="{{document.Title}}" />
                     </div>
 
-                    <div class="preview-card--body__text">
-                        <p>{{document.Description}}</p>
+                    <div class="preview-card--body__text" data-ng-cloak>
+                        <p data-ng-bind="document.Description"></p>
                         <p><b>{{document.Code}}</b>
                         </p>
                         <p>{{document.PublishDate | date : "d MMM yyyy"}}</p>

@@ -96,6 +96,13 @@ window.healthAdvisersSalesLiteratureApp = angular
                 $scope.types = categories;
             });
 
+            // Deselect all categories on a date search.
+            $rootScope.$on(events.dateFilter, function () {
+                $scope.types.forEach(function (literatureType) {
+                    literatureType.IsSelected = false;
+                });
+            });
+
             // Update the current selected category when a document is searched.
             $rootScope.$on(events.documentedSelected, function (event, document) {
                 if (!document) {
@@ -128,6 +135,18 @@ window.healthAdvisersSalesLiteratureApp = angular
         "LiteratureLibraryService",
         function ($scope, $rootScope, LiteratureLibraryService) {
             "use strict";
+            // Initialise all scope variables.
+            $scope.hasSearched = false;
+            $scope.literature = [];
+            $scope.showNoDocsFromSearchMessage = false;
+
+            // Watch the literature for changes and update the search message if necessary.
+            $scope.$watch("literature", function () {
+                $scope.showNoDocsFromSearchMessage =
+                    $scope.hasSearched && (!$scope.literature || $scope.literature.length < 1);
+            });
+
+
             // Update the current literature list and
             // selected literature when a document is searched.
             $rootScope.$on(events.documentedSelected, function (event, document) {
@@ -168,6 +187,9 @@ window.healthAdvisersSalesLiteratureApp = angular
 
                 // Fetch the data.
                 $scope.literature = LiteratureLibraryService.filterByDate(filterDate);
+
+                // A search has been performed, so a message can be shown if no document were found.
+                $scope.hasSearched = true;
 
                 // Deselect all of the documents.
                 $scope.literature.forEach(function (document) {
