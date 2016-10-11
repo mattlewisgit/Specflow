@@ -66,6 +66,9 @@
                                     callback(states.filter(function (state) {
                                         return substrRegex.test(state);
                                     }));
+                                },
+                                templates: {
+                                    notFound: "<div class=\"tt-no-results\">Sorry, there are no matching states.</div>"
                                 }
                             });
                         }, false);

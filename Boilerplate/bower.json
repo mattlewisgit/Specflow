@@ -26,6 +26,7 @@
     "jquery-match-height": "0.7.x",
     "jquery.smartresize": "1.0.x",
     "js-cookie": "2.1.x",
+    "moment": "2.15.x",
     "normalize.css": "4.2.x",
     "sass-mq": "3.2.x",
     "tablesaw": "2.0.x",

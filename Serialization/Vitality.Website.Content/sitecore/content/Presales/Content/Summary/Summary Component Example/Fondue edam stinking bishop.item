@@ -19,15 +19,15 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 2ba1bcce-9fa8-43d9-8035-ceb07364d4ea
+revision: d83d1eb8-bd4b-49a3-b9fc-ac1e008ffdd5
 
 ----field----
 field: {B1D34F37-4911-4153-A89B-284E8794DB1A}
 name: Title
 key: title
-content-length: 27
+content-length: 95
 
-Fondue edam stinking bishop
+<a href="~/link.aspx?_id=3313D0FF3AD04E34A8247246041531D7&_z=z">Fondue edam stinking bishop</a>
 ----field----
 field: {5ADE367F-2CCB-4EEC-A026-F4CB0C295714}
 name: Body
@@ -48,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-2ba1bcce-9fa8-43d9-8035-ceb07364d4ea
+d83d1eb8-bd4b-49a3-b9fc-ac1e008ffdd5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T133944Z
+20160810T104616Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

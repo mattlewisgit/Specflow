@@ -28,6 +28,7 @@
         "jQuery",
         "Modernizr",
         "module",
+        "moment",
         "QUnit",
         "require",
         "WOW",

@@ -62,6 +62,7 @@
     <Content Include="components\tabs.html" />
     <Content Include="components\footer.html" />
     <Content Include="components\summary\summary-right.html" />
+    <Content Include="global\colours.html" />
     <Content Include="global\grids.html" />
     <Content Include="global\lists.html" />
     <Content Include="global\forms.html" />
@@ -78,6 +79,7 @@
     <Content Include="components\rewards_leader.html" />
     <Content Include="index.html" />
     <Content Include="components\main_navigation.html" />
+    <Content Include="pages\health-adviser-member-library.html" />
     <Content Include="robots.txt" />
     <Content Include="pages\health-adviser-sales-library.html" />
     <Content Include="src\favicon-template.html" />

@@ -2,7 +2,7 @@
 version: 1
 id: {3F26F3B6-C4F9-4DDF-AAD9-A0AEB65C73F3}
 database: master
-path: /sitecore/media library/presales/components/Stanley
+path: /sitecore/media library/Presales/Components/Stanley
 parent: {5C450172-7FEE-4F80-B107-BBC6C1B9A44D}
 name: Stanley
 master: {00000000-0000-0000-0000-000000000000}

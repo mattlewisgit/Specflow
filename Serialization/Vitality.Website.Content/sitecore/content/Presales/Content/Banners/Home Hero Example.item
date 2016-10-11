@@ -12,7 +12,7 @@ templatekey: Home Hero
 ----version----
 language: en
 version: 1
-revision: bac15567-c4ed-477d-950a-c9c079ca2eba
+revision: f4abb32c-f93d-4a0e-a85f-b7b5ddd26947
 
 ----field----
 field: {DED19EC1-2455-4A52-8E92-4511FB5EB238}
@@ -20,28 +20,35 @@ name: PosterImage
 key: posterimage
 content-length: 58
 
-<image mediaid="{A83694AA-66FD-4FE8-8617-56AB25CE504F}" />
+<image mediaid="{D4353A04-0E87-4C81-8246-9D13C16E019B}" />
 ----field----
 field: {5A026F8B-759C-4D0F-B0AF-897B6F9FB017}
 name: Headline
 key: headline
-content-length: 39
+content-length: 20
 
-Dragon goby gray eel-catfish demoiselle
+Health & life  cover
 ----field----
 field: {CDDCB22D-6B3B-41DE-B0A8-00A937DDDCA6}
 name: SecondHeadline
 key: secondheadline
-content-length: 39
+content-length: 12
 
-Dragon goby gray eel-catfish demoiselle
+With Rewards
 ----field----
 field: {132A4383-2051-4507-8FDE-919B7D9662B9}
 name: OpeningParagraph
 key: openingparagraph
-content-length: 183
+content-length: 48
 
-Dogteeth tetra spadefish, codling Reef triggerfish, flathead northern pearleye lanternfish marlin shad paddlefish coelacanth; medaka blue danio cuchia--Moses sole, ropefish midshipman
+See how Vitality rewards you for getting healthy
+----field----
+field: {2745D07D-89CD-4E23-9409-0F044DE2BB75}
+name: VideoId
+key: videoid
+content-length: 11
+
+fJgklqKwjWM
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -55,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-bac15567-c4ed-477d-950a-c9c079ca2eba
+f4abb32c-f93d-4a0e-a85f-b7b5ddd26947
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160621T114823Z
+20160901T103922Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
