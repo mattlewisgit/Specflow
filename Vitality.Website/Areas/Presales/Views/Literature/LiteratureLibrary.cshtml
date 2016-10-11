@@ -42,6 +42,7 @@
             <ul class="list--buttons">
                 <li ng-repeat="entry in types">
                     <a class="button-list"
+                       data-ng-cloak
                        ng-class="{'button-list--selected': entry.IsSelected}"
                        ng-click="chooseController.loadType(entry)">
                         {{entry.Name}}
@@ -56,6 +57,7 @@
             <ul class="list--buttons">
                 <li ng-repeat="document in literature">
                     <a class="button-list"
+                       data-ng-cloak
                        ng-class="{'button-list--selected': document.IsSelected}"
                        ng-click="availableController.loadDocument(document)">
                         {{document.Title}}
@@ -68,7 +70,7 @@
             <h3>@Editable(Model, m => m.SelectionHeadline)</h3>
 
             <div class="preview-card" ng-if="document">
-                <div class="preview-card--header">
+                <div class="preview-card--header" data-ng-cloak>
                     {{document.Title}}
                 </div>
 
@@ -97,7 +99,7 @@
                         <img ng-src="{{document.Thumbnail}}" alt="{{document.Title}}" />
                     </div>
 
-                    <div class="preview-card--body__text">
+                    <div class="preview-card--body__text" data-ng-cloak>
                         <p>{{document.Description}}</p>
                         <p><b>{{document.Code}}</b></p>
                         <p>{{document.PublishDate | date : "d MMM yyyy"}}</p>

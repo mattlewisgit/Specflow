@@ -81,8 +81,9 @@
                         <ul class="list--buttons">
                             <li ng-repeat="entry in types">
                                 <a class="button-list"
-                                    ng-class="{'button-list--selected': entry.IsSelected}"
-                                    ng-click="chooseController.loadType(entry)">
+                                   data-ng-cloak
+                                   ng-class="{'button-list--selected': entry.IsSelected}"
+                                   ng-click="chooseController.loadType(entry)">
                                     {{entry.Name}}
                                 </a>
                             </li>
@@ -95,8 +96,9 @@
                         <ul class="list--buttons">
                             <li ng-repeat="document in literature">
                                 <a class="button-list"
-                                    ng-class="{'button-list--selected': document.IsSelected}"
-                                    ng-click="availableController.loadDocument(document)">
+                                   data-ng-cloak
+                                   ng-class="{'button-list--selected': document.IsSelected}"
+                                   ng-click="availableController.loadDocument(document)">
                                     {{document.Title}}
                                 </a>
                             </li>
@@ -107,7 +109,7 @@
                         <h3>Your selection</h3>
 
                         <div class="preview-card" ng-if="document">
-                            <div class="preview-card--header">
+                            <div class="preview-card--header" data-ng-cloak>
                                 {{document.Title}}
                             </div>
 
@@ -126,11 +128,11 @@
                                     </div>
                                 </div>
 
-                                <div class="preview-card--body__preview">
+                                <div class="preview-card--body__preview" data-ng-cloak>
                                     <img ng-src="{{document.Thumbnail}}" alt="{{document.Title}}" />
                                 </div>
 
-                                <div class="preview-card--body__text">
+                                <div class="preview-card--body__text" data-ng-cloak>
                                     <p>{{document.Description}}</p>
                                     <p><b>{{document.Code}}</b></p>
                                     <p>{{document.PublishDate | date : "d MMM yyyy"}}</p>
