@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {0BF3ACF3-A207-488D-9870-CB57D88EBF48}
+database: master
+path: /sitecore/templates/Presales/Page Templates/Application Form Library Page/__Standard Values
+parent: {87EDEF9E-D2D9-4FF9-9746-132CC28499C6}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {87EDEF9E-D2D9-4FF9-9746-132CC28499C6}
+templatekey: Application Form Library Page
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 668
+
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{9739784C-FDA6-45F1-ADA4-A86F18E3D4A0}"><r id="{874D1721-7D2C-4934-A983-B70FD0AC1B35}" ph="header" uid="{4513F125-695A-43BC-BB04-9D48FF586D3E}" /><r id="{BF71492E-474C-41CD-9EA5-328E5909AD50}" ph="" uid="{24CB1D1B-0C57-4D77-9080-E88D15798FFF}" /><r id="{F643ED45-4AC0-4751-AF89-4F31755527B5}" ph="" uid="{5924E08B-9EBA-4266-8CB6-26D6F7EA5ABB}" /><r id="{C64F0EB5-2BCF-43FF-82D4-2D5C92653A9C}" ph="" uid="{7B572AF0-1588-448D-BF86-4CED0CD6493E}" /><r id="{58A8623B-796E-4ABB-961B-CEC9283718E4}" ph="PresalesContent" uid="{64FECF76-871E-40D9-92BF-3731CEF1AEA7}" /></d></r>
+----version----
+language: en
+version: 1
+revision: 43a8638d-94be-42aa-91b9-80de3cccbe3e
+
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160928T144528Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+43a8638d-94be-42aa-91b9-80de3cccbe3e
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160928T150013Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

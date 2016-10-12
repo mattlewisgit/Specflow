@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Vitality.Website.Areas.Presales.PageTemplates
 {
@@ -41,5 +43,19 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
 
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public LiteratureLibrary LiteratureLibrary { get; set; }
+
+        public string StepHeaderOne { get; set; }
+
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public IEnumerable<Taxonomy> PlanTypes { get; set; }
+
+        public string StepHeaderTwo { get; set; }
+
+        public string StepHeaderTwoExample { get; set; }
+
+        public string StepHeaderThree { get; set; }
+        
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public IEnumerable<Taxonomy> PlanNumbers { get; set; }
     }
 }

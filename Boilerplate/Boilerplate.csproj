@@ -79,6 +79,7 @@
     <Content Include="components\rewards_leader.html" />
     <Content Include="index.html" />
     <Content Include="components\main_navigation.html" />
+    <Content Include="pages\health-adviser-member-library.html" />
     <Content Include="robots.txt" />
     <Content Include="pages\health-adviser-sales-library.html" />
     <Content Include="src\favicon-template.html" />

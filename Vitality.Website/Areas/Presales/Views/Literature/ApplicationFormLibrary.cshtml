@@ -1,0 +1,33 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.LiteratureLibraryPage>
+
+<div class="example" data-ng-app="HealthAdvisersSalesLiteratureApp">
+    <div class="grid grid-no-gutters">
+        <div class="grid-col-8-12">
+            <h1 class="text-flush-top">@Editable(Model, m => m.Headline)</h1>
+            <p>@Editable(Model, m => m.OpeningParagraph)</p>
+
+            
+
+                <h1 class="text-flush-top">@Editable(Model, m => m.StepHeaderOne)</h1>
+
+                <br/><br/>
+                @foreach (var plan in Model.PlanTypes)
+                {
+                    <h3>@plan.Title</h3>
+                }
+
+                <br/><br/>
+                <h1 class="text-flush-top">@Editable(Model, m => m.StepHeaderTwo)</h1>
+                <br/><br/>
+                <h1 class="text-flush-top">@Editable(Model, m => m.StepHeaderTwoExample)</h1>
+                <br/><br/>
+                <h1 class="text-flush-top">@Editable(Model, m => m.StepHeaderThree)</h1>
+                <br/><br/>
+                @foreach (var plan in Model.PlanNumbers)
+                {
+                    <h3>@plan.Title</h3>
+                }
+
+        </div>
+    </div>
+</div>
