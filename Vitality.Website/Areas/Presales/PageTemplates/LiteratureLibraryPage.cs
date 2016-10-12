@@ -46,16 +46,6 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
 
         public string StepHeaderOne { get; set; }
 
-        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public IEnumerable<Taxonomy> PlanTypes { get; set; }
-
-        public string StepHeaderTwo { get; set; }
-
-        public string StepHeaderTwoExample { get; set; }
-
-        public string StepHeaderThree { get; set; }
-        
-        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public IEnumerable<Taxonomy> PlanNumbers { get; set; }
+        public string NotFoundErrorMessage { get; set; }
     }
 }

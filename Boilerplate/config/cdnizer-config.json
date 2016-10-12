@@ -57,6 +57,12 @@
             "cdn": "//cdnjs.cloudflare.com/ajax/libs/typeahead.js/${version}/typeahead.jquery.min.js"
         },
         {
+            "file": "/bower_components/underscore/underscore-min.js",
+            "package": "underscore",
+            "test": "_",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/underscore.js/${version}/underscore-min.js"
+        },
+        {
             "file": "/bower_components/animate.css/animate.min.css",
             "package": "animate.css",
             "cdn":  "//cdnjs.cloudflare.com/ajax/libs/animate.css/${version}/animate.css"

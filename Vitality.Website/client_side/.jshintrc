@@ -20,7 +20,8 @@
     "unused": true,
     "varstmt": false,
     "predef": [
-        "require",
-        "requirejs"
+        "_",
+        "$",
+        "angular"
     ]
 }

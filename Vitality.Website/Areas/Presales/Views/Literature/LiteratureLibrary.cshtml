@@ -6,7 +6,10 @@
             <h1 class="text-flush-top">@Editable(Model, m => m.Headline)</h1>
             <p>@Editable(Model, m => m.OpeningParagraph)</p>
             <h2>@Editable(Model, m => m.SearchHeadline)</h2>
-            <input type="search" placeholder="@Html.Raw(Model.SearchPlaceholderText)" data-typeahead />
+            <input type="search" placeholder="@Html.Raw(Model.SearchPlaceholderText)" data-typeahead/>
+        </div>
+        <div ng-show="showNoDocsFromSearchMessage">
+            @Editable(Model, m => m.NotFoundErrorMessage)
         </div>
 
         <div class="grid-col-4-12 tablet-and-up">
@@ -42,6 +45,7 @@
             <ul class="list--buttons">
                 <li ng-repeat="entry in types">
                     <a class="button-list"
+                       data-ng-cloak
                        ng-class="{'button-list--selected': entry.IsSelected}"
                        ng-click="chooseController.loadType(entry)">
                         {{entry.Name}}
@@ -56,6 +60,7 @@
             <ul class="list--buttons">
                 <li ng-repeat="document in literature">
                     <a class="button-list"
+                       data-ng-cloak
                        ng-class="{'button-list--selected': document.IsSelected}"
                        ng-click="availableController.loadDocument(document)">
                         {{document.Title}}
@@ -68,22 +73,28 @@
             <h3>@Editable(Model, m => m.SelectionHeadline)</h3>
 
             <div class="preview-card" ng-if="document">
-                <div class="preview-card--header">
+                <div class="preview-card--header" data-ng-cloak>
                     {{document.Title}}
                 </div>
 
                 <div class="preview-card--body">
                     <div class="preview-card--body__buttons">
                         <div>
-                            <a href="{{document.Document}}" class="box-button box-button--secondary box-button--rounded box-button--full-width">
-                                @Editable(Model, m => m.DownloadLinkText)
-                            </a>
+                            @if (!string.IsNullOrWhiteSpace(Model.DownloadLinkText))
+                            {
+                                <a href="{{document.Document}}" class="box-button box-button--secondary box-button--rounded box-button--full-width">
+                                    @Editable(Model, m => m.DownloadLinkText)
+                                </a>
+                            }
                         </div>
 
                         <div>
-                            <a href="mailto:?subject={{document.Title}}&body={{document.Document}}" class="box-button box-button--secondary-inverse box-button--rounded box-button--full-width">
-                                @Editable(Model, m => m.EmailLinkText)
-                            </a>
+                            @if (!string.IsNullOrWhiteSpace(Model.EmailLinkText))
+                            {
+                                <a href="mailto:?subject={{document.Title}}&body={{document.Document}}" class="box-button box-button--secondary-inverse box-button--rounded box-button--full-width">
+                                    @Editable(Model, m => m.EmailLinkText)
+                                </a>
+                            }
                         </div>
                     </div>
 
@@ -91,7 +102,7 @@
                         <img ng-src="{{document.Thumbnail}}" alt="{{document.Title}}" />
                     </div>
 
-                    <div class="preview-card--body__text">
+                    <div class="preview-card--body__text" data-ng-cloak>
                         <p>{{document.Description}}</p>
                         <p><b>{{document.Code}}</b></p>
                         <p>{{document.PublishDate | date : "d MMM yyyy"}}</p>
