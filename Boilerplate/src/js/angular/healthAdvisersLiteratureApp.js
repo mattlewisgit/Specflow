@@ -142,10 +142,9 @@ window.healthAdvisersSalesLiteratureApp = angular
 
             // Watch the literature for changes and update the search message if necessary.
             $scope.$watch("literature", function () {
-                $scope.showNoDocsFromSearchMessage =
-                    $scope.hasSearched && (!$scope.literature || $scope.literature.length < 1);
+                $scope.showNoDocsFromSearchMessage = $scope.hasSearched &&
+                    (!$scope.literature || $scope.literature.length < 1);
             });
-
 
             // Update the current literature list and
             // selected literature when a document is searched.
