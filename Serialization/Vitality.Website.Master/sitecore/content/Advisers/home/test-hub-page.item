@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {503720F7-5FB9-4096-8B9E-D3BE3D286A5B}
+database: master
+path: /sitecore/content/Advisers/home/test-hub-page
+parent: {672B9669-6D76-430B-BB20-A3CA3E90F09D}
+name: test-hub-page
+master: {00000000-0000-0000-0000-000000000000}
+template: {69EDD821-B70A-4D85-B3AD-4FD6EE951FEB}
+templatekey: Hub Page
+
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
+----version----
+language: en
+version: 1
+revision: 3e2aa55a-0ec6-438c-bd88-3b737bd91d46
+
+----field----
+field: {0358353D-AA7F-41EC-86A9-09B5EDE5F10A}
+name: QuoteFooterLinks
+key: quotefooterlinks
+content-length: 77
+
+{2B99C2E1-689C-46B1-9751-CEDEB620537A}|{886C8D6B-4DD4-4762-890D-663CC7000BDC}
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 13
+
+Test Hub Page
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161012T103532Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+3e2aa55a-0ec6-438c-bd88-3b737bd91d46
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161012T103549Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{2E731AFD-ACB0-4361-B91B-43C68E853BE9}
