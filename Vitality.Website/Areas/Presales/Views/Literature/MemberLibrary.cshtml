@@ -113,15 +113,21 @@
                 <div class="preview-card--body">
                     <div class="preview-card--body__buttons">
                         <div>
-                            <a href="{{document.Document}}" class="box-button box-button--secondary box-button--rounded box-button--full-width">
-                                @Editable(Model, m => m.DownloadLinkText)
-                            </a>
+                            @if (!string.IsNullOrWhiteSpace(Model.DownloadLinkText))
+                            {
+                                <a href="{{document.Document}}" class="box-button box-button--secondary box-button--rounded box-button--full-width">
+                                    @Editable(Model, m => m.DownloadLinkText)
+                                </a>
+                            }
                         </div>
 
                         <div>
-                            <a href="mailto:?subject={{document.Title}}&body={{document.Document}}" class="box-button box-button--secondary-inverse box-button--rounded box-button--full-width">
-                                @Editable(Model, m => m.EmailLinkText)
-                            </a>
+                            @if (!string.IsNullOrWhiteSpace(Model.EmailLinkText))
+                            {
+                                <a href="mailto:?subject={{document.Title}}&body={{document.Document}}" class="box-button box-button--secondary-inverse box-button--rounded box-button--full-width">
+                                    @Editable(Model, m => m.EmailLinkText)
+                                </a>
+                            }
                         </div>
                     </div>
 
