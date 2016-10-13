@@ -35,7 +35,7 @@
                 var options = new MediaUrlOptions
                                   {
                                       AbsolutePath = false, 
-                                      MediaLinkServerUrl = SiteContextFactory.GetSiteContext("presales").HostName,
+                                      MediaLinkServerUrl = SiteContextFactory.GetSiteContext("advisers").HostName,
                                       AlwaysIncludeServerUrl = true
                                   };
                 return MediaManager.GetMediaUrl(mediaItem, options);
