@@ -40,6 +40,9 @@
                     <div class="grid-col-2-12 form__field__input--inline">
                         <input type="submit" ng-click="filterAction(dateForm, filterDate)" value="Submit" class="box-button box-button--secondary box-button--rounded form__field__input--submit--inline">
                     </div>
+                    <div ng-show="showNoDocsFromSearchMessage">
+                        @Editable(Model, m => m.NotFoundErrorMessage)
+                    </div>
                 </form>
             </div>
 

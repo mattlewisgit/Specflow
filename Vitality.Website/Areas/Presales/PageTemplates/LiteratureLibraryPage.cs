@@ -41,5 +41,7 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
 
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public LiteratureLibrary LiteratureLibrary { get; set; }
+
+        public string NotFoundErrorMessage { get; set; }
     }
 }
