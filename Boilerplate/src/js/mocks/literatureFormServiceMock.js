@@ -7,9 +7,11 @@ var mockData = {
             Code: "PHU1234",
             Description: "Vitality GP Select with VitalityHealth",
             Document: "http://dev.vitality.co.uk/media-online/presales/pdf/development/guide-to-business-healthcare---january-2015-print-friendly.pdf",
-            EffectivePlanDate: new Date("2015-07-06T23:00:00Z"),
+            EffectivePlanDate: moment("2015-07-06T23:00:00Z"),
             Key: "vitality-gp-select",
-            PublishDate: "2016-06-01T23:00:00Z",
+            PlanNumber : 10,
+            PlanType : "Personal",
+            PublishDate: moment("2016-06-01T23:00:00Z"),
             Size: 330,
             Thumbnail: "/src/img/examples/example-pdf.png",
             Title: "Personal Healthcare - New Business Only"
@@ -20,9 +22,11 @@ var mockData = {
             Code: "PLU1294A",
             Description: "Vitality GP with VitalityHealth",
             Document: "http://dev.vitality.co.uk/media-online/presales/pdf/development/phf-sales-aid-v2.pdf",
-            EffectivePlanDate: new Date("2016-01-06T23:00:00Z"),
+            EffectivePlanDate: moment("2016-01-06T23:00:00Z"),
             Key: "vitality-gp",
-            PublishDate: "2016-07-06T23:00:00Z",
+            PlanNumber : 10,
+            PlanType : "Business",
+            PublishDate: moment("2016-07-06T23:00:00Z"),
             Size: 200,
             Thumbnail: "/src/img/examples/example-pdf.png",
             Title: "Personal Healthcare - Business Only"
@@ -33,9 +37,11 @@ var mockData = {
             Code: "NPU1234",
             Description: "Health and rewards partners with VitalityHealth",
             Document: "http://dev.vitality.co.uk/media-online/presales/pdf/development/business-healthcare-sales-aid---january-2015.pdf",
-            EffectivePlanDate: new Date("2016-04-20T23:00:00Z"),
+            EffectivePlanDate: moment("2016-04-20T23:00:00Z"),
             Key: "health-and-rewards-partners",
-            PublishDate: "2016-06-01T23:00:00Z",
+            PlanNumber : 20,
+            PlanType : "Business",
+            PublishDate: moment("2016-06-01T23:00:00Z"),
             Size: 220,
             Thumbnail: "/src/img/examples/example-pdf.png",
             Title: "Personal Healthcare - Moratorium - Business Only"
@@ -46,9 +52,11 @@ var mockData = {
             Code: "PHU1294A",
             Description: "Personal Healthcare with VitalityHealth",
             Document: "http://dev.vitality.co.uk/media-online/presales/pdf/development/phf-sales-aid-v2.pdf",
-            EffectivePlanDate: new Date("2016-03-06T23:00:00Z"),
+            EffectivePlanDate: moment("2016-03-06T23:00:00Z"),
             Key: "personal-healthcare-sales-aid",
-            PublishDate: "2016-07-06T23:00:00Z",
+            PlanNumber : 50,
+            PlanType : "Corporate",
+            PublishDate: moment("2016-07-06T23:00:00Z"),
             Size: 1024,
             Thumbnail: "/src/img/examples/example-pdf.png",
             Title: "Personal Healthcare - New Business"
@@ -61,7 +69,7 @@ angular
     .service("LiteratureFormService", function () {
         "use strict";
         this._formState = {
-            date: new Date(),
+            date: moment(),
             planCode: "",
             planType: "",
         };
@@ -69,18 +77,25 @@ angular
         this._planCodes = [];
 
         var documentProperties = {
+            PlanNumber: "PlanNumber",
+            PlanType: "PlanType",
             Title: "Title"
         };
 
-        this.getCategories = function () {
-            return _.uniq(_.pluck(mockData.documents, "Category"));
+        this.getPlanCodes = function (category) {
+            return _.uniq(_.pluck(mockData.documents, documentProperties.PlanNumber)).sort();
+        };
+
+        this.getPlanTypes = function () {
+            return _.uniq(_.pluck(mockData.documents, documentProperties.PlanType)).sort();
         };
 
         this.getDocuments = function () {
             return _.sortBy(mockData.documents
                 .filter(function (document) {
-                    return document.Category == this._formState.planType &&
-                        document.Code.indexOf(this._formState.planCode) === 0;
+                    return document.PlanNumber === this._formState.planCode &&
+                        document.EffectivePlanDate.isAfter(this._formState.date) &&
+                        document.PlanType === this._formState.planType;
                 }, this)
                 .map(function (document) {
                     document.FileType = _.last(document.Document.split(".")).toUpperCase();
@@ -90,12 +105,6 @@ angular
 
         this.getFormState = function () {
             return this._formState;
-        };
-
-        this.getPlanCodes = function (category) {
-            return _.uniq(_.pluck(mockData.documents, "Code").map(function (planCode) {
-                return planCode.substr(0, 2);
-            })).sort();
         };
 
         this.setDate = function (date) {
@@ -109,12 +118,4 @@ angular
         this.setPlanType = function (planType) {
             this._formState.planType = planType;
         }
-
-        this.reset = function () {
-            this._formState = {
-                date: new Date(),
-                planCode: "",
-                planType: "",
-            };
-        };
     });
