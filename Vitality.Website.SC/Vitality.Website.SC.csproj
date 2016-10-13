@@ -38,6 +38,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Lucene.Net.dll</HintPath>
     </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Sitecore.Analytics, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Analytics.dll</HintPath>
       <Private>True</Private>
@@ -136,11 +140,23 @@
     <Compile Include="Utilities\SiteInfoHelper.cs" />
     <Compile Include="Utilities\StringHelper.cs" />
     <Compile Include="Providers\AppendLinkProvider.cs" />
+    <Compile Include="WFFM\Helpers\FormFieldsHelper.cs" />
+    <Compile Include="WFFM\Helpers\XmlTransformer.cs" />
     <Compile Include="WFFM\SaveActions\CallProSaveAction.cs" />
     <Compile Include="WFFM\SaveActions\CallProSchema.cs" />
+    <Compile Include="WFFM\WffmConstants.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vitality.Website.App\Vitality.Website.App.csproj">
+      <Project>{f8ae7eb7-5b71-4cd8-897d-5d72e6480f4f}</Project>
+      <Name>Vitality.Website.App</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,8 +1,8 @@
-﻿using Sitecore.Data;
-using Sitecore.Diagnostics;
-using Sitecore.Forms.Core.Wrappers;
-using Sitecore.Security.Authentication;
+﻿using System.Collections.Generic;
+using Sitecore.Data;
 using Sitecore.WFFM.Abstractions.Actions;
+using Vitality.Website.App.CallPro;
+using Vitality.Website.SC.WFFM.Helpers;
 
 namespace Vitality.Website.SC.WFFM.SaveActions
 {
@@ -32,18 +32,25 @@ namespace Vitality.Website.SC.WFFM.SaveActions
         /// </param>
         public void Execute(ID formId, AdaptedResultList adaptedFields, ActionCallContext actionCallContext = null, params object[] data)
         {
-            string xmlData = data[0].ToString();
-            Assert.ArgumentNotNullOrEmpty(xmlData, "Missing CallPro XML schema.");
+            // Extract form fields.
+            Dictionary<string, string> formFields = FormFieldsHelper.ExtractFormFields(adaptedFields);
 
-            // Call pro integration
+            // Extract XML template.
             var item = Sitecore.Context.Database.GetItem(new ID(SchemaId));
-            var xml = item.Fields["Xml"].Value;
+            var xmlTemplate = item.Fields["Xml"].Value;
+
+            // Transform XML.
+            var requestXml = XmlTransformer.TransformXml(xmlTemplate, formFields);
+
+            // Execute request.
+            var response = CallProConnector.Send(requestXml);
         }
 
         /// <summary>
         /// Gets or sets the SchemaId field.
         /// </summary>
         public string SchemaId { get; set; }
+        public string TestCheckBox { get; set; }
 
         public ID ActionID { get; set; }
         public string UniqueKey { get; set; }
