@@ -34,9 +34,9 @@ content-length: 0
 field: {D9B5A805-6623-4603-BC51-D838120B9B54}
 name: Parameters
 key: parameters
-content-length: 83
+content-length: 85
 
-<Host>example.host</Host><From>example@mail.net</From><IsBodyHtml>true</IsBodyHtml>
+<Host>192.168.96.122</Host><From>noreply@vitality</From><IsBodyHtml>true</IsBodyHtml>
 ----field----
 field: {A95C414D-B036-4E1B-B298-86DED562F411}
 name: Editor
@@ -264,7 +264,7 @@ content-length: 0
 ----version----
 language: en
 version: 1
-revision: 89e01d16-c00b-4412-8ef8-5cb7ff460a82
+revision: f9cd77a7-e241-4cad-9ef5-cccf97a391c1
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
@@ -335,14 +335,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-89e01d16-c00b-4412-8ef8-5cb7ff460a82
+f9cd77a7-e241-4cad-9ef5-cccf97a391c1
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20151230T135438Z
+20161013T152027Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

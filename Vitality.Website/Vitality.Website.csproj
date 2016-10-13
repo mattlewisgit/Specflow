@@ -284,7 +284,9 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Config\Include\Vitality\Vitality.Handlers" />
+    <Content Include="App_Config\Include\Vitality\Vitality.Handlers">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\Include\Sitecore.Forms.config">
       <SubType>Designer</SubType>
     </Content>
@@ -379,6 +381,7 @@
     <Content Include="img\vitality-logo--white.svg" />
     <Content Include="js\literatureLibraryService.js" />
     <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
+    <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\CallProSchemaEditor.xml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -496,7 +499,9 @@
     <Content Include="packages.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Config\ConnectionStrings.config" />
+    <Content Include="App_Config\ConnectionStrings.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\Sitecore.config">
       <SubType>Designer</SubType>
     </Content>
@@ -779,7 +784,6 @@
     <Folder Include="App_Config\Include\Custom\" />
     <Folder Include="Areas\Presales\Models\" />
     <Folder Include="img\examples\" />
-    <Folder Include="sitecore\" />
     <Folder Include="sitemaps\" />
   </ItemGroup>
   <ItemGroup>
