@@ -92,7 +92,7 @@
     "requireBlocksOnNewline": true,
     "requireCamelCaseOrUpperCaseIdentifiers": true,
     "requireCapitalizedComments": true,
-    "requireCapitalizedConstructors": true,
+    "requireCapitalizedConstructors": false,
     "requireCommaBeforeLineBreak": true,
     "requireCurlyBraces": {
         "keywords": [
