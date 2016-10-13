@@ -3,11 +3,12 @@
 <div class="example" data-ng-app="HealthAdvisersSalesLiteratureApp">
     <div class="grid">
         <div class="grid-col-8-12">
-            <h1 class="text-flush-top">@Editable(Model, m => m.Headline)</h1>
+            <h2 class="text-flush-top">@Editable(Model, m => m.Headline)</h2>
             <p>@Editable(Model, m => m.OpeningParagraph)</p>
-            <h2>@Editable(Model, m => m.SearchHeadline)</h2>
-            <input type="search" placeholder="@Html.Raw(Model.SearchPlaceholderText)" data-typeahead/>
+            <h3>@Editable(Model, m => m.SearchHeadline)</h3>
+            <input type="search" placeholder="@Html.Raw(Model.SearchPlaceholderText)" data-typeahead />
         </div>
+
         <div ng-show="showNoDocsFromSearchMessage">
             @Editable(Model, m => m.NotFoundErrorMessage)
         </div>
@@ -98,12 +99,12 @@
                         </div>
                     </div>
 
-                    <div class="preview-card--body__preview">
+                    <div class="preview-card--body__preview" data-ng-show="document.Thumbnail" data-ng-cloak>
                         <img ng-src="{{document.Thumbnail}}" alt="{{document.Title}}" />
                     </div>
 
                     <div class="preview-card--body__text" data-ng-cloak>
-                        <p>{{document.Description}}</p>
+                        <p data-ng-bind="document.Description"></p>
                         <p><b>{{document.Code}}</b></p>
                         <p>{{document.PublishDate | date : "d MMM yyyy"}}</p>
                     </div>
