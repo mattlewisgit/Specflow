@@ -297,7 +297,6 @@
     <Content Include="App_Config\Include\Sitecore.WFFM.Services.config" />
     <Content Include="App_Config\Include\Sitecore.WFFM.Speak.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config" />
-    <Content Include="App_Config\Include\Vitality\Vitality.AppSettings.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
