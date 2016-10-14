@@ -29,7 +29,7 @@ window.healthAdvisersSalesLiteratureApp = angular
 
             $scope.typeSelected = function () {
                 this.isVisible = false;
-                LiteratureFormService.setPlanType(this.selectedPlanType);
+                LiteratureFormService.formState.planType = this.selectedPlanType;
                 $rootScope.$broadcast(events.planTypeSubmit);
             };
         }
@@ -85,7 +85,7 @@ window.healthAdvisersSalesLiteratureApp = angular
                 }
 
                 this.isVisible = false;
-                LiteratureFormService.setDate(actualDate);
+                LiteratureFormService.formState.date = actualDate;
                 $rootScope.$broadcast(events.dateSubmit);
             };
         }
@@ -113,7 +113,7 @@ window.healthAdvisersSalesLiteratureApp = angular
 
             $scope.planCodeSubmit = function () {
                 this.isVisible = false;
-                LiteratureFormService.setPlanCode(+this.selectedPlanCode);
+                LiteratureFormService.formState.planCode = +this.selectedPlanCode;
                 $rootScope.$broadcast(events.planCodeSubmit);
             };
         }
@@ -124,22 +124,33 @@ window.healthAdvisersSalesLiteratureApp = angular
         "LiteratureFormService",
         function ($scope, $rootScope, LiteratureFormService) {
             "use strict";
-            $scope.badges = [];
             $scope.documents = [];
-
+            $scope.formState = {};
             $scope.isVisible = false;
 
             $rootScope.$on(events.planCodeSubmit, function () {
-                var formState = angular.copy(LiteratureFormService.getFormState());
-                formState.date = formState.date.format("d MMM YYYY");
-                $scope.badges = _.values(formState);
+                // Take a copy of the form state in case it is edited.
+                $scope.formState = angular.copy(LiteratureFormService.formState);
                 $scope.documents = LiteratureFormService.getDocuments();
                 $scope.isVisible = true;
             });
 
-            $scope.restart = function () {
+            // Links from the labels to their associated steps.
+            $scope.goToDateStep = function () {
+                this.isVisible = false;
+                $rootScope.$broadcast(events.planTypeSubmit);
+            };
+
+            $scope.goToPlanCodeStep = function () {
+                this.isVisible = false;
+                $rootScope.$broadcast(events.dateSubmit);
+            };
+
+            $scope.goToPlanTypeStep = function () {
                 this.isVisible = false;
                 $rootScope.$broadcast(events.restart);
             };
+
+            $scope.restart = $scope.goToPlanTypeStep;
         }
     ]);
