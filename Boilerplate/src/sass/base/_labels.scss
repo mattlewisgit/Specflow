@@ -23,4 +23,15 @@
     &--highlight {
         background: $highlight-color;
     }
+
+    a {
+        color: $white;
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+            color: $white;
+            text-decoration: underline;
+        }
+    }
 }

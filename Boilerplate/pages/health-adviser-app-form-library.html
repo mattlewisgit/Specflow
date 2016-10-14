@@ -130,16 +130,24 @@
                         <p>We found {{documents.length}} application forms based on your selections</p>
 
                         <div>
-                            <div class="label label--primary"
-                                 data-ng-bind="badge"
-                                 data-ng-repeat="badge in badges"></div>
+                            <div class="label label--primary">
+                                <a data-ng-bind="formState.planType" data-ng-click="goToPlanTypeStep()"></a>
+                            </div>
+                            
+                            <div class="label label--primary">
+                                <a data-ng-cloak data-ng-click="goToDateStep()">{{formState.date.format("d MMM YYYY")}}</a>
+                            </div>
+                            
+                            <div class="label label--primary">
+                                <a data-ng-bind="formState.planCode" data-ng-click="goToPlanCodeStep()"></a>
+                            </div>
                         </div>
 
                         <hr />
 
                         <div data-ng-repeat="document in documents">
                             <h4 data-ng-bind="document.Title"></h4>
-                            <p>{{document.Size}}KB, {{document.FileType}}</p>
+                            <p>{{document.DocumentSize}}KB, {{document.FileType}}</p>
 
                             <button class="box-button box-button--secondary-inverse">
                                 Download
