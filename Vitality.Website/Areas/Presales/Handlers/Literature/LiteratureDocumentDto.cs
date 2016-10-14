@@ -40,41 +40,22 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
         
         public static IEnumerable<LiteratureDocumentDto> From(IEnumerable<LiteratureDocumentSearchResult> searchResult1)
         {
-            var results = new List<LiteratureDocumentDto>();
-
-            var list = searchResult1.ToList();
-
-            foreach (var searchResult in searchResult1)
-                results.Add(new LiteratureDocumentDto
-                {
-                    Title = searchResult.Title,
-                    Description = searchResult.Description,
-                    Code = searchResult.Code,
-                    Document = searchResult.Document,
-                    Thumbnail = searchResult.Thumbnail,
-                    PublishDate = searchResult.PublishDate,
-                    Category = searchResult.Category,
-                    Key = searchResult.Title.ToLowerHyphenatedString(),
-                    EffectivePlanDate = searchResult.EffectivePlanDate,
-                    PlanType = searchResult.PlanType,
-                    PlanNumber = searchResult.PlanNumber,
-                    DocumentSize = searchResult.DocumentSize,
-                    AvailableLiterature = new LiteratureDocumentSummaryDto[0]
-                });
-
-            return results;
-        }    
-
-        public static string GetMediaItemSizeMB(string mediaItemID)
-        {
-            var actualPath = mediaItemID.Replace("advisers.vitality.co.uk/media-online", "/sitecore/media library");
-
-            Item item = Context.Database.GetItem(actualPath);
-            MediaItem mediaItem = new MediaItem(item);
-            
-            var kb = (double)mediaItem.Size / 1024 ;
-
-            return kb.ToString("##.#");
-        }                                
+            return searchResult1.Select(searchResult => new LiteratureDocumentDto
+            {
+                Title = searchResult.Title,
+                Description = searchResult.Description,
+                Code = searchResult.Code,
+                Document = searchResult.Document,
+                Thumbnail = searchResult.Thumbnail,
+                PublishDate = searchResult.PublishDate,
+                Category = searchResult.Category,
+                Key = searchResult.Title.ToLowerHyphenatedString(),
+                EffectivePlanDate = searchResult.EffectivePlanDate,
+                PlanType = searchResult.PlanType,
+                PlanNumber = searchResult.PlanNumber,
+                DocumentSize = searchResult.DocumentSize,
+                AvailableLiterature = new LiteratureDocumentSummaryDto[0]
+            }).ToList();
+        }                            
     }
 }
