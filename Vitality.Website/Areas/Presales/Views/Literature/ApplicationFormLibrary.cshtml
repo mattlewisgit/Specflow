@@ -1,30 +1,23 @@
 ﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.LiteratureLibraryPage>
 
 <div data-ng-app="HealthAdvisersFormApp">
-    <h1 class="text-flush-top">@Editable(Model, m => m.Headline)</h1>
-    <p>@Editable(Model, m => m.OpeningParagraph)</p>
-
     <div data-ng-show="isVisible" class="form step1" data-ng-controller="PlanTypeStepController">
         <form>
             <div>Step 1 of 3</div>
             <h3>@Editable(Model, m => m.StepHeaderOne)</h3>
 
             <fieldset>
-                <div data-ng-init="groupName = 'radiogroup1-' + planType"
-                     data-ng-repeat="(i, planType) in planTypes"
-                     class="form__field__input form__field__input--checkbox">
-                    <input id="{{groupName}}" name="selectedPlanType" type="radio"
-                           value="{{planType}}" data-ng-model="$parent.selectedPlanType" />
+                <div data-ng-init="groupName = 'radiogroup1-' + planType" data-ng-repeat="(i, planType) in planTypes" class="form__field__input form__field__input--checkbox">
+                    <input id="{{groupName}}" name="selectedPlanType" type="radio" value="{{planType}}" data-ng-model="$parent.selectedPlanType">
                     <label for="{{groupName}}" data-ng-bind="planType"></label>
                 </div>
             </fieldset>
 
-            <button class="box-button box-button--secondary-inverse"
-                    data-ng-click="typeSelected()">Next</button>
+            <button class="box-button box-button--secondary-inverse" data-ng-click="typeSelected()">Next</button>
         </form>
     </div>
 
-    <div data-ng-cloak data-ng-show="isVisible" class="form step2" data-ng-controller="DateStepController">
+    <div data-ng-cloak="" data-ng-show="isVisible" class="form step2" data-ng-controller="DateStepController">
         <form name="dateForm">
             <div>Step 2 of 3</div>
             <h3>@Editable(Model, m => m.StepHeaderTwo)</h3>
@@ -33,8 +26,7 @@
             <div class="grid-no-gutters form">
                 <div class="grid-col-3-12 form__field" ng-class="(dateForm.day.$invalid) ? 'is-invalid' : ''">
                     <label for="day">Day</label>
-                    <input id="day" name="day" ng-model="filterDate.day"
-                           type="number" pattern="\d*" placeholder="DD" />
+                    <input id="day" name="day" ng-model="filterDate.day" type="number" pattern="\d*" placeholder="DD">
 
                     <div ng-show="dateForm.day.$invalid" class="form__field__error">
                         <p>Please enter a valid day</p>
@@ -47,8 +39,7 @@
 
                 <div class="grid-col-3-12 form__field">
                     <label for="month">Month</label>
-                    <input id="month" name="month" ng-model="filterDate.month"
-                           type="number" pattern="\d*" placeholder="MM" />
+                    <input id="month" name="month" ng-model="filterDate.month" type="number" pattern="\d*" placeholder="MM">
 
                     <div ng-show="dateForm.month.$invalid" class="form__field__error">
                         <p>Please enter a valid month</p>
@@ -57,8 +48,7 @@
 
                 <div class="grid-col-3-12 form__field">
                     <label for="year">Year</label>
-                    <input id="year" name="year" ng-model="filterDate.year"
-                           type="number" pattern="\d*" placeholder="YYYY" />
+                    <input id="year" name="year" ng-model="filterDate.year" type="number" pattern="\d*" placeholder="YYYY">
                 </div>
 
                 <div class="grid-col-2-12 form__field__input--inline"></div>
@@ -72,25 +62,20 @@
         </form>
     </div>
 
-    <div data-ng-cloak data-ng-show="isVisible" class="form step3" data-ng-controller="PlanCodeController">
+    <div data-ng-cloak="" data-ng-show="isVisible" class="form step3" data-ng-controller="PlanCodeController">
         <form>
             <div>Step 3 of 3</div>
-            <h3>@Editable(Model, m => m.StepHeaderOThree</h3>
+            <h3>@Editable(Model, m => m.StepHeaderThree)</h3>
 
             <div class="grid-no-gutters form">
                 <div class="grid-col-4-12 form__field">
                     <select data-ng-model="selectedPlanCode">
-                        <option data-ng-bind="planCode"
-                                data-ng-repeat="(i, planCode) in planCodes"
-                                data-ng-selected="i === 0"
-                                data-ng-value="planCode">
-                        </option>
+                        <option data-ng-bind="planCode" data-ng-repeat="(i, planCode) in planCodes" data-ng-selected="i === 0" data-ng-value="planCode"></option>
                     </select>
                 </div>
             </div>
 
-            <button class="box-button box-button--secondary-inverse"
-                    data-ng-click="planCodeSubmit()">
+            <button class="box-button box-button--secondary-inverse" data-ng-click="planCodeSubmit()">
                 Next
             </button>
 
@@ -100,27 +85,25 @@
         </form>
     </div>
 
-    <div data-ng-cloak data-ng-show="isVisible" class="form results" data-ng-controller="ResultsController">
+    <div data-ng-cloak="" data-ng-show="isVisible" class="form results" data-ng-controller="ResultsController">
         <form>
             <p>We found {{documents.length}} application forms based on your selections</p>
 
             <div>
-                <div class="label label--primary"
-                     data-ng-bind="badge"
-                     data-ng-repeat="badge in badges"></div>
+                <div class="label label--primary" data-ng-bind="badge" data-ng-repeat="badge in badges"></div>
             </div>
 
-            <hr />
+            <hr>
 
             <div data-ng-repeat="document in documents">
                 <h4 data-ng-bind="document.Title"></h4>
-                <p>{{document.Size}}KB, {{document.FileType}}</p>
+                <p>{{document.DocumentSize}}KB, {{document.FileType}}</p>
 
                 <button class="box-button box-button--secondary-inverse">
                     Download
                 </button>
 
-                <hr />
+                <hr>
             </div>
 
             <p>Not quite what you were looking for?</p>
@@ -133,3 +116,8 @@
         </form>
     </div>
 </div>
+
+<script>
+    window.angularData = window.angularData || {};
+    window.angularData.literaturePath = "forms-library"; //'@*Model.LiteratureLibrary.Name*@';
+</script>

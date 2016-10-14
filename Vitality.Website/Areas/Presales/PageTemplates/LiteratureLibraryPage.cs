@@ -46,6 +46,16 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
 
         public string StepHeaderOne { get; set; }
 
+        public string StepHeaderTwo { get; set; }
+
+        public string StepHeaderThree { get; set; }
+
+        public string StepHeaderTwoExample { get; set; }
+
+        public string PlanTypes { get; set; }
+
+        public string PlanNumbers { get; set; }
+
         public string NotFoundErrorMessage { get; set; }
     }
 }

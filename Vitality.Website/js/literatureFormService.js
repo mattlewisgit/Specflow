@@ -1,73 +1,11 @@
-﻿// jscs:disable maximumLineLength
-var mockData = {
-    documents: [
-        {
-            AvailableLiterature: [],
-            Category: "Business",
-            Code: "PHU1234",
-            Description: "Vitality GP Select with VitalityHealth",
-            Document: "http://dev.vitality.co.uk/media-online/presales/pdf/development/guide-to-business-healthcare---january-2015-print-friendly.pdf",
-            EffectivePlanDate: moment("2015-07-06T23:00:00Z"),
-            Key: "vitality-gp-select",
-            PlanNumber : 10,
-            PlanType : "Personal",
-            PublishDate: moment("2016-06-01T23:00:00Z"),
-            Size: 330,
-            Thumbnail: "/src/img/examples/example-pdf.png",
-            Title: "Personal Healthcare - New Business Only"
-        },
-        {
-            AvailableLiterature: [],
-            Category: "Personal",
-            Code: "PLU1294A",
-            Description: "Vitality GP with VitalityHealth",
-            Document: "http://dev.vitality.co.uk/media-online/presales/pdf/development/phf-sales-aid-v2.pdf",
-            EffectivePlanDate: moment("2016-01-06T23:00:00Z"),
-            Key: "vitality-gp",
-            PlanNumber : 10,
-            PlanType : "Business",
-            PublishDate: moment("2016-07-06T23:00:00Z"),
-            Size: 200,
-            Thumbnail: "/src/img/examples/example-pdf.png",
-            Title: "Personal Healthcare - Business Only"
-        },
-        {
-            AvailableLiterature: [],
-            Category: "Corporate",
-            Code: "NPU1234",
-            Description: "Health and rewards partners with VitalityHealth",
-            Document: "http://dev.vitality.co.uk/media-online/presales/pdf/development/business-healthcare-sales-aid---january-2015.pdf",
-            EffectivePlanDate: moment("2016-04-20T23:00:00Z"),
-            Key: "health-and-rewards-partners",
-            PlanNumber : 20,
-            PlanType : "Business",
-            PublishDate: moment("2016-06-01T23:00:00Z"),
-            Size: 220,
-            Thumbnail: "/src/img/examples/example-pdf.png",
-            Title: "Personal Healthcare - Moratorium - Business Only"
-        },
-        {
-            AvailableLiterature: [],
-            Category: "Corporate",
-            Code: "PHU1294A",
-            Description: "Personal Healthcare with VitalityHealth",
-            Document: "http://dev.vitality.co.uk/media-online/presales/pdf/development/phf-sales-aid-v2.pdf",
-            EffectivePlanDate: moment("2016-03-06T23:00:00Z"),
-            Key: "personal-healthcare-sales-aid",
-            PlanNumber : 50,
-            PlanType : "Corporate",
-            PublishDate: moment("2016-07-06T23:00:00Z"),
-            Size: 1024,
-            Thumbnail: "/src/img/examples/example-pdf.png",
-            Title: "Personal Healthcare - New Business"
-        }
-    ]
-};
-
-angular
+﻿angular
     .module("LiteratureFormService", [])
-    .service("LiteratureFormService", function () {
+    .service("LiteratureFormService", ["$http", function ($http) {
         "use strict";
+        var baseUrl = "/api/literature/";
+        var cachedPlanTypes = [];
+        var cachedDocuments = [];
+
         this._formState = {
             date: moment(),
             planCode: "",
@@ -82,19 +20,33 @@ angular
             Title: "Title"
         };
 
-        this.getPlanCodes = function (category) {
-            return _.uniq(_.pluck(mockData.documents, documentProperties.PlanNumber)).sort();
+        this.getPlanCodes = function () {
+            return _.uniq(_.pluck(cachedDocuments, documentProperties.PlanNumber)).sort();
         };
 
-        this.getPlanTypes = function () {
-            return _.uniq(_.pluck(mockData.documents, documentProperties.PlanType)).sort();
+        this.getPlanTypes = function(callback) {
+            if (cachedPlanTypes && cachedPlanTypes.length > 0) {
+                callback(cachedPlanTypes);
+            }
+
+            $http
+                .get(baseUrl + window.angularData.literaturePath)
+                .error(function() {
+                    // ...
+                })
+                .then(function (response) {
+                    cachedDocuments = response.data;
+                    cachedPlanTypes = _.uniq(_.pluck(cachedDocuments, documentProperties.PlanType)).sort();
+                    callback(cachedPlanTypes);
+                });
         };
 
         this.getDocuments = function () {
-            return _.sortBy(mockData.documents
+            return _.sortBy(cachedDocuments
                 .filter(function (document) {
-                    return document.PlanNumber === this._formState.planCode &&
-                        document.EffectivePlanDate.isAfter(this._formState.date) &&
+                    // Filter documents based on the plan number, effective date and plan type.
+                    return (+document.PlanNumber) === (+this._formState.planCode) &&
+                        moment(document.EffectivePlanDate).isAfter(this._formState.date) &&
                         document.PlanType === this._formState.planType;
                 }, this)
                 .map(function (document) {
@@ -118,4 +70,4 @@ angular
         this.setPlanType = function (planType) {
             this._formState.planType = planType;
         }
-    });
+    }]);

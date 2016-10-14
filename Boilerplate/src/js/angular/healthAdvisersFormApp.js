@@ -17,8 +17,11 @@ window.healthAdvisersSalesLiteratureApp = angular
         function ($scope, $rootScope, LiteratureFormService) {
             "use strict";
             $scope.isVisible = true;
-            $scope.planTypes = LiteratureFormService.getPlanTypes();
-            $scope.selectedPlanType = $scope.planTypes[0];
+
+            LiteratureFormService.getPlanTypes(function (planTypes) {
+                $scope.selectedPlanType = planTypes[0];
+                $scope.planTypes = planTypes;
+            });
 
             $rootScope.$on(events.restart, function () {
                 $scope.isVisible = true;
