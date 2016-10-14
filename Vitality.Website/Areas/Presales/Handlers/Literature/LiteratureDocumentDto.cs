@@ -32,9 +32,9 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
 
         public string PlanType { get; set; }
 
-        public string PlanNumber { get; set; }
+        public int PlanNumber { get; set; }
 
-        public string DocumentSize { get; set; }
+        public long DocumentSize { get; set; }
 
         public LiteratureDocumentSummaryDto[] AvailableLiterature { get; set; }
         
