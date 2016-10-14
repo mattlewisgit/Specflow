@@ -43,9 +43,6 @@
                         <input type="submit" ng-click="filterAction(dateForm)" value="Submit"
                                class="box-button box-button--secondary box-button--rounded form__field__input--submit--inline" />
                     </div>
-                    <div ng-show="showNoDocsFromSearchMessage">
-                        @Editable(Model, m => m.NotFoundErrorMessage)
-                    </div>
                 </form>
             </div>
         </div>
@@ -74,7 +71,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
     <div class="grid">
@@ -98,7 +94,7 @@
 
             <ul class="list--buttons">
                 <li ng-show="showNoDocsFromSearchMessage">
-                    Sorry, no documents match that search.
+                    @Editable(Model, m => m.NotFoundErrorMessage)
                 </li>
                 <li ng-repeat="document in literature">
                     <a class="button-list"
