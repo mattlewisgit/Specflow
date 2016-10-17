@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {5D6A0F49-8596-4890-8493-EB5A5228E180}
+id: {95FAFF7E-8596-4388-AF58-FCED9E0E6696}
 database: master
-path: /sitecore/templates/Presales/Page Templates/Application Form Library Page/Step Content/PlanNumbers
-parent: {C7F8AF5E-3EA5-426C-9352-566C2A9E39E8}
-name: PlanNumbers
+path: /sitecore/templates/Presales/Component Templates/Literature/Literature Document/Literature/PlanType
+parent: {3D1DEFBD-7CD2-49E9-B148-29D96366B1CD}
+name: PlanType
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -13,56 +13,56 @@ templatekey: Template field
 field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
 name: Type
 key: type
-content-length: 9
+content-length: 8
 
-Multilist
+Droplist
 ----field----
 field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
 name: Source
 key: source
-content-length: 71
+content-length: 69
 
-/sitecore/content/Advisers/Configuration/Application Forms/Plan Numbers
+/sitecore/content/Advisers/Configuration/Application Forms/Plan Types
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
 key: __sortorder
-content-length: 3
+content-length: 4
 
-700
+1000
 ----version----
 language: en
 version: 1
-revision: e6f4b054-87f2-494e-b61c-1a7e98c886d4
+revision: a5367f36-b8f8-487f-a88a-013501976680
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 12
+content-length: 9
 
-Plan Numbers
+Plan Type
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20161011T155345Z
+20161013T085917Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-e6f4b054-87f2-494e-b61c-1a7e98c886d4
+a5367f36-b8f8-487f-a88a-013501976680
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161012T090836Z
+20161014T154238Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
