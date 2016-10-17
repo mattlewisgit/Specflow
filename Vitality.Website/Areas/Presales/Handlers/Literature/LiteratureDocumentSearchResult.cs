@@ -1,4 +1,9 @@
-﻿namespace Vitality.Website.Areas.Presales.Handlers.Literature
+﻿using System.Collections.Generic;
+using Glass.Mapper.Sc.Fields;
+using Sitecore.Configuration;
+using Sitecore.Resources.Media;
+
+namespace Vitality.Website.Areas.Presales.Handlers.Literature
 {
     using System;
     using System.ComponentModel;
@@ -34,6 +39,15 @@
 
         [IndexField("effectiveplandate")]
         public virtual DateTime EffectivePlanDate { get; set; }
+
+        [IndexField("plantype")]
+        public virtual string PlanType { get; set; }
+
+        [IndexField("plannumber")]
+        public virtual int PlanNumber { get; set; }
+
+        [IndexField("documentsize")]
+        public virtual long DocumentSize { get; set; }
 
         [IndexField("_template")]
         [TypeConverter(typeof(IndexFieldGuidValueConverter))]

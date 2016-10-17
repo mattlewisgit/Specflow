@@ -62,6 +62,7 @@
                     break;
                 case "general link":
                     var mediaLink = (LinkField)field;
+                    
                     if (mediaLink != null)
                     {
                         mediaItem = Database.GetDatabase("web").GetItem(mediaLink.TargetID);
