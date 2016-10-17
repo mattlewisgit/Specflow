@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
+    <sitecore>
+        <hooks>
+            <patch:delete type="Sitecore.Form.Core.WffmActionHook, Sitecore.Forms.Core" />
+        </hooks>
+
+        <settings>
+            <setting name="WFM.IsRemoteActions" value="true"/>
+        </settings>
+
+        <events timingLevel="custom">
+            <!--Remote events handler-->
+            <patch:delete name="wffm:action:remote">
+            </patch:delete>
+        </events>
+    </sitecore>
+</configuration>
