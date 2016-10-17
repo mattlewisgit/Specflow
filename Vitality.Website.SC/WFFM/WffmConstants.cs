@@ -27,7 +27,9 @@ namespace Vitality.Website.SC.WFFM
             public static Guid CheckboxList = new Guid("{E994EAE0-EDB0-4D89-B545-FEBEF07DD7CD}");
             public static readonly Guid Captcha = new Guid("{7FB270BE-FEFC-49C3-8CB4-947878C099E5}");
             public static Guid PasswordConfirmation = new Guid("{1AD5CA6E-8A92-49F0-889C-D082F2849FBD}");
-            public static Guid CreditCard = new Guid("{CBB8A16B-A726-4445-99E8-4D835AE1F735}");
+            public static Guid CreditCard = new Guid("{CBB8A16B-A726-4445-99E8-4D835AE1F735}");            
         }
+
+        public const string XmlSchemaTemplateId = "{8AE60F3E-4350-4973-BAAB-720EAEB6543D}";
     }
 }
