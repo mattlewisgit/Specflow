@@ -15,4 +15,7 @@
             </patch:delete>
         </events>
     </sitecore>
+    <connectionStrings>
+        <patch:delete name="wffm" />
+    </connectionStrings>
 </configuration>
