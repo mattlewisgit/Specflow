@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Sitecore.Data;
+using Sitecore.Diagnostics;
 using Sitecore.WFFM.Abstractions.Actions;
 using Vitality.Website.App.CallPro;
 using Vitality.Website.SC.WFFM.Helpers;
@@ -32,11 +34,21 @@ namespace Vitality.Website.SC.WFFM.SaveActions
         /// </param>
         public void Execute(ID formId, AdaptedResultList adaptedFields, ActionCallContext actionCallContext = null, params object[] data)
         {
+            Log.Info("SchemaId:" + SchemaId, this);
+            Log.Info("FormFields:" + adaptedFields.Count(), this);
+
+            Assert.ArgumentNotNull(SchemaId, "SchemaId");
+
+            Assert.ArgumentNotNull(adaptedFields, "Form Fields");
+
             // Extract form fields.
             Dictionary<string, string> formFields = FormFieldsHelper.ExtractFormFields(adaptedFields);
 
             // Extract XML template.
             var item = Sitecore.Context.Database.GetItem(new ID(SchemaId));
+            Assert.ArgumentNotNull(item, "Call Pro Schema");
+            Assert.AreEqual(item.TemplateID.ToString(), WffmConstants.XmlSchemaTemplateId, "");
+
             var xmlTemplate = item.Fields["Xml"].Value;
 
             // Transform XML.
@@ -50,7 +62,6 @@ namespace Vitality.Website.SC.WFFM.SaveActions
         /// Gets or sets the SchemaId field.
         /// </summary>
         public string SchemaId { get; set; }
-        public string TestCheckBox { get; set; }
 
         public ID ActionID { get; set; }
         public string UniqueKey { get; set; }
