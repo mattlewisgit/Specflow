@@ -57,7 +57,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Forms.Core">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.160304\lib\Sitecore.Forms.Core.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.160304\bin\Sitecore.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ItemWebApi, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.ItemWebApi.dll</HintPath>
@@ -92,7 +92,7 @@
     </Reference>
     <Reference Include="Sitecore.WFFM.Abstractions, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.160304\lib\Sitecore.WFFM.Abstractions.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.160304\bin\Sitecore.WFFM.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -111,6 +111,7 @@
     <Compile Include="Agents\Sitemaps\SitemapIndex.cs" />
     <Compile Include="ContentSearch\Analyzers\LowerCaseLetterAnalyzer.cs" />
     <Compile Include="ContentSearch\ComputedFields\AncestorField.cs" />
+    <Compile Include="ContentSearch\ComputedFields\MediaItemSize.cs" />
     <Compile Include="ContentSearch\ComputedFields\MediaItemReferenceUrlLink.cs" />
     <Compile Include="Events\ItemEventsHandler.cs" />
     <Compile Include="Agents\Sitemaps\InitializeSitemap.cs" />

@@ -35,7 +35,7 @@
                 // and returns a list of objects with those names and a default,
                 // deselected flag, then caches the result!
                 if (cachedCategories && cachedCategories.length > 0) {
-                    return cachedCategories;
+                    callback(cachedCategories);
                 }
 
                 $http

@@ -1,3 +1,4 @@
+require("./angular/healthAdvisersFormApp");
 require("./angular/healthAdvisersLiteratureApp");
 
 var AccordionModule = require("./modules/accordionModule");

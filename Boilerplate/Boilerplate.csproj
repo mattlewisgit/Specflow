@@ -64,6 +64,7 @@
     <Content Include="components\summary\summary-right.html" />
     <Content Include="global\colours.html" />
     <Content Include="global\grids.html" />
+    <Content Include="global\labels.html" />
     <Content Include="global\lists.html" />
     <Content Include="global\forms.html" />
     <Content Include="global\buttons.html" />
@@ -79,6 +80,7 @@
     <Content Include="components\rewards_leader.html" />
     <Content Include="index.html" />
     <Content Include="components\main_navigation.html" />
+    <Content Include="pages\health-adviser-app-form-library.html" />
     <Content Include="pages\health-adviser-member-library.html" />
     <Content Include="robots.txt" />
     <Content Include="pages\health-adviser-sales-library.html" />
@@ -216,6 +218,7 @@
     <Content Include="src\img\logos\white\starbucks_white.png" />
     <Content Include="src\img\logos\white\virgin-active_white.png" />
     <Content Include="src\img\logos\white\weightwatchers_white.png" />
+    <Content Include="src\js\angular\healthAdvisersFormApp.js" />
     <Content Include="src\js\angular\healthAdvisersLiteratureApp.js" />
     <Content Include="src\js\mocks\literatureLibraryServiceMock.js" />
     <Content Include="src\js\modules\accordionModule.js" />
@@ -237,6 +240,9 @@
     <Content Include="src\js\modules\tabsModule.js" />
     <Content Include="src\sass\modules\_faq-leader.scss" />
     <Content Include="src\templates\critical-css.html" />
+    <Content Include="src\unit-tests\modules\breakpointsModuleTest.js" />
+    <Content Include="src\unit-tests\unit-tests.js" />
+    <Content Include="unit-tests.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

@@ -1,5 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using Sitecore;
+using Sitecore.Data.Items;
+using Sitecore.Web;
 using Vitality.Website.Extensions;
 
 namespace Vitality.Website.Areas.Presales.Handlers.Literature
@@ -26,11 +30,17 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
 
         public DateTime EffectivePlanDate { get; set; }
 
+        public string PlanType { get; set; }
+
+        public int PlanNumber { get; set; }
+
+        public long DocumentSize { get; set; }
+
         public LiteratureDocumentSummaryDto[] AvailableLiterature { get; set; }
         
         public static IEnumerable<LiteratureDocumentDto> From(IEnumerable<LiteratureDocumentSearchResult> searchResult1)
         {
-            var results = searchResult1.Select(searchResult => new LiteratureDocumentDto
+            return searchResult1.Select(searchResult => new LiteratureDocumentDto
             {
                 Title = searchResult.Title,
                 Description = searchResult.Description,
@@ -41,10 +51,11 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
                 Category = searchResult.Category,
                 Key = searchResult.Title.ToLowerHyphenatedString(),
                 EffectivePlanDate = searchResult.EffectivePlanDate,
+                PlanType = searchResult.PlanType,
+                PlanNumber = searchResult.PlanNumber,
+                DocumentSize = searchResult.DocumentSize,
                 AvailableLiterature = new LiteratureDocumentSummaryDto[0]
             }).ToList();
-
-            return results;
-        }
+        }                            
     }
 }

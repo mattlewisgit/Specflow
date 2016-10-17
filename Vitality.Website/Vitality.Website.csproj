@@ -749,6 +749,7 @@
     <Content Include="Areas\Presales\Views\FeatureBlocks\AwardLeader.cshtml" />
     <Content Include="Areas\Presales\Views\Literature\LiteratureLibrary.cshtml" />
     <Content Include="Areas\Presales\Views\Literature\MemberLibrary.cshtml" />
+    <Content Include="Areas\Presales\Views\Literature\ApplicationFormLibrary.cshtml" />
     <None Include="Properties\PublishProfiles\test.pubxml" />
     <Content Include="Views\Form\EditorTemplates\CheckboxField.cshtml" />
     <Content Include="Views\Form\EditorTemplates\CheckboxListField.cshtml" />
