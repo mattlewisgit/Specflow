@@ -28,10 +28,7 @@
 
                 var media = GetMediaItem(field);
 
-                if (media != null)
-                    return media.Size/1024;
-
-                return null;
+                return media != null ? (object) (media.Size/1024) : null;
             }
 
         public string FieldName { get; set; }
@@ -39,26 +36,25 @@
         public string ReturnType { get; set; } 
 
         private static MediaItem GetMediaItem(Field field)
-        {
-            MediaItem mediaItem = null;
+        {   
             switch (field.TypeKey)
             {
                 case "image":
                     var image = (ImageField)field;
                     if (image != null)
                     {
-                        mediaItem = image.MediaItem;
+                        return image.MediaItem;
                     }
                     break;
                 case "general link":
                     var mediaLink = (LinkField)field;
                     if (mediaLink != null)
                     {
-                        mediaItem = Database.GetDatabase("web").GetItem(mediaLink.TargetID);
+                        return Database.GetDatabase("web").GetItem(mediaLink.TargetID);
                     }
                     break;
             }
-            return mediaItem;
+            return null;
         }
     }
 }
