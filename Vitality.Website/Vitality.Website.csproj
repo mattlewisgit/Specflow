@@ -320,7 +320,7 @@
     <Content Include="App_Config\Prototypes.config" />
     <Content Include="App_Config\XamlSharp.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.WFFM.config" />
-    <Content Include="App_Config\Include\Vitality\Vitality.WFFM.config.cdonly" />
+    <Content Include="App_Config\Include\Vitality\Vitality.WFFM_CD.config.cdonly" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
