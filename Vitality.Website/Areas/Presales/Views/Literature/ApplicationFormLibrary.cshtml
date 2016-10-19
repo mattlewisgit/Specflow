@@ -1,6 +1,6 @@
 ﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.LiteratureLibraryPage>
 
-<div data-ng-app="HealthAdvisersFormApp">
+<div class="multi-form" data-ng-app="HealthAdvisersFormApp">
     <div data-ng-show="isVisible" class="form step1" data-ng-controller="PlanTypeStepController">
         <form>
             <div>Step 1 of 3</div>
@@ -87,7 +87,11 @@
 
     <div data-ng-cloak="" data-ng-show="isVisible" class="form results" data-ng-controller="ResultsController">
         <form>
-            <p>We found {{documents.length}} application forms based on your selections</p>
+            <p>
+                We have found
+                <span class="text--primary">{{documents.length}} application forms</span>
+                based on your selections
+            </p>
 
             <div>
                 <div class="label label--primary">

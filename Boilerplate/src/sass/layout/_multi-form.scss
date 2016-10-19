@@ -1,0 +1,8 @@
+.multi-form {
+    @extend .pinch;
+    padding: $pad 0;
+
+    fieldset {
+        margin: $pad;
+    }
+}
