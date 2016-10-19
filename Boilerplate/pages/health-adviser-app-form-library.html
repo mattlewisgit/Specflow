@@ -149,9 +149,10 @@
                             <h4 data-ng-bind="document.Title"></h4>
                             <p>{{document.DocumentSize}}KB, {{document.FileType}}</p>
 
-                            <button class="box-button box-button--secondary-inverse">
+                            <a href="{{document.Document}}"
+                               class="box-button box-button--secondary-inverse box-button--rounded">
                                 Download
-                            </button>
+                            </a>
 
                             <hr />
                         </div>
