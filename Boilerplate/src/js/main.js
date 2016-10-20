@@ -1,5 +1,5 @@
-require("./angular/healthAdvisersFormApp");
-require("./angular/healthAdvisersLiteratureApp");
+require("./angular/health-advisers-form-app");
+require("./angular/health-advisers-literature-app");
 
 var AccordionModule = require("./modules/accordionModule");
 var AnimationDelayModule = require("./modules/animationDelayModule");
