@@ -39,7 +39,7 @@
                 }
 
                 $http
-                   .get(baseUrl + window.angularData.literaturePath)
+                   .get(baseUrl + window.angularData.literaturePath.toLowerCase())
                    .error(function () {
                        // ...
                    })
