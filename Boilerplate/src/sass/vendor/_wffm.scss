@@ -1,0 +1,8 @@
+// Sitecore Web Forms For Marketers.
+form[data-wffm] {
+    margin: $pad 0;
+
+    .field-validation-error {
+        @extend .form__field__error;
+    }
+}
