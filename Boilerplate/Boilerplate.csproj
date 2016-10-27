@@ -218,9 +218,10 @@
     <Content Include="src\img\logos\white\starbucks_white.png" />
     <Content Include="src\img\logos\white\virgin-active_white.png" />
     <Content Include="src\img\logos\white\weightwatchers_white.png" />
-    <Content Include="src\js\angular\healthAdvisersFormApp.js" />
-    <Content Include="src\js\angular\healthAdvisersLiteratureApp.js" />
-    <Content Include="src\js\mocks\literatureLibraryServiceMock.js" />
+    <Content Include="src\js\angular\health-advisers-form-app.js" />
+    <Content Include="src\js\angular\health-advisers-literature-app.js" />
+    <Content Include="src\js\mocks\literature-library-service-mock.js" />
+    <Content Include="src\js\mocks\literature-form-service-mock.js" />
     <Content Include="src\js\modules\accordionModule.js" />
     <Content Include="src\js\modules\animationDelayModule.js" />
     <Content Include="src\js\modules\cookieMessageModule.js" />
@@ -425,6 +426,7 @@
     <Content Include="src\js\config\youtube-api-base-config.json" />
     <Content Include="src\sass\vendor\_typeaheadjs.scss" />
     <Content Include="src\sass\layout\_multi-form.scss" />
+    <Content Include="src\js\config\moment-api.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
