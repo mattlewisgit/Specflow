@@ -28,6 +28,7 @@
     <file src="js\*.js" target="js" />
     <file src="sitecore modules\Shell\UrlRewrite\**\*.*" target="sitecore modules\Shell\UrlRewrite" />
     <file src="Views\Form\**\*.*" target="Views\Form" />
+    <file src="sitemaps" />
     <file src="Web.config" />
     <file src="Web.CD.config" />
     <file src="Web.CMS.config" />
