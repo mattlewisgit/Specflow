@@ -9,22 +9,19 @@ namespace Vitality.Website.App.CallPro
     {
         public static HttpStatusCode Send(string xml)
         {
-            var baseUrl = new StringBuilder();
-            baseUrl.Append(ConfigurationManager.AppSettings["CALL_PRO_API_URL"]);
-            baseUrl.Append("?mode=import&hash=");
-            baseUrl.Append(ConfigurationManager.AppSettings["CALL_PRO_HASH_CODE"]);
+            // Once this app is moved to an API, use a strongly-typed config interface
+            // with section, a URI builder and Dependency Injection.
+            var baseUrl = new StringBuilder()
+                .Append(ConfigurationManager.AppSettings["CALL_PRO_API_URL"])
+                .Append("?mode=import&hash=")
+                .Append(ConfigurationManager.AppSettings["CALL_PRO_HASH_CODE"]);
 
-            RestClient client = new RestClient(baseUrl.ToString());
-
-            var request = new RestRequest(Method.POST);
-            request.AddParameter(
+            var request = new RestRequest(Method.POST).AddParameter(
                 "application/x-www-form-urlencoded",
                 string.Format("xml={0}", xml),
                 ParameterType.RequestBody);
 
-            var response = client.Post(request);
-
-            return response.StatusCode;
+            return new RestClient(baseUrl.ToString()).Post(request).StatusCode;
         }
     }
 }
