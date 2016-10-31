@@ -240,11 +240,12 @@ Vitality.Website/default.css
 Vitality.Website/default.htm.sitedown
 Vitality.Website/default.js
 Vitality.Website/layouts/
+!Vitality.Website/sitecore/shell/Applications/Modules/Web Forms for Marketers/Dialogs/Action Editor/CallProSchemaEditor.xml
 Vitality.Website/upload/
 Vitality.Website/Views/Shared/
 Vitality.Website/xsl/
 Vitality.Website/webedit.css
-
+Vitality.Website/bower_components/vitality.boilerplate/.bower.json
 
 #Setup
 /install
@@ -258,16 +259,3 @@ Vitality.Website/client_side/sass/*.map
 *.orig
 *.*~HEAD
 
-# Boilerplate.
-Boilerplate/favicon-data.json
-Boilerplate/favicon-template.html
-Boilerplate/tmp-*.*
-Boilerplate/bower_components
-Boilerplate/css/
-Boilerplate/dist/
-Boilerplate/images/
-Boilerplate/img/
-Boilerplate/js/
-Boilerplate/src/sass/generated/
-Boilerplate/tmp/
-Vitality.Website/bower_components/vitality.boilerplate/.bower.json
