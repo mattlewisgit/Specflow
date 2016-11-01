@@ -2,17 +2,19 @@
     "name": "vitality.website",
     "version": "1.0.0",
     "description": "Vitality Website",
-    "dependencies": {
-        "del": "*",
-        "gulp": "*",
-        "gulp-cssnano": "*",
-        "gulp-load-plugins": "*",
-        "gulp-sass": "*",
-        "gulp-sass-lint": "*",
-        "gulp-task-listing": "*"
-    },
-    "scripts": {
-        "gulp": "gulp"
-    },
+  "dependencies": {
+    "bower": "1.7.x",
+    "del": "*",
+    "gulp": "*",
+    "gulp-cssnano": "*",
+    "gulp-load-plugins": "*",
+    "gulp-sass": "*",
+    "gulp-sass-lint": "*",
+    "gulp-task-listing": "*"
+  },
+  "scripts": {
+    "bower": "bower",
+    "gulp": "gulp"
+  },
     "sasslintConfig": "sass-lint.yml"
 }
