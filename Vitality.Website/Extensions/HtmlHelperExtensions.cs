@@ -38,5 +38,10 @@
             output.Append("</fieldset>");
             return new MvcHtmlString(output.ToString());
         }
+
+        public static MvcHtmlString WffmHeader(this HtmlHelper helper, string headerText, string tag)
+        {
+            return new MvcHtmlString(string.Format(@"<{0}>{1}</{0}>", tag, headerText));
+        }
     }
 }

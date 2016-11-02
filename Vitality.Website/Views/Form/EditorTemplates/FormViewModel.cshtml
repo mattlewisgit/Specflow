@@ -1,6 +1,7 @@
 ﻿@using Sitecore.Forms.Mvc
 @using Sitecore.Forms.Mvc.Html
 @using Sitecore.Globalization
+@using Vitality.Website.Extensions
 @model Sitecore.Forms.Mvc.ViewModels.FormViewModel
 
 @{
@@ -47,7 +48,7 @@
             if (Model.ShowTitle)
             {
                 var headerText = Html.BootstrapText("Title");
-                @Html.BootstrapHeader(headerText.ToString(), Model.TitleTag)
+                @Html.WffmHeader(headerText.ToString(), Model.TitleTag)
             }
 
             if (Model.SuccessSubmit)
