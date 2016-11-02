@@ -337,9 +337,7 @@
     <Content Include="client_side\img\vitality-logo.svg" />
     <Content Include="client_side\img\youtube--footer.svg" />
     <Content Include="css\experience_editor_fix.css" />
-    <Content Include="css\rich-text-editor-1.0.0.min.css" />
     <Content Include="css\tablesaw.css" />
-    <Content Include="css\vitality-boilerplate-1.0.0.min.css" />
     <Content Include="error.html" />
     <Content Include="Global.asax" />
     <Content Include="images\sprite-generated%402x.png" />
@@ -382,9 +380,8 @@
     <Content Include="img\spritesheets\svg-sprite.svg" />
     <Content Include="img\stanley-peering-min.png" />
     <Content Include="img\vitality-logo--white.svg" />
-    <Content Include="js\literatureFormService.js" />
-    <Content Include="js\literatureLibraryService.js" />
-    <Content Include="js\vitality-boilerplate-1.0.0.min.js" />
+    <Content Include="js\literature-form-service.js" />
+    <Content Include="js\literature-library-service.js" />
     <Content Include="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\CallProSchemaEditor.xml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -753,6 +750,8 @@
     <Content Include="Areas\Presales\Views\Literature\LiteratureLibrary.cshtml" />
     <Content Include="Areas\Presales\Views\Literature\MemberLibrary.cshtml" />
     <Content Include="Areas\Presales\Views\Literature\ApplicationFormLibrary.cshtml" />
+    <Content Include="client_side\bower.json" />
+    <Content Include="client_side\.bowerrc" />
     <None Include="Properties\PublishProfiles\test.pubxml" />
     <Content Include="Views\Form\EditorTemplates\CheckboxField.cshtml" />
     <Content Include="Views\Form\EditorTemplates\CheckboxListField.cshtml" />

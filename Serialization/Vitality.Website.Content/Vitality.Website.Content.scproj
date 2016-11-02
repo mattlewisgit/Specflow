@@ -30,7 +30,7 @@
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
     <EnableValidations>False</EnableValidations>
     <ValidationSettingsFilePath>.\Vitality.Website.Content_Debug.xml</ValidationSettingsFilePath>
-    <SitecoreWebUrl>http://dev.vitality.co.uk/</SitecoreWebUrl>
+    <SitecoreWebUrl>http://presales.vitality.co.uk/</SitecoreWebUrl>
     <InstallSitecoreConnector>True</InstallSitecoreConnector>
     <DisableFileDeployment>False</DisableFileDeployment>
     <SitecoreDeployFolder>E:\Projects\Vitality-Website\Vitality.Website</SitecoreDeployFolder>

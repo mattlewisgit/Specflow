@@ -16,13 +16,13 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
         {
             var context = HttpContext.Current;
             
-            var subdomain = GetSubDomain(context.Request.Url);
+            var siteName = Sitecore.Context.Site.Name;
             
             if (string.Equals(context.Request.CurrentExecutionFilePathExtension,".xml", StringComparison.InvariantCultureIgnoreCase))
             {
                 context.Response.ClearContent();
 
-                var xmlFileStream = new FileStream(ReformatXmlFile(args, subdomain), FileMode.Open, FileAccess.Read, FileShare.Read);
+                var xmlFileStream = new FileStream(ReformatXmlFile(args, siteName), FileMode.Open, FileAccess.Read, FileShare.Read);
                 
                 //xml.
                 var doc = new XmlDocument();
@@ -40,32 +40,13 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
             else if (string.Equals(context.Request.CurrentExecutionFilePathExtension, ".gz",StringComparison.InvariantCultureIgnoreCase))
             {
                 context.Response.ContentType = "application/octet-stream";
-                context.Response.WriteFile(ReformatXmlFile(args, subdomain));
+                context.Response.WriteFile(ReformatXmlFile(args, siteName));
             }
         }
 
-        private static string ReformatXmlFile(HttpRequestArgs args, string subdomain)
+        private static string ReformatXmlFile(HttpRequestArgs args, string siteName)
         {
-            return string.Format("{0}{1}//{2}{3}", HttpRuntime.AppDomainAppPath, SiteMapLocation, subdomain + "_", args.Context.Request.Url.Segments[1]);
-        }
-
-        private static string GetSubDomain(Uri url)
-        {
-            if (url.HostNameType == UriHostNameType.Dns)
-            {
-                var host = url.Host;
-
-                var nodes = host.Split('.');
-                var startNode = 0;
-                if (string.Equals(nodes[0], "www" , StringComparison.InvariantCultureIgnoreCase))
-                {
-                    startNode = 1;
-                }
-
-                return string.Format("{0}", nodes[startNode]);
-            }
-
-            return null;
-        }
+            return string.Format("{0}{1}//{2}{3}", HttpRuntime.AppDomainAppPath, SiteMapLocation, siteName + "_", args.Context.Request.Url.Segments[1]);
+        } 
     }
 }
