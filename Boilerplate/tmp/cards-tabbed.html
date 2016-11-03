@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Vitality Boilerplate | Components | Cards Tabbed</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0" />
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/app-devel.css" />
+
+    <!-- Boilerplate only. -->
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/themes/prism.css" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/plugins/line-numbers/prism-line-numbers.css" />
+
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/aight/2.1.1/aight.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <main tabindex="-1">
+        <section>
+            <div>
+                <h1>Cards Tabbed</h1>
+                <h2>Description</h2>
+
+                <p>
+                    Enables a single list of cards that can be filtered using a tabbed menu.
+                    The menu and subsequent filtering are powered by a single data attribute assigned to each card.
+                </p>
+
+                <p>
+                    <b>Note</b>: the data attribute can be comma-separated, so a card can be seen in multiple filters.
+                </p>
+
+                <h2>Example</h2>
+                <h3>Demo</h3>
+
+                <div class="example">
+                    <div class="js-filter-section">
+                        <div class="cards-tabbed spotlight spotlight--max-3">
+                            <h2 class="spotlight__heading">Partners</h2>
+
+                            <p class="spotlight__intro">
+                                Comprehensive cover, access to healthcare and
+                                huge rewards for our Health &amp; Life Insurance customers.
+                            </p>
+
+                            <ul class="filter-list js-filter-options">
+                                <li class="filter-list__item js-filter-options__item js-filter-options__item--default">
+                                    <a class="js-focus" role="button" data-filter="all">All</a>
+                                </li>
+
+                                <li class="filter-list__item js-filter-options__item">
+                                    <a role="button" data-filter="activity-tracking">Activity tracking</a>
+                                </li>
+
+                                <li class="filter-list__item js-filter-options__item">
+                                    <a role="button" data-filter="health-checks">Health checks</a>
+                                </li>
+
+                                <li class="filter-list__item js-filter-options__item">
+                                    <a role="button" data-filter="healthy-foods">Healthy foods</a>
+                                </li>
+
+                                <li class="filter-list__item js-filter-options__item">
+                                    <a role="button" data-filter="fitness">Fitness</a>
+                                </li>
+                            </ul>
+
+                            <div class="filter-section__details js-filter-section__details">
+                                <p>
+                                    Viewing <span class="js-filter-matches">X</span> Vitality Partners for
+                                    <span class="js-filter-string">filter term</span>.
+                                </p>
+                            </div>
+
+                            <ul class="spotlight__list js-filtered-container">
+                                <li class="spotlight__list-item js-filtered-container__item" data-filter="healthy-foods,fitness">
+                                    <div class="spotlight-item js-match-height--2">
+                                        <div class="spotlight-item__top-content js-match-height">
+                                            <div class="spotlight-item__intro-image burst">
+                                                <img src="/src/img/examples/running-woman-2.jpg" alt="Running" />
+                                            </div>
+
+                                            <div class="spotlight-item__logo" style="background-color: #005953;">
+                                                <a href="#">
+                                                    <img src="/src/img/logos/evans.png" alt="Evans Cycles" />
+                                                </a>
+                                            </div>
+
+                                            <p class="spotlight-item__heading">
+                                                Weight Watchers
+                                            </p>
+
+                                            <div class="spotlight-item__content">
+                                                Get a Weight Watchers Monthly Pass for 6 months for £30.
+                                            </div>
+                                        </div>
+                                        <div class="spotlight-item__cta">
+
+                                            <a href="#" class="emphasis-link">Learn more</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="spotlight__list-item js-filtered-container__item" data-filter="fitness">
+                                    <div class="spotlight-item js-match-height--2">
+                                        <div class="spotlight-item__top-content js-match-height">
+                                            <div class="spotlight-item__intro-image burst">
+                                                <img src="/src/img/examples/running-man.jpg" alt="Running man" />
+                                            </div>
+
+                                            <div class="spotlight-item__logo">
+                                                <a href="#">
+                                                    <img src="/src/img/logos/virgin_active.png" alt="Virgin Active" />
+                                                </a>
+                                            </div>
+
+                                            <p class="spotlight-item__heading">
+                                                Virgin Active
+                                            </p>
+
+                                            <div class="spotlight-item__content">
+                                                50% off monthly membership fees. A joining fee will apply.
+                                            </div>
+                                        </div>
+
+                                        <div class="spotlight-item__cta">
+                                            <a href="#" class="emphasis-link">Learn more</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="spotlight__list-item js-filtered-container__item" data-filter="healthy-foods">
+                                    <div class="spotlight-item js-match-height--2">
+                                        <div class="spotlight-item__top-content js-match-height">
+                                            <div class="spotlight-item__intro-image burst">
+                                                <img src="/src/img/examples/tennis.jpg" alt="Tennis" />
+                                            </div>
+
+                                            <div class="spotlight-item__logo" style="background-color: #005953;">
+                                                <a href="#">
+                                                    <img src="/src/img/logos/evans.png" alt="Evans Cycles" />
+                                                </a>
+                                            </div>
+
+                                            <p class="spotlight-item__heading">
+                                                Evans Cycles
+                                            </p>
+
+                                            <div class="spotlight-item__content">
+                                                Up to 50% cash back on a bike.
+                                            </div>
+                                        </div>
+
+                                        <div class="spotlight-item__cta">
+                                            <a href="#" class="emphasis-link">Learn more</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="spotlight__list-item js-filtered-container__item" data-filter="health-checks">
+                                    <div class="spotlight-item js-match-height--2">
+                                        <div class="spotlight-item__top-content js-match-height">
+                                            <div class="spotlight-item__intro-image burst">
+                                                <img src="/src/img/examples/cyclist-man.jpg" alt="Cyclist" />
+                                            </div>
+
+                                            <div class="spotlight-item__logo">
+                                                <a href="#">
+                                                    <img src="/src/img/logos/starbucks.png" alt="Starbucks" />
+                                                </a>
+                                            </div>
+
+                                            <p class="spotlight-item__heading">
+                                                Starbucks
+                                            </p>
+
+                                            <div class="spotlight-item__content">
+                                                Get active and be rewarded with a drink at Starbucks every week.
+                                            </div>
+                                        </div>
+
+                                        <div class="spotlight-item__cta">
+                                            <a href="#" class="emphasis-link">Learn more</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="spotlight__list-item js-filtered-container__item" data-filter="activity-tracking">
+                                    <div class="spotlight-item js-match-height--2">
+                                        <div class="spotlight-item__top-content js-match-height">
+                                            <div class="spotlight-item__intro-image burst">
+                                                <img src="/src/img/examples/coffee.jpg" alt="Coffee" />
+                                            </div>
+
+                                            <div class="spotlight-item__logo">
+                                                <a href="#">
+                                                    <img src="/src/img/logos/sainsburys.png" alt="Sainsbury's" />
+                                                </a>
+                                            </div>
+
+                                            <p class="spotlight-item__heading">
+                                                Sainsbury's
+                                            </p>
+
+                                            <div class="spotlight-item__content">
+                                                Vitality points and bonus Nectar points on certain healthy foods.
+                                            </div>
+                                        </div>
+
+                                        <div class="spotlight-item__cta">
+                                            <a href="#" class="emphasis-link">Learn more</a>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="spotlight__list-item js-filtered-container__item" data-filter="fitness">
+                                    <div class="spotlight-item js-match-height--2">
+                                        <div class="spotlight-item__top-content js-match-height">
+                                            <div class="spotlight-item__intro-image burst">
+                                                <img src="/src/img/examples/laptop-user.jpg" alt="Laptop user" />
+                                            </div>
+
+                                            <div class="spotlight-item__logo" style="background-color: #000;">
+                                                <a href="#">
+                                                    <img src="/src/img/logos/cinemas.png" alt="Cinemas" />
+                                                </a>
+                                            </div>
+
+                                            <p class="spotlight-item__heading">
+                                                Cineworld and Vue
+                                            </p>
+
+                                            <div class="spotlight-item__content">
+                                                Get active and enjoy a film on us.
+                                            </div>
+                                        </div>
+
+                                        <div class="spotlight-item__cta">
+                                            <a href="#" class="emphasis-link">Learn more</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>Markup</h2>
+                    <pre><code class="language-markup line-numbers"></code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>function cdnizerLoad(u) { document.write('<scr' + 'ipt src="' + encodeURIComponent(u) + '"></scr' + 'ipt>'); }</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script>if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script>if (!($.datepicker)) cdnizerLoad("/bower_components/jqueryui/jquery-ui.min.js");</script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.smartresize/0.1/jquery.debouncedresize.js"></script>
+    <script>if (!($.event.special.debouncedresize)) cdnizerLoad("/bower_components/jquery.smartresize/jquery.smartresize.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <script>if (!($(window).matchHeight)) cdnizerLoad("/bower_components/jquery-match-height/jquery.matchHeight-min.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+    <script>if (!(FastClick)) cdnizerLoad("/bower_components/fastclick/lib/fastclick.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>if (!(WOW)) cdnizerLoad("/bower_components/wowjs/dist/wow.min.js");</script>
+
+    <script type="text/javascript" src="/js/modernizr-custom.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+
+    <script type="text/javascript" src="/js/boilerplate.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/prism.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/normalize-whitespace/prism-normalize-whitespace.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+.article--heading-block {
+    @extend .burst;
+    background-color: $color-mono-12;
+    padding: $pad;
+
+    @include mq($from: tablet) {
+        padding: $pad--large;
+    }
+
+    &__content {
+        margin: 40px auto;
+        text-align: center;
+    }
+}

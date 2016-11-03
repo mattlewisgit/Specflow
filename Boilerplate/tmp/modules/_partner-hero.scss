@@ -1,0 +1,119 @@
+@import "../base/vars";
+@import "../utils/mixins";
+
+.partner-hero {
+    @extend .burst;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &--headline {
+        display: block;
+        margin: 0 auto;
+
+        // This should be rebuilt with flex in the future...
+        padding: 135px $pad;
+
+        &.text-light {
+            @include shadow--light;
+
+            h1, h2, p {
+                color: $white;
+            }
+        }
+
+        &.text-dark {
+            @include shadow--dark;
+        }
+
+        .partner-hero--headline__intro {
+            @extend .font-weight--light;
+            @extend .h3;
+            margin: $pad--xthin 0;
+        }
+
+        h1 {
+            @extend .font-weight--semi-bold;
+            @extend .h1-xlarge;
+            margin: $pad--xthin 0;
+        }
+
+        .partner-hero--headline__body {
+            @extend p;
+            @extend .h4;
+            margin: $pad--xthin 0;
+        }
+    }
+
+    &--right {
+        margin: $pad--large;
+        margin-bottom: 0;
+    }
+
+    &--card {
+        @include font-size($basesize);
+        background: $white;
+        margin-top: $pad;
+        max-width: 300px;
+        padding: $pad--xthin;
+        text-align: center;
+
+        &__top {
+            .partner-hero--card__top--intro {
+                @extend .h6;
+                text-transform: uppercase;
+            }
+
+            hr {
+                display: block;
+                height: 1px;
+                border: 0;
+                border-top: 1px solid $body-color--alt;
+                margin: 1em 0;
+                padding: 0;
+            }
+        }
+
+        &__bottom {
+            @include triangle-callout--central-top($white);
+            background: $primary-color;
+            color: $white;
+            padding: 30px 0;
+
+            // Ensure the arrow positions correctly.
+            position: relative;
+
+            p {
+                line-height: $line-height--small;
+                margin: 0;
+            }
+
+            .partner-hero--card__bottom--saving {
+                @extend .font-weight--semi-bold;
+                @include font-size($h1--large);
+            }
+        }
+    }
+}
+
+// Frustrating fix for bizarre lack of padding between certain breakpoints.
+@include mq($from: mobile-landscape, $until: desktop) {
+    .partner-hero--with-card {
+        .partner-hero--headline {
+            padding-left: $pad--large;
+        }
+    }
+}
+
+// Only use a full-width card on smaller devices.
+@include mq($until: tablet) {
+    .partner-hero--with-card {
+        .partner-hero--headline {
+            display: none;
+        }
+
+        .partner-hero--card {
+            margin-top: $pad--large;
+            max-width: 100%;
+        }
+    }
+}
