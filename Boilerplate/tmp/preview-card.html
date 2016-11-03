@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Vitality Boilerplate | Components | Preview Card</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0" />
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/app-devel.css" />
+
+    <!-- Boilerplate only. -->
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/themes/prism.css" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/plugins/line-numbers/prism-line-numbers.css" />
+
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/aight/2.1.1/aight.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="page">
+        <main id="main-content" tabindex="-1">
+            <section class="pinch">
+                <div>
+                    <h1>Preview Card</h1>
+
+                    <h2>Description</h2>
+
+                    <p>
+                        A Preview Card is used to show the a user what to expect of a media library item, such as a
+                        <abbr title="Portable Document Format">PDF</abbr>.
+                    </p>
+
+                    <h2>Note</h2>
+
+                    <p>
+                        This card should not be used alone, but as part of another component or interactive page,
+                        for example, <a href="/pages/health-adviser-sales-library.html">Health Adviser Sales Literature Library</a>.
+                    </p>
+
+                    <h2>Example</h2>
+
+                    <div class="example">
+                        <div class="grid">
+                            <div class="grid-col-4-12">
+                                <div class="preview-card">
+                                    <div class="preview-card--header">
+                                        Healthy Living Rewards and Partners from VitalityHealth
+                                    </div>
+
+                                    <div class="preview-card--body">
+                                        <div class="preview-card--body__buttons">
+                                            <div>
+                                                <a href="#" class="box-button box-button--secondary box-button--rounded box-button--full-width">
+                                                    Download
+                                                </a>
+                                            </div>
+
+                                            <div>
+                                                <a href="#" class="box-button box-button--secondary-inverse box-button--rounded box-button--full-width">
+                                                    Email
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="preview-card--body__preview">
+                                            <img src="/src/img/examples/example-pdf.png" alt="Example PDF" />
+                                        </div>
+
+                                        <div class="preview-card--body__text">
+                                            <p>Lorem ipsum descriptivio</p>
+                                            <p><b>&lt;CODE&gt;</b></p>
+                                            <p>&lt;Month Year&gt;</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h2>Markup</h2>
+                        <pre><code class="language-markup line-numbers"></code></pre>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>function cdnizerLoad(u) { document.write('<scr' + 'ipt src="' + encodeURIComponent(u) + '"></scr' + 'ipt>'); }</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script>    if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.smartresize/0.1/jquery.debouncedresize.js"></script>
+    <script>if (!($.event.special.debouncedresize)) cdnizerLoad("/bower_components/jquery.smartresize/jquery.smartresize.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <script>if (!($(window).matchHeight)) cdnizerLoad("/bower_components/jquery-match-height/jquery.matchHeight-min.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+    <script>if (!(FastClick)) cdnizerLoad("/bower_components/fastclick/lib/fastclick.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>if (!(WOW)) cdnizerLoad("/bower_components/wowjs/dist/wow.min.js");</script>
+
+    <script type="text/javascript" src="/js/modernizr-custom.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+
+    <script type="text/javascript" src="/js/boilerplate.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/prism.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/normalize-whitespace/prism-normalize-whitespace.js"></script>
+</body>
+</html>
