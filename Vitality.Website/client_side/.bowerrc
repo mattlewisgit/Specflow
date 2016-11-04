@@ -1,0 +1,25 @@
+{  
+  "directory":"../bower_components",
+  "registry": {
+    "search": [
+      "http://192.168.96.34:81/bower/Bower",
+      "https://bower.herokuapp.com"
+    ]
+  },
+  "ignoredDependencies": [
+     "angular",
+    "animate.css",
+    "fastclick",
+    "jquery",
+    "jquery-match-height",
+    "jquery.smartresize",
+    "js-cookie",
+    "moment",
+    "normalize.css",
+    "sass-mq",
+    "tablesaw",
+    "typeahead.js",
+    "underscore",
+    "wowjs"
+  ]
+}
