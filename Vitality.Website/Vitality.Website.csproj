@@ -286,9 +286,6 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="App_Config\Include\Vitality\Vitality.Handlers.config">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="App_Config\Include\Sitecore.Forms.config">
       <SubType>Designer</SubType>
     </Content>
@@ -320,7 +317,9 @@
     <Content Include="App_Config\Prototypes.config" />
     <Content Include="App_Config\XamlSharp.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.WFFM.config" />
-    <Content Include="App_Config\Include\Vitality\Vitality.WFFM_CD.config.cdonly" />
+    <Content Include="App_Config\Include\Vitality\Vitality.WFFM_CD.config.cdonly">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="client_side\gulpfile.js" />
     <Content Include="client_side\img\facebook--footer.svg" />
