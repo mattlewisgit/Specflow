@@ -1,17 +1,9 @@
 ﻿@using Sitecore.Forms.Mvc.Html
 @using Sitecore.Forms.Mvc.ViewModels.Fields
+@using Vitality.Website.Extensions
 @model RadioListField
 
 @using (Html.BeginField())
 {
-    foreach (var item in Model.Items)
-    {
-        <div class="radio">
-            <label>
-                @Html.RadioButtonFor(x => Model.Value, item.Value, (item.Selected) ? new { Checked = "checked" } : null)
-
-                @item.Text
-            </label>
-        </div>
-    }
+    @Html.RadioButtonList(Html.NameFor(x => Model.Value).ToString(), Model.Items)
 }
