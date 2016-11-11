@@ -7,7 +7,7 @@
         <p>@Editable(Model, m => m.OpeningParagraph)</p>
         <div data-ng-show="isVisible" class="form step1" data-ng-controller="PlanTypeStepController">
             <form>
-                <div>Step 1 of 3</div>
+                <div>@Editable(Model, m => m.StepOne)</div>
                 <h3>@Editable(Model, m => m.StepHeaderOne)</h3>
 
                 <fieldset>
@@ -23,52 +23,52 @@
 
         <div data-ng-cloak="" data-ng-show="isVisible" class="form step2" data-ng-controller="DateStepController">
             <form name="dateForm">
-                <div>Step 2 of 3</div>
+                <div>@Editable(Model, m => m.StepTwo)</div>
                 <h3>@Editable(Model, m => m.StepHeaderTwo)</h3>
                 <div>@Editable(Model, m => m.StepHeaderTwoExample)</div>
 
                 <div class="grid-no-gutters form">
                     <div class="grid-col-3-12 form__field" ng-class="(dateForm.day.$invalid) ? 'is-invalid' : ''">
-                        <label for="day">Day</label>
+                        <label for="day">@Editable(Model, m => m.DayLabel)</label>
                         <input id="day" name="day" ng-model="filterDate.day" type="number" pattern="\d*" placeholder="DD">
 
                         <div ng-show="dateForm.day.$invalid" class="form__field__error">
-                            <p>Please enter a valid day</p>
+                            <p>@Editable(Model, m => m.DayValidationErrorMessageOne)</p>
                         </div>
 
                         <div ng-show="dateForm.filterDate.$invalid" class="form__field__error">
-                            <p>There is a problem with the date</p>
+                            <p>@Editable(Model, m => m.DayValidationErrorMessageTwo)</p>
                         </div>
                     </div>
 
                     <div class="grid-col-3-12 form__field">
-                        <label for="month">Month</label>
+                        <label for="month">@Editable(Model, m => m.MonthLabel)</label>
                         <input id="month" name="month" ng-model="filterDate.month" type="number" pattern="\d*" placeholder="MM">
 
                         <div ng-show="dateForm.month.$invalid" class="form__field__error">
-                            <p>Please enter a valid month</p>
+                            <p><p>@Editable(Model, m => m.MonthValidationErrorMessage)</p></p>
                         </div>
                     </div>
 
                     <div class="grid-col-3-12 form__field">
-                        <label for="year">Year</label>
+                        <label for="year">@Editable(Model, m => m.YearLabel)</label>
                         <input id="year" name="year" ng-model="filterDate.year" type="number" pattern="\d*" placeholder="YYYY">
                     </div>
 
                     <div class="grid-col-2-12 form__field__input--inline"></div>
                 </div>
 
-                <button data-ng-click="dateEntered(dateForm, filterDate)" class="box-button box-button--secondary-inverse">Next</button>
+                <button data-ng-click="dateEntered(dateForm, filterDate)" class="box-button box-button--secondary-inverse">@Editable(Model, m => m.NextButtonText)</button>
 
                 <div>
-                    <a data-ng-click="back()" class="emphasis-link" title="Back">Back</a>
+                    <a data-ng-click="back()" class="emphasis-link" title="Back">@Editable(Model, m => m.PreviousButtonText)</a>
                 </div>
             </form>
         </div>
 
         <div data-ng-cloak="" data-ng-show="isVisible" class="form step3" data-ng-controller="PlanCodeController">
             <form>
-                <div>Step 3 of 3</div>
+                <div>@Editable(Model, m => m.StepThree)</div>
                 <h3>@Editable(Model, m => m.StepHeaderThree)</h3>
 
                 <div class="grid-no-gutters form">
@@ -80,11 +80,11 @@
                 </div>
 
                 <button class="box-button box-button--secondary-inverse" data-ng-click="planCodeSubmit()">
-                    Next
+                    @Editable(Model, m => m.NextButtonText)
                 </button>
 
                 <div>
-                    <a data-ng-click="back()" class="emphasis-link" title="Back">Back</a>
+                    <a data-ng-click="back()" class="emphasis-link" title="Back">@Editable(Model, m => m.PreviousButtonText)</a>
                 </div>
             </form>
         </div>
@@ -92,11 +92,8 @@
         <div data-ng-cloak="" data-ng-show="isVisible" class="form results" data-ng-controller="ResultsController">
             <form>
                 <p>
-                    We have found
-                    <span class="text--primary">{{documents.length}} application forms</span>
-                    based on your selections
+                    @Html.Raw(string.Format(Model.ResultsLabel, "<span class=\"text--primary\">{{documents.length}}</span>"))
                 </p>
-
                 <div>
                     <div class="label label--primary">
                         <a data-ng-bind="formState.planType" data-ng-click="goToPlanTypeStep()"></a>
@@ -119,17 +116,17 @@
 
                     <a href="{{document.Document}}"
                        class="box-button box-button--secondary-inverse box-button--rounded">
-                        Download
+                        @Editable(Model, m => m.DownloadButtonText)
                     </a>
 
                     <hr>
                 </div>
 
-                <p>Not quite what you were looking for?</p>
+                <p>@Editable(Model, m => m.UnexpectedResultsLabel)</p>
 
                 <div>
                     <a data-ng-click="restart()" class="emphasis-link" title="Back">
-                        Go back and change selections
+                        @Editable(Model, m => m.ChangeSelectionLabel)
                     </a>
                 </div>
             </form>
