@@ -2,19 +2,24 @@
     "name": "vitality.website",
     "version": "1.0.0",
     "description": "Vitality Website",
-  "dependencies": {
-    "bower": "1.7.x",
-    "del": "*",
-    "gulp": "*",
-    "gulp-cssnano": "*",
-    "gulp-load-plugins": "*",
-    "gulp-sass": "*",
-    "gulp-sass-lint": "*",
-    "gulp-task-listing": "*"
-  },
-  "scripts": {
-    "bower": "bower",
-    "gulp": "gulp"
-  },
+    "license": "UNLICENSED",
+    "dependencies": {
+        "bower": "1.7.x",
+        "del": "2.2.x",
+        "gulp": "3.9.x",
+        "gulp-cssnano": "2.1.x",
+        "gulp-load-plugins": "1.2.x",
+        "gulp-sass": "2.3.x",
+        "gulp-sass-lint": "1.2.x",
+        "gulp-task-listing": "1.0.x"
+    },
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@192.168.96.39:7999/von/vitality-website.git"
+    },
+    "scripts": {
+        "bower": "bower",
+        "gulp": "gulp"
+    },
     "sasslintConfig": "sass-lint.yml"
 }
