@@ -1,0 +1,141 @@
+// CSS specific to the boilerplate demo.
+// Excluded from final production CSS.
+
+// Triangle callout util testing.
+.box-holder {
+    @extend .clearfix;
+    margin: 0 auto;
+
+    .flexbox & {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .no-flexbox & {
+        text-align: center;
+    }
+}
+
+.box {
+    height: $pad--xxlarge;
+    margin: $pad--large auto;
+    position: relative;
+    width: $pad--xxlarge;
+
+    .no-flexbox & {
+        display: inline-block;
+    }
+}
+
+$_colour-map: (
+    primary-color: $primary-color,
+    secondary-color: $secondary-color,
+    tertiary-color: $tertiary-color,
+    highlight-color: $highlight-color,
+    primary-background-color: $primary-background-color,
+    secondary-background-color: $secondary-background-color,
+    tertiary-background-color: $tertiary-background-color,
+    error-color: $error-color,
+    primary-color--light: $primary-color--light,
+    secondary-color--light: $secondary-color--light,
+    tertiary-color--light: $tertiary-color--light,
+    highlight-color--light: $highlight-color--light,
+    error-color--light: $error-color--light,
+    primary-color--dark: $primary-color--dark,
+    secondary-color--dark: $secondary-color--dark,
+    tertiary-color--dark: $tertiary-color--dark,
+    highlight-color--dark: $highlight-color--dark,
+    error-color--dark: $error-color--dark,
+    grey: $grey,
+    grey--light: $grey--light,
+    black: $black,
+    white: $white,
+    color-mono-14: $color-mono-14,
+    color-mono-13: $color-mono-13,
+    color-mono-12: $color-mono-12,
+    color-mono-11: $color-mono-11,
+    color-mono-10: $color-mono-10,
+    color-mono-9: $color-mono-9,
+    color-mono-8: $color-mono-8,
+    color-mono-7: $color-mono-7,
+    color-mono-6: $color-mono-6,
+    color-mono-5: $color-mono-5,
+    color-mono-4: $color-mono-4,
+    color-mono-3: $color-mono-3,
+    color-mono-2: $color-mono-2,
+    color-mono-1: $color-mono-1
+);
+
+@each $name, $colour in $_colour-map {
+    .box--#{$name} {
+        background-color: $colour;
+    }
+}
+
+.example--box {
+    background-color: $grey--light;
+    padding: $pad 0;
+}
+
+// Test for column animation delay utility.
+.animation-test {
+    padding-top: 50px;
+
+    .anim-test-box {
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 0, 255, 0.2);
+        display: inline-block;
+        margin: 0 2px;
+    }
+}
+
+.test-background {
+    background-color: $primary-color;
+    $_colour: rgba(0, 0, 0, 0.4);
+    $_colour-two: rgba(0, 0, 0, 0.2);
+    $_colour-three: rgba(0, 0, 0, 0.5);
+    $_colour-four: rgba(255, 255, 255, 0.2);
+
+    background-image:
+    repeating-linear-gradient(transparent, transparent 50px, $_colour 50px, $_colour 53px, transparent 53px, transparent 63px, $_colour 63px, $_colour 66px, transparent 66px, transparent 116px, $_colour-three 116px, $_colour-three 166px, $_colour-four 166px, $_colour-four 169px, $_colour-three 169px, $_colour-three 179px, $_colour-four 179px, $_colour-four 182px, $_colour-three 182px, $_colour-three 232px, transparent 232px),
+    repeating-linear-gradient(270deg, transparent, transparent 50px, $_colour 50px, $_colour 53px, transparent 53px, transparent 63px, $_colour 63px, $_colour 66px, transparent 66px, transparent 116px, $_colour-three 116px, $_colour-three 166px, $_colour-four 166px, $_colour-four 169px, $_colour-three 169px, $_colour-three 179px, $_colour-four 179px, $_colour-four 182px, $_colour-three 182px, $_colour-three 232px, transparent 232px),
+    repeating-linear-gradient(125deg, transparent, transparent 2px, $_colour-two 2px, $_colour-two 3px, transparent 3px, transparent 5px, $_colour-two 5px);
+}
+
+// Custom grid example.
+.custom-grid {
+    @include outer-container;
+
+    .custom-col {
+        // 50% on small screens.
+        @include span-columns(6);
+        @include omega(2n);
+        background-color: rgba($tertiary-color, 0.2);
+        margin-top: $grid-margin-top;
+        padding: $pad--thin;
+
+        @include mq($from: tablet) {
+            // 25% on medium screens.
+            // Reset omega function.
+            // http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat.
+            @include omega-reset(2n);
+            @include span-columns(3);
+            @include omega(4n);
+        }
+
+        @include mq($from: desktop) {
+            // 16.66%.
+            @include omega-reset(4n);
+            @include span-columns(2);
+            @include omega(6n);
+        }
+
+        @include mq($from: max) {
+            // Back to 50%.
+            @include omega-reset(6n);
+            @include span-columns(6);
+            @include omega(2n);
+        }
+    }
+}
