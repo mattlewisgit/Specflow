@@ -40,7 +40,13 @@
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'PROD' ">
-    <OutputPath>bin\PROD\</OutputPath>
+    <OutputPath>.\bin\PROD\</OutputPath>
+    <InstallSitecoreConnector>True</InstallSitecoreConnector>
+    <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <DisableFileDeployment>False</DisableFileDeployment>
+    <SitecoreAccessGuid>b7e2695a-c408-44c9-b2d9-17ed9b71b5a2</SitecoreAccessGuid>
+    <SitecoreWebUrl>http://presales.vitality.co.uk</SitecoreWebUrl>
+    <SitecoreDeployFolder>E:\Projects\Vitality-Website\Vitality.Website</SitecoreDeployFolder>
   </PropertyGroup>
   <ItemGroup>
     <AssemblyAttributes Include="AssemblyFileVersion">
@@ -2597,10 +2603,6 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\system\Modules\Web Forms for Marketers\Settings\Field Types\Complex\Captcha.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\Web Forms for Marketers\Settings\Field Types\Complex\Credit Card.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -2657,19 +2659,11 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\system\Modules\Web Forms for Marketers\Settings\Field Types\Simple Types\Date Picker.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\Web Forms for Marketers\Settings\Field Types\Simple Types\Date.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\system\Modules\Web Forms for Marketers\Settings\Field Types\Simple Types\E-mail.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\system\Modules\Web Forms for Marketers\Settings\Field Types\Simple Types\File Upload.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
