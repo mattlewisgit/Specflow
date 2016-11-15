@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="em">
+<head>
+    <title>Vitality Boilerplate | Components | Cards Stacked</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0" />
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/app-devel.css" />
+
+    <!-- Boilerplate only. -->
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/themes/prism.css" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/plugins/line-numbers/prism-line-numbers.css" />
+
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/aight/2.1.1/aight.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <main tabindex="-1">
+        <section class="pinch">
+            <h1>Cards Stacked</h1>
+            <h2>Description</h2>
+
+            <p>
+                This component groups cards together,
+                inviting the user to read the full details on another page via a link.
+            </p>
+
+            <h2>Examples</h2>
+            <h3>Icon Cards with Background Image</h3>
+            <h4>Demo</h4>
+
+            <div class="example">
+                <div class="cards-stacked background-position-top-right"
+                         style="background-size:cover; background-image: url('/img/examples/cyclist.jpg');">
+                    <div class="spotlight text-light">
+                        <h2 class="spotlight__heading">Why choose Vitality?</h2>
+
+                        <p class="spotlight__intro">
+                            Comprehensive cover, access to healthcare &amp; huge
+                            <a href="#">rewards</a> for our Health &amp; Life Insurance customers
+                        </p>
+
+                        <ul class="spotlight__list">
+                            <li class="spotlight__list-item">
+                                <div class="spotlight-item">
+                                    <div class="spotlight-item__top-content">
+                                        <h3 class="spotlight-item__heading">
+                                            Comprehensive Cover
+                                        </h3>
+                                        
+                                        <div class="spotlight-item__icon">
+                                            <img src="/img/examples/clipboard-icon.png" alt="Clipboard" />
+                                        </div>
+
+                                        <div class="spotlight-item__content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                Debitis minus maiores omnis dicta natus minima ab consectetur quod aliquam ipsum.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="spotlight-item__cta">
+                                        <a href="#" class="emphasis-link">Here is an emphasis-link</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="spotlight__list-item">
+                                <div class="spotlight-item">
+                                    <div class="spotlight-item__top-content">
+                                        <h3 class="spotlight-item__heading">
+                                            Access to Hospitals
+                                        </h3>
+
+                                        <div class="spotlight-item__icon">
+                                            <img src="/img/examples/stethoscope-icon.png" alt="Stethoscope" />
+                                        </div>
+
+                                        <div class="spotlight-item__content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                Repudiandae iste obcaecati corrupti doloremque! Accusantium.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="spotlight-item__cta">
+                                        <a href="#" class="emphasis-link">Here is an emphasis-link</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="spotlight__list-item">
+                                <div class="spotlight-item">
+                                    <div class="spotlight-item__top-content">
+                                        <h3 class="spotlight-item__heading">
+                                            Award Winning Cover
+                                        </h3>
+
+                                        <div class="spotlight-item__icon">
+                                            <img src="/img/examples/stars-icon.png" alt="Stars" />
+                                        </div>
+
+                                        <div class="spotlight-item__content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                Cupiditate, possimus ipsa nemo numquam quibusdam?
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="spotlight-item__cta">
+                                        <a href="#" class="emphasis-link">Here is an emphasis-link</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="spotlight__list-item">
+                                <div class="spotlight-item">
+                                    <div class="spotlight-item__top-content">
+                                        <h3 class="spotlight-item__heading">
+                                            Huge Rewards
+                                        </h3>
+
+                                        <div class="spotlight-item__icon">
+                                            <img src="/img/examples/heart-icon.png" alt="Heart" />
+                                        </div>
+
+                                        <div class="spotlight-item__content">
+                                            <p>
+                                                Minima perferendis id, voluptas incidunt maxime eius velit
+                                                laboriosam rem numquam modi aspernatur enim, officia amet aut,
+                                                nemo fugiat saepe adipisci commodi!
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="spotlight-item__cta">
+                                        <a href="#" class="emphasis-link">Here is an emphasis-link</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4>Markup</h4>
+                <pre><code class="language-markup line-numbers"></code></pre>
+            </div>
+
+            <h3>Image Cards with Background Image without Introduction</h3>
+            <h4>Demo</h4>
+
+            <div class="example">
+                <div class="cards-stacked background-position-top-right"
+                         style="background-size:cover; background-image: url('/img/examples/cyclist.jpg');">
+                    <div class="spotlight text-light">
+                        <h2 class="spotlight__heading">Why choose Vitality?</h2>
+
+                        <ul class="spotlight__list">
+                            <li class="spotlight__list-item">
+                                <div class="spotlight-item">
+                                    <div class="spotlight-item__top-content">
+                                        <div class="spotlight-item__intro-image burst">
+                                            <img src="/img/examples/cyclist-man.jpg" alt="Cyclist" /> 
+                                        </div>
+
+                                        <h3 class="spotlight-item__heading">
+                                            Cover for just me
+                                        </h3>
+
+                                        <div class="spotlight-item__content">
+                                            <p>
+                                                Explore the best protection options for singles.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="spotlight-item__cta">
+                                        <a href="#" class="emphasis-link">
+                                            Learn more
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="spotlight__list-item">
+                                <div class="spotlight-item">
+                                    <div class="spotlight-item__top-content">
+                                        <div class="spotlight-item__intro-image burst">
+                                            <img src="/img/examples/laptop-user.jpg" alt="Laptop user" />
+                                        </div>
+
+                                        <h3 class="spotlight-item__heading">
+                                            Cover for me, my partner, and our little family
+                                        </h3>
+
+                                        <div class="spotlight-item__content">
+                                            <p>
+                                                Explore the best protection options for couples.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="spotlight-item__cta">
+                                        <a href="#" class="emphasis-link">
+                                            Learn more
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="spotlight__list-item">
+                                <div class="spotlight-item">
+                                    <div class="spotlight-item__top-content">
+                                        <div class="spotlight-item__intro-image burst">
+                                            <img src="/img/examples/running-man.jpg" alt="Running man" />
+                                        </div>
+
+                                        <h3 class="spotlight-item__heading">
+                                            Cover for me and my family
+                                        </h3>
+
+                                        <div class="spotlight-item__content">
+                                            <p>
+                                                Explore the best protection options for families.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="spotlight-item__cta">
+                                        <a href="#" class="emphasis-link">
+                                            Learn more
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4>Markup</h4>
+                <pre><code class="language-markup line-numbers"></code></pre>
+            </div>
+
+            <h3>Icon Cards without Background Image</h3>
+            <h4>Demo</h4>
+
+            <div class="example">
+                <div class="cards-stacked text-dark">
+                    <div class="spotlight text-light">
+                        <h2 class="spotlight__heading">Why choose Vitality?</h2>
+
+                        <p class="spotlight__intro">
+                            Comprehensive cover, access to healthcare &amp; huge rewards for our Health &amp; Life Insurance customers
+                        </p>
+
+                        <ul class="spotlight__list">
+                            <li class="spotlight__list-item">
+                                <div class="spotlight-item">
+                                    <div class="spotlight-item__top-content">
+                                        <h3 class="spotlight-item__heading">
+                                            Comprehensive Cover
+                                        </h3>
+
+                                        <div class="spotlight-item__icon">
+                                            <img src="/img/examples/clipboard-icon.png" alt="Clipboard" />
+                                        </div>
+
+                                        <div class="spotlight-item__content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                Debitis minus maiores omnis dicta natus minima ab consectetur quod aliquam ipsum.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="spotlight-item__cta">
+                                        <a href="#" class="emphasis-link">Here is an emphasis-link</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="spotlight__list-item">
+                                <div class="spotlight-item">
+                                    <div class="spotlight-item__top-content">
+                                        <h3 class="spotlight-item__heading">
+                                            Access to Hospitals
+                                        </h3>
+
+                                        <div class="spotlight-item__icon">
+                                            <img src="/img/examples/stethoscope-icon.png" alt="Stethoscope" />
+                                        </div>
+
+                                        <div class="spotlight-item__content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                Repudiandae iste obcaecati corrupti doloremque! Accusantium.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="spotlight-item__cta">
+                                        <a href="#" class="emphasis-link">Here is an emphasis-link</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="spotlight__list-item">
+                                <div class="spotlight-item">
+                                    <div class="spotlight-item__top-content">
+                                        <h3 class="spotlight-item__heading">
+                                            Award Winning Cover
+                                        </h3>
+
+                                        <div class="spotlight-item__icon">
+                                            <img src="/img/examples/stars-icon.png" alt="Stars" />
+                                        </div>
+
+                                        <div class="spotlight-item__content">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                                Cupiditate, possimus ipsa nemo numquam quibusdam?
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="spotlight-item__cta">
+                                        <a href="#" class="emphasis-link">Here is an emphasis-link</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h4>Markup</h4>
+                <pre><code class="language-markup line-numbers"></code></pre>
+            </div>
+        </section>
+    </main>
+
+    <script>function cdnizerLoad(u) { document.write('<scr' + 'ipt src="' + encodeURIComponent(u) + '"></scr' + 'ipt>'); }</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script>if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script>if (!($.datepicker)) cdnizerLoad("/bower_components/jqueryui/jquery-ui.min.js");</script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.smartresize/0.1/jquery.debouncedresize.js"></script>
+    <script>if (!($.event.special.debouncedresize)) cdnizerLoad("/bower_components/jquery.smartresize/jquery.smartresize.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <script>if (!($(window).matchHeight)) cdnizerLoad("/bower_components/jquery-match-height/jquery.matchHeight-min.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+    <script>if (!(FastClick)) cdnizerLoad("/bower_components/fastclick/lib/fastclick.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>if (!(WOW)) cdnizerLoad("/bower_components/wowjs/dist/wow.min.js");</script>
+    
+    <script type="text/javascript" src="/js/modernizr-custom.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+
+    <script type="text/javascript" src="/js/boilerplate.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/prism.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/normalize-whitespace/prism-normalize-whitespace.js"></script>
+</body>
+</html>

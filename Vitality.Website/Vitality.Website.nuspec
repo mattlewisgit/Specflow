@@ -17,6 +17,7 @@
     <file src="Areas\Presales\Views\**\*.*" target="Areas\Presales\Views" />
     <file src="bower_components\**\*.css" target="bower_components" />
     <file src="bower_components\**\*.js" target="bower_components" />
+    <file src="bower_components\**\*.png" target="bower_components" />
     <file src="bin\**\*.dll" target="bin" />
     <file src="bin\**\*.lic" target="bin" />
     <file src="css\*.css" target="css" />
