@@ -2,9 +2,9 @@
 version: 1
 id: {2FF25D48-AF5B-4A05-9B30-90F9127F0F4D}
 database: master
-path: /sitecore/media library/Presales
+path: /sitecore/media library/presales
 parent: {3D6658D8-A0BF-4E75-B3E2-D050FABCF4E1}
-name: Presales
+name: presales
 master: {00000000-0000-0000-0000-000000000000}
 template: {FE5DD826-48C6-436D-B87A-7C4210C7413B}
 templatekey: Media folder
@@ -19,8 +19,15 @@ ar|sitecore\Advisers User|pe|!*|pd|!*|ar|sitecore\Presales User|pe|+item:read|+i
 ----version----
 language: en
 version: 1
-revision: fc49e2ef-0f8c-48e8-a240-67179d588a12
+revision: 15af1b77-28a5-4ac4-9052-ebb754277a3e
 
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 8
+
+Presales
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -41,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-fc49e2ef-0f8c-48e8-a240-67179d588a12
+15af1b77-28a5-4ac4-9052-ebb754277a3e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160913T083449Z
+20161116T140333Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
