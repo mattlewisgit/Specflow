@@ -6,7 +6,7 @@
         <JSOutput Include="$(ProjectDir)js\**\*.js" />
         <CSSOutput Include="$(ProjectDir)css\**\*.css" />
     </ItemGroup>
-    <Target Name="AfterBuild" Inputs="@(JSInput);@(SASSInput)" Outputs="@(JSOutput);@(CSSOutput)">
+    <Target Name="AfterBuild">
         <Exec WorkingDirectory="$(ProjectDir)\client_side" Command="npm install" />
         <Exec WorkingDirectory="$(ProjectDir)\client_side" Command="npm run bower install" />
         <Exec WorkingDirectory="$(ProjectDir)\client_side" Command="npm run bower install vitality.boilerplate -- --force" />
