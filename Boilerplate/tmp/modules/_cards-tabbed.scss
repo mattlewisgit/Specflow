@@ -1,9 +1,0 @@
-.cards-tabbed {
-    @extend .pinch;
-}
-
-@include mq($until: tablet) {
-    .cards-tabbed {
-        padding: $pad;
-    }
-}
