@@ -27,9 +27,9 @@ office/16x16/check.png
 field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
 name: __Security
 key: __security
-content-length: 65
+content-length: 0
 
-ar|sitecore\Vitality Content Manager|pe|+workflowCommand:execute|
+
 ----version----
 language: da
 version: 1
@@ -141,7 +141,7 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: f7041958-d7dd-4753-8cc3-19fca0617afd
+revision: efd87a81-8128-4170-8798-779d583bd523
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -170,21 +170,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f7041958-d7dd-4753-8cc3-19fca0617afd
+efd87a81-8128-4170-8798-779d583bd523
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160915T112111Z
+20161111T144602Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\admin
+sitecore\dave
 ----version----
 language: ja-JP
 version: 1

@@ -34,9 +34,9 @@ content-length: 38
 field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
 name: __Security
 key: __security
-content-length: 141
+content-length: 179
 
-ar|sitecore\Vitality Configuration Manager|pe|+workflowCommand:execute|+workflowState:write|pd|+workflowCommand:execute|+workflowState:write|
+ar|sitecore\Vitality Content Manager|pe|+workflowState:delete|+workflowState:write|+workflowCommand:execute|pd|+workflowState:delete|+workflowState:write|+workflowCommand:execute|
 ----version----
 language: da
 version: 1
@@ -148,7 +148,7 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: e2da68e7-7d87-4afa-95ea-5b70218918d8
+revision: d76a1eb3-da30-4501-b861-3994d236ca36
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -177,21 +177,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e2da68e7-7d87-4afa-95ea-5b70218918d8
+d76a1eb3-da30-4501-b861-3994d236ca36
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160922T111620Z
+20161111T144326Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\admin
+sitecore\dave
 ----version----
 language: ja-JP
 version: 1

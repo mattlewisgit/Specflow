@@ -34,13 +34,13 @@ content-length: 38
 field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
 name: __Security
 key: __security
-content-length: 0
+content-length: 147
 
-
+ar|sitecore\Vitality Configuration Manager|pe|+item:create|+item:write|+item:read|pd|+item:rename|+item:write|+item:read|+item:delete|+item:create|
 ----version----
 language: en
 version: 1
-revision: 144f3ed8-df7b-4fce-a75e-03c2e201f4b5
+revision: 2d84ca8b-c0cf-4fd8-b7b9-6d3c8527d128
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -62,18 +62,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-144f3ed8-df7b-4fce-a75e-03c2e201f4b5
+2d84ca8b-c0cf-4fd8-b7b9-6d3c8527d128
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160912T132648Z
+20161117T165358Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\admin
+sitecore\dave

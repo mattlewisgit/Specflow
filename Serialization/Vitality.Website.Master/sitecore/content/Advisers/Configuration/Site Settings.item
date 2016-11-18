@@ -16,10 +16,17 @@ key: __originator
 content-length: 0
 
 
+----field----
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 147
+
+ar|sitecore\Vitality Configuration Manager|pe|+item:create|+item:write|+item:read|pd|+item:rename|+item:write|+item:read|+item:delete|+item:create|
 ----version----
 language: en
 version: 1
-revision: d011e7e1-da91-4192-9cb3-72f68f022ed1
+revision: 7628ad34-0f74-41df-84b0-be832d069108
 
 ----field----
 field: {E670AD08-9370-4CE9-B2F4-553A6A13AD1D}
@@ -92,6 +99,13 @@ content-length: 18
 
 Global Description
 ----field----
+field: {CD55AD16-8DAF-4F12-B1F3-9945491DCD46}
+name: DnsPrefetch
+key: dnsprefetch
+content-length: 20
+
+login.vitality.co.uk
+----field----
 field: {CCFF493E-3EBF-4E9F-925A-898207B6CDA0}
 name: GoogleTagManagerId
 key: googletagmanagerid
@@ -141,6 +155,13 @@ content-length: 12
 
 @Vitality_UK
 ----field----
+field: {DED4F772-C285-4705-A9F3-56E94849A80C}
+name: OpenGraphType
+key: opengraphtype
+content-length: 7
+
+website
+----field----
 field: {DB079977-A8F4-4430-AFDB-FFA811FFCFB8}
 name: ApplicationName
 key: applicationname
@@ -168,6 +189,18 @@ key: twittertitle
 content-length: 12
 
 Global Title
+----field----
+field: {6823384B-67BE-4751-A6B6-62406C4DF700}
+name: RobotsTxt
+key: robotstxt
+content-length: 86
+
+# Robots.txt file
+# All robots will spider the domain
+
+User-agent: *
+Disallow: /
+
 ----field----
 field: {561B1E66-C616-439B-AB2A-C9E0EA7B44C3}
 name: TwitterAppIPhoneName
@@ -237,18 +270,25 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d011e7e1-da91-4192-9cb3-72f68f022ed1
+7628ad34-0f74-41df-84b0-be832d069108
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160920T100522Z
+20161117T165248Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\admin
+sitecore\dave
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
