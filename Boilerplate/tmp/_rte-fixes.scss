@@ -1,7 +1,0 @@
-// Sitecore provides RTE editing by embedding an iframe.
-// This means the body tag *is* the RTE, so causes issues with some styles,
-// such as no Modernizr support, so no flexbox support styles are enabled, etc.
-body {
-    // Override flex display.
-    display: block !important;
-}

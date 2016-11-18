@@ -24,13 +24,6 @@ content-length: 0
 
 
 ----field----
-field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
-name: __Renderings
-key: __renderings
-content-length: 186
-
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{B73C367C-CC35-4EE2-B7F7-CA6164E76688}" s:ds="{8BDA910D-1CE5-44CE-9FA8-84006F5CC7EA}" /></d></r>
-----field----
 field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
 name: __Security
 key: __security
@@ -47,7 +40,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 6a929cb2-d838-4f47-b5ec-6eea7ce790e4
+revision: 794dadb6-a542-43ab-a4c2-a2a734a0a515
 
 ----field----
 field: {6327BB53-43BC-4B71-8D37-31543CBB6703}
@@ -111,14 +104,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6a929cb2-d838-4f47-b5ec-6eea7ce790e4
+794dadb6-a542-43ab-a4c2-a2a734a0a515
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160921T131545Z
+20160907T100559Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -126,6 +119,1231 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
+----version----
+language: en
+version: 2
+revision: 857a9ac0-3bd5-4b0b-a861-a0d0c663dd16
+
+----field----
+field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
+name: Title
+key: title
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {A9ADDED7-AA84-45E3-BCEE-C22B5815F6AD}
+name: Canonical
+key: canonical
+content-length: 32
+
+https://advisers.vitality.co.uk/
+----field----
+field: {503DBB8D-A5C9-4ECF-9EAA-B3F8904567F4}
+name: Description
+key: description
+content-length: 127
+
+We give brokers and advisers the support needed to provide their clients with details about Vitality Health and Life Insurance.
+----field----
+field: {89ECBE1C-DBA0-419D-8DFA-03738768CF00}
+name: OpenGraphTitle
+key: opengraphtitle
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {6327BB53-43BC-4B71-8D37-31543CBB6703}
+name: Robots
+key: robots
+content-length: 13
+
+index, follow
+----field----
+field: {7617A9BA-718F-494B-AC38-0CAB4E8243E0}
+name: TwitterSite
+key: twittersite
+content-length: 16
+
+@VitalityAdviser
+----field----
+field: {DED4F772-C285-4705-A9F3-56E94849A80C}
+name: OpenGraphType
+key: opengraphtype
+content-length: 7
+
+website
+----field----
+field: {BAAA1A3F-F2FE-471C-909D-D3835C8FD69B}
+name: OpenGraphUrl
+key: opengraphurl
+content-length: 32
+
+https://advisers.vitality.co.uk/
+----field----
+field: {4E2F6806-3219-45D0-95F7-28000CA59900}
+name: TwitterTitle
+key: twittertitle
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {D58FB095-D442-4F40-B456-BB90C7C34C30}
+name: TwitterDescription
+key: twitterdescription
+content-length: 127
+
+We give brokers and advisers the support needed to provide their clients with details about Vitality Health and Life Insurance.
+----field----
+field: {89F047C7-03A3-43C8-8F77-D1A96D550C4D}
+name: OpenGraphSiteName
+key: opengraphsitename
+content-length: 29
+
+Vitality Advisers and Brokers
+----field----
+field: {DC5AF0D9-4D11-4D47-998E-37F2F05E7B0E}
+name: TwitterImage
+key: twitterimage
+content-length: 0
+
+
+----field----
+field: {A2ECDE95-3430-4A1D-904C-DD477C8A5BE1}
+name: ShowQuoteFooter
+key: showquotefooter
+content-length: 1
+
+1
+----field----
+field: {0358353D-AA7F-41EC-86A9-09B5EDE5F10A}
+name: QuoteFooterLinks
+key: quotefooterlinks
+content-length: 77
+
+{CA3FE7AC-99F1-4B04-BAF3-374CA9095B35}|{4C966AE0-776D-4148-85A9-E73BC097B0DA}
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 4
+
+Home
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 1200
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{7129F78A-DE45-4BFE-BF2D-F1ED63F1873F}" p:before="*" s:ds="{842BC1F0-1CF8-4D11-9A6D-CF3E052E166E}" s:id="{2E89254C-C84F-482E-9B60-5C18B0BC7D3E}" s:par="FontTheme=%7BAF686E61-7006-4CA1-A15E-4A71E08567D6%7D&amp;ImageRelativePosition=%7B9097C6EB-902B-4408-B106-89CEDA90DBA8%7D" s:ph="PresalesContent" /><r uid="{FF57C680-41FC-433C-B12F-93B6C5F04D9C}" p:after="r[@uid='{7129F78A-DE45-4BFE-BF2D-F1ED63F1873F}']" s:ds="{013F4453-03AA-4412-B7C5-2455542F3D7F}" s:id="{60050E29-FE73-47BE-B927-40A65393DB06}" s:ph="PresalesContent" /><r uid="{B164DFE8-11F2-4F9E-8E1C-54A826036641}" p:after="r[@uid='{FF57C680-41FC-433C-B12F-93B6C5F04D9C}']" s:ds="{BB3C24C6-1FA8-47FA-9B37-D82C374CDBCB}" s:id="{8829319E-7570-4398-8C4E-C362B276D003}" s:ph="PresalesContent" /><r uid="{ED1CE4EA-56F6-47E1-99D3-DA1869BE4C64}" p:after="r[@uid='{B164DFE8-11F2-4F9E-8E1C-54A826036641}']" s:ds="{082319B1-3BCB-4320-AF1E-778A47160B68}" s:id="{9CE5E97F-991C-4576-A167-B2E587CA01E9}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
+----field----
+field: {C8F93AFE-BFD4-4E8F-9C61-152559854661}
+name: __Valid from
+key: __valid from
+content-length: 16
+
+20160907T145439Z
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160907T145439Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 21
+
+sitecore\ByronMadigan
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+857a9ac0-3bd5-4b0b-a861-a0d0c663dd16
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160909T141146Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 21
+
+sitecore\ByronMadigan
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
+----version----
+language: en
+version: 3
+revision: 5ecd6640-6593-4627-8680-d4219f6b7645
+
+----field----
+field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
+name: Title
+key: title
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {A9ADDED7-AA84-45E3-BCEE-C22B5815F6AD}
+name: Canonical
+key: canonical
+content-length: 32
+
+https://advisers.vitality.co.uk/
+----field----
+field: {503DBB8D-A5C9-4ECF-9EAA-B3F8904567F4}
+name: Description
+key: description
+content-length: 127
+
+We give brokers and advisers the support needed to provide their clients with details about Vitality Health and Life Insurance.
+----field----
+field: {89ECBE1C-DBA0-419D-8DFA-03738768CF00}
+name: OpenGraphTitle
+key: opengraphtitle
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {6327BB53-43BC-4B71-8D37-31543CBB6703}
+name: Robots
+key: robots
+content-length: 13
+
+index, follow
+----field----
+field: {7617A9BA-718F-494B-AC38-0CAB4E8243E0}
+name: TwitterSite
+key: twittersite
+content-length: 16
+
+@VitalityAdviser
+----field----
+field: {DED4F772-C285-4705-A9F3-56E94849A80C}
+name: OpenGraphType
+key: opengraphtype
+content-length: 7
+
+website
+----field----
+field: {BAAA1A3F-F2FE-471C-909D-D3835C8FD69B}
+name: OpenGraphUrl
+key: opengraphurl
+content-length: 32
+
+https://advisers.vitality.co.uk/
+----field----
+field: {4E2F6806-3219-45D0-95F7-28000CA59900}
+name: TwitterTitle
+key: twittertitle
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {D58FB095-D442-4F40-B456-BB90C7C34C30}
+name: TwitterDescription
+key: twitterdescription
+content-length: 127
+
+We give brokers and advisers the support needed to provide their clients with details about Vitality Health and Life Insurance.
+----field----
+field: {89F047C7-03A3-43C8-8F77-D1A96D550C4D}
+name: OpenGraphSiteName
+key: opengraphsitename
+content-length: 29
+
+Vitality Advisers and Brokers
+----field----
+field: {DC5AF0D9-4D11-4D47-998E-37F2F05E7B0E}
+name: TwitterImage
+key: twitterimage
+content-length: 0
+
+
+----field----
+field: {A2ECDE95-3430-4A1D-904C-DD477C8A5BE1}
+name: ShowQuoteFooter
+key: showquotefooter
+content-length: 1
+
+1
+----field----
+field: {0358353D-AA7F-41EC-86A9-09B5EDE5F10A}
+name: QuoteFooterLinks
+key: quotefooterlinks
+content-length: 77
+
+{CA3FE7AC-99F1-4B04-BAF3-374CA9095B35}|{4C966AE0-776D-4148-85A9-E73BC097B0DA}
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 4
+
+Home
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 1200
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{7129F78A-DE45-4BFE-BF2D-F1ED63F1873F}" p:before="*" s:ds="{842BC1F0-1CF8-4D11-9A6D-CF3E052E166E}" s:id="{2E89254C-C84F-482E-9B60-5C18B0BC7D3E}" s:par="FontTheme=%7BDAE842BC-82A2-4DC4-998B-B64A74FB25C9%7D&amp;ImageRelativePosition=%7B8397F5D2-835D-43EE-9A0C-3ADA9B07193C%7D" s:ph="PresalesContent" /><r uid="{FF57C680-41FC-433C-B12F-93B6C5F04D9C}" p:after="r[@uid='{7129F78A-DE45-4BFE-BF2D-F1ED63F1873F}']" s:ds="{013F4453-03AA-4412-B7C5-2455542F3D7F}" s:id="{60050E29-FE73-47BE-B927-40A65393DB06}" s:ph="PresalesContent" /><r uid="{B164DFE8-11F2-4F9E-8E1C-54A826036641}" p:after="r[@uid='{FF57C680-41FC-433C-B12F-93B6C5F04D9C}']" s:ds="{BB3C24C6-1FA8-47FA-9B37-D82C374CDBCB}" s:id="{8829319E-7570-4398-8C4E-C362B276D003}" s:ph="PresalesContent" /><r uid="{ED1CE4EA-56F6-47E1-99D3-DA1869BE4C64}" p:after="r[@uid='{B164DFE8-11F2-4F9E-8E1C-54A826036641}']" s:ds="{082319B1-3BCB-4320-AF1E-778A47160B68}" s:id="{9CE5E97F-991C-4576-A167-B2E587CA01E9}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
+----field----
+field: {C8F93AFE-BFD4-4E8F-9C61-152559854661}
+name: __Valid from
+key: __valid from
+content-length: 16
+
+20160909T161016Z
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160909T161016Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 21
+
+sitecore\ByronMadigan
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+5ecd6640-6593-4627-8680-d4219f6b7645
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160909T161238Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 21
+
+sitecore\ByronMadigan
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
+----version----
+language: en
+version: 4
+revision: 564b8bff-ced7-4ddc-882d-a49c028ab55e
+
+----field----
+field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
+name: Title
+key: title
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {A9ADDED7-AA84-45E3-BCEE-C22B5815F6AD}
+name: Canonical
+key: canonical
+content-length: 32
+
+https://advisers.vitality.co.uk/
+----field----
+field: {503DBB8D-A5C9-4ECF-9EAA-B3F8904567F4}
+name: Description
+key: description
+content-length: 127
+
+We give brokers and advisers the support needed to provide their clients with details about Vitality Health and Life Insurance.
+----field----
+field: {89ECBE1C-DBA0-419D-8DFA-03738768CF00}
+name: OpenGraphTitle
+key: opengraphtitle
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {6327BB53-43BC-4B71-8D37-31543CBB6703}
+name: Robots
+key: robots
+content-length: 13
+
+index, follow
+----field----
+field: {7617A9BA-718F-494B-AC38-0CAB4E8243E0}
+name: TwitterSite
+key: twittersite
+content-length: 16
+
+@VitalityAdviser
+----field----
+field: {DED4F772-C285-4705-A9F3-56E94849A80C}
+name: OpenGraphType
+key: opengraphtype
+content-length: 7
+
+website
+----field----
+field: {BAAA1A3F-F2FE-471C-909D-D3835C8FD69B}
+name: OpenGraphUrl
+key: opengraphurl
+content-length: 32
+
+https://advisers.vitality.co.uk/
+----field----
+field: {4E2F6806-3219-45D0-95F7-28000CA59900}
+name: TwitterTitle
+key: twittertitle
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {D58FB095-D442-4F40-B456-BB90C7C34C30}
+name: TwitterDescription
+key: twitterdescription
+content-length: 127
+
+We give brokers and advisers the support needed to provide their clients with details about Vitality Health and Life Insurance.
+----field----
+field: {89F047C7-03A3-43C8-8F77-D1A96D550C4D}
+name: OpenGraphSiteName
+key: opengraphsitename
+content-length: 29
+
+Vitality Advisers and Brokers
+----field----
+field: {DC5AF0D9-4D11-4D47-998E-37F2F05E7B0E}
+name: TwitterImage
+key: twitterimage
+content-length: 0
+
+
+----field----
+field: {A2ECDE95-3430-4A1D-904C-DD477C8A5BE1}
+name: ShowQuoteFooter
+key: showquotefooter
+content-length: 1
+
+1
+----field----
+field: {0358353D-AA7F-41EC-86A9-09B5EDE5F10A}
+name: QuoteFooterLinks
+key: quotefooterlinks
+content-length: 77
+
+{CA3FE7AC-99F1-4B04-BAF3-374CA9095B35}|{4C966AE0-776D-4148-85A9-E73BC097B0DA}
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 4
+
+Home
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 1200
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{7129F78A-DE45-4BFE-BF2D-F1ED63F1873F}" p:before="*" s:ds="{842BC1F0-1CF8-4D11-9A6D-CF3E052E166E}" s:id="{2E89254C-C84F-482E-9B60-5C18B0BC7D3E}" s:par="FontTheme=%7BDAE842BC-82A2-4DC4-998B-B64A74FB25C9%7D&amp;ImageRelativePosition=%7B8397F5D2-835D-43EE-9A0C-3ADA9B07193C%7D" s:ph="PresalesContent" /><r uid="{FF57C680-41FC-433C-B12F-93B6C5F04D9C}" p:after="r[@uid='{7129F78A-DE45-4BFE-BF2D-F1ED63F1873F}']" s:ds="{013F4453-03AA-4412-B7C5-2455542F3D7F}" s:id="{60050E29-FE73-47BE-B927-40A65393DB06}" s:ph="PresalesContent" /><r uid="{B164DFE8-11F2-4F9E-8E1C-54A826036641}" p:after="r[@uid='{FF57C680-41FC-433C-B12F-93B6C5F04D9C}']" s:ds="{BB3C24C6-1FA8-47FA-9B37-D82C374CDBCB}" s:id="{8829319E-7570-4398-8C4E-C362B276D003}" s:ph="PresalesContent" /><r uid="{ED1CE4EA-56F6-47E1-99D3-DA1869BE4C64}" p:after="r[@uid='{B164DFE8-11F2-4F9E-8E1C-54A826036641}']" s:ds="{082319B1-3BCB-4320-AF1E-778A47160B68}" s:id="{9CE5E97F-991C-4576-A167-B2E587CA01E9}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
+----field----
+field: {C8F93AFE-BFD4-4E8F-9C61-152559854661}
+name: __Valid from
+key: __valid from
+content-length: 16
+
+20160909T161601Z
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160909T161601Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 21
+
+sitecore\ByronMadigan
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+564b8bff-ced7-4ddc-882d-a49c028ab55e
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160909T161644Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 21
+
+sitecore\ByronMadigan
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
+----version----
+language: en
+version: 5
+revision: 2d844c07-69b3-4e37-98f0-e96a0662d25c
+
+----field----
+field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
+name: Title
+key: title
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {A9ADDED7-AA84-45E3-BCEE-C22B5815F6AD}
+name: Canonical
+key: canonical
+content-length: 32
+
+https://advisers.vitality.co.uk/
+----field----
+field: {503DBB8D-A5C9-4ECF-9EAA-B3F8904567F4}
+name: Description
+key: description
+content-length: 127
+
+We give brokers and advisers the support needed to provide their clients with details about Vitality Health and Life Insurance.
+----field----
+field: {89ECBE1C-DBA0-419D-8DFA-03738768CF00}
+name: OpenGraphTitle
+key: opengraphtitle
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {6327BB53-43BC-4B71-8D37-31543CBB6703}
+name: Robots
+key: robots
+content-length: 13
+
+index, follow
+----field----
+field: {7617A9BA-718F-494B-AC38-0CAB4E8243E0}
+name: TwitterSite
+key: twittersite
+content-length: 16
+
+@VitalityAdviser
+----field----
+field: {DED4F772-C285-4705-A9F3-56E94849A80C}
+name: OpenGraphType
+key: opengraphtype
+content-length: 7
+
+website
+----field----
+field: {BAAA1A3F-F2FE-471C-909D-D3835C8FD69B}
+name: OpenGraphUrl
+key: opengraphurl
+content-length: 32
+
+https://advisers.vitality.co.uk/
+----field----
+field: {4E2F6806-3219-45D0-95F7-28000CA59900}
+name: TwitterTitle
+key: twittertitle
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {D58FB095-D442-4F40-B456-BB90C7C34C30}
+name: TwitterDescription
+key: twitterdescription
+content-length: 127
+
+We give brokers and advisers the support needed to provide their clients with details about Vitality Health and Life Insurance.
+----field----
+field: {89F047C7-03A3-43C8-8F77-D1A96D550C4D}
+name: OpenGraphSiteName
+key: opengraphsitename
+content-length: 29
+
+Vitality Advisers and Brokers
+----field----
+field: {DC5AF0D9-4D11-4D47-998E-37F2F05E7B0E}
+name: TwitterImage
+key: twitterimage
+content-length: 0
+
+
+----field----
+field: {A2ECDE95-3430-4A1D-904C-DD477C8A5BE1}
+name: ShowQuoteFooter
+key: showquotefooter
+content-length: 1
+
+1
+----field----
+field: {0358353D-AA7F-41EC-86A9-09B5EDE5F10A}
+name: QuoteFooterLinks
+key: quotefooterlinks
+content-length: 77
+
+{CA3FE7AC-99F1-4B04-BAF3-374CA9095B35}|{4C966AE0-776D-4148-85A9-E73BC097B0DA}
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 4
+
+Home
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 1200
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{7129F78A-DE45-4BFE-BF2D-F1ED63F1873F}" p:before="*" s:ds="{842BC1F0-1CF8-4D11-9A6D-CF3E052E166E}" s:id="{2E89254C-C84F-482E-9B60-5C18B0BC7D3E}" s:par="FontTheme=%7BDAE842BC-82A2-4DC4-998B-B64A74FB25C9%7D&amp;ImageRelativePosition=%7B8397F5D2-835D-43EE-9A0C-3ADA9B07193C%7D" s:ph="PresalesContent" /><r uid="{FF57C680-41FC-433C-B12F-93B6C5F04D9C}" p:after="r[@uid='{7129F78A-DE45-4BFE-BF2D-F1ED63F1873F}']" s:ds="{013F4453-03AA-4412-B7C5-2455542F3D7F}" s:id="{60050E29-FE73-47BE-B927-40A65393DB06}" s:ph="PresalesContent" /><r uid="{B164DFE8-11F2-4F9E-8E1C-54A826036641}" p:after="r[@uid='{FF57C680-41FC-433C-B12F-93B6C5F04D9C}']" s:ds="{BB3C24C6-1FA8-47FA-9B37-D82C374CDBCB}" s:id="{8829319E-7570-4398-8C4E-C362B276D003}" s:ph="PresalesContent" /><r uid="{ED1CE4EA-56F6-47E1-99D3-DA1869BE4C64}" p:after="r[@uid='{B164DFE8-11F2-4F9E-8E1C-54A826036641}']" s:ds="{082319B1-3BCB-4320-AF1E-778A47160B68}" s:id="{9CE5E97F-991C-4576-A167-B2E587CA01E9}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
+----field----
+field: {C8F93AFE-BFD4-4E8F-9C61-152559854661}
+name: __Valid from
+key: __valid from
+content-length: 16
+
+20160910T115924Z
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160910T115924Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 18
+
+sitecore\JohnWyatt
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+2d844c07-69b3-4e37-98f0-e96a0662d25c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161010T145115Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 20
+
+sitecore\EmmaMadigan
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
+----version----
+language: en
+version: 6
+revision: fedff855-4daa-4256-a30c-11682a337062
+
+----field----
+field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
+name: Title
+key: title
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {A9ADDED7-AA84-45E3-BCEE-C22B5815F6AD}
+name: Canonical
+key: canonical
+content-length: 32
+
+https://advisers.vitality.co.uk/
+----field----
+field: {503DBB8D-A5C9-4ECF-9EAA-B3F8904567F4}
+name: Description
+key: description
+content-length: 127
+
+We give brokers and advisers the support needed to provide their clients with details about Vitality Health and Life Insurance.
+----field----
+field: {89ECBE1C-DBA0-419D-8DFA-03738768CF00}
+name: OpenGraphTitle
+key: opengraphtitle
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {6327BB53-43BC-4B71-8D37-31543CBB6703}
+name: Robots
+key: robots
+content-length: 13
+
+index, follow
+----field----
+field: {7617A9BA-718F-494B-AC38-0CAB4E8243E0}
+name: TwitterSite
+key: twittersite
+content-length: 16
+
+@VitalityAdviser
+----field----
+field: {DED4F772-C285-4705-A9F3-56E94849A80C}
+name: OpenGraphType
+key: opengraphtype
+content-length: 7
+
+website
+----field----
+field: {BAAA1A3F-F2FE-471C-909D-D3835C8FD69B}
+name: OpenGraphUrl
+key: opengraphurl
+content-length: 32
+
+https://advisers.vitality.co.uk/
+----field----
+field: {4E2F6806-3219-45D0-95F7-28000CA59900}
+name: TwitterTitle
+key: twittertitle
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {D58FB095-D442-4F40-B456-BB90C7C34C30}
+name: TwitterDescription
+key: twitterdescription
+content-length: 127
+
+We give brokers and advisers the support needed to provide their clients with details about Vitality Health and Life Insurance.
+----field----
+field: {89F047C7-03A3-43C8-8F77-D1A96D550C4D}
+name: OpenGraphSiteName
+key: opengraphsitename
+content-length: 29
+
+Vitality Advisers and Brokers
+----field----
+field: {DC5AF0D9-4D11-4D47-998E-37F2F05E7B0E}
+name: TwitterImage
+key: twitterimage
+content-length: 0
+
+
+----field----
+field: {A2ECDE95-3430-4A1D-904C-DD477C8A5BE1}
+name: ShowQuoteFooter
+key: showquotefooter
+content-length: 1
+
+1
+----field----
+field: {0358353D-AA7F-41EC-86A9-09B5EDE5F10A}
+name: QuoteFooterLinks
+key: quotefooterlinks
+content-length: 77
+
+{CA3FE7AC-99F1-4B04-BAF3-374CA9095B35}|{4C966AE0-776D-4148-85A9-E73BC097B0DA}
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 4
+
+Home
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 1419
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{7129F78A-DE45-4BFE-BF2D-F1ED63F1873F}" p:before="*" s:ds="{842BC1F0-1CF8-4D11-9A6D-CF3E052E166E}" s:id="{2E89254C-C84F-482E-9B60-5C18B0BC7D3E}" s:par="FontTheme=%7BDAE842BC-82A2-4DC4-998B-B64A74FB25C9%7D&amp;ImageRelativePosition=%7B8397F5D2-835D-43EE-9A0C-3ADA9B07193C%7D" s:ph="PresalesContent" /><r uid="{FF57C680-41FC-433C-B12F-93B6C5F04D9C}" p:after="r[@uid='{7129F78A-DE45-4BFE-BF2D-F1ED63F1873F}']" s:ds="{013F4453-03AA-4412-B7C5-2455542F3D7F}" s:id="{60050E29-FE73-47BE-B927-40A65393DB06}" s:ph="PresalesContent" /><r uid="{B164DFE8-11F2-4F9E-8E1C-54A826036641}" p:after="r[@uid='{FF57C680-41FC-433C-B12F-93B6C5F04D9C}']" s:ds="{BB3C24C6-1FA8-47FA-9B37-D82C374CDBCB}" s:id="{8829319E-7570-4398-8C4E-C362B276D003}" s:ph="PresalesContent" /><r uid="{ED1CE4EA-56F6-47E1-99D3-DA1869BE4C64}" p:after="r[@uid='{B164DFE8-11F2-4F9E-8E1C-54A826036641}']" s:ds="{082319B1-3BCB-4320-AF1E-778A47160B68}" s:id="{9CE5E97F-991C-4576-A167-B2E587CA01E9}" s:par="ContentAlignment=%7B5DE8C46C-2EC3-4F7F-971A-5A9242C98AA7%7D&amp;ImageRelativePosition=%7BC6367441-9501-48A2-A09E-2492E7D2DB49%7D&amp;BackgroundColour=%7B81D7053B-A8A3-4F21-A165-DF4ED2E3744A%7D&amp;ApplyGradient" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
+----field----
+field: {C8F93AFE-BFD4-4E8F-9C61-152559854661}
+name: __Valid from
+key: __valid from
+content-length: 16
+
+20161011T090247Z
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161011T090247Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 20
+
+sitecore\EmmaMadigan
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+fedff855-4daa-4256-a30c-11682a337062
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161011T155557Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 20
+
+sitecore\EmmaMadigan
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
+----version----
+language: en
+version: 7
+revision: 0185de16-2ba0-4453-951e-88c1989cc12a
+
+----field----
+field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
+name: Title
+key: title
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {A9ADDED7-AA84-45E3-BCEE-C22B5815F6AD}
+name: Canonical
+key: canonical
+content-length: 32
+
+https://advisers.vitality.co.uk/
+----field----
+field: {503DBB8D-A5C9-4ECF-9EAA-B3F8904567F4}
+name: Description
+key: description
+content-length: 127
+
+We give brokers and advisers the support needed to provide their clients with details about Vitality Health and Life Insurance.
+----field----
+field: {89ECBE1C-DBA0-419D-8DFA-03738768CF00}
+name: OpenGraphTitle
+key: opengraphtitle
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {6327BB53-43BC-4B71-8D37-31543CBB6703}
+name: Robots
+key: robots
+content-length: 13
+
+index, follow
+----field----
+field: {7617A9BA-718F-494B-AC38-0CAB4E8243E0}
+name: TwitterSite
+key: twittersite
+content-length: 16
+
+@VitalityAdviser
+----field----
+field: {DED4F772-C285-4705-A9F3-56E94849A80C}
+name: OpenGraphType
+key: opengraphtype
+content-length: 7
+
+website
+----field----
+field: {BAAA1A3F-F2FE-471C-909D-D3835C8FD69B}
+name: OpenGraphUrl
+key: opengraphurl
+content-length: 32
+
+https://advisers.vitality.co.uk/
+----field----
+field: {4E2F6806-3219-45D0-95F7-28000CA59900}
+name: TwitterTitle
+key: twittertitle
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {D58FB095-D442-4F40-B456-BB90C7C34C30}
+name: TwitterDescription
+key: twitterdescription
+content-length: 127
+
+We give brokers and advisers the support needed to provide their clients with details about Vitality Health and Life Insurance.
+----field----
+field: {89F047C7-03A3-43C8-8F77-D1A96D550C4D}
+name: OpenGraphSiteName
+key: opengraphsitename
+content-length: 29
+
+Vitality Advisers and Brokers
+----field----
+field: {DC5AF0D9-4D11-4D47-998E-37F2F05E7B0E}
+name: TwitterImage
+key: twitterimage
+content-length: 0
+
+
+----field----
+field: {1DDC22BC-0EAF-4B97-A5D6-7DF110FF748F}
+name: InheritQuoteFooterSettings
+key: inheritquotefootersettings
+content-length: 0
+
+
+----field----
+field: {A2ECDE95-3430-4A1D-904C-DD477C8A5BE1}
+name: ShowQuoteFooter
+key: showquotefooter
+content-length: 0
+
+
+----field----
+field: {0358353D-AA7F-41EC-86A9-09B5EDE5F10A}
+name: QuoteFooterLinks
+key: quotefooterlinks
+content-length: 77
+
+{CA3FE7AC-99F1-4B04-BAF3-374CA9095B35}|{4C966AE0-776D-4148-85A9-E73BC097B0DA}
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 4
+
+Home
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 1419
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{7129F78A-DE45-4BFE-BF2D-F1ED63F1873F}" p:before="*" s:ds="{842BC1F0-1CF8-4D11-9A6D-CF3E052E166E}" s:id="{2E89254C-C84F-482E-9B60-5C18B0BC7D3E}" s:par="FontTheme=%7BDAE842BC-82A2-4DC4-998B-B64A74FB25C9%7D&amp;ImageRelativePosition=%7B8397F5D2-835D-43EE-9A0C-3ADA9B07193C%7D" s:ph="PresalesContent" /><r uid="{FF57C680-41FC-433C-B12F-93B6C5F04D9C}" p:after="r[@uid='{7129F78A-DE45-4BFE-BF2D-F1ED63F1873F}']" s:ds="{013F4453-03AA-4412-B7C5-2455542F3D7F}" s:id="{60050E29-FE73-47BE-B927-40A65393DB06}" s:ph="PresalesContent" /><r uid="{B164DFE8-11F2-4F9E-8E1C-54A826036641}" p:after="r[@uid='{FF57C680-41FC-433C-B12F-93B6C5F04D9C}']" s:ds="{BB3C24C6-1FA8-47FA-9B37-D82C374CDBCB}" s:id="{8829319E-7570-4398-8C4E-C362B276D003}" s:ph="PresalesContent" /><r uid="{ED1CE4EA-56F6-47E1-99D3-DA1869BE4C64}" p:after="r[@uid='{B164DFE8-11F2-4F9E-8E1C-54A826036641}']" s:ds="{082319B1-3BCB-4320-AF1E-778A47160B68}" s:id="{9CE5E97F-991C-4576-A167-B2E587CA01E9}" s:par="ContentAlignment=%7B5DE8C46C-2EC3-4F7F-971A-5A9242C98AA7%7D&amp;ImageRelativePosition=%7BC6367441-9501-48A2-A09E-2492E7D2DB49%7D&amp;BackgroundColour=%7B81D7053B-A8A3-4F21-A165-DF4ED2E3744A%7D&amp;ApplyGradient" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
+----field----
+field: {C8F93AFE-BFD4-4E8F-9C61-152559854661}
+name: __Valid from
+key: __valid from
+content-length: 16
+
+20161012T081941Z
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161012T081941Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 20
+
+sitecore\EmmaMadigan
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+0185de16-2ba0-4453-951e-88c1989cc12a
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161014T112817Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 13
+
+sitecore\dave
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
+----version----
+language: en
+version: 8
+revision: 7172bcb9-960d-47d9-8322-cf8d568ec5b4
+
+----field----
+field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
+name: Title
+key: title
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {A9ADDED7-AA84-45E3-BCEE-C22B5815F6AD}
+name: Canonical
+key: canonical
+content-length: 32
+
+https://advisers.vitality.co.uk/
+----field----
+field: {503DBB8D-A5C9-4ECF-9EAA-B3F8904567F4}
+name: Description
+key: description
+content-length: 127
+
+We give brokers and advisers the support needed to provide their clients with details about Vitality Health and Life Insurance.
+----field----
+field: {89ECBE1C-DBA0-419D-8DFA-03738768CF00}
+name: OpenGraphTitle
+key: opengraphtitle
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {6327BB53-43BC-4B71-8D37-31543CBB6703}
+name: Robots
+key: robots
+content-length: 13
+
+index, follow
+----field----
+field: {7617A9BA-718F-494B-AC38-0CAB4E8243E0}
+name: TwitterSite
+key: twittersite
+content-length: 16
+
+@VitalityAdviser
+----field----
+field: {DED4F772-C285-4705-A9F3-56E94849A80C}
+name: OpenGraphType
+key: opengraphtype
+content-length: 7
+
+website
+----field----
+field: {BAAA1A3F-F2FE-471C-909D-D3835C8FD69B}
+name: OpenGraphUrl
+key: opengraphurl
+content-length: 32
+
+https://advisers.vitality.co.uk/
+----field----
+field: {4E2F6806-3219-45D0-95F7-28000CA59900}
+name: TwitterTitle
+key: twittertitle
+content-length: 31
+
+Vitality | Advisers and Brokers
+----field----
+field: {D58FB095-D442-4F40-B456-BB90C7C34C30}
+name: TwitterDescription
+key: twitterdescription
+content-length: 127
+
+We give brokers and advisers the support needed to provide their clients with details about Vitality Health and Life Insurance.
+----field----
+field: {89F047C7-03A3-43C8-8F77-D1A96D550C4D}
+name: OpenGraphSiteName
+key: opengraphsitename
+content-length: 29
+
+Vitality Advisers and Brokers
+----field----
+field: {DC5AF0D9-4D11-4D47-998E-37F2F05E7B0E}
+name: TwitterImage
+key: twitterimage
+content-length: 0
+
+
+----field----
+field: {1DDC22BC-0EAF-4B97-A5D6-7DF110FF748F}
+name: InheritQuoteFooterSettings
+key: inheritquotefootersettings
+content-length: 0
+
+
+----field----
+field: {A2ECDE95-3430-4A1D-904C-DD477C8A5BE1}
+name: ShowQuoteFooter
+key: showquotefooter
+content-length: 0
+
+
+----field----
+field: {0358353D-AA7F-41EC-86A9-09B5EDE5F10A}
+name: QuoteFooterLinks
+key: quotefooterlinks
+content-length: 77
+
+{CA3FE7AC-99F1-4B04-BAF3-374CA9095B35}|{4C966AE0-776D-4148-85A9-E73BC097B0DA}
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 4
+
+Home
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 1419
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{7129F78A-DE45-4BFE-BF2D-F1ED63F1873F}" p:before="*" s:ds="{842BC1F0-1CF8-4D11-9A6D-CF3E052E166E}" s:id="{2E89254C-C84F-482E-9B60-5C18B0BC7D3E}" s:par="FontTheme=%7BDAE842BC-82A2-4DC4-998B-B64A74FB25C9%7D&amp;ImageRelativePosition=%7B8397F5D2-835D-43EE-9A0C-3ADA9B07193C%7D" s:ph="PresalesContent" /><r uid="{FF57C680-41FC-433C-B12F-93B6C5F04D9C}" p:after="r[@uid='{7129F78A-DE45-4BFE-BF2D-F1ED63F1873F}']" s:ds="{013F4453-03AA-4412-B7C5-2455542F3D7F}" s:id="{60050E29-FE73-47BE-B927-40A65393DB06}" s:ph="PresalesContent" /><r uid="{B164DFE8-11F2-4F9E-8E1C-54A826036641}" p:after="r[@uid='{FF57C680-41FC-433C-B12F-93B6C5F04D9C}']" s:ds="{BB3C24C6-1FA8-47FA-9B37-D82C374CDBCB}" s:id="{8829319E-7570-4398-8C4E-C362B276D003}" s:ph="PresalesContent" /><r uid="{ED1CE4EA-56F6-47E1-99D3-DA1869BE4C64}" p:after="r[@uid='{B164DFE8-11F2-4F9E-8E1C-54A826036641}']" s:ds="{082319B1-3BCB-4320-AF1E-778A47160B68}" s:id="{9CE5E97F-991C-4576-A167-B2E587CA01E9}" s:par="ContentAlignment=%7B5DE8C46C-2EC3-4F7F-971A-5A9242C98AA7%7D&amp;ImageRelativePosition=%7B8397F5D2-835D-43EE-9A0C-3ADA9B07193C%7D&amp;BackgroundColour=%7B81D7053B-A8A3-4F21-A165-DF4ED2E3744A%7D&amp;ApplyGradient" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
+----field----
+field: {C8F93AFE-BFD4-4E8F-9C61-152559854661}
+name: __Valid from
+key: __valid from
+content-length: 16
+
+20161017T123438Z
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161017T123438Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 20
+
+sitecore\EmmaMadigan
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+7172bcb9-960d-47d9-8322-cf8d568ec5b4
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161117T170250Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 13
+
+sitecore\dave
 ----field----
 field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
 name: __Workflow state

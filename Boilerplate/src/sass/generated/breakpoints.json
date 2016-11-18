@@ -1,8 +1,0 @@
-{
-    "mobile": "350px",
-    "mobile-landscape": "540px",
-    "tablet": "770px",
-    "desktop": "1025px",
-    "wide": "1200px",
-    "max": "1440px"
-}
