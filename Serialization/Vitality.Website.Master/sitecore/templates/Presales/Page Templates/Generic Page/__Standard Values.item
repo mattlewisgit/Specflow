@@ -19,7 +19,14 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 0f2ac5a5-766b-48cc-9ee4-3fc797c7eb08
+revision: bfb063ec-2373-4f32-b9c6-c96f025787b3
+
+----field----
+field: {7AE135AE-220D-40F0-B2EC-D72B2A5659FC}
+name: ChangeFrequency
+key: changefrequency
+content-length: 0
+
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -48,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-0f2ac5a5-766b-48cc-9ee4-3fc797c7eb08
+bfb063ec-2373-4f32-b9c6-c96f025787b3
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160721T153304Z
+20161118T140922Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
