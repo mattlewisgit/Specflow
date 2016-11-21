@@ -3877,7 +3877,12 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Partners\PartnerHero.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductPanel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductsComponent.cs" />
+    <Compile Include="Areas\Presales\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Presales\Controllers\FeemaximaController.cs" />
     <Compile Include="Areas\Presales\Controllers\LiteratureLibraryController.cs" />
+    <Compile Include="Areas\Presales\Handlers\Feemaxima\FeemaximaChaptersDto.cs" />
+    <Compile Include="Areas\Presales\Handlers\Feemaxima\FeemaximaChaptersHandler.cs" />
+    <Compile Include="Areas\Presales\Handlers\Feemaxima\FeemaximaChaptersRequest.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentDto.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentRequest.cs" />
@@ -4666,6 +4671,10 @@
     <Folder Include="sitemaps\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Vitality.Website.App\Vitality.Website.App.csproj">
+      <Project>{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}</Project>
+      <Name>Vitality.Website.App</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Vitality.Website.SC\Vitality.Website.SC.csproj">
       <Project>{ee2349ba-bc4f-48e3-851e-90aa3aef0250}</Project>
       <Name>Vitality.Website.SC</Name>
