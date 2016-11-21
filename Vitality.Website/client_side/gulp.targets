@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="AfterBuild" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-    <ItemGroup>
-        <JSInput Include="$(ProjectDir)client_side\js\**\*.js" />
-        <SASSInput Include="$(ProjectDir)client_side\sass\**\*.scss" />
-        <JSOutput Include="$(ProjectDir)js\**\*.js" />
-        <CSSOutput Include="$(ProjectDir)css\**\*.css" />
-    </ItemGroup>
-    <Target Name="AfterBuild" Inputs="@(JSInput);@(SASSInput)" Outputs="@(JSOutput);@(CSSOutput)">
-        <Exec WorkingDirectory="$(ProjectDir)\client_side" Command="npm cache clean" />
-        <Exec WorkingDirectory="$(ProjectDir)\client_side" Command="npm install" />
-        <Exec WorkingDirectory="$(ProjectDir)\client_side" Command="npm run bower cache clean" />
-        <Exec WorkingDirectory="$(ProjectDir)\client_side" Command="npm run bower install" />
-        <Exec WorkingDirectory="$(ProjectDir)\client_side" Command="npm run gulp" />
-    </Target>
+  <ItemGroup>
+    <JSInput Include="$(ProjectDir)client_side\js\**\*.js" />
+    <SASSInput Include="$(ProjectDir)client_side\sass\**\*.scss" />
+    <JSOutput Include="$(ProjectDir)js\**\*.js" />
+    <CSSOutput Include="$(ProjectDir)css\**\*.css" />
+  </ItemGroup>
+  <Target Name="AfterBuild">
+    <Exec WorkingDirectory="$(ProjectDir)\client_side" Command="npm install" />
+    <Exec WorkingDirectory="$(ProjectDir)\client_side" Command="npm run bower install" />
+    <Exec WorkingDirectory="$(ProjectDir)\client_side" Command="npm run bower install vitality.boilerplate update --force" />
+  </Target>
+  <Target Name="AfterBuild" Inputs="@(JSInput);@(SASSInput)" Outputs="@(JSOutput);@(CSSOutput)">
+    <Exec WorkingDirectory="$(ProjectDir)client_side" Command="npm run gulp" />
+  </Target>
 </Project>

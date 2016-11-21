@@ -34,13 +34,13 @@ content-length: 77
 field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
 name: __Security
 key: __security
-content-length: 118
+content-length: 130
 
-ar|sitecore\Advisers User|pe|+item:read|+item:create|pd|+item:rename|+item:delete|+item:write|+item:create|+item:read|
+ar|sitecore\Advisers User|pe|+item:create|+item:write|+item:read|pd|+item:rename|+item:delete|+item:write|+item:create|+item:read|
 ----version----
 language: en
 version: 1
-revision: 4c2f7119-0634-4e78-9d54-67d4d86cdb8a
+revision: 8bb4e16a-6084-4ec1-b4cb-8bf38c927d20
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -62,18 +62,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4c2f7119-0634-4e78-9d54-67d4d86cdb8a
+8bb4e16a-6084-4ec1-b4cb-8bf38c927d20
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160912T095740Z
+20161117T170316Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\admin
+sitecore\dave
