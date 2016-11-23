@@ -150,7 +150,10 @@
     </div>
 </div>
 
-<script>
-    window.angularData = window.angularData || {};
-    window.angularData.literaturePath = '@Model.LiteratureLibrary.Name';
-</script>
+@if (@Model.LiteratureLibrary != null)
+{
+    <script>
+        window.angularData = window.angularData || {};
+        window.angularData.literaturePath = '@Model.LiteratureLibrary.Name';
+    </script>
+}
