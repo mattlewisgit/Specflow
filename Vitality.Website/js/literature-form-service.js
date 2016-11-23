@@ -47,7 +47,11 @@
                     // ...
                 })
                 .then(function (response) {
-                    cachedDocuments = response.data;
+                    // Ignore all documents that do not have plan details set.
+                    cachedDocuments = _.filter(response.data, function(document) {
+                        return document.PlanNumber && document.PlanType;
+                    });
+
                     cachedPlanTypes = _.uniq(_.pluck(cachedDocuments, documentProperties.PlanType)).sort();
                     callback(cachedPlanTypes);
                 });
