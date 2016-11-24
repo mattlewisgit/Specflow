@@ -1,18 +1,15 @@
-﻿using System.Collections.Generic;
-using Glass.Mapper.Sc.Fields;
-using Vitality.Website.Areas.Global.Models;
-
-namespace Vitality.Website.Areas.Presales.PageTemplates
+﻿namespace Vitality.Website.Areas.Presales.PageTemplates
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq.Expressions;
     using System.Reflection;
-    using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc;
+    using Glass.Mapper.Sc.Fields;
+    using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Maps;
-
     using Sitecore.Data.Fields;
-
+    using Vitality.Website.Areas.Global.Models;
     using Vitality.Website.Areas.Presales.BaseTemplates;
     using Vitality.Website.Areas.Presales.SettingsTemplates;
     using Vitality.Website.SC;
@@ -61,7 +58,7 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
         public bool HideFromSitemap { get; set; }
         public LinkItem Sitemap { get; set; }
         public string ChangeFrequency { get; set; }
-        public LinkItem Priority { get; set; }        
+        public LinkItem Priority { get; set; }
     }
 
     public class BasePageConfig : SitecoreGlassMap<BasePage>
@@ -74,7 +71,7 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
                 {typeof(string[]), StringArrayWithFallback},
                 {typeof(Image), ImageWithFallback},
             };
-        
+
         public override void Configure()
         {
             this.Map(
@@ -83,7 +80,8 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
                     context => context.Service.GetItem<QuoteFooter>(ItemConstants.Presales.Content.Configuration.QuoteFooter.Path).Headline)
                 );
 
-            var properties = typeof(BasePage).GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
+            var properties = typeof(BasePage).GetProperties
+                (BindingFlags.Public | BindingFlags.Instance | BindingFlags.DeclaredOnly);
 
             foreach (var property in properties)
             {
@@ -93,8 +91,8 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
                 }
 
                 var fieldName = property.Name;
-                var basePageProperty = this.BuildPropertyAccess<BasePage>(fieldName);
-                var siteSettingsProperty = this.BuildPropertyAccess<SiteSettings>(fieldName).Compile();
+                var basePageProperty = BuildPropertyAccess<BasePage>(fieldName);
+                var siteSettingsProperty = BuildPropertyAccess<SiteSettings>(fieldName).Compile();
 
                 if (_mapTypeValue.ContainsKey(property.PropertyType))
                 {
@@ -104,10 +102,9 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
             }
         }
 
-        private Expression<Func<T, object>> BuildPropertyAccess<T>(string property)
+        private static Expression<Func<T, object>> BuildPropertyAccess<T>(string property)
         {
             var basePage = Expression.Parameter(typeof(T));
-
             var propertyAccess = Expression.Property(basePage, property);
             var convertToObject = Expression.Convert(propertyAccess, typeof(object));
             return Expression.Lambda<Func<T, object>>(convertToObject, basePage);
@@ -115,36 +112,42 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
 
         private static object StringWithFallback(SitecoreDataMappingContext context, string property, Func<SiteSettings, object> siteSettingsProperty)
         {
-            if (!string.IsNullOrWhiteSpace(context.Item[property]))
-            {
-                return context.Item[property];
-            }
-            return GetFallbackValue(context.Service, siteSettingsProperty);
+            return !string.IsNullOrWhiteSpace(context.Item[property])
+                ? context.Item[property]
+                : GetFallbackValue(context.Service, siteSettingsProperty);
         }
 
         private static object StringArrayWithFallback(SitecoreDataMappingContext context, string property, Func<SiteSettings, object> siteSettingsProperty)
         {
-            if (!string.IsNullOrWhiteSpace(context.Item[property]))
-            {
-                return context.Item[property].Split('|');
-            }
-            return GetFallbackValue(context.Service, siteSettingsProperty);
+            return !string.IsNullOrWhiteSpace(context.Item[property])
+                ? context.Item[property].Split('|')
+                : GetFallbackValue(context.Service, siteSettingsProperty);
         }
 
-        private static object ImageWithFallback(SitecoreDataMappingContext context, string property, Func<SiteSettings, object> siteSettingsProperty)
+        private static object ImageWithFallback
+            (SitecoreDataMappingContext context, string property, Func<SiteSettings, object> siteSettingsProperty)
         {
             ImageField field = context.Item.Fields[property];
             var image = new Image();
+
+            if (field == null || field.InnerField == null)
+            {
+                return image;
+            }
+
             if (field.InnerField.HasValue)
             {
                 Glass.Mapper.Sc.DataMappers.SitecoreFieldImageMapper.MapToImage(image, field);
             }
+
             return GetFallbackValue(context.Service, siteSettingsProperty) ?? image;
         }
 
         private static object GetFallbackValue(ISitecoreService service, Func<SiteSettings, object> getFallbackValue)
         {
-            var fallbackSettings = service.GetItem<SiteSettings>(ItemConstants.Presales.Content.Configuration.SiteSettings.Path);
+            var fallbackSettings = service.GetItem<SiteSettings>
+                (ItemConstants.Presales.Content.Configuration.SiteSettings.Path);
+
             return getFallbackValue(fallbackSettings);
         }
     }
