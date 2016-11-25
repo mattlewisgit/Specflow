@@ -1,10 +1,10 @@
 [{
 	"Code": "CHABD",
 	"Name": "ABDOMEN (EXCL. URINARY &amp; REPRODUCTIVE ORGANS)",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCAWA",
 		"Name": "Abdominal wall",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -53,7 +53,7 @@
 	}, {
 		"Code": "SCDIG",
 		"Name": "Other Organs (Mainly Digestive)",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -102,7 +102,7 @@
 	}, {
 		"Code": "SCDUO",
 		"Name": "Duodenum",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -151,7 +151,7 @@
 	}, {
 		"Code": "SCJEJ",
 		"Name": "Jejunum/Ileum",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -200,7 +200,7 @@
 	}, {
 		"Code": "SCLAI",
 		"Name": "Large Intestine",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -249,7 +249,7 @@
 	}, {
 		"Code": "SCMVE",
 		"Name": "Major Vessels",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -298,7 +298,7 @@
 	}, {
 		"Code": "SCOSO",
 		"Name": "Oesophagus",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -347,7 +347,7 @@
 	}, {
 		"Code": "SCPER",
 		"Name": "Peritoneum",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -396,7 +396,7 @@
 	}, {
 		"Code": "SCRAN",
 		"Name": "Rectum/Anus",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -445,7 +445,7 @@
 	}, {
 		"Code": "SCSTO",
 		"Name": "Stomach",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -495,10 +495,10 @@
 }, {
 	"Code": "CHBON",
 	"Name": "BONES, JOINTS &amp; CONNECTIVE TISSUE / TENDON MUSCLE",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCAMP",
 		"Name": "Amputation",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -547,7 +547,7 @@
 	}, {
 		"Code": "SCBNS",
 		"Name": "Bone (Non-Specific)",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -596,7 +596,7 @@
 	}, {
 		"Code": "SCCTM",
 		"Name": "Connective tissue / Tendon Muscle",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -645,7 +645,7 @@
 	}, {
 		"Code": "SCEFT",
 		"Name": "External fixation / traction",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -694,7 +694,7 @@
 	}, {
 		"Code": "SCELB",
 		"Name": "Elbow",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -743,7 +743,7 @@
 	}, {
 		"Code": "SCFOO",
 		"Name": "Foot",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -792,7 +792,7 @@
 	}, {
 		"Code": "SCFRA",
 		"Name": "Fractures",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -841,7 +841,7 @@
 	}, {
 		"Code": "SCHAN",
 		"Name": "Hand",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -890,7 +890,7 @@
 	}, {
 		"Code": "SCHLP",
 		"Name": "Hip, Leg and Pelvis",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -939,7 +939,7 @@
 	}, {
 		"Code": "SCJRR",
 		"Name": "Joints, including relacement / reconstruction (not listed elsewhere)",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -988,7 +988,7 @@
 	}, {
 		"Code": "SCKNE",
 		"Name": "Knee",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -1037,7 +1037,7 @@
 	}, {
 		"Code": "SCNRV",
 		"Name": "Nerves",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -1086,7 +1086,7 @@
 	}, {
 		"Code": "SCSHO",
 		"Name": "Shoulder",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -1136,10 +1136,10 @@
 }, {
 	"Code": "CHBRA",
 	"Name": "BRAIN, CRANIUM AND OTHER INTRACRANIAL ORGANS",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCBRA",
 		"Name": "Brain",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -1188,7 +1188,7 @@
 	}, {
 		"Code": "SCCRA",
 		"Name": "Cranium",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -1237,7 +1237,7 @@
 	}, {
 		"Code": "SCMEN",
 		"Name": "Meninges",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -1286,59 +1286,59 @@
 	}, {
 		"Code": "SCNER",
 		"Name": "Nerves",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCOTH",
 		"Name": "Other",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCVES",
 		"Name": "Vessels",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHBRE",
 	"Name": "BREAST",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCBOT",
 		"Name": "Other",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCEXC",
 		"Name": "Excision/Biopsy codes",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCMAS",
 		"Name": "Mastectomy",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCREC",
 		"Name": "Reconstruction of breast",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHCHM",
 	"Name": "CHEMOTHERAPY",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCCHM",
 		"Name": "Chemotherapy",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHEAR",
 	"Name": "EAR, NOSE &amp; THROAT",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCEXT",
 		"Name": "External Ear",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCFEP",
 		"Name": "Fibreoptic Endoscopic Procedures (GA or LA)",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCINN",
 		"Name": "Inner Ear",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -1387,15 +1387,15 @@
 	}, {
 		"Code": "SCLAR",
 		"Name": "Larynx And Trachea",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCMID",
 		"Name": "Middle Ear and Mastoid",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCNAS",
 		"Name": "Nasal Sinuses",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -1444,19 +1444,19 @@
 	}, {
 		"Code": "SCNNC",
 		"Name": "Nose and Nasal Cavity",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCTHR",
 		"Name": "Throat",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHEND",
 	"Name": "ENDOSCOPIC GIT PROCEDURES",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCEND",
 		"Name": "Endoscopic GIT procedures",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -1506,14 +1506,14 @@
 }, {
 	"Code": "CHEYE",
 	"Name": "EYE &amp; ORBITAL CONTENTS",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCCON",
 		"Name": "Conjunctiva",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCCOR",
 		"Name": "Cornea",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -1562,23 +1562,23 @@
 	}, {
 		"Code": "SCEBR",
 		"Name": "Eyebrow &amp; Lid",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCEGN",
 		"Name": "General",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCGLO",
 		"Name": "Globe &amp; Orbit",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCIRI",
 		"Name": "Iris &amp; Anteria Chamber",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCLAC",
 		"Name": "Lacrimal System",
-		"CcsdProcedures": [{
+		"Procedures": [{
 			"Code": "G1900",
 			"Description": "Rigid oesophagoscopy (including biopsy, laser or diathermy destruction of lesions)",
 			"OperatorFee": 270,
@@ -1627,346 +1627,346 @@
 	}, {
 		"Code": "SCLEN",
 		"Name": "Lens",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCMUS",
 		"Name": "Muscles",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCRET",
 		"Name": "Retina",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCSCL",
 		"Name": "Sclera",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCVIT",
 		"Name": "Vitreous",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHFAC",
 	"Name": " FACE, MOUTH, SALIVARY &amp; THYROID",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCFAC",
 		"Name": "Face and Jaws",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCLIP",
 		"Name": "Lips",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCMOU",
 		"Name": "Mouth Cavity",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCNEC",
 		"Name": "Neck",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCPAL",
 		"Name": "Palate",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCSAL",
 		"Name": "Salivary Glands",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCTEE",
 		"Name": "Teeth",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCTHY",
 		"Name": "Thyroid and Parathyroid Glands",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCTON",
 		"Name": "Tongue",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHFEM",
 	"Name": "FEMALE REPRODUCTIVE ORGANS",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCCER",
 		"Name": "Cervix Uteri",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCSUS",
 		"Name": "Suspension",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCUTE",
 		"Name": "Uterus / Adnexa",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCVAG",
 		"Name": "Vagina / Perineum",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCVUL",
 		"Name": "Vulva / Labia",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHHAE",
 	"Name": "HAEMATOLOGY",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCHAE",
 		"Name": "Haematology",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHRAD",
 	"Name": "INTERVENTIONAL RADIOLOGY",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCANG",
 		"Name": "Angioplasty",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCBIO",
 		"Name": "Biopsy",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCDIL",
 		"Name": "Dilatation",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCDRA",
 		"Name": "Drainage",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCEMB",
 		"Name": "Embolisation",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCGIL",
 		"Name": "Gastrointestinal",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCHNK",
 		"Name": "Head and Neck",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCLVR",
 		"Name": "Liver",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCLYS",
 		"Name": "Thrombolysis",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCOTR",
 		"Name": "Other",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCRAX",
 		"Name": "Thorax",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCSPE",
 		"Name": "Spine",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCURY",
 		"Name": "Urinary",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHINS",
 	"Name": " INVESTIGATIONS, SIMPLE PROCEDURES AND CONSULTATION CODES",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCCOC",
 		"Name": "Consultation Codes",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCINV",
 		"Name": "Investigations",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCSIP",
 		"Name": "Simple Procedures",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHPRE",
 	"Name": " PREGNANCY & amp; CONFINEMENT",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCPRE",
 		"Name": "Pregnancy &amp; Confinement",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHSST",
 	"Name": "SKIN &amp; SUBCUTANEOUS TISSUE",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCBUR",
 		"Name": "Burns, Scars &amp; Contractures",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCFFS",
 		"Name": "Flaps &amp; Free Skin Grafts",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCLES",
 		"Name": "Lesions of skin",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCREP",
 		"Name": "Repair",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHSPI",
 	"Name": " SPINE, SPINAL CORD AND PERIPHERAL NERVES",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCNBL",
 		"Name": "Other Nerve Blocks",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCNEU",
 		"Name": "Neurophysiological Procedures",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCOPR",
 		"Name": "Other Procedures",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCPAR",
 		"Name": "Paraspinal Injections",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCPNV",
 		"Name": "Peripheral Nerves",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCROO",
 		"Name": "Nerve Roots",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCSPC",
 		"Name": "Spinal Cord",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCSPI",
 		"Name": "Spinal Column (including Intervertebral Disc)",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCSYM",
 		"Name": "Sympathetic Nerves",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHTHO",
 	"Name": " THORAX & amp; INTRA-THORACIC ORGANS",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCBRO",
 		"Name": "Bronchi / Lungs / Pleura",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCCAR",
 		"Name": "Heart - Cardiology",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCCHE",
 		"Name": "Chest Wall",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCFIB",
 		"Name": "Fibreoptic Endoscopic Procedures (GA or LA)",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCGRE",
 		"Name": "Great Vessels",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCHEA",
 		"Name": "Heart - Cardiac Surgery",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCMED",
 		"Name": "Mediastinum",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCOES",
 		"Name": "Oesophagus",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCTOT",
 		"Name": "Other",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCTRA",
 		"Name": "Trachea",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCVID",
 		"Name": "Video Assisted Thoracic Surgery (VATS)",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHURI",
 	"Name": " URINARY SYSTEM AND MALE REPRODUCTIVE ORGANS",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCBLA",
 		"Name": "Bladder",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCKID",
 		"Name": "Kidney / Renal Pelvic",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCLIA",
 		"Name": "Genitalia",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCPRO",
 		"Name": "Prostate",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCURE",
 		"Name": "Ureter",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCUTH",
 		"Name": "Urethra",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }, {
 	"Code": "CHVAS",
 	"Name": " VASCULAR SYSTEM",
-	"CcsdSections": [{
+	"Sections": [{
 		"Code": "SCABD",
 		"Name": "Abdominal Vessels",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCHNE",
 		"Name": "Head &amp; Neck",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCILE",
 		"Name": "Ileo-Femoral Vessels",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCLYM",
 		"Name": "Lymphatic System",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCNON",
 		"Name": "Non-Specific",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCREN",
 		"Name": "Renal",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCTHO",
 		"Name": "Thoracic",
-		"CcsdProcedures": []
+		"Procedures": []
 	}, {
 		"Code": "SCVAR",
 		"Name": "Varicose Veins",
-		"CcsdProcedures": []
+		"Procedures": []
 	}]
 }]

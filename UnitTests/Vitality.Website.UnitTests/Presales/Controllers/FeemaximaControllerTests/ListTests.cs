@@ -12,7 +12,7 @@ using Vitality.Website.Areas.Presales.Handlers.Feemaxima;
 using System.Collections.Generic;
 using Moq;
 using Vitality.Website.App.Services.Interfaces;
-using Vitality.Website.App.Models.CCSD;
+using Vitality.Website.App.Models.Feemaxima;
 
 namespace Vitality.Website.UnitTests.Presales.Controllers.FeemaximaControllerTests
 {
@@ -37,20 +37,20 @@ namespace Vitality.Website.UnitTests.Presales.Controllers.FeemaximaControllerTes
         [Fact]
         public void Should_respond_200_ok_when_chapters_returned()
         {
-            _ccsdService.Setup(c => c.GetChapters()).Returns(new List<CcsdChapter>
+            _ccsdService.Setup(c => c.GetChapters()).Returns(new List<Chapter>
             {
-                new CcsdChapter { Code ="10DS", Name="ABDOMEN" }
+                new Chapter { Code ="10DS", Name="ABDOMEN" }
             });
             Init();
             this._controller.List().StatusCode.ShouldBe(HttpStatusCode.OK);
         }
 
         [Fact]
-        public void Should_contain_ccsdchapters_in_the_response_body()
+        public void Should_contain_chapters_in_the_response_body()
         {
-            _ccsdService.Setup(c => c.GetChapters()).Returns(new List<CcsdChapter>
+            _ccsdService.Setup(c => c.GetChapters()).Returns(new List<Chapter>
             {
-                new CcsdChapter { Code ="10DS", Name="ABDOMEN" }
+                new Chapter { Code ="10DS", Name="ABDOMEN" }
             });
             Init();
             this._controller.List().Content.ReadAsAsync<FeemaximaChaptersDto>().Result.ShouldNotBeNull();

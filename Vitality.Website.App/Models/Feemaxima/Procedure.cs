@@ -1,6 +1,6 @@
-﻿namespace Vitality.Website.App.Models.CCSD
+﻿namespace Vitality.Website.App.Models.Feemaxima
 {
-    public class CcsdProcedure
+    public class Procedure
     {
         public string Code { get; set; }
         public string Description { get; set; }

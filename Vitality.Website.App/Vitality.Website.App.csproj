@@ -64,9 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CallPro\CallProConnector.cs" />
-    <Compile Include="Models\CCSD\CcsdChapter.cs" />
-    <Compile Include="Models\CCSD\CcsdProcedure.cs" />
-    <Compile Include="Models\CCSD\CcsdSection.cs" />
+    <Compile Include="Models\Feemaxima\Chapter.cs" />
+    <Compile Include="Models\Feemaxima\Procedure.cs" />
+    <Compile Include="Models\Feemaxima\Section.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CcsdService.cs" />
     <Compile Include="Services\Interfaces\ICcsdService.cs" />

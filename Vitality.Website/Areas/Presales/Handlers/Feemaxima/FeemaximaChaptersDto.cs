@@ -1,17 +1,17 @@
 ﻿using System.Collections.Generic;
-using Vitality.Website.App.Models.CCSD;
+using Vitality.Website.App.Models.Feemaxima;
 
 namespace Vitality.Website.Areas.Presales.Handlers.Feemaxima
 {
     public class FeemaximaChaptersDto
     {
-        public IEnumerable<CcsdChapter> CcsdChapters { get; set; }
+        public IEnumerable<Chapter> Chapters { get; set; }
 
-        public static FeemaximaChaptersDto From(IEnumerable<CcsdChapter> ccsdChapters)
+        public static FeemaximaChaptersDto From(IEnumerable<Chapter> chapters)
         {
             return new FeemaximaChaptersDto
             {
-                CcsdChapters = ccsdChapters
+                Chapters = chapters
             };
         }
     }

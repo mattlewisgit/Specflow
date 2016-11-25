@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 
-namespace Vitality.Website.App.Models.CCSD
+namespace Vitality.Website.App.Models.Feemaxima
 {
-    public class CcsdSection
+    public class Section
     {
         public string Code { get; set; }
         public string Name { get; set; }
-        public List<CcsdProcedure> CcsdProcedures { get; set; }
+        public List<Procedure> Procedures { get; set; }
     }
 }
