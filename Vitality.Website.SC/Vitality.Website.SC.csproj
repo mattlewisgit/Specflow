@@ -66,7 +66,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Forms.Core">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Sitecore.Forms.Core.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ItemWebApi, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.ItemWebApi.dll</HintPath>
@@ -100,7 +100,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Abstractions">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Sitecore.WFFM.Abstractions.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Collections" />
