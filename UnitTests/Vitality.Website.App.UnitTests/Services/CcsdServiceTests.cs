@@ -1,6 +1,6 @@
 ﻿using Shouldly;
 using System.Collections.Generic;
-using Vitality.Website.App.Models.Feemaxima;
+using Vitality.Website.App.Models.FeeMaxima;
 using Vitality.Website.App.Services;
 using Xunit;
 

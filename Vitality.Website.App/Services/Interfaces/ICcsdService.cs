@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Vitality.Website.App.Models.Feemaxima;
+using Vitality.Website.App.Models.FeeMaxima;
 
 namespace Vitality.Website.App.Services.Interfaces
 {

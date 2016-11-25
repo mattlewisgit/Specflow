@@ -1,10 +1,10 @@
 ﻿using MediatR;
 using System.Collections.Generic;
-using Vitality.Website.App.Models.Feemaxima;
+using Vitality.Website.App.Models.FeeMaxima;
 
-namespace Vitality.Website.Areas.Presales.Handlers.Feemaxima
+namespace Vitality.Website.Areas.Presales.Handlers.FeeMaxima
 {
-    public class FeemaximaChaptersRequest : IRequest<FeemaximaChaptersDto>
+    public class FeeMaximaChaptersRequest : IRequest<FeeMaximaChaptersDto>
     {
     }
 }

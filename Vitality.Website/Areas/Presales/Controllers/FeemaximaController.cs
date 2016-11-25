@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
-using Vitality.Website.App.Models.Feemaxima;
-using Vitality.Website.Areas.Presales.Handlers.Feemaxima;
+using Vitality.Website.App.Models.FeeMaxima;
+using Vitality.Website.Areas.Presales.Handlers.FeeMaxima;
 
 namespace Vitality.Website.Areas.Presales.Controllers
 {
-    public class FeemaximaController : BaseController
+    public class FeeMaximaController : BaseController
     {
-        public FeemaximaController(IMediator mediator):base(mediator)
+        public FeeMaximaController(IMediator mediator):base(mediator)
         {
         }
 
         [Route("api/Feemaxima/List")]
         public HttpResponseMessage List()
         {
-            return this.GetResponse<FeemaximaChaptersRequest, FeemaximaChaptersDto>(
-                new FeemaximaChaptersRequest(), chapters=>chapters.Chapters.Any());
+            return this.GetResponse<FeeMaximaChaptersRequest, FeeMaximaChaptersDto>(
+                new FeeMaximaChaptersRequest(), chapters=>chapters.Chapters.Any());
         }
     }
 }

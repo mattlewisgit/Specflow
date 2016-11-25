@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Vitality.Website.App.Models.Feemaxima
+namespace Vitality.Website.App.Models.FeeMaxima
 {
     public class Section
     {

@@ -1,20 +1,20 @@
 ﻿using MediatR;
 using Vitality.Website.App.Services.Interfaces;
 
-namespace Vitality.Website.Areas.Presales.Handlers.Feemaxima
+namespace Vitality.Website.Areas.Presales.Handlers.FeeMaxima
 {
-    public class FeemaximaChaptersHandler : IRequestHandler<FeemaximaChaptersRequest, FeemaximaChaptersDto>
+    public class FeeMaximaChaptersHandler : IRequestHandler<FeeMaximaChaptersRequest, FeeMaximaChaptersDto>
     {
         private readonly ICcsdService _ccsdService;
 
-        public FeemaximaChaptersHandler(ICcsdService ccsdService)
+        public FeeMaximaChaptersHandler(ICcsdService ccsdService)
         {
             _ccsdService = ccsdService;
         }
 
-        public FeemaximaChaptersDto Handle(FeemaximaChaptersRequest request)
+        public FeeMaximaChaptersDto Handle(FeeMaximaChaptersRequest request)
         {
-            return FeemaximaChaptersDto.From(_ccsdService.GetChapters());
+            return FeeMaximaChaptersDto.From(_ccsdService.GetChapters());
         }
     }
 }

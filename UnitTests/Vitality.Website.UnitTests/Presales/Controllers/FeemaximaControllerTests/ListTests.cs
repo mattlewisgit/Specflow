@@ -8,17 +8,17 @@ using Vitality.Website.Areas.Presales.Handlers.Literature;
 using Vitality.Website.UnitTests.TestDoubles;
 
 using Xunit;
-using Vitality.Website.Areas.Presales.Handlers.Feemaxima;
+using Vitality.Website.Areas.Presales.Handlers.FeeMaxima;
 using System.Collections.Generic;
 using Moq;
 using Vitality.Website.App.Services.Interfaces;
-using Vitality.Website.App.Models.Feemaxima;
+using Vitality.Website.App.Models.FeeMaxima;
 
 namespace Vitality.Website.UnitTests.Presales.Controllers.FeemaximaControllerTests
 {
     public class ListTests
     {
-        private FeemaximaController _controller;
+        private FeeMaximaController _controller;
 
         private readonly Mock<ICcsdService> _ccsdService;
 
@@ -53,13 +53,13 @@ namespace Vitality.Website.UnitTests.Presales.Controllers.FeemaximaControllerTes
                 new Chapter { Code ="10DS", Name="ABDOMEN" }
             });
             Init();
-            this._controller.List().Content.ReadAsAsync<FeemaximaChaptersDto>().Result.ShouldNotBeNull();
+            this._controller.List().Content.ReadAsAsync<FeeMaximaChaptersDto>().Result.ShouldNotBeNull();
         }
 
         private void Init()
         {
-            var handler = new MediatorStub<FeemaximaChaptersRequest, FeemaximaChaptersDto>(new FeemaximaChaptersHandler(_ccsdService.Object));
-            this._controller = new FeemaximaController(handler);
+            var handler = new MediatorStub<FeeMaximaChaptersRequest, FeeMaximaChaptersDto>(new FeeMaximaChaptersHandler(_ccsdService.Object));
+            this._controller = new FeeMaximaController(handler);
         }
     }
 }

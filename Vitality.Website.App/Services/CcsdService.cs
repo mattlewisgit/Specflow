@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Vitality.Website.App.Models.Feemaxima;
+using Vitality.Website.App.Models.FeeMaxima;
 using Vitality.Website.App.Services.Interfaces;
 
 namespace Vitality.Website.App.Services

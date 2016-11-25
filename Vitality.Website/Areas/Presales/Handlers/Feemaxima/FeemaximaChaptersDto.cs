@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
-using Vitality.Website.App.Models.Feemaxima;
+using Vitality.Website.App.Models.FeeMaxima;
 
-namespace Vitality.Website.Areas.Presales.Handlers.Feemaxima
+namespace Vitality.Website.Areas.Presales.Handlers.FeeMaxima
 {
-    public class FeemaximaChaptersDto
+    public class FeeMaximaChaptersDto
     {
         public IEnumerable<Chapter> Chapters { get; set; }
 
-        public static FeemaximaChaptersDto From(IEnumerable<Chapter> chapters)
+        public static FeeMaximaChaptersDto From(IEnumerable<Chapter> chapters)
         {
-            return new FeemaximaChaptersDto
+            return new FeeMaximaChaptersDto
             {
                 Chapters = chapters
             };

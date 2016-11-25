@@ -1,0 +1,45 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.FeeMaxima>
+
+<div class="grid">
+    <h2 class="text-flush-top">@Editable(Model, m => m.Headline)</h2>
+    <div class="example" data-ng-app="FeemaximaApp">
+        <div ng-controller="ChapterListController">
+            <a class="emphasis-link" ng-click="clearSection()" href="" data-ng-show="sectionSelected">@Editable(Model, m => m.BackLinkText)</a>
+            <h3>@Editable(Model, m => m.SearchText)</h3>
+            <input type="text" placeholder="@Html.Raw(Model.SearchPlaceholderText)" typeahead />
+
+            <div data-ng-show="noResultsFound">
+                Sorry, no chapters or sections found for that search.
+            </div>
+            <div class="expander expander--with-style js-expander-is-accordion expander--init" data-ng-hide="noResultsFound || sectionSelected">
+                <a ng-repeat-start="chapter in chapters" href="#expander1-{{chapter.Code}}" class="expander__link" ng-bind-html="chapter.Code +' : ' + chapter.Name | unsafe">
+                </a>
+
+                <div ng-repeat-end id="expander1-{{chapter.Code}}" class="expander__content">
+                    <a ng-click="selectSection(section)" href="" class="clearfix" ng-repeat="section in chapter.Sections" ng-bind-html="section.Code +' : ' + section.Name | unsafe">
+                    </a><br />
+                </div>
+            </div>
+        </div>
+        <div ng-controller="SectionController">
+            <table class="data-table tablesaw tablesaw-stack" data-ng-show="sectionSelected" data-tablesaw-mode="stack" data-ng-cloak>
+                <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Description</th>
+                    <th>Surgeon's Fee</th>
+                    <th>Anaesthetist's Fee</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="procedure in selectedProcedures">
+                    <td ng-bind="procedure.Code"></td>
+                    <td ng-bind-html="procedure.Description | unsafe"></td>
+                    <td>£{{procedure.OperatorFee}}</td>
+                    <td>£{{procedure.AnaesthetistFee}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
