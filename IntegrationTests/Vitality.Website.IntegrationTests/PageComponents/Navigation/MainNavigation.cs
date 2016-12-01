@@ -40,13 +40,17 @@
             }
         }
 
-        public IWebElement MemberZone
+
+
+        public IWebElement LogIn
         {
             get
             {
+
                 return this.webDriver.FindElement(new JQuerySelector(".top-bar--large .utility-nav__item--log-in"));
             }
         }
+
 
         public IEnumerable<IWebElement> LogInPanelLinks
         {
@@ -56,28 +60,31 @@
             }
         }
 
-        public IWebElement LogInButton
+
+        public IWebElement MemberZoneButton
         {
             get
             {
-                return this.webDriver.FindElement(new JQuerySelector(".log-in__links a.box-button--secondary"));
+                return this.webDriver.FindElement(OpenQA.Selenium.By.LinkText("Member Zone"));
             }
         }
 
-        public IWebElement RegisterButton
+
+        public IWebElement HealthAdvisersButton
         {
             get
             {
-                return this.webDriver.FindElements(new JQuerySelector(".log-in--large a")).ElementAt(1);
+                return this.webDriver.FindElement(OpenQA.Selenium.By.LinkText("Health Advisers"));
             }
         }
 
-        public IWebElement ForgottenDetailsButton
+        public IWebElement LifeAdvisersButton
         {
             get
             {
-                return this.webDriver.FindElement(new JQuerySelector(".log-in__forgotten a"));
+                return this.webDriver.FindElement(OpenQA.Selenium.By.LinkText("Life Advisers"));
             }
         }
+
     }
 }

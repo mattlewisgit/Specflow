@@ -81,13 +81,11 @@
                     "<link rel=\"publisher\" href=\"https://plus.google.com/111924979311472229172\"",
                     "<meta name=\"apple-itunes-app\" content=\"app-id=794024908\"",
                     "<link rel=\"dns-prefetch\" href=\"https://join.vitality.co.uk/\"",
-                    "<link rel=\"dns-prefetch\" href=\"https://quote.vitality.co.uk\"",
-                    "<link rel=\"dns-prefetch\" href=\"https://member.vitality.co.uk\"",
+                    "<link rel=\"dns-prefetch\" href=\"https://member.vitality.co.uk/\"",
                     "<meta name=\"referrer\" content=\"unsafe-url\"",
                     "<link rel=\"canonical",
                     "<meta name=\"referrer",
                     "<meta name=\"robots",
-                    "<html xmlns:og=\"http://ogp.me/ns#\" xmlns:fb=\"http://www.facebook.com/2008/fbml\"",
                     "<meta property=\"article:publisher\" content=\"https://www.facebook.com/VitalityUK/\""
                 };
             }

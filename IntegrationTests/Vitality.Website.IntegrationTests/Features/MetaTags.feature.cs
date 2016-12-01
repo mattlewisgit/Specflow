@@ -75,9 +75,9 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TheoryAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "Meta Tags")]
         [Xunit.TraitAttribute("Description", "Common Meta Tags should appear on every page")]
-        [Xunit.InlineDataAttribute("/development/faq-leader", new string[0])]
-        [Xunit.InlineDataAttribute("/development/accordion-content", new string[0])]
-        [Xunit.InlineDataAttribute("/development/benefit-leader", new string[0])]
+        [Xunit.InlineDataAttribute("/health-insurance", new string[0])]
+        [Xunit.InlineDataAttribute("/life-insurance", new string[0])]
+        [Xunit.InlineDataAttribute("/rewards", new string[0])]
         public virtual void CommonMetaTagsShouldAppearOnEveryPage(string initialpage, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Common Meta Tags should appear on every page", exampleTags);
@@ -96,9 +96,9 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TheoryAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "Meta Tags")]
         [Xunit.TraitAttribute("Description", "Home meta tags should not appear on non-home pages")]
-        [Xunit.InlineDataAttribute("/development/faq-leader", new string[0])]
-        [Xunit.InlineDataAttribute("/development/accordion-content", new string[0])]
-        [Xunit.InlineDataAttribute("/development/benefit-leader", new string[0])]
+        [Xunit.InlineDataAttribute("/health-insurance", new string[0])]
+        [Xunit.InlineDataAttribute("/life-insurance", new string[0])]
+        [Xunit.InlineDataAttribute("/rewards", new string[0])]
         public virtual void HomeMetaTagsShouldNotAppearOnNon_HomePages(string initialpage, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home meta tags should not appear on non-home pages", exampleTags);

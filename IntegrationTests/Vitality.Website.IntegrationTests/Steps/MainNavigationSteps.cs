@@ -11,6 +11,7 @@
     using Vitality.Website.IntegrationTests.Extensions;
     using Vitality.Website.IntegrationTests.PageObjects;
     using Vitality.Website.IntegrationTests.Utilities;
+    using OpenQA.Selenium;
 
     [Binding]
     public class MainNavigationSteps : BaseSteps
@@ -25,13 +26,22 @@
         [When(@"I click on the business section link")]
         public void WhenIClickOnTheBusinessSectionLink()
         {
-            this.presalesPage.MainNavigation.ClickNavigationSectionLink("business");
+            //this.presalesPage.MainNavigation.ClickNavigationSectionLink("business");
+            //WebDriver.FindElement(By.LinkText("business")).Click();
+            WebDriver
+                .FindElement(new JQuerySelector(".top-bar--large .site-nav__item--Business"))
+                .Click();
+
         }
 
         [When(@"I click on the navigation logo")]
         public void WhenIClickOnTheNavigationLogo()
         {
-            this.presalesPage.MainNavigation.Logo.Click();
+            //this.presalesPage.MainNavigation.Logo.Click();
+
+            WebDriver
+                .FindElement(new JQuerySelector(".section-nav__item--home a"))
+                .Click();
         }
 
         [Then(@"I expect the (.*) to open")]
@@ -51,12 +61,10 @@
         public void ThenIExpectTheHamburgerToBeVisible()
         {
             WebDriver
-                .FindElement(new JQuerySelector(".site-nav__item .burger-menu"))
+                .FindElement(new JQuerySelector(".utility-nav__item .burger-menu"))
                 .Displayed
                 .ShouldBeTrue();
-
-            this.presalesPage.MainNavigation.MobileNavigation.BurgerMenu.Displayed.ShouldBeTrue();
-        }
+         }
 
         [When(@"I resize to full-screen view")]
         public void WhenIResizeToFull_ScreenView()
@@ -68,33 +76,41 @@
         public void ThenIExpectTheHamburgerToBeInvisible()
         {
             WebDriver
-                .FindElement(new JQuerySelector(".site-nav__item .burger-menu"))
+                .FindElement(new JQuerySelector(".utility-nav__item .burger-menu"))
                 .Displayed
                 .ShouldBeFalse();
         }
 
-        [When(@"I click the Member Zone button")]
-        public void WhenIClickTheMemberZoneButton()
+
+        [When(@"I click on the Login button")]
+        public void WhenIClickOnTheLoginButton()
         {
-            this.presalesPage.MainNavigation.MemberZone.Click();
+            this.presalesPage.MainNavigation.LogIn.Click();
         }
 
-        [Then(@"I expect the Login button to be visible")]
-        public void ThenIExpectTheLoginButtonToBeVisible()
+
+
+        [Then(@"I expect the Member Zone button to be visible")]
+        public void ThenIExpectTheMemberZoneButtonToBeVisible()
         {
-            this.presalesPage.MainNavigation.LogInButton.Displayed.ShouldBeTrue();
+            this.presalesPage.MainNavigation.MemberZoneButton.Displayed.ShouldBeTrue();
         }
 
-        [Then(@"I expect the Register button to be visible")]
-        public void ThenIExpectTheRegisterButtonToBeVisible()
+        
+
+        [Then(@"I expect the Health Advisers button to be visible")]
+        public void ThenIExpectTheHealthAdvisersButtonToBeVisible()
         {
-            this.presalesPage.MainNavigation.RegisterButton.Displayed.ShouldBeTrue();
+            this.presalesPage.MainNavigation.HealthAdvisersButton.Displayed.ShouldBeTrue();
         }
 
-        [Then(@"I expect the Forgotten button to be visible")]
-        public void ThenIExpectTheForgottenButtonToBeVisible()
+
+        [Then(@"I expect the Life Advisers button to be visible")]
+        public void ThenIExpectTheLifeAdvisersButtonToBeVisible()
         {
-            this.presalesPage.MainNavigation.ForgottenDetailsButton.Displayed.ShouldBeTrue();
+            this.presalesPage.MainNavigation.LifeAdvisersButton.Displayed.ShouldBeTrue();
         }
+
+
     }
 }

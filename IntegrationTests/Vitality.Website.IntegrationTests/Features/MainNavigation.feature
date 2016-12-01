@@ -6,7 +6,7 @@
     Scenario: Test Navigation
     Given I am on the /
     When I click on the business section link
-    Then I expect the /business to open
+    Then I expect the /business/ to open
 
     Scenario: Click Navigation Logo
     Given I am on the /business
@@ -28,15 +28,15 @@
     Scenario: Check Member Zone login components show in Mobile view
     Given I am on the /
     When I resize to mobile view
-    And I click the Member Zone button
-    Then I expect the Login button to be visible
-    And I expect the Register button to be visible
-    And I expect the Forgotten button to be visible
+	And I click on the Login button
+    Then I expect the Member Zone button to be visible
+    And I expect the Health Advisers button to be visible
+    And I expect the Life Advisers button to be visible
 
     Scenario: Check Member Zone login components show in Full-screen view
     Given I am on the /
     When I resize to full-screen view
-    And I click the Member Zone button
-    Then I expect the Login button to be visible
-    And I expect the Register button to be visible
-    And I expect the Forgotten button to be visible
+	And I click on the Login button
+	Then I expect the Member Zone button to be visible
+	And I expect the Health Advisers button to be visible
+	And I expect the Life Advisers button to be visible

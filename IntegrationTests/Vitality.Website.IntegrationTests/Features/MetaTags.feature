@@ -10,9 +10,9 @@
 
 Examples:
 	| initialpage                    |
-	| /development/faq-leader        |
-	| /development/accordion-content |
-	| /development/benefit-leader    |
+	| /health-insurance	   	         |
+	| /life-insurance				 |
+	| /rewards					     |
 
 
 	Scenario Outline: Home meta tags should not appear on non-home pages
@@ -22,9 +22,9 @@ Examples:
 
 Examples:
 	| initialpage                    |
-	| /development/faq-leader        |
-	| /development/accordion-content |
-	| /development/benefit-leader    |
+	| /health-insurance	   	         |
+	| /life-insurance				 |
+	| /rewards					     |
 
 	Scenario: Home meta tags should appear on the home page
 	Given I am on the /home
