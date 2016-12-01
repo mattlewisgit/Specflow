@@ -5,12 +5,10 @@
     public class NavigationSection
     {
         private readonly IWebElement webElement;
-        private readonly IWebDriver webDriver;
 
-        public NavigationSection(IWebElement webElement, IWebDriver webDriver)
+        public NavigationSection(IWebElement webElement)
         {
             this.webElement = webElement;
-            this.webDriver = webDriver;
         }
 
         public IWebElement SectionLink

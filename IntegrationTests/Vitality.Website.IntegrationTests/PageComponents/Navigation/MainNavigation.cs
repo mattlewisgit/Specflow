@@ -9,12 +9,10 @@
 
     public class MainNavigation
     {
-        private readonly IWebElement webElement;
         private readonly IWebDriver webDriver;
 
-        public MainNavigation(IWebElement webElement, IWebDriver webDriver)
+        public MainNavigation(IWebDriver webDriver)
         {
-            this.webElement = webElement;
             this.webDriver = webDriver;
         }
 
@@ -22,7 +20,7 @@
         {
             get
             {
-                return new MobileNavigation(this.webDriver.FindElement(new JQuerySelector(".top-bar--small")), this.webDriver);
+                return new MobileNavigation(this.webDriver);
             }
         }
 
@@ -30,7 +28,7 @@
         {
             get
             {
-                return this.webDriver.FindElements(new JQuerySelector(".site-nav__item")).Select(e => new NavigationSection(e, this.webDriver));
+                return this.webDriver.FindElements(new JQuerySelector(".site-nav__item")).Select(e => new NavigationSection(e));
             }
         }
 

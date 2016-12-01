@@ -17,7 +17,7 @@
         {
             get
             {
-                return new MainNavigation(this.webDriver.FindElement(By.TagName("header")), this.webDriver);
+                return new MainNavigation(this.webDriver);
             }
         }
     }

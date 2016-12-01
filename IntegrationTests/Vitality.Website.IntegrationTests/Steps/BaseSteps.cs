@@ -14,7 +14,7 @@
         [BeforeTestRun]
         public static void BeforeTestRun()
         {
-            WebDriver = DriverFactory.PhantonJs();
+            WebDriver = DriverFactory.Chrome();
         }
 
         [AfterTestRun]

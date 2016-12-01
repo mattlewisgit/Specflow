@@ -8,7 +8,7 @@
 
     public static class Browser
     {
-        private static IWebDriver webDriver
+        private static IWebDriver WebDriver
         {
             get
             {
@@ -16,70 +16,68 @@
             }
         }
 
-        private static readonly BrowserChainer browserChainerInstance = new BrowserChainer();
+        private static readonly BrowserChainer BrowserChainerInstance = new BrowserChainer();
 
         public static string CurrentUrl
         {
             get
             {
-                return webDriver.Url;
+                return WebDriver.Url;
             }
         }
 
         public static BrowserChainer GoTo(string url)
         {
-            webDriver.Navigate().GoToUrl(url);
-            return browserChainerInstance;
+            WebDriver.Navigate().GoToUrl(url);
+            return BrowserChainerInstance;
         }
 
         public static BrowserChainer GoTo(this BrowserChainer browserChainer, string url)
         {
-            return Browser.GoTo(url);
+            return GoTo(url);
         }
 
         public static BrowserChainer Resize(int width, int height)
         {
-            webDriver.Manage().Window.Size = new System.Drawing.Size(width, height);
-            return browserChainerInstance;
+            WebDriver.Manage().Window.Size = new System.Drawing.Size(width, height);
+            return BrowserChainerInstance;
         }
-        
+
         public static BrowserChainer Resize(this BrowserChainer browserChainer, int width, int height)
         {
-            return Browser.Resize(width, height);
+            return Resize(width, height);
         }
 
         public static BrowserChainer Maximise()
         {
-            webDriver.Manage().Window.Maximize();
-            return browserChainerInstance;
+            WebDriver.Manage().Window.Maximize();
+            return BrowserChainerInstance;
         }
 
         public static BrowserChainer Maximise(this BrowserChainer browserChainer)
         {
-            return Browser.Maximise();
+            return Maximise();
         }
 
         public static BrowserChainer Wait(TimeSpan timespan)
         {
-            webDriver.Manage().Timeouts().ImplicitlyWait(timespan);
-            return browserChainerInstance;
+            WebDriver.Manage().Timeouts().ImplicitlyWait(timespan);
+            return BrowserChainerInstance;
         }
 
         public static BrowserChainer Wait(this BrowserChainer browserChainer, TimeSpan timespan)
         {
-            return Browser.Wait(timespan);
+            return Wait(timespan);
         }
 
         public static string PageSource
         {
             get
             {
-                return webDriver.PageSource;
+                return WebDriver.PageSource;
             }
         }
-        public class BrowserChainer
-        {
 
-        }
+        public class BrowserChainer { }
     }
 }

@@ -2,6 +2,8 @@
 {
     using System;
 
+    using Selenium.WebDriver.Extensions.JQuery;
+
     using Shouldly;
 
     using TechTalk.SpecFlow;
@@ -25,13 +27,13 @@
         {
             this.presalesPage.MainNavigation.ClickNavigationSectionLink("business");
         }
-        
+
         [When(@"I click on the navigation logo")]
         public void WhenIClickOnTheNavigationLogo()
         {
             this.presalesPage.MainNavigation.Logo.Click();
         }
-        
+
         [Then(@"I expect the (.*) to open")]
         public void ThenIExpectTheToOpen(string p0)
         {
@@ -48,6 +50,11 @@
         [Then(@"I expect the hamburger to be visible")]
         public void ThenIExpectTheHamburgerToBeVisible()
         {
+            WebDriver
+                .FindElement(new JQuerySelector(".site-nav__item .burger-menu"))
+                .Displayed
+                .ShouldBeTrue();
+
             this.presalesPage.MainNavigation.MobileNavigation.BurgerMenu.Displayed.ShouldBeTrue();
         }
 
@@ -60,7 +67,10 @@
         [Then(@"I expect the hamburger to be invisible")]
         public void ThenIExpectTheHamburgerToBeInvisible()
         {
-            this.presalesPage.MainNavigation.MobileNavigation.BurgerMenu.Displayed.ShouldBeFalse();
+            WebDriver
+                .FindElement(new JQuerySelector(".site-nav__item .burger-menu"))
+                .Displayed
+                .ShouldBeFalse();
         }
 
         [When(@"I click the Member Zone button")]
@@ -86,6 +96,5 @@
         {
             this.presalesPage.MainNavigation.ForgottenDetailsButton.Displayed.ShouldBeTrue();
         }
-
     }
 }

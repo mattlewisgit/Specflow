@@ -7,7 +7,7 @@
 	Given I am on the <initialpage>
 	When I check the source
 	Then I expect the common meta tags to be in the source
-	
+
 Examples:
 	| initialpage                    |
 	| /development/faq-leader        |
@@ -19,7 +19,7 @@ Examples:
 	Given I am on the <initialpage>
 	When I check the source
 	Then I do not expect the home meta tags to be in the source
-	
+
 Examples:
 	| initialpage                    |
 	| /development/faq-leader        |

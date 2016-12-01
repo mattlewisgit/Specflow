@@ -33,8 +33,8 @@ namespace Vitality.Website.IntegrationTests.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Main Navigation", "\tIn order to test that the Main Navigation works\r\n\tAs a Tester\r\n\tI want to perfor" +
-                    "m basic navigation tests", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Main Navigation", "    In order to test that the Main Navigation works\r\n    As a Tester\r\n    I want " +
+                    "to perform basic navigation tests", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -79,13 +79,13 @@ namespace Vitality.Website.IntegrationTests.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Navigation", ((string[])(null)));
 #line 6
- this.ScenarioSetup(scenarioInfo);
+    this.ScenarioSetup(scenarioInfo);
 #line 7
- testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
- testRunner.When("I click on the business section link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I click on the business section link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
- testRunner.Then("I expect the /business to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I expect the /business to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -97,13 +97,13 @@ namespace Vitality.Website.IntegrationTests.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click Navigation Logo", ((string[])(null)));
 #line 11
- this.ScenarioSetup(scenarioInfo);
+    this.ScenarioSetup(scenarioInfo);
 #line 12
- testRunner.Given("I am on the /business", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on the /business", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
- testRunner.When("I click on the navigation logo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I click on the navigation logo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
- testRunner.Then("I expect the / to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I expect the / to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -115,13 +115,13 @@ namespace Vitality.Website.IntegrationTests.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Resize home page to Mobile view and check for hamburger", ((string[])(null)));
 #line 16
- this.ScenarioSetup(scenarioInfo);
+    this.ScenarioSetup(scenarioInfo);
 #line 17
- testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 18
- testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 19
- testRunner.Then("I expect the hamburger to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I expect the hamburger to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -136,15 +136,40 @@ namespace Vitality.Website.IntegrationTests.Features
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Resize home page from Mobile view to Full-screen and check that hamburger invisib" +
                     "le", ((string[])(null)));
 #line 21
- this.ScenarioSetup(scenarioInfo);
+    this.ScenarioSetup(scenarioInfo);
 #line 22
- testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 23
- testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 24
- testRunner.And("I resize to full-screen view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I resize to full-screen view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 25
- testRunner.Then("I expect the hamburger to be invisible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I expect the hamburger to be invisible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check Member Zone login components show in Mobile view", Skip="Ignored")]
+        [Xunit.TraitAttribute("FeatureTitle", "Main Navigation")]
+        [Xunit.TraitAttribute("Description", "Check Member Zone login components show in Mobile view")]
+        public virtual void CheckMemberZoneLoginComponentsShowInMobileView()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Member Zone login components show in Mobile view", new string[] {
+                        "ignore"});
+#line 28
+    this.ScenarioSetup(scenarioInfo);
+#line 29
+    testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 30
+    testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 31
+    testRunner.And("I click the Member Zone button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 32
+    testRunner.Then("I expect the Login button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 33
+    testRunner.And("I expect the Register button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 34
+    testRunner.And("I expect the Forgotten button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -156,19 +181,19 @@ namespace Vitality.Website.IntegrationTests.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Member Zone login components show in Full-screen view", ((string[])(null)));
 #line 36
- this.ScenarioSetup(scenarioInfo);
+    this.ScenarioSetup(scenarioInfo);
 #line 37
- testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 38
- testRunner.When("I resize to full-screen view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I resize to full-screen view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 39
- testRunner.And("I click the Member Zone button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I click the Member Zone button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 40
- testRunner.Then("I expect the Login button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I expect the Login button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 41
- testRunner.And("I expect the Register button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I expect the Register button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 42
- testRunner.And("I expect the Forgotten button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I expect the Forgotten button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
