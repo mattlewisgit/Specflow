@@ -20,12 +20,12 @@
 
     if (Model.IsAjaxForm)
     {
-        attributes.Add("data-wffm-ajax", true);
+        attributes.AddOrOverwrite("data-wffm-ajax", true);
 
         if (!IsPost)
         {
-            queryString.Add("wffm." + Constants.FormItemId, Model.Item.ID.ToGuid());
-            queryString.Add("wffm." + Constants.Id, Model.UniqueId);
+            queryString.AddOrOverwrite("wffm." + Constants.FormItemId, Model.Item.ID.ToGuid());
+            queryString.AddOrOverwrite("wffm." + Constants.Id, Model.UniqueId);
         }
 
         routeName = Constants.Routes.Form;

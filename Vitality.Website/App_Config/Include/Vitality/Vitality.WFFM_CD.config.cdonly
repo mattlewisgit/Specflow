@@ -10,6 +10,9 @@
 
         <settings>
             <setting name="WFM.IsRemoteActions" value="true"/>
+            <setting name="WFM.MasterDatabase">
+                <patch:attribute name="value">web</patch:attribute>
+            </setting>
         </settings>
 
         <events timingLevel="custom">
