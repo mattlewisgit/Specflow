@@ -29,7 +29,7 @@
             //this.presalesPage.MainNavigation.ClickNavigationSectionLink("business");
             //WebDriver.FindElement(By.LinkText("business")).Click();
             WebDriver
-                .FindElement(new JQuerySelector(".top-bar--large .site-nav__item--Business"))
+                .FindElement(new JQuerySelector(Button.BUSINESS))
                 .Click();
 
         }
@@ -40,7 +40,7 @@
             //this.presalesPage.MainNavigation.Logo.Click();
 
             WebDriver
-                .FindElement(new JQuerySelector(".section-nav__item--home a"))
+                .FindElement(new JQuerySelector(Button.NAV_LOGO))
                 .Click();
         }
 
@@ -61,7 +61,7 @@
         public void ThenIExpectTheHamburgerToBeVisible()
         {
             WebDriver
-                .FindElement(new JQuerySelector(".utility-nav__item .burger-menu"))
+                .FindElement(new JQuerySelector(Button.BURGER_MENU))
                 .Displayed
                 .ShouldBeTrue();
          }
@@ -76,16 +76,20 @@
         public void ThenIExpectTheHamburgerToBeInvisible()
         {
             WebDriver
-                .FindElement(new JQuerySelector(".utility-nav__item .burger-menu"))
-                .Displayed
-                .ShouldBeFalse();
+            .FindElement(new JQuerySelector(Button.BURGER_MENU))
+            .Displayed
+            .ShouldBeFalse();
         }
 
 
         [When(@"I click on the Login button")]
         public void WhenIClickOnTheLoginButton()
         {
-            this.presalesPage.MainNavigation.LogIn.Click();
+           //  this.presalesPage.MainNavigation.LogIn.Click();
+
+            WebDriver
+            .FindElement(new JQuerySelector(Button.LOGIN))
+            .Click();
         }
 
 
@@ -93,7 +97,13 @@
         [Then(@"I expect the Member Zone button to be visible")]
         public void ThenIExpectTheMemberZoneButtonToBeVisible()
         {
-            this.presalesPage.MainNavigation.MemberZoneButton.Displayed.ShouldBeTrue();
+            //this.presalesPage.MainNavigation.MemberZoneButton.Displayed.ShouldBeTrue();
+
+            WebDriver
+            .FindElement(OpenQA.Selenium.By.LinkText("Member Zone"))
+            .Displayed
+            .ShouldBeTrue();
+
         }
 
         
@@ -101,14 +111,25 @@
         [Then(@"I expect the Health Advisers button to be visible")]
         public void ThenIExpectTheHealthAdvisersButtonToBeVisible()
         {
-            this.presalesPage.MainNavigation.HealthAdvisersButton.Displayed.ShouldBeTrue();
+            //this.presalesPage.MainNavigation.HealthAdvisersButton.Displayed.ShouldBeTrue();
+
+            WebDriver
+            .FindElement(OpenQA.Selenium.By.LinkText("Health Advisers"))
+            .Displayed
+            .ShouldBeTrue();
         }
 
 
         [Then(@"I expect the Life Advisers button to be visible")]
         public void ThenIExpectTheLifeAdvisersButtonToBeVisible()
         {
-            this.presalesPage.MainNavigation.LifeAdvisersButton.Displayed.ShouldBeTrue();
+            //this.presalesPage.MainNavigation.LifeAdvisersButton.Displayed.ShouldBeTrue();
+
+            WebDriver
+            .FindElement(OpenQA.Selenium.By.LinkText("Life Advisers"))
+            .Displayed
+            .ShouldBeTrue();
+
         }
 
 

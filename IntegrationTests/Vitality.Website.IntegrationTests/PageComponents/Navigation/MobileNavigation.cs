@@ -13,12 +13,12 @@
             this.webDriver = webDriver;
         }
 
-        public IWebElement BurgerMenu
-        {
-            get
-            {
-                return this.webDriver.FindElement(new JQuerySelector(".burger-menu"));
-            }
-        }
+        //public IWebElement BurgerMenu
+        //{
+        //    get
+        //    {
+        //        return this.webDriver.FindElement(new JQuerySelector(".burger-menu"));
+        //    }
+        //}
     }
 }

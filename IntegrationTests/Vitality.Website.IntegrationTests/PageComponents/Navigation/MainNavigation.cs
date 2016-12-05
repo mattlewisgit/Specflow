@@ -24,67 +24,67 @@
             }
         }
 
-        public IEnumerable<NavigationSection> NavigationSections
-        {
-            get
-            {
-                return this.webDriver.FindElements(new JQuerySelector(".site-nav__item")).Select(e => new NavigationSection(e));
-            }
-        }
+        //public IEnumerable<NavigationSection> NavigationSections
+        //{
+        //    get
+        //    {
+        //        return this.webDriver.FindElements(new JQuerySelector(".site-nav__item")).Select(e => new NavigationSection(e));
+        //    }
+        //}
 
-        public IWebElement Logo
-        {
-            get
-            {
-                return this.webDriver.FindElement(new JQuerySelector(".section-nav__item--home a"));
-            }
-        }
-
-
-
-        public IWebElement LogIn
-        {
-            get
-            {
-
-                return this.webDriver.FindElement(new JQuerySelector(".top-bar--large .utility-nav__item--log-in"));
-            }
-        }
+        //public IWebElement Logo
+        //{
+        //    get
+        //    {
+        //        return this.webDriver.FindElement(new JQuerySelector(".section-nav__item--home a"));
+        //    }
+        //}
 
 
-        public IEnumerable<IWebElement> LogInPanelLinks
-        {
-            get
-            {
-                return this.webDriver.FindElements(new JQuerySelector(".log-in--large a"));
-            }
-        }
+
+        //public IWebElement LogIn
+        //{
+        //    get
+        //    {
+
+        //        return this.webDriver.FindElement(new JQuerySelector(".top-bar--large .utility-nav__item--log-in"));
+        //    }
+        //}
 
 
-        public IWebElement MemberZoneButton
-        {
-            get
-            {
-                return this.webDriver.FindElement(OpenQA.Selenium.By.LinkText("Member Zone"));
-            }
-        }
+        //public IEnumerable<IWebElement> LogInPanelLinks
+        //{
+        //    get
+        //    {
+        //        return this.webDriver.FindElements(new JQuerySelector(".log-in--large a"));
+        //    }
+        //}
 
 
-        public IWebElement HealthAdvisersButton
-        {
-            get
-            {
-                return this.webDriver.FindElement(OpenQA.Selenium.By.LinkText("Health Advisers"));
-            }
-        }
+        //public IWebElement MemberZoneButton
+        //{
+        //    get
+        //    {
+        //        return this.webDriver.FindElement(OpenQA.Selenium.By.LinkText("Member Zone"));
+        //    }
+        //}
 
-        public IWebElement LifeAdvisersButton
-        {
-            get
-            {
-                return this.webDriver.FindElement(OpenQA.Selenium.By.LinkText("Life Advisers"));
-            }
-        }
+
+        //public IWebElement HealthAdvisersButton
+        //{
+        //    get
+        //    {
+        //        return this.webDriver.FindElement(OpenQA.Selenium.By.LinkText("Health Advisers"));
+        //    }
+        //}
+
+        //public IWebElement LifeAdvisersButton
+        //{
+        //    get
+        //    {
+        //        return this.webDriver.FindElement(OpenQA.Selenium.By.LinkText("Life Advisers"));
+        //    }
+        //}
 
     }
 }
