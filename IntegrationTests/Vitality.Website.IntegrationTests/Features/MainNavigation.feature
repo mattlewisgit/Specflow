@@ -3,10 +3,20 @@
     As a Tester
     I want to perform basic navigation tests
 
-    Scenario: Test Navigation
+    Scenario: Test Navigation to Business
     Given I am on the /
     When I click on the business section link
     Then I expect the /business/ to open
+
+	Scenario: Test Navigation to Advisers
+    Given I am on the /
+    When I click on the advisers section link
+    Then I expect the /advisers/ to open
+
+	Scenario: Test Navigation to Personal
+    Given I am on the /business
+    When I click on the personal section link
+    Then I expect the / to open
 
     Scenario: Click Navigation Logo
     Given I am on the /business
@@ -24,11 +34,10 @@
     And I resize to full-screen view
     Then I expect the hamburger to be invisible
 
-    @ignore
     Scenario: Check Member Zone login components show in Mobile view
     Given I am on the /
     When I resize to mobile view
-	And I click on the Login button
+	And I click on the Login (small) button
     Then I expect the Member Zone button to be visible
     And I expect the Health Advisers button to be visible
     And I expect the Life Advisers button to be visible
@@ -36,7 +45,7 @@
     Scenario: Check Member Zone login components show in Full-screen view
     Given I am on the /
     When I resize to full-screen view
-	And I click on the Login button
+	And I click on the Login (large) button
 	Then I expect the Member Zone button to be visible
 	And I expect the Health Advisers button to be visible
 	And I expect the Life Advisers button to be visible

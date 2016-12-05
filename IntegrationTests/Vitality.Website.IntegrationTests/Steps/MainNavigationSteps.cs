@@ -12,7 +12,7 @@
     using Vitality.Website.IntegrationTests.PageObjects;
     using Vitality.Website.IntegrationTests.Utilities;
     using OpenQA.Selenium;
-
+    using System.Linq;
     [Binding]
     public class MainNavigationSteps : BaseSteps
     {
@@ -29,10 +29,32 @@
             //this.presalesPage.MainNavigation.ClickNavigationSectionLink("business");
             //WebDriver.FindElement(By.LinkText("business")).Click();
             WebDriver
-                .FindElement(new JQuerySelector(Button.BUSINESS))
-                .Click();
+            .FindElements(new JQuerySelector(Button.SITE_NAV))
+            .Single(e => e.Text.Equals("Business", StringComparison.InvariantCultureIgnoreCase))
+            .Click();
 
         }
+
+
+        [When(@"I click on the advisers section link")]
+        public void WhenIClickOnTheAdvisersSectionLink()
+        {
+            WebDriver
+            .FindElements(new JQuerySelector(Button.SITE_NAV))
+            .Single(e => e.Text.Equals("Advisers", StringComparison.InvariantCultureIgnoreCase))
+            .Click();
+
+        }
+
+        [When(@"I click on the personal section link")]
+        public void WhenIClickOnThePersonalSectionLink()
+        {
+            WebDriver
+            .FindElements(new JQuerySelector(Button.SITE_NAV))
+            .Single(e => e.Text.Equals("Personal", StringComparison.InvariantCultureIgnoreCase))
+            .Click();
+        }
+
 
         [When(@"I click on the navigation logo")]
         public void WhenIClickOnTheNavigationLogo()
@@ -40,8 +62,8 @@
             //this.presalesPage.MainNavigation.Logo.Click();
 
             WebDriver
-                .FindElement(new JQuerySelector(Button.NAV_LOGO))
-                .Click();
+            .FindElement(new JQuerySelector(Button.NAV_LOGO))
+            .Click();
         }
 
         [Then(@"I expect the (.*) to open")]
@@ -54,16 +76,16 @@
         [When(@"I resize to mobile view")]
         public void WhenIResizeToMobileView()
         {
-            Browser.Resize(320, 800).Wait(TimeSpan.FromMilliseconds(50));
+            Browser.Resize(320, 800).Wait(TimeSpan.FromMilliseconds(300));
         }
 
         [Then(@"I expect the hamburger to be visible")]
         public void ThenIExpectTheHamburgerToBeVisible()
         {
             WebDriver
-                .FindElement(new JQuerySelector(Button.BURGER_MENU))
-                .Displayed
-                .ShouldBeTrue();
+            .FindElement(new JQuerySelector(Button.BURGER_MENU))
+            .Displayed
+            .ShouldBeTrue();
          }
 
         [When(@"I resize to full-screen view")]
@@ -82,17 +104,35 @@
         }
 
 
-        [When(@"I click on the Login button")]
-        public void WhenIClickOnTheLoginButton()
-        {
-           //  this.presalesPage.MainNavigation.LogIn.Click();
+        //[When(@"I click on the Login button")]
+        //public void WhenIClickOnTheLoginButton()
+        //{
+        //   //  this.presalesPage.MainNavigation.LogIn.Click();
 
+        //    WebDriver
+        //    .FindElement(new JQuerySelector(Button.LOGIN_LARGE))
+        //    .Click();
+        //}
+
+
+
+        [When(@"I click on the Login \(small\) button")]
+        public void WhenIClickOnTheLoginSmallButton()
+        {
+              WebDriver
+             .FindElement(new JQuerySelector(Button.LOGIN_SMALL))
+             .Click();
+        }
+    
+
+        [When(@"I click on the Login \(large\) button")]
+        public void WhenIClickOnTheLoginLargeButton()
+        {
             WebDriver
-            .FindElement(new JQuerySelector(Button.LOGIN))
+            .FindElement(new JQuerySelector(Button.LOGIN_LARGE))
             .Click();
         }
-
-
+  
 
         [Then(@"I expect the Member Zone button to be visible")]
         public void ThenIExpectTheMemberZoneButtonToBeVisible()

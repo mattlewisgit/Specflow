@@ -15,6 +15,7 @@
         public static void BeforeTestRun()
         {
             WebDriver = DriverFactory.Chrome();
+            
         }
 
         [AfterTestRun]
