@@ -13,7 +13,7 @@ namespace Vitality.Website.App.Services
         public IEnumerable<Chapter> GetChapters()
         {
             //TODO: Read data from Papillion
-            return JsonConvert.DeserializeObject<List<Chapter>>(_ccsdChaptersJsonFile);
+            return JsonConvert.DeserializeObject<List<Chapter>>(File.ReadAllText(_ccsdChaptersJsonFile));
         }
     }
 }

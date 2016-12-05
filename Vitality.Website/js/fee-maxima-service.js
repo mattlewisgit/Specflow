@@ -1,10 +1,10 @@
 ﻿// jscs:disable maximumLineLength
 var mockData = {
     chapters: [{
-        Code: "CHABD",
+        Id: 1,
         Name: "ABDOMEN (EXCL. URINARY &amp; REPRODUCTIVE ORGANS)",
         Sections: [{
-            Code: "SCAWA",
+            Id: 1,
             Name: "Abdominal wall",
             Procedures: [{
                 Code: "G1900",
@@ -53,7 +53,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCDIG",
+            Id: 2,
             Name: "Other Organs (Mainly Digestive)",
             Procedures: [{
                 Code: "G1900",
@@ -102,7 +102,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCDUO",
+            Id: 3,
             Name: "Duodenum",
             Procedures: [{
                 Code: "G1900",
@@ -151,7 +151,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCJEJ",
+            Id: 4,
             Name: "Jejunum/Ileum",
             Procedures: [{
                 Code: "G1900",
@@ -200,7 +200,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCLAI",
+            Id: 5,
             Name: "Large Intestine",
             Procedures: [{
                 Code: "G1900",
@@ -249,7 +249,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCMVE",
+            Id: 6,
             Name: "Major Vessels",
             Procedures: [{
                 Code: "G1900",
@@ -298,7 +298,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCOSO",
+            Id: 7,
             Name: "Oesophagus",
             Procedures: [{
                 Code: "G1900",
@@ -347,7 +347,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCPER",
+            Id: 8,
             Name: "Peritoneum",
             Procedures: [{
                 Code: "G1900",
@@ -396,7 +396,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCRAN",
+            Id: 9,
             Name: "Rectum/Anus",
             Procedures: [{
                 Code: "G1900",
@@ -445,7 +445,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCSTO",
+            Id: 10,
             Name: "Stomach",
             Procedures: [{
                 Code: "G1900",
@@ -495,10 +495,10 @@ var mockData = {
             }]
         }]
     }, {
-        Code: "CHBON",
+        Id: 2,
         Name: "BONES, JOINTS &amp; CONNECTIVE TISSUE / TENDON MUSCLE",
         Sections: [{
-            Code: "SCAMP",
+            Id: 1,
             Name: "Amputation",
             Procedures: [{
                 Code: "G1900",
@@ -547,7 +547,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCBNS",
+            Id: 2,
             Name: "Bone (Non-Specific)",
             Procedures: [{
                 Code: "G1900",
@@ -596,7 +596,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCCTM",
+            Id: 3,
             Name: "Connective tissue / Tendon Muscle",
             Procedures: [{
                 Code: "G1900",
@@ -645,7 +645,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCEFT",
+            Id: 4,
             Name: "External fixation / traction",
             Procedures: [{
                 Code: "G1900",
@@ -694,7 +694,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCELB",
+            Id: 5,
             Name: "Elbow",
             Procedures: [{
                 Code: "G1900",
@@ -743,7 +743,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCFOO",
+            Id: 6,
             Name: "Foot",
             Procedures: [{
                 Code: "G1900",
@@ -792,7 +792,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCFRA",
+            Id: 7,
             Name: "Fractures",
             Procedures: [{
                 Code: "G1900",
@@ -841,7 +841,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCHAN",
+            Id: 8,
             Name: "Hand",
             Procedures: [{
                 Code: "G1900",
@@ -890,7 +890,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCHLP",
+            Id: 9,
             Name: "Hip, Leg and Pelvis",
             Procedures: [{
                 Code: "G1900",
@@ -939,7 +939,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCJRR",
+            Id: 10,
             Name: "Joints, including relacement / reconstruction (not listed elsewhere)",
             Procedures: [{
                 Code: "G1900",
@@ -988,7 +988,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCKNE",
+            Id: 11,
             Name: "Knee",
             Procedures: [{
                 Code: "G1900",
@@ -1037,7 +1037,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCNRV",
+            Id: 12,
             Name: "Nerves",
             Procedures: [{
                 Code: "G1900",
@@ -1086,7 +1086,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCSHO",
+            Id: 13,
             Name: "Shoulder",
             Procedures: [{
                 Code: "G1900",
@@ -1136,10 +1136,10 @@ var mockData = {
             }]
         }]
     }, {
-        Code: "CHBRA",
+        Id: 3,
         Name: "BRAIN, CRANIUM AND OTHER INTRACRANIAL ORGANS",
         Sections: [{
-            Code: "SCBRA",
+            Id: 1,
             Name: "Brain",
             Procedures: [{
                 Code: "G1900",
@@ -1188,7 +1188,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCCRA",
+            Id: 2,
             Name: "Cranium",
             Procedures: [{
                 Code: "G1900",
@@ -1237,7 +1237,7 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCMEN",
+            Id: 3,
             Name: "Meninges",
             Procedures: [{
                 Code: "G1900",
@@ -1286,59 +1286,59 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCNER",
+            Id: 4,
             Name: "Nerves",
             Procedures: []
         }, {
-            Code: "SCOTH",
+            Id: 5,
             Name: "Other",
             Procedures: []
         }, {
-            Code: "SCVES",
+            Id: 6,
             Name: "Vessels",
             Procedures: []
         }]
     }, {
-        Code: "CHBRE",
+        Id: 4,
         Name: "BREAST",
         Sections: [{
-            Code: "SCBOT",
+            Id: 1,
             Name: "Other",
             Procedures: []
         }, {
-            Code: "SCEXC",
+            Id: 2,
             Name: "Excision/Biopsy codes",
             Procedures: []
         }, {
-            Code: "SCMAS",
+            Id: 3,
             Name: "Mastectomy",
             Procedures: []
         }, {
-            Code: "SCREC",
+            Id: 4,
             Name: "Reconstruction of breast",
             Procedures: []
         }]
     }, {
-        Code: "CHCHM",
+        Id: 5,
         Name: "CHEMOTHERAPY",
         Sections: [{
-            Code: "SCCHM",
+            Id: 1,
             Name: "Chemotherapy",
             Procedures: []
         }]
     }, {
-        Code: "CHEAR",
+        Id: 6,
         Name: "EAR, NOSE &amp; THROAT",
         Sections: [{
-            Code: "SCEXT",
+            Id: 1,
             Name: "External Ear",
             Procedures: []
         }, {
-            Code: "SCFEP",
+            Id: 2,
             Name: "Fibreoptic Endoscopic Procedures (GA or LA)",
             Procedures: []
         }, {
-            Code: "SCINN",
+            Id: 3,
             Name: "Inner Ear",
             Procedures: [{
                 Code: "G1900",
@@ -1387,15 +1387,15 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCLAR",
+            Id: 4,
             Name: "Larynx And Trachea",
             Procedures: []
         }, {
-            Code: "SCMID",
+            Id: 5,
             Name: "Middle Ear and Mastoid",
             Procedures: []
         }, {
-            Code: "SCNAS",
+            Id: 6,
             Name: "Nasal Sinuses",
             Procedures: [{
                 Code: "G1900",
@@ -1444,19 +1444,19 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCNNC",
+            Id: 7,
             Name: "Nose and Nasal Cavity",
             Procedures: []
         }, {
-            Code: "SCTHR",
+            Id: 8,
             Name: "Throat",
             Procedures: []
         }]
     }, {
-        Code: "CHEND",
+        Id: 7,
         Name: "ENDOSCOPIC GIT Procedures",
         Sections: [{
-            Code: "SCEND",
+            Id: 1,
             Name: "Endoscopic GIT Procedures",
             Procedures: [{
                 Code: "G1900",
@@ -1506,14 +1506,14 @@ var mockData = {
             }]
         }]
     }, {
-        Code: "CHEYE",
+        Id: 8,
         Name: "EYE &amp; ORBITAL CONTENTS",
         Sections: [{
-            Code: "SCCON",
+            Id: 1,
             Name: "Conjunctiva",
             Procedures: []
         }, {
-            Code: "SCCOR",
+            Id: 2,
             Name: "Cornea",
             Procedures: [{
                 Code: "G1900",
@@ -1562,23 +1562,23 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCEBR",
+            Id: 3,
             Name: "Eyebrow &amp; Lid",
             Procedures: []
         }, {
-            Code: "SCEGN",
+            Id: 4,
             Name: "General",
             Procedures: []
         }, {
-            Code: "SCGLO",
+            Id: 5,
             Name: "Globe &amp; Orbit",
             Procedures: []
         }, {
-            Code: "SCIRI",
+            Id: 6,
             Name: "Iris &amp; Anteria Chamber",
             Procedures: []
         }, {
-            Code: "SCLAC",
+            Id: 7,
             Name: "Lacrimal System",
             Procedures: [{
                 Code: "G1900",
@@ -1627,347 +1627,347 @@ var mockData = {
                 AnaesthetistFee: null
             }]
         }, {
-            Code: "SCLEN",
+            Id: 8,
             Name: "Lens",
             Procedures: []
         }, {
-            Code: "SCMUS",
+            Id: 9,
             Name: "Muscles",
             Procedures: []
         }, {
-            Code: "SCRET",
+            Id: 10,
             Name: "Retina",
             Procedures: []
         }, {
-            Code: "SCSCL",
+            Id: 11,
             Name: "Sclera",
             Procedures: []
         }, {
-            Code: "SCVIT",
+            Id: 12,
             Name: "Vitreous",
             Procedures: []
         }]
     }, {
-        Code: "CHFAC",
+        Id: 9,
         Name: " FACE, MOUTH, SALIVARY &amp; THYROID",
         Sections: [{
-            Code: "SCFAC",
+            Id: 1,
             Name: "Face and Jaws",
             Procedures: []
         }, {
-            Code: "SCLIP",
+            Id: 2,
             Name: "Lips",
             Procedures: []
         }, {
-            Code: "SCMOU",
+            Id: 3,
             Name: "Mouth Cavity",
             Procedures: []
         }, {
-            Code: "SCNEC",
+            Id: 4,
             Name: "Neck",
             Procedures: []
         }, {
-            Code: "SCPAL",
+            Id: 5,
             Name: "Palate",
             Procedures: []
         }, {
-            Code: "SCSAL",
+            Id: 6,
             Name: "Salivary Glands",
             Procedures: []
         }, {
-            Code: "SCTEE",
+            Id: 7,
             Name: "Teeth",
             Procedures: []
         }, {
-            Code: "SCTHY",
+            Id: 8,
             Name: "Thyroid and Parathyroid Glands",
             Procedures: []
         }, {
-            Code: "SCTON",
+            Id: 9,
             Name: "Tongue",
             Procedures: []
         }]
     }, {
-        Code: "CHFEM",
+        Id: 10,
         Name: "FEMALE REPRODUCTIVE ORGANS",
         Sections: [{
-            Code: "SCCER",
+            Id: 1,
             Name: "Cervix Uteri",
             Procedures: []
         }, {
-            Code: "SCSUS",
+            Id: 2,
             Name: "Suspension",
             Procedures: []
         }, {
-            Code: "SCUTE",
+            Id: 3,
             Name: "Uterus / Adnexa",
             Procedures: []
         }, {
-            Code: "SCVAG",
+            Id: 4,
             Name: "Vagina / Perineum",
             Procedures: []
         }, {
-            Code: "SCVUL",
+            Id: 5,
             Name: "Vulva / Labia",
             Procedures: []
         }]
     }, {
-        Code: "CHHAE",
+        Id: 11,
         Name: "HAEMATOLOGY",
         Sections: [{
-            Code: "SCHAE",
+            Id: 1,
             Name: "Haematology",
             Procedures: []
         }]
     }, {
-        Code: "CHRAD",
+        Id: 12,
         Name: "INTERVENTIONAL RADIOLOGY",
         Sections: [{
-            Code: "SCANG",
+            Id: 1,
             Name: "Angioplasty",
             Procedures: []
         }, {
-            Code: "SCBIO",
+            Id: 2,
             Name: "Biopsy",
             Procedures: []
         }, {
-            Code: "SCDIL",
+            Id: 3,
             Name: "Dilatation",
             Procedures: []
         }, {
-            Code: "SCDRA",
+            Id: 4,
             Name: "Drainage",
             Procedures: []
         }, {
-            Code: "SCEMB",
+            Id: 5,
             Name: "Embolisation",
             Procedures: []
         }, {
-            Code: "SCGIL",
+            Id: 6,
             Name: "Gastrointestinal",
             Procedures: []
         }, {
-            Code: "SCHNK",
+            Id: 7,
             Name: "Head and Neck",
             Procedures: []
         }, {
-            Code: "SCLVR",
+            Id: 8,
             Name: "Liver",
             Procedures: []
         }, {
-            Code: "SCLYS",
+            Id: 9,
             Name: "Thrombolysis",
             Procedures: []
         }, {
-            Code: "SCOTR",
+            Id: 10,
             Name: "Other",
             Procedures: []
         }, {
-            Code: "SCRAX",
+            Id: 11,
             Name: "Thorax",
             Procedures: []
         }, {
-            Code: "SCSPE",
+            Id: 12,
             Name: "Spine",
             Procedures: []
         }, {
-            Code: "SCURY",
+            Id: 13,
             Name: "Urinary",
             Procedures: []
         }]
     }, {
-        Code: "CHINS",
-        Name: " INVESTIGATIONS, SIMPLE Procedures AND CONSULTATION CODES",
+        Id: 13,
+        Name: " INVESTIGATIONS, SIMPLE Procedures AND CONSULTATION IdS",
         Sections: [{
-            Code: "SCCOC",
-            Name: "Consultation Codes",
+            Id: 1,
+            Name: "Consultation Ids",
             Procedures: []
         }, {
-            Code: "SCINV",
+            Id: 2,
             Name: "Investigations",
             Procedures: []
         }, {
-            Code: "SCSIP",
+            Id: 3,
             Name: "Simple Procedures",
             Procedures: []
         }]
     }, {
-        Code: "CHPRE",
+        Id: 14,
         Name: " PREGNANCY &amp; CONFINEMENT",
         Sections: [{
-            Code: "SCPRE",
+            Id: 1,
             Name: "Pregnancy &amp; Confinement",
             Procedures: []
         }]
     }, {
-        Code: "CHSST",
+        Id: 15,
         Name: "SKIN &amp; SUBCUTANEOUS TISSUE",
         Sections: [{
-            Code: "SCBUR",
+            Id: 1,
             Name: "Burns, Scars &amp; Contractures",
             Procedures: []
         }, {
-            Code: "SCFFS",
+            Id: 2,
             Name: "Flaps &amp; Free Skin Grafts",
             Procedures: []
         }, {
-            Code: "SCLES",
+            Id: 3,
             Name: "Lesions of skin",
             Procedures: []
         }, {
-            Code: "SCREP",
+            Id: 4,
             Name: "Repair",
             Procedures: []
         }]
     }, {
-        Code: "CHSPI",
+        Id: 16,
         Name: " SPINE, SPINAL CORD AND PERIPHERAL NERVES",
         Sections: [{
-            Code: "SCNBL",
+            Id: 1,
             Name: "Other Nerve Blocks",
             Procedures: []
         }, {
-            Code: "SCNEU",
+            Id: 2,
             Name: "Neurophysiological Procedures",
             Procedures: []
         }, {
-            Code: "SCOPR",
+            Id: 3,
             Name: "Other Procedures",
             Procedures: []
         }, {
-            Code: "SCPAR",
+            Id: 4,
             Name: "Paraspinal Injections",
             Procedures: []
         }, {
-            Code: "SCPNV",
+            Id: 5,
             Name: "Peripheral Nerves",
             Procedures: []
         }, {
-            Code: "SCROO",
+            Id: 6,
             Name: "Nerve Roots",
             Procedures: []
         }, {
-            Code: "SCSPC",
+            Id: 7,
             Name: "Spinal Cord",
             Procedures: []
         }, {
-            Code: "SCSPI",
+            Id: 8,
             Name: "Spinal Column (including Intervertebral Disc)",
             Procedures: []
         }, {
-            Code: "SCSYM",
+            Id: 9,
             Name: "Sympathetic Nerves",
             Procedures: []
         }]
     }, {
-        Code: "CHTHO",
+        Id: 17,
         Name: " THORAX &amp; INTRA-THORACIC ORGANS",
         Sections: [{
-            Code: "SCBRO",
+            Id: 1,
             Name: "Bronchi / Lungs / Pleura",
             Procedures: []
         }, {
-            Code: "SCCAR",
+            Id: 2,
             Name: "Heart - Cardiology",
             Procedures: []
         }, {
-            Code: "SCCHE",
+            Id: 3,
             Name: "Chest Wall",
             Procedures: []
         }, {
-            Code: "SCFIB",
+            Id: 4,
             Name: "Fibreoptic Endoscopic Procedures (GA or LA)",
             Procedures: []
         }, {
-            Code: "SCGRE",
+            Id: 5,
             Name: "Great Vessels",
             Procedures: []
         }, {
-            Code: "SCHEA",
+            Id: 6,
             Name: "Heart - Cardiac Surgery",
             Procedures: []
         }, {
-            Code: "SCMED",
+            Id: 7,
             Name: "Mediastinum",
             Procedures: []
         }, {
-            Code: "SCOES",
+            Id: 8,
             Name: "Oesophagus",
             Procedures: []
         }, {
-            Code: "SCTOT",
+            Id: 9,
             Name: "Other",
             Procedures: []
         }, {
-            Code: "SCTRA",
+            Id: 10,
             Name: "Trachea",
             Procedures: []
         }, {
-            Code: "SCVID",
+            Id: 11,
             Name: "Video Assisted Thoracic Surgery (VATS)",
             Procedures: []
         }]
     }, {
-        Code: "CHURI",
+        Id: 18,
         Name: " URINARY SYSTEM AND MALE REPRODUCTIVE ORGANS",
         Sections: [{
-            Code: "SCBLA",
+            Id: 1,
             Name: "Bladder",
             Procedures: []
         }, {
-            Code: "SCKID",
+            Id: 2,
             Name: "Kidney / Renal Pelvic",
             Procedures: []
         }, {
-            Code: "SCLIA",
+            Id: 3,
             Name: "Genitalia",
             Procedures: []
         }, {
-            Code: "SCPRO",
+            Id: 4,
             Name: "Prostate",
             Procedures: []
         }, {
-            Code: "SCURE",
+            Id: 5,
             Name: "Ureter",
             Procedures: []
         }, {
-            Code: "SCUTH",
+            Id: 6,
             Name: "Urethra",
             Procedures: []
         }]
     }, {
-        Code: "CHVAS",
+        Id: 19,
         Name: " VASCULAR SYSTEM",
         Sections: [{
-            Code: "SCABD",
+            Id: 1,
             Name: "Abdominal Vessels",
             Procedures: []
         }, {
-            Code: "SCHNE",
+            Id: 2,
             Name: "Head &amp; Neck",
             Procedures: []
         }, {
-            Code: "SCILE",
+            Id: 3,
             Name: "Ileo-Femoral Vessels",
             Procedures: []
         }, {
-            Code: "SCLYM",
+            Id: 4,
             Name: "Lymphatic System",
             Procedures: []
         }, {
-            Code: "SCNON",
+            Id: 5,
             Name: "Non-Specific",
             Procedures: []
         }, {
-            Code: "SCREN",
+            Id: 6,
             Name: "Renal",
             Procedures: []
         }, {
-            Code: "SCTHO",
+            Id: 7,
             Name: "Thoracic",
             Procedures: []
         }, {
-            Code: "SCVAR",
+            Id: 8,
             Name: "Varicose Veins",
             Procedures: []
         }]
@@ -2006,12 +2006,12 @@ angular
             var datasetTypes = this.datasetTypes;
             this.datasets.chapters = _.uniq(_.map(mockData.chapters,
                 function (chapter) {
-                    return { Code: chapter.Code, Value: chapter.Name, Type: datasetTypes.Chapter };
+                    return { Id: chapter.Id, Value: chapter.Name, Type: datasetTypes.Chapter };
                 }));
             var sections = _.flatten(_.pluck(mockData.chapters, this.subArrayPropertyNames.Sections));
             this.datasets.sections = _.uniq(_.map(sections,
                 function (section) {
-                    return { Code: section.Code, Value: section.Name, Type: datasetTypes.Section };
+                    return { Id: section.Id, Value: section.Name, Type: datasetTypes.Section };
                 }));
             this.datasets.procedures = _.uniq(_.map(_.flatten(_.pluck(sections, this.subArrayPropertyNames.Procedures)),
                 function (procedure) {

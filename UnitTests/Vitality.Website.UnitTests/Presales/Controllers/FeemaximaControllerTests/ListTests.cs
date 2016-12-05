@@ -4,7 +4,6 @@ using System.Net.Http;
 using Shouldly;
 
 using Vitality.Website.Areas.Presales.Controllers;
-using Vitality.Website.Areas.Presales.Handlers.Literature;
 using Vitality.Website.UnitTests.TestDoubles;
 
 using Xunit;
@@ -39,7 +38,7 @@ namespace Vitality.Website.UnitTests.Presales.Controllers.FeemaximaControllerTes
         {
             _ccsdService.Setup(c => c.GetChapters()).Returns(new List<Chapter>
             {
-                new Chapter { Code ="10DS", Name="ABDOMEN" }
+                new Chapter { Id =1, Name="ABDOMEN" }
             });
             Init();
             this._controller.List().StatusCode.ShouldBe(HttpStatusCode.OK);
@@ -50,7 +49,7 @@ namespace Vitality.Website.UnitTests.Presales.Controllers.FeemaximaControllerTes
         {
             _ccsdService.Setup(c => c.GetChapters()).Returns(new List<Chapter>
             {
-                new Chapter { Code ="10DS", Name="ABDOMEN" }
+                new Chapter { Id =1, Name="ABDOMEN" }
             });
             Init();
             this._controller.List().Content.ReadAsAsync<FeeMaximaChaptersDto>().Result.ShouldNotBeNull();
