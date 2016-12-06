@@ -172,6 +172,36 @@
 
         }
 
+        [When(@"I click on the footer button")]
+        public void WhenIClickOnTheFooterButton()
+        {
+            WebDriver
+            .FindElement(new JQuerySelector(Button.FOOTER))
+            .Click(); ;
+        }
+
+
+        [Then(@"I expect the Health insurance quote button to be visible")]
+        public void ThenIExpectTheHealthInsuranceQuoteButtonToBeVisible()
+        {
+            //this.presalesPage.MainNavigation.HealthQuoteButton.Displayed.ShouldBeTrue();
+            WebDriver
+            .FindElement(OpenQA.Selenium.By.LinkText("Health insurance quote"))
+            .Displayed
+            .ShouldBeTrue();
+
+        }
+
+        [Then(@"I expect the Life insurance quote button to be visible")]
+        public void ThenIExpectTheLifeInsuranceQuoteButtonToBeVisible()
+        {
+            //this.presalesPage.MainNavigation.LifeQuoteButton.Displayed.ShouldBeTrue();
+            WebDriver
+            .FindElement(OpenQA.Selenium.By.LinkText("Life insurance quote"))
+            .Displayed
+            .ShouldBeTrue();
+
+        }
 
     }
 }

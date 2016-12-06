@@ -49,3 +49,18 @@
 	Then I expect the Member Zone button to be visible
 	And I expect the Health Advisers button to be visible
 	And I expect the Life Advisers button to be visible
+
+	Scenario: Resize home page from Mobile view to Full-screen and check that footer visible
+	Given I am on the /
+	When I resize to mobile view
+	And I resize to full-screen view
+	Then I expect the footer to be invisible
+	And I expect the Health insurance quote button to be visible
+	And I expect the Life insurance quote button to be visible
+
+	Scenario: Check footer pop up component show in Mobile view
+	Given I am on the /
+	When I resize to mobile view
+	And I click on the footer button
+	Then I expect the Health insurance quote button to be visible
+	And I expect the Life insurance quote button to be visible

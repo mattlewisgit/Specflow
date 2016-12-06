@@ -12,6 +12,8 @@
         public const string TOPBARSMALL = ".top-bar.top-bar--small ";
         public const string LOGIN_LARGE = TOPBARLARGE + ".utility-nav__item--log-in";
         public const string LOGIN_SMALL = TOPBARSMALL + ".utility-nav__item--log-in";
+
+        public const string FOOTER = "p.quote-footer--tab > a";
     }
 
 }
