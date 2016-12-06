@@ -1,33 +1,31 @@
 ﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.FeeMaxima>
-
-<div class="grid">
+<div class="pinch">
     <h2 class="text-flush-top">@Editable(Model, m => m.Headline)</h2>
 
-    <div class="example" data-ng-app="FeemaximaApp">
+    <div data-ng-app="FeemaximaApp">
         <div ng-controller="ChapterListController">
             <a class="emphasis-link" ng-click="clearSection()" href="" data-ng-show="sectionSelected">@Editable(Model, m => m.BackLinkText)</a>
             <h3>@Editable(Model, m => m.SearchText)</h3>
             <input type="text" placeholder="@Html.Raw(Model.SearchPlaceholderText)" typeahead />
 
             <div data-ng-show="noResultsFound">
-                Sorry, no chapters or sections found for that search.
+               @Editable(Model, m => m.NoResultsText) 
             </div>
             <div class="expanding-list js-expander-is-accordion expander--init" data-ng-hide="noResultsFound || sectionSelected" data-ng-cloak>
                 <a ng-repeat-start="chapter in chapters" class="expander__link grid" href="#expander1-{{chapter.Id}}">
                     <div class="grid-col-2-12 chapter">
-                        Chapter {{chapter.Id}}
+                       @Editable(Model, m => m.ChapterText) {{chapter.Id}}
                     </div>
                     <div class="grid-col-10-12 name" ng-bind-html="chapter.Name | unsafe">
                     </div>
                 </a>
-
                 <div ng-repeat-end class="expander__content" id="expander1-{{chapter.Id}}">
                     <a ng-click="selectSection(section)" class="grid" ng-repeat="section in chapter.Sections">
 
                         <div class="grid-col-2-12 chapter"></div>
 
                         <div class="grid-col-2-12 subchapter">
-                            Chapter {{chapter.Id}}.{{section.Id}}
+                            @Editable(Model, m => m.ChapterText) {{chapter.Id}}.{{section.Id}}
                         </div>
 
                         <div class="grid-col-8-12 name" ng-bind-html="section.Name | unsafe">
@@ -40,18 +38,18 @@
             <table class="data-table tablesaw tablesaw-stack" data-ng-show="sectionSelected" data-tablesaw-mode="stack" data-ng-cloak>
                 <thead>
                     <tr>
-                        <th>Code</th>
-                        <th>Description</th>
-                        <th>Surgeon's Fee</th>
-                        <th>Anaesthetist's Fee</th>
+                        <th>@Editable(Model, m => m.CodeHeader)</th>
+                        <th>@Editable(Model, m => m.DescriptionHeader)</th>
+                        <th>@Editable(Model, m => m.SurgeonsFeeHeader)</th>
+                        <th>@Editable(Model, m => m.AnaesthetistsFeeHeader)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-repeat="procedure in selectedProcedures">
                         <td ng-bind="procedure.Code"></td>
                         <td ng-bind-html="procedure.Description | unsafe"></td>
-                        <td>£{{procedure.OperatorFee}}</td>
-                        <td>£{{procedure.AnaesthetistFee}}</td>
+                        <td>@Model.CurrencySymbol{{procedure.OperatorFee}}</td>
+                        <td>@Model.CurrencySymbol{{procedure.AnaesthetistFee}}</td>
                     </tr>
                 </tbody>
             </table>
