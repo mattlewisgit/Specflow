@@ -187,12 +187,13 @@
     <Compile Include="Presales\Controllers\FeemaximaControllerTests\ListTests.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\Get_Tests.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\List_Tests.cs" />
+    <Compile Include="Presales\Handlers\FeeMaxima\FeeMaximaChaptersHandlerTests.cs" />
     <Compile Include="TestDoubles\MediatorStub.cs" />
     <Compile Include="Presales\Handlers\Literature\LiteratureDocumentSummariesHandler_Handle_Tests.cs" />
-    <Compile Include="TestDoubles\SearchContextStub.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\Search_Tests.cs" />
     <Compile Include="Presales\Handlers\Literature\LiteratureDocumentHandler_Handle_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestDoubles\SearchContextStub.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

@@ -14,6 +14,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
         {
         }
 
+        [HttpGet]
         [Route("api/Feemaxima/List")]
         public HttpResponseMessage List()
         {

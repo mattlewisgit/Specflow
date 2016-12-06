@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Glass.Mapper.Sc.Configuration.Attributes;
-using Glass.Mapper.Sc.Fields;
-using Sitecore.Globalization;
+﻿using Glass.Mapper.Sc.Configuration.Attributes;
 using Vitality.Website.Areas.Global.Models;
-using Vitality.Website.Areas.Presales.ComponentTemplates.Generic;
+using Vitality.Website.SC.Utilities;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
 {
@@ -15,7 +9,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
     {
         public FeeMaxima()
         {
-            CurrencySymbol = "£";
+            CurrencySymbol = DictionaryHelper.CurrencySymbol.Phrase;
         }
         public string AnaesthetistsFeeHeader { get; set; }
         public string BackLinkText { get; set; }
@@ -24,7 +18,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
         public string CurrencySymbol { get; set; }
         public string DescriptionHeader { get; set; }
         public string Headline { get; set; }
-        public string NoResultsText { get; set; }
+        public string LoadingText { get; set; }
         public string SearchText { get; set; }
         public string SearchPlaceholderText { get; set; }
         public string SurgeonsFeeHeader { get; set; }

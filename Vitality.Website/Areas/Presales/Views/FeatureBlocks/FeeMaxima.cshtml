@@ -2,14 +2,14 @@
 <div class="pinch">
     <h2 class="text-flush-top">@Editable(Model, m => m.Headline)</h2>
 
-    <div data-ng-app="FeemaximaApp">
+    <div class="example" data-ng-app="FeemaximaApp">
         <div ng-controller="ChapterListController">
             <a class="emphasis-link" ng-click="clearSection()" href="" data-ng-show="sectionSelected">@Editable(Model, m => m.BackLinkText)</a>
             <h3>@Editable(Model, m => m.SearchText)</h3>
             <input type="text" placeholder="@Html.Raw(Model.SearchPlaceholderText)" typeahead />
 
-            <div data-ng-show="noResultsFound">
-               @Editable(Model, m => m.NoResultsText) 
+            <div data-ng-show="isLoading">
+               @Editable(Model, m => m.LoadingText)
             </div>
             <div class="expanding-list js-expander-is-accordion expander--init" data-ng-hide="noResultsFound || sectionSelected" data-ng-cloak>
                 <a ng-repeat-start="chapter in chapters" class="expander__link grid" href="#expander1-{{chapter.Id}}">
