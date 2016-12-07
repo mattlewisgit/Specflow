@@ -13,6 +13,7 @@
     using Vitality.Website.IntegrationTests.Utilities;
     using OpenQA.Selenium;
     using System.Linq;
+    using OpenQA.Selenium.Interactions;
     [Binding]
     public class MainNavigationSteps : BaseSteps
     {
@@ -203,5 +204,27 @@
 
         }
 
+        [Then(@"I expect the footer to be invisible")]
+        public void ThenIExpectTheFooterToBeInvisible()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+        [When(@"I hover over (.*) and click on (.*)")]
+        public void WhenIHoverOver(string hoverLink, string clickLink)
+        {
+            var sectionLink = WebDriver.FindElement(new JQuerySelector(".section-nav .section-nav__item--megamenu:contains('" + hoverLink + "')"));
+
+            // Hover over the menu.
+            new Actions(WebDriver).MoveToElement(sectionLink).Perform();
+
+            // Wait for the submenu to appear.
+            WebDriver.WaitForElement(OpenQA.Selenium.By.ClassName("megamenu"));
+
+            // Find and click the subsection.
+            WebDriver
+                .FindElement(new JQuerySelector(".megamenu a:contains('" + clickLink + "')"))
+                .Click();
+        }
     }
 }
