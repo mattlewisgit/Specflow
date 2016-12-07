@@ -31,7 +31,7 @@
                 .success(function (dt) {
                     deferred.resolve(dt);
                 })
-                .error(function (data, status) {
+                .error(function () {
                     deferred.reject();
                 });
             return deferred.promise;
