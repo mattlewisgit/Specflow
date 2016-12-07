@@ -106,7 +106,18 @@
     <Compile Include="AppSettings.cs" />
     <Compile Include="Drivers\DriverFactory.cs" />
     <Compile Include="Extensions\AssertionExtensions.cs" />
+    <Compile Include="Extensions\IWebDriverExtensions.cs" />
     <Compile Include="Extensions\MainNavigationExtensions.cs" />
+    <Compile Include="Features\HealthPresalesContent.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HealthPresalesContent.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\LiteratureLibrary.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LiteratureLibrary.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\MainNavigation.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -117,15 +128,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MetaTags.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\QuoteApply.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuoteApply.feature</DependentUpon>
+    </Compile>
     <Compile Include="PageComponents\Navigation\MainNavigation.cs" />
     <Compile Include="PageComponents\Navigation\MobileNavigation.cs" />
     <Compile Include="PageComponents\Navigation\NavigationSection.cs" />
     <Compile Include="PageObjects\PresalesPage.cs" />
     <Compile Include="Steps\BaseSteps.cs" />
     <Compile Include="Steps\CommonSteps.cs" />
+    <Compile Include="Steps\HealthPresalesContentSteps.cs" />
+    <Compile Include="Steps\LiteratureLibrarySteps.cs" />
     <Compile Include="Steps\MainNavigationSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\MetaTagsSteps.cs" />
+    <Compile Include="Steps\QuoteApplySteps.cs" />
     <Compile Include="Utilities\Browser.cs" />
     <Compile Include="Utilities\PageItems.cs" />
   </ItemGroup>
@@ -136,6 +155,14 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Features\HealthPresalesContent.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>HealthPresalesContent.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\LiteratureLibrary.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>LiteratureLibrary.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\MainNavigation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>MainNavigation.feature.cs</LastGenOutput>
@@ -143,6 +170,10 @@
     <None Include="Features\MetaTags.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>MetaTags.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteApply.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>QuoteApply.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
