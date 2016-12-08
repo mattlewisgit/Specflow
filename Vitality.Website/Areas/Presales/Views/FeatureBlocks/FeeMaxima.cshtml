@@ -4,17 +4,33 @@
 
     <div class="example" data-ng-app="FeemaximaApp">
         <div ng-controller="ChapterListController">
-            <a class="emphasis-link" ng-click="clearSection()" href="" data-ng-show="sectionSelected">@Editable(Model, m => m.BackLinkText)</a>
-            <h3>@Editable(Model, m => m.SearchText)</h3>
-            <input type="text" placeholder="@Html.Raw(Model.SearchPlaceholderText)" typeahead />
+            <div class="grid grid--search-header">
+                <div data-ng-hide="sectionSelected" class="grid-col-5-12 grid--search-header__title no-pad">
+                    @Editable(Model, m => m.ChooseChapterText)
+                </div>
 
+                <div data-ng-show="sectionSelected" class="grid-col-5-12 no-pad">
+                    <a class="emphasis-link" data-ng-click="clearSection()" href="">
+                        @Editable(Model, m => m.BackLinkText)
+                    </a>
+                </div>
+
+                <div class="grid-col-2-12 grid--search-header__label no-pad">
+                    <label for="feemaximaSearch">@Editable(Model, m => m.SearchText)</label>
+                </div>
+
+                <div class="grid-col-5-12 no-pad">
+                    <input id="feemaximaSearch" type="text"
+                           placeholder="@Html.Raw(Model.SearchPlaceholderText)" typeahead />
+                </div>
+            </div>
             <div data-ng-show="isLoading">
-               @Editable(Model, m => m.LoadingText)
+                @Editable(Model, m => m.LoadingText)
             </div>
             <div class="expanding-list js-expander-is-accordion expander--init" data-ng-hide="noResultsFound || sectionSelected" data-ng-cloak>
                 <a ng-repeat-start="chapter in chapters" class="expander__link grid" href="#expander1-{{chapter.Id}}">
                     <div class="grid-col-2-12 chapter">
-                       @Editable(Model, m => m.ChapterText) {{chapter.Id}}
+                        @Editable(Model, m => m.ChapterText) {{chapter.Id}}
                     </div>
                     <div class="grid-col-10-12 name" ng-bind-html="chapter.Name | unsafe">
                     </div>
@@ -37,20 +53,20 @@
         <div ng-controller="SectionController">
             <table class="data-table tablesaw tablesaw-stack" data-ng-show="sectionSelected" data-tablesaw-mode="stack" data-ng-cloak>
                 <thead>
-                    <tr>
-                        <th>@Editable(Model, m => m.CodeHeader)</th>
-                        <th>@Editable(Model, m => m.DescriptionHeader)</th>
-                        <th>@Editable(Model, m => m.SurgeonsFeeHeader)</th>
-                        <th>@Editable(Model, m => m.AnaesthetistsFeeHeader)</th>
-                    </tr>
+                <tr>
+                    <th>@Editable(Model, m => m.CodeHeader)</th>
+                    <th>@Editable(Model, m => m.DescriptionHeader)</th>
+                    <th>@Editable(Model, m => m.SurgeonsFeeHeader)</th>
+                    <th>@Editable(Model, m => m.AnaesthetistsFeeHeader)</th>
+                </tr>
                 </thead>
                 <tbody>
-                    <tr ng-repeat="procedure in selectedProcedures">
-                        <td ng-bind="procedure.Code"></td>
-                        <td ng-bind-html="procedure.Description | unsafe"></td>
-                        <td>@Model.CurrencySymbol{{procedure.OperatorFee}}</td>
-                        <td>@Model.CurrencySymbol{{procedure.AnaesthetistFee}}</td>
-                    </tr>
+                <tr ng-repeat="procedure in selectedProcedures">
+                    <td ng-bind="procedure.Code"></td>
+                    <td ng-bind-html="procedure.Description | unsafe"></td>
+                    <td>@Model.CurrencySymbol{{procedure.OperatorFee}}</td>
+                    <td>@Model.CurrencySymbol{{procedure.AnaesthetistFee}}</td>
+                </tr>
                 </tbody>
             </table>
         </div>

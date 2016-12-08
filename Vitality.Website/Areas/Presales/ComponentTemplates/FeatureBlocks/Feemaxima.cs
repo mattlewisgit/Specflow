@@ -15,6 +15,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
         public string BackLinkText { get; set; }
         public string ChapterText { get; set; }
         public string CodeHeader { get; set; }
+        public string ChooseChapterText { get; set; }
         public string CurrencySymbol { get; set; }
         public string DescriptionHeader { get; set; }
         public string Headline { get; set; }
