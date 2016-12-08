@@ -1,7 +1,7 @@
 ﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.FeeMaxima>
 <div class="pinch">
-    <h2 class="text-flush-top">@Editable(Model, m => m.Headline)</h2>
-
+    <h2>@Editable(Model, m => m.Headline)</h2>
+    <p>@Editable(Model, m => m.Title)</p>
     <div class="example" data-ng-app="FeemaximaApp">
         <div ng-controller="ChapterListController">
             <div class="grid grid--search-header">
