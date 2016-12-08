@@ -18,6 +18,22 @@
         public static readonly TimeSpan DefaultWaitTimeSpan
             = TimeSpan.FromSeconds(5);
 
+        /// <summary>
+        /// Executes JavaScript and casts to the generic type.
+        /// </summary>
+        /// <typeparam name="T">To which the return type will be cast</typeparam>
+        /// <param name="driver">Web driver</param>
+        /// <param name="script">To run</param>
+        /// <returns>Return value from JavaScript</returns>
+        public static T ExecuteScript<T>(this IWebDriver driver, string script)
+        {
+            if (driver == null)
+            {
+                throw new ArgumentNullException("driver");
+            }
+
+            return (T)((IJavaScriptExecutor)driver).ExecuteScript(script);
+        }
 
         /// <summary>
         /// Waits for the entire page to load using document ready state.
@@ -32,8 +48,8 @@
             }
 
             new WebDriverWait(driver, DefaultWaitTimeSpan)
-                .Until(d => ((IJavaScriptExecutor) d)
-                    .ExecuteScript("return document.readyState")
+                .Until(d => d
+                    .ExecuteScript<string>("return document.readyState")
                     .Equals("complete"));
 
             return driver;
@@ -59,17 +75,7 @@
                 throw new ArgumentNullException("element");
             }
 
-            var javaScriptExecutor = driver as IJavaScriptExecutor;
-
-            if (javaScriptExecutor == null)
-            {
-                throw new InvalidOperationException(
-                    "Must be able to cast the driver as IJavaScriptExecutor");
-            }
-
-            javaScriptExecutor.ExecuteScript
-                ("arguments[0].scrollIntoView(true);", element);
-
+            driver.ExecuteScript("arguments[0].scrollIntoView(true);", element);
             return driver;
         }
 
