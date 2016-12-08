@@ -3867,6 +3867,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Literature\LiteratureCategory.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Literature\LiteratureDocument.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Literature\LiteratureLibrary.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Navigation\Breadcrumb.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\FooterSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\GlobalFooter.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\MainNavigation.cs" />
