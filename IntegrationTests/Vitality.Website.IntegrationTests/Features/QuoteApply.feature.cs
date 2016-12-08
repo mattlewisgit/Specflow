@@ -72,14 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Get A Quote")]
+        [Xunit.FactAttribute(DisplayName="Get A Quote", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "QuoteApply")]
         [Xunit.TraitAttribute("Description", "Get A Quote")]
-        [Xunit.TraitAttribute("Category", "mytag")]
         public virtual void GetAQuote()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get A Quote", new string[] {
-                        "mytag"});
+                        "ignore"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8

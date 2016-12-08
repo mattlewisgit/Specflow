@@ -5,6 +5,7 @@
     using OpenQA.Selenium;
     using OpenQA.Selenium.Support.UI;
     using Selenium.WebDriver.Extensions.Core;
+
     // ReSharper disable once InconsistentNaming
     /// <summary>
     /// Provides extension methods for <see cref="IWebDriver">IWebDriver</see>.
@@ -16,6 +17,27 @@
         /// </summary>
         public static readonly TimeSpan DefaultWaitTimeSpan
             = TimeSpan.FromSeconds(5);
+
+
+        /// <summary>
+        /// Waits for the entire page to load using document ready state.
+        /// </summary>
+        /// <param name="driver">Web driver</param>
+        /// <returns>Web driver</returns>
+        public static IWebDriver WaitForPageLoad(this IWebDriver driver)
+        {
+            if (driver == null)
+            {
+                throw new ArgumentNullException("driver");
+            }
+
+            new WebDriverWait(driver, DefaultWaitTimeSpan)
+                .Until(d => ((IJavaScriptExecutor) d)
+                    .ExecuteScript("return document.readyState")
+                    .Equals("complete"));
+
+            return driver;
+        }
 
         /// <summary>
         /// Scrolls to an element on-screen.
@@ -76,7 +98,7 @@
         /// <see cref="DefaultWaitTimeSpan">DefaultWaitTimeSpan</see>.
         /// </summary>
         /// <param name="driver">Web driver</param>
-        /// <param name="by">Element selector</param>
+        /// <param name="selector">Element selector</param>
         /// <returns>Web driver</returns>
         public static IWebElement WaitForElement(this IWebDriver driver, SelectorBase selector)
         {
@@ -96,7 +118,7 @@
         /// <see cref="DefaultWaitTimeSpan">DefaultWaitTimeSpan</see>.
         /// </summary>
         /// <param name="driver">Web driver</param>
-        /// <param name="by">Element selector</param>
+        /// <param name="selector">Element selector</param>
         /// <returns>Web driver.</returns>
         public static IWebElement WaitToClear(this IWebDriver driver, SelectorBase selector)
         {

@@ -3,7 +3,7 @@
 	As an adviser
 	I want to be able to download documents
 
-@mytag
+@ignore
 Scenario: Literature library
 	Given I am on the /
 	And I have entered 70 into the calculator

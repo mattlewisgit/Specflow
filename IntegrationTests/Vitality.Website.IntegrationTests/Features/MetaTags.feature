@@ -14,7 +14,6 @@ Examples:
 	| /life-insurance				 |
 	| /rewards					     |
 
-
 	Scenario Outline: Home meta tags should not appear on non-home pages
 	Given I am on the <initialpage>
 	When I check the source

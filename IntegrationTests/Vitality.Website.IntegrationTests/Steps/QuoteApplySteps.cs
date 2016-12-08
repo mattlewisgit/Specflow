@@ -1,24 +1,13 @@
 ﻿namespace Vitality.Website.IntegrationTests.Steps
 {
-    using System;
     using TechTalk.SpecFlow;
 
-    using Shouldly;
-
-    using Vitality.Website.IntegrationTests.Extensions;
-    using Vitality.Website.IntegrationTests.PageObjects;
-    using Vitality.Website.IntegrationTests.Utilities;
     using OpenQA.Selenium;
-    using OpenQA.Selenium.Firefox;
     using OpenQA.Selenium.Support.UI;
 
     [Binding]
     public class QuoteApplySteps : BaseSteps
     {
-
-
-
-
         [When(@"I enter the about you quote details")]
         public void WhenIEnterTheAboutYouQuoteDetails()
         {
@@ -38,14 +27,11 @@
             WebDriver.FindElement(By.Id("M")).Click();
         }
 
-
         [When(@"click on the Now get a quote button")]
         public void WhenClickOnTheNowGetAQuoteButton()
         {
-            //click on get a quote
             WebDriver.FindElement(By.Id("getquote")).Click();
         }
-
 
         [Then(@"when I personalise your plan")]
         public void ThenWhenIPersonaliseYourPlan()
@@ -53,13 +39,11 @@
             WebDriver.FindElement(By.Id("apply-now")).Click();
         }
 
-
         [Then(@"when continue the quote summary")]
         public void ThenWhenContinueTheQuoteSummary()
         {
             WebDriver.FindElement(By.Id("confirm")).Click();
         }
-
 
         [Then(@"when I complete the medical questions")]
         public void ThenWhenICompleteTheMedicalQuestions()
@@ -87,8 +71,5 @@
         {
             WebDriver.FindElement(By.Id("pay_now")).Click();
         }
-
-
     }
-
 }
