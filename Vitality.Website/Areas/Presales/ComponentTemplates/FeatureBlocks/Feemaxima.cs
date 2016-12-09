@@ -23,5 +23,6 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
         public string SearchText { get; set; }
         public string SearchPlaceholderText { get; set; }
         public string SurgeonsFeeHeader { get; set; }
+        public string Title { get; set; }
     }
 }
