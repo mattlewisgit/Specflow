@@ -1,18 +1,31 @@
-﻿<div class="breadcrumb">
-    <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a itemprop="item" href="/components/cookie-message/">
-                <span itemprop="name">Cookie Message</span>
-            </a>
+﻿@model Vitality.Website.Areas.Presales.ComponentTemplates.Navigation.BreadcrumbTrail
 
-            <meta itemprop="position" content="1" />
-        </li>
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-            <a itemprop="item">
-                <span itemprop="name">With Cookie</span>
-            </a>
+ <div class="breadcrumb">
+     <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+         @{
+             int index = 1;
+             foreach (var breadcrumb in Model.Breadcrumbs.)
+             {
+                 if ( )
+                 {
+                     
+                 }
+                 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                     <a itemprop="item" href="/components/cookie-message/">
+                         <span itemprop="name">Cookie Message</span>
+                     </a>
 
-            <meta itemprop="position" content="2" />
-        </li>
-    </ol>
+                     <meta itemprop="position" content="1"/>
+                 </li>
+             }
+         }
+
+         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+             <a itemprop="item">
+                 <span itemprop="name">With Cookie</span>
+             </a>
+
+             <meta itemprop="position" content="2"/>
+         </li>
+     </ol>
 </div>

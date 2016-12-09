@@ -1,5 +1,7 @@
 ﻿@using System.Web.Mvc.Html
 @using Sitecore.Mvc
+@using Sitecore.Sites
+@using Vitality.Website.Areas.Presales.ComponentTemplates.Navigation
 @using Vitality.Website.Areas.Presales.SettingsTemplates
 @using Vitality.Website.SC
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.BasePage>
@@ -40,7 +42,7 @@
             <section class="vertical-flush">
                 @Html.Sitecore().Placeholder("PresalesContent")
             </section>
-            @Html.Partial("_Breadcrumb")
+            @Html.Partial("_Breadcrumb", new BreadcrumbTrail())
         </main>
     </div>
 
