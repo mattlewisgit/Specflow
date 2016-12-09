@@ -213,18 +213,21 @@
         [When(@"I hover over (.*) and click on (.*)")]
         public void WhenIHoverOver(string hoverLink, string clickLink)
         {
-            var sectionLink = WebDriver.FindElement(new JQuerySelector(".section-nav .section-nav__item--megamenu:contains('" + hoverLink + "')"));
+            // At this time we will assume that this call always relates to items on the Section Navigation bar ...
+            IWebElement sectionNav = WebDriver.FindElement(new JQuerySelector(Button.SECTION_NAV));
 
-            // Hover over the menu.
-            new Actions(WebDriver).MoveToElement(sectionLink).Perform();
+            // Setup new Actions attribute to simulate mouseover events
+            Actions actions = new Actions(WebDriver);
+            
+            // Find element called "hoverLink" and then perform a hover over
+            IWebElement mainMenu = WebDriver.FindElement(OpenQA.Selenium.By.LinkText(hoverLink));
+            actions.MoveToElement(mainMenu).Perform();
 
-            // Wait for the submenu to appear.
-            WebDriver.WaitForElement(OpenQA.Selenium.By.ClassName("megamenu"));
+            // Find element called "clickLink", perform a hover over, and then click it
+            IWebElement subMenu = WebDriver.FindElement(OpenQA.Selenium.By.LinkText(clickLink));
+            actions.MoveToElement(subMenu).Perform();
+            actions.Click().Perform();
 
-            // Find and click the subsection.
-            WebDriver
-                .FindElement(new JQuerySelector(".megamenu a:contains('" + clickLink + "')"))
-                .Click();
         }
     }
 }

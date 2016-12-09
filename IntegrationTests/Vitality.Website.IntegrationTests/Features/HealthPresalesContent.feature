@@ -16,6 +16,7 @@
 	Scenario: UserJourney 3: Navigate to Core Cover, Awards page
 	Given I am on the /
 	When I hover over Health Insurance and click on Core Cover
+	And I go to the Award-winning cover feature block
 	And I click on the Learn more page link
 	Then I expect the /about/awards/ to open
 
