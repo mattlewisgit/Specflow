@@ -3,13 +3,13 @@
 	As a math idiot
 	I want to be told the sum of two numbers
 
-@mytag
+@ignore
 Scenario: Get A Quote
 	Given I am on the /quote
 	When I enter the about you quote details
 	And click on the Now get a quote button
 	Then I expect the /yourquote to open
-	And when I personalise your plan 
+	And when I personalise your plan
 	Then I expect the /quotesummary to open
 	And when continue the quote summary
 	Then I expect the /fmumedicalquestions to open

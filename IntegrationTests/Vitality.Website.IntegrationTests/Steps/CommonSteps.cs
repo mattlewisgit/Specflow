@@ -1,27 +1,7 @@
-﻿namespace Vitality.Website.IntegrationTests.Steps
-{
-    using BoDi;
+﻿namespace Vitality.Website.IntegrationTests.Steps {     using TechTalk.SpecFlow;
 
-    using TechTalk.SpecFlow;
+    using Vitality.Website.IntegrationTests.Extensions;
 
-    using Vitality.Website.IntegrationTests.PageObjects;
-    using Vitality.Website.IntegrationTests.Utilities;
-
-    [Binding]
-    public class CommonSteps : BaseSteps
-    {
-        private readonly IObjectContainer container;
-
-        public CommonSteps(IObjectContainer container)
-        {
-            this.container = container;
-        }
-
-        [Given(@"I am on the (.*)")]
-        public void GivenIAmOnTheTable(string p0)
-        {
-            Browser.Maximise().GoTo(AppSettings.Links.VitalityBaseUrl + p0);
-            this.container.RegisterInstanceAs(new PresalesPage(WebDriver));
-        }
-    }
-}
+    [Binding]     public class CommonSteps : BaseSteps     {         [Given(@"I am on the (.*)")]         public void GivenIAmOnTheTable(string p0)         {             WebDriver.Manage().Window.Maximize();             WebDriver.Navigate().GoToUrl(AppSettings.Links.VitalityBaseUrl + p0);
+            WebDriver.WaitForPageLoad();
+        }     } } 

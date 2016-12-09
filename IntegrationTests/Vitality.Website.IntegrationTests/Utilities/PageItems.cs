@@ -16,5 +16,4 @@
 
         public const string FOOTER = "p.quote-footer--tab > a";
     }
-
 }

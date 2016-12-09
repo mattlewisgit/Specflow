@@ -67,6 +67,10 @@
       <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Moq, Version=4.5.28.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moq.4.5.28\lib\net45\Moq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Shouldly, Version=2.8.2.0, Culture=neutral, PublicKeyToken=6042cbcb05cbc941, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Shouldly.2.8.2\lib\net40\Shouldly.dll</HintPath>
       <Private>True</Private>
@@ -180,14 +184,16 @@
     <Compile Include="Extensions\EnumerableExtensionsTests.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions_GetActiveNavigationSection.cs" />
     <Compile Include="Extensions\IDictionaryExtensionsTests.cs" />
+    <Compile Include="Presales\Controllers\FeemaximaControllerTests\ListTests.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\Get_Tests.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\List_Tests.cs" />
+    <Compile Include="Presales\Handlers\FeeMaxima\FeeMaximaChaptersHandlerTests.cs" />
     <Compile Include="TestDoubles\MediatorStub.cs" />
     <Compile Include="Presales\Handlers\Literature\LiteratureDocumentSummariesHandler_Handle_Tests.cs" />
-    <Compile Include="TestDoubles\SearchContextStub.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\Search_Tests.cs" />
     <Compile Include="Presales\Handlers\Literature\LiteratureDocumentHandler_Handle_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestDoubles\SearchContextStub.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
@@ -201,6 +207,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Vitality.Website.App\Vitality.Website.App.csproj">
+      <Project>{f8ae7eb7-5b71-4cd8-897d-5d72e6480f4f}</Project>
+      <Name>Vitality.Website.App</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Vitality.Website.SC\Vitality.Website.SC.csproj">
       <Project>{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}</Project>
       <Name>Vitality.Website.SC</Name>

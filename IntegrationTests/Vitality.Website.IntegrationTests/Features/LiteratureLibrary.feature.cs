@@ -72,14 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Literature library")]
+        [Xunit.FactAttribute(DisplayName="Literature library", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "LiteratureLibrary")]
         [Xunit.TraitAttribute("Description", "Literature library")]
-        [Xunit.TraitAttribute("Category", "mytag")]
         public virtual void LiteratureLibrary()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Literature library", new string[] {
-                        "mytag"});
+                        "ignore"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8

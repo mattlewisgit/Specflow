@@ -5,17 +5,17 @@
 
     Scenario: Test Navigation to Business
     Given I am on the /
-    When I click on the business section link
+    When I click on the Business section link
     Then I expect the /business/ to open
 
-	Scenario: Test Navigation to Advisers
+    Scenario: Test Navigation to Advisers
     Given I am on the /
-    When I click on the advisers section link
+    When I click on the Advisers section link
     Then I expect the /advisers/ to open
 
-	Scenario: Test Navigation to Personal
+    Scenario: Test Navigation to Personal
     Given I am on the /business
-    When I click on the personal section link
+    When I click on the Personal section link
     Then I expect the / to open
 
     Scenario: Click Navigation Logo
@@ -37,7 +37,7 @@
     Scenario: Check Member Zone login components show in Mobile view
     Given I am on the /
     When I resize to mobile view
-	And I click on the Login (small) button
+    And I click on the Login (small) button
     Then I expect the Member Zone button to be visible
     And I expect the Health Advisers button to be visible
     And I expect the Life Advisers button to be visible
@@ -45,22 +45,21 @@
     Scenario: Check Member Zone login components show in Full-screen view
     Given I am on the /
     When I resize to full-screen view
-	And I click on the Login (large) button
-	Then I expect the Member Zone button to be visible
-	And I expect the Health Advisers button to be visible
-	And I expect the Life Advisers button to be visible
+    And I click on the Login (large) button
+    Then I expect the Member Zone button to be visible
+    And I expect the Health Advisers button to be visible
+    And I expect the Life Advisers button to be visible
 
-	Scenario: Resize home page from Mobile view to Full-screen and check that footer visible
-	Given I am on the /
-	When I resize to mobile view
-	And I resize to full-screen view
-	Then I expect the footer to be invisible
-	And I expect the Health insurance quote button to be visible
-	And I expect the Life insurance quote button to be visible
+    Scenario: Resize home page from Mobile view to Full-screen and check that footer visible
+    Given I am on the /
+    When I resize to mobile view
+    And I resize to full-screen view
+    Then I expect the Health insurance quote button to be visible
+    And I expect the Life insurance quote button to be visible
 
-	Scenario: Check footer pop up component show in Mobile view
-	Given I am on the /
-	When I resize to mobile view
-	And I click on the footer button
-	Then I expect the Health insurance quote button to be visible
-	And I expect the Life insurance quote button to be visible
+    Scenario: Check footer pop up component show in Mobile view
+    Given I am on the /
+    When I resize to mobile view
+    And I click on the footer button
+    Then I expect the Health insurance quote button to be visible
+    And I expect the Life insurance quote button to be visible

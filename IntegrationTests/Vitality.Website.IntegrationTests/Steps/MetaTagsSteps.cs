@@ -3,7 +3,6 @@
     using System.Collections.Generic;
 
     using TechTalk.SpecFlow;
-    using Utilities;
 
     using Vitality.Website.IntegrationTests.Extensions;
 
@@ -15,7 +14,7 @@
         [When(@"I check the source")]
         public void WhenICheckTheSource()
         {
-            this.pageSource = Browser.PageSource;
+            this.pageSource = WebDriver.PageSource;
         }
 
         [Then(@"I expect the common meta tags to be in the source")]

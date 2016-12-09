@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Vitality.Website.App.Services;
+using Vitality.Website.App.Services.Interfaces;
 
 namespace Vitality.Website.App_Start
 {
@@ -53,6 +55,7 @@ namespace Vitality.Website.App_Start
             container.RegisterMvcControllers(assemblies);
             RegisterWebApiControllers(assemblies);
             container.Register<Func<string, IProviderSearchContext>>(() => index => ContentSearchManager.GetIndex(index).CreateSearchContext(), new WebApiRequestLifestyle());
+            container.Register<ICcsdService, CcsdService>();
         }
 
         /// <remarks>

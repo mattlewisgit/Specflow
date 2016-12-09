@@ -1,30 +1,14 @@
 ﻿namespace Vitality.Website.IntegrationTests.Steps
 {
-    using System;
-
     using Selenium.WebDriver.Extensions.JQuery;
-
-    using Shouldly;
-
     using TechTalk.SpecFlow;
-
-    using Vitality.Website.IntegrationTests.Extensions;
-    using Vitality.Website.IntegrationTests.PageObjects;
-    using Vitality.Website.IntegrationTests.Utilities;
     using OpenQA.Selenium;
-    using System.Linq;
     using Xunit;
     using OpenQA.Selenium.Interactions;
+
     [Binding]
     public class HealthPresalesContentSteps : BaseSteps
     {
-        private readonly PresalesPage presalesPage;
-
-        public HealthPresalesContentSteps(PresalesPage presalesPage)
-        {
-            this.presalesPage = presalesPage;
-        }
-
         [When(@"I go to the (.*) feature block")]
         public void WhenIGoToTheFeatureBlock(string featureName)
         {
