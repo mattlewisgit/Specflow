@@ -127,6 +127,7 @@
     <Compile Include="Fields\InsertLinkDialogTree.cs" />
     <Compile Include="Fields\QueryableGeneralLink.cs" />
     <Compile Include="ItemConstants.cs" />
+    <Compile Include="Models\DictionaryReferenceObject.cs" />
     <Compile Include="Pipelines\HttpRequest\NotFoundItemResolver.cs" />
     <Compile Include="Pipelines\HttpRequest\RobotsFileGenerator.cs" />
     <Compile Include="Pipelines\HttpRequest\SetNotFoundStatusCode.cs" />
@@ -147,6 +148,7 @@
     <Compile Include="Agents\Sitemaps\SitemapSettings.cs" />
     <Compile Include="Agents\Sitemaps\SitemapUrlModel.cs" />
     <Compile Include="Providers\MediaProvider.cs" />
+    <Compile Include="Utilities\DictionaryHelper.cs" />
     <Compile Include="Utilities\QueryHelper.cs" />
     <Compile Include="Utilities\SitecoreDataItemHelper.cs" />
     <Compile Include="Utilities\SiteInfoHelper.cs" />
@@ -162,9 +164,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Vitality.Website.App\Vitality.Website.App.csproj">
       <Project>{f8ae7eb7-5b71-4cd8-897d-5d72e6480f4f}</Project>

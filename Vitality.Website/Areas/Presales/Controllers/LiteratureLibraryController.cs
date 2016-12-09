@@ -12,13 +12,10 @@
 
     using Vitality.Website.Areas.Presales.Handlers.Literature;
 
-    public class LiteratureLibraryController : ApiController
+    public class LiteratureLibraryController : BaseController
     {
-        private readonly IMediator mediator;
-
-        public LiteratureLibraryController(IMediator mediator)
+        public LiteratureLibraryController(IMediator mediator):base(mediator)
         {
-            this.mediator = mediator;
         }
 
         [Route("api/literature/{library}/{category}/{title}")]
@@ -74,19 +71,6 @@
             return this.GetResponse<LiteratureDocumentSummariesRequest, IEnumerable<LiteratureDocumentSummaryDto>>(
                 new LiteratureDocumentSummariesRequest(library, category),
                 documents => documents.Any());
-        }
-
-        private HttpResponseMessage GetResponse<TRequest, TResponse>(TRequest request, Predicate<TResponse> isValidResponse) where TRequest : IRequest<TResponse>
-        {
-            var response = this.mediator.Send(request);
-            if (isValidResponse(response))
-            {
-                return new HttpResponseMessage(HttpStatusCode.OK)
-                {
-                    Content = new ObjectContent<TResponse>(response, new JsonMediaTypeFormatter())
-                };
-            }
-            return new HttpResponseMessage(HttpStatusCode.NotFound);
         }
     }
 }
