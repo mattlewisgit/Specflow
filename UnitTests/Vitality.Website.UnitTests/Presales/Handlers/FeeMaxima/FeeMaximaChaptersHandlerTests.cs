@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+
 using Moq;
 using Shouldly;
 using Vitality.Website.App.Models.FeeMaxima;
 using Vitality.Website.App.Services.Interfaces;
 using Vitality.Website.Areas.Presales.Handlers.FeeMaxima;
-using Vitality.Website.Areas.Presales.Handlers.Literature;
-using Vitality.Website.UnitTests.TestDoubles;
+
 using Xunit;
 
 namespace Vitality.Website.UnitTests.Presales.Handlers.FeeMaxima
