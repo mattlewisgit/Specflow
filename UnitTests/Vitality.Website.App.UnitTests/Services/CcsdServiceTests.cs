@@ -20,7 +20,7 @@ namespace Vitality.Website.App.UnitTests.Services
             [Fact(Skip = "Hardcoded JSON reference")]
             public void GetChapters_should_returns_list_of_chapters()
             {
-                _ccsdService.GetChapters().ShouldBeOfType(typeof(List<Chapter>));
+                _ccsdService.GetChapters(@"C:\projects\vitality-website\Vitality.Website.App\Data\CcsdChaptersWithProcedures.json").ShouldBeOfType(typeof(List<Chapter>));
             }
         }
     }

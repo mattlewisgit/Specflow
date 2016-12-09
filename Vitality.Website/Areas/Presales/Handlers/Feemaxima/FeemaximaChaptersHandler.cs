@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using System.Web;
+using MediatR;
+using Sitecore.ApplicationCenter.Applications;
 using Vitality.Website.App.Services.Interfaces;
 
 namespace Vitality.Website.Areas.Presales.Handlers.FeeMaxima
@@ -14,7 +16,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.FeeMaxima
 
         public FeeMaximaChaptersDto Handle(FeeMaximaChaptersRequest request)
         {
-            return FeeMaximaChaptersDto.From(_ccsdService.GetChapters());
+            return FeeMaximaChaptersDto.From(_ccsdService.GetChapters(HttpContext.Current.Server.MapPath("~/App_Data/CcsdChaptersWithProcedures.json")));
         }
     }
 }

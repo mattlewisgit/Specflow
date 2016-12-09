@@ -9,11 +9,10 @@ namespace Vitality.Website.App.Services
 {
     public class CcsdService : ICcsdService 
     {
-        private readonly string _ccsdChaptersJsonFile = @"C:\projects\vitality-website\Vitality.Website.App\Data\CcsdChaptersWithProcedures.json";
-        public IEnumerable<Chapter> GetChapters()
+        public IEnumerable<Chapter> GetChapters(string ccsdChaptersJsonFile)
         {
             //TODO: Read data from Papillion
-            return JsonConvert.DeserializeObject<List<Chapter>>(File.ReadAllText(_ccsdChaptersJsonFile));
+            return JsonConvert.DeserializeObject<List<Chapter>>(File.ReadAllText(ccsdChaptersJsonFile));
         }
     }
 }
