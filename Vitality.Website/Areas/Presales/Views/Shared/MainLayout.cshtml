@@ -1,6 +1,5 @@
 ﻿@using System.Web.Mvc.Html
 @using Sitecore.Mvc
-@using Sitecore.Sites
 @using Vitality.Website.Areas.Presales.ComponentTemplates.Navigation
 @using Vitality.Website.Areas.Presales.SettingsTemplates
 @using Vitality.Website.SC
@@ -37,12 +36,12 @@
 
         <a href="#main-content" class="offscreen">Skip to Content</a>
         @Html.Sitecore().Placeholder("header")
+        @Html.Partial("_Breadcrumb", new BreadcrumbTrail())
 
         <main id="main-content" tabindex="-1">
             <section class="vertical-flush">
                 @Html.Sitecore().Placeholder("PresalesContent")
             </section>
-            @Html.Partial("_Breadcrumb", new BreadcrumbTrail())
         </main>
     </div>
 

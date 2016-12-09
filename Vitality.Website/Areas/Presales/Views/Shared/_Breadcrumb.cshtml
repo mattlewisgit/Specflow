@@ -1,31 +1,37 @@
 ﻿@model Vitality.Website.Areas.Presales.ComponentTemplates.Navigation.BreadcrumbTrail
 
- <div class="breadcrumb">
+@if (Model.Breadcrumbs.Count < 2)
+{
+    return;
+}
+
+<div class="breadcrumb">
      <ol itemscope itemtype="http://schema.org/BreadcrumbList">
          @{
-             int index = 1;
-             foreach (var breadcrumb in Model.Breadcrumbs.)
+             var index = 1;
+
+             while (Model.Breadcrumbs.Count > 1)
              {
-                 if ( )
-                 {
-                     
-                 }
+                 var breadcrumb = Model.Breadcrumbs.Pop();
+
                  <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                     <a itemprop="item" href="/components/cookie-message/">
-                         <span itemprop="name">Cookie Message</span>
+                     <a itemprop="item" href="@breadcrumb.Url">
+                         <span itemprop="name">@breadcrumb.Name</span>
                      </a>
 
-                     <meta itemprop="position" content="1"/>
+                     <meta itemprop="position" content="@(index++)" />
                  </li>
              }
          }
 
+         @{ var currentPageBreadcrumb = Model.Breadcrumbs.Pop(); }
+
          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
              <a itemprop="item">
-                 <span itemprop="name">With Cookie</span>
+                 <span itemprop="name">@currentPageBreadcrumb.Name</span>
              </a>
 
-             <meta itemprop="position" content="2"/>
+             <meta itemprop="position" content="@index" />
          </li>
      </ol>
 </div>

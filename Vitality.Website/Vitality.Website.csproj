@@ -3867,7 +3867,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Literature\LiteratureCategory.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Literature\LiteratureDocument.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Literature\LiteratureLibrary.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\Navigation\Breadcrumb.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Navigation\BreadcrumbTrail.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\FooterSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\GlobalFooter.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\MainNavigation.cs" />
@@ -3889,6 +3889,7 @@
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummariesHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummariesRequest.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummaryDto.cs" />
+    <Compile Include="Areas\Presales\Models\Breadcrumb.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\CallToActionPanel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\PrimaryCallToAction.cs" />
@@ -4664,7 +4665,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Config\Include\Custom\" />
-    <Folder Include="Areas\Presales\Models\" />
     <Folder Include="img\examples\" />
     <Folder Include="sitecore modules\debug\" />
     <Folder Include="sitemaps\" />
