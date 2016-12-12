@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {252D3793-4CAF-4F2C-A024-A5E57D000E7C}
+database: master
+path: /sitecore/templates/Presales/Component Templates/Feature Blocks/FeeMaxima
+parent: {DE50BD84-7D5F-4084-AE4A-0BD6AE233184}
+name: FeeMaxima
+master: {00000000-0000-0000-0000-000000000000}
+template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
+templatekey: Template
+
+----field----
+field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
+name: __Base template
+key: __base template
+content-length: 38
+
+{1930BBEB-7805-471A-A3BE-4858AC7CF696}
+----version----
+language: en
+version: 1
+revision: 728a14ab-5154-4f6a-b47a-0d37698e4c12
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161125T094611Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+728a14ab-5154-4f6a-b47a-0d37698e4c12
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161125T095502Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
