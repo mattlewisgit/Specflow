@@ -5,6 +5,6 @@ namespace Vitality.Website.App.Services.Interfaces
 {
     public interface ICcsdService
     {
-        IEnumerable<Chapter> GetChapters();
+        IEnumerable<Chapter> GetChapters(string ccsdChaptersJsonFile);
     }
 }

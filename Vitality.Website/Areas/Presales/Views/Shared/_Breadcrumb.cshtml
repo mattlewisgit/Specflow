@@ -1,0 +1,37 @@
+﻿@model Vitality.Website.Areas.Presales.ComponentTemplates.Navigation.BreadcrumbTrail
+
+@if (Model.Breadcrumbs.Count < 2)
+{
+    return;
+}
+
+<div class="breadcrumb">
+     <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+         @{
+             var index = 1;
+
+             while (Model.Breadcrumbs.Count > 1)
+             {
+                 var breadcrumb = Model.Breadcrumbs.Pop();
+
+                 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                     <a itemprop="item" href="@breadcrumb.Url">
+                         <span itemprop="name">@breadcrumb.Name</span>
+                     </a>
+
+                     <meta itemprop="position" content="@(index++)" />
+                 </li>
+             }
+         }
+
+         @{ var currentPageBreadcrumb = Model.Breadcrumbs.Pop(); }
+
+         <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+             <a itemprop="item">
+                 <span itemprop="name">@currentPageBreadcrumb.Name</span>
+             </a>
+
+             <meta itemprop="position" content="@index" />
+         </li>
+     </ol>
+</div>
