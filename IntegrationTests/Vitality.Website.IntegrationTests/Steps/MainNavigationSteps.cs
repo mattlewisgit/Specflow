@@ -1,91 +1,164 @@
 ﻿namespace Vitality.Website.IntegrationTests.Steps
 {
-    using System;
+    using System.Drawing;
+
+    using Selenium.WebDriver.Extensions.JQuery;
 
     using Shouldly;
 
     using TechTalk.SpecFlow;
 
-    using Vitality.Website.IntegrationTests.Extensions;
-    using Vitality.Website.IntegrationTests.PageObjects;
-    using Vitality.Website.IntegrationTests.Utilities;
+    using Extensions;
+    using Utilities;
+
+    using OpenQA.Selenium.Interactions;
+    using By = OpenQA.Selenium.By;
 
     [Binding]
     public class MainNavigationSteps : BaseSteps
     {
-        private readonly PresalesPage presalesPage;
-
-        public MainNavigationSteps(PresalesPage presalesPage)
+        [When(@"I click on the (.*) section link")]
+        public void WhenIClickOnTheSectionLink(string p0)
         {
-            this.presalesPage = presalesPage;
+            WebDriver
+                .FindElement(new JQuerySelector(Button.SITE_NAV + ":contains('" + p0 + "')"))
+                .Click();
         }
 
-        [When(@"I click on the business section link")]
-        public void WhenIClickOnTheBusinessSectionLink()
-        {
-            this.presalesPage.MainNavigation.ClickNavigationSectionLink("business");
-        }
-        
         [When(@"I click on the navigation logo")]
         public void WhenIClickOnTheNavigationLogo()
         {
-            this.presalesPage.MainNavigation.Logo.Click();
+            WebDriver
+                .FindElement(new JQuerySelector(Button.NAV_LOGO))
+                .Click();
         }
-        
+
         [Then(@"I expect the (.*) to open")]
         public void ThenIExpectTheToOpen(string p0)
         {
-            var expected = AppSettings.Links.VitalityBaseUrl + p0;
-            Browser.CurrentUrl.ShouldBe(expected);
+            WebDriver
+                .WaitForPageLoad()
+                .Url
+                .ShouldBe(AppSettings.Links.VitalityBaseUrl + p0);
         }
 
         [When(@"I resize to mobile view")]
         public void WhenIResizeToMobileView()
         {
-            Browser.Resize(320, 800).Wait(TimeSpan.FromMilliseconds(50));
+            WebDriver.Manage().Window.Size = new Size(320, 800);
         }
 
         [Then(@"I expect the hamburger to be visible")]
         public void ThenIExpectTheHamburgerToBeVisible()
         {
-            this.presalesPage.MainNavigation.MobileNavigation.BurgerMenu.Displayed.ShouldBeTrue();
+            WebDriver
+                .WaitForElement(new JQuerySelector(Button.BURGER_MENU))
+                .Displayed
+                .ShouldBeTrue();
         }
 
         [When(@"I resize to full-screen view")]
         public void WhenIResizeToFull_ScreenView()
         {
-            Browser.Maximise();
+            WebDriver.Manage().Window.Maximize();
         }
 
         [Then(@"I expect the hamburger to be invisible")]
         public void ThenIExpectTheHamburgerToBeInvisible()
         {
-            this.presalesPage.MainNavigation.MobileNavigation.BurgerMenu.Displayed.ShouldBeFalse();
+            WebDriver
+                .FindElement(new JQuerySelector(Button.BURGER_MENU))
+                .Displayed
+                .ShouldBeFalse();
         }
 
-        [When(@"I click the Member Zone button")]
-        public void WhenIClickTheMemberZoneButton()
+        [When(@"I click on the Login \(small\) button")]
+        public void WhenIClickOnTheLoginSmallButton()
         {
-            this.presalesPage.MainNavigation.MemberZone.Click();
+            WebDriver
+                .WaitForElement(new JQuerySelector(Button.LOGIN_SMALL))
+                .Click();
         }
 
-        [Then(@"I expect the Login button to be visible")]
-        public void ThenIExpectTheLoginButtonToBeVisible()
+        [When(@"I click on the Login \(large\) button")]
+        public void WhenIClickOnTheLoginLargeButton()
         {
-            this.presalesPage.MainNavigation.LogInButton.Displayed.ShouldBeTrue();
+            WebDriver
+                .FindElement(new JQuerySelector(Button.LOGIN_LARGE))
+                .Click();
         }
 
-        [Then(@"I expect the Register button to be visible")]
-        public void ThenIExpectTheRegisterButtonToBeVisible()
+        [Then(@"I expect the Member Zone button to be visible")]
+        public void ThenIExpectTheMemberZoneButtonToBeVisible()
         {
-            this.presalesPage.MainNavigation.RegisterButton.Displayed.ShouldBeTrue();
+            WebDriver
+                .WaitForElement(By.LinkText("Member Zone"))
+                .Displayed
+                .ShouldBeTrue();
         }
 
-        [Then(@"I expect the Forgotten button to be visible")]
-        public void ThenIExpectTheForgottenButtonToBeVisible()
+        [Then(@"I expect the Health Advisers button to be visible")]
+        public void ThenIExpectTheHealthAdvisersButtonToBeVisible()
         {
-            this.presalesPage.MainNavigation.ForgottenDetailsButton.Displayed.ShouldBeTrue();
+            WebDriver
+                .FindElement(By.LinkText("Life insurance quote"))
+                .Displayed
+                .ShouldBeTrue();
         }
 
+        [When(@"I hover over (.*) and click on (.*)")]
+        public void WhenIHoverOver(string hoverLink, string clickLink)
+        {
+            // At this time we will assume that this call always relates to items on the Section Navigation bar ...
+            var sectionNav = WebDriver.FindElement(new JQuerySelector(Button.SECTION_NAV));
+
+            // Setup new Actions attribute to simulate mouseover events
+            Actions actions = new Actions(WebDriver);
+            
+            // Find element called "hoverLink" and then perform a hover over
+            var mainMenu = WebDriver.FindElement(OpenQA.Selenium.By.LinkText(hoverLink));
+            actions.MoveToElement(mainMenu).Perform();
+
+            // Find element called "clickLink", perform a hover over, and then click it
+            var subMenu = WebDriver.FindElement(OpenQA.Selenium.By.LinkText(clickLink));
+            actions.MoveToElement(subMenu).Perform();
+            actions.Click().Perform();
+
+        }
+
+        [Then(@"I expect the Life Advisers button to be visible")]
+        public void ThenIExpectTheLifeAdvisersButtonToBeVisible()
+        {
+            WebDriver
+                .WaitForElement(By.LinkText("Life Advisers"))
+                .Displayed
+                .ShouldBeTrue();
+        }
+
+        [When(@"I click on the footer button")]
+        public void WhenIClickOnTheFooterButton()
+        {
+            WebDriver
+                .WaitForElement(new JQuerySelector(Button.FOOTER))
+                .Click();
+        }
+
+        [Then(@"I expect the Health insurance quote button to be visible")]
+        public void ThenIExpectTheHealthInsuranceQuoteButtonToBeVisible()
+        {
+            WebDriver
+                .FindElement(By.LinkText("Health insurance quote"))
+                .Displayed
+                .ShouldBeTrue();
+        }
+
+        [Then(@"I expect the Life insurance quote button to be visible")]
+        public void ThenIExpectTheLifeInsuranceQuoteButtonToBeVisible()
+        {
+            WebDriver
+                .WaitForElement(By.LinkText("Life insurance quote"))
+                .Displayed
+                .ShouldBeTrue();
+        }
     }
 }

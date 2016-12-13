@@ -16,10 +16,17 @@ key: __icon
 content-length: 32
 
 Applications/16x16/form_blue.png
+----field----
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 147
+
+ar|sitecore\Vitality Configuration Manager|pe|+item:create|+item:write|+item:read|pd|+item:rename|+item:write|+item:read|+item:delete|+item:create|
 ----version----
 language: en
 version: 1
-revision: 6afe04b7-e31b-4ea2-840e-769e7ad64503
+revision: 3c504c2f-b8e9-4468-8db4-f3a1a1500922
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -41,18 +48,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6afe04b7-e31b-4ea2-840e-769e7ad64503
+3c504c2f-b8e9-4468-8db4-f3a1a1500922
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161012T100810Z
+20161117T165304Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\admin
+sitecore\dave

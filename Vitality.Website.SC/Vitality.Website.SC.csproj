@@ -31,6 +31,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PROD|AnyCPU'">
+    <OutputPath>bin\PROD\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -57,7 +66,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Forms.Core">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Sitecore.Forms.Core.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ItemWebApi, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.ItemWebApi.dll</HintPath>
@@ -91,7 +100,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Abstractions">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Sitecore.WFFM.Abstractions.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Collections" />
@@ -118,6 +127,7 @@
     <Compile Include="Fields\InsertLinkDialogTree.cs" />
     <Compile Include="Fields\QueryableGeneralLink.cs" />
     <Compile Include="ItemConstants.cs" />
+    <Compile Include="Models\DictionaryReferenceObject.cs" />
     <Compile Include="Pipelines\HttpRequest\NotFoundItemResolver.cs" />
     <Compile Include="Pipelines\HttpRequest\RobotsFileGenerator.cs" />
     <Compile Include="Pipelines\HttpRequest\SetNotFoundStatusCode.cs" />
@@ -138,6 +148,7 @@
     <Compile Include="Agents\Sitemaps\SitemapSettings.cs" />
     <Compile Include="Agents\Sitemaps\SitemapUrlModel.cs" />
     <Compile Include="Providers\MediaProvider.cs" />
+    <Compile Include="Utilities\DictionaryHelper.cs" />
     <Compile Include="Utilities\QueryHelper.cs" />
     <Compile Include="Utilities\SitecoreDataItemHelper.cs" />
     <Compile Include="Utilities\SiteInfoHelper.cs" />
@@ -153,9 +164,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Vitality.Website.App\Vitality.Website.App.csproj">
       <Project>{f8ae7eb7-5b71-4cd8-897d-5d72e6480f4f}</Project>

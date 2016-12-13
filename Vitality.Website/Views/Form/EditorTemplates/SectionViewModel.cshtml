@@ -5,19 +5,15 @@
 {
     <fieldset class="@Model.CssClass">
         <legend>@Html.BootstrapText("Title")</legend>
+
         @if (Model.ShowInformation && !string.IsNullOrEmpty(Model.Information))
         {
             <p>@Html.BootstrapText("Information")</p>
         }
 
-        <div class="row">
-            <div class="col-md-12">
-                @Html.EditorFor(x => Model.Fields)
-            </div>
-        </div>
+        @Html.EditorFor(x => Model.Fields)
     </fieldset>
 }
-
 else
 {
     @Html.EditorFor(x => Model.Fields)

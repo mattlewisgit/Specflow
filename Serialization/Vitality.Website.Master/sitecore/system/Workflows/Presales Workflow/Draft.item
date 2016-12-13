@@ -34,9 +34,9 @@ content-length: 38
 field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
 name: __Security
 key: __security
-content-length: 130
+content-length: 357
 
-ar|sitecore\Sitecore Client Authoring|pe|+workflowState:write|+workflowState:delete|pd|+workflowState:write|+workflowState:delete|
+ar|sitecore\Vitality Content Author|pe|+workflowState:delete|+workflowState:write|+workflowCommand:execute|pd|+workflowState:delete|+workflowState:write|+workflowCommand:execute|ar|sitecore\Vitality Content Manager|pe|+workflowState:delete|+workflowCommand:execute|+workflowState:write|pd|+workflowState:delete|+workflowState:write|+workflowCommand:execute|
 ----version----
 language: da
 version: 1
@@ -148,7 +148,7 @@ sitecore\admin
 ----version----
 language: en
 version: 1
-revision: 6a9219ff-3a9d-425a-a9c5-c966b3b5b878
+revision: 656ad92c-dcf9-454c-a7a4-a75c979a0b5c
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
@@ -184,21 +184,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6a9219ff-3a9d-425a-a9c5-c966b3b5b878
+656ad92c-dcf9-454c-a7a4-a75c979a0b5c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160922T111701Z
+20161111T143743Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\admin
+sitecore\dave
 ----version----
 language: ja-JP
 version: 1

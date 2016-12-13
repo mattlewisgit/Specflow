@@ -16,18 +16,25 @@ key: __originator
 content-length: 0
 
 
+----field----
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 147
+
+ar|sitecore\Vitality Configuration Manager|pe|+item:create|+item:write|+item:read|pd|+item:rename|+item:write|+item:read|+item:delete|+item:create|
 ----version----
 language: en
 version: 1
-revision: 77098160-0b23-48b5-b4eb-48a9f2268b38
+revision: 5f96cbf6-9230-4c44-a90e-67608f84c428
 
 ----field----
 field: {F8AC694F-79DE-40F1-9943-6679A54D0F09}
 name: Message
 key: message
-content-length: 271
+content-length: 240
 
-<p><span>Vitality.co.uk use&nbsp;</span><a href="http://uat-devops.online2.vitality.co.uk/~/link.aspx?_id=110D559FDEA542EA9C1C8A5DF7E70EF9&amp;_z=z">cookies</a><span>&nbsp;(small text files)to store information on your computer to give you the best experience.</span></p>
+<p><span>Advisers.vitality.co.uk use&nbsp;</span><a href="~/link.aspx?_id=08FCDD608C884B209E42FF89D2F3DB14&amp;_z=z">cookies</a><span>&nbsp;(small text files) to store information on your computer to give you the best experience.</span></p>
 ----field----
 field: {0B958EB3-E977-4630-B8F4-CDDC5A54FFD3}
 name: AcceptText
@@ -48,18 +55,25 @@ name: __Revision
 key: __revision
 content-length: 36
 
-77098160-0b23-48b5-b4eb-48a9f2268b38
+5f96cbf6-9230-4c44-a90e-67608f84c428
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160818T135234Z
+20161117T165312Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\admin
+sitecore\dave
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

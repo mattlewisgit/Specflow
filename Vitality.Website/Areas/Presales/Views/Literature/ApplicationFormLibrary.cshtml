@@ -1,138 +1,149 @@
 ﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.LiteratureLibraryPage>
 
 <div class="multi-form" data-ng-app="HealthAdvisersFormApp">
-    <div data-ng-show="isVisible" class="form step1" data-ng-controller="PlanTypeStepController">
-        <form>
-            <div>Step 1 of 3</div>
-            <h3>@Editable(Model, m => m.StepHeaderOne)</h3>
 
-            <fieldset>
-                <div data-ng-init="groupName = 'radiogroup1-' + planType" data-ng-repeat="(i, planType) in planTypes" class="form__field__input form__field__input--checkbox">
-                    <input id="{{groupName}}" name="selectedPlanType" type="radio" value="{{planType}}" data-ng-model="$parent.selectedPlanType">
-                    <label for="{{groupName}}" data-ng-bind="planType"></label>
+    <div class="pinch">
+        <h2>@Editable(Model, m => m.Headline)</h2>
+        <p>@Editable(Model, m => m.OpeningParagraph)</p>
+        <div data-ng-show="isVisible" class="form step1" data-ng-controller="PlanTypeStepController">
+            <form>
+                <div>@Editable(Model, m => m.StepOne)</div>
+                <h3>@Editable(Model, m => m.StepHeaderOne)</h3>
+
+                <fieldset>
+                    <div data-ng-init="groupName = 'radiogroup1-' + planType" data-ng-repeat="(i, planType) in planTypes" class="form__field__input form__field__input--checkbox">
+                        <input id="{{groupName}}" name="selectedPlanType" type="radio" value="{{planType}}" data-ng-model="$parent.selectedPlanType">
+                        <label for="{{groupName}}" data-ng-bind="planType"></label>
+                    </div>
+                </fieldset>
+
+                <button class="box-button box-button--secondary-inverse" data-ng-click="typeSelected()">Next</button>
+            </form>
+        </div>
+
+        <div data-ng-cloak="" data-ng-show="isVisible" class="form step2" data-ng-controller="DateStepController">
+            <form name="dateForm">
+                <div>@Editable(Model, m => m.StepTwo)</div>
+                <h3>@Editable(Model, m => m.StepHeaderTwo)</h3>
+
+                <div class="form">
+                    <fieldset>
+                        <div class="form__field">
+                            <div class="form__field__description">
+                                <label for="day">@Editable(Model, m => m.StepHeaderTwoExample)</label>
+                            </div>
+
+                            <div class="form__field__input--date">
+                                <input class="day" id="day" name="day" ng-model="filterDate.day" type="number"
+                                       pattern="\d*" placeholder="DD" ng-class="(dateForm.day.$invalid) ? 'is-invalid' : ''">
+
+                                <input class="month" id="month" name="month"
+                                       ng-model="filterDate.month" type="number" pattern="\d*" placeholder="MM">
+
+                                <input class="year" id="year" name="year"
+                                       ng-model="filterDate.year" type="number" pattern="\d*" placeholder="YYYY">
+                            </div>
+
+                            <div ng-show="dateForm.filterDate.$invalid" class="form__field__error">
+                                <p>@Editable(Model, m => m.DayValidationErrorMessageTwo)</p>
+                            </div>
+
+                            <div ng-show="dateForm.day.$invalid" class="form__field__error">
+                                <p>@Editable(Model, m => m.DayValidationErrorMessageOne)</p>
+                            </div>
+
+                            <div ng-show="dateForm.month.$invalid" class="form__field__error">
+                                <p>@Editable(Model, m => m.MonthValidationErrorMessage)</p>
+                            </div>
+                        </div>
+                    </fieldset>
                 </div>
-            </fieldset>
 
-            <button class="box-button box-button--secondary-inverse" data-ng-click="typeSelected()">Next</button>
-        </form>
-    </div>
+                <button data-ng-click="dateEntered(dateForm, filterDate)" class="box-button box-button--secondary-inverse">
+                    @Editable(Model, m => m.NextButtonText)
+                </button>
 
-    <div data-ng-cloak="" data-ng-show="isVisible" class="form step2" data-ng-controller="DateStepController">
-        <form name="dateForm">
-            <div>Step 2 of 3</div>
-            <h3>@Editable(Model, m => m.StepHeaderTwo)</h3>
-            <div>@Editable(Model, m => m.StepHeaderTwoExample)</div>
+                <div>
+                    <a data-ng-click="back()" class="emphasis-link" title="Back">
+                        @Editable(Model, m => m.PreviousButtonText)
+                    </a>
+                </div>
+            </form>
+        </div>
 
-            <div class="grid-no-gutters form">
-                <div class="grid-col-3-12 form__field" ng-class="(dateForm.day.$invalid) ? 'is-invalid' : ''">
-                    <label for="day">Day</label>
-                    <input id="day" name="day" ng-model="filterDate.day" type="number" pattern="\d*" placeholder="DD">
+        <div data-ng-cloak="" data-ng-show="isVisible" class="form step3" data-ng-controller="PlanCodeController">
+            <form>
+                <div>@Editable(Model, m => m.StepThree)</div>
+                <h3>@Editable(Model, m => m.StepHeaderThree)</h3>
 
-                    <div ng-show="dateForm.day.$invalid" class="form__field__error">
-                        <p>Please enter a valid day</p>
+                <div class="grid-no-gutters form">
+                    <div class="grid-col-4-12 form__field">
+                        <select data-ng-model="selectedPlanCode">
+                            <option data-ng-bind="planCode" data-ng-repeat="(i, planCode) in planCodes" data-ng-selected="i === 0" data-ng-value="planCode"></option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="box-button box-button--secondary-inverse" data-ng-click="planCodeSubmit()">
+                    @Editable(Model, m => m.NextButtonText)
+                </button>
+
+                <div>
+                    <a data-ng-click="back()" class="emphasis-link" title="Back">@Editable(Model, m => m.PreviousButtonText)</a>
+                </div>
+            </form>
+        </div>
+
+        <div data-ng-cloak="" data-ng-show="isVisible" class="form results" data-ng-controller="ResultsController">
+            <form>
+                <p>
+                    @Html.Raw(string.Format(Model.ResultsLabel, "<span class=\"text--primary\">{{documents.length}}</span>"))
+                </p>
+                <div>
+                    <div class="label label--primary">
+                        <a data-ng-bind="formState.planType" data-ng-click="goToPlanTypeStep()"></a>
                     </div>
 
-                    <div ng-show="dateForm.filterDate.$invalid" class="form__field__error">
-                        <p>There is a problem with the date</p>
+                    <div class="label label--primary">
+                        <a data-ng-cloak data-ng-click="goToDateStep()">{{formState.date.format("D MMM YYYY")}}</a>
+                    </div>
+
+                    <div class="label label--primary">
+                        <a data-ng-bind="formState.planCode" data-ng-click="goToPlanCodeStep()"></a>
                     </div>
                 </div>
-
-                <div class="grid-col-3-12 form__field">
-                    <label for="month">Month</label>
-                    <input id="month" name="month" ng-model="filterDate.month" type="number" pattern="\d*" placeholder="MM">
-
-                    <div ng-show="dateForm.month.$invalid" class="form__field__error">
-                        <p>Please enter a valid month</p>
-                    </div>
-                </div>
-
-                <div class="grid-col-3-12 form__field">
-                    <label for="year">Year</label>
-                    <input id="year" name="year" ng-model="filterDate.year" type="number" pattern="\d*" placeholder="YYYY">
-                </div>
-
-                <div class="grid-col-2-12 form__field__input--inline"></div>
-            </div>
-
-            <button data-ng-click="dateEntered(dateForm, filterDate)" class="box-button box-button--secondary-inverse">Next</button>
-
-            <div>
-                <a data-ng-click="back()" class="emphasis-link" title="Back">Back</a>
-            </div>
-        </form>
-    </div>
-
-    <div data-ng-cloak="" data-ng-show="isVisible" class="form step3" data-ng-controller="PlanCodeController">
-        <form>
-            <div>Step 3 of 3</div>
-            <h3>@Editable(Model, m => m.StepHeaderThree)</h3>
-
-            <div class="grid-no-gutters form">
-                <div class="grid-col-4-12 form__field">
-                    <select data-ng-model="selectedPlanCode">
-                        <option data-ng-bind="planCode" data-ng-repeat="(i, planCode) in planCodes" data-ng-selected="i === 0" data-ng-value="planCode"></option>
-                    </select>
-                </div>
-            </div>
-
-            <button class="box-button box-button--secondary-inverse" data-ng-click="planCodeSubmit()">
-                Next
-            </button>
-
-            <div>
-                <a data-ng-click="back()" class="emphasis-link" title="Back">Back</a>
-            </div>
-        </form>
-    </div>
-
-    <div data-ng-cloak="" data-ng-show="isVisible" class="form results" data-ng-controller="ResultsController">
-        <form>
-            <p>
-                We have found
-                <span class="text--primary">{{documents.length}} application forms</span>
-                based on your selections
-            </p>
-
-            <div>
-                <div class="label label--primary">
-                    <a data-ng-bind="formState.planType" data-ng-click="goToPlanTypeStep()"></a>
-                </div>
-
-                <div class="label label--primary">
-                    <a data-ng-cloak data-ng-click="goToDateStep()">{{formState.date.format("D MMM YYYY")}}</a>
-                </div>
-
-                <div class="label label--primary">
-                    <a data-ng-bind="formState.planCode" data-ng-click="goToPlanCodeStep()"></a>
-                </div>
-            </div>
-
-            <hr>
-
-            <div data-ng-repeat="document in documents">
-                <h4 data-ng-bind="document.Title"></h4>
-                <p>{{document.DocumentSize}}KB, {{document.FileType}}</p>
-
-                <a href="{{document.Document}}"
-                   class="box-button box-button--secondary-inverse box-button--rounded">
-                    Download
-                </a>
 
                 <hr>
-            </div>
 
-            <p>Not quite what you were looking for?</p>
+                <div data-ng-repeat="document in documents">
+                    <h4 data-ng-bind="document.Title"></h4>
+                    <p>{{document.DocumentSize}}KB, {{document.FileType}}</p>
 
-            <div>
-                <a data-ng-click="restart()" class="emphasis-link" title="Back">
-                    Go back and change selections
-                </a>
-            </div>
-        </form>
+                    <a href="{{document.Document}}"
+                       class="box-button box-button--secondary-inverse box-button--rounded">
+                        @Editable(Model, m => m.DownloadButtonText)
+                    </a>
+
+                    <hr>
+                </div>
+
+                <p>@Editable(Model, m => m.UnexpectedResultsLabel)</p>
+
+                <div>
+                    <a data-ng-click="restart()" class="emphasis-link" title="Back">
+                        @Editable(Model, m => m.ChangeSelectionLabel)
+                    </a>
+                </div>
+            </form>
+        </div>
+
     </div>
 </div>
 
-<script>
-    window.angularData = window.angularData || {};
-    window.angularData.literaturePath = "forms-library"; //'@*Model.LiteratureLibrary.Name*@';
-</script>
+@if (@Model.LiteratureLibrary != null)
+{
+    <script>
+        window.angularData = window.angularData || {};
+        window.angularData.literaturePath = '@Model.LiteratureLibrary.Name';
+    </script>
+}

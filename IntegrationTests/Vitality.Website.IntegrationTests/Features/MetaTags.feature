@@ -7,24 +7,23 @@
 	Given I am on the <initialpage>
 	When I check the source
 	Then I expect the common meta tags to be in the source
-	
+
 Examples:
 	| initialpage                    |
-	| /development/faq-leader        |
-	| /development/accordion-content |
-	| /development/benefit-leader    |
-
+	| /health-insurance	   	         |
+	| /life-insurance				 |
+	| /rewards					     |
 
 	Scenario Outline: Home meta tags should not appear on non-home pages
 	Given I am on the <initialpage>
 	When I check the source
 	Then I do not expect the home meta tags to be in the source
-	
+
 Examples:
 	| initialpage                    |
-	| /development/faq-leader        |
-	| /development/accordion-content |
-	| /development/benefit-leader    |
+	| /health-insurance	   	         |
+	| /life-insurance				 |
+	| /rewards					     |
 
 	Scenario: Home meta tags should appear on the home page
 	Given I am on the /home

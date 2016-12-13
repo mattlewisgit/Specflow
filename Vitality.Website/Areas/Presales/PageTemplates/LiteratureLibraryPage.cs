@@ -50,6 +50,36 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
 
         public string StepHeaderThree { get; set; }
 
+        public string StepOne { get; set; }
+
+        public string StepTwo { get; set; }
+
+        public string StepThree { get; set; }
+
+        public string PreviousButtonText { get; set; }
+
+        public string NextButtonText { get; set; }
+
+        public string DownloadButtonText { get; set; }
+
+        public string DayLabel { get; set; }
+
+        public string MonthLabel { get; set; }
+
+        public string YearLabel { get; set; }
+
+        public string DayValidationErrorMessageOne { get; set; }
+
+        public string DayValidationErrorMessageTwo { get; set; }
+
+        public string MonthValidationErrorMessage { get; set; }
+
+        public string ResultsLabel { get; set; }
+
+        public string UnexpectedResultsLabel { get; set; }
+
+        public string ChangeSelectionLabel { get; set; }
+
         public string StepHeaderTwoExample { get; set; }
 
         public string PlanTypes { get; set; }
