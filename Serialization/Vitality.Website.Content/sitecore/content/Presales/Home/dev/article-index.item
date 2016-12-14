@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {4E758A8C-6ADF-4E70-BB05-6DCC1409DABD}
+id: {49412E83-CAC4-4BEF-86DE-044AC8C8F812}
 database: master
 path: /sitecore/content/Presales/home/dev/article-index
 parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
@@ -19,14 +19,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: ece12595-fb37-4581-b341-a4b0068d6d9b
-
-----field----
-field: {1DDC22BC-0EAF-4B97-A5D6-7DF110FF748F}
-name: InheritQuoteFooterSettings
-key: inheritquotefootersettings
-content-length: 0
-
+revision: 39398d36-6484-457b-828d-006933909e1a
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
@@ -34,35 +27,35 @@ name: __Display name
 key: __display name
 content-length: 13
 
-Article Index
+Article index
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 462
+content-length: 398
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{640CF3E7-EC20-4A34-AE94-90D5F58D5594}" p:before="*" s:ds="{2E3ED7CF-A551-41EE-B269-28B1C63A88EF}" s:id="{26C84568-1294-4492-B482-3ED4DA4915BC}" s:ph="PresalesContent" /><r uid="{4583108D-358E-4B6E-8C69-E37C6096CC87}" s:ph="footer" /><r uid="{4525F252-32CC-4B49-BAC4-7771898315D5}" s:ph="footer" /><r uid="{571A4264-40A5-4555-ABAD-91559404A79C}" s:ph="metadata" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{FEF2039D-F51A-4EDA-8B57-269E36D7D4CA}" p:before="*" s:ds="{C811A129-2DE7-40EA-8B3D-84BF3B1BCB23}" s:id="{26C84568-1294-4492-B482-3ED4DA4915BC}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160712T095626Z
+20161214T141138Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-ece12595-fb37-4581-b341-a4b0068d6d9b
+39398d36-6484-457b-828d-006933909e1a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160713T155806Z
+20161214T141347Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -76,4 +69,11 @@ name: __Workflow state
 key: __workflow state
 content-length: 38
 
-{BBC08507-1651-4F93-804C-AF45D7A30D0C}
+{2E731AFD-ACB0-4361-B91B-43C68E853BE9}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
