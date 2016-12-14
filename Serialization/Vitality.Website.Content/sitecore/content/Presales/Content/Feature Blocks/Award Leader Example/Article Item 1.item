@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {CE044BCF-7E79-4648-94A7-95DBA13635D4}
+database: master
+path: /sitecore/content/Presales/Content/Feature Blocks/Award Leader Example/Article Item 1
+parent: {C007FB3C-30BD-459B-880D-A56F62B64611}
+name: Article Item 1
+master: {00000000-0000-0000-0000-000000000000}
+template: {972CA70E-945F-4D10-967B-FD622EF97D66}
+templatekey: Article Item
+
+----version----
+language: en
+version: 1
+revision: 177242e1-23ab-484e-99d8-c4c0f5a69682
+
+----field----
+field: {18ADA82B-D17A-4985-8330-F2EF67907F88}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{7D773239-99B4-4B79-9ABA-72EC6AF3B8C2}" />
+----field----
+field: {EB94A15C-9915-40EC-AAB6-CC93F723596E}
+name: LeadIn
+key: leadin
+content-length: 28
+
+Ed saved £750 and cycled 20K
+----field----
+field: {11AC93CE-75B9-4D25-8DCC-465BE3635C3F}
+name: Title
+key: title
+content-length: 16
+
+Member Stories 1
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161213T140504Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+177242e1-23ab-484e-99d8-c4c0f5a69682
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161213T142212Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

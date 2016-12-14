@@ -1,0 +1,93 @@
+----item----
+version: 1
+id: {FF1F781C-0098-412C-8B19-A59875AAA878}
+database: master
+path: /sitecore/content/Presales/Content/Articles/Article Index Example/The travel hub
+parent: {C811A129-2DE7-40EA-8B3D-84BF3B1BCB23}
+name: The travel hub
+master: {00000000-0000-0000-0000-000000000000}
+template: {972CA70E-945F-4D10-967B-FD622EF97D66}
+templatekey: Article Item
+
+----version----
+language: en
+version: 1
+revision: e6e94f42-aa2a-4167-a978-6203b3a6e923
+
+----field----
+field: {18ADA82B-D17A-4985-8330-F2EF67907F88}
+name: Image
+key: image
+content-length: 64
+
+<image mediaid="{796DDC2D-E007-438E-BC40-C6B930C14513}"></image>
+----field----
+field: {EB94A15C-9915-40EC-AAB6-CC93F723596E}
+name: LeadIn
+key: leadin
+content-length: 55
+
+Save on air and train travel, boutique hotels and spas.
+----field----
+field: {11AC93CE-75B9-4D25-8DCC-465BE3635C3F}
+name: Title
+key: title
+content-length: 14
+
+The travel hub
+----field----
+field: {E5B77B8D-53DB-49AD-A422-CC6472BFAC90}
+name: Link
+key: link
+content-length: 114
+
+<link text="" linktype="internal" class="" title=""  querystring="" id="{B70B8F54-BFC7-4BC1-81DD-FE3C2CCAC22C}" />
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 21
+
+sitecore\ByronMadigan
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160804T085702Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 21
+
+sitecore\ByronMadigan
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+e6e94f42-aa2a-4167-a978-6203b3a6e923
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161214T141928Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
