@@ -1,0 +1,79 @@
+----item----
+version: 1
+id: {4E758A8C-6ADF-4E70-BB05-6DCC1409DABD}
+database: master
+path: /sitecore/content/Presales/home/dev/article-index
+parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+name: article-index
+master: {00000000-0000-0000-0000-000000000000}
+template: {87BED180-12E1-4B27-B352-B5C5D06521D0}
+templatekey: Product Details Page
+
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
+----version----
+language: en
+version: 1
+revision: ece12595-fb37-4581-b341-a4b0068d6d9b
+
+----field----
+field: {1DDC22BC-0EAF-4B97-A5D6-7DF110FF748F}
+name: InheritQuoteFooterSettings
+key: inheritquotefootersettings
+content-length: 0
+
+
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 13
+
+Article Index
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 462
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{640CF3E7-EC20-4A34-AE94-90D5F58D5594}" p:before="*" s:ds="{2E3ED7CF-A551-41EE-B269-28B1C63A88EF}" s:id="{26C84568-1294-4492-B482-3ED4DA4915BC}" s:ph="PresalesContent" /><r uid="{4583108D-358E-4B6E-8C69-E37C6096CC87}" s:ph="footer" /><r uid="{4525F252-32CC-4B49-BAC4-7771898315D5}" s:ph="footer" /><r uid="{571A4264-40A5-4555-ABAD-91559404A79C}" s:ph="metadata" /></d></r>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160712T095626Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+ece12595-fb37-4581-b341-a4b0068d6d9b
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160713T155806Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
