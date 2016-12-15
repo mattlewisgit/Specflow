@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {AD1A355B-13AE-48D8-962E-16314C44363D}
+id: {8BF82E6B-86B6-4DA6-9546-E180632BF680}
 database: master
 path: /sitecore/content/Presales/home/dev/cards-tabbed
 parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
@@ -19,7 +19,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 1dac292f-c207-4de9-b96d-f6743b039589
+revision: 93f68140-83fa-4f2e-ae7e-d8903cb747d3
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
@@ -32,30 +32,30 @@ Cards Tabbed
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 332
+content-length: 398
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{CC7CAC42-49B1-43D9-AA57-02AA694CE818}" p:before="*" s:ds="{30EF8F19-0562-45F5-8FF4-1A49810DAF13}" s:id="{54C3E438-530B-4F99-A472-FABBC7B94FA9}" s:ph="PresalesContent" /><r uid="{3E1F3E38-5893-461D-94F7-699090EF8512}" s:ph="footer" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{216FE7D0-5B38-4AB0-BDDC-7E5D86447802}" p:before="*" s:ds="{552E9495-6B01-4A95-B894-F9DF01182038}" s:id="{54C3E438-530B-4F99-A472-FABBC7B94FA9}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160622T115049Z
+20161215T120442Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-1dac292f-c207-4de9-b96d-f6743b039589
+93f68140-83fa-4f2e-ae7e-d8903cb747d3
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160622T121429Z
+20161215T123332Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -70,3 +70,10 @@ key: __workflow state
 content-length: 38
 
 {BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
