@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {4FF6568B-25A2-4DCD-81C2-025552554613}
+database: master
+path: /sitecore/content/Presales/Content/Tabbed Content/Tabbed Content Example/Tab2
+parent: {0DD1C5D7-12CF-4C0D-A218-7297C8229485}
+name: Tab2
+master: {00000000-0000-0000-0000-000000000000}
+template: {A5530129-F521-479B-8A24-520E741BA5A7}
+templatekey: Tab
+
+----version----
+language: en
+version: 1
+revision: aa53073c-c64b-4d99-a15f-63953e87df7f
+
+----field----
+field: {30CF053C-9888-4A6C-9ED5-650A6FC78C05}
+name: Title
+key: title
+content-length: 4
+
+Tab2
+----field----
+field: {3748C66D-03BB-4DA3-8CEA-6A4A26911BE4}
+name: Body
+key: body
+content-length: 850
+
+<h2 style="margin-top: 0px;">Tab 2 Header</h2><p class="paragraph-emphasis">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel odio tempora qui repellendus dignissimos aspernatur cum vero atque dolorum cumque.</p><p style="line-height: 27.2px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quos totam commodi repellendus quam est voluptatum, perspiciatis deserunt suscipit numquam quae nihil, ab neque! Esse architecto nulla, dignissimos repellat animi!</p><p style="margin-bottom: 0px; line-height: 27.2px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolorum quas, totam cum reprehenderit, unde, vero rem quasi, provident distinctio aliquam quos libero. Laudantium asperiores necessitatibus quos, eveniet accusamus eius vel dolores recusandae quas voluptate numquam tenetur, minima quod! Maxime.</p>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160617T141947Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+aa53073c-c64b-4d99-a15f-63953e87df7f
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160617T142020Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

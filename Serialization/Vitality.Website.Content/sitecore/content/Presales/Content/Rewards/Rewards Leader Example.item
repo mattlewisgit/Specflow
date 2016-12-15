@@ -1,0 +1,65 @@
+----item----
+version: 1
+id: {6B0DFD74-966A-4BD5-B5F3-F92C9EE17958}
+database: master
+path: /sitecore/content/Presales/Content/Rewards/Rewards Leader Example
+parent: {0CD01959-A081-4C0A-BA07-C00D77C2C71C}
+name: Rewards Leader Example
+master: {00000000-0000-0000-0000-000000000000}
+template: {5CDF9BF1-35E1-4E28-8718-21F6506D7AE5}
+templatekey: Rewards Leader
+
+----version----
+language: en
+version: 1
+revision: 88e4af69-d765-43a6-b767-1893132f9417
+
+----field----
+field: {473D5805-93D0-4DBE-8C13-99A4D489AA12}
+name: Headline
+key: headline
+content-length: 20
+
+OUR REWARDS PARTNERS
+----field----
+field: {4567052D-7575-4A9F-81FB-E298EA501B62}
+name: OpeningParagraph
+key: openingparagraph
+content-length: 58
+
+Some of the great partners our members enjoy rewards from:
+----field----
+field: {E5D11870-D3DA-4372-8651-1F559B44780C}
+name: CallToAction
+key: calltoaction
+content-length: 124
+
+<link linktype="internal" text="Learn about rewards" querystring="" target="" id="{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160617T142745Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+88e4af69-d765-43a6-b767-1893132f9417
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160617T143104Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
