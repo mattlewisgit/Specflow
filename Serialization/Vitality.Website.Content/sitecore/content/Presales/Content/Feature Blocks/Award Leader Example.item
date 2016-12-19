@@ -1,0 +1,72 @@
+----item----
+version: 1
+id: {C007FB3C-30BD-459B-880D-A56F62B64611}
+database: master
+path: /sitecore/content/Presales/Content/Feature Blocks/Award Leader Example
+parent: {B626955A-8D36-4516-B6EB-F2A66D89D6BA}
+name: Award Leader Example
+master: {00000000-0000-0000-0000-000000000000}
+template: {056C6833-9BE7-418D-A47B-CCD697D9EDA3}
+templatekey: Award Leader
+
+----version----
+language: en
+version: 1
+revision: e056244e-eb59-4c80-97cf-960b0a981307
+
+----field----
+field: {5042B5EC-D6EC-4B24-9575-4E920F3CA379}
+name: BackgroundImage
+key: backgroundimage
+content-length: 58
+
+<image mediaid="{FDE3B9E4-D5EF-4823-A699-ED7154A26934}" />
+----field----
+field: {75A3B055-FFE2-46F8-A883-B3985B577192}
+name: Headline
+key: headline
+content-length: 74
+
+Choose confidently with award-winning health insurance cover from vitality
+----field----
+field: {51988CC9-C79F-4936-9345-1738E556A127}
+name: OpeningParagraph
+key: openingparagraph
+content-length: 268
+
+Turpis facilisi semper, litora arcu dictumst hac quisque aenean facilisi tellus phasellus proin. Cum orci justo nisi, phasellus dis, dapibus mi primis quis eget porttitor vel, vehicula. Sociis vulputate aptent. Euismod orci eget iaculis vulputate tempus litora. Magna.
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161213T140004Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+e056244e-eb59-4c80-97cf-960b0a981307
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161214T142207Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

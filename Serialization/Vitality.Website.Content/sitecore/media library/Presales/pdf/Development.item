@@ -2,7 +2,7 @@
 version: 1
 id: {F1C1A8B6-5EF8-458F-82AD-62DF8B4E521C}
 database: master
-path: /sitecore/media library/Presales/pdf/Development
+path: /sitecore/media library/presales/pdf/Development
 parent: {4D48CEB4-E3D5-4033-A1F3-E5A796B09482}
 name: Development
 master: {00000000-0000-0000-0000-000000000000}

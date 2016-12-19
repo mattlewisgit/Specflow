@@ -5,6 +5,7 @@ using System.Web;
 using System.Xml;
 using System.Xml.Linq;
 using Sitecore.Pipelines.HttpRequest;
+using Sitecore.Diagnostics;
 
 namespace Vitality.Website.SC.Pipelines.HttpRequest
 {
@@ -22,20 +23,30 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
             {
                 context.Response.ClearContent();
 
-                var xmlFileStream = new FileStream(ReformatXmlFile(args, siteName), FileMode.Open, FileAccess.Read, FileShare.Read);
-                
-                //xml.
-                var doc = new XmlDocument();
-                doc.Load(xmlFileStream);
+                var fileName = ReformatXmlFile(args, siteName);
 
-                context.Response.ContentType = "text/xml";
-                context.Response.ContentEncoding = System.Text.Encoding.UTF8;
-                context.Response.Expires = -1;
-                context.Response.Cache.SetAllowResponseInBrowserHistory(true);
-                
-                doc.Save(context.Response.Output);
+                if (File.Exists(fileName))
+                {
+                    var xmlFileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read,
+                        FileShare.Read);
 
-                context.Response.End();
+                    //xml.
+                    var doc = new XmlDocument();
+                    doc.Load(xmlFileStream);
+
+                    context.Response.ContentType = "text/xml";
+                    context.Response.ContentEncoding = System.Text.Encoding.UTF8;
+                    context.Response.Expires = -1;
+                    context.Response.Cache.SetAllowResponseInBrowserHistory(true);
+
+                    doc.Save(context.Response.Output);
+
+                    context.Response.End();
+                }
+                else
+                {
+                    Log.Warn(string.Format("Requested sitemap file {0} does not exist.", fileName), this);
+                }
             }
             else if (string.Equals(context.Request.CurrentExecutionFilePathExtension, ".gz",StringComparison.InvariantCultureIgnoreCase))
             {

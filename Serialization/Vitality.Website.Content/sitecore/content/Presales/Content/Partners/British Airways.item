@@ -1,0 +1,107 @@
+----item----
+version: 1
+id: {5CA3779F-658D-44AA-B4AA-B3DDF1525632}
+database: master
+path: /sitecore/content/Presales/Content/Partners/British Airways
+parent: {14B3F9CC-1D26-473E-B7D9-148093F3C960}
+name: British Airways
+master: {00000000-0000-0000-0000-000000000000}
+template: {E8118048-EB94-4F70-8793-30A460D1B041}
+templatekey: Partner Card
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+300
+----version----
+language: en
+version: 1
+revision: ee77b9a7-7d28-426f-a124-1e41dfd4d6de
+
+----field----
+field: {116B55E0-A9AE-4A68-A962-34AC7B6BEB7A}
+name: Headline
+key: headline
+content-length: 15
+
+British Airways
+----field----
+field: {D7C606CD-0574-4DA8-A18C-71D5FE1EE00B}
+name: OpeningParagraph
+key: openingparagraph
+content-length: 91
+
+Up to 40% off return economy flights within the UK and Europe, including taxes and charges.
+----field----
+field: {F77D1744-EB66-4542-ADDE-761ECE55DC25}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{9BC8F40A-9E2D-40EF-B505-C28A5C494307}" />
+----field----
+field: {0EEEA750-A523-4E00-A23C-A868D84206D0}
+name: Logo
+key: logo
+content-length: 58
+
+<image mediaid="{D8816F8F-9A92-4400-AAC9-D7EA36B7D68E}" />
+----field----
+field: {4124A12F-DE27-43EB-9E9E-84DC114EF22E}
+name: CallToAction
+key: calltoaction
+content-length: 137
+
+<link text="Explore British Airways" linktype="internal" class="" title=""  querystring="" id="{FC2894D9-ABE3-40D2-BE3F-602143283F63}" />
+----field----
+field: {0C60D441-2779-4A02-AF2D-35AB2DB986A5}
+name: Categories
+key: categories
+content-length: 38
+
+{F77B16D3-1AAA-4637-A748-DC53DE175F1F}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160720T135125Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 18
+
+sitecore\JohnWyatt
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+ee77b9a7-7d28-426f-a124-1e41dfd4d6de
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160801T112503Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 21
+
+sitecore\ByronMadigan
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

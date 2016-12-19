@@ -1,0 +1,135 @@
+----item----
+version: 1
+id: {55276F97-E11F-4F88-BA78-EF94C73BD44A}
+database: master
+path: /sitecore/content/Presales/Content/Feature Blocks/FeeMaxima presales
+parent: {B626955A-8D36-4516-B6EB-F2A66D89D6BA}
+name: FeeMaxima presales
+master: {00000000-0000-0000-0000-000000000000}
+template: {252D3793-4CAF-4F2C-A024-A5E57D000E7C}
+templatekey: FeeMaxima
+
+----version----
+language: en
+version: 1
+revision: 6efd6429-fc09-4a20-ba9a-b3a7848c0a9f
+
+----field----
+field: {05D50627-1153-47B0-98DB-CA191598144F}
+name: Headline
+key: headline
+content-length: 18
+
+Feemaxima Presales
+----field----
+field: {C3BE0FBD-ED29-4476-98DA-C8603C1EFC1E}
+name: BackLinkText
+key: backlinktext
+content-length: 30
+
+Back to CCSD Schedule Chapters
+----field----
+field: {2E8EB260-B227-48E1-9CE3-69D38DF5EF7F}
+name: SearchText
+key: searchtext
+content-length: 6
+
+Search
+----field----
+field: {AF8FF4A9-98B2-4AAF-9AF6-69E098152689}
+name: ChapterText
+key: chaptertext
+content-length: 6
+
+Numero
+----field----
+field: {4BCDB2D6-A423-40A3-A46D-71F8D5B1764B}
+name: CodeHeader
+key: codeheader
+content-length: 4
+
+Code
+----field----
+field: {6FB6011F-047D-47DD-A40C-D62F97B9D32B}
+name: DescriptionHeader
+key: descriptionheader
+content-length: 11
+
+Description
+----field----
+field: {6567C7F6-17F1-4324-B2C6-8A5F5EBE66B3}
+name: SurgeonsFeeHeader
+key: surgeonsfeeheader
+content-length: 12
+
+Surgeons Fee
+----field----
+field: {0C135904-870A-4A44-98FF-F87D8E201396}
+name: AnaesthetistsFeeHeader
+key: anaesthetistsfeeheader
+content-length: 8
+
+Anes Fee
+----field----
+field: {D1B823B9-2305-4F64-A244-76429030BC46}
+name: ChooseChapterText
+key: choosechaptertext
+content-length: 10
+
+Data Here!
+----field----
+field: {80EACCAF-B2AF-4E2C-93B6-42B8E6FB0F65}
+name: Title
+key: title
+content-length: 21
+
+This is a description
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161208T160830Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+6efd6429-fc09-4a20-ba9a-b3a7848c0a9f
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161215T153512Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

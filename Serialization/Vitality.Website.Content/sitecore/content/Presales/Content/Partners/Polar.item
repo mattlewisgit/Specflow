@@ -1,0 +1,100 @@
+----item----
+version: 1
+id: {0750C1E6-5BCD-44CA-B624-CAA1E575EBD1}
+database: master
+path: /sitecore/content/Presales/Content/Partners/Polar
+parent: {14B3F9CC-1D26-473E-B7D9-148093F3C960}
+name: Polar
+master: {00000000-0000-0000-0000-000000000000}
+template: {E8118048-EB94-4F70-8793-30A460D1B041}
+templatekey: Partner Card
+
+----version----
+language: en
+version: 1
+revision: f5bd5e25-67bf-4d91-b56f-b3533bff8dcf
+
+----field----
+field: {116B55E0-A9AE-4A68-A962-34AC7B6BEB7A}
+name: Headline
+key: headline
+content-length: 5
+
+Polar
+----field----
+field: {D7C606CD-0574-4DA8-A18C-71D5FE1EE00B}
+name: OpeningParagraph
+key: openingparagraph
+content-length: 40
+
+40% off a range of devices. P&P applies.
+----field----
+field: {F77D1744-EB66-4542-ADDE-761ECE55DC25}
+name: Image
+key: image
+content-length: 58
+
+<image mediaid="{DB28C69A-1F5D-4C91-AB72-B85325AC4053}" />
+----field----
+field: {0EEEA750-A523-4E00-A23C-A868D84206D0}
+name: Logo
+key: logo
+content-length: 58
+
+<image mediaid="{22B8CE51-C300-4E49-9C3A-38B23B67A4CE}" />
+----field----
+field: {4124A12F-DE27-43EB-9E9E-84DC114EF22E}
+name: CallToAction
+key: calltoaction
+content-length: 127
+
+<link text="Explore Polar" linktype="internal" class="" title=""  querystring="" id="{F7D38A3D-49B6-4ECD-BE36-0B6CD02D5D6A}" />
+----field----
+field: {0C60D441-2779-4A02-AF2D-35AB2DB986A5}
+name: Categories
+key: categories
+content-length: 38
+
+{A65D9C65-3C78-4A23-B528-EA6521C1FFEA}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160720T134925Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 18
+
+sitecore\JohnWyatt
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+f5bd5e25-67bf-4d91-b56f-b3533bff8dcf
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160905T130659Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 24
+
+sitecore\KimberleyGraham
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

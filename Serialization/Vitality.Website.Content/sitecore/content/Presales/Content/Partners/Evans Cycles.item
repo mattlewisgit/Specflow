@@ -12,7 +12,7 @@ templatekey: Partner Card
 ----version----
 language: en
 version: 1
-revision: 9079d18b-9e40-468f-8d6a-0763a6402ccb
+revision: 9908a3cb-f2ac-4039-88eb-0a28dd415f87
 
 ----field----
 field: {116B55E0-A9AE-4A68-A962-34AC7B6BEB7A}
@@ -34,14 +34,14 @@ name: Image
 key: image
 content-length: 58
 
-<image mediaid="{4D13DB20-B854-4CC1-9934-1EE3C7D62095}" />
+<image mediaid="{1C7B126B-C9D4-432C-93A7-AA508A94D829}" />
 ----field----
 field: {0EEEA750-A523-4E00-A23C-A868D84206D0}
 name: Logo
 key: logo
 content-length: 58
 
-<image mediaid="{031E77B1-B682-4053-ABFE-795AAD67837C}" />
+<image mediaid="{59E9217E-C897-4A85-9193-FA029A414EA1}" />
 ----field----
 field: {4124A12F-DE27-43EB-9E9E-84DC114EF22E}
 name: CallToAction
@@ -69,14 +69,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9079d18b-9e40-468f-8d6a-0763a6402ccb
+9908a3cb-f2ac-4039-88eb-0a28dd415f87
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160622T121723Z
+20161215T122848Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

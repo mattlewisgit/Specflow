@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {8AFEC3CE-677A-45DB-BB90-6EF55771984E}
+database: master
+path: /sitecore/content/Advisers/Content/Navigation/Main Navigation/Development/Components/Sales Library
+parent: {9C14014C-6849-499F-9BD9-EB90F04197C6}
+name: Sales Library
+master: {00000000-0000-0000-0000-000000000000}
+template: {86112F62-773D-464C-AEE7-F6E86CEC4A11}
+templatekey: Link
+
+----version----
+language: en
+version: 1
+revision: 241a9032-2e09-4a43-92ad-ac16097590dd
+
+----field----
+field: {89E4692B-40AF-44F4-ABD6-347753F08243}
+name: Link
+key: link
+content-length: 140
+
+<link text="Sales Library" linktype="internal" class="" title="Sales Library"  querystring="" id="{A8B154EE-A46F-4D15-976F-18474B2E01FD}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161215T163431Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+241a9032-2e09-4a43-92ad-ac16097590dd
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161215T163628Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

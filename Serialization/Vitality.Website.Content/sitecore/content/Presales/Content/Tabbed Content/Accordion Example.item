@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {BADF66B1-34D7-4B5C-8CB7-E85D61B44AAD}
+database: master
+path: /sitecore/content/Presales/Content/Tabbed Content/Accordion Example
+parent: {E4388075-4463-4D15-9629-532E4D44CC0F}
+name: Accordion Example
+master: {00000000-0000-0000-0000-000000000000}
+template: {F7CFF045-57AE-49F5-BD7A-B24C06EF287B}
+templatekey: Tab Collection
+
+----version----
+language: en
+version: 1
+revision: 9f1419b5-cb51-46e9-bb00-0a8ac611b800
+
+----field----
+field: {7EE590B1-EA5E-4B79-9EAA-B5D99E61AE43}
+name: Heading
+key: heading
+content-length: 9
+
+Accordion
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160617T135834Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9f1419b5-cb51-46e9-bb00-0a8ac611b800
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160617T135834Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

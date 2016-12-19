@@ -4,8 +4,7 @@
         <hooks>
             <hook type="Sitecore.Form.Core.WffmActionHook, Sitecore.Forms.Core">
                 <patch:delete/>
-            </hook>
-            <patch:delete type="Sitecore.Form.Core.WffmActionHook, Sitecore.Forms.Core" />
+            </hook>            
         </hooks>
 
         <settings>

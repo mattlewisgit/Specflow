@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {9A3259C8-61BC-4CE2-BF59-75F5B6057815}
+database: master
+path: /sitecore/content/Presales/Content/Feature Blocks/Benefit Leader Example
+parent: {B626955A-8D36-4516-B6EB-F2A66D89D6BA}
+name: Benefit Leader Example
+master: {00000000-0000-0000-0000-000000000000}
+template: {0D4CB8F9-6D49-40AF-920A-FC5C881BEA94}
+templatekey: Benefit Leader
+
+----version----
+language: en
+version: 1
+revision: f9a85d2d-1346-4c7c-ba4e-3b688da33aea
+
+----field----
+field: {27E1EB5B-44A7-467E-86D4-C587BE5EDFA8}
+name: LeadIn
+key: leadin
+content-length: 11
+
+Vitality GP
+----field----
+field: {DA87BB32-8FA1-4F37-8B7E-D3BB6E67DB9C}
+name: Headline
+key: headline
+content-length: 39
+
+The personal GP who lives in your phone
+----field----
+field: {80D33F35-A61F-45C9-97F2-4929238901D8}
+name: Body
+key: body
+content-length: 704
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada malesuada varius. Vivamus malesuada enim tempor, convallis est ut, rhoncus urna. Nullam cursus justo vel justo bibendum consectetur. Quisque vulputate molestie massa faucibus vulputate. In ac felis varius, tempus enim ut, semper tortor. Vivamus ut arcu gravida, consequat erat sollicitudin, viverra sapien. Morbi urna leo, fringilla bibendum augue et, finibus iaculis justo. Donec quis purus diam. Donec erat nisl, volutpat porta vulputate sed, fringilla eget massa. Donec vulputate, quam nec ultricies accumsan, dui mi cursus velit, et condimentum neque purus ac lacus. Donec tincidunt posuere diam, et aliquam lectus laoreet non.
+----field----
+field: {4BEF1E56-7D25-49A4-870C-52692B7BB9A9}
+name: CallToAction
+key: calltoaction
+content-length: 124
+
+<link linktype="internal" text="Explore Vitality GP" querystring="" target="" id="{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" />
+----field----
+field: {DB27A15F-40DB-4367-B41C-01117BBCD6E8}
+name: BackgroundImage
+key: backgroundimage
+content-length: 58
+
+<image mediaid="{5B84CDC3-BBAA-46FB-A7F3-90BF17994A97}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160617T124415Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+f9a85d2d-1346-4c7c-ba4e-3b688da33aea
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161214T142652Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

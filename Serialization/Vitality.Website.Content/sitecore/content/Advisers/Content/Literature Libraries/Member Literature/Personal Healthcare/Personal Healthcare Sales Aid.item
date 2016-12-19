@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {5B21B709-E581-4799-A2DC-8D4B27D7427E}
+database: master
+path: /sitecore/content/Advisers/Content/Literature Libraries/Member Literature/Personal Healthcare/Personal Healthcare Sales Aid
+parent: {F59EB7DC-953C-4C51-B299-97734E2C3889}
+name: Personal Healthcare Sales Aid
+master: {00000000-0000-0000-0000-000000000000}
+template: {7270914B-2ED9-4840-A8F9-2C1688DC1F55}
+templatekey: Literature Document
+
+----version----
+language: en
+version: 1
+revision: afb034bb-f4a0-4a73-9ee9-22c22e2847b3
+
+----field----
+field: {14409C3F-137A-4053-AD7A-8328E4BB5F52}
+name: Title
+key: title
+content-length: 29
+
+Personal Healthcare Sales Aid
+----field----
+field: {5D3A8645-56B3-43DD-B181-5F14E4A1A77A}
+name: Document
+key: document
+content-length: 150
+
+<link text="Testing Document 4" linktype="internal" class="" title="Testing Document 4"  querystring="" id="{E34F8838-B51E-4045-8078-D35CE6FA2FC8}" />
+----field----
+field: {2538AE0C-8B9B-43B7-BEEF-A3CCEFD9E9C6}
+name: Description
+key: description
+content-length: 29
+
+Personal Healthcare Sales Aid
+----field----
+field: {050EE160-FAA1-46D4-8EE6-1B1E83936E10}
+name: PublishDate
+key: publishdate
+content-length: 16
+
+20161013T230000Z
+----field----
+field: {770BD351-1CDF-4216-8EFB-075CF019F1FE}
+name: Code
+key: code
+content-length: 6
+
+VIT777
+----field----
+field: {5E69297F-5D38-443E-A4C6-BE7104D33802}
+name: EffectivePlanDate
+key: effectiveplandate
+content-length: 16
+
+20161013T230000Z
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161214T164813Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+afb034bb-f4a0-4a73-9ee9-22c22e2847b3
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161214T172003Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

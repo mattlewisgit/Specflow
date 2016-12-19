@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {00CFC53A-3EBA-45C3-A606-6E2C9F58423C}
+database: master
+path: /sitecore/content/Presales/Content/Navigation/Main Navigation/Development/Components/Home Hero
+parent: {4D1908BF-7058-4DC9-B520-2E5B36CA30B2}
+name: Home Hero
+master: {00000000-0000-0000-0000-000000000000}
+template: {86112F62-773D-464C-AEE7-F6E86CEC4A11}
+templatekey: Link
+
+----version----
+language: en
+version: 1
+revision: 1045c84f-ba44-4fb4-9073-d8a0e9c2eaab
+
+----field----
+field: {89E4692B-40AF-44F4-ABD6-347753F08243}
+name: Link
+key: link
+content-length: 132
+
+<link text="Home Hero" linktype="internal" class="" title="Home Hero"  querystring="" id="{0C90CB1D-A40A-40AA-8B54-6BE581BCC501}" />
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161215T160448Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+1045c84f-ba44-4fb4-9073-d8a0e9c2eaab
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161215T161331Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

@@ -1,0 +1,170 @@
+----item----
+version: 1
+id: {A8B154EE-A46F-4D15-976F-18474B2E01FD}
+database: master
+path: /sitecore/content/Advisers/home/dev/sales-library
+parent: {312B270B-A09E-4C9E-AC08-025D7A17B392}
+name: sales-library
+master: {00000000-0000-0000-0000-000000000000}
+template: {0160CD5B-71AD-4C17-AD40-93699FB4035F}
+templatekey: Sales Literature Library Page
+
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
+----version----
+language: en
+version: 1
+revision: 58d91869-71fb-4551-81b2-5f5216347e38
+
+----field----
+field: {93334BBA-ED1B-4C1A-9377-D60DB8F96BFB}
+name: Headline
+key: headline
+content-length: 16
+
+Sales literature
+----field----
+field: {393F704D-856E-402A-88EE-A824885C7816}
+name: OpeningParagraph
+key: openingparagraph
+content-length: 252
+
+Bacon ipsum dolor amet pancetta ham bacon sirloin, ham hock ball tip rump pastrami prosciutto beef ribs short loin porchetta. Turkey sausage rump venison beef ribs. Short loin kevin beef tongue capicola pork loin sausage pork belly beef ribs pig picanh
+----field----
+field: {5B82F13F-BB14-465B-A832-F62F297BA009}
+name: CardHeadline
+key: cardheadline
+content-length: 17
+
+Member Literature
+----field----
+field: {A9809291-5B94-46D9-998E-6C0241B5AFC4}
+name: CardOpeningParagraph
+key: cardopeningparagraph
+content-length: 107
+
+Amet molestiae et dolorum cumque modi. Nemo consequatur nobis quam dolor praesentium atque dolor. Explicabo
+----field----
+field: {BF859918-1E94-484C-9CD2-0A41154743A3}
+name: CardLink
+key: cardlink
+content-length: 148
+
+<link linktype="internal" text="Member Literature" title="Member Literature" querystring="" target="" id="{11111111-1111-1111-1111-111111111111}" />
+----field----
+field: {AD0D8F62-7040-4323-9352-006A0206DD25}
+name: CardImage
+key: cardimage
+content-length: 58
+
+<image mediaid="{796DDC2D-E007-438E-BC40-C6B930C14513}" />
+----field----
+field: {63AD6DA4-19C7-4BAC-8805-F9C98BA550F6}
+name: DownloadLinkText
+key: downloadlinktext
+content-length: 8
+
+Download
+----field----
+field: {784C5CA8-39EE-42CB-9588-24083EA356D2}
+name: EmailLinkText
+key: emaillinktext
+content-length: 5
+
+Email
+----field----
+field: {A3270FD7-AEE1-4417-B056-E4FF3F2CF14C}
+name: SearchHeadline
+key: searchheadline
+content-length: 6
+
+Search
+----field----
+field: {1B11E66B-5678-44F9-B072-283B77E0A3DA}
+name: CategoriesHeadline
+key: categoriesheadline
+content-length: 22
+
+Choose Literature Type
+----field----
+field: {568870EB-D0DE-4738-85FE-D7871EC58F3F}
+name: LiteratureHeadline
+key: literatureheadline
+content-length: 20
+
+Available Literature
+----field----
+field: {21FD1237-DF45-4BAB-9FDB-594984D3B2FB}
+name: SelectionHeadline
+key: selectionheadline
+content-length: 14
+
+Your Selection
+----field----
+field: {C1DC6B4D-089B-4185-903A-2E6C0BDBF962}
+name: LiteratureLibrary
+key: literaturelibrary
+content-length: 38
+
+{38BA1738-459B-4E13-A502-37F750E6BCD5}
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 13
+
+Sales Library
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 293
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /><r uid="{D9E14FEF-9ED0-4C2D-8F1D-6F447B2BFD7A}" s:ph="PresalesContent" /></d></r>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161213T163442Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+58d91869-71fb-4551-81b2-5f5216347e38
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161214T172606Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
