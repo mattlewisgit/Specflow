@@ -74,6 +74,11 @@ namespace Vitality.Website.IntegrationTests.Steps
         public void WhenIChooseLiteratureType(string p0)
         {
             WebDriver
+                    .WaitForElement(By.LinkText(p0))
+                    .Displayed
+                    .ShouldBeTrue();
+
+            WebDriver
                 .FindElement(By.LinkText(p0))
                 .Click();
         }

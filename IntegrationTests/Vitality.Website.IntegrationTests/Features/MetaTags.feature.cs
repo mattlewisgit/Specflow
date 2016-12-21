@@ -84,7 +84,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 6
  this.ScenarioSetup(scenarioInfo);
 #line 7
- testRunner.Given(string.Format("I am on the {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I am on presales {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
  testRunner.When("I check the source", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
@@ -105,7 +105,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 17
  this.ScenarioSetup(scenarioInfo);
 #line 18
- testRunner.Given(string.Format("I am on the {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given(string.Format("I am on presales {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
  testRunner.When("I check the source", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
@@ -123,7 +123,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 28
  this.ScenarioSetup(scenarioInfo);
 #line 29
- testRunner.Given("I am on the /home", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 30
  testRunner.When("I check the source", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 31

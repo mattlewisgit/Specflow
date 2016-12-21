@@ -89,7 +89,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 8
  this.ScenarioSetup(scenarioInfo);
 #line 9
-    testRunner.Given(string.Format("I am on the {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given(string.Format("I am on advisers {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
     testRunner.When(string.Format("I search for {0} document", literatureType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
@@ -117,7 +117,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 20
  this.ScenarioSetup(scenarioInfo);
 #line 21
-    testRunner.Given(string.Format("I am on the {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given(string.Format("I am on advisers {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 22
     testRunner.When(string.Format("I choose Literature Type {0}", literatureType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 23
@@ -144,19 +144,19 @@ namespace Vitality.Website.IntegrationTests.Features
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Member Literature - Searching", @__tags);
-#line 34
+#line 33
  this.ScenarioSetup(scenarioInfo);
+#line 34
+    testRunner.Given(string.Format("I am on advisers {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 35
- testRunner.Given(string.Format("I am on the {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 36
  testRunner.And(string.Format("I enter plan start date {0} {1} {2}", dD, mM, yYYY), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 37
+#line 36
  testRunner.When("click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
+#line 37
  testRunner.And(string.Format("I select on {0} Literature", availableLiterature), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 39
+#line 38
  testRunner.Then(string.Format("I expect the {0} document to be visible", availableLiterature), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 40
+#line 39
  testRunner.And("I expect the download and email  buttons to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -179,7 +179,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 47
  this.ScenarioSetup(scenarioInfo);
 #line 48
-    testRunner.Given(string.Format("I am on the {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given(string.Format("I am on advisers {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 49
     testRunner.When(string.Format("I choose Literature Type {0}", literatureType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 50

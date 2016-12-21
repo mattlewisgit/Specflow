@@ -42,6 +42,17 @@
                 .ShouldBe(AppSettings.Links.VitalityBaseUrl + p0);
         }
 
+        [Then(@"I expect the presales (.*) to  open")]
+        public void ThenIExpectThePresalesToOpen(string p0)
+        {
+            WebDriver
+                .WaitForPageLoad()
+                .Url
+                .ShouldBe(AppSettings.Links.VitalityPresalesUrl + p0);
+        }
+
+
+
         [When(@"I resize to mobile view")]
         public void WhenIResizeToMobileView()
         {

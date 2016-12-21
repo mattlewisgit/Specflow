@@ -72,161 +72,169 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="UserJourney 1: Health Insurance Menu Get a Quote")]
+        [Xunit.FactAttribute(DisplayName="UserJourney 1: Health Insurance Menu Get a Quote", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "Health Presales Content")]
         [Xunit.TraitAttribute("Description", "UserJourney 1: Health Insurance Menu Get a Quote")]
         public virtual void UserJourney1HealthInsuranceMenuGetAQuote()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 1: Health Insurance Menu Get a Quote", ((string[])(null)));
-#line 6
- this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 1: Health Insurance Menu Get a Quote", new string[] {
+                        "ignore"});
 #line 7
- testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.When("I hover over Health Insurance and click on Get a quote", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.Then("I see the https://join.pruhealth.co.uk/ page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I hover over Health Insurance and click on Get a quote", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
+ testRunner.Then("I see the https://www.vitality.co.uk/health-insurance/quote/ page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="UserJourney 2: Health Insurance Menu Health insurance quote")]
+        [Xunit.FactAttribute(DisplayName="UserJourney 2: Health Insurance Menu Health insurance quote", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "Health Presales Content")]
         [Xunit.TraitAttribute("Description", "UserJourney 2: Health Insurance Menu Health insurance quote")]
         public virtual void UserJourney2HealthInsuranceMenuHealthInsuranceQuote()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 2: Health Insurance Menu Health insurance quote", ((string[])(null)));
-#line 11
- this.ScenarioSetup(scenarioInfo);
-#line 12
- testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 2: Health Insurance Menu Health insurance quote", new string[] {
+                        "ignore"});
 #line 13
- testRunner.When("I hover over Health Insurance and click on Health insurance quote", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ this.ScenarioSetup(scenarioInfo);
 #line 14
- testRunner.Then("I see the https://join.pruhealth.co.uk/ page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 15
+ testRunner.When("I hover over Health Insurance and click on Health Insurance quote", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 16
+ testRunner.Then("I see the https://www.vitality.co.uk/health-insurance/quote/ page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="UserJourney 3: Navigate to Core Cover, Awards page")]
+        [Xunit.FactAttribute(DisplayName="UserJourney 3: Navigate to Core Cover, Awards page", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "Health Presales Content")]
         [Xunit.TraitAttribute("Description", "UserJourney 3: Navigate to Core Cover, Awards page")]
         public virtual void UserJourney3NavigateToCoreCoverAwardsPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 3: Navigate to Core Cover, Awards page", ((string[])(null)));
-#line 16
- this.ScenarioSetup(scenarioInfo);
-#line 17
- testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 18
- testRunner.When("I hover over Health Insurance and click on Core Cover", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 3: Navigate to Core Cover, Awards page", new string[] {
+                        "ignore"});
 #line 19
- testRunner.And("I go to the Award-winning cover feature block", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ this.ScenarioSetup(scenarioInfo);
 #line 20
- testRunner.And("I click on the Learn more page link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 21
- testRunner.Then("I expect the /about/awards/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I hover over Health Insurance and click on Core Cover", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 22
+ testRunner.And("I go to the Award-winning cover feature block", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 23
+ testRunner.And("I click on the Learn more page link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 24
+ testRunner.Then("I expect the presales /about/awards/ to  open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="UserJourney 4: Navigate to Cover options, Get a quote")]
+        [Xunit.FactAttribute(DisplayName="UserJourney 4: Navigate to Cover options, Get a quote", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "Health Presales Content")]
         [Xunit.TraitAttribute("Description", "UserJourney 4: Navigate to Cover options, Get a quote")]
         public virtual void UserJourney4NavigateToCoverOptionsGetAQuote()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 4: Navigate to Cover options, Get a quote", ((string[])(null)));
-#line 23
- this.ScenarioSetup(scenarioInfo);
-#line 24
- testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 25
- testRunner.When("I hover over Health Insurance and click on Cover Options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 26
- testRunner.And("I click on the Get a quote page link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 4: Navigate to Cover options, Get a quote", new string[] {
+                        "ignore"});
 #line 27
- testRunner.Then("I see the https://join.pruhealth.co.uk/ page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ this.ScenarioSetup(scenarioInfo);
+#line 28
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 29
+ testRunner.When("I hover over Health Insurance and click on Cover Options", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 30
+ testRunner.And("I click on the Get a quote page link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
+ testRunner.Then("I see the https://www.vitality.co.uk/health-insurance/quote/ page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="UserJourney 5: Navigate to Vitality GP, Hospital page")]
+        [Xunit.FactAttribute(DisplayName="UserJourney 5: Navigate to Vitality GP, Hospital page", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "Health Presales Content")]
         [Xunit.TraitAttribute("Description", "UserJourney 5: Navigate to Vitality GP, Hospital page")]
         public virtual void UserJourney5NavigateToVitalityGPHospitalPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 5: Navigate to Vitality GP, Hospital page", ((string[])(null)));
-#line 29
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 5: Navigate to Vitality GP, Hospital page", new string[] {
+                        "ignore"});
+#line 34
  this.ScenarioSetup(scenarioInfo);
-#line 30
- testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 31
+#line 35
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 36
  testRunner.When("I hover over Health Insurance and click on Vitality GP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
+#line 37
  testRunner.And("I click on the Learn more page link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 33
- testRunner.Then("I expect the /health-insurance/hospitals/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 38
+ testRunner.Then("I expect the presales /health-insurance/hospitals/ to  open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="UserJourney 6: Navigate to Vitality GP, Get a Quote")]
+        [Xunit.FactAttribute(DisplayName="UserJourney 6: Navigate to Vitality GP, Get a Quote", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "Health Presales Content")]
         [Xunit.TraitAttribute("Description", "UserJourney 6: Navigate to Vitality GP, Get a Quote")]
         public virtual void UserJourney6NavigateToVitalityGPGetAQuote()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 6: Navigate to Vitality GP, Get a Quote", ((string[])(null)));
-#line 35
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 6: Navigate to Vitality GP, Get a Quote", new string[] {
+                        "ignore"});
+#line 41
  this.ScenarioSetup(scenarioInfo);
-#line 36
- testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 37
+#line 42
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 43
  testRunner.When("I hover over Health Insurance and click on Vitality GP", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 38
+#line 44
  testRunner.And("I click on the Get a quote page link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 39
- testRunner.Then("I see the https://join.pruhealth.co.uk/ page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 45
+ testRunner.Then("I see the https://www.vitality.co.uk/health-insurance/quote/ page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="UserJourney 7: Switch to Us and get a quote")]
+        [Xunit.FactAttribute(DisplayName="UserJourney 7: Switch to Us and get a quote", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "Health Presales Content")]
         [Xunit.TraitAttribute("Description", "UserJourney 7: Switch to Us and get a quote")]
         public virtual void UserJourney7SwitchToUsAndGetAQuote()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 7: Switch to Us and get a quote", ((string[])(null)));
-#line 41
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 7: Switch to Us and get a quote", new string[] {
+                        "ignore"});
+#line 48
  this.ScenarioSetup(scenarioInfo);
-#line 42
- testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 43
+#line 49
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 50
  testRunner.When("I hover over Health Insurance and click on Switch to Vitality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 44
+#line 51
  testRunner.And("I click on the Get a quote page link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 45
- testRunner.Then("I see the https://join.pruhealth.co.uk/ page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 52
+ testRunner.Then("I see the https://www.vitality.co.uk/health-insurance/quote/ page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="UserJourney 8: Switch to Us, In Patient Care page")]
+        [Xunit.FactAttribute(DisplayName="UserJourney 8: Switch to Us, In Patient Care page", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "Health Presales Content")]
         [Xunit.TraitAttribute("Description", "UserJourney 8: Switch to Us, In Patient Care page")]
         public virtual void UserJourney8SwitchToUsInPatientCarePage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 8: Switch to Us, In Patient Care page", ((string[])(null)));
-#line 47
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("UserJourney 8: Switch to Us, In Patient Care page", new string[] {
+                        "ignore"});
+#line 55
  this.ScenarioSetup(scenarioInfo);
-#line 48
- testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 49
+#line 56
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 57
  testRunner.When("I hover over Health Insurance and click on Switch to Vitality", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 50
+#line 58
  testRunner.And("I click on the Read more page link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 51
- testRunner.Then("I expect the /health-insurance/core-cover/in-patient/#anchor_1470237471794 to ope" +
-                    "n", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 59
+ testRunner.Then("I expect the presales /health-insurance/core-cover/in-patient/#anchor_14702374717" +
+                    "94 to  open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

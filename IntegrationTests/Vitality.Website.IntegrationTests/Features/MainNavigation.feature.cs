@@ -81,11 +81,11 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 6
     this.ScenarioSetup(scenarioInfo);
 #line 7
-    testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 8
     testRunner.When("I click on the Business section link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
-    testRunner.Then("I expect the /business/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales /business/ to  open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -99,11 +99,11 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 11
     this.ScenarioSetup(scenarioInfo);
 #line 12
-    testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 13
     testRunner.When("I click on the Advisers section link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
-    testRunner.Then("I expect the /advisers/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales /advisers/ to  open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -117,11 +117,11 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 16
     this.ScenarioSetup(scenarioInfo);
 #line 17
-    testRunner.Given("I am on the /business", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /business", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 18
     testRunner.When("I click on the Personal section link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 19
-    testRunner.Then("I expect the / to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales / to  open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -133,13 +133,13 @@ namespace Vitality.Website.IntegrationTests.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Click Navigation Logo", ((string[])(null)));
 #line 21
-    this.ScenarioSetup(scenarioInfo);
+ this.ScenarioSetup(scenarioInfo);
 #line 22
-    testRunner.Given("I am on the /business", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /business", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 23
     testRunner.When("I click on the navigation logo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 24
-    testRunner.Then("I expect the / to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales / to  open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -153,7 +153,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 26
     this.ScenarioSetup(scenarioInfo);
 #line 27
-    testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 28
     testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 29
@@ -174,7 +174,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 31
     this.ScenarioSetup(scenarioInfo);
 #line 32
-    testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 33
     testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 34
@@ -194,7 +194,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 37
     this.ScenarioSetup(scenarioInfo);
 #line 38
-    testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 39
     testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 40
@@ -218,7 +218,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 45
     this.ScenarioSetup(scenarioInfo);
 #line 46
-    testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 47
     testRunner.When("I resize to full-screen view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 48
@@ -242,7 +242,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 53
     this.ScenarioSetup(scenarioInfo);
 #line 54
-    testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 55
     testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 56
@@ -264,7 +264,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 60
     this.ScenarioSetup(scenarioInfo);
 #line 61
-    testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 62
     testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 63
