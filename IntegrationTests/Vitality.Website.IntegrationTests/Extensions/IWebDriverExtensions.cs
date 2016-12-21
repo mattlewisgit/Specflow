@@ -16,7 +16,7 @@
         /// Default wait time.
         /// </summary>
         public static readonly TimeSpan DefaultWaitTimeSpan
-            = TimeSpan.FromSeconds(5);
+            = TimeSpan.FromSeconds(20);
 
         /// <summary>
         /// Executes JavaScript and casts to the generic type.
