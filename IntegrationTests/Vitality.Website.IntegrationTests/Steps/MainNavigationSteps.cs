@@ -23,6 +23,9 @@
             WebDriver
                 .FindElement(new JQuerySelector(Button.SITE_NAV + ":contains('" + p0 + "')"))
                 .Click();
+
+            WebDriver
+                   .WaitForPageLoad();
         }
 
         [When(@"I click on the navigation logo")]
@@ -31,6 +34,9 @@
             WebDriver
                 .FindElement(new JQuerySelector(Button.NAV_LOGO))
                 .Click();
+
+            WebDriver
+                   .WaitForPageLoad();
         }
 
         [Then(@"I expect the (.*) to open")]
