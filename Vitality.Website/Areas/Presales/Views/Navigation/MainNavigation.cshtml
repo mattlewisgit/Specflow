@@ -36,22 +36,26 @@
                 }
             </li>
             *@
-            <li class="utility-nav__item utility-nav__item--log-in js-log-in-toggle">
-                <a href="#">@Html.Raw(Model.LogInText)</a>
 
-                @* log in panel desktop *@
-                <div class="log-in log-in--large">
-                    <div class="log-in__content">
-                        <div class="log-in__links">
-                            @foreach (var loginLink in Model.LoginLinks)
-                            {
-                                @RenderLink(loginLink, m => m.Link, this.LoginLinkCssClass(loginLink))
-                            }
+            @if (!string.IsNullOrEmpty(Model.LogInText))
+            {
+                <li class="utility-nav__item utility-nav__item--log-in js-log-in-toggle">
+                    <a href="#">@Html.Raw(Model.LogInText)</a>
+
+                    @* log in panel desktop *@
+                    <div class="log-in log-in--large">
+                        <div class="log-in__content">
+                            <div class="log-in__links">
+                                @foreach (var loginLink in Model.LoginLinks)
+                                {
+                                    @RenderLink(loginLink, m => m.Link, this.LoginLinkCssClass(loginLink))
+                                }
+                            </div>
                         </div>
                     </div>
-                </div>
-                @* end log in panel desktop *@
-            </li>
+                    @* end log in panel desktop *@
+                </li>
+            }
 
             <li class="utility-nav__item">
                 @RenderLink(Model, item => item.ContactUsPage)
@@ -78,7 +82,7 @@
     @Html.Partial("/Areas/Presales/Views/Navigation/NavigationSection.cshtml", this.GetActiveNavigationSection(SitecoreContext.GetCurrentItem<SitecoreItem>()))
     @* end section-nav *@
 
-    @* site-nav for mobile, moved to botom of menu *@
+    @* site-nav for mobile, moved to bottom of menu *@
     <ul class="site-nav--small">
         @foreach (var navigationSection in Model.NavigationSections)
         {
@@ -106,17 +110,20 @@
 </header>
 
 @* log in panel for mobile *@
-<div class="log-in log-in--small">
-    <div class="log-in__content">
-        <div class="log-in__links">
-            @foreach (var loginLink in Model.LoginLinks)
-            {
-                @RenderLink(loginLink, m => m.Link, this.LoginLinkCssClass(loginLink))
-            }
+@if (!string.IsNullOrEmpty(Model.LogInText))
+{
+    <div class="log-in log-in--small">
+        <div class="log-in__content">
+            <div class="log-in__links">
+                @foreach (var loginLink in Model.LoginLinks)
+                {
+                    @RenderLink(loginLink, m => m.Link, this.LoginLinkCssClass(loginLink))
+                }
+            </div>
         </div>
     </div>
-</div>
-@* end log in panel mobile*@
+}
+@* end log in panel mobile *@
 
 @* search panel for mobile
 <div class="search-panel">
