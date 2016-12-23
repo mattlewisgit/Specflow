@@ -6,22 +6,22 @@
     Scenario: Test Navigation to Business
     Given I am on presales /
     When I click on the Business section link
-	Then I expect the presales /business/ to  open
+	Then I expect the presales /business/ to open
 
     Scenario: Test Navigation to Advisers
     Given I am on presales /
     When I click on the Advisers section link
-	Then I expect the presales /advisers/ to  open
+	Then I expect the presales /advisers/ to open
 
     Scenario: Test Navigation to Personal
     Given I am on presales /business
     When I click on the Personal section link
-	Then I expect the presales / to  open
+	Then I expect the presales / to open
 
 	Scenario: Click Navigation Logo
     Given I am on presales /business
     When I click on the navigation logo
-	Then I expect the presales / to  open
+	Then I expect the presales / to open
 
     Scenario: Resize home page to Mobile view and check for hamburger
     Given I am on presales /

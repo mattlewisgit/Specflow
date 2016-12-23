@@ -85,7 +85,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 8
     testRunner.When("I click on the Business section link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 9
- testRunner.Then("I expect the presales /business/ to  open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales /business/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -103,7 +103,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 13
     testRunner.When("I click on the Advisers section link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 14
- testRunner.Then("I expect the presales /advisers/ to  open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales /advisers/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -121,7 +121,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 18
     testRunner.When("I click on the Personal section link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 19
- testRunner.Then("I expect the presales / to  open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales / to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -139,7 +139,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 23
     testRunner.When("I click on the navigation logo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 24
- testRunner.Then("I expect the presales / to  open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales / to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
