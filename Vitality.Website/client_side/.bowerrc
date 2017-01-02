@@ -20,6 +20,7 @@
     "tablesaw",
     "typeahead.js",
     "underscore",
-    "wowjs"
+    "wowjs",
+    "lazysizes"
   ]
 }

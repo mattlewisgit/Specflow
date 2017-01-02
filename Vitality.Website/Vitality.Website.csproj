@@ -549,6 +549,7 @@
     <Content Include="Areas\Presales\Views\FeatureBlocks\FeeMaxima.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_GoogleTagManagerNoScript.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_Breadcrumb.cshtml" />
+    <Content Include="Areas\Presales\Views\FeatureBlocks\ContentCollection.cshtml" />
     <None Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.intellisense.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.min.js" />
@@ -3860,9 +3861,15 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsStacked.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsTabbed.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Articles\ContentArticle.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Articles\LargeArticle.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Articles\MediumArticle.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Articles\SmallArticle.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\AwardLeader.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\ContentCollection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\FeeMaxima.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\ProductHero.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Generic\SocialMedia.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\ArticleItem.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Content.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Tab.cs" />

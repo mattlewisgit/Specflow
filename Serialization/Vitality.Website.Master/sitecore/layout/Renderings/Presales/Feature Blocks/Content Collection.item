@@ -1,0 +1,107 @@
+----item----
+version: 1
+id: {E1475796-D931-492E-B8C9-781C21ADEB6F}
+database: master
+path: /sitecore/layout/Renderings/Presales/Feature Blocks/Content Collection
+parent: {0AF2F4A2-20EB-4E22-8F00-8F08C40EEBC0}
+name: Content Collection
+master: {00000000-0000-0000-0000-000000000000}
+template: {99F8905D-4A87-4EB8-9F8B-A9BEBFB3ADD6}
+templatekey: View rendering
+
+----field----
+field: {51B435BC-F7B9-478A-9C51-52916AF96FF5}
+name: Path
+key: path
+content-length: 60
+
+/Areas/Presales/Views/FeatureBlocks/ContentCollection.cshtml
+----field----
+field: {F869E724-0718-43E4-92A0-D612FE191CFB}
+name: Area
+key: area
+content-length: 8
+
+Presales
+----field----
+field: {3D08DB46-2267-41B0-BC52-BE69FD618633}
+name: Cacheable
+key: cacheable
+content-length: 1
+
+1
+----field----
+field: {8B6D532B-6128-4486-A044-CA06D90948BA}
+name: VaryByData
+key: varybydata
+content-length: 1
+
+1
+----field----
+field: {3AD2506A-DC39-4B1E-959F-9D524ADDBF50}
+name: VaryByParm
+key: varybyparm
+content-length: 1
+
+1
+----field----
+field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
+name: Datasource Location
+key: datasource location
+content-length: 76
+
+query:./ancestor-or-self::*[@@templatename='Website']/Content/Feature Blocks
+----field----
+field: {1A7C85E5-DC0B-490D-9187-BB1DBCB4C72F}
+name: Datasource Template
+key: datasource template
+content-length: 82
+
+/sitecore/templates/Presales/Component Templates/Feature Blocks/Content Collection
+----field----
+field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
+name: __Thumbnail
+key: __thumbnail
+content-length: 58
+
+<image mediaid="{B2932FE5-4104-4E46-81D2-9E59FA0C8851}" />
+----version----
+language: en
+version: 1
+revision: a39ff17f-e14d-4d8f-8ca3-7c8bacae601e
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161229T160408Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+a39ff17f-e14d-4d8f-8ca3-7c8bacae601e
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20161231T101523Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

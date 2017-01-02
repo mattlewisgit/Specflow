@@ -1,0 +1,94 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.ContentCollection>
+
+<div class="pinch">
+    <div class="example">
+        <div class="content-collection">
+            <h2>@Editable(Model, item => item.Headline)</h2>
+
+            <p>@Editable(Model, item => item.OpeningParagraph)</p>
+
+            <div class="grid-no-gutters">
+                <div class="@Model.LeftCss major-column thin-pad">
+                    @foreach (var largeArticle in Model.LargeArticles)
+                    {
+                        <div class="content-collection--module article--large @largeArticle.TextCss lazyload"
+                             data-bg="@largeArticle.Image.Src">
+
+                            <p class="content-collection--module__strapline">@Editable(largeArticle, item => item.LeadIn)</p>
+
+                            <p class="content-collection--module__title">
+                                @Editable(largeArticle, item => item.Headline)
+                            </p>
+
+                            <a href="@largeArticle.CallToAction.Url" class="box-button @largeArticle.ButtonCss box-button--rounded">
+                                @largeArticle.CallToAction.Text
+                            </a>
+                        </div>
+                    }
+                    <div class="grid-no-gutters content-collection--module mpu">
+                        @foreach (var imageLink in Model.ImageLinks)
+                        {
+                            <div class="grid-col-6-12 no-pad lazyload"
+                                 data-bg="@imageLink.Image.Src">
+                            </div>
+                        }
+                    </div>
+
+                </div>
+
+                <div class="@Model.RightCss major-column thin-pad">
+                    <div class="content-collection--module social">
+                        @foreach (var socialMedia in Model.SocialMediaItems)
+                        {
+                            <div class="custom-col text-light" style="background-color: @socialMedia.BackgroundColor;">
+                                <img data-src="@socialMedia.Icon.Src" alt="@socialMedia.Icon.Alt" class="lazyload"/>
+
+                                <p class="content-collection--module__title-bold">125,234</p>
+                                <p>@Editable(socialMedia, item => item.LeadIn)</p>
+
+                                <a href="@socialMedia.CallToAction.Url" class="box-button box-button--light box-button--rounded">
+                                    @socialMedia.CallToAction.Text
+                                </a>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="content-collection--module article--medium">
+                        @foreach (var mediumArticle in Model.MediumArticles)
+                        {
+                            <img data-src="@mediumArticle.Image.Src" alt="@mediumArticle.Image.Alt" class="lazyload" />
+
+                            <div>
+                                <p class="content-collection--module__strapline">@Editable(mediumArticle, item => item.LeadIn)</p>
+
+                                <p class="content-collection--module__title-bold">
+                                    @Editable(mediumArticle, item => item.Headline)
+                                </p>
+
+                                <p class="opening">
+                                    @Editable(mediumArticle, item => item.OpeningParagraph)
+                                </p>
+
+                                <a href="@mediumArticle.CallToAction.Url">@mediumArticle.CallToAction.Text</a>
+                            </div>
+                        }
+                    </div>
+                    
+                    @foreach (var smallArticle in Model.SmallArticles)
+                    {
+                        <div class="content-collection--module article--small @smallArticle.TextCss lazyload"
+                             data-bg="@smallArticle.Image.Src">
+                            <p class="content-collection--module__strapline">@Editable(smallArticle, item => item.LeadIn)</p>
+
+                            <p class="content-collection--module__title">
+                                @Editable(smallArticle, item => item.Headline)
+                            </p>
+
+                            <a href="@smallArticle.CallToAction.Url">@smallArticle.CallToAction.Text</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

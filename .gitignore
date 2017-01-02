@@ -259,3 +259,4 @@ Vitality.Website/client_side/sass/*.map
 *.orig
 *.*~HEAD
 
+Vitality.Website/bower_components/
