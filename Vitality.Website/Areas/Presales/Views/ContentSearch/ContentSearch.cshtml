@@ -1,0 +1,50 @@
+﻿<script>
+    angular
+        .module("SearchService", [])
+        .controller("dentalPointsController",
+            function($scope, $http) {
+                $scope.SearchData = {};
+
+                $scope.submitSearchQuery = function (isValid) {
+
+                    debugger;
+
+                    if (isValid) {
+                        var token = $('input[name="__RequestVerificationToken"]').val();
+
+                        var dataObjects = {
+                            SearchQuery: $scope.SearchData.SearchQuery
+                        };
+
+
+                        var response = $http.post("/api/search/",
+                            dataObjects,
+                            {
+                                headers: {
+                                    '__RequestVerificationToken': token
+                                }
+                            });
+                        console.log(response);
+                    }
+                    
+                }
+            });
+</script>
+
+<div class="pinch">
+    <div class="grid">
+        <form name="searchForm">
+            <div class="grid-col-8-12">
+                <h2 class="text-flush-top">This will be replaces</h2>
+                <p>Opening Para</p>
+                <h3>Search anything..</h3>
+                <input type="search" placeholder="Enter your search" data-typeahead />
+            </div>
+
+            <div class="grid-col-2-12 form__field__input--inline">
+                <input type="submit" value="Submit" ng-click="submitSearchQuery(searchForm)"
+                       class="box-button box-button--secondary box-button--rounded form__field__input--submit--inline" />
+            </div>
+        </form>
+    </div>
+</div>

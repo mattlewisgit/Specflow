@@ -295,7 +295,12 @@
     <Content Include="App_Config\Include\Sitecore.WFFM.Dependencies.config" />
     <Content Include="App_Config\Include\Sitecore.WFFM.Services.config" />
     <Content Include="App_Config\Include\Sitecore.WFFM.Speak.config" />
-    <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config" />
+    <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\Include\Vitality\Vitality.WebContentSearch.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -549,6 +554,7 @@
     <Content Include="Areas\Presales\Views\FeatureBlocks\FeeMaxima.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_GoogleTagManagerNoScript.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_Breadcrumb.cshtml" />
+    <Content Include="Areas\Presales\Views\ContentSearch\ContentSearch.cshtml" />
     <None Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.intellisense.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.min.js" />
@@ -3884,8 +3890,13 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductPanel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductsComponent.cs" />
     <Compile Include="Areas\Presales\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Presales\Controllers\ContentSearchController.cs" />
+    <Compile Include="Areas\Presales\Handlers\ContentSearch\ContentSearchRequest.cs" />
+    <Compile Include="Areas\Presales\Handlers\ContentSearch\ContentSearchResult.cs" />
     <Compile Include="Areas\Presales\Controllers\FeeMaximaController.cs" />
     <Compile Include="Areas\Presales\Controllers\LiteratureLibraryController.cs" />
+    <Compile Include="Areas\Presales\Handlers\ContentSearch\SearchDocumentDto.cs" />
+    <Compile Include="Areas\Presales\Handlers\ContentSearch\ContentSearchHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\FeeMaxima\FeeMaximaChaptersDto.cs" />
     <Compile Include="Areas\Presales\Handlers\FeeMaxima\FeeMaximaChaptersHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\FeeMaxima\FeeMaximaChaptersRequest.cs" />
@@ -3969,7 +3980,9 @@
     <Content Include="App_Config\Include\ContentTesting\Sitecore.ContentTesting.Mvc.config" />
     <Content Include="App_Config\Include\ContentTesting\Sitecore.ContentTesting.Processing.Aggregation.config" />
     <Content Include="App_Config\Include\ContentTesting\Sitecore.ContentTesting.Solr.IndexConfiguration.config.disabled" />
-    <Content Include="App_Config\Include\DataFolder.config.example" />
+    <Content Include="App_Config\Include\DataFolder.config.example">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\Include\EventHandler.config.example" />
     <Content Include="App_Config\Include\ExperienceProfile\Sitecore.ExperienceProfile.Client.config" />
     <Content Include="App_Config\Include\ExperienceProfile\Sitecore.ExperienceProfile.config" />
@@ -4021,7 +4034,9 @@
     <Content Include="App_Config\Include\Sitecore.Buckets.WarmupQueries.config.example" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Analytics.config" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.config" />
-    <Content Include="App_Config\Include\Sitecore.ContentSearch.DefaultConfigurations.config" />
+    <Content Include="App_Config\Include\Sitecore.ContentSearch.DefaultConfigurations.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Lucene.DefaultIndexConfiguration.config" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Lucene.Index.Analytics.config" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Lucene.Index.Core.config" />
