@@ -1,0 +1,10 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection.GroupedItem<Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection.Mpu>>
+
+<div class="grid-no-gutters content-collection--module mpu">
+    @foreach (var imageLink in Model.Items)
+    {
+        <div class="grid-col-6-12 no-pad lazyload"
+             data-bg="@imageLink.Image.Src">
+        </div>
+    }
+</div>

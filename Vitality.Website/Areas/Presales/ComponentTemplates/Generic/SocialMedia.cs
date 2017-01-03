@@ -2,7 +2,7 @@
 using Glass.Mapper.Sc.Fields;
 using Vitality.Website.Areas.Global.Models;
 
-namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
+namespace Vitality.Website.Areas.Presales.ComponentTemplates.Generic
 {
     [SitecoreType(AutoMap = true)]
     public class SocialMedia : SitecoreItem
@@ -15,5 +15,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
         public Link CallToAction { get; set; }
         public Image Icon { get; set; }
         public string LeadIn { get; set; }
+        [SitecoreField("__Sortorder")]
+        public int SortOrder { get; set; }
     }
 }

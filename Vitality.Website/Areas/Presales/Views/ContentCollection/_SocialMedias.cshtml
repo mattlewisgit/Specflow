@@ -1,0 +1,16 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection.GroupedItem<Vitality.Website.Areas.Presales.ComponentTemplates.Generic.SocialMedia>>
+<div class="content-collection--module social">
+    @foreach (var socialMedia in Model.Items)
+    {
+        <div class="custom-col text-light" style="background-color: @socialMedia.BackgroundColor;">
+            <img data-src="@socialMedia.Icon.Src" alt="@socialMedia.Icon.Alt" class="lazyload" />
+
+            <p class="content-collection--module__title-bold">125,234</p>
+            <p>@Editable(socialMedia, item => item.LeadIn)</p>
+
+            <a href="@socialMedia.CallToAction.Url" class="box-button box-button--light box-button--rounded">
+                @socialMedia.CallToAction.Text
+            </a>
+        </div>
+    }
+</div>

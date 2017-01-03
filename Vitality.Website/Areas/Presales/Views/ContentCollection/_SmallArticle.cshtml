@@ -1,0 +1,11 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Articles.SmallArticle>
+<div class="content-collection--module article--small @Model.TextCss lazyload"
+     data-bg="@Model.Image.Src">
+    <p class="content-collection--module__strapline">@Editable(Model, item => item.LeadIn)</p>
+
+    <p class="content-collection--module__title">
+        @Editable(Model, item => item.Headline)
+    </p>
+
+    <a href="@Model.CallToAction.Url">@Model.CallToAction.Text</a>
+</div>

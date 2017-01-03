@@ -1,0 +1,18 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Articles.MediumArticle>
+<div class="content-collection--module article--medium">
+    <img data-src="@Model.Image.Src" alt="@Model.Image.Alt" class="lazyload" />
+    <div>
+        <p class="content-collection--module__strapline">@Editable(Model, item => item.LeadIn)</p>
+
+        <p class="content-collection--module__title-bold">
+            @Editable(Model, item => item.Headline)
+        </p>
+        <p class="opening">
+            @Editable(Model, item => item.OpeningParagraph)
+        </p>
+        <a href="@Model.CallToAction.Url">@Model.CallToAction.Text</a>
+    </div>
+</div>
+
+
+

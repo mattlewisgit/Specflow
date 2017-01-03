@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using Glass.Mapper.Sc.Configuration.Attributes;
 using Vitality.Website.Areas.Global.Models;
-using Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection;
+using Vitality.Website.Areas.Presales.ComponentTemplates.Articles;
+using Vitality.Website.Areas.Presales.ComponentTemplates.Generic;
 
-namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
+namespace Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection
 {
     [SitecoreType(AutoMap = true)]
     public class ContentCollection : SitecoreItem
@@ -26,6 +27,6 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
         public virtual IEnumerable<SocialMedia> SocialMediaItems { get; set; }
 
         [SitecoreQuery("./*[@@templateid='{BDD88ED4-C40F-43A1-9900-572B18179434}']", IsRelative = true)]
-        public virtual IEnumerable<ImageLink> ImageLinks { get; set; }
+        public virtual IEnumerable<Mpu> Mpus { get; set; }
     }
 }
