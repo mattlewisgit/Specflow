@@ -1,0 +1,50 @@
+.cta {
+    color: $heading-color;
+    text-align: center;
+
+    .grid-module {
+        @include max-text-width;
+    }
+
+    &__header {
+        @extend .h3;
+
+        img {
+            display: inline-block;
+            max-height: 3.2rem;
+            vertical-align: top;
+        }
+    }
+
+    // Only do vertical alignment and separater line on larger layout.
+    @include mq($from: tablet) {
+        [class*="grid-col-"] {
+            // Verticaly align modules.
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            // Add the middle border line.
+            &::after {
+                content: "";
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                top: 0;
+
+                // Nasty magic number relating to variable gutter width.
+                right: -3.8%;
+
+                background-color: $primary-background-color;
+            }
+        }
+
+        // Remove the middle border line for the last column.
+        [class*="grid-col-"]:last-of-type {
+            &::after {
+                content: none;
+            }
+        }
+    }
+}

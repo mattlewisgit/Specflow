@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>Vitality Boilerplate | Components | FAQ Leader</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0" />
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/app-devel.css" />
+
+    <!-- Boilerplate only. -->
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/themes/prism.css" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/prism/plugins/line-numbers/prism-line-numbers.css" />
+
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/aight/2.1.1/aight.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <main tabindex="-1">
+        <section class="vertical-flush">
+            <div>
+                <h1>FAQ Leader</h1>
+                <h2>Description</h2>
+
+                <p>
+                    This component groups concise answers to <abbr title="Frequently-Asked Questions">FAQs</abbr>,
+                    inviting the user to read the full details on another page via a link.
+                </p>
+            </div>
+
+            <div>
+                <h2>Example</h2>
+                
+                <div class="example example--box">
+                    <div class="faq_leader">
+                        <div class="header">
+                            <h2>Frequently asked questions</h2>
+
+                            <p class="paragraph-emphasis">
+                                Here's a selection of questions and answers that we've helped customers with
+                            </p>
+                        </div>
+
+                        <div class="faqs">
+                            <div class="grid-no-gutters">
+                                <div class="grid-col-1-2">
+                                    <h3 class="text-detail-block__heading">
+                                        How does Serious Illness Cover work?
+                                    </h3>
+
+                                    <div>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vehicula ac libero et bibendum.
+                                        Cras pharetra tincidunt tortor ac pulvinar.
+
+                                        <p>
+                                            <a href="#">Read more</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="grid-col-1-2">
+                                    <h3 class="text-detail-block__heading">
+                                        What's the difference between Life and Serious Illness Cover?
+                                    </h3>
+
+                                    <div>
+                                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                        Morbi non laoreet nulla. Mauris iaculis efficitur leo eu commodo.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid-no-gutters">
+                                <div class="grid-col-1-2">
+                                    <h3 class="text-detail-block__heading">
+                                        What illnesses are covered?
+                                    </h3>
+
+                                    <div>
+                                        Proin vestibulum placerat mauris, quis fermentum ipsum varius id.
+                                        Morbi nec turpis consectetur, laoreet odio eget, sagittis risus. Nullam sed faucibus nisl.
+                                    </div>
+                                </div>
+
+                                <div class="grid-col-1-2">
+                                    <h3 class="text-detail-block__heading">
+                                        Am I covered for heart attacks or stroke?
+                                    </h3>
+
+                                    <div>
+                                        Aenean nec mattis nibh. Nunc in nulla sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Morbi rutrum, massa in tristique posuere, ex orci luctus est, eget vehicula nunc magna interdum erat.
+
+                                        <p>
+                                            <a href="#">Read more</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="more">
+                            <a href="#" class="box-button box-button--rounded">
+                                Show me more
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2>Markup</h2>
+                <pre><code class="language-markup line-numbers"></code></pre>
+            </div>
+        </section>
+    </main>
+
+    <script>function cdnizerLoad(u) { document.write('<scr' + 'ipt src="' + encodeURIComponent(u) + '"></scr' + 'ipt>'); }</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script>if (!(jQuery)) cdnizerLoad("/bower_components/jquery/dist/jquery.min.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script>if (!($.datepicker)) cdnizerLoad("/bower_components/jqueryui/jquery-ui.min.js");</script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.smartresize/0.1/jquery.debouncedresize.js"></script>
+    <script>if (!($.event.special.debouncedresize)) cdnizerLoad("/bower_components/jquery.smartresize/jquery.smartresize.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+    <script>if (!($(window).matchHeight)) cdnizerLoad("/bower_components/jquery-match-height/jquery.matchHeight-min.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
+    <script>if (!(FastClick)) cdnizerLoad("/bower_components/fastclick/lib/fastclick.js");</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>if (!(WOW)) cdnizerLoad("/bower_components/wowjs/dist/wow.min.js");</script>
+
+    <script type="text/javascript" src="/js/modernizr-custom.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+
+    <script type="text/javascript" src="/js/boilerplate.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/prism.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script type="text/javascript" src="/bower_components/prism/plugins/normalize-whitespace/prism-normalize-whitespace.js"></script>
+</body>
+</html>
