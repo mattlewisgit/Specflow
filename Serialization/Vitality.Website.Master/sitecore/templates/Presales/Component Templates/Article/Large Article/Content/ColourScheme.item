@@ -2,9 +2,9 @@
 version: 1
 id: {AFE39102-8580-479B-B3AD-23559E58EA9C}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Article/Large Article/Content/TextCss
+path: /sitecore/templates/Presales/Component Templates/Article/Large Article/Content/ColourScheme
 parent: {93F4916C-4C2B-4A79-89B2-43382712845C}
-name: TextCss
+name: ColourScheme
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -26,15 +26,15 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 6b260af4-27f8-4ff1-90ac-cfa9d03dfb23
+revision: ac5c7e7c-dd84-4309-8386-b1537d667875
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 8
+content-length: 13
 
-Text Css
+Colour Scheme
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6b260af4-27f8-4ff1-90ac-cfa9d03dfb23
+ac5c7e7c-dd84-4309-8386-b1537d667875
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161231T094739Z
+20170104T114530Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

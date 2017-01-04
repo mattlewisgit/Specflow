@@ -12,7 +12,7 @@
 
             <p>@Editable(Model, item => item.OpeningParagraph)</p>
             <div class="grid-no-gutters">
-                <div class="@Model.LeftCss major-column thin-pad">
+                <div class="@Model.ColumnCss("left") major-column thin-pad">
                       @for (var i = 0; i < itemsPerColumn; i++)
                       {
                           var item = allContentItems[i];
@@ -20,7 +20,7 @@
                       }
                 </div>
 
-                <div class="@Model.RightCss major-column thin-pad">
+                <div class="@Model.ColumnCss("right") major-column thin-pad">
                     @for (var i = itemsPerColumn; i < totalNoOfItems; i++)
                     {
                         var item = allContentItems[i];

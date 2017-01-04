@@ -2,7 +2,7 @@
 version: 1
 id: {0C4B8BAF-DEF3-4DCC-A663-3495E8D1D3DD}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Feature Blocks/Content Collection/__Standard Values
+path: /sitecore/templates/Presales/Component Templates/Content Collection/Content Collection/__Standard Values
 parent: {922FA01B-2E91-4951-8096-54308B0C91F0}
 name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
@@ -23,18 +23,11 @@ revision: 4fd18b2a-d6d0-49fd-9f34-c69d420634da
 
 ----field----
 field: {ECD4AC4B-67D1-4C6C-B885-E3038E1DBB3F}
-name: LeftCss
-key: leftcss
+name: LargeColumnSide
+key: largecolumnside
 content-length: 13
 
 grid-col-8-12
-----field----
-field: {6A652922-CF9A-4830-BFB3-8CFC20A0B7F1}
-name: RightCss
-key: rightcss
-content-length: 13
-
-grid-col-4-12
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner

@@ -11,8 +11,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection
     {
         public string Headline { get; set; }
         public string OpeningParagraph { get; set; }
-        public string LeftCss { get; set; }
-        public string RightCss { get; set; }
+        public string LargeColumnSide { get; set; }
 
         [SitecoreQuery("./*[@@templateid='{A9C674A9-0C3A-4F6B-83DF-B0BD25E863E0}']", IsRelative = true)]
         public virtual IEnumerable<LargeArticle> LargeArticles { get; set; }

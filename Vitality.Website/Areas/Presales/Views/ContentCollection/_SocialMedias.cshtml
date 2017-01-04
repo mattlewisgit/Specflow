@@ -2,15 +2,16 @@
 <div class="content-collection--module social">
     @foreach (var socialMedia in Model.Items)
     {
-        <div class="custom-col text-light" style="background-color: @socialMedia.BackgroundColor;">
-            <img data-src="@socialMedia.Icon.Src" alt="@socialMedia.Icon.Alt" class="lazyload" />
+        using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", socialMedia.Path))
+        {
+            <div class="custom-col text-light" style="background-color: @socialMedia.BackgroundColor;">
+                @Editable(socialMedia, item => item.Icon, new {alt = socialMedia.Icon.Alt, @class = "lazyload"})
 
-            <p class="content-collection--module__title-bold">125,234</p>
-            <p>@Editable(socialMedia, item => item.LeadIn)</p>
+                <p class="content-collection--module__title-bold">125,234</p>
+                <p>@Editable(socialMedia, item => item.LeadIn)</p>
 
-            <a href="@socialMedia.CallToAction.Url" class="box-button box-button--light box-button--rounded">
-                @socialMedia.CallToAction.Text
-            </a>
-        </div>
+                @Editable(socialMedia, item => item.CallToAction, new {@class = "box-button box-button--light box-button--rounded"})
+            </div>
+        }
     }
 </div>

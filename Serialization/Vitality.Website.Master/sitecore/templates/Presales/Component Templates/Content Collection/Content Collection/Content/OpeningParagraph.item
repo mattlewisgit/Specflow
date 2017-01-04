@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {4448BD0B-2162-4B53-9CE2-2C947DA1EE50}
+id: {8F9EEBB7-180D-491E-9F9D-79004F42E428}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Article/Small Article/Content/TextCss
-parent: {2C683820-8B92-474F-BF86-77921A238469}
-name: TextCss
+path: /sitecore/templates/Presales/Component Templates/Content Collection/Content Collection/Content/OpeningParagraph
+parent: {59DAF6AA-A557-4F10-B970-A4B63298333C}
+name: OpeningParagraph
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -13,9 +13,9 @@ templatekey: Template field
 field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
 name: Type
 key: type
-content-length: 16
+content-length: 15
 
-Single-Line Text
+Multi-Line Text
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
@@ -26,22 +26,22 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 0c3695ff-f889-4216-9ac1-b5a552e3b725
+revision: 4c38224f-cabe-4b2c-adab-133d8b4d243f
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 8
+content-length: 17
 
-Text Css
+Opening Paragraph
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20161230T095837Z
+20161229T154842Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-0c3695ff-f889-4216-9ac1-b5a552e3b725
+4c38224f-cabe-4b2c-adab-133d8b4d243f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161230T095837Z
+20170104T114936Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -2,7 +2,7 @@
 version: 1
 id: {59DAF6AA-A557-4F10-B970-A4B63298333C}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Feature Blocks/Content Collection/Content
+path: /sitecore/templates/Presales/Component Templates/Content Collection/Content Collection/Content
 parent: {922FA01B-2E91-4951-8096-54308B0C91F0}
 name: Content
 master: {00000000-0000-0000-0000-000000000000}
@@ -12,7 +12,7 @@ templatekey: Template section
 ----version----
 language: en
 version: 1
-revision: a50af6fd-4f88-4a16-b21b-dbf4d6b3de0f
+revision: 839f1938-ddbe-42f2-9f0e-630110ace32d
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -27,14 +27,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a50af6fd-4f88-4a16-b21b-dbf4d6b3de0f
+839f1938-ddbe-42f2-9f0e-630110ace32d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170102T131422Z
+20170104T114936Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
