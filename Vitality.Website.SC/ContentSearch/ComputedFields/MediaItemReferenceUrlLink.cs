@@ -28,27 +28,14 @@
                 return null;
             }
             
-            var mediaItem = GetMediaItem(field);
-
-            if (mediaItem != null)
-            {
-                var options = new MediaUrlOptions
-                                  {
-                                      AbsolutePath = false, 
-                                      MediaLinkServerUrl = SiteContextFactory.GetSiteContext("advisers").HostName,
-                                      AlwaysIncludeServerUrl = true
-                                  };
-                return MediaManager.GetMediaUrl(mediaItem, options);
-            }
-
-            return null;
+            return GetMediaItem(field);
         }
 
         public string FieldName { get; set; }
 
         public string ReturnType { get; set; }
 
-        private static MediaItem GetMediaItem(Field field)
+        private static string GetMediaItem(Field field)
         {
             MediaItem mediaItem = null;
             switch (field.TypeKey)
@@ -65,11 +52,32 @@
                     
                     if (mediaLink != null)
                     {
-                        mediaItem = Database.GetDatabase("web").GetItem(mediaLink.TargetID);
+                        if (mediaLink.IsInternal)
+                        {
+                            mediaItem = Database.GetDatabase("web").GetItem(mediaLink.TargetID);
+                            return GetMediaUrl(mediaItem);
+                        }
+                        return mediaLink.Url;
                     }
                     break;
             }
-            return mediaItem;
+            return GetMediaUrl(mediaItem);
+        }
+
+        private static string GetMediaUrl(MediaItem mediaItem)
+        {
+            if (mediaItem != null)
+            {
+                var options = new MediaUrlOptions
+                {
+                    AbsolutePath = false,
+                    MediaLinkServerUrl = SiteContextFactory.GetSiteContext("advisers").HostName,
+                    AlwaysIncludeServerUrl = true
+                };
+                return MediaManager.GetMediaUrl(mediaItem, options);
+            }
+
+            return null;
         }
     }
 }
