@@ -40,6 +40,21 @@ namespace Vitality.Website.IntegrationTests
                     return GetValue("Links.VitalityBaseUrl");
                 }
             }
+            public static string VitalityAdvisersUrl
+            {
+                get
+                {
+                    return GetValue("Links.VitalityAdvisersUrl");
+                }
+            }
+            public static string VitalityPresalesUrl
+            {
+                get
+                {
+                    return GetValue("Links.VitalityPresalesUrl");
+                }
+            }
+
         }
         private static string GetValue(string key)
         {

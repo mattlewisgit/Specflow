@@ -8,6 +8,8 @@
 
     using TechTalk.SpecFlow;
 
+    using System.Threading;
+
     using Extensions;
     using Utilities;
 
@@ -23,6 +25,9 @@
             WebDriver
                 .FindElement(new JQuerySelector(Button.SITE_NAV + ":contains('" + p0 + "')"))
                 .Click();
+
+            WebDriver
+                   .WaitForPageLoad();
         }
 
         [When(@"I click on the navigation logo")]
@@ -31,16 +36,22 @@
             WebDriver
                 .FindElement(new JQuerySelector(Button.NAV_LOGO))
                 .Click();
+
+            WebDriver
+                   .WaitForPageLoad();
         }
 
-        [Then(@"I expect the (.*) to open")]
-        public void ThenIExpectTheToOpen(string p0)
+
+        [Then(@"I expect the presales (.*) to open")]
+        public void ThenIExpectThePresalesToOpen(string p0)
         {
             WebDriver
                 .WaitForPageLoad()
                 .Url
-                .ShouldBe(AppSettings.Links.VitalityBaseUrl + p0);
+                .ShouldBe(AppSettings.Links.VitalityPresalesUrl + p0);
         }
+
+
 
         [When(@"I resize to mobile view")]
         public void WhenIResizeToMobileView()
@@ -97,14 +108,26 @@
                 .ShouldBeTrue();
         }
 
+
         [Then(@"I expect the Health Advisers button to be visible")]
         public void ThenIExpectTheHealthAdvisersButtonToBeVisible()
         {
             WebDriver
-                .FindElement(By.LinkText("Life insurance quote"))
+                .FindElement(By.LinkText("Health Advisers"))
                 .Displayed
                 .ShouldBeTrue();
         }
+
+
+        [Then(@"I expect the Life Advisers button to be visible")]
+        public void ThenIExpectTheLifeAdvisersButtonToBeVisible()
+        {
+            WebDriver
+                .WaitForElement(By.LinkText("Life Advisers"))
+                .Displayed
+                .ShouldBeTrue();
+        }
+
 
         [When(@"I hover over (.*) and click on (.*)")]
         public void WhenIHoverOver(string hoverLink, string clickLink)
@@ -118,22 +141,19 @@
             // Find element called "hoverLink" and then perform a hover over
             var mainMenu = WebDriver.FindElement(OpenQA.Selenium.By.LinkText(hoverLink));
             actions.MoveToElement(mainMenu).Perform();
+            
+            // Having some problems with this bit, need to revisit with a better solution....
+            Thread.Sleep(1000);
 
             // Find element called "clickLink", perform a hover over, and then click it
             var subMenu = WebDriver.FindElement(OpenQA.Selenium.By.LinkText(clickLink));
             actions.MoveToElement(subMenu).Perform();
             actions.Click().Perform();
 
+            // Having some problems with this bit, need to revisit with a better solution....
+            Thread.Sleep(1000);
         }
 
-        [Then(@"I expect the Life Advisers button to be visible")]
-        public void ThenIExpectTheLifeAdvisersButtonToBeVisible()
-        {
-            WebDriver
-                .WaitForElement(By.LinkText("Life Advisers"))
-                .Displayed
-                .ShouldBeTrue();
-        }
 
         [When(@"I click on the footer button")]
         public void WhenIClickOnTheFooterButton()
@@ -160,5 +180,14 @@
                 .Displayed
                 .ShouldBeTrue();
         }
+
+
+
+
+
+
+
+
     }
+
 }

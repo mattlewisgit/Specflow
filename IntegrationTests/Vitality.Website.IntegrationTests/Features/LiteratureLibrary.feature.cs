@@ -33,8 +33,8 @@ namespace Vitality.Website.IntegrationTests.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "LiteratureLibrary", "\tIn order to download adviser documents\r\n\tAs an adviser\r\n\tI want to be able to do" +
-                    "wnload documents", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "LiteratureLibrary", "\tIn order to download a sales literature document\r\n\tAs an advisers user\r\n\tI want " +
+                    "to be able to download sales literature documents", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -72,23 +72,122 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Literature library", Skip="Ignored")]
+        [Xunit.TheoryAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "LiteratureLibrary")]
-        [Xunit.TraitAttribute("Description", "Literature library")]
-        public virtual void LiteratureLibrary()
+        [Xunit.TraitAttribute("Description", "Sales Literature - Searching")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        [Xunit.InlineDataAttribute("/dev/sales-library", "Business healthcare aid", new string[0])]
+        public virtual void SalesLiterature_Searching(string initialpage, string literatureType, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Literature library", new string[] {
-                        "ignore"});
-#line 7
-this.ScenarioSetup(scenarioInfo);
+            string[] @__tags = new string[] {
+                    "SIT"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sales Literature - Searching", @__tags);
 #line 8
- testRunner.Given("I am on the /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ this.ScenarioSetup(scenarioInfo);
 #line 9
- testRunner.And("I have entered 70 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.Given(string.Format("I am on advisers {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
- testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When(string.Format("I search for {0} document", literatureType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
- testRunner.Then("the result should be 120 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I expect the {0} document to be visible", literatureType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+ testRunner.And("I expect the download and email  buttons to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.TheoryAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "LiteratureLibrary")]
+        [Xunit.TraitAttribute("Description", "Sales Literature - Choosing")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        [Xunit.InlineDataAttribute("/dev/sales-library", "Business and Corporate", "Business healthcare aid", new string[0])]
+        public virtual void SalesLiterature_Choosing(string initialpage, string literatureType, string availableLiterature, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "SIT"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Sales Literature - Choosing", @__tags);
+#line 20
+ this.ScenarioSetup(scenarioInfo);
+#line 21
+    testRunner.Given(string.Format("I am on advisers {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 22
+    testRunner.When(string.Format("I choose Literature Type {0}", literatureType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 23
+ testRunner.And(string.Format("I select on {0} Literature", availableLiterature), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 24
+ testRunner.Then(string.Format("I expect the {0} document to be visible", availableLiterature), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 25
+ testRunner.And("I expect the download and email  buttons to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.TheoryAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "LiteratureLibrary")]
+        [Xunit.TraitAttribute("Description", "Member Literature - Searching")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        [Xunit.InlineDataAttribute("/dev/member-library", "01", "12", "2016", "Business healthcare aid", new string[0])]
+        public virtual void MemberLiterature_Searching(string initialpage, string dD, string mM, string yYYY, string availableLiterature, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "SIT"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Member Literature - Searching", @__tags);
+#line 33
+ this.ScenarioSetup(scenarioInfo);
+#line 34
+    testRunner.Given(string.Format("I am on advisers {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 35
+ testRunner.And(string.Format("I enter plan start date {0} {1} {2}", dD, mM, yYYY), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 36
+ testRunner.When("click on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 37
+ testRunner.And(string.Format("I select on {0} Literature", availableLiterature), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 38
+ testRunner.Then(string.Format("I expect the {0} document to be visible", availableLiterature), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 39
+ testRunner.And("I expect the download and email  buttons to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.TheoryAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "LiteratureLibrary")]
+        [Xunit.TraitAttribute("Description", "Member Literature - Choosing")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        [Xunit.InlineDataAttribute("/dev/member-library", "Business and Corporate", "Business healthcare aid", new string[0])]
+        public virtual void MemberLiterature_Choosing(string initialpage, string literatureType, string availableLiterature, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "SIT"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Member Literature - Choosing", @__tags);
+#line 47
+ this.ScenarioSetup(scenarioInfo);
+#line 48
+    testRunner.Given(string.Format("I am on advisers {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 49
+    testRunner.When(string.Format("I choose Literature Type {0}", literatureType), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 50
+ testRunner.And(string.Format("I select on {0} Literature", availableLiterature), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 51
+ testRunner.Then(string.Format("I expect the {0} document to be visible", availableLiterature), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 52
+ testRunner.And("I expect the download and email  buttons to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
