@@ -184,6 +184,10 @@
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Speak.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Sitecore.Support.136135, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Sitecore.Support.136135.dll</HintPath>
+    </Reference>
     <Reference Include="Sitecore.Web, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Web.dll</HintPath>
       <Private>True</Private>
@@ -390,6 +394,7 @@
     <Content Include="js\fee-maxima-service.js" />
     <Content Include="js\literature-form-service.js" />
     <Content Include="js\literature-library-service.js" />
+    <Content Include="js\site-search-service.js" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\app.css" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.css" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.min.css" />
@@ -3914,6 +3919,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\PrimaryCallToAction.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqPreview.cs" />
+    <Compile Include="Areas\Presales\PageTemplates\ContentSearchPage.cs" />
     <Compile Include="Areas\Presales\PageTemplates\ErrorPage.cs" />
     <Compile Include="Areas\Presales\PageTemplates\LiteratureLibraryPage.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />

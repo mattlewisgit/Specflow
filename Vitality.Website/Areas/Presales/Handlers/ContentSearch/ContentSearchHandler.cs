@@ -13,7 +13,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
 
             using (var context = ContentSearchManager.GetIndex("presales_content").CreateSearchContext())
             {   
-                var pathToSearch = string.Format("/sitecore/content/{0}/home", Sitecore.Context.Site.Name == "website" ? "advisers" : "website");
+                var pathToSearch = string.Format("/sitecore/content/{0}/home", Sitecore.Context.Site.Name);
 
                 var query = context.GetQueryable<ContentSearchResult>()
                     .Where(p => p.Path.StartsWith(pathToSearch))

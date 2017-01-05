@@ -1,50 +1,42 @@
-﻿<script>
-    angular
-        .module("SearchService", [])
-        .controller("dentalPointsController",
-            function($scope, $http) {
-                $scope.SearchData = {};
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.ContentSearchPage>
+             
 
-                $scope.submitSearchQuery = function (isValid) {
+<div class="search-panel" data-ng-app="SiteSearchApp">
+    <div class="search-panel__content pinch" data-ng-controller="site-search">
+        <div class="search-panel__header">
+            <p>@Editable(x => x.Headline)</p>
+        </div>
 
-                    debugger;
-
-                    if (isValid) {
-                        var token = $('input[name="__RequestVerificationToken"]').val();
-
-                        var dataObjects = {
-                            SearchQuery: $scope.SearchData.SearchQuery
-                        };
-
-
-                        var response = $http.post("/api/search/",
-                            dataObjects,
-                            {
-                                headers: {
-                                    '__RequestVerificationToken': token
-                                }
-                            });
-                        console.log(response);
-                    }
-                    
-                }
-            });
-</script>
-
-<div class="pinch">
-    <div class="grid">
-        <form name="searchForm">
-            <div class="grid-col-8-12">
-                <h2 class="text-flush-top">This will be replaces</h2>
-                <p>Opening Para</p>
-                <h3>Search anything..</h3>
-                <input type="search" placeholder="Enter your search" data-typeahead />
+        <div class="search-panel__search-field form" role="search">
+            <div class="form__field">
+                <input type="text" class="search-panel__search-input" placeholder="@Html.Raw(Model.SearchPlaceholderText)" data-ng-model="searchTerm" data-ng-change="search(searchTerm)" data-ng-model-options="{ debounce: 350 }">
             </div>
 
-            <div class="grid-col-2-12 form__field__input--inline">
-                <input type="submit" value="Submit" ng-click="submitSearchQuery(searchForm)"
-                       class="box-button box-button--secondary box-button--rounded form__field__input--submit--inline" />
+            <div data-ng-show="showResults" class="search-panel__search-details" data-ng-cloak="">
+                <p>
+                    <span class="search-matches">{{results.length}}</span>
+                    results for
+                    <span class="search-string">{{searchTerm}}</span>.
+                </p>
             </div>
-        </form>
+        </div>
+
+        <div data-ng-show="showResults" class="search-panel__search-results">
+            <ul class="search-results__list">
+                <li data-ng-repeat="result in results" class="search-results__item" data-ng-cloak="">
+                    <a href="{{result.url}}">
+                        <h4 class="search-results__item-header" data-ng-bind-html="result.title"></h4>
+
+                        <ol data-ng-show="result.breadcrumb">
+                            <li data-ng-repeat="breadcrumb in result.breadcrumb">
+                                {{breadcrumb}}
+                            </li>
+                        </ol>
+
+                        <p class="search-results__item-body" data-ng-bind-html="result.description"></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
