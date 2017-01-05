@@ -2,7 +2,7 @@
 version: 1
 id: {8520677A-D389-46F9-9C68-088E56147617}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Generic/Social Media/Content
+path: /sitecore/templates/Presales/Component Templates/Content Collection/Social Media Item/Content
 parent: {307FF875-5C27-45DA-9C14-6ADC774A9E82}
 name: Content
 master: {00000000-0000-0000-0000-000000000000}
@@ -12,7 +12,7 @@ templatekey: Template section
 ----version----
 language: en
 version: 1
-revision: bacafb28-ccbe-4019-be07-88fc5166620e
+revision: 5adedc88-05b0-4aaa-884c-b11d611746c0
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -27,14 +27,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-bacafb28-ccbe-4019-be07-88fc5166620e
+5adedc88-05b0-4aaa-884c-b11d611746c0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170102T134353Z
+20170105T120722Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

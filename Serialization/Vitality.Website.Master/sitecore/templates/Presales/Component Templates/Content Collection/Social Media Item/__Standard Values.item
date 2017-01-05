@@ -1,47 +1,40 @@
 ----item----
 version: 1
-id: {1D414CA7-F24C-481B-8CB5-E6ED16A52F50}
+id: {AFD7F6E2-1AFD-4589-AB3D-72E6CFBB4D64}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Generic/Social Media/Content/LeadIn
-parent: {8520677A-D389-46F9-9C68-088E56147617}
-name: LeadIn
+path: /sitecore/templates/Presales/Component Templates/Content Collection/Social Media Item/__Standard Values
+parent: {307FF875-5C27-45DA-9C14-6ADC774A9E82}
+name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {455A3E98-A627-4B40-8035-E683A0331AC7}
-templatekey: Template field
+template: {307FF875-5C27-45DA-9C14-6ADC774A9E82}
+templatekey: Social Media Item
 
-----field----
-field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
-name: Type
-key: type
-content-length: 16
-
-Single-Line Text
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 3
-
-100
 ----version----
 language: en
 version: 1
-revision: 41c78978-9ded-4944-a04e-9e1b2c91d46e
+revision: e12ec825-01ff-4be9-9efb-4b395438b2c3
 
 ----field----
-field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
-name: Title
-key: title
+field: {6A8F2274-F467-4649-B3D1-93A9E0BD7B6F}
+name: BackgroundColor
+key: backgroundcolor
 content-length: 7
 
-Lead In
+#4267b2
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20161231T094835Z
+20170102T134406Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-41c78978-9ded-4944-a04e-9e1b2c91d46e
+e12ec825-01ff-4be9-9efb-4b395438b2c3
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170102T134354Z
+20170102T134428Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

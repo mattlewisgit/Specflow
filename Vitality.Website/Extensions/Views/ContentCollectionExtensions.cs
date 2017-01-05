@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Glass.Mapper.Sc.Web.Mvc;
 using Sitecore.Forms.Mvc.Extensions;
 using Vitality.Website.Areas.Presales.ComponentTemplates.Articles;
 using Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection;
-using Vitality.Website.Areas.Presales.ComponentTemplates.Generic;
-
 namespace Vitality.Website.Extensions.Views
 {
     public static class ContentCollectionExtensions
@@ -14,16 +11,16 @@ namespace Vitality.Website.Extensions.Views
         public static IEnumerable<ContentItem<object>> GetContentItemsAsOneList(this ContentCollection contentCollection)
         {
             var allContentItems = new List<ContentItem<object>>();
-            allContentItems.AddAsIndividualItems(contentCollection.LargeArticles, "_LargeArticle");
-            allContentItems.AddAsIndividualItems(contentCollection.MediumArticles, "_MediumArticle");
-            allContentItems.AddAsIndividualItems(contentCollection.SmallArticles, "_SmallArticle");
-            allContentItems.AddAsList(contentCollection.SocialMediaItems.ToList(), "_SocialMedias");
-            allContentItems.AddAsList(contentCollection.Mpus.ToList(), "_Mpus");
+            allContentItems.AddContentItem(contentCollection.LargeArticles, "_LargeArticle");
+            allContentItems.AddContentItem(contentCollection.MediumArticles, "_MediumArticle");
+            allContentItems.AddContentItem(contentCollection.SmallArticles, "_SmallArticle");
+            allContentItems.AddContentItem(contentCollection.SocialMediaSections, "_SocialMedias");
+            allContentItems.AddContentItem(contentCollection.MpuSections, "_Mpus");
 
             return allContentItems.OrderBy(o => o.SortOrder);
         }
 
-        private static void AddAsIndividualItems<T>(this List<ContentItem<T>> allContentItems, IEnumerable<T> itemsToAdd,
+        private static void AddContentItem<T>(this List<ContentItem<T>> allContentItems, IEnumerable<T> itemsToAdd,
             string partialViewName)
         {
             allContentItems.AddRange(itemsToAdd.Select(item => new ContentItem<T>
@@ -32,20 +29,6 @@ namespace Vitality.Website.Extensions.Views
                 PartialView = partialViewName,
                 SortOrder = item.GetPropertyValue<int>("SortOrder")
             }));
-        }
-
-        private static void AddAsList<T>(this List<ContentItem<object>> allContentItems, List<T> itemsToAdd,
-            string partialViewName)
-        {
-            allContentItems.AddRange(new List<ContentItem<object>>
-            {
-                new ContentItem<object>
-                {
-                    Item = new GroupedItem<T> {Items = itemsToAdd},
-                    PartialView = partialViewName,
-                    SortOrder = itemsToAdd.First().GetPropertyValue<int>("SortOrder")
-                }
-            });
         }
 
         public static string ColumnCss(this ContentCollection contentCollection, string column)

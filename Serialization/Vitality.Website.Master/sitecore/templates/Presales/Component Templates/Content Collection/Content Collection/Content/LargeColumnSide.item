@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {6A652922-CF9A-4830-BFB3-8CFC20A0B7F1}
+id: {ECD4AC4B-67D1-4C6C-B885-E3038E1DBB3F}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Feature Blocks/Content Collection/Content/RightCss
+path: /sitecore/templates/Presales/Component Templates/Content Collection/Content Collection/Content/LargeColumnSide
 parent: {59DAF6AA-A557-4F10-B970-A4B63298333C}
-name: RightCss
+name: LargeColumnSide
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -22,19 +22,19 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-400
+300
 ----version----
 language: en
 version: 1
-revision: 4a4edd14-9e4e-4f29-963d-63957a2e19b7
+revision: 0f6ea6e2-11cc-430c-be84-7dd73aa98915
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 9
+content-length: 17
 
-Right Css
+Large Column Side
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4a4edd14-9e4e-4f29-963d-63957a2e19b7
+0f6ea6e2-11cc-430c-be84-7dd73aa98915
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170102T131423Z
+20170104T114937Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

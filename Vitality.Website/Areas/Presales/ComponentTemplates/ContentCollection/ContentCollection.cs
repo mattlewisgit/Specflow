@@ -22,10 +22,10 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection
         [SitecoreQuery("./*[@@templateid='{E5A3E874-6E47-442B-B9A9-612CC96095ED}']", IsRelative = true)]
         public virtual IEnumerable<SmallArticle> SmallArticles { get; set; }
 
-        [SitecoreQuery("./*[@@templateid='{307FF875-5C27-45DA-9C14-6ADC774A9E82}']", IsRelative = true)]
-        public virtual IEnumerable<SocialMedia> SocialMediaItems { get; set; }
+        [SitecoreQuery("./*[@@templateid='{6738ED7B-195F-4505-A289-D525C143E480}']", IsRelative = true)]
+        public virtual IEnumerable<SocialMediaSection> SocialMediaSections { get; set; }
 
-        [SitecoreQuery("./*[@@templateid='{BDD88ED4-C40F-43A1-9900-572B18179434}']", IsRelative = true)]
-        public virtual IEnumerable<Mpu> Mpus { get; set; }
+        [SitecoreQuery("./*[@@templateid='{4A3A387E-F7C7-4ACB-83C7-49706D77B6A9}']", IsRelative = true)]
+        public virtual IEnumerable<MpuSection> MpuSections { get; set; }
     }
 }

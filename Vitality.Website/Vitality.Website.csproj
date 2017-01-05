@@ -3862,7 +3862,8 @@
     <Compile Include="Areas\Presales\BaseTemplates\IWebmasterToolsGlobal.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Articles\ArticleIndex.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Articles\ArticleItem.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\ContentCollection\Mpu.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\ContentCollection\ContentItem.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\ContentCollection\MpuSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Banners\HomeHero.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsStacked.cs" />
@@ -3871,13 +3872,12 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Articles\LargeArticle.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Articles\MediumArticle.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Articles\SmallArticle.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\ContentCollection\ContentItem.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\ContentCollection\GroupedItem.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\ContentCollection\SocialMediaSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\AwardLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\ContentCollection\ContentCollection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\FeeMaxima.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\ProductHero.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\Generic\SocialMedia.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\ContentCollection\SocialMediaItem.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\ArticleItem.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Content.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Tab.cs" />
@@ -3930,6 +3930,7 @@
     <Compile Include="Areas\Presales\SettingsTemplates\CookieSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\SiteSettings.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\SocialMediaSetting.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />

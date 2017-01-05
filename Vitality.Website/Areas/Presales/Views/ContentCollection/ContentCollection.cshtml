@@ -1,7 +1,7 @@
 ﻿@using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection.ContentCollection>
 @{
-    var allContentItems = Model.GetContentItemsAsOneList().OrderBy(o=>o.SortOrder).ToArray();
+    var allContentItems = Model.GetContentItemsAsOneList().ToArray();
     var totalNoOfItems = allContentItems.Count();
     var itemsPerColumn = totalNoOfItems / 2;
 }
@@ -15,16 +15,16 @@
                 <div class="@Model.ColumnCss("left") major-column thin-pad">
                       @for (var i = 0; i < itemsPerColumn; i++)
                       {
-                          var item = allContentItems[i];
-                          @Html.Partial("~/Areas/Presales/Views/ContentCollection/" + item.PartialView + ".cshtml", item.Item)
+                          var contentItem = allContentItems[i];
+                          @Html.Partial("~/Areas/Presales/Views/ContentCollection/" + contentItem.PartialView + ".cshtml", contentItem.Item)
                       }
                 </div>
 
                 <div class="@Model.ColumnCss("right") major-column thin-pad">
                     @for (var i = itemsPerColumn; i < totalNoOfItems; i++)
                     {
-                        var item = allContentItems[i];
-                        @Html.Partial("~/Areas/Presales/Views/ContentCollection/" + item.PartialView + ".cshtml", item.Item)
+                        var contentItem = allContentItems[i];
+                        @Html.Partial("~/Areas/Presales/Views/ContentCollection/" + contentItem.PartialView + ".cshtml", contentItem.Item)
                     }
                 </div>
             </div>

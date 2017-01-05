@@ -15,6 +15,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.Articles
         public string Headline { get; set; }
         public Image Image { get; set; }
         public string LeadIn { get; set; }
+
         [SitecoreField("__Sortorder")]
         public int SortOrder { get; set; }
     }

@@ -1,47 +1,40 @@
 ----item----
 version: 1
-id: {ECD4AC4B-67D1-4C6C-B885-E3038E1DBB3F}
+id: {BBD1B3DF-FAAC-4F83-A0C0-985701334B59}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Feature Blocks/Content Collection/Content/LeftCss
-parent: {59DAF6AA-A557-4F10-B970-A4B63298333C}
-name: LeftCss
+path: /sitecore/templates/Presales/Component Templates/Content Collection/Mpu Section/__Standard Values
+parent: {4A3A387E-F7C7-4ACB-83C7-49706D77B6A9}
+name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {455A3E98-A627-4B40-8035-E683A0331AC7}
-templatekey: Template field
+template: {4A3A387E-F7C7-4ACB-83C7-49706D77B6A9}
+templatekey: Mpu Section
 
 ----field----
-field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
-name: Type
-key: type
-content-length: 16
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
 
-Single-Line Text
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 3
-
-300
+{BDD88ED4-C40F-43A1-9900-572B18179434}
 ----version----
 language: en
 version: 1
-revision: faeb7bdf-17bf-478f-8931-2906643854fa
+revision: 32dcbd1f-0c26-49d5-a2d0-1a7d6e4bc701
 
 ----field----
-field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
-name: Title
-key: title
-content-length: 8
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
 
-Left Css
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170102T131423Z
+20170105T122037Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-faeb7bdf-17bf-478f-8931-2906643854fa
+32dcbd1f-0c26-49d5-a2d0-1a7d6e4bc701
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170102T131423Z
+20170105T122107Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,6 +1,6 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection.GroupedItem<Vitality.Website.Areas.Presales.ComponentTemplates.Generic.SocialMedia>>
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection.SocialMediaSection>
 <div class="content-collection--module social">
-    @foreach (var socialMedia in Model.Items)
+    @foreach (var socialMedia in Model.SocialMediaItems)
     {
         using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", socialMedia.Path))
         {
