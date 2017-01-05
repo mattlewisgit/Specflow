@@ -184,6 +184,7 @@
     <Compile Include="Extensions\EnumerableExtensionsTests.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions_GetActiveNavigationSection.cs" />
     <Compile Include="Extensions\IDictionaryExtensionsTests.cs" />
+    <Compile Include="Extensions\View\ContentCollectionExtenstionsTest.cs" />
     <Compile Include="Presales\Controllers\FeemaximaControllerTests\ListTests.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\Get_Tests.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\List_Tests.cs" />
