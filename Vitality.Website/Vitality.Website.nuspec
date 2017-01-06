@@ -33,8 +33,6 @@
     <file src="Views\Form\**\*.*" target="Views\Form" />
     <file src="sitemaps\**\*.*" target="sitemaps" />
     <file src="Web.config" />
-    <file src="Web.CD.config" />
-    <file src="Web.CMS.config" />
-    <file src="Web.Release.config" />
+    <file src="Web.*.config" />
   </files>
 </package>
