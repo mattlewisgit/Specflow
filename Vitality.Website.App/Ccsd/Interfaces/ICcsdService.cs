@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Vitality.Website.App.Models.FeeMaxima;
+using Vitality.Website.App.Ccsd.Models;
 
-namespace Vitality.Website.App.Services.Interfaces
+namespace Vitality.Website.App.Ccsd.Interfaces
 {
     public interface ICcsdService
     {

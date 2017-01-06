@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using MediatR;
 using Sitecore.ApplicationCenter.Applications;
-using Vitality.Website.App.Services.Interfaces;
+using Vitality.Website.App.Ccsd.Interfaces;
 
 namespace Vitality.Website.Areas.Presales.Handlers.FeeMaxima
 {

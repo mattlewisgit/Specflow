@@ -1,10 +1,10 @@
 ﻿using Shouldly;
 using System.Collections.Generic;
-using Vitality.Website.App.Models.FeeMaxima;
-using Vitality.Website.App.Services;
+using Vitality.Website.App.Ccsd;
+using Vitality.Website.App.Ccsd.Models;
 using Xunit;
 
-namespace Vitality.Website.App.UnitTests.Services
+namespace Vitality.Website.App.UnitTests.Ccsd
 {
     public class CcsdServiceTests
     {

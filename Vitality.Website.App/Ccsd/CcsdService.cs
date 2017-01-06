@@ -1,11 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using Vitality.Website.App.Models.FeeMaxima;
-using Vitality.Website.App.Services.Interfaces;
+using Vitality.Website.App.Ccsd.Interfaces;
+using Vitality.Website.App.Ccsd.Models;
 
-namespace Vitality.Website.App.Services
+namespace Vitality.Website.App.Ccsd
 {
     public class CcsdService : ICcsdService 
     {

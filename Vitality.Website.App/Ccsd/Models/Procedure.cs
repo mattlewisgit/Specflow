@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.App.Models.FeeMaxima
+﻿namespace Vitality.Website.App.Ccsd.Models
 {
     public class Procedure
     {
