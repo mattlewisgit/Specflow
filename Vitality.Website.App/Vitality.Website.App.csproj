@@ -67,9 +67,12 @@
     <Compile Include="Models\FeeMaxima\Chapter.cs" />
     <Compile Include="Models\FeeMaxima\Procedure.cs" />
     <Compile Include="Models\FeeMaxima\Section.cs" />
+    <Compile Include="SocialMedia\Models\SocialMediaAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CcsdService.cs" />
     <Compile Include="Services\Interfaces\ICcsdService.cs" />
+    <Compile Include="SocialMedia\Interfaces\ISocialMediaConnector.cs" />
+    <Compile Include="SocialMedia\FacebookConnector.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Data\CcsdChaptersWithProcedures.json" />
