@@ -1,8 +1,10 @@
 ﻿
+using Vitality.Website.App.SocialMedia.Models.Facebook;
+
 namespace Vitality.Website.App.SocialMedia.Interfaces
 {
     public interface ISocialMediaConnector
     {
-        string GetAccessToken();
+        AccessTokenResponse GetAccessToken();
     }
 }
