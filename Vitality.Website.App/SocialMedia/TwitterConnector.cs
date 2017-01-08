@@ -6,7 +6,6 @@ using System.Text;
 using RestSharp;
 using Vitality.Website.App.SocialMedia.Interfaces;
 using Vitality.Website.App.SocialMedia.Models;
-using Vitality.Website.App.SocialMedia.Models.Facebook;
 using Vitality.Website.App.SocialMedia.Models.Twitter;
 
 namespace Vitality.Website.App.SocialMedia
@@ -33,12 +32,12 @@ namespace Vitality.Website.App.SocialMedia
             return _restClient.Execute<AccessTokenResponse>(request).Data;
         }
 
-        public int GetFollowers(string pageId, string accessToken)
+        public int GetFollowersOrLikesCount(string userId, string accessToken)
         {
             var request = new RestRequest("/1.1/users/lookup.json", Method.GET);
             request.AddHeader(HttpRequestHeader.Authorization.ToString(), string.Format("Bearer {0}",
                 accessToken));
-            request.AddQueryParameter("screen_name", pageId);
+            request.AddQueryParameter("screen_name", userId);
             var response =  _restClient.Execute<List<FollowersCountReponse>>(request).Data;
             return response.First().FollowersCount;
         }

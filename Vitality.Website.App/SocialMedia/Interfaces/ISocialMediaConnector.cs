@@ -6,5 +6,6 @@ namespace Vitality.Website.App.SocialMedia.Interfaces
     public interface ISocialMediaConnector
     {
         AccessTokenResponse GetAccessToken();
+        int GetFollowersOrLikesCount(string id, string accessToken);
     }
 }

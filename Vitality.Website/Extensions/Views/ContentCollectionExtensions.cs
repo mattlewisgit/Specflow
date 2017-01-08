@@ -2,8 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using Sitecore.Forms.Mvc.Extensions;
+using Vitality.Website.App.SocialMedia;
+using Vitality.Website.App.SocialMedia.Models;
 using Vitality.Website.Areas.Presales.ComponentTemplates.Articles;
 using Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection;
+using Vitality.Website.Areas.Presales.SettingsTemplates;
+
 namespace Vitality.Website.Extensions.Views
 {
     public static class ContentCollectionExtensions
@@ -44,6 +48,7 @@ namespace Vitality.Website.Extensions.Views
         {
             return string.Format("text-{0}", smallArticle.ColourScheme);
         }
+
         public static string LargeArticleTextCss(this LargeArticle largeArticle)
         {
             return string.Format("text-{0}", largeArticle.ColourScheme);
@@ -56,6 +61,29 @@ namespace Vitality.Website.Extensions.Views
                 return "box-button box-button--rounded";
             }
             return "box-button box-button--light box-button--rounded";
+        }
+        
+        public static int GetSocialMediaCounts(this SocialMediaSetting socialMediaSetting)
+        {
+            var socialMediaAccount = new SocialMediaAccount
+            {
+                AppKey = socialMediaSetting.AppKey,
+                AppSecret = socialMediaSetting.AppSecret
+            };
+            if (string.Equals(socialMediaSetting.SiteName, "facebook", StringComparison.OrdinalIgnoreCase))
+            {
+                var facebookConnector = new FacebookConnector(socialMediaAccount);
+                facebookConnector.GetFollowersOrLikesCount(socialMediaSetting.PageOrUserId,
+                facebookConnector.GetAccessToken().AccessToken);
+            }
+            else if (string.Equals(socialMediaSetting.SiteName, "twitter", StringComparison.OrdinalIgnoreCase))
+            {
+                var twitterConnector = new FacebookConnector(socialMediaAccount);
+                twitterConnector.GetFollowersOrLikesCount(socialMediaSetting.PageOrUserId,
+                twitterConnector.GetAccessToken().AccessToken);
+
+            }
+            return 0;
         }
     }
 }

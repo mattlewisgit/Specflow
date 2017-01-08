@@ -1,6 +1,8 @@
-﻿using Glass.Mapper.Sc.Configuration.Attributes;
+﻿using Glass.Mapper.Sc.Configuration;
+using Glass.Mapper.Sc.Configuration.Attributes;
 using Glass.Mapper.Sc.Fields;
 using Vitality.Website.Areas.Global.Models;
+using Vitality.Website.Areas.Presales.SettingsTemplates;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection
 {
@@ -11,9 +13,12 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection
         {
             Icon = new Image();
         }
+
         public string BackgroundColor { get; set; }
         public Link CallToAction { get; set; }
         public Image Icon { get; set; }
         public string LeadIn { get; set; }
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public SocialMediaSetting SocialMediaSetting { get; set; }
     }
 }

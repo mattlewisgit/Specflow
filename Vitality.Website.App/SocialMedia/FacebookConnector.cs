@@ -25,7 +25,7 @@ namespace Vitality.Website.App.SocialMedia
             return _restClient.Execute<AccessTokenResponse>(request).Data;
         }
 
-        public int GetLikes(string pageId, string accessToken)
+        public int GetFollowersOrLikesCount(string pageId, string accessToken)
         {
             var url = string.Format(@"/{0}/?fields=fan_count&access_token={1}", pageId,accessToken);
             var request = new RestRequest(url, Method.GET);
