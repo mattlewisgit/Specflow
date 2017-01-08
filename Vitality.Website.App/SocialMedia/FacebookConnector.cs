@@ -1,14 +1,14 @@
 ﻿using RestSharp;
-using Vitality.Website.App.Models.SocialMedia;
 using Vitality.Website.App.SocialMedia.Interfaces;
+using Vitality.Website.App.SocialMedia.Models;
 using Vitality.Website.App.SocialMedia.Models.Facebook;
 
 namespace Vitality.Website.App.SocialMedia
 {
     public class FacebookConnector :ISocialMediaConnector
     {
-        private RestClient _restClient; 
-        private SocialMediaAccount _socialMediaAccount;
+        private readonly RestClient _restClient; 
+        private readonly SocialMediaAccount _socialMediaAccount;
 
         public FacebookConnector(SocialMediaAccount socialMediaAccount)
         {
@@ -18,8 +18,10 @@ namespace Vitality.Website.App.SocialMedia
 
         public AccessTokenResponse GetAccessToken()
         {
-            var url = string.Format(@"/oauth/access_token?client_id={0}&client_secret={1}&grant_type={2}", _socialMediaAccount.ClientId, _socialMediaAccount.ClientSecret, _socialMediaAccount.GrantType);
-            var request = new RestRequest(url, Method.GET);
+            var request = new RestRequest("/oauth/access_token", Method.GET);
+            request.AddQueryParameter("client_id", _socialMediaAccount.AppKey);
+            request.AddQueryParameter("client_secret", _socialMediaAccount.AppSecret);
+            request.AddQueryParameter("grant_type", "client_credentials");
             return _restClient.Execute<AccessTokenResponse>(request).Data;
         }
 

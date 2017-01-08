@@ -1,9 +1,8 @@
-﻿namespace Vitality.Website.App.Models.SocialMedia
+﻿namespace Vitality.Website.App.SocialMedia.Models
 {
     public class SocialMediaAccount
     {
-        public string ClientId { get; set; }
-        public string ClientSecret { get; set; }
-        public string GrantType { get; set; }
+        public string AppKey { get; set; }
+        public string AppSecret { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿
-using Vitality.Website.App.SocialMedia.Models.Facebook;
+using Vitality.Website.App.SocialMedia.Models;
 
 namespace Vitality.Website.App.SocialMedia.Interfaces
 {
