@@ -16,6 +16,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection
 
         public string BackgroundColor { get; set; }
         public Link CallToAction { get; set; }
+        public string ErrorMessage { get; set; }
         public Image Icon { get; set; }
         public string LeadIn { get; set; }
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]

@@ -69,13 +69,17 @@
     <Compile Include="Ccsd\Models\Chapter.cs" />
     <Compile Include="Ccsd\Models\Procedure.cs" />
     <Compile Include="Ccsd\Models\Section.cs" />
+    <Compile Include="Handlers\ApiResponseHandler.cs" />
+    <Compile Include="SocialMedia\Interfaces\IFacebookConnector.cs" />
+    <Compile Include="SocialMedia\Interfaces\ITwitterConnector.cs" />
     <Compile Include="SocialMedia\Models\AccessTokenResponse.cs" />
+    <Compile Include="SocialMedia\Models\ErrorResponse.cs" />
     <Compile Include="SocialMedia\Models\Facebook\FanCountResponse.cs" />
     <Compile Include="SocialMedia\Models\SocialMediaAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SocialMedia\Interfaces\ISocialMediaConnector.cs" />
     <Compile Include="SocialMedia\FacebookConnector.cs" />
     <Compile Include="SocialMedia\Models\Twitter\FollowersCountReponse.cs" />
+    <Compile Include="SocialMedia\SocialMediaConstants.cs" />
     <Compile Include="SocialMedia\TwitterConnector.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -8,7 +8,7 @@
             <div class="custom-col text-light" style="background-color: @socialMedia.BackgroundColor;">
                 @Editable(socialMedia, item => item.Icon, new {alt = socialMedia.Icon.Alt, @class = "lazyload"})
 
-                <p class="content-collection--module__title-bold">@socialMedia.Settings.GetSocialMediaCounts()</p>
+                <p class="content-collection--module__title-bold">@socialMedia.GetSocialMediaCounts()</p>
                 <p>@Editable(socialMedia, item => item.LeadIn)</p>
 
                 @Editable(socialMedia, item => item.CallToAction, new {@class = "box-button box-button--light box-button--rounded"})

@@ -1,4 +1,6 @@
-﻿using Shouldly;
+﻿using System;
+using System.Net;
+using Shouldly;
 using Vitality.Website.App.SocialMedia;
 using Vitality.Website.App.SocialMedia.Models;
 using Xunit;
@@ -27,8 +29,15 @@ namespace Vitality.Website.App.UnitTests.SocialMedia
             [Fact]
             public void Request_with_page_id_should_retun_fancount()
             {
-                var result = FacebookConnector.GetFollowersOrLikesCount(242495902445893.ToString(), FacebookConnector.GetAccessToken().AccessToken);
-                result.ShouldBeGreaterThan(0);
+                var result = FacebookConnector.GetLikesCount(242495902445893.ToString(), FacebookConnector.GetAccessToken().AccessToken);
+                result.FanCount.ShouldBeGreaterThan(0);
+            }
+
+            [Fact]
+            public void Request_with_wrong_access_token_page_id_should_throw_exception_with_401_status_code()
+            {
+                var ex = Assert.Throws<Exception>(()=> FacebookConnector.GetLikesCount(242495902445893.ToString(), "wrong access token"));
+                Assert.Equal(HttpStatusCode.Unauthorized, (HttpStatusCode)ex.Data["StatusCode"]);
             }
         }
     }

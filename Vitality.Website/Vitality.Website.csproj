@@ -221,6 +221,7 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -296,6 +297,7 @@
     <Content Include="App_Config\Include\Sitecore.WFFM.Services.config" />
     <Content Include="App_Config\Include\Sitecore.WFFM.Speak.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config" />
+    <Content Include="App_Config\Include\Vitality\Vitality.Log4Net.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -3912,6 +3914,7 @@
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummariesHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummariesRequest.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummaryDto.cs" />
+    <Compile Include="Areas\Presales\Handlers\PresalesLog.cs" />
     <Compile Include="Areas\Presales\Models\Breadcrumb.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\CallToActionPanel.cs" />
