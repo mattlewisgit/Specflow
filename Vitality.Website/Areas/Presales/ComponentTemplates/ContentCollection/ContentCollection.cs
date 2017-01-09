@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Configuration.Attributes;
 using Vitality.Website.Areas.Global.Models;
 using Vitality.Website.Areas.Presales.ComponentTemplates.Articles;
 using Vitality.Website.Areas.Presales.ComponentTemplates.Generic;
+using Vitality.Website.Areas.Presales.SettingsTemplates;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection
 {

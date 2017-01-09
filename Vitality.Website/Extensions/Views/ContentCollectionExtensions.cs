@@ -63,25 +63,26 @@ namespace Vitality.Website.Extensions.Views
             return "box-button box-button--light box-button--rounded";
         }
         
-        public static int GetSocialMediaCounts(this SocialMediaSetting socialMediaSetting)
+        public static int GetSocialMediaCounts(this SocialMediaSettings socialMediaSettings)
         {
             var socialMediaAccount = new SocialMediaAccount
             {
-                AppKey = socialMediaSetting.AppKey,
-                AppSecret = socialMediaSetting.AppSecret
+                AppKey = socialMediaSettings.AppKey,
+                AppSecret = socialMediaSettings.AppSecret
             };
-            if (string.Equals(socialMediaSetting.SiteName, "facebook", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(socialMediaSettings.Name, "facebook", StringComparison.OrdinalIgnoreCase))
             {
                 var facebookConnector = new FacebookConnector(socialMediaAccount);
-                facebookConnector.GetFollowersOrLikesCount(socialMediaSetting.PageOrUserId,
-                facebookConnector.GetAccessToken().AccessToken);
+                var accessTokenResponse = facebookConnector.GetAccessToken();
+                return facebookConnector.GetFollowersOrLikesCount(socialMediaSettings.EntityId, accessTokenResponse.AccessToken
+                );
             }
-            else if (string.Equals(socialMediaSetting.SiteName, "twitter", StringComparison.OrdinalIgnoreCase))
+            if (string.Equals(socialMediaSettings.Name, "twitter", StringComparison.OrdinalIgnoreCase))
             {
-                var twitterConnector = new FacebookConnector(socialMediaAccount);
-                twitterConnector.GetFollowersOrLikesCount(socialMediaSetting.PageOrUserId,
-                twitterConnector.GetAccessToken().AccessToken);
-
+                var twitterConnector = new TwitterConnector(socialMediaAccount);
+                var accessTokenResponse = twitterConnector.GetAccessToken();
+                return twitterConnector.GetFollowersOrLikesCount(socialMediaSettings.EntityId,
+                accessTokenResponse.AccessToken);
             }
             return 0;
         }

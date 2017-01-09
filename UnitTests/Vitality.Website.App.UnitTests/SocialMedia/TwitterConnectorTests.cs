@@ -27,7 +27,7 @@ namespace Vitality.Website.App.UnitTests.SocialMedia
             [Fact]
             public void Request_with_page_id_should_retun_fancount()
             {
-                var result = TwitterConnector.GetFollowers("lakmalvbj", TwitterConnector.GetAccessToken().AccessToken);
+                var result = TwitterConnector.GetFollowersOrLikesCount("lakmalvbj", TwitterConnector.GetAccessToken().AccessToken);
                 result.ShouldBeGreaterThan(0);
             }
         }

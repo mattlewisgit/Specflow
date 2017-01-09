@@ -3930,7 +3930,7 @@
     <Compile Include="Areas\Presales\SettingsTemplates\CookieSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\SiteSettings.cs" />
-    <Compile Include="Areas\Presales\SettingsTemplates\SocialMediaSetting.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\SocialMediaSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />

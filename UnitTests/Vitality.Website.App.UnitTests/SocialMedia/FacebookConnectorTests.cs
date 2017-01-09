@@ -27,7 +27,7 @@ namespace Vitality.Website.App.UnitTests.SocialMedia
             [Fact]
             public void Request_with_page_id_should_retun_fancount()
             {
-                var result = FacebookConnector.GetLikes(242495902445893.ToString(), FacebookConnector.GetAccessToken().AccessToken);
+                var result = FacebookConnector.GetFollowersOrLikesCount(242495902445893.ToString(), FacebookConnector.GetAccessToken().AccessToken);
                 result.ShouldBeGreaterThan(0);
             }
         }

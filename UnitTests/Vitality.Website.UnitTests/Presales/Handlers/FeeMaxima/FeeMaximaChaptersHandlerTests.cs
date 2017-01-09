@@ -3,8 +3,8 @@ using System.Linq;
 
 using Moq;
 using Shouldly;
-using Vitality.Website.App.Models.FeeMaxima;
-using Vitality.Website.App.Services.Interfaces;
+using Vitality.Website.App.Ccsd.Interfaces;
+using Vitality.Website.App.Ccsd.Models;
 using Vitality.Website.Areas.Presales.Handlers.FeeMaxima;
 
 using Xunit;

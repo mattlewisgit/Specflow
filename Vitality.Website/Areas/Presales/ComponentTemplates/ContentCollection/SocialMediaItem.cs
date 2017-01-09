@@ -19,6 +19,6 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection
         public Image Icon { get; set; }
         public string LeadIn { get; set; }
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public SocialMediaSetting SocialMediaSetting { get; set; }
+        public SocialMediaSettings Settings { get; set; }
     }
 }
