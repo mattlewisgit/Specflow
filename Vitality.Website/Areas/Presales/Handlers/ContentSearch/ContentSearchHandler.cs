@@ -6,14 +6,20 @@ using Sitecore.ContentSearch;
 namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
 {
     public class ContentSearchHandler : IRequestHandler<ContentSearchRequest, IEnumerable<SearchDocumentDto>>
-    {   
+    {
+        private ISearchIndex SearchIndex = ContentSearchManager.GetIndex("presales_content");
+
+        public ContentSearchHandler()
+        {
+            SearchIndex.Rebuild();
+        }
+
         public IEnumerable<SearchDocumentDto> Handle(ContentSearchRequest message)
         {
-            ContentSearchManager.GetIndex("presales_content").Rebuild();
-
-            using (var context = ContentSearchManager.GetIndex("presales_content").CreateSearchContext())
+            using (var context = SearchIndex.CreateSearchContext())
             {   
-                var pathToSearch = string.Format("/sitecore/content/{0}/home", Sitecore.Context.Site.Name);
+                var pathToSearch = string.Format
+                    ("/sitecore/content/{0}/home", Sitecore.Context.Site.Name);
 
                 var query = context.GetQueryable<ContentSearchResult>()
                     .Where(p => p.Path.StartsWith(pathToSearch))
