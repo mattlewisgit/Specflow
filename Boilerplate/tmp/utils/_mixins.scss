@@ -1,0 +1,113 @@
+// Fonts to rems.
+@mixin font-size($size-value: 1.6) {
+    font-size: $size-value + rem;
+}
+
+// Background transparency.
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: rgba($color, $opacity);
+}
+
+// Pixels to ems for zoomable media queries.
+@function em($pixels) {
+    @return #{$pixels / ($basesize * 10)}em;
+}
+
+// Styling for placeholder text.
+@mixin placeholder-text {
+    ::-webkit-input-placeholder {
+        @content;
+    }
+
+    :-moz-placeholder {
+        @content;
+    }
+
+    ::-moz-placeholder {
+        @content;
+    }
+
+    :-ms-input-placeholder {
+        @content;
+    }
+}
+
+//RGBA fallbacks - http://thesassway.com/intermediate/mixins-for-semi-transparent-colors
+@mixin alpha-attribute($attribute, $color, $background) {
+    $percent: alpha($color) * 100%;
+    $opaque: opacify($color, 1);
+    $solid-color: mix($opaque, $background, $percent);
+    #{$attribute}: $solid-color;
+    #{$attribute}: $color;
+}
+
+$_border-radius: 5px;
+
+@mixin rounding {
+    border-radius: $_border-radius;
+}
+
+@mixin tab-rounding {
+    border-radius: $_border-radius $_border-radius 0 0;
+}
+
+@mixin hide-text2 {
+    font: 0 / 0 serif;
+    text-shadow: none;
+    color: transparent;
+}
+
+.hide-text2 {
+    @include hide-text2;
+}
+
+@mixin max-text-width {
+    max-width: $max-text-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin ensure-at-front {
+    z-index: 100;
+}
+
+@mixin shadow--dark {
+    text-shadow: 0 0 $pad--thin $darken-light;
+}
+
+@mixin shadow--light {
+    text-shadow: 0 0 $pad--thin $darken-heavy;
+}
+
+@mixin text-centre {
+    text-align: center;
+}
+
+@mixin wide-padding {
+    padding-left: $pad--large;
+    padding-right: $pad--large;
+}
+
+@mixin scale-and-centre($scale) {
+    $scale-centre: $scale / 2;
+    left: $scale-centre;
+    max-height: $scale;
+    max-width: $scale;
+    position: absolute;
+    top: $scale-centre;
+    transform: translateX(-$scale-centre) translateY(-$scale-centre);
+}
+
+@mixin bounce-linked-image {
+    a {
+        color: transparent;
+
+        &:hover img {
+            animation-name: pulse;
+            animation-duration: 0.3s;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+    }
+}

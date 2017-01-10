@@ -21,34 +21,21 @@
                 Log.Warn(string.Format("{0} : unsupported IIndexable type : {1}", this, indexable.GetType()), this);
                 return null;
             }
-            
+
             var field = indexableItem.Item.Fields[this.FieldName];
             if (field == null)
             {
                 return null;
             }
-            
-            var mediaItem = GetMediaItem(field);
 
-            if (mediaItem != null)
-            {
-                var options = new MediaUrlOptions
-                                  {
-                                      AbsolutePath = false, 
-                                      MediaLinkServerUrl = SiteContextFactory.GetSiteContext("advisers").HostName,
-                                      AlwaysIncludeServerUrl = true
-                                  };
-                return MediaManager.GetMediaUrl(mediaItem, options);
-            }
-
-            return null;
+            return GetMediaItem(field);
         }
 
         public string FieldName { get; set; }
 
         public string ReturnType { get; set; }
 
-        private static MediaItem GetMediaItem(Field field)
+        private static string GetMediaItem(Field field)
         {
             MediaItem mediaItem = null;
             switch (field.TypeKey)
@@ -62,14 +49,35 @@
                     break;
                 case "general link":
                     var mediaLink = (LinkField)field;
-                    
+
                     if (mediaLink != null)
                     {
-                        mediaItem = Database.GetDatabase("web").GetItem(mediaLink.TargetID);
+                        if (mediaLink.IsInternal)
+                        {
+                            mediaItem = Database.GetDatabase("web").GetItem(mediaLink.TargetID);
+                            return GetMediaUrl(mediaItem);
+                        }
+                        return mediaLink.Url;
                     }
                     break;
             }
-            return mediaItem;
+            return GetMediaUrl(mediaItem);
+        }
+
+        private static string GetMediaUrl(MediaItem mediaItem)
+        {
+            if (mediaItem != null)
+            {
+                var options = new MediaUrlOptions
+                {
+                    AbsolutePath = false,
+                    MediaLinkServerUrl = SiteContextFactory.GetSiteContext("advisers").HostName,
+                    AlwaysIncludeServerUrl = true
+                };
+                return MediaManager.GetMediaUrl(mediaItem, options);
+            }
+
+            return null;
         }
     }
 }

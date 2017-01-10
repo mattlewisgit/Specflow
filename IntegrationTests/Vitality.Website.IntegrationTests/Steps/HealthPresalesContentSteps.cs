@@ -9,6 +9,7 @@
     using By = OpenQA.Selenium.By;
     using Extensions;
     using Shouldly;
+    using System.Threading;
 
     [Binding]
     public class HealthPresalesContentSteps : BaseSteps
@@ -72,9 +73,20 @@
         [When(@"I click on the (.*) page link")]
         public void WhenIClickOnThePageLink(string linkName)
         {
+            // Force a scroll to by using the Keys.Space in case the object is not visible
             WebDriver
                 .FindElement(By.LinkText(linkName))
-                .Click();
+                .SendKeys(Keys.Space);
+
+            Actions actions = new Actions(WebDriver);
+
+            // As it is in focus, send Enter rather than click...
+            actions
+                .SendKeys(Keys.Enter)
+                .Perform();
+
+            // Pause for page to load....
+            Thread.Sleep(1000);
         }
 
         [Then(@"I see the (.*) page")]

@@ -1,0 +1,145 @@
+// /*-------------------------------------------------.
+// \    Config: Grid debugging -
+//  `-------------------------------------------------*/
+
+$visual-grid: false;
+
+// /*-------------------------------------------------.
+// \    Config: Colours
+//  `-------------------------------------------------*/
+
+$primary-color: #f41c5e; //Hot pink
+$secondary-color: #5bb6b1; //Bright teal
+$tertiary-color: #6e527e; //Purple
+$highlight-color: #ed8b00; //Bright orange
+
+$primary-background-color: #eaeff4; //Very light grey blue
+$secondary-background-color: #4f738a;
+$tertiary-background-color: #34404d;
+$error-color: #ff6961;
+
+$lighten-percentage: 10%;
+$darken-percentage: 10%;
+
+// Light modifiers.
+$primary-color--light: lighten($primary-color, $lighten-percentage);
+$secondary-color--light: lighten($secondary-color, $lighten-percentage);
+$tertiary-color--light: lighten($tertiary-color, $lighten-percentage);
+$highlight-color--light: lighten($highlight-color, $lighten-percentage);
+$error-color--light: lighten($error-color, $lighten-percentage);
+
+// Dark modifiers.
+$primary-color--dark: darken($primary-color, $darken-percentage);
+$secondary-color--dark: darken($secondary-color, $darken-percentage);
+$tertiary-color--dark: darken($tertiary-color, $darken-percentage);
+$highlight-color--dark: darken($highlight-color, $darken-percentage);
+$error-color--dark: darken($error-color, $darken-percentage);
+
+// Social Media colours -
+$facebook-color: #27489b;
+$twitter-color: #38a8e5;
+
+// Monochrome helpers -
+$grey: #4d4d4d;
+$grey--light: #f2f2f2;
+$black: #000;
+$white: #fff;
+$color-mono-14: #eee;
+$color-mono-13: #ddd;
+$color-mono-12: #ccc;
+$color-mono-11: #bbb;
+$color-mono-10: #aaa;
+$color-mono-9: #999;
+$color-mono-8: #888;
+$color-mono-7: #777;
+$color-mono-6: #666;
+$color-mono-5: #555;
+$color-mono-4: #444;
+$color-mono-3: #333;
+$color-mono-2: #222;
+$color-mono-1: #111;
+
+$outline-color: #ced9dd;
+$nav-gradient-color: #f2f8f8;
+
+$body-color: #666;
+$body-color--alt: #b3b3b3;
+$heading-color: $color-mono-3;
+
+$dropshadow-color: rgba($body-color, 0.25);
+$dropshadow-color-dark: rgba($body-color, 0.5);
+
+$_opacity: 0.8;
+$darken-light: rgba(255, 255, 255, $_opacity);
+$darken-medium: rgba(0, 0, 0, 0.15);
+$darken-heavy: rgba(0, 0, 0, $_opacity);
+
+$nav-gradient: linear-gradient(to bottom, $white 75%, $nav-gradient-color 100%);
+
+$dashed-border: dashed rgba(255, 255, 255, 0.5) 1px;
+
+// Animation delays;
+$delay--medium: 0.3s;
+$delay--long: 0.6s;
+
+// /*-------------------------------------------------.
+// \    Config: Typography
+//  `-------------------------------------------------*/
+
+//Base Font size -
+$basesize: 1.6;
+$paragraph-emphasis: 1.8;
+$font-small: 1.4;
+
+//Heading sizes -
+$h1: 2.8;
+$h2: 2.5;
+$h3: 2.2;
+$h4: 2;
+$h5: 2;
+$h6: 1.8;
+
+$h1--xlarge: 8;
+$h1--large: 4;
+$h2--xlarge: 7;
+$h2--large: 3.5;
+$h3--large: 3.2;
+$h4--large: 2.5;
+$h5--large: 2;
+$h6--large: 1.8;
+
+$max-text-width: 485px;
+
+// Font weights.
+$font-weight--light: 300;
+$font-weight--regular: 400;
+$font-weight--semi-bold: 600;
+$font-weight--bold: 700;
+
+// Line heights;
+$line-height--small: 1.2;
+$line-height--normal: 1.7;
+
+// /*-------------------------------------------------.
+// \    Config: Layout
+//  `-------------------------------------------------*/
+
+//Main content max width -
+$max-width: 1200px;
+
+//Module padding -
+$pad: 20px;
+$pad--xxthin: $pad / 8;
+$pad--xthin: $pad / 4;
+$pad--thin: $pad / 2;
+$pad--large: $pad * 2;
+$pad--xlarge: $pad * 4;
+$pad--xxlarge: $pad * 8;
+
+// Icon padding
+$icon-padding: 25px;
+
+// Width.
+$width--max: 100%;
+$width--half: $width--max / 2;
+$width--near-max: 80%;

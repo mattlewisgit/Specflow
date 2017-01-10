@@ -1,0 +1,120 @@
+// CSS specific to the boilerplate demo.
+// Excluded from final production CSS.
+
+// Triangle callout util testing.
+.box-holder {
+    @extend .clearfix;
+    margin: 0 auto;
+
+    .flexbox & {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .no-flexbox & {
+        text-align: center;
+    }
+}
+
+.box {
+    height: 200px;
+    margin: 80px auto;
+    position: relative;
+    width: 200px;
+
+    .no-flexbox & {
+        display: inline-block;
+    }
+}
+
+.box--pink {
+    background-color: $primary-color;
+
+    &.callout-tri--central-down {
+        @include triangle-callout--central-down(pink);
+    }
+
+    &.callout-tri--left-up {
+        @include triangle-callout--left-up(pink, 80px, 60px);
+    }
+}
+
+.box--green {
+    background-color: $secondary-color;
+
+    &.callout-tri--central-down {
+        @include triangle-callout--central-down(seagreen, 60px, 44px);
+    }
+
+    &.callout-tri--left-up {
+        @include triangle-callout--left-up(seagreen);
+    }
+}
+
+.example--box {
+    background-color: $grey--light;
+    padding: $pad 0;
+}
+
+// Test for column animation delay utility.
+.animation-test {
+    padding-top: 50px;
+
+    .anim-test-box {
+        width: 100px;
+        height: 100px;
+        background-color: rgba(0, 0, 255, 0.2);
+        display: inline-block;
+        margin: 0 2px;
+    }
+}
+
+.test-background {
+    background-color: $primary-color;
+    $_colour: rgba(0, 0, 0, 0.4);
+    $_colour-two: rgba(0, 0, 0, 0.2);
+    $_colour-three: rgba(0, 0, 0, 0.5);
+    $_colour-four: rgba(255, 255, 255, 0.2);
+
+    background-image:
+    repeating-linear-gradient(transparent, transparent 50px, $_colour 50px, $_colour 53px, transparent 53px, transparent 63px, $_colour 63px, $_colour 66px, transparent 66px, transparent 116px, $_colour-three 116px, $_colour-three 166px, $_colour-four 166px, $_colour-four 169px, $_colour-three 169px, $_colour-three 179px, $_colour-four 179px, $_colour-four 182px, $_colour-three 182px, $_colour-three 232px, transparent 232px),
+    repeating-linear-gradient(270deg, transparent, transparent 50px, $_colour 50px, $_colour 53px, transparent 53px, transparent 63px, $_colour 63px, $_colour 66px, transparent 66px, transparent 116px, $_colour-three 116px, $_colour-three 166px, $_colour-four 166px, $_colour-four 169px, $_colour-three 169px, $_colour-three 179px, $_colour-four 179px, $_colour-four 182px, $_colour-three 182px, $_colour-three 232px, transparent 232px),
+    repeating-linear-gradient(125deg, transparent, transparent 2px, $_colour-two 2px, $_colour-two 3px, transparent 3px, transparent 5px, $_colour-two 5px);
+}
+
+// Custom grid example.
+.custom-grid {
+    @include outer-container;
+
+    .custom-col {
+        // 50% on small screens.
+        @include span-columns(6);
+        @include omega(2n);
+        background-color: rgba($tertiary-color, 0.2);
+        margin-top: $grid-margin-top;
+        padding: $pad--thin;
+
+        @include mq($from: tablet) {
+            // 25% on medium screens.
+            // Reset omega function.
+            // http://www.joshfry.me/blog/2013/05/13/omega-reset-for-bourbon-neat.
+            @include omega-reset(2n);
+            @include span-columns(3);
+            @include omega(4n);
+        }
+
+        @include mq($from: desktop) {
+            // 16.66%.
+            @include omega-reset(4n);
+            @include span-columns(2);
+            @include omega(6n);
+        }
+
+        @include mq($from: max) {
+            // Back to 50%.
+            @include omega-reset(6n);
+            @include span-columns(6);
+            @include omega(2n);
+        }
+    }
+}
