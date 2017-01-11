@@ -6,7 +6,7 @@
         var baseUrl = "/api/search/";
         var orderBy = "asc";
         var pageNo = 1;
-        var pageSize = 10;
+        var pageSize = 50;
 
         // Move to the controller?
         function highlight(text, term) {

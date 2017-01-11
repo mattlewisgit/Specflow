@@ -22,18 +22,17 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
 
         public IEnumerable<string> Breadcrumbs { get; set; }
 
-        public static IEnumerable<SearchDocumentDto> From(IEnumerable<ContentSearchResult> searchResult1, string searchQuery)
+        public static IEnumerable<SearchDocumentDto> From(IEnumerable<ContentSearchResult> searchResults, string searchQuery)
         {
-            return (from searchResult in searchResult1 
-                    where CultureInfo.CurrentCulture.CompareInfo.IndexOf(searchResult.Description, searchQuery, CompareOptions.IgnoreCase) >= 0 ||
-                    CultureInfo.CurrentCulture.CompareInfo.IndexOf(searchResult.Description, searchQuery, CompareOptions.IgnoreCase) >= 0
-                        select new SearchDocumentDto
-                        {
-                            Title = searchResult.Title,
-                            Description = searchResult.Description,
-                            Path = LinkManager.GetItemUrl(Sitecore.Context.Database.GetItem(searchResult.Path)),
-                            Breadcrumbs = GetBreadcrumbs(searchResult.GetItem())
-                        }).ToList();
+            return (from result in searchResults
+                where FilterCase(searchQuery, result.Description) || FilterCase(searchQuery, result.Title)
+                select new SearchDocumentDto
+                {
+                    Title = result.Title, 
+                    Description = result.Description, 
+                    Path = LinkManager.GetItemUrl(Sitecore.Context.Database.GetItem(result.Path)), 
+                    Breadcrumbs = GetBreadcrumbs(result.GetItem())
+                }).ToList();
         }
 
         public static IEnumerable<string> GetBreadcrumbs(Item currentItem)
@@ -64,5 +63,11 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
             // Only want to show this if more than one element in the list
             return breadcrumbs.Select(x => x.Name).Count() > 1 ? breadcrumbs.Select(x => x.Name) : new List<string>();
         }
+
+        private static bool FilterCase(string searchQuery, string property)
+        {
+            return CultureInfo.CurrentCulture.CompareInfo.IndexOf(property, searchQuery, CompareOptions.IgnoreCase) >= 0;
+        }
+
     }
 }
