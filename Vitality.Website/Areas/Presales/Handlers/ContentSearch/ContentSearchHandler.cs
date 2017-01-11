@@ -2,12 +2,13 @@
 using System.Linq;
 using MediatR;
 using Sitecore.ContentSearch;
+using Sitecore.ContentSearch.Linq.Utilities;
 
 namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
 {
     public class ContentSearchHandler : IRequestHandler<ContentSearchRequest, IEnumerable<SearchDocumentDto>>
     {
-        private ISearchIndex SearchIndex = ContentSearchManager.GetIndex("presales_content");
+        private ISearchIndex SearchIndex = ContentSearchManager.GetIndex("vitality_site_content");
 
         public ContentSearchHandler()
         {
@@ -21,9 +22,17 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
                 var pathToSearch = string.Format
                     ("/sitecore/content/{0}/home", Sitecore.Context.Site.Name);
 
-                var query = context.GetQueryable<ContentSearchResult>()
-                    .Where(p => p.Path.StartsWith(pathToSearch))
-                    .Where(n => (n.Description.Contains(message.SearchQuery)) || (n.Name.Contains(message.SearchQuery)));
+                var predecate = PredicateBuilder.True<ContentSearchResult>();
+
+                predecate = predecate.And(p => p.Path.StartsWith(pathToSearch));
+                predecate = predecate.And(x => x.Description.Contains(message.SearchQuery));
+                predecate = predecate.Or(x => x.Title.Contains(message.SearchQuery));
+
+                var query = context.GetQueryable<ContentSearchResult>().Where(predecate);
+
+                //var query = context.GetQueryable<ContentSearchResult>()
+                //    .Where(p => p.Path.StartsWith(pathToSearch))
+                //    .Where(n => (n.Description.Contains(message.SearchQuery)) || (n.Name.Contains(message.SearchQuery)));
 
                 if (!string.IsNullOrEmpty(message.OrderBy))
                 {
