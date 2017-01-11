@@ -23,10 +23,17 @@ key: __standard values
 content-length: 38
 
 {0D3DA2B8-BEF6-435D-8B02-6EBC2AE80368}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 38
+
+Applications/32x32/text_align_left.png
 ----version----
 language: en
 version: 1
-revision: f719bb76-9009-47ea-a060-020602e244df
+revision: 4f70b9dd-c603-4231-a657-b5b067b5de8f
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -41,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f719bb76-9009-47ea-a060-020602e244df
+4f70b9dd-c603-4231-a657-b5b067b5de8f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161231T101333Z
+20170111T142258Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -16,10 +16,17 @@ key: __base template
 content-length: 38
 
 {81935A24-283D-4CDD-BF31-649344827115}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 34
+
+Applications/32x32/text_marked.png
 ----version----
 language: en
 version: 1
-revision: fe9ced9d-be3b-43e4-8f2a-7402689d6e58
+revision: f3eb703e-762c-4aac-8212-f12595d6d0dc
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -34,14 +41,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-fe9ced9d-be3b-43e4-8f2a-7402689d6e58
+f3eb703e-762c-4aac-8212-f12595d6d0dc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161231T101326Z
+20170111T142010Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
