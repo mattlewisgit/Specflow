@@ -1,4 +1,5 @@
 ﻿using RestSharp;
+using RestSharp.Authenticators;
 using Vitality.Website.App.Handlers;
 using Vitality.Website.App.SocialMedia.Interfaces;
 using Vitality.Website.App.SocialMedia.Models;
@@ -20,17 +21,18 @@ namespace Vitality.Website.App.SocialMedia
         public AccessTokenResponse GetAccessToken()
         {
             var request = new RestRequest("/oauth/access_token", Method.GET);
-            request.AddQueryParameter("client_id", _socialMediaAccount.AppKey);
-            request.AddQueryParameter("client_secret", _socialMediaAccount.AppSecret);
             request.AddQueryParameter("grant_type", "client_credentials");
+            _restClient.Authenticator = new SimpleAuthenticator("client_id", _socialMediaAccount.AppKey,
+               "client_secret", _socialMediaAccount.AppSecret);
             var response = _restClient.Execute<AccessTokenResponse>(request);
             return response.Handle();
         }
 
         public FanCountResponse GetLikesCount(string pageId, string accessToken)
         {
-            var url = string.Format(@"/{0}/?fields=fan_count&access_token={1}", pageId,accessToken);
+            var url = string.Format(@"/{0}/?fields=fan_count", pageId);
             var request = new RestRequest(url, Method.GET);
+            _restClient.Authenticator = new OAuth2UriQueryParameterAuthenticator(accessToken);
             var response =  _restClient.Execute<FanCountResponse>(request);
             return response.Handle();
         }

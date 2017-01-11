@@ -77,7 +77,7 @@ namespace Vitality.Website.Extensions.Views
         /// <param name="socialMediaItem">Social Media Item with Settings</param>
         /// <param name="attempt">Use attempt to try again as Access Token might be expired first time expired</param>
         /// <returns></returns>
-        public static string GetSocialMediaCounts(this SocialMediaItem socialMediaItem, int attempt = 0)
+        public static async string GetSocialMediaCounts(this SocialMediaItem socialMediaItem, int attempt = 0)
         {
             var settings = socialMediaItem.Settings;
 
@@ -93,7 +93,7 @@ namespace Vitality.Website.Extensions.Views
                     StringComparison.OrdinalIgnoreCase))
                 {
                     var facebookConnector = new FacebookConnector(socialMediaAccount);
-                    var accessToken = GetAccessToken(facebookConnector.GetAccessToken, settings.SiteIdentifier);
+                    var accessToken = await GetAccessToken(facebookConnector.GetAccessToken, settings.SiteIdentifier);
                     return facebookConnector.GetLikesCount(settings.EntityId, accessToken).FanCount.ToString();
                 }
                 if (string.Equals(settings.SiteIdentifier, SocialMediaConstants.Twitter,
@@ -121,9 +121,9 @@ namespace Vitality.Website.Extensions.Views
             return socialMediaItem.ErrorMessage;
         }
 
-        private static string GetAccessToken(Func<AccessTokenResponse> getAccessToken, string siteIdentifier)
+        private static async string GetAccessToken(Func<AccessTokenResponse> getAccessToken, string siteIdentifier)
         {
-            return (string)MemoryCacheStore.AddOrGetExisting(string.Format("{0}_accessToken", siteIdentifier), getAccessToken().AccessToken, DateTimeOffset.UtcNow.AddDays((1)));
+            return await (string)MemoryCacheStore.AddOrGetExisting(string.Format("{0}_accessToken", siteIdentifier), getAccessToken().AccessToken, DateTimeOffset.UtcNow.AddDays((1)));
         }
     }
 }
