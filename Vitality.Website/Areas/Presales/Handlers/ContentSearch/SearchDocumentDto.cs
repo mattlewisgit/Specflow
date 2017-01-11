@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
+using Sitecore.ContentSearch.Linq;
 using Sitecore.Data.Items;
 using Sitecore.Links;
 using Sitecore.Sites;
@@ -20,15 +22,18 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
 
         public IEnumerable<string> Breadcrumbs { get; set; }
 
-        public static IEnumerable<SearchDocumentDto> From(IEnumerable<ContentSearchResult> searchResult1)
-        { 
-            return searchResult1.Select(searchResult => new SearchDocumentDto
-            {
-                Title = searchResult.Title,
-                Description = searchResult.Description,
-                Path = LinkManager.GetItemUrl(Sitecore.Context.Database.GetItem(searchResult.Path)),
-                Breadcrumbs = GetBreadcrumbs(searchResult.GetItem())
-            }).ToList();
+        public static IEnumerable<SearchDocumentDto> From(IEnumerable<ContentSearchResult> searchResult1, string searchQuery)
+        {
+            return (from searchResult in searchResult1 
+                    where CultureInfo.CurrentCulture.CompareInfo.IndexOf(searchResult.Description, searchQuery, CompareOptions.IgnoreCase) >= 0 ||
+                    CultureInfo.CurrentCulture.CompareInfo.IndexOf(searchResult.Description, searchQuery, CompareOptions.IgnoreCase) >= 0
+                        select new SearchDocumentDto
+                        {
+                            Title = searchResult.Title,
+                            Description = searchResult.Description,
+                            Path = LinkManager.GetItemUrl(Sitecore.Context.Database.GetItem(searchResult.Path)),
+                            Breadcrumbs = GetBreadcrumbs(searchResult.GetItem())
+                        }).ToList();
         }
 
         public static IEnumerable<string> GetBreadcrumbs(Item currentItem)

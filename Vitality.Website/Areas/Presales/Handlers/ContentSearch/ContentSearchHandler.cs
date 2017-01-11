@@ -1,23 +1,25 @@
 ﻿using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using MediatR;
 using Sitecore.ContentSearch;
+using Sitecore.ContentSearch.Linq;
 using Sitecore.ContentSearch.Linq.Utilities;
 
 namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
 {
     public class ContentSearchHandler : IRequestHandler<ContentSearchRequest, IEnumerable<SearchDocumentDto>>
     {
-        private ISearchIndex SearchIndex = ContentSearchManager.GetIndex("vitality_site_content");
+        private readonly ISearchIndex _searchIndex = ContentSearchManager.GetIndex("vitality_site_content");
 
         public ContentSearchHandler()
         {
-            SearchIndex.Rebuild();
+            //_searchIndex.Rebuild();
         }
 
         public IEnumerable<SearchDocumentDto> Handle(ContentSearchRequest message)
         {
-            using (var context = SearchIndex.CreateSearchContext())
+            using (var context = _searchIndex.CreateSearchContext())
             {   
                 var pathToSearch = string.Format
                     ("/sitecore/content/{0}/home", Sitecore.Context.Site.Name);
@@ -25,8 +27,10 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
                 var predecate = PredicateBuilder.True<ContentSearchResult>();
 
                 predecate = predecate.And(p => p.Path.StartsWith(pathToSearch));
-                predecate = predecate.And(x => x.Description.Contains(message.SearchQuery));
-                predecate = predecate.Or(x => x.Title.Contains(message.SearchQuery));
+                //predecate = predecate.And(x => CultureInfo.CurrentCulture.CompareInfo.IndexOf(x.Description, message.SearchQuery, CompareOptions.IgnoreCase) >= 0);
+                //predecate = predecate.Or(x => CultureInfo.CurrentCulture.CompareInfo.IndexOf(x.Title, message.SearchQuery, CompareOptions.IgnoreCase) >= 0);
+
+                //predecate = predecate.And(x => x.Description.Contains(message.SearchQuery));
 
                 var query = context.GetQueryable<ContentSearchResult>().Where(predecate);
 
@@ -45,11 +49,9 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
                 // Getting pagination data
                 int skipRecords = (message.PageNo - 1) * message.PageSize;
                 query = query.Skip(skipRecords).Take(message.PageSize);
-
-                var results = query.ToList();
-
+                
                 // Return results; 
-                return SearchDocumentDto.From(results);
+                return SearchDocumentDto.From(query.ToList(), message.SearchQuery);
             }
         }
     }
