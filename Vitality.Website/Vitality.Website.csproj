@@ -387,6 +387,7 @@
     <Content Include="js\fee-maxima-service.js" />
     <Content Include="js\literature-form-service.js" />
     <Content Include="js\literature-library-service.js" />
+    <Content Include="js\social-connector-app.js" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\app.css" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.css" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.min.css" />
@@ -3903,6 +3904,7 @@
     <Compile Include="Areas\Presales\Controllers\BaseController.cs" />
     <Compile Include="Areas\Presales\Controllers\FeeMaximaController.cs" />
     <Compile Include="Areas\Presales\Controllers\LiteratureLibraryController.cs" />
+    <Compile Include="Areas\Presales\Controllers\SocialMediaController.cs" />
     <Compile Include="Areas\Presales\Handlers\FeeMaxima\FeeMaximaChaptersDto.cs" />
     <Compile Include="Areas\Presales\Handlers\FeeMaxima\FeeMaximaChaptersHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\FeeMaxima\FeeMaximaChaptersRequest.cs" />
@@ -3915,6 +3917,9 @@
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummariesRequest.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummaryDto.cs" />
     <Compile Include="Areas\Presales\Handlers\PresalesLog.cs" />
+    <Compile Include="Areas\Presales\Handlers\SocialMedia\SocialMediaCountsDto.cs" />
+    <Compile Include="Areas\Presales\Handlers\SocialMedia\SocialMediaCountsHandler.cs" />
+    <Compile Include="Areas\Presales\Handlers\SocialMedia\SocialMediaCountsRequest.cs" />
     <Compile Include="Areas\Presales\Models\Breadcrumb.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\CallToActionPanel.cs" />
@@ -3935,6 +3940,7 @@
     <Compile Include="Areas\Presales\SettingsTemplates\SiteSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\SocialMediaSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
+    <Compile Include="Extensions\CacheExtensions.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\ImageExtensions.cs" />

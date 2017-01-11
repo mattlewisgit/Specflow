@@ -1,4 +1,6 @@
-﻿using Shouldly;
+﻿using System;
+using System.Net;
+using Shouldly;
 using Vitality.Website.App.SocialMedia;
 using Vitality.Website.App.SocialMedia.Models;
 using Xunit;
@@ -34,7 +36,8 @@ namespace Vitality.Website.App.UnitTests.SocialMedia
             [Fact]
             public void Request_with_page_id_should_throw_exception_when_call_with_wrong_accesstoken()
             {
-                var result = TwitterConnector.GetFollowersCount("lakmalvbj", "wrong exception");
+                var ex = Assert.Throws<Exception>(() => TwitterConnector.GetFollowersCount("lakmalvbj", "wrong exception"));
+                Assert.Equal(HttpStatusCode.BadRequest, (HttpStatusCode)ex.Data["StatusCode"]);
             }
         }
     }
