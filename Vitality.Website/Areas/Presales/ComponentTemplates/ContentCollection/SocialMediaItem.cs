@@ -17,12 +17,12 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection
 
         public string BackgroundColor { get; set; }
         public Link CallToAction { get; set; }
-        public string ErrorMessage { get; set; }
+        public string CountDisplayText { get; set; }
         public Image Icon { get; set; }
         public string LeadIn { get; set; }
         // Only retriev ID as the full object needs to be retrieved back again 
         // As App key and secrete should not be passed from Client side
-        [SitecoreField]
-        public Guid Settings { get; set; }
+        [SitecoreField("Settings")]
+        public Guid SettingsId { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 ﻿@using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection.SocialMediaSection>
-<div class="content-collection--module social">
+<div class="content-collection--module social" ng-app="SocialConnectorApp">
     @using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", Model.Path, "Edit Social Media Section"))
     {
         foreach (var socialMedia in Model.SocialMediaItems)
@@ -10,7 +10,9 @@
                 <div class="custom-col text-light" style="background-color: @socialMedia.BackgroundColor;">
                     @Editable(socialMedia, item => item.Icon, new {alt = socialMedia.Icon.Alt, @class = "lazyload"})
 
-                    <p class="content-collection--module__title-bold">@socialMedia.Settings</p>
+                    <p class="content-collection--module__title-bold">
+                        <popularity-count settings-id="'@socialMedia.SettingsId'" count-display-text="'@socialMedia.CountDisplayText'"></popularity-count>
+                    </p>
                     <p>@Editable(socialMedia, item => item.LeadIn)</p>
 
                     @Editable(socialMedia, item => item.CallToAction, new {@class = "box-button box-button--light box-button--rounded"})

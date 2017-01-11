@@ -2,9 +2,9 @@
 version: 1
 id: {A1B56FCB-2AE0-4BDA-871C-B141B8761E5A}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Content Collection/Social Media Item/Content/ErrorMessage
+path: /sitecore/templates/Presales/Component Templates/Content Collection/Social Media Item/Content/CountDisplayText
 parent: {8520677A-D389-46F9-9C68-088E56147617}
-name: ErrorMessage
+name: CountDisplayText
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -26,15 +26,15 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 86f775ed-77f3-48d3-887a-dcb67b942c07
+revision: 4cb4b130-0c5b-42a2-a5e4-9ef1a33e4d30
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 13
+content-length: 18
 
-Error Message
+Count Display Text
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-86f775ed-77f3-48d3-887a-dcb67b942c07
+4cb4b130-0c5b-42a2-a5e4-9ef1a33e4d30
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170109T162346Z
+20170111T230205Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
