@@ -15,17 +15,17 @@ namespace Vitality.Website.Areas.Presales.Controllers
         {
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("api/search/")]
-        public HttpResponseMessage Search(string searchQuery, string orderBy, int pageSize, int pageNo)
+        public HttpResponseMessage Search(ContentSearchRequest model)
         {
-            if (string.IsNullOrWhiteSpace(searchQuery))
+            if (string.IsNullOrWhiteSpace(model.SearchQuery))
             {
                 return new HttpResponseMessage(HttpStatusCode.BadRequest);
             }
 
             return this.GetResponse<ContentSearchRequest, IEnumerable<SearchDocumentDto>>(
-                new ContentSearchRequest(searchQuery, orderBy, pageSize, pageNo),
+                model,
                 documents => documents.Any());
         }
     }
