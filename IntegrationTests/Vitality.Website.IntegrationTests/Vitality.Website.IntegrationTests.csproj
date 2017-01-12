@@ -132,6 +132,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuoteApply.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\SearchingContent.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearchingContent.feature</DependentUpon>
+    </Compile>
     <Compile Include="Steps\BaseSteps.cs" />
     <Compile Include="Steps\CommonSteps.cs" />
     <Compile Include="Steps\HealthPresalesContentSteps.cs" />
@@ -140,6 +145,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\MetaTagsSteps.cs" />
     <Compile Include="Steps\QuoteApplySteps.cs" />
+    <Compile Include="Steps\SearchingSteps.cs" />
     <Compile Include="Utilities\PageItems.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -168,6 +174,10 @@
     <None Include="Features\QuoteApply.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>QuoteApply.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\SearchingContent.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SearchingContent.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

@@ -17,6 +17,13 @@ content-length: 216
 
 <r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}"><p:d /></r><r uid="{B59AF949-7B41-4E23-8CD4-A41D5128E3F8}" p:after="*[1=2]" /></d></r>
 ----field----
+field: {9135200A-5626-4DD8-AB9D-D665B8C11748}
+name: __Never publish
+key: __never publish
+content-length: 0
+
+
+----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
 name: __Workflow
 key: __workflow
@@ -26,8 +33,22 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: aa1397f8-5081-4b33-8c05-ba8fdd0e5a06
+revision: a5114eee-64c3-4c64-952f-d36a5b020e74
 
+----field----
+field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
+name: Title
+key: title
+content-length: 15
+
+Accordion Title
+----field----
+field: {503DBB8D-A5C9-4ECF-9EAA-B3F8904567F4}
+name: Description
+key: description
+content-length: 21
+
+Accordion Description
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -55,14 +76,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-aa1397f8-5081-4b33-8c05-ba8fdd0e5a06
+a5114eee-64c3-4c64-952f-d36a5b020e74
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161214T141034Z
+20170112T151134Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
