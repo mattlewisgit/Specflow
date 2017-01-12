@@ -1,12 +1,14 @@
 ﻿angular
     .module("SiteSearchService", [])
-    .service("SiteSearchService", ["$http", "$q", "$sce", function ($http, $q, $sce) {
+    .service("SiteSearchService", ["$http", "$q", "$sce", function($http, $q, $sce) {
         "use strict";
-
-        var baseUrl = "/api/search/";
-        var orderBy = "asc";
-        var pageNo = 1;
-        var pageSize = 50;
+        var baseUrl = "/api/search/" ;
+        var searchParams =
+        {
+            orderBy: "asc",
+            pageNo: 1,
+            pageSize: 50
+        }
 
         // Move to the controller?
         function highlight(text, term) {
@@ -18,11 +20,10 @@
 
         this.search = function (term) {
             var deferred = $q.defer();
-            var term = (term || "").toLowerCase();
-            var url = baseUrl + "?searchQuery=" + term + "&orderBy=" + orderBy + "&pageSize=" + pageSize + "&pageNo=" + pageNo;
+            searchParams.searchQuery = (term || "").toLowerCase();
 
             $http
-                .get(url)
+                .post(baseUrl, searchParams)
                 .error(function (result) {
                     // Send back an empty dataset.
                     deferred.resolve([]);
