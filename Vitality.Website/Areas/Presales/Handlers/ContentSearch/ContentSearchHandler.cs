@@ -33,10 +33,6 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
                 
                 var query = context.GetQueryable<ContentSearchResult>().Where(predecate);
                 
-                // Getting pagination data
-                int skipRecords = (message.PageNo - 1) * message.PageSize;
-                query = query.Skip(skipRecords).Take(message.PageSize);
-                
                 // Return results; 
                 return SearchDocumentDto.From(query.ToList(), message.SearchQuery);
             }
