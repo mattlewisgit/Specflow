@@ -1,0 +1,19 @@
+﻿@using Vitality.Website.Extensions.Views
+@using Vitality.Website.Extensions
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Articles.LargeArticle>
+ 
+@using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", Model.Path))
+{
+    using (BeginEditFrame(Model, "Edit Background image", item => item.Image))
+     {
+         <div class="content-collection--module article--large @Model.LargeArticleTextCss() lazyload" data-bg="@Model.Image.ProtectedSrc()">
+             <p class="content-collection--module__strapline">@Editable(Model, item => item.LeadIn)</p>
+
+             <p class="content-collection--module__title">
+                 @Editable(Model, item => item.Headline)
+             </p>
+
+             @Editable(Model, item => item.CallToAction, new {@class = Model.LargeArticleButtonCss() })
+         </div>
+     }
+}

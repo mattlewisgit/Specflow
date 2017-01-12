@@ -10,8 +10,8 @@ using Xunit;
 using Vitality.Website.Areas.Presales.Handlers.FeeMaxima;
 using System.Collections.Generic;
 using Moq;
-using Vitality.Website.App.Services.Interfaces;
-using Vitality.Website.App.Models.FeeMaxima;
+using Vitality.Website.App.Ccsd.Interfaces;
+using Vitality.Website.App.Ccsd.Models;
 
 namespace Vitality.Website.UnitTests.Presales.Controllers.FeemaximaControllerTests
 {

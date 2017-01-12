@@ -21,13 +21,13 @@
                 Log.Warn(string.Format("{0} : unsupported IIndexable type : {1}", this, indexable.GetType()), this);
                 return null;
             }
-            
+
             var field = indexableItem.Item.Fields[this.FieldName];
             if (field == null)
             {
                 return null;
             }
-            
+
             return GetMediaItem(field);
         }
 
@@ -49,7 +49,7 @@
                     break;
                 case "general link":
                     var mediaLink = (LinkField)field;
-                    
+
                     if (mediaLink != null)
                     {
                         if (mediaLink.IsInternal)

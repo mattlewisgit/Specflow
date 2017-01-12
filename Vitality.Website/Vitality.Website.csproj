@@ -184,10 +184,6 @@
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Speak.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Support.136135, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Sitecore.Support.136135.dll</HintPath>
-    </Reference>
     <Reference Include="Sitecore.Web, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Web.dll</HintPath>
       <Private>True</Private>
@@ -225,6 +221,7 @@
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -299,15 +296,8 @@
     <Content Include="App_Config\Include\Sitecore.WFFM.Dependencies.config" />
     <Content Include="App_Config\Include\Sitecore.WFFM.Services.config" />
     <Content Include="App_Config\Include\Sitecore.WFFM.Speak.config" />
-    <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="App_Config\Include\Vitality\Vitality.PresalesContentSearch.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config" />
+    <Content Include="App_Config\Include\Vitality\Vitality.Log4Net.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -397,7 +387,7 @@
     <Content Include="js\fee-maxima-service.js" />
     <Content Include="js\literature-form-service.js" />
     <Content Include="js\literature-library-service.js" />
-    <Content Include="js\site-search-service.js" />
+    <Content Include="js\social-connector-app.js" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\app.css" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.css" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.min.css" />
@@ -562,7 +552,12 @@
     <Content Include="Areas\Presales\Views\FeatureBlocks\FeeMaxima.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_GoogleTagManagerNoScript.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_Breadcrumb.cshtml" />
-    <Content Include="Areas\Presales\Views\ContentSearch\ContentSearch.cshtml" />
+    <Content Include="Areas\Presales\Views\ContentCollection\ContentCollection.cshtml" />
+    <Content Include="Areas\Presales\Views\ContentCollection\_LargeArticle.cshtml" />
+    <Content Include="Areas\Presales\Views\ContentCollection\_SmallArticle.cshtml" />
+    <Content Include="Areas\Presales\Views\ContentCollection\_MediumArticle.cshtml" />
+    <Content Include="Areas\Presales\Views\ContentCollection\_SocialMedias.cshtml" />
+    <Content Include="Areas\Presales\Views\ContentCollection\_Mpus.cshtml" />
     <None Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.intellisense.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.min.js" />
@@ -3870,13 +3865,22 @@
     <Compile Include="Areas\Presales\BaseTemplates\IWebmasterToolsGlobal.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Articles\ArticleIndex.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Articles\ArticleItem.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\ContentCollection\ContentItem.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\ContentCollection\MpuSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Banners\HomeHero.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\Card.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsStacked.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Cards\CardsTabbed.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Articles\ContentArticle.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Articles\LargeArticle.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Articles\MediumArticle.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Articles\SmallArticle.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\ContentCollection\SocialMediaSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\AwardLeader.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\ContentCollection\ContentCollection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\FeeMaxima.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\ProductHero.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\ContentCollection\SocialMediaItem.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\ArticleItem.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Content.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Tab.cs" />
@@ -3898,13 +3902,9 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductPanel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductsComponent.cs" />
     <Compile Include="Areas\Presales\Controllers\BaseController.cs" />
-    <Compile Include="Areas\Presales\Controllers\ContentSearchController.cs" />
-    <Compile Include="Areas\Presales\Handlers\ContentSearch\ContentSearchRequest.cs" />
-    <Compile Include="Areas\Presales\Handlers\ContentSearch\ContentSearchResult.cs" />
     <Compile Include="Areas\Presales\Controllers\FeeMaximaController.cs" />
     <Compile Include="Areas\Presales\Controllers\LiteratureLibraryController.cs" />
-    <Compile Include="Areas\Presales\Handlers\ContentSearch\SearchDocumentDto.cs" />
-    <Compile Include="Areas\Presales\Handlers\ContentSearch\ContentSearchHandler.cs" />
+    <Compile Include="Areas\Presales\Controllers\SocialMediaController.cs" />
     <Compile Include="Areas\Presales\Handlers\FeeMaxima\FeeMaximaChaptersDto.cs" />
     <Compile Include="Areas\Presales\Handlers\FeeMaxima\FeeMaximaChaptersHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\FeeMaxima\FeeMaximaChaptersRequest.cs" />
@@ -3916,13 +3916,16 @@
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummariesHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummariesRequest.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummaryDto.cs" />
+    <Compile Include="Areas\Presales\Handlers\PresalesLog.cs" />
+    <Compile Include="Areas\Presales\Handlers\SocialMedia\SocialMediaCountsDto.cs" />
+    <Compile Include="Areas\Presales\Handlers\SocialMedia\SocialMediaCountsHandler.cs" />
+    <Compile Include="Areas\Presales\Handlers\SocialMedia\SocialMediaCountsRequest.cs" />
     <Compile Include="Areas\Presales\Models\Breadcrumb.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\CallToActionPanel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\PrimaryCallToAction.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FAQ\FaqPreview.cs" />
-    <Compile Include="Areas\Presales\PageTemplates\ContentSearchPage.cs" />
     <Compile Include="Areas\Presales\PageTemplates\ErrorPage.cs" />
     <Compile Include="Areas\Presales\PageTemplates\LiteratureLibraryPage.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
@@ -3935,12 +3938,15 @@
     <Compile Include="Areas\Presales\SettingsTemplates\CookieSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\SiteSettings.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\SocialMediaSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
+    <Compile Include="Extensions\CacheExtensions.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\ImageExtensions.cs" />
     <Compile Include="Extensions\IntergerExtensions.cs" />
     <Compile Include="Extensions\IDictionaryExtensions.cs" />
+    <Compile Include="Extensions\Views\ContentCollectionExtensions.cs" />
     <Compile Include="Extensions\Views\CookieMessageExtensions.cs" />
     <Compile Include="Extensions\Views\AwardLeaderExtensions.cs" />
     <Compile Include="Extensions\Views\ArticleIndexExtensions.cs" />
@@ -3989,9 +3995,7 @@
     <Content Include="App_Config\Include\ContentTesting\Sitecore.ContentTesting.Mvc.config" />
     <Content Include="App_Config\Include\ContentTesting\Sitecore.ContentTesting.Processing.Aggregation.config" />
     <Content Include="App_Config\Include\ContentTesting\Sitecore.ContentTesting.Solr.IndexConfiguration.config.disabled" />
-    <Content Include="App_Config\Include\DataFolder.config.example">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="App_Config\Include\DataFolder.config.example" />
     <Content Include="App_Config\Include\EventHandler.config.example" />
     <Content Include="App_Config\Include\ExperienceProfile\Sitecore.ExperienceProfile.Client.config" />
     <Content Include="App_Config\Include\ExperienceProfile\Sitecore.ExperienceProfile.config" />
@@ -4043,9 +4047,7 @@
     <Content Include="App_Config\Include\Sitecore.Buckets.WarmupQueries.config.example" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Analytics.config" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.config" />
-    <Content Include="App_Config\Include\Sitecore.ContentSearch.DefaultConfigurations.config">
-      <SubType>Designer</SubType>
-    </Content>
+    <Content Include="App_Config\Include\Sitecore.ContentSearch.DefaultConfigurations.config" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Lucene.DefaultIndexConfiguration.config" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Lucene.Index.Analytics.config" />
     <Content Include="App_Config\Include\Sitecore.ContentSearch.Lucene.Index.Core.config" />

@@ -127,6 +127,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Sitecore.Binaries.8.1.160302\lib\System.Net.Http.Formatting.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Caching" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
@@ -184,10 +185,14 @@
     <Compile Include="Extensions\EnumerableExtensionsTests.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions_GetActiveNavigationSection.cs" />
     <Compile Include="Extensions\IDictionaryExtensionsTests.cs" />
+    <Compile Include="Extensions\View\ContentCollectionExtenstionsTest.cs" />
     <Compile Include="Presales\Controllers\FeemaximaControllerTests\ListTests.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\Get_Tests.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\List_Tests.cs" />
     <Compile Include="Presales\Handlers\FeeMaxima\FeeMaximaChaptersHandlerTests.cs" />
+    <Compile Include="Presales\Handlers\SocialMedia\SocialMediaCountsDtoTests.cs" />
+    <Compile Include="Presales\Handlers\SocialMedia\SocialMediaCountsHandlerTests.cs" />
+    <Compile Include="Presales\Handlers\SocialMedia\SocialMediaCountsRequestTests.cs" />
     <Compile Include="TestDoubles\MediatorStub.cs" />
     <Compile Include="Presales\Handlers\Literature\LiteratureDocumentSummariesHandler_Handle_Tests.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\Search_Tests.cs" />
@@ -219,6 +224,9 @@
       <Project>{ed53f038-83ee-4c5d-b208-783b0c6b3917}</Project>
       <Name>Vitality.Website</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presales\Controllers\SocialMediaControllerTests\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
