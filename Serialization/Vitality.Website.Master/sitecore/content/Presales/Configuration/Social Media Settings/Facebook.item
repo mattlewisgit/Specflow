@@ -1,0 +1,86 @@
+----item----
+version: 1
+id: {A1BF005C-8A12-454B-9280-C9E15BFBF22C}
+database: master
+path: /sitecore/content/Presales/Configuration/Social Media Settings/Facebook
+parent: {D72A1919-E464-4312-86A1-6B2AA23D80BF}
+name: Facebook
+master: {00000000-0000-0000-0000-000000000000}
+template: {57F5D7E8-FE85-40F6-A8F6-2F585428F2B8}
+templatekey: Social Media Settings
+
+----version----
+language: en
+version: 1
+revision: 0847bad7-3045-4ced-a509-161f3c728700
+
+----field----
+field: {C3300FB8-D02B-4F6D-8319-AFD97B5D26E4}
+name: EntityId
+key: entityid
+content-length: 15
+
+242495902445893
+----field----
+field: {A7C35BCD-F966-48EC-A6AB-852B3C375949}
+name: AppKey
+key: appkey
+content-length: 16
+
+1633481376904537
+----field----
+field: {CAAA44C1-1955-4681-A7F8-35B6D468554D}
+name: AppSecret
+key: appsecret
+content-length: 32
+
+d59f86dc81132b6d1db696ee42357f4f
+----field----
+field: {A0E6D78A-0435-455A-AD18-FF24666FA74D}
+name: SiteIdentifier
+key: siteidentifier
+content-length: 8
+
+facebook
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170108T211713Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+0847bad7-3045-4ced-a509-161f3c728700
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170109T165012Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

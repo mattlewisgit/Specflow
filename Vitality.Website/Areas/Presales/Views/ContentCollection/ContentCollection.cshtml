@@ -1,0 +1,32 @@
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection.ContentCollection>
+@{
+    var allContentItems = Model.GetContentItemsAsOneList().ToArray();
+    var totalNoOfItems = allContentItems.Count();
+    var itemsPerColumn = totalNoOfItems / 2;
+}
+<div class="pinch">
+    <div class="example">
+        <div class="content-collection">
+            <h2>@Editable(Model, item => item.Headline)</h2>
+            <p>@Editable(Model, item => item.OpeningParagraph)</p>
+            <div class="grid-no-gutters">
+                <div class="@Model.ColumnCss("left") major-column thin-pad">
+                      @for (var i = 0; i < itemsPerColumn; i++)
+                      {
+                          var contentItem = allContentItems[i];
+                          @Html.Partial("~/Areas/Presales/Views/ContentCollection/" + contentItem.PartialView + ".cshtml", contentItem.Item)
+                      }
+                </div>
+
+                <div class="@Model.ColumnCss("right") major-column thin-pad">
+                    @for (var i = itemsPerColumn; i < totalNoOfItems; i++)
+                    {
+                        var contentItem = allContentItems[i];
+                        @Html.Partial("~/Areas/Presales/Views/ContentCollection/" + contentItem.PartialView + ".cshtml", contentItem.Item)
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Vitality.Website.App.Services;
-using Vitality.Website.App.Services.Interfaces;
+using Vitality.Website.App.Ccsd;
+using Vitality.Website.App.Ccsd.Interfaces;
 
 namespace Vitality.Website.App_Start
 {
