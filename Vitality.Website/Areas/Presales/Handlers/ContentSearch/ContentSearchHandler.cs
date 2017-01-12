@@ -10,8 +10,6 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
 {
     public class ContentSearchHandler : IRequestHandler<ContentSearchRequest, IEnumerable<SearchDocumentDto>>
     {
-        private readonly ISearchIndex _searchIndex = ContentSearchManager.GetIndex("vitality_site_content");
-
         public ContentSearchHandler()
         {
             //_searchIndex.Rebuild();
@@ -19,11 +17,16 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
 
         public IEnumerable<SearchDocumentDto> Handle(ContentSearchRequest message)
         {
-            using (var context = _searchIndex.CreateSearchContext())
-            {   
-                var pathToSearch = string.Format
-                    ("/sitecore/content/{0}/home", Sitecore.Context.Site.Name);
+            var currentSite = Sitecore.Context.Site.Name;
 
+            var pathToSearch = string.Format("/sitecore/content/{0}/home", currentSite);
+
+            var indexName = string.Format("{0}_site_content", currentSite);
+
+            var searchIndex = ContentSearchManager.GetIndex(indexName);
+
+            using (var context = searchIndex.CreateSearchContext())
+            { 
                 var predecate = PredicateBuilder.True<ContentSearchResult>();
 
                 predecate = predecate.And(p => p.Path.StartsWith(pathToSearch));

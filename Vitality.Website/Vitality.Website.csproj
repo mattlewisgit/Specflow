@@ -302,7 +302,10 @@
     <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Config\Include\Vitality\Vitality.WebContentSearch.config">
+    <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Config\Include\Vitality\Vitality.PresalesContentSearch.config">
       <SubType>Designer</SubType>
     </Content>
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
