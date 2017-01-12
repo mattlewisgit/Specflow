@@ -19,7 +19,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
         [Route("api/search/")]
         public HttpResponseMessage Search(string searchQuery, string orderBy, int pageSize, int pageNo)
         {
-            if (string.IsNullOrWhiteSpace(searchQuery) || string.IsNullOrWhiteSpace(searchQuery))
+            if (string.IsNullOrWhiteSpace(searchQuery))
             {
                 return new HttpResponseMessage(HttpStatusCode.BadRequest);
             }
