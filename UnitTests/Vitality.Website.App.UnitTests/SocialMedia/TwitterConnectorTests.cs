@@ -29,14 +29,14 @@ namespace Vitality.Website.App.UnitTests.SocialMedia
             [Fact]
             public void Request_with_page_id_should_retun_fancount()
             {
-                var result = TwitterConnector.GetFollowersCount("lakmalvbj", TwitterConnector.GetAccessToken().AccessToken);
-                result.FollowersCount.ShouldBeGreaterThan(0);
+                var result = TwitterConnector.GetPopularityCount("lakmalvbj", TwitterConnector.GetAccessToken().AccessToken);
+                result.ShouldBeGreaterThan(0);
             }
 
             [Fact]
             public void Request_with_page_id_should_throw_exception_when_call_with_wrong_accesstoken()
             {
-                var ex = Assert.Throws<Exception>(() => TwitterConnector.GetFollowersCount("lakmalvbj", "wrong exception"));
+                var ex = Assert.Throws<Exception>(() => TwitterConnector.GetPopularityCount("lakmalvbj", "wrong exception"));
                 Assert.Equal(HttpStatusCode.BadRequest, (HttpStatusCode)ex.Data["StatusCode"]);
             }
         }

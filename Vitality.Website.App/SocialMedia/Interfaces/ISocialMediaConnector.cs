@@ -1,11 +1,10 @@
 ﻿using Vitality.Website.App.SocialMedia.Models;
-using Vitality.Website.App.SocialMedia.Models.Facebook;
 
 namespace Vitality.Website.App.SocialMedia.Interfaces
 {
-    public interface IFacebookConnector
+    public interface ISocialMediaConnector
     {
         AccessTokenResponse GetAccessToken();
-        FanCountResponse GetLikesCount(string id, string accessToken);
+        int GetPopularityCount(string id, string accessToken);
     }
 }

@@ -10,7 +10,7 @@ using Vitality.Website.App.SocialMedia.Models.Twitter;
 
 namespace Vitality.Website.App.SocialMedia
 {
-    public class TwitterConnector : ITwitterConnector
+    public class TwitterConnector : ISocialMediaConnector
     {
         private readonly RestClient _restClient;
         private readonly SocialMediaAccount _socialMediaAccount;
@@ -34,13 +34,13 @@ namespace Vitality.Website.App.SocialMedia
             return response.Handle();
         }
 
-        public FollowersCountReponse GetFollowersCount(string userId, string accessToken)
+        public int GetPopularityCount(string userId, string accessToken)
         {
             var request = new RestRequest("/1.1/users/lookup.json", Method.GET);
             request.AddQueryParameter("screen_name", userId);
             _restClient.Authenticator = new OAuth2AuthorizationRequestHeaderAuthenticator(accessToken, "Bearer");
             var response = _restClient.Execute<List<FollowersCountReponse>>(request);
-            return response.Handle().First();
+            return response.Handle().First().FollowersCount;
         }
     }
 }

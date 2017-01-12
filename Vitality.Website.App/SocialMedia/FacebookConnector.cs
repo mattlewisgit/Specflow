@@ -7,7 +7,7 @@ using Vitality.Website.App.SocialMedia.Models.Facebook;
 
 namespace Vitality.Website.App.SocialMedia
 {
-    public class FacebookConnector :IFacebookConnector
+    public class FacebookConnector :ISocialMediaConnector
     {
         private readonly RestClient _restClient; 
         private readonly SocialMediaAccount _socialMediaAccount;
@@ -28,13 +28,13 @@ namespace Vitality.Website.App.SocialMedia
             return response.Handle();
         }
 
-        public FanCountResponse GetLikesCount(string pageId, string accessToken)
+        public int GetPopularityCount(string pageId, string accessToken)
         {
             var url = string.Format(@"/{0}/?fields=fan_count", pageId);
             var request = new RestRequest(url, Method.GET);
             _restClient.Authenticator = new OAuth2UriQueryParameterAuthenticator(accessToken);
             var response =  _restClient.Execute<FanCountResponse>(request);
-            return response.Handle();
+            return response.Handle().FanCount;
         }
     }
 }
