@@ -36,8 +36,7 @@ namespace Vitality.Website.App.UnitTests.SocialMedia
             [Fact]
             public void Request_with_page_id_should_throw_exception_when_call_with_wrong_accesstoken()
             {
-                var ex = Assert.Throws<Exception>(() => TwitterConnector.GetPopularityCount("lakmalvbj", "wrong exception"));
-                Assert.Equal(HttpStatusCode.BadRequest, (HttpStatusCode)ex.Data["StatusCode"]);
+               Assert.Throws<Exception>(() => TwitterConnector.GetPopularityCount("lakmalvbj", "wrong exception"));
             }
         }
     }
