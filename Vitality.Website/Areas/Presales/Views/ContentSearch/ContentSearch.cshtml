@@ -15,7 +15,7 @@
             <div data-ng-show="showResults" class="search-panel__search-details" data-ng-cloak="">
                 <p>
                     <span class="search-matches">{{results.length}}</span>
-                    results for
+                    @Editable(x => x.SearchStatus)
                     <span class="search-string">{{searchTerm}}</span>.
                 </p>
             </div>
