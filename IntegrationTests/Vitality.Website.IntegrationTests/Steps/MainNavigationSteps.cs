@@ -51,7 +51,7 @@
                 .ShouldBe(AppSettings.Links.VitalityPresalesUrl + p0);
         }
 
-        [Then(@"I expect the advisers '(.*)' to open")]
+        [Then(@"I expect the advisers (.*) to open")]
         public void ThenIExpectTheAdvisersToOpen(string p0)
         {
             WebDriver

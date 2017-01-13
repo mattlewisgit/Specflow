@@ -19,7 +19,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: de9f587b-67d8-4b24-a19e-b81eb61553dc
+revision: 52b03ffd-f6f5-401f-9f6e-e5ec870fcb4b
 
 ----field----
 field: {B86309DF-ED3A-4D6F-884F-AD4B0CEE748F}
@@ -35,6 +35,20 @@ key: searchplaceholdertext
 content-length: 9
 
 Search...
+----field----
+field: {D16AA654-BB88-4BA5-8E66-268015555B25}
+name: SearchPageSize
+key: searchpagesize
+content-length: 2
+
+50
+----field----
+field: {166A2754-488C-466A-B9F1-FEA37B70CB2E}
+name: SearchStatus
+key: searchstatus
+content-length: 11
+
+results for
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -55,14 +69,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-de9f587b-67d8-4b24-a19e-b81eb61553dc
+52b03ffd-f6f5-401f-9f6e-e5ec870fcb4b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170111T141155Z
+20170113T143150Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

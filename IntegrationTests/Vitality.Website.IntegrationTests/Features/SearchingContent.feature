@@ -11,11 +11,12 @@
     When I search for <Data> 
 	Then I expect the <Results> to be visible
 	And then I click on the <Results> results page
-	Then I expect the presales /dev/cards-stacked/ to open
+	Then I expect the presales <URL> to open
 	
 	Examples:
-	| Data		            | Results				|
-	| Cards Stacked		    | Cards Stacked Title	| 
+	| Data		            | Results				| URL				   |
+	| Cards Stacked		    | Cards Stacked Title	| /dev/cards-stacked/  |
+	| Home				    | Home Hero Desc		| /dev/home-hero/	   |
 
 
 	@SIT
@@ -24,8 +25,9 @@
     When I search for <Data> 
 	Then I expect the <Results> to be visible
 	And then I click on the <Results> results page
-	Then I expect the advisers '/dev/sales-library/' to open
+	Then I expect the advisers <URL> to open
 
 	Examples:
-	| Data		            | Results							|
-	| Sales				    | Sales Literature Library Title	| 
+	| Data		            | Results							| URL				   |
+	| Sales				    | Sales Literature Library Title	| /dev/sales-library/  |
+	| Literature		    | Member Literature Library Desc	| /dev/member-library/ | 

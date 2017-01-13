@@ -76,8 +76,9 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TraitAttribute("FeatureTitle", "SearchingContent")]
         [Xunit.TraitAttribute("Description", "Searching Presales Content")]
         [Xunit.TraitAttribute("Category", "SIT")]
-        [Xunit.InlineDataAttribute("Cards Stacked", "Cards Stacked Title", new string[0])]
-        public virtual void SearchingPresalesContent(string data, string results, string[] exampleTags)
+        [Xunit.InlineDataAttribute("Cards Stacked", "Cards Stacked Title", "/dev/cards-stacked/", new string[0])]
+        [Xunit.InlineDataAttribute("Home", "Home Hero Desc", "/dev/home-hero/", new string[0])]
+        public virtual void SearchingPresalesContent(string data, string results, string uRL, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "SIT"};
@@ -97,7 +98,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 13
  testRunner.And(string.Format("then I click on the {0} results page", results), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
- testRunner.Then("I expect the presales /dev/cards-stacked/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I expect the presales {0} to open", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -106,8 +107,9 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TraitAttribute("FeatureTitle", "SearchingContent")]
         [Xunit.TraitAttribute("Description", "Searching Advisers Content")]
         [Xunit.TraitAttribute("Category", "SIT")]
-        [Xunit.InlineDataAttribute("Sales", "Sales Literature Library Title", new string[0])]
-        public virtual void SearchingAdvisersContent(string data, string results, string[] exampleTags)
+        [Xunit.InlineDataAttribute("Sales", "Sales Literature Library Title", "/dev/sales-library/", new string[0])]
+        [Xunit.InlineDataAttribute("Literature", "Member Literature Library Desc", "/dev/member-library/", new string[0])]
+        public virtual void SearchingAdvisersContent(string data, string results, string uRL, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "SIT"};
@@ -116,18 +118,18 @@ namespace Vitality.Website.IntegrationTests.Features
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Searching Advisers Content", @__tags);
-#line 22
- this.ScenarioSetup(scenarioInfo);
 #line 23
-    testRunner.Given("I am on advisers /dev/search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ this.ScenarioSetup(scenarioInfo);
 #line 24
-    testRunner.When(string.Format("I search for {0}", data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Given("I am on advisers /dev/search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 25
- testRunner.Then(string.Format("I expect the {0} to be visible", results), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.When(string.Format("I search for {0}", data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 26
- testRunner.And(string.Format("then I click on the {0} results page", results), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Then(string.Format("I expect the {0} to be visible", results), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 27
- testRunner.Then("I expect the advisers \'/dev/sales-library/\' to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And(string.Format("then I click on the {0} results page", results), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
+ testRunner.Then(string.Format("I expect the advisers {0} to open", uRL), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

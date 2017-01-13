@@ -19,8 +19,22 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 93f68140-83fa-4f2e-ae7e-d8903cb747d3
+revision: 7426175e-b2e5-4cf7-be55-a0fb41d619cd
 
+----field----
+field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
+name: Title
+key: title
+content-length: 18
+
+Cards Tabbed Title
+----field----
+field: {503DBB8D-A5C9-4ECF-9EAA-B3F8904567F4}
+name: Description
+key: description
+content-length: 24
+
+Cards Tabbed Description
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -48,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-93f68140-83fa-4f2e-ae7e-d8903cb747d3
+7426175e-b2e5-4cf7-be55-a0fb41d619cd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161215T123332Z
+20170112T143246Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

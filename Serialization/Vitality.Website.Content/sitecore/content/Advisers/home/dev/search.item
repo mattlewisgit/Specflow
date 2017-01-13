@@ -19,7 +19,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 7cc17167-863a-4dfb-9d7c-b57b0e0c59af
+revision: 7cf0a332-8f83-406a-889e-0f23bba31533
 
 ----field----
 field: {B86309DF-ED3A-4D6F-884F-AD4B0CEE748F}
@@ -35,6 +35,20 @@ key: searchplaceholdertext
 content-length: 9
 
 Search...
+----field----
+field: {D16AA654-BB88-4BA5-8E66-268015555B25}
+name: SearchPageSize
+key: searchpagesize
+content-length: 2
+
+50
+----field----
+field: {166A2754-488C-466A-B9F1-FEA37B70CB2E}
+name: SearchStatus
+key: searchstatus
+content-length: 11
+
+results for
 ----field----
 field: {B6E8B615-EE7A-485C-B14E-611876076E39}
 name: InheritSitemapSettings
@@ -76,14 +90,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7cc17167-863a-4dfb-9d7c-b57b0e0c59af
+7cf0a332-8f83-406a-889e-0f23bba31533
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170111T141307Z
+20170113T143411Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
