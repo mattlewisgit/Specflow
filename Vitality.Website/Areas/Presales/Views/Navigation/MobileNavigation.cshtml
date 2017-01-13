@@ -15,7 +15,10 @@
                 @using (BeginRenderLink(Model, item => item.SearchPage))
                 {
                     <img src="/img/search.svg" alt="Search">
-                    @Html.Raw(Model.SearchPage.Text)
+                    if (Model.SearchPage != null)
+                    {
+                        @Html.Raw(Model.SearchPage.Text)
+                    }
                 }
             </div>
         </li>
