@@ -9,17 +9,20 @@
     </div>
 
     <ul class="utility-nav--small">
-        
-        <li class="utility-nav__item utility-nav__item--search">
-            <div class="utility-nav__inner">
-                @using (BeginRenderLink(Model, item => item.SearchPage))
-                {
-                    <img src="/img/search.svg" alt="Search">
-                    @Html.Raw(Model.SearchPage.Text)
-                }
-            </div>
-        </li>
-        
+
+        @if (Model.SearchPage != null)
+        {
+            <li class="utility-nav__item utility-nav__item--search">
+                <div class="utility-nav__inner">
+                    @using (BeginRenderLink(Model, item => item.SearchPage))
+                    {
+                        <img src="/img/search.svg" alt="Search">
+                        @Html.Raw(Model.SearchPage.Text)
+
+                    }
+                </div>
+            </li>
+        }
         <li class="utility-nav__item utility-nav__item--log-in js-log-in-toggle">
             <div class="utility-nav__inner ">
                 <img src="/img/log-in.svg" alt="Log in">

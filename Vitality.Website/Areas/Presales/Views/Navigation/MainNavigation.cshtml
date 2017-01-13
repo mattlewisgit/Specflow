@@ -27,14 +27,16 @@
         </ul>
 
         <ul class="utility-nav">
-            <li class="utility-nav__item utility-nav__item--search">
-                @using (BeginRenderLink(Model, item => item.SearchPage))
-                {
-                    <img src="/img/search.svg" alt="Search">
-                    @Html.Raw(Model.SearchPage.Text)
-                }
-            </li>
-
+            @if (Model.SearchPage != null)
+            {
+                <li class="utility-nav__item utility-nav__item--search">
+                    @using (BeginRenderLink(Model, item => item.SearchPage))
+                    {
+                        <img src="/img/search.svg" alt="Search">
+                        @Html.Raw(Model.SearchPage.Text)
+                    }
+                </li>
+            }
             @if (!string.IsNullOrEmpty(Model.LogInText))
             {
                 <li class="utility-nav__item utility-nav__item--log-in js-log-in-toggle">
