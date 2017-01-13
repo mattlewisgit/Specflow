@@ -21,7 +21,7 @@ namespace Vitality.Website.UnitTests.Presales.Handlers.SocialMedia
             });
             result.EntityId.ShouldBe("testentityid");
             result.SiteIdentifier.ShouldBe("twitter");
-            result.SocialMediaConnector.ShouldBeOfType<FacebookConnector>();
+            result.SocialMediaConnector.ShouldBeOfType<TwitterConnector>();
         }
 
         [Fact]
