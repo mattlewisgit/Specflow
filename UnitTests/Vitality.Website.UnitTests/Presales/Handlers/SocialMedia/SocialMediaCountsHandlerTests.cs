@@ -37,14 +37,16 @@ namespace Vitality.Website.UnitTests.Presales.Handlers.SocialMedia
                     , DateTimeOffset.UtcNow.AddSeconds(10));
                 _handler.CallSocialConnector(_logger.Object, _socialMediaConnector.Object, "twitter", "testentityid", 0);
                 _socialMediaConnector.Verify(smc => smc.GetAccessToken(), Times.Never);
+                CacheStore.Remove("twitter_accessToken");
             }
 
             [Fact]
             public void should_call_accesstoken_request_when_not_found_in_cache()
             {
-                _socialMediaConnector.Setup(smc => smc.GetAccessToken()).Returns(new AccessTokenResponse());
+                   _socialMediaConnector.Setup(smc => smc.GetAccessToken()).Returns(new AccessTokenResponse());
                 _handler.CallSocialConnector(_logger.Object, _socialMediaConnector.Object, "facebook", "testentityid", 0);
                 _socialMediaConnector.Verify(smc => smc.GetAccessToken(), Times.Once);
+                CacheStore.Remove("facebook_accessToken");
             }
 
             [Fact]
@@ -57,6 +59,7 @@ namespace Vitality.Website.UnitTests.Presales.Handlers.SocialMedia
                     .Throws(exception);
                 Assert.Throws<Exception>(() => _handler.CallSocialConnector(_logger.Object, _socialMediaConnector.Object, "facebook", "testentityid", 0));
                 _socialMediaConnector.Verify(smc => smc.GetAccessToken(), Times.Exactly(2));
+                CacheStore.Remove("facebook_accessToken");
             }
         }
     }
