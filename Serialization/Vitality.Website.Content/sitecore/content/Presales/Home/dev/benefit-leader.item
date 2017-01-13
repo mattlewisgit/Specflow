@@ -26,8 +26,22 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: e10b82dd-4fb4-4eb9-9177-afe5025b9303
+revision: 043ccb73-a83e-40a3-ba74-ae17a741503b
 
+----field----
+field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
+name: Title
+key: title
+content-length: 20
+
+Benefit Leader Title
+----field----
+field: {503DBB8D-A5C9-4ECF-9EAA-B3F8904567F4}
+name: Description
+key: description
+content-length: 26
+
+Benefit Leader Description
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
@@ -55,14 +69,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e10b82dd-4fb4-4eb9-9177-afe5025b9303
+043ccb73-a83e-40a3-ba74-ae17a741503b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161214T142921Z
+20170112T123634Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

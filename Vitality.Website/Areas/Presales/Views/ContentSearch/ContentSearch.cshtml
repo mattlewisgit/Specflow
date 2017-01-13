@@ -1,0 +1,42 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.ContentSearchPage>
+             
+
+<div class="search-panel" data-ng-app="SiteSearchApp">
+    <div class="search-panel__content pinch" data-ng-controller="site-search">
+        <div class="search-panel__header">
+            <p>@Editable(x => x.Headline)</p>
+        </div>
+
+        <div class="search-panel__search-field form" role="search">
+            <div class="form__field">
+                <input type="text" class="search-panel__search-input" placeholder="@Html.Raw(Model.SearchPlaceholderText)" data-ng-model="searchTerm" data-ng-change="search(searchTerm)" data-ng-keyup="navigate($event.which)" data-ng-model-options="{ debounce: 350 }">
+            </div>
+
+            <div data-ng-show="showResults" class="search-panel__search-details" data-ng-cloak="">
+                <p>
+                    <span class="search-matches">{{results.length}}</span>
+                    @Editable(x => x.SearchStatus)
+                    <span class="search-string">{{searchTerm}}</span>.
+                </p>
+            </div>
+        </div>
+
+        <div data-ng-show="showResults" class="search-panel__search-results">
+            <ul class="search-results__list"> 
+                <li data-ng-repeat="(i, result) in results" class="search-results__item" data-ng-cloak data-ng-class="(i === highlightedIndex) ? 'hover' : ''">
+                    <a href="{{result.url}}">
+                        <h4 class="search-results__item-header" data-ng-bind-html="result.title"></h4>
+
+                        <ol data-ng-show="result.breadcrumb">
+                            <li data-ng-repeat="breadcrumb in result.breadcrumb">
+                                {{breadcrumb}}
+                            </li>
+                        </ol>
+
+                        <p class="search-results__item-body" data-ng-bind-html="result.description"></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

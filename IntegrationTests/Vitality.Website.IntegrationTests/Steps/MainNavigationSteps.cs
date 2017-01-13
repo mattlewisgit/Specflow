@@ -51,6 +51,16 @@
                 .ShouldBe(AppSettings.Links.VitalityPresalesUrl + p0);
         }
 
+        [Then(@"I expect the advisers '(.*)' to open")]
+        public void ThenIExpectTheAdvisersToOpen(string p0)
+        {
+            WebDriver
+                .WaitForPageLoad()
+                .Url
+                .ShouldBe(AppSettings.Links.VitalityAdvisersUrl + p0);
+        }
+
+
 
 
         [When(@"I resize to mobile view")]
