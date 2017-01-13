@@ -36,8 +36,7 @@ namespace Vitality.Website.App.UnitTests.SocialMedia
             [Fact]
             public void Request_with_wrong_access_token_page_id_should_throw_exception_with_401_status_code()
             {
-                var ex = Assert.Throws<Exception>(()=> FacebookConnector.GetPopularityCount(242495902445893.ToString(), "wrong access token"));
-                Assert.Equal(HttpStatusCode.BadRequest, (HttpStatusCode)ex.Data["StatusCode"]);
+                Assert.Throws<Exception>(()=> FacebookConnector.GetPopularityCount(242495902445893.ToString(), "wrong access token"));
             }
         }
     }

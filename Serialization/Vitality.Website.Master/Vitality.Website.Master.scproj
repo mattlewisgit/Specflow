@@ -773,6 +773,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Renderings\Presales\Search\Content Search.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Renderings\Presales\Shared.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -5604,6 +5605,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Content Search\Content\SearchStatus.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Page Templates\Error Page.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>

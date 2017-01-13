@@ -19,15 +19,15 @@ content-length: 194
 ----version----
 language: en
 version: 1
-revision: e87aa48b-94b6-4f19-b9b3-267a7c653fe1
+revision: 8c3cfad4-0332-471e-976e-46526996e418
 
 ----field----
 field: {ECD4AC4B-67D1-4C6C-B885-E3038E1DBB3F}
 name: LargeColumnSide
 key: largecolumnside
-content-length: 13
+content-length: 4
 
-grid-col-8-12
+left
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e87aa48b-94b6-4f19-b9b3-267a7c653fe1
+8c3cfad4-0332-471e-976e-46526996e418
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170105T121757Z
+20170113T134301Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
