@@ -81,8 +81,10 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
 
         private static bool FilterCase(string searchQuery, string property)
         {
-            return CultureInfo.CurrentCulture.CompareInfo.IndexOf(property, searchQuery, CompareOptions.IgnoreCase) >= 0;
-        }
+            if(!string.IsNullOrEmpty(searchQuery) && !string.IsNullOrEmpty(property))
+                return CultureInfo.CurrentCulture.CompareInfo.IndexOf(property, searchQuery, CompareOptions.IgnoreCase) >= 0;
 
+            return false;
+        }                
     }
 }
