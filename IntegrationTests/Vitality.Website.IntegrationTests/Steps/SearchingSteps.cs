@@ -21,8 +21,8 @@ namespace Vitality.Website.IntegrationTests.Steps
     {
         // For additional details on SpecFlow step definitions see http://go.specflow.org/doc-stepdef
 
-        [When(@"I search for (.*)")]
-        public void WhenISearchFor(string p0)
+        [When(@"I search content (.*)")]
+        public void WhenISearchContent(string p0)
         {
             //Clear Search box text
             WebDriver
@@ -35,8 +35,9 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .SendKeys(p0);
         }
 
-        [Then(@"I expect the (.*) to be visible")]
-        public void ThenIExpectTheToBeVisible(string p0)
+
+        [Then(@"I expect search contents (.*) to be visible")]
+        public void ThenIExpectSearchContentsToBeVisible(string p0)
         {
             //Wait for first search result to appear
             //WebDriver
@@ -47,6 +48,7 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .WaitForElement(new JQuerySelector("li.search-results__item.ng-scope" + ":contains('" + p0 + "')"))
                 .Displayed.ShouldBeTrue();
         }
+
 
 
         [Then(@"then I click on the (.*) results page")]

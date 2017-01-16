@@ -8,8 +8,8 @@
 	@SIT
 	Scenario Outline: Searching Presales Content
     Given I am on presales /dev/search
-    When I search for <Data> 
-	Then I expect the <Results> to be visible
+    When I search content <Data> 
+	Then I expect search contents <Results> to be visible
 	And then I click on the <Results> results page
 	Then I expect the presales <URL> to open
 	
@@ -22,8 +22,8 @@
 	@SIT
 	Scenario Outline: Searching Advisers Content
     Given I am on advisers /dev/search
-    When I search for <Data> 
-	Then I expect the <Results> to be visible
+    When I search content <Data> 
+	Then I expect search contents <Results> to be visible
 	And then I click on the <Results> results page
 	Then I expect the advisers <URL> to open
 

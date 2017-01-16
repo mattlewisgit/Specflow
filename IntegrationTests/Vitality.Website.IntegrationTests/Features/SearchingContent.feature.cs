@@ -92,9 +92,9 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 10
     testRunner.Given("I am on presales /dev/search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 11
-    testRunner.When(string.Format("I search for {0}", data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When(string.Format("I search content {0}", data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 12
- testRunner.Then(string.Format("I expect the {0} to be visible", results), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I expect search contents {0} to be visible", results), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 13
  testRunner.And(string.Format("then I click on the {0} results page", results), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
@@ -123,9 +123,9 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 24
     testRunner.Given("I am on advisers /dev/search", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 25
-    testRunner.When(string.Format("I search for {0}", data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When(string.Format("I search content {0}", data), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 26
- testRunner.Then(string.Format("I expect the {0} to be visible", results), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I expect search contents {0} to be visible", results), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 27
  testRunner.And(string.Format("then I click on the {0} results page", results), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 28
