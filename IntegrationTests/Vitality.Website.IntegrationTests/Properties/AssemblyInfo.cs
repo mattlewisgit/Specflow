@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Vitality.Website.IntegrationTests")]
+[assembly: AssemblyCompany("Vitality")]
 [assembly: AssemblyProduct("Vitality.Website.IntegrationTests")]
 [assembly: AssemblyCopyright("Copyright © Vitality 2016")]
 

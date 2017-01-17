@@ -32,6 +32,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -4228,7 +4229,6 @@
     <Content Include="Areas\Presales\Views\Literature\ApplicationFormLibrary.cshtml" />
     <Content Include="client_side\bower.json" />
     <Content Include="client_side\.bowerrc" />
-    <None Include="Properties\PublishProfiles\test.pubxml" />
     <Content Include="Views\Form\EditorTemplates\CheckboxField.cshtml" />
     <Content Include="Views\Form\EditorTemplates\CheckboxListField.cshtml" />
     <Content Include="Views\Form\EditorTemplates\DateField.cshtml" />
