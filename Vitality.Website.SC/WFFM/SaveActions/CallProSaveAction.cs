@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Sitecore.Data;
 using Sitecore.Diagnostics;
 using Sitecore.WFFM.Abstractions.Actions;
@@ -36,8 +37,21 @@ namespace Vitality.Website.SC.WFFM.SaveActions
             // Transform XML.
             var requestXml = xmlTemplate.Replace(formFields);
 
-            // Execute request.
-            CallProConnector.Send(requestXml);
+            try
+            {
+                // Execute request.
+                CallProConnector.Send(requestXml);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(
+                    string.Format("Failed to submit form to Call Pro. SchemaId:{0}. Error:{1}. InnerException:{2}.", 
+                    SchemaId, 
+                    ex.Message, 
+                    ex.InnerException != null ? ex.InnerException.Message : string.Empty)
+                    , this);
+            }
+            
         }
 
         public ActionState QueryState(ActionQueryContext queryContext)
