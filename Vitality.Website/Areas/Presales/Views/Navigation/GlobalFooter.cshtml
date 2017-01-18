@@ -23,7 +23,7 @@
 
         <div class="page-footer__logo page-footer__logo--large">
             <a href="/">
-                @RenderImage(Model, m => m.Logo, new { @class = "page-footer__logo-img" })
+                @RenderImage(Model, m => m.Logo, new { @class = "page-footer__logo-img lazyload" })
             </a>
             <p class="page-footer__copyright">
                 @Html.Raw(Model.CopyrightStatement)
@@ -59,7 +59,7 @@
                 <li class="social-icon">
                     @using (BeginRenderLink(socialLink, m => m.Link))
                     {
-                        @RenderImage(socialLink, m => m.Image)
+                        @RenderImage(socialLink, m => m.Image, new {@class= "lazyload" })
                     }
                 </li>
             }
@@ -69,7 +69,7 @@
 
         <div class="page-footer__logo page-footer__logo--small">
             <a href="/">
-                @RenderImage(Model, m => m.Logo, new { @class = "page-footer__logo-img" })
+                @RenderImage(Model, m => m.Logo, new { @class = "page-footer__logo-img lazyload" })
             </a>
             <p class="page-footer__copyright">
                 @Html.Raw(Model.CopyrightStatement)

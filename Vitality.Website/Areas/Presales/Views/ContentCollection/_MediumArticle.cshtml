@@ -1,9 +1,9 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Articles.MediumArticle>
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Articles.MediumArticle>
 @using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", Model.Path))
 {
     <div class="content-collection--module article--medium">
-
-        @Editable(Model, item => item.Image, new { alt = Model.Image.Alt, @class = "lazyload", mw = 377 })
+        @RenderImage(item => item.Image, new {alt = Model.Image.Alt, @class = "lazyload", mw = 377}, true)
 
         <div>
             <p class="content-collection--module__strapline">@Editable(Model, item => item.LeadIn)</p>

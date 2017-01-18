@@ -1,8 +1,10 @@
 using Glass.Mapper.Configuration;
 using Glass.Mapper.IoC;
 using Glass.Mapper.Maps;
+using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.IoC;
 using Vitality.Website.Areas.Presales.SettingsTemplates;
+using Vitality.Website.Constants;
 using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
 
 namespace Vitality.Website.App_Start
@@ -11,8 +13,11 @@ namespace Vitality.Website.App_Start
 
     public static  class GlassMapperScCustom
     {
-		public static IDependencyResolver CreateResolver(){
-			var config = new Glass.Mapper.Sc.Config();
+		public static IDependencyResolver CreateResolver()
+		{
+            // Set default images to be lazyload
+		    GlassHtml.ImageTagFormat = GlassMapperConstants.LazyImageTagFormat;
+			var config = new Config();
 
 			var dependencyResolver = new DependencyResolver(config);
 			// add any changes to the standard resolver here
