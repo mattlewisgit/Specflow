@@ -28,6 +28,9 @@ namespace Vitality.Website.SC.WFFM.Helpers
                 .AddRange(new Dictionary<string, string>
                 {
                     { "{TODAY}", today.ToShortDateString() },
+                    { "{DAY}", today.Day.ToString("D2") },
+                    { "{MONTH}", today.Month.ToString("D2") },
+                    { "{YEAR}", today.Year.ToString() },
                     { "{NEXTMONTH}", today.AddMonths(1).ToShortDateString() },
                     { "{NEXTYEAR}", today.AddYears(1).ToShortDateString() }
                 });
