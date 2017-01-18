@@ -32,10 +32,24 @@ namespace Vitality.Website.SC.WFFM.SaveActions
             Assert.ArgumentNotNull(item, "Call Pro Schema");
             Assert.AreEqual(item.TemplateID.ToString(), WffmConstants.XmlSchemaTemplateId, string.Empty);
 
+            Assert.ArgumentNotNull(item.Fields["Xml"], "Call Pro Schema Xml");
             var xmlTemplate = item.Fields["Xml"].Value;
 
-            // Transform XML.
-            var requestXml = xmlTemplate.Replace(formFields);
+            var requestXml = string.Empty;
+
+            try
+            {
+                // Transform XML.
+                requestXml = xmlTemplate.Replace(formFields);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(
+                    string.Format("Error Transforming Call Pro XML Data: Error:{0}. InnerException: {1}",
+                    ex.Message,
+                    ex.InnerException != null ? ex.InnerException.Message : string.Empty)
+                    , this);
+            }
 
             try
             {
@@ -45,13 +59,13 @@ namespace Vitality.Website.SC.WFFM.SaveActions
             catch (Exception ex)
             {
                 Log.Error(
-                    string.Format("Failed to submit form to Call Pro. SchemaId:{0}. Error:{1}. InnerException:{2}.", 
-                    SchemaId, 
-                    ex.Message, 
+                    string.Format("Failed to submit form to Call Pro. SchemaId:{0}. Error:{1}. InnerException:{2}.",
+                    SchemaId,
+                    ex.Message,
                     ex.InnerException != null ? ex.InnerException.Message : string.Empty)
                     , this);
             }
-            
+
         }
 
         public ActionState QueryState(ActionQueryContext queryContext)
