@@ -5,24 +5,23 @@
 {
     <div class="cards-stacked @this.BackgroundClass() lazyload" data-bg="@this.BackgroundStyle()">
         <div class="spotlight text-light">
-            <h2 class="spotlight__heading">
+            <h2>
                 @Editable(Model, item => item.Headline)
             </h2>
             
             @if (IsInEditingMode || !string.IsNullOrEmpty(Model.OpeningParagraph))
             {
-                <div class="spotlight__intro">
+                <p class="spotlight__intro">
                     @Editable(Model, item => item.OpeningParagraph)
-                </div>
+                </p>
             }
 
-            <ul class="spotlight__list">
+            <ul>
                 @foreach (var card in Model.Cards)
                 {
                     using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", card.Path))
                     {
-                        <li class="spotlight__list-item">
-                            <div class="spotlight-item">
+                        <li>
                                 <div class="spotlight-item__top-content">
                                     @if (this.ImageOnTop())
                                     {
@@ -30,13 +29,13 @@
                                             @RenderImage(card, item => item.Icon, new { @class="lazyload", mw = 388 }, true)
                                         </div>
 
-                                        <h3 class="spotlight-item__heading">
+                                        <h3>
                                             @Editable(card, item => item.Title)
                                         </h3>
                                     }
                                     else
                                     {
-                                        <h3 class="spotlight-item__heading">
+                                        <h3>
                                             @Editable(card, item => item.Title)
                                         </h3>
                                         
@@ -51,9 +50,8 @@
                                 </div>
 
                                 <div class="spotlight-item__cta">
-                                    @Editable(card, item => item.CallToAction, new { @class = "emphasis-link" })
+                                    @Editable(card, item => item.CallToAction)
                                 </div>
-                            </div>
                         </li>
                     }
                 }

@@ -7,7 +7,7 @@
         <h2 class="spotlight__heading">@Editable(Model, m => m.Headline)</h2>
         <p class="spotlight__intro">@Editable(Model, m => m.OpeningParagraph)</p>
 
-        <ul class="filter-list js-filter-options">
+        <ol class="filter-list js-filter-options">
             <li class="filter-list__item js-filter-options__item js-filter-options__item--default">
                 <a class="js-focus" role="button" data-filter="all">
                     @Editable(Model, m => m.AllCategoriesText)
@@ -21,37 +21,33 @@
                 </a>
             </li>
         }
-        </ul>
+        </ol>
 
-        <div class="filter-section__details js-filter-section__details">
-            <p>@Html.Raw(this.ResultsCountText())</p>
-        </div>
-
-        <ul class="spotlight__list js-filtered-container">
+        <ul class="js-filtered-container">
             @foreach (var partnerCard in Model.PartnerCards)
             {
                 using (BeginEditFrame(partnerCard, "Edit partner categories", m => m.Categories))
                 {
-                <li class="spotlight__list-item js-filtered-container__item" data-filter="@this.PartnerCategories(partnerCard)">
-                    <div class="spotlight-item js-match-height--2">
-                        <div class="spotlight-item__top-content js-match-height">
+                <li class="js-filtered-container__item" data-filter="@this.PartnerCategories(partnerCard)">
+                    <div class="spotlight-item__top-content">
                             <div class="spotlight-item__intro-image burst">
                                 @RenderImage(partnerCard, m => m.Image, new { @class="lazyload", mw = 388 }, true)
                             </div>
 
-                            <div class="spotlight-item__logo">
-                                @RenderImage(partnerCard, m => m.Logo, new { @class="lazyload", mw = 200 }, true)
-                            </div>
+                        <div class="spotlight-item__logo">
+                            <a href="@partnerCard.CallToAction.Url">
+                                @RenderImage(partnerCard, m => m.Logo, new { @class = "lazyload", mw = 200 }, true)
+                            </a>
+                        </div>
 
-                            <p class="spotlight-item__heading">@Editable(partnerCard, m => m.Headline)</p>
+                            <h3>@Editable(partnerCard, m => m.Headline)</h3>
 
                             <div class="spotlight-item__content">@Editable(partnerCard, m => m.OpeningParagraph)</div>
                         </div>
 
                         <div class="spotlight-item__cta">
-                            @Editable(partnerCard, m => m.CallToAction, new { @class = "emphasis-link" })
+                            @Editable(partnerCard, m => m.CallToAction)
                         </div>
-                    </div>
                 </li>
                 }
             }
