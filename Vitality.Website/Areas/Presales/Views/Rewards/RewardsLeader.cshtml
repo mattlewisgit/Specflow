@@ -20,7 +20,7 @@
                     {
                         using (BeginRenderLink(rewardsIcon, item => item.Link, isEditable: true))
                         {
-                            @Editable(rewardsIcon, item => item.Image)
+                            @RenderImage(rewardsIcon, item => item.Image, new {@class="lazyload"}, true)
                         }
                     }
                 }

@@ -4,12 +4,12 @@
 
 <div class="product-hero feature-block feature-block--primary">
     <div class="feature-block__image">
-        @Editable(Model, item => item.VitalityLogo, new { mw = 952 })
+        @RenderImage(Model, item => item.VitalityLogo, new { @class="lazyload", mw = 952 }, true)
     </div>
 
     <div class="feature-block__content-container">
         <div class="feature-block__content">
-            @Editable(Model, item => item.Image, new { @class = "lead-in" })
+            @RenderImage(Model, item => item.Image, new { @class = "lead-in lazyload" }, true)
             <h1>@Editable(Model, item => item.Headline)</h1>
             
             <div class="feature-block__content-body">

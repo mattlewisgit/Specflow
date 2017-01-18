@@ -68,7 +68,7 @@
                         <li class="social-icon">
                             @using (BeginRenderLink(socialLink, item => item.Link))
                             {
-                                @RenderImage(socialLink, item => item.Image, new {@class= "lazyload" }, isEditable: false)
+                                @RenderImage(socialLink, item => item.Image, new {@class= "lazyload" })
                             }
                         </li>
                     }

@@ -36,11 +36,11 @@
                     <div class="spotlight-item js-match-height--2">
                         <div class="spotlight-item__top-content js-match-height">
                             <div class="spotlight-item__intro-image burst">
-                                @Editable(partnerCard, m => m.Image, new { mw = 388 })
+                                @RenderImage(partnerCard, m => m.Image, new { @class="lazyload", mw = 388 }, true)
                             </div>
 
                             <div class="spotlight-item__logo">
-                                @Editable(partnerCard, m => m.Logo, new { mw = 200 })
+                                @RenderImage(partnerCard, m => m.Logo, new { @class="lazyload", mw = 200 }, true)
                             </div>
 
                             <p class="spotlight-item__heading">@Editable(partnerCard, m => m.Headline)</p>
