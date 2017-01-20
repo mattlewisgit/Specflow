@@ -32,12 +32,14 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
                 var query = context.GetQueryable<ContentSearchResult>().Where(predecate);
                 
                 // Return results; 
-                return From(query.ToList(), message.SearchQuery);
+                return From(query.ToList(), message.SearchQuery, message.PageSize);
             }
         }
 
-        public static IEnumerable<SearchDocumentDto> From(IEnumerable<ContentSearchResult> searchResults, string searchQuery)
+        public static IEnumerable<SearchDocumentDto> From(IEnumerable<ContentSearchResult> searchResults, string searchQuery, string pageSize)
         {
+            var pageCount = !string.IsNullOrEmpty(pageSize) ? Int32.Parse(pageSize) : 0;
+
             return (from result in searchResults
                     where FilterCase(searchQuery, result.Description) || FilterCase(searchQuery, result.Title)
                     select new SearchDocumentDto
@@ -46,7 +48,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
                         Description = result.Description,
                         Path = LinkManager.GetItemUrl(Sitecore.Context.Database.GetItem(result.Path)),
                         Breadcrumbs = GetBreadcrumbs(result.GetItem())
-                    }).ToList();
+                    }).ToList().Take(pageCount);
         }
 
 
