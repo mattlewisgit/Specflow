@@ -52,7 +52,7 @@
 
                     if (mediaLink != null)
                     {
-                        if (mediaLink.IsInternal)
+                        if (mediaLink.IsInternal || mediaLink.IsMediaLink)
                         {
                             mediaItem = Database.GetDatabase("web").GetItem(mediaLink.TargetID);
                             return GetMediaUrl(mediaItem);
