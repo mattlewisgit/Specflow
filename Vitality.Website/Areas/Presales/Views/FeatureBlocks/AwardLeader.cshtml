@@ -37,8 +37,8 @@
                         <div class="grid-no-gutters article-snippet">
                             @using (BeginEditFrame(articleItem, "Edit Background image", item => item.Image))
                             {
-                                <div class="grid-col-4-12 article-snippet--image background-position-middle" data-bg="@this.BackgroundImage(articleItem)">
-                                    <div class="tablet-less-than">@RenderImage(articleItem, x => x.Image, new {@class="lazyload", mw = 720 }, true)</div>
+                                <div class="grid-col-4-12 article-snippet--image background-position-middle lazyload" data-bg="@this.BackgroundImage(articleItem)">
+                                    <div class="tablet-less-than">@RenderImage(articleItem, x => x.Image, new { @class="lazyload", mw = 720 }, true)</div>
                                 </div>
 
                                 <div class="grid-col-8-12 article-snippet--content">
