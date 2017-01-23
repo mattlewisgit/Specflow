@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
+using System.Web;
 using Sitecore;
 using Sitecore.WFFM.Abstractions.Actions;
 using Vitality.Website.SC.Extensions;
@@ -32,7 +34,13 @@ namespace Vitality.Website.SC.WFFM.Helpers
                     { "{MONTH}", today.Month.ToString("D2") },
                     { "{YEAR}", today.Year.ToString() },
                     { "{NEXTMONTH}", today.AddMonths(1).ToShortDateString() },
-                    { "{NEXTYEAR}", today.AddYears(1).ToShortDateString() }
+                    { "{NEXTYEAR}", today.AddYears(1).ToShortDateString() },
+                    { "{UTM_SOURCE}", GetUtmCookieValue(Constants.CookieSettings.UtmCookieSource)},
+                    { "{UTM_MEDIUM}", GetUtmCookieValue(Constants.CookieSettings.UtmCookieMedium)},
+                    { "{UTM_CAMPAIGN}", GetUtmCookieValue(Constants.CookieSettings.UtmCookieCampaign)},
+                    { "{UTM_TERM}", GetUtmCookieValue(Constants.CookieSettings.UtmCookieTerm)},
+                    { "{UTM_CONTENT}", GetUtmCookieValue(Constants.CookieSettings.UtmCookieContent)},
+                    { "{REF_URL}", GetUtmCookieValue(Constants.CookieSettings.RefUrl)}
                 });
         }
 
@@ -55,6 +63,19 @@ namespace Vitality.Website.SC.WFFM.Helpers
         private static DateTime ToDateTime(this string @string)
         {
             return DateUtil.IsoDateToDateTime(@string, DateTime.MinValue);
+        }
+
+        public static string GetUtmCookieValue(string key)
+        {
+            HttpCookie utmCookie =
+                HttpContext.Current.Request.Cookies[ConfigurationManager.AppSettings["UtmCookieName"]];
+
+            if (utmCookie == null)
+            {
+                return string.Empty;
+            }
+
+            return utmCookie[key];
         }
     }
 }
