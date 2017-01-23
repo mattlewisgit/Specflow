@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Configuration;
 using System.Linq;
 using System.Web;
@@ -23,6 +24,8 @@ namespace Vitality.Website.SC.WFFM.Helpers
         {
             var today = DateTime.Today;
 
+            var cookie = GetUtmCookie();
+
             return formFields
                 .ToDictionary(
                     f => FormatFieldName(f.FieldName),
@@ -35,12 +38,12 @@ namespace Vitality.Website.SC.WFFM.Helpers
                     { "{YEAR}", today.Year.ToString() },
                     { "{NEXTMONTH}", today.AddMonths(1).ToShortDateString() },
                     { "{NEXTYEAR}", today.AddYears(1).ToShortDateString() },
-                    { "{UTM_SOURCE}", GetUtmCookieValue(Constants.CookieSettings.UtmCookieSource)},
-                    { "{UTM_MEDIUM}", GetUtmCookieValue(Constants.CookieSettings.UtmCookieMedium)},
-                    { "{UTM_CAMPAIGN}", GetUtmCookieValue(Constants.CookieSettings.UtmCookieCampaign)},
-                    { "{UTM_TERM}", GetUtmCookieValue(Constants.CookieSettings.UtmCookieTerm)},
-                    { "{UTM_CONTENT}", GetUtmCookieValue(Constants.CookieSettings.UtmCookieContent)},
-                    { "{REF_URL}", GetUtmCookieValue(Constants.CookieSettings.RefUrl)}
+                    { "{UTM_SOURCE}", cookie != null ? cookie[Constants.CookieSettings.UtmCookieSource] : null },
+                    { "{UTM_MEDIUM}", cookie != null ? cookie[Constants.CookieSettings.UtmCookieMedium] : null },
+                    { "{UTM_CAMPAIGN}", cookie != null ? cookie[Constants.CookieSettings.UtmCookieCampaign] : null},
+                    { "{UTM_TERM}", cookie != null ? cookie[Constants.CookieSettings.UtmCookieTerm] : null },
+                    { "{UTM_CONTENT}", cookie != null ? cookie[Constants.CookieSettings.UtmCookieContent] : null },
+                    { "{REF_URL}", cookie != null? cookie[Constants.CookieSettings.RefUrl] : null }
                 });
         }
 
@@ -65,17 +68,16 @@ namespace Vitality.Website.SC.WFFM.Helpers
             return DateUtil.IsoDateToDateTime(@string, DateTime.MinValue);
         }
 
-        public static string GetUtmCookieValue(string key)
+        public static NameValueCollection GetUtmCookie()
         {
-            HttpCookie utmCookie =
-                HttpContext.Current.Request.Cookies[ConfigurationManager.AppSettings["UtmCookieName"]];
+            var httpCookie = HttpContext.Current.Request.Cookies[ConfigurationManager.AppSettings["UtmCookieName"]];
 
-            if (utmCookie == null)
+            if (httpCookie != null)
             {
-                return string.Empty;
+                return httpCookie.Values;
             }
 
-            return utmCookie[key];
+            return null;
         }
     }
 }
