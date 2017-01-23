@@ -43,13 +43,14 @@
 	And I go to the And rewards for a healthy lifestyle feature block and I click on the Learn more page link
 	Then I expect the presales /rewards/ to open
 
+	@Ignore
 	Scenario: Navigate to Vitality GP, Get a Quote page
     Given I am on presales /
 	When I hover over Health Insurance and click on Vitality GP
 	And I go to the Ready to apply online cta and I click on the Get a quote page link
 	Then I see the https://www.vitality.co.uk/health-insurance/quote/ page
 
-
+	@Ignore
 	Scenario: Navigate to Vitality GP, Hospitals page
     Given I am on presales /
 	When I hover over Health Insurance and click on Vitality GP

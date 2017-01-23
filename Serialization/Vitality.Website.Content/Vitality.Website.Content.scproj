@@ -101,6 +101,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Banners\Web Forms - Home hero.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Forms.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -116,9 +117,11 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Forms\wffm\How did you find us\Agree to Terms and Conditions.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Forms\wffm\How did you find us\How did you find us.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Forms\wffm\Submit the form to enter.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -126,21 +129,27 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Forms\wffm\Submit the form to enter\Email Address.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Forms\wffm\Submit the form to enter\First name.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Forms\wffm\Submit the form to enter\Last Name.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Forms\wffm\Submit the form to enter\Other names.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Forms\wffm\Submit the form to enter\Phone number.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Forms\wffm\Submit the form to enter\Submission Date.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Literature Libraries.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -260,15 +269,19 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Navigation\Main Navigation\Development\Components\Application Library.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Navigation\Main Navigation\Development\Components\Member library.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Navigation\Main Navigation\Development\Components\Sales Library.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Navigation\Main Navigation\Development\Components\WFFM.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\home.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -280,18 +293,23 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\home\dev\application-form.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\home\dev\member-library.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\home\dev\sales-library.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\home\dev\search.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\home\dev\wffm.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -515,18 +533,23 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Global Footer\Components\Accordion Content.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Global Footer\Components\Cards Stacked.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Global Footer\Components\FAQ Leader.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Global Footer\Components\Product Hero.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Global Footer\Components\Summary Component.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Global Footer\More Components.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -534,18 +557,23 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Global Footer\More Components\Benefit Leader.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Global Footer\More Components\Call To Action.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Global Footer\More Components\Content.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Global Footer\More Components\Rewards Leader.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Global Footer\More Components\Tabbed Content.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Main Navigation.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -629,6 +657,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Main Navigation\Personal.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Main Navigation\Social links.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -636,15 +665,19 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Main Navigation\Social links\Facebook.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Main Navigation\Social links\Instagram.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Main Navigation\Social links\Twitter.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Navigation\Main Navigation\Social links\YouTube.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Partners.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -1088,6 +1121,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\media library\Presales\Components\Wembley.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\media library\Presales\Components\woman-running-on-beach.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>

@@ -137,6 +137,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SearchingContent.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\WFFM.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WFFM.feature</DependentUpon>
+    </Compile>
     <Compile Include="Steps\BaseSteps.cs" />
     <Compile Include="Steps\CommonSteps.cs" />
     <Compile Include="Steps\HealthPresalesContentSteps.cs" />
@@ -146,6 +151,7 @@
     <Compile Include="Steps\MetaTagsSteps.cs" />
     <Compile Include="Steps\QuoteApplySteps.cs" />
     <Compile Include="Steps\SearchingSteps.cs" />
+    <Compile Include="Steps\WFFMSteps.cs" />
     <Compile Include="Utilities\PageItems.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +184,10 @@
     <None Include="Features\SearchingContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SearchingContent.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\WFFM.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>WFFM.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
