@@ -21,7 +21,7 @@
                 <ul class="megamenu__list">
                     @foreach (var mainMenuLink in Model.MainMenuLinks)
                     {
-                        <li>@RenderLink(mainMenuLink, item => item.Link)</li>
+                        <li itemprop="name">@RenderLink(mainMenuLink, item => item.Link, new { itemprop = "url" })</li>
                     }
                 </ul>
             </div>
@@ -31,7 +31,7 @@
                 <ul class="megamenu__list">
                     @foreach (var additionalMenuLink in Model.AdditionalMenuLinks)
                     {
-                        <li>@RenderLink(additionalMenuLink, item => item.Link)</li>
+                        <li itemprop="name">@RenderLink(additionalMenuLink, item => item.Link, new { itemprop = "url" })</li>
                     }
                 </ul>
             </div>
