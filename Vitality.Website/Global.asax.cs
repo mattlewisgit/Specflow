@@ -30,7 +30,7 @@ namespace Vitality.Website
             utmCookie[Constants.CookieSettings.UtmCookieCampaign] = Request.Params[ConfigurationManager.AppSettings["UtmCookieCampaign"]];
             utmCookie[Constants.CookieSettings.UtmCookieTerm] = Request.Params[ConfigurationManager.AppSettings["UtmCookieTerm"]];
             utmCookie[Constants.CookieSettings.UtmCookieContent] = Request.Params[ConfigurationManager.AppSettings["UtmCookieContent"]];
-            utmCookie[Constants.CookieSettings.RefUrl] = Request.Params[ConfigurationManager.AppSettings["UtmCookieReferrer"]];
+            utmCookie[Constants.CookieSettings.RefUrl] = Request.UrlReferrer != null ? Request.UrlReferrer.ToString() : string.Empty;
             utmCookie.Expires = DateTime.MinValue;
 
             Response.Cookies.Add(utmCookie);
