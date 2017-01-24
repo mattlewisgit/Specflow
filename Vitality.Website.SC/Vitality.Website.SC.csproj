@@ -119,6 +119,7 @@
     <Compile Include="Agents\Sitemaps\Sitemap.cs" />
     <Compile Include="Agents\Sitemaps\SitemapGenerator.cs" />
     <Compile Include="Agents\Sitemaps\SitemapIndex.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="ContentSearch\Analyzers\LowerCaseLetterAnalyzer.cs" />
     <Compile Include="ContentSearch\ComputedFields\AncestorField.cs" />
     <Compile Include="ContentSearch\ComputedFields\MediaItemSize.cs" />
