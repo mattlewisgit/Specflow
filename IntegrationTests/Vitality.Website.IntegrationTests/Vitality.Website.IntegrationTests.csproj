@@ -107,6 +107,11 @@
     <Compile Include="Drivers\DriverFactory.cs" />
     <Compile Include="Extensions\AssertionExtensions.cs" />
     <Compile Include="Extensions\IWebDriverExtensions.cs" />
+    <Compile Include="Features\Accordion.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Accordion.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\HealthPresalesContent.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -142,6 +147,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WFFM.feature</DependentUpon>
     </Compile>
+    <Compile Include="Steps\AccordionSteps.cs" />
     <Compile Include="Steps\BaseSteps.cs" />
     <Compile Include="Steps\CommonSteps.cs" />
     <Compile Include="Steps\HealthPresalesContentSteps.cs" />
@@ -160,6 +166,10 @@
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Features\Accordion.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Accordion.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\HealthPresalesContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
