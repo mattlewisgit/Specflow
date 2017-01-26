@@ -17,16 +17,24 @@
 
         public Link SearchPage { get; set; }
 
+        public Image SearchIcon { get; set; }
+
+        public string SearchAltText { get; set; }
+
         public Link ContactUsPage { get; set; }
 
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<ImageLink> SocialLinks { get; set; }
-        
+
+        public Image LoginIcon { get; set; }
+
         public string LogInText { get; set; }
+
+        public string LoginAltText { get; set; }
 
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<LinkItem> LoginLinks { get; set; }
-        
+
         [SitecoreQuery(HasNavigationSectionTemplate, IsRelative = true)]
         public IEnumerable<NavigationSection> NavigationSections { get; set; }
     }
