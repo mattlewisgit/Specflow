@@ -90,13 +90,13 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check Accordion Expands on Click")]
+        [Xunit.FactAttribute(DisplayName="Check Accordion Expands on Click in full size view")]
         [Xunit.TraitAttribute("FeatureTitle", "Accordion Component")]
-        [Xunit.TraitAttribute("Description", "Check Accordion Expands on Click")]
+        [Xunit.TraitAttribute("Description", "Check Accordion Expands on Click in full size view")]
         [Xunit.TraitAttribute("Category", "SIT")]
-        public virtual void CheckAccordionExpandsOnClick()
+        public virtual void CheckAccordionExpandsOnClickInFullSizeView()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Accordion Expands on Click", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Accordion Expands on Click in full size view", new string[] {
                         "SIT"});
 #line 13
 this.ScenarioSetup(scenarioInfo);
@@ -110,6 +110,28 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute(DisplayName="Check Accordion Expands on Click in mobile view")]
+        [Xunit.TraitAttribute("FeatureTitle", "Accordion Component")]
+        [Xunit.TraitAttribute("Description", "Check Accordion Expands on Click in mobile view")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void CheckAccordionExpandsOnClickInMobileView()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Accordion Expands on Click in mobile view", new string[] {
+                        "SIT"});
+#line 19
+this.ScenarioSetup(scenarioInfo);
+#line 20
+ testRunner.Given("I am on presales /dev/accordion-content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 21
+    testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 22
+ testRunner.And("I click on accordion tab \'This is Tab 4\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 23
+ testRunner.Then("I expect the accordion description \'#tab4\' to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [Xunit.FactAttribute(DisplayName="Check Accordion Expands Multiple Times")]
         [Xunit.TraitAttribute("FeatureTitle", "Accordion Component")]
         [Xunit.TraitAttribute("Description", "Check Accordion Expands Multiple Times")]
@@ -118,21 +140,21 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Accordion Expands Multiple Times", new string[] {
                         "SIT"});
-#line 19
-this.ScenarioSetup(scenarioInfo);
-#line 20
- testRunner.Given("I am on presales /dev/accordion-content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 21
- testRunner.When("I click on accordion tab \'This is Tab 2\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 22
- testRunner.Then("I expect the accordion description \'#tab2\' to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 23
- testRunner.When("I click on accordion tab \'This is Tab 3\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 24
- testRunner.Then("I expect the accordion description \'#tab3\' to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 25
- testRunner.When("I click on accordion tab \'This is Tab 4\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 26
+this.ScenarioSetup(scenarioInfo);
+#line 27
+ testRunner.Given("I am on presales /dev/accordion-content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 28
+ testRunner.When("I click on accordion tab \'This is Tab 2\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 29
+ testRunner.Then("I expect the accordion description \'#tab2\' to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 30
+ testRunner.When("I click on accordion tab \'This is Tab 3\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 31
+ testRunner.Then("I expect the accordion description \'#tab3\' to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 32
+ testRunner.When("I click on accordion tab \'This is Tab 4\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 33
  testRunner.Then("I expect the accordion description \'#tab4\' to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

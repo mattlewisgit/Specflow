@@ -142,6 +142,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SearchingContent.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Tabbed.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tabbed.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\WFFM.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -157,6 +162,7 @@
     <Compile Include="Steps\MetaTagsSteps.cs" />
     <Compile Include="Steps\QuoteApplySteps.cs" />
     <Compile Include="Steps\SearchingSteps.cs" />
+    <Compile Include="Steps\TabbedSteps.cs" />
     <Compile Include="Steps\WFFMSteps.cs" />
     <Compile Include="Utilities\PageItems.cs" />
   </ItemGroup>
@@ -194,6 +200,10 @@
     <None Include="Features\SearchingContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SearchingContent.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Tabbed.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Tabbed.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\WFFM.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
