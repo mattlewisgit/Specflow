@@ -20,14 +20,14 @@ namespace Vitality.Website.Extensions.Views
 
         public static string BackgroundImage(this GlassView<AwardLeader> view)
         {
-            return string.Format("background-image: url('{0}')", view.Model.BackgroundImage.ProtectedSrc(width:1200));
+            return view.Model.BackgroundImage.ProtectedSrc(width:1200);
         }
 
         public static string BackgroundImage(this GlassView<AwardLeader> view, ArticleItem articleItem)
         {
             if (articleItem != null && articleItem.Image != null && !string.IsNullOrWhiteSpace(articleItem.Image.Src))
             {
-                return string.Format("background-image: url('{0}')", articleItem.Image.ProtectedSrc(width: 388));
+                return articleItem.Image.ProtectedSrc(width: 388);
             }
             return "";
         }

@@ -4,7 +4,7 @@
 
 @using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
 {
-    <div class="partner-hero @this.PartnerWithCardClass() @this.ImageRelativePosition()" style="@this.BackgroundImage()">
+    <div class="partner-hero @this.PartnerWithCardClass() @this.ImageRelativePosition()" data-bg="@this.BackgroundImage()">
         <div class="grid">
             <div class="partner-hero--headline @this.ColumnSpan() @this.FontTheme()">
                 <p class="partner-hero--headline__intro">@Editable(Model, item => item.Headline1)</p>
@@ -20,7 +20,7 @@
                 <div class="grid-col-6-12 partner-hero--right">
                     <div class="partner-hero--card">
                         <div class="spotlight-item__logo--large">
-                            @Editable(Model, item => item.PartnerIcon)
+                            @RenderImage(Model, item => item.PartnerIcon, new {@class="lazyload"}, true)
                         </div>
 
                         <div class="partner-hero--card__top">

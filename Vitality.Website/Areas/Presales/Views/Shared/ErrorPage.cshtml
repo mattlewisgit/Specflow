@@ -11,5 +11,5 @@
         @Editable(Model, m => m.CallToAction2, new { @class = "box-button box-button--light box-button--rounded" })
     </div>
 
-    @Editable(Model, m => m.BackgroundImage)
+    @RenderImage(Model, m => m.BackgroundImage, new {@class="lazyload"}, true)
 </div>

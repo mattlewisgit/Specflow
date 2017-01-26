@@ -8,7 +8,7 @@
             using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", socialMedia.Path))
             {
                 <div class="custom-col text-light" style="background-color: @socialMedia.BackgroundColor;">
-                    @Editable(socialMedia, item => item.Icon, new {alt = socialMedia.Icon.Alt, @class = "lazyload"})
+                    @RenderImage(socialMedia, item => item.Icon, new {alt = socialMedia.Icon.Alt, @class = "lazyload"}, true)
 
                     <p class="content-collection--module__title-bold">
                         <popularity-count settings-id="'@socialMedia.SettingsId'" count-display-text="'@socialMedia.CountDisplayText'"></popularity-count>
