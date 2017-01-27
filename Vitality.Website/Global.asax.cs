@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using Vitality.Website.SC;
+using SC = Vitality.Website.SC;
 
 namespace Vitality.Website
 {
@@ -40,12 +40,11 @@ namespace Vitality.Website
             {
                 HttpCookie utmCookie = new HttpCookie(ConfigurationManager.AppSettings["UtmCookieName"]);
 
-                utmCookie[Constants.CookieSettings.UtmCookieSource] = Request.Params[ConfigurationManager.AppSettings["UtmCookieSource"]];
-                utmCookie[Constants.CookieSettings.UtmCookieMedium] = Request.Params[ConfigurationManager.AppSettings["UtmCookieMedium"]];
-                utmCookie[Constants.CookieSettings.UtmCookieCampaign] = Request.Params[ConfigurationManager.AppSettings["UtmCookieCampaign"]];
-                utmCookie[Constants.CookieSettings.UtmCookieTerm] = Request.Params[ConfigurationManager.AppSettings["UtmCookieTerm"]];
-                utmCookie[Constants.CookieSettings.UtmCookieContent] = Request.Params[ConfigurationManager.AppSettings["UtmCookieContent"]];
-                utmCookie[Constants.CookieSettings.RefUrl] = Request.UrlReferrer != null
+                utmCookie[SC.Constants.CookieSettings.UtmCookieMedium] = Request.Params[ConfigurationManager.AppSettings["UtmCookieMedium"]];
+                utmCookie[SC.Constants.CookieSettings.UtmCookieCampaign] = Request.Params[ConfigurationManager.AppSettings["UtmCookieCampaign"]];
+                utmCookie[SC.Constants.CookieSettings.UtmCookieTerm] = Request.Params[ConfigurationManager.AppSettings["UtmCookieTerm"]];
+                utmCookie[SC.Constants.CookieSettings.UtmCookieContent] = Request.Params[ConfigurationManager.AppSettings["UtmCookieContent"]];
+                utmCookie[SC.Constants.CookieSettings.RefUrl] = Request.UrlReferrer != null
                     ? Request.UrlReferrer.ToString()
                     : null;
                 utmCookie.Expires = DateTime.MinValue;
