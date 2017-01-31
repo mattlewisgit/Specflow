@@ -15,6 +15,7 @@
 
     using OpenQA.Selenium.Interactions;
     using By = OpenQA.Selenium.By;
+    using OpenQA.Selenium;
 
     [Binding]
     public class MainNavigationSteps : BaseSteps
@@ -192,7 +193,14 @@
         }
 
 
-
+        [When(@"I click on the (.*) quote footer button")]
+        public void WhenIClickOnTheQuoteFooterButton(string p0)
+        {
+            WebDriver
+                .WaitForElement(new JQuerySelector(".button-cta" + ":contains('" + p0 + "')"))
+                .Click();
+            
+        }
 
 
 

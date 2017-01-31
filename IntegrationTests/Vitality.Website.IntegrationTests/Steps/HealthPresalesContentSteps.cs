@@ -66,7 +66,74 @@
             actions
                 .SendKeys(Keys.Enter)
                 .Perform();
+
+            WebDriver.WaitForPageLoad();
         }
+
+
+        [When(@"I go to the (.*) Cards Tabbed and I click on the (.*) page link")]
+        public void WhenIGoToTheCardsTabbedAndIClickOnThePageLink(string CardsTabbed, string linkName)
+        {
+            WebDriver
+   .FindElement(new JQuerySelector(".cards-tabbed .spotlight__list-item:contains('" + CardsTabbed + "')"));
+
+            WebDriver
+               .FindElement(new JQuerySelector(".cards-tabbed .spotlight__list-item:contains('" + CardsTabbed + "') a:contains('" + linkName + "')"))
+               .SendKeys(Keys.Space);
+
+            Actions actions = new Actions(WebDriver);
+
+            actions
+                .SendKeys(Keys.Enter)
+                .Perform();
+
+            WebDriver.WaitForPageLoad();
+        }
+
+
+
+
+        [When(@"I go to the (.*) product component and I click on the (.*) page link")]
+        public void WhenIGoToTheProductComponentAndIClickOnThePageLink(string ProductComponent, string LinkName)
+        {
+            WebDriver
+               .FindElement(new JQuerySelector(".products-component .products-component--panel:contains('" + ProductComponent + "')"));
+
+            WebDriver
+               .FindElement(new JQuerySelector(".products-component .products-component--panel:contains('" + ProductComponent + "') a:contains('" + LinkName + "')"))
+               .SendKeys(Keys.Space);
+
+            Actions actions = new Actions(WebDriver);
+
+            actions
+                .SendKeys(Keys.Enter)
+                .Perform();
+
+            WebDriver.WaitForPageLoad();
+        }
+
+
+
+
+        [When(@"I go to the global footer (.*) and I click on the (.*) page link")]
+        public void WhenIGoToTheGlobalFooterAndIClickOnThePageLink(string GlobalFooter, string LinkName)
+        {
+            WebDriver
+               .FindElement(new JQuerySelector(".page-footer__quote:contains('" + GlobalFooter + "')"));
+
+            WebDriver
+               .FindElement(new JQuerySelector(".page-footer__quote:contains('" + GlobalFooter + "') a:contains('" + LinkName + "')"))
+               .SendKeys(Keys.Space);
+
+            Actions actions = new Actions(WebDriver);
+
+            actions
+                .SendKeys(Keys.Enter)
+                .Perform();
+
+            WebDriver.WaitForPageLoad();
+        }
+
 
 
 
@@ -92,12 +159,12 @@
         [Then(@"I see the (.*) page")]
         public void ThenISeeThePage(string pageName)
         {
-         //   Assert.StartsWith(pageName, WebDriver.Url);
+            //Assert.StartsWith(pageName, WebDriver.Url);
 
             WebDriver
               .WaitForPageLoad()
               .Url
-              .ShouldBe(pageName);
+              .StartsWith(pageName);
         }
     }
 }
