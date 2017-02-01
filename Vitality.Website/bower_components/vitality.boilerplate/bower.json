@@ -13,15 +13,25 @@
   "private": true,
   "ignore": [
     "*",
+    "!.bowerrc",
+    "!.editorconfig",
+    "!.gitignore",
+    "!.htmlhintrc",
+    "!.jscsrc",
+    "!.jshintrc",
+    "!bower.json",
+    "!gulpfile.js",
+    "!package.json",
+    "!sass-lint.yml",
     "!dist/**/*",
-    "!src/**/*"
+    "!src/js/**/*",
+    "!src/sass/**/*"
   ],
   "dependencies": {
     "angular": "1.5.x",
     "animate.css": "3.5.x",
     "fastclick": "1.0.x",
     "jquery": "2.2.x",
-    "jquery-match-height": "0.7.x",
     "jquery.smartresize": "1.0.x",
     "js-cookie": "2.1.x",
     "lazysizes": "2.0.x",
@@ -34,8 +44,8 @@
     "wowjs": "1.1.x"
   },
   "devDependencies": {
+    "jquery.cssAnimateAuto": "0.4.x",
     "prism": "1.5.x",
-    "qunit": "2.0.x",
-    "jquery.cssAnimateAuto": "^0.4.0"
+    "qunit": "2.0.x"
   }
 }
