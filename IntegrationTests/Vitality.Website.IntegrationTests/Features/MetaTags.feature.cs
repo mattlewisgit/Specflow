@@ -75,19 +75,26 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TheoryAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "Meta Tags")]
         [Xunit.TraitAttribute("Description", "Common Meta Tags should appear on every page")]
+        [Xunit.TraitAttribute("Category", "SIT")]
         [Xunit.InlineDataAttribute("/health-insurance", new string[0])]
         [Xunit.InlineDataAttribute("/life-insurance", new string[0])]
         [Xunit.InlineDataAttribute("/rewards", new string[0])]
         public virtual void CommonMetaTagsShouldAppearOnEveryPage(string initialpage, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Common Meta Tags should appear on every page", exampleTags);
-#line 6
- this.ScenarioSetup(scenarioInfo);
+            string[] @__tags = new string[] {
+                    "SIT"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Common Meta Tags should appear on every page", @__tags);
 #line 7
- testRunner.Given(string.Format("I am on presales {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.When("I check the source", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given(string.Format("I am on presales {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
+ testRunner.When("I check the source", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
  testRunner.Then("I expect the common meta tags to be in the source", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -96,19 +103,26 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TheoryAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "Meta Tags")]
         [Xunit.TraitAttribute("Description", "Home meta tags should not appear on non-home pages")]
+        [Xunit.TraitAttribute("Category", "SIT")]
         [Xunit.InlineDataAttribute("/health-insurance", new string[0])]
         [Xunit.InlineDataAttribute("/life-insurance", new string[0])]
         [Xunit.InlineDataAttribute("/rewards", new string[0])]
         public virtual void HomeMetaTagsShouldNotAppearOnNon_HomePages(string initialpage, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home meta tags should not appear on non-home pages", exampleTags);
-#line 17
- this.ScenarioSetup(scenarioInfo);
-#line 18
- testRunner.Given(string.Format("I am on presales {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+            string[] @__tags = new string[] {
+                    "SIT"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home meta tags should not appear on non-home pages", @__tags);
 #line 19
- testRunner.When("I check the source", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ this.ScenarioSetup(scenarioInfo);
 #line 20
+ testRunner.Given(string.Format("I am on presales {0}", initialpage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 21
+ testRunner.When("I check the source", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 22
  testRunner.Then("I do not expect the home meta tags to be in the source", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -120,13 +134,13 @@ namespace Vitality.Website.IntegrationTests.Features
         public virtual void HomeMetaTagsShouldAppearOnTheHomePage()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home meta tags should appear on the home page", ((string[])(null)));
-#line 28
- this.ScenarioSetup(scenarioInfo);
-#line 29
- testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 30
- testRunner.When("I check the source", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ this.ScenarioSetup(scenarioInfo);
 #line 31
+ testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 32
+ testRunner.When("I check the source", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 33
  testRunner.Then("I expect the home meta tags to be in the source", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

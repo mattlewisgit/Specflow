@@ -5,7 +5,7 @@
 
 
 
-	@SIT
+	@SITDEPLOYISSUE
 	Scenario Outline: Searching Presales Content
     Given I am on presales /dev/search
     When I search content <Data> 
@@ -19,7 +19,7 @@
 	| Home				    | Home Hero Desc		| /dev/home-hero/	   |
 
 
-	@SIT
+	@SITDEPLOYISSUE
 	Scenario Outline: Searching Advisers Content
     Given I am on advisers /dev/search
     When I search content <Data> 

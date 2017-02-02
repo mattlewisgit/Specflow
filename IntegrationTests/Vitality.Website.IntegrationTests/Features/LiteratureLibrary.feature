@@ -4,7 +4,7 @@
 	I want to be able to download sales literature documents
 
 
-	@SIT
+	@SITDEPLOYISSUE
 	Scenario Outline: Sales Literature - Searching
     Given I am on advisers <initialpage>
     When I search for <Literature Type> document
@@ -16,7 +16,7 @@ Examples:
 	| /dev/sales-library    | Business healthcare aid  | 
 
 
-	@SIT
+	@SITDEPLOYISSUE
 	Scenario Outline: Sales Literature - Choosing
     Given I am on advisers <initialpage>
     When I choose Literature Type <Literature Type>
@@ -29,7 +29,7 @@ Examples:
 	| /dev/sales-library    | Business and Corporate  | Business healthcare aid | 
 
 
-	@SIT
+	@SITDEPLOYISSUE
 	Scenario Outline: Member Literature - Searching
     Given I am on advisers <initialpage>
 	And I enter plan start date <DD> <MM> <YYYY>
@@ -43,7 +43,7 @@ Examples:
 	| /dev/member-library   | 01 | 12 | 2016 | Business healthcare aid |
 
 
-	@SIT
+	@SITDEPLOYISSUE
 	Scenario Outline: Member Literature - Choosing
     Given I am on advisers <initialpage>
     When I choose Literature Type <Literature Type>

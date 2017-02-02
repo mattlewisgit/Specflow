@@ -112,6 +112,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Accordion.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Breadcrumb.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Breadcrumb.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\HealthPresalesContent.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -154,6 +159,7 @@
     </Compile>
     <Compile Include="Steps\AccordionSteps.cs" />
     <Compile Include="Steps\BaseSteps.cs" />
+    <Compile Include="Steps\BreadcrumbSteps.cs" />
     <Compile Include="Steps\CommonSteps.cs" />
     <Compile Include="Steps\HealthPresalesContentSteps.cs" />
     <Compile Include="Steps\LiteratureLibrarySteps.cs" />
@@ -176,6 +182,10 @@
     <None Include="Features\Accordion.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Accordion.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Breadcrumb.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Breadcrumb.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\HealthPresalesContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

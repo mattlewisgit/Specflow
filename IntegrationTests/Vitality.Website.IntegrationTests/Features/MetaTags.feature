@@ -3,6 +3,7 @@
 	As a Tester
 	I want to check that each page has the appropriate content
 
+	@SIT
 	Scenario Outline: Common Meta Tags should appear on every page
 	Given I am on presales <initialpage>
 	When I check the source
@@ -14,6 +15,7 @@ Examples:
 	| /life-insurance				 |
 	| /rewards					     |
 
+	@SIT
 	Scenario Outline: Home meta tags should not appear on non-home pages
 	Given I am on presales <initialpage>
 	When I check the source

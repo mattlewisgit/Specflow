@@ -75,13 +75,13 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TheoryAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "SearchingContent")]
         [Xunit.TraitAttribute("Description", "Searching Presales Content")]
-        [Xunit.TraitAttribute("Category", "SIT")]
+        [Xunit.TraitAttribute("Category", "SITDEPLOYISSUE")]
         [Xunit.InlineDataAttribute("Cards Stacked", "Cards Stacked Title", "/dev/cards-stacked/", new string[0])]
         [Xunit.InlineDataAttribute("Home", "Home Hero Desc", "/dev/home-hero/", new string[0])]
         public virtual void SearchingPresalesContent(string data, string results, string uRL, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "SIT"};
+                    "SITDEPLOYISSUE"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -106,13 +106,13 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TheoryAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "SearchingContent")]
         [Xunit.TraitAttribute("Description", "Searching Advisers Content")]
-        [Xunit.TraitAttribute("Category", "SIT")]
+        [Xunit.TraitAttribute("Category", "SITDEPLOYISSUE")]
         [Xunit.InlineDataAttribute("Sales", "Sales Literature Library Title", "/dev/sales-library/", new string[0])]
         [Xunit.InlineDataAttribute("Literature", "Member Literature Library Desc", "/dev/member-library/", new string[0])]
         public virtual void SearchingAdvisersContent(string data, string results, string uRL, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "SIT"};
+                    "SITDEPLOYISSUE"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));

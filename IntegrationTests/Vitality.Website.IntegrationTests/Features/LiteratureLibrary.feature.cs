@@ -75,12 +75,12 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TheoryAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "LiteratureLibrary")]
         [Xunit.TraitAttribute("Description", "Sales Literature - Searching")]
-        [Xunit.TraitAttribute("Category", "SIT")]
+        [Xunit.TraitAttribute("Category", "SITDEPLOYISSUE")]
         [Xunit.InlineDataAttribute("/dev/sales-library", "Business healthcare aid", new string[0])]
         public virtual void SalesLiterature_Searching(string initialpage, string literatureType, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "SIT"};
+                    "SITDEPLOYISSUE"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -103,12 +103,12 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TheoryAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "LiteratureLibrary")]
         [Xunit.TraitAttribute("Description", "Sales Literature - Choosing")]
-        [Xunit.TraitAttribute("Category", "SIT")]
+        [Xunit.TraitAttribute("Category", "SITDEPLOYISSUE")]
         [Xunit.InlineDataAttribute("/dev/sales-library", "Business and Corporate", "Business healthcare aid", new string[0])]
         public virtual void SalesLiterature_Choosing(string initialpage, string literatureType, string availableLiterature, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "SIT"};
+                    "SITDEPLOYISSUE"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -133,12 +133,12 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TheoryAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "LiteratureLibrary")]
         [Xunit.TraitAttribute("Description", "Member Literature - Searching")]
-        [Xunit.TraitAttribute("Category", "SIT")]
+        [Xunit.TraitAttribute("Category", "SITDEPLOYISSUE")]
         [Xunit.InlineDataAttribute("/dev/member-library", "01", "12", "2016", "Business healthcare aid", new string[0])]
         public virtual void MemberLiterature_Searching(string initialpage, string dD, string mM, string yYYY, string availableLiterature, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "SIT"};
+                    "SITDEPLOYISSUE"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -165,12 +165,12 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TheoryAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "LiteratureLibrary")]
         [Xunit.TraitAttribute("Description", "Member Literature - Choosing")]
-        [Xunit.TraitAttribute("Category", "SIT")]
+        [Xunit.TraitAttribute("Category", "SITDEPLOYISSUE")]
         [Xunit.InlineDataAttribute("/dev/member-library", "Business and Corporate", "Business healthcare aid", new string[0])]
         public virtual void MemberLiterature_Choosing(string initialpage, string literatureType, string availableLiterature, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "SIT"};
+                    "SITDEPLOYISSUE"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
