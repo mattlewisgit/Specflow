@@ -40,6 +40,7 @@ namespace Vitality.Website
             {
                 HttpCookie utmCookie = new HttpCookie(ConfigurationManager.AppSettings["UtmCookieName"]);
 
+                utmCookie[SC.Constants.CookieSettings.UtmCookieSource] = Request.Params[ConfigurationManager.AppSettings["UtmCookieSource"]];
                 utmCookie[SC.Constants.CookieSettings.UtmCookieMedium] = Request.Params[ConfigurationManager.AppSettings["UtmCookieMedium"]];
                 utmCookie[SC.Constants.CookieSettings.UtmCookieCampaign] = Request.Params[ConfigurationManager.AppSettings["UtmCookieCampaign"]];
                 utmCookie[SC.Constants.CookieSettings.UtmCookieTerm] = Request.Params[ConfigurationManager.AppSettings["UtmCookieTerm"]];
