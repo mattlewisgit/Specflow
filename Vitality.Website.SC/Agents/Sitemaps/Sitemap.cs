@@ -42,7 +42,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
                 });
             }
 
-            SitemapHelper<SitemapModel>.SaveSitemapToDisk(model, string.Format("{0}_{1}.xml", website, Name), true);
+            SitemapHelper<SitemapModel>.SaveSitemapToDisk(model, string.Format("{0}_{1}.xml", website, Name), false);
         }
     }
 }

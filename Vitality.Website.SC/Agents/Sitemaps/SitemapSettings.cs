@@ -30,6 +30,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
                 itemUrl = item.Paths.Path.ToLower();
                 itemUrl = itemUrl.Replace(Sitecore.Context.Data.Site.RootPath.ToLower(), "");
                 itemUrl = itemUrl.Replace(Sitecore.Context.Data.Site.StartItem.ToLower(), "");
+                itemUrl = itemUrl.TrimStart('/');
             }
 
             itemUrl = baseUrl + itemUrl;
