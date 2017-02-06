@@ -52,6 +52,17 @@
                 .ShouldBe(AppSettings.Links.VitalityPresalesUrl + p0);
         }
 
+
+        [Then(@"I expect the production presales (.*) to open")]
+        public void ThenIExpectTheProductionPresalesToOpen(string p0)
+        {
+            WebDriver
+                .WaitForPageLoad()
+                .Url
+                .ShouldBe(AppSettings.Links.VitalityPresalesProductionUrl + p0);
+        }
+
+
         [Then(@"I expect the advisers (.*) to open")]
         public void ThenIExpectTheAdvisersToOpen(string p0)
         {
@@ -61,6 +72,15 @@
                 .ShouldBe(AppSettings.Links.VitalityAdvisersUrl + p0);
         }
 
+
+        [Then(@"I expect the production advisers (.*) to open")]
+        public void ThenIExpectTheProductionAdvisersToOpen(string p0)
+        {
+            WebDriver
+                .WaitForPageLoad()
+                .Url
+                .ShouldBe(AppSettings.Links.VitalityAdvisersProductionUrl+ p0);
+        }
 
 
 

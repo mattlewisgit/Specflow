@@ -91,6 +91,15 @@
         }
 
 
+        [Then(@"I go to the (.*) Rich Text and I click on the (.*) page link")]
+        public void ThenIGoToTheRichTextAndIClickOnThePageLink(string richtext, string text)
+        {
+            WebDriver
+                .FindElement(By.LinkText(text))
+                .Click();
+        }
+
+
 
 
         [When(@"I go to the (.*) product component and I click on the (.*) page link")]

@@ -55,6 +55,22 @@ namespace Vitality.Website.IntegrationTests
                 }
             }
 
+
+            public static string VitalityAdvisersProductionUrl
+            {
+                get
+                {
+                    return GetValue("Links.VitalityAdvisersProductionUrl");
+                }
+            }
+            public static string VitalityPresalesProductionUrl
+            {
+                get
+                {
+                    return GetValue("Links.VitalityPresalesProductionUrl");
+                }
+            }
+
         }
         private static string GetValue(string key)
         {
