@@ -16,7 +16,7 @@ namespace Vitality.Website.App_Start
 		public static IDependencyResolver CreateResolver()
 		{
             // Set default images to be lazyload
-		    GlassHtml.ImageTagFormat = GlassMapperConstants.LazyImageTagFormat;
+		    //GlassHtml.ImageTagFormat = GlassMapperConstants.LazyImageTagFormat;
 			var config = new Config();
 
 			var dependencyResolver = new DependencyResolver(config);

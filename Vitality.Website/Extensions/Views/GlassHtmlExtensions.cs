@@ -9,9 +9,9 @@ namespace Vitality.Website.Extensions.Views
     public static class GlassHtmlExtensions
     {
         /// <summary>
-        /// On IoC level,  GlassHtml Image tag format is set to lazy load 
-        /// as most of our images should be lazy loaded. 
-        /// This extension is to render any images should not be lazy loaded. 
+        /// On IoC level,  GlassHtml Image tag format is set to lazy load
+        /// as most of our images should be lazy loaded.
+        /// This extension is to render any images should not be lazy loaded.
         /// </summary>
         public static HtmlString RenderNotLazyImage<T>(this Glass.Mapper.Sc.Web.Mvc.GlassView<T> glassView,
             Expression<Func<T, object>> field,
@@ -27,6 +27,26 @@ namespace Vitality.Website.Extensions.Views
             GlassHtml.ImageTagFormat = GlassMapperConstants.LazyImageTagFormat;
             return
                 new HtmlString(renderImageTag);
+        }
+
+        public static HtmlString RenderLazyImage<T>(this Glass.Mapper.Sc.Web.Mvc.GlassView<T> glassView,
+            T model,
+            Expression<Func<T, object>> field,
+            object parameters = null,
+            bool isEditable = false,
+            bool outputHeightWidth = false) where T : class
+        {
+
+            var renderImageTag = glassView.GlassHtml.RenderImage
+                (model, field, parameters, isEditable, outputHeightWidth);
+
+            // after: convert src and add data-src
+            // <img src="a.png" class="lazyload" />
+            // <img data-src="a.png" class="lazyload" src="a.png?w=20" />
+
+            var lazyLoadedImage = renderImageTag.Replace("src=", "data-src=").Replace("/>", string.Format("src='{0}?w=20'", "test.png"));
+
+            return new HtmlString(lazyLoadedImage);
         }
     }
 }

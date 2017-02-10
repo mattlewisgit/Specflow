@@ -30,9 +30,10 @@
                 {
                 <li class="js-filtered-container__item" data-filter="@this.PartnerCategories(partnerCard)">
                     <div class="spotlight-item__top-content">
-                            <div class="spotlight-item__intro-image burst">
-                                @RenderImage(partnerCard, m => m.Image, new { @class="lazyload", mw = 388, @lowres=true }, true)
-                            </div>
+                        <div class="spotlight-item__intro-image burst">
+                            @*@this.RenderNotLazyImage(m => partnerCard.Image)*@
+                            @this.RenderLazyImage(partnerCard, m => m.Image, new {@class = "lazyload", mw = 388 /*, src = partnerCard.Image.Src + "?w=10"*/}, true)
+                        </div>
 
                         <div class="spotlight-item__logo">
                             <a href="@partnerCard.CallToAction.Url">
