@@ -122,6 +122,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AdvisersContent.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Cookies.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cookies.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\PresalesContent.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -166,6 +171,7 @@
     <Compile Include="Steps\BaseSteps.cs" />
     <Compile Include="Steps\BreadcrumbSteps.cs" />
     <Compile Include="Steps\CommonSteps.cs" />
+    <Compile Include="Steps\CookiesSteps.cs" />
     <Compile Include="Steps\HealthPresalesContentSteps.cs" />
     <Compile Include="Steps\LiteratureLibrarySteps.cs" />
     <Compile Include="Steps\MainNavigationSteps.cs" />
@@ -195,6 +201,10 @@
     <None Include="Features\AdvisersContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AdvisersContent.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Cookies.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Cookies.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\PresalesContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
