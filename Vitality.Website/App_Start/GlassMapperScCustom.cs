@@ -4,7 +4,6 @@ using Glass.Mapper.Maps;
 using Glass.Mapper.Sc;
 using Glass.Mapper.Sc.IoC;
 using Vitality.Website.Areas.Presales.SettingsTemplates;
-using Vitality.Website.Constants;
 using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
 
 namespace Vitality.Website.App_Start
@@ -16,7 +15,6 @@ namespace Vitality.Website.App_Start
 		public static IDependencyResolver CreateResolver()
 		{
             // Set default images to be lazyload
-		    GlassHtml.ImageTagFormat = GlassMapperConstants.LazyImageTagFormat;
 			var config = new Config();
 
 			var dependencyResolver = new DependencyResolver(config);
@@ -24,12 +22,12 @@ namespace Vitality.Website.App_Start
 			return dependencyResolver;
 		}
 
-		public static IConfigurationLoader[] GlassLoaders(){			
-			
+		public static IConfigurationLoader[] GlassLoaders(){
+
 			/* USE THIS AREA TO ADD FLUENT CONFIGURATION LOADERS
-             * 
+             *
              * If you are using Attribute Configuration or automapping/on-demand mapping you don't need to do anything!
-             * 
+             *
              */
 
 			return new IConfigurationLoader[]{};

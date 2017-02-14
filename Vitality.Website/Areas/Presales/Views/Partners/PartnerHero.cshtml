@@ -20,7 +20,7 @@
                 <div class="grid-col-6-12 partner-hero--right">
                     <div class="partner-hero--card">
                         <div class="spotlight-item__logo--large">
-                            @RenderImage(Model, item => item.PartnerIcon, new {@class="lazyload"}, true)
+                            @GlassHtml.RenderLazyImage(Model, item => item.PartnerIcon)
                         </div>
 
                         <div class="partner-hero--card__top">

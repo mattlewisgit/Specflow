@@ -1,10 +1,11 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Navigation.MainNavigation>
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Navigation.MainNavigation>
 
 @* top-bar mobile *@
 <div class="top-bar top-bar--small">
     <div class="top-bar__home">
         <a href="/">
-            @RenderImage(Model, m => m.Logo, new { @class = "top-bar__logo lazyload" })
+            @GlassHtml.RenderLazyImage(Model, m => m.Logo, new { @class = "top-bar__logo" })
         </a>
     </div>
 
@@ -16,7 +17,7 @@
                 <div class="utility-nav__inner">
                     @using (BeginRenderLink(Model, item => item.SearchPage))
                     {
-                        @RenderImage(Model, item => item.SearchIcon, new { @class = "lazyload", @alt = Model.SearchAltText })
+                        @GlassHtml.RenderLazyImage(Model, item => item.SearchIcon, new { @alt = Model.SearchAltText })
                         @Html.Raw(Model.SearchPage.Text)
 
                     }
@@ -25,7 +26,7 @@
         }
         <li class="utility-nav__item utility-nav__item--log-in js-log-in-toggle">
             <div class="utility-nav__inner ">
-                @RenderImage(Model, item => item.LoginIcon, new { @class = "lazyload", @alt = Model.LoginAltText })
+                @GlassHtml.RenderLazyImage(Model, item => item.LoginIcon, new { @alt = Model.LoginAltText })
                 @Html.Raw(Model.LogInText)
             </div>
         </li>
