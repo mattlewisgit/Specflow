@@ -117,10 +117,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Breadcrumb.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\HealthPresalesContent.feature.cs">
+    <Compile Include="Features\AdvisersContent.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>HealthPresalesContent.feature</DependentUpon>
+      <DependentUpon>AdvisersContent.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Cookies.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cookies.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\PresalesContent.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PresalesContent.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\LiteratureLibrary.feature.cs">
       <AutoGen>True</AutoGen>
@@ -161,6 +171,7 @@
     <Compile Include="Steps\BaseSteps.cs" />
     <Compile Include="Steps\BreadcrumbSteps.cs" />
     <Compile Include="Steps\CommonSteps.cs" />
+    <Compile Include="Steps\CookiesSteps.cs" />
     <Compile Include="Steps\HealthPresalesContentSteps.cs" />
     <Compile Include="Steps\LiteratureLibrarySteps.cs" />
     <Compile Include="Steps\MainNavigationSteps.cs" />
@@ -187,9 +198,17 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Breadcrumb.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\HealthPresalesContent.feature">
+    <None Include="Features\AdvisersContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>HealthPresalesContent.feature.cs</LastGenOutput>
+      <LastGenOutput>AdvisersContent.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Cookies.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Cookies.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\PresalesContent.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PresalesContent.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\LiteratureLibrary.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
