@@ -3951,7 +3951,6 @@
     <Compile Include="Areas\Presales\SettingsTemplates\SiteSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\SocialMediaSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
-    <Compile Include="Constants\GlassMapperConstants.cs" />
     <Compile Include="Extensions\CacheExtensions.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />

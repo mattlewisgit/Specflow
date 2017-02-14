@@ -107,7 +107,6 @@
     <Reference Include="System.Collections" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
