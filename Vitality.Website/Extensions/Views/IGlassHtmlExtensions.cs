@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Web;
-using System.Web.Routing;
 using Glass.Mapper.Sc;
-using Sitecore.Collections;
-using Sitecore.Text;
+using Sitecore.Forms.Mvc.Extensions;
 
 namespace Vitality.Website.Extensions.Views
 {
@@ -18,14 +13,23 @@ namespace Vitality.Website.Extensions.Views
             this IGlassHtml source,
             T model,
             Expression<Func<T, object>> field,
-            string imageSrc,
-            int maxWidth) where T : class
+            object parameters = null) where T : class
         {
-            var renderImageTag = source.RenderImage(model, field, new { @class = "lazyload", mw = maxWidth }, true);
+            var renderImageTag = source.RenderImage(model, field, parameters, true);
 
-            var lazyLoadedImage = renderImageTag
-                .Replace("src=", "data-src=")
-                .Replace("/>", string.Format(@"src=""{0}?w=20""/>", imageSrc));
+            var img = field.Compile()(model) as Glass.Mapper.Sc.Fields.Image;
+            var imageSrc = img != null ? img.Src : null;
+
+            var lazyLoadedImage = renderImageTag.Replace("src=", "data-src=");
+
+            if (!string.IsNullOrWhiteSpace(imageSrc))
+            {
+                lazyLoadedImage = lazyLoadedImage.Replace("/>", string.Format(@" src=""{0}?w=20""/>", imageSrc));
+            }
+            var src = field.GetPropertyValue<string>("Src");
+            lazyLoadedImage = lazyLoadedImage.Contains(@"class=""")
+                ? lazyLoadedImage.Replace(@"class=""", @"class=""lazyload ")
+                : lazyLoadedImage.Replace("/>", @" class=""lazyload"" />");
 
             return new HtmlString(lazyLoadedImage);
         }

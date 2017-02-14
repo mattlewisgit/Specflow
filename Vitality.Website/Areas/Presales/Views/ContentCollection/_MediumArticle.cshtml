@@ -3,7 +3,7 @@
 @using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", Model.Path))
 {
     <div class="content-collection--module article--medium">
-        @RenderImage(item => item.Image, new {alt = Model.Image.Alt, @class = "lazyload", mw = 377}, true)
+        @GlassHtml.RenderLazyImage(Model, item => item.Image, new {alt = Model.Image.Alt, mw = 377})
 
         <div>
             <p class="content-collection--module__strapline">@Editable(Model, item => item.LeadIn)</p>

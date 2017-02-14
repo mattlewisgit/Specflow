@@ -21,7 +21,7 @@
                             {
                                 using (BeginRenderLink(awardLogos, item => item.Link, isEditable: true))
                                 {
-                                    @RenderImage(awardLogos, item => item.Image, new {@class="lazyload", mw = 200 }, true)
+                                    @GlassHtml.RenderLazyImage(awardLogos, item => item.Image, new { mw = 200 })
                                 }
                             }
                         }
@@ -38,7 +38,7 @@
                             @using (BeginEditFrame(articleItem, "Edit Background image", item => item.Image))
                             {
                                 <div class="grid-col-4-12 article-snippet--image background-position-middle lazyload" data-bg="@this.BackgroundImage(articleItem)">
-                                    <div class="tablet-less-than">@RenderImage(articleItem, x => x.Image, new { @class="lazyload", mw = 720 }, true)</div>
+                                    <div class="tablet-less-than">@GlassHtml.RenderLazyImage(articleItem, x => x.Image, new { mw = 720 })</div>
                                 </div>
 
                                 <div class="grid-col-8-12 article-snippet--content">

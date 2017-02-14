@@ -8,7 +8,7 @@
             <h2>
                 @Editable(Model, item => item.Headline)
             </h2>
-            
+
             @if (IsInEditingMode || !string.IsNullOrEmpty(Model.OpeningParagraph))
             {
                 <p class="spotlight__intro">
@@ -26,7 +26,7 @@
                                     @if (this.ImageOnTop())
                                     {
                                         <div class="spotlight-item__intro-image burst">
-                                            @RenderImage(card, item => item.Icon, new { @class="lazyload", mw = 388 }, true)
+                                            @GlassHtml.RenderLazyImage(card, item => item.Icon, new { mw = 388 })
                                         </div>
 
                                         <h3>
@@ -38,9 +38,9 @@
                                         <h3>
                                             @Editable(card, item => item.Title)
                                         </h3>
-                                        
+
                                         <div class="spotlight-item__icon">
-                                            @RenderImage(card, item => item.Icon, new { @class="lazyload", mw = 388 }, true)
+                                            @GlassHtml.RenderLazyImage(card, item => item.Icon, new { mw = 388 })
                                         </div>
                                     }
 

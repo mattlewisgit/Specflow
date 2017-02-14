@@ -1,7 +1,8 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.ErrorPage>
+﻿@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.ErrorPage>
 <div class="server-error">
     <h1>@Editable(Model, m => m.Headline)</h1>
-    
+
     <div class="server-error--detail">
         @Editable(Model, m => m.OpeningParagraph)
     </div>
@@ -11,5 +12,5 @@
         @Editable(Model, m => m.CallToAction2, new { @class = "box-button box-button--light box-button--rounded" })
     </div>
 
-    @RenderImage(Model, m => m.BackgroundImage, new {@class="lazyload"}, true)
+    @GlassHtml.RenderLazyImage(Model, m => m.BackgroundImage)
 </div>

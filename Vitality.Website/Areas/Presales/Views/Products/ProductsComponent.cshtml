@@ -8,7 +8,7 @@
             using (this.BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", panel.Path))
             {
                 <div class="products-component--panel grid-col-@this.NumberOfColumns()-12">
-                    <div>@RenderImage(panel, m => m.Image, new {@class="lazyload", mw = 1140 / Model.ProductPanels.Count() }, true)</div>
+                    <div>@GlassHtml.RenderLazyImage(panel, m => m.Image, new { mw = 1140 / Model.ProductPanels.Count() })</div>
 
                     <div class="products-component--panel__body">
                         @Editable(panel, m => m.OpeningParagraph)

@@ -31,12 +31,12 @@
                 <li class="js-filtered-container__item" data-filter="@this.PartnerCategories(partnerCard)">
                     <div class="spotlight-item__top-content">
                         <div class="spotlight-item__intro-image burst">
-                            @GlassHtml.RenderLazyImage(partnerCard, m => m.Image, partnerCard.Image.Src, 388)
+                            @GlassHtml.RenderLazyImage(partnerCard, m => m.Image, new { mw = 388 })
                         </div>
 
                         <div class="spotlight-item__logo">
                             <a href="@partnerCard.CallToAction.Url">
-                                @RenderImage(partnerCard, m => m.Logo, new { @class = "lazyload", mw = 200 }, true)
+                                @GlassHtml.RenderLazyImage(partnerCard, m => m.Logo, new { mw = 200 })
                             </a>
                         </div>
 

@@ -5,7 +5,7 @@
 <div class="feature-block feature-block--@this.BackgroundColour() rewards_leader">
     <div class="feature-block__content">
         <h2>@Editable(Model, item => item.Headline)</h2>
-        
+
         <div class="feature-block__content--body">
             @Editable(Model, item => item.OpeningParagraph)
         </div>
@@ -20,7 +20,7 @@
                     {
                         using (BeginRenderLink(rewardsIcon, item => item.Link, isEditable: true))
                         {
-                            @RenderImage(rewardsIcon, item => item.Image, new {@class="lazyload"}, true)
+                            @GlassHtml.RenderLazyImage(rewardsIcon, item => item.Image)
                         }
                     }
                 }
