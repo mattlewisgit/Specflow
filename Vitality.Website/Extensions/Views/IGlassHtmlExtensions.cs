@@ -15,21 +15,31 @@ namespace Vitality.Website.Extensions.Views
             Expression<Func<T, object>> field,
             object parameters = null) where T : class
         {
+            /*
+             * generate image tag using specified max width
+             * convert src to data-src
+             * generate image tag using 20px max width
+             * combine both image tags
+             * apply lazyload class
+             */
+
             var renderImageTag = source.RenderImage(model, field, parameters, true);
 
-            var img = field.Compile()(model) as Glass.Mapper.Sc.Fields.Image;
-            var imageSrc = img != null ? img.Src : null;
-
-            var lazyLoadedImage = renderImageTag.Replace("src=", "data-src=");
-
-            if (!string.IsNullOrWhiteSpace(imageSrc))
+            if (Sitecore.Context.PageMode.IsExperienceEditor || Sitecore.Context.PageMode.IsPreview)
             {
-                lazyLoadedImage = lazyLoadedImage.Replace("/>", string.Format(@" src=""{0}?w=20""/>", imageSrc));
+                return new HtmlString(renderImageTag);
             }
-            var src = field.GetPropertyValue<string>("Src");
-            lazyLoadedImage = lazyLoadedImage.Contains(@"class=""")
-                ? lazyLoadedImage.Replace(@"class=""", @"class=""lazyload ")
-                : lazyLoadedImage.Replace("/>", @" class=""lazyload"" />");
+
+            var lazyParameters = new {mw = 20, alt = string.Empty};
+            var renderLazyImageTag = source.RenderImage(model, field, lazyParameters, true);
+
+            var lazyLoadedImageFirstPart = renderImageTag.Replace("src=", "data-src=").Replace("/>", string.Empty);
+            var lazyLoadedImageSecondPart = renderLazyImageTag.Replace("<img ", string.Empty)
+                .Replace("alt=''", String.Empty);
+            var lazyLoadedImage = string.Format("{0}{1}", lazyLoadedImageFirstPart, lazyLoadedImageSecondPart);
+            lazyLoadedImage = lazyLoadedImage.Contains("class='")
+                ? lazyLoadedImage.Replace("class='", "class='lazyload ")
+                : lazyLoadedImage.Replace("/>", " class='lazyload' />");
 
             return new HtmlString(lazyLoadedImage);
         }
