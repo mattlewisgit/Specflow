@@ -297,6 +297,42 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute(DisplayName="Check console logs on presales")]
+        [Xunit.TraitAttribute("FeatureTitle", "Main Navigation")]
+        [Xunit.TraitAttribute("Description", "Check console logs on presales")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void CheckConsoleLogsOnPresales()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check console logs on presales", new string[] {
+                        "SIT"});
+#line 78
+    this.ScenarioSetup(scenarioInfo);
+#line 79
+    testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 80
+ testRunner.Then("I should not see any console logs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check console logs on advisers")]
+        [Xunit.TraitAttribute("FeatureTitle", "Main Navigation")]
+        [Xunit.TraitAttribute("Description", "Check console logs on advisers")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void CheckConsoleLogsOnAdvisers()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check console logs on advisers", new string[] {
+                        "SIT"});
+#line 83
+    this.ScenarioSetup(scenarioInfo);
+#line 84
+    testRunner.Given("I am on advisers /dev/sales-library/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 85
+ testRunner.Then("I should not see any console logs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable

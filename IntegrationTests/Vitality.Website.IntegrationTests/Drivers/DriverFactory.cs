@@ -21,7 +21,7 @@
         public static IWebDriver Chrome()
         {
             var options = new ChromeOptions();
-            options.AddArguments("start-maximized");
+            options.SetLoggingPreference(LogType.Browser, LogLevel.All);
             return new ChromeDriver(options);
         }
     }

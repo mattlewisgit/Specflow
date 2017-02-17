@@ -16,6 +16,7 @@
     using OpenQA.Selenium.Interactions;
     using By = OpenQA.Selenium.By;
     using OpenQA.Selenium;
+    using System.Linq;
 
     [Binding]
     public class MainNavigationSteps : BaseSteps
@@ -223,6 +224,20 @@
         }
 
 
+        [Then(@"I should not see any console logs")]
+        public void ThenIShouldNotSeeAnyConsoleLogs()
+        {
+            // Ensure there no console errors, other than JavaScript
+            // deprecation warnings, and GTM-loaded tags, which we cannot control...
+            WebDriver
+                .Manage()
+                .Logs
+                .GetLog(LogType.Browser)
+                .Where(l =>
+                    !l.Message.Contains("cloudfront") &&
+                    !l.Message.Contains("deprecated"))
+                .ShouldBeEmpty();
+        }
 
 
 

@@ -73,3 +73,13 @@
     And I click on the footer button
     Then I expect the Health insurance quote button to be visible
     And I expect the Life insurance quote button to be visible
+
+	@SIT
+    Scenario: Check console logs on presales
+    Given I am on presales /
+	Then I should not see any console logs
+
+	@SIT
+    Scenario: Check console logs on advisers
+    Given I am on advisers /dev/sales-library/
+	Then I should not see any console logs
