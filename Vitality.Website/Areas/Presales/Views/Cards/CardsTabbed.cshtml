@@ -36,7 +36,8 @@
 
                         <div class="spotlight-item__logo">
                             <a href="@partnerCard.CallToAction.Url">
-                                @GlassHtml.RenderLazyImage(partnerCard, m => m.Logo, new { mw = 200 })
+                                @* Do not lazy-load logos, as they are small anyway and can badly affect the initial render. *@
+                                @RenderImage(partnerCard, m => m.Logo, new { mw = 200 }, true)
                             </a>
                         </div>
 
