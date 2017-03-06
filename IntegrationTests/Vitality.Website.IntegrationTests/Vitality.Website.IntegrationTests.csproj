@@ -107,6 +107,7 @@
     <Compile Include="Drivers\DriverFactory.cs" />
     <Compile Include="Extensions\AssertionExtensions.cs" />
     <Compile Include="Extensions\IWebDriverExtensions.cs" />
+    <Compile Include="Extensions\IWebElementExtensions.cs" />
     <Compile Include="Features\Accordion.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -239,12 +240,6 @@
       <LastGenOutput>WFFM.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Vitality.Website\Vitality.Website.csproj">
-      <Project>{ed53f038-83ee-4c5d-b208-783b0c6b3917}</Project>
-      <Name>Vitality.Website</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\packages\PhantomJS.2.1.1\tools\phantomjs\phantomjs.exe">
