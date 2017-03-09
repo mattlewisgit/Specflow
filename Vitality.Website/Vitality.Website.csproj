@@ -44,7 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AjaxMin, Version=4.0.202.1, Culture=neutral, PublicKeyToken=24297a69a7eae424, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\AjaxMin.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\AjaxMin.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
@@ -64,7 +64,7 @@
       <HintPath>..\packages\Glass.Mapper.Sc.4.0.11.63\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Hi.UrlRewrite, Version=1.8.5779.17263, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Hi.UrlRewrite.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Hi.UrlRewrite.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Krusen.Sitecore.WebApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -138,15 +138,15 @@
     </Reference>
     <Reference Include="Sitecore.ContentSearch.Linq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="Sitecore.Forms.Core, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Sitecore.Forms.Core.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.Forms.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Forms.Custom, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Sitecore.Forms.Custom.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.Forms.Custom.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Forms.Mvc, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Sitecore.Forms.Mvc.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.Forms.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.ItemWebApi, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -190,11 +190,11 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Sitecore.WFFM.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Abstractions, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Sitecore.WFFM.Abstractions.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Actions, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -202,19 +202,19 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Analytics, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Sitecore.WFFM.Analytics.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.Analytics.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Client, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Sitecore.WFFM.Client.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Services, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Sitecore.WFFM.Services.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.Services.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Speak, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Sitecore.WFFM.Speak.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.Speak.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
