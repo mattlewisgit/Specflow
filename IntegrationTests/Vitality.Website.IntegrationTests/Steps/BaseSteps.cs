@@ -11,14 +11,14 @@
     {
         public static IWebDriver WebDriver;
 
-        [BeforeTestRun]
+        [BeforeScenario]
         public static void BeforeTestRun()
         {
             WebDriver = DriverFactory.Chrome();
             
         }
 
-        [AfterTestRun]
+        [AfterScenario]
         public static void AfterTestRun()
         {
             WebDriver.Quit();
