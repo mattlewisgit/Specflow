@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using Glass.Mapper.Sc.Web.Mvc;
 using Vitality.Website.Areas.Presales.ComponentTemplates.Articles;

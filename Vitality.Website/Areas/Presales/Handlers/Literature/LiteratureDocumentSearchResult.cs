@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Glass.Mapper.Sc.Fields;
 using Sitecore.Configuration;
 using Sitecore.Resources.Media;

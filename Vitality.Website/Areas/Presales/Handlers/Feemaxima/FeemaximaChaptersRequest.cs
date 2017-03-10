@@ -1,4 +1,4 @@
-﻿using MediatR;
+using MediatR;
 
 namespace Vitality.Website.Areas.Presales.Handlers.FeeMaxima
 {

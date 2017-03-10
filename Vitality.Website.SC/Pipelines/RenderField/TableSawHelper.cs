@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using System.Linq;
 using Sitecore.Security.AccessControl;
 using Sitecore.WordOCX.HtmlDocument;

@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.SC.UnitTests.Utilities
+namespace Vitality.Website.SC.UnitTests.Utilities
 {
     using Shouldly;
 

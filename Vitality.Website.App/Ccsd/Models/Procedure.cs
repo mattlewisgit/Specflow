@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.App.Ccsd.Models
+namespace Vitality.Website.App.Ccsd.Models
 {
     public class Procedure
     {

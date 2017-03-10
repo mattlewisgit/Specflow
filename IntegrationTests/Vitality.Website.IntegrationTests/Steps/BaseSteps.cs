@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.IntegrationTests.Steps
+namespace Vitality.Website.IntegrationTests.Steps
 {
     using OpenQA.Selenium;
 

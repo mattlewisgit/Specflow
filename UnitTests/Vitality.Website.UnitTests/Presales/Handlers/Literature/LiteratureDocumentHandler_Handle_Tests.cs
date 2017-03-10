@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.UnitTests.Presales.Handlers.Literature
+namespace Vitality.Website.UnitTests.Presales.Handlers.Literature
 {
     using Shouldly;
 

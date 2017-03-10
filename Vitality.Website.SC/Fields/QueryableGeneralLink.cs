@@ -1,4 +1,4 @@
-﻿using Sitecore;
+using Sitecore;
 using Sitecore.Diagnostics;
 using System;
 using Sitecore.Shell.Applications.ContentEditor;

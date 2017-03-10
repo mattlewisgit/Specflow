@@ -1,4 +1,4 @@
-﻿using Glass.Mapper.Sc.Configuration.Attributes;
+using Glass.Mapper.Sc.Configuration.Attributes;
 using Vitality.Website.Areas.Global.Models;
 using Vitality.Website.SC.Utilities;
 

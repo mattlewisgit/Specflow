@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Shouldly;
 using Sitecore.Shell.Controls.RichTextEditor.Pipelines.SaveRichTextContent;
 using Vitality.Website.SC.Pipelines.RichTextEditor.SaveRichTextContent;

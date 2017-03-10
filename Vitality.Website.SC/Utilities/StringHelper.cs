@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.SC.Utilities
+namespace Vitality.Website.SC.Utilities
 {
     using System.Text.RegularExpressions;
 

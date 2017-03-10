@@ -1,4 +1,4 @@
-﻿// <summary>Extracted from Sitecore Shared Source</summary>
+// <summary>Extracted from Sitecore Shared Source</summary>
 // <url>http://trac.sitecore.net/LinkProvider/</url>
 
 using Sitecore.Data.Items;

@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.Controllers
+namespace Vitality.Website.Areas.Presales.Controllers
 {
     using System;
     using System.Collections.Generic;

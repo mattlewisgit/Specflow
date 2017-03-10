@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Vitality.Website.App.Ccsd;
 using Vitality.Website.App.Ccsd.Interfaces;

@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.SC.Pipelines.Response.RenderRendering
+namespace Vitality.Website.SC.Pipelines.Response.RenderRendering
 {
     using System.Collections.Generic;
     using System.Linq;

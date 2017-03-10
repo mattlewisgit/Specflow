@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.PageTemplates
+namespace Vitality.Website.Areas.Presales.PageTemplates
 {
     using Glass.Mapper.Sc.Fields;
 

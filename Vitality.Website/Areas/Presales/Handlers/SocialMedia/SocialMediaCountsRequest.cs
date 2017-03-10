@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using MediatR;
 using Vitality.Website.App.SocialMedia;
 using Vitality.Website.App.SocialMedia.Interfaces;

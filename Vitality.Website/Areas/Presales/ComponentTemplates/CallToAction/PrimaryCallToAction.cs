@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.CallToAction
+namespace Vitality.Website.Areas.Presales.ComponentTemplates.CallToAction
 {
     using System.Collections.Generic;
 

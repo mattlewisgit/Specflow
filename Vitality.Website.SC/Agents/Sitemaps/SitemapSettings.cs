@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Sitecore.Configuration;
 using Sitecore.Data.Items;
 using Sitecore.Sites;

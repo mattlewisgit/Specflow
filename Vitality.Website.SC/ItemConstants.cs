@@ -1,4 +1,4 @@
-﻿using System.Web;
+using System.Web;
 using Sitecore;
 
 namespace Vitality.Website.SC

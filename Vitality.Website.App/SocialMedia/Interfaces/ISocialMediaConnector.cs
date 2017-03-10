@@ -1,4 +1,4 @@
-﻿using Vitality.Website.App.SocialMedia.Models;
+using Vitality.Website.App.SocialMedia.Models;
 
 namespace Vitality.Website.App.SocialMedia.Interfaces
 {

@@ -1,4 +1,4 @@
-﻿using System.Web;
+using System.Web;
 using MediatR;
 using Sitecore.ApplicationCenter.Applications;
 using Vitality.Website.App.Ccsd.Interfaces;

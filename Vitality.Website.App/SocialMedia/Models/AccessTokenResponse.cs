@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.App.SocialMedia.Models
+namespace Vitality.Website.App.SocialMedia.Models
 {
     public class AccessTokenResponse
     {

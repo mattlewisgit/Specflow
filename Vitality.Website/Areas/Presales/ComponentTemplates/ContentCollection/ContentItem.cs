@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection
+namespace Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection
 {
     public class ContentItem <T>
     {

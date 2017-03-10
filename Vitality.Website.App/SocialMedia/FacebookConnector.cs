@@ -1,4 +1,4 @@
-﻿using RestSharp;
+using RestSharp;
 using RestSharp.Authenticators;
 using Vitality.Website.App.Handlers;
 using Vitality.Website.App.SocialMedia.Interfaces;

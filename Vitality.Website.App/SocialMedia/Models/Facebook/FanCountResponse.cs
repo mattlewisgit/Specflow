@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.App.SocialMedia.Models.Facebook
+namespace Vitality.Website.App.SocialMedia.Models.Facebook
 {
     public class FanCountResponse
     {

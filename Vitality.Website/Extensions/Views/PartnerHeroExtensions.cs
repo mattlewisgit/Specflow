@@ -1,4 +1,4 @@
-﻿using Glass.Mapper.Sc.Web.Mvc;
+using Glass.Mapper.Sc.Web.Mvc;
 
 namespace Vitality.Website.Extensions.Views
 {

@@ -1,4 +1,4 @@
-﻿using Sitecore.Data;
+using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Globalization;
 

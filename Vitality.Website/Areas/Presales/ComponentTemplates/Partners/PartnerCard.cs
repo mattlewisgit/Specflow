@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.Partners
+namespace Vitality.Website.Areas.Presales.ComponentTemplates.Partners
 {
     using System.Collections.Generic;
 

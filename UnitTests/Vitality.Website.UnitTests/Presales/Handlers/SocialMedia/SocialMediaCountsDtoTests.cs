@@ -1,4 +1,4 @@
-﻿using Shouldly;
+using Shouldly;
 using Vitality.Website.Areas.Presales.Handlers.SocialMedia;
 using Xunit;
 

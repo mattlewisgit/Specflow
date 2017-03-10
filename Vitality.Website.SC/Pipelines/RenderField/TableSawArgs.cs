@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.SC.Pipelines.RenderField
+namespace Vitality.Website.SC.Pipelines.RenderField
 {
     public class TableSawArgs
     {
