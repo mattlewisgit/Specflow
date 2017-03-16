@@ -43,13 +43,17 @@ namespace Vitality.Website.SC.Agents.Sitemaps
                 return new SitemapSettings {HideFromSitemap = true};
             }
 
-            while (item[InheritSitemapSettingsField] == "1" &&
-                !string.Equals(item.Paths.Path,ItemConstants.Presales.Content.Home.Path, StringComparison.InvariantCultureIgnoreCase))
+            var currentItem = item;
+
+            while (currentItem[InheritSitemapSettingsField] == "1" &&
+                !currentItem.Paths.Path.Equals
+                    (ItemConstants.Presales.Content.Home.Path, StringComparison.InvariantCultureIgnoreCase))
             {
-                item = item.Parent;
+                currentItem = currentItem.Parent;
             }
 
-            if (string.IsNullOrWhiteSpace(item[ChangeFrequencyField]) || string.IsNullOrWhiteSpace(item[SitemapField]))
+            if (string.IsNullOrWhiteSpace(currentItem[ChangeFrequencyField]) ||
+                string.IsNullOrWhiteSpace(currentItem[SitemapField]))
             {
                 return new SitemapSettings { HideFromSitemap = true };
             }
@@ -57,9 +61,12 @@ namespace Vitality.Website.SC.Agents.Sitemaps
             return new SitemapSettings
             {
                 PageUrl = itemUrl,
-                ChangeFrequency = item.Database.GetItem(item[ChangeFrequencyField]) != null ? item.Database.GetItem(item[ChangeFrequencyField]).Fields["Value"].Value : "",
-                Priority = item[PriorityField],
-                SitemapName = item.Database.GetItem(item[SitemapField]) != null ? item.Database.GetItem(item[SitemapField]).Fields["Value"].Value : "",
+                ChangeFrequency = currentItem.Database.GetItem(currentItem[ChangeFrequencyField]) != null
+                    ? currentItem.Database.GetItem(currentItem[ChangeFrequencyField]).Fields["Value"].Value
+                    : "",
+                Priority = currentItem[PriorityField],
+                SitemapName = currentItem.Database.GetItem(currentItem[SitemapField]) != null
+                    ? currentItem.Database.GetItem(currentItem[SitemapField]).Fields["Value"].Value : "",
                 PublishedDate = publishedDate,
                 HideFromSitemap = false
             };

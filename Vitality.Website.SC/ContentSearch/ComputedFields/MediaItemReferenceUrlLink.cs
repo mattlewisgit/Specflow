@@ -38,6 +38,7 @@ namespace Vitality.Website.SC.ContentSearch.ComputedFields
         private static string GetMediaItem(Field field)
         {
             MediaItem mediaItem = null;
+
             switch (field.TypeKey)
             {
                 case "image":
@@ -61,6 +62,7 @@ namespace Vitality.Website.SC.ContentSearch.ComputedFields
                     }
                     break;
             }
+
             return GetMediaUrl(mediaItem);
         }
 

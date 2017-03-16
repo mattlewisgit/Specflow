@@ -1,28 +1,22 @@
-using System;
-using System.Collections.Generic;
-using Vitality.Website.App.Ccsd;
-using Vitality.Website.App.Ccsd.Interfaces;
-
 namespace Vitality.Website.App_Start
 {
-    using System.Linq;
-    using System.Reflection;
-    using System.Web.Http;
-    using System.Web.Mvc;
-
+    using App.Ccsd;
+    using App.Ccsd.Interfaces;
     using Glass.Mapper.Sc;
-
     using MediatR;
-
     using SimpleInjector;
     using SimpleInjector.Diagnostics;
     using SimpleInjector.Integration.Web.Mvc;
     using SimpleInjector.Integration.WebApi;
-
     using Sitecore.ContentSearch;
     using Sitecore.Mvc.Helpers;
     using Sitecore.Pipelines;
-
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+    using System.Web.Http;
+    using System.Web.Mvc;
     using IDependencyResolver = System.Web.Mvc.IDependencyResolver;
 
     public class IoC
@@ -69,7 +63,12 @@ namespace Vitality.Website.App_Start
                 if (typeof(ApiController).IsAssignableFrom(type))
                 {
                     Registration registration = Lifestyle.Transient.CreateRegistration(type, container);
-                    registration.SuppressDiagnosticWarning(DiagnosticType.DisposableTransientComponent, "Web API registers controllers for disposal when the request ends during the call to ApiController.ExecuteAsync.");
+
+                    registration.SuppressDiagnosticWarning(
+                        DiagnosticType.DisposableTransientComponent,
+                        "Web API registers controllers for " + 
+                            "disposal when the request ends during the call to ApiController.ExecuteAsync.");
+
                     container.AddRegistration(type, registration);    
                 }
             }
@@ -77,18 +76,18 @@ namespace Vitality.Website.App_Start
 
         private class SimpleInjectorSitecoreDependencyResolver : IDependencyResolver
         {
-            private readonly IDependencyResolver innerDependencyResolver;
+            private readonly IDependencyResolver _innerDependencyResolver;
 
             public SimpleInjectorSitecoreDependencyResolver(IDependencyResolver innerDependencyResolver)
             {
-                this.innerDependencyResolver = innerDependencyResolver;
+                _innerDependencyResolver = innerDependencyResolver;
             }
 
             public object GetService(Type serviceType)
             {
                 try
                 {
-                    return this.innerDependencyResolver.GetService(serviceType);
+                    return _innerDependencyResolver.GetService(serviceType);
                 }
                 catch (Exception)
                 {
@@ -98,7 +97,7 @@ namespace Vitality.Website.App_Start
 
             public IEnumerable<object> GetServices(Type serviceType)
             {
-                return this.innerDependencyResolver.GetServices(serviceType);
+                return _innerDependencyResolver.GetServices(serviceType);
             }
         }
     }

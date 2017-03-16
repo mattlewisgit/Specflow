@@ -1,20 +1,20 @@
-using System.Web.Mvc;
-
 namespace Vitality.Website.Areas.Presales
 {
-    public class PresalesAreaRegistration : AreaRegistration 
+    using System.Web.Mvc;
+
+    public class PresalesAreaRegistration : AreaRegistration
     {
-        public override string AreaName 
+        public override string AreaName
         {
-            get 
+            get
             {
                 return "Presales";
             }
         }
 
-        public override void RegisterArea(AreaRegistrationContext context) 
+        public override void RegisterArea(AreaRegistrationContext context)
         {
-            
+            // Method intentionally left empty.
         }
     }
 }

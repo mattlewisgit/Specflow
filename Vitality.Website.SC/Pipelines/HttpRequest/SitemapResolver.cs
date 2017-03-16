@@ -1,14 +1,12 @@
-using System;
-using System.IO;
-using System.Linq;
-using System.Web;
-using System.Xml;
-using System.Xml.Linq;
-using Sitecore.Pipelines.HttpRequest;
-using Sitecore.Diagnostics;
-
 namespace Vitality.Website.SC.Pipelines.HttpRequest
 {
+    using Sitecore.Diagnostics;
+    using Sitecore.Pipelines.HttpRequest;
+    using System;
+    using System.IO;
+    using System.Web;
+    using System.Xml;
+
     public class SitemapResolver : HttpRequestProcessor
     {
         private const string SiteMapLocation = "sitemaps";
@@ -27,10 +25,8 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
 
                 if (File.Exists(fileName))
                 {
-                    var xmlFileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read,
-                        FileShare.Read);
+                    var xmlFileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read,FileShare.Read);
 
-                    //xml.
                     var doc = new XmlDocument();
                     doc.Load(xmlFileStream);
 
