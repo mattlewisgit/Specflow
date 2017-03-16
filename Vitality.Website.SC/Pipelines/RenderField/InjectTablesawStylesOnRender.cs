@@ -6,15 +6,17 @@ namespace Vitality.Website.SC.Pipelines.RenderField
     using Sitecore.Web;
     using System;
     using System.Collections.Generic;
+    using System.Collections.ObjectModel;
 
     public class InjectTablesawStylesOnRender
     {
-        private static IDictionary<string, Func<string, TableSawArgs>> _typeToArgsGenerator =
-            new Dictionary<string, Func<string, TableSawArgs>>
-            {
-                { "stack", TableSawArgs.Stack },
-                { "swipe", TableSawArgs.Swipe }
-            };
+        private static ReadOnlyDictionary<string, Func<string, TableSawArgs>> _typeToArgsGenerator =
+            new ReadOnlyDictionary<string, Func<string, TableSawArgs>>(
+                new Dictionary<string, Func<string, TableSawArgs>>
+                {
+                    { "stack", TableSawArgs.Stack },
+                    { "swipe", TableSawArgs.Swipe }
+                });
 
         public void Process(RenderFieldArgs args)
         {

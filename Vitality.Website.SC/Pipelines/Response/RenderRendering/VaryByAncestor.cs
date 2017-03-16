@@ -21,19 +21,14 @@ namespace Vitality.Website.SC.Pipelines.Response.RenderRendering
     {
         private readonly List<ID> templateIds = new List<ID>();
 
-        private string query;
+        private string _query;
 
         protected string Query
         {
             get
             {
-                if (this.query == null)
-                {
-                    this.query = string.Format("./ancestor-or-self::*[{0}]",
-                        string.Join(" or ", this.templateIds.Select(id => string.Format("@@templateid='{0}'", id))));
-                }
-
-                return this.query;
+                return _query ?? (_query = string.Format("./ancestor-or-self::*[{0}]",
+                    string.Join(" or ", this.templateIds.Select(id => $"@@templateid='{id}'"))));
             }
         }
 

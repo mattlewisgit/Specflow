@@ -10,6 +10,7 @@ namespace Vitality.Website.SC.ContentSearch.ComputedFields
     using Sitecore.Sites;
     using System;
     using System.Collections.Generic;
+    using System.Collections.ObjectModel;
 
     public class MediaItemReferenceUrlLink : IComputedIndexField
     {
@@ -61,12 +62,13 @@ namespace Vitality.Website.SC.ContentSearch.ComputedFields
                 : mediaLink.Url;
         }
 
-        private static IDictionary<string, Func<Field, string>> fieldUrlGenerators =
-            new Dictionary<string, Func<Field, string>>
-            {
-                { "general link", GetGeneralLinkUrl },
-                { "image", GetImageUrl }
-            };
+        private static ReadOnlyDictionary<string, Func<Field, string>> fieldUrlGenerators =
+            new ReadOnlyDictionary<string, Func<Field, string>>
+                (new Dictionary<string, Func<Field, string>>
+                {
+                    { "general link", GetGeneralLinkUrl },
+                    { "image", GetImageUrl }
+                });
 
         private static string GetMediaItem(Field field)
         {

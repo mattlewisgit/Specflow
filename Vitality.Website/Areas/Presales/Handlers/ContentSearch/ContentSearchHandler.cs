@@ -80,13 +80,10 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
             return breadcrumbs.Select(x => x.Name).Count() > 1 ? breadcrumbs.Select(x => x.Name) : new List<string>();
         }
 
-        private static bool FilterCase(string searchQuery, string property)
-        {
-            return
-                !string.IsNullOrEmpty(searchQuery) &&
-                !string.IsNullOrEmpty(property) &&
-                CultureInfo.CurrentCulture.CompareInfo.IndexOf
-                    (property, searchQuery, CompareOptions.IgnoreCase) >= 0;
-        }
+        private static bool FilterCase(string searchQuery, string property) =>
+            !string.IsNullOrEmpty(searchQuery) &&
+            !string.IsNullOrEmpty(property) &&
+            CultureInfo.CurrentCulture.CompareInfo.IndexOf
+                (property, searchQuery, CompareOptions.IgnoreCase) >= 0;
     }
 }
