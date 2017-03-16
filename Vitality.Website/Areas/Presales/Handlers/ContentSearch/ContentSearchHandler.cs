@@ -36,7 +36,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
 
         public static IEnumerable<SearchDocumentDto> From(IEnumerable<ContentSearchResult> searchResults, string searchQuery, string pageSize)
         {
-            var pageCount = !string.IsNullOrEmpty(pageSize) ? Int32.Parse(pageSize) : 0;
+            var pageCount = !string.IsNullOrEmpty(pageSize) ? int.Parse(pageSize) : 0;
 
             return (from result in searchResults
                     where FilterCase(searchQuery, result.Description) || FilterCase(searchQuery, result.Title)
@@ -46,7 +46,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
                         Description = result.Description,
                         Path = LinkManager.GetItemUrl(Sitecore.Context.Database.GetItem(result.Path)),
                         Breadcrumbs = GetBreadcrumbs(result.GetItem())
-                    }).ToList().Take(pageCount);
+                    }).Take(pageCount);
         }
 
 

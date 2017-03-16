@@ -48,6 +48,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SonarQube", "SonarQube", "{
 	ProjectSection(SolutionItems) = preProject
 		SonarQube\SolutionBinding.sqconfig = SonarQube\SolutionBinding.sqconfig
 		SonarQube\Vitality_0e40c8adCSharp.ruleset = SonarQube\Vitality_0e40c8adCSharp.ruleset
+		SonarQube\Vitality_b062e81aCSharp.ruleset = SonarQube\Vitality_b062e81aCSharp.ruleset
 	EndProjectSection
 EndProject
 Global

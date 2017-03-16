@@ -8,6 +8,8 @@ namespace Vitality.Website.SC.ContentSearch.ComputedFields
     using Sitecore.Diagnostics;
     using Sitecore.Resources.Media;
     using Sitecore.Sites;
+    using System;
+    using System.Collections.Generic;
 
     public class MediaItemReferenceUrlLink : IComputedIndexField
     {
@@ -22,7 +24,8 @@ namespace Vitality.Website.SC.ContentSearch.ComputedFields
                 return null;
             }
 
-            var field = indexableItem.Item.Fields[this.FieldName];
+            var field = indexableItem.Item.Fields[FieldName];
+
             if (field == null)
             {
                 return null;
@@ -35,51 +38,65 @@ namespace Vitality.Website.SC.ContentSearch.ComputedFields
 
         public string ReturnType { get; set; }
 
-        private static string GetMediaItem(Field field)
+        private static string GetImageUrl(Field field)
         {
-            MediaItem mediaItem = null;
+            var image = (ImageField)field;
 
-            switch (field.TypeKey)
+            return image != null
+                ? GetMediaUrl(image.MediaItem)
+                : null;
+        }
+
+        private static string GetGeneralLinkUrl(Field field)
+        {
+            var mediaLink = (LinkField)field;
+
+            if (mediaLink == null)
             {
-                case "image":
-                    var image = (ImageField)field;
-                    if (image != null)
-                    {
-                        mediaItem = image.MediaItem;
-                    }
-                    break;
-                case "general link":
-                    var mediaLink = (LinkField)field;
-
-                    if (mediaLink != null)
-                    {
-                        if (mediaLink.IsInternal || mediaLink.IsMediaLink)
-                        {
-                            mediaItem = Database.GetDatabase("web").GetItem(mediaLink.TargetID);
-                            return GetMediaUrl(mediaItem);
-                        }
-                        return mediaLink.Url;
-                    }
-                    break;
+                return null;
             }
 
-            return GetMediaUrl(mediaItem);
+            return mediaLink.IsInternal || mediaLink.IsMediaLink
+                ? GetMediaUrl(Database.GetDatabase("web").GetItem(mediaLink.TargetID))
+                : mediaLink.Url;
+        }
+
+        private static IDictionary<string, Func<Field, string>> fieldUrlGenerators =
+            new Dictionary<string, Func<Field, string>>
+            {
+                { "general link", GetGeneralLinkUrl },
+                { "image", GetImageUrl }
+            };
+
+        private static string GetMediaItem(Field field)
+        {
+            if (field == null)
+            {
+                return null;
+            }
+
+            var fieldType = field.TypeKey;
+
+            return fieldUrlGenerators.ContainsKey(fieldType)
+                ? fieldUrlGenerators[fieldType](field)
+                : null;
         }
 
         private static string GetMediaUrl(MediaItem mediaItem)
         {
-            if (mediaItem != null)
+            if (mediaItem == null)
             {
-                var options = new MediaUrlOptions
-                {
-                    AbsolutePath = false,
-                    MediaLinkServerUrl = SiteContextFactory.GetSiteContext("advisers").HostName,
-                    AlwaysIncludeServerUrl = true
-                };
-                return MediaManager.GetMediaUrl(mediaItem, options);
+                return null;
             }
 
-            return null;
+            var options = new MediaUrlOptions
+            {
+                AbsolutePath = false,
+                AlwaysIncludeServerUrl = true,
+                MediaLinkServerUrl = SiteContextFactory.GetSiteContext("advisers").HostName
+            };
+
+            return MediaManager.GetMediaUrl(mediaItem, options);
         }
     }
 }

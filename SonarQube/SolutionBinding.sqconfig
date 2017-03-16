@@ -1,10 +1,10 @@
 {
-  "ServerUri": "https://vitality.shazamlabs.com/",
-  "ProjectKey": "Vitality:0e40c8ad",
+  "ServerUri": "https://vitality-staging.shazamlabs.com/",
+  "ProjectKey": "Vitality:b062e81a",
   "Profiles": {
     "CSharp": {
-      "ProfileKey": "cs-vitality-website-90430",
-      "ProfileTimestamp": "2016-12-20T16:23:04+00:00"
+      "ProfileKey": "cs-vitality-website-32230",
+      "ProfileTimestamp": "2017-03-16T15:00:02+00:00"
     }
   }
 }

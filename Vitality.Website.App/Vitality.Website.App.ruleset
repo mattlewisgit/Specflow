@@ -1,4 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RuleSet Name="SonarQube - Vitality Website develop (68bbe22) Vitality Website" ToolsVersion="14.0">
-  <Include Path="..\sonarqube\vitality_0e40c8adcsharp.ruleset" Action="Default" />
+  <Include Path="..\sonarqube\vitality_b062e81acsharp.ruleset" Action="Default" />
 </RuleSet>

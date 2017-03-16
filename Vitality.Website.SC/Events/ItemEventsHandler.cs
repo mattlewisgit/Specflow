@@ -1,15 +1,13 @@
-using System;
-using System.Collections.Generic;
-using Sitecore.Web;
-
 namespace Vitality.Website.SC.Events
 {
     using Sitecore;
     using Sitecore.Data;
     using Sitecore.Data.Items;
     using Sitecore.Events;
-
-    using Vitality.Website.SC.Utilities;
+    using Sitecore.Web;
+    using System;
+    using System.Collections.Generic;
+    using Utilities;
 
     public class ItemEventsHandler
     {
@@ -37,14 +35,11 @@ namespace Vitality.Website.SC.Events
         {
             var item = this.GetItem(args);
 
-            if (item != null && ItemIsMasterDatabaseTemplateField(item))
+            if (item != null && ItemIsMasterDatabaseTemplateField(item) && FieldItemTitleIsNotSplitCamelCase(item))
             {
-                if (FieldItemTitleIsNotSplitCamelCase(item))
+                using (new EditContext(item))
                 {
-                    using (new EditContext(item))
-                    {
-                        item.Fields["Title"].SetValue(StringHelper.SplitCamelCase(item.Name), false);
-                    }
+                    item.Fields["Title"].SetValue(StringHelper.SplitCamelCase(item.Name), false);
                 }
             }
         }
@@ -89,8 +84,8 @@ namespace Vitality.Website.SC.Events
 
         private static bool FieldItemTitleIsNotSplitCamelCase(Item item)
         {
-            return item.TemplateID == fieldTemplateId 
-                && item.Fields["Title"] != null 
+            return item.TemplateID == fieldTemplateId
+                && item.Fields["Title"] != null
                 && item.Fields["Title"].Value != StringHelper.SplitCamelCase(item.Name);
         }
 

@@ -71,13 +71,7 @@ namespace Vitality.Website.SC.WFFM.Helpers
         public static NameValueCollection GetUtmCookie()
         {
             var httpCookie = HttpContext.Current.Request.Cookies[ConfigurationManager.AppSettings["UtmCookieName"]];
-
-            if (httpCookie != null)
-            {
-                return httpCookie.Values;
-            }
-
-            return null;
+            return httpCookie?.Values;
         }
     }
 }
