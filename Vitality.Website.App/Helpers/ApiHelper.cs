@@ -1,8 +1,5 @@
 using System;
-using System.IO;
 using System.Net;
-using System.Xml.Serialization;
-using Newtonsoft.Json;
 using RestSharp;
 
 namespace Vitality.Website.App.Helpers
@@ -17,67 +14,23 @@ namespace Vitality.Website.App.Helpers
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="response"></param>
+        /// <param name="getMockData"></param>
         /// <returns></returns>
-        public static T HandleResponse<T>(this IRestResponse<T> response)
+        public static T HandleResponse<T>(this IRestResponse<T> response, Func<T> getMockData = null)
         {
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 return response.Data;
+            }
+            if (getMockData !=null)
+            {
+                return getMockData();
             }
             var exception = new Exception(response.ErrorMessage);
             exception.Data.Add(StatusCodeKey, response.StatusCode);
             exception.Data.Add(MoreInfoKey, response.Content);
             throw exception;
         }
-
-        /// <summary>
-        /// Read data from json mock data file then returns a deserialized object of data.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="filePath"></param>
-        /// <returns></returns>
-        public static T GetJsonMockData<T>(string filePath)
-        {
-            string jsonOutput;
-            using (var sr = new StreamReader(filePath))
-            {
-                jsonOutput = sr.ReadToEnd();
-            }
-
-            var jsResult = JsonConvert.DeserializeObject<T>(jsonOutput);
-
-            if (jsResult != null)
-            {
-                return jsResult;
-            }
-            return default(T);
-        }
-
-        /// <summary>
-        /// Read data from xml mock data file then returns a deserialized object of data.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="filePath"></param>
-        /// <returns></returns>
-        public static T GetXmlMockData<T>(string filePath)
-        {
-            string xmlOutput;
-            using (var sr = new StreamReader(filePath))
-            {
-                xmlOutput = sr.ReadToEnd();
-            }
-
-            var xmlSerialize = new XmlSerializer(typeof(T));
-            var xmlResult = (T) xmlSerialize.Deserialize(new StringReader(xmlOutput));
-
-            if (xmlResult != null)
-            {
-                return xmlResult;
-            }
-            return default(T);
-        }
     }
 }
 
-
-//http://www.latestvacancies.com/vitality/rss/RSSFeed_External.asp

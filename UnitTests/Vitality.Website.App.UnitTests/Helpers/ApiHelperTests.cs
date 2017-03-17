@@ -8,7 +8,7 @@ using Xunit;
 
 namespace Vitality.Website.App.UnitTests.Helpers
 {
-    public class ApiHandlerTest
+    public class ApiHandlerTests
     {
         public class HandleResponse
         {
@@ -37,6 +37,15 @@ namespace Vitality.Website.App.UnitTests.Helpers
                 var exception = Assert.Throws<Exception>(() => _mockRestResponse.Object.HandleResponse());
                 exception.Data[ApiHelper.StatusCodeKey] = 404;
                 exception.Data[ApiHelper.MoreInfoKey] = errorMessage;
+            }
+
+            [Fact]
+            public void When_status_code_is_not_ok_but_pass_get_mock_data_function_returns_data_from_mock_data_file()
+            {
+                var mockDataHelper = new Mock<IMockDataHelper>();
+                _mockRestResponse.Setup(r => r.StatusCode).Returns(HttpStatusCode.NotFound);
+                _mockRestResponse.Object.HandleResponse(() => mockDataHelper.Object.GetXmlMockData<string>("testMockDataFile"));
+                mockDataHelper.Verify(m=>m.GetXmlMockData<string>(It.IsAny<string>()),Times.Once);
             }
         }
     }

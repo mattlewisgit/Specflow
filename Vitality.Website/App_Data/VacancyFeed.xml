@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<rss version='2.0'>
+    <link rel='alternate' type='application/rss+xml' title='... current vacancies' href='...' />
+    <channel>
+        <title>... current vacancies</title>
+        <link>...</link>
+        <description>Vacancy RSS feed for ...</description>
+        <lastBuildDate>Tue, 12 Jul 2016 11:51:05 GMT</lastBuildDate>
+        <category>Jobs</category>
+        <ttl></ttl>
+        <generator>Posting Panda</generator>
+        <language>en-uk</language>
+        <alertdata></alertdata>
+        <alertdata2></alertdata2>
+        <item>
+            <title>Job Title</title>
+            <link>...</link>
+            <guid>...</guid>
+            <pubDate>Wed, 29 Jun 2016 10:17:03 GMT</pubDate>
+            <description>Job Description &lt;p&gt;Another paragraph;&lt;/p&gt;</description>
+            <jobtitle>Job Title</jobtitle>
+            <advertid>1385</advertid>
+            <jobsalary>&#163;10,000.00 to &#163;12,000.00 per annum</jobsalary>
+            <jobsalaryfrom>10000</jobsalaryfrom>
+            <jobsalaryto>14000</jobsalaryto>
+            <joblocation>Chesham, Greater Manchester</joblocation>
+            <jobcountry>England</jobcountry>
+            <jobcounty>Greater Manchester</jobcounty>
+            <longitude>-2.15962</longitude>
+            <latitude>53.46515</latitude>
+            <jobtype>Permanent</jobtype>
+            <organisation>360 Resourcing</organisation>
+            <jobreference>Job0001</jobreference>
+            <applydata>...</applydata>
+            <extradataitems>
+                <extradataitem category='Department'>Department1</extradataitem>
+                <extradataitem category='Department'>Department2</extradataitem>
+            </extradataitems>
+        </item>
+        <item>
+            <title>Job Title 2</title>
+            <link>...</link>
+            <guid>...</guid>
+            <pubDate>Wed, 29 Jun 2016 10:17:03 GMT</pubDate>
+            <description>Job Description &lt;p&gt;Another paragraph;&lt;/p&gt;</description>
+            <jobtitle>Job Title</jobtitle>
+            <advertid>1385</advertid>
+            <jobsalary>&#163;10,000.00 to &#163;12,000.00 per annum</jobsalary>
+            <jobsalaryfrom>10000</jobsalaryfrom>
+            <jobsalaryto>14000</jobsalaryto>
+            <joblocation>Chesham, Greater Manchester</joblocation>
+            <jobcountry>England</jobcountry>
+            <jobcounty>Greater Manchester</jobcounty>
+            <longitude>-2.15962</longitude>
+            <latitude>53.46515</latitude>
+            <jobtype>Permanent</jobtype>
+            <organisation>360 Resourcing</organisation>
+            <jobreference>Job0001</jobreference>
+            <applydata>...</applydata>
+            <extradataitems>
+                <extradataitem category='Department'>Department1</extradataitem>
+                <extradataitem category='Department'>Department2</extradataitem>
+            </extradataitems>
+        </item>
+    </channel>
+</rss>
