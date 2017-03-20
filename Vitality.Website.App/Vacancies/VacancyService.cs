@@ -18,7 +18,7 @@ namespace Vitality.Website.App.Vacancies
             _mockDataHelper = mockDataHelper;
         }
 
-        public List<Vacancy> GetLatestVacancies()
+        public List<Item> GetLatestVacancies()
         {
             var restClient = new RestClient(_feedSetting.Url)
             {
@@ -28,11 +28,11 @@ namespace Vitality.Website.App.Vacancies
             {
                 RequestFormat = DataFormat.Xml
             };
-            var response = restClient.Execute<VacancyFeed>(request);
+            var response = restClient.Execute<List<Item>>(request);
 
             return string.IsNullOrEmpty(_feedSetting.MockDataFile) ?
-                response.HandleResponse().Channel.Vacancies :
-                response.HandleResponse(() => _mockDataHelper.GetXmlMockData<VacancyFeed>(_feedSetting.MockDataFile)).Channel.Vacancies;
+                response.HandleResponse() :
+                response.HandleResponse(() => _mockDataHelper.GetXmlMockData<List<Item>>(_feedSetting.MockDataFile));
         }
     }
 }

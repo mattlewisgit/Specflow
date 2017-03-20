@@ -85,7 +85,7 @@
     <Compile Include="SocialMedia\TwitterConnector.cs" />
     <Compile Include="Vacancies\Interfaces\IVacancyService.cs" />
     <Compile Include="Vacancies\Models\Channel.cs" />
-    <Compile Include="Vacancies\Models\Vacancy.cs" />
+    <Compile Include="Vacancies\Models\Item.cs" />
     <Compile Include="Vacancies\Models\FeedSetting.cs" />
     <Compile Include="Vacancies\Models\VacancyFeed.cs" />
     <Compile Include="Vacancies\VacancyService.cs" />
