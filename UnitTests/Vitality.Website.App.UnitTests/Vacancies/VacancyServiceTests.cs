@@ -22,7 +22,7 @@ namespace Vitality.Website.App.UnitTests.Vacancies
                 _mockedMockDataHelper = new Mock<IMockDataHelper>();
                 var mockFeed = new Mock<IFeedSettings>();
                 mockFeed.Setup(f => f.Password).Returns("qp!Yg@J(A5gy/>S3");
-                mockFeed.Setup(f => f.Url).Returns("https://postingpanda.com/feeds/yourboard");
+                mockFeed.Setup(f => f.FeedUrl).Returns("https://postingpanda.com/feeds/yourboard");
                 mockFeed.Setup(f => f.Username).Returns("vitalityfeed@postingpanda.com");
                 _feedSettings = mockFeed.Object;
             }
