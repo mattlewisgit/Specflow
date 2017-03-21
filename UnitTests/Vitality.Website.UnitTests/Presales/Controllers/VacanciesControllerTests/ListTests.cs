@@ -18,7 +18,7 @@ namespace Vitality.Website.UnitTests.Presales.Controllers.VacanciesControllerTes
     public class ListTests
     {
         private VacancyController _controller;
-        private Guid _feedSettingId;
+        private readonly Guid _feedSettingId;
         private readonly Mock<ISitecoreContext> _sitecoreContext;
         private readonly Mock<IVacancyService> _vacancyService;
 
@@ -63,8 +63,8 @@ namespace Vitality.Website.UnitTests.Presales.Controllers.VacanciesControllerTes
         private void Init()
         {
             _sitecoreContext.Setup(m => m.GetItem<FeedSettings>(_feedSettingId, false,false)).Returns(new FeedSettings {Id=_feedSettingId});
-            var handler = new MediatorStub<VacanciesRequest, VacanciesDto>(new VacanciesHandler(_vacancyService.Object));
-            this._controller = new VacancyController(handler, _sitecoreContext.Object);
+            var handler = new MediatorStub<VacanciesRequest, VacanciesDto>(new VacanciesHandler(_sitecoreContext.Object, _vacancyService.Object));
+            this._controller = new VacancyController(handler);
         }
     }
 }

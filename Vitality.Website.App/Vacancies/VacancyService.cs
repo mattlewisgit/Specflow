@@ -19,7 +19,7 @@ namespace Vitality.Website.App.Vacancies
 
         public List<Item> GetLatestVacancies(IFeedSettings feedSetting)
         {
-            var restClient = new RestClient(feedSetting.Url)
+            var restClient = new RestClient(feedSetting.FeedUrl)
             {
                 Authenticator = new HttpBasicAuthenticator(feedSetting.Username, feedSetting.Password)
             };

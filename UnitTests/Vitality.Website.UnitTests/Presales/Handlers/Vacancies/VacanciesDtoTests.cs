@@ -2,7 +2,6 @@
 using System.Linq;
 using Shouldly;
 using Vitality.Website.App.Vacancies.Models;
-using Vitality.Website.Areas.Presales.Handlers.SocialMedia;
 using Vitality.Website.Areas.Presales.Handlers.Vacancies;
 using Xunit;
 

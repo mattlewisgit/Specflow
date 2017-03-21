@@ -1,15 +1,14 @@
-﻿using MediatR;
-using Vitality.Website.App.Interfaces;
-using Vitality.Website.Areas.Presales.SettingsTemplates;
+﻿using System;
+using MediatR;
 
 namespace Vitality.Website.Areas.Presales.Handlers.Vacancies
 {
     public class VacanciesRequest : IRequest<VacanciesDto>
     {
-        public readonly FeedSettings FeedSettings;
-        public VacanciesRequest(FeedSettings feedSettings)
+        public readonly Guid SettingsId;
+        public VacanciesRequest(Guid settingsId)
         {
-            FeedSettings = feedSettings;
+            SettingsId = settingsId;
         }
     }
 }

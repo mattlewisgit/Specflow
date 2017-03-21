@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Xml.Serialization;
 using Newtonsoft.Json;
+using RestSharp;
 
 namespace Vitality.Website.App.Helpers
 {
@@ -43,14 +44,15 @@ namespace Vitality.Website.App.Helpers
                 xmlOutput = sr.ReadToEnd();
             }
 
-            var xmlSerialize = new XmlSerializer(typeof(T));
-            var xmlResult = (T)xmlSerialize.Deserialize(new StringReader(xmlOutput));
-
-            if (xmlResult != null)
+            // Deserialize
+            var restResponse = new RestResponse<T>
             {
-                return xmlResult;
-            }
-            return default(T);
+                Content = xmlOutput
+            };
+
+            var deserializer = new RestSharp.Deserializers.XmlDeserializer();
+
+            return deserializer.Deserialize<T>(restResponse);
         }
     }
 }
