@@ -563,6 +563,7 @@
     <Content Include="Areas\Presales\Views\ContentCollection\_SocialMedias.cshtml" />
     <Content Include="Areas\Presales\Views\ContentCollection\_Mpus.cshtml" />
     <Content Include="Areas\Presales\Views\ContentSearch\ContentSearch.cshtml" />
+    <Content Include="Areas\Presales\Views\FeatureBlocks\VacancyList.cshtml" />
     <None Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.intellisense.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.min.js" />
@@ -3886,6 +3887,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\FeeMaxima.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\ProductHero.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\ContentCollection\SocialMediaItem.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\VacancyList.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\ArticleItem.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Content.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Tab.cs" />
@@ -3908,6 +3910,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductsComponent.cs" />
     <Compile Include="Areas\Presales\Controllers\BaseController.cs" />
     <Compile Include="Areas\Presales\Controllers\ContentSearchController.cs" />
+    <Compile Include="Areas\Presales\Controllers\VacancyController.cs" />
     <Compile Include="Areas\Presales\Controllers\FeeMaximaController.cs" />
     <Compile Include="Areas\Presales\Controllers\LiteratureLibraryController.cs" />
     <Compile Include="Areas\Presales\Controllers\SocialMediaController.cs" />
@@ -3930,6 +3933,9 @@
     <Compile Include="Areas\Presales\Handlers\SocialMedia\SocialMediaCountsDto.cs" />
     <Compile Include="Areas\Presales\Handlers\SocialMedia\SocialMediaCountsHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\SocialMedia\SocialMediaCountsRequest.cs" />
+    <Compile Include="Areas\Presales\Handlers\Vacancies\VacanciesDto.cs" />
+    <Compile Include="Areas\Presales\Handlers\Vacancies\VacanciesHandler.cs" />
+    <Compile Include="Areas\Presales\Handlers\Vacancies\VacanciesRequest.cs" />
     <Compile Include="Areas\Presales\Models\Breadcrumb.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\CallToActionPanel.cs" />
@@ -3947,6 +3953,7 @@
     <Compile Include="Areas\Presales\RenderingTemplates\RewardsLeaderRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\SummaryComponentRendering.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\CookieSettings.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\FeedSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\SiteSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\SocialMediaSettings.cs" />
