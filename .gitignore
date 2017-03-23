@@ -251,8 +251,9 @@ Vitality.Website/webedit.css
 
 # Client-side build.
 Vitality.Website/css/**/*.css
-Vitality.Website/client_side/sass/*.css
-Vitality.Website/client_side/sass/*.map
+Vitality.Website/js/**/*.css
+Vitality.Website/src/sass/*.css
+Vitality.Website/**/*.map
 
 # Diffs.
 *.orig

@@ -1,5 +1,5 @@
 {
-  "directory":"../bower_components",
+  "directory": "./bower_components",
   "registry": {
     "search": [
       "http://172.27.160.110/bower/Bower",
