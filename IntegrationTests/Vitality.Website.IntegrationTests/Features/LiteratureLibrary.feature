@@ -9,7 +9,7 @@
     Given I am on advisers <initialpage>
     When I search for <Literature Type> document
 	Then I expect the <Literature Type> document to be visible
-	And I expect the download and email  buttons to be visible
+	And I expect the download and email buttons to be visible
 
 Examples:
 	| initialpage           | Literature Type          |
@@ -22,7 +22,7 @@ Examples:
     When I choose Literature Type <Literature Type>
 	And I select on <Available Literature> Literature
 	Then I expect the <Available Literature> document to be visible
-	And I expect the download and email  buttons to be visible
+	And I expect the download and email buttons to be visible
 
 Examples:
 	| initialpage           | Literature Type         | Available Literature    |
@@ -36,7 +36,7 @@ Examples:
 	When click on the submit button
 	And I select on <Available Literature> Literature
 	Then I expect the <Available Literature> document to be visible
-	And I expect the download and email  buttons to be visible
+	And I expect the download and email buttons to be visible
 
 Examples:
 	| initialpage           | DD | MM | YYYY | Available Literature    |
@@ -49,7 +49,7 @@ Examples:
     When I choose Literature Type <Literature Type>
 	And I select on <Available Literature> Literature
 	Then I expect the <Available Literature> document to be visible
-	And I expect the download and email  buttons to be visible
+	And I expect the download and email buttons to be visible
 
 Examples:
 	| initialpage           | Literature Type         | Available Literature    |
