@@ -2,6 +2,7 @@
 using System.Net;
 using Moq;
 using RestSharp;
+using RestSharp.Deserializers;
 using Shouldly;
 using Vitality.Website.App.Helpers;
 using Xunit;
@@ -40,12 +41,12 @@ namespace Vitality.Website.App.UnitTests.Helpers
             }
 
             [Fact]
-            public void When_status_code_is_not_ok_but_pass_get_mock_data_function_returns_data_from_mock_data_file()
+            public void When_status_code_is_not_ok_but_get_mock_data_function_returns_data_from_mock_data_file()
             {
                 var mockDataHelper = new Mock<IMockDataHelper>();
                 _mockRestResponse.Setup(r => r.StatusCode).Returns(HttpStatusCode.NotFound);
-                _mockRestResponse.Object.HandleResponse(() => mockDataHelper.Object.GetXmlMockData<string>("testMockDataFile"));
-                mockDataHelper.Verify(m=>m.GetXmlMockData<string>(It.IsAny<string>()),Times.Once);
+                _mockRestResponse.Object.HandleResponse(() => mockDataHelper.Object.GetMockData<string>(new XmlDeserializer(), "testMockDataFile"));
+                mockDataHelper.Verify(m=>m.GetMockData<string>(It.IsAny<XmlDeserializer>(), It.IsAny<string>()),Times.Once);
             }
         }
     }

@@ -74,6 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ccsd\CcsdServiceTests.cs" />
     <Compile Include="Helpers\ApiHelperTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SocialMedia\FacebookConnectorTests.cs" />

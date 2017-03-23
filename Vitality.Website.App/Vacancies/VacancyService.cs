@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using RestSharp;
 using RestSharp.Authenticators;
+using RestSharp.Deserializers;
 using Vitality.Website.App.Helpers;
 using Vitality.Website.App.Interfaces;
 using Vitality.Website.App.Vacancies.Interfaces;
@@ -31,7 +32,7 @@ namespace Vitality.Website.App.Vacancies
 
             return string.IsNullOrEmpty(feedSetting.MockDataFile) ?
                 response.HandleResponse() :
-                response.HandleResponse(() => _mockDataHelper.GetXmlMockData<List<Item>>(feedSetting.MockDataFile));
+                response.HandleResponse(() => _mockDataHelper.GetMockData<List<Item>>(new XmlDeserializer(), feedSetting.MockDataFile));
         }
     }
 }

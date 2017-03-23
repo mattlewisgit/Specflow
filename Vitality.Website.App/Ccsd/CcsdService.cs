@@ -1,17 +1,35 @@
-using Newtonsoft.Json;
 using System.Collections.Generic;
-using System.IO;
+using RestSharp;
+using RestSharp.Authenticators;
+using RestSharp.Deserializers;
 using Vitality.Website.App.Ccsd.Interfaces;
 using Vitality.Website.App.Ccsd.Models;
+using Vitality.Website.App.Helpers;
+using Vitality.Website.App.Interfaces;
 
 namespace Vitality.Website.App.Ccsd
 {
-    public class CcsdService : ICcsdService 
+    public class CcsdService : ICcsdService
     {
-        public IEnumerable<Chapter> GetChapters(string ccsdChaptersJsonFile)
+        private readonly IMockDataHelper _mockDataHelper;
+
+        public CcsdService(IMockDataHelper mockDataHelper)
         {
-            //TODO: Read data from Papillion
-            return JsonConvert.DeserializeObject<List<Chapter>>(File.ReadAllText(ccsdChaptersJsonFile));
+            _mockDataHelper = mockDataHelper;
+        }
+        public List<Chapter> GetChapters(IFeedSettings feedSetting)
+        {
+            var restClient = new RestClient(feedSetting.FeedUrl)
+            {
+                Authenticator = new HttpBasicAuthenticator(feedSetting.Username, feedSetting.Password)
+            };
+            var request = new RestRequest(Method.GET);
+
+            var response = restClient.Execute<ExternalCcsd>(request);
+
+            return string.IsNullOrEmpty(feedSetting.MockDataFile) ?
+                response.HandleResponse().Chapters :
+                response.HandleResponse(() => _mockDataHelper.GetMockData<ExternalCcsd>(new JsonDeserializer(),feedSetting.MockDataFile)).Chapters;
         }
     }
 }

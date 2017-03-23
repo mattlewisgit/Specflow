@@ -12,7 +12,7 @@ namespace Vitality.Website.UnitTests.Presales.Handlers.Vacancies
         public class From
         {
             [Fact]
-            public void should_assign_counts_property()
+            public void should_assign_vacancies()
             {
                 VacanciesDto.From(new List<Item> {new Item()}).Vacancies.Count().ShouldBe(1);
             }

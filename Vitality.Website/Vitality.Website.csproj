@@ -387,7 +387,6 @@
     <Content Include="img\spritesheets\svg-sprite.svg" />
     <Content Include="img\stanley-peering-min.png" />
     <Content Include="img\vitality-logo--white.svg" />
-    <Content Include="js\angular.js" />
     <Content Include="js\fee-maxima-service.js" />
     <Content Include="js\literature-form-service.js" />
     <Content Include="js\literature-library-service.js" />

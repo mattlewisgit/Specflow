@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Moq;
+using RestSharp.Deserializers;
 using Shouldly;
 using Vitality.Website.App.Helpers;
 using Vitality.Website.App.Interfaces;
@@ -40,7 +41,7 @@ namespace Vitality.Website.App.UnitTests.Vacancies
             public void Should_first_try_to_get_data_from_feed_even_if_mock_data_file_available()
             {
                 _feedSettings.MockDataFile = "mockdataFile";
-                _mockedMockDataHelper.Setup(m => m.GetXmlMockData<List<Item>>(_feedSettings.MockDataFile)).Returns(
+                _mockedMockDataHelper.Setup(m => m.GetMockData<List<Item>>(new XmlDeserializer(),  _feedSettings.MockDataFile)).Returns(
                     new List<Item>
                     {
                         new Item()
@@ -49,7 +50,7 @@ namespace Vitality.Website.App.UnitTests.Vacancies
                 var response =
                     _vacancyService.GetLatestVacancies(_feedSettings);
                 response.Count.ShouldBeGreaterThan(0);
-                _mockedMockDataHelper.Verify(m=>m.GetXmlMockData<List<Item>>(_feedSettings.MockDataFile),Times.Never);
+                _mockedMockDataHelper.Verify(m=>m.GetMockData<List<Item>>(It.IsAny<XmlDeserializer>(), _feedSettings.MockDataFile),Times.Never);
             }
         }
     }

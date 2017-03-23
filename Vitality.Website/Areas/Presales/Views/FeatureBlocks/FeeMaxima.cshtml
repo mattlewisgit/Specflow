@@ -24,8 +24,11 @@
                            placeholder="@Html.Raw(Model.SearchPlaceholderText)" typeahead />
                 </div>
             </div>
-            <div data-ng-show="isLoading">
-                @Editable(Model, m => m.LoadingText)
+            <div data-ng-show="isLoading" class="loader">
+                <p class="loader__label">
+                    @Editable(Model, m => m.LoadingText)
+                </p>
+                <div class="loader__icon"></div>
             </div>
             <div class="expanding-list js-expander-is-accordion expander--init" data-ng-hide="noResultsFound || sectionSelected" data-ng-cloak>
                 <a ng-repeat-start="chapter in chapters" class="expander__link grid" href="#expander1-{{chapter.Id}}">
@@ -56,6 +59,7 @@
                 <tr>
                     <th>@Editable(Model, m => m.CodeHeader)</th>
                     <th>@Editable(Model, m => m.DescriptionHeader)</th>
+                    <th>@Editable(Model, m => m.HospitalComplexityHeader)</th>
                     <th>@Editable(Model, m => m.SurgeonsFeeHeader)</th>
                     <th>@Editable(Model, m => m.AnaesthetistsFeeHeader)</th>
                 </tr>
@@ -64,11 +68,24 @@
                 <tr ng-repeat="procedure in selectedProcedures">
                     <td ng-bind="procedure.Code"></td>
                     <td ng-bind-html="procedure.Description | unsafe"></td>
-                    <td>@Model.CurrencySymbol{{procedure.OperatorFee}}</td>
-                    <td>@Model.CurrencySymbol{{procedure.AnaesthetistFee}}</td>
+                    <td>
+                        <conditional-text alternative-text="'@Model.ContactUsText'" condition="procedure.HospitalComplexity" value="procedure.HospitalComplexity"></conditional-text>
+                    </td>
+                    <td>
+                        <conditional-text alternative-text="'@Model.ContactUsText'" condition="procedure.SurgeonFee" value="'@Model.CurrencySymbol' + procedure.OperatorFee"></conditional-text>
+                    </td>
+                    <td>
+                        <conditional-text alternative-text="'@Model.AnaesthetistFeeAlternateText'" condition="procedure.AnaesthetistFee" value="''@Model.CurrencySymbol' + procedure.AnaesthetistFee"></conditional-text>
+                        <conditional-text ng-hide="procedure.SurgeonFee" alternative-text="'@Model.ContactUsText'" condition="procedure.AnaesthetistFee" value="'@Model.CurrencySymbol' + procedure.AnaesthetistFee}}"></conditional-text>
+                    </td>
                 </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
+
+    <script>
+        window.angularData = window.angularData || {};
+        window.angularData.CcsdFeedSettingsId = '@Model.FeedSettingsId';
+    </script>

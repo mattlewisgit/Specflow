@@ -190,7 +190,9 @@
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\Get_Tests.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\List_Tests.cs" />
     <Compile Include="Presales\Controllers\VacanciesControllerTests\ListTests.cs" />
+    <Compile Include="Presales\Handlers\FeeMaxima\FeeMaximaChaptersDtoTests.cs" />
     <Compile Include="Presales\Handlers\FeeMaxima\FeeMaximaChaptersHandlerTests.cs" />
+    <Compile Include="Presales\Handlers\FeeMaxima\FeeMaximaChaptersRequestTests.cs" />
     <Compile Include="Presales\Handlers\SocialMedia\SocialMediaCountsDtoTests.cs" />
     <Compile Include="Presales\Handlers\SocialMedia\SocialMediaCountsHandlerTests.cs" />
     <Compile Include="Presales\Handlers\SocialMedia\SocialMediaCountsRequestTests.cs" />
