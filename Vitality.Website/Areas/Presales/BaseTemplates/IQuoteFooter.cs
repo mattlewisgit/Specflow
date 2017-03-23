@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.BaseTemplates
+namespace Vitality.Website.Areas.Presales.BaseTemplates
 {
     using System.Collections.Generic;
 

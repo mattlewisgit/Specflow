@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.IntegrationTests.Drivers
+namespace Vitality.Website.IntegrationTests.Drivers
 {
     using OpenQA.Selenium;
     using OpenQA.Selenium.Chrome;

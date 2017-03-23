@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.UnitTests.TestDoubles
+namespace Vitality.Website.UnitTests.TestDoubles
 {
     using System;
     using System.Collections.Generic;

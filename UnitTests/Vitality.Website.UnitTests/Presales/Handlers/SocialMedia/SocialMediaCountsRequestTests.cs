@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Shouldly;
 using Vitality.Website.App.SocialMedia;
 using Vitality.Website.Areas.Presales.Handlers.SocialMedia;

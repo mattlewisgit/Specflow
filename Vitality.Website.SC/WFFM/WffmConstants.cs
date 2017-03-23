@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Vitality.Website.SC.WFFM
 {

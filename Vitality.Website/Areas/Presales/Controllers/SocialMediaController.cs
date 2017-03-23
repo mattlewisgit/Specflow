@@ -1,9 +1,8 @@
-﻿using System;
+using System;
 using System.Net.Http;
 using System.Web.Http;
 using Glass.Mapper.Sc;
 using MediatR;
-using Sitecore.Data;
 using Vitality.Website.Areas.Presales.Handlers.SocialMedia;
 using Vitality.Website.Areas.Presales.SettingsTemplates;
 

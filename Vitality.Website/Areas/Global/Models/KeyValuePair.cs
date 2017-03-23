@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Global.Models
+namespace Vitality.Website.Areas.Global.Models
 {
     public class KeyValuePair : SitecoreItem
     {

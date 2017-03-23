@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Vitality.Website.App.Ccsd.Models;
 
 namespace Vitality.Website.Areas.Presales.Handlers.FeeMaxima

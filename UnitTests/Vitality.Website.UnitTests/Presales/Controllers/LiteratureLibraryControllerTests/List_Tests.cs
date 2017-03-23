@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.UnitTests.Presales.Controllers.LiteratureLibraryControllerTests
+namespace Vitality.Website.UnitTests.Presales.Controllers.LiteratureLibraryControllerTests
 {
     using System.Collections.Generic;
     using System.Net;

@@ -1,4 +1,4 @@
-﻿using Shouldly;
+using Shouldly;
 using Vitality.Website.SC.Providers;
 using Vitality.Website.SC.Utilities;
 using Xunit;

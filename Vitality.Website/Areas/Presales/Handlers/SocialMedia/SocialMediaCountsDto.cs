@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.Handlers.SocialMedia
+namespace Vitality.Website.Areas.Presales.Handlers.SocialMedia
 {
     public class SocialMediaCountsDto
     {

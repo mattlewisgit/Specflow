@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Sitecore.Web.UI.Pages;
 using Sitecore.Web.UI.Sheer;
 using Sitecore.Web.UI.XmlControls;

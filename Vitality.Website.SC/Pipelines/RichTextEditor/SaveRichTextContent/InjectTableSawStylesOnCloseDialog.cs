@@ -1,4 +1,4 @@
-﻿using Vitality.Website.SC.Pipelines.RenderField;
+using Vitality.Website.SC.Pipelines.RenderField;
 
 namespace Vitality.Website.SC.Pipelines.RichTextEditor.SaveRichTextContent
 {

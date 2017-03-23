@@ -68,9 +68,13 @@
     <Compile Include="Ccsd\CcsdService.cs" />
     <Compile Include="Ccsd\Interfaces\ICcsdService.cs" />
     <Compile Include="Ccsd\Models\Chapter.cs" />
+    <Compile Include="Ccsd\Models\ExternalCcsd.cs" />
     <Compile Include="Ccsd\Models\Procedure.cs" />
     <Compile Include="Ccsd\Models\Section.cs" />
-    <Compile Include="Handlers\ApiResponseHandler.cs" />
+    <Compile Include="Helpers\ApiHelper.cs" />
+    <Compile Include="Helpers\IMockDataHelper.cs" />
+    <Compile Include="Helpers\MockDataHelper.cs" />
+    <Compile Include="Interfaces\IFeedSettings.cs" />
     <Compile Include="SocialMedia\Interfaces\ISocialMediaConnector.cs" />
     <Compile Include="SocialMedia\Models\AccessTokenResponse.cs" />
     <Compile Include="SocialMedia\Models\ErrorResponse.cs" />
@@ -81,9 +85,13 @@
     <Compile Include="SocialMedia\Models\Twitter\FollowersCountReponse.cs" />
     <Compile Include="SocialMedia\SocialMediaConstants.cs" />
     <Compile Include="SocialMedia\TwitterConnector.cs" />
+    <Compile Include="Vacancies\Interfaces\IVacancyService.cs" />
+    <Compile Include="Vacancies\Models\Channel.cs" />
+    <Compile Include="Vacancies\Models\Item.cs" />
+    <Compile Include="Vacancies\Models\VacancyFeed.cs" />
+    <Compile Include="Vacancies\VacancyService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Data\CcsdChaptersWithProcedures.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

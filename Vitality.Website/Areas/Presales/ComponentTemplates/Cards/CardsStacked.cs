@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.Cards
+namespace Vitality.Website.Areas.Presales.ComponentTemplates.Cards
 {
     using System.Collections.Generic;
 

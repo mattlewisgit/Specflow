@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.Literature
+namespace Vitality.Website.Areas.Presales.ComponentTemplates.Literature
 {
     using System.Collections.Generic;
 

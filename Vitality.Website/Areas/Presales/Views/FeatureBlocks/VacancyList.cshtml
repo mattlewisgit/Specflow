@@ -1,0 +1,12 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.VacancyList>
+<div class="pinch">
+    <h2>@Editable(Model, m => m.Headline)</h2>
+    <div class="example" data-ng-app="CareerApp">
+        <div ng-controller="VacancyListController">
+           <div data-ng-show="isLoading">
+                Loading
+            </div>
+
+        </div>
+    </div>
+</div>

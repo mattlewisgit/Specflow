@@ -1,4 +1,4 @@
-﻿using Sitecore.Data.Items;
+using Sitecore.Data.Items;
 
 namespace Vitality.Website.SC.Utilities
 {

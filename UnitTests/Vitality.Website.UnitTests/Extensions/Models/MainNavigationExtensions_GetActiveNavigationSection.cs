@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.UnitTests.Extensions.Models
+namespace Vitality.Website.UnitTests.Extensions.Models
 {
     using System.Collections.Generic;
 

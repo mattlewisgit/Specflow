@@ -1,4 +1,4 @@
-﻿/* Extracted from https://github.com/rahm0277/SC-MS-CustomFields */
+/* Extracted from https://github.com/rahm0277/SC-MS-CustomFields */
 
 using System;
 using Sitecore;

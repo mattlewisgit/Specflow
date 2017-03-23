@@ -1,4 +1,4 @@
-﻿using Glass.Mapper.Sc.Fields;
+using Glass.Mapper.Sc.Fields;
 
 using Vitality.Website.Areas.Global.Models;
 using Vitality.Website.Areas.Presales.BaseTemplates;

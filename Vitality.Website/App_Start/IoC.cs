@@ -1,7 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Vitality.Website.App.Ccsd;
 using Vitality.Website.App.Ccsd.Interfaces;
+using Vitality.Website.App.Helpers;
+using Vitality.Website.App.Vacancies;
+using Vitality.Website.App.Vacancies.Interfaces;
 
 namespace Vitality.Website.App_Start
 {
@@ -56,10 +59,12 @@ namespace Vitality.Website.App_Start
             RegisterWebApiControllers(assemblies);
             container.Register<Func<string, IProviderSearchContext>>(() => index => ContentSearchManager.GetIndex(index).CreateSearchContext(), new WebApiRequestLifestyle());
             container.Register<ICcsdService, CcsdService>();
+            container.Register<IMockDataHelper, MockDataHelper>();
+            container.Register<IVacancyService, VacancyService>();
         }
 
         /// <remarks>
-        /// Unable to use container.RegisterWebApiControllers(GlobalConfiguration.Configuration, vitalityWebsite) 
+        /// Unable to use container.RegisterWebApiControllers(GlobalConfiguration.Configuration, vitalityWebsite)
         /// due to Sitecore Api Controllers being picked up which have multiple public constructors.
         /// </remarks>
         private static void RegisterWebApiControllers(IEnumerable<Assembly> assemblies)
@@ -70,7 +75,7 @@ namespace Vitality.Website.App_Start
                 {
                     Registration registration = Lifestyle.Transient.CreateRegistration(type, container);
                     registration.SuppressDiagnosticWarning(DiagnosticType.DisposableTransientComponent, "Web API registers controllers for disposal when the request ends during the call to ApiController.ExecuteAsync.");
-                    container.AddRegistration(type, registration);    
+                    container.AddRegistration(type, registration);
                 }
             }
         }

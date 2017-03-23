@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.SC.Pipelines.HttpRequest
+namespace Vitality.Website.SC.Pipelines.HttpRequest
 {
     using System.Net;
     using System.Web;

@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.SC.ContentSearch.ComputedFields
+namespace Vitality.Website.SC.ContentSearch.ComputedFields
 {
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.ComputedFields;

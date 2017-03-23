@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.FAQ
+namespace Vitality.Website.Areas.Presales.ComponentTemplates.FAQ
 {
     using Glass.Mapper.Sc.Fields;
 

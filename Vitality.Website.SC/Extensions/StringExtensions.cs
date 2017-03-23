@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.SC.Extensions
+namespace Vitality.Website.SC.Extensions
 {
     using System.Collections.Generic;
     using System.Linq;

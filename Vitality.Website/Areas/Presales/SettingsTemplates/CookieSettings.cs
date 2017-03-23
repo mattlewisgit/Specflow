@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.SettingsTemplates
+namespace Vitality.Website.Areas.Presales.SettingsTemplates
 {
     using Glass.Mapper.Sc.Configuration.Attributes;
 

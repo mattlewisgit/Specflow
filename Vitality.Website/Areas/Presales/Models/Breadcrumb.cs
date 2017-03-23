@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.Models
+namespace Vitality.Website.Areas.Presales.Models
 {
     public class Breadcrumb
     {

@@ -1,22 +1,40 @@
-﻿using System.Web;
+using System;
+using System.Runtime.Caching;
+using System.Web;
+using Glass.Mapper.Sc;
 using MediatR;
-using Sitecore.ApplicationCenter.Applications;
 using Vitality.Website.App.Ccsd.Interfaces;
+using Vitality.Website.Areas.Presales.SettingsTemplates;
+using Vitality.Website.Extensions;
 
 namespace Vitality.Website.Areas.Presales.Handlers.FeeMaxima
 {
     public class FeeMaximaChaptersHandler : IRequestHandler<FeeMaximaChaptersRequest, FeeMaximaChaptersDto>
     {
+        private static readonly ObjectCache MemoryCacheStore = MemoryCache.Default;
         private readonly ICcsdService _ccsdService;
-
-        public FeeMaximaChaptersHandler(ICcsdService ccsdService)
+        private readonly ISitecoreContext _sitecoreContext;
+        public FeeMaximaChaptersHandler(ICcsdService ccsdService, ISitecoreContext sitecoreContext)
         {
             _ccsdService = ccsdService;
+            _sitecoreContext = sitecoreContext;
         }
 
         public FeeMaximaChaptersDto Handle(FeeMaximaChaptersRequest request)
         {
-            return FeeMaximaChaptersDto.From(_ccsdService.GetChapters(HttpContext.Current.Server.MapPath("~/App_Data/CcsdChaptersWithProcedures.json")));
+            return MemoryCacheStore.AddOrGet(string.Format("{0}_ccsdchapters", request.SettingsId),
+            () => CallCcsdService(request),
+            DateTimeOffset.UtcNow.AddDays(1));
+        }
+
+        public FeeMaximaChaptersDto CallCcsdService(FeeMaximaChaptersRequest request)
+        {
+            var feedSettings = _sitecoreContext.GetItem<FeedSettings>(request.SettingsId);
+            if (!string.IsNullOrEmpty(feedSettings?.MockDataFile))
+            {
+                feedSettings.MockDataFile = HttpContext.Current.Server.MapPath(feedSettings.MockDataFile);
+            }
+            return FeeMaximaChaptersDto.From(_ccsdService.GetChapters(feedSettings));
         }
     }
 }

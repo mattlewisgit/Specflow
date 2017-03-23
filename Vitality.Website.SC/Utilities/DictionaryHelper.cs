@@ -1,4 +1,4 @@
-﻿using Vitality.Website.SC.Models;
+using Vitality.Website.SC.Models;
 
 namespace Vitality.Website.SC.Utilities
 {

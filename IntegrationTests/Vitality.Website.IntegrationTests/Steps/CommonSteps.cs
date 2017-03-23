@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.IntegrationTests.Steps {     using TechTalk.SpecFlow;
+namespace Vitality.Website.IntegrationTests.Steps {     using TechTalk.SpecFlow;
 
     using Vitality.Website.IntegrationTests.Extensions;
 

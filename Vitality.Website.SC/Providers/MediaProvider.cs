@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.SC.Providers
+namespace Vitality.Website.SC.Providers
 {
     using System;
 

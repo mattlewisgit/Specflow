@@ -1,4 +1,4 @@
-﻿using Sitecore;
+using Sitecore;
 using Sitecore.Data;
 using Sitecore.Data.Query;
 using Sitecore.Diagnostics;

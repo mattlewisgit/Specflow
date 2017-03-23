@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.SC.ContentSearch.Analyzers
+namespace Vitality.Website.SC.ContentSearch.Analyzers
 {
     using System.IO;
 

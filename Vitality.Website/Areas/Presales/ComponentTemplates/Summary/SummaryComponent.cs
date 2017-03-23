@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.Summary
+namespace Vitality.Website.Areas.Presales.ComponentTemplates.Summary
 {
     using System.Collections.Generic;
 

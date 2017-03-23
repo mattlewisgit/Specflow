@@ -1,4 +1,4 @@
-﻿using Glass.Mapper.Sc.Configuration.Attributes;
+using Glass.Mapper.Sc.Configuration.Attributes;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.Articles
 {

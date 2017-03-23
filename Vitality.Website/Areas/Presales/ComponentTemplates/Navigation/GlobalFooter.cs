@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.Navigation
+namespace Vitality.Website.Areas.Presales.ComponentTemplates.Navigation
 {
     using System.Collections.Generic;
 

@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Net;
 using System.Runtime.Caching;
 using log4net;
 using MediatR;
-using Vitality.Website.App.Handlers;
+using Vitality.Website.App.Helpers;
 using Vitality.Website.App.SocialMedia.Interfaces;
 using Vitality.Website.Extensions;
 
@@ -34,7 +34,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.SocialMedia
             }
             catch (Exception ex)
             {
-                var statusCode = (HttpStatusCode) ex.Data[ApiResponseHandler.StatusCodeKey];
+                var statusCode = (HttpStatusCode) ex.Data[ApiHelper.StatusCodeKey];
                 //Access token might be expired, clear it from the cache and try again
                 if ((statusCode == HttpStatusCode.BadRequest || statusCode == HttpStatusCode.Unauthorized) &&
                     attempt == 0)

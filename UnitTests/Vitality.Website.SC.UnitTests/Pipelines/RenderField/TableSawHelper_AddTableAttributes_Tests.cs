@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Shouldly;
 using Vitality.Website.SC.Pipelines.RenderField;
 using Xunit;

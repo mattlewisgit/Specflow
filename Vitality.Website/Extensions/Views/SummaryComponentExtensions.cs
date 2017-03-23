@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Extensions.Views
+namespace Vitality.Website.Extensions.Views
 {
     using System;
     using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.IntegrationTests.Steps
+namespace Vitality.Website.IntegrationTests.Steps
 {
     using System.Drawing;
     using Selenium.WebDriver.Extensions.JQuery;

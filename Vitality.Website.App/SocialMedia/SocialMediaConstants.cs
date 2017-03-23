@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.App.SocialMedia
+namespace Vitality.Website.App.SocialMedia
 {
     public static class SocialMediaConstants
     {

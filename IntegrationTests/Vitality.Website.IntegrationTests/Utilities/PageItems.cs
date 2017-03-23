@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.IntegrationTests.Utilities
+namespace Vitality.Website.IntegrationTests.Utilities
 {
     public static class Button
     {

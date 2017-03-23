@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Sitecore.Mvc.Pipelines.Response.GetRenderer;
 using Vitality.Website.SC.Utilities;
 

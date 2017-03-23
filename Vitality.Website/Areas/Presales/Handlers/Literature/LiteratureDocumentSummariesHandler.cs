@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.Handlers.Literature
+namespace Vitality.Website.Areas.Presales.Handlers.Literature
 {
     using System;
     using System.Collections.Generic;

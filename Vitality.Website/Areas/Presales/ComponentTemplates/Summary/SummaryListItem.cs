@@ -1,4 +1,4 @@
-﻿namespace Vitality.Website.Areas.Presales.ComponentTemplates.Summary
+namespace Vitality.Website.Areas.Presales.ComponentTemplates.Summary
 {
     using Vitality.Website.Areas.Global.Models;
     using Vitality.Website.SC;

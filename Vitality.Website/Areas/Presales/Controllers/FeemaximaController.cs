@@ -1,4 +1,5 @@
-﻿using MediatR;
+using System;
+using MediatR;
 
 using System.Linq;
 using System.Net.Http;
@@ -14,10 +15,10 @@ namespace Vitality.Website.Areas.Presales.Controllers
 
         [HttpGet]
         [Route("api/Feemaxima/List")]
-        public HttpResponseMessage List()
+        public HttpResponseMessage List(Guid settingsId)
         {
-            return this.GetResponse<FeeMaximaChaptersRequest, FeeMaximaChaptersDto>(
-                new FeeMaximaChaptersRequest(), chapters=>chapters.Chapters.Any());
+            return GetResponse<FeeMaximaChaptersRequest, FeeMaximaChaptersDto>(
+                new FeeMaximaChaptersRequest(settingsId), chapters=>chapters.Chapters.Any());
         }
     }
 }

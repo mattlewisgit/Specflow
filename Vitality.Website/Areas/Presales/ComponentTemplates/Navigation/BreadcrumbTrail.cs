@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using Sitecore.Sites;
 using Vitality.Website.Areas.Presales.Models;
 
