@@ -75,7 +75,7 @@
                         <conditional-text alternative-text="'@Model.ContactUsText'" condition="procedure.SurgeonFee" value="'@Model.CurrencySymbol' + procedure.OperatorFee"></conditional-text>
                     </td>
                     <td>
-                        <conditional-text alternative-text="'@Model.AnaesthetistFeeAlternateText'" condition="procedure.AnaesthetistFee" value="''@Model.CurrencySymbol' + procedure.AnaesthetistFee"></conditional-text>
+                        <conditional-text alternative-text="'@Model.AnaesthetistFeeAlternateText'" condition="procedure.AnaesthetistFee" value="'@Model.CurrencySymbol' + procedure.AnaesthetistFee"></conditional-text>
                         <conditional-text ng-hide="procedure.SurgeonFee" alternative-text="'@Model.ContactUsText'" condition="procedure.AnaesthetistFee" value="'@Model.CurrencySymbol' + procedure.AnaesthetistFee}}"></conditional-text>
                     </td>
                 </tr>
