@@ -3,7 +3,7 @@ using System.Linq;
 using System.Net;
 using RestSharp;
 using RestSharp.Authenticators;
-using Vitality.Website.App.Handlers;
+using Vitality.Website.App.Helpers;
 using Vitality.Website.App.SocialMedia.Interfaces;
 using Vitality.Website.App.SocialMedia.Models;
 using Vitality.Website.App.SocialMedia.Models.Twitter;
@@ -31,7 +31,7 @@ namespace Vitality.Website.App.SocialMedia
             _restClient.Authenticator = new HttpBasicAuthenticator(_socialMediaAccount.AppKey,
                 _socialMediaAccount.AppSecret);
             var response = _restClient.Execute<AccessTokenResponse>(request);
-            return response.Handle();
+            return response.HandleResponse();
         }
 
         public int GetPopularityCount(string userId, string accessToken)
@@ -40,7 +40,7 @@ namespace Vitality.Website.App.SocialMedia
             request.AddQueryParameter("screen_name", userId);
             _restClient.Authenticator = new OAuth2AuthorizationRequestHeaderAuthenticator(accessToken, "Bearer");
             var response = _restClient.Execute<List<FollowersCountReponse>>(request);
-            return response.Handle().First().FollowersCount;
+            return response.HandleResponse().First().FollowersCount;
         }
     }
 }

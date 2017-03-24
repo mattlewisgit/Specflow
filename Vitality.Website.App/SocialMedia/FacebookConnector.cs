@@ -1,6 +1,6 @@
 using RestSharp;
 using RestSharp.Authenticators;
-using Vitality.Website.App.Handlers;
+using Vitality.Website.App.Helpers;
 using Vitality.Website.App.SocialMedia.Interfaces;
 using Vitality.Website.App.SocialMedia.Models;
 using Vitality.Website.App.SocialMedia.Models.Facebook;
@@ -9,7 +9,7 @@ namespace Vitality.Website.App.SocialMedia
 {
     public class FacebookConnector :ISocialMediaConnector
     {
-        private readonly RestClient _restClient; 
+        private readonly RestClient _restClient;
         private readonly SocialMediaAccount _socialMediaAccount;
 
         public FacebookConnector(SocialMediaAccount socialMediaAccount)
@@ -25,7 +25,7 @@ namespace Vitality.Website.App.SocialMedia
             _restClient.Authenticator = new SimpleAuthenticator("client_id", _socialMediaAccount.AppKey,
                "client_secret", _socialMediaAccount.AppSecret);
             var response = _restClient.Execute<AccessTokenResponse>(request);
-            return response.Handle();
+            return response.HandleResponse();
         }
 
         public int GetPopularityCount(string pageId, string accessToken)
@@ -34,7 +34,7 @@ namespace Vitality.Website.App.SocialMedia
             var request = new RestRequest(url, Method.GET);
             _restClient.Authenticator = new OAuth2UriQueryParameterAuthenticator(accessToken);
             var response =  _restClient.Execute<FanCountResponse>(request);
-            return response.Handle().FanCount;
+            return response.HandleResponse().FanCount;
         }
     }
 }
