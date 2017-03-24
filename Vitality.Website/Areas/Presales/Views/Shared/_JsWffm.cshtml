@@ -3,9 +3,9 @@
     var scriptsBaseUrlUrlContent = Url.Content(Constants.ScriptsBaseUrl);
     var scriptsBaseUrlUrlContentDecoded = HttpUtility.UrlDecode(scriptsBaseUrlUrlContent);
 }
-<script defer="defer" type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
-<script defer="defer">if (!($.validator)) cdnizerLoad("@(scriptsBaseUrlUrlContentDecoded + "libs/jquery/jquery.validate.min.js")");</script>
-<script defer="defer" type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
-<script defer="defer">if (!($.validator.unobtrusive)) cdnizerLoad("@(scriptsBaseUrlUrlContentDecoded + "libs/jquery/jquery.validate.unobtrusive.min.js"))");</script>
-<script defer="defer" type="text/javascript" src="@(scriptsBaseUrlUrlContent +"wffm.min.js")"></script>
-<script defer="defer" type="text/javascript" src="@(scriptsBaseUrlUrlContent + "main.min.js")"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+<script>if (!($.validator)) cdnizerLoad("@(scriptsBaseUrlUrlContentDecoded + "libs/jquery/jquery.validate.min.js")");</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
+<script>if (!($.validator.unobtrusive)) cdnizerLoad("@(scriptsBaseUrlUrlContentDecoded + "libs/jquery/jquery.validate.unobtrusive.min.js"))");</script>
+<script type="text/javascript" src="@(scriptsBaseUrlUrlContent +"wffm.min.js")"></script>
+<script type="text/javascript" src="@(scriptsBaseUrlUrlContent + "main.min.js")"></script>
