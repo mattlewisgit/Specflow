@@ -15,45 +15,46 @@ using Sitecore.Pipelines;
 
 namespace Vitality.Website.App_Start
 {
-	public class  GlassMapperSc
-	{
-		public void Process(PipelineArgs args){
-			GlassMapperSc.Start();
-		}
+    public class GlassMapperSc
+    {
+        public void Process(PipelineArgs args)
+        {
+            Start();
+        }
 
-		public static void Start()
-		{
-			//install the custom services
-			var resolver = GlassMapperScCustom.CreateResolver();
+        public static void Start()
+        {
+            // Install the custom services.
+            var resolver = GlassMapperScCustom.CreateResolver();
 
-			//create a context
-			var context = Glass.Mapper.Context.Create(resolver);
+            // Create a context.
+            var context = Glass.Mapper.Context.Create(resolver);
 
-			LoadConfigurationMaps(resolver, context);
+            LoadConfigurationMaps(resolver, context);
 
-			context.Load(      
-				GlassMapperScCustom.GlassLoaders()        				
-				);
+            context.Load(GlassMapperScCustom.GlassLoaders());
 
-			GlassMapperScCustom.PostLoad();
-		}
+            GlassMapperScCustom.PostLoad();
+        }
 
         public static void LoadConfigurationMaps(IDependencyResolver resolver, Glass.Mapper.Context context)
         {
-            var dependencyResolver = resolver as DependencyResolver;
-            if (dependencyResolver == null)
+            if (resolver == null)
             {
                 return;
             }
 
-            if (dependencyResolver.ConfigurationMapFactory is ConfigurationMapConfigFactory)
+            if (resolver.ConfigurationMapFactory is ConfigurationMapConfigFactory)
             {
-                GlassMapperScCustom.AddMaps(dependencyResolver.ConfigurationMapFactory);
+                GlassMapperScCustom.AddMaps(resolver.ConfigurationMapFactory);
             }
 
-            IConfigurationMap configurationMap = new ConfigurationMap(dependencyResolver);
-            SitecoreFluentConfigurationLoader configurationLoader = configurationMap.GetConfigurationLoader<SitecoreFluentConfigurationLoader>();
+            var configurationMap = new ConfigurationMap(resolver);
+
+            SitecoreFluentConfigurationLoader configurationLoader =
+                configurationMap.GetConfigurationLoader<SitecoreFluentConfigurationLoader>();
+
             context.Load(configurationLoader);
         }
-	}
+    }
 }

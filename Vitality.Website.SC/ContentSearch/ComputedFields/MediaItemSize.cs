@@ -22,10 +22,12 @@ namespace Vitality.Website.SC.ContentSearch.ComputedFields
 
             var field = indexableItem.Item.Fields["document"];
 
-            if (field == null) return null;
+            if (field == null)
+            {
+                return null;
+            }
 
             var media = GetMediaItem(field);
-
             return media != null ? (object)(media.Size / 1024) : null;
         }
 
@@ -34,21 +36,17 @@ namespace Vitality.Website.SC.ContentSearch.ComputedFields
             switch (field.TypeKey)
             {
                 case "image":
-                    var image = (ImageField)field;
-                    if (image != null)
-                    {
-                        return image.MediaItem;
-                    }
-                    break;
+                    return ((ImageField)field)?.MediaItem;
                 case "general link":
                     var mediaLink = (LinkField)field;
-                    if (mediaLink != null)
-                    {
-                        return Database.GetDatabase("web").GetItem(mediaLink.TargetID);
-                    }
-                    break;
+
+                    return mediaLink == null
+                        ? null
+                        : Database.GetDatabase("web").GetItem(mediaLink.TargetID);
+
+                default:
+                    return null;
             }
-            return null;
         }
     }
 }

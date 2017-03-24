@@ -1,20 +1,19 @@
-using System;
-using System.Collections.Generic;
-using Sitecore.Web;
-
 namespace Vitality.Website.SC.Events
 {
     using Sitecore;
     using Sitecore.Data;
     using Sitecore.Data.Items;
     using Sitecore.Events;
-
-    using Vitality.Website.SC.Utilities;
+    using Sitecore.Web;
+    using System;
+    using System.Collections.Generic;
+    using Utilities;
 
     public class ItemEventsHandler
     {
         private static readonly ID fieldTemplateId = new ID("{455A3E98-A627-4B40-8035-E683A0331AC7}");
         private static readonly IEnumerable<SiteInfo> siteInfoList = Sitecore.Configuration.Factory.GetSiteInfoList().RemoveSitecoreShellSiteInfos();
+
         public void SetSeoFriendlyItemName(object sender, EventArgs args)
         {
             var item = this.GetItem(args);
@@ -37,14 +36,11 @@ namespace Vitality.Website.SC.Events
         {
             var item = this.GetItem(args);
 
-            if (item != null && ItemIsMasterDatabaseTemplateField(item))
+            if (item != null && ItemIsMasterDatabaseTemplateField(item) && FieldItemTitleIsNotSplitCamelCase(item))
             {
-                if (FieldItemTitleIsNotSplitCamelCase(item))
+                using (new EditContext(item))
                 {
-                    using (new EditContext(item))
-                    {
-                        item.Fields["Title"].SetValue(StringHelper.SplitCamelCase(item.Name), false);
-                    }
+                    item.Fields["Title"].SetValue(StringHelper.SplitCamelCase(item.Name), false);
                 }
             }
         }
@@ -68,6 +64,7 @@ namespace Vitality.Website.SC.Events
             {
                 return false;
             }
+
             var currentSiteContentStartPath = item.GetSiteContentStartPath(siteInfoList);
             return item.Paths.FullPath.StartsWith(
                 currentSiteContentStartPath + ItemConstants.Presales.Content.Home.RelativePath,
@@ -87,16 +84,12 @@ namespace Vitality.Website.SC.Events
                    && !item.Name.Equals("__Standard Values", StringComparison.OrdinalIgnoreCase);
         }
 
-        private static bool FieldItemTitleIsNotSplitCamelCase(Item item)
-        {
-            return item.TemplateID == fieldTemplateId 
-                && item.Fields["Title"] != null 
+        private static bool FieldItemTitleIsNotSplitCamelCase(Item item) =>
+            item.TemplateID == fieldTemplateId
+                && item.Fields["Title"] != null
                 && item.Fields["Title"].Value != StringHelper.SplitCamelCase(item.Name);
-        }
 
-        private Item GetItem(EventArgs args)
-        {
-            return Event.ExtractParameter(args, 0) as Item;
-        }
+        private Item GetItem(EventArgs args) =>
+            Event.ExtractParameter(args, 0) as Item;
     }
 }

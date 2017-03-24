@@ -1,45 +1,43 @@
-using System.Collections.Generic;
-
 namespace Vitality.Website.Areas.Presales.Handlers.Literature
 {
-    using System;
-    using System.Linq;
-
     using MediatR;
-
+    using SC;
     using Sitecore.ContentSearch;
-
-    using Vitality.Website.SC;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
     public class LiteratureDocumentHandler : IRequestHandler<LiteratureDocumentRequest, LiteratureDocumentDto>
     {
-        private readonly IProviderSearchContext searchContext;
+        private readonly IProviderSearchContext _searchContext;
 
         public LiteratureDocumentHandler(Func<string, IProviderSearchContext> searchContextFactory)
         {
-            this.searchContext = searchContextFactory("literature_library");
+            _searchContext = searchContextFactory("literature_library");
         }
 
         public LiteratureDocumentDto Handle(LiteratureDocumentRequest request)
         {
-            var searchResult = this.searchContext
+            var searchResult = _searchContext
                 .GetQueryable<LiteratureDocumentSearchResult>()
-                .FirstOrDefault(document => 
-                    document.Library == request.Library && 
+                .FirstOrDefault(document =>
+                    document.Library == request.Library &&
                     document.Category == request.Category &&
                     document.Title == request.Title &&
                     document.TemplateId == ItemConstants.Presales.Templates.Literature.Document.Id);
-            var literatureDocument = LiteratureDocumentDto.From(new List<LiteratureDocumentSearchResult>{searchResult}).FirstOrDefault();
 
-            if (request.IncludeAvailableLiterature)
+            var literatureDocument = LiteratureDocumentDto
+                .From(new List<LiteratureDocumentSearchResult>{ searchResult })
+                .FirstOrDefault();
+
+            if (request.IncludeAvailableLiterature && literatureDocument != null)
             {
-                if (literatureDocument != null)
-                {
-                    literatureDocument.AvailableLiterature = searchContext.GetQueryable<LiteratureDocumentSearchResult>()
-                            .Where(document => document.Category == searchResult.Category && document.Library == searchResult.Library)
-                            .Select(LiteratureDocumentSummaryDto.From)
-                            .ToArray();
-                }
+                literatureDocument
+                    .AvailableLiterature = _searchContext.GetQueryable<LiteratureDocumentSearchResult>()
+                    .Where(document => document.Category == searchResult.Category
+                        && document.Library == searchResult.Library)
+                    .Select(LiteratureDocumentSummaryDto.From)
+                    .ToArray();
             }
 
             return literatureDocument;
