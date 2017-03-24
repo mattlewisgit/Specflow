@@ -57,14 +57,14 @@ namespace Vitality.Website.UnitTests.Presales.Controllers.VacanciesControllerTes
                 new Item { Title = "Developer" }
             });
             Init();
-            this._controller.List(_feedSettingId).Content.ReadAsAsync<VacanciesDto>().Result.ShouldNotBeNull();
+            _controller.List(_feedSettingId).Content.ReadAsAsync<VacanciesDto>().Result.ShouldNotBeNull();
         }
 
         private void Init()
         {
             _sitecoreContext.Setup(m => m.GetItem<FeedSettings>(_feedSettingId, false,false)).Returns(new FeedSettings {Id=_feedSettingId});
             var handler = new MediatorStub<VacanciesRequest, VacanciesDto>(new VacanciesHandler(_sitecoreContext.Object, _vacancyService.Object));
-            this._controller = new VacancyController(handler);
+           _controller = new VacancyController(handler);
         }
     }
 }

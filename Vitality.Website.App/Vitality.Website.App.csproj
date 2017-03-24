@@ -68,6 +68,7 @@
     <Compile Include="Ccsd\CcsdService.cs" />
     <Compile Include="Ccsd\Interfaces\ICcsdService.cs" />
     <Compile Include="Ccsd\Models\Chapter.cs" />
+    <Compile Include="Ccsd\Models\ExternalCcsd.cs" />
     <Compile Include="Ccsd\Models\Procedure.cs" />
     <Compile Include="Ccsd\Models\Section.cs" />
     <Compile Include="Helpers\ApiHelper.cs" />

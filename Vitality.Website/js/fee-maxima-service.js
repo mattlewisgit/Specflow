@@ -2,9 +2,9 @@
     .module("FeemaximaService", [])
     .service("FeemaximaService", ["$q", "$http", function ($q, $http) {
         "use strict";
-        var baseUrl = "/api/feemaxima/";
+        var endpoint = "/api/feemaxima/list/?settingsId=";
 
-        // Typehead currently doesn't return dataset name on select. 
+        // Typehead currently doesn't return dataset name on select.
         this.datasetTypes =
         {
             Chapter: "Chapter",
@@ -27,7 +27,7 @@
         this.getChapters = function () {
             var deferred = $q.defer();
 
-            $http.get(baseUrl + 'list/')
+            $http.get(endpoint + window.angularData.CcsdFeedSettingsId)
                 .success(function (dt) {
                     deferred.resolve(dt);
                 })
