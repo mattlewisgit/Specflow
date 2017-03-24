@@ -70,5 +70,5 @@ gulp.task("default", function () {
 
 // Simply runs bower, but saves running the command separately.
 gulp.task("bower", function () {
-    return plugins.bower();
+    return plugins.bower({ cmd: 'update' });
 });
