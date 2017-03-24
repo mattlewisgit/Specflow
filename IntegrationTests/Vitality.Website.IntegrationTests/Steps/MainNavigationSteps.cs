@@ -213,6 +213,33 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .ShouldBeTrue();
         }
 
+        [When(@"I expand the mobile footer section (.*)")]
+        public void IExpandTheMobileFooterSection(string footerSection)
+        {
+
+
+            //Move down the page first
+            WebDriver
+                .FindElement(new JQuerySelector(".page-footer .expander a:contains('" + footerSection + "')"))
+                .SendKeys(Keys.Space);
+
+            Actions actions = new Actions(WebDriver);
+
+            actions
+                .SendKeys(Keys.Enter)
+                .Perform();
+
+        }
+
+
+        [When(@"I click on the footer link (.*)")]
+        public void IClickOnTheFooterLink(string linkName)
+        {
+            WebDriver
+                .FindElement(new JQuerySelector(".page-footer .expander__content.is-active a:contains('" + linkName + "')"))
+                .Click();
+        }
+
 
         [When(@"I click on the (.*) quote footer button")]
         public void WhenIClickOnTheQuoteFooterButton(string p0)
