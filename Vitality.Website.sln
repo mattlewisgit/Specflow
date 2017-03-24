@@ -44,6 +44,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitality.Website.App", "Vit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitality.Website.App.UnitTests", "UnitTests\Vitality.Website.App.UnitTests\Vitality.Website.App.UnitTests.csproj", "{D1C282A4-0B9B-42F8-9845-378FCB85EDDC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SonarQube", "SonarQube", "{5493304E-7D1E-403C-AF98-FC80C8F080A7}"
+	ProjectSection(SolutionItems) = preProject
+		SonarQube\SolutionBinding.sqconfig = SonarQube\SolutionBinding.sqconfig
+		SonarQube\Vitality_0e40c8adCSharp.ruleset = SonarQube\Vitality_0e40c8adCSharp.ruleset
+		SonarQube\Vitality_b062e81aCSharp.ruleset = SonarQube\Vitality_b062e81aCSharp.ruleset
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

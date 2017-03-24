@@ -21,17 +21,14 @@ namespace Vitality.Website.SC.Pipelines.Response.RenderRendering
     {
         private readonly List<ID> templateIds = new List<ID>();
 
-        private string query;
+        private string _query;
 
         protected string Query
         {
             get
             {
-                if (this.query == null)
-                {
-                    this.query = string.Format("./ancestor-or-self::*[{0}]", string.Join(" or ", this.templateIds.Select(id => string.Format("@@templateid='{0}'", id))));
-                }
-                return this.query;
+                return _query ?? (_query = string.Format("./ancestor-or-self::*[{0}]",
+                    string.Join(" or ", this.templateIds.Select(id => $"@@templateid='{id}'"))));
             }
         }
 
@@ -53,18 +50,21 @@ namespace Vitality.Website.SC.Pipelines.Response.RenderRendering
             }
 
             var rendering = this.GetRenderingItem(args);
+
             if (rendering == null || rendering["VaryByAncestor"] != "1")
             {
                 return;
             }
+
             var dataSource = args.PageContext.Item;
 
             Assert.IsNotNull(dataSource, "dataSource: args.PageContext.Item");
 
-            foreach (var item in this.GetAncestorsWithTemplates(dataSource))
+            var firstAncestorWithTemplate = GetAncestorsWithTemplates(dataSource).FirstOrDefault();
+
+            if (firstAncestorWithTemplate != null)
             {
-                args.CacheKey += "_#ancestor:" + item.ID;
-                break;
+                args.CacheKey += "_#ancestor:" + firstAncestorWithTemplate.ID;
             }
         }
 

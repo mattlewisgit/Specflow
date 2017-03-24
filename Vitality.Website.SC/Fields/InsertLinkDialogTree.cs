@@ -1,21 +1,20 @@
-/* Extracted from https://github.com/rahm0277/SC-MS-CustomFields */
-
-using System;
-using Sitecore;
-using Sitecore.Configuration;
-using Sitecore.Data;
-using Sitecore.Data.Items;
-using Sitecore.Shell;
-using Sitecore.Speak.Applications;
-using Sitecore.Web;
-using Sitecore.Web.PageCodes;
-using System.Net;
-using System.Xml.Linq;
-using Sitecore.Mvc.Presentation;
-using Vitality.Website.SC.Utilities;
-
 namespace Vitality.Website.SC.Fields
 {
+    using System;
+    using Sitecore;
+    using Sitecore.Configuration;
+    using Sitecore.Shell;
+    using Sitecore.Speak.Applications;
+    using Sitecore.Web;
+    using Sitecore.Web.PageCodes;
+    using System.Net;
+    using System.Xml.Linq;
+    using Sitecore.Mvc.Presentation;
+    using Utilities;
+
+    /// <summary>
+    /// Taken from https://github.com/rahm0277/SC-MS-CustomFields
+    /// </summary>
     public class InsertLinkDialogTree : PageCodeBase
     {
         public Rendering TreeView { get; set; }
@@ -47,12 +46,10 @@ namespace Vitality.Website.SC.Fields
             ReadQueryParamsAndUpdatePlaceholders();
         }
 
-        private static string GetXmlAttributeValue(XElement element, string attrName)
-        {
-            return element.Attribute((XName) attrName) != null
+        private static string GetXmlAttributeValue(XElement element, string attrName) =>
+            element.Attribute((XName) attrName) != null
                 ? element.Attribute((XName) attrName).Value
                 : string.Empty;
-        }
 
         private void ReadQueryParamsAndUpdatePlaceholders()
         {
@@ -62,7 +59,7 @@ namespace Vitality.Website.SC.Fields
             {
                 TreeView.Parameters["RootItem"] = queryStringRoot;
             }
-            
+
             Func<Rendering, string> formatClickParmeters = (clickedButton) =>
             string.Format(InsertAnchorButton.Parameters["Click"],
                 WebUtility.UrlEncode(queryStringRoot),WebUtility.UrlEncode(queryStringHdl));
@@ -70,7 +67,7 @@ namespace Vitality.Website.SC.Fields
             formatClickParmeters(InsertAnchorButton);
             formatClickParmeters(InsertEmailButton);
             formatClickParmeters(ListViewToggleButton);
-    
+
             var text = string.Empty;
             if (!string.IsNullOrEmpty(queryStringHdl))
             {

@@ -1,10 +1,9 @@
-using System.IO;
-using System.Linq;
-using Sitecore.Security.AccessControl;
-using Sitecore.WordOCX.HtmlDocument;
-
 namespace Vitality.Website.SC.Pipelines.RenderField
 {
+    using System.IO;
+    using System.Linq;
+    using Sitecore.WordOCX.HtmlDocument;
+
     public static class TableSawHelper
     {
         public const string Class = "class";
@@ -14,7 +13,7 @@ namespace Vitality.Website.SC.Pipelines.RenderField
 
         public static string AddTableAttributes(TableSawArgs args)
         {
-            bool isSwipe = args.TableMode.ToLowerInvariant() == "swipe";
+            var isSwipe = args.TableMode.ToLowerInvariant() == "swipe";
 
             var htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(args.Html);
@@ -23,26 +22,7 @@ namespace Vitality.Website.SC.Pipelines.RenderField
 
             if (tables != null)
             {
-                foreach (var attributes in tables.Select(table => table.Attributes))
-                {
-                    if (attributes[Class] == null)
-                    {
-                        attributes.Add(Class, string.Empty);
-                    }
-
-                    if (attributes[DataTablesawMode] == null)
-                    {
-                        attributes.Add(DataTablesawMode, string.Empty);
-                    }
-
-                    if (attributes[DataTablesawMinimap] == null && isSwipe)
-                    {
-                        attributes.Add(DataTablesawMinimap, string.Empty);
-                    }
-                    
-                    attributes[Class].Value = args.TableClass;
-                    attributes[DataTablesawMode].Value = args.TableMode;
-                }                
+                AddTableAttributes(tables, isSwipe, args);
             }
 
             if (isSwipe)
@@ -68,6 +48,31 @@ namespace Vitality.Website.SC.Pipelines.RenderField
             }
 
             return args.Html;
+        }
+
+        private static void AddTableAttributes
+            (HtmlAgilityPack.HtmlNodeCollection tables, bool isSwipe, TableSawArgs args)
+        {
+            foreach (var attributes in tables.Select(table => table.Attributes))
+            {
+                if (attributes[Class] == null)
+                {
+                    attributes.Add(Class, string.Empty);
+                }
+
+                if (attributes[DataTablesawMode] == null)
+                {
+                    attributes.Add(DataTablesawMode, string.Empty);
+                }
+
+                if (attributes[DataTablesawMinimap] == null && isSwipe)
+                {
+                    attributes.Add(DataTablesawMinimap, string.Empty);
+                }
+
+                attributes[Class].Value = args.TableClass;
+                attributes[DataTablesawMode].Value = args.TableMode;
+            }
         }
     }
 }

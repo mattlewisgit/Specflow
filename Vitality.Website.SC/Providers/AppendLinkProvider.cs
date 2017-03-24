@@ -66,27 +66,26 @@ namespace Vitality.Website.SC.Providers
 
             public static string HandleSlash(string url)
             {
-                if (string.IsNullOrWhiteSpace(url) || url.EndsWith("/"))
+                const string slash = "/";
+
+                if (string.IsNullOrWhiteSpace(url) || url.EndsWith(slash))
                 {
                     return url;
                 }
 
                 var uri = new Uri(url);
+
                 if (Path.HasExtension(uri.AbsoluteUri))
                 {
                     return url;
                 }
 
                 var slashPosition = GetSlashPosition(url);
-
                 var prefix = url.Substring(0, slashPosition);
 
-                if (!prefix.EndsWith("/"))
-                {
-                    url = string.Format("{0}/{1}", prefix ,url.Substring(slashPosition));
-                }
-
-                return url;
+                return !prefix.EndsWith(slash)
+                    ? string.Format("{0}/{1}", prefix, url.Substring(slashPosition))
+                    : url;
             }
 
             private static int GetSlashPosition(string url)
@@ -96,7 +95,7 @@ namespace Vitality.Website.SC.Providers
 
                 if (slashPosition < 0)
                 {
-                    //then check for hash and if present enter slash before it 
+                    //then check for hash and if present enter slash before it
                     slashPosition = url.IndexOf("#");
                     if (slashPosition < 0)
                     {
