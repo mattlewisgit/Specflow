@@ -302,6 +302,7 @@
     <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.Log4Net.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
+    <Content Include="_Heartbeat.html" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -328,20 +329,7 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
-    <Content Include="client_side\gulpfile.js" />
-    <Content Include="client_side\img\facebook--footer.svg" />
-    <Content Include="client_side\img\icon-mouse.svg" />
-    <Content Include="client_side\img\icon-phone--dark.svg" />
-    <Content Include="client_side\img\icon-phone.svg" />
-    <Content Include="client_side\img\instagram--footer.svg" />
-    <Content Include="client_side\img\log-in.svg" />
-    <Content Include="client_side\img\search-background.png" />
-    <Content Include="client_side\img\search.svg" />
-    <Content Include="client_side\img\sprite-generated.png" />
-    <Content Include="client_side\img\twitter--footer.svg" />
-    <Content Include="client_side\img\vitality-logo--white.svg" />
-    <Content Include="client_side\img\vitality-logo.svg" />
-    <Content Include="client_side\img\youtube--footer.svg" />
+    <Content Include="gulpfile.js" />
     <Content Include="css\experience_editor_fix.css" />
     <Content Include="css\tablesaw.css" />
     <Content Include="Data\Sitecore_Wffm.ldf">
@@ -389,11 +377,11 @@
     <Content Include="img\spritesheets\svg-sprite.svg" />
     <Content Include="img\stanley-peering-min.png" />
     <Content Include="img\vitality-logo--white.svg" />
-    <Content Include="js\fee-maxima-service.js" />
-    <Content Include="js\literature-form-service.js" />
-    <Content Include="js\literature-library-service.js" />
-    <Content Include="js\site-search-service.js" />
-    <Content Include="js\social-connector-app.js" />
+    <Content Include="src\js\fee-maxima-service.js" />
+    <Content Include="src\js\literature-form-service.js" />
+    <Content Include="src\js\literature-library-service.js" />
+    <Content Include="src\js\site-search-service.js" />
+    <Content Include="src\js\social-connector-app.js" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\app.css" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.css" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.min.css" />
@@ -4203,12 +4191,12 @@
     <Content Include="Areas\Presales\Views\Navigation\NavigationSection.cshtml" />
     <Content Include="Areas\Presales\Views\Navigation\NavigationSubSection.cshtml" />
     <Content Include="Areas\Presales\Views\Navigation\MobileNavigation.cshtml" />
-    <Content Include="client_side\.jshintrc" />
-    <Content Include="client_side\package.json" />
-    <Content Include="client_side\sass\experience_editor_fix.scss" />
-    <Content Include="client_side\.jscsrc" />
-    <Content Include="client_side\sass-lint.yml" />
-    <Content Include="client_side\gulp.targets" />
+    <Content Include=".jshintrc" />
+    <Content Include="package.json" />
+    <Content Include="src\sass\experience_editor_fix.scss" />
+    <Content Include=".jscsrc" />
+    <Content Include="sass-lint.yml" />
+    <Content Include="gulp.targets" />
     <Content Include="Areas\Presales\Views\Rewards\RewardsLeader.cshtml" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\BenefitLeader.cshtml" />
     <Content Include="Areas\Presales\Views\FAQ\FAQLeader.cshtml" />
@@ -4223,7 +4211,7 @@
     <Content Include="Areas\Presales\Views\Navigation\GlobalFooter.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_Favicons.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_CriticalCss.cshtml" />
-    <Content Include="client_side\config\cssnano-config.json" />
+    <Content Include="config\cssnano-config.json" />
     <Content Include="Areas\Presales\Views\Products\ProductsComponent.cshtml" />
     <Content Include="Areas\Presales\Views\Partners\PartnerHero.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\QuoteFooter.cshtml" />
@@ -4237,8 +4225,8 @@
     <Content Include="Areas\Presales\Views\Literature\LiteratureLibrary.cshtml" />
     <Content Include="Areas\Presales\Views\Literature\MemberLibrary.cshtml" />
     <Content Include="Areas\Presales\Views\Literature\ApplicationFormLibrary.cshtml" />
-    <Content Include="client_side\bower.json" />
-    <Content Include="client_side\.bowerrc" />
+    <Content Include="bower.json" />
+    <Content Include=".bowerrc" />
     <Content Include="Views\Form\EditorTemplates\CheckboxField.cshtml" />
     <Content Include="Views\Form\EditorTemplates\CheckboxListField.cshtml" />
     <Content Include="Views\Form\EditorTemplates\DateField.cshtml" />
@@ -4760,7 +4748,7 @@
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Import Project="$(SolutionDir)\packages\Sitecore.Binaries.8.1.160302\build\Sitecore.targets" />
-  <Import Project="$(ProjectDir)\client_side\gulp.targets" />
+  <Import Project="$(ProjectDir)\gulp.targets" />
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
@@ -4786,7 +4774,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
