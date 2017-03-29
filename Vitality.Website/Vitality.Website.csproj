@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -24,6 +25,8 @@
     </NuGetPackageImportStamp>
     <UseGlobalApplicationHostFile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -303,6 +306,10 @@
     <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.Log4Net.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
+    <Content Include="src\ts\app\Components\vacancy-details.html" />
+    <Content Include="src\ts\app\Components\vacancyList.html" />
+    <Content Include="src\ts\systemjs.config.extras.js" />
+    <Content Include="src\ts\systemjs.config.js" />
     <Content Include="_Heartbeat.html" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
@@ -4689,6 +4696,7 @@
     <Content Include="sitecore\shell\client\Applications\WFFM\Controls\FormSummaryDataSource\FormSummaryDataSource.cshtml" />
     <Content Include="sitecore\shell\client\Applications\WFFM\Controls\FormResponsesDataSource\FormResponsesDataSource.cshtml" />
     <Content Include="Vitality.Website.ruleset" />
+    <Content Include="src\ts\app\Vacancies.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4732,6 +4740,17 @@
     <Analyzer Include="..\packages\SonarAnalyzer.CSharp.1.10.0\analyzers\SonarAnalyzer.CSharp.dll" />
     <Analyzer Include="..\packages\SonarAnalyzer.CSharp.1.10.0\analyzers\SonarAnalyzer.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\ts\app\app-routing.module.ts" />
+    <TypeScriptCompile Include="src\ts\app\app.module.ts" />
+    <TypeScriptCompile Include="src\ts\app\Components\app.component.ts" />
+    <TypeScriptCompile Include="src\ts\app\Components\vacancies.component.ts" />
+    <TypeScriptCompile Include="src\ts\app\Components\vacancy-details.component.ts" />
+    <TypeScriptCompile Include="src\ts\app\Models\vacancies.ts" />
+    <TypeScriptCompile Include="src\ts\app\Models\vacancy.ts" />
+    <TypeScriptCompile Include="src\ts\app\Services\vacancies.service.ts" />
+    <TypeScriptCompile Include="src\ts\main.ts" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -4746,6 +4765,7 @@
     <CodeAnalysisRuleSet>Vitality.Website.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Import Project="$(SolutionDir)\packages\Sitecore.Binaries.8.1.160302\build\Sitecore.targets" />
