@@ -38,12 +38,12 @@ namespace Vitality.Website.SC.WFFM.Helpers
                     { "{YEAR}", today.Year.ToString() },
                     { "{NEXTMONTH}", today.AddMonths(1).ToShortDateString() },
                     { "{NEXTYEAR}", today.AddYears(1).ToShortDateString() },
-                    { "{UTM_SOURCE}", cookie != null ? cookie[Constants.CookieSettings.UtmCookieSource] : null },
-                    { "{UTM_MEDIUM}", cookie != null ? cookie[Constants.CookieSettings.UtmCookieMedium] : null },
-                    { "{UTM_CAMPAIGN}", cookie != null ? cookie[Constants.CookieSettings.UtmCookieCampaign] : null},
-                    { "{UTM_TERM}", cookie != null ? cookie[Constants.CookieSettings.UtmCookieTerm] : null },
-                    { "{UTM_CONTENT}", cookie != null ? cookie[Constants.CookieSettings.UtmCookieContent] : null },
-                    { "{REF_URL}", cookie != null? cookie[Constants.CookieSettings.RefUrl] : null }
+                    { "{UTM_SOURCE}", cookie?[Constants.CookieSettings.UtmCookieSource] },
+                    { "{UTM_MEDIUM}", cookie?[Constants.CookieSettings.UtmCookieMedium] },
+                    { "{UTM_CAMPAIGN}", cookie?[Constants.CookieSettings.UtmCookieCampaign] },
+                    { "{UTM_TERM}", cookie?[Constants.CookieSettings.UtmCookieTerm] },
+                    { "{UTM_CONTENT}", cookie?[Constants.CookieSettings.UtmCookieContent] },
+                    { "{REF_URL}", cookie?[Constants.CookieSettings.RefUrl] }
                 });
         }
 
@@ -71,13 +71,7 @@ namespace Vitality.Website.SC.WFFM.Helpers
         public static NameValueCollection GetUtmCookie()
         {
             var httpCookie = HttpContext.Current.Request.Cookies[ConfigurationManager.AppSettings["UtmCookieName"]];
-
-            if (httpCookie != null)
-            {
-                return httpCookie.Values;
-            }
-
-            return null;
+            return httpCookie?.Values;
         }
     }
 }

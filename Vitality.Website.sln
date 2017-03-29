@@ -15,14 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitality.Website.Integratio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{7DBC029E-4BFE-47D4-ADED-4124A0876869}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4C6C7DB0-6E0B-4552-B6DA-CEF7F90F0A36}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-		.nuget\packages.config = .nuget\packages.config
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitality.Website.SC", "Vitality.Website.SC\Vitality.Website.SC.csproj", "{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitality.Website.SC.UnitTests", "UnitTests\Vitality.Website.SC.UnitTests\Vitality.Website.SC.UnitTests.csproj", "{1A5386C6-8B46-4ECD-A81B-A9A043969E3E}"
@@ -32,6 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
+		NuGet.Config = NuGet.Config
 	EndProjectSection
 EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Vitality.Website.Core", "Serialization\Vitality.Website.Core\Vitality.Website.Core.scproj", "{7DF208E1-19F6-46B0-B73D-BE169EA5891F}"
@@ -43,6 +36,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitality.Website.App", "Vitality.Website.App\Vitality.Website.App.csproj", "{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitality.Website.App.UnitTests", "UnitTests\Vitality.Website.App.UnitTests\Vitality.Website.App.UnitTests.csproj", "{D1C282A4-0B9B-42F8-9845-378FCB85EDDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SonarQube", "SonarQube", "{5493304E-7D1E-403C-AF98-FC80C8F080A7}"
+	ProjectSection(SolutionItems) = preProject
+		SonarQube\SolutionBinding.sqconfig = SonarQube\SolutionBinding.sqconfig
+		SonarQube\Vitality_0e40c8adCSharp.ruleset = SonarQube\Vitality_0e40c8adCSharp.ruleset
+		SonarQube\Vitality_b062e81aCSharp.ruleset = SonarQube\Vitality_b062e81aCSharp.ruleset
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

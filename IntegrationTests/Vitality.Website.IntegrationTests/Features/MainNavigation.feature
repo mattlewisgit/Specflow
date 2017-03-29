@@ -66,13 +66,18 @@
     Then I expect the Health insurance quote button to be visible
     And I expect the Life insurance quote button to be visible
 
-	@SIT
-    Scenario: Check footer pop up component show in Mobile view
+    @SIT
+    Scenario: resize home page Mobile view
     Given I am on presales /
     When I resize to mobile view
-    And I click on the footer button
-    Then I expect the Health insurance quote button to be visible
-    And I expect the Life insurance quote button to be visible
+
+	@SIT
+    Scenario: Check Footer links work in Mobile view
+    Given I am on presales /
+    When I resize to mobile view
+    And I expand the mobile footer section Get a quote
+    And I click on the footer link Health insurance quote
+    Then I expect the production presales /health-insurance/quote/ to open
 
 	@SIT
     Scenario: Check console logs on presales

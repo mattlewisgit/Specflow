@@ -10,22 +10,20 @@ namespace Vitality.Website.SC.ContentSearch.ComputedFields
 
     public class AncestorField : AbstractComputedIndexField
     {
-        private readonly int recursionLevel;
-        private readonly string ancestorFieldName;
+        private readonly string _ancestorFieldName;
+        private readonly int _recursionLevel;
 
         public AncestorField(XmlNode xmlNode)
             : base(xmlNode)
         {
-            this.recursionLevel = 0;
-            int.TryParse(XmlUtil.GetAttribute("recursionLevel", xmlNode), out this.recursionLevel);
-            this.ancestorFieldName = XmlUtil.GetAttribute("ancestorFieldName", xmlNode);
+            int.TryParse(XmlUtil.GetAttribute("recursionLevel", xmlNode), out _recursionLevel);
+            _ancestorFieldName = XmlUtil.GetAttribute("ancestorFieldName", xmlNode);
         }
 
         public override object ComputeFieldValue(IIndexable indexable)
         {
             Assert.ArgumentNotNull(indexable, "indexable");
             var indexableItem = indexable as SitecoreIndexableItem;
-
 
             if (indexableItem == null)
             {
@@ -34,15 +32,18 @@ namespace Vitality.Website.SC.ContentSearch.ComputedFields
             }
 
             var ancestor = indexableItem.Item;
-            for (var i = 0; i < this.recursionLevel; i++)
+
+            for (var i = 0; i < _recursionLevel; i++)
             {
                 ancestor = ancestor.Parent;
             }
-            if (this.ancestorFieldName.Equals("name", StringComparison.OrdinalIgnoreCase))
+
+            if (_ancestorFieldName.Equals("name", StringComparison.OrdinalIgnoreCase))
             {
                 return ancestor.Name;
             }
-            return ancestor[this.ancestorFieldName];
+
+            return ancestor[_ancestorFieldName];
         }
     }
 }

@@ -30,7 +30,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.FeeMaxima
         public FeeMaximaChaptersDto CallCcsdService(FeeMaximaChaptersRequest request)
         {
             var feedSettings = _sitecoreContext.GetItem<FeedSettings>(request.SettingsId);
-            if (!string.IsNullOrEmpty(feedSettings?.MockDataFile))
+            if (feedSettings != null && !string.IsNullOrEmpty(feedSettings.MockDataFile))
             {
                 feedSettings.MockDataFile = HttpContext.Current.Server.MapPath(feedSettings.MockDataFile);
             }

@@ -37,10 +37,10 @@ namespace Vitality.Website.IntegrationTests.Steps
         public void WhenIGoToTheCardsStackedAndIClickOnThePageLink(string cardStackedName, string linkName)
         {
             WebDriver
-                .FindElement(new JQuerySelector(".cards-stacked .spotlight__list-item:has(h3:contains('" + cardStackedName + "'))"));
+                .FindElement(new JQuerySelector(".cards-stacked li:has(h3:contains('" + cardStackedName + "'))"));
 
             WebDriver
-                .FindElement(new JQuerySelector(".cards-stacked .spotlight__list-item:has(h3:contains('" + cardStackedName + "')) a:contains('" + linkName + "')"))
+                .FindElement(new JQuerySelector(".cards-stacked li:has(h3:contains('" + cardStackedName + "')) a:contains('" + linkName + "')"))
                 .SendKeys(Keys.Space);
 
             Actions actions = new Actions(WebDriver);

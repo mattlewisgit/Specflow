@@ -4,8 +4,7 @@
 @using Vitality.Website.Areas.Presales.SettingsTemplates
 @using Vitality.Website.SC
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.BasePage>
-
-<!DOCTYPE html>
+<!doctype html>
 <html class="@(IsInEditingMode ? "disable-tablesaw" : null)" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">
 <head>
     @Html.Sitecore().Placeholder("gtm")
@@ -20,19 +19,20 @@
     }
     else
     {
-        <link rel="stylesheet" type="text/css" href="/css/tablesaw.css"/>
+        <link rel="stylesheet" type="text/css" href="/bower_components/vitality.boilerplate/dist/tablesaw.min.css"/>
     }
 
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css"/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700"/>
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/bower_components/vitality.boilerplate/dist/vitality-boilerplate-1.0.0.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/bower_components/vitality.boilerplate/dist/vitality-boilerplate.min.css"/>
 </head>
 
 <body>
     @Html.Sitecore().Placeholder("gtmnoscript")
     <div class="page">
-        @Html.Partial("_CookieMessage", SitecoreContext.GetItem<CookieSettings>(ItemConstants.Presales.Content.Configuration.CookieSettings.Path))
+        @Html.Partial("_CookieMessage", SitecoreContext.GetItem<CookieSettings>
+            (ItemConstants.Presales.Content.Configuration.CookieSettings.Path))
 
         <a href="#main-content" class="offscreen">Skip to Content</a>
         @Html.Sitecore().Placeholder("header")
@@ -48,18 +48,13 @@
     @Html.Sitecore().Placeholder("footer")
     @Html.Partial("_JsThirdParty")
     @Html.Partial("_JsWffm")
+
     @if (!IsInEditingMode)
     {
-        <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw.js"></script>
-        <script type="text/javascript" src="/bower_components/tablesaw/dist/tablesaw-init.js"></script>
+        <script type="text/javascript" src="/bower_components/vitality.boilerplate/dist/tablesaw.min.js"></script>
     }
 
-    @* TODO Bundle and minify the Angular data services. *@
-    <script type="text/javascript" src="/js/literature-form-service.js"></script>
-    <script type="text/javascript" src="/js/literature-library-service.js"></script>
-    <script type="text/javascript" src="/js/fee-maxima-service.js"></script>
-    <script src="~/js/site-search-service.js"></script>
-    <script type="text/javascript" src="/js/social-connector-app.js"></script>
-    <script type="text/javascript" src="/bower_components/vitality.boilerplate/dist/vitality-boilerplate-1.0.0.min.js"></script>
+    <script type="text/javascript" src="/js/vitality.presales.min.js"></script>
+    <script type="text/javascript" src="/bower_components/vitality.boilerplate/dist/vitality-boilerplate.min.js"></script>
 </body>
 </html>

@@ -41,16 +41,16 @@
             var datasetTypes = this.datasetTypes;
             this.datasets.chapters = _.uniq(_.map(chapters,
                 function (chapter) {
-                    return { Id: chapter.Id, Value: chapter.Name, Type: datasetTypes.Chapter };
+                    return { Id: chapter.Id, Value: _.unescape(chapter.Name), Type: datasetTypes.Chapter };
                 }));
             var sections = _.flatten(_.pluck(chapters, this.subArrayPropertyNames.Sections));
             this.datasets.sections = _.uniq(_.map(sections,
                 function (section) {
-                    return { Id: section.Id, Value: section.Name, Type: datasetTypes.Section };
+                    return { Id: section.Id, Value: _.unescape(section.Name), Type: datasetTypes.Section };
                 }));
             this.datasets.procedures = _.uniq(_.map(_.flatten(_.pluck(sections, this.subArrayPropertyNames.Procedures)),
                 function (procedure) {
-                    return { Code: procedure.Code, Value: procedure.Description, Type: datasetTypes.Procedure };
+                    return { Code: procedure.Code, Value: _.unescape(procedure.Description), Type: datasetTypes.Procedure };
                 }), false, function (item) {
                     return item.Code;
                 });

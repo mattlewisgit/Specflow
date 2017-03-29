@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -19,10 +20,10 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
-    <NuGetPackageImportStamp>e79f5d81</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <UseGlobalApplicationHostFile />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
-    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,7 +33,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <CodeAnalysisRuleSet>Vitality.Website.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -41,6 +43,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>Vitality.Website.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AjaxMin, Version=4.0.202.1, Culture=neutral, PublicKeyToken=24297a69a7eae424, processorArchitecture=MSIL">
@@ -89,7 +92,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NWebsec, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3613da5f958908a1, processorArchitecture=MSIL">
@@ -300,6 +303,7 @@
     <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.Log4Net.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
+    <Content Include="_Heartbeat.html" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -326,20 +330,7 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
-    <Content Include="client_side\gulpfile.js" />
-    <Content Include="client_side\img\facebook--footer.svg" />
-    <Content Include="client_side\img\icon-mouse.svg" />
-    <Content Include="client_side\img\icon-phone--dark.svg" />
-    <Content Include="client_side\img\icon-phone.svg" />
-    <Content Include="client_side\img\instagram--footer.svg" />
-    <Content Include="client_side\img\log-in.svg" />
-    <Content Include="client_side\img\search-background.png" />
-    <Content Include="client_side\img\search.svg" />
-    <Content Include="client_side\img\sprite-generated.png" />
-    <Content Include="client_side\img\twitter--footer.svg" />
-    <Content Include="client_side\img\vitality-logo--white.svg" />
-    <Content Include="client_side\img\vitality-logo.svg" />
-    <Content Include="client_side\img\youtube--footer.svg" />
+    <Content Include="gulpfile.js" />
     <Content Include="css\experience_editor_fix.css" />
     <Content Include="css\tablesaw.css" />
     <Content Include="Data\Sitecore_Wffm.ldf">
@@ -387,11 +378,11 @@
     <Content Include="img\spritesheets\svg-sprite.svg" />
     <Content Include="img\stanley-peering-min.png" />
     <Content Include="img\vitality-logo--white.svg" />
-    <Content Include="js\fee-maxima-service.js" />
-    <Content Include="js\literature-form-service.js" />
-    <Content Include="js\literature-library-service.js" />
-    <Content Include="js\site-search-service.js" />
-    <Content Include="js\social-connector-app.js" />
+    <Content Include="src\js\fee-maxima-service.js" />
+    <Content Include="src\js\literature-form-service.js" />
+    <Content Include="src\js\literature-library-service.js" />
+    <Content Include="src\js\site-search-service.js" />
+    <Content Include="src\js\social-connector-app.js" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\app.css" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.css" />
     <Content Include="sitecore modules\Shell\UrlRewrite\Content\bootstrap-theme.min.css" />
@@ -4201,12 +4192,12 @@
     <Content Include="Areas\Presales\Views\Navigation\NavigationSection.cshtml" />
     <Content Include="Areas\Presales\Views\Navigation\NavigationSubSection.cshtml" />
     <Content Include="Areas\Presales\Views\Navigation\MobileNavigation.cshtml" />
-    <Content Include="client_side\.jshintrc" />
-    <Content Include="client_side\package.json" />
-    <Content Include="client_side\sass\experience_editor_fix.scss" />
-    <Content Include="client_side\.jscsrc" />
-    <Content Include="client_side\sass-lint.yml" />
-    <Content Include="client_side\gulp.targets" />
+    <Content Include=".jshintrc" />
+    <Content Include="package.json" />
+    <Content Include="src\sass\experience_editor_fix.scss" />
+    <Content Include=".jscsrc" />
+    <Content Include="sass-lint.yml" />
+    <Content Include="gulp.targets" />
     <Content Include="Areas\Presales\Views\Rewards\RewardsLeader.cshtml" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\BenefitLeader.cshtml" />
     <Content Include="Areas\Presales\Views\FAQ\FAQLeader.cshtml" />
@@ -4221,7 +4212,7 @@
     <Content Include="Areas\Presales\Views\Navigation\GlobalFooter.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_Favicons.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_CriticalCss.cshtml" />
-    <Content Include="client_side\config\cssnano-config.json" />
+    <Content Include="config\cssnano-config.json" />
     <Content Include="Areas\Presales\Views\Products\ProductsComponent.cshtml" />
     <Content Include="Areas\Presales\Views\Partners\PartnerHero.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\QuoteFooter.cshtml" />
@@ -4235,8 +4226,8 @@
     <Content Include="Areas\Presales\Views\Literature\LiteratureLibrary.cshtml" />
     <Content Include="Areas\Presales\Views\Literature\MemberLibrary.cshtml" />
     <Content Include="Areas\Presales\Views\Literature\ApplicationFormLibrary.cshtml" />
-    <Content Include="client_side\bower.json" />
-    <Content Include="client_side\.bowerrc" />
+    <Content Include="bower.json" />
+    <Content Include=".bowerrc" />
     <Content Include="Views\Form\EditorTemplates\CheckboxField.cshtml" />
     <Content Include="Views\Form\EditorTemplates\CheckboxListField.cshtml" />
     <Content Include="Views\Form\EditorTemplates\DateField.cshtml" />
@@ -4697,6 +4688,7 @@
     <Content Include="sitecore\shell\client\Applications\WFFM\Controls\ReportDataSource\FormReportDataSource.cshtml" />
     <Content Include="sitecore\shell\client\Applications\WFFM\Controls\FormSummaryDataSource\FormSummaryDataSource.cshtml" />
     <Content Include="sitecore\shell\client\Applications\WFFM\Controls\FormResponsesDataSource\FormResponsesDataSource.cshtml" />
+    <Content Include="Vitality.Website.ruleset" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4734,6 +4726,12 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\codecracker.CSharp.1.0.1\analyzers\dotnet\cs\CodeCracker.Common.dll" />
+    <Analyzer Include="..\packages\codecracker.CSharp.1.0.1\analyzers\dotnet\cs\CodeCracker.CSharp.dll" />
+    <Analyzer Include="..\packages\SonarAnalyzer.CSharp.1.10.0\analyzers\SonarAnalyzer.CSharp.dll" />
+    <Analyzer Include="..\packages\SonarAnalyzer.CSharp.1.10.0\analyzers\SonarAnalyzer.dll" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -4745,13 +4743,13 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>Vitality.Website.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <Import Project="$(SolutionDir)\packages\Sitecore.Binaries.8.1.160302\build\Sitecore.targets" />
-  <Import Project="$(ProjectDir)\client_side\gulp.targets" />
+  <Import Project="$(ProjectDir)\gulp.targets" />
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
@@ -4770,14 +4768,13 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props'))" />
   </Target>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

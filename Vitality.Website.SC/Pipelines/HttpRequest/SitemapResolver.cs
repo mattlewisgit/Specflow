@@ -1,14 +1,12 @@
-using System;
-using System.IO;
-using System.Linq;
-using System.Web;
-using System.Xml;
-using System.Xml.Linq;
-using Sitecore.Pipelines.HttpRequest;
-using Sitecore.Diagnostics;
-
 namespace Vitality.Website.SC.Pipelines.HttpRequest
 {
+    using Sitecore.Diagnostics;
+    using Sitecore.Pipelines.HttpRequest;
+    using System;
+    using System.IO;
+    using System.Web;
+    using System.Xml;
+
     public class SitemapResolver : HttpRequestProcessor
     {
         private const string SiteMapLocation = "sitemaps";
@@ -16,10 +14,11 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
         public override void Process(HttpRequestArgs args)
         {
             var context = HttpContext.Current;
-            
+
             var siteName = Sitecore.Context.Site.Name;
-            
-            if (string.Equals(context.Request.CurrentExecutionFilePathExtension,".xml", StringComparison.InvariantCultureIgnoreCase))
+
+            if (context.Request.CurrentExecutionFilePathExtension
+                .Equals(".xml", StringComparison.InvariantCultureIgnoreCase))
             {
                 context.Response.ClearContent();
 
@@ -27,10 +26,8 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
 
                 if (File.Exists(fileName))
                 {
-                    var xmlFileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read,
-                        FileShare.Read);
+                    var xmlFileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read,FileShare.Read);
 
-                    //xml.
                     var doc = new XmlDocument();
                     doc.Load(xmlFileStream);
 
@@ -48,16 +45,22 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
                     Log.Warn(string.Format("Requested sitemap file {0} does not exist.", fileName), this);
                 }
             }
-            else if (string.Equals(context.Request.CurrentExecutionFilePathExtension, ".gz",StringComparison.InvariantCultureIgnoreCase))
+            else if (context.Request.CurrentExecutionFilePathExtension
+                .Equals(".gz",StringComparison.InvariantCultureIgnoreCase))
             {
                 context.Response.ContentType = "application/octet-stream";
                 context.Response.WriteFile(ReformatXmlFile(args, siteName));
+            }
+            else
+            {
+                // No need to cater for other extensions.
             }
         }
 
         private static string ReformatXmlFile(HttpRequestArgs args, string siteName)
         {
-            return string.Format("{0}{1}//{2}{3}", HttpRuntime.AppDomainAppPath, SiteMapLocation, siteName + "_", args.Context.Request.Url.Segments[1]);
-        } 
+            var secondUrlSegment = args.Context.Request.Url?.Segments?[1] ?? string.Empty;
+            return $"{HttpRuntime.AppDomainAppPath}{SiteMapLocation}//{siteName}_{secondUrlSegment}";
+        }
     }
 }
