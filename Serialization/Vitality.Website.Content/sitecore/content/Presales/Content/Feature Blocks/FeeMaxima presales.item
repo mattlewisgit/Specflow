@@ -12,7 +12,7 @@ templatekey: FeeMaxima
 ----version----
 language: en
 version: 1
-revision: 6efd6429-fc09-4a20-ba9a-b3a7848c0a9f
+revision: a620cb36-8660-49a3-a7b6-954742605406
 
 ----field----
 field: {05D50627-1153-47B0-98DB-CA191598144F}
@@ -25,9 +25,9 @@ Feemaxima Presales
 field: {C3BE0FBD-ED29-4476-98DA-C8603C1EFC1E}
 name: BackLinkText
 key: backlinktext
-content-length: 30
+content-length: 4
 
-Back to CCSD Schedule Chapters
+Back
 ----field----
 field: {2E8EB260-B227-48E1-9CE3-69D38DF5EF7F}
 name: SearchText
@@ -36,54 +36,89 @@ content-length: 6
 
 Search
 ----field----
+field: {9422F4BC-7BB9-4D88-8FF5-8D135AE118C5}
+name: SearchPlaceholderText
+key: searchplaceholdertext
+content-length: 18
+
+Search Placeholder
+----field----
 field: {AF8FF4A9-98B2-4AAF-9AF6-69E098152689}
 name: ChapterText
 key: chaptertext
-content-length: 6
+content-length: 7
 
-Numero
+Chapter
+----field----
+field: {0F90DA89-F1EE-4A05-B0F1-C8A12969A9D7}
+name: LoadingText
+key: loadingtext
+content-length: 12
+
+Loading Text
 ----field----
 field: {4BCDB2D6-A423-40A3-A46D-71F8D5B1764B}
 name: CodeHeader
 key: codeheader
-content-length: 4
+content-length: 11
 
-Code
+Code Header
 ----field----
 field: {6FB6011F-047D-47DD-A40C-D62F97B9D32B}
 name: DescriptionHeader
 key: descriptionheader
-content-length: 11
+content-length: 18
 
-Description
+Description Header
+----field----
+field: {D52429E3-EC90-47CD-B1D8-D9DCCAFE38F6}
+name: HospitalComplexityHeader
+key: hospitalcomplexityheader
+content-length: 15
+
+Hospital Header
 ----field----
 field: {6567C7F6-17F1-4324-B2C6-8A5F5EBE66B3}
 name: SurgeonsFeeHeader
 key: surgeonsfeeheader
 content-length: 12
 
-Surgeons Fee
+Operator Fee
 ----field----
 field: {0C135904-870A-4A44-98FF-F87D8E201396}
 name: AnaesthetistsFeeHeader
 key: anaesthetistsfeeheader
-content-length: 8
+content-length: 19
 
-Anes Fee
+Anaesthetist Header
+----field----
+field: {915F3CCE-C02D-41AB-A51F-1C0F055A65C0}
+name: AnaesthetistFeeAlternateText
+key: anaesthetistfeealternatetext
+content-length: 27
+
+Anaesthetist Alternate text
 ----field----
 field: {D1B823B9-2305-4F64-A244-76429030BC46}
 name: ChooseChapterText
 key: choosechaptertext
-content-length: 10
+content-length: 14
 
-Data Here!
+Choose Chapter
 ----field----
-field: {80EACCAF-B2AF-4E2C-93B6-42B8E6FB0F65}
-name: Title
-key: title
-content-length: 21
+field: {D8B77983-5B4A-40F6-AF46-077E1FC724DB}
+name: ContactUsText
+key: contactustext
+content-length: 42
 
-This is a description
+Contact us at cons_helpline@vitality.co.uk
+----field----
+field: {8C93FDF3-53B3-42D0-8869-BA2855274175}
+name: FeedSettings
+key: feedsettings
+content-length: 0
+
+
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -111,14 +146,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6efd6429-fc09-4a20-ba9a-b3a7848c0a9f
+a620cb36-8660-49a3-a7b6-954742605406
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161215T153512Z
+20170329T152912Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
