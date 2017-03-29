@@ -5,8 +5,9 @@ namespace Vitality.Website.Extensions.Views
 
     using Glass.Mapper.Sc.Web.Mvc;
 
-    using Vitality.Website.Areas.Presales.ComponentTemplates.Cards;
-    using Vitality.Website.Areas.Presales.ComponentTemplates.Partners;
+    using Areas.Presales.ComponentTemplates.Cards;
+    using Areas.Presales.ComponentTemplates.Partners;
+    using Core;
 
     public static class CardsTabbedExtensions
     {
@@ -21,7 +22,7 @@ namespace Vitality.Website.Extensions.Views
 
         public static string PartnerCategories(this GlassView<CardsTabbed> view, PartnerCard partnerCard)
         {
-            return string.Join(",", partnerCard.Categories.Select(category => category.Name.ToLowerHyphenatedString()));
+            return string.Join(",", partnerCard.Categories.Select(category => category.Name.ToLowerHyphenatedWords()));
         }
     }
 }

@@ -1,6 +1,6 @@
 namespace Vitality.Website.Areas.Presales.Handlers.Literature
 {
-    using Vitality.Website.Extensions;
+    using Core;
 
     public class LiteratureDocumentSummaryDto
     {
@@ -10,14 +10,12 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
 
         public string Title { get; set; }
 
-        public static LiteratureDocumentSummaryDto From(LiteratureDocumentSearchResult searchResult)
-        {
-            return new LiteratureDocumentSummaryDto
-                   {
-                       Key = searchResult.Title.ToLowerHyphenatedString(),
-                       CategoryKey = searchResult.Category.ToLowerHyphenatedString(),
-                       Title = searchResult.Title
-                   };
-        }
+        public static LiteratureDocumentSummaryDto From(LiteratureDocumentSearchResult searchResult) =>
+            new LiteratureDocumentSummaryDto
+            {
+                CategoryKey = searchResult.Category.ToLowerHyphenatedWords(),
+                Key = searchResult.Title.ToLowerHyphenatedWords(),
+                Title = searchResult.Title
+            };
     }
 }

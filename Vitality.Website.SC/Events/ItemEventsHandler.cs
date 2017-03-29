@@ -7,6 +7,7 @@ namespace Vitality.Website.SC.Events
     using Sitecore.Web;
     using System;
     using System.Collections.Generic;
+    using Core;
     using Utilities;
 
     public class ItemEventsHandler
@@ -20,7 +21,7 @@ namespace Vitality.Website.SC.Events
 
             if (ItemIsMasterDatabaseContentPage(item))
             {
-                var hyphenatedName = StringHelper.HyphenatedWords(item.Name).ToLowerInvariant();
+                var hyphenatedName = item.Name.ToLowerHyphenatedWords();
                 if (!item.Name.Equals(hyphenatedName, StringComparison.Ordinal))
                 {
                     using (new EditContext(item))
@@ -40,7 +41,7 @@ namespace Vitality.Website.SC.Events
             {
                 using (new EditContext(item))
                 {
-                    item.Fields["Title"].SetValue(StringHelper.SplitCamelCase(item.Name), false);
+                    item.Fields["Title"].SetValue(item.Name.SplitCamelCase(), false);
                 }
             }
         }
@@ -87,7 +88,7 @@ namespace Vitality.Website.SC.Events
         private static bool FieldItemTitleIsNotSplitCamelCase(Item item) =>
             item.TemplateID == fieldTemplateId
                 && item.Fields["Title"] != null
-                && item.Fields["Title"].Value != StringHelper.SplitCamelCase(item.Name);
+                && item.Fields["Title"].Value != item.Name.SplitCamelCase();
 
         private Item GetItem(EventArgs args) =>
             Event.ExtractParameter(args, 0) as Item;
