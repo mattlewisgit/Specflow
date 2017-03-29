@@ -70,5 +70,15 @@ gulp.task("default", function () {
 
 // Simply runs bower, but saves running the command separately.
 gulp.task("bower", function () {
-    return plugins.bower({ cmd: 'update' });
+    return plugins.bower({ cmd: "update" });
+});
+
+gulp.task("typescript", function () {
+    var tsProject = plugins.typescript.createProject("tsconfig.json");
+
+    var tsResult = gulp
+        .src("src/ts/**/*.ts")
+        .pipe(tsProject());
+
+    return tsResult.js.pipe(gulp.dest(paths.js.dest));
 });
