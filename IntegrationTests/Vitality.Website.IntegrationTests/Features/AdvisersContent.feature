@@ -42,7 +42,7 @@
 	Given I am on production advisers /resources/literature/health-insurance-sales-literature/
 	When I search for Personal Healthcare document
 	Then I expect the Personal Healthcare document to be visible
-	And I expect the download and email  buttons to be visible
+	And I expect the download and email buttons to be visible
 
 	@Production
 	Scenario: Navigate to Health Member Literature, Lit tool displays
@@ -51,4 +51,4 @@
 	When click on the submit button
 	And I select on Personal Healthcare Plan terms and conditions Literature
 	Then I expect the Personal Healthcare Plan terms and conditions document to be visible
-	And I expect the download and email  buttons to be visible
+	And I expect the download and email buttons to be visible

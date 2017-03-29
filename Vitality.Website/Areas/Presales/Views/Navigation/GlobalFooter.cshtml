@@ -1,4 +1,4 @@
-﻿@using Vitality.Website.Extensions
+﻿@using Vitality.Core
 @using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Navigation.GlobalFooter>
 
@@ -8,8 +8,8 @@
             <div class="expander expander--dark  expander--with-style  js-expander-is-accordion">
                 @foreach (var footerSection in this.FooterSections())
                 {
-                <a href="#@footerSection.Name.ToLowerHyphenatedString()" class="expander__link">@Html.Raw(footerSection.Heading)</a>
-                <div id="@footerSection.Name.ToLowerHyphenatedString()" class="expander__content">
+                <a href="#@footerSection.Name.ToLowerHyphenatedWords()" class="expander__link">@Html.Raw(footerSection.Heading)</a>
+                <div id="@footerSection.Name.ToLowerHyphenatedWords()" class="expander__content">
                     <ul class="page-footer__list page-footer__list--quote">
                         @foreach (var footerLink in footerSection.FooterLinks)
                         {
