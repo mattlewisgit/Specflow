@@ -15,6 +15,7 @@
     "*"
   ],
   "dependencies": {
-    "vitality.boilerplate" :"~1.0.*"
+    "jqueryui": "1.11.4",
+    "vitality.boilerplate": "~1.0.*"
   }
 }
