@@ -126,6 +126,10 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Vitality.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vitality.Core.1.0.10\lib\net40\Vitality.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agents\Sitemaps\Sitemap.cs" />
@@ -166,13 +170,10 @@
     <Compile Include="Utilities\QueryHelper.cs" />
     <Compile Include="Utilities\SitecoreDataItemHelper.cs" />
     <Compile Include="Utilities\SiteInfoHelper.cs" />
-    <Compile Include="Utilities\StringHelper.cs" />
     <Compile Include="Providers\AppendLinkProvider.cs" />
     <Compile Include="WFFM\Helpers\FormFieldsHelper.cs" />
-    <Compile Include="Extensions\IDictionaryExtensions.cs" />
     <Compile Include="WFFM\SaveActions\CallProSaveAction.cs" />
     <Compile Include="WFFM\SaveActions\CallProSchema.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="WFFM\WffmConstants.cs" />
   </ItemGroup>
   <ItemGroup>
