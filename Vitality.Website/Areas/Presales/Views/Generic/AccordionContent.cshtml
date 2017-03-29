@@ -1,4 +1,4 @@
-﻿@using Vitality.Website.Extensions
+﻿@using Vitality.Core
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Generic.TabCollection>
 
 <div class="pinch">
@@ -10,10 +10,10 @@
     {
         using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", tab.Path))
         {
-        <a href="#@tab.Name.ToLowerHyphenatedString()" class="expander__link">
+        <a href="#@tab.Name.ToLowerHyphenatedWords()" class="expander__link">
             @Editable(tab, m => m.Title)
         </a>
-        <div id="@tab.Name.ToLowerHyphenatedString()" class="expander__content">
+        <div id="@tab.Name.ToLowerHyphenatedWords()" class="expander__content">
             @Editable(tab, m => m.Body)
         </div>
         }
