@@ -223,11 +223,11 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .WaitForElement(new JQuerySelector(".page-footer .expander a:contains('" + footerSection + "')"))
                 .SendKeys(Keys.Space);
 
-            Actions actions = new Actions(WebDriver);
+            //Actions actions = new Actions(WebDriver);
 
-            actions
-                .SendKeys(Keys.Enter)
-                .Perform();
+            //actions
+            //    .SendKeys(Keys.Enter)
+            //    .Perform();
 
             WebDriver.WaitForPageLoad();
 
