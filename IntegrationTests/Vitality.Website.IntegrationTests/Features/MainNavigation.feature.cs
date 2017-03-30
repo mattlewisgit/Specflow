@@ -308,9 +308,9 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 78
     testRunner.And("I expand the mobile footer section Get a quote", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 79
-    testRunner.And("I click on the footer link Health insurance quote", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I click on the footer mobile link Health insurance quote", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 80
-    testRunner.Then("I expect the production presales /health-insurance/quote/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see the https://www.vitality.co.uk/health-insurance/quote/ page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
