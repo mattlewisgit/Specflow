@@ -105,6 +105,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="Features\CardsStacked.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CardsStacked.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Feemaxima.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -178,6 +183,7 @@
     <Compile Include="Steps\AccordionSteps.cs" />
     <Compile Include="Steps\BaseSteps.cs" />
     <Compile Include="Steps\BreadcrumbSteps.cs" />
+    <Compile Include="Steps\CardsStackedSteps.cs" />
     <Compile Include="Steps\CommonSteps.cs" />
     <Compile Include="Steps\CookiesSteps.cs" />
     <Compile Include="Steps\FeemaximaSteps.cs" />
@@ -209,6 +215,10 @@
     <None Include="Features\AdvisersContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AdvisersContent.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CardsStacked.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CardsStacked.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Cookies.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
