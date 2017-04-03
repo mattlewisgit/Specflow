@@ -84,7 +84,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         }
 
 
-
+        [Given(@"I resize to mobile view")]
         [When(@"I resize to mobile view")]
         public void WhenIResizeToMobileView()
         {
