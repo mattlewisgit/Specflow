@@ -1,0 +1,9 @@
+﻿@using Sitecore.Forms.Mvc.Html
+@model Sitecore.Forms.Mvc.ViewModels.Fields.SingleLineTextField
+
+@using (Html.BeginField())
+{
+    <div class="form__field__input">
+        @Html.TextBoxFor(x => Model.Value, new {@class = "form-control"})
+    </div>
+}

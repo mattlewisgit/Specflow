@@ -4690,6 +4690,7 @@
     <Content Include="sitecore\shell\client\Applications\WFFM\Controls\FormSummaryDataSource\FormSummaryDataSource.cshtml" />
     <Content Include="sitecore\shell\client\Applications\WFFM\Controls\FormResponsesDataSource\FormResponsesDataSource.cshtml" />
     <Content Include="Vitality.Website.ruleset" />
+    <Content Include="Views\Form\EditorTemplates\SingleLineTextField.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
