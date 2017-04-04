@@ -115,6 +115,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Feemaxima.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\RichText.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RichText.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Drivers\DriverFactory.cs" />
     <Compile Include="Extensions\AssertionExtensions.cs" />
@@ -192,6 +197,7 @@
     <Compile Include="Steps\MainNavigationSteps.cs" />
     <Compile Include="Steps\MetaTagsSteps.cs" />
     <Compile Include="Steps\QuoteApplySteps.cs" />
+    <Compile Include="Steps\RichTextSteps.cs" />
     <Compile Include="Steps\SearchingSteps.cs" />
     <Compile Include="Steps\TabbedSteps.cs" />
     <Compile Include="Steps\WFFMSteps.cs" />
@@ -247,6 +253,10 @@
     <None Include="Features\QuoteApply.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>QuoteApply.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\RichText.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RichText.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\SearchingContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
