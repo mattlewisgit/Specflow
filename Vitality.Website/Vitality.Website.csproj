@@ -309,10 +309,12 @@
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
     <Content Include="_Heartbeat.html" />
     <Content Include="App_Code\FormFieldWithToolTip.cshtml" />
+    <Content Include="App_Config\Include\Vitality\Vitality.AdvisersLitLibraries.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
     <Content Include="App_Config\Include\Vitality\Vitality.PresalesContentSearch.config" />
+    <Content Include="App_Config\Include\Vitality\Vitality.PresalesLitLibraries.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
