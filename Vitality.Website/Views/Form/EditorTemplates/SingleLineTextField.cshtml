@@ -3,7 +3,7 @@
 
 @using (Html.BeginField())
 {
-    <div class="form__field__input">
-        @Html.TextBoxFor(x => Model.Value, new {@class = "form-control"})
-    </div>
+    @FormFieldWithToolTip.Create(Model.Information, Html.TextBoxFor(x => Model.Value, new {@class = "form-control"}))
+    // Make ShowInformation to false as default behaviour is to render information below the field
+    Model.ShowInformation = false;
 }

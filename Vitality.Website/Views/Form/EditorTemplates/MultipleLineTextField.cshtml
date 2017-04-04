@@ -3,5 +3,7 @@
 
 @using (Html.BeginField())
 {
-    @Html.TextAreaFor(x => Model.Value, Model.Rows, Model.Columns, new { @class = "form-control"})
+    @FormFieldWithToolTip.Create(Model.Information, Html.TextAreaFor(x => Model.Value, Model.Rows, Model.Columns, new {@class = "form-control"}))
+    // Make ShowInformation to false as default behaviour is to render information below the field
+    Model.ShowInformation = false;
 }

@@ -4,5 +4,7 @@
 
 @using (Html.BeginField())
 {
-    @Html.DropDownListFor(x => Model.Value, Model.Items, new { @class = "form-control" })
+    @FormFieldWithToolTip.Create(Model.Information, Html.DropDownListFor(x => Model.Value, Model.Items, new { @class = "form-control" }))
+    // Make ShowInformation to false as default behaviour is to render information below the field
+    Model.ShowInformation = false;
 }
