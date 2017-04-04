@@ -115,6 +115,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Feemaxima.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\MessageBox.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageBox.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\RichText.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -195,6 +200,7 @@
     <Compile Include="Steps\HealthPresalesContentSteps.cs" />
     <Compile Include="Steps\LiteratureLibrarySteps.cs" />
     <Compile Include="Steps\MainNavigationSteps.cs" />
+    <Compile Include="Steps\MessageBoxSteps.cs" />
     <Compile Include="Steps\MetaTagsSteps.cs" />
     <Compile Include="Steps\QuoteApplySteps.cs" />
     <Compile Include="Steps\RichTextSteps.cs" />
@@ -233,6 +239,10 @@
     <None Include="Features\Feemaxima.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Feemaxima.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\MessageBox.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MessageBox.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\PresalesContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
