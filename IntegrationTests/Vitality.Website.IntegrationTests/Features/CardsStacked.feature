@@ -25,5 +25,5 @@ Scenario: Check Cards Stacked internal link
 	@SIT
 Scenario: Check Cards Stacked external link
 	Given I am on presales /dev/cards-stacked
-	When I go to the External Link cards stacked and I click on the Click External Link page link
+	When I go to the External Link cards stacked and I click on the External Link page link
 	Then I see the www.google.co.uk page
