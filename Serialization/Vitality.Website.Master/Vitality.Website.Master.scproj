@@ -166,6 +166,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Message Boxes.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Navigation.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
@@ -538,6 +539,9 @@
     <SitecoreItem Include="sitecore\content\Presales\Content\Forms.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Content\Literature Libraries.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Message Boxes.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
