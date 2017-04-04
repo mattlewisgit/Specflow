@@ -308,6 +308,7 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Log4Net.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
     <Content Include="_Heartbeat.html" />
+    <Content Include="App_Code\FormFieldWithToolTip.cshtml" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
     </None>
@@ -559,6 +560,7 @@
     <Content Include="Areas\Presales\Views\ContentCollection\_Mpus.cshtml" />
     <Content Include="Areas\Presales\Views\ContentSearch\ContentSearch.cshtml" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\VacancyList.cshtml" />
+    <Content Include="Areas\Presales\Views\Generic\MessageBox.cshtml" />
     <None Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.intellisense.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.min.js" />
@@ -3885,6 +3887,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\VacancyList.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\ArticleItem.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Content.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Generic\MessageBox.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Tab.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\TabCollection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Literature\LiteratureCategory.cs" />
@@ -4688,6 +4691,7 @@
     <Content Include="sitecore\shell\client\Applications\WFFM\Controls\FormSummaryDataSource\FormSummaryDataSource.cshtml" />
     <Content Include="sitecore\shell\client\Applications\WFFM\Controls\FormResponsesDataSource\FormResponsesDataSource.cshtml" />
     <Content Include="Vitality.Website.ruleset" />
+    <Content Include="Views\Form\EditorTemplates\SingleLineTextField.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
