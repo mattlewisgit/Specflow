@@ -4,6 +4,7 @@ namespace Vitality.Website.IntegrationTests.Steps
     using TechTalk.SpecFlow;
     using Extensions;
     using By = OpenQA.Selenium.By;
+    using Selenium.WebDriver.Extensions.JQuery;
 
     [Binding]
     public sealed class LiteratureLibrarySteps : BaseSteps
@@ -28,24 +29,26 @@ namespace Vitality.Website.IntegrationTests.Steps
         {
             // Download button is visible.
             WebDriver
-                .WaitForElement(By.LinkText("Download"))
+                .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Download')"))
                 .Displayed
                 .ShouldBeTrue();
 
             // Email button is visible.
             WebDriver
-                .WaitForElement(By.LinkText("Email"))
+                .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Email')"))
                 .Displayed
                 .ShouldBeTrue();
         }
 
         [Then(@"I expect the (.*) document to be visible")]
-        public void IExpectTheDocumentToBeVisible(string p0)
+        public void IExpectTheDocumentToBeVisible(string Selection)
         {
+            //Check your selection contains String
             WebDriver
-                .WaitForElement(By.LinkText(p0))
+                .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--header.ng-binding:contains('" + Selection + "')"))
                 .Displayed
                 .ShouldBeTrue();
+
         }
 
         [When(@"I choose Literature Type (.*)")]

@@ -4,8 +4,10 @@
 	I want to be able to download sales literature documents
 
 
+	### Advisers Literature Library Tests
+
 	@SITDEPLOYISSUE
-	Scenario Outline: Sales Literature - Searching
+	Scenario Outline: Advisers - Sales Literature - Searching
     Given I am on advisers <initialpage>
     When I search for <Literature Type> document
 	Then I expect the <Literature Type> document to be visible
@@ -17,7 +19,7 @@ Examples:
 
 
 	@SITDEPLOYISSUE
-	Scenario Outline: Sales Literature - Choosing
+	Scenario Outline: Advisers - Sales Literature - Choosing
     Given I am on advisers <initialpage>
     When I choose Literature Type <Literature Type>
 	And I select on <Available Literature> Literature
@@ -30,7 +32,7 @@ Examples:
 
 
 	@SITDEPLOYISSUE
-	Scenario Outline: Member Literature - Searching
+	Scenario Outline: Advisers - Member Literature - Searching
     Given I am on advisers <initialpage>
 	And I enter plan start date <DD> <MM> <YYYY>
 	When click on the submit button
@@ -44,7 +46,7 @@ Examples:
 
 
 	@SITDEPLOYISSUE
-	Scenario Outline: Member Literature - Choosing
+	Scenario Outline: Advisers - Member Literature - Choosing
     Given I am on advisers <initialpage>
     When I choose Literature Type <Literature Type>
 	And I select on <Available Literature> Literature
@@ -54,3 +56,61 @@ Examples:
 Examples:
 	| initialpage           | Literature Type         | Available Literature    |
 	| /dev/member-library   | Business and Corporate  | Business healthcare aid | 
+
+
+
+
+	### Presales Literature Library Tests
+
+		@SITDEPLOYISSUE
+	Scenario Outline: Presales - Sales Literature - Searching
+    Given I am on presales <initialpage>
+    When I search for <Literature Type> document
+	Then I expect the <Literature Type> document to be visible
+	And I expect the download and email buttons to be visible
+
+Examples:
+	| initialpage           | Literature Type          |
+	| /dev/sales-library    | Cinema				   | 
+
+
+	@SITDEPLOYISSUE
+	Scenario Outline: Presales - Sales Literature - Choosing
+    Given I am on presales <initialpage>
+    When I choose Literature Type <Literature Type>
+	And I select on <Available Literature> Literature
+	Then I expect the <Available Literature> document to be visible
+	And I expect the download and email buttons to be visible
+
+Examples:
+	| initialpage           | Literature Type         | Available Literature    |
+	| /dev/sales-library    | Understand your health  | Fitness assesment	    | 
+
+
+
+
+	@SITDEPLOYISSUE
+	Scenario Outline: Presales - Member Literature - Searching
+    Given I am on presales <initialpage>
+	And I enter plan start date <DD> <MM> <YYYY>
+	When click on the submit button
+	And I select on <Available Literature> Literature
+	Then I expect the <Available Literature> document to be visible
+	And I expect the download and email buttons to be visible
+
+Examples:
+	| initialpage           | DD | MM | YYYY | Available Literature    |
+	| /dev/member-library   | 05 | 04 | 2017 | Eurostar				   |
+
+
+	@SITDEPLOYISSUE
+	Scenario Outline: Presales - Member Literature - Choosing
+    Given I am on presales <initialpage>
+    When I choose Literature Type <Literature Type>
+	And I select on <Available Literature> Literature
+	Then I expect the <Available Literature> document to be visible
+	And I expect the download and email buttons to be visible
+
+Examples:
+	| initialpage           | Literature Type				 | Available Literature |
+	| /dev/member-library   | Rewards to keep you motivated  | Apple Watch			| 
