@@ -136,6 +136,11 @@ namespace Vitality.Website.IntegrationTests.Steps
         [When(@"I click on literature library card snippet (.*) link")]
         public void WhenIClickOnLiteratureLibraryCardSnippetLink(string cardsnippetlink)
         {
+            //check cards snipper generic image appears
+            WebDriver
+                .WaitForElement(new JQuerySelector(".grid-col-4-12.tablet-and-up .spotlight__list-item.spotlight__standalone .spotlight-item__top-content .spotlight-item__intro-image.burst img"))
+                .Displayed.ShouldBeTrue();
+
             //Clicks on link in the card snippet - not included string and left it generic
             WebDriver
                 .WaitForElement(new JQuerySelector(".grid-col-4-12.tablet-and-up .spotlight__list-item.spotlight__standalone .spotlight-item__cta a"))
