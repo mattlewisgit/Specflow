@@ -312,6 +312,46 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute(DisplayName="Check Member literature card button works")]
+        [Xunit.TraitAttribute("FeatureTitle", "LiteratureLibrary")]
+        [Xunit.TraitAttribute("Description", "Check Member literature card button works")]
+        [Xunit.TraitAttribute("Category", "SITDEPLOYISSUE")]
+        public virtual void CheckMemberLiteratureCardButtonWorks()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Member literature card button works", new string[] {
+                        "SITDEPLOYISSUE"});
+#line 120
+ this.ScenarioSetup(scenarioInfo);
+#line 121
+    testRunner.Given("I am on presales /dev/member-library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 122
+ testRunner.When("I click on literature library card snippet Sales Literature link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 123
+ testRunner.Then("I expect the presales /dev/sales-library to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check Sales literature card button works")]
+        [Xunit.TraitAttribute("FeatureTitle", "LiteratureLibrary")]
+        [Xunit.TraitAttribute("Description", "Check Sales literature card button works")]
+        [Xunit.TraitAttribute("Category", "SITDEPLOYISSUE")]
+        public virtual void CheckSalesLiteratureCardButtonWorks()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Sales literature card button works", new string[] {
+                        "SITDEPLOYISSUE"});
+#line 126
+ this.ScenarioSetup(scenarioInfo);
+#line 127
+    testRunner.Given("I am on presales /dev/sales-library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 128
+ testRunner.When("I click on literature library card snippet Member Literature link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 129
+ testRunner.Then("I expect the presales /dev/member-library to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable
