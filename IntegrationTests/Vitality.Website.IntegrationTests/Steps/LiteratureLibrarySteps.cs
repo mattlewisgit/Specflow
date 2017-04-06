@@ -33,16 +33,15 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .Displayed
                 .ShouldBeTrue();
 
-            string DownloadBackgroundColour = WebDriver
-                                    .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Download')"))
-                                    .GetCssValue("background-color");
+            WebDriver
+                .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Download')"))
+                .GetCssValue("background-color")
+                .ShouldBe("rgba(91, 182, 177, 1)");
 
-            string DownloadFontColour = WebDriver
-                        .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Download')"))
-                        .GetCssValue("color");
-
-            DownloadBackgroundColour.ShouldBe("rgba(91, 182, 177, 1)");
-            DownloadFontColour.ShouldBe("rgba(255, 255, 255, 1)");
+            WebDriver
+                .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Download')"))
+                .GetCssValue("color")
+                .ShouldBe("rgba(255, 255, 255, 1)");
 
 
             // EMAIL button is visible.
@@ -51,17 +50,15 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .Displayed
                 .ShouldBeTrue();
 
-            string EmailBackgroundColour = WebDriver
-                        .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Email')"))
-                        .GetCssValue("background-color");
+            WebDriver
+                .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Email')"))
+                .GetCssValue("background-color")
+                .ShouldBe("rgba(255, 255, 255, 1)");
 
-            string EmailFontColour = WebDriver
-                        .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Email')"))
-                        .GetCssValue("color");
-
-            EmailBackgroundColour.ShouldBe("rgba(255, 255, 255, 1)");
-            EmailFontColour.ShouldBe("rgba(91, 182, 177, 1)");
-
+            WebDriver
+                .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Email')"))
+                .GetCssValue("color")
+                .ShouldBe("rgba(91, 182, 177, 1)");
         }
 
         [Then(@"I expect the (.*) document to be visible")]
@@ -87,8 +84,6 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver
                 .WaitForElement(new JQuerySelector(".grid-col-4-12.ng-scope .list--buttons .ng-scope .button-list.ng-binding.button-list--selected"))
                 .Displayed.ShouldBeTrue();
-
-            
         }
 
         [When(@"I select on (.*) Literature")]

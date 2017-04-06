@@ -29,10 +29,10 @@
                 .Displayed.ShouldBeTrue();
 
             //check background color
-            String messagecolor = WebDriver.FindElement(new JQuerySelector(".message-box.message-box--error"))
-                                    .GetCssValue("background-color");
-
-            messagecolor.ShouldBe("rgba(255, 105, 97, 0.2)");
+            WebDriver
+                .FindElement(new JQuerySelector(".message-box.message-box--error"))
+                .GetCssValue("background-color")
+                .ShouldBe("rgba(255, 105, 97, 0.2)");
 
             //check image
             //need to look into this..... Checking the image icons
@@ -54,10 +54,9 @@
                 .Displayed.ShouldBeTrue();
 
             //check background color
-            String messagecolor = WebDriver.FindElement(new JQuerySelector(".message-box.message-box--alert"))
-                                    .GetCssValue("background-color");
-
-            messagecolor.ShouldBe("rgba(91, 182, 177, 0.2)");
+            WebDriver
+                .FindElement(new JQuerySelector(".message-box.message-box--alert"))
+                .GetCssValue("background-color").ShouldBe("rgba(91, 182, 177, 0.2)");
 
             //check image
             //need to look into this..... Checking the image icons
@@ -79,10 +78,9 @@
                 .Displayed.ShouldBeTrue();
 
             //check background color
-            String messagecolor = WebDriver.FindElement(new JQuerySelector(".message-box.message-box--expired"))
-                                    .GetCssValue("background-color");
-
-            messagecolor.ShouldBe("rgba(91, 182, 177, 0.2)");
+            WebDriver
+                .FindElement(new JQuerySelector(".message-box.message-box--expired"))
+                .GetCssValue("background-color").ShouldBe("rgba(91, 182, 177, 0.2)");
 
             //check image
             //need to look into this..... Checking the image icons

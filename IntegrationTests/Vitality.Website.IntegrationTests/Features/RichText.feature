@@ -1,7 +1,7 @@
 ﻿Feature: RichText
 	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	As a rich text dialog box user
+	I want to be able to view the rich text dialog box
 
 	@SIT
 Scenario: Check Rich Text Dialog Box in full size view
