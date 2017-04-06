@@ -146,8 +146,8 @@ this.ScenarioSetup(scenarioInfo);
 #line 27
  testRunner.Given("I am on presales /dev/cards-stacked", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 28
- testRunner.When("I go to the External Link cards stacked and I click on the Click External Link pa" +
-                    "ge link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I go to the External Link cards stacked and I click on the External Link page lin" +
+                    "k", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 29
  testRunner.Then("I see the www.google.co.uk page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
