@@ -1,0 +1,9 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Generic.MessageBox>
+<div class="pinch">
+        <div class="message-box message-box--@Model.MessageType.Value">
+            <h4 class="message-box__heading">
+                <span class="message-box__icon"></span>@Editable(Model, item => item.MessageHeading)
+            </h4>
+            @Editable(Model, item => item.MessageText)
+        </div>
+    </div>

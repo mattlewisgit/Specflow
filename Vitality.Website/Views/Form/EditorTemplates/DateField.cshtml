@@ -4,19 +4,23 @@
 
 @using (Html.BeginField())
 {
-    @Html.HiddenFor(x => Model.Value, new { @class = "wfmDatebox" })
+    @Html.HiddenFor(x => Model.Value, new {@class = "wfmDatebox"})
 
     var htmlAttributes = new RouteValueDictionary
     {
-       { "class", "form-control" },
-       { Constants.Tracking, "false" }
+        {"class", "form-control"},
+        {Constants.Tracking, "false"}
     };
 
-    <div class="form__field__input--date">
-        @Html.DropDownListFor(x => x.Day, Model.Days, htmlAttributes)
-        @Html.DropDownListFor(x => x.Month, Model.Months, htmlAttributes)
-        @Html.DropDownListFor(x => x.Year, Model.Years, htmlAttributes)
-    </div>
+    var renderedField = string.Format("<div class=\"form__field__input--date\">{0}{1}{2}</div>",
+        Html.DropDownListFor(x => x.Day, Model.Days, htmlAttributes),
+        Html.DropDownListFor(x => x.Month, Model.Months, htmlAttributes),
+        Html.DropDownListFor(x => x.Year, Model.Years, htmlAttributes));
+
+    @FormFieldWithToolTip.Create(Model.Information, MvcHtmlString.Create(renderedField))
+    // Make ShowInformation to false as default behaviour is to render information below the field
+    Model.ShowInformation = false;
+
 
     @Html.RenderScriptBlock(
         @<script type="text/javascript">
@@ -29,5 +33,5 @@
                  yearId: "@Html.Id("Year")"
              };
          </script>
-    )
+        )
 }

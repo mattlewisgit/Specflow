@@ -1,0 +1,14 @@
+﻿@using System.Web.Mvc
+
+@helper Create(string information, MvcHtmlString renderedField)
+{    if (string.IsNullOrEmpty(information))    {        <div class="form__field__input">
+            @renderedField
+        </div>    }    else    {        <div class="form__form__field--tooltip">
+            <div class="form__field__input">
+                @renderedField
+                <p class="tool-tip-icon">
+                    <button type="button" title="@information"></button>
+                </p>
+            </div>
+        </div>
+    }}

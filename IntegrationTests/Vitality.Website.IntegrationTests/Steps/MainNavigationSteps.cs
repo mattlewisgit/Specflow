@@ -84,7 +84,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         }
 
 
-
+        [Given(@"I resize to mobile view")]
         [When(@"I resize to mobile view")]
         public void WhenIResizeToMobileView()
         {
@@ -199,7 +199,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         public void ThenIExpectTheHealthInsuranceQuoteButtonToBeVisible()
         {
             WebDriver
-                .WaitForElement(By.LinkText("Health insurance quote"))
+                .FindElement(By.LinkText("Health insurance quote"))
                 .Displayed
                 .ShouldBeTrue();
         }

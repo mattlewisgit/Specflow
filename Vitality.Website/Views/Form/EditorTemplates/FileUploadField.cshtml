@@ -2,6 +2,8 @@
 @model Sitecore.Forms.Mvc.ViewModels.Fields.FileUploadField
 
 @using (Html.BeginField())
-{   
-    @Html.TextBoxFor(m => m.Value, new { type = "file"}  )
+{
+    @FormFieldWithToolTip.Create(Model.Information, Html.TextBoxFor(m => m.Value, new {type = "file"}))
+    // Make ShowInformation to false as default behaviour is to render information below the field
+    Model.ShowInformation = false;
 }

@@ -4,6 +4,7 @@ namespace Vitality.Website.IntegrationTests.Steps
     using TechTalk.SpecFlow;
     using Extensions;
     using By = OpenQA.Selenium.By;
+    using Selenium.WebDriver.Extensions.JQuery;
 
     [Binding]
     public sealed class LiteratureLibrarySteps : BaseSteps
@@ -26,66 +27,96 @@ namespace Vitality.Website.IntegrationTests.Steps
         [Then(@"I expect the download and email buttons to be visible")]
         public void IExpectTheDownloadAndEmailButtonsToBeVisible()
         {
-            // Download button is visible.
+            // DOWNLOAD button is visible.
             WebDriver
-                .WaitForElement(By.LinkText("Download"))
+                .WaitForElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Download')"))
                 .Displayed
                 .ShouldBeTrue();
 
-            // Email button is visible.
             WebDriver
-                .WaitForElement(By.LinkText("Email"))
+                .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Download')"))
+                .GetCssValue("background-color")
+                .ShouldBe("rgba(91, 182, 177, 1)");
+
+            WebDriver
+                .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Download')"))
+                .GetCssValue("color")
+                .ShouldBe("rgba(255, 255, 255, 1)");
+
+
+            // EMAIL button is visible.
+            WebDriver
+                .WaitForElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Email')"))
                 .Displayed
                 .ShouldBeTrue();
+
+            WebDriver
+                .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Email')"))
+                .GetCssValue("background-color")
+                .ShouldBe("rgba(255, 255, 255, 1)");
+
+            WebDriver
+                .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--body__buttons div a:contains('Email')"))
+                .GetCssValue("color")
+                .ShouldBe("rgba(91, 182, 177, 1)");
         }
 
         [Then(@"I expect the (.*) document to be visible")]
-        public void IExpectTheDocumentToBeVisible(string p0)
+        public void IExpectTheDocumentToBeVisible(string Selection)
         {
+            //Check your selection contains String
             WebDriver
-                .WaitForElement(By.LinkText(p0))
+                .FindElement(new JQuerySelector(".preview-card.ng-scope .preview-card--header.ng-binding:contains('" + Selection + "')"))
                 .Displayed
                 .ShouldBeTrue();
+
         }
 
         [When(@"I choose Literature Type (.*)")]
-        public void IChooseLiteratureType(string p0)
+        public void IChooseLiteratureType(string literaturetype)
         {
+            //Click on Literature type
             WebDriver
-                .WaitForElement(By.LinkText(p0))
-                .Displayed
-                .ShouldBeTrue();
-
-            WebDriver
-                .FindElement(By.LinkText(p0))
+                .WaitForElement(new JQuerySelector(".grid-col-4-12.ng-scope .list--buttons .ng-scope a:contains('" + literaturetype + "')"))
                 .Click();
+
+            //Check arrow icon appears on Literature type
+            WebDriver
+                .WaitForElement(new JQuerySelector(".grid-col-4-12.ng-scope .list--buttons .ng-scope .button-list.ng-binding.button-list--selected"))
+                .Displayed.ShouldBeTrue();
         }
 
         [When(@"I select on (.*) Literature")]
-        public void ISelectOnLiterature(string p0)
+        public void ISelectOnLiterature(string AvailableLiterature)
         {
+            //Click on Available Literature
             WebDriver
-                .FindElement(By.LinkText(p0))
+                .WaitForElement(new JQuerySelector(".grid-col-4-12.ng-scope .list--buttons .ng-scope a:contains('" + AvailableLiterature + "')"))
                 .Click();
+
+            //Check arrow icon appears on available literature
+            WebDriver
+                .WaitForElement(new JQuerySelector(".grid-col-4-12.ng-scope .list--buttons .ng-scope .button-list.ng-binding.button-list--selected"))
+                .Displayed.ShouldBeTrue();
         }
 
         [Given(@"I enter plan start date (.*) (.*) (.*)")]
-        public void IEnterPlanStartDate(string p0, string p1, string p2)
+        public void IEnterPlanStartDate(string day, string month, string year)
         {
             WebDriver
                 .FindElement(By.Id("day"))
                 .ClearAndContinue()
-                .SendKeys(p0);
+                .SendKeys(day);
 
             WebDriver
                 .FindElement(By.Id("month"))
                 .ClearAndContinue()
-                .SendKeys(p1);
+                .SendKeys(month);
 
             WebDriver
                 .FindElement(By.Id("year"))
                 .ClearAndContinue()
-                .SendKeys(p2);
+                .SendKeys(year);
         }
 
         [When(@"click on the submit button")]
@@ -95,5 +126,21 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .FindElement(By.XPath("//input[@value='Submit']"))
                 .Click();
         }
+
+
+        [When(@"I click on literature library card snippet (.*) link")]
+        public void WhenIClickOnLiteratureLibraryCardSnippetLink(string cardsnippetlink)
+        {
+            //check cards snipper generic image appears
+            WebDriver
+                .WaitForElement(new JQuerySelector(".grid-col-4-12.tablet-and-up .spotlight__list-item.spotlight__standalone .spotlight-item__top-content .spotlight-item__intro-image.burst img"))
+                .Displayed.ShouldBeTrue();
+
+            //Clicks on link in the card snippet - not included string and left it generic
+            WebDriver
+                .WaitForElement(new JQuerySelector(".grid-col-4-12.tablet-and-up .spotlight__list-item.spotlight__standalone .spotlight-item__cta a"))
+                .Click();
+        }
+
     }
 }

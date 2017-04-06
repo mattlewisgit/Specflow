@@ -36,7 +36,7 @@
         routeName = Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName;
     }
 
-    <div class="form pinch">
+    <div class="form form--clearfields pinch">
         @using (Html.BeginRouteForm(routeName, queryString, FormMethod.Post, attributes))
         {
             var uniqueId = Model.UniqueId.ToString();
