@@ -29,6 +29,7 @@ export class VacanciesComponent implements OnInit  {
     vacancySalary: string;
     vacancyClosesOn: string;
     path: string;
+    feedId: string;
 
 	constructor(
         private vacanciesService: VacanciesService,
@@ -36,9 +37,7 @@ export class VacanciesComponent implements OnInit  {
         private winRef: WindowRef
 	) {}
 
-	ngOnInit(): void {
-        this.getVacancies();
-        this.path = this.document.location.pathname + "/";
+    ngOnInit(): void {
 
         this.headline = this.winRef.nativeWindow.angularData.headline;
         this.locationsLabel = this.winRef.nativeWindow.angularData.locationsDropdownLabel;
@@ -50,8 +49,11 @@ export class VacanciesComponent implements OnInit  {
         this.vacancyLocation = this.winRef.nativeWindow.angularData.locationText;
         this.vacancySalary = this.winRef.nativeWindow.angularData.salaryText;
         this.vacancyClosesOn = this.winRef.nativeWindow.angularData.closesOnText;
+        this.feedId = this.winRef.nativeWindow.angularData.FeedSettings;
+        this.vacanciesService.setFeedId(this.feedId);
 
-	    console.log('url:' + this.winRef.nativeWindow.angularData.FeedSettings);
+        this.getVacancies();
+        this.path = this.document.location.pathname + "/";
 	}
 
 	getVacancies(): void {

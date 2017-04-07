@@ -10,10 +10,12 @@ require('rxjs/add/operator/toPromise');
 var VacanciesService = (function () {
     function VacanciesService(http) {
         this.http = http;
-        this.vacancyFeedUrl = '/api/vacancy/list?settingsId={3180CA2D-2EE1-4AD7-B8A0-E507DDC1093C}'; // URL to web api
     }
+    VacanciesService.prototype.setFeedId = function (feedId) {
+        this.settingsId = feedId;
+    };
     VacanciesService.prototype.getVacancies = function () {
-        return this.http.get(this.vacancyFeedUrl)
+        return this.http.get('/api/vacancy/list?settingsId=' + this.settingsId)
             .toPromise()
             .then(function (response) { return response.json(); })
             .catch(this.handleError);

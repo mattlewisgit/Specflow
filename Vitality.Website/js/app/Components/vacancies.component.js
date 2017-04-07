@@ -22,8 +22,6 @@ var VacanciesComponent = (function () {
         this.winRef = winRef;
     }
     VacanciesComponent.prototype.ngOnInit = function () {
-        this.getVacancies();
-        this.path = this.document.location.pathname + "/";
         this.headline = this.winRef.nativeWindow.angularData.headline;
         this.locationsLabel = this.winRef.nativeWindow.angularData.locationsDropdownLabel;
         this.allLocations = this.winRef.nativeWindow.angularData.allLocationsText;
@@ -34,7 +32,10 @@ var VacanciesComponent = (function () {
         this.vacancyLocation = this.winRef.nativeWindow.angularData.locationText;
         this.vacancySalary = this.winRef.nativeWindow.angularData.salaryText;
         this.vacancyClosesOn = this.winRef.nativeWindow.angularData.closesOnText;
-        console.log('url:' + this.winRef.nativeWindow.angularData.FeedSettings);
+        this.feedId = this.winRef.nativeWindow.angularData.FeedSettings;
+        this.vacanciesService.setFeedId(this.feedId);
+        this.getVacancies();
+        this.path = this.document.location.pathname + "/";
     };
     VacanciesComponent.prototype.getVacancies = function () {
         var _this = this;

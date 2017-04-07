@@ -7,16 +7,20 @@ import { Vacancy } from '../Models/vacancy';
 
 @Injectable()
 export class VacanciesService {
-    private vacancyFeedUrl = '/api/vacancy/list?settingsId={3180CA2D-2EE1-4AD7-B8A0-E507DDC1093C}';  // URL to web api
-    vacancy:Vacancy;
+    settingsId: string;
+    vacancy: Vacancy;
 
-  constructor(private http: Http) { }
+  constructor(private http: Http) {}
+
+  setFeedId(feedId: string): void {
+      this.settingsId = feedId;
+  }
 
   getVacancies(): Promise<Vacancies> {
-    return this.http.get(this.vacancyFeedUrl)
+      return this.http.get('/api/vacancy/list?settingsId=' + this.settingsId)
                .toPromise()
                .then(response => response.json() as Vacancies)
-               .catch(this.handleError);
+          .catch(this.handleError);      
   }
 
   getVacancy(advertId: number): Promise<Vacancy> {      
