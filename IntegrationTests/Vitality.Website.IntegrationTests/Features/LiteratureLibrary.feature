@@ -120,10 +120,10 @@ Examples:
 	Scenario: Check Member literature card button works
     Given I am on presales /dev/member-library
 	When I click on literature library card snippet Sales Literature link
-	Then I expect the presales /dev/sales-library to open
+	Then I expect the presales /dev/sales-library/ to open
 
 	@SITDEPLOYISSUE
 	Scenario: Check Sales literature card button works
     Given I am on presales /dev/sales-library
 	When I click on literature library card snippet Member Literature link
-	Then I expect the presales /dev/member-library to open
+	Then I expect the presales /dev/member-library/ to open

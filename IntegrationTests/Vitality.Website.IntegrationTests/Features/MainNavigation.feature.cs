@@ -344,7 +344,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 88
     this.ScenarioSetup(scenarioInfo);
 #line 89
-    testRunner.Given("I am on advisers /dev/sales-library/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on advisers /dev", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 90
  testRunner.Then("I should not see any console logs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

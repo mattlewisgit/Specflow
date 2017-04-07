@@ -327,7 +327,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 122
  testRunner.When("I click on literature library card snippet Sales Literature link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 123
- testRunner.Then("I expect the presales /dev/sales-library to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales /dev/sales-library/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -347,7 +347,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 128
  testRunner.When("I click on literature library card snippet Member Literature link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 129
- testRunner.Then("I expect the presales /dev/member-library to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales /dev/member-library/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

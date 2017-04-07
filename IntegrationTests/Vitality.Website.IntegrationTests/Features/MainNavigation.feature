@@ -86,5 +86,5 @@
 
 	@SIT
     Scenario: Check console logs on advisers
-    Given I am on advisers /dev/sales-library/
+    Given I am on advisers /dev
 	Then I should not see any console logs
