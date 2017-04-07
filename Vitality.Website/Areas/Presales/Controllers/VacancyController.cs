@@ -18,7 +18,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
         public HttpResponseMessage List(Guid settingsId)
         {
             return GetResponse<VacanciesRequest, VacanciesDto>(
-                new VacanciesRequest(settingsId), vacancies=>vacancies.Vacancies.Any());
+                new VacanciesRequest(settingsId), vacancies=>vacancies.Vacancies != null);
         }
     }
 }

@@ -1,7 +1,9 @@
 // jshint strict: false
 
+var browserSync = require("browser-sync");
 var del = require("del");
 var gulp = require("gulp");
+var rimraf = require("rimraf");
 var runSequence = require("run-sequence");
 
 // Pull all Gulp plugins into a single object.
@@ -19,7 +21,9 @@ var paths = {
         minified: "vitality.presales.min.js",
         src: "./src/js/*.js"
     },
-    sass: "./src/sass/**/*.scss"
+    sass: "./src/sass/**/*.scss",
+    ts: "src/ts/**/*.ts",
+    html: "src/ts/**/*.html"
 }
 
 // Include all configuration files in a single object.
@@ -74,6 +78,11 @@ gulp.task("bower", function () {
 });
 
 gulp.task("typescript", function () {
+    // Copy HTML templates, too.
+    gulp
+        .src("src/ts/**/*.html")
+        .pipe(plugins.copy(paths.js.dest, { prefix: 2 }));
+
     var tsProject = plugins.typescript.createProject("tsconfig.json");
 
     var tsResult = gulp
@@ -81,4 +90,38 @@ gulp.task("typescript", function () {
         .pipe(tsProject());
 
     return tsResult.js.pipe(gulp.dest(paths.js.dest));
+});
+
+gulp.task("watch", function () {
+    gulp.watch(paths.sass, [
+        "css"
+    ]);
+
+    gulp.watch([paths.ts, paths.html], [
+        "typescript"
+    ]);
+});
+
+gulp.task("serve", function () {
+    browserSync({
+        options: {
+            proxy: {
+                target: "http://presales.vitality.co.uk/"
+            }
+        }
+    });
+
+    gulp.watch(paths.sass, [
+        "css",
+        browserSync.reload
+    ]);
+
+    gulp.watch([paths.ts, paths.html], [
+        "typescript",
+        browserSync.reload
+    ]);
+});
+
+gulp.task("clean", function (cb) {
+    return rimraf(paths.js.dest, cb);
 });

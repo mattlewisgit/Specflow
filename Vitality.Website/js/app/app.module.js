@@ -12,11 +12,9 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
-var app_routing_module_1 = require('./app-routing.module');
-var app_component_1 = require('./Components/app.component');
 var vacancies_component_1 = require('./Components/vacancies.component');
-var vacancy_details_component_1 = require('./Components/vacancy-details.component');
 var vacancies_service_1 = require('./Services/vacancies.service');
+var windowRef_1 = require('./Components/windowRef');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,12 +23,11 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
-                http_1.HttpModule,
-                app_routing_module_1.AppRoutingModule
+                http_1.HttpModule
             ],
-            declarations: [app_component_1.AppComponent, vacancies_component_1.VacanciesComponent, vacancy_details_component_1.VacancyDetailsComponent],
-            providers: [vacancies_service_1.VacanciesService],
-            bootstrap: [app_component_1.AppComponent]
+            declarations: [vacancies_component_1.VacanciesComponent],
+            providers: [vacancies_service_1.VacanciesService, windowRef_1.WindowRef],
+            bootstrap: [vacancies_component_1.VacanciesComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

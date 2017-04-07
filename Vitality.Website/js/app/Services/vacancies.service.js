@@ -14,7 +14,7 @@ require('rxjs/add/operator/toPromise');
 var VacanciesService = (function () {
     function VacanciesService(http) {
         this.http = http;
-        this.vacancyFeedUrl = './app/Vacancies.json'; // URL to web api
+        this.vacancyFeedUrl = '/api/vacancy/list?settingsId={3180CA2D-2EE1-4AD7-B8A0-E507DDC1093C}'; // URL to web api
     }
     VacanciesService.prototype.getVacancies = function () {
         return this.http.get(this.vacancyFeedUrl)

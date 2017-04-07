@@ -1,0 +1,55 @@
+﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.VacancyList>
+
+<div class="pinch">
+    <vacancy-details>Retrieving job details...</vacancy-details>
+</div>
+
+<script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+<!-- Update these package versions as needed -->
+<script src="https://unpkg.com/zone.js@0.8.4?main=browser"></script>
+<script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+<script src="/js/systemjs.config.server.js"></script>
+
+<script type='text/javascript'>
+    //if ('presales.vitality.co.uk' === document.location.host) {
+    //    document.write("<script src='node_modules/core-js/client/shim.min.js'><\/script>");
+    //    document.write("<script src='node_modules/zone.js/dist/zone.js'><\/script>");
+    //    document.write("<script src='node_modules/systemjs/dist/system.src.js'><\/script>");
+
+    //    //<![CDATA[
+    //    document.write("<script src='/js/systemjs.config.js'><\/script>");
+    //    //]]>
+    //} else {
+    //    // This SystemJS configuration loads umd packages from the web
+    //    // Update these package versions as needed
+    //    document.write("<script src='https://unpkg.com/core-js/client/shim.min.js'><\/script>");
+    //    document.write("<script src='https://unpkg.com/zone.js@0.8.4?main=browser'><\/script>");
+    //    document.write("<script src='https://unpkg.com/systemjs@0.19.39/dist/system.src.js'><\/script>");
+
+    //    //<![CDATA[
+    //    document.write("<script src='/js/systemjs.server.config.js'><\/script>");
+    //    //]]>
+    //}
+
+      System.import('/js/vacancyDetails-Main.js')
+            .catch(function (err) { console.error(err); });
+
+    window.angularData = window.angularData || {};
+    window.angularData.headline = '@Model.Headline';
+    window.angularData.locationsDropdownLabel = '@Model.LocationsDropdownLabel';
+    window.angularData.allLocationsText = '@Model.AllLocationsText';
+    window.angularData.departmentsDropdownLabel = '@Model.DepartmentsDropdownLabel';
+    window.angularData.allDepartmentsText = '@Model.AllDepartmentsText';
+    window.angularData.findoutMoreText = '@Model.FindoutMoreText';
+    window.angularData.noVacanciesFoundText = '@Model.NoVacanciesFoundText';
+    window.angularData.FeedSettings = '@Model.FeedSettings';
+    window.angularData.locationText = '@Model.LocationText';
+    window.angularData.salaryText = '@Model.SalaryText';
+    window.angularData.closesOnText = '@Model.ClosesOnText';
+    window.angularData.applyForVacancyText = '@Model.ApplyForVacancyText';
+    window.angularData.shareVacancyText = '@Model.ShareVacancyText';
+    window.angularData.backToVacanciesListingText = '@Model.BackToVacanciesListText';
+
+
+</script>
+

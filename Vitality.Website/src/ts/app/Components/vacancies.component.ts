@@ -1,41 +1,72 @@
-import { Component, OnInit }      from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Inject, OnInit }      from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
 
 import { Vacancy } from '../Models/vacancy';
 import { Vacancies } from '../Models/vacancies';
 import { VacanciesService } from '../Services/vacancies.service';
+import { WindowRef } from './windowRef';
 
 @Component({
-  selector: 'vacancies',
-  templateUrl: './app/Components/vacancyList.html'
+  selector: 'vacancy-list',
+  templateUrl: './js/app/Components/vacancyListTemplate.html'
 })
 export class VacanciesComponent implements OnInit  {
-	title = 'Latest Vacancies';	
-	vacancies:Array<Vacancy>;			// vacancies returned from feed
-	filteredVacancies:Array<Vacancy>;	// vacancies filtered by location
-	locations:Array<string>;			// job locations array
-	allLocations = "All locations";		// all job locations dropdown value
-	vacancy:Vacancy;
-	location:string;
+    headline: string;
+	vacancies: Array<Vacancy>;			// vacancies returned from feed
+	filteredVacancies: Array<Vacancy>;	// vacancies filtered by location
+	locations: Array<string>;			// job locations array
+    departments: Array<string>;			// departments array
+    vacancy: Vacancy;
+    locationsLabel: string;
+    departmentsLabel: string;
+    allLocations: string;
+    allDepartments: string;
+    location: string;
+    department: string;
+    findoutMore: string;
+    noVacanciesFoundText: string;
+    vacancyLocation: string;
+    vacancySalary: string;
+    vacancyClosesOn: string;
+    path: string;
 
 	constructor(
-		private router: Router,
-		private vacanciesService: VacanciesService
+        private vacanciesService: VacanciesService,
+        @Inject(DOCUMENT) private document: any,
+        private winRef: WindowRef
 	) {}
-	
-	ngOnInit(): void {
-		this.getVacancies();		
-	}
-	  
-	getVacancies(): void {
-		this.vacanciesService.getVacancies().then(v => this.initialisePage(v));		
-	}	
 
-	initialisePage(vac:Vacancies): void {
+	ngOnInit(): void {
+        this.getVacancies();
+        this.path = this.document.location.pathname + "/";
+
+        this.headline = this.winRef.nativeWindow.angularData.headline;
+        this.locationsLabel = this.winRef.nativeWindow.angularData.locationsDropdownLabel;
+        this.allLocations = this.winRef.nativeWindow.angularData.allLocationsText;
+        this.departmentsLabel = this.winRef.nativeWindow.angularData.departmentsDropdownLabel;
+        this.allDepartments = this.winRef.nativeWindow.angularData.allDepartmentsText;
+        this.findoutMore = this.winRef.nativeWindow.angularData.findoutMoreText;
+        this.noVacanciesFoundText = this.winRef.nativeWindow.angularData.noVacanciesFoundText;
+        this.vacancyLocation = this.winRef.nativeWindow.angularData.locationText;
+        this.vacancySalary = this.winRef.nativeWindow.angularData.salaryText;
+        this.vacancyClosesOn = this.winRef.nativeWindow.angularData.closesOnText;
+
+	    console.log('url:' + this.winRef.nativeWindow.angularData.FeedSettings);
+	}
+
+	getVacancies(): void {
+		this.vacanciesService.getVacancies().then(v => this.initialisePage(v));
+	}
+
+    initialisePage(vac: Vacancies): void {
 		this.vacancies = vac.Vacancies;
 		this.getLocations();
-		this.locationChanged(this.allLocations);
-		this.location = this.allLocations;
+        this.location = this.allLocations;
+
+        this.getDepartments();
+        this.department = this.allDepartments;
+
+        this.filtersChanged(this.allLocations, this.allDepartments);
 	}
 
 	// populates locations array
@@ -45,8 +76,8 @@ export class VacanciesComponent implements OnInit  {
 		locs.push(this.allLocations);
 
 		// add locations from feed
-		this.vacancies.forEach(s => this.addLocation(s, locs));
-		
+        this.vacancies.forEach(s => this.addLocation(s, locs));
+
 		this.locations = locs;
 	}
 
@@ -59,18 +90,43 @@ export class VacanciesComponent implements OnInit  {
 		}
 	}
 
-	/// filters vacancy list based on selected location
-	locationChanged(loc:string) {
-		this.filteredVacancies = loc === this.allLocations ? this.vacancies : this.vacancies.filter(e => e.Joblocation == loc);
-	}
-
 	// used if we want to display job details on same page
 	onSelect(vacancy: Vacancy): void {
     	this.vacancy = vacancy;
-  	}
+    }
 
-	// used if we want to display job details on same page
-	gotoDetail(): void {
-    	this.router.navigate(['/vacancies', this.vacancy.Advertid]);
-  }
+    // populates departments array
+    getDepartments(): void {
+        var depts = new Array();
+        // add default department
+        depts.push(this.allDepartments);
+
+        // add departments from feed
+        this.vacancies.forEach(s => this.addDepartment(s, depts));
+
+        this.departments = depts;
+    }
+
+    // add department to array
+    addDepartment(vacancy: Vacancy, depts: Array<string>) {
+        // check department not already added
+        if (depts.indexOf(vacancy.Jobdepartment) < 1) {
+            depts.push(vacancy.Jobdepartment);
+        }
+    }
+
+    /// filters vacancy list based on selected department
+    filtersChanged(loc: string, dept: string) {
+
+        // reset filter
+        this.filteredVacancies = this.vacancies;
+
+        if (loc != this.allLocations) {
+            this.filteredVacancies = this.filteredVacancies.filter(p => p.Joblocation === loc);
+        }
+
+        if (dept != this.allDepartments) {
+            this.filteredVacancies = this.filteredVacancies.filter(p => p.Jobdepartment === dept);
+        }
+    }
 }

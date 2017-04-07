@@ -5,7 +5,8 @@ export class Vacancy {
 	JobType: string;
 	Joblocation: string;
 	JobSalary: string;
-	Jobtitle: string;
+    Jobtitle: string;
+    Jobdepartment: string;
 	Link: string;
 	Title: string;
 }

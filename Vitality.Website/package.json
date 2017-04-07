@@ -5,10 +5,12 @@
   "license": "UNLICENSED",
   "dependencies": {
     "bower": "~1.8.0",
+    "browser-sync": "~2.6.1",
     "del": "~2.2.2",
     "gulp": "~3.9.1",
     "gulp-bower": "~0.0.13",
     "gulp-concat": "~2.6.1",
+    "gulp-copy": "~1.0.0",
     "gulp-cssnano": "~2.1.2",
     "gulp-load-plugins": "~1.5.0",
     "gulp-sass": "~3.1.0",
@@ -29,6 +31,7 @@
     "angular-in-memory-web-api": "~0.2.4",
     "systemjs": "~0.19.40",
     "core-js": "~2.4.1",
+    "rimraf": "~2.6.1" ,
     "rxjs": "~5.0.1",
     "zone.js": "~0.7.4"
   },

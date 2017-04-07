@@ -1,32 +1,45 @@
-import { Component, OnInit }      from '@angular/core';
-import { ActivatedRoute, Params }   from '@angular/router';
-import { Location }                 from '@angular/common';
+import { Component, Inject, OnInit }      from '@angular/core';
+import { DOCUMENT } from '@angular/platform-browser';
 import 'rxjs/add/operator/switchMap';
 
 import { Vacancy } from '../Models/vacancy';
 import { Vacancies } from '../Models/vacancies';
 import { VacanciesService } from '../Services/vacancies.service';
+import { WindowRef } from './windowRef';
 
 @Component({
-  selector: 'vacancy',
-  templateUrl: './app/Components/vacancy-details.html'
+  selector: 'vacancy-details',
+  templateUrl: './js/app/Components/vacancy-detailsTemplate.html'
 })
 export class VacancyDetailsComponent implements OnInit  {
-  vacancy: Vacancy;
+    vacancy: Vacancy;
+    advertId: number;
+    applyForVacancy: string;
+    shareVacancy: string;
+    backToListing: string;
+    backToListingUrl: string;
+    backToVacanciesListingText: string;
+    vacancyLocation: string;
+    vacancySalary: string;
+    vacancyClosesOn: string;
 
   constructor(
-    private vacanciesService: VacanciesService,
-    private route: ActivatedRoute,
-    private location: Location
+      private vacanciesService: VacanciesService,
+      @Inject(DOCUMENT) private document: any,
+      private winRef: WindowRef
   ) {}
 
   ngOnInit(): void {
-    this.route.params
-      .switchMap((params: Params) => this.vacanciesService.getVacancy(+params['Advertid']))
-      .subscribe(v => this.vacancy = v);
-  }
+      this.advertId = this.document.location.href.split(/[/ ]+/).pop();
 
-  goBack(): void {
-    this.location.back();
+      this.applyForVacancy = this.winRef.nativeWindow.angularData.applyForVacancyText;
+      this.shareVacancy = this.winRef.nativeWindow.angularData.shareVacancyText;      
+      this.vacancyLocation = this.winRef.nativeWindow.angularData.locationText;
+      this.vacancySalary = this.winRef.nativeWindow.angularData.salaryText;
+      this.vacancyClosesOn = this.winRef.nativeWindow.angularData.closesOnText;
+      this.backToVacanciesListingText = this.winRef.nativeWindow.angularData.backToVacanciesListingText;
+
+      this.vacanciesService.getVacancy(+this.advertId).then(v => this.vacancy = v);
+      this.backToListingUrl = this.document.location.pathname.split("/").slice(0, -1).join("/") + "/";
   }
 }

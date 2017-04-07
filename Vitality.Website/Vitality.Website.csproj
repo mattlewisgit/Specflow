@@ -38,6 +38,7 @@
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <CodeAnalysisRuleSet>Vitality.Website.ruleset</CodeAnalysisRuleSet>
+    <TypeScriptExperimentalDecorators>true</TypeScriptExperimentalDecorators>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -306,10 +307,24 @@
     <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.Log4Net.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
-    <Content Include="src\ts\app\Components\vacancy-details.html" />
-    <Content Include="src\ts\app\Components\vacancyList.html" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="src\ts\app\Components\vacancy-detailsTemplate.html" />
+    <Content Include="src\ts\app\Components\vacancyListTemplate.html" />
     <Content Include="src\ts\systemjs.config.extras.js" />
-    <Content Include="src\ts\systemjs.config.js" />
+    <TypeScriptCompile Include="src\ts\app\Components\windowRef.ts" />
+    <TypeScriptCompile Include="src\ts\app\vacancyDetails-app.module.ts" />
+    <TypeScriptCompile Include="src\ts\systemjs.config.server.ts" />
+    <TypeScriptCompile Include="src\ts\vacancyDetails-Main.ts" />
+    <TypeScriptCompile Include="src\ts\systemjs.config.ts" />
     <Content Include="_Heartbeat.html" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
@@ -562,6 +577,13 @@
     <Content Include="Areas\Presales\Views\ContentCollection\_Mpus.cshtml" />
     <Content Include="Areas\Presales\Views\ContentSearch\ContentSearch.cshtml" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\VacancyList.cshtml" />
+    <Content Include="Areas\Presales\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Presales\Views\FeatureBlocks\VacancyDetails.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.intellisense.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.min.js" />
@@ -4696,7 +4718,6 @@
     <Content Include="sitecore\shell\client\Applications\WFFM\Controls\FormSummaryDataSource\FormSummaryDataSource.cshtml" />
     <Content Include="sitecore\shell\client\Applications\WFFM\Controls\FormResponsesDataSource\FormResponsesDataSource.cshtml" />
     <Content Include="Vitality.Website.ruleset" />
-    <Content Include="src\ts\app\Vacancies.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -4741,15 +4762,13 @@
     <Analyzer Include="..\packages\SonarAnalyzer.CSharp.1.10.0\analyzers\SonarAnalyzer.dll" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\ts\app\app-routing.module.ts" />
-    <TypeScriptCompile Include="src\ts\app\app.module.ts" />
-    <TypeScriptCompile Include="src\ts\app\Components\app.component.ts" />
+    <TypeScriptCompile Include="src\ts\app\vacancyList-app.module.ts" />
     <TypeScriptCompile Include="src\ts\app\Components\vacancies.component.ts" />
     <TypeScriptCompile Include="src\ts\app\Components\vacancy-details.component.ts" />
     <TypeScriptCompile Include="src\ts\app\Models\vacancies.ts" />
     <TypeScriptCompile Include="src\ts\app\Models\vacancy.ts" />
     <TypeScriptCompile Include="src\ts\app\Services\vacancies.service.ts" />
-    <TypeScriptCompile Include="src\ts\main.ts" />
+    <TypeScriptCompile Include="src\ts\vacancyList-Main.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

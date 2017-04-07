@@ -13,9 +13,8 @@ var router_1 = require('@angular/router');
 var vacancies_component_1 = require('./Components/vacancies.component');
 var vacancy_details_component_1 = require('./Components/vacancy-details.component');
 var routes = [
-    { path: '', redirectTo: '/vacancies', pathMatch: 'full' },
-    { path: 'vacancies', component: vacancies_component_1.VacanciesComponent },
-    { path: 'vacancies/:Advertid', component: vacancy_details_component_1.VacancyDetailsComponent }
+    { path: 'careers/vacancies', component: vacancies_component_1.VacanciesComponent },
+    { path: 'careers/vacancies/:Advertid', component: vacancy_details_component_1.VacancyDetailsComponent }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {

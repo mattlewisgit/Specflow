@@ -8,32 +8,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
-var common_1 = require('@angular/common');
+var platform_browser_1 = require('@angular/platform-browser');
 require('rxjs/add/operator/switchMap');
 var vacancies_service_1 = require('../Services/vacancies.service');
+var windowRef_1 = require('./windowRef');
 var VacancyDetailsComponent = (function () {
-    function VacancyDetailsComponent(vacanciesService, route, location) {
+    function VacancyDetailsComponent(vacanciesService, document, winRef) {
         this.vacanciesService = vacanciesService;
-        this.route = route;
-        this.location = location;
+        this.document = document;
+        this.winRef = winRef;
     }
     VacancyDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.route.params
-            .switchMap(function (params) { return _this.vacanciesService.getVacancy(+params['Advertid']); })
-            .subscribe(function (v) { return _this.vacancy = v; });
-    };
-    VacancyDetailsComponent.prototype.goBack = function () {
-        this.location.back();
+        this.advertId = this.document.location.href.split(/[/ ]+/).pop();
+        this.applyForVacancy = this.winRef.nativeWindow.angularData.applyForVacancyText;
+        this.shareVacancy = this.winRef.nativeWindow.angularData.shareVacancyText;
+        this.vacancyLocation = this.winRef.nativeWindow.angularData.locationText;
+        this.vacancySalary = this.winRef.nativeWindow.angularData.salaryText;
+        this.vacancyClosesOn = this.winRef.nativeWindow.angularData.closesOnText;
+        this.backToVacanciesListingText = this.winRef.nativeWindow.angularData.backToVacanciesListingText;
+        this.vacanciesService.getVacancy(+this.advertId).then(function (v) { return _this.vacancy = v; });
+        this.backToListingUrl = this.document.location.pathname.split("/").slice(0, -1).join("/") + "/";
     };
     VacancyDetailsComponent = __decorate([
         core_1.Component({
-            selector: 'vacancy',
-            templateUrl: './app/Components/vacancy-details.html'
-        }), 
-        __metadata('design:paramtypes', [vacancies_service_1.VacanciesService, router_1.ActivatedRoute, common_1.Location])
+            selector: 'vacancy-details',
+            templateUrl: './js/app/Components/vacancy-detailsTemplate.html'
+        }),
+        __param(1, core_1.Inject(platform_browser_1.DOCUMENT)), 
+        __metadata('design:paramtypes', [vacancies_service_1.VacanciesService, Object, windowRef_1.WindowRef])
     ], VacancyDetailsComponent);
     return VacancyDetailsComponent;
 }());

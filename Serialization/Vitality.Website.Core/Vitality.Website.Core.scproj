@@ -31,7 +31,7 @@
     <SitecoreWebUrl>http://presales.vitality.co.uk/</SitecoreWebUrl>
     <InstallSitecoreConnector>True</InstallSitecoreConnector>
     <DisableFileDeployment>False</DisableFileDeployment>
-    <SitecoreDeployFolder>E:\Projects\Vitality-Website\Vitality.Website</SitecoreDeployFolder>
+    <SitecoreDeployFolder>C:\Projects\Vitality-Website\Vitality.Website</SitecoreDeployFolder>
     <SitecoreAccessGuid>b7e2695a-c408-44c9-b2d9-17ed9b71b5a2</SitecoreAccessGuid>
     <EnableValidations>False</EnableValidations>
     <ValidationSettingsFilePath>.\Vitality.Website.Core_Debug.xml</ValidationSettingsFilePath>

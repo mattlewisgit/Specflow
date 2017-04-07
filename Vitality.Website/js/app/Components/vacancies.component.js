@@ -8,18 +8,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
+var platform_browser_1 = require('@angular/platform-browser');
 var vacancies_service_1 = require('../Services/vacancies.service');
+var windowRef_1 = require('./windowRef');
 var VacanciesComponent = (function () {
-    function VacanciesComponent(router, vacanciesService) {
-        this.router = router;
+    function VacanciesComponent(vacanciesService, document, winRef) {
         this.vacanciesService = vacanciesService;
-        this.title = 'Latest Vacancies';
-        this.allLocations = "All locations"; // all job locations dropdown value
+        this.document = document;
+        this.winRef = winRef;
     }
     VacanciesComponent.prototype.ngOnInit = function () {
         this.getVacancies();
+        this.path = this.document.location.pathname + "/";
+        this.headline = this.winRef.nativeWindow.angularData.headline;
+        this.locationsLabel = this.winRef.nativeWindow.angularData.locationsDropdownLabel;
+        this.allLocations = this.winRef.nativeWindow.angularData.allLocationsText;
+        this.departmentsLabel = this.winRef.nativeWindow.angularData.departmentsDropdownLabel;
+        this.allDepartments = this.winRef.nativeWindow.angularData.allDepartmentsText;
+        this.findoutMore = this.winRef.nativeWindow.angularData.findoutMoreText;
+        this.noVacanciesFoundText = this.winRef.nativeWindow.angularData.noVacanciesFoundText;
+        this.vacancyLocation = this.winRef.nativeWindow.angularData.locationText;
+        this.vacancySalary = this.winRef.nativeWindow.angularData.salaryText;
+        this.vacancyClosesOn = this.winRef.nativeWindow.angularData.closesOnText;
+        console.log('url:' + this.winRef.nativeWindow.angularData.FeedSettings);
     };
     VacanciesComponent.prototype.getVacancies = function () {
         var _this = this;
@@ -28,8 +43,10 @@ var VacanciesComponent = (function () {
     VacanciesComponent.prototype.initialisePage = function (vac) {
         this.vacancies = vac.Vacancies;
         this.getLocations();
-        this.locationChanged(this.allLocations);
         this.location = this.allLocations;
+        this.getDepartments();
+        this.department = this.allDepartments;
+        this.filtersChanged(this.allLocations, this.allDepartments);
     };
     // populates locations array
     VacanciesComponent.prototype.getLocations = function () {
@@ -48,24 +65,45 @@ var VacanciesComponent = (function () {
             locs.push(vacancy.Joblocation);
         }
     };
-    /// filters vacancy list based on selected location
-    VacanciesComponent.prototype.locationChanged = function (loc) {
-        this.filteredVacancies = loc === this.allLocations ? this.vacancies : this.vacancies.filter(function (e) { return e.Joblocation == loc; });
-    };
     // used if we want to display job details on same page
     VacanciesComponent.prototype.onSelect = function (vacancy) {
         this.vacancy = vacancy;
     };
-    // used if we want to display job details on same page
-    VacanciesComponent.prototype.gotoDetail = function () {
-        this.router.navigate(['/vacancies', this.vacancy.Advertid]);
+    // populates departments array
+    VacanciesComponent.prototype.getDepartments = function () {
+        var _this = this;
+        var depts = new Array();
+        // add default department
+        depts.push(this.allDepartments);
+        // add departments from feed
+        this.vacancies.forEach(function (s) { return _this.addDepartment(s, depts); });
+        this.departments = depts;
+    };
+    // add department to array
+    VacanciesComponent.prototype.addDepartment = function (vacancy, depts) {
+        // check department not already added
+        if (depts.indexOf(vacancy.Jobdepartment) < 1) {
+            depts.push(vacancy.Jobdepartment);
+        }
+    };
+    /// filters vacancy list based on selected department
+    VacanciesComponent.prototype.filtersChanged = function (loc, dept) {
+        // reset filter
+        this.filteredVacancies = this.vacancies;
+        if (loc != this.allLocations) {
+            this.filteredVacancies = this.filteredVacancies.filter(function (p) { return p.Joblocation === loc; });
+        }
+        if (dept != this.allDepartments) {
+            this.filteredVacancies = this.filteredVacancies.filter(function (p) { return p.Jobdepartment === dept; });
+        }
     };
     VacanciesComponent = __decorate([
         core_1.Component({
-            selector: 'vacancies',
-            templateUrl: './app/Components/vacancyList.html'
-        }), 
-        __metadata('design:paramtypes', [router_1.Router, vacancies_service_1.VacanciesService])
+            selector: 'vacancy-list',
+            templateUrl: './js/app/Components/vacancyListTemplate.html'
+        }),
+        __param(1, core_1.Inject(platform_browser_1.DOCUMENT)), 
+        __metadata('design:paramtypes', [vacancies_service_1.VacanciesService, Object, windowRef_1.WindowRef])
     ], VacanciesComponent);
     return VacanciesComponent;
 }());
