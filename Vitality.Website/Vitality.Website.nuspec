@@ -13,6 +13,7 @@
   <files>
     <file src="App_Config\ConnectionStrings.config" target="App_Config" />
     <file src="App_Config\**\*.*" target="App_Config" />
+    <file src="App_Code\**\*.*" target="App_Code" />
     <file src="App_Data\license.xml" target="App_Data" />
     <file src="App_Data\CcsdFeed.json" target="App_Data" />
     <file src="App_Data\ExternalVacancyFeed.xml" target="App_Data" />
