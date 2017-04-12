@@ -21,7 +21,7 @@
         public void WhenIClickOnTheRichTextDialogLink(string DialogLink)
         {
             WebDriver
-                .WaitForElement(new JQuerySelector(".grid-col-8-12 a:contains('" + DialogLink + "')"))
+                .WaitForElement(new JQuerySelector(".grid-col-12-12 a:contains('" + DialogLink + "')"))
                 .Click();
         }
 
