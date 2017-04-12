@@ -12,7 +12,7 @@ templatekey: FeeMaxima
 ----version----
 language: en
 version: 1
-revision: a620cb36-8660-49a3-a7b6-954742605406
+revision: b139e713-440c-40a2-9b1f-01c7188dd849
 
 ----field----
 field: {05D50627-1153-47B0-98DB-CA191598144F}
@@ -116,9 +116,9 @@ Contact us at cons_helpline@vitality.co.uk
 field: {8C93FDF3-53B3-42D0-8869-BA2855274175}
 name: FeedSettings
 key: feedsettings
-content-length: 0
+content-length: 38
 
-
+{8D54A58D-B1AB-4CF4-8E5F-1A5BCDD57907}
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -146,25 +146,25 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a620cb36-8660-49a3-a7b6-954742605406
+b139e713-440c-40a2-9b1f-01c7188dd849
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170329T152912Z
+20170412T155037Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\admin
+sitecore\matt
 ----field----
 field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
 name: __Lock
 key: __lock
-content-length: 5
+content-length: 51
 
-<r />
+<r owner="sitecore\matt" date="20170412T155031Z" />

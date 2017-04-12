@@ -505,7 +505,6 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Feature Blocks\FeeMaxima presales.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
-      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Feature Blocks\Product Hero Examplee 2.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
