@@ -29,7 +29,7 @@ namespace Vitality.Website.App.Ccsd
 
             return string.IsNullOrEmpty(feedSetting.MockDataFile) ?
                 response.HandleResponse().Chapters :
-                response.HandleResponse(() => _mockDataHelper.GetMockData<ExternalCcsd>(new JsonDeserializer(),feedSetting.MockDataFile)).Chapters;
+                response.HandleResponse(() => _mockDataHelper.GetMockData<ExternalCcsd>(feedSetting.MockDataFile)).Chapters;
         }
     }
 }

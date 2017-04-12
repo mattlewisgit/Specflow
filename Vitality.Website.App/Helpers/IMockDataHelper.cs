@@ -5,5 +5,6 @@ namespace Vitality.Website.App.Helpers
     public interface IMockDataHelper
     {
         T GetMockData<T>(IDeserializer deserializer, string filePath);
+        T GetMockData<T>(string fileUrl) where T : new();
     }
 }
