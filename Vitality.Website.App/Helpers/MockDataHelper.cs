@@ -32,12 +32,16 @@ namespace Vitality.Website.App.Helpers
         /// Read data from a url , IE sitecore file
         /// </summary>
         /// <typeparam name="T"></typeparam>
+        /// <param name="contentType"></param>
         /// <param name="fileUrl"></param>
         /// <returns></returns>
-        public T GetMockData<T>(string fileUrl) where T : new()
+        public T GetMockData<T>(string contentType, string fileUrl) where T : new()
         {
             var restClient = new RestClient(fileUrl);
-            return restClient.Execute<T>(new RestRequest(Method.GET)).Data;
+            var request = new RestRequest(Method.GET);
+            request.OnBeforeDeserialization = resp => { resp.ContentType = contentType; };
+            var response= restClient.Execute<T>(request);
+            return response.Data;
         }
     }
 }
