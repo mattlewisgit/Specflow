@@ -110,6 +110,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CardsStacked.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\FAQLeader.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FAQLeader.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Feemaxima.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -196,6 +201,7 @@
     <Compile Include="Steps\CardsStackedSteps.cs" />
     <Compile Include="Steps\CommonSteps.cs" />
     <Compile Include="Steps\CookiesSteps.cs" />
+    <Compile Include="Steps\FAQLeaderSteps.cs" />
     <Compile Include="Steps\FeemaximaSteps.cs" />
     <Compile Include="Steps\HealthPresalesContentSteps.cs" />
     <Compile Include="Steps\LiteratureLibrarySteps.cs" />
@@ -235,6 +241,10 @@
     <None Include="Features\Cookies.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Cookies.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\FAQLeader.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FAQLeader.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Feemaxima.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
