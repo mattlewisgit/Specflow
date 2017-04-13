@@ -3909,6 +3909,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductPanel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductsComponent.cs" />
     <Compile Include="Areas\Presales\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Presales\Controllers\AdminController.cs" />
     <Compile Include="Areas\Presales\Controllers\ContentSearchController.cs" />
     <Compile Include="Areas\Presales\Controllers\VacancyController.cs" />
     <Compile Include="Areas\Presales\Controllers\FeeMaximaController.cs" />
