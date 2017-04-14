@@ -308,7 +308,6 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Log4Net.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
     <Content Include="_Heartbeat.html" />
-    <Content Include="App_Code\FormFieldWithToolTip.cshtml" />
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersLitLibraries.config" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>

@@ -1,9 +1,10 @@
 ﻿@using Sitecore.Forms.Mvc.Html
+@using Vitality.Website.Extensions
 @model Sitecore.Forms.Mvc.ViewModels.Fields.FileUploadField
 
-@using (Html.BeginField())
+@using (Html.BeginField(false))
 {
-    @FormFieldWithToolTip.Create(Model.Information, Html.TextBoxFor(m => m.Value, new {type = "file"}))
-    // Make ShowInformation to false as default behaviour is to render information below the field
-    Model.ShowInformation = false;
+    @Html.ToolTipLabelFor(Html.BootstrapLabelFor(x => Model.Value, Model.Title), Model.Information)
+    @Html.TextBoxFor(m => m.Value, new { type = "file" })
+    @Html.BootstrapValidationMessageFor(x => Model.Value)
 }
