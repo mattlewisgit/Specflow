@@ -10,11 +10,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Vitality.Website.SC</RootNamespace>
     <AssemblyName>Vitality.Website.SC</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -46,63 +47,48 @@
     <CodeAnalysisRuleSet>Vitality.Website.SC.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\HtmlAgilityPack.dll</HintPath>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
-    <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Lucene.Net.dll</HintPath>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\packages\Lucene.Net.3.0.3\lib\NET40\Lucene.Net.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Analytics, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Analytics.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Sitecore.Analytics">
+      <HintPath>..\packages\Sitecore.Analytics.8.2.161221\lib\NET452\Sitecore.Analytics.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Client, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Client.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Sitecore.Client">
+      <HintPath>..\packages\Sitecore.Client.8.2.161221\lib\NET452\Sitecore.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.ContentSearch.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Sitecore.ContentSearch">
+      <HintPath>..\packages\Sitecore.ContentSearch.8.2.161221\lib\NET452\Sitecore.ContentSearch.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Forms.Core">
       <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.Forms.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.ItemWebApi, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.ItemWebApi.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Sitecore.ItemWebApi">
+      <HintPath>..\packages\Sitecore.ItemWebApi.8.2.161221\lib\NET452\Sitecore.ItemWebApi.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Kernel, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Kernel.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\packages\Sitecore.Kernel.8.2.161221\lib\NET452\Sitecore.Kernel.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Logging, Version=1.2.0.30715, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Logging.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Sitecore.Logging">
+      <HintPath>..\packages\Sitecore.Logging.8.2.161221\lib\NET452\Sitecore.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Mvc.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="sitecore.nexus, Version=1.0.0.4404, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\sitecore.nexus.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Sitecore.Mvc">
+      <HintPath>..\packages\Sitecore.Mvc.8.2.161221\lib\NET452\Sitecore.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Speak.Applications">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Speak.Applications.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Speak.Applications.8.2.161221\lib\NET452\Sitecore.Speak.Applications.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Speak.Client, Version=2.0.812.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Speak.Client.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Sitecore.Speak.Client">
+      <HintPath>..\packages\Sitecore.Speak.Client.8.2.161221\lib\NET452\Sitecore.Speak.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Web, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Web.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Sitecore.Web">
+      <HintPath>..\packages\Sitecore.Web.8.2.161221\lib\NET452\Sitecore.Web.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.WFFM.Abstractions">
       <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.Abstractions.dll</HintPath>

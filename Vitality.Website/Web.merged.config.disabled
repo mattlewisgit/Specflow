@@ -1,8 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
 <configuration>
   <configSections>
     <section name="sitecore" type="Sitecore.Configuration.ConfigReader, Sitecore.Kernel" />
     <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, Sitecore.Logging" />
+    <section name="packageInstallation" type="Sitecore.Ship.Infrastructure.Configuration.PackageInstallationConfiguration, Sitecore.Ship.Infrastructure" />
+    <section name="nancyFx" type="Nancy.Hosting.Aspnet.NancyFxSection" />
+    <sectionGroup name="nwebsec">
+      <!-- For information on how to configure NWebsec please visit: https://docs.nwebsec.com/ -->
+      <section name="httpHeaderSecurityModule" type="NWebsec.Modules.Configuration.HttpHeaderSecurityConfigurationSection, NWebsec, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3613da5f958908a1" requirePermission="false" />
+    </sectionGroup>
   </configSections>
   <connectionStrings configSource="App_Config\ConnectionStrings.config" />
   <appSettings>
@@ -11,12 +17,27 @@
     <add key="DictionaryFolder" value="/sitecore/shell/controls/rich text editor/Dictionaries/" />
     <add key="Lucene.Net.FSDirectory.class" value="Sitecore.Search.FSDirectory, Sitecore.Kernel" />
     <add key="PageInspector:ServerCodeMappingSupport" value="Disabled" />
+    <add key="CALL_PRO_API_URL" value="https://vitality.callprocrm.com/907350/api.php" />
+    <add key="CALL_PRO_HASH_CODE" value="9a646ec5a761222717e36353c4cabcd4" />
+    <!-- UTM cookie -->
+    <add key="UtmCookieName" value="VitalityUtm" />
+    <add key="UtmCookieSource" value="utm_source" />
+    <add key="UtmCookieMedium" value="utm_medium" />
+    <add key="UtmCookieCampaign" value="utm_campaign" />
+    <add key="UtmCookieTerm" value="utm_term" />
+    <add key="UtmCookieContent" value="utm_content" />
+    <add key="UtmCookieReferrer" value="refURL" />
   </appSettings>
   <sitecore configSource="App_Config\Sitecore.config" />
   <!-- SYSTEM.WEBSERVER
        This section is a ASP.NET configuration section when running in Integrated Mode on IIS7.
   -->
+  <!---->
   <system.webServer>
+    <staticContent>
+      <clientCache cacheControlMode="UseMaxAge" cacheControlMaxAge="10.00:00:00" />
+    </staticContent>
+    <urlCompression doStaticCompression="true" doDynamicCompression="true" dynamicCompressionBeforeCache="false" />
     <modules runAllManagedModulesForAllRequests="true">
       <remove name="WebDAVModule" />
       <add type="Sitecore.DependencyInjection.SitecorePerRequestScopeModule, Sitecore.Kernel" name="SitecorePerRequestScopeModule" />
@@ -33,6 +54,7 @@
       <add type="Sitecore.Web.XFrameOptionsHeaderModule, Sitecore.Kernel" name="SitecoreXFrameOptionsHeaderModule" />
       <add name="SitecoreAntiCSRF" type="Sitecore.Security.AntiCsrf.SitecoreAntiCsrfModule, Sitecore.Security.AntiCsrf" />
       <add type="Sitecore.Analytics.RobotDetection.Media.MediaRequestSessionModule, Sitecore.Analytics.RobotDetection" name="MediaRequestSessionModule" />
+      <add name="NWebsecHttpHeaderSecurityModule" type="NWebsec.Modules.HttpHeaderSecurityModule, NWebsec, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3613da5f958908a1" />
     </modules>
     <handlers>
       <add name="WebDAVRoot" path="*" verb="OPTIONS,PROPFIND" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" resourceType="Unspecified" preCondition="classicMode,runtimeVersionv4.0,bitness32" />
@@ -40,7 +62,7 @@
       <add verb="*" path="sitecore_webDAV.ashx" type="Sitecore.Resources.Media.WebDAVMediaRequestHandler, Sitecore.Kernel" name="Sitecore.WebDAVMediaRequestHandler" />
       <add verb="*" path="sitecore_media.ashx" type="Sitecore.Resources.Media.MediaRequestHandler, Sitecore.Kernel" name="Sitecore.MediaRequestHandler" />
       <add verb="*" path="sitecore_xaml.ashx" type="Sitecore.Web.UI.XamlSharp.Xaml.XamlPageHandlerFactory, Sitecore.Kernel" name="Sitecore.XamlPageRequestHandler" />
-      <add verb="*" path="sitecore_icon.ashx" type="Sitecore.Resources.IconRequestHandler, Sitecore.Kernel" name="Sitecore.IconRequestHandler" />
+      <add name="Sitecore.Support.IconRequestHandler" verb="*" path="sitecore_icon.ashx" type="Sitecore.Support.Resources.IconRequestHandler, Sitecore.Support.136135" />
       <add verb="*" path="sitecore_temp.ashx" type="Sitecore.Resources.TempRequestHandler, Sitecore.Kernel" name="Sitecore.TempRequestHandler" />
       <add verb="*" path="sitecore_feed.ashx" type="Sitecore.Shell.Feeds.FeedRequestHandler, Sitecore.Kernel" name="Sitecore.FeedRequestHandler" />
       <add verb="*" path="sitecore_handlers.ashx" type="Sitecore.Web.CustomHandlerFactory, Sitecore.Kernel" name="Sitecore.GenericHandler" />
@@ -57,18 +79,74 @@
       <add verb="*" name="Sitecore.SpeakClassic32" path="sitecore_speak.ashx" modules="IsapiModule" scriptProcessor="%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_isapi.dll" resourceType="Unspecified" preCondition="classicMode,runtimeVersionv4.0,bitness32" />
       <add verb="*" path="sitecore_speak.ashx" type="Sitecore.Resources.Scripts.ScriptHandler, Sitecore.Speak.Client" name="Sitecore.Speak" />
       <add verb="*" path="sitecore_expeditor_speak_request.ashx" type="Sitecore.ExperienceEditor.Speak.Server.RequestHandler, Sitecore.ExperienceEditor.Speak" name="Sitecore.ExperienceEditor.Speak" />
-    <remove name="ExtensionlessUrlHandler-Integrated-4.0" /><remove name="OPTIONSVerbHandler" /><remove name="TRACEVerbHandler" /><add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" /></handlers>
+      <remove name="Nancy" />
+      <add name="Nancy" verb="*" type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" path="/services/*" />
+      <remove name="ExtensionlessUrlHandler-Integrated-4.0" />
+      <remove name="OPTIONSVerbHandler" />
+      <remove name="TRACEVerbHandler" />
+      <add name="ExtensionlessUrlHandler-Integrated-4.0" path="*." verb="*" type="System.Web.Handlers.TransferRequestHandler" preCondition="integratedMode,runtimeVersionv4.0" />
+    </handlers>
     <validation validateIntegratedModeConfiguration="false" />
     <security>
       <requestFiltering>
         <requestLimits maxAllowedContentLength="524288000" />
+        <hiddenSegments>
+          <add segment="NWebsecConfig" />
+        </hiddenSegments>
       </requestFiltering>
     </security>
     <httpProtocol>
       <customHeaders>
         <remove name="X-Powered-By" />
+        <add name="X-Xss-Protection" value="1; mode=block" />
+        <remove name="Vary" />
+        <add name="Vary" value="Accept-Encoding" />
+        <clear />
       </customHeaders>
     </httpProtocol>
+    <rewrite>
+      <rules>
+        <clear />
+        <rule name="Add www" enabled="false" stopProcessing="true">
+          <match url="^(.*)$" />
+          <conditions logicalGrouping="MatchAll" trackAllCaptures="true">
+            <add input="{URL}" pattern="heartbeat.html" negate="true" />
+            <add input="{HTTP_HOST}" pattern="^(www\.)(.*)$" negate="true" />
+            <add input="{HTTP_HOST}" pattern="adviser.vitality.co.uk" negate="true" />
+            <add input="{HTTP_X_Requested_With}" pattern="^XMLHttpRequest$" negate="true" />
+          </conditions>
+          <action type="Redirect" url="http://www.{HTTP_HOST}/{R:0}" />
+        </rule>
+        <rule name="Lowercase" enabled="false" stopProcessing="true">
+          <match url="[A-Z]" ignoreCase="false" />
+          <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
+            <add input="{REQUEST_FILENAME}" pattern="TdsService.asmx" negate="true" />
+            <add input="{HTTP_X_Requested_With}" pattern="^XMLHttpRequest$" negate="true" />
+            <add input="{URL}" pattern="/sitecore" negate="true" />
+            <add input="{URL}" pattern="/services/package/install" negate="true" />
+          </conditions>
+          <action type="Redirect" url="{ToLower:{URL}}" />
+        </rule>
+        <rule name="Add trailing slash" enabled="false" stopProcessing="true">
+          <match url="(.*[^/])$" />
+          <conditions logicalGrouping="MatchAll" trackAllCaptures="false">
+            <add input="{REQUEST_FILENAME}" matchType="IsDirectory" negate="true" />
+            <add input="{REQUEST_FILENAME}" matchType="IsFile" negate="true" />
+            <add input="{REQUEST_FILENAME}" matchType="Pattern" pattern="(.*?)\.[a-zA-Z]+$" ignoreCase="true" negate="true" />
+            <add input="{HTTP_X_Requested_With}" pattern="^XMLHttpRequest$" negate="true" />
+          </conditions>
+          <action type="Redirect" url="{R:1}/" />
+        </rule>
+        <rule name="Hide folders" enabled="false">
+          <match url="(.*)$" />
+          <conditions>
+            <add input="{REMOTE_ADDR}" pattern="127.0.0.1" negate="true" />
+            <add input="{URL}" matchType="Pattern" pattern="^\/(App_Browsers|App_Config|App_Data|Areas\/|Artifacts\/|bin|layouts|sitecore\/|temp|upload|Views\/|xsl\/)" ignoreCase="true" negate="false" />
+          </conditions>
+          <action type="Rewrite" url="go-to-four-o-four" />
+        </rule>
+      </rules>
+    </rewrite>
   </system.webServer>
   <!--
     For a description of web.config changes for .NET 4.5 see http://go.microsoft.com/fwlink/?LinkId=235367.
@@ -83,6 +161,12 @@
          Sitecore requires this setting to be set to "false" for Sitecore client to work and it shouldn't be changed.
          You can however set ValidateRequest attribute in the @Page directive to "true" for your layout .aspx files. 
     -->
+    <!---->
+    <machineKey validationKey="975254A138557E02B8C5F6A6DD48F618C77D55B1D1C43EBF18806DDF8C47CD667B007F54DE073B88581934153654485561BF788614F445A64C59AAD7F6D7AF53" decryptionKey="0CFD1A488F48313B4FA64F96C15109195245449ADA8FF38CEB22441F26CF3640" validation="SHA1" decryption="AES" />
+    <!-- If requestValidationMode attribute of httRuntime node is set to 2.0,
+         Sitecore requires this setting to be set to "false" for Sitecore client to work and it shouldn't be changed.
+         You can however set ValidateRequest attribute in the @Page directive to "true" for your layout .aspx files.
+    -->
     <pages validateRequest="false">
       <controls>
         <add tagPrefix="sc" namespace="Sitecore.Web.UI.WebControls" assembly="Sitecore.Kernel" />
@@ -95,8 +179,6 @@
         <add namespace="System.Web.Mvc.Ajax" />
         <add namespace="System.Web.Mvc.Html" />
         <add namespace="System.Web.Routing" />
-        <add namespace="System.Linq" />
-        <add namespace="System.Collections.Generic" />
       </namespaces>
     </pages>
     <membership defaultProvider="sitecore" hashAlgorithmType="SHA1">
@@ -135,7 +217,7 @@
           false at all other times. For more information, refer to the documentation about
           debugging ASP .NET files.
     -->
-    <compilation defaultLanguage="c#" debug="false" targetFramework="4.5.2">
+    <compilation defaultLanguage="c#" targetFramework="4.5.2">
       <assemblies>
         <add assembly="System.Web.Abstractions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
         <add assembly="System.Web.Routing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35" />
@@ -148,6 +230,7 @@
         <add assembly="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral,PublicKeyToken=31BF3856AD364E35" />
         <add assembly="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral,PublicKeyToken=31BF3856AD364E35" />
         <add assembly="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral,PublicKeyToken=31BF3856AD364E35" />
+        <add assembly="System.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
       </assemblies>
     </compilation>
     <!--  CUSTOM ERROR MESSAGES
@@ -160,7 +243,9 @@
           on the local Web server. This setting is recommended for security purposes, so
           that you do not display application detail information to remote clients.
     -->
-    <customErrors mode="RemoteOnly" />
+    <customErrors defaultRedirect="error.html?" redirectMode="ResponseRedirect">
+      <error statusCode="500" redirect="error.html?" />
+    </customErrors>
     <!--  AUTHENTICATION
           This section sets the authentication policies of the application. Possible modes are "Windows", "Forms",
           "Passport" and "None"
@@ -192,7 +277,8 @@
     <!--  GLOBALIZATION
           This section sets the globalization settings of the application.
     -->
-    <globalization requestEncoding="utf-8" responseEncoding="utf-8" />
+    <!---->
+    <globalization requestEncoding="utf-8" responseEncoding="utf-8" culture="en-GB" uiCulture="en-GB" />
     <!--
       httpRuntime Attributes:
         executionTimeout="[seconds]" - time in seconds before request is automatically timed out
@@ -206,9 +292,17 @@
         Media.MaxSizeInDatabase should always be less than maxRequestLength.
       -->
     <httpRuntime targetFramework="4.5.2" maxRequestLength="512000" executionTimeout="3600" enableKernelOutputCache="false" relaxedUrlToFileSystemMapping="true" requestValidationMode="4.0" enableVersionHeader="false" />
+    <httpHandlers>
+      <add type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" verb="*" path="*" />
+      <add type="Nancy.Hosting.Aspnet.NancyHttpRequestHandler" verb="*" path="/services/*" />
+    </httpHandlers>
   </system.web>
   <runtime>
     <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="Antlr3.Runtime" publicKeyToken="eb42632606e9261f" />
+        <bindingRedirect oldVersion="0.0.0.0-3.4.1.9004" newVersion="3.5.0.2" />
+      </dependentAssembly>
       <dependentAssembly>
         <assemblyIdentity name="Lucene.Net" publicKeyToken="85089178b9ac3181" />
         <bindingRedirect oldVersion="0.0.0.0-2.9.4.0" newVersion="3.0.3.0" />
@@ -218,23 +312,23 @@
         <bindingRedirect oldVersion="0.0.0.0-6.0.0.0" newVersion="6.0.0.0" />
       </dependentAssembly>
       <dependentAssembly>
+        <assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35" xmlns="urn:schemas-microsoft-com:asm.v1" />
+        <bindingRedirect oldVersion="1.0.0.0-5.2.3.0" newVersion="5.2.3.0" xmlns="urn:schemas-microsoft-com:asm.v1" />
+      </dependentAssembly>
+      <dependentAssembly>
         <assemblyIdentity name="System.Web.WebPages.Razor" publicKeyToken="31bf3856ad364e35" xmlns="urn:schemas-microsoft-com:asm.v1" />
         <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" xmlns="urn:schemas-microsoft-com:asm.v1" />
       </dependentAssembly>
       <dependentAssembly>
         <assemblyIdentity name="System.Web.Http" publicKeyToken="31bf3856ad364e35" xmlns="urn:schemas-microsoft-com:asm.v1" />
-        <bindingRedirect oldVersion="0.0.0.0-5.2.3.0" newVersion="5.2.3.0" xmlns="urn:schemas-microsoft-com:asm.v1" />
+        <bindingRedirect oldVersion="1.0.0.0-5.2.3.0" newVersion="5.2.3.0" xmlns="urn:schemas-microsoft-com:asm.v1" />
       </dependentAssembly>
       <dependentAssembly>
         <assemblyIdentity name="System.Web.Http.WebHost" publicKeyToken="31bf3856ad364e35" xmlns="urn:schemas-microsoft-com:asm.v1" />
-        <bindingRedirect oldVersion="0.0.0.0-5.2.3.0" newVersion="5.2.3.0" xmlns="urn:schemas-microsoft-com:asm.v1" />
+        <bindingRedirect oldVersion="1.0.0.0-5.2.3.0" newVersion="5.2.3.0" xmlns="urn:schemas-microsoft-com:asm.v1" />
       </dependentAssembly>
       <dependentAssembly>
         <assemblyIdentity name="System.Net.Http.Formatting" publicKeyToken="31bf3856ad364e35" xmlns="urn:schemas-microsoft-com:asm.v1" />
-        <bindingRedirect oldVersion="0.0.0.0-5.2.3.0" newVersion="5.2.3.0" xmlns="urn:schemas-microsoft-com:asm.v1" />
-      </dependentAssembly>
-      <dependentAssembly>
-        <assemblyIdentity name="System.Web.Http.Cors" publicKeyToken="31bf3856ad364e35" xmlns="urn:schemas-microsoft-com:asm.v1" />
         <bindingRedirect oldVersion="1.0.0.0-5.2.3.0" newVersion="5.2.3.0" xmlns="urn:schemas-microsoft-com:asm.v1" />
       </dependentAssembly>
       <dependentAssembly>
@@ -242,16 +336,12 @@
         <codeBase version="3.2.0.0" href="bin\Social\Ninject.dll" xmlns="urn:schemas-microsoft-com:asm.v1" />
       </dependentAssembly>
       <dependentAssembly>
-        <assemblyIdentity name="System.Web.Helpers" publicKeyToken="31bf3856ad364e35" />
-        <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+        <assemblyIdentity name="System.Web.WebPages" publicKeyToken="31bf3856ad364e35" xmlns="urn:schemas-microsoft-com:asm.v1" />
+        <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" xmlns="urn:schemas-microsoft-com:asm.v1" />
       </dependentAssembly>
       <dependentAssembly>
-        <assemblyIdentity name="System.Web.WebPages" publicKeyToken="31bf3856ad364e35" />
-        <bindingRedirect oldVersion="0.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
-      </dependentAssembly>
-      <dependentAssembly>
-        <assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35" />
-        <bindingRedirect oldVersion="0.0.0.0-5.2.3.0" newVersion="5.2.3.0" />
+        <assemblyIdentity name="System.Web.Http.Cors" publicKeyToken="31bf3856ad364e35" xmlns="urn:schemas-microsoft-com:asm.v1" />
+        <bindingRedirect oldVersion="1.0.0.0-5.2.3.0" newVersion="5.2.3.0" xmlns="urn:schemas-microsoft-com:asm.v1" />
       </dependentAssembly>
     </assemblyBinding>
   </runtime>
@@ -264,4 +354,126 @@
       </basicHttpBinding>
     </bindings>
   </system.serviceModel>
+  <packageInstallation enabled="true" allowRemote="false" allowPackageStreaming="false" recordInstallationHistory="false" muteAuthorisationFailureLogging="false" />
+  <nancyFx>
+    <bootstrapper type="Sitecore.Ship.DefaultBootstrapper, Sitecore.Ship" assembly="Sitecore.Ship" />
+  </nancyFx>
+  <nwebsec>
+    <httpHeaderSecurityModule xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://nwebsec.com/HttpHeaderSecurityModuleConfig.xsd">
+      <redirectValidation enabled="true">
+        <add allowedDestination="http://www.nwebsec.com/" />
+        <add allowedDestination="https://www.vitality.co.uk" />
+        <add allowedDestination="http://www.vitality.co.uk" />
+        <add allowedDestination="http://www.pruprotect.co.uk/" />
+        <add allowedDestination="https://www.pruprotect.co.uk/" />
+        <add allowedDestination="http://insights.vitality.co.uk/" />
+        <add allowedDestination="https://insights.vitality.co.uk/" />
+        <add allowedDestination="http://www.vitalitylife.co.uk/" />
+        <add allowedDestination="https://www.vitalitylife.co.uk/" />
+        <add allowedDestination="http://magazine.vitality.co.uk/" />
+        <add allowedDestination="https://magazine.vitality.co.uk/" />
+        <add allowedDestination="http://vitality.curve-interactive.com/" />
+        <add allowedDestination="https://vitality.curve-interactive.com/" />
+        <add allowedDestination="http://partnerfinder.parseapp.com/" />
+        <add allowedDestination="https://partnerfinder.parseapp.com/" />
+        <add allowedDestination="https://www.on2pp4.co.uk" />
+        <add allowedDestination="http://www.on2pp4.co.uk" />
+        <add allowedDestination="https://www.staging.vitality.co.uk" />
+        <add allowedDestination="http://www.staging.vitality.co.uk" />
+        <add allowedDestination="http://adviser.vitality.co.uk/" />
+        <add allowedDestination="https://adviser.vitality.co.uk/" />
+        <add allowedDestination="http://login.vitality.co.uk/" />
+        <add allowedDestination="https://login.vitality.co.uk/" />
+        <add allowedDestination="http://join.vitality.co.uk/" />
+        <add allowedDestination="https://join.vitality.co.uk/" />
+        <add allowedDestination="http://presales.vitality.co.uk/" />
+        <add allowedDestination="https://partnerfinder.thoughtfaqtory.com/" />
+        <add allowedDestination="https://vitality.csod.com/" />
+      </redirectValidation>
+      <securityHttpHeaders>
+        <x-Frame-Options policy="SameOrigin" />
+        <strict-Transport-Security max-age="365" includeSubdomains="true" httpsOnly="false" preload="true" />
+        <x-Content-Type-Options enabled="true" />
+        <x-Download-Options enabled="false" />
+        <x-XSS-Protection policy="FilterEnabled" blockMode="true" />
+        <content-Security-Policy enabled="true">
+          <upgrade-insecure-requests enabled="false" />
+          <script-src self="true" unsafeEval="true" unsafeInline="true">
+            <add source="*.cloudfront.net" />
+            <add source="cdnjs.cloudflare.com" />
+            <add source="cdn.jsdelivr.net" />
+            <add source="cdn.vitality.co.uk" />
+            <add source="metrics.responsetap.com" />
+            <add source="s.idio.co" />
+            <add source="js.idio.co" />
+            <add source="s.ytimg.com" />
+            <add source="script.crazyegg.com" />
+            <add source="static-cdn.responsetap.com" />
+            <add source="static-ssl.responsetap.com" />
+            <add source="tagmanager.google.com" />
+            <add source="www.google-analytics.com" />
+            <add source="www.googletagmanager.com" />
+            <add source="www.youtube.com" />
+            <add source="www.on2pp4.co.uk" />
+            <add source="s3.amazonaws.com" />
+          </script-src>
+          <style-src self="true" unsafeInline="true">
+            <add source="cdnjs.cloudflare.com" />
+            <add source="cdn.jsdelivr.net" />
+            <add source="cdn.vitality.co.uk" />
+            <add source="fonts.googleapis.com" />
+            <add source="fonts.gstatic.com" />
+            <add source="tagmanager.google.com" />
+          </style-src>
+          <img-src self="true">
+            <add source="a.idio.co" />
+            <add source="bppmdmxgsg.execute-api.eu-west-1.amazonaws.com" />
+            <add source="cdn.vitality.co.uk" />
+            <add source="data:" />
+            <add source="google.com" />
+            <add source="gtrk.s3.amazonaws.com" />
+            <add source="cm.g.doubleclick.net" />
+            <add source="stats.g.doubleclick.net" />
+            <add source="www.google-analytics.com" />
+            <add source="www.google.co.uk" />
+            <add source="www.google.com" />
+            <add source="www.vitality.co.uk" />
+            <add source="adviser.vitality.co.uk" />
+          </img-src>
+          <object-src self="true">
+            <add source="cdn.vitality.co.uk" />
+          </object-src>
+          <media-src self="true">
+            <add source="cdn.vitality.co.uk" />
+          </media-src>
+          <frame-src self="true">
+            <add source="*.fls.doubleclick.net" />
+            <add source="sdn.sitecore.net" />
+            <add source="vitality.co.uk" />
+            <add source="www.youtube.com" />
+            <add source="https://www.youtube.com" />
+            <add source="survey.vitalityreferral.co.uk" />
+            <add source="docs.google.com" />
+          </frame-src>
+          <font-src self="true">
+            <add source="cdn.vitality.co.uk" />
+            <add source="data:" />
+            <add source="fonts.googleapis.com" />
+            <add source="fonts.gstatic.com" />
+          </font-src>
+          <frame-ancestors self="true">
+            <add source="https://vitality-portal.1stmd.com" />
+            <add source="vitality.co.uk" />
+          </frame-ancestors>
+          <!--<connect-src self="true">
+            <add source="gong-eb.qubit.com" />
+            <add source="lookup.qubit.com" />
+            <add source="pong.qubitproducts.com" />
+            <add source="prong.qubit.com" />
+          </connect-src>-->
+          <report-uri enableBuiltinHandler="true" />
+        </content-Security-Policy>
+      </securityHttpHeaders>
+    </httpHeaderSecurityModule>
+  </nwebsec>
 </configuration>

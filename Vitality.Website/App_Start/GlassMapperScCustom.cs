@@ -1,39 +1,56 @@
+#region GlassMapperScCustom generated code
+using Glass.Mapper.Configuration;
+using Glass.Mapper.IoC;
+using Glass.Mapper.Maps;
+using Glass.Mapper.Sc.IoC;
+using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
+
 namespace Vitality.Website.App_Start
 {
-    using Areas.Presales.PageTemplates;
-    using Glass.Mapper.Configuration;
-    using Glass.Mapper.IoC;
-    using Glass.Mapper.Maps;
-    using Glass.Mapper.Sc;
-    using Glass.Mapper.Sc.IoC;
-    using Areas.Presales.SettingsTemplates;
-    using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
-
     public static  class GlassMapperScCustom
     {
-        public static IDependencyResolver CreateResolver()
-        {
-            return new DependencyResolver(new Config());
-        }
+		public static IDependencyResolver CreateResolver(){
+			var config = new Glass.Mapper.Sc.Config();
 
-        public static IConfigurationLoader[] GlassLoaders()
-        {
+			var dependencyResolver = new DependencyResolver(config);
+			// add any changes to the standard resolver here
+			return dependencyResolver;
+		}
 
-            // Add fluent configuration loaders here.
-            // If you are using Attribute Configuration or
-            // automapping /on-demand mapping, you don't need to do anything!
-            return new IConfigurationLoader[]{};
-        }
+		public static IConfigurationLoader[] GlassLoaders(){			
+			
+			/* USE THIS AREA TO ADD FLUENT CONFIGURATION LOADERS
+             * 
+             * If you are using Attribute Configuration or automapping/on-demand mapping you don't need to do anything!
+             * 
+             */
 
-        public static void PostLoad()
+			return new IConfigurationLoader[]{};
+		}
+		public static void PostLoad(){
+			//Remove the comments to activate CodeFist
+			/* CODE FIRST START
+            var dbs = Sitecore.Configuration.Factory.GetDatabases();
+            foreach (var db in dbs)
+            {
+                var provider = db.GetDataProviders().FirstOrDefault(x => x is GlassDataProvider) as GlassDataProvider;
+                if (provider != null)
+                {
+                    using (new SecurityDisabler())
+                    {
+                        provider.Initialise(db);
+                    }
+                }
+            }
+             * CODE FIRST END
+             */
+		}
+		public static void AddMaps(IConfigFactory<IGlassMap> mapsConfigFactory)
         {
-            // Method intentionally left empty.
-        }
-
-        public static void AddMaps(IConfigFactory<IGlassMap> mapsConfigFactory)
-        {
+			// Add maps here
             mapsConfigFactory.Add(() => new BasePageConfig());
             mapsConfigFactory.Add(() => new SiteSettingsConfig());
         }
     }
 }
+#endregion

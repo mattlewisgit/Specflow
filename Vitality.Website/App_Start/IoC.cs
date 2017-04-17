@@ -1,3 +1,4 @@
+using Sitecore.DependencyInjection;
 using Vitality.Website.App.Helpers;
 using Vitality.Website.App.Vacancies;
 using Vitality.Website.App.Vacancies.Interfaces;
@@ -21,89 +22,33 @@ namespace Vitality.Website.App_Start
     using System.Web.Http;
     using System.Web.Mvc;
     using IDependencyResolver = System.Web.Mvc.IDependencyResolver;
+    using Microsoft.Extensions.DependencyInjection;
 
-    public class IoC
+    public class IoC : IServicesConfigurator
     {
-        private static Container container;
-
-        public void Process(PipelineArgs args)
+        public void Configure(IServiceCollection serviceCollection)
         {
-            container = new Container();
+            var serviceprovider = serviceCollection.BuildServiceProvider();
 
-            RegisterDepenencies();
+            serviceCollection.AddTransient<ISitecoreContext>(provider => SitecoreContext.GetFromHttpContext());
+            serviceCollection.AddTransient<IMediator, Mediator>();
+            serviceCollection.AddTransient<IVacancyService, VacancyService>();
+            //var assemblies = new[] { Assembly.Load("Vitality.Website") };
 
-            DependencyResolver.SetResolver(new SimpleInjectorSitecoreDependencyResolver(new SimpleInjectorDependencyResolver(container)));
+            //container.Register<IMediator, Mediator>();
+            //container.Register<SingleInstanceFactory>(() => type => container.GetInstance(type));
+            //container.Register<MultiInstanceFactory>(() => type => container.GetAllInstances(type));
+            //container.Register(typeof(IRequestHandler<,>), assemblies);
+            //container.Register(typeof(INotificationHandler<>), assemblies);
+            //container.RegisterPerWebRequest<ISitecoreContext>(() => SitecoreContext.GetFromHttpContext());
+            //container.RegisterMvcControllers(assemblies);
+            //RegisterWebApiControllers(assemblies);
+            //container.Register<Func<string, IProviderSearchContext>>(() => index => ContentSearchManager.GetIndex(index).CreateSearchContext(), new WebApiRequestLifestyle());
+            //container.Register<ICcsdService, CcsdService>();
+            //container.Register<IMockDataHelper, MockDataHelper>();
+            //container.Register<IVacancyService, VacancyService>();
 
-            container.Verify();
-
-            GlobalConfiguration.Configuration.DependencyResolver = new SimpleInjectorWebApiDependencyResolver(container);
-        }
-
-        private static void RegisterDepenencies()
-        {
-            var assemblies = new [] { Assembly.Load("Vitality.Website") };
-
-            container.Register<IMediator, Mediator>();
-            container.Register<SingleInstanceFactory>(() => type => container.GetInstance(type));
-            container.Register<MultiInstanceFactory>(() => type => container.GetAllInstances(type));
-            container.Register(typeof(IRequestHandler<,>), assemblies);
-            container.Register(typeof(INotificationHandler<>), assemblies);
-            container.RegisterPerWebRequest<ISitecoreContext>(() => SitecoreContext.GetFromHttpContext());
-            container.RegisterMvcControllers(assemblies);
-            RegisterWebApiControllers(assemblies);
-            container.Register<Func<string, IProviderSearchContext>>(() => index => ContentSearchManager.GetIndex(index).CreateSearchContext(), new WebApiRequestLifestyle());
-            container.Register<ICcsdService, CcsdService>();
-            container.Register<IMockDataHelper, MockDataHelper>();
-            container.Register<IVacancyService, VacancyService>();
-        }
-
-        /// <remarks>
-        /// Unable to use container.RegisterWebApiControllers(GlobalConfiguration.Configuration, vitalityWebsite)
-        /// due to Sitecore Api Controllers being picked up which have multiple public constructors.
-        /// </remarks>
-        private static void RegisterWebApiControllers(IEnumerable<Assembly> assemblies)
-        {
-            foreach (var type in assemblies.SelectMany(assembly => assembly.DefinedTypes))
-            {
-                if (typeof(ApiController).IsAssignableFrom(type))
-                {
-                    Registration registration = Lifestyle.Transient.CreateRegistration(type, container);
-
-                    registration.SuppressDiagnosticWarning(
-                        DiagnosticType.DisposableTransientComponent,
-                        "Web API registers controllers for " + 
-                            "disposal when the request ends during the call to ApiController.ExecuteAsync.");
-
-                    container.AddRegistration(type, registration);
-                }
-            }
-        }
-
-        private class SimpleInjectorSitecoreDependencyResolver : IDependencyResolver
-        {
-            private readonly IDependencyResolver _innerDependencyResolver;
-
-            public SimpleInjectorSitecoreDependencyResolver(IDependencyResolver innerDependencyResolver)
-            {
-                _innerDependencyResolver = innerDependencyResolver;
-            }
-
-            public object GetService(Type serviceType)
-            {
-                try
-                {
-                    return _innerDependencyResolver.GetService(serviceType);
-                }
-                catch (Exception)
-                {
-                    return TypeHelper.CreateObject<IController>(serviceType);
-                }
-            }
-
-            public IEnumerable<object> GetServices(Type serviceType)
-            {
-                return _innerDependencyResolver.GetServices(serviceType);
-            }
+            serviceCollection.AddMvcControllers("Vitality.Website*");
         }
     }
 }
