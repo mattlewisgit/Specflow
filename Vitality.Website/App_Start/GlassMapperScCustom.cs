@@ -3,6 +3,8 @@ using Glass.Mapper.Configuration;
 using Glass.Mapper.IoC;
 using Glass.Mapper.Maps;
 using Glass.Mapper.Sc.IoC;
+using Vitality.Website.Areas.Presales.PageTemplates;
+using Vitality.Website.Areas.Presales.SettingsTemplates;
 using IDependencyResolver = Glass.Mapper.Sc.IoC.IDependencyResolver;
 
 namespace Vitality.Website.App_Start
