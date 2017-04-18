@@ -43,5 +43,25 @@ namespace Vitality.Website.Extensions
         {
             return new MvcHtmlString(string.Format(@"<{0}>{1}</{0}>", tag, headerText));
         }
+
+        public static MvcHtmlString ToolTipLabelFor(this HtmlHelper helper, MvcHtmlString renderedLabel,
+            string information)
+        {
+            if (string.IsNullOrEmpty(information))
+            {
+                return renderedLabel;
+            }
+            var renderedLabelString = renderedLabel.ToString();
+            // Get the index of label closing tag and insert tooltip
+            return
+                new MvcHtmlString(
+                    renderedLabelString.Insert(
+                        renderedLabelString.IndexOf("</label>", StringComparison.OrdinalIgnoreCase),
+                        string.Format(ToolTipHtml,information)));
+        }
+
+        private const string ToolTipHtml = " <span class=\"tool-tip-icon tool-tip-icon--inline\">" +
+                                           "<button type =\"button\" title=\"{0}\"></button>"
+                                           + "</span>";
     }
 }

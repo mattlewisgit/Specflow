@@ -3,9 +3,9 @@
 @using Vitality.Website.Extensions
 @model CheckboxListField
 
-@using (Html.BeginField())
+@using (Html.BeginField(false))
 {
-    @FormFieldWithToolTip.Create(Model.Information, Html.CheckBoxList(Html.NameFor(x => Model.Value).ToString(), Model.Items))
-    // Make ShowInformation to false as default behaviour is to render information below the field
-    Model.ShowInformation = false;
+    @Html.ToolTipLabelFor(Html.BootstrapLabelFor(x => Model.Value, Model.Title), Model.Information)
+    @Html.CheckBoxList(Html.NameFor(x => Model.Value).ToString(), Model.Items)
+    @Html.BootstrapValidationMessageFor(x => Model.Value)
 }
