@@ -31,22 +31,18 @@ namespace Vitality.Website.App_Start
             var serviceprovider = serviceCollection.BuildServiceProvider();
 
             serviceCollection.AddTransient<ISitecoreContext>(provider => SitecoreContext.GetFromHttpContext());
-            serviceCollection.AddTransient<IMediator, Mediator>();
+            
             serviceCollection.AddTransient<IVacancyService, VacancyService>();
-            //var assemblies = new[] { Assembly.Load("Vitality.Website") };
+            serviceCollection.AddTransient<ICcsdService, CcsdService>();
+            serviceCollection.AddTransient<IMockDataHelper, MockDataHelper>();
+            serviceCollection.AddTransient<IVacancyService, VacancyService>();
+            serviceCollection.AddMediatR();
 
-            //container.Register<IMediator, Mediator>();
-            //container.Register<SingleInstanceFactory>(() => type => container.GetInstance(type));
-            //container.Register<MultiInstanceFactory>(() => type => container.GetAllInstances(type));
-            //container.Register(typeof(IRequestHandler<,>), assemblies);
-            //container.Register(typeof(INotificationHandler<>), assemblies);
-            //container.RegisterPerWebRequest<ISitecoreContext>(() => SitecoreContext.GetFromHttpContext());
-            //container.RegisterMvcControllers(assemblies);
-            //RegisterWebApiControllers(assemblies);
+            serviceCollection.AddScoped<SingleInstanceFactory>(p => t => p.GetService(t));
+            serviceCollection.AddScoped<MultiInstanceFactory>(p => t => p.GetServices(t));
+            
             //container.Register<Func<string, IProviderSearchContext>>(() => index => ContentSearchManager.GetIndex(index).CreateSearchContext(), new WebApiRequestLifestyle());
-            //container.Register<ICcsdService, CcsdService>();
-            //container.Register<IMockDataHelper, MockDataHelper>();
-            //container.Register<IVacancyService, VacancyService>();
+
 
             serviceCollection.AddMvcControllers("Vitality.Website*");
         }
