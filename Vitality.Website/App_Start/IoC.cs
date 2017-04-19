@@ -23,20 +23,23 @@ namespace Vitality.Website.App_Start
     using System.Web.Mvc;
     using IDependencyResolver = System.Web.Mvc.IDependencyResolver;
     using Microsoft.Extensions.DependencyInjection;
+    
 
     public class IoC : IServicesConfigurator
     {
         public void Configure(IServiceCollection serviceCollection)
         {
+            var assemblies = new[] { Assembly.Load("Vitality.Website") };
+
             var serviceprovider = serviceCollection.BuildServiceProvider();
 
-            serviceCollection.AddTransient<ISitecoreContext>(provider => SitecoreContext.GetFromHttpContext());
+            serviceCollection.AddTransient(provider => SitecoreContext.GetFromHttpContext());
             
-            serviceCollection.AddTransient<IVacancyService, VacancyService>();
-            serviceCollection.AddTransient<ICcsdService, CcsdService>();
-            serviceCollection.AddTransient<IMockDataHelper, MockDataHelper>();
-            serviceCollection.AddTransient<IVacancyService, VacancyService>();
-            serviceCollection.AddMediatR();
+            serviceCollection.AddScoped<IVacancyService, VacancyService>();
+            serviceCollection.AddScoped<ICcsdService, CcsdService>();
+            serviceCollection.AddScoped<IMockDataHelper, MockDataHelper>();
+            serviceCollection.AddScoped<IVacancyService, VacancyService>();
+            serviceCollection.AddMediatR(assemblies);
 
             serviceCollection.AddScoped<SingleInstanceFactory>(p => t => p.GetService(t));
             serviceCollection.AddScoped<MultiInstanceFactory>(p => t => p.GetServices(t));
@@ -44,7 +47,7 @@ namespace Vitality.Website.App_Start
             //container.Register<Func<string, IProviderSearchContext>>(() => index => ContentSearchManager.GetIndex(index).CreateSearchContext(), new WebApiRequestLifestyle());
 
 
-            serviceCollection.AddMvcControllers("Vitality.Website*");
+            serviceCollection.AddMvcControllers(assemblies);
         }
     }
 }

@@ -20,11 +20,12 @@ namespace Vitality.Website.Areas.Presales.Controllers
         protected HttpResponseMessage GetResponse<TRequest, TResponse>(TRequest request, Predicate<TResponse> isValidResponse) where TRequest : IRequest<TResponse>
         {
             var response = this.mediator.Send(request);
-            if (isValidResponse(response))
+
+            if (isValidResponse(response.Result))
             {
                 return new HttpResponseMessage(HttpStatusCode.OK)
                 {
-                    Content = new ObjectContent<TResponse>(response, new JsonMediaTypeFormatter())
+                    Content = new ObjectContent<TResponse>(response.Result, new JsonMediaTypeFormatter())
                 };
             }
             return new HttpResponseMessage(HttpStatusCode.NotFound);
