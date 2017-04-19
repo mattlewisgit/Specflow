@@ -17,7 +17,6 @@ export class WindowRef {
         {
             newUrl = newUrl.replace("//", "/");
             newUrl = newUrl.split("/").slice(0, -1).join("/");
-            console.log('url is now');
         }
 
         return newUrl + "/";

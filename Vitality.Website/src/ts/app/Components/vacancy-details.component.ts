@@ -42,7 +42,17 @@ export class VacancyDetailsComponent implements OnInit  {
       this.feedId = this.winRef.nativeWindow.angularData.FeedSettings;
       this.vacanciesService.setFeedId(this.feedId);
 
-      this.vacanciesService.getVacancy(+this.advertId).then(v => this.vacancy = v);
-      
+      this.vacanciesService.getVacancy(+this.advertId).then(v => this.setVacancy(v));
+  }
+
+  setVacancy(vac:Vacancy) : void {
+      if (vac != null)
+      {
+          this.vacancy = vac;
+      }
+      else
+      {
+          this.winRef.nativeWindow.location = "/notfound";
+      }
   }
 }

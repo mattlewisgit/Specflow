@@ -34,7 +34,15 @@ var VacancyDetailsComponent = (function () {
         this.backToListingUrl = this.winRef.ensureTrailingSlash(this.document.location.pathname);
         this.feedId = this.winRef.nativeWindow.angularData.FeedSettings;
         this.vacanciesService.setFeedId(this.feedId);
-        this.vacanciesService.getVacancy(+this.advertId).then(function (v) { return _this.vacancy = v; });
+        this.vacanciesService.getVacancy(+this.advertId).then(function (v) { return _this.setVacancy(v); });
+    };
+    VacancyDetailsComponent.prototype.setVacancy = function (vac) {
+        if (vac != null) {
+            this.vacancy = vac;
+        }
+        else {
+            this.winRef.nativeWindow.location = "/notfound";
+        }
     };
     VacancyDetailsComponent = __decorate([
         core_1.Component({
