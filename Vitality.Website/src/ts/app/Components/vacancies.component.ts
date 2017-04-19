@@ -53,7 +53,7 @@ export class VacanciesComponent implements OnInit  {
         this.vacanciesService.setFeedId(this.feedId);
 
         this.getVacancies();
-        this.path = this.document.location.pathname + "/";
+        this.path = this.winRef.ensureTrailingSlash(this.document.location.pathname);
 	}
 
 	getVacancies(): void {

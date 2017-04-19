@@ -35,7 +35,7 @@ var VacanciesComponent = (function () {
         this.feedId = this.winRef.nativeWindow.angularData.FeedSettings;
         this.vacanciesService.setFeedId(this.feedId);
         this.getVacancies();
-        this.path = this.document.location.pathname + "/";
+        this.path = this.winRef.ensureTrailingSlash(this.document.location.pathname);
     };
     VacanciesComponent.prototype.getVacancies = function () {
         var _this = this;

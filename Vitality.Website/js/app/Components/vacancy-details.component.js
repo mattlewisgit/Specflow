@@ -31,7 +31,7 @@ var VacancyDetailsComponent = (function () {
         this.vacancySalary = this.winRef.nativeWindow.angularData.salaryText;
         this.vacancyClosesOn = this.winRef.nativeWindow.angularData.closesOnText;
         this.backToVacanciesListingText = this.winRef.nativeWindow.angularData.backToVacanciesListingText;
-        this.backToListingUrl = this.document.location.pathname.split("/").slice(0, -1).join("/") + "/";
+        this.backToListingUrl = this.winRef.ensureTrailingSlash(this.document.location.pathname);
         this.feedId = this.winRef.nativeWindow.angularData.FeedSettings;
         this.vacanciesService.setFeedId(this.feedId);
         this.vacanciesService.getVacancy(+this.advertId).then(function (v) { return _this.vacancy = v; });

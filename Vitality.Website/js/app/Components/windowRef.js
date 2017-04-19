@@ -23,6 +23,15 @@ var WindowRef = (function () {
         enumerable: true,
         configurable: true
     });
+    WindowRef.prototype.ensureTrailingSlash = function (url) {
+        var newUrl = url;
+        while (newUrl.endsWith("/") || newUrl.indexOf("//") > -1) {
+            newUrl = newUrl.replace("//", "/");
+            newUrl = newUrl.split("/").slice(0, -1).join("/");
+            console.log('url is now');
+        }
+        return newUrl + "/";
+    };
     WindowRef = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [])
