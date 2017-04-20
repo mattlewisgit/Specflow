@@ -12,7 +12,7 @@ templatekey: Vacancy List
 ----version----
 language: en
 version: 1
-revision: 5a0d5f1e-1c37-4192-975b-4c3d3b1d5a95
+revision: c19a1201-4f54-4d8a-9610-5f8525527a46
 
 ----field----
 field: {2FF10897-2AB8-42E6-9BC1-02FAD3941648}
@@ -22,12 +22,26 @@ content-length: 31
 
 This is the vacancies component
 ----field----
+field: {C3F7C27F-E5B2-4913-8677-58E36CC2CB08}
+name: LocationsDropdownLabel
+key: locationsdropdownlabel
+content-length: 18
+
+Locations Dropdown
+----field----
 field: {F533EF5A-3BE8-43EA-B317-708E201DF9DC}
 name: AllLocationsText
 key: alllocationstext
 content-length: 13
 
 All Locations
+----field----
+field: {EBB78B54-3B73-4AA0-BB07-0FCF0CE9A669}
+name: DepartmentsDropdownLabel
+key: departmentsdropdownlabel
+content-length: 19
+
+Department Dropdown
 ----field----
 field: {240FF698-6A45-4502-AA7E-FF2A5B42B8F7}
 name: AllDepartmentsText
@@ -43,12 +57,12 @@ content-length: 12
 
 Findout More
 ----field----
-field: {FCC0F3B4-98D0-4362-A316-725458662B67}
-name: ShowMoreText
-key: showmoretext
-content-length: 9
+field: {68033C38-CCBE-4B17-814B-CA935AAA8210}
+name: NoVacanciesFoundText
+key: novacanciesfoundtext
+content-length: 23
 
-Show More
+No Vacancies Found Text
 ----field----
 field: {22764005-8E09-4D92-B86A-6411542814B3}
 name: FeedSettings
@@ -125,14 +139,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5a0d5f1e-1c37-4192-975b-4c3d3b1d5a95
+c19a1201-4f54-4d8a-9610-5f8525527a46
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170419T103623Z
+20170420T144743Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
