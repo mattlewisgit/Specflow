@@ -43,17 +43,19 @@ export class VacanciesComponent implements OnInit  {
             this.document.location.pathname = this.winRef.ensureTrailingSlash(this.document.location.pathname);
         }
 
-        this.headline = this.winRef.nativeWindow.angularData.headline;
-        this.locationsLabel = this.winRef.nativeWindow.angularData.locationsDropdownLabel;
-        this.allLocations = this.winRef.nativeWindow.angularData.allLocationsText;
-        this.departmentsLabel = this.winRef.nativeWindow.angularData.departmentsDropdownLabel;
-        this.allDepartments = this.winRef.nativeWindow.angularData.allDepartmentsText;
-        this.findoutMore = this.winRef.nativeWindow.angularData.findoutMoreText;
-        this.noVacanciesFoundText = this.winRef.nativeWindow.angularData.noVacanciesFoundText;
-        this.vacancyLocation = this.winRef.nativeWindow.angularData.locationText;
-        this.vacancySalary = this.winRef.nativeWindow.angularData.salaryText;
-        this.vacancyClosesOn = this.winRef.nativeWindow.angularData.closesOnText;
-        this.feedId = this.winRef.nativeWindow.angularData.FeedSettings;
+        var data = this.winRef.nativeWindow.angularData;
+
+        this.headline = data.headline;
+        this.locationsLabel = data.locationsDropdownLabel;
+        this.allLocations = data.allLocationsText;
+        this.departmentsLabel = data.departmentsDropdownLabel;
+        this.allDepartments = data.allDepartmentsText;
+        this.findoutMore = data.findoutMoreText;
+        this.noVacanciesFoundText = data.noVacanciesFoundText;
+        this.vacancyLocation = data.locationText;
+        this.vacancySalary = data.salaryText;
+        this.vacancyClosesOn = data.closesOnText;
+        this.feedId = data.FeedSettings;
         this.vacanciesService.setFeedId(this.feedId);
 
         this.getVacancies();

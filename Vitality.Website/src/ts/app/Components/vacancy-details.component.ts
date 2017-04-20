@@ -36,15 +36,17 @@ export class VacancyDetailsComponent implements OnInit  {
         this.document.location.pathname = this.winRef.ensureTrailingSlash(this.document.location.pathname);
       }
 
-      this.advertId = this.document.location.href.slice(0, -1).split(/[/ ]+/).pop();      
-      this.applyForVacancy = this.winRef.nativeWindow.angularData.applyForVacancyText;
-      this.shareVacancy = this.winRef.nativeWindow.angularData.shareVacancyText;
-      this.vacancyLocation = this.winRef.nativeWindow.angularData.locationText;
-      this.vacancySalary = this.winRef.nativeWindow.angularData.salaryText;
-      this.vacancyClosesOn = this.winRef.nativeWindow.angularData.closesOnText;
-      this.backToVacanciesListingText = this.winRef.nativeWindow.angularData.backToVacanciesListingText;
+      this.advertId = this.document.location.href.slice(0, -1).split(/[/ ]+/).pop();
+
+      var data = this.winRef.nativeWindow.angularData;
+      this.applyForVacancy = data.applyForVacancyText;
+      this.shareVacancy = data.shareVacancyText;
+      this.vacancyLocation = data.locationText;
+      this.vacancySalary = data.salaryText;
+      this.vacancyClosesOn = data.closesOnText;
+      this.backToVacanciesListingText = data.backToVacanciesListingText;
       this.backToListingUrl = this.winRef.ensureTrailingSlash(this.document.location.pathname.replace(this.advertId + "/", ""));
-      this.feedId = this.winRef.nativeWindow.angularData.FeedSettings;
+      this.feedId = data.FeedSettings;
       this.vacanciesService.setFeedId(this.feedId);
 
       this.vacanciesService.getVacancy(+this.advertId).then(v => this.setVacancy(v));
