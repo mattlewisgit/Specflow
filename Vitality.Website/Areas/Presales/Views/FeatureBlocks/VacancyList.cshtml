@@ -1,5 +1,9 @@
 ﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.VacancyList>
 
+@{
+    var localEnv = "presales.vitality.co.uk" == System.Web.HttpContext.Current.Request.Url.Host;
+}
+
 <div class="pinch">
     <h2>@Editable(Model, m => m.Headline)</h2>
     @if (Sitecore.Context.PageMode.IsExperienceEditor)
@@ -46,48 +50,17 @@
         </div>
     }
     else
-    {
-        <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
-        <script src="https://unpkg.com/zone.js@0.8.4?main=browser"></script>
-        <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
-        <script src="/js/systemjs.config.server.js"></script>
+    {        
+        <script type="text/javascript" src='@(localEnv ? "node_modules/core-js/client/shim.min.js" : "https://unpkg.com/core-js/client/shim.min.js")'></script>
+        <script type="text/javascript" src='@(localEnv ? "node_modules/zone.js/dist/zone.js" : "https://unpkg.com/zone.js@0.8.4?main=browser")'></script>
+        <script type="text/javascript" src='@(localEnv ? "node_modules/systemjs/dist/system.src.js" : "https://unpkg.com/systemjs@0.19.39/dist/system.src.js")'></script>
+        <script type="text/javascript" src='@(localEnv ? "/js/systemjs.config.js" : "/js/systemjs.config.server.js")'></script>
 
-        <vacancy-list>Loading Vacancies...</vacancy-list>
-
-        <script type="text/javascript">            
-            // TODO: reference npm packages locally from dev env
-
-            //if ('presales.vitality.co.uk' == document.location.host) {
-            //    //<![CDATA[
-            //    document.write("<script src='node_modules/core-js/client/shim.min.js'><\/script>");
-            //    //]]>
-            //    //<![CDATA[
-            //    document.write("<script src='node_modules/zone.js/dist/zone.js'><\/script>");
-            //    //]]>
-            //    //<![CDATA[
-            //    document.write("<script src='node_modules/systemjs/dist/system.src.js'><\/script>");
-            //    //]]>
-
-
-            //    //<![CDATA[
-            //    document.write("<script src='/js/systemjs.config.js'><\/script>");
-            //    //]]>
-            //} else {
-            //    // This SystemJS configuration loads umd packages from the web
-            //    // Update these package versions as needed
-            //    document.write("<script src='https://unpkg.com/core-js/client/shim.min.js'><\/script>");
-            //    document.write("<script src='https://unpkg.com/zone.js@0.8.4?main=browser'><\/script>");
-            //    document.write("<script src='https://unpkg.com/systemjs@0.19.39/dist/system.src.js'><\/script>");
-        
-            //    //<![CDATA[
-            //    document.write("<script src='/js/systemjs.config.server.js'><\/script>");
-            //    //]]>
-            //}
-        
+        <script type="text/javascript">
             System.import('/js/vacancyList-Main.js')
-                .catch(function (err) { console.error(err); });
+                .catch (function (err) { console.error(err); });
 
-            window.angularData = window.angularData || {};
+            window.angularData = window.angularData || { };
             window.angularData.headline = '@Model.Headline';
             window.angularData.locationsDropdownLabel = '@Model.LocationsDropdownLabel';
             window.angularData.allLocationsText = '@Model.AllLocationsText';
@@ -103,6 +76,8 @@
             window.angularData.shareVacancyText = '@Model.ShareVacancyText';
             window.angularData.backToVacanciesListingText = '@Model.BackToVacanciesListText';
         </script>
+
+        <vacancy-list>Loading Vacancies...</vacancy-list>
     }
     
 </div>
