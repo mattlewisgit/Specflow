@@ -12,15 +12,15 @@ templatekey: Card
 ----version----
 language: en
 version: 1
-revision: 8d8d07f7-5cad-4d87-a8a7-3322c0f98149
+revision: a2325503-a23a-4659-a625-9643d5cd1cc2
 
 ----field----
 field: {A709A5E9-9DF9-4783-A36D-13F9678FB487}
 name: Title
 key: title
-content-length: 85
+content-length: 13
 
-Podcasting operational change management inside of workflows to establish a framework
+External Link
 ----field----
 field: {7E171B05-4D40-4884-B8F9-9A48D0E1ECD6}
 name: Icon
@@ -39,9 +39,9 @@ Taking seamless key performance indicators offline to maximise the long tail. Ke
 field: {07D370C2-179F-4695-AB97-03E9718A0349}
 name: CallToAction
 key: calltoaction
-content-length: 114
+content-length: 121
 
-<link linktype="internal" text="Workflows" querystring="" target="" id="{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" />
+<link text="External Link" linktype="external" url="http://www.google.co.uk" anchor="" title="External Link" target="" />
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8d8d07f7-5cad-4d87-a8a7-3322c0f98149
+a2325503-a23a-4659-a625-9643d5cd1cc2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161215T104745Z
+20170330T165132Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

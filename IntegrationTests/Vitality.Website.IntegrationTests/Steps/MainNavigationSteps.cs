@@ -84,7 +84,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         }
 
 
-
+        [Given(@"I resize to mobile view")]
         [When(@"I resize to mobile view")]
         public void WhenIResizeToMobileView()
         {
@@ -220,25 +220,28 @@ namespace Vitality.Website.IntegrationTests.Steps
 
             //Move down the page first
             WebDriver
-                .FindElement(new JQuerySelector(".page-footer .expander a:contains('" + footerSection + "')"))
+                .WaitForElement(new JQuerySelector(".page-footer .expander a:contains('" + footerSection + "')"))
                 .SendKeys(Keys.Space);
 
-            Actions actions = new Actions(WebDriver);
+            //Actions actions = new Actions(WebDriver);
 
-            actions
-                .SendKeys(Keys.Enter)
-                .Perform();
+            //actions
+            //    .SendKeys(Keys.Enter)
+            //    .Perform();
+
+            WebDriver.WaitForPageLoad();
 
         }
 
 
-        [When(@"I click on the footer link (.*)")]
-        public void IClickOnTheFooterLink(string linkName)
+        [When(@"I click on the footer mobile link (.*)")]
+        public void WhenIClickOnTheFooterMobileLink(string linkName)
         {
             WebDriver
-                .FindElement(new JQuerySelector(".page-footer .expander__content.is-active a:contains('" + linkName + "')"))
+                .WaitForElement(new JQuerySelector(".page-footer .expander__content.is-active ul li a:contains('" + linkName + "')"))
                 .Click();
         }
+
 
 
         [When(@"I click on the (.*) quote footer button")]

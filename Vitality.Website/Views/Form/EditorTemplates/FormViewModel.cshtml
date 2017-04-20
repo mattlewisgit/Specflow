@@ -1,6 +1,7 @@
 ﻿@using Sitecore.Forms.Mvc
 @using Sitecore.Forms.Mvc.Html
 @using Sitecore.Globalization
+@using Vitality.Core
 @using Vitality.Website.Extensions
 @model Sitecore.Forms.Mvc.ViewModels.FormViewModel
 
@@ -35,7 +36,7 @@
         routeName = Sitecore.Mvc.Configuration.MvcSettings.SitecoreRouteName;
     }
 
-    <div class="form pinch">
+    <div class="form form--clearfields pinch">
         @using (Html.BeginRouteForm(routeName, queryString, FormMethod.Post, attributes))
         {
             var uniqueId = Model.UniqueId.ToString();

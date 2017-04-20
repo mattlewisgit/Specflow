@@ -1,7 +1,10 @@
 ﻿@using Sitecore.Forms.Mvc.Html
+@using Vitality.Website.Extensions
 @model Sitecore.Forms.Mvc.ViewModels.Fields.FileUploadField
 
-@using (Html.BeginField())
-{   
-    @Html.TextBoxFor(m => m.Value, new { type = "file"}  )
+@using (Html.BeginField(false))
+{
+    @Html.ToolTipLabelFor(Html.BootstrapLabelFor(x => Model.Value, Model.Title), Model.Information)
+    @Html.TextBoxFor(m => m.Value, new { type = "file" })
+    @Html.BootstrapValidationMessageFor(x => Model.Value)
 }

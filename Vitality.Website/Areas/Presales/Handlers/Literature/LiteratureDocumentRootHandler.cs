@@ -12,7 +12,11 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
 
         public LiteratureDocumentRootHandler(Func<string, IProviderSearchContext> searchContextFactory)
         {
-            this.searchContext = searchContextFactory("literature_library");
+            if (Sitecore.Context.Site != null)
+            {
+                var searchableIndex = string.Format("{0}_literature_library", Sitecore.Context.Site.Name);
+                this.searchContext = searchContextFactory(searchableIndex);
+            }
         }
 
         public IEnumerable<LiteratureDocumentDto> Handle(LiteratureDocumentRequest request)

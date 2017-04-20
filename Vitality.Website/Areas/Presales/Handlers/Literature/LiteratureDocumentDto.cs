@@ -1,14 +1,9 @@
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using Sitecore;
-using Sitecore.Data.Items;
-using Sitecore.Web;
-using Vitality.Website.Extensions;
-
 namespace Vitality.Website.Areas.Presales.Handlers.Literature
 {
     using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Core;
 
     public class LiteratureDocumentDto
     {
@@ -37,25 +32,24 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
         public long DocumentSize { get; set; }
 
         public LiteratureDocumentSummaryDto[] AvailableLiterature { get; set; }
-        
-        public static IEnumerable<LiteratureDocumentDto> From(IEnumerable<LiteratureDocumentSearchResult> searchResult1)
-        {
-            return searchResult1.Select(searchResult => new LiteratureDocumentDto
-            {
-                Title = searchResult.Title,
-                Description = searchResult.Description,
-                Code = searchResult.Code,
-                Document = searchResult.Document,
-                Thumbnail = searchResult.Thumbnail,
-                PublishDate = searchResult.PublishDate,
-                Category = searchResult.Category,
-                Key = searchResult.Title.ToLowerHyphenatedString(),
-                EffectivePlanDate = searchResult.EffectivePlanDate,
-                PlanType = searchResult.PlanType,
-                PlanNumber = searchResult.PlanNumber,
-                DocumentSize = searchResult.DocumentSize,
-                AvailableLiterature = new LiteratureDocumentSummaryDto[0]
-            }).ToList();
-        }                            
+
+        public static IEnumerable<LiteratureDocumentDto> From
+            (IEnumerable<LiteratureDocumentSearchResult> searchResult1) =>
+                searchResult1.Select(searchResult => new LiteratureDocumentDto
+                {
+                    Title = searchResult.Title,
+                    Description = searchResult.Description,
+                    Code = searchResult.Code,
+                    Document = searchResult.Document,
+                    Thumbnail = searchResult.Thumbnail,
+                    PublishDate = searchResult.PublishDate,
+                    Category = searchResult.Category,
+                    Key = searchResult.Title.ToLowerHyphenatedWords(),
+                    EffectivePlanDate = searchResult.EffectivePlanDate,
+                    PlanType = searchResult.PlanType,
+                    PlanNumber = searchResult.PlanNumber,
+                    DocumentSize = searchResult.DocumentSize,
+                    AvailableLiterature = new LiteratureDocumentSummaryDto[0]
+                }).ToList();
     }
 }

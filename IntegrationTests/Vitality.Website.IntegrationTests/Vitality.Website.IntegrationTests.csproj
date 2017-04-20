@@ -105,6 +105,31 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="Features\CardsStacked.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CardsStacked.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\FAQLeader.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FAQLeader.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Feemaxima.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Feemaxima.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\MessageBox.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MessageBox.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\RichText.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RichText.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Drivers\DriverFactory.cs" />
     <Compile Include="Extensions\AssertionExtensions.cs" />
@@ -173,13 +198,18 @@
     <Compile Include="Steps\AccordionSteps.cs" />
     <Compile Include="Steps\BaseSteps.cs" />
     <Compile Include="Steps\BreadcrumbSteps.cs" />
+    <Compile Include="Steps\CardsStackedSteps.cs" />
     <Compile Include="Steps\CommonSteps.cs" />
     <Compile Include="Steps\CookiesSteps.cs" />
+    <Compile Include="Steps\FAQLeaderSteps.cs" />
+    <Compile Include="Steps\FeemaximaSteps.cs" />
     <Compile Include="Steps\HealthPresalesContentSteps.cs" />
     <Compile Include="Steps\LiteratureLibrarySteps.cs" />
     <Compile Include="Steps\MainNavigationSteps.cs" />
+    <Compile Include="Steps\MessageBoxSteps.cs" />
     <Compile Include="Steps\MetaTagsSteps.cs" />
     <Compile Include="Steps\QuoteApplySteps.cs" />
+    <Compile Include="Steps\RichTextSteps.cs" />
     <Compile Include="Steps\SearchingSteps.cs" />
     <Compile Include="Steps\TabbedSteps.cs" />
     <Compile Include="Steps\WFFMSteps.cs" />
@@ -204,9 +234,25 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AdvisersContent.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\CardsStacked.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CardsStacked.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\Cookies.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Cookies.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\FAQLeader.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FAQLeader.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Feemaxima.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Feemaxima.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\MessageBox.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MessageBox.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\PresalesContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -227,6 +273,10 @@
     <None Include="Features\QuoteApply.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>QuoteApply.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\RichText.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RichText.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\SearchingContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

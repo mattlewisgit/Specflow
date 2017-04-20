@@ -1,8 +1,9 @@
 ﻿@using Sitecore.Forms.Mvc
 @using Sitecore.Forms.Mvc.Html
+@using Vitality.Website.Extensions
 @model Sitecore.Forms.Mvc.ViewModels.Fields.DateField
 
-@using (Html.BeginField())
+@using (Html.BeginField(false))
 {
     @Html.HiddenFor(x => Model.Value, new { @class = "wfmDatebox" })
 
@@ -12,14 +13,15 @@
        { Constants.Tracking, "false" }
     };
 
+    @Html.ToolTipLabelFor(Html.BootstrapLabelFor(x => Model.Value, Model.Title), Model.Information)
     <div class="form__field__input--date">
         @Html.DropDownListFor(x => x.Day, Model.Days, htmlAttributes)
         @Html.DropDownListFor(x => x.Month, Model.Months, htmlAttributes)
         @Html.DropDownListFor(x => x.Year, Model.Years, htmlAttributes)
     </div>
-
+    @Html.BootstrapValidationMessageFor(x => Model.Value)
     @Html.RenderScriptBlock(
-        @<script type="text/javascript">
+    @<script type="text/javascript">
              window.WffmFieldsData = window.WffmFieldsData || {};
 
              window.WffmFieldsData["@Html.IdFor(x => Model.Value)"] =
@@ -28,6 +30,6 @@
                  monthId: "@Html.Id("Month")",
                  yearId: "@Html.Id("Year")"
              };
-         </script>
+    </script>
     )
 }

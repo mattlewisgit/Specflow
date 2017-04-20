@@ -6,10 +6,10 @@ using System.Linq;
 using System.Web;
 using Sitecore;
 using Sitecore.WFFM.Abstractions.Actions;
-using Vitality.Website.SC.Extensions;
-
 namespace Vitality.Website.SC.WFFM.Helpers
 {
+    using Core;
+
     internal static class FormFieldsHelper
     {
         private readonly static IReadOnlyDictionary<Guid, Func<string, string>> FieldValueConvertors

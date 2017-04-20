@@ -76,8 +76,8 @@
     Given I am on presales /
     When I resize to mobile view
     And I expand the mobile footer section Get a quote
-    And I click on the footer link Health insurance quote
-    Then I expect the production presales /health-insurance/quote/ to open
+    And I click on the footer mobile link Health insurance quote
+	Then I see the https://www.vitality.co.uk/health-insurance/quote/ page
 
 	@SIT
     Scenario: Check console logs on presales
@@ -86,5 +86,5 @@
 
 	@SIT
     Scenario: Check console logs on advisers
-    Given I am on advisers /dev/sales-library/
+    Given I am on advisers /dev
 	Then I should not see any console logs
