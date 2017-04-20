@@ -38,7 +38,7 @@
                     <li>{{ vacancyClosesOn }} {{ vacancy.ClosingDate }}</li>
                 </ul>
 
-                <a href="{{ path }}{{ vacancy.Advertid }}" class="emphasis-link">{{ findoutMore }}</a>
+                <a href="{{ path }}{{ vacancy.Advertid }}/" class="emphasis-link">{{ findoutMore }}</a>
             </div>
             <div *ngIf="filteredVacancies?.length < 1">
                 <span>

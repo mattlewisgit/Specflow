@@ -22,6 +22,9 @@ var VacanciesComponent = (function () {
         this.winRef = winRef;
     }
     VacanciesComponent.prototype.ngOnInit = function () {
+        if (!this.document.location.pathname.endsWith("/")) {
+            this.document.location.pathname = this.winRef.ensureTrailingSlash(this.document.location.pathname);
+        }
         this.headline = this.winRef.nativeWindow.angularData.headline;
         this.locationsLabel = this.winRef.nativeWindow.angularData.locationsDropdownLabel;
         this.allLocations = this.winRef.nativeWindow.angularData.allLocationsText;
