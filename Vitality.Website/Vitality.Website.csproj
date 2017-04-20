@@ -313,7 +313,6 @@
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
     <Content Include="src\ts\app\Components\vacancy-detailsTemplate.html" />
     <Content Include="src\ts\app\Components\vacancyListTemplate.html" />
-    <Content Include="src\ts\systemjs.config.extras.js" />
     <TypeScriptCompile Include="src\ts\app\Components\windowRef.ts" />
     <TypeScriptCompile Include="src\ts\app\vacancyDetails-app.module.ts" />
     <TypeScriptCompile Include="src\ts\systemjs.config.server.ts" />
