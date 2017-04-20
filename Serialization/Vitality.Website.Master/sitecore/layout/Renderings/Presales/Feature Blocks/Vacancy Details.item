@@ -23,10 +23,17 @@ key: area
 content-length: 8
 
 Presales
+----field----
+field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
+name: __Thumbnail
+key: __thumbnail
+content-length: 58
+
+<image mediaid="{D52CF2FC-9126-42A4-8DC1-F02BB3F42AA6}" />
 ----version----
 language: en
 version: 1
-revision: 10ca5c64-5d71-4e55-ae61-6f6e2a557f6d
+revision: c209ff2b-1135-4f45-bfbf-ba4c4f3aabb6
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -48,18 +55,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-10ca5c64-5d71-4e55-ae61-6f6e2a557f6d
+c209ff2b-1135-4f45-bfbf-ba4c4f3aabb6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170404T085903Z
+20170420T141117Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\admin
