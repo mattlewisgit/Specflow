@@ -27,8 +27,7 @@ export class VacanciesService {
       return this.getVacancies().then(v => v.Vacancies.find(p => p.Advertid === advertId));
   }
 
-  private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error); // for demo purposes only
-    return Promise.reject(error.message || error);
+  private handleError(error: any): void {
+      throw error.message || error;    
   }
 }

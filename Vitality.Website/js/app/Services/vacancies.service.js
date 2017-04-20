@@ -28,8 +28,7 @@ var VacanciesService = (function () {
         return this.getVacancies().then(function (v) { return v.Vacancies.find(function (p) { return p.Advertid === advertId; }); });
     };
     VacanciesService.prototype.handleError = function (error) {
-        console.error('An error occurred', error); // for demo purposes only
-        return Promise.reject(error.message || error);
+        throw error.message || error;
     };
     VacanciesService = __decorate([
         core_1.Injectable(), 

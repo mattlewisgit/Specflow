@@ -19,17 +19,28 @@ var VacancyDetailsComponent = (function () {
     }
     VacancyDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.advertId = this.document.location.href.split(/[/ ]+/).pop();
+        if (!this.document.location.pathname.endsWith("/")) {
+            this.document.location.pathname = this.winRef.ensureTrailingSlash(this.document.location.pathname);
+        }
+        this.advertId = this.document.location.href.slice(0, -1).split(/[/ ]+/).pop();
         this.applyForVacancy = this.winRef.nativeWindow.angularData.applyForVacancyText;
         this.shareVacancy = this.winRef.nativeWindow.angularData.shareVacancyText;
         this.vacancyLocation = this.winRef.nativeWindow.angularData.locationText;
         this.vacancySalary = this.winRef.nativeWindow.angularData.salaryText;
         this.vacancyClosesOn = this.winRef.nativeWindow.angularData.closesOnText;
         this.backToVacanciesListingText = this.winRef.nativeWindow.angularData.backToVacanciesListingText;
-        this.backToListingUrl = this.document.location.pathname.split("/").slice(0, -1).join("/") + "/";
+        this.backToListingUrl = this.winRef.ensureTrailingSlash(this.document.location.pathname.replace(this.advertId + "/", ""));
         this.feedId = this.winRef.nativeWindow.angularData.FeedSettings;
         this.vacanciesService.setFeedId(this.feedId);
-        this.vacanciesService.getVacancy(+this.advertId).then(function (v) { return _this.vacancy = v; });
+        this.vacanciesService.getVacancy(+this.advertId).then(function (v) { return _this.setVacancy(v); });
+    };
+    VacancyDetailsComponent.prototype.setVacancy = function (vac) {
+        if (vac != null) {
+            this.vacancy = vac;
+        }
+        else {
+            this.winRef.nativeWindow.location = "/notfound";
+        }
     };
     VacancyDetailsComponent = __decorate([
         core_1.Component({

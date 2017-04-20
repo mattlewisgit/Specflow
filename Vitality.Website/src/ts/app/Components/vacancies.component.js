@@ -17,6 +17,9 @@ var VacanciesComponent = (function () {
         this.winRef = winRef;
     }
     VacanciesComponent.prototype.ngOnInit = function () {
+        if (!this.document.location.pathname.endsWith("/")) {
+            this.document.location.pathname = this.winRef.ensureTrailingSlash(this.document.location.pathname);
+        }
         this.headline = this.winRef.nativeWindow.angularData.headline;
         this.locationsLabel = this.winRef.nativeWindow.angularData.locationsDropdownLabel;
         this.allLocations = this.winRef.nativeWindow.angularData.allLocationsText;
@@ -30,7 +33,7 @@ var VacanciesComponent = (function () {
         this.feedId = this.winRef.nativeWindow.angularData.FeedSettings;
         this.vacanciesService.setFeedId(this.feedId);
         this.getVacancies();
-        this.path = this.document.location.pathname + "/";
+        this.path = this.winRef.ensureTrailingSlash(this.document.location.pathname);
     };
     VacanciesComponent.prototype.getVacancies = function () {
         var _this = this;
