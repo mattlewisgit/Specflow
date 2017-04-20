@@ -2,58 +2,110 @@
 
 <div class="pinch">
     <h2>@Editable(Model, m => m.Headline)</h2>
-    <vacancy-list>Loading Vacancies...</vacancy-list>
+    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        <div class="form__field">
+            <div class="grid ">
+                <div class="grid-col-3-12">
+                    <div class="form__field__description">
+                        <label for="locationsDropDown">@Editable(Model, m => m.LocationsDropdownLabel)</label>
+                    </div>
+
+                    <div class="form__field__input--date">
+                        <span>@Editable(Model, m => m.AllLocationsText)</span>
+                    </div>
+                </div>
+
+                <div class="grid-col-3-12">
+                    <div class="form__field__description">
+                        <label for="departmentsDropDown">@Editable(Model, m => m.DepartmentsDropdownLabel)</label>
+                    </div>
+
+                    <div class="form__field__input--date">
+                        <span>@Editable(Model, m => m.AllDepartmentsText)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__field">
+            <div *ngFor="let vacancy of filteredVacancies">
+                <h3>[Vacancy Title]</h3>
+                <ul>
+                    <li>@Editable(Model, m => m.LocationText) [Vacancy Location]</li>
+                    <li>@Editable(Model, m => m.SalaryText) [Vacancy Salary]</li>
+                    <li>@Editable(Model, m => m.ClosesOnText) [Vacancy Closes On]</li>
+                </ul>
+
+                <a href="#" class="emphasis-link">@Editable(Model, m => m.FindoutMoreText)</a>
+            </div>
+            
+            <span>
+                @Editable(Model, m => m.NoVacanciesFoundText)
+            </span>            
+        </div>
+    }
+    else
+    {
+        <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+        <script src="https://unpkg.com/zone.js@0.8.4?main=browser"></script>
+        <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+        <script src="/js/systemjs.config.server.js"></script>
+
+        <vacancy-list>Loading Vacancies...</vacancy-list>
+
+        <script type="text/javascript">            
+            // TODO: reference npm packages locally from dev env
+
+            //if ('presales.vitality.co.uk' == document.location.host) {
+            //    //<![CDATA[
+            //    document.write("<script src='node_modules/core-js/client/shim.min.js'><\/script>");
+            //    //]]>
+            //    //<![CDATA[
+            //    document.write("<script src='node_modules/zone.js/dist/zone.js'><\/script>");
+            //    //]]>
+            //    //<![CDATA[
+            //    document.write("<script src='node_modules/systemjs/dist/system.src.js'><\/script>");
+            //    //]]>
+
+
+            //    //<![CDATA[
+            //    document.write("<script src='/js/systemjs.config.js'><\/script>");
+            //    //]]>
+            //} else {
+            //    // This SystemJS configuration loads umd packages from the web
+            //    // Update these package versions as needed
+            //    document.write("<script src='https://unpkg.com/core-js/client/shim.min.js'><\/script>");
+            //    document.write("<script src='https://unpkg.com/zone.js@0.8.4?main=browser'><\/script>");
+            //    document.write("<script src='https://unpkg.com/systemjs@0.19.39/dist/system.src.js'><\/script>");
+        
+            //    //<![CDATA[
+            //    document.write("<script src='/js/systemjs.config.server.js'><\/script>");
+            //    //]]>
+            //}
+        
+            System.import('/js/vacancyList-Main.js')
+                .catch(function (err) { console.error(err); });
+
+            window.angularData = window.angularData || {};
+            window.angularData.headline = '@Model.Headline';
+            window.angularData.locationsDropdownLabel = '@Model.LocationsDropdownLabel';
+            window.angularData.allLocationsText = '@Model.AllLocationsText';
+            window.angularData.departmentsDropdownLabel = '@Model.DepartmentsDropdownLabel';
+            window.angularData.allDepartmentsText = '@Model.AllDepartmentsText';
+            window.angularData.findoutMoreText = '@Model.FindoutMoreText';
+            window.angularData.noVacanciesFoundText = '@Model.NoVacanciesFoundText';
+            window.angularData.FeedSettings = '@Model.FeedSettings';
+            window.angularData.locationText = '@Model.LocationText';
+            window.angularData.salaryText = '@Model.SalaryText';
+            window.angularData.closesOnText = '@Model.ClosesOnText';
+            window.angularData.applyForVacancyText = '@Model.ApplyForVacancyText';
+            window.angularData.shareVacancyText = '@Model.ShareVacancyText';
+            window.angularData.backToVacanciesListingText = '@Model.BackToVacanciesListText';
+        </script>
+    }
+    
 </div>
 
-    <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
-    <script src="https://unpkg.com/zone.js@0.8.4?main=browser"></script>
-    <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
-    <script src="/js/systemjs.config.server.js"></script>
 
-    <script type="text/javascript">
-    //if ('presales.vitality.co.uk' == document.location.host) {
-    //    //<![CDATA[
-    //    document.write("<script src='node_modules/core-js/client/shim.min.js'><\/script>");
-    //    //]]>
-    //    //<![CDATA[
-    //    document.write("<script src='node_modules/zone.js/dist/zone.js'><\/script>");
-    //    //]]>
-    //    //<![CDATA[
-    //    document.write("<script src='node_modules/systemjs/dist/system.src.js'><\/script>");
-    //    //]]>
-
-
-    //    //<![CDATA[
-    //    document.write("<script src='/js/systemjs.config.js'><\/script>");
-    //    //]]>
-    //} else {
-    //    // This SystemJS configuration loads umd packages from the web
-    //    // Update these package versions as needed
-    //    document.write("<script src='https://unpkg.com/core-js/client/shim.min.js'><\/script>");
-    //    document.write("<script src='https://unpkg.com/zone.js@0.8.4?main=browser'><\/script>");
-    //    document.write("<script src='https://unpkg.com/systemjs@0.19.39/dist/system.src.js'><\/script>");
-
-    //    //<![CDATA[
-    //    document.write("<script src='/js/systemjs.config.server.js'><\/script>");
-    //    //]]>
-    //}
-
-    System.import('/js/vacancyList-Main.js')
-        .catch(function (err) { console.error(err); });
-
-    window.angularData = window.angularData || {};
-    window.angularData.headline = '@Model.Headline';
-    window.angularData.locationsDropdownLabel = '@Model.LocationsDropdownLabel';
-    window.angularData.allLocationsText = '@Model.AllLocationsText';
-    window.angularData.departmentsDropdownLabel = '@Model.DepartmentsDropdownLabel';
-    window.angularData.allDepartmentsText = '@Model.AllDepartmentsText';
-    window.angularData.findoutMoreText = '@Model.FindoutMoreText';
-    window.angularData.noVacanciesFoundText = '@Model.NoVacanciesFoundText';
-    window.angularData.FeedSettings = '@Model.FeedSettings';
-    window.angularData.locationText = '@Model.LocationText';
-    window.angularData.salaryText = '@Model.SalaryText';
-    window.angularData.closesOnText = '@Model.ClosesOnText';
-    window.angularData.applyForVacancyText = '@Model.ApplyForVacancyText';
-    window.angularData.shareVacancyText = '@Model.ShareVacancyText';
-    window.angularData.backToVacanciesListingText = '@Model.BackToVacanciesListText';
-</script>
+    
