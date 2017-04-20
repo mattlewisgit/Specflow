@@ -4,6 +4,7 @@
 
 @using (Html.BeginField(false))
 {
+    <span class="tool-tip-icon tool-tip-icon--inline"><button type="button" title="@Model.Information"></button></span>
     var cssclass = Model.FormType == FormType.Inline ? "checkbox-inline" : "checkbox";
     <div class="@cssclass">
         <label>

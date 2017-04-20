@@ -1,9 +1,9 @@
 ----item----
 version: 1
-id: {D765B0B1-CA5E-4765-B417-3A2F7648B406}
+id: {EB922588-7393-46FC-9CE8-412E39385943}
 database: master
-path: /sitecore/content/Advisers/Content/Forms/wffm
-parent: {187A5B66-1229-4DBD-BC24-A965D6554249}
+path: /sitecore/content/Presales/Content/Forms/wffm
+parent: {196C436A-12F7-4E2E-A9E6-F839BD6AFA60}
 name: wffm
 master: {00000000-0000-0000-0000-000000000000}
 template: {FFB1DA32-2764-47DB-83B0-95B843546A7E}
@@ -144,10 +144,3 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />
