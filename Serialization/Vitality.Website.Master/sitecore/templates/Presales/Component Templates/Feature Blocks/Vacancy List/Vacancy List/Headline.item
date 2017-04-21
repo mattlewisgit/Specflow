@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {240FF698-6A45-4502-AA7E-FF2A5B42B8F7}
+id: {2FF10897-2AB8-42E6-9BC1-02FAD3941648}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Feature Blocks/Vacancy List/Content/AllDepartmentsText
+path: /sitecore/templates/Presales/Component Templates/Feature Blocks/Vacancy List/Vacancy List/Headline
 parent: {8DCA9281-2D74-4850-B85A-B7444FCD68AE}
-name: AllDepartmentsText
+name: Headline
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -22,19 +22,19 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-200
+100
 ----version----
 language: en
 version: 1
-revision: 002d902d-6a08-46fa-b303-177a02b361a7
+revision: e1c23598-4556-452a-86c6-cf72df43b927
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 20
+content-length: 8
 
-All Departments Text
+Headline
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -55,18 +55,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-002d902d-6a08-46fa-b303-177a02b361a7
+e1c23598-4556-452a-86c6-cf72df43b927
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170320T164631Z
+20170407T081205Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\admin

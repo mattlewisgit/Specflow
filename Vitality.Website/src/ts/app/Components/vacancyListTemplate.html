@@ -1,0 +1,51 @@
+<div class="form">
+    <form>
+        <div class="form__field">
+            <div class="grid ">
+                <div class="grid-col-3-12">
+                    <div class="form__field__description">
+                        <label for="locationsDropDown">{{ locationsLabel }}</label>
+                    </div>
+                    
+                    <div class="form__field__input--date">
+                        <select (ngModelChange)="filtersChanged($event, document.getElementById('departmentsDropDown').value)" [ngModel]="location" id="locationsDropDown" name="locationsDropDown">
+                            <option *ngFor="let loc of locations" [value]="loc">{{ loc }}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid-col-3-12">
+                    <div class="form__field__description">
+                        <label for="departmentsDropDown">{{ departmentsLabel }}</label>
+                    </div>
+                    
+                    <div class="form__field__input--date">
+                        <select (ngModelChange)="filtersChanged(document.getElementById('locationsDropDown').value, $event)" [ngModel]="department" id="departmentsDropDown" name="departmentsDropDown">
+                            <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form__field">
+            <div *ngFor="let vacancy of filteredVacancies">
+                <h3>{{ vacancy.Jobtitle }}</h3>
+                <ul>
+                    <li>{{ vacancyLocation }} {{ vacancy.Joblocation }}</li>
+                    <li>{{ vacancySalary }} {{ vacancy.JobSalary }}</li>
+                    <li>{{ vacancyClosesOn }} {{ vacancy.ClosingDate }}</li>
+                </ul>
+
+                <a href="{{ path }}{{ vacancy.Advertid }}/" class="emphasis-link">{{ findoutMore }}</a>
+            </div>
+            <div *ngIf="filteredVacancies?.length < 1">
+                <span>
+                    {{ noVacanciesFoundText }}
+                </span>
+            </div>
+        </div>
+    </form>
+</div>
+

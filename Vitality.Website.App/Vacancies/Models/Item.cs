@@ -7,8 +7,10 @@
         public string Description { get; set; }
         public string JobType { get; set; }
         public string Joblocation { get; set; }
+        public string Jobdepartment { get; set; }
         public string JobSalary { get; set; }
         public string Jobtitle { get; set; }
+        public string Link { get; set; }
         public string Title { get; set; }
     }
 }

@@ -1,0 +1,20 @@
+<div *ngIf="vacancy">
+	<h3>{{ vacancy.Jobtitle }}</h3>
+	<ul>
+		<li>{{ vacancyLocation }} {{ vacancy.Joblocation }}</li>
+		<li>{{ vacancySalary }} {{ vacancy.JobSalary }}</li>
+		<li>{{ vacancyClosesOn }} {{ vacancy.ClosingDate }}</li>
+	</ul>
+
+    <div><a href="{{ vacancy.Link }}" target="_blank" class="box-button box-button--rounded box-button box-button--primary">{{ applyForVacancy}}</a></div>
+    <div><a href="{{ backToListingUrl }}" class="box-button box-button--rounded box-button--primary-inverse">{{ backToVacanciesListingText }}</a></div>
+
+	<hr/>
+
+	<div [innerHTML]="vacancy.Description"></div>
+
+    <div><a href="{{ vacancy.Link }}" target="_blank" class="box-button box-button--rounded box-button box-button--primary">{{ applyForVacancy}}</a></div>
+    <div><a href="{{ backToListingUrl }}" class="box-button box-button--rounded box-button--primary-inverse">{{ backToVacanciesListingText }}</a></div>
+	
+</div>
+

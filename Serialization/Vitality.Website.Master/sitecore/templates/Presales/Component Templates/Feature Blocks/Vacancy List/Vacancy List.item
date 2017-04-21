@@ -2,9 +2,9 @@
 version: 1
 id: {8DCA9281-2D74-4850-B85A-B7444FCD68AE}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Feature Blocks/Vacancy List/Content
+path: /sitecore/templates/Presales/Component Templates/Feature Blocks/Vacancy List/Vacancy List
 parent: {4256C3AC-8087-420C-86D8-9C1127474E10}
-name: Content
+name: Vacancy List
 master: {00000000-0000-0000-0000-000000000000}
 template: {E269FBB5-3750-427A-9149-7AA950B49301}
 templatekey: Template section
@@ -12,7 +12,7 @@ templatekey: Template section
 ----version----
 language: en
 version: 1
-revision: 314105bc-dd88-4554-84f4-d62a82124a92
+revision: 35939682-f82f-4852-a245-5e69d2544dc5
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -27,18 +27,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-314105bc-dd88-4554-84f4-d62a82124a92
+35939682-f82f-4852-a245-5e69d2544dc5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170320T164631Z
+20170407T081204Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\admin

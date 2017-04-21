@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {0E7B1670-59B2-46DB-9997-6A58C70FE739}
+id: {F533EF5A-3BE8-43EA-B317-708E201DF9DC}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Feature Blocks/Vacancy List/Content/FindoutMoreText
+path: /sitecore/templates/Presales/Component Templates/Feature Blocks/Vacancy List/Vacancy List/AllLocationsText
 parent: {8DCA9281-2D74-4850-B85A-B7444FCD68AE}
-name: FindoutMoreText
+name: AllLocationsText
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -22,19 +22,19 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-400
+175
 ----version----
 language: en
 version: 1
-revision: e7bebe1b-22fd-4a88-975b-9e968f2e9d10
+revision: 26e86230-6b33-4a62-8164-256d1997996b
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 17
+content-length: 18
 
-Findout More Text
+All Locations Text
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -55,18 +55,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e7bebe1b-22fd-4a88-975b-9e968f2e9d10
+26e86230-6b33-4a62-8164-256d1997996b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170320T164631Z
+20170407T081314Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\admin
