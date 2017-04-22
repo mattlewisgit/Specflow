@@ -5,7 +5,6 @@ namespace Vitality.Website.SC.WFFM.SaveActions
     using Sitecore.Data;
     using Sitecore.Diagnostics;
     using Sitecore.WFFM.Abstractions.Actions;
-    using App.CallPro;
     using Core;
     using Helpers;
 

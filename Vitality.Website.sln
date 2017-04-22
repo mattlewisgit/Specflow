@@ -33,8 +33,6 @@ Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Vitality.Website.Content", 
 EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Vitality.Website.Master", "Serialization\Vitality.Website.Master\Vitality.Website.Master.scproj", "{11D0116B-F0F0-4060-A0F7-4B0D733F5223}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vitality.Website.App", "Vitality.Website.App\Vitality.Website.App.csproj", "{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SonarQube", "SonarQube", "{5493304E-7D1E-403C-AF98-FC80C8F080A7}"
 	ProjectSection(SolutionItems) = preProject
 		SonarQube\SolutionBinding.sqconfig = SonarQube\SolutionBinding.sqconfig
@@ -140,16 +138,6 @@ Global
 		{11D0116B-F0F0-4060-A0F7-4B0D733F5223}.UAT|Any CPU.ActiveCfg = Release|Any CPU
 		{11D0116B-F0F0-4060-A0F7-4B0D733F5223}.UAT|Any CPU.Build.0 = Release|Any CPU
 		{11D0116B-F0F0-4060-A0F7-4B0D733F5223}.UAT|Any CPU.Deploy.0 = Release|Any CPU
-		{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}.PROD|Any CPU.ActiveCfg = PROD|Any CPU
-		{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}.PROD|Any CPU.Build.0 = PROD|Any CPU
-		{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}.SIT|Any CPU.ActiveCfg = Release|Any CPU
-		{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}.SIT|Any CPU.Build.0 = Release|Any CPU
-		{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}.UAT|Any CPU.ActiveCfg = Release|Any CPU
-		{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}.UAT|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

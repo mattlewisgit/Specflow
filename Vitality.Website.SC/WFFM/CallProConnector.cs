@@ -3,7 +3,7 @@ using System.Net;
 using System.Text;
 using RestSharp;
 
-namespace Vitality.Website.App.CallPro
+namespace Vitality.Website.SC.WFFM
 {
     public static class CallProConnector
     {

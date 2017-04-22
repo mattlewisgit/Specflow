@@ -1,12 +1,7 @@
-using Vitality.Website.App.Helpers;
-using Vitality.Website.App.Vacancies;
-using Vitality.Website.App.Vacancies.Interfaces;
 using Vitality.Website.Areas.Presales.Services;
 
 namespace Vitality.Website.App_Start
 {
-    using App.Ccsd;
-    using App.Ccsd.Interfaces;
     using Glass.Mapper.Sc;
     using MediatR;
     using SimpleInjector;

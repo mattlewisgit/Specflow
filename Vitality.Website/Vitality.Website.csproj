@@ -3966,10 +3966,8 @@
     <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />
     <Compile Include="Areas\Presales\Services\PresalesBslService.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\CookieSettings.cs" />
-    <Compile Include="Areas\Presales\SettingsTemplates\FeedSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\SiteSettings.cs" />
-    <Compile Include="Areas\Presales\SettingsTemplates\SocialMediaSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\ImageExtensions.cs" />
@@ -4732,10 +4730,6 @@
     <Folder Include="sitemaps\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Vitality.Website.App\Vitality.Website.App.csproj">
-      <Project>{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}</Project>
-      <Name>Vitality.Website.App</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Vitality.Website.SC\Vitality.Website.SC.csproj">
       <Project>{ee2349ba-bc4f-48e3-851e-90aa3aef0250}</Project>
       <Name>Vitality.Website.SC</Name>
