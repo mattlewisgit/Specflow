@@ -11,7 +11,7 @@
                     @GlassHtml.RenderLazyImage(socialMedia, item => item.Icon, new { alt = socialMedia.Icon.Alt })
 
                     <p class="content-collection--module__title-bold">
-                        <popularity-count settings-id="'@socialMedia.SettingsId'" count-display-text="'@socialMedia.CountDisplayText'"></popularity-count>
+                        <popularity-count bsl-endpoint="'@socialMedia.FeedSettings.Endpoint'" count-display-text="'@socialMedia.CountDisplayText'"></popularity-count>
                     </p>
                     <p>@Editable(socialMedia, item => item.LeadIn)</p>
 

@@ -2,7 +2,8 @@
     .module("FeemaximaService", [])
     .service("FeemaximaService", ["$q", "$http", function ($q, $http) {
         "use strict";
-        var endpoint = "/api/feemaxima/list/?settingsId=";
+        var action = "/api/bsl/post?bslendpoint=";
+        var feedSettings = window.angularData.feedSettings;
 
         // Typehead currently doesn't return dataset name on select.
         this.datasetTypes =
@@ -27,9 +28,10 @@
         this.getChapters = function () {
             var deferred = $q.defer();
 
-            $http.get(endpoint + window.angularData.CcsdFeedSettingsId)
+            $http.post(action + encodeURIComponent(feedSettings.Endpoint),
+                JSON.stringify(encodeURI(feedSettings.MockDataFile)))
                 .success(function (dt) {
-                    deferred.resolve(dt);
+                    deferred.resolve(dt.BslResponse);
                 })
                 .error(function () {
                     deferred.reject();

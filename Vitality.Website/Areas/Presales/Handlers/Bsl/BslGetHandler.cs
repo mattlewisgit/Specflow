@@ -14,6 +14,6 @@ namespace Vitality.Website.Areas.Presales.Handlers.Bsl
         }
 
         public async Task<BslDto> Handle(BslGetRequest request) =>
-            await BslDto.From(_presalesBslService.Get<string>(request.Endpoint));
+            await BslDto.From(_presalesBslService.Get<string>(request.BslEndpoint));
     }
 }
