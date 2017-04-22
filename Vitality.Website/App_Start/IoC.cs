@@ -1,6 +1,8 @@
 using Vitality.Website.App.Helpers;
 using Vitality.Website.App.Vacancies;
 using Vitality.Website.App.Vacancies.Interfaces;
+using Vitality.Website.Areas.Presales.Services;
+
 namespace Vitality.Website.App_Start
 {
     using App.Ccsd;
@@ -48,13 +50,13 @@ namespace Vitality.Website.App_Start
             container.Register<MultiInstanceFactory>(() => type => container.GetAllInstances(type));
             container.Register(typeof(IRequestHandler<,>), assemblies);
             container.Register(typeof(INotificationHandler<>), assemblies);
+            container.Register(typeof(IAsyncRequestHandler<,>), assemblies);
+            container.Register(typeof(IAsyncNotificationHandler<>), assemblies);
             container.RegisterPerWebRequest<ISitecoreContext>(() => SitecoreContext.GetFromHttpContext());
             container.RegisterMvcControllers(assemblies);
             RegisterWebApiControllers(assemblies);
             container.Register<Func<string, IProviderSearchContext>>(() => index => ContentSearchManager.GetIndex(index).CreateSearchContext(), new WebApiRequestLifestyle());
-            container.Register<ICcsdService, CcsdService>();
-            container.Register<IMockDataHelper, MockDataHelper>();
-            container.Register<IVacancyService, VacancyService>();
+            container.Register<IPresalesBslService, PresalesBslService>();
         }
 
         /// <remarks>
@@ -71,7 +73,7 @@ namespace Vitality.Website.App_Start
 
                     registration.SuppressDiagnosticWarning(
                         DiagnosticType.DisposableTransientComponent,
-                        "Web API registers controllers for " + 
+                        "Web API registers controllers for " +
                             "disposal when the request ends during the call to ApiController.ExecuteAsync.");
 
                     container.AddRegistration(type, registration);
