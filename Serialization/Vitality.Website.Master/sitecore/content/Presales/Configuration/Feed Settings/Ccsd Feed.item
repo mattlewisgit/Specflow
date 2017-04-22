@@ -12,36 +12,22 @@ templatekey: Feed Settings
 ----version----
 language: en
 version: 1
-revision: a6e6ad46-78b9-4608-82c3-1e7a46d6c071
+revision: 06c3b1c5-647a-42f6-99ef-c41fdf32fd92
 
 ----field----
-field: {27C684BE-221B-4A01-A5C5-77D33C1387C0}
-name: Username
-key: username
-content-length: 5
+field: {61883224-82A0-44A7-81FB-9A6C9E916CE9}
+name: Endpoint
+key: endpoint
+content-length: 14
 
-tibco
-----field----
-field: {A2D31E0B-AB35-4958-AED4-7770EAA58FFC}
-name: Password
-key: password
-content-length: 12
-
-Kxfbxssoo320
-----field----
-field: {89A06D4A-6430-44F1-B7E4-A57E657ACB15}
-name: FeedUrl
-key: feedurl
-content-length: 62
-
-http://172.27.30.48:8380/Papillon/Service/EnterpriseCCSDPrice/
+feemaxima/list
 ----field----
 field: {C002D72F-2B0E-487C-90D1-694E103BD41D}
 name: MockDataFile
 key: mockdatafile
-content-length: 23
+content-length: 63
 
-\App_Data\CcsdFeed.json
+http://presales.vitality.co.uk/media-online/Files/UAT-CCSD.json
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -69,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a6e6ad46-78b9-4608-82c3-1e7a46d6c071
+06c3b1c5-647a-42f6-99ef-c41fdf32fd92
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170322T173628Z
+20170422T100205Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

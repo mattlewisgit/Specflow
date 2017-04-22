@@ -1,47 +1,40 @@
 ----item----
 version: 1
-id: {A2D31E0B-AB35-4958-AED4-7770EAA58FFC}
+id: {5B958645-18B4-4D65-806F-6A2FD2DC7271}
 database: master
-path: /sitecore/templates/Presales/Settings Templates/Feed Settings/Content/Password
-parent: {D286C52C-8AEF-49F8-B974-75FDAA7FB0BD}
-name: Password
+path: /sitecore/content/Presales/Configuration/Feed Settings/FacebookLikes
+parent: {1AB4A224-7BC3-481C-8B5A-16ECD10B728A}
+name: FacebookLikes
 master: {00000000-0000-0000-0000-000000000000}
-template: {455A3E98-A627-4B40-8035-E683A0331AC7}
-templatekey: Template field
+template: {2FFAE337-E3CA-4DB3-8CEF-1F6575DAC46A}
+templatekey: Feed Settings
 
-----field----
-field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
-name: Type
-key: type
-content-length: 16
-
-Single-Line Text
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 3
-
-200
 ----version----
 language: en
 version: 1
-revision: a2646268-9620-4ac9-a7c9-398b3af87f4d
+revision: 66b6cd64-c846-46f4-aade-8d5ad1b39dc3
 
 ----field----
-field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
-name: Title
-key: title
-content-length: 8
+field: {61883224-82A0-44A7-81FB-9A6C9E916CE9}
+name: Endpoint
+key: endpoint
+content-length: 41
 
-Password
+socialMedia/facebooklikes/242495902445893
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170320T163202Z
+20170422T095952Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a2646268-9620-4ac9-a7c9-398b3af87f4d
+66b6cd64-c846-46f4-aade-8d5ad1b39dc3
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170320T164547Z
+20170422T100123Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

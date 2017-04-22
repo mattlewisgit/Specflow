@@ -3966,6 +3966,7 @@
     <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />
     <Compile Include="Areas\Presales\Services\PresalesBslService.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\CookieSettings.cs" />
+    <Compile Include="Areas\Presales\SettingsTemplates\FeedSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\SiteSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />

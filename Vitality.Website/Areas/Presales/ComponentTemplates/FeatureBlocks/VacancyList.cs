@@ -1,6 +1,7 @@
-﻿using Glass.Mapper.Sc.Configuration.Attributes;
+﻿using Glass.Mapper.Sc.Configuration;
+using Glass.Mapper.Sc.Configuration.Attributes;
 using Vitality.Website.Areas.Global.Models;
-using Glass.Mapper.Sc.Fields;
+using Vitality.Website.Areas.Presales.SettingsTemplates;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
 {
@@ -11,11 +12,11 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
         public string LocationsDropdownLabel { get; set; }
         public string AllLocationsText { get; set; }
         public string DepartmentsDropdownLabel { get; set; }
-        public string AllDepartmentsText { get; set; }      
+        public string AllDepartmentsText { get; set; }
         public string FindoutMoreText { get; set; }
         public string NoVacanciesFoundText { get; set; }
-        public string FeedSettings { get; set; }
-        
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public FeedSettings FeedSettings { get; set; }
         public string LocationText { get; set; }
         public string SalaryText { get; set; }
         public string ClosesOnText { get; set; }
