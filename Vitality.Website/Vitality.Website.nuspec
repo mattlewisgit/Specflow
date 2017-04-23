@@ -27,8 +27,8 @@
     <file src="Global.asax" />
     <file src="_Heartbeat.html" />
     <file src="img\**\*.*" target="img" />
-    <file src="js\*.js" target="js" />
-    <file src="src\*.*" target="src" />
+    <file src="js\**\*.js" target="js" />
+    <file src="js\**\*.html" target="js" />
     <file src="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\CallProSchemaEditor.xml" target="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\CallProSchemaEditor.xml" />
     <file src="sitecore modules\Shell\UrlRewrite\**\*.*" target="sitecore modules\Shell\UrlRewrite" />
     <file src="Views\Form\**\*.*" target="Views\Form" />

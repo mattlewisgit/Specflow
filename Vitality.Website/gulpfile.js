@@ -53,7 +53,7 @@ gulp.task("css", ["css:lint"], function () {
 });
 
 // Concatenates and minifies all custom Presales scripts.
-gulp.task("js", function () {
+gulp.task("js", ["typescript"], function () {
     return gulp
         .src(paths.js.src)
         .pipe(plugins.concat(paths.js.minified))
