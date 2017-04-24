@@ -23,6 +23,10 @@ namespace Vitality.Website.Areas.Presales.Controllers
         [Route("api/bsl/get")]
         public async Task<HttpResponseMessage> Get(string bslEndpoint)
         {
+            if (string.IsNullOrEmpty(bslEndpoint))
+            {
+                return HandleBadRequest();
+            }
             return await GetResponseAsync<BslGetRequest, BslDto>(
                 new BslGetRequest(bslEndpoint), result =>result !=null);
         }
@@ -36,6 +40,10 @@ namespace Vitality.Website.Areas.Presales.Controllers
         [Route("api/bsl/post")]
         public async Task<HttpResponseMessage> Post(string bslEndpoint, object postData)
         {
+            if (string.IsNullOrEmpty(bslEndpoint) || postData == null)
+            {
+                return HandleBadRequest();
+            }
             return await GetResponseAsync<BslPostRequest, BslDto>(
                 new BslPostRequest(bslEndpoint, postData), result => result != null);
         }
