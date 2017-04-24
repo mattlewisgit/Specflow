@@ -171,6 +171,7 @@
     <Compile Include="Utilities\SitecoreDataItemHelper.cs" />
     <Compile Include="Utilities\SiteInfoHelper.cs" />
     <Compile Include="Providers\AppendLinkProvider.cs" />
+    <Compile Include="WFFM\CallProConnector.cs" />
     <Compile Include="WFFM\Helpers\FormFieldsHelper.cs" />
     <Compile Include="WFFM\SaveActions\CallProSaveAction.cs" />
     <Compile Include="WFFM\SaveActions\CallProSchema.cs" />
@@ -185,12 +186,6 @@
     <Analyzer Include="..\packages\codecracker.CSharp.1.0.1\analyzers\dotnet\cs\CodeCracker.CSharp.dll" />
     <Analyzer Include="..\packages\SonarAnalyzer.CSharp.1.10.0\analyzers\SonarAnalyzer.CSharp.dll" />
     <Analyzer Include="..\packages\SonarAnalyzer.CSharp.1.10.0\analyzers\SonarAnalyzer.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Vitality.Website.App\Vitality.Website.App.csproj">
-      <Project>{f8ae7eb7-5b71-4cd8-897d-5d72e6480f4f}</Project>
-      <Name>Vitality.Website.App</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

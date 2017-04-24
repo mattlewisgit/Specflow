@@ -43,14 +43,14 @@
 
                 <a href="#" class="emphasis-link">@Editable(Model, m => m.FindoutMoreText)</a>
             </div>
-            
+
             <span>
                 @Editable(Model, m => m.NoVacanciesFoundText)
-            </span>            
+            </span>
         </div>
     }
     else
-    {        
+    {
         <script type="text/javascript" src='@(localEnv ? "node_modules/core-js/client/shim.min.js" : "https://unpkg.com/core-js/client/shim.min.js")'></script>
         <script type="text/javascript" src='@(localEnv ? "node_modules/zone.js/dist/zone.js" : "https://unpkg.com/zone.js@0.8.4?main=browser")'></script>
         <script type="text/javascript" src='@(localEnv ? "node_modules/systemjs/dist/system.src.js" : "https://unpkg.com/systemjs@0.19.39/dist/system.src.js")'></script>
@@ -68,7 +68,10 @@
             window.angularData.allDepartmentsText = '@Model.AllDepartmentsText';
             window.angularData.findoutMoreText = '@Model.FindoutMoreText';
             window.angularData.noVacanciesFoundText = '@Model.NoVacanciesFoundText';
-            window.angularData.FeedSettings = '@Model.FeedSettings';
+            window.angularData.feedSettings = {
+                Endpoint: "@Model.FeedSettings.Endpoint",
+                MockDataFile: "@Model.FeedSettings.MockDataFile.Url"
+            };
             window.angularData.locationText = '@Model.LocationText';
             window.angularData.salaryText = '@Model.SalaryText';
             window.angularData.closesOnText = '@Model.ClosesOnText';
@@ -79,8 +82,8 @@
 
         <vacancy-list>Loading Vacancies...</vacancy-list>
     }
-    
+
 </div>
 
 
-    
+

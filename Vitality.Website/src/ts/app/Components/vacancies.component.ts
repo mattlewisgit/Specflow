@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit }      from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
+import { FeedSettings } from '../Models/feedSettings';
 import { Vacancy } from '../Models/vacancy';
 import { Vacancies } from '../Models/vacancies';
 import { VacanciesService } from '../Services/vacancies.service';
@@ -29,7 +30,7 @@ export class VacanciesComponent implements OnInit  {
     vacancySalary: string;
     vacancyClosesOn: string;
     path: string;
-    feedId: string;
+    feedSettings: FeedSettings;
 
 	constructor(
         private vacanciesService: VacanciesService,
@@ -55,8 +56,8 @@ export class VacanciesComponent implements OnInit  {
         this.vacancyLocation = data.locationText;
         this.vacancySalary = data.salaryText;
         this.vacancyClosesOn = data.closesOnText;
-        this.feedId = data.FeedSettings;
-        this.vacanciesService.setFeedId(this.feedId);
+        this.feedSettings = data.feedSettings;
+        this.vacanciesService.setFeedSettings(this.feedSettings);
 
         this.getVacancies();
         this.path = this.winRef.ensureTrailingSlash(this.document.location.pathname);

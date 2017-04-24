@@ -184,19 +184,11 @@
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions_GetActiveNavigationSection.cs" />
     <Compile Include="Extensions\View\ContentCollectionExtenstionsTest.cs" />
-    <Compile Include="Presales\Controllers\FeemaximaControllerTests\ListTests.cs" />
+    <Compile Include="Presales\Controllers\BslControllerTests\GetTests.cs" />
+    <Compile Include="Presales\Controllers\BslControllerTests\PostTests.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\Get_Tests.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\List_Tests.cs" />
-    <Compile Include="Presales\Controllers\VacanciesControllerTests\ListTests.cs" />
-    <Compile Include="Presales\Handlers\FeeMaxima\FeeMaximaChaptersDtoTests.cs" />
-    <Compile Include="Presales\Handlers\FeeMaxima\FeeMaximaChaptersHandlerTests.cs" />
-    <Compile Include="Presales\Handlers\FeeMaxima\FeeMaximaChaptersRequestTests.cs" />
-    <Compile Include="Presales\Handlers\SocialMedia\SocialMediaCountsDtoTests.cs" />
-    <Compile Include="Presales\Handlers\SocialMedia\SocialMediaCountsHandlerTests.cs" />
-    <Compile Include="Presales\Handlers\SocialMedia\SocialMediaCountsRequestTests.cs" />
-    <Compile Include="Presales\Handlers\Vacancies\VacanciesDtoTests.cs" />
-    <Compile Include="Presales\Handlers\Vacancies\VacanciesHandlerTests.cs" />
-    <Compile Include="Presales\Handlers\Vacancies\VacanciesRequestRests.cs" />
+    <Compile Include="TestDoubles\MediatorAsyncStub.cs" />
     <Compile Include="TestDoubles\MediatorStub.cs" />
     <Compile Include="Presales\Handlers\Literature\LiteratureDocumentSummariesHandler_Handle_Tests.cs" />
     <Compile Include="Presales\Controllers\LiteratureLibraryControllerTests\Search_Tests.cs" />
@@ -216,10 +208,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Vitality.Website.App\Vitality.Website.App.csproj">
-      <Project>{f8ae7eb7-5b71-4cd8-897d-5d72e6480f4f}</Project>
-      <Name>Vitality.Website.App</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Vitality.Website.SC\Vitality.Website.SC.csproj">
       <Project>{EE2349BA-BC4F-48E3-851E-90AA3AEF0250}</Project>
       <Name>Vitality.Website.SC</Name>
@@ -229,9 +217,7 @@
       <Name>Vitality.Website</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Presales\Controllers\SocialMediaControllerTests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -2,6 +2,7 @@ import { Component, Inject, OnInit }      from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import 'rxjs/add/operator/switchMap';
 
+import { FeedSettings } from '../Models/feedSettings';
 import { Vacancy } from '../Models/vacancy';
 import { Vacancies } from '../Models/vacancies';
 import { VacanciesService } from '../Services/vacancies.service';
@@ -22,7 +23,7 @@ export class VacancyDetailsComponent implements OnInit  {
     vacancyLocation: string;
     vacancySalary: string;
     vacancyClosesOn: string;
-    feedId: string;
+    feedSettings: FeedSettings;
 
   constructor(
       private vacanciesService: VacanciesService,
@@ -46,8 +47,8 @@ export class VacancyDetailsComponent implements OnInit  {
       this.vacancyClosesOn = data.closesOnText;
       this.backToVacanciesListingText = data.backToVacanciesListingText;
       this.backToListingUrl = this.winRef.ensureTrailingSlash(this.document.location.pathname.replace(this.advertId + "/", ""));
-      this.feedId = data.FeedSettings;
-      this.vacanciesService.setFeedId(this.feedId);
+      this.feedSettings = data.feedSettings;
+      this.vacanciesService.setFeedSettings(this.feedSettings);
 
       this.vacanciesService.getVacancy(+this.advertId).then(v => this.setVacancy(v));
   }
