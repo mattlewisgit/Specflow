@@ -1,6 +1,7 @@
-using System;
+using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Configuration.Attributes;
 using Vitality.Website.Areas.Global.Models;
+using Vitality.Website.Areas.Presales.SettingsTemplates;
 using Vitality.Website.SC.Utilities;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
@@ -22,8 +23,8 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
         public string ContactUsText { get; set; }
         public string CurrencySymbol { get; set; }
         public string DescriptionHeader { get; set; }
-        [SitecoreField("FeedSettings")]
-        public Guid FeedSettingsId { get; set; }
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public FeedSettings FeedSettings { get; set; }
         public string Headline { get; set; }
         public string HospitalComplexityHeader { get; set; }
         public string LoadingText { get; set; }

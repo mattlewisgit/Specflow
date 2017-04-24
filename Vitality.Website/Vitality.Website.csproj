@@ -111,6 +111,10 @@
       <HintPath>..\packages\NWebsec.Mvc.4.2.0\lib\45\NWebsec.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SimpleInjector, Version=3.1.2.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.3.1.2\lib\net45\SimpleInjector.dll</HintPath>
       <Private>True</Private>
@@ -314,6 +318,7 @@
     <Content Include="src\ts\app\Components\vacancy-detailsTemplate.html" />
     <Content Include="src\ts\app\Components\vacancyListTemplate.html" />
     <TypeScriptCompile Include="src\ts\app\Components\windowRef.ts" />
+    <TypeScriptCompile Include="src\ts\app\Models\feedSettings.ts" />
     <TypeScriptCompile Include="src\ts\app\vacancyDetails-app.module.ts" />
     <TypeScriptCompile Include="src\ts\systemjs.config.server.ts" />
     <TypeScriptCompile Include="src\ts\vacancyDetails-Main.ts" />
@@ -3921,19 +3926,18 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductPanel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Products\ProductsComponent.cs" />
     <Compile Include="Areas\Presales\Controllers\BaseController.cs" />
-    <Compile Include="Areas\Presales\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Presales\Controllers\BslController.cs" />
     <Compile Include="Areas\Presales\Controllers\ContentSearchController.cs" />
-    <Compile Include="Areas\Presales\Controllers\VacancyController.cs" />
-    <Compile Include="Areas\Presales\Controllers\FeeMaximaController.cs" />
     <Compile Include="Areas\Presales\Controllers\LiteratureLibraryController.cs" />
-    <Compile Include="Areas\Presales\Controllers\SocialMediaController.cs" />
+    <Compile Include="Areas\Presales\Handlers\Bsl\BslDto.cs" />
+    <Compile Include="Areas\Presales\Handlers\Bsl\BslGetHandler.cs" />
+    <Compile Include="Areas\Presales\Handlers\Bsl\BslGetRequest.cs" />
+    <Compile Include="Areas\Presales\Handlers\Bsl\BslPostHandler.cs" />
+    <Compile Include="Areas\Presales\Handlers\Bsl\BslPostRequest.cs" />
     <Compile Include="Areas\Presales\Handlers\ContentSearch\ContentSearchHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\ContentSearch\ContentSearchRequest.cs" />
     <Compile Include="Areas\Presales\Handlers\ContentSearch\ContentSearchResult.cs" />
     <Compile Include="Areas\Presales\Handlers\ContentSearch\SearchDocumentDto.cs" />
-    <Compile Include="Areas\Presales\Handlers\FeeMaxima\FeeMaximaChaptersDto.cs" />
-    <Compile Include="Areas\Presales\Handlers\FeeMaxima\FeeMaximaChaptersHandler.cs" />
-    <Compile Include="Areas\Presales\Handlers\FeeMaxima\FeeMaximaChaptersRequest.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentDto.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentRequest.cs" />
@@ -3943,12 +3947,6 @@
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummariesRequest.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummaryDto.cs" />
     <Compile Include="Areas\Presales\Handlers\PresalesLog.cs" />
-    <Compile Include="Areas\Presales\Handlers\SocialMedia\SocialMediaCountsDto.cs" />
-    <Compile Include="Areas\Presales\Handlers\SocialMedia\SocialMediaCountsHandler.cs" />
-    <Compile Include="Areas\Presales\Handlers\SocialMedia\SocialMediaCountsRequest.cs" />
-    <Compile Include="Areas\Presales\Handlers\Vacancies\VacanciesDto.cs" />
-    <Compile Include="Areas\Presales\Handlers\Vacancies\VacanciesHandler.cs" />
-    <Compile Include="Areas\Presales\Handlers\Vacancies\VacanciesRequest.cs" />
     <Compile Include="Areas\Presales\Models\Breadcrumb.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\CallToActionPanel.cs" />
@@ -3959,17 +3957,19 @@
     <Compile Include="Areas\Presales\PageTemplates\ErrorPage.cs" />
     <Compile Include="Areas\Presales\PageTemplates\LiteratureLibraryPage.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
+    <Compile Include="Areas\Presales\PresalesConstants.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\ArticleIndexRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\CardsStackedRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\HomeHeroRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\PartnerHeroRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\RewardsLeaderRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\SummaryComponentRendering.cs" />
+    <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />
+    <Compile Include="Areas\Presales\Services\PresalesBslService.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\CookieSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\FeedSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\QuoteFooter.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\SiteSettings.cs" />
-    <Compile Include="Areas\Presales\SettingsTemplates\SocialMediaSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\Website.cs" />
     <Compile Include="Extensions\HtmlHelperExtensions.cs" />
     <Compile Include="Extensions\ImageExtensions.cs" />
@@ -4732,10 +4732,6 @@
     <Folder Include="sitemaps\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Vitality.Website.App\Vitality.Website.App.csproj">
-      <Project>{F8AE7EB7-5B71-4CD8-897D-5D72E6480F4F}</Project>
-      <Name>Vitality.Website.App</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Vitality.Website.SC\Vitality.Website.SC.csproj">
       <Project>{ee2349ba-bc4f-48e3-851e-90aa3aef0250}</Project>
       <Name>Vitality.Website.SC</Name>
