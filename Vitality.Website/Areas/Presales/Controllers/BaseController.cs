@@ -43,9 +43,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
             return new HttpResponseMessage(HttpStatusCode.NotFound);
         }
 
-        public HttpResponseMessage HandleBadRequest()
-        {
-            return new HttpResponseMessage(HttpStatusCode.BadRequest);
-        }
+        public HttpResponseMessage HandleBadRequest() =>
+            new HttpResponseMessage(HttpStatusCode.BadRequest);
     }
 }
