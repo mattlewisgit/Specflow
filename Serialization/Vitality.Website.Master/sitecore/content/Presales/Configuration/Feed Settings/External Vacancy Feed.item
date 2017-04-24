@@ -12,7 +12,7 @@ templatekey: Feed Settings
 ----version----
 language: en
 version: 1
-revision: 8f18ea06-1c54-4c8b-ac20-166afae872b7
+revision: e3921573-04dc-4750-bbed-03d84ce39aad
 
 ----field----
 field: {61883224-82A0-44A7-81FB-9A6C9E916CE9}
@@ -25,9 +25,9 @@ vacancy/list
 field: {C002D72F-2B0E-487C-90D1-694E103BD41D}
 name: MockDataFile
 key: mockdatafile
-content-length: 72
+content-length: 114
 
-http://presales.vitality.co.uk/media-online/Files/External Vacancies.xml
+<link text="" linktype="internal" class="" title=""  querystring="" id="{0DD527A3-CDE2-4AA2-9B5E-8D09C5BFDAFB}" />
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8f18ea06-1c54-4c8b-ac20-166afae872b7
+e3921573-04dc-4750-bbed-03d84ce39aad
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170423T185049Z
+20170424T103101Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

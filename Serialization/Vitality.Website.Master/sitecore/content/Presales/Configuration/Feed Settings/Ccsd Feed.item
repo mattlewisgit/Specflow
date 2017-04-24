@@ -12,7 +12,7 @@ templatekey: Feed Settings
 ----version----
 language: en
 version: 1
-revision: 06c3b1c5-647a-42f6-99ef-c41fdf32fd92
+revision: 5470f1ed-4be0-43a1-9e21-35ec50e82fe7
 
 ----field----
 field: {61883224-82A0-44A7-81FB-9A6C9E916CE9}
@@ -25,9 +25,9 @@ feemaxima/list
 field: {C002D72F-2B0E-487C-90D1-694E103BD41D}
 name: MockDataFile
 key: mockdatafile
-content-length: 63
+content-length: 114
 
-http://presales.vitality.co.uk/media-online/Files/UAT-CCSD.json
+<link text="" linktype="internal" class="" title=""  querystring="" id="{00F80AA9-5A6F-459E-971B-A1AF94924738}" />
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-06c3b1c5-647a-42f6-99ef-c41fdf32fd92
+5470f1ed-4be0-43a1-9e21-35ec50e82fe7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170422T100205Z
+20170424T103037Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
