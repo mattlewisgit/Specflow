@@ -12,36 +12,22 @@ templatekey: Feed Settings
 ----version----
 language: en
 version: 1
-revision: cb176ca6-dd12-45d1-b8ce-0f02093adeec
+revision: e3921573-04dc-4750-bbed-03d84ce39aad
 
 ----field----
-field: {27C684BE-221B-4A01-A5C5-77D33C1387C0}
-name: Username
-key: username
-content-length: 29
+field: {61883224-82A0-44A7-81FB-9A6C9E916CE9}
+name: Endpoint
+key: endpoint
+content-length: 12
 
-vitalityfeed@postingpanda.com
-----field----
-field: {A2D31E0B-AB35-4958-AED4-7770EAA58FFC}
-name: Password
-key: password
-content-length: 16
-
-qp!Yg@J(A5gy/>S3
-----field----
-field: {89A06D4A-6430-44F1-B7E4-A57E657ACB15}
-name: FeedUrl
-key: feedurl
-content-length: 41
-
-https://posting2panda.com/feeds/yourboard
+vacancy/list
 ----field----
 field: {C002D72F-2B0E-487C-90D1-694E103BD41D}
 name: MockDataFile
 key: mockdatafile
-content-length: 33
+content-length: 114
 
-\App_Data\ExternalVacancyFeed.xml
+<link text="" linktype="internal" class="" title=""  querystring="" id="{0DD527A3-CDE2-4AA2-9B5E-8D09C5BFDAFB}" />
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -69,18 +55,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-cb176ca6-dd12-45d1-b8ce-0f02093adeec
+e3921573-04dc-4750-bbed-03d84ce39aad
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170418T150404Z
+20170424T103101Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin
