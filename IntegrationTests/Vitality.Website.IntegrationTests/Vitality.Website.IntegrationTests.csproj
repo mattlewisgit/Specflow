@@ -105,6 +105,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="Features\CallToAction.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CallToAction.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\CardsStacked.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -198,6 +203,7 @@
     <Compile Include="Steps\AccordionSteps.cs" />
     <Compile Include="Steps\BaseSteps.cs" />
     <Compile Include="Steps\BreadcrumbSteps.cs" />
+    <Compile Include="Steps\CallToActionSteps.cs" />
     <Compile Include="Steps\CardsStackedSteps.cs" />
     <Compile Include="Steps\CommonSteps.cs" />
     <Compile Include="Steps\CookiesSteps.cs" />
@@ -233,6 +239,10 @@
     <None Include="Features\AdvisersContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AdvisersContent.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CallToAction.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CallToAction.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\CardsStacked.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

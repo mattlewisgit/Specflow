@@ -12,7 +12,7 @@ templatekey: Call To Action Panel
 ----version----
 language: en
 version: 1
-revision: be0d7204-e41b-42ba-af15-04baeceb0605
+revision: 087b964a-f34f-4062-aa72-92de5711d3c3
 
 ----field----
 field: {943F577A-22CE-47D5-9007-9A1315711BD5}
@@ -39,9 +39,9 @@ Eat the fat cats food slap owner's face at 5am until human fills food dish. Cats
 field: {B542B7E4-5B22-4856-B68E-644265700AF9}
 name: CallToAction
 key: calltoaction
-content-length: 123
+content-length: 114
 
-<link linktype="internal" text="Crouch, shake butt" querystring="" target="" id="{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" />
+<link linktype="external" text="External Link" title="External Link" url="http://bbc.co.uk" anchor="" target="" />
 ----field----
 field: {9F351599-F37F-4565-81EE-92E736F0E430}
 name: SecondaryCallToAction
@@ -62,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-be0d7204-e41b-42ba-af15-04baeceb0605
+087b964a-f34f-4062-aa72-92de5711d3c3
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161215T112505Z
+20170425T092858Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

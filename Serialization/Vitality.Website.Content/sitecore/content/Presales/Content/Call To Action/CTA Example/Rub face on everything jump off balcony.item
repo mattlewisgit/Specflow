@@ -12,7 +12,7 @@ templatekey: Call To Action Panel
 ----version----
 language: en
 version: 1
-revision: 06693fba-858c-49ec-ac0d-a17365fe260e
+revision: 6356788b-6c18-4dd9-a6c9-ce221ccfbefd
 
 ----field----
 field: {943F577A-22CE-47D5-9007-9A1315711BD5}
@@ -39,9 +39,9 @@ Bathe private parts with tongue then lick owner's face sleep on dog bed, force d
 field: {B542B7E4-5B22-4856-B68E-644265700AF9}
 name: CallToAction
 key: calltoaction
-content-length: 129
+content-length: 140
 
-<link linktype="internal" text="Slap owner's face at 5am" querystring="" target="" id="{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" />
+<link linktype="internal" text="Internal Link" title="Internal Link" querystring="" target="" id="{110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}" />
 ----field----
 field: {9F351599-F37F-4565-81EE-92E736F0E430}
 name: SecondaryCallToAction
@@ -62,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-06693fba-858c-49ec-ac0d-a17365fe260e
+6356788b-6c18-4dd9-a6c9-ce221ccfbefd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161215T112350Z
+20170425T092858Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
