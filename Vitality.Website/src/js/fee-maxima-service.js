@@ -29,7 +29,7 @@
             var deferred = $q.defer();
 
             $http.post(action + encodeURIComponent(feedSettings.Endpoint),
-                JSON.stringify(encodeURI(feedSettings.MockDataFile)))
+                 {MockDataFile: encodeURI(feedSettings.MockDataFile)})
                 .success(function (dt) {
                     deferred.resolve(dt.BslResponse);
                 })

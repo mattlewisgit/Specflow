@@ -259,7 +259,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="Vitality.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Vitality.Core.1.0.10\lib\net40\Vitality.Core.dll</HintPath>
+      <HintPath>..\packages\Vitality.Core.1.0.0\lib\net45\Vitality.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -3948,6 +3948,7 @@
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummaryDto.cs" />
     <Compile Include="Areas\Presales\Handlers\PresalesLog.cs" />
     <Compile Include="Areas\Presales\Models\Breadcrumb.cs" />
+    <Compile Include="Areas\Presales\Models\BslPostData.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\CallToActionPanel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\PrimaryCallToAction.cs" />
