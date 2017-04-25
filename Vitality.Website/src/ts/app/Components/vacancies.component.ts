@@ -88,7 +88,7 @@ export class VacanciesComponent implements OnInit  {
 		var locs = new Array();
 		// add default location
 		locs.push(this.allLocations);
-        console.log('locs:' + this.locationsArray);
+
 		// add locations from feed
         this.locationsArray.split("|").forEach(s => this.addLocation(s, locs));
 
