@@ -50,10 +50,12 @@
             window.angularData.applyForVacancyText = '@Model.ApplyForVacancyText';
             window.angularData.shareVacancyText = '@Model.ShareVacancyText';
             window.angularData.backToVacanciesListingText = '@Model.BackToVacanciesListText';
+            window.angularData.locations = '@(String.Join("|", Model.Locations.Select(p => p.Name)))';
+            window.angularData.departments = '@(String.Join("|", Model.Departments.Select(p => p.Name)))';
         </script>
 
         <vacancy-details>Retrieving job details...</vacancy-details>
-    }    
+    }
 </div>
 
 

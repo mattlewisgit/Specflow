@@ -3,6 +3,7 @@ using Moq;
 using Shouldly;
 using Vitality.Website.Areas.Presales.Controllers;
 using Vitality.Website.Areas.Presales.Handlers.Bsl;
+using Vitality.Website.Areas.Presales.Models;
 using Vitality.Website.Areas.Presales.Services;
 using Vitality.Website.UnitTests.TestDoubles;
 using Xunit;
@@ -49,7 +50,7 @@ namespace Vitality.Website.UnitTests.Presales.Controllers.BslControllerTests
         {
             _presalesBslService.Setup(p => p.Post<string>(It.IsAny<string>(), It.IsAny<object>())).ReturnsAsync(_sampleJson);
             Init();
-            var result = await _controller.Post("test", "mockfile");
+            var result = await _controller.Post("test",new BslPostData {MockDataFile = "mockfile"});
             result.StatusCode.ShouldBe(HttpStatusCode.OK);
         }
 

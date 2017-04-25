@@ -1,4 +1,5 @@
-﻿using Glass.Mapper.Sc.Configuration;
+﻿using System.Collections.Generic;
+using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Configuration.Attributes;
 using Vitality.Website.Areas.Global.Models;
 using Vitality.Website.Areas.Presales.SettingsTemplates;
@@ -23,5 +24,9 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
         public string ApplyForVacancyText { get; set; }
         public string ShareVacancyText { get; set; }
         public string BackToVacanciesListText { get; set; }
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public IEnumerable<LinkItem> Locations { get; set; }
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public IEnumerable<LinkItem> Departments { get; set; }
     }
 }
