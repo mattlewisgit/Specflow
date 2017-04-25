@@ -3948,6 +3948,7 @@
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummaryDto.cs" />
     <Compile Include="Areas\Presales\Handlers\PresalesLog.cs" />
     <Compile Include="Areas\Presales\Models\Breadcrumb.cs" />
+    <Compile Include="Areas\Presales\Models\BslPostData.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\CallToActionPanel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\CallToAction\PrimaryCallToAction.cs" />

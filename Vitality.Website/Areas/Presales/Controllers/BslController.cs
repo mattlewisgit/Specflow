@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using Newtonsoft.Json.Linq;
 using Vitality.Website.Areas.Presales.Handlers.Bsl;
+using Vitality.Website.Areas.Presales.Models;
 
 namespace Vitality.Website.Areas.Presales.Controllers
 {
@@ -38,7 +39,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
         /// <param name="postData">Data to post to BSL</param>
         [HttpPost]
         [Route("api/bsl/post")]
-        public async Task<HttpResponseMessage> Post(string bslEndpoint, object postData)
+        public async Task<HttpResponseMessage> Post(string bslEndpoint, BslPostData postData)
         {
             if (string.IsNullOrEmpty(bslEndpoint) || postData == null)
             {
