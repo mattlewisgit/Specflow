@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {3DE8CA89-E07E-451A-B97F-80F3A1D28615}
+id: {9666BEA3-DCB4-4743-A9C5-B2634FD1D887}
 database: master
-path: /sitecore/content/Presales/Content/Feature Blocks/Award Leader Example/Award Logo 1
+path: /sitecore/content/Presales/Content/Feature Blocks/Award Leader Example/Award Logo 4
 parent: {C007FB3C-30BD-459B-880D-A56F62B64611}
-name: Award Logo 1
+name: Award Logo 4
 master: {00000000-0000-0000-0000-000000000000}
 template: {25EB72FE-6AE2-44E4-AC1E-9631E53D3AB0}
 templatekey: Award Logo
@@ -12,7 +12,7 @@ templatekey: Award Logo
 ----version----
 language: en
 version: 1
-revision: b0e49bc2-878c-4c03-b8ae-8ad7385d7e96
+revision: 1073f290-835a-409e-89fa-975600549262
 
 ----field----
 field: {9A4D889C-168E-4BBA-90CB-C9AFBA966F76}
@@ -20,7 +20,7 @@ name: Image
 key: image
 content-length: 58
 
-<image mediaid="{EA937974-5309-435E-9766-C92837F15D3F}" />
+<image mediaid="{68714AEE-D5AB-4B20-8FA1-A4ADCEACBE14}" />
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -34,7 +34,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20161213T140919Z
+20170425T140557Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -48,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b0e49bc2-878c-4c03-b8ae-8ad7385d7e96
+1073f290-835a-409e-89fa-975600549262
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170425T140331Z
+20170425T140641Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -63,10 +63,3 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />
