@@ -40,7 +40,10 @@
             window.angularData.allDepartmentsText = '@Model.AllDepartmentsText';
             window.angularData.findoutMoreText = '@Model.FindoutMoreText';
             window.angularData.noVacanciesFoundText = '@Model.NoVacanciesFoundText';
-            window.angularData.FeedSettings = '@Model.FeedSettings';
+            window.angularData.feedSettings = {
+                Endpoint: "@Model.FeedSettings.Endpoint",
+                MockDataFile: "@Model.FeedSettings.MockDataFile.Url"
+            };
             window.angularData.locationText = '@Model.LocationText';
             window.angularData.salaryText = '@Model.SalaryText';
             window.angularData.closesOnText = '@Model.ClosesOnText';
