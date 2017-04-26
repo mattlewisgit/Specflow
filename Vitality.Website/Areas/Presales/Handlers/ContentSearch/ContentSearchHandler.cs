@@ -26,7 +26,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
             {
                 var predecate = PredicateBuilder.True<ContentSearchResult>();
 
-                predecate = predecate.And(p => p.Path.StartsWith(pathToSearch));
+                predecate = predecate.And(p => p.Path.StartsWith(pathToSearch) && !p.HideFromSearch);
 
                 var query = context.GetQueryable<ContentSearchResult>().Where(predecate);
 
