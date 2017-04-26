@@ -60,7 +60,8 @@
             System.import('/js/vacancyList-Main.js')
                 .catch (function (err) { console.error(err); });
 
-            window.angularData = window.angularData || { };
+            window.angularData = window.angularData || {};
+
             window.angularData.headline = '@Model.Headline';
             window.angularData.locationsDropdownLabel = '@Model.LocationsDropdownLabel';
             window.angularData.allLocationsText = '@Model.AllLocationsText';
@@ -82,7 +83,7 @@
             window.angularData.departments = '@(String.Join("|", Model.Departments.Select(p => p.Name)))';
         </script>
 
-        <vacancy-list>Loading Vacancies...</vacancy-list>
+        <vacancy-list>Loading Vacancies...<div class="loader__icon"></div></vacancy-list>
     }
 
 </div>
