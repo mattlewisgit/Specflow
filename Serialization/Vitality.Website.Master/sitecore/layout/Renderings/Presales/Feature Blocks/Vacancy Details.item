@@ -24,6 +24,20 @@ content-length: 8
 
 Presales
 ----field----
+field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
+name: Datasource Location
+key: datasource location
+content-length: 76
+
+query:./ancestor-or-self::*[@@templatename='Website']/Content/Feature Blocks
+----field----
+field: {1A7C85E5-DC0B-490D-9187-BB1DBCB4C72F}
+name: Datasource Template
+key: datasource template
+content-length: 76
+
+/sitecore/templates/Presales/Component Templates/Feature Blocks/Vacancy List
+----field----
 field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
 name: __Thumbnail
 key: __thumbnail
@@ -33,7 +47,7 @@ content-length: 58
 ----version----
 language: en
 version: 1
-revision: c209ff2b-1135-4f45-bfbf-ba4c4f3aabb6
+revision: 3440aa27-5e7a-4d13-8c32-5c50acc5baf6
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -55,14 +69,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c209ff2b-1135-4f45-bfbf-ba4c4f3aabb6
+3440aa27-5e7a-4d13-8c32-5c50acc5baf6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170420T141117Z
+20170425T100444Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

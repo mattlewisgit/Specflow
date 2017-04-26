@@ -18,10 +18,8 @@ export class VacanciesService {
   }
 
   getVacancies(): Promise<Vacancies> {
-      var headers = new Headers();
-      headers.append('Content-Type', 'application/json');
-      return this.http.post("/api/bsl/post?bslendpoint=" + encodeURIComponent(this.feedSettings.Endpoint),
-          JSON.stringify(encodeURI(this.feedSettings.MockDataFile)), { headers: headers })
+     return this.http.post("/api/bsl/post?bslendpoint=" + encodeURIComponent(this.feedSettings.Endpoint),
+          { FeedType: "External", MockDataFile: encodeURI(this.feedSettings.MockDataFile )})
                .toPromise()
                .then(response => response.json().BslResponse as Vacancies)
           .catch(this.handleError);

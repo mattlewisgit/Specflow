@@ -3,10 +3,10 @@ export class Vacancy {
 	ClosingDate: string;
 	Description: string;
 	JobType: string;
-	Joblocation: string;
+	JobLocation: string;
 	JobSalary: string;
-    Jobtitle: string;
-    Jobdepartment: string;
+    JobTitle: string;
+    JobDepartment: string;
 	Link: string;
 	Title: string;
 }

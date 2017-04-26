@@ -20,7 +20,7 @@ export class VacanciesComponent implements OnInit  {
     vacancy: Vacancy;
     locationsLabel: string;
     departmentsLabel: string;
-    allLocations: string;
+    allLocations: string;    
     allDepartments: string;
     location: string;
     department: string;
@@ -31,6 +31,9 @@ export class VacanciesComponent implements OnInit  {
     vacancyClosesOn: string;
     path: string;
     feedSettings: FeedSettings;
+    locationsArray: string;
+    departmentsArray: string;
+
 
 	constructor(
         private vacanciesService: VacanciesService,
@@ -57,6 +60,8 @@ export class VacanciesComponent implements OnInit  {
         this.vacancySalary = data.salaryText;
         this.vacancyClosesOn = data.closesOnText;
         this.feedSettings = data.feedSettings;
+        this.locationsArray = data.locations;
+        this.departmentsArray = data.departments;
         this.vacanciesService.setFeedSettings(this.feedSettings);
 
         this.getVacancies();
@@ -85,17 +90,17 @@ export class VacanciesComponent implements OnInit  {
 		locs.push(this.allLocations);
 
 		// add locations from feed
-        this.vacancies.forEach(s => this.addLocation(s, locs));
+        this.locationsArray.split("|").forEach(s => this.addLocation(s, locs));
 
 		this.locations = locs;
 	}
 
 	// add location to array
-	addLocation(vacancy:Vacancy, locs: Array<string>) {
+	addLocation(loc:string, locs: Array<string>) {
 		// check location not already added
-		if (locs.indexOf(vacancy.Joblocation) < 1)
+		if (locs.indexOf(loc) < 1)
 		{
-			locs.push(vacancy.Joblocation);
+			locs.push(loc);
 		}
 	}
 
@@ -111,16 +116,16 @@ export class VacanciesComponent implements OnInit  {
         depts.push(this.allDepartments);
 
         // add departments from feed
-        this.vacancies.forEach(s => this.addDepartment(s, depts));
+        this.departmentsArray.split("|").forEach(s => this.addDepartment(s, depts));
 
         this.departments = depts;
     }
 
     // add department to array
-    addDepartment(vacancy: Vacancy, depts: Array<string>) {
+    addDepartment(dept: string, depts: Array<string>) {
         // check department not already added
-        if (depts.indexOf(vacancy.Jobdepartment) < 1) {
-            depts.push(vacancy.Jobdepartment);
+        if (depts.indexOf(dept) < 1) {
+            depts.push(dept);
         }
     }
 
@@ -131,11 +136,11 @@ export class VacanciesComponent implements OnInit  {
         this.filteredVacancies = this.vacancies;
 
         if (loc != this.allLocations) {
-            this.filteredVacancies = this.filteredVacancies.filter(p => p.Joblocation === loc);
+            this.filteredVacancies = this.filteredVacancies.filter(p => p.JobLocation === loc);
         }
 
         if (dept != this.allDepartments) {
-            this.filteredVacancies = this.filteredVacancies.filter(p => p.Jobdepartment === dept);
+            this.filteredVacancies = this.filteredVacancies.filter(p => p.JobDepartment === dept);
         }
     }
 }
