@@ -105,6 +105,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="Features\BenefitLeader.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BenefitLeader.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\CallToAction.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -207,6 +212,7 @@
     </Compile>
     <Compile Include="Steps\AccordionSteps.cs" />
     <Compile Include="Steps\BaseSteps.cs" />
+    <Compile Include="Steps\BenefitLeaderSteps.cs" />
     <Compile Include="Steps\BreadcrumbSteps.cs" />
     <Compile Include="Steps\CallToActionSteps.cs" />
     <Compile Include="Steps\CardsStackedSteps.cs" />
@@ -236,6 +242,10 @@
     <None Include="Features\Accordion.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Accordion.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BenefitLeader.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BenefitLeader.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Breadcrumb.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
