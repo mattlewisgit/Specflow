@@ -1,12 +1,16 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.VacancyList>
+﻿@using AutoMapper;
 @using Newtonsoft.Json;
+@using Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks;
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<VacancyList>
 
 @{
-    var localEnv = "presales.vitality.co.uk" == System.Web.HttpContext.Current.Request.Url.Host;
+    var localEnv = "presales.vitality.co.uk" == HttpContext.Current.Request.Url.Host;
+    var angularModel = JsonConvert.SerializeObject(Mapper.Map<VacancyListViewModel>(Model));
 }
 
 <div class="pinch">
     <h2>@Editable(Model, m => m.Headline)</h2>
+
     @if (Sitecore.Context.PageMode.IsExperienceEditor)
     {
         <div class="form__field">
@@ -36,6 +40,7 @@
         <div class="form__field">
             <div *ngFor="let vacancy of filteredVacancies">
                 <h3>[Vacancy Title]</h3>
+
                 <ul>
                     <li>@Editable(Model, m => m.LocationText) [Vacancy Location]</li>
                     <li>@Editable(Model, m => m.SalaryText) [Vacancy Salary]</li>
@@ -58,37 +63,13 @@
         <script type="text/javascript" src='@(localEnv ? "/js/systemjs.config.js" : "/js/systemjs.config.server.js")'></script>
 
         <script type="text/javascript">
-            System.import('/js/vacancyList-Main.js')
+            System
+                .import('/js/vacancyList-Main.js')
                 .catch (function (err) { console.error(err); });
 
-            window.angularData = window.angularData || {};
-          
-            window.angularData.headline = '@Model.Headline';
-            window.angularData.locationsDropdownLabel = '@Model.LocationsDropdownLabel';
-            window.angularData.allLocationsText = '@Model.AllLocationsText';
-            window.angularData.departmentsDropdownLabel = '@Model.DepartmentsDropdownLabel';
-            window.angularData.allDepartmentsText = '@Model.AllDepartmentsText';
-            window.angularData.findoutMoreText = '@Model.FindoutMoreText';
-            window.angularData.noVacanciesFoundText = '@Model.NoVacanciesFoundText';
-            window.angularData.feedSettings = {
-                Endpoint: "@Model.FeedSettings.Endpoint",
-                MockDataFile: "@Model.FeedSettings.MockDataFile.Url",
-                FeedType: "@Model.FeedType"
-            };
-            window.angularData.locationText = '@Model.LocationText';
-            window.angularData.salaryText = '@Model.SalaryText';
-            window.angularData.closesOnText = '@Model.ClosesOnText';
-            window.angularData.applyForVacancyText = '@Model.ApplyForVacancyText';
-            window.angularData.shareVacancyText = '@Model.ShareVacancyText';
-            window.angularData.backToVacanciesListingText = '@Model.BackToVacanciesListText';
-            window.angularData.locations = '@(String.Join("|", Model.Locations.Select(p => p.Name)))';
-            window.angularData.departments = '@(String.Join("|", Model.Departments.Select(p => p.Name)))';
+            window.angularData = '@angularModel';
         </script>
 
         <vacancy-list>Loading Vacancies...<div class="loader__icon"></div></vacancy-list>
     }
-
 </div>
-
-
-
