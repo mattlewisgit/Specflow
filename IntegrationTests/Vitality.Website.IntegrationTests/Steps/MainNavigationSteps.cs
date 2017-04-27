@@ -199,7 +199,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         public void ThenIExpectTheHealthInsuranceQuoteButtonToBeVisible()
         {
             WebDriver
-                .FindElement(By.LinkText("Health insurance quote"))
+                .WaitForElement(By.LinkText("Health insurance quote"))
                 .Displayed
                 .ShouldBeTrue();
         }
