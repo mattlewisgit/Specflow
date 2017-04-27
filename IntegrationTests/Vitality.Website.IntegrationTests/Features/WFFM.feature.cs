@@ -104,10 +104,10 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TraitAttribute("FeatureTitle", "WFFM")]
         [Xunit.TraitAttribute("Description", "Submit Invalid Web Form")]
         [Xunit.TraitAttribute("Category", "SIT")]
-        [Xunit.InlineDataAttribute("Matt", "LeTissier", "Other", "IncorrectEmail", "02380999999", "1", "May", "2016", "Magic", "Yes", new string[0])]
-        [Xunit.InlineDataAttribute("Matt", "LeTissier", "Other", "Test@Test.com", "IncorrectPhone", "1", "May", "2016", "Magic", "Yes", new string[0])]
-        [Xunit.InlineDataAttribute("", "LeTissier", "Other", "Test@Test.com", "02380999999", "1", "May", "2016", "Magic", "Yes", new string[0])]
-        public virtual void SubmitInvalidWebForm(string firstName, string lastName, string otherName, string email, string phone, string day, string mM, string yYYY, string dropList, string checkBox, string[] exampleTags)
+        [Xunit.InlineDataAttribute("Matt", "LeTissier", "Other", "IncorrectEmail", "02380999999", "1", "May", "2016", "Magic", "Yes", "The Email Address field contains an invalid email address.", new string[0])]
+        [Xunit.InlineDataAttribute("Matt", "LeTissier", "Other", "Test@Test.com", "IncorrectPhone", "1", "May", "2016", "Magic", "Yes", "The value of the Phone number field is not valid.", new string[0])]
+        [Xunit.InlineDataAttribute("", "LeTissier", "Other", "Test@Test.com", "02380999999", "1", "May", "2016", "Magic", "Yes", "The First name field is required.", new string[0])]
+        public virtual void SubmitInvalidWebForm(string firstName, string lastName, string otherName, string email, string phone, string day, string mM, string yYYY, string dropList, string checkBox, string errorMessage, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "SIT"};
@@ -125,7 +125,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 22
  testRunner.And("I click on the Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23
- testRunner.Then("I expect the web forms mandatory error message to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I expect the web forms {0} error message to appear", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
