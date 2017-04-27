@@ -29,8 +29,8 @@
 
         </div>
 
-        <div class="form__field">
-            <div *ngFor="let vacancy of filteredVacancies">
+        <div class="form__field vacancyList">
+            <div *ngFor="let vacancy of filteredVacancies" class="vacancy">
                 <h3>{{ vacancy.JobTitle }}</h3>
                 <ul>
                     <li>{{ vacancyLocation }} {{ vacancy.JobLocation }}</li>
@@ -41,7 +41,7 @@
                 <a href="{{ path }}{{ vacancy.Advertid }}/" class="emphasis-link">{{ findoutMore }}</a>
                 <hr/>
             </div>
-            <div *ngIf="filteredVacancies?.length < 1">
+            <div *ngIf="filteredVacancies?.length < 1" class="novacancies">
                 <span>
                     {{ noVacanciesFoundText }}
                 </span>
