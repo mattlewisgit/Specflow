@@ -28,5 +28,6 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
         public IEnumerable<LinkItem> Locations { get; set; }
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<LinkItem> Departments { get; set; }
+        public string FeedType { get; set; }
     }
 }

@@ -2,7 +2,11 @@
     <form>
         <div class="form__field">
 			<div *ngIf="vacancy">
-				<h3>{{ vacancy.JobTitle }}</h3>
+				<div class="grid ">
+					<div class="grid-col-12-12">
+						<h3>{{ vacancy.JobTitle }}</h3>
+					</div>
+            	</div>				
             	<div class="grid ">
 	                <div class="grid-col-9-12">
 						<ul>
@@ -21,12 +25,10 @@
 					<div class="grid-col-12-12" [innerHTML]="vacancy.Description"></div>
             	</div>
 				<div class="grid ">
-	                <div class="grid-col-9-12">
-                	</div>
-					<div class="grid-col-3-12">
+	                <div class="grid-col-12-12">
 						<div><a href="{{ vacancy.Link }}" target="_blank" class="box-button box-button--rounded box-button box-button--primary">{{ applyForVacancy}}</a></div>
     					<div><a href="{{ backToListingUrl }}" class="box-button box-button--rounded box-button--primary-inverse">{{ backToVacanciesListingText }}</a></div>
-					</div>
+                	</div>
             	</div>
 			</div>
         </div>
