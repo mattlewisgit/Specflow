@@ -52,7 +52,6 @@ namespace Vitality.Website.IntegrationTests.Steps
 
             //Check Box
             WebDriver.FindElement(By.Id(WebFormID + "Sections_1__Fields_1__Value")).Click();
-
         }
 
 
@@ -66,20 +65,21 @@ namespace Vitality.Website.IntegrationTests.Steps
         }
 
         [Then(@"I expect the web forms '(.*)' message to appear")]
-        public void ThenIExpectTheWebFormsMessageToAppear(string p0)
+        public void ThenIExpectTheWebFormsMessageToAppear(string SuccessMessage)
         {
             WebDriver
-                    .WaitForElement(new JQuerySelector(".form.pinch" + ":contains('" + p0 + "')"))
+                    .WaitForElement(new JQuerySelector(".form.pinch" + ":contains('" + SuccessMessage + "')"))
                     .Displayed.ShouldBeTrue();
         }
 
 
-        [Then(@"I expect the web forms mandatory error message to appear")]
-        public void ThenIExpectTheWebFormsMandatoryErrorMessageToAppear()
+        [Then(@"I expect the web forms (.*) error message to appear")]
+        public void ThenIExpectTheWebFormsErrorMessageToAppear(string ErrorMessage)
         {
             WebDriver
-                    .FindElement(new JQuerySelector(".required-field.form-group.has-feedback.has-error"))
-                    .Displayed.ShouldBeTrue();
+                    .WaitForElement(new JQuerySelector(".required-field.form-group.has-error .field-validation-error.help-block"))
+                    .GetAttribute("innerHTML")
+                    .ShouldContain(ErrorMessage);
         }
 
 
@@ -89,7 +89,6 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver
                     .WaitForElement(new JQuerySelector(".required-field.form-group.has-feedback .control-label:contains('" + tooltipfield + "') .tool-tip-icon.tool-tip-icon--inline button"))
                     .SendKeys(Keys.Space);
-
 
             WebDriver
                     .WaitForElement(new JQuerySelector(".required-field.form-group.has-feedback .control-label:contains('" + tooltipfield + "') .tool-tip-icon.tool-tip-icon--inline button"))

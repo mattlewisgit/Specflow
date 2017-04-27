@@ -83,11 +83,11 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 8
 this.ScenarioSetup(scenarioInfo);
 #line 9
- testRunner.Given("I am on presales /dev/faq-leader", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on presales /dev/award-leader", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
  testRunner.When("I resize to full-screen view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
- testRunner.Then("I expect the correct CSS FAQ Leader values to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the correct CSS Award Leader values to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -103,51 +103,93 @@ this.ScenarioSetup(scenarioInfo);
 #line 14
 this.ScenarioSetup(scenarioInfo);
 #line 15
- testRunner.Given("I am on presales /dev/faq-leader", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on presales /dev/award-leader", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 16
  testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 17
- testRunner.Then("I expect the correct CSS FAQ Leader values to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the correct CSS Award Leader values to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check Award Leader paragraph anchor link works")]
+        [Xunit.FactAttribute(DisplayName="Check Award Leader Member Story 1 link works")]
         [Xunit.TraitAttribute("FeatureTitle", "Award Leader")]
-        [Xunit.TraitAttribute("Description", "Check Award Leader paragraph anchor link works")]
+        [Xunit.TraitAttribute("Description", "Check Award Leader Member Story 1 link works")]
         [Xunit.TraitAttribute("Category", "SIT")]
-        public virtual void CheckAwardLeaderParagraphAnchorLinkWorks()
+        public virtual void CheckAwardLeaderMemberStory1LinkWorks()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Award Leader paragraph anchor link works", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Award Leader Member Story 1 link works", new string[] {
                         "SIT"});
 #line 20
 this.ScenarioSetup(scenarioInfo);
 #line 21
- testRunner.Given("I am on presales /dev/faq-leader", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on presales /dev/award-leader", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 22
- testRunner.When("I click on FAQ Leader paragraph anchor Read more link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on the Award Leader Member Stories 1 link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 23
- testRunner.Then("I expect the presales / to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales /dev/home-hero/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check Award Leader bottom button works")]
+        [Xunit.FactAttribute(DisplayName="Check Award Leader Member Story 2 link works")]
         [Xunit.TraitAttribute("FeatureTitle", "Award Leader")]
-        [Xunit.TraitAttribute("Description", "Check Award Leader bottom button works")]
+        [Xunit.TraitAttribute("Description", "Check Award Leader Member Story 2 link works")]
         [Xunit.TraitAttribute("Category", "SIT")]
-        public virtual void CheckAwardLeaderBottomButtonWorks()
+        public virtual void CheckAwardLeaderMemberStory2LinkWorks()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Award Leader bottom button works", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Award Leader Member Story 2 link works", new string[] {
                         "SIT"});
 #line 26
 this.ScenarioSetup(scenarioInfo);
 #line 27
- testRunner.Given("I am on presales /dev/faq-leader", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on presales /dev/award-leader", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 28
- testRunner.When("I click on FAQ Leader bottom button Layback skate key link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on the Award Leader member Stories 2 link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 29
- testRunner.Then("I expect the presales / to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales /dev/home-hero/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check Award Leader Member Story 3 link works")]
+        [Xunit.TraitAttribute("FeatureTitle", "Award Leader")]
+        [Xunit.TraitAttribute("Description", "Check Award Leader Member Story 3 link works")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void CheckAwardLeaderMemberStory3LinkWorks()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Award Leader Member Story 3 link works", new string[] {
+                        "SIT"});
+#line 32
+this.ScenarioSetup(scenarioInfo);
+#line 33
+ testRunner.Given("I am on presales /dev/award-leader", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 34
+ testRunner.When("I click on the Award Leader Member Stories 3 link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
+ testRunner.Then("I expect the presales /dev/home-hero/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check Award Leader Member Story 1 link works in mobile view")]
+        [Xunit.TraitAttribute("FeatureTitle", "Award Leader")]
+        [Xunit.TraitAttribute("Description", "Check Award Leader Member Story 1 link works in mobile view")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void CheckAwardLeaderMemberStory1LinkWorksInMobileView()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Award Leader Member Story 1 link works in mobile view", new string[] {
+                        "SIT"});
+#line 38
+this.ScenarioSetup(scenarioInfo);
+#line 39
+ testRunner.Given("I am on presales /dev/award-leader", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 40
+    testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 41
+ testRunner.And("I click on the Award Leader Member Stories 1 link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 42
+ testRunner.Then("I expect the presales /dev/home-hero/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
