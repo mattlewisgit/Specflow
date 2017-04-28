@@ -261,6 +261,7 @@ Vitality.Website/**/*.map
 
 Vitality.Website/bower_components/
 
+Vitality.Website/img/
 Vitality.Website/js/
 Vitality.Website/src/**/*.js
 Vitality.Website/src/**/*.js.map
