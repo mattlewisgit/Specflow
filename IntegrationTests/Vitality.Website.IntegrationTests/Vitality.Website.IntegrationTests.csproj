@@ -105,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="Steps\CareersSteps.cs" />
     <Compile Include="Features\BenefitLeader.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,6 +145,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AwardLeader.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Careers.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Careers.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Drivers\DriverFactory.cs" />
@@ -311,6 +317,10 @@
     <None Include="Features\AwardLeader.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AwardLeader.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Careers.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Careers.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Tabbed.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
