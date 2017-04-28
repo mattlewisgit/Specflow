@@ -365,8 +365,6 @@
     <Content Include="Data\WFFM_Analytics.sql" />
     <Content Include="error.html" />
     <Content Include="Global.asax" />
-    <Content Include="images\sprite-generated%402x.png" />
-    <Content Include="images\sprite-generated.png" />
     <Content Include="img\favicon\android-chrome-144x144.png" />
     <Content Include="img\favicon\android-chrome-192x192.png" />
     <Content Include="img\favicon\android-chrome-36x36.png" />

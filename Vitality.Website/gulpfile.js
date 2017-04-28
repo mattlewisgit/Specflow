@@ -12,6 +12,26 @@ var plugins = require("gulp-load-plugins")({
     replaceString: /\bgulp[\-\.]/
 });
 
+var tasks = {
+    bower: {
+        "default": "bower",
+        run: "run"
+    },
+    clean: "clean",
+    css: {
+        "default": "css",
+        lint: "css:lint"
+    },
+    "default": "default",
+    help: "help",
+    js: {
+        "default": "js",
+        typescript: "typescript"
+    },
+    serve: "serve",
+    watch: "watch"
+};
+
 // Set paths that are used eveywhere.
 var paths = {
     config: "./config/",
@@ -32,10 +52,10 @@ var configs = {
 };
 
 // Task listing.
-gulp.task("help", plugins.taskListing);
+gulp.task(tasks.help, plugins.taskListing);
 
 // CSS SQA.
-gulp.task("css:lint", function () {
+gulp.task(tasks.css.lint, function () {
     return gulp
         .src(paths.sass)
         .pipe(plugins.sassLint())
@@ -44,7 +64,7 @@ gulp.task("css:lint", function () {
 });
 
 // Compiles all SASS to CSS.
-gulp.task("css", ["css:lint"], function () {
+gulp.task(tasks.css.default, [tasks.css.lint], function () {
     return gulp
         .src(paths.sass)
         .pipe(plugins.sass().on("error", plugins.sass.logError))
@@ -53,7 +73,7 @@ gulp.task("css", ["css:lint"], function () {
 });
 
 // Concatenates and minifies all custom Presales scripts.
-gulp.task("js", ["typescript"], function () {
+gulp.task(tasks.js.default, [tasks.js.typescript], function () {
     return gulp
         .src(paths.js.src)
         .pipe(plugins.concat(paths.js.minified))
@@ -62,22 +82,34 @@ gulp.task("js", ["typescript"], function () {
 });
 
 // Standard task runner that installs and builds eveything.
-gulp.task("default", function () {
+gulp.task(tasks.default, function () {
     runSequence(
-        "bower",
+        tasks.bower.default,
         [
-            "css",
-            "js"
+            tasks.css.default,
+            tasks.js.default
         ]
     );
 });
 
-// Simply runs bower, but saves running the command separately.
-gulp.task("bower", function () {
+// Run bower and copy required assets.
+gulp.task(tasks.bower.default, [tasks.bower.run], function () {
+    var boilerplateDist = "./bower_components/vitality.boilerplate/dist/";
+
+    gulp
+        .src(boilerplateDist + "sprite-generated*.png")
+        .pipe(gulp.dest("./images/"));
+
+    return gulp
+        .src(boilerplateDist + "svg-sprite.svg")
+        .pipe(gulp.dest("./img/spritesheets/"));
+});
+
+gulp.task(tasks.bower.run, function () {
     return plugins.bower({ cmd: "update" });
 });
 
-gulp.task("typescript", function () {
+gulp.task(tasks.js.typescript, function () {
     // Copy HTML templates, too.
     gulp
         .src("src/ts/**/*.html")
@@ -92,7 +124,7 @@ gulp.task("typescript", function () {
     return tsResult.js.pipe(gulp.dest(paths.js.dest));
 });
 
-gulp.task("watch", function () {
+gulp.task(tasks.watch, function () {
     gulp.watch(paths.sass, [
         "css"
     ]);
@@ -102,7 +134,7 @@ gulp.task("watch", function () {
     ]);
 });
 
-gulp.task("serve", function () {
+gulp.task(tasks.serve, function () {
     browserSync({
         options: {
             proxy: {
@@ -122,6 +154,6 @@ gulp.task("serve", function () {
     ]);
 });
 
-gulp.task("clean", function (cb) {
+gulp.task(tasks.clean, function (cb) {
     return rimraf(paths.js.dest, cb);
 });
