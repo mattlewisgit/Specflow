@@ -105,6 +105,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="Features\ArticleIndex.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArticleIndex.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Steps\ArticleIndexSteps.cs" />
     <Compile Include="Steps\CareersSteps.cs" />
     <Compile Include="Features\BenefitLeader.feature.cs">
       <AutoGen>True</AutoGen>
@@ -249,6 +255,10 @@
     <None Include="Features\Accordion.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Accordion.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\ArticleIndex.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ArticleIndex.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\BenefitLeader.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
