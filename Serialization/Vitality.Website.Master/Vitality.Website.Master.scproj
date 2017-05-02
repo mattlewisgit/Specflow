@@ -783,6 +783,10 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
+    <SitecoreItem Include="sitecore\layout\Renderings\Presales\Generic\Countdown Timer.item">
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
+    </SitecoreItem>
     <SitecoreItem Include="sitecore\layout\Renderings\Presales\Generic\Message Box.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
@@ -1060,6 +1064,10 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\media library\Presales\System\Components\ContentCollection.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\media library\Presales\System\Components\CountdownTimer.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
@@ -5136,6 +5144,26 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Generic\Content\Content\RichText.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Generic\Countdown Timer.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Generic\Countdown Timer\__Standard Values.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Generic\Countdown Timer\Content.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Generic\Countdown Timer\Content\Labels.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Generic\Countdown Timer\Content\RichText.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
