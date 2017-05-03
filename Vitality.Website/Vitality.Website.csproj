@@ -319,6 +319,8 @@
     <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.Log4Net.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
+    <Content Include="src\js\countdown-timer-app.js" />
+    <Content Include="src\js\global-functions.js" />
     <Content Include="src\ts\app\Components\vacancy-detailsTemplate.html" />
     <Content Include="src\ts\app\Components\vacancyListTemplate.html" />
     <TypeScriptCompile Include="src\ts\app\Components\windowRef.ts" />
@@ -582,6 +584,7 @@
     <Content Include="Areas\Presales\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\VacancyDetails.cshtml" />
     <Content Include="Areas\Presales\Views\Generic\MessageBox.cshtml" />
+    <Content Include="Areas\Presales\Views\Generic\CountdownTimer.cshtml" />
     <None Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.intellisense.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.min.js" />
@@ -3910,6 +3913,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\FeatureBlocks\VacancyListViewModel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\ArticleItem.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Content.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\Generic\CountdownTimer.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\MessageBox.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\Tab.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Generic\TabCollection.cs" />
@@ -3951,6 +3955,7 @@
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummariesRequest.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummaryDto.cs" />
     <Compile Include="Areas\Presales\Handlers\PresalesLog.cs" />
+    <Compile Include="Areas\Presales\LabelsConstants.cs" />
     <Compile Include="Areas\Presales\Models\Breadcrumb.cs" />
     <Compile Include="Areas\Presales\Models\BslPostData.cs" />
     <Compile Include="Areas\Presales\PageTemplates\BasePage.cs" />

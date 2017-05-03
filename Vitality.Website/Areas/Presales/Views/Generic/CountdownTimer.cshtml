@@ -1,0 +1,33 @@
+﻿@using Vitality.Website.Areas.Presales
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Generic.CountdownTimer>
+<div class="pinch">
+    @if (Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        //Best edit these in content editor
+        @Editable(Model, m=>m.Labels)
+    }
+    <div ng-app="CountdownTimerApp">
+        <div class="grid" ng-controller="CountdownTimerController">
+            <div class="grid-col-3-12"></div>
+            <div class="grid-col-6-12">
+                <div class="grid-col-3-12">
+                    <h6 class="h1" ng-bind="timer.date()-1"></h6>
+                    <p class="font-weight--normal">@Model.Labels[LabelsConstants.CountdownTimer.Days]</p>
+                </div>
+                <div class="grid-col-3-12">
+                    <h6 class="h1" ng-bind="timer.hour()"></h6>
+                    <p class="font-weight--normal">@Model.Labels[LabelsConstants.CountdownTimer.Hours]</p>
+                </div>
+                <div class="grid-col-3-12">
+                    <h6 class="h1" ng-bind="timer.minutes()"></h6>
+                    <p class="font-weight--normal">@Model.Labels[LabelsConstants.CountdownTimer.Minutes]</p>
+                </div>
+                <div class="grid-col-3-12">
+                    <h6 class="h1" ng-bind="timer.seconds()"></h6>
+                    <p class="font-weight--normal">@Model.Labels[LabelsConstants.CountdownTimer.Seconds]</p>
+                </div>
+            </div>
+        </div>
+        @Editable(Model, m=>m.RichText)
+    </div>
+</div>
