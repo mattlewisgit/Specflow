@@ -6,7 +6,7 @@
                     <div class="form__field__description">
                         <label for="locationsDropDown">{{ locationsLabel }}</label>
                     </div>
-                    
+
                     <div class="form__field__input--date">
                         <select (ngModelChange)="filtersChanged($event, document.getElementById('departmentsDropDown').value)" [ngModel]="location" id="locationsDropDown" name="locationsDropDown">
                             <option *ngFor="let loc of locations" [value]="loc">{{ loc }}</option>
@@ -18,7 +18,7 @@
                     <div class="form__field__description">
                         <label for="departmentsDropDown">{{ departmentsLabel }}</label>
                     </div>
-                    
+
                     <div class="form__field__input--date">
                         <select (ngModelChange)="filtersChanged(document.getElementById('locationsDropDown').value, $event)" [ngModel]="department" id="departmentsDropDown" name="departmentsDropDown">
                             <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
@@ -30,21 +30,25 @@
         </div>
 
         <div class="form__field vacancyList">
-            <div *ngFor="let vacancy of filteredVacancies" class="vacancy">
-                <h3>{{ vacancy.JobTitle }}</h3>
-                <ul>
-                    <li>{{ vacancyLocation }} {{ vacancy.JobLocation }}</li>
-                    <li>{{ vacancySalary }} {{ vacancy.JobSalary }}</li>
-                    <li>{{ vacancyClosesOn }} {{ vacancy.ClosingDate }}</li>
-                </ul>
+            <div class="grid ">
+                <div class="grid-col-12-12">
+                    <div *ngFor="let vacancy of filteredVacancies" class="vacancy">
+                        <h3>{{ vacancy.JobTitle }}</h3>
+                        <ul>
+                            <li>{{ vacancyLocation }} {{ vacancy.JobLocation }}</li>
+                            <li>{{ vacancySalary }} {{ vacancy.JobSalary }}</li>
+                            <li>{{ vacancyClosesOn }} {{ vacancy.ClosingDate }}</li>
+                        </ul>
 
-                <a href="{{ path }}{{ vacancy.Advertid }}/" class="emphasis-link">{{ findoutMore }}</a>
-                <hr/>
-            </div>
-            <div *ngIf="filteredVacancies?.length < 1" class="novacancies">
-                <span>
-                    {{ noVacanciesFoundText }}
-                </span>
+                        <a href="{{ path }}{{ vacancy.Advertid }}/" class="emphasis-link">{{ findoutMore }}</a>
+                        <hr />
+                    </div>
+                    <div *ngIf="filteredVacancies?.length < 1" class="novacancies">
+                        <span>
+                            {{ noVacanciesFoundText }}
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </form>

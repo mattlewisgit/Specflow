@@ -2,15 +2,15 @@ import { Component, Inject, OnInit }      from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import 'rxjs/add/operator/switchMap';
 
-import { FeedSettings } from '../Models/feedSettings';
-import { Vacancy } from '../Models/vacancy';
-import { Vacancies } from '../Models/vacancies';
-import { VacanciesService } from '../Services/vacancies.service';
-import { WindowRef } from './windowRef';
+import { FeedSettings } from '../models/feedsettings';
+import { Vacancy } from '../models/vacancy';
+import { Vacancies } from '../models/vacancies';
+import { VacanciesService } from '../services/vacancies.service';
+import { WindowRef } from './windowref';
 
 @Component({
   selector: 'vacancy-details',
-  templateUrl: './js/app/Components/vacancy-detailsTemplate.html'
+  templateUrl: './js/app/components/vacancy-detailstemplate.html'
 })
 export class VacancyDetailsComponent implements OnInit  {
     vacancy: Vacancy;

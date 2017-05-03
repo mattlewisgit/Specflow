@@ -2,9 +2,9 @@ import { Injectable }    from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
-import { FeedSettings } from '../Models/feedSettings';
-import { Vacancies } from '../Models/vacancies';
-import { Vacancy } from '../Models/vacancy';
+import { FeedSettings } from '../models/feedsettings';
+import { Vacancies } from '../models/vacancies';
+import { Vacancy } from '../models/vacancy';
 
 @Injectable()
 export class VacanciesService {

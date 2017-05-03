@@ -5,12 +5,18 @@
 
 @{
     var localEnv = "presales.vitality.co.uk" == HttpContext.Current.Request.Url.Host;
-    var angularModel = JsonConvert.SerializeObject(Mapper.Map<VacancyListViewModel>(Model));
+    //var angularModel = JsonConvert.SerializeObject(Mapper.Map<VacancyListViewModel>(Model));
 }
 
 <div class="pinch">
-    <h2>@Editable(Model, m => m.Headline)</h2>
 
+    <div class="form__field">
+        <div class="grid ">
+            <div class="grid-col-12-12">
+                <h2>@Editable(Model, m => m.Headline)</h2>
+            </div>
+        </div>
+    </div>
     @if (Sitecore.Context.PageMode.IsExperienceEditor)
     {
         <div class="form__field">
@@ -62,14 +68,48 @@
         <script type="text/javascript" src='@(localEnv ? "node_modules/systemjs/dist/system.src.js" : "https://unpkg.com/systemjs@0.19.39/dist/system.src.js")'></script>
         <script type="text/javascript" src='@(localEnv ? "/js/systemjs.config.js" : "/js/systemjs.config.server.js")'></script>
 
-        <script type="text/javascript">
-            System
-                .import('/js/vacancyList-Main.js')
-                .catch (function (err) { console.error(err); });
+        if (localEnv)
+        {
+            <script type="text/javascript">
+                System.import('/js/vacancylist-main.js')
+                    .catch(function (err) { throw err; });
+            </script>
+        }
+        else
+        {
+            <script type="text/javascript" src="/js/vacancylist-main.js"></script>
+        }
 
-            window.angularData = '@angularModel';
+        <script type="text/javascript">
+
+            window.angularData = window.angularData || {};
+
+            window.angularData.headline = '@Model.Headline';
+            window.angularData.locationsDropdownLabel = '@Model.LocationsDropdownLabel';
+            window.angularData.allLocationsText = '@Model.AllLocationsText';
+            window.angularData.departmentsDropdownLabel = '@Model.DepartmentsDropdownLabel';
+            window.angularData.allDepartmentsText = '@Model.AllDepartmentsText';
+            window.angularData.findoutMoreText = '@Model.FindoutMoreText';
+            window.angularData.noVacanciesFoundText = '@Model.NoVacanciesFoundText';
+            window.angularData.feedSettings = {
+                Endpoint: "@Model.FeedSettings.Endpoint",
+                MockDataFile: "@Model.FeedSettings.MockDataFile.Url",
+                FeedType: "@Model.FeedType"
+            };
+            window.angularData.locationText = '@Model.LocationText';
+            window.angularData.salaryText = '@Model.SalaryText';
+            window.angularData.closesOnText = '@Model.ClosesOnText';
+            window.angularData.applyForVacancyText = '@Model.ApplyForVacancyText';
+            window.angularData.shareVacancyText = '@Model.ShareVacancyText';
+            window.angularData.backToVacanciesListingText = '@Model.BackToVacanciesListText';
+            window.angularData.locations = '@(String.Join("|", Model.Locations.Select(p => p.Value)))';
+            window.angularData.departments = '@(String.Join("|", Model.Departments.Select(p => p.Value)))';
         </script>
 
-        <vacancy-list>Loading Vacancies...<div class="loader__icon"></div></vacancy-list>
+        <vacancy-list><div class="loader__icon"></div></vacancy-list>
     }
+
 </div>
+
+
+

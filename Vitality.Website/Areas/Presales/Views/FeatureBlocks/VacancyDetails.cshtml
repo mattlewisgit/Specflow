@@ -1,4 +1,5 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.VacancyList>
+﻿@using Vitality.Website.SC.Utilities
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.VacancyList>
 
 @{
     var localEnv = "presales.vitality.co.uk" == System.Web.HttpContext.Current.Request.Url.Host;
@@ -28,9 +29,19 @@
         <script type="text/javascript" src='@(localEnv ? "node_modules/systemjs/dist/system.src.js" : "https://unpkg.com/systemjs@0.19.39/dist/system.src.js")'></script>
         <script type="text/javascript" src='@(localEnv ? "/js/systemjs.config.js" : "/js/systemjs.config.server.js")'></script>
 
+        if (localEnv)
+        {
+            <script type="text/javascript">
+                System.import('/js/vacancydetails-main.js')
+                                .catch(function (err) { throw err; });
+            </script>
+        }
+        else
+        {
+            <script type="text/javascript" src="/js/vacancydetails-main.js"></script>
+        }
+
         <script type="text/javascript">
-            System.import('/js/vacancyDetails-Main.js')
-                .catch(function (err) { throw err; });
 
             window.angularData = window.angularData || {};
             window.angularData.headline = '@Model.Headline';
@@ -51,11 +62,11 @@
             window.angularData.applyForVacancyText = '@Model.ApplyForVacancyText';
             window.angularData.shareVacancyText = '@Model.ShareVacancyText';
             window.angularData.backToVacanciesListingText = '@Model.BackToVacanciesListText';
-            window.angularData.locations = '@(String.Join("|", Model.Locations.Select(p => p.Name)))';
-            window.angularData.departments = '@(String.Join("|", Model.Departments.Select(p => p.Name)))';
+            window.angularData.locations = '@(String.Join("|", Model.Locations.Select(p => p.Value)))';
+            window.angularData.departments = '@(String.Join("|", Model.Departments.Select(p => p.Value)))';
         </script>
 
-        <vacancy-details>Retrieving job details...<div class="loader__icon"></div></vacancy-details>
+        <vacancy-details><div class="loader__icon"></div></vacancy-details>
     }
 </div>
 

@@ -1,15 +1,15 @@
 import { Component, Inject, OnInit }      from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
-import { FeedSettings } from '../Models/feedSettings';
-import { Vacancy } from '../Models/vacancy';
-import { Vacancies } from '../Models/vacancies';
-import { VacanciesService } from '../Services/vacancies.service';
-import { WindowRef } from './windowRef';
+import { FeedSettings } from '../models/feedsettings';
+import { Vacancy } from '../models/vacancy';
+import { Vacancies } from '../models/vacancies';
+import { VacanciesService } from '../services/vacancies.service';
+import { WindowRef } from './windowref';
 
 @Component({
   selector: 'vacancy-list',
-  templateUrl: './js/app/Components/vacancyListTemplate.html'
+  templateUrl: './js/app/components/vacancylisttemplate.html'
 })
 export class VacanciesComponent implements OnInit  {
     headline: string;
@@ -20,7 +20,7 @@ export class VacanciesComponent implements OnInit  {
     vacancy: Vacancy;
     locationsLabel: string;
     departmentsLabel: string;
-    allLocations: string;    
+    allLocations: string;
     allDepartments: string;
     location: string;
     department: string;
@@ -100,7 +100,7 @@ export class VacanciesComponent implements OnInit  {
 		// check location not already added
 		if (locs.indexOf(loc) < 1)
 		{
-			locs.push(loc);
+            locs.push(loc.replace(/&amp;/g, '&'));
 		}
 	}
 
@@ -125,7 +125,7 @@ export class VacanciesComponent implements OnInit  {
     addDepartment(dept: string, depts: Array<string>) {
         // check department not already added
         if (depts.indexOf(dept) < 1) {
-            depts.push(dept);
+            depts.push(dept.replace(/&amp;/g, '&'));
         }
     }
 
