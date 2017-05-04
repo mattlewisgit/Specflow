@@ -63,7 +63,7 @@ export class VacanciesComponent implements OnInit  {
         locs.push(this.viewModel.AllLocationsText);
 
 		// add locations from feed
-        this.viewModel.Locations.forEach(s => this.addLocation(s.trim(), locs));
+        this.viewModel.Locations.forEach((s:any) => this.addLocation(s.trim(), locs));
 
 		this.locations = locs;
 	}
@@ -89,7 +89,7 @@ export class VacanciesComponent implements OnInit  {
         depts.push(this.viewModel.AllDepartmentsText);
 
         // add departments from feed
-        this.viewModel.Departments.forEach(s => this.addDepartment(s.trim(), depts));
+        this.viewModel.Departments.forEach((s:any) => this.addDepartment(s.trim(), depts));
 
         this.departments = depts;
     }
