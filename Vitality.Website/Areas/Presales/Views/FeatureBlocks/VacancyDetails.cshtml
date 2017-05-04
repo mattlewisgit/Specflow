@@ -32,17 +32,10 @@
         <script type="text/javascript" src='@(localEnv ? "node_modules/systemjs/dist/system.src.js" : "https://unpkg.com/systemjs@0.19.39/dist/system.src.js")'></script>
         <script type="text/javascript" src='@(localEnv ? "/js/systemjs.config.js" : "/js/systemjs.config.server.js")'></script>
 
-        if (localEnv)
-        {
-            <script type="text/javascript">
+        <script type="text/javascript">
                 System.import('/js/vacancydetails-main.js')
                                 .catch(function (err) { throw err; });
-            </script>
-        }
-        else
-        {
-            <script type="text/javascript" src="/js/vacancydetails-main.js"></script>
-        }
+        </script>
 
         <script type="text/javascript">
             window.angularData = window.angularData || {};
