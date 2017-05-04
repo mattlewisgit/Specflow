@@ -10,14 +10,14 @@
             	<div class="grid ">
 	                <div class="grid-col-9-12">
 						<ul>
-							<li>{{ vacancyLocation }} {{ vacancy.JobLocation }}</li>
-							<li>{{ vacancySalary }} {{ vacancy.JobSalary }}</li>
-							<li>{{ vacancyClosesOn }} {{ vacancy.ClosingDate }}</li>
+							<li>{{ viewModel.LocationText }} {{ vacancy.JobLocation }}</li>
+							<li>{{ viewModel.SalaryText }} {{ vacancy.JobSalary }}</li>
+							<li>{{ viewModel.VacancyClosesOn }} {{ vacancy.ClosingDate }}</li>
 						</ul>
                 	</div>
 					<div class="grid-col-3-12">
-						<div><a href="{{ vacancy.Link }}" target="_blank" class="box-button box-button--rounded box-button box-button--primary">{{ applyForVacancy}}</a></div>
-    					<div><a href="{{ backToListingUrl }}" class="box-button box-button--rounded box-button--primary-inverse">{{ backToVacanciesListingText }}</a></div>
+						<div><a href="{{ vacancy.Link }}" target="_blank" class="box-button box-button--rounded box-button box-button--primary">{{ viewModel.ApplyForVacancyText}}</a></div>
+    					<div><a href="{{ backToListingUrl }}" class="box-button box-button--rounded box-button--primary-inverse">{{ viewModel.BackToVacanciesListText }}</a></div>
 					</div>
             	</div>
 				<hr/>
@@ -26,8 +26,8 @@
             	</div>
 				<div class="grid ">
 	                <div class="grid-col-12-12">
-						<div><a href="{{ vacancy.Link }}" target="_blank" class="box-button box-button--rounded box-button box-button--primary">{{ applyForVacancy}}</a></div>
-    					<div><a href="{{ backToListingUrl }}" class="box-button box-button--rounded box-button--primary-inverse">{{ backToVacanciesListingText }}</a></div>
+						<div><a href="{{ vacancy.Link }}" target="_blank" class="box-button box-button--rounded box-button box-button--primary">{{ viewModel.ApplyForVacancyText }}</a></div>
+    					<div><a href="{{ backToListingUrl }}" class="box-button box-button--rounded box-button--primary-inverse">{{ viewModel.BackToVacanciesListText }}</a></div>
                 	</div>
             	</div>
 			</div>

@@ -2,24 +2,27 @@ import { Injectable }    from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
-import { FeedSettings } from '../Models/feedSettings';
-import { Vacancies } from '../Models/vacancies';
-import { Vacancy } from '../Models/vacancy';
+import { Vacancies } from '../models/vacancies';
+import { Vacancy } from '../models/vacancy';
 
 @Injectable()
 export class VacanciesService {
-    feedSettings: FeedSettings;
+    endpoint: string;
+    feedType: string;
+    mockDataFile: string;
     vacancy: Vacancy;
 
   constructor(private http: Http) {}
 
-  setFeedSettings(feedSettings: FeedSettings): void {
-      this.feedSettings = feedSettings;
+  setFeedSettings(endpoint: string, feedType: string, mockDataFile: string): void {
+      this.endpoint = endpoint;
+      this.feedType = feedType;
+      this.mockDataFile = mockDataFile;
   }
 
   getVacancies(): Promise<Vacancies> {
-     return this.http.post("/api/bsl/post?bslendpoint=" + encodeURIComponent(this.feedSettings.Endpoint),
-          { FeedType: this.feedSettings.FeedType, MockDataFile: encodeURI(this.feedSettings.MockDataFile )})
+     return this.http.post("/api/bsl/post?bslendpoint=" + encodeURIComponent(this.endpoint),
+          { FeedType: this.feedType, MockDataFile: encodeURI(this.mockDataFile )})
                .toPromise()
                .then(response => response.json().BslResponse as Vacancies)
           .catch(this.handleError);

@@ -321,13 +321,13 @@
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
     <Content Include="src\js\countdown-timer-app.js" />
     <Content Include="src\js\global-functions.js" />
-    <Content Include="src\ts\app\Components\vacancy-detailsTemplate.html" />
-    <Content Include="src\ts\app\Components\vacancyListTemplate.html" />
-    <TypeScriptCompile Include="src\ts\app\Components\windowRef.ts" />
-    <TypeScriptCompile Include="src\ts\app\Models\feedSettings.ts" />
-    <TypeScriptCompile Include="src\ts\app\vacancyDetails-app.module.ts" />
+    <Content Include="src\ts\app\components\vacancy-detailstemplate.html" />
+    <Content Include="src\ts\app\components\vacancylisttemplate.html" />
+    <TypeScriptCompile Include="src\ts\app\components\windowref.ts" />
+    <TypeScriptCompile Include="src\ts\app\models\feedsettings.ts" />
+    <TypeScriptCompile Include="src\ts\app\vacancydetails-app.module.ts" />
     <TypeScriptCompile Include="src\ts\systemjs.config.server.ts" />
-    <TypeScriptCompile Include="src\ts\vacancyDetails-Main.ts" />
+    <TypeScriptCompile Include="src\ts\vacancydetails-main.ts" />
     <TypeScriptCompile Include="src\ts\systemjs.config.ts" />
     <Content Include="_Heartbeat.html" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
@@ -3867,6 +3867,7 @@
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="App_Start\IoC.cs" />
+    <Compile Include="App_Start\MapperConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Global\Models\ImageLink.cs" />
     <Compile Include="Areas\Global\Models\KeyValuePair.cs" />
@@ -4757,13 +4758,13 @@
     <Analyzer Include="..\packages\SonarAnalyzer.CSharp.1.10.0\analyzers\SonarAnalyzer.dll" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\ts\app\vacancyList-app.module.ts" />
-    <TypeScriptCompile Include="src\ts\app\Components\vacancies.component.ts" />
-    <TypeScriptCompile Include="src\ts\app\Components\vacancy-details.component.ts" />
-    <TypeScriptCompile Include="src\ts\app\Models\vacancies.ts" />
-    <TypeScriptCompile Include="src\ts\app\Models\vacancy.ts" />
-    <TypeScriptCompile Include="src\ts\app\Services\vacancies.service.ts" />
-    <TypeScriptCompile Include="src\ts\vacancyList-Main.ts" />
+    <TypeScriptCompile Include="src\ts\app\vacancylist-app.module.ts" />
+    <TypeScriptCompile Include="src\ts\app\components\vacancies.component.ts" />
+    <TypeScriptCompile Include="src\ts\app\components\vacancy-details.component.ts" />
+    <TypeScriptCompile Include="src\ts\app\models\vacancies.ts" />
+    <TypeScriptCompile Include="src\ts\app\models\vacancy.ts" />
+    <TypeScriptCompile Include="src\ts\app\services\vacancies.service.ts" />
+    <TypeScriptCompile Include="src\ts\vacancylist-main.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

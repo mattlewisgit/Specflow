@@ -7,6 +7,7 @@
 <!doctype html>
 <html class="@(IsInEditingMode ? "disable-tablesaw" : null)" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">
 <head>
+
     @Html.Sitecore().Placeholder("gtm")
     @Html.Sitecore().Placeholder("metadata")
 
@@ -61,13 +62,13 @@
     <script type="text/javascript" src="/js/vitality.presales.min.js"></script>
     <script type="text/javascript" src="/bower_components/vitality.boilerplate/dist/vitality-boilerplate.min.js"></script>
 <script type='text/javascript' id="__bs_script__">
-    
+
     if ('presales.vitality.co.uk' === document.location.host) {
         //<![CDATA[
         document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.6.11.js'><\/script>".replace("HOST", location.hostname));
-        //]]>    
+        //]]>
     }
-    
+
 </script>
 </body>
 </html>

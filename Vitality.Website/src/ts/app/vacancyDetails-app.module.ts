@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 
-import { VacancyDetailsComponent }  from './Components/vacancy-details.component';
-import { VacanciesService }  from './Services/vacancies.service';
+import { VacancyDetailsComponent }  from './components/vacancy-details.component';
+import { VacanciesService }  from './services/vacancies.service';
 
-import { WindowRef }  from './Components/windowRef';
+import { WindowRef }  from './components/windowref';
 
 @NgModule({
   imports:      [

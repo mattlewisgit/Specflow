@@ -1,6 +1,6 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { VacancyListAppModule } from './app/vacancyList-app.module';
+import { VacancyListAppModule } from './app/vacancylist-app.module';
 
 import { enableProdMode } from '@angular/core';
 

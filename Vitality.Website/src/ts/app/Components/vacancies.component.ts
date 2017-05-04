@@ -1,39 +1,24 @@
 import { Component, Inject, OnInit }      from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
-import { FeedSettings } from '../Models/feedSettings';
-import { Vacancy } from '../Models/vacancy';
-import { Vacancies } from '../Models/vacancies';
-import { VacanciesService } from '../Services/vacancies.service';
-import { WindowRef } from './windowRef';
+import { Vacancy } from '../models/vacancy';
+import { Vacancies } from '../models/vacancies';
+import { VacanciesService } from '../services/vacancies.service';
+import { WindowRef } from './windowref';
 
 @Component({
   selector: 'vacancy-list',
-  templateUrl: './js/app/Components/vacancyListTemplate.html'
+  templateUrl: './js/app/components/vacancylisttemplate.html'
 })
 export class VacanciesComponent implements OnInit  {
-    headline: string;
 	vacancies: Array<Vacancy>;			// vacancies returned from feed
 	filteredVacancies: Array<Vacancy>;	// vacancies filtered by location
-	locations: Array<string>;			// job locations array
-    departments: Array<string>;			// departments array
     vacancy: Vacancy;
-    locationsLabel: string;
-    departmentsLabel: string;
-    allLocations: string;    
-    allDepartments: string;
+    locations: Array<string>;            // job locations array
+    departments: Array<string>;            // departments array
     location: string;
     department: string;
-    findoutMore: string;
-    noVacanciesFoundText: string;
-    vacancyLocation: string;
-    vacancySalary: string;
-    vacancyClosesOn: string;
-    path: string;
-    feedSettings: FeedSettings;
-    locationsArray: string;
-    departmentsArray: string;
-
+    viewModel: any;
 
 	constructor(
         private vacanciesService: VacanciesService,
@@ -47,25 +32,11 @@ export class VacanciesComponent implements OnInit  {
             this.document.location.pathname = this.winRef.ensureTrailingSlash(this.document.location.pathname);
         }
 
-        var data = this.winRef.nativeWindow.angularData;
-
-        this.headline = data.headline;
-        this.locationsLabel = data.locationsDropdownLabel;
-        this.allLocations = data.allLocationsText;
-        this.departmentsLabel = data.departmentsDropdownLabel;
-        this.allDepartments = data.allDepartmentsText;
-        this.findoutMore = data.findoutMoreText;
-        this.noVacanciesFoundText = data.noVacanciesFoundText;
-        this.vacancyLocation = data.locationText;
-        this.vacancySalary = data.salaryText;
-        this.vacancyClosesOn = data.closesOnText;
-        this.feedSettings = data.feedSettings;
-        this.locationsArray = data.locations;
-        this.departmentsArray = data.departments;
-        this.vacanciesService.setFeedSettings(this.feedSettings);
+        this.viewModel = this.winRef.nativeWindow.angularData;
+        this.vacanciesService.setFeedSettings(this.viewModel.FeedSettingsEndpoint, this.viewModel.FeedSettingsType, this.viewModel.FeedSettingsMockDataFileUrl);
 
         this.getVacancies();
-        this.path = this.winRef.ensureTrailingSlash(this.document.location.pathname);
+        this.viewModel.Path = this.winRef.ensureTrailingSlash(this.document.location.pathname);
 	}
 
 	getVacancies(): void {
@@ -74,23 +45,25 @@ export class VacanciesComponent implements OnInit  {
 
     initialisePage(vac: Vacancies): void {
 		this.vacancies = vac.Vacancies;
-		this.getLocations();
-        this.location = this.allLocations;
+        this.getLocations();
+        // set initial value
+        this.location = this.viewModel.AllLocationsText;
 
         this.getDepartments();
-        this.department = this.allDepartments;
+        // set initial value
+        this.department = this.viewModel.AllDepartmentsText;
 
-        this.filtersChanged(this.allLocations, this.allDepartments);
+        this.filtersChanged(this.viewModel.AllLocationsText, this.viewModel.AllDepartmentsText);
 	}
 
 	// populates locations array
 	getLocations(): void {
 		var locs = new Array();
 		// add default location
-		locs.push(this.allLocations);
+        locs.push(this.viewModel.AllLocationsText);
 
 		// add locations from feed
-        this.locationsArray.split("|").forEach(s => this.addLocation(s, locs));
+        this.viewModel.Locations.forEach(s => this.addLocation(s.trim(), locs));
 
 		this.locations = locs;
 	}
@@ -100,7 +73,7 @@ export class VacanciesComponent implements OnInit  {
 		// check location not already added
 		if (locs.indexOf(loc) < 1)
 		{
-			locs.push(loc);
+            locs.push(loc.replace(/&amp;/g, '&'));
 		}
 	}
 
@@ -113,10 +86,10 @@ export class VacanciesComponent implements OnInit  {
     getDepartments(): void {
         var depts = new Array();
         // add default department
-        depts.push(this.allDepartments);
+        depts.push(this.viewModel.AllDepartmentsText);
 
         // add departments from feed
-        this.departmentsArray.split("|").forEach(s => this.addDepartment(s, depts));
+        this.viewModel.Departments.forEach(s => this.addDepartment(s.trim(), depts));
 
         this.departments = depts;
     }
@@ -125,7 +98,7 @@ export class VacanciesComponent implements OnInit  {
     addDepartment(dept: string, depts: Array<string>) {
         // check department not already added
         if (depts.indexOf(dept) < 1) {
-            depts.push(dept);
+            depts.push(dept.replace(/&amp;/g, '&'));
         }
     }
 
@@ -135,11 +108,11 @@ export class VacanciesComponent implements OnInit  {
         // reset filter
         this.filteredVacancies = this.vacancies;
 
-        if (loc != this.allLocations) {
+        if (loc != this.viewModel.AllLocationsText) {
             this.filteredVacancies = this.filteredVacancies.filter(p => p.JobLocation === loc);
         }
 
-        if (dept != this.allDepartments) {
+        if (dept != this.viewModel.AllDepartmentsText) {
             this.filteredVacancies = this.filteredVacancies.filter(p => p.JobDepartment === dept);
         }
     }

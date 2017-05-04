@@ -1,7 +1,11 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks.VacancyList>
+﻿@using AutoMapper;
+@using Newtonsoft.Json;
+@using Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks;
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<VacancyList>
 
 @{
     var localEnv = "presales.vitality.co.uk" == System.Web.HttpContext.Current.Request.Url.Host;
+    var angularModel = JsonConvert.SerializeObject(Mapper.Map<VacancyListViewModel>(Model));
 }
 
 <div class="pinch">
@@ -28,34 +32,24 @@
         <script type="text/javascript" src='@(localEnv ? "node_modules/systemjs/dist/system.src.js" : "https://unpkg.com/systemjs@0.19.39/dist/system.src.js")'></script>
         <script type="text/javascript" src='@(localEnv ? "/js/systemjs.config.js" : "/js/systemjs.config.server.js")'></script>
 
-        <script type="text/javascript">
-            System.import('/js/vacancyDetails-Main.js')
-                .catch(function (err) { throw err; });
+        if (localEnv)
+        {
+            <script type="text/javascript">
+                System.import('/js/vacancydetails-main.js')
+                                .catch(function (err) { throw err; });
+            </script>
+        }
+        else
+        {
+            <script type="text/javascript" src="/js/vacancydetails-main.js"></script>
+        }
 
+        <script type="text/javascript">
             window.angularData = window.angularData || {};
-            window.angularData.headline = '@Model.Headline';
-            window.angularData.locationsDropdownLabel = '@Model.LocationsDropdownLabel';
-            window.angularData.allLocationsText = '@Model.AllLocationsText';
-            window.angularData.departmentsDropdownLabel = '@Model.DepartmentsDropdownLabel';
-            window.angularData.allDepartmentsText = '@Model.AllDepartmentsText';
-            window.angularData.findoutMoreText = '@Model.FindoutMoreText';
-            window.angularData.noVacanciesFoundText = '@Model.NoVacanciesFoundText';
-            window.angularData.feedSettings = {
-                Endpoint: "@Model.FeedSettings.Endpoint",
-                MockDataFile: "@Model.FeedSettings.MockDataFile.Url",
-                FeedType: "@Model.FeedType"
-            };
-            window.angularData.locationText = '@Model.LocationText';
-            window.angularData.salaryText = '@Model.SalaryText';
-            window.angularData.closesOnText = '@Model.ClosesOnText';
-            window.angularData.applyForVacancyText = '@Model.ApplyForVacancyText';
-            window.angularData.shareVacancyText = '@Model.ShareVacancyText';
-            window.angularData.backToVacanciesListingText = '@Model.BackToVacanciesListText';
-            window.angularData.locations = '@(String.Join("|", Model.Locations.Select(p => p.Name)))';
-            window.angularData.departments = '@(String.Join("|", Model.Departments.Select(p => p.Name)))';
+            window.angularData = @Html.Raw(angularModel);
         </script>
 
-        <vacancy-details>Retrieving job details...<div class="loader__icon"></div></vacancy-details>
+        <vacancy-details><div class="loader__icon"></div></vacancy-details>
     }
 </div>
 

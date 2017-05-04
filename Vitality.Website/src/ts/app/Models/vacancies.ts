@@ -1,4 +1,4 @@
-import { Vacancy } from '../Models/vacancy';
+import { Vacancy } from '../models/vacancy';
 
 export class Vacancies {
   Vacancies: Array<Vacancy>;
