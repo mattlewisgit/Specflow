@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Vitality.Website.App_Start;
 using SC = Vitality.Website.SC;
 
 namespace Vitality.Website
@@ -16,6 +17,7 @@ namespace Vitality.Website
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             MvcHandler.DisableMvcResponseHeader = true;
+            MapperConfig.Init();
         }
 
         protected void Application_PreSendRequestHeaders()

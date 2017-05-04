@@ -11,6 +11,7 @@
         public IEnumerable<string> Departments { get; set; }
         public string DepartmentsDropdownLabel { get; set; }
         public string FeedSettingsEndpoint { get; set; }
+        public string FeedSettingsType { get; set; }
         public string FeedSettingsMockDataFileUrl { get; set; }
         public string FindoutMoreText { get; set; }
         public string Headline { get; set; }

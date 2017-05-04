@@ -15,15 +15,8 @@ import { WindowRef } from './windowref';
 export class VacancyDetailsComponent implements OnInit  {
     vacancy: Vacancy;
     advertId: number;
-    applyForVacancy: string;
-    shareVacancy: string;
-    backToListing: string;
     backToListingUrl: string;
-    backToVacanciesListingText: string;
-    vacancyLocation: string;
-    vacancySalary: string;
-    vacancyClosesOn: string;
-    feedSettings: FeedSettings;
+    viewModel: any;
 
   constructor(
       private vacanciesService: VacanciesService,
@@ -39,17 +32,9 @@ export class VacancyDetailsComponent implements OnInit  {
 
       this.advertId = this.document.location.href.slice(0, -1).split(/[/ ]+/).pop();
 
-      var data = this.winRef.nativeWindow.angularData;
-      this.applyForVacancy = data.applyForVacancyText;
-      this.shareVacancy = data.shareVacancyText;
-      this.vacancyLocation = data.locationText;
-      this.vacancySalary = data.salaryText;
-      this.vacancyClosesOn = data.closesOnText;
-      this.backToVacanciesListingText = data.backToVacanciesListingText;
-      this.backToListingUrl = this.winRef.ensureTrailingSlash(this.document.location.pathname.replace(this.advertId + "/", ""));
-      this.feedSettings = data.feedSettings;
-      this.vacanciesService.setFeedSettings(this.feedSettings);
-
+      this.viewModel = this.winRef.nativeWindow.angularData;
+      this.backToListingUrl = this.winRef.ensureTrailingSlash(this.document.location.pathname.replace(this.advertId + "/", ""));      
+      this.vacanciesService.setFeedSettings(this.viewModel.FeedSettingsEndpoint, this.viewModel.FeedSettingsType, this.viewModel.FeedSettingsMockDataFileUrl);
       this.vacanciesService.getVacancy(+this.advertId).then(v => this.setVacancy(v));
   }
 

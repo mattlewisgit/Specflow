@@ -5,7 +5,7 @@
 
 @{
     var localEnv = "presales.vitality.co.uk" == HttpContext.Current.Request.Url.Host;
-    //var angularModel = JsonConvert.SerializeObject(Mapper.Map<VacancyListViewModel>(Model));
+    var angularModel = JsonConvert.SerializeObject(Mapper.Map<VacancyListViewModel>(Model));
 }
 
 <div class="pinch">
@@ -81,29 +81,8 @@
         }
 
         <script type="text/javascript">
-
             window.angularData = window.angularData || {};
-
-            window.angularData.headline = '@Model.Headline';
-            window.angularData.locationsDropdownLabel = '@Model.LocationsDropdownLabel';
-            window.angularData.allLocationsText = '@Model.AllLocationsText';
-            window.angularData.departmentsDropdownLabel = '@Model.DepartmentsDropdownLabel';
-            window.angularData.allDepartmentsText = '@Model.AllDepartmentsText';
-            window.angularData.findoutMoreText = '@Model.FindoutMoreText';
-            window.angularData.noVacanciesFoundText = '@Model.NoVacanciesFoundText';
-            window.angularData.feedSettings = {
-                Endpoint: "@Model.FeedSettings.Endpoint",
-                MockDataFile: "@Model.FeedSettings.MockDataFile.Url",
-                FeedType: "@Model.FeedType"
-            };
-            window.angularData.locationText = '@Model.LocationText';
-            window.angularData.salaryText = '@Model.SalaryText';
-            window.angularData.closesOnText = '@Model.ClosesOnText';
-            window.angularData.applyForVacancyText = '@Model.ApplyForVacancyText';
-            window.angularData.shareVacancyText = '@Model.ShareVacancyText';
-            window.angularData.backToVacanciesListingText = '@Model.BackToVacanciesListText';
-            window.angularData.locations = '@(String.Join("|", Model.Locations.Select(p => p.Value)))';
-            window.angularData.departments = '@(String.Join("|", Model.Departments.Select(p => p.Value)))';
+            window.angularData = @Html.Raw(angularModel);
         </script>
 
         <vacancy-list><div class="loader__icon"></div></vacancy-list>
