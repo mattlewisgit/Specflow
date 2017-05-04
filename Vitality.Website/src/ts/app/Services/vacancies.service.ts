@@ -2,7 +2,6 @@ import { Injectable }    from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
-import { FeedSettings } from '../models/feedsettings';
 import { Vacancies } from '../models/vacancies';
 import { Vacancy } from '../models/vacancy';
 
@@ -10,7 +9,7 @@ import { Vacancy } from '../models/vacancy';
 export class VacanciesService {
     endpoint: string;
     feedType: string;
-    mockDataFile: string;   
+    mockDataFile: string;
     vacancy: Vacancy;
 
   constructor(private http: Http) {}

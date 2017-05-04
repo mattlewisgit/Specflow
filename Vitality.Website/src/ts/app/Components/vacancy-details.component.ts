@@ -2,7 +2,6 @@ import { Component, Inject, OnInit }      from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 import 'rxjs/add/operator/switchMap';
 
-import { FeedSettings } from '../models/feedsettings';
 import { Vacancy } from '../models/vacancy';
 import { Vacancies } from '../models/vacancies';
 import { VacanciesService } from '../services/vacancies.service';
@@ -33,7 +32,7 @@ export class VacancyDetailsComponent implements OnInit  {
       this.advertId = this.document.location.href.slice(0, -1).split(/[/ ]+/).pop();
 
       this.viewModel = this.winRef.nativeWindow.angularData;
-      this.backToListingUrl = this.winRef.ensureTrailingSlash(this.document.location.pathname.replace(this.advertId + "/", ""));      
+      this.backToListingUrl = this.winRef.ensureTrailingSlash(this.document.location.pathname.replace(this.advertId + "/", ""));
       this.vacanciesService.setFeedSettings(this.viewModel.FeedSettingsEndpoint, this.viewModel.FeedSettingsType, this.viewModel.FeedSettingsMockDataFileUrl);
       this.vacanciesService.getVacancy(+this.advertId).then(v => this.setVacancy(v));
   }

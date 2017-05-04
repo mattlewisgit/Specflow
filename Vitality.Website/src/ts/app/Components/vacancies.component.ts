@@ -1,7 +1,6 @@
 import { Component, Inject, OnInit }      from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
-import { FeedSettings } from '../models/feedsettings';
 import { Vacancy } from '../models/vacancy';
 import { Vacancies } from '../models/vacancies';
 import { VacanciesService } from '../services/vacancies.service';
@@ -11,7 +10,7 @@ import { WindowRef } from './windowref';
   selector: 'vacancy-list',
   templateUrl: './js/app/components/vacancylisttemplate.html'
 })
-export class VacanciesComponent implements OnInit  {    
+export class VacanciesComponent implements OnInit  {
 	vacancies: Array<Vacancy>;			// vacancies returned from feed
 	filteredVacancies: Array<Vacancy>;	// vacancies filtered by location
     vacancy: Vacancy;
