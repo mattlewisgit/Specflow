@@ -4,9 +4,10 @@ import { VacancyDetailsAppModule } from './app/vacancydetails-app.module';
 
 import { enableProdMode } from '@angular/core';
 
-platformBrowserDynamic().bootstrapModule(VacancyDetailsAppModule);
-
 // Enable production mode unless running locally
 if (!/presales.vitality.co.uk/.test(document.location.host)) {
     enableProdMode();
 }
+
+platformBrowserDynamic().bootstrapModule(VacancyDetailsAppModule);
+
