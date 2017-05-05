@@ -324,6 +324,7 @@
     <Content Include="src\ts\app\components\vacancy-detailstemplate.html" />
     <Content Include="src\ts\app\components\vacancylisttemplate.html" />
     <TypeScriptCompile Include="src\ts\app\components\windowref.ts" />
+    <TypeScriptCompile Include="src\ts\app\models\extradataitem.ts" />
     <TypeScriptCompile Include="src\ts\app\vacancydetails-app.module.ts" />
     <TypeScriptCompile Include="src\ts\systemjs.config.server.ts" />
     <TypeScriptCompile Include="src\ts\vacancydetails-main.ts" />

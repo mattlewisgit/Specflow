@@ -118,7 +118,14 @@ export class VacanciesComponent implements OnInit  {
         }
 
         if (dept != this.viewModel.AllDepartmentsText) {
-            this.filteredVacancies = this.filteredVacancies.filter(p => p.JobDepartment === dept);
+            this.filteredVacancies = this.filteredVacancies.filter(p => this.matchesJobDepartment(p, dept));
         }
+    }
+
+    matchesJobDepartment(vacancy: Vacancy, department: string): boolean {
+        var depts: Array<string> = [];
+        vacancy.ExtraDataItems.filter(p => p.Category === "Department").map(m => depts.push(m.Value));
+
+        return depts.indexOf(department) > -1;
     }
 }
