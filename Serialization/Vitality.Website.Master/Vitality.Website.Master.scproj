@@ -545,6 +545,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\Countdown Timers.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Presales\Content\FAQ.item">
       <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
