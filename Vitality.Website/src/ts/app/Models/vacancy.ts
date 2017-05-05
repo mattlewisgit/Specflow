@@ -1,3 +1,5 @@
+import { ExtraDataItem } from '../models/extradataitem';
+
 export class Vacancy {
 	Advertid: number;
 	ClosingDate: string;
@@ -8,5 +10,6 @@ export class Vacancy {
     JobTitle: string;
     JobDepartment: string;
 	Link: string;
-	Title: string;
+    Title: string;
+    ExtraDataItems: Array<ExtraDataItem>;
 }

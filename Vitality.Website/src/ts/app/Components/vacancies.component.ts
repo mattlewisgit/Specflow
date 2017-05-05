@@ -108,6 +108,11 @@ export class VacanciesComponent implements OnInit  {
         // reset filter
         this.filteredVacancies = this.vacancies;
 
+        // remove expired jobs
+        var now = new Date();
+        var minDate = "0001-01-01T00:00:00";
+        this.filteredVacancies = this.filteredVacancies.filter(p => p.ClosingDate === minDate || new Date(p.ClosingDate) > now);
+
         if (loc != this.viewModel.AllLocationsText) {
             this.filteredVacancies = this.filteredVacancies.filter(p => p.JobLocation === loc);
         }
