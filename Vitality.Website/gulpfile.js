@@ -121,7 +121,9 @@ gulp.task(tasks.js.typescript, function () {
         .src("src/ts/**/*.ts")
         .pipe(tsProject());
 
-    return tsResult.js.pipe(gulp.dest(paths.js.dest));
+    return tsResult.js
+        .pipe(plugins.uglify())
+        .pipe(gulp.dest(paths.js.dest));
 });
 
 gulp.task(tasks.watch, function () {
