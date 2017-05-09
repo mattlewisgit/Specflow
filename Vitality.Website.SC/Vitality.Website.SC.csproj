@@ -130,12 +130,15 @@
       <HintPath>..\packages\Vitality.Core.1.0.0\lib\net45\Vitality.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Vitality.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vitality.Mvc.1.0.0\lib\net45\Vitality.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agents\Sitemaps\Sitemap.cs" />
     <Compile Include="Agents\Sitemaps\SitemapGenerator.cs" />
     <Compile Include="Agents\Sitemaps\SitemapIndex.cs" />
-    <Compile Include="Constants.cs" />
     <Compile Include="ContentSearch\Analyzers\LowerCaseLetterAnalyzer.cs" />
     <Compile Include="ContentSearch\ComputedFields\AncestorField.cs" />
     <Compile Include="ContentSearch\ComputedFields\MediaItemSize.cs" />
@@ -167,6 +170,7 @@
     <Compile Include="Agents\Sitemaps\SitemapUrlModel.cs" />
     <Compile Include="Providers\MediaProvider.cs" />
     <Compile Include="Utilities\DictionaryHelper.cs" />
+    <Compile Include="Utilities\PresalesLog.cs" />
     <Compile Include="Utilities\QueryHelper.cs" />
     <Compile Include="Utilities\SitecoreDataItemHelper.cs" />
     <Compile Include="Utilities\SiteInfoHelper.cs" />

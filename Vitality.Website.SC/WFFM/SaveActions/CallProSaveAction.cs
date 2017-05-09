@@ -1,3 +1,5 @@
+using Vitality.Website.SC.Utilities;
+
 namespace Vitality.Website.SC.WFFM.SaveActions
 {
     using System;
@@ -52,6 +54,7 @@ namespace Vitality.Website.SC.WFFM.SaveActions
 
             try
             {
+                PresalesLog.Log.Info(requestXml);
                 // Execute request.
                 CallProConnector.Send(requestXml);
             }

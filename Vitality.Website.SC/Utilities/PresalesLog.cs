@@ -1,6 +1,6 @@
 using log4net;
 
-namespace Vitality.Website.Areas.Presales.Handlers
+namespace Vitality.Website.SC.Utilities
 {
     public static class PresalesLog
     {

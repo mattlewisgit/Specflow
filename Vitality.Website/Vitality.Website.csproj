@@ -266,6 +266,10 @@
       <HintPath>..\packages\Vitality.Core.1.0.0\lib\net45\Vitality.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Vitality.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vitality.Mvc.1.0.0\lib\net45\Vitality.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -317,7 +321,9 @@
     <Content Include="App_Config\Include\Sitecore.WFFM.Services.config" />
     <Content Include="App_Config\Include\Sitecore.WFFM.Speak.config" />
     <Content Include="App_Config\Include\Vitality\Vitality.ContentSearch.config" />
-    <Content Include="App_Config\Include\Vitality\Vitality.Log4Net.config" />
+    <Content Include="App_Config\Include\Vitality\Vitality.Log4Net.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
     <Content Include="src\js\countdown-timer-app.js" />
     <Content Include="src\js\global-functions.js" />
@@ -3955,7 +3961,6 @@
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummariesHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummariesRequest.cs" />
     <Compile Include="Areas\Presales\Handlers\Literature\LiteratureDocumentSummaryDto.cs" />
-    <Compile Include="Areas\Presales\Handlers\PresalesLog.cs" />
     <Compile Include="Areas\Presales\LabelsConstants.cs" />
     <Compile Include="Areas\Presales\Models\Breadcrumb.cs" />
     <Compile Include="Areas\Presales\Models\BslPostData.cs" />
