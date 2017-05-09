@@ -3,9 +3,7 @@
 
 @using (Html.BeginField())
 {
-   @FormFieldWithToolTip.Create(Model.Information, Model.SelectionMode == "Single"
-          ? Html.DropDownListFor(x => x.Value, new SelectList(Model.Items, "Value", "Text"), new { size = Model.Rows, @class = "form-control" })
-          : Html.ListBoxFor(x => x.Value, new SelectList(Model.Items, "Value", "Text"), new { @class = "form-control" }))
-    // Make ShowInformation to false as default behaviour is to render information below the field
-    Model.ShowInformation = false;
+    @(Model.SelectionMode == "Single"
+          ? Html.DropDownListFor(x => x.Value, new SelectList(Model.Items, "Value", "Text"), new { size = Model.Rows, @class = "form-control"})
+          : Html.ListBoxFor(x => x.Value, new SelectList(Model.Items, "Value", "Text"), new { @class = "form-control"}))
 }

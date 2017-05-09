@@ -58,47 +58,47 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Analytics">
-      <HintPath>..\packages\Sitecore.Analytics.8.2.161221\lib\NET452\Sitecore.Analytics.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Client">
-      <HintPath>..\packages\Sitecore.Client.8.2.161221\lib\NET452\Sitecore.Client.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Client.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ContentSearch">
-      <HintPath>..\packages\Sitecore.ContentSearch.8.2.161221\lib\NET452\Sitecore.ContentSearch.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.ContentSearch.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Forms.Core">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.Forms.Core.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ItemWebApi">
-      <HintPath>..\packages\Sitecore.ItemWebApi.8.2.161221\lib\NET452\Sitecore.ItemWebApi.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.ItemWebApi.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\packages\Sitecore.Kernel.8.2.161221\lib\NET452\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Logging">
-      <HintPath>..\packages\Sitecore.Logging.8.2.161221\lib\NET452\Sitecore.Logging.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Logging.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc">
-      <HintPath>..\packages\Sitecore.Mvc.8.2.161221\lib\NET452\Sitecore.Mvc.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Speak.Applications">
-      <HintPath>..\packages\Sitecore.Speak.Applications.8.2.161221\lib\NET452\Sitecore.Speak.Applications.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Speak.Applications.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Speak.Client">
-      <HintPath>..\packages\Sitecore.Speak.Client.8.2.161221\lib\NET452\Sitecore.Speak.Client.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Speak.Client.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Web">
-      <HintPath>..\packages\Sitecore.Web.8.2.161221\lib\NET452\Sitecore.Web.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Web.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.WFFM.Abstractions">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.Abstractions.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.WFFM.Actions, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.WFFM.Actions.NoReferences.8.1.160304\lib\NET45\Sitecore.WFFM.Actions.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Actions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Analytics, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.WFFM.Analytics.NoReferences.8.1.160304\lib\NET45\Sitecore.WFFM.Analytics.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Analytics.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
