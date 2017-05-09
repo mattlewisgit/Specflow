@@ -40,7 +40,7 @@
         <a href="#main-content" class="offscreen">Skip to Content</a>
         @Html.Sitecore().Placeholder("header")
         @Html.Partial("_Breadcrumb", new BreadcrumbTrail())
-
+        @Html.Partial("_JsThirdParty")
         <main id="main-content" tabindex="-1">
             <section class="vertical-flush">
                 @Html.Sitecore().Placeholder("PresalesContent")
@@ -48,8 +48,7 @@
         </main>
     </div>
 
-    @Html.Sitecore().Placeholder("footer")
-    @Html.Partial("_JsThirdParty")
+    @Html.Sitecore().Placeholder("footer")    
     @Html.Partial("_JsWffm")
 
     @if (!IsInEditingMode)
@@ -61,14 +60,5 @@
 
     <script type="text/javascript" src="/js/vitality.presales.min.js"></script>
     <script type="text/javascript" src="/bower_components/vitality.boilerplate/dist/vitality-boilerplate.min.js"></script>
-<script type='text/javascript' id="__bs_script__">
-
-    if ('presales.vitality.co.uk' === document.location.host) {
-        //<![CDATA[
-        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.2.6.11.js'><\/script>".replace("HOST", location.hostname));
-        //]]>
-    }
-
-</script>
 </body>
 </html>

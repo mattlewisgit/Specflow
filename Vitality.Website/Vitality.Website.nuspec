@@ -28,6 +28,9 @@
     <file src="img\**\*.*" target="img" />
     <file src="js\**\*.js" target="js" />
     <file src="js\**\*.html" target="js" />
+    <file src="node_modules\core-js\client\shim.min.js" target="node_modules\core-js\client" />
+    <file src="node_modules\zone.js\dist\zone.js" target="node_modules\zone.js\dist" />
+    <file src="node_modules\systemjs\dist\system.src.js" target="node_modules\systemjs\dist" />
     <file src="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\CallProSchemaEditor.xml" target="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\CallProSchemaEditor.xml" />
     <file src="sitecore modules\Shell\UrlRewrite\**\*.*" target="sitecore modules\Shell\UrlRewrite" />
     <file src="Views\Form\**\*.*" target="Views\Form" />
