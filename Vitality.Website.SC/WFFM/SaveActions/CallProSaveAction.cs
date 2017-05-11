@@ -1,5 +1,3 @@
-using Vitality.Website.SC.Utilities;
-
 namespace Vitality.Website.SC.WFFM.SaveActions
 {
     using System;
@@ -9,6 +7,7 @@ namespace Vitality.Website.SC.WFFM.SaveActions
     using Sitecore.WFFM.Abstractions.Actions;
     using Core;
     using Helpers;
+    using Utilities;
 
     public class CallProSaveAction : ISaveAction
     {
