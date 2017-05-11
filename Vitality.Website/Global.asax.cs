@@ -1,13 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Vitality.Website.App_Start;
-using SC = Vitality.Website.SC;
-
 namespace Vitality.Website
 {
     public class MvcApplication : Sitecore.Web.Application
@@ -27,32 +21,10 @@ namespace Vitality.Website
 
         protected void Session_Start()
         {
-            // Get any UTM params
-            List<string> utmParams = new List<string>();
-            utmParams.Add(Request.Params[ConfigurationManager.AppSettings["UtmCookieSource"]]);
-            utmParams.Add(Request.Params[ConfigurationManager.AppSettings["UtmCookieMedium"]]);
-            utmParams.Add(Request.Params[ConfigurationManager.AppSettings["UtmCookieCampaign"]]);
-            utmParams.Add(Request.Params[ConfigurationManager.AppSettings["UtmCookieTerm"]]);
-            utmParams.Add(Request.Params[ConfigurationManager.AppSettings["UtmCookieContent"]]);
-
-            bool hasValue = utmParams.Any(s => s != null);
-
-            // If urchin tracker module session cookie is not already present, create it
-            if (Request.Cookies[ConfigurationManager.AppSettings["UtmCookieName"]] == null && hasValue)
+            var utmCookie = Mvc.Utilities.UtmCookieHelper.CreateUtmCookie(new HttpRequestWrapper(Context.Request));
+            if (utmCookie != null)
             {
-                HttpCookie utmCookie = new HttpCookie(ConfigurationManager.AppSettings["UtmCookieName"]);
-
-                utmCookie[SC.Constants.CookieSettings.UtmCookieSource] = Request.Params[ConfigurationManager.AppSettings["UtmCookieSource"]];
-                utmCookie[SC.Constants.CookieSettings.UtmCookieMedium] = Request.Params[ConfigurationManager.AppSettings["UtmCookieMedium"]];
-                utmCookie[SC.Constants.CookieSettings.UtmCookieCampaign] = Request.Params[ConfigurationManager.AppSettings["UtmCookieCampaign"]];
-                utmCookie[SC.Constants.CookieSettings.UtmCookieTerm] = Request.Params[ConfigurationManager.AppSettings["UtmCookieTerm"]];
-                utmCookie[SC.Constants.CookieSettings.UtmCookieContent] = Request.Params[ConfigurationManager.AppSettings["UtmCookieContent"]];
-                utmCookie[SC.Constants.CookieSettings.RefUrl] = Request.UrlReferrer != null
-                    ? Request.UrlReferrer.ToString()
-                    : null;
-                utmCookie.Expires = DateTime.MinValue;
-
-                Response.Cookies.Add(utmCookie);
+                Context.Response.Cookies.Add(utmCookie);
             }
         }
     }
