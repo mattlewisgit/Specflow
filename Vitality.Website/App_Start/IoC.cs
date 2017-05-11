@@ -1,7 +1,10 @@
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Sitecore.DependencyInjection;
 using Vitality.Website.App.Helpers;
 using Vitality.Website.App.Vacancies;
 using Vitality.Website.App.Vacancies.Interfaces;
+using Vitality.Website.Areas.Presales.Handlers.Literature;
+
 namespace Vitality.Website.App_Start
 {
     using App.Ccsd;
@@ -30,22 +33,17 @@ namespace Vitality.Website.App_Start
         public void Configure(IServiceCollection serviceCollection)
         {
             var assemblies = new[] { Assembly.Load("Vitality.Website") };
-
-            var serviceprovider = serviceCollection.BuildServiceProvider();
-
+            
             serviceCollection.AddTransient(provider => SitecoreContext.GetFromHttpContext());
             
             serviceCollection.AddScoped<IVacancyService, VacancyService>();
             serviceCollection.AddScoped<ICcsdService, CcsdService>();
             serviceCollection.AddScoped<IMockDataHelper, MockDataHelper>();
             serviceCollection.AddScoped<IVacancyService, VacancyService>();
+            
             serviceCollection.AddMediatR(assemblies);
-
             serviceCollection.AddScoped<SingleInstanceFactory>(p => t => p.GetService(t));
             serviceCollection.AddScoped<MultiInstanceFactory>(p => t => p.GetServices(t));
-            
-            //container.Register<Func<string, IProviderSearchContext>>(() => index => ContentSearchManager.GetIndex(index).CreateSearchContext(), new WebApiRequestLifestyle());
-
 
             serviceCollection.AddMvcControllers(assemblies);
         }

@@ -14,16 +14,20 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
 
     public class LiteratureDocumentSummariesHandler : IRequestHandler<LiteratureDocumentSummariesRequest, IEnumerable<LiteratureDocumentSummaryDto>>
     {
-        private readonly IProviderSearchContext searchContext;
+        private readonly IProviderSearchContext _searchContext;
 
         public LiteratureDocumentSummariesHandler(Func<string, IProviderSearchContext> searchContextFactory)
         {
-            this.searchContext = searchContextFactory("literature_library");
+            if (Sitecore.Context.Site != null)
+            {
+                var searchableIndex = string.Format("{0}_literature_library", Sitecore.Context.Site.Name);
+                this._searchContext = ContentSearchManager.GetIndex(searchableIndex).CreateSearchContext();
+            }
         }
 
         public IEnumerable<LiteratureDocumentSummaryDto> Handle(LiteratureDocumentSummariesRequest request)
         {
-            var searchResults = this.searchContext
+            var searchResults = this._searchContext
                 .GetQueryable<LiteratureDocumentSearchResult>()
                 .Where(this.MatchingLiteratureDocumentSummaries(request))
                 .ToArray();

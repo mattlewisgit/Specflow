@@ -152,10 +152,10 @@
     <Compile Include="Agents\Sitemaps\SitemapSettings.cs" />
     <Compile Include="Agents\Sitemaps\SitemapUrlModel.cs" />
     <Compile Include="Providers\MediaProvider.cs" />
-    <Compile Include="Utilities\DictionaryHelper.cs" />
-    <Compile Include="Utilities\QueryHelper.cs" />
-    <Compile Include="Utilities\SitecoreDataItemHelper.cs" />
-    <Compile Include="Utilities\SiteInfoHelper.cs" />
+    <Compile Include="Fields\Utilities\DictionaryHelper.cs" />
+    <Compile Include="Fields\Utilities\QueryHelper.cs" />
+    <Compile Include="Fields\Utilities\SitecoreDataItemHelper.cs" />
+    <Compile Include="Fields\Utilities\SiteInfoHelper.cs" />
     <Compile Include="Providers\AppendLinkProvider.cs" />
     <Compile Include="WFFM\Helpers\FormFieldsHelper.cs" />
     <Compile Include="WFFM\SaveActions\CallProSaveAction.cs" />
