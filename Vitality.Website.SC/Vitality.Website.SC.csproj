@@ -48,10 +48,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="HtmlAgilityPack">
-      <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221\lib\HtmlAgilityPack.dll</HintPath>
     </Reference>
     <Reference Include="Lucene.Net">
-      <HintPath>..\packages\Lucene.Net.3.0.3\lib\NET40\Lucene.Net.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221\lib\Lucene.Net.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
@@ -93,11 +93,11 @@
     <Reference Include="Sitecore.WFFM.Abstractions">
       <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.WFFM.Actions, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Sitecore.WFFM.Actions">
       <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Actions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.WFFM.Analytics, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Sitecore.WFFM.Analytics">
       <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Analytics.dll</HintPath>
       <Private>True</Private>
     </Reference>
