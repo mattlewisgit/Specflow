@@ -8,6 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {4A3A387E-F7C7-4ACB-83C7-49706D77B6A9}
 templatekey: Mpu Section
+created: 20170403T142936Z
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
@@ -16,10 +17,17 @@ key: __masters
 content-length: 38
 
 {BDD88ED4-C40F-43A1-9900-572B18179434}
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: 32dcbd1f-0c26-49d5-a2d0-1a7d6e4bc701
+revision: ab42a7b8-fbb4-434d-ab97-8955cca28092
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -48,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-32dcbd1f-0c26-49d5-a2d0-1a7d6e4bc701
+ab42a7b8-fbb4-434d-ab97-8955cca28092
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170105T122107Z
+20170512T153425Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

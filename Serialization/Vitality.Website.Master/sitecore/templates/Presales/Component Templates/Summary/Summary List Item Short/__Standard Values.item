@@ -8,11 +8,19 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {428438C8-D8C7-4D8E-BA51-B4FAAE4269C5}
 templatekey: Summary List Item Short
+created: 20160818T132957Z
 
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: d758215b-b357-4460-97fc-1fbc7e35afd3
+revision: 1fd55866-32d9-4d59-957e-302cff6fe91b
 
 ----field----
 field: {A29F2185-3E6E-4C22-A856-8D2D122A2376}
@@ -48,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d758215b-b357-4460-97fc-1fbc7e35afd3
+1fd55866-32d9-4d59-957e-302cff6fe91b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160525T151627Z
+20170512T154609Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

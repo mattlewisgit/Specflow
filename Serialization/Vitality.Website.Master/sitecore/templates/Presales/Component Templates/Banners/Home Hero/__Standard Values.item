@@ -8,11 +8,19 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {06BA5852-E7F7-436C-A4F6-C5E81F1EC299}
 templatekey: Home Hero
+created: 20160818T132920Z
 
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: 68db9ff2-55f9-4e4f-81dc-513cb88e3043
+revision: d93fbcc4-e34c-41fc-8c06-f0f1a0f7353f
 
 ----field----
 field: {5A026F8B-759C-4D0F-B0AF-897B6F9FB017}
@@ -48,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-68db9ff2-55f9-4e4f-81dc-513cb88e3043
+d93fbcc4-e34c-41fc-8c06-f0f1a0f7353f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160621T112216Z
+20170512T152847Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {AFD7F6E2-1AFD-4589-AB3D-72E6CFBB4D64}
+id: {2B3B4805-F35C-4C68-9A0A-56E5B4AE6E0D}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Content Collection/Social Media Item/__Standard Values
-parent: {307FF875-5C27-45DA-9C14-6ADC774A9E82}
+path: /sitecore/templates/Presales/Component Templates/Feature Blocks/Vacancy List/__Standard Values
+parent: {4256C3AC-8087-420C-86D8-9C1127474E10}
 name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
-template: {307FF875-5C27-45DA-9C14-6ADC774A9E82}
-templatekey: Social Media Item
-created: 20170403T142939Z
+template: {4256C3AC-8087-420C-86D8-9C1127474E10}
+templatekey: Vacancy List
+created: 20170512T153754Z
 
 ----field----
 field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
@@ -20,15 +20,8 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: fe252a1e-1f87-4b2c-ab4b-59b68cbeb3c7
+revision: 5b00faf1-3d5b-4a66-ad68-395abab594fd
 
-----field----
-field: {6A8F2274-F467-4649-B3D1-93A9E0BD7B6F}
-name: BackgroundColor
-key: backgroundcolor
-content-length: 7
-
-#4267b2
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -42,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170102T134406Z
+20170512T153754Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-fe252a1e-1f87-4b2c-ab4b-59b68cbeb3c7
+5b00faf1-3d5b-4a66-ad68-395abab594fd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170512T153459Z
+20170512T153802Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
