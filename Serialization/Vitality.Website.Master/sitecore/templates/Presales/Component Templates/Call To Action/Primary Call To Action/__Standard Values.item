@@ -8,6 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {18709C78-2661-47A9-AF8D-2FAB087EC546}
 templatekey: Primary Call To Action
+created: 20160818T132922Z
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
@@ -16,10 +17,17 @@ key: __masters
 content-length: 38
 
 {1B6BD083-B9CA-44F6-8B2D-F742FCAFF3E4}
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: 32f88f77-8551-46bf-a3fc-f7ac9823efc7
+revision: 7eafb2a7-eb76-4efa-99e7-5cd9cb36cae9
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -48,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-32f88f77-8551-46bf-a3fc-f7ac9823efc7
+7eafb2a7-eb76-4efa-99e7-5cd9cb36cae9
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160609T104741Z
+20170512T153311Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

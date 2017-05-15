@@ -8,6 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {BE2854DE-BB75-42FF-879D-9E6C05B1C6AA}
 templatekey: FAQ Leader
+created: 20160818T132928Z
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
@@ -16,10 +17,17 @@ key: __masters
 content-length: 38
 
 {E5BEA071-8E83-42C6-9348-68A6E7B0C66D}
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: ac995470-3078-4b8c-87de-69f3f666e959
+revision: 528ea83a-f85f-477e-9752-4e8a68398af5
 
 ----field----
 field: {1A08BCFD-A925-4D5E-9443-DF79F3D140E6}
@@ -55,18 +63,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ac995470-3078-4b8c-87de-69f3f666e959
+528ea83a-f85f-477e-9752-4e8a68398af5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T140943Z
+20170512T153541Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

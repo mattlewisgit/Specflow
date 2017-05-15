@@ -8,11 +8,19 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {E5B15680-FB0E-4273-83F4-E19F8783440E}
 templatekey: Message Box
+created: 20170512T160030Z
 
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: efd3239f-13b9-4f54-9666-4fd960a792f6
+revision: 10b4c845-b1b9-438c-8043-baa4bc99858f
 
 ----field----
 field: {25DB54E0-075B-4BED-AE8C-F229FCE27D60}
@@ -48,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-efd3239f-13b9-4f54-9666-4fd960a792f6
+10b4c845-b1b9-438c-8043-baa4bc99858f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170403T110909Z
+20170512T160456Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
