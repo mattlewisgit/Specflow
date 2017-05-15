@@ -1,8 +1,9 @@
 ﻿@using Sitecore.Form.Web.UI.Controls
 @using Sitecore.Forms.Mvc.Html
+@using Vitality.Website.Extensions
 @model Sitecore.Forms.Mvc.ViewModels.Fields.DatePickerField
 
-@using (Html.BeginField())
+@using (Html.BeginField(false))
 {
     @Html.RenderScriptBlock(
         @<script type="text/javascript">
@@ -18,7 +19,7 @@
                  'maxDate': new Date('@Model.EndDate.Year', '@(Model.EndDate.Month - 1)', '@Model.EndDate.Day'),
              };
          </script>)
-    
+    @Html.ToolTipLabelFor(Html.BootstrapLabelFor(x => Model.Value, Model.Title), Model.Information)
     @Html.Editor("Value", null, new
     {
         htmlAttributes = new
@@ -26,4 +27,5 @@
             @class = "form-control datepicker"
         }
     })
+    @Html.BootstrapValidationMessageFor(x => Model.Value)
 }

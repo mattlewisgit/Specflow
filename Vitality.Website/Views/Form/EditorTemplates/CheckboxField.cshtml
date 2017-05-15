@@ -2,11 +2,14 @@
 @using Sitecore.Forms.Mvc.Html
 @model Sitecore.Forms.Mvc.ViewModels.Fields.CheckboxField
 
-@using (Html.BeginField())
+@using (Html.BeginField(false))
 {
-    var cssClass = Model.FormType == FormType.Inline ? "checkbox-inline" : "checkbox";
-    var renderedField = string.Format("<div class=\"{0}\"> <label>{1}{2}</label></div>", cssClass, Html.CheckBoxFor(x => Model.Value), Html.BootstrapText("Title"));
-    @FormFieldWithToolTip.Create(Model.Information, MvcHtmlString.Create(renderedField))
-    // Make ShowInformation to false as default behaviour is to render information below the field
-    Model.ShowInformation = false;
+    <span class="tool-tip-icon tool-tip-icon--inline"><button type="button" title="@Model.Information"></button></span>
+    var cssclass = Model.FormType == FormType.Inline ? "checkbox-inline" : "checkbox";
+    <div class="@cssclass">
+        <label>
+            @Html.CheckBoxFor(x => Model.Value)
+            @Html.BootstrapText("Title")
+        </label>
+    </div>
 }

@@ -5,9 +5,9 @@ namespace Vitality.Website.SC.WFFM.SaveActions
     using Sitecore.Data;
     using Sitecore.Diagnostics;
     using Sitecore.WFFM.Abstractions.Actions;
-    using App.CallPro;
     using Core;
     using Helpers;
+    using Utilities;
 
     public class CallProSaveAction : ISaveAction
     {
@@ -53,6 +53,7 @@ namespace Vitality.Website.SC.WFFM.SaveActions
 
             try
             {
+                PresalesLog.Log.Info(requestXml);
                 // Execute request.
                 CallProConnector.Send(requestXml);
             }

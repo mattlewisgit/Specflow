@@ -104,10 +104,10 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TraitAttribute("FeatureTitle", "WFFM")]
         [Xunit.TraitAttribute("Description", "Submit Invalid Web Form")]
         [Xunit.TraitAttribute("Category", "SIT")]
-        [Xunit.InlineDataAttribute("Matt", "LeTissier", "Other", "IncorrectEmail", "02380999999", "1", "May", "2016", "Magic", "Yes", new string[0])]
-        [Xunit.InlineDataAttribute("Matt", "LeTissier", "Other", "Test@Test.com", "IncorrectPhone", "1", "May", "2016", "Magic", "Yes", new string[0])]
-        [Xunit.InlineDataAttribute("", "LeTissier", "Other", "Test@Test.com", "02380999999", "1", "May", "2016", "Magic", "Yes", new string[0])]
-        public virtual void SubmitInvalidWebForm(string firstName, string lastName, string otherName, string email, string phone, string day, string mM, string yYYY, string dropList, string checkBox, string[] exampleTags)
+        [Xunit.InlineDataAttribute("Matt", "LeTissier", "Other", "IncorrectEmail", "02380999999", "1", "May", "2016", "Magic", "Yes", "The Email Address field contains an invalid email address.", new string[0])]
+        [Xunit.InlineDataAttribute("Matt", "LeTissier", "Other", "Test@Test.com", "IncorrectPhone", "1", "May", "2016", "Magic", "Yes", "The value of the Phone number field is not valid.", new string[0])]
+        [Xunit.InlineDataAttribute("", "LeTissier", "Other", "Test@Test.com", "02380999999", "1", "May", "2016", "Magic", "Yes", "The First name field is required.", new string[0])]
+        public virtual void SubmitInvalidWebForm(string firstName, string lastName, string otherName, string email, string phone, string day, string mM, string yYYY, string dropList, string checkBox, string errorMessage, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "SIT"};
@@ -125,7 +125,87 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 22
  testRunner.And("I click on the Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23
- testRunner.Then("I expect the web forms mandatory error message to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I expect the web forms {0} error message to appear", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Web Form single line tool tips - Presales")]
+        [Xunit.TraitAttribute("FeatureTitle", "WFFM")]
+        [Xunit.TraitAttribute("Description", "Web Form single line tool tips - Presales")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void WebFormSingleLineToolTips_Presales()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Web Form single line tool tips - Presales", new string[] {
+                        "SIT"});
+#line 33
+ this.ScenarioSetup(scenarioInfo);
+#line 34
+    testRunner.Given("I am on presales /dev/wffm", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 35
+ testRunner.When("I click on field First name tool tips", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 36
+ testRunner.Then("I expect Enter First Name tool tips to be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Web Form Date tool tips - Presales")]
+        [Xunit.TraitAttribute("FeatureTitle", "WFFM")]
+        [Xunit.TraitAttribute("Description", "Web Form Date tool tips - Presales")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void WebFormDateToolTips_Presales()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Web Form Date tool tips - Presales", new string[] {
+                        "SIT"});
+#line 39
+ this.ScenarioSetup(scenarioInfo);
+#line 40
+    testRunner.Given("I am on presales /dev/wffm", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 41
+ testRunner.When("I click on field Submission Date tool tips", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 42
+ testRunner.Then("I expect Enter Submission Date tool tips to be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Web Form Phone Number tool tips - Advisers")]
+        [Xunit.TraitAttribute("FeatureTitle", "WFFM")]
+        [Xunit.TraitAttribute("Description", "Web Form Phone Number tool tips - Advisers")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void WebFormPhoneNumberToolTips_Advisers()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Web Form Phone Number tool tips - Advisers", new string[] {
+                        "SIT"});
+#line 45
+ this.ScenarioSetup(scenarioInfo);
+#line 46
+    testRunner.Given("I am on advisers /dev/wffm", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 47
+ testRunner.When("I click on field Phone number tool tips", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 48
+ testRunner.Then("I expect Enter Phone Number tool tips to be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Web Form Date Check box - Advisers")]
+        [Xunit.TraitAttribute("FeatureTitle", "WFFM")]
+        [Xunit.TraitAttribute("Description", "Web Form Date Check box - Advisers")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void WebFormDateCheckBox_Advisers()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Web Form Date Check box - Advisers", new string[] {
+                        "SIT"});
+#line 51
+ this.ScenarioSetup(scenarioInfo);
+#line 52
+    testRunner.Given("I am on advisers /dev/wffm", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 53
+ testRunner.When("I click on field How did you find us? tool tips", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 54
+ testRunner.Then("I expect Select How To Find Us tool tips to be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

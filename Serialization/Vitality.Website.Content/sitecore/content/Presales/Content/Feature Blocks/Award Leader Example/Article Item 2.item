@@ -12,7 +12,7 @@ templatekey: Article Item
 ----version----
 language: en
 version: 1
-revision: c202ce3b-0749-43ab-a59c-8b504422a435
+revision: 5d564431-7db5-44d4-af21-3cea119065e6
 
 ----field----
 field: {18ADA82B-D17A-4985-8330-F2EF67907F88}
@@ -35,6 +35,13 @@ key: title
 content-length: 16
 
 member Stories 2
+----field----
+field: {E5B77B8D-53DB-49AD-A422-CC6472BFAC90}
+name: Link
+key: link
+content-length: 131
+
+<link text="Link to Home Hero" linktype="internal" class="" title=""  querystring="" id="{0C90CB1D-A40A-40AA-8B54-6BE581BCC501}" />
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -62,14 +69,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c202ce3b-0749-43ab-a59c-8b504422a435
+5d564431-7db5-44d4-af21-3cea119065e6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161213T150227Z
+20170425T132403Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

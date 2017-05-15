@@ -1,9 +1,12 @@
 ﻿@using Sitecore.Forms.Mvc.Html
+@using Vitality.Website.Extensions
 @model Sitecore.Forms.Mvc.ViewModels.Fields.ListBoxField
 
-@using (Html.BeginField())
+@using (Html.BeginField(false))
 {
+    @Html.ToolTipLabelFor(Html.BootstrapLabelFor(x => Model.Value, Model.Title), Model.Information)
     @(Model.SelectionMode == "Single"
-          ? Html.DropDownListFor(x => x.Value, new SelectList(Model.Items, "Value", "Text"), new { size = Model.Rows, @class = "form-control"})
-          : Html.ListBoxFor(x => x.Value, new SelectList(Model.Items, "Value", "Text"), new { @class = "form-control"}))
+          ? Html.DropDownListFor(x => x.Value, new SelectList(Model.Items, "Value", "Text"), new { size = Model.Rows, @class = "form-control" })
+          : Html.ListBoxFor(x => x.Value, new SelectList(Model.Items, "Value", "Text"), new { @class = "form-control" }))
+    @Html.BootstrapValidationMessageFor(x => Model.Value)
 }

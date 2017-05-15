@@ -12,7 +12,7 @@ templatekey: Award Logo
 ----version----
 language: en
 version: 1
-revision: 761739ea-61d8-465d-b9c4-d037f8168165
+revision: b0e49bc2-878c-4c03-b8ae-8ad7385d7e96
 
 ----field----
 field: {9A4D889C-168E-4BBA-90CB-C9AFBA966F76}
@@ -20,7 +20,7 @@ name: Image
 key: image
 content-length: 58
 
-<image mediaid="{337F3DA7-651A-4020-BF8C-6C5656D691F0}" />
+<image mediaid="{EA937974-5309-435E-9766-C92837F15D3F}" />
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -48,14 +48,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-761739ea-61d8-465d-b9c4-d037f8168165
+b0e49bc2-878c-4c03-b8ae-8ad7385d7e96
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161213T141631Z
+20170425T140331Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -13,10 +13,7 @@
   <files>
     <file src="App_Config\ConnectionStrings.config" target="App_Config" />
     <file src="App_Config\**\*.*" target="App_Config" />
-    <file src="App_Code\**\*.*" target="App_Code" />
     <file src="App_Data\license.xml" target="App_Data" />
-    <file src="App_Data\CcsdFeed.json" target="App_Data" />
-    <file src="App_Data\ExternalVacancyFeed.xml" target="App_Data" />
     <file src="Areas\Presales\Views\**\*.*" target="Areas\Presales\Views" />
     <file src="bower_components\**\*.css" target="bower_components" />
     <file src="bower_components\**\*.js" target="bower_components" />
@@ -29,7 +26,11 @@
     <file src="Global.asax" />
     <file src="_Heartbeat.html" />
     <file src="img\**\*.*" target="img" />
-    <file src="js\*.js" target="js" />
+    <file src="js\**\*.js" target="js" />
+    <file src="js\**\*.html" target="js" />
+    <file src="node_modules\core-js\client\shim.min.js" target="node_modules\core-js\client" />
+    <file src="node_modules\zone.js\dist\zone.js" target="node_modules\zone.js\dist" />
+    <file src="node_modules\systemjs\dist\system.src.js" target="node_modules\systemjs\dist" />
     <file src="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\CallProSchemaEditor.xml" target="sitecore\shell\Applications\Modules\Web Forms for Marketers\Dialogs\Action Editor\CallProSchemaEditor.xml" />
     <file src="sitecore modules\Shell\UrlRewrite\**\*.*" target="sitecore modules\Shell\UrlRewrite" />
     <file src="Views\Form\**\*.*" target="Views\Form" />

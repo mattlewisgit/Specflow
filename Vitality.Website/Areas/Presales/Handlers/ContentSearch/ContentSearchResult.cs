@@ -8,6 +8,8 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
         [IndexField("title")]
         public string Title { get; set; }
         [IndexField("description")]
-        public string Description { get; set; } 
+        public string Description { get; set; }
+        [IndexField("hideFromSearch")]
+        public bool HideFromSearch { get; set; }
     }
 }

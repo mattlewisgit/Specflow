@@ -1,0 +1,56 @@
+<div class="form">
+    <form>
+        <div class="form__field">
+            <div class="grid ">
+                <div class="grid-col-3-12">
+                    <div class="form__field__description">
+                        <label for="locationsDropDown">{{ viewModel.LocationsLabel }}</label>
+                    </div>
+
+                    <div class="form__field__input--date">
+                        <select (ngModelChange)="filtersChanged($event, document.getElementById('departmentsDropDown').value)" [ngModel]="location" id="locationsDropDown" name="locationsDropDown">
+                            <option *ngFor="let loc of locations" [value]="loc">{{ loc }}</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid-col-3-12">
+                    <div class="form__field__description">
+                        <label for="departmentsDropDown">{{ viewModel.DepartmentsLabel }}</label>
+                    </div>
+
+                    <div class="form__field__input--date">
+                        <select (ngModelChange)="filtersChanged(document.getElementById('locationsDropDown').value, $event)" [ngModel]="department" id="departmentsDropDown" name="departmentsDropDown">
+                            <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form__field vacancyList">
+            <div class="grid ">
+                <div class="grid-col-12-12">
+                    <div *ngFor="let vacancy of filteredVacancies" class="vacancy">
+                        <h3>{{ vacancy.JobTitle }}</h3>
+                        <ul>
+                            <li>{{ viewModel.LocationText }} {{ vacancy.JobLocation }}</li>
+                            <li>{{ viewModel.SalaryText }} {{ vacancy.JobSalary }}</li>
+                            <li *ngIf='vacancy.ClosingDate != "0001-01-01T00:00:00"'>{{ viewModel.VacancyClosesOn }} {{ vacancy.ClosingDate | date: 'dd/MM/yyyy' }}</li>
+                        </ul>
+
+                        <a href="{{ viewModel.Path }}{{ vacancy.Advertid }}/" class="emphasis-link">{{ viewModel.FindoutMoreText }}</a>
+                        <hr />
+                    </div>
+                    <div *ngIf="filteredVacancies?.length < 1" class="novacancies">
+                        <span>
+                            {{ viewModel.NoVacanciesFoundText }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+

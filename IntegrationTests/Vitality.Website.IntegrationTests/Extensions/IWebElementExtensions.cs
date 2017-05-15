@@ -41,5 +41,20 @@ namespace Vitality.Website.IntegrationTests.Extensions
             source.Click();
             return source;
         }
+
+        /// <summary>
+        /// Gets the immediate parent element.
+        /// </summary>
+        /// <param name="source">To search</param>
+        /// <returns>Parent element if it exists</returns>
+        public static IWebElement GetParent(this IWebElement source)
+        {
+            if (source == null)
+            {
+                throw new ArgumentNullException("source");
+            }
+
+            return source.FindElement(By.XPath(".."));
+        }
     }
 }

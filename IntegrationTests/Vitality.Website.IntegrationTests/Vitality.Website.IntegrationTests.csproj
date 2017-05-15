@@ -106,10 +106,32 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="Features\ArticleIndex.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ArticleIndex.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Steps\ArticleIndexSteps.cs" />
+    <Compile Include="Steps\CareersSteps.cs" />
+    <Compile Include="Features\BenefitLeader.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BenefitLeader.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\CallToAction.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CallToAction.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\CardsStacked.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CardsStacked.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\FAQLeader.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FAQLeader.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\Feemaxima.feature.cs">
       <AutoGen>True</AutoGen>
@@ -125,6 +147,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RichText.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\AwardLeader.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AwardLeader.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Careers.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Careers.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Drivers\DriverFactory.cs" />
@@ -193,10 +225,13 @@
     </Compile>
     <Compile Include="Steps\AccordionSteps.cs" />
     <Compile Include="Steps\BaseSteps.cs" />
+    <Compile Include="Steps\BenefitLeaderSteps.cs" />
     <Compile Include="Steps\BreadcrumbSteps.cs" />
+    <Compile Include="Steps\CallToActionSteps.cs" />
     <Compile Include="Steps\CardsStackedSteps.cs" />
     <Compile Include="Steps\CommonSteps.cs" />
     <Compile Include="Steps\CookiesSteps.cs" />
+    <Compile Include="Steps\FAQLeaderSteps.cs" />
     <Compile Include="Steps\FeemaximaSteps.cs" />
     <Compile Include="Steps\HealthPresalesContentSteps.cs" />
     <Compile Include="Steps\LiteratureLibrarySteps.cs" />
@@ -206,6 +241,7 @@
     <Compile Include="Steps\QuoteApplySteps.cs" />
     <Compile Include="Steps\RichTextSteps.cs" />
     <Compile Include="Steps\SearchingSteps.cs" />
+    <Compile Include="Steps\AwardLeaderSteps.cs" />
     <Compile Include="Steps\TabbedSteps.cs" />
     <Compile Include="Steps\WFFMSteps.cs" />
     <Compile Include="Utilities\PageItems.cs" />
@@ -221,6 +257,14 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Accordion.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\ArticleIndex.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ArticleIndex.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\BenefitLeader.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>BenefitLeader.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\Breadcrumb.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Breadcrumb.feature.cs</LastGenOutput>
@@ -229,6 +273,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AdvisersContent.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\CallToAction.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CallToAction.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\CardsStacked.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CardsStacked.feature.cs</LastGenOutput>
@@ -236,6 +284,10 @@
     <None Include="Features\Cookies.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Cookies.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\FAQLeader.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FAQLeader.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Feemaxima.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
@@ -272,6 +324,14 @@
     <None Include="Features\SearchingContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SearchingContent.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\AwardLeader.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AwardLeader.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Careers.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Careers.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Tabbed.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

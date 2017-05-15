@@ -7,6 +7,7 @@
 <!doctype html>
 <html class="@(IsInEditingMode ? "disable-tablesaw" : null)" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">
 <head>
+
     @Html.Sitecore().Placeholder("gtm")
     @Html.Sitecore().Placeholder("metadata")
 
@@ -19,6 +20,7 @@
     }
     else
     {
+        <base href="/">
         <link rel="stylesheet" type="text/css" href="/bower_components/vitality.boilerplate/dist/tablesaw.min.css"/>
     }
 
@@ -38,7 +40,7 @@
         <a href="#main-content" class="offscreen">Skip to Content</a>
         @Html.Sitecore().Placeholder("header")
         @Html.Partial("_Breadcrumb", new BreadcrumbTrail())
-
+        @Html.Partial("_JsThirdParty")
         <main id="main-content" tabindex="-1">
             <section class="vertical-flush">
                 @Html.Sitecore().Placeholder("PresalesContent")
@@ -46,14 +48,15 @@
         </main>
     </div>
 
-    @Html.Sitecore().Placeholder("footer")
-    @Html.Partial("_JsThirdParty")
+    @Html.Sitecore().Placeholder("footer")    
     @Html.Partial("_JsWffm")
 
     @if (!IsInEditingMode)
     {
         <script type="text/javascript" src="/bower_components/vitality.boilerplate/dist/tablesaw.min.js"></script>
     }
+
+
 
     <script type="text/javascript" src="/js/vitality.presales.min.js"></script>
     <script type="text/javascript" src="/bower_components/vitality.boilerplate/dist/vitality-boilerplate.min.js"></script>

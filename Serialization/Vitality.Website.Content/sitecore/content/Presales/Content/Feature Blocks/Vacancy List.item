@@ -1,0 +1,163 @@
+----item----
+version: 1
+id: {94EFC85C-3929-4B8E-A51F-D849A23347DA}
+database: master
+path: /sitecore/content/Presales/Content/Feature Blocks/Vacancy List
+parent: {B626955A-8D36-4516-B6EB-F2A66D89D6BA}
+name: Vacancy List
+master: {00000000-0000-0000-0000-000000000000}
+template: {4256C3AC-8087-420C-86D8-9C1127474E10}
+templatekey: Vacancy List
+
+----version----
+language: en
+version: 1
+revision: c19a1201-4f54-4d8a-9610-5f8525527a46
+
+----field----
+field: {2FF10897-2AB8-42E6-9BC1-02FAD3941648}
+name: Headline
+key: headline
+content-length: 31
+
+This is the vacancies component
+----field----
+field: {C3F7C27F-E5B2-4913-8677-58E36CC2CB08}
+name: LocationsDropdownLabel
+key: locationsdropdownlabel
+content-length: 18
+
+Locations Dropdown
+----field----
+field: {F533EF5A-3BE8-43EA-B317-708E201DF9DC}
+name: AllLocationsText
+key: alllocationstext
+content-length: 13
+
+All Locations
+----field----
+field: {EBB78B54-3B73-4AA0-BB07-0FCF0CE9A669}
+name: DepartmentsDropdownLabel
+key: departmentsdropdownlabel
+content-length: 19
+
+Department Dropdown
+----field----
+field: {240FF698-6A45-4502-AA7E-FF2A5B42B8F7}
+name: AllDepartmentsText
+key: alldepartmentstext
+content-length: 15
+
+All departments
+----field----
+field: {0E7B1670-59B2-46DB-9997-6A58C70FE739}
+name: FindoutMoreText
+key: findoutmoretext
+content-length: 12
+
+Findout More
+----field----
+field: {68033C38-CCBE-4B17-814B-CA935AAA8210}
+name: NoVacanciesFoundText
+key: novacanciesfoundtext
+content-length: 23
+
+No Vacancies Found Text
+----field----
+field: {22764005-8E09-4D92-B86A-6411542814B3}
+name: FeedSettings
+key: feedsettings
+content-length: 38
+
+{3180CA2D-2EE1-4AD7-B8A0-E507DDC1093C}
+----field----
+field: {04EF40FD-BA7C-4DE7-A8CB-A09031D8D962}
+name: LocationText
+key: locationtext
+content-length: 8
+
+Location
+----field----
+field: {C52C3FE7-5F55-4572-B842-4ABD4351577F}
+name: SalaryText
+key: salarytext
+content-length: 6
+
+Salary
+----field----
+field: {1E5D19ED-90AE-42C0-9B3B-180435CB1B46}
+name: ClosesOnText
+key: closesontext
+content-length: 9
+
+Closes on
+----field----
+field: {B3C4F613-F008-4C7F-A3A4-654D128FE7EE}
+name: ApplyForVacancyText
+key: applyforvacancytext
+content-length: 17
+
+Apply for Vacancy
+----field----
+field: {4F95AE05-0F54-49A1-AB5A-985B78C5F974}
+name: ShareVacancyText
+key: sharevacancytext
+content-length: 13
+
+Share vacancy
+----field----
+field: {8E016544-ECE2-4374-A813-4B235CF91DDB}
+name: BackToVacanciesListText
+key: backtovacancieslisttext
+content-length: 17
+
+Back To Vacancies
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170418T143204Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c19a1201-4f54-4d8a-9610-5f8525527a46
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170420T144743Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
