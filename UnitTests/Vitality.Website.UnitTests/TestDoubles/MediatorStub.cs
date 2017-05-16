@@ -15,32 +15,17 @@ namespace Vitality.Website.UnitTests.TestDoubles
             this.handler = requestHandler;
         }
 
-        public TResponse Send<TResponse>(IRequest<TResponse> request)
+        public Task<TResponse1> Send<TResponse1>(IRequest<TResponse1> request, CancellationToken cancellationToken = new CancellationToken())
         {
             return this.handler.Handle((dynamic)request);
         }
 
-        public Task<TResponse> SendAsync<TResponse>(IAsyncRequest<TResponse> request)
+        public Task Send(IRequest request, CancellationToken cancellationToken = new CancellationToken())
         {
             throw new NotImplementedException();
         }
 
-        public Task<TResponse> SendAsync<TResponse>(ICancellableAsyncRequest<TResponse> request, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Publish(INotification notification)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task PublishAsync(IAsyncNotification notification)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task PublishAsync(ICancellableAsyncNotification notification, CancellationToken cancellationToken)
+        public Task Publish<TNotification>(TNotification notification, CancellationToken cancellationToken = new CancellationToken()) where TNotification : INotification
         {
             throw new NotImplementedException();
         }
