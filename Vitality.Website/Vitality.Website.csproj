@@ -400,6 +400,7 @@
     <Content Include="App_Config\Include\Vitality\Vitality.WFFM_CD.config.cdonly">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="App_Config\Include\ZPerformance.Dev.config" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="gulpfile.js" />
     <Content Include="css\experience_editor_fix.css" />
