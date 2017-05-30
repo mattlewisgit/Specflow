@@ -325,6 +325,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
+    <Content Include="Areas\Presales\Views\QuoteApply\QuoteApplyForm.cshtml" />
+    <None Include="Areas\Presales\Views\Shared\QuoteApplyLayout.cshtml" />
     <Content Include="src\js\countdown-timer-app.js" />
     <Content Include="src\js\global-functions.js" />
     <Content Include="src\ts\app\components\vacancy-detailstemplate.html" />
@@ -3934,6 +3936,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSubSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Partners\PartnerCard.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyForm.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Rewards\RewardsLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryComponent.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryListItem.cs" />
