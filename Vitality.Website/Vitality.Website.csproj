@@ -349,9 +349,9 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Config\Include\Sitecore.Forms.config">
+    <None Include="App_Config\Include\Sitecore.Forms.config">
       <SubType>Designer</SubType>
-    </Content>
+    </None>
     <Content Include="App_Config\Include\Sitecore.Forms.Xtune.CD.config.disabled" />
     <Content Include="App_Config\Include\Sitecore.MvcForms.config" />
     <Content Include="App_Config\Include\Sitecore.WFFM.Analytics.config" />
@@ -4117,9 +4117,7 @@
     <Content Include="App_Config\Include\Sitecore.Analytics.Outcome.config" />
     <Content Include="App_Config\Include\Sitecore.Analytics.Processing.Aggregation.config" />
     <Content Include="App_Config\Include\Sitecore.Analytics.Processing.Aggregation.ProcessingPools.config" />
-    <Content Include="App_Config\Include\Sitecore.Analytics.Processing.Aggregation.Services.config" />
     <Content Include="App_Config\Include\Sitecore.Analytics.Processing.config" />
-    <Content Include="App_Config\Include\Sitecore.Analytics.Processing.Services.config" />
     <Content Include="App_Config\Include\Sitecore.Analytics.Reporting.config" />
     <Content Include="App_Config\Include\Sitecore.Analytics.Tracking.Aggregation.config" />
     <Content Include="App_Config\Include\Sitecore.Analytics.Tracking.config" />
