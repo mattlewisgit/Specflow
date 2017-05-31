@@ -1,0 +1,14 @@
+<div class="question">
+    {{ viewModel.NameLabel }}
+
+    <select [ngModel]="quoteApplyForm.Title" id="salutation" name="salutation">
+        <option *ngFor="let salutation of viewModel.Salutations" [value]="salutation.Value">{{ salutation.Name }}</option>
+    </select>
+    <div class="question--input__text">
+        <input type="text" id="first-name" [ngModel]="quoteApplyForm.firstName" ngPlaceholder="viewModel.FirstNameLabel" />
+    </div>
+
+    <div class="question--input__text">
+        <input type="text" id="last-name" [ngModel]="quoteApplyForm.lastName" ngPlaceholder="viewModel.LastNameLabel" />
+    </div>
+</div>

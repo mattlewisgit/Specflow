@@ -1,143 +1,177 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply.QuoteApplyForm>
+﻿@using AutoMapper
+@using Newtonsoft.Json
+@using Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply.QuoteApplyForm>
+ @{
+     var localEnv = "presales.vitality.co.uk" == HttpContext.Current.Request.Url.Host;
+     var angularModel = JsonConvert.SerializeObject(Model);
+ }
+    <div class="quote--content">
+        @if (Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            <div class="question">
+                @Editable(m => m.NameLabel)
+                <ul>
+                    @foreach (var salutation in Model.Salutations)
+                {
+                    using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", salutation.Path))
+                    {
+                            <li>@salutation.Name <span>(@salutation.Value)</span></li>
+                        }
+                    }
+                </ul>
 
-<div class="quote--content">
-    <div class="question">
-        @Editable(x => x.NameLabel)
+                <div class="question--input__text">
+                    @Editable(x => x.FirstNameLabel)
+                </div>
 
-        <select id="salutation">
-            <option value="Mr" selected="selected">Mr</option>
-            <option value="Mrs">Mrs</option>
-            <option value="Ms">Ms</option>
-            <option value="Mstr">Mstr</option>
-        </select>
+                <div class="question--input__text">
+                    @Editable(x => x.LastNameLabel)
+                </div>
+            </div>
+        }
+        else
+        {
 
-        <div class="question--input__text">
-            <input type="text" id="first-name" placeholder="First name" />
+            <script type="text/javascript" src='@(localEnv ? "node_modules/core-js/client/shim.min.js" : "https://unpkg.com/core-js/client/shim.min.js")'></script>
+            <script type="text/javascript" src='@(localEnv ? "node_modules/zone.js/dist/zone.js" : "https://unpkg.com/zone.js@0.8.4/dist/zone.min.js?main=browser")'></script>
+            <script type="text/javascript" src='@(localEnv ? "node_modules/systemjs/dist/system.src.js" : "https://unpkg.com/systemjs@0.19.39/dist/system.js")'></script>
+            <script>if(!(window.SystemJS)) window.cdnizerLoad("node_modules/core-js/client/shim.min.js");</script>
+            <script>if(!(window.SystemJS)) window.cdnizerLoad("node_modules/zone.js/dist/zone.js");</script>
+            <script>if(!(window.SystemJS)) window.cdnizerLoad("node_modules/systemjs/dist/system.src.js");</script>
+            <script type="text/javascript" src='@(localEnv ? "/js/systemjs.config.js" : "/js/systemjs.config.server.js")'></script>
+
+            <script type="text/javascript">
+                System.import('/js/quoteapply-main.js')
+                                .catch(function (err) { throw err; });
+            </script>
+
+            <script type="text/javascript">
+                window.angularData = window.angularData || {};
+                window.angularData = @Html.Raw(angularModel);
+            </script>
+
+            <quoteapply-form><div class="loader__icon"></div></quoteapply-form>
+        }
+
+        <div class="question">
+            You can call me on
+
+            <div class="question--input__text">
+                <input type="text" id="phone" />
+            </div>
         </div>
 
-        <div class="question--input__text">
-            <input type="text" id="last-name" placeholder="Last name" />
-        </div>
-    </div>
+        <div class="question">
+            And my email is
 
-    <div class="question">
-        You can call me on
+            <div class="question--input__text">
+                <input type="email" id="email" />
+            </div>
 
-        <div class="question--input__text">
-            <input type="text" id="phone" />
-        </div>
-    </div>
-
-    <div class="question">
-        And my email is
-
-        <div class="question--input__text">
-            <input type="email" id="email" />
+            <div class="question--input__info">
+                We'll never share your details with third parties
+            </div>
         </div>
 
-        <div class="question--input__info">
-            We'll never share your details with third parties
-        </div>
-    </div>
+        <div class="question">
+            I'm
 
-    <div class="question">
-        I'm
-
-        <select id="is-insured">
-            <option value="0" selected="selected">not currently insured</option>
-            <option value="1">currently insured</option>
-        </select>
-    </div>
-
-    <div class="question">
-        I've been claim-free for
-
-        <select id="claim-free-years">
-            <option value="0">0 years</option>
-            <option value="1" selected="selected">1 year</option>
-            <option value="2">2 years</option>
-            <option value="3">3 years</option>
-            <option value="4">4 years</option>
-            <option value="5">5+ years</option>
-        </select>
-    </div>
-
-    <div class="question">
-        And made
-
-        <select id="claim-previous-insurer">
-            <option value="0" selected="selected">no claims</option>
-            <option value="1" selected="selected">1 claim</option>
-            <option value="2" selected="selected">2 claim</option>
-            <option value="3" selected="selected">3+ claims</option>
-        </select>
-
-        with my previous insurer
-    </div>
-
-    <div class="question">
-        My date of birth is
-
-        <div class="question--input__text">
-            <input type="text" id="my-dob" placeholder="DD/MM/YYYY" />
-        </div>
-    </div>
-
-    <div class="question">
-        I want my cover to start on
-
-        <div class="question--input__text">
-            <input type="text" id="cover-start-date" placeholder="DD/MM/YYYY" />
+            <select id="is-insured">
+                <option value="0" selected="selected">not currently insured</option>
+                <option value="1">currently insured</option>
+            </select>
         </div>
 
-        <div class="question--input__info">
-            Start date must be within 30 days
-        </div>
-    </div>
+        <div class="question">
+            I've been claim-free for
 
-    <div class="question">
-        I want to cover
-
-        <select id="claim-previous-insurer">
-            <option value="individual" selected="selected">just me</option>
-            <option value="all">me, my partner and kids</option>
-            <option value="partner">me and my partner</option>
-            <option value="children">me and my kids</option>
-        </select>
-    </div>
-
-    <div class="question">
-        My partner's date of birth is
-
-        <div class="question--input__text">
-            <input type="text" id="partner-dob" placeholder="DD/MM/YYYY" />
-        </div>
-    </div>
-
-    <div class="question">
-        My
-
-        <select id="number-children">
-            <option value="1">kid's</option>
-            <option value="2" selected="selected">2 kids</option>
-        </select>
-
-        dates of birth are
-
-        <div class="question--input__text">
-            <input type="text" id="child-1-dob" placeholder="DD/MM/YYYY" />
+            <select id="claim-free-years">
+                <option value="0">0 years</option>
+                <option value="1" selected="selected">1 year</option>
+                <option value="2">2 years</option>
+                <option value="3">3 years</option>
+                <option value="4">4 years</option>
+                <option value="5">5+ years</option>
+            </select>
         </div>
 
-        and
+        <div class="question">
+            And made
 
-        <div class="question--input__text">
-            <input type="text" id="child-2-dob" placeholder="DD/MM/YYYY" />
+            <select id="claim-previous-insurer">
+                <option value="0" selected="selected">no claims</option>
+                <option value="1" selected="selected">1 claim</option>
+                <option value="2" selected="selected">2 claim</option>
+                <option value="3" selected="selected">3+ claims</option>
+            </select>
+
+            with my previous insurer
+        </div>
+
+        <div class="question">
+            My date of birth is
+
+            <div class="question--input__text">
+                <input type="text" id="my-dob" placeholder="DD/MM/YYYY" />
+            </div>
+        </div>
+
+        <div class="question">
+            I want my cover to start on
+
+            <div class="question--input__text">
+                <input type="text" id="cover-start-date" placeholder="DD/MM/YYYY" />
+            </div>
+
+            <div class="question--input__info">
+                Start date must be within 30 days
+            </div>
+        </div>
+
+        <div class="question">
+            I want to cover
+
+            <select id="claim-previous-insurer">
+                <option value="individual" selected="selected">just me</option>
+                <option value="all">me, my partner and kids</option>
+                <option value="partner">me and my partner</option>
+                <option value="children">me and my kids</option>
+            </select>
+        </div>
+
+        <div class="question">
+            My partner's date of birth is
+
+            <div class="question--input__text">
+                <input type="text" id="partner-dob" placeholder="DD/MM/YYYY" />
+            </div>
+        </div>
+
+        <div class="question">
+            My
+
+            <select id="number-children">
+                <option value="1">kid's</option>
+                <option value="2" selected="selected">2 kids</option>
+            </select>
+
+            dates of birth are
+
+            <div class="question--input__text">
+                <input type="text" id="child-1-dob" placeholder="DD/MM/YYYY" />
+            </div>
+
+            and
+
+            <div class="question--input__text">
+                <input type="text" id="child-2-dob" placeholder="DD/MM/YYYY" />
+            </div>
+        </div>
+
+        <div class="question">
+            By clicking next, I understand the Vitality <a href="#">privacy policy</a>
+            and agree to be contracted by the Vitality Group about
+            other products and services.
         </div>
     </div>
-
-    <div class="question">
-        By clicking next, I understand the Vitality <a href="#">privacy policy</a>
-        and agree to be contracted by the Vitality Group about
-        other products and services.
-    </div>
-</div>

@@ -12,10 +12,10 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 
         // Field Data
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public IEnumerable<KeyValuePair> CurrentInsuredStatusData { get; set; }
+        public IEnumerable<KeyValuePair> CurrentInsuredStatuses { get; set; }
 
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public IEnumerable<LinkItem> TitleData { get; set; }
+        public IEnumerable<KeyValuePair> Salutations { get; set; }
 
 
         // Field Labels
