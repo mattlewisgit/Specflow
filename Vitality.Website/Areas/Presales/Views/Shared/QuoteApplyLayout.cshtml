@@ -1,62 +1,57 @@
 ﻿@using Sitecore.Mvc
+@using Vitality.Website.Extensions.Views
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.QuoteApplyPage>
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Vitality Quote Boilerplate | Home</title>
-
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="initial-scale=1.0, width=device-width, maximum-scale=1, user-scalable=0" />
+    @Html.Sitecore().Placeholder("gtm")
+    @Html.Sitecore().Placeholder("metadata")
 
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700" />
     <link rel="stylesheet" type="text/css" href="/css/main.css" />
 </head>
 <body>
-    <script id="__bs_script__">
-//<![CDATA[
-    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.12'><\/script>".replace("HOST", location.hostname));
-//]]></script>
+@Html.Sitecore().Placeholder("gtmnoscript")
+<main tabindex="-1">
+    <div class="quote">
+        <div class="quote--header">
+            @GlassHtml.RenderLazyImage(Model, item => item.Logo)
+            <h1>@Editable(Model , item=> item.Title)</h1>
+        </div>
 
-    <main tabindex="-1">
-        <div class="quote">
-            <div class="quote--header">
-                <img src="/images/vitality-health-logo.svg" alt="Vitality Health logo" />
-                <h1>Get a quote</h1>
+        <div class="quote--left">
+            &nbsp;
+        </div>
+        @Html.Sitecore().Placeholder("QuoteApplyContent")
+
+
+        <div class="quote--right">
+            &nbsp;
+        </div>
+
+        <div class="quote--footer">
+            <div class="quote--footer__logo">
+                <div>
+                    <img src="/images/star_ratings_secondary_logo_2017_5.png" alt="Defacto 5 star rating"/>
+                </div>
             </div>
 
-            <div class="quote--left">
-                &nbsp;
-            </div>
-            @Html.Sitecore().Placeholder("QuoteApplyContent")
-
-
-            <div class="quote--right">
-                &nbsp;
-            </div>
-
-            <div class="quote--footer">
-                <div class="quote--footer__logo">
-                    <div>
-                        <img src="/images/star_ratings_secondary_logo_2017_5.png" alt="Defacto 5 star rating" />
+            <div class="quote--footer__progress">
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar"
+                         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
                     </div>
                 </div>
+            </div>
 
-                <div class="quote--footer__progress">
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar"
-                             aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="quote--footer__chat">
-                    <div>
-                        <img src="/images/chat-open.svg" alt="Open chat window" />
-                    </div>
+            <div class="quote--footer__chat">
+                <div>
+                    <img src="/images/chat-open.svg" alt="Open chat window"/>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
+</main>
 </body>
 </html>

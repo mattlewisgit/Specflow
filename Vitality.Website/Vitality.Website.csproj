@@ -3975,6 +3975,7 @@
     <Compile Include="Areas\Presales\PageTemplates\ContentSearchPage.cs" />
     <Compile Include="Areas\Presales\PageTemplates\ErrorPage.cs" />
     <Compile Include="Areas\Presales\PageTemplates\LiteratureLibraryPage.cs" />
+    <Compile Include="Areas\Presales\PageTemplates\QuoteApplyPage.cs" />
     <Compile Include="Areas\Presales\PresalesAreaRegistration.cs" />
     <Compile Include="Areas\Presales\PresalesConstants.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\ArticleIndexRendering.cs" />
