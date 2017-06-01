@@ -5803,31 +5803,19 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\QuoteApply\Quote Apply Form\Validation Messages\ContactNumberInvalid.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\QuoteApply\Quote Apply Form\Validation Messages\ContactNumberValidation.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\QuoteApply\Quote Apply Form\Validation Messages\ContactNumberRequired.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\QuoteApply\Quote Apply Form\Validation Messages\DateValidation.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\QuoteApply\Quote Apply Form\Validation Messages\DateOfBirthInvalid.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\QuoteApply\Quote Apply Form\Validation Messages\EmailValidation.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\QuoteApply\Quote Apply Form\Validation Messages\DateOfBirthRequired.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\QuoteApply\Quote Apply Form\Validation Messages\EmailInvalid.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\QuoteApply\Quote Apply Form\Validation Messages\EmailRequired.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\QuoteApply\Quote Apply Form\Validation Messages\NameRequired.item">
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\QuoteApply\Quote Apply Form\Validation Messages\NameValidation.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>

@@ -6,6 +6,7 @@ import "rxjs/add/operator/switchMap";
 
 import { QuoteApplication } from "../models/quoteapplication";
 import { QuoteApplyService } from "../services/quoteapply.service";
+import { ValidationService } from "../services/validation.service";
 import { WindowRef } from "./windowref";
 
 @Component({
@@ -39,7 +40,7 @@ export class QuoteApplyFormComponent implements OnInit {
             firstName: ["", <any>[Validators.required]],
             lastName: ["", <any>[Validators.required]],
             contactNumber: ["", <any>[Validators.required]],
-            email: ["", <any>[Validators.required]],
+            email: ["", <any>[Validators.required, ValidationService.emailValidator]],
             dateOfBirth: ["", <any>[Validators.required]]
         });
     }

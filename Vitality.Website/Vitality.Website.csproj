@@ -338,6 +338,7 @@
     <TypeScriptCompile Include="src\ts\app\models\quoteapplication.ts" />
     <TypeScriptCompile Include="src\ts\app\quoteapply-form-app.module.ts" />
     <TypeScriptCompile Include="src\ts\app\services\quoteapply.service.ts" />
+    <TypeScriptCompile Include="src\ts\app\services\validation.service.ts" />
     <TypeScriptCompile Include="src\ts\app\vacancydetails-app.module.ts" />
     <TypeScriptCompile Include="src\ts\systemjs.config.server.ts" />
     <TypeScriptCompile Include="src\ts\quoteapply-main.ts" />

@@ -1,10 +1,10 @@
 ----item----
 version: 1
-id: {4A84733C-8223-49A4-9831-B3ADD8F1ABFF}
+id: {8E8EC80E-2F60-4DD2-A9DC-19549F76D739}
 database: master
-path: /sitecore/templates/Presales/Component Templates/QuoteApply/Quote Apply Form/Validation Messages/DateOfBirthRequired
+path: /sitecore/templates/Presales/Component Templates/QuoteApply/Quote Apply Form/Validation Messages/DateValidation
 parent: {BC73D6D1-2E25-4E3C-B2F4-7D720B021856}
-name: DateOfBirthRequired
+name: DateValidation
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -22,26 +22,26 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-800
+600
 ----version----
 language: en
 version: 1
-revision: ca3954bb-a72a-42c0-b01c-f4ce92984740
+revision: cb731700-89d6-438b-b885-d5d8541b0022
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 22
+content-length: 15
 
-Date Of Birth Required
+Date Validation
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170601T095821Z
+20170601T095820Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ca3954bb-a72a-42c0-b01c-f4ce92984740
+cb731700-89d6-438b-b885-d5d8541b0022
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170601T095821Z
+20170601T210743Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

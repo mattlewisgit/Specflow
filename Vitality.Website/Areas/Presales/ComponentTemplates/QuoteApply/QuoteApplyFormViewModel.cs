@@ -35,13 +35,10 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         public string EmailHelpTexts { get; set; }
 
         // Validation Messages
-        public string ContactNumberInvalid { get; set; }
-        public string ContactNumberRequired { get; set; }
-        public string EmailInvalid { get; set; }
-        public string EmailRequired { get; set; }
-        public string DateOfBirthInvalid { get; set; }
-        public string DateOfBirthRequired { get;set; }
-        public string NameRequired { get; set; }
+        public string ContactNumberValidation { get; set; }
+        public string DateValidation { get; set; }
+        public string EmailValidation { get; set; }
+        public string NameValidation { get; set; }
     }
 }
 

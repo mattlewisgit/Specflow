@@ -12,11 +12,48 @@
         <div class="question--input__text">
             <input type="text" formControlName="lastName" placeholder="{{viewModel.LastNameLabel}}" />
         </div>
-        <small [hidden]="(quoteApplyForm.controls.firstName.valid && quoteApplyForm.controls.lastName.valid) || ((quoteApplyForm.controls.firstName.pristine
+        <p [hidden]="(quoteApplyForm.controls.firstName.valid && quoteApplyForm.controls.lastName.valid) || ((quoteApplyForm.controls.firstName.pristine
                || quoteApplyForm.controls.lastName.pristine) && !submitted)" class="text-danger">
             {{ viewModel.NameRequired }}
-        </small>
+        </p>
     </div>
+    <div class="question">
+        {{ viewModel.ContactNumberLabel }}
+
+        <div class="question--input__text">
+            <input type="text"  formControlName="contactNumber" />
+        </div>
+        <p [hidden]="quoteApplyForm.controls.contactNumber.valid || (quoteApplyForm.controls.contactNumber.pristine && !submitted)" class="text-danger">
+            {{ viewModel.ContactNumberRequired }}
+        </p>
+    </div>
+
+    <div class="question">
+        {{ viewModel.EmailLabel }}
+
+        <div class="question--input__text">
+            <input type="email" formControlName="email" />
+        </div>
+
+        <div class="question--input__info">
+            {{ viewModel.EmailHelpTexts }}
+        </div>
+        <p [hidden]="quoteApplyForm.controls.email.valid || (quoteApplyForm.controls.email.pristine && !submitted)" class="text-danger">
+            {{ viewModel.EmailInvalid }}
+        </p>
+    </div>
+
+    <div class="question">
+        {{ viewModel.DateOfBirthlabel }}
+
+        <div class="question--input__text">
+            <input type="text" formControlName="dateOfBirth" placeholder="{{viewModel.DateFormatLabel}}"/>
+        </div>
+        <p [hidden]="quoteApplyForm.controls.dateOfBirth.valid || (quoteApplyForm.controls.dateOfBirth.pristine && !submitted)" class="text-danger">
+            {{ viewModel.DateOfBirthRequired }}
+        </p>
+    </div>
+
 
     <button type="submit" class="btn btn-primary">Apply</button>
 </form>
