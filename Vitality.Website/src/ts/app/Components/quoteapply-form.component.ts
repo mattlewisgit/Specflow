@@ -14,6 +14,7 @@ import { WindowRef } from "./windowref";
 })
 export class QuoteApplyFormComponent implements OnInit {
     quoteApplyForm: FormGroup;
+    quoteApplication: QuoteApplication;
     viewModel: any;
     submitted: boolean;
 
@@ -43,7 +44,8 @@ export class QuoteApplyFormComponent implements OnInit {
         });
     }
 
-    apply(): void {
+    apply(model : QuoteApplication, isValid: boolean): void {
         this.submitted = true;
+        this.quoteApplication = model;
     }
 }

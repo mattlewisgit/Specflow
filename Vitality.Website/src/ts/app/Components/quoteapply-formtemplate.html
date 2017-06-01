@@ -1,23 +1,24 @@
-<form [formGroup]="quoteApplyForm" (ngSubmit)="apply()" novalidate>
+<form [formGroup]="quoteApplyForm" (ngSubmit)="apply(quoteApplyForm.value, quoteApplyForm.valid)" novalidate>
     <div class="question">
         {{ viewModel.NameLabel }}
 
-        <select id="title" name="title" required formControlName="title">
+        <select formControlName="title">
             <option *ngFor="let salutation of viewModel.Salutations" [value]="salutation.Value">{{ salutation.Key }}</option>
         </select>
         <div class="question--input__text">
-            <input type="text" id="firstName" name="firstName"  required formControlName="firstName" placeholder="{{viewModel.FirstNameLabel}}" />
+            <input type="text" formControlName="firstName" placeholder="{{viewModel.FirstNameLabel}}" />
         </div>
 
         <div class="question--input__text">
-            <input type="text" id="lastName" name="lastName" required formControlName="lastName" placeholder="{{viewModel.LastNameLabel}}" />
+            <input type="text" formControlName="lastName" placeholder="{{viewModel.LastNameLabel}}" />
         </div>
-        <div [hidden]="(firstName.valid && lastName.valid) || (firstName.pristine  && lastName.pristine)" class="alert alert-danger">
+        <small [hidden]="(quoteApplyForm.controls.firstName.valid && quoteApplyForm.controls.lastName.valid) || ((quoteApplyForm.controls.firstName.pristine
+               || quoteApplyForm.controls.lastName.pristine) && !submitted)" class="text-danger">
             {{ viewModel.NameRequired }}
-        </div>
+        </small>
     </div>
 
-    <button type="submit" [disabled]="!quoteApplyForm.pristine" class="btn btn-primary">Apply</button>
+    <button type="submit" class="btn btn-primary">Apply</button>
 </form>
 
 <div [hidden]="!submitted">
