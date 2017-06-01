@@ -3915,7 +3915,6 @@
     <Compile Include="App_Start\MapperConfig.cs" />
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\ServiceCollectionExtensions.cs" />
     <Compile Include="Areas\Global\Models\ImageLink.cs" />
     <Compile Include="Areas\Global\Models\KeyValuePair.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />

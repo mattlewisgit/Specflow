@@ -34,7 +34,7 @@ namespace Vitality.Website.App_Start
             serviceCollection.AddScoped<SingleInstanceFactory>(p => t => p.GetService(t));
             serviceCollection.AddScoped<MultiInstanceFactory>(p => t => p.GetServices(t));
 
-            serviceCollection.AddMvcControllers(assemblies);
+            //serviceCollection.AddMvcControllers(assemblies);
         }
     }
 }
