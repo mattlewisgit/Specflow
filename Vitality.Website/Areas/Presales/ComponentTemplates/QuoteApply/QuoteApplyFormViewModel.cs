@@ -1,22 +1,14 @@
 ﻿using System.Collections.Generic;
-using Glass.Mapper.Sc.Configuration;
-using Glass.Mapper.Sc.Configuration.Attributes;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 {
-    using  Global.Models;
-
-    public class QuoteApplyForm : SitecoreItem
+    public class QuoteApplyFormViewModel
     {
         public string TermsAndCondition { get; set; }
 
         // Field Data
-        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public IEnumerable<KeyValuePair> CurrentInsuredStatuses { get; set; }
-
-        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public IEnumerable<KeyValuePair> Salutations { get; set; }
-
+        public List<KeyValuePair<string, string>> CurrentInsuredStatuses { get; set; }
+        public List<KeyValuePair<string, string>> Salutations { get; set; }
 
         // Field Labels
         public string ClaimFreeLabel { get; set; }
@@ -48,7 +40,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         public string EmailInvalid { get; set; }
         public string EmailRequired { get; set; }
         public string DateOfBirthInvalid { get; set; }
-        public string DateOfBirthRequired { get; set; }
+        public string DateOfBirthRequired { get;set; }
         public string NameRequired { get; set; }
     }
 }

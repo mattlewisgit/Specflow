@@ -1,4 +1,7 @@
-﻿namespace Vitality.Website.App_Start
+﻿using System.Collections.Generic;
+using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply;
+
+namespace Vitality.Website.App_Start
 {
     using Areas.Presales.ComponentTemplates.FeatureBlocks;
     using AutoMapper;
@@ -34,6 +37,15 @@
                 .ForMember(
                     dest => dest.VacancyClosesOn,
                     opt => opt.MapFrom(src => src.ClosesOnText));
+
+            config
+                .CreateMap<QuoteApplyForm, QuoteApplyFormViewModel>()
+                .ForMember(
+                    dest => dest.CurrentInsuredStatuses,
+                    opt => opt.MapFrom(src => src.CurrentInsuredStatuses.Select(i => new KeyValuePair<string, string>(i.Name, i.Value))))
+                .ForMember(
+                    dest => dest.Salutations,
+                    opt => opt.MapFrom(src => src.Salutations.Select(i=>new KeyValuePair<string,string>(i.Name, i.Value))));
         }
     }
 }

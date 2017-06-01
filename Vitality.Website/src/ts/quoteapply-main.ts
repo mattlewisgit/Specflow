@@ -10,4 +10,3 @@ if (!/presales.vitality.co.uk/.test(document.location.host)) {
 }
 
 platformBrowserDynamic().bootstrapModule(QuoteApplyFormAppModule);
-

@@ -1,4 +1,4 @@
-export class QuoteApplyForm {
+export class QuoteApplication {
     title: string;
     firstName: string;
     lastName: string;

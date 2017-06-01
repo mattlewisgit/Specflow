@@ -1,14 +1,26 @@
-<div class="question">
-    {{ viewModel.NameLabel }}
+<form [formGroup]="quoteApplyForm" (ngSubmit)="apply()" novalidate>
+    <div class="question">
+        {{ viewModel.NameLabel }}
 
-    <select [ngModel]="quoteApplyForm.Title" id="salutation" name="salutation">
-        <option *ngFor="let salutation of viewModel.Salutations" [value]="salutation.Value">{{ salutation.Name }}</option>
-    </select>
-    <div class="question--input__text">
-        <input type="text" id="first-name" [ngModel]="quoteApplyForm.firstName" ngPlaceholder="viewModel.FirstNameLabel" />
+        <select id="title" name="title" required formControlName="title">
+            <option *ngFor="let salutation of viewModel.Salutations" [value]="salutation.Value">{{ salutation.Key }}</option>
+        </select>
+        <div class="question--input__text">
+            <input type="text" id="firstName" name="firstName"  required formControlName="firstName" placeholder="{{viewModel.FirstNameLabel}}" />
+        </div>
+
+        <div class="question--input__text">
+            <input type="text" id="lastName" name="lastName" required formControlName="lastName" placeholder="{{viewModel.LastNameLabel}}" />
+        </div>
+        <div [hidden]="(firstName.valid && lastName.valid) || (firstName.pristine  && lastName.pristine)" class="alert alert-danger">
+            {{ viewModel.NameRequired }}
+        </div>
     </div>
 
-    <div class="question--input__text">
-        <input type="text" id="last-name" [ngModel]="quoteApplyForm.lastName" ngPlaceholder="viewModel.LastNameLabel" />
-    </div>
+    <button type="submit" [disabled]="!quoteApplyForm.pristine" class="btn btn-primary">Apply</button>
+</form>
+
+<div [hidden]="!submitted">
+    <h2>You will be submitting following values when development completed:</h2>
+    {{quoteApplication}}
 </div>

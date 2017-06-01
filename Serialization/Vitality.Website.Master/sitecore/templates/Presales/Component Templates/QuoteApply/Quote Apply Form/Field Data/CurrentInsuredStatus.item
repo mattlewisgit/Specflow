@@ -2,9 +2,9 @@
 version: 1
 id: {8CE033D7-CC95-4323-A7E1-A7711AA283ED}
 database: master
-path: /sitecore/templates/Presales/Component Templates/QuoteApply/Quote Apply Form/Field Data/CurrentInsuredStatusData
+path: /sitecore/templates/Presales/Component Templates/QuoteApply/Quote Apply Form/Field Data/CurrentInsuredStatus
 parent: {18A5ED8B-9583-4874-8099-FFF8A1CF815B}
-name: CurrentInsuredStatusData
+name: CurrentInsuredStatus
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
@@ -13,9 +13,16 @@ templatekey: Template field
 field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
 name: Type
 key: type
-content-length: 15
+content-length: 9
 
-Name Value List
+Multilist
+----field----
+field: {1EB8AE32-E190-44A6-968D-ED904C794EBF}
+name: Source
+key: source
+content-length: 82
+
+query:./ancestor-or-self::*[@@templatename='Datasource Folder']/Insured Statuses/*
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
@@ -26,15 +33,15 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 847972f5-9b22-4b88-bc08-a08e34c91e86
+revision: 994dc60a-938f-4862-976a-b68d2922f1f6
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 27
+content-length: 22
 
-Current Insured Status Data
+Current Insured Status
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -55,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-847972f5-9b22-4b88-bc08-a08e34c91e86
+994dc60a-938f-4862-976a-b68d2922f1f6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170530T104147Z
+20170601T095819Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

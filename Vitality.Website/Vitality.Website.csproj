@@ -335,7 +335,7 @@
     <TypeScriptCompile Include="src\ts\app\components\quoteapply-form.component.ts" />
     <TypeScriptCompile Include="src\ts\app\components\windowref.ts" />
     <TypeScriptCompile Include="src\ts\app\models\extradataitem.ts" />
-    <TypeScriptCompile Include="src\ts\app\models\quoteapplyform.ts" />
+    <TypeScriptCompile Include="src\ts\app\models\quoteapplication.ts" />
     <TypeScriptCompile Include="src\ts\app\quoteapply-form-app.module.ts" />
     <TypeScriptCompile Include="src\ts\app\services\quoteapply.service.ts" />
     <TypeScriptCompile Include="src\ts\app\vacancydetails-app.module.ts" />
@@ -3942,6 +3942,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSubSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Partners\PartnerCard.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFormViewModel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyForm.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Rewards\RewardsLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryComponent.cs" />

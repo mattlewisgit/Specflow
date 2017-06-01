@@ -2,14 +2,14 @@ import { Injectable }    from '@angular/core';
 import { Headers, Http } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
-import { QuoteApplyForm } from '../models/quoteapplyform';
+import { QuoteApplication } from '../models/quoteapplication';
 
 @Injectable()
 export class QuoteApplyService {
     endpoint: string;
     feedType: string;
     mockDataFile: string;
-    quoteApplyForm: QuoteApplyForm;
+    quoteApplication: QuoteApplication;
 
   constructor(private http: Http) {}
 
@@ -18,9 +18,4 @@ export class QuoteApplyService {
       this.feedType = feedType;
       this.mockDataFile = mockDataFile;
   }
-
-  //Impliment postQuoteApplyForm() when ready
-  //private handleError(error: any): void {
-  //    throw error.message || error;
-  //}
 }
