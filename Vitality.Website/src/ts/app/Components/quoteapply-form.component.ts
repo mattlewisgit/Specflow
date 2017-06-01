@@ -39,9 +39,9 @@ export class QuoteApplyFormComponent implements OnInit {
             title: [this.viewModel.Salutations[0].Value, <any>[Validators.required]],
             firstName: ["", <any>[Validators.required]],
             lastName: ["", <any>[Validators.required]],
-            contactNumber: ["", <any>[Validators.required]],
+            contactNumber: ["", <any>[Validators.required, ValidationService.phoneNumberValidator]],
             email: ["", <any>[Validators.required, ValidationService.emailValidator]],
-            dateOfBirth: ["", <any>[Validators.required]]
+            dateOfBirth: ["", <any>[Validators.required, ValidationService.dateValidator]]
         });
     }
 

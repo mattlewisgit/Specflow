@@ -12,9 +12,9 @@
         <div class="question--input__text">
             <input type="text" formControlName="lastName" placeholder="{{viewModel.LastNameLabel}}" />
         </div>
-        <p [hidden]="(quoteApplyForm.controls.firstName.valid && quoteApplyForm.controls.lastName.valid) || ((quoteApplyForm.controls.firstName.pristine
-               || quoteApplyForm.controls.lastName.pristine) && !submitted)" class="text-danger">
-            {{ viewModel.NameRequired }}
+        <p [hidden]="(quoteApplyForm.controls.firstName.valid || (quoteApplyForm.controls.firstName.pristine && !submitted)) &&
+           (quoteApplyForm.controls.lastName.valid || (quoteApplyForm.controls.lastName.pristine && !submitted))" class="text-danger">
+            {{ viewModel.NameValidation }}
         </p>
     </div>
     <div class="question">
@@ -24,7 +24,7 @@
             <input type="text"  formControlName="contactNumber" />
         </div>
         <p [hidden]="quoteApplyForm.controls.contactNumber.valid || (quoteApplyForm.controls.contactNumber.pristine && !submitted)" class="text-danger">
-            {{ viewModel.ContactNumberRequired }}
+            {{ viewModel.ContactNumberValidation }}
         </p>
     </div>
 
@@ -39,7 +39,7 @@
             {{ viewModel.EmailHelpTexts }}
         </div>
         <p [hidden]="quoteApplyForm.controls.email.valid || (quoteApplyForm.controls.email.pristine && !submitted)" class="text-danger">
-            {{ viewModel.EmailInvalid }}
+            {{ viewModel.EmailValidation }}
         </p>
     </div>
 
@@ -50,7 +50,7 @@
             <input type="text" formControlName="dateOfBirth" placeholder="{{viewModel.DateFormatLabel}}"/>
         </div>
         <p [hidden]="quoteApplyForm.controls.dateOfBirth.valid || (quoteApplyForm.controls.dateOfBirth.pristine && !submitted)" class="text-danger">
-            {{ viewModel.DateOfBirthRequired }}
+            {{ viewModel.DateValidation }}
         </p>
     </div>
 
