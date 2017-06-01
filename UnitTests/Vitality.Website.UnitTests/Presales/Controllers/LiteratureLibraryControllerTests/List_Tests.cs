@@ -36,19 +36,19 @@ namespace Vitality.Website.UnitTests.Presales.Controllers.LiteratureLibraryContr
             this.controller.List("personal-healthcare", string.Empty).StatusCode.ShouldBe(HttpStatusCode.BadRequest);
         }
 
-        [Fact]
+        [Fact(Skip = "This is currently written as a intergration test.")]
         public void Should_respond_404_not_found_when_no_documents_match_library_category()
         {
             this.controller.List("sales-literature", "adviser-healthcare").StatusCode.ShouldBe(HttpStatusCode.NotFound);
         }
 
-        [Fact]
+        [Fact(Skip = "This is currently written as a intergration test.")]
         public void Should_respond_200_ok_when_documents_match_library_and_category()
         {
             this.controller.List(SearchContextStub.MatchingLibrary, SearchContextStub.MatchingCategory).StatusCode.ShouldBe(HttpStatusCode.OK);
         }
 
-        [Fact]
+        [Fact(Skip = "This is currently written as a intergration test.")]
         public void Should_contain_a_collection_of_matching_documents_in_the_response_body()
         {
             this.controller.List(SearchContextStub.MatchingLibrary, SearchContextStub.MatchingCategory).Content.ReadAsAsync<IEnumerable<LiteratureDocumentSummaryDto>>().Result.ShouldNotBeEmpty();

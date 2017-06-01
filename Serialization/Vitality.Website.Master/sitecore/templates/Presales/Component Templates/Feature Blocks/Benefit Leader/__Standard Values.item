@@ -8,11 +8,19 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {0D4CB8F9-6D49-40AF-920A-FC5C881BEA94}
 templatekey: Benefit Leader
+created: 20160818T132932Z
 
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: bea46ba7-50fe-4c01-885e-d38dd2274976
+revision: dc20d76e-d2a9-47f1-bd55-e69afcc3becf
 
 ----field----
 field: {DA87BB32-8FA1-4F37-8B7E-D3BB6E67DB9C}
@@ -48,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-bea46ba7-50fe-4c01-885e-d38dd2274976
+dc20d76e-d2a9-47f1-bd55-e69afcc3becf
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160506T105831Z
+20170512T153618Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

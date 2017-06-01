@@ -11,9 +11,13 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
     {
         private readonly IProviderSearchContext _searchContext;
 
-        public LiteratureDocumentHandler(Func<string, IProviderSearchContext> searchContextFactory)
+        public LiteratureDocumentHandler()
         {
-            _searchContext = searchContextFactory("literature_library");
+            if (Sitecore.Context.Site != null)
+            {
+                var searchableIndex = string.Format("{0}_literature_library", Sitecore.Context.Site.Name);
+                this._searchContext = ContentSearchManager.GetIndex(searchableIndex).CreateSearchContext();
+            }
         }
 
         public LiteratureDocumentDto Handle(LiteratureDocumentRequest request)
