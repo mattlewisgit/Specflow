@@ -13,21 +13,62 @@
                 @Editable(m => m.NameLabel)
                 <ul>
                     @foreach (var salutation in Model.Salutations)
-                {
-                    using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", salutation.Path))
                     {
+                        using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", salutation.Path))
+                        {
                             <li>@salutation.Name <span>(@salutation.Value)</span></li>
                         }
                     }
                 </ul>
 
                 <div class="question--input__text">
-                    @Editable(x => x.FirstNameLabel)
+                    @Editable(m => m.FirstNameLabel)
                 </div>
 
                 <div class="question--input__text">
-                    @Editable(x => x.LastNameLabel)
+                    @Editable(m => m.LastNameLabel)
                 </div>
+
+                <p class="alert-error">
+                    @Editable(m => m.NameValidation)
+                </p>
+            </div>
+
+            <div class="question">
+               @Editable(m=>m.ContactNumberLabel)
+
+                <div class="question--input__text">
+                    <input type="text" id="phone" />
+                </div>
+                <p class="alert-error">
+                    @Editable(m => m.ContactNumberValidation)
+                </p>
+            </div>
+
+            <div class="question">
+                @Editable(m => m.EmailLabel)
+
+                <div class="question--input__text">
+                    <input type="email" id="email" />
+                </div>
+
+                <div class="question--input__info">
+                    @Editable(m => m.EmailHelpTexts)
+                </div>
+                <p class="alert-error">
+                    @Editable(m => m.EmailValidation)
+                </p>
+            </div>
+
+
+            <div class="question">
+                @Editable(m => m.DateOfBirthLabel)
+                <div class="question--input__text">
+                    @Editable(m => m.DateFormatLabel)
+                </div>
+                <p class="alert-error">
+                    @Editable(m => m.DateValidation)
+                </p>
             </div>
         }
         else
@@ -54,27 +95,7 @@
             <quoteapply-form><div class="loader__icon"></div></quoteapply-form>
         }
 
-        <div class="question">
-            You can call me on
-
-            <div class="question--input__text">
-                <input type="text" id="phone" />
-            </div>
-        </div>
-
-        <div class="question">
-            And my email is
-
-            <div class="question--input__text">
-                <input type="email" id="email" />
-            </div>
-
-            <div class="question--input__info">
-                We'll never share your details with third parties
-            </div>
-        </div>
-
-        <div class="question">
+        @*<div class="question">
             I'm
 
             <select id="is-insured">
@@ -141,14 +162,6 @@
         </div>
 
         <div class="question">
-            My partner's date of birth is
-
-            <div class="question--input__text">
-                <input type="text" id="partner-dob" placeholder="DD/MM/YYYY" />
-            </div>
-        </div>
-
-        <div class="question">
             My
 
             <select id="number-children">
@@ -174,4 +187,4 @@
             and agree to be contracted by the Vitality Group about
             other products and services.
         </div>
-    </div>
+    </div>*@

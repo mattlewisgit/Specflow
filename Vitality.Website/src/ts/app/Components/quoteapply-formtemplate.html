@@ -44,7 +44,7 @@
     </div>
 
     <div class="question">
-        {{ viewModel.DateOfBirthlabel }}
+        {{ viewModel.DateOfBirthLabel }}
 
         <div class="question--input__text">
             <input type="text" formControlName="dateOfBirth" placeholder="{{viewModel.DateFormatLabel}}"/>
@@ -60,5 +60,8 @@
 
 <div [hidden]="!submitted">
     <h2>You will be submitting following values when development completed:</h2>
-    {{quoteApplication}}
+    <ul><li>Name : {{quoteApplication.title}}.{{quoteApplication.firstName}} {{quoteApplication.lastName}} </li>
+        <li>Contact Number : {{quoteApplication.contactNumber}} </li>
+        <li>Email : {{quoteApplication.email}} </li>
+        <li>Date of Birth : {{quoteApplication.dateOfBirth}} </li></ul>
 </div>

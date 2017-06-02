@@ -31,6 +31,7 @@ export class QuoteApplyFormComponent implements OnInit {
             this.document.location.pathname = this.winRef.ensureTrailingSlash(this.document.location.pathname);
         }
         this.viewModel = this.winRef.nativeWindow.angularData;
+        this.quoteApplication = new QuoteApplication();
         this.createForm();
     }
 
@@ -45,8 +46,10 @@ export class QuoteApplyFormComponent implements OnInit {
         });
     }
 
-    apply(model : QuoteApplication, isValid: boolean): void {
-        this.submitted = true;
-        this.quoteApplication = model;
+    apply(model: QuoteApplication, isValid: boolean): void {
+        if (isValid) {
+            this.submitted = true;
+            this.quoteApplication = model;
+        }
     }
 }

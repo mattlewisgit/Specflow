@@ -17,7 +17,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         public string CoverStartLabel { get; set; }
         public string CurrentlyInsuredLabel { get; set; }
         public string DateFormatLabel { get; set; }
-        public string DateOfBirthlabel { get; set; }
+        public string DateOfBirthLabel { get; set; }
         public string DobSeperatorLabel { get; set; }
         public string EmailLabel { get; set; }
         public string FirstNameLabel { get; set; }
