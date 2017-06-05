@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule }   from '@angular/forms';
 import { HttpModule }    from '@angular/http';
 
+import { AutoScrollTo } from "./directives/auto-scroll-to.directive";
 import { QuoteApplyFormComponent }  from './components/quoteapply-form.component';
 import { QuoteApplyService }  from './services/quoteapply.service';
 
@@ -14,7 +15,7 @@ import { WindowRef }  from './components/windowref';
         ReactiveFormsModule,
         HttpModule
     ],
-    declarations: [QuoteApplyFormComponent],
+    declarations: [QuoteApplyFormComponent, AutoScrollTo],
     providers: [QuoteApplyService, WindowRef],
     bootstrap: [QuoteApplyFormComponent]
 })

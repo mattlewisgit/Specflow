@@ -334,6 +334,7 @@
     <Content Include="src\ts\app\components\vacancylisttemplate.html" />
     <TypeScriptCompile Include="src\ts\app\components\quoteapply-form.component.ts" />
     <TypeScriptCompile Include="src\ts\app\components\windowref.ts" />
+    <TypeScriptCompile Include="src\ts\app\Directives\auto-scroll-to.directive.ts" />
     <TypeScriptCompile Include="src\ts\app\models\extradataitem.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quoteapplication.ts" />
     <TypeScriptCompile Include="src\ts\app\quoteapply-form-app.module.ts" />

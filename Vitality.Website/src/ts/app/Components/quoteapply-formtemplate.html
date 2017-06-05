@@ -10,18 +10,19 @@
         </div>
 
         <div class="question--input__text">
-            <input type="text" formControlName="lastName" placeholder="{{viewModel.LastNameLabel}}" />
+            <input type="text" formControlName="lastName" placeholder="{{viewModel.LastNameLabel}}" auto-scroll-to="#contactNumber" />
         </div>
         <p [hidden]="(quoteApplyForm.controls.firstName.valid || (quoteApplyForm.controls.firstName.pristine && !submitted)) &&
            (quoteApplyForm.controls.lastName.valid || (quoteApplyForm.controls.lastName.pristine && !submitted))" class="text-danger">
             {{ viewModel.NameValidation }}
         </p>
     </div>
+
     <div class="question">
         {{ viewModel.ContactNumberLabel }}
 
         <div class="question--input__text">
-            <input type="text"  formControlName="contactNumber" />
+            <input type="text" id="contactNumber"  formControlName="contactNumber" auto-scroll-to="#email" />
         </div>
         <p [hidden]="quoteApplyForm.controls.contactNumber.valid || (quoteApplyForm.controls.contactNumber.pristine && !submitted)" class="text-danger">
             {{ viewModel.ContactNumberValidation }}
@@ -32,7 +33,7 @@
         {{ viewModel.EmailLabel }}
 
         <div class="question--input__text">
-            <input type="email" formControlName="email" />
+            <input type="email" id="email" formControlName="email" auto-scroll-to="#dateOfBirth" />
         </div>
 
         <div class="question--input__info">
@@ -47,7 +48,7 @@
         {{ viewModel.DateOfBirthLabel }}
 
         <div class="question--input__text">
-            <input type="text" formControlName="dateOfBirth" placeholder="{{viewModel.DateFormatLabel}}"/>
+            <input type="text" id="dateOfBirth" formControlName="dateOfBirth" placeholder="{{viewModel.DateFormatLabel}}"/>
         </div>
         <p [hidden]="quoteApplyForm.controls.dateOfBirth.valid || (quoteApplyForm.controls.dateOfBirth.pristine && !submitted)" class="text-danger">
             {{ viewModel.DateValidation }}
