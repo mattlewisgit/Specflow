@@ -101,6 +101,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Banners\Home Hero Advisers.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\Content\Banners\Web Forms - Home hero.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
@@ -296,6 +297,7 @@
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\home\dev\home-hero.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
+      <ChildItemSynchronization>NoChildSynchronization</ChildItemSynchronization>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\content\Advisers\home\dev\member-library.item">
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
