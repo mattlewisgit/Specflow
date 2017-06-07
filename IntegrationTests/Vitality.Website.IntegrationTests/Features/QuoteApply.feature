@@ -1,7 +1,7 @@
 ﻿Feature: QuoteApply
-	In order to avoid silly mistakes
-	As a math idiot
-	I want to be told the sum of two numbers
+	In order to test that Vitality can join new Members
+	As a prospective Member
+	I want to Quote/Apply for Health insurance cover
 
 @ignore
 Scenario: Get A Quote

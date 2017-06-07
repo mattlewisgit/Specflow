@@ -110,6 +110,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ArticleIndex.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\QuoteAndApply.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuoteAndApply.feature</DependentUpon>
+    </Compile>
     <Compile Include="Steps\ArticleIndexSteps.cs" />
     <Compile Include="Steps\CareersSteps.cs" />
     <Compile Include="Features\BenefitLeader.feature.cs">
@@ -237,6 +242,7 @@
     <Compile Include="Steps\MainNavigationSteps.cs" />
     <Compile Include="Steps\MessageBoxSteps.cs" />
     <Compile Include="Steps\MetaTagsSteps.cs" />
+    <Compile Include="Steps\QuoteAndApplySteps.cs" />
     <Compile Include="Steps\QuoteApplySteps.cs" />
     <Compile Include="Steps\RichTextSteps.cs" />
     <Compile Include="Steps\SearchingSteps.cs" />
@@ -311,6 +317,10 @@
     <None Include="Features\MetaTags.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>MetaTags.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>QuoteAndApply.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\QuoteApply.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
