@@ -1,34 +1,30 @@
 ﻿namespace Vitality.Website.IntegrationTests.Steps
 {
-    using System.Drawing;
     using Selenium.WebDriver.Extensions.JQuery;
     using Shouldly;
     using TechTalk.SpecFlow;
-    using Extensions;
-    using Utilities;
-    using OpenQA.Selenium.Interactions;
-    using By = OpenQA.Selenium.By;
-    using OpenQA.Selenium.Support.UI;
-    using System;
+    using Vitality.Extensions.Selenium;
 
     [Binding]
     public sealed class MessageBoxSteps : BaseSteps
     {
-
         [Then(@"I expect the Message Box Error Message to be displayed")]
         public void ThenIExpectTheMessageBoxErrorMessageToBeDisplayed()
         {
-            //check message box error appears
+            // Check message box error appears.
             WebDriver
                 .WaitForElement(new JQuerySelector(".message-box.message-box--error"))
-                .Displayed.ShouldBeTrue();
+                .Displayed
+                .ShouldBeTrue();
 
-            //check message box contains H4
+            // Check message box contains a header.
             WebDriver
-                .WaitForElement(new JQuerySelector(".message-box.message-box--error h4.message-box__heading"))
-                .Displayed.ShouldBeTrue();
+                .WaitForElement(new JQuerySelector
+                    (".message-box.message-box--error h4.message-box__heading"))
+                .Displayed
+                .ShouldBeTrue();
 
-            //check background color
+            // Check background colour.
             WebDriver
                 .FindElement(new JQuerySelector(".message-box.message-box--error"))
                 .GetCssValue("background-color")
@@ -36,57 +32,58 @@
 
             //check image
             //need to look into this..... Checking the image icons
-
         }
-
 
         [Then(@"I expect the Message Box Alert Message to be displayed")]
         public void ThenIExpectTheMessageBoxAlertMessageToBeDisplayed()
         {
-            //check message box alert appears
+            // Check message box alert appears.
             WebDriver
                 .WaitForElement(new JQuerySelector(".message-box.message-box--alert"))
-                .Displayed.ShouldBeTrue();
+                .Displayed
+                .ShouldBeTrue();
 
-            //check message box contains H4
+            // Check message box contains a header.
             WebDriver
-                .WaitForElement(new JQuerySelector(".message-box.message-box--alert h4.message-box__heading"))
-                .Displayed.ShouldBeTrue();
+                .WaitForElement(new JQuerySelector
+                    (".message-box.message-box--alert h4.message-box__heading"))
+                .Displayed
+                .ShouldBeTrue();
 
-            //check background color
+            // Check background colour.
             WebDriver
                 .FindElement(new JQuerySelector(".message-box.message-box--alert"))
-                .GetCssValue("background-color").ShouldBe("rgba(91, 182, 177, 0.2)");
+                .GetCssValue("background-color")
+                .ShouldBe("rgba(91, 182, 177, 0.2)");
 
             //check image
             //need to look into this..... Checking the image icons
         }
-
-
 
         [Then(@"I expect the Message Box Expired Message to be displayed")]
         public void ThenIExpectTheMessageBoxExpiredMessageToBeDisplayed()
         {
-            //check message box expired appears
+            // Check message box expired appears.
             WebDriver
                 .WaitForElement(new JQuerySelector(".message-box.message-box--expired"))
-                .Displayed.ShouldBeTrue();
+                .Displayed
+                .ShouldBeTrue();
 
-            //check message box contains H4
+            // Check message box contains a header.
             WebDriver
-                .WaitForElement(new JQuerySelector(".message-box.message-box--expired h4.message-box__heading"))
-                .Displayed.ShouldBeTrue();
+                .WaitForElement(new JQuerySelector
+                    (".message-box.message-box--expired h4.message-box__heading"))
+                .Displayed
+                .ShouldBeTrue();
 
-            //check background color
+            // Check background colour.
             WebDriver
                 .FindElement(new JQuerySelector(".message-box.message-box--expired"))
-                .GetCssValue("background-color").ShouldBe("rgba(91, 182, 177, 0.2)");
+                .GetCssValue("background-color")
+                .ShouldBe("rgba(91, 182, 177, 0.2)");
 
             //check image
             //need to look into this..... Checking the image icons
         }
-
-
-
     }
 }

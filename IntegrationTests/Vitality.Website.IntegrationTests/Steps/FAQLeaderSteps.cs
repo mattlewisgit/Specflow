@@ -1,22 +1,14 @@
 ﻿namespace Vitality.Website.IntegrationTests.Steps
 {
-
-    using System.Drawing;
+    using OpenQA.Selenium;
     using Selenium.WebDriver.Extensions.JQuery;
     using Shouldly;
     using TechTalk.SpecFlow;
-    using Extensions;
-    using Utilities;
-    using OpenQA.Selenium.Interactions;
-    using By = OpenQA.Selenium.By;
-    using OpenQA.Selenium.Support.UI;
-    using System;
-    using OpenQA.Selenium;
+    using Vitality.Extensions.Selenium;
 
     [Binding]
     public sealed class FAQLeaderSteps : BaseSteps
     {
-
         [Then(@"I expect the correct CSS FAQ Leader values to appear")]
         public void ThenIExpectTheCorrectCSSFAQLeaderValuesToAppear()
         {
@@ -31,7 +23,6 @@
                 .FindElement(new JQuerySelector(".faq_leader .header .paragraph-emphasis"))
                 .Displayed
                 .ShouldBeTrue();
-
 
             //FAQ Leader Block contains H3
             WebDriver
@@ -57,7 +48,6 @@
                 .GetCssValue("color")
                 .ShouldBe("rgba(102, 102, 102, 1)");
 
-
             //FAQ Link Button at the bottom - Border thickness
             WebDriver
                 .FindElement(new JQuerySelector(".faq_leader .more a"))
@@ -68,34 +58,31 @@
                 .FindElement(new JQuerySelector(".faq_leader .more a"))
                 .GetCssValue("padding")
                 .ShouldBe("10px 40px");
-
         }
-
 
         [When(@"I click on FAQ Leader paragraph anchor (.*) link")]
-        public void WhenIClickOnFAQLeaderParagraphAnchorLink(string anchortext)
+        public void WhenIClickOnFAQLeaderParagraphAnchorLink(string anchorText)
         {
             WebDriver
-                .WaitForElement(new JQuerySelector(".faq_leader .faqs .grid-no-gutters .grid-col-1-2 p a:contains('" + anchortext + "')"))
+                .WaitForElement(new JQuerySelector(
+                    $".faq_leader .faqs .grid-no-gutters .grid-col-1-2 p a:contains('{anchorText}')"))
                 .Click();
         }
-
 
         [When(@"I click on FAQ Leader bottom button (.*) link")]
-        public void WhenIClickOnFAQLeaderComponentLink(string buttonlink)
+        public void WhenIClickOnFAQLeaderComponentLink(string buttonLink)
         {
-            //scroll to button if not visible
+            var buttonSelector = new JQuerySelector($".faq_leader .more a:contains('{buttonLink}')");
+
+            // Scroll to button if not visible.
             WebDriver
-                .WaitForElement(new JQuerySelector(".faq_leader .more a:contains('" + buttonlink + "')"))
+                .WaitForElement(buttonSelector)
                 .SendKeys(Keys.Space);
 
-            //click on button
+            // Click on button.
             WebDriver
-                .WaitForElement(new JQuerySelector(".faq_leader .more a:contains('" + buttonlink + "')"))
+                .WaitForElement(buttonSelector)
                 .Click();
-
         }
-
-
     }
 }
