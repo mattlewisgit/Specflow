@@ -81,34 +81,34 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Analytics">
-      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Analytics.dll</HintPath>
+      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Client">
-      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Client.dll</HintPath>
+      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Client.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ContentSearch">
-      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.ContentSearch.dll</HintPath>
+      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.ContentSearch.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ContentSearch.Linq">
-      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.ContentSearch.Linq.dll</HintPath>
+      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.ContentSearch.Linq.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ItemWebApi">
-      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.ItemWebApi.dll</HintPath>
+      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.ItemWebApi.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel">
-      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Kernel.dll</HintPath>
+      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Logging">
-      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Logging.dll</HintPath>
+      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Logging.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Mvc">
-      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Mvc.dll</HintPath>
+      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Speak.Client">
-      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Speak.Client.dll</HintPath>
+      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Speak.Client.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Web">
-      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221\lib\Sitecore.Web.dll</HintPath>
+      <HintPath>..\..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Web.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
