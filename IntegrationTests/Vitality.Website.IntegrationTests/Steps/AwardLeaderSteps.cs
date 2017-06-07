@@ -1,18 +1,11 @@
 ﻿namespace Vitality.Website.IntegrationTests.Steps
 {
-
-    using System.Drawing;
     using Selenium.WebDriver.Extensions.JQuery;
     using Shouldly;
     using TechTalk.SpecFlow;
-    using Extensions;
-    using Utilities;
-    using OpenQA.Selenium.Interactions;
-    using By = OpenQA.Selenium.By;
-    using OpenQA.Selenium.Support.UI;
-    using System;
     using OpenQA.Selenium;
     using System.Linq;
+    using Vitality.Extensions.Selenium;
     using Xunit;
 
     [Binding]
@@ -82,9 +75,6 @@
                 .SendKeys(Keys.Space);
 
             memberStoryArticle.Click();
-
         }
-
-
     }
 }

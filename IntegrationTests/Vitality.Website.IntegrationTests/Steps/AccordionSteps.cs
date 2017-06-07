@@ -1,21 +1,14 @@
 namespace Vitality.Website.IntegrationTests.Steps
 {
-    using System.Drawing;
     using Selenium.WebDriver.Extensions.JQuery;
     using Shouldly;
     using TechTalk.SpecFlow;
-    using Extensions;
-    using Utilities;
-    using OpenQA.Selenium.Interactions;
+    using Vitality.Extensions.Selenium;
     using By = OpenQA.Selenium.By;
-    using OpenQA.Selenium.Support.UI;
-    using System;
-
 
     [Binding]
     public sealed class AccordionSteps : BaseSteps
     {
-
         [When(@"I click on accordion tab '(.*)'")]
         public void WhenIClickOnAccordionTab(string p0)
         {
@@ -23,7 +16,6 @@ namespace Vitality.Website.IntegrationTests.Steps
                     .FindElement(By.LinkText(p0))
                     .Click();
         }
-
 
         [Then(@"I expect the accordion description '(.*)' to appear")]
         public void ThenIExpectTheAccordionDescriptionToAppear(string p0)
@@ -37,12 +29,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver
                     .WaitForElement(new JQuerySelector(".expander__link.is-active"))
                     .Displayed.ShouldBeTrue();
-            
+
         }
-
-        
-
     }
-
-    
 }
