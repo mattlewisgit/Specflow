@@ -115,6 +115,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ArticleIndex.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\PartnerHero.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PartnerHero.feature</DependentUpon>
+    </Compile>
     <Compile Include="Steps\ArticleIndexSteps.cs" />
     <Compile Include="Steps\CareersSteps.cs" />
     <Compile Include="Features\BenefitLeader.feature.cs">
@@ -239,6 +244,7 @@
     <Compile Include="Steps\MainNavigationSteps.cs" />
     <Compile Include="Steps\MessageBoxSteps.cs" />
     <Compile Include="Steps\MetaTagsSteps.cs" />
+    <Compile Include="Steps\PartnerHeroSteps.cs" />
     <Compile Include="Steps\QuoteApplySteps.cs" />
     <Compile Include="Steps\RichTextSteps.cs" />
     <Compile Include="Steps\SearchingSteps.cs" />
@@ -297,6 +303,10 @@
     <None Include="Features\MessageBox.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>MessageBox.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\PartnerHero.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PartnerHero.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\PresalesContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
