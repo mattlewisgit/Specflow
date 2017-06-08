@@ -10,4 +10,9 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js"></script>
 <script>if (!($.validator.unobtrusive)) cdnizerLoad("@(scriptsBaseUrlUrlContentDecoded + "libs/jquery/jquery.validate.unobtrusive.min.js"))");</script>
 <script type="text/javascript" src="@(scriptsBaseUrlUrlContent +"wffm.min.js")"></script>
-<script type="text/javascript" src="@(scriptsBaseUrlUrlContent + "main.min.js")"></script>
+
+@*
+    The WFFM main file is swapped out for a customised Vitality version,
+    which is bundled as part of the minified presales script.
+    <script type="text/javascript" src="@(scriptsBaseUrlUrlContent + "main.min.js")"></script>
+*@
