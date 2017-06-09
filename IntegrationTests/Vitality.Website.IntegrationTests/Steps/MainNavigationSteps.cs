@@ -1,35 +1,29 @@
 namespace Vitality.Website.IntegrationTests.Steps
 {
     using System.Drawing;
-
-    using Selenium.WebDriver.Extensions.JQuery;
-
-    using Shouldly;
-
-    using TechTalk.SpecFlow;
-
-    using System.Threading;
-
-    using Extensions;
-    using Utilities;
-
-    using OpenQA.Selenium.Interactions;
-    using By = OpenQA.Selenium.By;
-    using OpenQA.Selenium;
     using System.Linq;
+    using System.Threading;
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Interactions;
+    using Selenium.WebDriver.Extensions.JQuery;
+    using Shouldly;
+    using TechTalk.SpecFlow;
+    using Utilities;
+    using Vitality.Extensions.Selenium;
+    using By = OpenQA.Selenium.By;
 
     [Binding]
     public class MainNavigationSteps : BaseSteps
     {
         [When(@"I click on the (.*) section link")]
-        public void WhenIClickOnTheSectionLink(string p0)
+        public void WhenIClickOnTheSectionLink(string link)
         {
             WebDriver
-                .FindElement(new JQuerySelector(Button.SITE_NAV + ":contains('" + p0 + "')"))
+                .FindElement(new JQuerySelector(Button.SITE_NAV + ":contains('" + link + "')"))
                 .Click();
 
             WebDriver
-                   .WaitForPageLoad();
+                .WaitForPageLoad();
         }
 
         [When(@"I click on the navigation logo")]
@@ -40,49 +34,44 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .Click();
 
             WebDriver
-                   .WaitForPageLoad();
+                .WaitForPageLoad();
         }
-
 
         [Then(@"I expect the presales (.*) to open")]
-        public void ThenIExpectThePresalesToOpen(string p0)
+        public void ThenIExpectThePresalesToOpen(string link)
         {
             WebDriver
                 .WaitForPageLoad()
                 .Url
-                .ShouldBe(AppSettings.Links.VitalityPresalesUrl + p0);
+                .ShouldBe(AppSettings.Links.VitalityPresalesUrl + link);
         }
-
 
         [Then(@"I expect the production presales (.*) to open")]
-        public void ThenIExpectTheProductionPresalesToOpen(string p0)
+        public void ThenIExpectTheProductionPresalesToOpen(string link)
         {
             WebDriver
                 .WaitForPageLoad()
                 .Url
-                .ShouldBe(AppSettings.Links.VitalityPresalesProductionUrl + p0);
+                .ShouldBe(AppSettings.Links.VitalityPresalesProductionUrl + link);
         }
-
 
         [Then(@"I expect the advisers (.*) to open")]
-        public void ThenIExpectTheAdvisersToOpen(string p0)
+        public void ThenIExpectTheAdvisersToOpen(string link)
         {
             WebDriver
                 .WaitForPageLoad()
                 .Url
-                .ShouldBe(AppSettings.Links.VitalityAdvisersUrl + p0);
+                .ShouldBe(AppSettings.Links.VitalityAdvisersUrl + link);
         }
-
 
         [Then(@"I expect the production advisers (.*) to open")]
-        public void ThenIExpectTheProductionAdvisersToOpen(string p0)
+        public void ThenIExpectTheProductionAdvisersToOpen(string link)
         {
             WebDriver
                 .WaitForPageLoad()
                 .Url
-                .ShouldBe(AppSettings.Links.VitalityAdvisersProductionUrl+ p0);
+                .ShouldBe(AppSettings.Links.VitalityAdvisersProductionUrl+ link);
         }
-
 
         [Given(@"I resize to mobile view")]
         [When(@"I resize to mobile view")]
@@ -140,7 +129,6 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .ShouldBeTrue();
         }
 
-
         [Then(@"I expect the Health Advisers button to be visible")]
         public void ThenIExpectTheHealthAdvisersButtonToBeVisible()
         {
@@ -149,7 +137,6 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .Displayed
                 .ShouldBeTrue();
         }
-
 
         [Then(@"I expect the Life Advisers button to be visible")]
         public void ThenIExpectTheLifeAdvisersButtonToBeVisible()
@@ -160,7 +147,6 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .ShouldBeTrue();
         }
 
-
         [When(@"I hover over (.*) and click on (.*)")]
         public void WhenIHoverOver(string hoverLink, string clickLink)
         {
@@ -168,12 +154,12 @@ namespace Vitality.Website.IntegrationTests.Steps
             var sectionNav = WebDriver.FindElement(new JQuerySelector(Button.SECTION_NAV));
 
             // Setup new Actions attribute to simulate mouseover events
-            Actions actions = new Actions(WebDriver);
-            
+            var actions = new Actions(WebDriver);
+
             // Find element called "hoverLink" and then perform a hover over
             var mainMenu = WebDriver.FindElement(OpenQA.Selenium.By.LinkText(hoverLink));
             actions.MoveToElement(mainMenu).Perform();
-            
+
             // Having some problems with this bit, need to revisit with a better solution....
             Thread.Sleep(1000);
 
@@ -185,7 +171,6 @@ namespace Vitality.Website.IntegrationTests.Steps
             // Having some problems with this bit, need to revisit with a better solution....
             Thread.Sleep(1000);
         }
-
 
         [When(@"I click on the footer button")]
         public void WhenIClickOnTheFooterButton()
@@ -216,33 +201,22 @@ namespace Vitality.Website.IntegrationTests.Steps
         [When(@"I expand the mobile footer section (.*)")]
         public void IExpandTheMobileFooterSection(string footerSection)
         {
-
-
-            //Move down the page first
+            // Move down the page first.
             WebDriver
                 .WaitForElement(new JQuerySelector(".page-footer .expander a:contains('" + footerSection + "')"))
                 .SendKeys(Keys.Space);
 
-            //Actions actions = new Actions(WebDriver);
-
-            //actions
-            //    .SendKeys(Keys.Enter)
-            //    .Perform();
-
             WebDriver.WaitForPageLoad();
-
         }
-
 
         [When(@"I click on the footer mobile link (.*)")]
         public void WhenIClickOnTheFooterMobileLink(string linkName)
         {
             WebDriver
-                .WaitForElement(new JQuerySelector(".page-footer .expander__content.is-active ul li a:contains('" + linkName + "')"))
+                .WaitForElement(new JQuerySelector
+                    (".page-footer .expander__content.is-active ul li a:contains('" + linkName + "')"))
                 .Click();
         }
-
-
 
         [When(@"I click on the (.*) quote footer button")]
         public void WhenIClickOnTheQuoteFooterButton(string p0)
@@ -250,9 +224,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver
                 .WaitForElement(new JQuerySelector(".button-cta" + ":contains('" + p0 + "')"))
                 .Click();
-            
         }
-
 
         [Then(@"I should not see any console logs")]
         public void ThenIShouldNotSeeAnyConsoleLogs()
@@ -268,9 +240,5 @@ namespace Vitality.Website.IntegrationTests.Steps
                     !l.Message.Contains("deprecated"))
                 .ShouldBeEmpty();
         }
-
-
-
     }
-
 }

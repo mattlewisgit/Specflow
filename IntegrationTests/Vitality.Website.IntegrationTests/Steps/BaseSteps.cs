@@ -1,14 +1,14 @@
 namespace Vitality.Website.IntegrationTests.Steps
 {
+    using Drivers;
     using OpenQA.Selenium;
-    using Extensions;
     using TechTalk.SpecFlow;
-
-    using Vitality.Website.IntegrationTests.Drivers;
+    using Vitality.Extensions.Selenium;
 
     [Binding]
     public class BaseSteps
     {
+        // ReSharper disable once MemberCanBeProtected.Global
         public static IWebDriver WebDriver;
 
         [BeforeScenario]
@@ -17,10 +17,12 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver = DriverFactory.Chrome();
 
             // Need to set these after as there are no options for Chrome.
-            WebDriver.Manage().Timeouts().SetPageLoadTimeout(IWebDriverExtensions.DefaultWaitTimeSpan);
-            WebDriver.Manage().Timeouts().SetScriptTimeout(IWebDriverExtensions.DefaultWaitTimeSpan);
-            WebDriver.Manage().Timeouts().ImplicitlyWait(IWebDriverExtensions.DefaultWaitTimeSpan);
-
+            WebDriver
+                .Manage()
+                .Timeouts()
+                .SetPageLoadTimeout(IWebDriverExtensions.DefaultWaitTimeSpan)
+                .SetScriptTimeout(IWebDriverExtensions.DefaultWaitTimeSpan)
+                .ImplicitlyWait(IWebDriverExtensions.DefaultWaitTimeSpan);
         }
 
         [AfterScenario]

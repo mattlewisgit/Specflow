@@ -19,16 +19,15 @@ namespace Vitality.Website.Areas.Presales.Controllers
             _mediator = mediator;
         }
 
-        protected HttpResponseMessage GetResponse<TRequest, TResponse>(TRequest request,
-            Predicate<TResponse> isValidResponse) where TRequest : IRequest<TResponse>
+        protected HttpResponseMessage GetResponse<TRequest, TResponse>(TRequest request, Predicate<TResponse> isValidResponse) where TRequest : IRequest<TResponse>
         {
-            return HandleResponse(_mediator.Send(request), isValidResponse);
+            return HandleResponse(_mediator.Send(request).Result, isValidResponse);
         }
 
         protected async Task<HttpResponseMessage> GetResponseAsync<TRequest, TResponse>(TRequest request,
-            Predicate<TResponse> isValidResponse) where TRequest : IAsyncRequest<TResponse>
+            Predicate<TResponse> isValidResponse) where TRequest : IRequest<TResponse>
         {
-            return HandleResponse(await _mediator.SendAsync(request), isValidResponse);
+            return HandleResponse(await _mediator.Send(request), isValidResponse);
         }
 
         private HttpResponseMessage HandleResponse<TResponse>(TResponse response, Predicate<TResponse> isValidResponse)

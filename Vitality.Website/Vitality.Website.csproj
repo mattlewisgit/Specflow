@@ -15,7 +15,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Vitality.Website</RootNamespace>
     <AssemblyName>Vitality.Website</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -51,7 +51,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AjaxMin, Version=4.0.202.1, Culture=neutral, PublicKeyToken=24297a69a7eae424, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\AjaxMin.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\AjaxMin.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
@@ -62,33 +62,53 @@
       <HintPath>..\packages\Castle.Core.3.3.3\lib\net45\Castle.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Glass.Mapper, Version=4.0.11.63, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Glass.Mapper.Sc.4.0.11.63\lib\net45\Glass.Mapper.dll</HintPath>
+    <Reference Include="Glass.Mapper, Version=4.2.1.188, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Glass.Mapper.Sc.Core.4.2.1.188\lib\net45\Glass.Mapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Glass.Mapper.Sc, Version=4.0.11.63, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Glass.Mapper.Sc, Version=4.2.1.188, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Glass.Mapper.Sc.4.0.11.63\lib\81\Glass.Mapper.Sc.dll</HintPath>
+      <HintPath>..\packages\Glass.Mapper.Sc.Core.4.2.1.188\lib\100\Glass.Mapper.Sc.dll</HintPath>
     </Reference>
-    <Reference Include="Glass.Mapper.Sc.Mvc, Version=4.0.11.63, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Glass.Mapper.Sc.Mvc, Version=4.2.1.188, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Glass.Mapper.Sc.4.0.11.63\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
+      <HintPath>..\packages\Glass.Mapper.Sc.Core.4.2.1.188\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Hi.UrlRewrite, Version=1.8.5779.17263, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Hi.UrlRewrite.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Hi.UrlRewrite.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Krusen.Sitecore.WebApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Krusen.Sitecore.WebApi.1.0.0\lib\net45\Krusen.Sitecore.WebApi.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="MediatR, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MediatR.2.1.0\lib\net45\MediatR.dll</HintPath>
+    <Reference Include="MediatR, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MediatR.3.0.1\lib\net45\MediatR.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MediatR.Extensions.Microsoft.DependencyInjection, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MediatR.Extensions.Microsoft.DependencyInjection.2.0.0\lib\net451\MediatR.Extensions.Microsoft.DependencyInjection.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Microsoft.Extensions.DependencyModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MSCaptcha, Version=4.0.4250.31585, Culture=neutral, PublicKeyToken=b9ff12f28cdcf412, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\MSCaptcha.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\MSCaptcha.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nancy, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -99,8 +119,8 @@
       <HintPath>..\packages\Nancy.Hosting.Aspnet.0.17.1\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NWebsec, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3613da5f958908a1, processorArchitecture=MSIL">
@@ -113,6 +133,10 @@
     </Reference>
     <Reference Include="NWebsec.Mvc, Version=4.2.0.0, Culture=neutral, PublicKeyToken=3613da5f958908a1, processorArchitecture=MSIL">
       <HintPath>..\packages\NWebsec.Mvc.4.2.0\lib\45\NWebsec.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RazorGenerator.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\RazorGenerator.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
@@ -139,49 +163,52 @@
       <HintPath>..\packages\SimpleInjector.Integration.WebApi.3.1.2\lib\net45\SimpleInjector.Integration.WebApi.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Analytics, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Analytics.dll</HintPath>
+    <Reference Include="Sitecore.Analytics, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Analytics.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Client, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Client.dll</HintPath>
+    <Reference Include="Sitecore.Client, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.ContentSearch.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.ContentSearch.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.ContentSearch.Linq, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
-    <Reference Include="Sitecore.Forms.Core, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.Forms.Core.dll</HintPath>
+    <Reference Include="Sitecore.ContentSearch.Linq, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.ContentSearch.Linq.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Forms.Custom, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.Forms.Custom.dll</HintPath>
+    <Reference Include="Sitecore.Forms.Core, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.Forms.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Forms.Mvc, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.Forms.Mvc.dll</HintPath>
+    <Reference Include="Sitecore.Forms.Custom, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.Forms.Custom.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.ItemWebApi, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.ItemWebApi.dll</HintPath>
+    <Reference Include="Sitecore.Forms.Mvc, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.Forms.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Kernel, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Kernel.dll</HintPath>
+    <Reference Include="Sitecore.ItemWebApi, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.ItemWebApi.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Logging, Version=1.2.0.30715, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Logging.dll</HintPath>
+    <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Kernel.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Mvc.dll</HintPath>
+    <Reference Include="Sitecore.Logging, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Logging.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="sitecore.nexus, Version=1.0.0.4404, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\sitecore.nexus.dll</HintPath>
+    <Reference Include="Sitecore.Mvc, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Nexus, Version=1.0.4425.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Nexus.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Ship, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -196,48 +223,54 @@
       <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Speak.Client, Version=2.0.812.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Speak.Client.dll</HintPath>
+    <Reference Include="Sitecore.Speak.Client, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Speak.Client.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Web, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Binaries.8.1.160302\lib\Sitecore.Web.dll</HintPath>
+    <Reference Include="Sitecore.Web, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.WFFM, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.dll</HintPath>
+    <Reference Include="Sitecore.WFFM, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.WFFM.Abstractions, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.Abstractions.dll</HintPath>
+    <Reference Include="Sitecore.WFFM.Abstractions, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.WFFM.Actions, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.8.1.160304\lib\Sitecore.WFFM.Actions.dll</HintPath>
+    <Reference Include="Sitecore.WFFM.Actions, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Actions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.WFFM.Analytics, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.Analytics.dll</HintPath>
+    <Reference Include="Sitecore.WFFM.Analytics, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Analytics.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.WFFM.Client, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.Client.dll</HintPath>
+    <Reference Include="Sitecore.WFFM.Services, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Services.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.WFFM.Services, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.Services.dll</HintPath>
+    <Reference Include="Sitecore.WFFM.Update, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Update.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.WFFM.Speak, Version=8.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.1.2\bin\Sitecore.WFFM.Speak.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime" />
     <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -249,6 +282,10 @@
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -270,6 +307,10 @@
       <HintPath>..\packages\Vitality.Mvc.1.0.0\lib\net45\Vitality.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web.Razor">
@@ -286,9 +327,6 @@
     </Reference>
     <Reference Include="System.Web.Helpers">
       <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Web.Infrastructure">
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Mvc">
       <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
@@ -311,9 +349,9 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Config\Include\Sitecore.Forms.config">
+    <None Include="App_Config\Include\Sitecore.Forms.config">
       <SubType>Designer</SubType>
-    </Content>
+    </None>
     <Content Include="App_Config\Include\Sitecore.Forms.Xtune.CD.config.disabled" />
     <Content Include="App_Config\Include\Sitecore.MvcForms.config" />
     <Content Include="App_Config\Include\Sitecore.WFFM.Analytics.config" />
@@ -329,6 +367,7 @@
     <None Include="Areas\Presales\Views\Shared\QuoteApplyLayout.cshtml" />
     <Content Include="src\js\countdown-timer-app.js" />
     <Content Include="src\js\global-functions.js" />
+    <Content Include="src\js\vitality-wffm-main.js" />
     <Content Include="src\ts\app\components\quoteapply-formtemplate.html" />
     <Content Include="src\ts\app\components\vacancy-detailstemplate.html" />
     <Content Include="src\ts\app\components\vacancylisttemplate.html" />
@@ -372,6 +411,7 @@
     <Content Include="App_Config\Include\Vitality\Vitality.WFFM_CD.config.cdonly">
       <SubType>Designer</SubType>
     </Content>
+    <None Include="App_Config\Include\ZPerformance.Dev.config" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="gulpfile.js" />
     <Content Include="css\experience_editor_fix.css" />
@@ -3884,7 +3924,9 @@
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="App_Start\IoC.cs" />
     <Compile Include="App_Start\MapperConfig.cs" />
+    <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\ServiceCollectionExtensions.cs" />
     <Compile Include="Areas\Global\Models\ImageLink.cs" />
     <Compile Include="Areas\Global\Models\KeyValuePair.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
@@ -4089,9 +4131,7 @@
     <Content Include="App_Config\Include\Sitecore.Analytics.Outcome.config" />
     <Content Include="App_Config\Include\Sitecore.Analytics.Processing.Aggregation.config" />
     <Content Include="App_Config\Include\Sitecore.Analytics.Processing.Aggregation.ProcessingPools.config" />
-    <Content Include="App_Config\Include\Sitecore.Analytics.Processing.Aggregation.Services.config" />
     <Content Include="App_Config\Include\Sitecore.Analytics.Processing.config" />
-    <Content Include="App_Config\Include\Sitecore.Analytics.Processing.Services.config" />
     <Content Include="App_Config\Include\Sitecore.Analytics.Reporting.config" />
     <Content Include="App_Config\Include\Sitecore.Analytics.Tracking.Aggregation.config" />
     <Content Include="App_Config\Include\Sitecore.Analytics.Tracking.config" />
@@ -4798,10 +4838,10 @@
     <CodeAnalysisRuleSet>Vitality.Website.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <!--<Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />-->
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
-  <Import Project="$(SolutionDir)\packages\Sitecore.Binaries.8.1.160302\build\Sitecore.targets" />
+  <Import Project="$(SolutionDir)\packages\Sitecore.Binaries.8.2.161221.1\build\Sitecore.targets" />
   <Import Project="$(ProjectDir)\gulp.targets" />
   <ProjectExtensions>
     <VisualStudio>

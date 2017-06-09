@@ -8,6 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {922FA01B-2E91-4951-8096-54308B0C91F0}
 templatekey: Content Collection
+created: 20170403T142935Z
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
@@ -16,10 +17,17 @@ key: __masters
 content-length: 194
 
 {A9C674A9-0C3A-4F6B-83DF-B0BD25E863E0}|{ED92DF1A-DA76-40E7-9780-11011865968A}|{E5A3E874-6E47-442B-B9A9-612CC96095ED}|{4A3A387E-F7C7-4ACB-83C7-49706D77B6A9}|{6738ED7B-195F-4505-A289-D525C143E480}
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: 8c3cfad4-0332-471e-976e-46526996e418
+revision: b729a101-cb7a-4c78-9bf6-36d6b8cdb6c2
 
 ----field----
 field: {ECD4AC4B-67D1-4C6C-B885-E3038E1DBB3F}
@@ -55,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8c3cfad4-0332-471e-976e-46526996e418
+b729a101-cb7a-4c78-9bf6-36d6b8cdb6c2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170113T134301Z
+20170512T153521Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

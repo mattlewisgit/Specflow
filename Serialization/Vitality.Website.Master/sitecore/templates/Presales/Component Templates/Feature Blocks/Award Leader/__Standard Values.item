@@ -8,6 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {056C6833-9BE7-418D-A47B-CCD697D9EDA3}
 templatekey: Award Leader
+created: 20160818T132930Z
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
@@ -16,10 +17,17 @@ key: __masters
 content-length: 77
 
 {25EB72FE-6AE2-44E4-AC1E-9631E53D3AB0}|{972CA70E-945F-4D10-967B-FD622EF97D66}
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: c14c8fd2-eb08-4305-bb60-d95bddca1dda
+revision: 5c679dca-759a-40fa-a5dc-f611c0084040
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -48,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c14c8fd2-eb08-4305-bb60-d95bddca1dda
+5c679dca-759a-40fa-a5dc-f611c0084040
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160725T091341Z
+20170512T153606Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

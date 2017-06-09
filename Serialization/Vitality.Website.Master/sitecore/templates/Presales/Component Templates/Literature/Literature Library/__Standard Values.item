@@ -8,6 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {B16E9007-040F-410E-878E-C56B68F570DC}
 templatekey: Literature Library
+created: 20170403T142954Z
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
@@ -16,10 +17,17 @@ key: __masters
 content-length: 38
 
 {73424C35-E196-41C6-87F5-8D52F25D5527}
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: 4838b04c-e103-46a4-bed2-b950746ccdf8
+revision: d18322c8-5566-4940-8407-5c954300174c
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -48,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4838b04c-e103-46a4-bed2-b950746ccdf8
+d18322c8-5566-4940-8407-5c954300174c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160701T112425Z
+20170512T154240Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

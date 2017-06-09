@@ -8,6 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {73424C35-E196-41C6-87F5-8D52F25D5527}
 templatekey: Literature Category
+created: 20170403T142950Z
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
@@ -16,10 +17,17 @@ key: __masters
 content-length: 38
 
 {7270914B-2ED9-4840-A8F9-2C1688DC1F55}
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: 7c7f0a8d-6907-4921-896d-e8df04bb8b99
+revision: 0da9b406-064d-4314-9ab5-63a33d450d10
 
 ----field----
 field: {4B06C6D8-BF43-49A2-94C5-6E7B9D57585A}
@@ -55,18 +63,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7c7f0a8d-6907-4921-896d-e8df04bb8b99
+0da9b406-064d-4314-9ab5-63a33d450d10
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160701T112646Z
+20170512T154100Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

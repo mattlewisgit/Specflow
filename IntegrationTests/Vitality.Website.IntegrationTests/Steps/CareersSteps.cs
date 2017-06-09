@@ -1,19 +1,10 @@
-﻿namespace Vitality.Website.IntegrationTests
+﻿namespace Vitality.Website.IntegrationTests.Steps
 {
-    using System.Drawing;
+    using System.Linq;
     using Selenium.WebDriver.Extensions.JQuery;
     using Shouldly;
     using TechTalk.SpecFlow;
-    using Extensions;
-    using Utilities;
-    using OpenQA.Selenium.Interactions;
-    using By = OpenQA.Selenium.By;
-    using OpenQA.Selenium.Support.UI;
-    using System;
-    using Vitality.Website.IntegrationTests.Steps;
-    using System.Linq;
-    using System.Threading;
-    using OpenQA.Selenium;
+    using Vitality.Extensions.Selenium;
 
     [Binding]
     public sealed class CareersSteps : BaseSteps
@@ -28,27 +19,28 @@
         public void ISeeTheLocation(string location)
         {
             WebDriver
-                .FindElement(new JQuerySelector($"vacancy-list #locationsDropDown option[value='{location}']"))
+                .FindElement(new JQuerySelector(
+                    $"vacancy-list #locationsDropDown option[value='{location}']"))
                 .Displayed
                 .ShouldBeTrue();
-
         }
 
         [Then(@"I see the department (.*)")]
         public void ISeeTheDepartment(string department)
         {
             WebDriver
-                .FindElement(new JQuerySelector($"vacancy-list #departmentsDropDown option[value='{department}']"))
+                .FindElement(new JQuerySelector(
+                    $"vacancy-list #departmentsDropDown option[value='{department}']"))
                 .Displayed
                 .ShouldBeTrue();
-
         }
 
         [When(@"I select the location (.*)")]
         public void ISelectTheLocation(string location)
         {
             WebDriver
-                .FindElement(new JQuerySelector($"vacancy-list #locationsDropDown option[value='{location}']"))
+                .FindElement(new JQuerySelector(
+                    $"vacancy-list #locationsDropDown option[value='{location}']"))
                 .Click();
         }
 
@@ -67,7 +59,8 @@
         public void ISelectTheDepartment(string department)
         {
             WebDriver
-                .FindElement(new JQuerySelector($"vacancy-list #departmentsDropDown option[value='{department}']"))
+                .FindElement(new JQuerySelector(
+                    $"vacancy-list #departmentsDropDown option[value='{department}']"))
                 .Click();
         }
 
@@ -90,16 +83,17 @@
             // If there are options, then the form has finished loading.
             // This is the most reliable way of checking there is data in the form!!
             WebDriver
-                .WaitForElement(new JQuerySelector("#locationsDropDown option"));
-
+                .WaitForElement(new JQuerySelector("#locationsDropDown option"))
+                .ShouldNotBeNull();
         }
 
         [When(@"I see the Vacancies page feed is loading with a message (.*)")]
-        public void ISeeTheVacanciesPageFeedIsLoadingWithAMessage( string message)
+        public void ISeeTheVacanciesPageFeedIsLoadingWithAMessage(string message)
         {
             WebDriver
                 .FindElements(new JQuerySelector("vacancy-list"))
-                .FirstOrDefault(e => e.Text.Equals(message));
+                .FirstOrDefault(e => e.Text.Equals(message))
+                .ShouldNotBeNull();
         }
 
         [Then(@"I see there are no Vacancies available")]
@@ -107,16 +101,17 @@
         {
             // vacancyList is the element where the loaded jobs appear
             WebDriver
-                .WaitForElement(new JQuerySelector(".vacancyList .novacancies"));
+                .WaitForElement(new JQuerySelector(".vacancyList .novacancies"))
+                .ShouldNotBeNull();
         }
 
         [Then(@"I click the link for the job (.*)")]
         public void IClickTheLinkForTheJob(string jobTitle)
         {
             WebDriver
-             .FindElement(new JQuerySelector($"vacancy-list .vacancyList .vacancy:has(h3:contains('{jobTitle}')) .emphasis-link"))
-             .Click();
-
+                .FindElement(new JQuerySelector(
+                    $"vacancy-list .vacancyList .vacancy:has(h3:contains('{jobTitle}')) .emphasis-link"))
+                .Click();
         }
 
         [Then(@"I see the Vacancy page feed is loading with a message (.*)")]
@@ -124,9 +119,9 @@
         {
             WebDriver
                 .FindElements(new JQuerySelector("vacancy-details"))
-                .FirstOrDefault(e => e.Text.Equals(message));
+                .FirstOrDefault(e => e.Text.Equals(message))
+                .ShouldNotBeNull();
         }
-
 
         [Then(@"I see the Vacancy page feed load has completed")]
         public void ThenISeeTheVacancyPageFeedLoadHasCompleted()
@@ -135,8 +130,8 @@
             // If there are options, then the form has finished loading.
             // This is the most reliable way of checking there is data in the form!!
             WebDriver
-                .WaitForElement(new JQuerySelector("vacancy-details"));
+                .WaitForElement(new JQuerySelector("vacancy-details"))
+                .ShouldNotBeNull();
         }
-
     }
 }

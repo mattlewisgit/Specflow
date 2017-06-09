@@ -1,15 +1,9 @@
 ﻿namespace Vitality.Website.IntegrationTests.Steps
 {
-    using System.Drawing;
     using Selenium.WebDriver.Extensions.JQuery;
     using Shouldly;
     using TechTalk.SpecFlow;
-    using Extensions;
-    using Utilities;
-    using OpenQA.Selenium.Interactions;
-    using By = OpenQA.Selenium.By;
-    using OpenQA.Selenium.Support.UI;
-    using System;
+    using Vitality.Extensions.Selenium;
 
     [Binding]
     public sealed class CallToActionSteps : BaseSteps
@@ -17,8 +11,7 @@
         [Then(@"I expect the correct CTA CSS values to appear for mobile view")]
         public void ThenIExpectTheCorrectCTACSSValuesToAppearForMobileView()
         {
-
-            //Check CTA header icon image
+            // Check CTA header icon image.
             WebDriver
                 .FindElement(new JQuerySelector(".cta .cta__header img"))
                 .GetCssValue("display")
@@ -34,15 +27,13 @@
                 .GetCssValue("vertical-align")
                 .ShouldBe("top");
 
-
-            //Check CTA body paragraph
+            // Check CTA body paragraph.
             WebDriver
                 .FindElement(new JQuerySelector(".cta .cta__body"))
                 .Displayed
                 .ShouldBeTrue();
 
-
-            //Check CTA button CSS layout
+            // Check CTA button CSS layout.
             WebDriver
                 .FindElement(new JQuerySelector(".cta .grid-module a"))
                 .GetCssValue("background-color")
@@ -57,17 +48,15 @@
                 .FindElement(new JQuerySelector(".cta .grid-module a"))
                 .GetCssValue("box-shadow")
                 .ShouldBe("none");
-
         }
-
 
         [When(@"I click on CTA (.*) button")]
-        public void WhenIClickOnCTAButton(string CTAButton)
+        public void WhenIClickOnCTAButton(string button)
         {
             WebDriver
-                 .WaitForElement(new JQuerySelector(".cta .grid-module .box-button.box-button--rounded.box-button--secondary:contains('" + CTAButton + "')"))
+                 .WaitForElement(new JQuerySelector(
+                     $".cta .grid-module .box-button.box-button--rounded.box-button--secondary:contains('{button}')"))
                  .Click();
         }
-
     }
 }

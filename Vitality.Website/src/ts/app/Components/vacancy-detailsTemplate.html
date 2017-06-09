@@ -6,12 +6,12 @@
 					<div class="grid-col-12-12">
 						<h3>{{ vacancy.JobTitle }}</h3>
 					</div>
-            	</div>				
+            	</div>
             	<div class="grid ">
 	                <div class="grid-col-9-12">
 						<ul>
 							<li>{{ viewModel.LocationText }} {{ vacancy.JobLocation }}</li>
-							<li>{{ viewModel.SalaryText }} {{ vacancy.JobSalary }}</li>
+							<li>{{ viewModel.SalaryText }} &pound;Competitive + Bonus + Benefits</li>
                             <li *ngIf='vacancy.ClosingDate != "0001-01-01T00:00:00"'>{{ viewModel.VacancyClosesOn }} {{ vacancy.ClosingDate | date: 'dd/MM/yyyy' }}</li>
 						</ul>
                 	</div>

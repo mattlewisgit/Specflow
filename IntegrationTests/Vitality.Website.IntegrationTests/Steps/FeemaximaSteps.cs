@@ -1,24 +1,18 @@
 ﻿namespace Vitality.Website.IntegrationTests.Steps
 {
-    using System.Drawing;
+    using System.Linq;
+    using System.Threading;
     using Selenium.WebDriver.Extensions.JQuery;
     using Shouldly;
     using TechTalk.SpecFlow;
-    using Extensions;
-    using Utilities;
-    using OpenQA.Selenium.Interactions;
+    using Vitality.Extensions.Selenium;
     using By = OpenQA.Selenium.By;
-    using OpenQA.Selenium.Support.UI;
-    using System;
-    using System.Threading;
-    using OpenQA.Selenium;
 
     [Binding]
     public sealed class FeemaximaSteps : BaseSteps
     {
-
         [When(@"I search for feemaxima (.*) data")]
-        public void WhenISearchForFeemaximaData(string feemaximasearch)
+        public void WhenISearchForFeemaximaData(string search)
         {
             WebDriver
                 .FindElement(new JQuerySelector(".tt-input"))
@@ -26,41 +20,30 @@
 
             WebDriver
                 .FindElement(new JQuerySelector(".tt-input"))
-                .SendKeys(feemaximasearch);
+                .SendKeys(search);
 
             Thread.Sleep(1000);
 
             WebDriver
-                .FindElement(new JQuerySelector("strong.tt-highlight:contains('" + feemaximasearch + "')"))
+                .FindElement(new JQuerySelector("strong.tt-highlight:contains('" + search + "')"))
                 .Click();
         }
 
         [Then(@"I expect the feemaxima table to contain (.*) search results")]
-        public void ThenIExpectTheFeemaximaTableToContainSearchResults(string feemaximasearch)
+        public void ThenIExpectTheFeemaximaTableToContainSearchResults(string search)
         {
-            //var resultstable = WebDriver
-            //    .FindElement(new JQuerySelector("ng-scope:contains('" + feemaximasearch + "')"));
-
-            //string result = resultstable.Text;
-
-            //result.Contains(feemaximasearch);
-
             WebDriver
-                .FindElement(new JQuerySelector("tr.ng-scope:contains('" + feemaximasearch + "')"))
+                .FindElement(new JQuerySelector("tr.ng-scope:contains('" + search + "')"))
                 .Displayed
                 .ShouldBeTrue();
-
-
         }
 
         [Then(@"I click on the feemaxima (.*) button")]
-        public void ThenIClickOnTheFeemaximaButton(string backbutton)
+        public void ThenIClickOnTheFeemaximaButton(string backButton)
         {
             WebDriver
-                .FindElement(By.LinkText(backbutton))
+                .FindElement(By.LinkText(backButton))
                 .Click();
-
-
         }
 
         [Then(@"I expect the feemaxima home table to be displayed")]
@@ -72,75 +55,43 @@
                 .ShouldBeTrue();
         }
 
-
         [When(@"I click on feemaxima (.*) and select on subcolumn (.*)")]
-        public void WhenIClickOnFeemaximaAndSelectOnSubcolumn(string UIcolumn, string UIsubcolumn)
+        public void WhenIClickOnFeemaximaAndSelectOnSubcolumn(string column, string subColumn)
         {
-
-
-            //variable chapter
-            //var column1 = WebDriver
-            //    .FindElement(new JQuerySelector("div.grid-col-2-12.chapter.ng-binding:contains('" + UIcolumn + "')"));
-
-            //variable name
-            //var column2 = WebDriver
-            //    .FindElement(new JQuerySelector("div.grid-col-10-12.name.ng-binding:contains('" + UIcolumn + "')"));
-
-            //if (column1.Count() !=0)
-            //{
-            //    column1.Click();
-            //
-            //else if (column2.Count() != 0)
-            //{
-            //    column2.Click();
-            //}
-
-
-            //wait for data feed to load
-            //WebDriver
-            //    .FindElement(new JQuerySelector(".example .ng-scope .loader")).Displayed.should
-            //    .Click();
-
             WebDriver
                 .WaitForElement(new JQuerySelector(".expanding-list.js-expander-is-accordion.expander--init.expander--collapsible"))
                 .Displayed
                 .ShouldBeTrue();
 
-
-            //If chapter or name contains string UIColumn, then click on it
-            if (WebDriver.FindElements(new JQuerySelector("div.grid-col-2-12.chapter.ng-binding:contains('" + UIcolumn + "')")).Count != 0)
+            // If chapter or name contains column, then click on it.
+            if (WebDriver.FindElements(new JQuerySelector("div.grid-col-2-12.chapter.ng-binding:contains('" + column + "')")).Any())
             {
                 WebDriver
-                .FindElement(new JQuerySelector("div.grid-col-2-12.chapter.ng-binding:contains('" + UIcolumn + "')"))
+                .FindElement(new JQuerySelector("div.grid-col-2-12.chapter.ng-binding:contains('" + column + "')"))
                 .Click();
             }
-            else if (WebDriver.FindElements(new JQuerySelector("div.grid-col-10-12.name.ng-binding:contains('" + UIcolumn + "')")).Count != 0)
+            else if (WebDriver.FindElements(new JQuerySelector("div.grid-col-10-12.name.ng-binding:contains('" + column + "')")).Any())
             {
                 WebDriver
-                .FindElement(new JQuerySelector("div.grid-col-10-12.name.ng-binding:contains('" + UIcolumn + "')"))
-                .Click();
-            }
-
-
-
-            //If subchapter or subname contains string UIsubcolumn, then click on it
-            if (WebDriver.FindElements(new JQuerySelector("div.grid-col-2-12.subchapter.ng-binding:contains('" + UIsubcolumn + "')")).Count != 0)
-            {
-                WebDriver
-                .FindElement(new JQuerySelector("div.grid-col-2-12.subchapter.ng-binding:contains('" + UIsubcolumn + "')"))
-                .Click();
-            }
-            else if (WebDriver.FindElements(new JQuerySelector("div.grid-col-8-12.name.ng-binding:contains('" + UIsubcolumn + "')")).Count != 0)
-            {
-                WebDriver
-                .FindElement(new JQuerySelector("div.grid-col-8-12.name.ng-binding:contains('" + UIsubcolumn + "')"))
+                .FindElement(new JQuerySelector("div.grid-col-10-12.name.ng-binding:contains('" + column + "')"))
                 .Click();
             }
 
+            // If subchapter or subname contains string subColumn, then click on it.
+            if (WebDriver.FindElements(new JQuerySelector("div.grid-col-2-12.subchapter.ng-binding:contains('" + subColumn + "')")).Any())
+            {
+                WebDriver
+                .FindElement(new JQuerySelector
+                    ("div.grid-col-2-12.subchapter.ng-binding:contains('" + subColumn + "')"))
+                .Click();
+            }
+            else if (WebDriver.FindElements(new JQuerySelector("div.grid-col-8-12.name.ng-binding:contains('" + subColumn + "')")).Any())
+            {
+                WebDriver
+                .FindElement(new JQuerySelector
+                    ("div.grid-col-8-12.name.ng-binding:contains('" + subColumn + "')"))
+                .Click();
+            }
         }
-
-
-
-
     }
 }
