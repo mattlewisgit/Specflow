@@ -81,4 +81,3 @@ export class AutoScrollTo implements AfterContentInit {
         } return y;
     }
 }
-

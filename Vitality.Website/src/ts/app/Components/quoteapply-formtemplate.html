@@ -1,28 +1,11 @@
-<form [formGroup]="quoteApplyForm" (ngSubmit)="apply(quoteApplyForm.value, quoteApplyForm.valid)" novalidate>
-    <div class="question">
-        {{ viewModel.NameLabel }}
+<form [formGroup]="quoteApplyForm" (ngSubmit)="apply(quoteApplyForm.valid)" novalidate>
+    <df-question-group *ngFor="let questionGroup of questionGroups" [questionGroup]="questionGroup" [form]="quoteApplyForm"></df-question-group>
 
-        <select formControlName="title">
-            <option *ngFor="let salutation of viewModel.Salutations" [value]="salutation.Value">{{ salutation.Key }}</option>
-        </select>
-        <div class="question--input__text">
-            <input type="text" formControlName="firstName" placeholder="{{viewModel.FirstNameLabel}}" />
-        </div>
-
-        <div class="question--input__text">
-            <input type="text" formControlName="lastName" placeholder="{{viewModel.LastNameLabel}}" auto-scroll-to="#contactNumber" />
-        </div>
-        <p [hidden]="(quoteApplyForm.controls.firstName.valid || (quoteApplyForm.controls.firstName.pristine && !submitted)) &&
-           (quoteApplyForm.controls.lastName.valid || (quoteApplyForm.controls.lastName.pristine && !submitted))" class="text-danger">
-            {{ viewModel.NameValidation }}
-        </p>
-    </div>
-
-    <div class="question">
+    <!--<div class="question">
         {{ viewModel.ContactNumberLabel }}
 
         <div class="question--input__text">
-            <input type="text" id="contactNumber"  formControlName="contactNumber" auto-scroll-to="#email" />
+            <input type="text" id="contactNumber" formControlName="contactNumber" auto-scroll-to="#email"/>
         </div>
         <p [hidden]="quoteApplyForm.controls.contactNumber.valid || (quoteApplyForm.controls.contactNumber.pristine && !submitted)" class="text-danger">
             {{ viewModel.ContactNumberValidation }}
@@ -33,7 +16,7 @@
         {{ viewModel.EmailLabel }}
 
         <div class="question--input__text">
-            <input type="email" id="email" formControlName="email" auto-scroll-to="#dateOfBirth" />
+            <input type="email" id="email" formControlName="email" auto-scroll-to="#dateOfBirth"/>
         </div>
 
         <div class="question--input__info">
@@ -53,7 +36,7 @@
         <p [hidden]="quoteApplyForm.controls.dateOfBirth.valid || (quoteApplyForm.controls.dateOfBirth.pristine && !submitted)" class="text-danger">
             {{ viewModel.DateValidation }}
         </p>
-    </div>
+    </div>-->
 
 
     <button type="submit" class="btn btn-primary">Apply</button>
@@ -61,8 +44,5 @@
 
 <div [hidden]="!submitted">
     <h2>You will be submitting following values when development completed:</h2>
-    <ul><li>Name : {{quoteApplication.title}}.{{quoteApplication.firstName}} {{quoteApplication.lastName}} </li>
-        <li>Contact Number : {{quoteApplication.contactNumber}} </li>
-        <li>Email : {{quoteApplication.email}} </li>
-        <li>Date of Birth : {{quoteApplication.dateOfBirth}} </li></ul>
+    {{paylod}}
 </div>

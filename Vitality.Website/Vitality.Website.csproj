@@ -373,9 +373,12 @@
     <Content Include="src\ts\app\components\vacancylisttemplate.html" />
     <TypeScriptCompile Include="src\ts\app\components\quoteapply-form.component.ts" />
     <TypeScriptCompile Include="src\ts\app\components\windowref.ts" />
-    <TypeScriptCompile Include="src\ts\app\Directives\auto-scroll-to.directive.ts" />
+    <TypeScriptCompile Include="src\ts\app\directives\auto-scroll-to.directive.ts" />
+    <TypeScriptCompile Include="src\ts\app\dynamic-form\dynamic-form-question-group.component.ts" />
+    <TypeScriptCompile Include="src\ts\app\dynamic-form\question-group.ts" />
+    <TypeScriptCompile Include="src\ts\app\dynamic-form\question.ts" />
+    <TypeScriptCompile Include="src\ts\app\dynamic-form\question-control.service.ts" />
     <TypeScriptCompile Include="src\ts\app\models\extradataitem.ts" />
-    <TypeScriptCompile Include="src\ts\app\models\quoteapplication.ts" />
     <TypeScriptCompile Include="src\ts\app\quoteapply-form-app.module.ts" />
     <TypeScriptCompile Include="src\ts\app\services\quoteapply.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\validation.service.ts" />
@@ -384,6 +387,7 @@
     <TypeScriptCompile Include="src\ts\quoteapply-main.ts" />
     <TypeScriptCompile Include="src\ts\vacancydetails-main.ts" />
     <TypeScriptCompile Include="src\ts\systemjs.config.ts" />
+    <Content Include="src\ts\app\dynamic-form\dynamic-form-question-group.component.html" />
     <Content Include="_Heartbeat.html" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
