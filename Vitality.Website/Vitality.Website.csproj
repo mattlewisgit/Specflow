@@ -3924,6 +3924,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pipelines\AppStartInitializer.cs" />
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="App_Start\IoC.cs" />
