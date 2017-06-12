@@ -1,22 +1,22 @@
 ----item----
 version: 1
-id: {E9EBB8EF-718C-40F0-82E4-05519F54B2F4}
+id: {365CBF3B-BCA1-4C43-A070-68B9FD55DAE2}
 database: master
-path: /sitecore/templates/Presales/Component Templates/QuoteApply/Quote Apply Form/Contents/TermsAndCondition
-parent: {0363AF28-AB2D-4274-80B2-3D584FEA31A9}
-name: TermsAndCondition
+path: /sitecore/templates/Global/Question/Contents/Key
+parent: {BA0671F6-DE34-4AE4-AE31-82214AE3CE3D}
+name: Key
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
-created: 20170610T141144Z
+created: 20170610T184158Z
 
 ----field----
 field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
 name: Type
 key: type
-content-length: 9
+content-length: 16
 
-Rich Text
+Single-Line Text
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
 name: __Sortorder
@@ -27,22 +27,29 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: f94a14a8-c751-40fb-b4ad-43aa22addde8
+revision: cbbdc7cd-82eb-4bd8-974d-7e9f9db8cf4f
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 19
+content-length: 3
 
-Terms And Condition
+Key
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170526T151155Z
+20170610T184158Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f94a14a8-c751-40fb-b4ad-43aa22addde8
+cbbdc7cd-82eb-4bd8-974d-7e9f9db8cf4f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170612T120018Z
+20170612T094423Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
