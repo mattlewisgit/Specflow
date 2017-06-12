@@ -1,10 +1,12 @@
 ﻿@using AutoMapper
 @using Newtonsoft.Json
+@using Newtonsoft.Json.Serialization
 @using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<QuoteApplyForm>
  @{
      var localEnv = "presales.vitality.co.uk" == HttpContext.Current.Request.Url.Host;
-     var angularModel = JsonConvert.SerializeObject(Mapper.Map<QuoteApplyFormViewModel>(Model));
+     var serializerSettings = new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()};
+     var angularModel = JsonConvert.SerializeObject(Mapper.Map<QuoteApplyFormViewModel>(Model), serializerSettings);
  }
     <div class="quote--content">
         @if (Sitecore.Context.PageMode.IsExperienceEditor)

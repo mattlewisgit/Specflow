@@ -39,8 +39,12 @@ namespace Vitality.Website.App_Start
                 .ForMember(
                     dest => dest.VacancyClosesOn,
                     opt => opt.MapFrom(src => src.ClosesOnText));
+
             config
                 .CreateMap<Question, QuestionViewModel>()
+                .ForMember(
+                    dest => dest.Value,
+                    opt => opt.MapFrom(src => src.DefaultValue))
                 .ForMember(
                     dest => dest.ControlType,
                     opt => opt.MapFrom(src => src.ControlType.Value))
