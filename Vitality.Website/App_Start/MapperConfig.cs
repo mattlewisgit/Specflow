@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using Vitality.Website.Areas.Global.Models;
 using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply;
 
 namespace Vitality.Website.App_Start
@@ -37,15 +39,23 @@ namespace Vitality.Website.App_Start
                 .ForMember(
                     dest => dest.VacancyClosesOn,
                     opt => opt.MapFrom(src => src.ClosesOnText));
-
             config
-                .CreateMap<QuoteApplyForm, QuoteApplyFormViewModel>()
+                .CreateMap<Question, QuestionViewModel>()
                 .ForMember(
-                    dest => dest.CurrentInsuredStatuses,
-                    opt => opt.MapFrom(src => src.CurrentInsuredStatuses.Select(i => new KeyValuePair<string, string>(i.Name, i.Value))))
+                    dest => dest.ControlType,
+                    opt => opt.MapFrom(src => src.ControlType.Value))
                 .ForMember(
-                    dest => dest.Salutations,
-                    opt => opt.MapFrom(src => src.Salutations.Select(i=>new KeyValuePair<string,string>(i.Name, i.Value))));
+                    dest => dest.RelatedData,
+                    opt =>
+                        opt.MapFrom(
+                            src => src.RelatedData.Select(i => new KeyValuePair<string, string>(i.Name, i.Value))))
+                .ForMember(
+                    dest => dest.Validations,
+                    opt => opt.MapFrom(src => src.Validations.Select(i => i.Value)));
+
+            config.CreateMap<QuestionGroup, QuestionGroupViewModel>();
+
+            config.CreateMap<QuoteApplyForm, QuoteApplyFormViewModel>();
         }
     }
 }

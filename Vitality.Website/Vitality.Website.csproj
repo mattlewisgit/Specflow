@@ -3932,6 +3932,7 @@
     <Compile Include="App_Start\RazorGeneratorMvcStart.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\ServiceCollectionExtensions.cs" />
+    <Compile Include="Areas\Global\Models\Question.cs" />
     <Compile Include="Areas\Global\Models\ImageLink.cs" />
     <Compile Include="Areas\Global\Models\KeyValuePair.cs" />
     <Compile Include="Areas\Global\Models\LinkItem.cs" />
@@ -3991,6 +3992,9 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSubSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Partners\PartnerCard.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuestionGroup.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuestionGroupViewModel.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuestionViewModel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFormViewModel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyForm.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Rewards\RewardsLeader.cs" />

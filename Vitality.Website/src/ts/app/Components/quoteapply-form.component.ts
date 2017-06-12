@@ -36,7 +36,7 @@ export class QuoteApplyFormComponent implements OnInit {
                             key: "title",
                             label: "Title",
                             controlType: "dropdown",
-                            choices: [
+                            relatedData: [
                                 { key: 'mr', value: 'Mr' },
                                 { key: 'miss', value: 'Miss' },
                                 { key: 'mrs', value: 'Mrs' }

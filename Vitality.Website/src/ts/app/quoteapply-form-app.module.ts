@@ -8,8 +8,6 @@ import { QuoteApplyFormComponent }  from "./components/quoteapply-form.component
 import { QuoteApplyService }  from "./services/quoteapply.service";
 import { QuestionControlService }  from "./dynamic-form/question-control.service";
 import { DynamicFormQuestionGroupComponent }         from "./dynamic-form/dynamic-form-question-group.component";
-import { DynamicFormQuestionComponent } from "./dynamic-form/dynamic-form-question.component";
-
 
 import { WindowRef }  from "./components/windowref";
 
@@ -19,7 +17,7 @@ import { WindowRef }  from "./components/windowref";
         ReactiveFormsModule,
         HttpModule
     ],
-    declarations: [QuoteApplyFormComponent, AutoScrollTo, DynamicFormQuestionGroupComponent, DynamicFormQuestionComponent],
+    declarations: [QuoteApplyFormComponent, AutoScrollTo, DynamicFormQuestionGroupComponent],
     providers: [QuoteApplyService, QuestionControlService, WindowRef],
     bootstrap: [QuoteApplyFormComponent]
 })
