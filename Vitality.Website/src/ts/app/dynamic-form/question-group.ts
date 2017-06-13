@@ -2,6 +2,7 @@
 
 export class QuestionGroup {
     label: string;
+    conditionToHide: string;
     helpText: string;
     validationMessage: string;
     questions: Question<any>[];

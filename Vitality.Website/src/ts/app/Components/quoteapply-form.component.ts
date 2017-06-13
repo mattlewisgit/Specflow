@@ -24,7 +24,10 @@ export class QuoteApplyFormComponent implements OnInit {
 
 
     ngOnInit(): void {
+
         this.questionGroups = this.winRef.nativeWindow.angularData.questionGroups;
+        console.log(this.questionGroups);
+        this.questionGroups[4].conditionToHide = "true";
         this.quoteApplyForm = new FormGroup({});
     }
 

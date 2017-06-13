@@ -1,10 +1,12 @@
-﻿<div class="question" [formGroup]="form">
+﻿<div class="question" [hidden]="questionGroup.conditionToHide" [formGroup]="form">
     {{ questionGroup.label }}
     <ng-container *ngFor="let question of questionGroup.questions" [ngSwitch]="question.controlType">
-        <select [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key">
-            <option *ngFor="let opt of question.relatedData" [value]="opt.value">{{opt.key}}</option>
-        </select>
-
+        <ng-container *ngSwitchCase="'dropdown'">
+            <select [id]="question.key" [formControlName]="question.key">
+                <option *ngFor="let opt of question.relatedData" [value]="opt.key">{{opt.value}}</option>
+            </select>
+            {{ question.label }}
+        </ng-container>
         <div *ngSwitchDefault class="question--input__text">
             <input [formControlName]="question.key"
                    [id]="question.key" [type]="question.controlType" placeholder="{{ question.placeholder }}" [attr.auto-scroll-to]="question.scrollTo">

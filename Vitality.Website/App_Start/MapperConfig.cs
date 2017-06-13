@@ -43,6 +43,9 @@ namespace Vitality.Website.App_Start
             config
                 .CreateMap<Question, QuestionViewModel>()
                 .ForMember(
+                    dest => dest.Key,
+                    opt => opt.MapFrom(src => src.Key.Value))
+                .ForMember(
                     dest => dest.Value,
                     opt => opt.MapFrom(src => src.DefaultValue))
                 .ForMember(

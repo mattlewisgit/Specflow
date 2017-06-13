@@ -9,7 +9,8 @@ namespace Vitality.Website.Areas.Global.Models
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public KeyValuePair ControlType { get; set; }
         public string DefaultValue { get; set; }
-        public string Key { get; set; }
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public KeyValuePair Key { get; set; }
         public string Label { get; set; }
         public string Placeholder { get; set; }
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
