@@ -15,5 +15,3 @@
     When I click on the Apply button
     Then I expect to see the interim panel
 
-
-
