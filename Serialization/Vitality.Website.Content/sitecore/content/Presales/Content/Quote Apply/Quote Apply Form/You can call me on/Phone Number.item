@@ -1,69 +1,62 @@
 ----item----
 version: 1
-id: {7CE0BE25-0327-46BB-A49C-13EA0234FB77}
+id: {09D14C27-D11A-459C-8690-22AE2D3DA539}
 database: master
-path: /sitecore/templates/Global/Question/__Standard Values
-parent: {16446BB0-1CE3-44A5-81FA-2417CE6A1FEB}
-name: __Standard Values
+path: /sitecore/content/Presales/Content/Quote Apply/Quote Apply Form/You can call me on/Phone Number
+parent: {992BBBA9-6964-430E-B95A-EE81BCBD904B}
+name: Phone Number
 master: {00000000-0000-0000-0000-000000000000}
 template: {16446BB0-1CE3-44A5-81FA-2417CE6A1FEB}
 templatekey: Question
-created: 20170610T203737Z
+created: 20170612T155736Z
 
-----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
-content-length: 38
-
-{A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
 ----version----
 language: en
 version: 1
-revision: d67f4a10-1c71-493e-999a-96e0d19846a3
+revision: be2bdec7-c22d-44cb-8327-33948397e4a0
 
 ----field----
 field: {365CBF3B-BCA1-4C43-A070-68B9FD55DAE2}
 name: Key
 key: key
-content-length: 0
+content-length: 38
 
-
+{0E44793B-72F1-44AF-9F86-E83B9631F792}
 ----field----
-field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
-name: __Owner
-key: __owner
-content-length: 14
+field: {EDBA5F60-C406-43A0-8E4E-145A7BCD98FF}
+name: ControlType
+key: controltype
+content-length: 38
 
-sitecore\Admin
+{85F5E2CD-877A-45A3-B9B2-BB53B36EECD3}
+----field----
+field: {98D8AEE3-52A2-4CCE-9654-16DDD64735BD}
+name: Validations
+key: validations
+content-length: 77
+
+{098E2EE5-FD37-46AA-A15F-4CF811C9E4D0}|{DD82F92F-CDB4-487F-A0F8-9A7AAE134ED7}
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170610T203737Z
-----field----
-field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
-name: __Created by
-key: __created by
-content-length: 14
-
-sitecore\Admin
+20170612T155736Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-d67f4a10-1c71-493e-999a-96e0d19846a3
+be2bdec7-c22d-44cb-8327-33948397e4a0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170613T122007Z
+20170613T124555Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

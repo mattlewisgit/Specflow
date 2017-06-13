@@ -1,34 +1,27 @@
 ----item----
 version: 1
-id: {0563B78D-0A33-4113-AEF2-00B2395D57DF}
+id: {772F1FEA-6F86-4D6B-84E3-BA317A49CF29}
 database: master
-path: /sitecore/content/Presales/Content/Quote Apply
-parent: {1513AD49-B5AE-4ACC-9D41-E63E41363B58}
-name: Quote Apply
+path: /sitecore/content/Presales/Content/Quote Apply/Quote Apply Form/Insured status/Insured Status/1
+parent: {28128CA6-BCF9-4F37-ADAA-8992B2DADB00}
+name: 1
 master: {00000000-0000-0000-0000-000000000000}
-template: {7C96FFFF-DA60-44F1-BC58-2E4315D2F483}
-templatekey: Datasource Folder
-created: 20170610T192201Z
+template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
+templatekey: Key Value Pair
+created: 20170613T092704Z
 
-----field----
-field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
-name: __Icon
-key: __icon
-content-length: 38
-
-Applications/32x32/form_green_edit.png
-----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
-content-length: 77
-
-{2ADA24F8-7B05-48A5-AD7A-081AD11637D2}|{4902517E-93B7-41B5-BCC4-387E1D0304A7}
 ----version----
 language: en
 version: 1
-revision: e4e454dd-2b8b-4707-9c59-ba4c5e49e5e6
+revision: 21d33392-c5fb-454a-96ce-6fa4669115d7
 
+----field----
+field: {C01F61CF-8603-4C48-A96A-EFDDDFEB52ED}
+name: Value
+key: value
+content-length: 21
+
+not currently insured
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -42,21 +35,28 @@ name: __Created
 key: __created
 content-length: 16
 
-20170610T192201Z
+20170613T092704Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-e4e454dd-2b8b-4707-9c59-ba4c5e49e5e6
+21d33392-c5fb-454a-96ce-6fa4669115d7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170610T202248Z
+20170613T094018Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
