@@ -13,7 +13,7 @@ created: 20170613T104655Z
 ----version----
 language: en
 version: 1
-revision: 409ccf99-b3ed-43f4-a802-c4cd9ab0e18e
+revision: 79503510-d447-4d5e-8ef2-98c60343d9f3
 
 ----field----
 field: {DE38D3EB-81E3-4D60-8F57-F803A68EBEF2}
@@ -30,6 +30,20 @@ content-length: 77
 
 {616A38D3-CE62-4C88-9570-513811CB5019}|{2A34CA6A-22CB-4C58-9DC7-D8BE48C51E47}
 ----field----
+field: {E8A3ACCA-67D0-4EFD-BDEB-0C179CD59302}
+name: BasedOnKey
+key: basedonkey
+content-length: 38
+
+{2D471DD5-A101-4CF0-9DAE-C516F4229A03}
+----field----
+field: {DE134F64-7C89-4CF5-B0D9-6C8DAF0D9117}
+name: BasedOnValues
+key: basedonvalues
+content-length: 20
+
+mekids,mepartnerkids
+----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
@@ -42,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-409ccf99-b3ed-43f4-a802-c4cd9ab0e18e
+79503510-d447-4d5e-8ef2-98c60343d9f3
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170613T105640Z
+20170613T151534Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,4 +1,4 @@
-﻿<div class="question" [hidden]="questionGroup.conditionToHide" [formGroup]="form">
+﻿<div class="question"  *ngIf="makeVisible(questionGroup.basedOnKey, questionGroup.basedOnValues)" [formGroup]="form">
     {{ questionGroup.label }}
     <ng-container *ngFor="let question of questionGroup.questions" [ngSwitch]="question.controlType">
         <ng-container *ngSwitchCase="'dropdown'">

@@ -13,7 +13,7 @@ created: 20170613T094340Z
 ----version----
 language: en
 version: 1
-revision: 47fc8ab8-2ff2-458b-a86d-6de43eb5d998
+revision: a4851d78-c59b-422d-8fad-8d4adef82596
 
 ----field----
 field: {DE38D3EB-81E3-4D60-8F57-F803A68EBEF2}
@@ -30,6 +30,20 @@ content-length: 38
 
 {84CEBD85-316E-47F7-A198-B8518E6672D8}
 ----field----
+field: {E8A3ACCA-67D0-4EFD-BDEB-0C179CD59302}
+name: BasedOnKey
+key: basedonkey
+content-length: 38
+
+{90B43708-4431-4DD4-AAFC-CF2599D8A8BA}
+----field----
+field: {DE134F64-7C89-4CF5-B0D9-6C8DAF0D9117}
+name: BasedOnValues
+key: basedonvalues
+content-length: 1
+
+1
+----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
@@ -42,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-47fc8ab8-2ff2-458b-a86d-6de43eb5d998
+a4851d78-c59b-422d-8fad-8d4adef82596
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170613T101449Z
+20170613T143307Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

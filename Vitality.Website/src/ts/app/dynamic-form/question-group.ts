@@ -2,7 +2,8 @@
 
 export class QuestionGroup {
     label: string;
-    conditionToHide: string;
+    basedOnKey: string;
+    basedOnValues: string[];
     helpText: string;
     validationMessage: string;
     questions: Question<any>[];

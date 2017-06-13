@@ -16,6 +16,7 @@ export class DynamicFormQuestionGroupComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        console.log(this.questionGroup);
         this.qcs.addFormControls(this.form, this.questionGroup.questions);
     }
 
@@ -27,5 +28,19 @@ export class DynamicFormQuestionGroupComponent implements OnInit {
             }
         }
         return true;
+    }
+
+    makeVisible(basedOnKey: string, basedOnValues: string[]): boolean {
+        if (!basedOnKey || !basedOnValues) {
+            return true;
+        }
+        console.log(basedOnValues);
+        let control = this.form.controls[basedOnKey];
+        for (let basedOnValue of basedOnValues) {
+            if (control.value === basedOnValue) {
+                return true;
+            }
+        }
+        return false;
     }
 }

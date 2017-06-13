@@ -60,7 +60,13 @@ namespace Vitality.Website.App_Start
                     dest => dest.Validations,
                     opt => opt.MapFrom(src => src.Validations.Select(i => i.Value)));
 
-            config.CreateMap<QuestionGroup, QuestionGroupViewModel>();
+            config.CreateMap<QuestionGroup, QuestionGroupViewModel>()
+                .ForMember(
+                    dest => dest.BasedOnKey,
+                    opt => opt.MapFrom(src => src.BasedOnKey.Value))
+                .ForMember(
+                    dest => dest.BasedOnValues,
+                    opt => opt.MapFrom(src => string.IsNullOrEmpty(src.BasedOnValues)? null: src.BasedOnValues.Split(',')));
 
             config.CreateMap<QuoteApplyForm, QuoteApplyFormViewModel>();
         }
