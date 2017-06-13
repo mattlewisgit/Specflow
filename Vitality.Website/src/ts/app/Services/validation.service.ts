@@ -1,11 +1,27 @@
-﻿export class ValidationService {
+﻿import { Validators } from "@angular/forms";
+
+export class ValidationService {
     static getValidatorErrorMessage(validatorName: string, validatorValue?: any) {
         let config = {
             "required": "Required",
             "invalidDate": "Invalid Date",
             "invalidEmailAddress": "Invalid email address",
             "invalidPhoneNumber": "Invalid phone number",
-            "minlength": "Minimum length ${validatorValue.requiredLength}"
+            "minLength": "Minimum length ${validatorValue.requiredLength}",
+            "maxLength": "Maximum length ${validatorValue.requiredLength}"
+        };
+
+        return config[validatorName];
+    }
+
+    static getValidator(validatorName: string) {
+        let config = {
+            "required": Validators.required,
+            "dateValidator": this.dateValidator,
+            "emailValidator": this.emailValidator,
+            "phoneNumberValidator": this.phoneNumberValidator,
+            "minlength": Validators.minLength,
+            "maxlength": Validators.maxLength
         };
 
         return config[validatorName];

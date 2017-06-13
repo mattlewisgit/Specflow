@@ -16,18 +16,7 @@ export class QuestionControlService {
     getValidators(validations: string[]) {
         let validators: any[] = [];
         for (let entry of validations) {
-            if (entry === "required") {
-                validators.push(Validators.required);
-            }
-            if (entry === "dateValidator") {
-                validators.push(ValidationService.dateValidator);
-            }
-            if (entry === "emailValidator") {
-                validators.push(ValidationService.emailValidator);
-            }
-            if (entry === "phoneNumberValidator") {
-                validators.push(ValidationService.phoneNumberValidator);
-            }
+                validators.push(ValidationService.getValidator(entry));
         }
         return validators;
     }
