@@ -45,13 +45,16 @@ export class ValidationService {
     static ageRangeValidator(options: any) {
         return (control: any) => {
             if (this.dateValidator(control) == null) {
-                console.log(control.value);
-                const ageDifMs = Date.now() - new Date(control.value).getTime();
-                const ageDate = new Date(ageDifMs);
-                console.log(ageDate);
-                const age = Math.abs(ageDate.getUTCFullYear() - 1970);
-                console.log(age);
-                if (age > options.minAge && age < options.maxAge) {
+                const dateParts = control.value.split("/");
+                const birthDate = new Date(dateParts[2], dateParts[1], dateParts[0]);
+                const now = new Date();
+                let years = (now.getFullYear() - birthDate.getFullYear());
+
+                if (now.getMonth() < birthDate.getMonth() ||
+                    now.getMonth() === birthDate.getMonth() && now.getDate() < birthDate.getDate()) {
+                    years--;
+                }
+                if (years >= options.minAge && years < options.maxAge) {
                     return null;
                 }
             }

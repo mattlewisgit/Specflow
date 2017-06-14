@@ -1,24 +1,24 @@
 ----item----
 version: 1
-id: {0DA5BF60-C1F0-4910-AB4B-888F0B4C1615}
+id: {E38F5FF8-A3FB-4A37-ACFD-F80521B9EC95}
 database: master
 path: /sitecore/content/Presales/Configuration/Field Validators/Date Validator
 parent: {38BDCDEF-A8A4-4C3C-93AD-9BD62C745FB7}
 name: Date Validator
 master: {00000000-0000-0000-0000-000000000000}
-template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
-templatekey: Key Value Pair
-created: 20170610T191649Z
+template: {C631EE17-FF6E-4C17-8303-CFCE777FD8A2}
+templatekey: Field Validator
+created: 20170614T114222Z
 
 ----version----
 language: en
 version: 1
-revision: 18cc2586-2af9-4785-bab1-d0b181b4f7a3
+revision: dc20fe67-16ec-46d6-a2ba-a368b05cd1ed
 
 ----field----
-field: {C01F61CF-8603-4C48-A96A-EFDDDFEB52ED}
-name: Value
-key: value
+field: {41F1F96F-0AA6-4E4C-95ED-EA251B3BD7E7}
+name: ValidatorName
+key: validatorname
 content-length: 13
 
 dateValidator
@@ -35,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170610T191649Z
+20170614T114222Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-18cc2586-2af9-4785-bab1-d0b181b4f7a3
+dc20fe67-16ec-46d6-a2ba-a368b05cd1ed
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170610T191656Z
+20170614T125614Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

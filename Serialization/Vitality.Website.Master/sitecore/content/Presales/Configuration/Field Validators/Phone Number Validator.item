@@ -1,24 +1,24 @@
 ----item----
 version: 1
-id: {DD82F92F-CDB4-487F-A0F8-9A7AAE134ED7}
+id: {7042F48C-3242-42D9-AC71-65F131669496}
 database: master
 path: /sitecore/content/Presales/Configuration/Field Validators/Phone Number Validator
 parent: {38BDCDEF-A8A4-4C3C-93AD-9BD62C745FB7}
 name: Phone Number Validator
 master: {00000000-0000-0000-0000-000000000000}
-template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
-templatekey: Key Value Pair
-created: 20170610T191611Z
+template: {C631EE17-FF6E-4C17-8303-CFCE777FD8A2}
+templatekey: Field Validator
+created: 20170614T114415Z
 
 ----version----
 language: en
 version: 1
-revision: b10a3d7a-21f6-4e9e-9efa-e58415aaae05
+revision: 75e849ad-0500-4814-9f2c-267776206595
 
 ----field----
-field: {C01F61CF-8603-4C48-A96A-EFDDDFEB52ED}
-name: Value
-key: value
+field: {41F1F96F-0AA6-4E4C-95ED-EA251B3BD7E7}
+name: ValidatorName
+key: validatorname
 content-length: 20
 
 phoneNumberValidator
@@ -35,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170610T191611Z
+20170614T114415Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b10a3d7a-21f6-4e9e-9efa-e58415aaae05
+75e849ad-0500-4814-9f2c-267776206595
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170610T191627Z
+20170614T125632Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

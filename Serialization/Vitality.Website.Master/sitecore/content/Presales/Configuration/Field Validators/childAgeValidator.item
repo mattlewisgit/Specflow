@@ -1,27 +1,34 @@
 ----item----
 version: 1
-id: {F9D8696B-D818-4BD7-AAA3-1F270F7EF184}
+id: {AFB39CB0-3F0A-40E5-85B3-8D07E036342C}
 database: master
-path: /sitecore/content/Presales/Configuration/Field Validators/Required
+path: /sitecore/content/Presales/Configuration/Field Validators/childAgeValidator
 parent: {38BDCDEF-A8A4-4C3C-93AD-9BD62C745FB7}
-name: Required
+name: childAgeValidator
 master: {00000000-0000-0000-0000-000000000000}
 template: {C631EE17-FF6E-4C17-8303-CFCE777FD8A2}
 templatekey: Field Validator
-created: 20170614T114145Z
+created: 20170614T114640Z
 
 ----version----
 language: en
 version: 1
-revision: c2063003-fee5-447b-940c-2e2d85906a98
+revision: 35589b8a-9396-48d6-b056-4412d4f120a8
 
 ----field----
 field: {41F1F96F-0AA6-4E4C-95ED-EA251B3BD7E7}
 name: ValidatorName
 key: validatorname
-content-length: 8
+content-length: 17
 
-required
+ageRangeValidator
+----field----
+field: {2DA36667-40DD-4A1C-952A-795FE6F0B4F0}
+name: Parameters
+key: parameters
+content-length: 18
+
+minAge=0&maxAge=18
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -35,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170614T114145Z
+20170614T114640Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c2063003-fee5-447b-940c-2e2d85906a98
+35589b8a-9396-48d6-b056-4412d4f120a8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170614T125639Z
+20170614T151247Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
