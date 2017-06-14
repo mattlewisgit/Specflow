@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Sitecore.Form.Core.Utility;
 using Vitality.Website.Areas.Global.Models;
 using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply;
 
@@ -40,8 +41,13 @@ namespace Vitality.Website.App_Start
                     dest => dest.VacancyClosesOn,
                     opt => opt.MapFrom(src => src.ClosesOnText));
 
-            config
-                .CreateMap<Question, QuestionViewModel>()
+
+            config.CreateMap<FieldValidator, FieldValidatorViewModel>()
+                .ForMember(
+                    dest => dest.Parameters,
+                    opt => opt.MapFrom(src => src.Parameters.AllKeys.ToDictionary(i=>i, i=> src.Parameters[i])));
+
+            config.CreateMap<Question, QuestionViewModel>()
                 .ForMember(
                     dest => dest.Key,
                     opt => opt.MapFrom(src => src.Key.Value))
@@ -55,10 +61,7 @@ namespace Vitality.Website.App_Start
                     dest => dest.RelatedData,
                     opt =>
                         opt.MapFrom(
-                            src => src.RelatedData.Select(i => new KeyValuePair<string, string>(i.Name, i.Value))))
-                .ForMember(
-                    dest => dest.Validations,
-                    opt => opt.MapFrom(src => src.Validations.Select(i => i.Value)));
+                            src => src.RelatedData.Select(i => new KeyValuePair<string, string>(i.Name, i.Value))));
 
             config.CreateMap<QuestionGroup, QuestionGroupViewModel>()
                 .ForMember(

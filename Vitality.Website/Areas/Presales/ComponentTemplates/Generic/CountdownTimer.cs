@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Collections.Specialized;
+﻿using System.Collections.Specialized;
 using Vitality.Website.Areas.Global.Models;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.Generic

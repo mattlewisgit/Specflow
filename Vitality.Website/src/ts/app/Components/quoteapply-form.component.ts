@@ -24,6 +24,7 @@ export class QuoteApplyFormComponent implements OnInit {
 
 
     ngOnInit(): void {
+        console.log(this.winRef.nativeWindow.angularData);
         this.questionGroups = this.winRef.nativeWindow.angularData.questionGroups;
         this.quoteApplyForm = new FormGroup({});
     }

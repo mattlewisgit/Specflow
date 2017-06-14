@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Vitality.Website.Areas.Global.Models;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 {
@@ -10,6 +11,6 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         public string Label { get; set; }
         public string Placeholder { get; set; }
         public List<KeyValuePair<string, string>> RelatedData { get; set; }
-        public List<string> Validations { get; set; }
+        public List<FieldValidatorViewModel> Validators { get; set; }
     }
 }
