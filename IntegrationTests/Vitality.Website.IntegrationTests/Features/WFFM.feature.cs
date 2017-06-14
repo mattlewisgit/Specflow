@@ -76,8 +76,8 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TraitAttribute("FeatureTitle", "WFFM")]
         [Xunit.TraitAttribute("Description", "Submit Valid Web Form")]
         [Xunit.TraitAttribute("Category", "SIT")]
-        [Xunit.InlineDataAttribute("Matt", "Le Tissier", "Other", "Test@Test.com", "02380999999", "1", "May", "2016", "Magic", "Yes", new string[0])]
-        public virtual void SubmitValidWebForm(string firstName, string lastName, string otherName, string email, string phone, string day, string mM, string yYYY, string dropList, string checkBox, string[] exampleTags)
+        [Xunit.InlineDataAttribute("Matt", "LeTissier", "Other", "Test@Test.com", "02380999999", "1", "May", "2016", "Magic", new string[0])]
+        public virtual void SubmitValidWebForm(string firstname, string lastname, string othername, string email, string phone, string day, string month, string year, string dropList, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "SIT"};
@@ -91,7 +91,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 8
     testRunner.Given("I am on advisers /dev/wffm", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
-    testRunner.When(string.Format("I enter the form details {0} {1} {2} {3} {4} {5} {6} {7} {8} {9}", firstName, lastName, otherName, email, phone, day, mM, yYYY, dropList, checkBox), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I enter the form details {0} {1} {2} {3} {4} {5} {6} {7} {8}", firstname, lastname, othername, email, phone, day, month, year, dropList), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
  testRunner.And("I click on the Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
@@ -104,10 +104,10 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.TraitAttribute("FeatureTitle", "WFFM")]
         [Xunit.TraitAttribute("Description", "Submit Invalid Web Form")]
         [Xunit.TraitAttribute("Category", "SIT")]
-        [Xunit.InlineDataAttribute("Matt", "LeTissier", "Other", "IncorrectEmail", "02380999999", "1", "May", "2016", "Magic", "Yes", "The Email Address field contains an invalid email address.", new string[0])]
-        [Xunit.InlineDataAttribute("Matt", "LeTissier", "Other", "Test@Test.com", "IncorrectPhone", "1", "May", "2016", "Magic", "Yes", "The value of the Phone number field is not valid.", new string[0])]
-        [Xunit.InlineDataAttribute("", "LeTissier", "Other", "Test@Test.com", "02380999999", "1", "May", "2016", "Magic", "Yes", "The First name field is required.", new string[0])]
-        public virtual void SubmitInvalidWebForm(string firstName, string lastName, string otherName, string email, string phone, string day, string mM, string yYYY, string dropList, string checkBox, string errorMessage, string[] exampleTags)
+        [Xunit.InlineDataAttribute("Matt", "LeTissier", "Other", "IncorrectEmail", "02380999999", "1", "May", "2016", "Magic", "The Email Address field contains an invalid email address.", new string[0])]
+        [Xunit.InlineDataAttribute("Matt", "LeTissier", "Other", "Test@Test.com", "IncorrectPhone", "1", "May", "2016", "Magic", "The value of the Phone number field is not valid.", new string[0])]
+        [Xunit.InlineDataAttribute("", "LeTissier", "Other", "Test@Test.com", "02380999999", "1", "May", "2016", "Magic", "The First name field is required.", new string[0])]
+        public virtual void SubmitInvalidWebForm(string firstname, string lastname, string othername, string email, string phone, string day, string month, string year, string dropList, string errorMessage, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "SIT"};
@@ -121,7 +121,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 20
     testRunner.Given("I am on advisers /dev/wffm", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 21
-    testRunner.When(string.Format("I enter the form details {0} {1} {2} {3} {4} {5} {6} {7} {8} {9}", firstName, lastName, otherName, email, phone, day, mM, yYYY, dropList, checkBox), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I enter the form details {0} {1} {2} {3} {4} {5} {6} {7} {8}", firstname, lastname, othername, email, phone, day, month, year, dropList), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 22
  testRunner.And("I click on the Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23

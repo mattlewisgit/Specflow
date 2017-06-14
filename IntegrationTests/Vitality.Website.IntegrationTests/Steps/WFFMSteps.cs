@@ -11,9 +11,9 @@ namespace Vitality.Website.IntegrationTests.Steps
     [Binding]
     public sealed class WFFMSteps : BaseSteps
     {
-        [When(@"I enter the form details (.*) (.*) (.*) (.*) (.*) (.*) (.*) (.*) (.*) (.*)")]
-        public void WhenIEnterTheFormDetails(string firstName, string lastName, string otherName,
-            string email, string phone, string day, string month, string year, string dropList)
+
+        [When(@"I enter the form details (.*) (.*) (.*) (.*) (.*) (.*) (.*) (.*) (.*)")]
+        public void WhenIEnterTheFormDetails(string Firstname, string Lastname, string Othername, string Email, string Phone, string Day, string Month, string Year, string Droplist)
         {
             const string WebFormID = "wffm6f9c146419a24306ad5b9a7db5e9b409_";
 
@@ -21,43 +21,47 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver
                 .FindElement(By.Id(WebFormID + "Sections_0__Fields_0__Value"))
                 .ClearAndContinue()
-                .SendKeys(firstName);
+                .SendKeys(Firstname);
 
             // Last Name.
             WebDriver
                 .FindElement(By.Id(WebFormID + "Sections_0__Fields_1__Value"))
                 .ClearAndContinue()
-                .SendKeys(lastName);
+                .SendKeys(Lastname);
 
             // Other names.
             WebDriver
                 .FindElement(By.Id(WebFormID + "Sections_0__Fields_2__Value"))
                 .ClearAndContinue()
-                .SendKeys(otherName);
+                .SendKeys(Othername);
 
             // Email Address.
             WebDriver
                 .FindElement(By.Id(WebFormID + "Sections_0__Fields_3__Value"))
                 .ClearAndContinue()
-                .SendKeys(email);
+                .SendKeys(Email);
 
             // Phone Number.
             WebDriver
                 .FindElement(By.Id(WebFormID + "Sections_0__Fields_4__Value"))
                 .ClearAndContinue()
-                .SendKeys(phone);
+                .SendKeys(Phone);
 
             // Date.
-            new SelectElement(WebDriver.FindElement(By.Id(WebFormID + "Sections_0__Fields_5__Day"))).SelectByText(day);
-            new SelectElement(WebDriver.FindElement(By.Id(WebFormID + "Sections_0__Fields_5__Month"))).SelectByText(month);
-            new SelectElement(WebDriver.FindElement(By.Id(WebFormID + "Sections_0__Fields_5__Year"))).SelectByText(year);
+            new SelectElement(WebDriver.FindElement(By.Id(WebFormID + "Sections_0__Fields_5__Day"))).SelectByText(Day);
+            new SelectElement(WebDriver.FindElement(By.Id(WebFormID + "Sections_0__Fields_5__Month"))).SelectByText(Month);
+            new SelectElement(WebDriver.FindElement(By.Id(WebFormID + "Sections_0__Fields_5__Year"))).SelectByText(Year);
 
             // Drop List.
-            new SelectElement(WebDriver.FindElement(By.Id(WebFormID + "Sections_1__Fields_0__Value"))).SelectByText(dropList);
+            new SelectElement(WebDriver.FindElement(By.Id(WebFormID + "Sections_1__Fields_0__Value"))).SelectByText(Droplist);
 
             // Check Box.
             WebDriver.FindElement(By.Id(WebFormID + "Sections_1__Fields_1__Value")).Click();
         }
+
+
+
+
 
         [When(@"I click on the Submit button")]
         public void WhenIClickOnTheSubmitButton()

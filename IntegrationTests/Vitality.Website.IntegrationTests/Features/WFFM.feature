@@ -6,27 +6,27 @@
 	@SIT
 	Scenario Outline: Submit Valid Web Form
     Given I am on advisers /dev/wffm
-    When I enter the form details <First Name> <Last Name> <Other Name> <Email> <Phone> <Day> <MM> <YYYY> <DropList> <CheckBox>
+	When I enter the form details <Firstname> <Lastname> <Othername> <Email> <Phone> <Day> <Month> <Year> <DropList>
 	And I click on the Submit button
 	Then I expect the web forms 'Thank you for filling in the form!' message to appear
 	
 	Examples:
-	| First Name  | Last Name	| Other Name  | Email            | Phone			| Day | MM	| YYYY	| DropList  | CheckBox | 
-	| Matt		  | Le Tissier	| Other		  | Test@Test.com	 | 02380999999		| 1	  | May	| 2016	| Magic	    | Yes	   | 
+	| Firstname  | Lastname		| Othername   | Email            | Phone			| Day | Month	| Year	| DropList  |
+	| Matt		 | LeTissier	| Other		  | Test@Test.com	 | 02380999999		| 1	  | May		| 2016	| Magic	    |
 
 
 	@SIT
 	Scenario Outline: Submit Invalid Web Form
     Given I am on advisers /dev/wffm
-    When I enter the form details <First Name> <Last Name> <Other Name> <Email> <Phone> <Day> <MM> <YYYY> <DropList> <CheckBox>
+	When I enter the form details <Firstname> <Lastname> <Othername> <Email> <Phone> <Day> <Month> <Year> <DropList>
 	And I click on the Submit button
 	Then I expect the web forms <ErrorMessage> error message to appear
 	
 	Examples:
-	| First Name  | Last Name	| Other Name  | Email            | Phone			| Day | MM	| YYYY	| DropList  | CheckBox | ErrorMessage												| 
-	| Matt		  | LeTissier	| Other		  | IncorrectEmail	 | 02380999999		| 1	  | May	| 2016	| Magic	    | Yes	   | The Email Address field contains an invalid email address. |
-	| Matt		  | LeTissier	| Other		  | Test@Test.com	 | IncorrectPhone	| 1	  | May	| 2016	| Magic	    | Yes	   | The value of the Phone number field is not valid.			|
-	|			  | LeTissier	| Other		  | Test@Test.com	 | 02380999999		| 1	  | May	| 2016	| Magic	    | Yes	   | The First name field is required.							|
+	| Firstname   | Lastname	| Othername   | Email            | Phone			| Day | Month	| Year	| DropList  | ErrorMessage												| 
+	| Matt		  | LeTissier	| Other		  | IncorrectEmail	 | 02380999999		| 1	  | May		| 2016	| Magic	    | The Email Address field contains an invalid email address.|
+	| Matt		  | LeTissier	| Other		  | Test@Test.com	 | IncorrectPhone	| 1	  | May		| 2016	| Magic	    | The value of the Phone number field is not valid.			|
+	|			  | LeTissier	| Other		  | Test@Test.com	 | 02380999999		| 1	  | May		| 2016	| Magic	    | The First name field is required.							|
 
 
 	@SIT
