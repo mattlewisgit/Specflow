@@ -353,6 +353,7 @@
       <LastGenOutput>WFFM.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Vitality.Website.IntegrationTests.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\packages\PhantomJS.2.1.1\tools\phantomjs\phantomjs.exe">
