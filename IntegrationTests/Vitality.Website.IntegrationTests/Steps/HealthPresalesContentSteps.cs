@@ -138,7 +138,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver
                 .WaitForPageLoad()
                 .Url
-                .StartsWith(pageName)
+                .Contains(pageName)
                 .ShouldBeTrue();
         }
     }
