@@ -8,7 +8,8 @@ export class ValidationService {
             "invalidEmailAddress": "Invalid email address",
             "invalidPhoneNumber": "Invalid phone number",
             "minLength": "Minimum length ${validatorValue.requiredLength}",
-            "maxLength": "Maximum length ${validatorValue.requiredLength}"
+            "maxLength": "Maximum length ${validatorValue.requiredLength}",
+            "invalidPostcode": "Invalid Postcode"
         };
 
         return config[validatorName];
@@ -30,6 +31,8 @@ export class ValidationService {
             return Validators.maxLength;
         case "ageRangeValidator":
             return this.ageRangeValidator(params);
+        case "postcodeValidator":
+            return this.postcodeValidator;
         default: return null;
         }
     }
@@ -76,5 +79,13 @@ export class ValidationService {
             return null;
         }
         return { "invalidPhoneNumber": true };
+    }
+
+    static postcodeValidator(control: any) {
+        if (control.value
+            .match(/^((([gG][iI][rR] {0,}0[aA]{2})|(([aA][sS][cC][nN]|[sS][tT][hH][lL]|[tT][dD][c‌​C][uU]|[bB][bB][nN][‌​dD]|[bB][iI][qQ][qQ]‌​|[fF][iI][qQ][qQ]|[p‌​P][cC][rR][nN]|[sS][‌​iI][qQ][qQ]|[iT][kK]‌​[cC][aA]) {0,}1[zZ]{2})|((([a-pr-uwyzA-PR-UWYZ][a-hk-yxA-HK-XY]?[0-9][‌​0-9]?)|(([a-pr-uwyzA‌​PR-UWYZ][0-9][a-hjk‌​stuwA-HJKSTUW])|([a-‌​pr-uwyzA-PR-UWYZ][a-‌​hk-yA-HK-Y][0-9][abe‌​hmnprv-yABEHMNPRV-Y]‌​))) {0,}[0-9][abd-hjlnp-uw-zABD-HJLNP-UW-Z]{2})))$/)) {
+            return null;
+        }
+        return { "invalidPostcode": true };
     }
 }
