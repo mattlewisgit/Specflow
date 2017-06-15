@@ -48,8 +48,6 @@ export class QuoteApplyFormComponent implements OnInit {
         this.quoteApplyForm = new FormGroup({});
 
         this.quoteApplyForm.valueChanges.subscribe(data => {
-
-
             // If Partner is included only allow 4 kids
             if (data.membersToInsure === "mepartnerkids") {
                 let nofKidsQuestion = this.getKidsQuestion(this.noOfKidsKey);
@@ -60,16 +58,16 @@ export class QuoteApplyFormComponent implements OnInit {
             else if (data.membersToInsure === "mekids") {
                 // If kids without partner allow 5 kids
                 let nofKidsQuestion = this.getKidsQuestion(this.noOfKidsKey);
-               // nofKidsQuestion.relatedData.push(this.kid5Option);
+                if (nofKidsQuestion.relatedData.length < 5) {
+                    nofKidsQuestion.relatedData.push({ key: this.kid5Option.key, value: this.kid5Option.value });
+                }
             };
             //// handles kids Labels
             let noOfKids: number = data.noOfKids;
-            console.log(noOfKids);
             //Do not use ===
             if (noOfKids == 1) {
                 this.noOfKidsQuestion.label = null;
                 this.kid1DobQuestion.label = this.kid1DobLabel;
-                console.log(this.kid1DobQuestion.label);
             } else {
                 this.noOfKidsQuestion.label = this.noOfKidsLabel;
                 this.kid1DobQuestion.label = null;
