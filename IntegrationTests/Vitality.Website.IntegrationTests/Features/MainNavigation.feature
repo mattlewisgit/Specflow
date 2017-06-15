@@ -75,7 +75,7 @@
     When I resize to mobile view
     And I expand the mobile footer section Get a quote
     And I click on the footer mobile link Health insurance quote
-	Then I see the https://www.vitality.co.uk/health-insurance/quote/ page
+	Then I see the webpage https://www.vitality.co.uk/health-insurance/quote/
 
 	@SIT
     Scenario: Check console logs on presales

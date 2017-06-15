@@ -107,11 +107,11 @@ this.ScenarioSetup(scenarioInfo);
 #line 16
 this.ScenarioSetup(scenarioInfo);
 #line 17
- testRunner.Given("I am on advisers /dev/sales-library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on advisers /dev/member-library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 18
  testRunner.Then("I expect the breadcrumb to show Dev", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 19
- testRunner.Then("I expect the breadcrumb to show Sales Library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the breadcrumb to show Member Library", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 20
  testRunner.And("then I click on breadcrumbs Dev", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 21

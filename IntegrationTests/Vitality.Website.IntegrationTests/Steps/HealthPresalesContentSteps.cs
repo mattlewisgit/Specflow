@@ -141,5 +141,15 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .Contains(pageName)
                 .ShouldBeTrue();
         }
+
+        [Then(@"I see the webpage (.*)")]
+        public void ThenISeeTheWebpage(string pageName)
+        {
+            WebDriver
+                .WaitForPageLoad()
+                .Url
+                .StartsWith(pageName);
+        }
+
     }
 }
