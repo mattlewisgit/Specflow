@@ -8,10 +8,12 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 
     public class QuoteApplyForm : SitecoreItem
     {
-        public string TermsAndCondition { get; set; }
+        public string ChildDobSeperatorLabel { get; set; }
+        public string ChildDobLastLabel { get; set; }
 
-        // Field Data
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<QuestionGroup> QuestionGroups { get; set; }
+
+        public string TermsAndCondition { get; set; }
     }
 }

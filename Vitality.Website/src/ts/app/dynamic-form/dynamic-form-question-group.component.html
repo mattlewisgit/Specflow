@@ -7,10 +7,13 @@
             </select>
             {{ question.label }}
         </ng-container>
-        <div *ngSwitchDefault class="question--input__text">
-            <input [formControlName]="question.key"
-                   [id]="question.key" [type]="question.controlType" placeholder="{{ question.placeholder }}" [attr.auto-scroll-to]="question.scrollTo">
-        </div>
+        <ng-container *ngSwitchDefault>
+            <div class="question--input__text" *ngIf="makeControlVisible(question.basedOnKey, question.basedOnValue)">
+                {{ question.label }}
+                <input [formControlName]="question.key"
+                       [id]="question.key" [type]="question.controlType" placeholder="{{ question.placeholder }}" [attr.auto-scroll-to]="question.scrollTo">
+            </div>
+        </ng-container>
     </ng-container>
     <div class="errorMessage" *ngIf="!isValid">{{ questionGroup.validationMessage }} </div>
 </div>
