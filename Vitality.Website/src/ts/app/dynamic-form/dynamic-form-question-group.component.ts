@@ -12,6 +12,7 @@ import { QuestionControlService }    from "./question-control.service";
 export class DynamicFormQuestionGroupComponent implements OnInit {
     @Input() questionGroup: QuestionGroup;
     @Input() form: FormGroup;
+    @Input()
     noOfKidsKey = "noOfKids";
     membersToInsureKey = "membersToInsure";
     kid1DateOfBirthKey = "kid1DateOfBirth";
