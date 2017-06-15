@@ -72,14 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Feemaxima Searching for code")]
+        [Xunit.FactAttribute(DisplayName="Feemaxima Searching for code", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "Feemaxima")]
         [Xunit.TraitAttribute("Description", "Feemaxima Searching for code")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void FeemaximaSearchingForCode()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Feemaxima Searching for code", new string[] {
-                        "SIT"});
+                        "ignore"});
 #line 8
  this.ScenarioSetup(scenarioInfo);
 #line 9
@@ -96,14 +95,13 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Feemaxima Searching for Chapters - Breast")]
+        [Xunit.FactAttribute(DisplayName="Feemaxima Searching for Chapters - Breast", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "Feemaxima")]
         [Xunit.TraitAttribute("Description", "Feemaxima Searching for Chapters - Breast")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void FeemaximaSearchingForChapters_Breast()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Feemaxima Searching for Chapters - Breast", new string[] {
-                        "SIT"});
+                        "ignore"});
 #line 16
  this.ScenarioSetup(scenarioInfo);
 #line 17
@@ -123,14 +121,13 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Feemaxima Clicking - Chapter 1, Chapter 1.1")]
+        [Xunit.FactAttribute(DisplayName="Feemaxima Clicking - Chapter 1, Chapter 1.1", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "Feemaxima")]
         [Xunit.TraitAttribute("Description", "Feemaxima Clicking - Chapter 1, Chapter 1.1")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void FeemaximaClicking_Chapter1Chapter1_1()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Feemaxima Clicking - Chapter 1, Chapter 1.1", new string[] {
-                        "SIT"});
+                        "ignore"});
 #line 25
  this.ScenarioSetup(scenarioInfo);
 #line 26
@@ -150,14 +147,13 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Feemaxima Clicking - Chapter 2, Elbow")]
+        [Xunit.FactAttribute(DisplayName="Feemaxima Clicking - Chapter 2, Elbow", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "Feemaxima")]
         [Xunit.TraitAttribute("Description", "Feemaxima Clicking - Chapter 2, Elbow")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void FeemaximaClicking_Chapter2Elbow()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Feemaxima Clicking - Chapter 2, Elbow", new string[] {
-                        "SIT"});
+                        "ignore"});
 #line 34
  this.ScenarioSetup(scenarioInfo);
 #line 35
@@ -174,14 +170,13 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Feemaxima Clicking - Abdomen (ExcL. Urinary & Reproductive Organs), Chapter 1.7")]
+        [Xunit.FactAttribute(DisplayName="Feemaxima Clicking - Abdomen (ExcL. Urinary & Reproductive Organs), Chapter 1.7", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "Feemaxima")]
         [Xunit.TraitAttribute("Description", "Feemaxima Clicking - Abdomen (ExcL. Urinary & Reproductive Organs), Chapter 1.7")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void FeemaximaClicking_AbdomenExcL_UrinaryReproductiveOrgansChapter1_7()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Feemaxima Clicking - Abdomen (ExcL. Urinary & Reproductive Organs), Chapter 1.7", new string[] {
-                        "SIT"});
+                        "ignore"});
 #line 42
  this.ScenarioSetup(scenarioInfo);
 #line 43
@@ -204,14 +199,13 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Feemaxima Clicking - Breast, reconstruction of Breast")]
+        [Xunit.FactAttribute(DisplayName="Feemaxima Clicking - Breast, reconstruction of Breast", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "Feemaxima")]
         [Xunit.TraitAttribute("Description", "Feemaxima Clicking - Breast, reconstruction of Breast")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void FeemaximaClicking_BreastReconstructionOfBreast()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Feemaxima Clicking - Breast, reconstruction of Breast", new string[] {
-                        "SIT"});
+                        "ignore"});
 #line 52
  this.ScenarioSetup(scenarioInfo);
 #line 53

@@ -45,18 +45,16 @@
     Given I am on presales /
     When I resize to mobile view
     And I click on the Login (small) button
-    Then I expect the Member Zone button to be visible
-    And I expect the Health Advisers button to be visible
-    And I expect the Life Advisers button to be visible
+	Then I expect the Navigation Login button Member Zone to be visible
+	And I expect the Navigation Login button Health Advisers to be visible
 
 	@SIT
     Scenario: Check Member Zone login components show in Full-screen view
     Given I am on presales /
     When I resize to full-screen view
     And I click on the Login (large) button
-    Then I expect the Member Zone button to be visible
-    And I expect the Health Advisers button to be visible
-    And I expect the Life Advisers button to be visible
+	Then I expect the Navigation Login button Member Zone to be visible
+	And I expect the Navigation Login button Health Advisers to be visible
 
 	@SIT
     Scenario: Resize home page from Mobile view to Full-screen and check that footer visible

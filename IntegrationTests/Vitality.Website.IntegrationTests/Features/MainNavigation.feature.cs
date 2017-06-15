@@ -214,11 +214,9 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 47
     testRunner.And("I click on the Login (small) button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 48
-    testRunner.Then("I expect the Member Zone button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the Navigation Login button Member Zone to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 49
-    testRunner.And("I expect the Health Advisers button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 50
-    testRunner.And("I expect the Life Advisers button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I expect the Navigation Login button Health Advisers to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -231,20 +229,18 @@ namespace Vitality.Website.IntegrationTests.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Member Zone login components show in Full-screen view", new string[] {
                         "SIT"});
-#line 53
+#line 52
     this.ScenarioSetup(scenarioInfo);
-#line 54
+#line 53
     testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 55
+#line 54
     testRunner.When("I resize to full-screen view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
+#line 55
     testRunner.And("I click on the Login (large) button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 56
+ testRunner.Then("I expect the Navigation Login button Member Zone to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 57
-    testRunner.Then("I expect the Member Zone button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 58
-    testRunner.And("I expect the Health Advisers button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 59
-    testRunner.And("I expect the Life Advisers button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I expect the Navigation Login button Health Advisers to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -257,17 +253,17 @@ namespace Vitality.Website.IntegrationTests.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Resize home page from Mobile view to Full-screen and check that footer visible", new string[] {
                         "SIT"});
-#line 62
+#line 60
     this.ScenarioSetup(scenarioInfo);
-#line 63
+#line 61
     testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 64
+#line 62
     testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 65
+#line 63
     testRunner.And("I resize to full-screen view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 66
+#line 64
     testRunner.Then("I expect the Health insurance quote button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 67
+#line 65
     testRunner.And("I expect the Life insurance quote button to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -281,11 +277,11 @@ namespace Vitality.Website.IntegrationTests.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("resize home page Mobile view", new string[] {
                         "SIT"});
-#line 70
+#line 68
     this.ScenarioSetup(scenarioInfo);
-#line 71
+#line 69
     testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 72
+#line 70
     testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -299,17 +295,17 @@ namespace Vitality.Website.IntegrationTests.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Footer links work in Mobile view", new string[] {
                         "SIT"});
-#line 75
+#line 73
     this.ScenarioSetup(scenarioInfo);
-#line 76
+#line 74
     testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 77
+#line 75
     testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 78
+#line 76
     testRunner.And("I expand the mobile footer section Get a quote", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 79
+#line 77
     testRunner.And("I click on the footer mobile link Health insurance quote", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 80
+#line 78
  testRunner.Then("I see the https://www.vitality.co.uk/health-insurance/quote/ page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -323,11 +319,11 @@ namespace Vitality.Website.IntegrationTests.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check console logs on presales", new string[] {
                         "SIT"});
-#line 83
+#line 81
     this.ScenarioSetup(scenarioInfo);
-#line 84
+#line 82
     testRunner.Given("I am on presales /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 85
+#line 83
  testRunner.Then("I should not see any console logs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -341,11 +337,11 @@ namespace Vitality.Website.IntegrationTests.Features
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check console logs on advisers", new string[] {
                         "SIT"});
-#line 88
+#line 86
     this.ScenarioSetup(scenarioInfo);
-#line 89
+#line 87
     testRunner.Given("I am on advisers /dev", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 90
+#line 88
  testRunner.Then("I should not see any console logs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

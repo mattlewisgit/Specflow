@@ -120,32 +120,16 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .Click();
         }
 
-        [Then(@"I expect the Member Zone button to be visible")]
-        public void ThenIExpectTheMemberZoneButtonToBeVisible()
+
+        [Then(@"I expect the Navigation Login button (.*) to be visible")]
+        public void ThenIExpectTheNavigationLoginButtonToBeVisible(string Buttonname)
         {
             WebDriver
-                .WaitForElement(By.LinkText("Member Zone"))
+                .WaitForElement(By.LinkText(Buttonname))
                 .Displayed
                 .ShouldBeTrue();
         }
 
-        [Then(@"I expect the Health Advisers button to be visible")]
-        public void ThenIExpectTheHealthAdvisersButtonToBeVisible()
-        {
-            WebDriver
-                .FindElement(By.LinkText("Health Advisers"))
-                .Displayed
-                .ShouldBeTrue();
-        }
-
-        [Then(@"I expect the Life Advisers button to be visible")]
-        public void ThenIExpectTheLifeAdvisersButtonToBeVisible()
-        {
-            WebDriver
-                .WaitForElement(By.LinkText("Life Advisers"))
-                .Displayed
-                .ShouldBeTrue();
-        }
 
         [When(@"I hover over (.*) and click on (.*)")]
         public void WhenIHoverOver(string hoverLink, string clickLink)
