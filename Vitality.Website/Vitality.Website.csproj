@@ -381,6 +381,7 @@
     <TypeScriptCompile Include="src\ts\app\dynamic-form\question-control.service.ts" />
     <TypeScriptCompile Include="src\ts\app\models\extradataitem.ts" />
     <TypeScriptCompile Include="src\ts\app\quoteapply-form-app.module.ts" />
+    <TypeScriptCompile Include="src\ts\app\services\postcode.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\quoteapply.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\validation.service.ts" />
     <TypeScriptCompile Include="src\ts\app\vacancydetails-app.module.ts" />

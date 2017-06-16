@@ -7,6 +7,7 @@ export class Question<T>{
     label: string;
     placeholder: string;
     validators: FieldValidator[];
+    onValueChange : any;
     controlType: string;
     relatedData: { key: string, value: string }[] = [];
 }
