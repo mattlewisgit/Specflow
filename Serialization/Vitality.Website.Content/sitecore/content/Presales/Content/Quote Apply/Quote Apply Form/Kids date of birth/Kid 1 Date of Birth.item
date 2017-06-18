@@ -13,7 +13,7 @@ created: 20170613T105518Z
 ----version----
 language: en
 version: 1
-revision: 04bb8cc4-6ce8-43bf-ae60-fe859f6d3a45
+revision: ebc76c87-a5ab-486c-ba44-c9358f356850
 
 ----field----
 field: {365CBF3B-BCA1-4C43-A070-68B9FD55DAE2}
@@ -30,6 +30,13 @@ content-length: 38
 
 {85F5E2CD-877A-45A3-B9B2-BB53B36EECD3}
 ----field----
+field: {FB8609FA-B563-4BC8-A82F-492875A9BA40}
+name: Label
+key: label
+content-length: 16
+
+Date of birth is
+----field----
 field: {AF4DB38F-344A-443B-B34C-FB7EB529AAB7}
 name: Placeholder
 key: placeholder
@@ -38,11 +45,11 @@ content-length: 10
 DD/MM/YYYY
 ----field----
 field: {98D8AEE3-52A2-4CCE-9654-16DDD64735BD}
-name: Validations
-key: validations
-content-length: 77
+name: Validators
+key: validators
+content-length: 116
 
-{098E2EE5-FD37-46AA-A15F-4CF811C9E4D0}|{0DA5BF60-C1F0-4910-AB4B-888F0B4C1615}
+{F9D8696B-D818-4BD7-AAA3-1F270F7EF184}|{E38F5FF8-A3FB-4A37-ACFD-F80521B9EC95}|{AFB39CB0-3F0A-40E5-85B3-8D07E036342C}
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -56,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-04bb8cc4-6ce8-43bf-ae60-fe859f6d3a45
+ebc76c87-a5ab-486c-ba44-c9358f356850
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170613T124603Z
+20170615T121304Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
