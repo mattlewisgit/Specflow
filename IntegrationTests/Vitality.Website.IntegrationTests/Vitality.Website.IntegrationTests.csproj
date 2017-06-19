@@ -80,8 +80,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Vitality.Extensions.Selenium, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Vitality.Extensions.Selenium.1.0.0\lib\net452\Vitality.Extensions.Selenium.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Vitality.Extensions.Selenium.1.0.5\lib\net452\Vitality.Extensions.Selenium.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Selenium.WebDriver.3.0.1\lib\net40\WebDriver.dll</HintPath>
@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Features\ArticleIndex.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -172,11 +173,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Careers.feature</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Drivers\DriverFactory.cs" />
     <Compile Include="Extensions\AssertionExtensions.cs" />
-    <Compile Include="Extensions\IWebDriverExtensions.cs" />
-    <Compile Include="Extensions\IWebElementExtensions.cs" />
     <Compile Include="Features\Accordion.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -365,7 +363,9 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>WFFM.feature.cs</LastGenOutput>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\packages\PhantomJS.2.1.1\tools\phantomjs\phantomjs.exe">
