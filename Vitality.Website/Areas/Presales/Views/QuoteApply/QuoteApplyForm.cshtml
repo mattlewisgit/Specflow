@@ -12,7 +12,6 @@
         @if (Sitecore.Context.PageMode.IsExperienceEditor)
         {
             <div class="question">
-                @Editable(m => m.TermsAndCondition)
                 <ul>
                     @foreach (var questionGroups in Model.QuestionGroups)
                     {

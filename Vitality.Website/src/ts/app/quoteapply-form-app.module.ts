@@ -6,6 +6,7 @@ import { HttpModule }    from "@angular/http";
 import { AutoScrollTo } from "./directives/auto-scroll-to.directive";
 import { QuoteApplyFormComponent }  from "./components/quoteapply-form.component";
 import { QuoteApplyService }  from "./services/quoteapply.service";
+import { PostcodeService }  from "./services/postcode.service";
 import { QuestionControlService }  from "./dynamic-form/question-control.service";
 import { DynamicFormQuestionGroupComponent }         from "./dynamic-form/dynamic-form-question-group.component";
 
@@ -18,7 +19,7 @@ import { WindowRef }  from "./components/windowref";
         HttpModule
     ],
     declarations: [QuoteApplyFormComponent, AutoScrollTo, DynamicFormQuestionGroupComponent],
-    providers: [QuoteApplyService, QuestionControlService, WindowRef],
+    providers: [PostcodeService, QuoteApplyService, QuestionControlService, WindowRef],
     bootstrap: [QuoteApplyFormComponent]
 })
 export class QuoteApplyFormAppModule { }

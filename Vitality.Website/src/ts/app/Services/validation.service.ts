@@ -31,6 +31,8 @@ export class ValidationService {
             return Validators.maxLength;
         case "ageRangeValidator":
             return this.ageRangeValidator(params);
+        case "futureDateValidator":
+            return this.futureDateValidator(params);
         case "postcodeValidator":
             return this.postcodeValidator;
         default: return null;
@@ -62,6 +64,23 @@ export class ValidationService {
                 }
             }
             return { "invalidAgeRange": true };
+        }
+    }
+
+    static futureDateValidator(options: any) {
+        return (control: any) => {
+            if (this.dateValidator(control) == null) {
+                const dateParts = control.value.split("/");
+                const futureDate = new Date(dateParts[2], dateParts[1], dateParts[0]);
+                const now = new Date();
+                if (options.minDaysAhead) {
+                    now.setDate(now.getDate() +  parseInt(options.minDaysAhead));
+                }
+                if (futureDate.getDate() >= now.getDate() ) {
+                    return null;
+                }
+            }
+            return { "invalidFutureDate": true };
         }
     }
 

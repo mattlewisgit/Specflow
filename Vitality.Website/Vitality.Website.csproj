@@ -381,6 +381,7 @@
     <TypeScriptCompile Include="src\ts\app\dynamic-form\question-control.service.ts" />
     <TypeScriptCompile Include="src\ts\app\models\extradataitem.ts" />
     <TypeScriptCompile Include="src\ts\app\quoteapply-form-app.module.ts" />
+    <TypeScriptCompile Include="src\ts\app\services\postcode.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\quoteapply.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\validation.service.ts" />
     <TypeScriptCompile Include="src\ts\app\vacancydetails-app.module.ts" />
@@ -3927,6 +3928,7 @@
   <ItemGroup>
     <Compile Include="Areas\Global\Models\FieldValidator.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\FieldValidatorViewModel.cs" />
+    <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />
     <Compile Include="Pipelines\AppStartInitializer.cs" />
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
@@ -4047,7 +4049,6 @@
     <Compile Include="Areas\Presales\RenderingTemplates\PartnerHeroRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\RewardsLeaderRendering.cs" />
     <Compile Include="Areas\Presales\RenderingTemplates\SummaryComponentRendering.cs" />
-    <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />
     <Compile Include="Areas\Presales\Services\PresalesBslService.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\CookieSettings.cs" />
     <Compile Include="Areas\Presales\SettingsTemplates\FeedSettings.cs" />
