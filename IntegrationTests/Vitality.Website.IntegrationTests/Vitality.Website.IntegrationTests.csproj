@@ -79,9 +79,8 @@
       <HintPath>..\..\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Vitality.Extensions.Selenium, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Vitality.Extensions.Selenium.1.0.0\lib\net452\Vitality.Extensions.Selenium.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Vitality.Extensions.Selenium">
+      <HintPath>..\..\packages\Vitality.Extensions.Selenium.1.0.6\lib\net452\Vitality.Extensions.Selenium.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Selenium.WebDriver.3.0.1\lib\net40\WebDriver.dll</HintPath>
@@ -119,6 +118,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PartnerHero.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\WFFM.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WFFM.feature</DependentUpon>
     </Compile>
     <Compile Include="Steps\ArticleIndexSteps.cs" />
     <Compile Include="Steps\CareersSteps.cs" />
@@ -223,11 +227,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Tabbed.feature</DependentUpon>
-    </Compile>
-    <Compile Include="Features\WFFM.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>WFFM.feature</DependentUpon>
     </Compile>
     <Compile Include="Steps\AccordionSteps.cs" />
     <Compile Include="Steps\BaseSteps.cs" />
