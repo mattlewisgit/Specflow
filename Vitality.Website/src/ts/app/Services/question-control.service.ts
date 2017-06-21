@@ -2,8 +2,8 @@
 
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { ValidationService } from "../services/validation.service";
-import {FieldValidator } from "./field-validator";
-import {Question } from "./question";
+import {FieldValidator } from "../models/field-validator";
+import {Question } from "../models/question";
 
 @Injectable()
 export class QuestionControlService {

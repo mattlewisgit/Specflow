@@ -1,15 +1,15 @@
 import { Component, Inject, OnInit, Input }      from "@angular/core";
 import { FormArray, FormBuilder, FormGroup } from "@angular/forms";
 
-import { QuoteApplyService } from "../services/quoteapply.service";
-import { QuestionGroup }     from "../dynamic-form/question-group";
-import { Question }     from "../dynamic-form/question";
-import { QuestionControlService }    from "../dynamic-form/question-control.service";
-import { WindowRef } from "./windowref";
+import { QuoteApplyService } from "../../services/quoteapply.service";
+import { QuestionGroup }     from "../../models/question-group";
+import { Question }     from "../../models/question";
+import { QuestionControlService }    from "../../services/question-control.service";
+import { WindowRef } from "./../windowref";
 
 @Component({
     selector: "quoteapply-form",
-    templateUrl: "./js/app/components/quoteapply-formtemplate.html"
+    templateUrl: "./js/app/components/quoteapply/quoteapply-form.component.html"
 })
 export class QuoteApplyFormComponent implements OnInit {
     quoteApplyForm: FormGroup;
@@ -66,19 +66,20 @@ export class QuoteApplyFormComponent implements OnInit {
                     value: this.child5Option.value
                 });
             };
+
             //// handles children Labels
-            let noOfchildren: number = data.noOfchildren;
+            let noOfChildren: number = data.noOfChildren;
             //Do not use ===
-            if (noOfchildren == 1) {
+            if (noOfChildren == 1) {
                 this.noOfChildrenQuestion.label = null;
                 this.child1DobQuestion.label = this.child1DobLabel;
             } else {
                 this.noOfChildrenQuestion.label = this.noOfChildrenLabel;
                 this.child1DobQuestion.label = null;
             }
-            for (let i = 2; i <= data.noOfchildren; i++) {
-                let currentchildDobQuestion = this.getQuestion(`child${i}DateOfBirth`, this.childrenQuestionGroup);
-                if (i == noOfchildren) {
+            for (let i = 2; i <= noOfChildren; i++) {
+                let currentchildDobQuestion = this.getQuestion(`child${i}Dob`, this.childrenQuestionGroup);
+                if (i == noOfChildren) {
                     currentchildDobQuestion.label = this.childDobLastLabel;
                 } else {
                     currentchildDobQuestion.label = this.childDobSeperatorLabel;

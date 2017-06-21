@@ -1,15 +1,15 @@
 ﻿import { Component, Input, OnInit } from "@angular/core";
 import { FormGroup }        from "@angular/forms";
 
-import { Question }     from "./question";
-import { QuestionGroup }     from "./question-group";
-import { QuestionControlService }    from "./question-control.service";
+import { QuestionGroup }     from "../../models/question-group";
+import { Question }     from "../../models/question";
+import { QuestionControlService }    from "../../services/question-control.service";
 
 @Component({
-    selector: "df-question-group",
-    templateUrl: "./js/app/dynamic-form/dynamic-form-question-group.component.html"
+    selector: "question-group",
+    templateUrl: "./js/app/components/quoteapply/question-group.component.html"
 })
-export class DynamicFormQuestionGroupComponent implements OnInit {
+export class QuestionGroupComponent implements OnInit {
     @Input() questionGroup: QuestionGroup;
     @Input() form: FormGroup;
 
