@@ -60,7 +60,7 @@ export class ValidationService {
         return (control: any) => {
             if (this.dateValidator(control) == null) {
                 const dateParts = control.value.split("/");
-                const birthDate = new Date(dateParts[2], dateParts[1], dateParts[0]);
+                const birthDate = new Date(dateParts[2], dateParts[1]-1, dateParts[0]);
                 const now = new Date();
                 let years = (now.getFullYear() - birthDate.getFullYear());
 
