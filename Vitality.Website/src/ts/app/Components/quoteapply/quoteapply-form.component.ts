@@ -102,7 +102,7 @@ export class QuoteApplyFormComponent implements OnInit {
             childDobToAdd.value = null;
             childDobToAdd.basedOnKey = this.noOfChildrenKey;
             childDobToAdd.basedOnValue = i;
-            childDobToAdd.key = `child${i}DateOfBirth`;
+            childDobToAdd.key = `child${i}Dob`;
             childDobToAdd.label = ",";
             childDobToAdd.placeholder = this.child1DobQuestion.placeholder;
             childDobToAdd.validators = this.child1DobQuestion.validators;
