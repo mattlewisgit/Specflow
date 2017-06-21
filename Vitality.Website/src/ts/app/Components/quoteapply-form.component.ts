@@ -55,16 +55,16 @@ export class QuoteApplyFormComponent implements OnInit {
 
         this.quoteApplyForm.valueChanges.subscribe(data => {
             // If Partner is included only allow 4 children
-            if (data.membersToInsure === "mepartnerchildren") {
+            if (data.membersToInsure === "mepartnerchildren" && this.noOfChildrenQuestion.relatedData.length === 5) {
                 let lastItemIndex = this.noOfChildrenQuestion.relatedData.length - 1;
                 this.child5Option = this.noOfChildrenQuestion.relatedData[lastItemIndex];
                 this.noOfChildrenQuestion.relatedData.pop();
             }
-            else if (data.membersToInsure === "mechildren") {
-                // If children without partner allow 5 children
-                if (this.noOfChildrenQuestion.relatedData.length < 5) {
-                    this.noOfChildrenQuestion.relatedData.push({ key: this.child5Option.key, value: this.child5Option.value });
-                }
+            else if (data.membersToInsure === "mechildren" && this.noOfChildrenQuestion.relatedData.length < 5) {
+                this.noOfChildrenQuestion.relatedData.push({
+                    key: this.child5Option.key,
+                    value: this.child5Option.value
+                });
             };
             //// handles children Labels
             let noOfchildren: number = data.noOfchildren;
