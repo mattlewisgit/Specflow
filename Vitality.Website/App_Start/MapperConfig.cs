@@ -64,6 +64,9 @@ namespace Vitality.Website.App_Start
                             src => src.RelatedData.Select(i => new KeyValuePair<string, string>(i.Name, i.Value))));
 
             config.CreateMap<QuestionGroup, QuestionGroupViewModel>()
+                 .ForMember(
+                    dest => dest.Key,
+                    opt => opt.MapFrom(src => src.Key.Value))
                 .ForMember(
                     dest => dest.BasedOnKey,
                     opt => opt.MapFrom(src => src.BasedOnKey.Value))

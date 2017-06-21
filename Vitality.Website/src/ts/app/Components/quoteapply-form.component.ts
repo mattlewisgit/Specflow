@@ -21,6 +21,7 @@ export class QuoteApplyFormComponent implements OnInit {
     kid5Option: any;
     membersToInsureKey = "membersToInsure";
     noOfKidsKey = "noOfKids";
+    kid1DateOfBirthKey = "kid1DateOfBirth";
     noOfKidsQuestion: Question<any>;
     noOfKidsLabel: string;
     kid1DobQuestion: Question<any>;
@@ -92,6 +93,28 @@ export class QuoteApplyFormComponent implements OnInit {
             }
         }
         return null;
+    }
+
+    getKidsQuestionGroup(basedOnKey: string) {
+    }
+
+    addChildrenBirthDayQuestions(): void {
+        let kid1DobQuestion = this.getKidsQuestion(this.kid1DateOfBirthKey);
+            if (kid1DobQuestion != null) {
+                for (let i = 2; i < 6; i++) {
+                    let kidDobToAdd = Object.apply({}, kid1DobQuestion);
+                    kidDobToAdd.value = null;
+                    kidDobToAdd.basedOnKey = this.noOfKidsKey;
+                    kidDobToAdd.basedOnValue = i;
+                    kidDobToAdd.key = `kid${i}DateOfBirth`;
+                    kidDobToAdd.label = ",";
+                    kidDobToAdd.placeholder = kid1DobQuestion.placeholder;
+                    kidDobToAdd.validators = kid1DobQuestion.validators;
+                    kidDobToAdd.controlType = kid1DobQuestion.controlType;
+                    this.questionGroup.questions.push(kidDobToAdd);
+                }
+            }
+        }
     }
 
     apply(isValid: boolean): void {
