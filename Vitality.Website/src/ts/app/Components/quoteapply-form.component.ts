@@ -18,14 +18,15 @@ export class QuoteApplyFormComponent implements OnInit {
     childDobSeperatorLabel: string;
     questionGroups: QuestionGroup[];
     submitted: boolean;
-    kid5Option: any;
-    membersToInsureKey = "membersToInsure";
-    noOfKidsKey = "noOfKids";
-    kid1DateOfBirthKey = "kid1DateOfBirth";
-    noOfKidsQuestion: Question<any>;
-    noOfKidsLabel: string;
-    kid1DobQuestion: Question<any>;
-    kid1DobLabel: string;
+    child5Option: any;
+    childrenQuestionGroupKey = "childrenDobGroup";
+    noOfChildrenKey = "noOfChildren";
+    child1DobKey = "child1Dob";
+    childrenQuestionGroup : QuestionGroup;
+    noOfChildrenQuestion: Question<any>;
+    noOfChildrenLabel: string;
+    child1DobQuestion: Question<any>;
+    child1DobLabel: string;
 
     constructor(
         private fb: FormBuilder,
@@ -39,86 +40,78 @@ export class QuoteApplyFormComponent implements OnInit {
         this.childDobLastLabel = this.winRef.nativeWindow.angularData.childDobLastLabel;
         this.childDobSeperatorLabel = this.winRef.nativeWindow.angularData.childDobSeperatorLabel;
 
-        this.noOfKidsQuestion = this.getKidsQuestion(this.noOfKidsKey);
-        this.noOfKidsLabel = this.noOfKidsQuestion.label;
-        this.kid1DobQuestion = this.getKidsQuestion("kid1DateOfBirth");
-        this.kid1DobLabel = this.kid1DobQuestion.label;
-        this.noOfKidsQuestion.label = "";
+        this.childrenQuestionGroup = this.getQuestionGroup(this.childrenQuestionGroupKey);
+        this.noOfChildrenQuestion = this.getQuestion(this.noOfChildrenKey, this.childrenQuestionGroup);
+        this.noOfChildrenLabel = this.noOfChildrenQuestion.label;
+        this.child1DobQuestion = this.getQuestion(this.child1DobKey, this.childrenQuestionGroup);
+        this.child1DobLabel = this.child1DobQuestion.label;
 
-        //Make no of kid label to  empty
+        this.addChildrenDobQuestions();
+
+        //Make no of child label to  empty
+        this.noOfChildrenQuestion.label = "";
+
         this.quoteApplyForm = new FormGroup({});
 
         this.quoteApplyForm.valueChanges.subscribe(data => {
-            // If Partner is included only allow 4 kids
-            if (data.membersToInsure === "mepartnerkids") {
-                let nofKidsQuestion = this.getKidsQuestion(this.noOfKidsKey);
-                let lastItemIndex = nofKidsQuestion.relatedData.length - 1;
-                this.kid5Option = nofKidsQuestion.relatedData[lastItemIndex];
-                nofKidsQuestion.relatedData.pop();
+            // If Partner is included only allow 4 children
+            if (data.membersToInsure === "mepartnerchildren") {
+                let lastItemIndex = this.noOfChildrenQuestion.relatedData.length - 1;
+                this.child5Option = this.noOfChildrenQuestion.relatedData[lastItemIndex];
+                this.noOfChildrenQuestion.relatedData.pop();
             }
-            else if (data.membersToInsure === "mekids") {
-                // If kids without partner allow 5 kids
-                let nofKidsQuestion = this.getKidsQuestion(this.noOfKidsKey);
-                if (nofKidsQuestion.relatedData.length < 5) {
-                    nofKidsQuestion.relatedData.push({ key: this.kid5Option.key, value: this.kid5Option.value });
+            else if (data.membersToInsure === "mechildren") {
+                // If children without partner allow 5 children
+                if (this.noOfChildrenQuestion.relatedData.length < 5) {
+                    this.noOfChildrenQuestion.relatedData.push({ key: this.child5Option.key, value: this.child5Option.value });
                 }
             };
-            //// handles kids Labels
-            let noOfKids: number = data.noOfKids;
+            //// handles children Labels
+            let noOfchildren: number = data.noOfchildren;
             //Do not use ===
-            if (noOfKids == 1) {
-                this.noOfKidsQuestion.label = null;
-                this.kid1DobQuestion.label = this.kid1DobLabel;
+            if (noOfchildren == 1) {
+                this.noOfChildrenQuestion.label = null;
+                this.child1DobQuestion.label = this.child1DobLabel;
             } else {
-                this.noOfKidsQuestion.label = this.noOfKidsLabel;
-                this.kid1DobQuestion.label = null;
+                this.noOfChildrenQuestion.label = this.noOfChildrenLabel;
+                this.child1DobQuestion.label = null;
             }
-            for (let i = 2; i <= data.noOfKids; i++) {
-                let currentKidDobQuestion = this.getKidsQuestion(`kid${i}DateOfBirth`);
-                if (i == noOfKids) {
-                    currentKidDobQuestion.label = this.childDobLastLabel;
+            for (let i = 2; i <= data.noOfchildren; i++) {
+                let currentchildDobQuestion = this.getQuestion(`child${i}DateOfBirth`, this.childrenQuestionGroup);
+                if (i == noOfchildren) {
+                    currentchildDobQuestion.label = this.childDobLastLabel;
                 } else {
-                    currentKidDobQuestion.label = this.childDobSeperatorLabel;
+                    currentchildDobQuestion.label = this.childDobSeperatorLabel;
                 }
             }
         });
     }
 
-    getKidsQuestion(key :string): Question<any> {
-        let kidsDobQuestionGroup = this.questionGroups.filter(x => x.basedOnKey === this.membersToInsureKey);
-        for (let entry of kidsDobQuestionGroup) {
-            let noOfKidsQuestion = entry.questions.filter(x => x.key === key)[0];
-            if (noOfKidsQuestion != null) {
-                return noOfKidsQuestion;
-            }
-        }
-        return null;
+    getQuestion(key: string, questionGroup: QuestionGroup): Question<any> {
+        return questionGroup.questions.filter(x => x.key === key)[0];
     }
 
-    getKidsQuestionGroup(basedOnKey: string) {
+    getQuestionGroup(key: string) {
+        return this.questionGroups.filter(x => x.key === key)[0];
     }
 
-    addChildrenBirthDayQuestions(): void {
-        let kid1DobQuestion = this.getKidsQuestion(this.kid1DateOfBirthKey);
-            if (kid1DobQuestion != null) {
-                for (let i = 2; i < 6; i++) {
-                    let kidDobToAdd = Object.apply({}, kid1DobQuestion);
-                    kidDobToAdd.value = null;
-                    kidDobToAdd.basedOnKey = this.noOfKidsKey;
-                    kidDobToAdd.basedOnValue = i;
-                    kidDobToAdd.key = `kid${i}DateOfBirth`;
-                    kidDobToAdd.label = ",";
-                    kidDobToAdd.placeholder = kid1DobQuestion.placeholder;
-                    kidDobToAdd.validators = kid1DobQuestion.validators;
-                    kidDobToAdd.controlType = kid1DobQuestion.controlType;
-                    this.questionGroup.questions.push(kidDobToAdd);
-                }
-            }
+    addChildrenDobQuestions(): void {
+        for (let i = 2; i < 6; i++) {
+            let childDobToAdd = Object.apply({}, this.child1DobQuestion);
+            childDobToAdd.value = null;
+            childDobToAdd.basedOnKey = this.noOfChildrenKey;
+            childDobToAdd.basedOnValue = i;
+            childDobToAdd.key = `child${i}DateOfBirth`;
+            childDobToAdd.label = ",";
+            childDobToAdd.placeholder = this.child1DobQuestion.placeholder;
+            childDobToAdd.validators = this.child1DobQuestion.validators;
+            childDobToAdd.controlType = this.child1DobQuestion.controlType;
+            this.childrenQuestionGroup.questions.push(childDobToAdd);
         }
     }
 
     apply(isValid: boolean): void {
-        //Do it only when isvalid later
+        //Do it only when isvalid
         this.submitted = true;
         this.payload = JSON.stringify(this.quoteApplyForm.value);
     }

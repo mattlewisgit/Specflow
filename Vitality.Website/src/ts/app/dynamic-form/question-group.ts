@@ -1,6 +1,7 @@
 ﻿import {Question } from "./question";
 
 export class QuestionGroup {
+    key: string;
     label: string;
     basedOnKey: string;
     basedOnValues: string[];
