@@ -2,9 +2,9 @@
 version: 1
 id: {03D8DE8A-E46B-4D06-A263-F8E6BB5AC545}
 database: master
-path: /sitecore/content/Presales/Configuration/Quote Apply Field Keys/Kid 1 Date Of Birth
+path: /sitecore/content/Presales/Configuration/Quote Apply Field Keys/Child 1 Date Of Birth
 parent: {55A7FBBD-D36E-4BA8-862D-DC58B4943080}
-name: Kid 1 Date Of Birth
+name: Child 1 Date Of Birth
 master: {00000000-0000-0000-0000-000000000000}
 template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
 templatekey: Key Value Pair
@@ -13,15 +13,15 @@ created: 20170613T124028Z
 ----version----
 language: en
 version: 1
-revision: 711bb686-b3c9-4c96-8396-d79ac1a8a8c1
+revision: 13f42ede-6a26-4e0c-aeca-9e4a885a27a8
 
 ----field----
 field: {C01F61CF-8603-4C48-A96A-EFDDDFEB52ED}
 name: Value
 key: value
-content-length: 15
+content-length: 9
 
-kid1DateOfBirth
+child1Dob
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-711bb686-b3c9-4c96-8396-d79ac1a8a8c1
+13f42ede-6a26-4e0c-aeca-9e4a885a27a8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170613T124036Z
+20170621T092720Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -2,9 +2,9 @@
 version: 1
 id: {F7136AD4-B32B-4B9C-91D1-A544BAF7C3D1}
 database: master
-path: /sitecore/content/Presales/Configuration/Quote Apply Field Keys/Kids Dob Group
+path: /sitecore/content/Presales/Configuration/Quote Apply Field Keys/Children Date of Birth Group
 parent: {55A7FBBD-D36E-4BA8-862D-DC58B4943080}
-name: Kids Dob Group
+name: Children Date of Birth Group
 master: {00000000-0000-0000-0000-000000000000}
 template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
 templatekey: Key Value Pair
@@ -13,15 +13,15 @@ created: 20170620T150209Z
 ----version----
 language: en
 version: 1
-revision: c17d98bc-69d7-4e27-bb35-cfc8e0790788
+revision: 59d16503-94ff-4c0a-a9dc-5f9f7b0af458
 
 ----field----
 field: {C01F61CF-8603-4C48-A96A-EFDDDFEB52ED}
 name: Value
 key: value
-content-length: 12
+content-length: 16
 
-kidsDobGroup
+childrenDobGroup
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c17d98bc-69d7-4e27-bb35-cfc8e0790788
+59d16503-94ff-4c0a-a9dc-5f9f7b0af458
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170620T150221Z
+20170621T092809Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
