@@ -38,14 +38,12 @@ export class QuoteApplyFormComponent implements OnInit {
         this.noOfChildrenQuestion = this.getQuestion(this.noOfChildrenKey, this.childrenQuestionGroup);
         this.child1DobQuestion = this.getQuestion(this.child1DobKey, this.childrenQuestionGroup);
 
-        this.addChildrenDobQuestions();
-
         this.dobControlService.initialize({
-            childDobLastLabel: this.winRef.nativeWindow.angularData.childDobLastLabel,
-            childDobSeperatorLabel: this.winRef.nativeWindow.angularData.childDobSeperatorLabel,
+            childrenQuestionGroup: this.childrenQuestionGroup,
             noOfChildrenQuestion: this.noOfChildrenQuestion,
-            child1DobQuestion: this.child1DobQuestion
-
+            child1DobQuestion: this.child1DobQuestion,
+            childDobLastLabel: this.winRef.nativeWindow.angularData.childDobLastLabel,
+            childDobSeperatorLabel: this.winRef.nativeWindow.angularData.childDobSeperatorLabel
         });
 
         this.quoteApplyForm = new FormGroup({});
@@ -72,21 +70,6 @@ export class QuoteApplyFormComponent implements OnInit {
 
     getQuestionGroup(key: string) {
         return this.questionGroups.filter(x => x.key === key)[0];
-    }
-
-    addChildrenDobQuestions(): void {
-        for (let i = 2; i < 6; i++) {
-            let childDobToAdd = Object.apply({}, this.child1DobQuestion);
-            childDobToAdd.value = null;
-            childDobToAdd.basedOnKey = this.noOfChildrenKey;
-            childDobToAdd.basedOnValue = i;
-            childDobToAdd.key = `child${i}Dob`;
-            childDobToAdd.label = ",";
-            childDobToAdd.placeholder = this.child1DobQuestion.placeholder;
-            childDobToAdd.validators = this.child1DobQuestion.validators;
-            childDobToAdd.controlType = this.child1DobQuestion.controlType;
-            this.childrenQuestionGroup.questions.push(childDobToAdd);
-        }
     }
 
     apply(isValid: boolean): void {

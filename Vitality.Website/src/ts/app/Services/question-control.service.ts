@@ -19,6 +19,7 @@ export class QuestionControlService {
             if (question.key === "noOfChildren") {
              formControl.valueChanges.subscribe(data=> this.dobControlService.noOfKidsChanged(data, questions));
             }
+
             form.addControl(question.key, formControl);
         });
     }
