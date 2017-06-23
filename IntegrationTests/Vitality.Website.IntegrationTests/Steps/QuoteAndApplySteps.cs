@@ -32,8 +32,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         [Given(@"I go to the (.*) field and choose (.*)")]
         public void IGoToTheFieldAndChoose(string fieldName, string option)
         {
-
-            //ReadOnlyCollection<IWebElement> possibleOptions;
+            WebDriver.ScrollToElement($"#{fieldName}");
 
             var possibleOptions = WebDriver
                 .FindElements(new JQuerySelector($".quote--content > quoteapply-form .question #{fieldName} option"));
@@ -41,14 +40,15 @@ namespace Vitality.Website.IntegrationTests.Steps
             possibleOptions
                 .FirstOrDefault(e => e.Text.Equals(option))
                 .Click();
-
-
         }
 
-        [When(@"I go to the (.*) field and enter (.*)")]
+
         [Given(@"I go to the (.*) field and enter (.*)")]
+        [When(@"I go to the (.*) field and enter (.*)")]
         public void IGoToTheFieldAndEnter(string fieldName, string inputText)
         {
+            WebDriver.ScrollToElement($"#{fieldName}");
+
             WebDriver
                 .FindElement(new JQuerySelector($".quote--content > quoteapply-form .question .question--input__text #{fieldName}"))
                 .SendKeys(inputText);
@@ -67,27 +67,9 @@ namespace Vitality.Website.IntegrationTests.Steps
             button.Click();
         }
 
-        [Then(@"I expect to see the interim panel")]
-        public void ThenIExpectToSeeTheInterimPanel()
-        {
-            var interimPanel = WebDriver
-                .FindElement(new JQuerySelector(".quote--content > quoteapply-form div:contains('You will be submitting following values when development completed:')"));
 
-            interimPanel
-                .FindElement(new JQuerySelector("ul > li:contains('Name : Mrs.Sarah Nicholas')"));
-
-            interimPanel
-                .FindElement(new JQuerySelector("ul > li:contains('Contact Number : 01202 223344')"));
-
-            interimPanel
-                .FindElement(new JQuerySelector("ul > li:contains('sarah.nicholas@gmail.com')"));
-
-            interimPanel
-                .FindElement(new JQuerySelector("ul > li:contains('Date of Birth : 01/01/1970')"));
-
-        }
-
-
+        [Given(@"the (.*) field is not displayed")]
+        [When(@"the (.*) field is not displayed")]
         [Then(@"the (.*) field is not displayed")]
         public void TheFieldIsNotDisplayed(string fieldName)
         {
@@ -107,6 +89,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         }
 
 
+        [Given(@"the (.*) field is displayed")]
         [Then(@"the (.*) field is displayed")]
         public void TheFieldIsDisplayed(string fieldName)
         {
@@ -121,10 +104,86 @@ namespace Vitality.Website.IntegrationTests.Steps
 
             WebDriver
                 .FindElement(new JQuerySelector($".quote--content > quoteapply-form .question:has(#{fieldName}) .question--input__error"))
-                .Text.LooseEquals(errorText);
+                .Text.LooseEquals(errorText)
+                .ShouldBe(true);
 
         }
 
+        [Then(@"I don't see the (.*) field error")]
+        public void IDontSeetheFieldError(string fieldName)
+        {
+            try
+            {
+                WebDriver.FindElement
+                    (new JQuerySelector($".quote--content > quoteapply-form .question:has(#{fieldName}) .question--input__error"))
+                    .ShouldBeNull();
+            }
+            catch (NoSuchElementException)
+            {
+                return;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        [Then(@"I don't see any field errors")]
+        public void IDonTSeeAnyFieldErrors()
+        {
+            try
+            {
+                WebDriver.FindElement
+                    (new JQuerySelector($".quote--content > quoteapply-form .question .question--input__error"))
+                    .ShouldBeNull();
+            }
+            catch (NoSuchElementException)
+            {
+                return;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public enum PlusMinus
+        {
+            plus,
+            minus
+        }
+
+
+        [Given(@"I go to the (.*) field and make the age (.*) (.*) (.*) days")]
+        [When(@"I go to the (.*) field and make the age (.*) (.*) (.*) days")]
+        public void IGoToTheFieldAndMakeTheAgeDays(string fieldName, int age, PlusMinus plusMinus, int days)
+        {
+            // As this function is setting the age, I have deliberately reversed the logic around adding and subtracting days
+            // so a "plus" enum actually takes a day off the birthdate to make the Member older!!
+            string inputText = DateTime.Now
+                .AddYears(-age)
+                .AddDays(plusMinus == PlusMinus.plus ? -days : days)
+                .ToString("dd/MM/yyyy");
+
+            WebDriver
+                .FindElement(new JQuerySelector($".quote--content > quoteapply-form .question .question--input__text #{fieldName}"))
+                .SendKeys(inputText);
+        }
+
+        [Given(@"I go to the (.*) field and make the date today (.*) (.*) days")]
+        [When(@"I go to the (.*) field and make the date today (.*) (.*) days")]
+        public void IGoToTheFieldAndMakeTheDateTodayDays(string fieldName, PlusMinus plusMinus, int days)
+        {
+            
+            string inputText = DateTime.Now
+                .AddDays(plusMinus == PlusMinus.plus ? days : -days)
+                .ToString("dd/MM/yyyy");
+
+            WebDriver
+                .FindElement(new JQuerySelector($".quote--content > quoteapply-form .question .question--input__text #{fieldName}"))
+                .SendKeys(inputText);
+        }
 
     }
 }
