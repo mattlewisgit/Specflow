@@ -14,11 +14,11 @@ namespace Vitality.Website.IntegrationTests.Extensions
             }
         }
 
-        public static void ShouldNotContainAll(this string acutal, IEnumerable<string> expected)
+        public static void ShouldNotContainAll(this string actual, IEnumerable<string> expected)
         {
             foreach (var @string in expected)
             {
-                acutal.ShouldNotContain(@string);
+                actual.ShouldNotContain(@string);
             }
         }
     }

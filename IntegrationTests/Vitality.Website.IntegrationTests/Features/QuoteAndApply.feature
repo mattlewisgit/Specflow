@@ -404,3 +404,104 @@
     And I go to the membersToInsure field and choose just me
     When I go to the postcode field and enter BH 1JD
     Then I see the postcode field error text Please enter valid postcode
+
+    Scenario: Check the options that are available in insuredStatus
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Sarah
+    And I go to the lastName field and enter Nicholas
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    When I go to the insuredStatus field and look at the options available
+    Then I see that the insuredStatus options are as expected
+
+    Scenario: Check the options that are available in No Of Claim Free Years
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Sarah
+    And I go to the lastName field and enter Nicholas
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    When I go to the noOfClaimFreeYears field and look at the options available
+    Then I see that the noOfClaimFreeYears options are as expected
+
+    Scenario: Check the options that are available in No Of Claims
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Sarah
+    And I go to the lastName field and enter Nicholas
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    When I go to the noOfClaims field and look at the options available
+    Then I see that the noOfClaims options are as expected
+
+
+    Scenario: Check the options that are available in Members To Insure
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Sarah
+    And I go to the lastName field and enter Nicholas
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the insuredStatus field and choose not currently insured
+    And I go to the dateOfBirth field and make the age 18 minus 0 days
+    And I go to the coverStartDate field and make the date today plus 0 days
+    When I go to the membersToInsure field and look at the options available
+    Then I see that the membersToInsure options are as expected
+
+    Scenario: Check the options that are available in No of Children (no Partner)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Sarah
+    And I go to the lastName field and enter Nicholas
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the insuredStatus field and choose not currently insured
+    And I go to the dateOfBirth field and make the age 18 minus 0 days
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose me and my kids
+    And I set the PartnerContext as NoPartner
+    When I go to the noOfChildren field and look at the options available
+    Then I see that the noOfChildren options are as expected
+
+    Scenario: Check the options that are available in No of Children (with Partner)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Sarah
+    And I go to the lastName field and enter Nicholas
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the insuredStatus field and choose not currently insured
+    And I go to the dateOfBirth field and make the age 18 minus 0 days
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose me, my partner and kids
+    And I set the PartnerContext as WithPartner
+    When I go to the noOfChildren field and look at the options available
+    Then I see that the noOfChildren options are as expected
+
+    Scenario: Check the options that are available in Marketing Permission
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Sarah
+    And I go to the lastName field and enter Nicholas
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the insuredStatus field and choose not currently insured
+    And I go to the dateOfBirth field and make the age 18 minus 0 days
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose just me
+    And I go to the postcode field and enter BH1 1JD
+    When I go to the marketingPermission field and look at the options available
+    Then I see that the marketingPermission options are as expected
+
+
