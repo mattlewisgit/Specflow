@@ -16,13 +16,7 @@ export class QuoteApplyFormComponent implements OnInit {
     payload: string;
     questionGroups: QuestionGroup[];
     submitted: boolean;
-    child5Option: any;
     childrenQuestionGroupKey = "childrenDobGroup";
-    noOfChildrenKey = "noOfChildren";
-    child1DobKey = "child1Dob";
-    childrenQuestionGroup : QuestionGroup;
-    noOfChildrenQuestion: Question<any>;
-    child1DobQuestion: Question<any>;
 
     constructor(
         private fb: FormBuilder,
@@ -34,14 +28,10 @@ export class QuoteApplyFormComponent implements OnInit {
     ngOnInit(): void {
         this.questionGroups = this.winRef.nativeWindow.angularData.questionGroups;
 
-        this.childrenQuestionGroup = this.getQuestionGroup(this.childrenQuestionGroupKey);
-        this.noOfChildrenQuestion = this.getQuestion(this.noOfChildrenKey, this.childrenQuestionGroup);
-        this.child1DobQuestion = this.getQuestion(this.child1DobKey, this.childrenQuestionGroup);
+        let childrenQuestionGroup = this.getQuestionGroup(this.childrenQuestionGroupKey);
 
         this.dobControlService.initialize({
-            childrenQuestionGroup: this.childrenQuestionGroup,
-            noOfChildrenQuestion: this.noOfChildrenQuestion,
-            child1DobQuestion: this.child1DobQuestion,
+            childrenQuestionGroup: childrenQuestionGroup,
             childDobLastLabel: this.winRef.nativeWindow.angularData.childDobLastLabel,
             childDobSeperatorLabel: this.winRef.nativeWindow.angularData.childDobSeperatorLabel
         });
@@ -49,23 +39,8 @@ export class QuoteApplyFormComponent implements OnInit {
         this.quoteApplyForm = new FormGroup({});
 
         this.quoteApplyForm.valueChanges.subscribe(data => {
-            // If Partner is included only allow 4 children
-            if (data.membersToInsure === "mepartnerchildren" && this.noOfChildrenQuestion.relatedData.length === 5) {
-                let lastItemIndex = this.noOfChildrenQuestion.relatedData.length - 1;
-                this.child5Option = this.noOfChildrenQuestion.relatedData[lastItemIndex];
-                this.noOfChildrenQuestion.relatedData.pop();
-            }
-            else if (data.membersToInsure === "mechildren" && this.noOfChildrenQuestion.relatedData.length < 5) {
-                this.noOfChildrenQuestion.relatedData.push({
-                    key: this.child5Option.key,
-                    value: this.child5Option.value
-                });
-            };
-        });
-    }
 
-    getQuestion(key: string, questionGroup: QuestionGroup): Question<any> {
-        return questionGroup.questions.filter(x => x.key === key)[0];
+        });
     }
 
     getQuestionGroup(key: string) {

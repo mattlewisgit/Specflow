@@ -17,7 +17,10 @@ export class QuestionControlService {
         questions.forEach(question => {
             let formControl = new FormControl(question.value || "", this.getValidators(question.validators));
             if (question.key === "noOfChildren") {
-             formControl.valueChanges.subscribe(data=> this.dobControlService.noOfKidsChanged(data, questions));
+             formControl.valueChanges.subscribe(data=> this.dobControlService.noOfKidsChanged(data));
+            }
+            else if (question.key === "membersToInsure") {
+                formControl.valueChanges.subscribe(data => this.dobControlService.membersToInsureChanged(data));
             }
 
             form.addControl(question.key, formControl);

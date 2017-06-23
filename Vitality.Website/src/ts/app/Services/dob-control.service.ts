@@ -6,9 +6,12 @@ import { Question } from "../models/question";
 
 @Injectable()
 export class DobControlService {
+    noOfChildrenKey = "noOfChildren";
+    child1DobKey = "child1Dob";
     childrenQuestionGroup: QuestionGroup;
     noOfChildrenQuestion: Question<any>;
     child1DobQuestion: Question<any>;
+    child5Option: { key: string, value: string };
     noOfChildrenLabel: string;
     child1DobLabel: string;
     childDobLastLabel: string;
@@ -16,17 +19,15 @@ export class DobControlService {
 
     initialize(options: {
         childrenQuestionGroup: QuestionGroup,
-        child1DobQuestion: Question<any>,
-        noOfChildrenQuestion: Question<any>,
         childDobLastLabel: string,
         childDobSeperatorLabel: string})
     {
         this.childrenQuestionGroup = options.childrenQuestionGroup;
 
-        this.child1DobQuestion = options.child1DobQuestion;
+        this.child1DobQuestion = this.getQuestion(this.child1DobKey, this.childrenQuestionGroup);
         this.child1DobLabel = this.child1DobQuestion.label;
 
-        this.noOfChildrenQuestion = options.noOfChildrenQuestion;
+        this.noOfChildrenQuestion = this.getQuestion(this.noOfChildrenKey, this.childrenQuestionGroup);
         this.noOfChildrenLabel = this.noOfChildrenQuestion.label;
         // Default to empty label
         this.noOfChildrenQuestion.label = "";
@@ -37,8 +38,21 @@ export class DobControlService {
         this.addChildrenDobQuestions();
     }
 
-    noOfKidsChanged(noOfChildren: number,
-        questions: Question<any>[]) {
+    membersToInsureChanged(membersToInsure: string) {
+        // If Partner is included only allow 4 children
+        if (membersToInsure === "mepartnerchildren" && this.noOfChildrenQuestion.relatedData.length === 5) {
+            let lastItemIndex = this.noOfChildrenQuestion.relatedData.length - 1;
+            this.child5Option = this.noOfChildrenQuestion.relatedData[lastItemIndex];
+            this.noOfChildrenQuestion.relatedData.pop();
+        } else if (membersToInsure === "mechildren" && this.noOfChildrenQuestion.relatedData.length < 5) {
+            this.noOfChildrenQuestion.relatedData.push({
+                key: this.child5Option.key,
+                value: this.child5Option.value
+            });
+        }
+    }
+
+    noOfKidsChanged(noOfChildren: number) {
         //Do not use ===
         if (noOfChildren == 1) {
             this.noOfChildrenQuestion.label = null;
@@ -48,7 +62,7 @@ export class DobControlService {
             this.child1DobQuestion.label = null;
         }
         for (let i = 2; i <= noOfChildren; i++) {
-            let currentchildDobQuestion = questions.filter(x => x.key === `child${i}Dob`)[0];
+            let currentchildDobQuestion = this.childrenQuestionGroup.questions.filter(x => x.key === `child${i}Dob`)[0];
             if (i == noOfChildren) {
                 currentchildDobQuestion.label = this.childDobLastLabel;
             } else {
@@ -70,5 +84,9 @@ export class DobControlService {
             childDobToAdd.controlType = this.child1DobQuestion.controlType;
             this.childrenQuestionGroup.questions.push(childDobToAdd);
         }
+    }
+
+    getQuestion(key: string, questionGroup: QuestionGroup): Question<any> {
+        return questionGroup.questions.filter(x => x.key === key)[0];
     }
 }
