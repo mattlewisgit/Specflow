@@ -4,7 +4,7 @@ using Glass.Mapper.Sc.Configuration.Attributes;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 {
-    using  Global.Models;
+    using Global.Models;
     using SettingsTemplates;
 
     public class QuoteApplyForm : SitecoreItem

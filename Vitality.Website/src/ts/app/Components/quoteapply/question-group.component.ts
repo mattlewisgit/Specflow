@@ -50,9 +50,6 @@ export class QuestionGroupComponent implements OnInit {
             return true;
         }
         const control = this.form.controls[basedOnKey];
-        if (+control.value >= basedOnValue) {
-            return true;
-        }
-        return false;
+        return +control.value >= basedOnValue;
     }
 }

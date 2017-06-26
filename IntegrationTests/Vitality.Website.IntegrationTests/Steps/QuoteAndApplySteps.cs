@@ -85,7 +85,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             }
             catch (Exception)
             {
-                throw;
+                Assert.True(false);
             }
         }
 
@@ -162,7 +162,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         {
             // As this function is setting the age, I have deliberately reversed the logic around adding and subtracting days
             // so a "plus" enum actually takes a day off the birthdate to make the Member older!!
-            string inputText = DateTime.Now
+            var inputText = DateTime.Now
                 .AddYears(-age)
                 .AddDays(plusMinus == PlusMinus.plus ? -days : days)
                 .ToString("dd/MM/yyyy");
@@ -176,8 +176,8 @@ namespace Vitality.Website.IntegrationTests.Steps
         [When(@"I go to the (.*) field and make the date today (.*) (.*) days")]
         public void IGoToTheFieldAndMakeTheDateTodayDays(string fieldName, PlusMinus plusMinus, int days)
         {
-            
-            string inputText = DateTime.Now
+
+            var inputText = DateTime.Now
                 .AddDays(plusMinus == PlusMinus.plus ? days : -days)
                 .ToString("dd/MM/yyyy");
 
@@ -194,7 +194,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             var possibleOptions = WebDriver
                 .FindElements(new JQuerySelector($".quote--content > quoteapply-form .question #{fieldName} option"));
 
-            
+
             ScenarioContext.Current.Add(fieldName, possibleOptions.Select(e => e.Text));
         }
 
@@ -243,7 +243,7 @@ namespace Vitality.Website.IntegrationTests.Steps
                     break;
 
                 case "noOfChildren":
-                    
+
                     targetList.Add("kid's");
                     targetList.Add("2 kids'");
                     targetList.Add("3 kids'");

@@ -1,4 +1,6 @@
-﻿namespace Vitality.Website.IntegrationTests.Extensions
+﻿using System.Linq;
+
+namespace Vitality.Website.IntegrationTests.Extensions
 {
     using System;
     using System.Collections.Generic;
@@ -45,13 +47,7 @@
             if (source.Count != target.Count)
                 return false;
 
-            for (int i = 0; i < source.Count; i++)
-            {
-                if (source[i] != target[i])
-                    return false;
-            }
-
-            return true;
+            return !source.Where((t, i) => t != target[i]).Any();
         }
     }
 }
