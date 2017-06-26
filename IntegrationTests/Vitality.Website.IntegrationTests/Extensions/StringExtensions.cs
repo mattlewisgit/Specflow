@@ -1,6 +1,8 @@
 ﻿namespace Vitality.Website.IntegrationTests.Extensions
 {
     using System;
+    using System.Collections.Generic;
+
     /// <summary>
     /// Provides extension methods for the native
     /// <see cref="string">enumerable</see> type.
@@ -29,6 +31,27 @@
             return source
                 .Trim()
                 .Equals(value, StringComparison.InvariantCultureIgnoreCase);
+        }
+
+        /// <summary>
+        /// Compares strings while ignoring case, culture and leading whitespace.
+        /// </summary>
+        /// <param name="source">Source List</param>
+        /// <param name="target">To compare against</param>
+        /// <returns>Equality</returns>
+        /// <exception cref="ArgumentNullException">When either string is null</exception>
+        public static bool CompareLists(this List<string> source, List<string> target)
+        {
+            if (source.Count != target.Count)
+                return false;
+
+            for (int i = 0; i < source.Count; i++)
+            {
+                if (source[i] != target[i])
+                    return false;
+            }
+
+            return true;
         }
     }
 }

@@ -1115,6 +1115,258 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute(DisplayName="Check the options that are available in insuredStatus")]
+        [Xunit.TraitAttribute("FeatureTitle", "QuoteAndApply")]
+        [Xunit.TraitAttribute("Description", "Check the options that are available in insuredStatus")]
+        public virtual void CheckTheOptionsThatAreAvailableInInsuredStatus()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options that are available in insuredStatus", ((string[])(null)));
+#line 408
+    this.ScenarioSetup(scenarioInfo);
+#line 409
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 410
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 411
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 412
+    testRunner.And("I go to the firstName field and enter Sarah", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 413
+    testRunner.And("I go to the lastName field and enter Nicholas", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 414
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 415
+    testRunner.And("I go to the emailAddress field and enter sarah.nicholas@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 416
+    testRunner.When("I go to the insuredStatus field and look at the options available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 417
+    testRunner.Then("I see that the insuredStatus options are as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check the options that are available in No Of Claim Free Years")]
+        [Xunit.TraitAttribute("FeatureTitle", "QuoteAndApply")]
+        [Xunit.TraitAttribute("Description", "Check the options that are available in No Of Claim Free Years")]
+        public virtual void CheckTheOptionsThatAreAvailableInNoOfClaimFreeYears()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options that are available in No Of Claim Free Years", ((string[])(null)));
+#line 419
+    this.ScenarioSetup(scenarioInfo);
+#line 420
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 421
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 422
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 423
+    testRunner.And("I go to the firstName field and enter Sarah", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 424
+    testRunner.And("I go to the lastName field and enter Nicholas", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 425
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 426
+    testRunner.And("I go to the emailAddress field and enter sarah.nicholas@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 427
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 428
+    testRunner.When("I go to the noOfClaimFreeYears field and look at the options available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 429
+    testRunner.Then("I see that the noOfClaimFreeYears options are as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check the options that are available in No Of Claims")]
+        [Xunit.TraitAttribute("FeatureTitle", "QuoteAndApply")]
+        [Xunit.TraitAttribute("Description", "Check the options that are available in No Of Claims")]
+        public virtual void CheckTheOptionsThatAreAvailableInNoOfClaims()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options that are available in No Of Claims", ((string[])(null)));
+#line 431
+    this.ScenarioSetup(scenarioInfo);
+#line 432
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 433
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 434
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 435
+    testRunner.And("I go to the firstName field and enter Sarah", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 436
+    testRunner.And("I go to the lastName field and enter Nicholas", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 437
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 438
+    testRunner.And("I go to the emailAddress field and enter sarah.nicholas@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 439
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 440
+    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 441
+    testRunner.When("I go to the noOfClaims field and look at the options available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 442
+    testRunner.Then("I see that the noOfClaims options are as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check the options that are available in Members To Insure")]
+        [Xunit.TraitAttribute("FeatureTitle", "QuoteAndApply")]
+        [Xunit.TraitAttribute("Description", "Check the options that are available in Members To Insure")]
+        public virtual void CheckTheOptionsThatAreAvailableInMembersToInsure()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options that are available in Members To Insure", ((string[])(null)));
+#line 445
+    this.ScenarioSetup(scenarioInfo);
+#line 446
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 447
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 448
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 449
+    testRunner.And("I go to the firstName field and enter Sarah", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 450
+    testRunner.And("I go to the lastName field and enter Nicholas", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 451
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 452
+    testRunner.And("I go to the emailAddress field and enter sarah.nicholas@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 453
+    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 454
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 455
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 456
+    testRunner.When("I go to the membersToInsure field and look at the options available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 457
+    testRunner.Then("I see that the membersToInsure options are as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check the options that are available in No of Children (no Partner)")]
+        [Xunit.TraitAttribute("FeatureTitle", "QuoteAndApply")]
+        [Xunit.TraitAttribute("Description", "Check the options that are available in No of Children (no Partner)")]
+        public virtual void CheckTheOptionsThatAreAvailableInNoOfChildrenNoPartner()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options that are available in No of Children (no Partner)", ((string[])(null)));
+#line 459
+    this.ScenarioSetup(scenarioInfo);
+#line 460
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 461
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 462
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 463
+    testRunner.And("I go to the firstName field and enter Sarah", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 464
+    testRunner.And("I go to the lastName field and enter Nicholas", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 465
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 466
+    testRunner.And("I go to the emailAddress field and enter sarah.nicholas@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 467
+    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 468
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 469
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 470
+    testRunner.And("I go to the membersToInsure field and choose me and my kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 471
+    testRunner.And("I set the PartnerContext as NoPartner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 472
+    testRunner.When("I go to the noOfChildren field and look at the options available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 473
+    testRunner.Then("I see that the noOfChildren options are as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check the options that are available in No of Children (with Partner)")]
+        [Xunit.TraitAttribute("FeatureTitle", "QuoteAndApply")]
+        [Xunit.TraitAttribute("Description", "Check the options that are available in No of Children (with Partner)")]
+        public virtual void CheckTheOptionsThatAreAvailableInNoOfChildrenWithPartner()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options that are available in No of Children (with Partner)", ((string[])(null)));
+#line 475
+    this.ScenarioSetup(scenarioInfo);
+#line 476
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 477
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 478
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 479
+    testRunner.And("I go to the firstName field and enter Sarah", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 480
+    testRunner.And("I go to the lastName field and enter Nicholas", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 481
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 482
+    testRunner.And("I go to the emailAddress field and enter sarah.nicholas@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 483
+    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 484
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 485
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 486
+    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 487
+    testRunner.And("I set the PartnerContext as WithPartner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 488
+    testRunner.When("I go to the noOfChildren field and look at the options available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 489
+    testRunner.Then("I see that the noOfChildren options are as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check the options that are available in Marketing Permission")]
+        [Xunit.TraitAttribute("FeatureTitle", "QuoteAndApply")]
+        [Xunit.TraitAttribute("Description", "Check the options that are available in Marketing Permission")]
+        public virtual void CheckTheOptionsThatAreAvailableInMarketingPermission()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options that are available in Marketing Permission", ((string[])(null)));
+#line 491
+    this.ScenarioSetup(scenarioInfo);
+#line 492
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 493
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 494
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 495
+    testRunner.And("I go to the firstName field and enter Sarah", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 496
+    testRunner.And("I go to the lastName field and enter Nicholas", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 497
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 498
+    testRunner.And("I go to the emailAddress field and enter sarah.nicholas@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 499
+    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 500
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 501
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 502
+    testRunner.And("I go to the membersToInsure field and choose just me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 503
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 504
+    testRunner.When("I go to the marketingPermission field and look at the options available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 505
+    testRunner.Then("I see that the marketingPermission options are as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable

@@ -13,6 +13,7 @@ using Selenium.WebDriver.Extensions.JQuery;
 using OpenQA.Selenium.Support.UI;
 using Vitality.Extensions.Selenium;
 using Vitality.Website.IntegrationTests.Extensions;
+using System.Collections;
 
 namespace Vitality.Website.IntegrationTests.Steps
 {
@@ -183,6 +184,82 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver
                 .FindElement(new JQuerySelector($".quote--content > quoteapply-form .question .question--input__text #{fieldName}"))
                 .SendKeys(inputText);
+        }
+
+        [When(@"I go to the (.*) field and look at the options available")]
+        public void IGoToTheFieldAndLookAtTheOptionsAvailable(string fieldName)
+        {
+            WebDriver.ScrollToElement($"#{fieldName}");
+
+            var possibleOptions = WebDriver
+                .FindElements(new JQuerySelector($".quote--content > quoteapply-form .question #{fieldName} option"));
+
+            
+            ScenarioContext.Current.Add(fieldName, possibleOptions.Select(e => e.Text));
+        }
+
+        [Given(@"I set the PartnerContext as (.*)")]
+        public void ISetThePartnerContextAs(string withOrWithoutPartner)
+        {
+            ScenarioContext.Current.Add("PartnerContext", withOrWithoutPartner);
+        }
+
+
+        [Then(@"I see that the (.*) options are as expected")]
+        public void ThenISeeThatTheOptionsAreAsExpected(string fieldName)
+        {
+            var possibleOptions = ScenarioContext.Current.Get<IEnumerable<string>>(fieldName).ToList();
+            var targetList = new List<string>();
+
+
+            switch (fieldName)
+            {
+                case "insuredStatus":
+                    targetList.Add("currently insured");
+                    targetList.Add("not currently insured");
+                    break;
+
+                case "noOfClaimFreeYears":
+                    targetList.Add("0 years");
+                    targetList.Add("1 year");
+                    targetList.Add("2 years");
+                    targetList.Add("3 years");
+                    targetList.Add("4 years");
+                    targetList.Add("5+ years");
+                    break;
+
+                case "noOfClaims":
+                    targetList.Add("no claims");
+                    targetList.Add("1 claim");
+                    targetList.Add("2 claims");
+                    targetList.Add("3+ claims");
+                    break;
+
+                case "membersToInsure":
+                    targetList.Add("just me");
+                    targetList.Add("me and my kids");
+                    targetList.Add("me and my partner");
+                    targetList.Add("me, my partner and kids");
+                    break;
+
+                case "noOfChildren":
+                    
+                    targetList.Add("kid's");
+                    targetList.Add("2 kids'");
+                    targetList.Add("3 kids'");
+                    targetList.Add("4 kids'");
+                    if (ScenarioContext.Current.Get<string>("PartnerContext") == "NoPartner")
+                    {
+                        targetList.Add("5 kids'");
+                    }
+                    break;
+
+                case "marketingPermission":
+                    targetList.Add("Agreed");
+                    targetList.Add("Not Agreed");
+                    break;
+            }
+            Assert.True(possibleOptions.CompareLists(targetList));
         }
 
     }
