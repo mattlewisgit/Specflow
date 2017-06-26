@@ -1,0 +1,80 @@
+----item----
+version: 1
+id: {15593453-37CB-4EA4-B837-C36156C0D734}
+database: master
+path: /sitecore/templates/Presales/Component Templates/QuoteApply/Quote Apply Form/__Standard Values
+parent: {2ADA24F8-7B05-48A5-AD7A-081AD11637D2}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {2ADA24F8-7B05-48A5-AD7A-081AD11637D2}
+templatekey: Quote Apply Form
+created: 20170610T202646Z
+
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{338B1198-FD2E-4C63-94F2-CA164AF1E26C}
+----version----
+language: en
+version: 1
+revision: 30873225-bf7c-4ded-a0f7-74e7a2573e02
+
+----field----
+field: {ACDB204F-DCE6-4DA1-BEE9-80F2F9F0C04C}
+name: ChildDobSeperatorLabel
+key: childdobseperatorlabel
+content-length: 1
+
+,
+----field----
+field: {2679AF8A-520E-4A52-A096-6F175234B606}
+name: ChildDobLastLabel
+key: childdoblastlabel
+content-length: 3
+
+and
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170610T202646Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+30873225-bf7c-4ded-a0f7-74e7a2573e02
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170613T163428Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

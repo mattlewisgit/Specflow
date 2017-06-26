@@ -1,0 +1,73 @@
+----item----
+version: 1
+id: {28128CA6-BCF9-4F37-ADAA-8992B2DADB00}
+database: master
+path: /sitecore/content/Presales/Content/Quote Apply/Quote Apply Form/Insured status/Insured Status
+parent: {A798F328-CF1F-49F8-A4B1-6B18D6C221C3}
+name: Insured Status
+master: {00000000-0000-0000-0000-000000000000}
+template: {16446BB0-1CE3-44A5-81FA-2417CE6A1FEB}
+templatekey: Question
+created: 20170613T092544Z
+
+----version----
+language: en
+version: 1
+revision: 77da1b72-ea41-44cd-a138-817946486fae
+
+----field----
+field: {365CBF3B-BCA1-4C43-A070-68B9FD55DAE2}
+name: Key
+key: key
+content-length: 38
+
+{90B43708-4431-4DD4-AAFC-CF2599D8A8BA}
+----field----
+field: {EDBA5F60-C406-43A0-8E4E-145A7BCD98FF}
+name: ControlType
+key: controltype
+content-length: 38
+
+{E77FFF18-83B4-4891-9DD5-A2962DC2FF36}
+----field----
+field: {683C6454-743E-40A8-8259-3A89EBEEA95E}
+name: DefaultValue
+key: defaultvalue
+content-length: 1
+
+1
+----field----
+field: {142376C6-E1DA-431C-B6D1-5796FF970557}
+name: RelatedData
+key: relateddata
+content-length: 77
+
+{439B96D7-E4D4-4915-B2B9-9ABB5EFE5B6F}|{772F1FEA-6F86-4D6B-84E3-BA317A49CF29}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170613T092544Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+77da1b72-ea41-44cd-a138-817946486fae
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170613T155706Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

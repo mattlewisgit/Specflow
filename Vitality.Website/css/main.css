@@ -1,0 +1,167 @@
+a,
+body,
+input,
+select {
+  color: white;
+  font-family: "Hind Siliguri", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 2.0; }
+
+body {
+  background: #f41a5c;
+  font-size: 24px;
+  padding: 1.5em; }
+  @media (min-width: 50em) {
+    body {
+      padding: 3em; } }
+
+a {
+  border-color: white; }
+
+div:focus,
+input:focus,
+main:focus,
+section:focus {
+  outline: none; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+  line-height: 1;
+  margin: 0.375em 0; }
+
+.quote {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .quote:after {
+    content: " ";
+    display: block;
+    clear: both; }
+  @media (min-width: 50em) {
+    .quote--left, .quote--right {
+      width: 23.72881%;
+      float: left;
+      margin-right: 1.69492%; }
+    .quote--content {
+      width: 49.15254%;
+      float: left;
+      margin-right: 1.69492%; }
+    .quote--right {
+      float: right;
+      margin-right: 0; } }
+  .quote--header {
+    left: 1.5em;
+    max-width: 30%;
+    position: fixed;
+    top: 1.5em; }
+    .quote--header h1 {
+      font-size: 36px; }
+  .quote--footer {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #e91c59;
+    border-top: 1px dotted #bb114a;
+    bottom: 0;
+    left: 0;
+    max-height: 6em;
+    padding: 0.75em 0;
+    position: fixed;
+    right: 0; }
+    .quote--footer:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    .quote--footer img {
+      max-height: 2.5em; }
+    .quote--footer__logo div {
+      padding-left: 1.5em; }
+    @media (max-width: 49.99em) {
+      .quote--footer__logo, .quote--footer__chat {
+        display: none; }
+      .quote--footer__progress {
+        padding: 0 3em 0 1.5em; } }
+    @media (min-width: 50em) {
+      .quote--footer__logo, .quote--footer__chat {
+        width: 23.72881%;
+        float: left;
+        margin-right: 1.69492%; }
+      .quote--footer__progress {
+        width: 49.15254%;
+        float: left;
+        margin-right: 1.69492%; }
+      .quote--footer__chat {
+        float: right;
+        margin-right: 0; } }
+    .quote--footer__chat div {
+      padding-right: 1.5em;
+      text-align: right; }
+    .quote--footer__chat img {
+      filter: drop-shadow(0 0 10px rgba(51, 51, 51, 0.6));
+      max-width: 3em; }
+
+.chat-window {
+  background: white;
+  padding: 1.5em; }
+  .chat-window--bubble {
+    background-color: #ccc;
+    border-radius: 0.75em;
+    color: black;
+    margin-bottom: 1.5em;
+    padding: 0.75em; }
+    .chat-window--bubble:last-child {
+      margin-bottom: 0; }
+
+.progress {
+  background: #bb114a;
+  border: 8px solid #bb114a;
+  border-radius: 0.75em;
+  color: #f41a5c;
+  width: 100%; }
+  .progress-bar {
+    background: #f41a5c;
+    border: 4px solid #f41a5c;
+    border-radius: 0.375em;
+    height: 0.375em; }
+
+.question {
+  font-size: 24px;
+  margin: 6em 0; }
+  .question--input__error, .question--input__info {
+    font-size: 16px;
+    margin-top: 0.75em; }
+  .question--input__error {
+    color: #710a2c;
+    font-weight: 600; }
+  .question--input__text {
+    display: inline-block;
+    margin-left: 0.375em; }
+    .question--input__text input[type="email"], .question--input__text input[type="text"] {
+      background: none;
+      border: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+      line-height: 1;
+      font-weight: 600;
+      width: 8em; }
+      .question--input__text input[type="email"]::-webkit-input-placeholder, .question--input__text input[type="text"]::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.6); }
+      .question--input__text input[type="email"]::-moz-placeholder, .question--input__text input[type="text"]::-moz-placeholder {
+        color: rgba(255, 255, 255, 0.6); }
+      .question--input__text input[type="email"]:-ms-input-placeholder, .question--input__text input[type="text"]:-ms-input-placeholder {
+        color: rgba(255, 255, 255, 0.6); }
+      .question--input__text input[type="email"]:-moz-placeholder, .question--input__text input[type="text"]:-moz-placeholder {
+        color: rgba(255, 255, 255, 0.6); }
+  .question select {
+    background: none;
+    border: 1px #bb114a solid;
+    border-radius: 0.1875em;
+    color: white;
+    margin: 0 0.375em;
+    padding: 0 0.375em; }
+  .question option {
+    color: black; }
+
+/*# sourceMappingURL=main.css.map */

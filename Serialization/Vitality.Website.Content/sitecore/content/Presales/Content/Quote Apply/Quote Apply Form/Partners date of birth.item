@@ -1,0 +1,80 @@
+----item----
+version: 1
+id: {D22BE4DE-D0C6-43C9-83CC-5E1424D0585F}
+database: master
+path: /sitecore/content/Presales/Content/Quote Apply/Quote Apply Form/Partners date of birth
+parent: {78A08764-97F8-477F-A1FB-5643492C7BD3}
+name: Partners date of birth
+master: {00000000-0000-0000-0000-000000000000}
+template: {338B1198-FD2E-4C63-94F2-CA164AF1E26C}
+templatekey: Question Group
+created: 20170613T103548Z
+
+----version----
+language: en
+version: 1
+revision: 44840f55-f18f-428a-aed8-156d97e3e1cc
+
+----field----
+field: {DE38D3EB-81E3-4D60-8F57-F803A68EBEF2}
+name: Label
+key: label
+content-length: 29
+
+My partner's date of birth is
+----field----
+field: {B5971C34-6E72-4FE6-A8A0-1252FD55986A}
+name: Questions
+key: questions
+content-length: 38
+
+{EEE07DC7-15B7-45D5-ACFA-41DFB0AB513A}
+----field----
+field: {3754388B-A1F5-4D59-BB18-D8F583537122}
+name: ValidationMessage
+key: validationmessage
+content-length: 23
+
+Please enter valid date
+----field----
+field: {E8A3ACCA-67D0-4EFD-BDEB-0C179CD59302}
+name: BasedOnKey
+key: basedonkey
+content-length: 38
+
+{2D471DD5-A101-4CF0-9DAE-C516F4229A03}
+----field----
+field: {DE134F64-7C89-4CF5-B0D9-6C8DAF0D9117}
+name: BasedOnValues
+key: basedonvalues
+content-length: 27
+
+mepartner,mepartnerchildren
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170613T103548Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+44840f55-f18f-428a-aed8-156d97e3e1cc
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170621T101124Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

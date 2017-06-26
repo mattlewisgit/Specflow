@@ -1,0 +1,10 @@
+<form [formGroup]="quoteApplyForm" (ngSubmit)="apply(quoteApplyForm.valid)" novalidate>
+    <question-group *ngFor="let questionGroup of questionGroups" [questionGroup]="questionGroup" [form]="quoteApplyForm"></question-group>
+
+    <button type="submit" class="btn btn-primary">Apply</button>
+</form>
+
+<div [hidden]="!submitted">
+    <h2>You will be submitting following values when development completed:</h2>
+    {{payload}}
+</div>
