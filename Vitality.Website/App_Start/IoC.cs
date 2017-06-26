@@ -1,12 +1,11 @@
-using Sitecore.DependencyInjection;
-using Vitality.Website.Areas.Presales.Services;
-
 namespace Vitality.Website.App_Start
 {
+    using Areas.Presales.Services;
     using Glass.Mapper.Sc;
     using MediatR;
     using System.Reflection;
     using Microsoft.Extensions.DependencyInjection;
+    using Sitecore.DependencyInjection;
     public class IoC : IServicesConfigurator
     {
         public void Configure(IServiceCollection serviceCollection)

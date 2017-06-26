@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using Sitecore.Form.Core.Utility;
-using Vitality.Website.Areas.Global.Models;
-using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply;
+﻿using System.Collections.Generic;
 
 namespace Vitality.Website.App_Start
 {
+    using Areas.Global.Models;
     using Areas.Presales.ComponentTemplates.FeatureBlocks;
+    using Areas.Presales.ComponentTemplates.QuoteApply;
     using AutoMapper;
     using System.Linq;
 
