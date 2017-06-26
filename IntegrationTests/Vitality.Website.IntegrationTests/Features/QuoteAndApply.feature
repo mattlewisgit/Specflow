@@ -7,10 +7,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose currently insured
     And I go to the noOfClaimFreeYears field and choose 1 year
     And I go to the noOfClaims field and choose no claims
@@ -26,8 +26,8 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     When I go to the phoneNumber field and enter +44 1202 667788
     Then I don't see the phoneNumber field error
 
@@ -35,8 +35,8 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     When I go to the phoneNumber field and enter +44 1202 66 77 88
     Then I don't see the phoneNumber field error
 
@@ -44,8 +44,8 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     When I go to the phoneNumber field and enter +44 1202 667 788
     Then I don't see the phoneNumber field error
 
@@ -53,8 +53,8 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     When I go to the phoneNumber field and enter 01202 22334
     Then I see the phoneNumber field error text Please enter a valid phone number
 
@@ -62,8 +62,8 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     When I go to the phoneNumber field and enter 01202 2233445
     Then I see the phoneNumber field error text Please enter a valid phone number
 
@@ -71,8 +71,8 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     When I go to the phoneNumber field and enter 01202 eeeeee
     Then I see the phoneNumber field error text Please enter a valid phone number
 
@@ -80,20 +80,20 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 222222
-    When I go to the emailAddress field and enter sarah.nicholas@gmail
+    When I go to the emailAddress field and enter test.user@gmail
     Then I see the emailAddress field error text Please enter valid email address
 
     Scenario: Hide the fields relating to current insurance
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     When I go to the insuredStatus field and choose not currently insured
     Then the noOfClaimFreeYears field is not displayed
     And the noOfClaims field is not displayed
@@ -102,10 +102,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     When I go to the membersToInsure field and choose just me
     Then the partnerDateOfBirth field is not displayed
@@ -116,10 +116,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     When I go to the membersToInsure field and choose me and my kids
     Then the partnerDateOfBirth field is not displayed
@@ -130,10 +130,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     When I go to the membersToInsure field and choose me and my partner
     Then the partnerDateOfBirth field is displayed
@@ -144,10 +144,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     When I go to the membersToInsure field and choose me, my partner and kids
     Then the partnerDateOfBirth field is displayed
@@ -158,10 +158,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     When I go to the dateOfBirth field and enter 01/01/197
     Then I see the dateOfBirth field error text Please enter valid date
@@ -170,10 +170,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     When I go to the dateOfBirth field and make the age 80 plus 0 days
     Then I see the dateOfBirth field error text Please enter valid date
@@ -182,10 +182,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     When I go to the dateOfBirth field and make the age 18 minus 1 days
     Then I see the dateOfBirth field error text Please enter valid date
@@ -194,10 +194,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     When I go to the dateOfBirth field and make the age 80 minus 1 days
     Then I don't see the dateOfBirth field error
@@ -206,10 +206,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     When I go to the dateOfBirth field and make the age 18 minus 0 days
     Then I don't see the dateOfBirth field error
@@ -218,10 +218,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose currently insured
     And I go to the noOfClaimFreeYears field and choose 1 year
     And I go to the noOfClaims field and choose no claims
@@ -238,10 +238,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose currently insured
     And I go to the noOfClaimFreeYears field and choose 1 year
     And I go to the noOfClaims field and choose no claims
@@ -261,10 +261,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose currently insured
     And I go to the noOfClaimFreeYears field and choose 1 year
     And I go to the noOfClaims field and choose no claims
@@ -284,10 +284,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     And I go to the dateOfBirth field and make the age 18 minus 0 days
     And I go to the coverStartDate field and make the date today plus 0 days
@@ -299,10 +299,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     And I go to the dateOfBirth field and make the age 18 minus 0 days
     And I go to the coverStartDate field and make the date today plus 0 days
@@ -314,10 +314,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     And I go to the dateOfBirth field and make the age 18 minus 0 days
     And I go to the coverStartDate field and make the date today plus 0 days
@@ -329,10 +329,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     And I go to the dateOfBirth field and make the age 18 minus 0 days
     And I go to the coverStartDate field and make the date today plus 0 days
@@ -344,10 +344,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     And I go to the dateOfBirth field and make the age 18 minus 0 days
     And I go to the coverStartDate field and make the date today plus 0 days
@@ -360,10 +360,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     And I go to the dateOfBirth field and make the age 18 minus 0 days
     And I go to the coverStartDate field and make the date today plus 0 days
@@ -379,10 +379,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     And I go to the dateOfBirth field and make the age 18 minus 0 days
     And I go to the coverStartDate field and make the date today plus 0 days
@@ -394,10 +394,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     And I go to the dateOfBirth field and make the age 18 minus 0 days
     And I go to the coverStartDate field and make the date today plus 0 days
@@ -409,10 +409,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     When I go to the insuredStatus field and look at the options available
     Then I see that the insuredStatus options are as expected
 
@@ -420,10 +420,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose currently insured
     When I go to the noOfClaimFreeYears field and look at the options available
     Then I see that the noOfClaimFreeYears options are as expected
@@ -432,10 +432,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose currently insured
     And I go to the noOfClaimFreeYears field and choose 1 year
     When I go to the noOfClaims field and look at the options available
@@ -446,10 +446,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     And I go to the dateOfBirth field and make the age 18 minus 0 days
     And I go to the coverStartDate field and make the date today plus 0 days
@@ -460,10 +460,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     And I go to the dateOfBirth field and make the age 18 minus 0 days
     And I go to the coverStartDate field and make the date today plus 0 days
@@ -476,10 +476,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     And I go to the dateOfBirth field and make the age 18 minus 0 days
     And I go to the coverStartDate field and make the date today plus 0 days
@@ -492,10 +492,10 @@
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Sarah
-    And I go to the lastName field and enter Nicholas
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
     And I go to the phoneNumber field and enter 01202 223344
-    And I go to the emailAddress field and enter sarah.nicholas@gmail.com
+    And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     And I go to the dateOfBirth field and make the age 18 minus 0 days
     And I go to the coverStartDate field and make the date today plus 0 days
