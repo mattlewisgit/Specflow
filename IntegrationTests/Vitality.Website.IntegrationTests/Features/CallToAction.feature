@@ -20,7 +20,7 @@
 	Scenario: Check CTA Component button links internally
 	Given I am on presales /dev/call-to-action
 	When I click on CTA Internal button 
-	Then I see the /dev page
+	Then I expect the presales / to open
 
 	@SIT
 	Scenario: Check CTA Component button links externally

@@ -14,9 +14,9 @@ Scenario: Check Breadcrumbs on presales
 
 	@SIT
 Scenario: Check Breadcrumbs on advisers
-	Given I am on advisers /dev/sales-library
+	Given I am on advisers /dev/member-library
 	Then I expect the breadcrumb to show Dev
-	Then I expect the breadcrumb to show Sales Library
+	Then I expect the breadcrumb to show Member Library
 	And then I click on breadcrumbs Dev
 	Then I expect the advisers /dev/ to open
 
