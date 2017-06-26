@@ -114,6 +114,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ArticleIndex.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\HomeHero.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomeHero.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\PartnerHero.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -239,6 +244,7 @@
     <Compile Include="Steps\FAQLeaderSteps.cs" />
     <Compile Include="Steps\FeemaximaSteps.cs" />
     <Compile Include="Steps\HealthPresalesContentSteps.cs" />
+    <Compile Include="Steps\HomeHeroSteps.cs" />
     <Compile Include="Steps\LiteratureLibrarySteps.cs" />
     <Compile Include="Steps\MainNavigationSteps.cs" />
     <Compile Include="Steps\MessageBoxSteps.cs" />
@@ -298,6 +304,10 @@
     <None Include="Features\Feemaxima.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Feemaxima.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\HomeHero.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>HomeHero.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\MessageBox.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
