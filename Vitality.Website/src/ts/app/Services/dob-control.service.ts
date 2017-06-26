@@ -62,7 +62,7 @@ export class DobControlService {
             this.child1DobQuestion.label = null;
         }
         for (let i = 2; i <= noOfChildren; i++) {
-            let currentchildDobQuestion = this.childrenQuestionGroup.questions.filter(x => x.key === `child${i}Dob`)[0];
+            let currentchildDobQuestion = this.getQuestion(`child${i}Dob`, this.childrenQuestionGroup);
             if (i == noOfChildren) {
                 currentchildDobQuestion.label = this.childDobLastLabel;
             } else {
