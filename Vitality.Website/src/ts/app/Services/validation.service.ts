@@ -8,20 +8,6 @@ export class ValidationService {
         private postcodeService: PostcodeService
     ) { }
 
-    getValidatorErrorMessage(validatorName: string, validatorValue?: any) {
-        let config = {
-            "required": "Required",
-            "invalidDate": "Invalid Date",
-            "invalidEmailAddress": "Invalid email address",
-            "invalidPhoneNumber": "Invalid phone number",
-            "minLength": "Minimum length ${validatorValue.requiredLength}",
-            "maxLength": "Maximum length ${validatorValue.requiredLength}",
-            "invalidPostcode": "Invalid Postcode"
-        };
-
-        return config[validatorName];
-    }
-
     getValidator(validatorName: string, params: any) :any{
         switch (validatorName) {
         case "required":
@@ -32,10 +18,12 @@ export class ValidationService {
             return this.emailValidator;
         case "phoneNumberValidator":
             return this.phoneNumberValidator;
-        case "minlength":
-            return Validators.minLength;
-        case "maxlength":
-            return Validators.maxLength;
+        case "textOnly":
+            return this.textOnlyValidator;
+        case "minLength":
+            return Validators.minLength(params.minLength);
+        case "maxLength":
+            return Validators.maxLength(params.maxLength);
         case "ageRangeValidator":
             return this.ageRangeValidator(params);
         case "futureDateValidator":
@@ -103,11 +91,22 @@ export class ValidationService {
 
     phoneNumberValidator(control: any) {
         if (control.value
-            .match(/^(((\+44\s?\d{4}|\(?0\d{4}\)?)\s?\d{3}\s?\d{3})|((\+44\s?\d{3}|\(?0\d{3}\)?)\s?\d{3}\s?\d{4})|((\+44\s?\d{2}|\(?0\d{2}\)?)\s?\d{4}\s?\d{4}))(\s?\#(\d{4}|\d{3}))?$/)) {
-            return null;
+            .match(/^[0-9][0-9 ]*$/)) {
+            if (control.value.replace(/\s/g, "").length == 11) {
+                return null;
+            }
         }
         return { "invalidPhoneNumber": true };
     }
+
+    textOnlyValidator(control: any) {
+        if (control.value
+            .match(/^[a-zA-Z \s\.\!\?\"\-]+$/)) {
+            return null;
+        }
+        return { "textOnly": true };
+    }
+
 
     postcodeValidator(control: any) {
         if (control.value
