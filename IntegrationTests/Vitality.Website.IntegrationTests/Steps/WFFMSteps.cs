@@ -59,15 +59,11 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver.FindElement(By.Id(WebFormID + "Sections_1__Fields_1__Value")).Click();
         }
 
-
-
-
-
-        [When(@"I click on the Submit button")]
-        public void WhenIClickOnTheSubmitButton()
+        [When(@"I click on webform (.*) button")]
+        public void WhenIClickOnWebformButton(string button)
         {
             WebDriver
-                .FindElement(By.XPath("//input[@value='Submit']"))
+                .FindElement(new JQuerySelector(".form-submit-border .btn.btn-default"))
                 .Click();
         }
 

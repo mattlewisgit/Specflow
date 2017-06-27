@@ -125,6 +125,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PartnerHero.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\ProductHero.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductHero.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\QuoteAndApply.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -256,6 +261,7 @@
     <Compile Include="Steps\MessageBoxSteps.cs" />
     <Compile Include="Steps\MetaTagsSteps.cs" />
     <Compile Include="Steps\PartnerHeroSteps.cs" />
+    <Compile Include="Steps\ProductHeroSteps.cs" />
     <Compile Include="Steps\QuoteAndApplySteps.cs" />
     <Compile Include="Steps\QuoteApplySteps.cs" />
     <Compile Include="Steps\RichTextSteps.cs" />
@@ -339,6 +345,10 @@
     <None Include="Features\MetaTags.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>MetaTags.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\ProductHero.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ProductHero.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\QuoteAndApply.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

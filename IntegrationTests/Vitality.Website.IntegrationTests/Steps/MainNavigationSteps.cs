@@ -15,6 +15,8 @@ namespace Vitality.Website.IntegrationTests.Steps
     [Binding]
     public class MainNavigationSteps : BaseSteps
     {
+        private string buttonsize;
+
         [When(@"I click on the (.*) section link")]
         public void WhenIClickOnTheSectionLink(string link)
         {
@@ -104,20 +106,26 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .ShouldBeFalse();
         }
 
-        [When(@"I click on the Login \(small\) button")]
-        public void WhenIClickOnTheLoginSmallButton()
-        {
-            WebDriver
-                .WaitForElement(new JQuerySelector(Button.LOGIN_SMALL))
-                .Click();
-        }
 
-        [When(@"I click on the Login \(large\) button")]
-        public void WhenIClickOnTheLoginLargeButton()
+        [When(@"I click on Login (.*) button")]
+        public void WhenIClickOnLoginButton(string button)
         {
+            //If string equal 'large', then pass large button size
+            if (button.Equals("large"))
+            {
+                buttonsize = Button.LOGIN_LARGE;
+            }
+            //If string equal 'small', then pass small button size
+            if (button.Equals("small"))
+            {
+                buttonsize = Button.LOGIN_SMALL;
+            }
+            
+            //Button size small or large
             WebDriver
-                .FindElement(new JQuerySelector(Button.LOGIN_LARGE))
+                .WaitForElement(new JQuerySelector(buttonsize))
                 .Click();
+
         }
 
 

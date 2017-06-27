@@ -44,7 +44,7 @@
     Scenario: Check Member Zone login components show in Mobile view
     Given I am on presales /
     When I resize to mobile view
-    And I click on the Login (small) button
+    And I click on Login small button
 	Then I expect the Navigation Login button Member Zone to be visible
 	And I expect the Navigation Login button Health Advisers to be visible
 
@@ -52,7 +52,7 @@
     Scenario: Check Member Zone login components show in Full-screen view
     Given I am on presales /
     When I resize to full-screen view
-    And I click on the Login (large) button
+    And I click on Login large button
 	Then I expect the Navigation Login button Member Zone to be visible
 	And I expect the Navigation Login button Health Advisers to be visible
 
