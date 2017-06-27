@@ -53,7 +53,6 @@ export class QuestionGroupComponent implements OnInit {
         return this.questionGroup.isVisible = false;
     }
 
-
     // Only used for children Dobs
     isControlVisible(question: Question<any>): boolean {
         if (!question.basedOnKey) {

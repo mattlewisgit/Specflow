@@ -9,7 +9,7 @@
             {{ question.label }}
         </ng-container>
         <ng-container *ngSwitchDefault>
-            <div class="question--input__text" *ngIf="isControlVisible(question)">
+            <div class="question--input__text" *ngIf="question.isVisible">
                 {{ question.label }}
                 <input [formControlName]="question.key"
                        [id]="question.key" [type]="question.controlType" placeholder="{{ question.placeholder }}" [attr.auto-scroll-to]="question.scrollTo">

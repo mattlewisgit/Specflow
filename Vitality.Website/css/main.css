@@ -1,11 +1,23 @@
 a,
 body,
+button,
 input,
 select {
   color: white;
   font-family: "Hind Siliguri", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  line-height: 2.0; }
+  font-weight: 300; }
+
+body,
+select {
+  line-height: 2; }
+
+button,
+h1,
+h2,
+h3,
+h4,
+input {
+  line-height: 1; }
 
 body {
   background: #f41a5c;
@@ -29,8 +41,62 @@ h2,
 h3,
 h4 {
   font-weight: 300;
-  line-height: 1;
   margin: 0.375em 0; }
+
+button {
+  cursor: pointer; }
+
+.button--box {
+  border-color: #cccccc;
+  border-color: rgba(0, 0, 0, 0.2);
+  background-clip: padding-box;
+  background-color: #5db6b2;
+  border-radius: 0.1875em;
+  border-style: solid;
+  border-width: 0.375em;
+  color: white;
+  display: inline-block;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin: 0 0.75em 0.75em 0;
+  padding: 1em;
+  padding-right: 3em;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: border-color 0.4s;
+  vertical-align: middle; }
+  .button--box:hover, .button--box:focus {
+    border-color: #999999;
+    border-color: rgba(0, 0, 0, 0.4); }
+    .button--box:hover::before, .button--box:focus::before {
+      background-color: #999999;
+      background-color: rgba(0, 0, 0, 0.4);
+      transform: translateX(0.1875em); }
+  .button--box::before {
+    background: url(/images/arrow--right.svg) no-repeat;
+    background-position: 50%;
+    background-size: 50%;
+    background-color: #4b928e;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 1em;
+    position: absolute;
+    right: 1em;
+    top: 35%;
+    transition: background-color 0.4s, transform 0.4s;
+    width: 1em; }
+  .button--box::after {
+    content: "";
+    border-left: 1px solid rgba(0, 0, 0, 0.2);
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3em; }
 
 .quote {
   max-width: 100%;
@@ -64,7 +130,7 @@ h4 {
     margin-left: auto;
     margin-right: auto;
     background-color: #e91c59;
-    border-top: 1px dotted #bb114a;
+    border-top: 2px dotted #bb114a;
     bottom: 0;
     left: 0;
     max-height: 6em;
@@ -79,6 +145,10 @@ h4 {
       max-height: 2.5em; }
     .quote--footer__logo div {
       padding-left: 1.5em; }
+    .quote--footer__progress {
+      font-size: 24px; }
+      .quote--footer__progress button {
+        width: 100%; }
     @media (max-width: 49.99em) {
       .quote--footer__logo, .quote--footer__chat {
         display: none; }
@@ -86,11 +156,11 @@ h4 {
         padding: 0 3em 0 1.5em; } }
     @media (min-width: 50em) {
       .quote--footer__logo, .quote--footer__chat {
-        width: 23.72881%;
+        width: 32.20339%;
         float: left;
         margin-right: 1.69492%; }
       .quote--footer__progress {
-        width: 49.15254%;
+        width: 32.20339%;
         float: left;
         margin-right: 1.69492%; }
       .quote--footer__chat {
@@ -117,13 +187,13 @@ h4 {
 
 .progress {
   background: #bb114a;
-  border: 8px solid #bb114a;
+  border: 16px solid #bb114a;
   border-radius: 0.75em;
   color: #f41a5c;
   width: 100%; }
   .progress-bar {
     background: #f41a5c;
-    border: 4px solid #f41a5c;
+    border: 8px solid #f41a5c;
     border-radius: 0.375em;
     height: 0.375em; }
 
@@ -142,8 +212,7 @@ h4 {
     .question--input__text input[type="email"], .question--input__text input[type="text"] {
       background: none;
       border: 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-      line-height: 1;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.6);
       font-weight: 600;
       width: 8em; }
       .question--input__text input[type="email"]::-webkit-input-placeholder, .question--input__text input[type="text"]::-webkit-input-placeholder {
@@ -156,7 +225,7 @@ h4 {
         color: rgba(255, 255, 255, 0.6); }
   .question select {
     background: none;
-    border: 1px #bb114a solid;
+    border: 2px #bb114a solid;
     border-radius: 0.1875em;
     color: white;
     margin: 0 0.375em;

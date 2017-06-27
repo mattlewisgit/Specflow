@@ -13,8 +13,10 @@ import { WindowRef } from "./../windowref";
 })
 export class QuoteApplyFormComponent implements OnInit {
     quoteApplyForm: FormGroup;
+    callToActionText: string;
     payload: string;
     questionGroups: QuestionGroup[];
+    completedPercentage: number;
     submitted: boolean;
     childrenQuestionGroupKey = "childrenDobGroup";
 
@@ -27,6 +29,7 @@ export class QuoteApplyFormComponent implements OnInit {
 
     ngOnInit(): void {
         this.questionGroups = this.winRef.nativeWindow.angularData.questionGroups;
+        this.callToActionText = this.winRef.nativeWindow.angularData.callToActionText;
         let childrenQuestionGroup = this.getQuestionGroup(this.childrenQuestionGroupKey);
 
         this.dobControlService.initialize({
@@ -38,13 +41,17 @@ export class QuoteApplyFormComponent implements OnInit {
         this.quoteApplyForm = new FormGroup({});
 
         this.quoteApplyForm.valueChanges.subscribe(data => {
-
+            this.calculateCompletedPercentage();
         });
     }
 
     calculateCompletedPercentage() {
-        console.log(this.questionGroups);
-        return (this.questionGroups.filter(x => x.isCompleted).length / this.questionGroups.filter(x => x.isVisible).length)* 100;
+        let visibleQuestionGroups = this.questionGroups.filter(x => x.isVisible);
+        return this.completedPercentage = (visibleQuestionGroups.filter(x => x.isCompleted).length / visibleQuestionGroups.length) * 100;
+    }
+
+    isAllCompleted() {
+        return this.completedPercentage === 100;
     }
 
     getQuestionGroup(key: string) {
