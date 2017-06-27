@@ -85,7 +85,7 @@ export class ValidationService {
                 if (options.minDaysAhead) {
                     now.setDate(now.getDate() +  parseInt(options.minDaysAhead));
                 }
-                if (futureDate.getDate() >= now.getDate() ) {
+                if (futureDate.getDate() <= now.getDate()) {
                     return null;
                 }
             }

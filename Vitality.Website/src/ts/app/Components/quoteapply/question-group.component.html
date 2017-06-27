@@ -1,14 +1,15 @@
-﻿<div class="question"  *ngIf="makeVisible(questionGroup.basedOnKey, questionGroup.basedOnValues)" [formGroup]="form">
+﻿<div class="question"  *ngIf="isGroupVisible()" [formGroup]="form">
     <span [innerHTML]="questionGroup.label"> </span>
     <ng-container *ngFor="let question of questionGroup.questions" [ngSwitch]="question.controlType">
         <ng-container *ngSwitchCase="'dropdown'">
             <select [id]="question.key" [formControlName]="question.key">
+                <option  *ngIf="question.placeholder " value="">{{ question.placeholder }}</option>
                 <option *ngFor="let opt of question.relatedData" [value]="opt.key">{{opt.value}}</option>
             </select>
             {{ question.label }}
         </ng-container>
         <ng-container *ngSwitchDefault>
-            <div class="question--input__text" *ngIf="makeControlVisible(question.basedOnKey, question.basedOnValue)">
+            <div class="question--input__text" *ngIf="isControlVisible(question)">
                 {{ question.label }}
                 <input [formControlName]="question.key"
                        [id]="question.key" [type]="question.controlType" placeholder="{{ question.placeholder }}" [attr.auto-scroll-to]="question.scrollTo">

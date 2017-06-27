@@ -27,7 +27,6 @@ export class QuoteApplyFormComponent implements OnInit {
 
     ngOnInit(): void {
         this.questionGroups = this.winRef.nativeWindow.angularData.questionGroups;
-
         let childrenQuestionGroup = this.getQuestionGroup(this.childrenQuestionGroupKey);
 
         this.dobControlService.initialize({
@@ -41,6 +40,11 @@ export class QuoteApplyFormComponent implements OnInit {
         this.quoteApplyForm.valueChanges.subscribe(data => {
 
         });
+    }
+
+    calculateCompletedPercentage() {
+        console.log(this.questionGroups);
+        return (this.questionGroups.filter(x => x.isCompleted).length / this.questionGroups.filter(x => x.isVisible).length)* 100;
     }
 
     getQuestionGroup(key: string) {

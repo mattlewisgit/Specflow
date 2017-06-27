@@ -21,35 +21,45 @@ export class QuestionGroupComponent implements OnInit {
     }
 
     get isValid() {
+        if (!this.questionGroup.isVisible) {
+            // If group is not visible make the group valid and completed
+            return this.questionGroup.isCompleted = true;
+        }
         for (let entry of this.questionGroup.questions) {
+            // If control is not visible make the group valid and completed
             let control = this.form.controls[entry.key];
-            if (!control.valid && !control.pristine) {
-                return false;
+            if (!control.valid && this.isControlVisible(entry)) {
+                this.questionGroup.isCompleted = false;
+                if (!control.pristine) {
+                    return false;
+                }
+            } else {
+                this.questionGroup.isCompleted = true;
             }
         }
         return true;
     }
 
-    makeVisible(basedOnKey: string, basedOnValues: string[]): boolean {
-        if (!basedOnKey || !basedOnValues) {
-            return true;
+    isGroupVisible(): boolean {
+        if (!this.questionGroup.basedOnKey || !this.questionGroup.basedOnValues) {
+           return this.questionGroup.isVisible = true;
         }
-        let control = this.form.controls[basedOnKey];
-        for (let basedOnValue of basedOnValues) {
+        let control = this.form.controls[this.questionGroup.basedOnKey];
+        for (let basedOnValue of this.questionGroup.basedOnValues) {
             if (control.value === basedOnValue) {
-                return true;
+                return this.questionGroup.isVisible = true;
             }
         }
-        return false;
+        return this.questionGroup.isVisible = false;
     }
 
 
     // Only used for children Dobs
-    makeControlVisible(basedOnKey: string, basedOnValue: number): boolean {
-        if (!basedOnKey) {
-            return true;
+    isControlVisible(question: Question<any>): boolean {
+        if (!question.basedOnKey) {
+            return question.isVisible = true;
         }
-        const control = this.form.controls[basedOnKey];
-        return +control.value >= basedOnValue;
+        const control = this.form.controls[question.basedOnKey];
+        return question.isVisible = +control.value >= question.basedOnValue;
     }
 }

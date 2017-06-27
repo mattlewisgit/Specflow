@@ -57,8 +57,11 @@ export class DobControlService {
         if (noOfChildren == 1) {
             this.noOfChildrenQuestion.label = null;
             this.child1DobQuestion.label = this.child1DobLabel;
-        } else {
+        } else if (noOfChildren > 1) {
             this.noOfChildrenQuestion.label = this.noOfChildrenLabel;
+            this.child1DobQuestion.label = null;
+        } else {
+            this.noOfChildrenQuestion.label = null;
             this.child1DobQuestion.label = null;
         }
         for (let i = 2; i <= noOfChildren; i++) {
@@ -72,6 +75,8 @@ export class DobControlService {
     }
 
     addChildrenDobQuestions(): void {
+        this.child1DobQuestion.basedOnKey = this.noOfChildrenQuestion.key;
+        this.child1DobQuestion.basedOnValue = 1;
         for (let i = 2; i < 6; i++) {
             let childDobToAdd = Object.apply({}, this.child1DobQuestion);
             childDobToAdd.value = null;
