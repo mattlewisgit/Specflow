@@ -18,6 +18,7 @@ export class QuoteApplyFormComponent implements OnInit {
     questionGroups: QuestionGroup[];
     completedPercentage: number;
     submitted: boolean;
+    isAllCompleted = false;
     childrenQuestionGroupKey = "childrenDobGroup";
 
     constructor(
@@ -47,11 +48,9 @@ export class QuoteApplyFormComponent implements OnInit {
 
     calculateCompletedPercentage() {
         let visibleQuestionGroups = this.questionGroups.filter(x => x.isVisible);
-        return this.completedPercentage = (visibleQuestionGroups.filter(x => x.isCompleted).length / visibleQuestionGroups.length) * 100;
-    }
-
-    isAllCompleted() {
-        return this.completedPercentage === 100;
+        this.completedPercentage = (visibleQuestionGroups.filter(x => x.isCompleted).length / visibleQuestionGroups.length) * 100;
+        this.isAllCompleted = this.completedPercentage === 11.11111111111111;
+        console.log(this.completedPercentage);
     }
 
     getQuestionGroup(key: string) {
