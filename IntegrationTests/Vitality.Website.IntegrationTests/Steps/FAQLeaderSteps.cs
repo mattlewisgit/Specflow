@@ -3,6 +3,7 @@
     using OpenQA.Selenium;
     using Selenium.WebDriver.Extensions.JQuery;
     using Shouldly;
+    using System.Linq;
     using TechTalk.SpecFlow;
     using Vitality.Extensions.Selenium;
 
@@ -63,10 +64,17 @@
         [When(@"I click on FAQ Leader paragraph anchor (.*) link")]
         public void WhenIClickOnFAQLeaderParagraphAnchorLink(string anchorText)
         {
-            WebDriver
-                .WaitForElement(new JQuerySelector(
-                    $".faq_leader .faqs .grid-no-gutters .grid-col-1-2 p a:contains('{anchorText}')"))
-                .Click();
+            //Find All anchor texts containing 'anchortext'
+            var anchorSelector = WebDriver
+                .FindElements(new JQuerySelector(".faq_leader .faqs .grid-no-gutters .grid-col-1-2 p a"))
+                .FirstOrDefault(e => e.Text.Equals(anchorText));
+
+            // Send a "scroll" to the anchor text so it is in view (required in mobile view as panels stack)
+            anchorSelector
+                .SendKeys(Keys.Space);
+
+            //Click on 'anchortext'
+            anchorSelector.Click();
         }
 
         [When(@"I click on FAQ Leader bottom button (.*) link")]
