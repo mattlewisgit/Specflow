@@ -99,8 +99,9 @@ export class ValidationService {
 
     phoneNumberValidator(control: any) {
         if (control.value
-            .match(/^[0-9][0-9 ]*$/)) {
-            if (control.value.replace(/\s/g, "").length == 11) {
+            .match(/^[+?0-9][0-9 ]*$/)) {
+            let length = control.value.replace(/\s/g, "").length;
+            if ( length > 10 && length < 14) {
                 return null;
             }
         }
