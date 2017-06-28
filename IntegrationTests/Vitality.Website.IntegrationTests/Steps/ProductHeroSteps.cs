@@ -1,4 +1,5 @@
-﻿using Selenium.WebDriver.Extensions.JQuery;
+﻿using OpenQA.Selenium;
+using Selenium.WebDriver.Extensions.JQuery;
 using Shouldly;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,6 @@ namespace Vitality.Website.IntegrationTests.Steps
             {
                 H1fontsize = "28px";
             }
-
 
 
             //Product Hero image right hand side
@@ -98,13 +98,18 @@ namespace Vitality.Website.IntegrationTests.Steps
         [When(@"I click on the Product Hero (.*) Button")]
         public void WhenIClickOnTheProductHeroButton(string button)
         {
+            var buttonSelector = new JQuerySelector($".product-hero.feature-block.feature-block--primary .feature-block__content-container .feature-block__content .button-cta:contains('{button}')");
+
+            // Scroll to button if not visible.
             WebDriver
-                .WaitForElement(new JQuerySelector(
-                $".product-hero.feature-block.feature-block--primary .feature-block__content-container .feature-block__content .button-cta:contains('{button}')"))
+                .WaitForElement(buttonSelector)
+                .SendKeys(Keys.Space);
+
+            // Click on button.
+            WebDriver
+                .WaitForElement(buttonSelector)
                 .Click();
         }
-
-
 
     }
 }
