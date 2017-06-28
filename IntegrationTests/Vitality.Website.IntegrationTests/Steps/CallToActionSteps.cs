@@ -1,7 +1,9 @@
 ﻿namespace Vitality.Website.IntegrationTests.Steps
 {
+    using OpenQA.Selenium;
     using Selenium.WebDriver.Extensions.JQuery;
     using Shouldly;
+    using System.Linq;
     using TechTalk.SpecFlow;
     using Vitality.Extensions.Selenium;
 
@@ -53,10 +55,26 @@
         [When(@"I click on CTA (.*) button")]
         public void WhenIClickOnCTAButton(string button)
         {
+            //WebDriver
+            //     .WaitForElement(new JQuerySelector(
+            //         $".cta .grid-module .box-button.box-button--rounded.box-button--secondary:contains('{button}')"))
+            //     .Click();
+
+                        
+            var buttonSelector = new JQuerySelector(
+                     $".cta .grid-module .box-button.box-button--rounded.box-button--secondary:contains('{button}')");
+
+            // Scroll to button if not visible.
             WebDriver
-                 .WaitForElement(new JQuerySelector(
-                     $".cta .grid-module .box-button.box-button--rounded.box-button--secondary:contains('{button}')"))
-                 .Click();
+                .WaitForElement(buttonSelector)
+                .SendKeys(Keys.Space);
+
+            // Click on button.
+            WebDriver
+                .WaitForElement(buttonSelector)
+                .Click();
+
+
         }
     }
 }
