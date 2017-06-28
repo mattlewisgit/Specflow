@@ -115,8 +115,9 @@
                 .ShouldBeFalse();
         }
 
-        [When(@"I click on the home hero pause button")]
-        public void WhenIClickOnTheHomeHeroPauseButton()
+
+        [When(@"I pause the home hero video")]
+        public void WhenIPauseTheHomeHeroVideo()
         {
             //Video playing but pause button not visible 
             WebDriver
@@ -133,8 +134,6 @@
 
             //Need to wait for video from youtube to Pause - Not ideal so need to look into this later
             Thread.Sleep(10000);
-
-
         }
 
 

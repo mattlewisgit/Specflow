@@ -147,7 +147,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 28
  testRunner.When("I click on home hero play button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 29
- testRunner.And("I click on the home hero pause button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I pause the home hero video", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 30
  testRunner.Then("I expect the correct CSS home hero values to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
