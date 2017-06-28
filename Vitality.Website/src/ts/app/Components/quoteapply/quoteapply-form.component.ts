@@ -49,8 +49,7 @@ export class QuoteApplyFormComponent implements OnInit {
     calculateCompletedPercentage() {
         let visibleQuestionGroups = this.questionGroups.filter(x => x.isVisible);
         this.completedPercentage = (visibleQuestionGroups.filter(x => x.isCompleted).length / visibleQuestionGroups.length) * 100;
-        this.isAllCompleted = this.completedPercentage === 11.11111111111111;
-        console.log(this.completedPercentage);
+        this.isAllCompleted = this.completedPercentage === 100;
     }
 
     getQuestionGroup(key: string) {

@@ -12,12 +12,8 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         public string CallToActionText { get; set; }
         public string ChildDobSeperatorLabel { get; set; }
         public string ChildDobLastLabel { get; set; }
-
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<QuestionGroup> QuestionGroups { get; set; }
-
-        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public FeedSettings PostcodeFeed { get; set; }
         public string TermsAndCondition { get; set; }
     }
 }
