@@ -7,6 +7,7 @@ import { AutoScrollTo } from "./directives/auto-scroll-to.directive";
 import { QuoteApplyFormComponent }  from "./components/quoteapply/quoteapply-form.component";
 import { QuoteApplyService }  from "./services/quoteapply.service";
 import { PostcodeService }  from "./services/postcode.service";
+import { ErrorService }  from "./services/error.service";
 import { ValidationService }  from "./services/validation.service";
 import { DobControlService }  from "./services/dob-control.service";
 import { QuestionControlService }  from "./services/question-control.service";
@@ -21,7 +22,7 @@ import { WindowRef }  from "./components/windowref";
         HttpModule
     ],
     declarations: [QuoteApplyFormComponent, AutoScrollTo, QuestionGroupComponent],
-    providers: [DobControlService, PostcodeService, QuoteApplyService, QuestionControlService, ValidationService, WindowRef],
+    providers: [DobControlService, ErrorService, PostcodeService, QuoteApplyService, QuestionControlService, ValidationService, WindowRef],
     bootstrap: [QuoteApplyFormComponent]
 })
 export class QuoteApplyFormAppModule { }

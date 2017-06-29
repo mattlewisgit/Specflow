@@ -1,15 +1,18 @@
-﻿import { Injectable }    from '@angular/core';
-import { Headers, Http } from '@angular/http';
-import 'rxjs/add/operator/toPromise';
+﻿import { Injectable }    from "@angular/core";
+import { Headers, Http } from "@angular/http";
+import { ErrorService } from "./error.service";
+import "rxjs/add/operator/toPromise";
 
 @Injectable()
 export class PostcodeService {
     endpoint: string;
     feedType: string;
 
-    constructor(private http: Http) {}
+    constructor(private http: Http,
+        private errorService: ErrorService) {
+    }
 
-    initialize(endpoint: string, feedType:string): void {
+    initialize(endpoint: string, feedType: string): void {
         this.endpoint = endpoint;
         this.feedType = feedType;
     }
@@ -19,11 +22,6 @@ export class PostcodeService {
                 { FeedType: this.feedType })
             .toPromise()
             .then(response => response.json().BslResponse)
-            .catch(this.handleError);
-    }
-
-    private handleError(error: any): void {
-        throw error.message || error;
+            .catch(this.errorService.handleServiceOutage.bind(this.errorService));
     }
 }
-

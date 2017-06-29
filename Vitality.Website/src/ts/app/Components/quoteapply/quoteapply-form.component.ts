@@ -59,6 +59,6 @@ export class QuoteApplyFormComponent implements OnInit {
     apply(isValid: boolean): void {
         //Do it only when isvalid
         this.submitted = true;
-        this.payload = JSON.stringify(this.quoteApplyForm.value);
+        this.quoteApplyService.apply(this.quoteApplyForm.value);
     }
 }
