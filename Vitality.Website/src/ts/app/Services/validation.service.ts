@@ -99,12 +99,9 @@ export class ValidationService {
 
     phoneNumberValidator(control: any) {
         if (control.value
-            .match(/^[+?0-9][0-9 ]*$/)) {
-            let length = control.value.replace(/\s/g, "").length;
-            if ( length > 10 && length < 14) {
+            .replace(/\s/g, "").replace(/\)|\(/g, "").match(/((0)(?!44)[0-9]{10}$)|((0044|044|\+44)[0-9]{10}$)/)) {
                 return null;
             }
-        }
         return { "invalidPhoneNumber": true };
     }
 
