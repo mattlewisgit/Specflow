@@ -91,7 +91,7 @@ export class ValidationService {
 
     emailValidator(control: any) {
         if (control.value
-            .match(/^[a-zA-Z]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/)) {
+            .match(/^.+@.+\..+$/)) {
             return null;
         }
         return { "invalidEmailAddress": true };
