@@ -45,9 +45,7 @@ namespace Vitality.Website.SC.WFFM.SaveActions
             catch (Exception ex)
             {
                 Log.Error(
-                    string.Format("Error Transforming Call Pro XML Data: Error:{0}. InnerException: {1}",
-                    ex.Message,
-                    ex.InnerException != null ? ex.InnerException.Message : string.Empty)
+                    $"Error Transforming Call Pro XML Data: Error:{ex.Message}. InnerException: {(ex.InnerException != null ? ex.InnerException.Message : string.Empty)}"
                     , this);
             }
 
@@ -60,10 +58,7 @@ namespace Vitality.Website.SC.WFFM.SaveActions
             catch (Exception ex)
             {
                 Log.Error(
-                    string.Format("Failed to submit form to Call Pro. SchemaId:{0}. Error:{1}. InnerException:{2}.",
-                    SchemaId,
-                    ex.Message,
-                    ex.InnerException != null ? ex.InnerException.Message : string.Empty)
+                    $"Failed to submit form to Call Pro. SchemaId:{SchemaId}. Error:{ex.Message}. InnerException:{(ex.InnerException != null ? ex.InnerException.Message : string.Empty)}."
                     , this);
             }
 

@@ -16,7 +16,7 @@ namespace Vitality.Website.SC.ContentSearch.ComputedFields
 
             if (indexableItem == null)
             {
-                Log.Warn(string.Format("{0} : unsupported IIndexable type : {1}", this, indexable.GetType()), this);
+                Log.Warn($"{this} : unsupported IIndexable type : {indexable.GetType()}", this);
                 return null;
             }
 

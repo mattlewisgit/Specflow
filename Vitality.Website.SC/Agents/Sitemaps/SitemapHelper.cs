@@ -22,7 +22,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
                 ConformanceLevel = ConformanceLevel.Auto
             };
 
-            var xmlFile = string.Format("{0}{1}\\{2}", HttpRuntime.AppDomainAppPath, SiteMapLocation, sitemapName);
+            var xmlFile = $"{HttpRuntime.AppDomainAppPath}{SiteMapLocation}\\{sitemapName}";
 
             using (var writer = XmlWriter.Create(xmlFile, xmlWriterSetting))
             {
@@ -50,7 +50,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
         {
             T model = default(T);
             
-            var xmlFile = string.Format("{0}{1}\\{2}", HttpRuntime.AppDomainAppPath, SiteMapLocation, sitemapName);
+            var xmlFile = $"{HttpRuntime.AppDomainAppPath}{SiteMapLocation}\\{sitemapName}";
 
             if (File.Exists(xmlFile))
             {

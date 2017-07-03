@@ -18,9 +18,9 @@ namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
         {
             var currentSite = Sitecore.Context.Site.Name;
 
-            var pathToSearch = string.Format("/sitecore/content/{0}/home", currentSite);
+            var pathToSearch = $"/sitecore/content/{currentSite}/home";
 
-            var indexName = string.Format("{0}_site_content", currentSite);
+            var indexName = $"{currentSite}_site_content";
 
             using (var context = ContentSearchManager.GetIndex(indexName).CreateSearchContext())
             {

@@ -11,7 +11,7 @@ namespace Vitality.Website.Extensions.Views
         {
             if (Parameters(view).BackgroundColour != null)
             {
-                return string.Format("{0}--{1}", CssClass(view), Parameters(view).BackgroundColour.Value);
+                return $"{CssClass(view)}--{Parameters(view).BackgroundColour.Value}";
             }
             return CssClass(view) + "--light";
         }
@@ -20,7 +20,7 @@ namespace Vitality.Website.Extensions.Views
         {
             if (Parameters(view).ContentAlignment != null)
             {
-                return string.Format("{0}--{1}", CssClass(view), Parameters(view).ContentAlignment.Value);
+                return $"{CssClass(view)}--{Parameters(view).ContentAlignment.Value}";
             }
             return string.Empty;
         }

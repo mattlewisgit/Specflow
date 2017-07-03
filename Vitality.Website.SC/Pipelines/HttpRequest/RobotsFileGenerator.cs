@@ -26,7 +26,7 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
                 return;
             }
 
-            var robotsTxtContent = string.Format(@"User-agent: *{0}Disallow: /sitecore", Environment.NewLine);
+            var robotsTxtContent = $@"User-agent: *{Environment.NewLine}Disallow: /sitecore";
 
             if (Sitecore.Context.Site != null && Sitecore.Context.Database != null)
             {

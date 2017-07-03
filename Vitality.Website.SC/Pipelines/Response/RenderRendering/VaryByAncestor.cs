@@ -27,8 +27,9 @@ namespace Vitality.Website.SC.Pipelines.Response.RenderRendering
         {
             get
             {
-                return _query ?? (_query = string.Format("./ancestor-or-self::*[{0}]",
-                    string.Join(" or ", templateIds.Select(id => $"@@templateid='{id}'"))));
+                return _query ?? (_query =
+                           $"./ancestor-or-self::*[{string.Join(" or ", templateIds.Select(id => $"@@templateid='{id}'"))}]"
+                       );
             }
         }
 

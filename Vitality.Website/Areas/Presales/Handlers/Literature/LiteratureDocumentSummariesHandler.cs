@@ -20,7 +20,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
         {
             if (Sitecore.Context.Site != null)
             {
-                var searchableIndex = string.Format("{0}_literature_library", Sitecore.Context.Site.Name);
+                var searchableIndex = $"{Sitecore.Context.Site.Name}_literature_library";
                 _searchContext = ContentSearchManager.GetIndex(searchableIndex).CreateSearchContext();
             }
         }
