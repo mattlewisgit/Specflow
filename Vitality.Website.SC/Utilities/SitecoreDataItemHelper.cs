@@ -1,9 +1,8 @@
-using System;
-using Sitecore.Data;
-using Sitecore.Data.Items;
-
 namespace Vitality.Website.SC.Utilities
 {
+    using System;
+    using Sitecore.Data.Items;
+
     public static class SitecoreDataItemHelper
     {
         public static bool PathStartsWith(this Item item, Item itemToCheck, StringComparison stringComparison = StringComparison.InvariantCultureIgnoreCase)

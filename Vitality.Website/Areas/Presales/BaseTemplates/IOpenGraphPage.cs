@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Glass.Mapper.Sc.Fields;
-
 namespace Vitality.Website.Areas.Presales.BaseTemplates
 {
+    using Glass.Mapper.Sc.Fields;
+
     public interface IOpenGraphPage
     {
         string OpenGraphTitle { get; set; }

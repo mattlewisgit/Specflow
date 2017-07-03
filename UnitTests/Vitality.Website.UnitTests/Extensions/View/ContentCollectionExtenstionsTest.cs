@@ -1,10 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using Moq;
 using Shouldly;
 using Vitality.Website.Areas.Presales.ComponentTemplates.Articles;
 using Vitality.Website.Areas.Presales.ComponentTemplates.ContentCollection;
-using Vitality.Website.Extensions;
 using Vitality.Website.Extensions.Views;
 using Xunit;
 

@@ -1,17 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Sitecore;
-using Sitecore.Data.Items;
-using Sitecore.Links;
-using Sitecore.Publishing.Pipelines.GetItemReferences;
-using Sitecore.Publishing.Pipelines.PublishItem;
-using Sitecore.Web;
-using Vitality.Website.SC.Utilities;
-
 namespace Vitality.Website.SC.Pipelines.Publishing.GetItemReferences
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Sitecore.Data.Items;
+    using Sitecore.Publishing.Pipelines.GetItemReferences;
+    using Sitecore.Publishing.Pipelines.PublishItem;
+    using Sitecore.Web;
+    using Utilities;
+
     public class AddDataSourceItemDescendants : GetItemReferencesProcessor
     {
         private readonly List<string> pathsToIgnore = new List<string>();

@@ -1,9 +1,7 @@
-using System.Web;
 using Sitecore;
 
 namespace Vitality.Website.SC
 {
-    using Sitecore.Data;
     using System;
 
     public static class ItemConstants

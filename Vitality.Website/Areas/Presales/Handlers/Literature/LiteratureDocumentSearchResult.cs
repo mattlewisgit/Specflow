@@ -1,13 +1,7 @@
-using System.Collections.Generic;
-using Glass.Mapper.Sc.Fields;
-using Sitecore.Configuration;
-using Sitecore.Resources.Media;
-
 namespace Vitality.Website.Areas.Presales.Handlers.Literature
 {
     using System;
     using System.ComponentModel;
-
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.Converters;
 

@@ -3,7 +3,6 @@
     using OpenQA.Selenium;
     using Selenium.WebDriver.Extensions.JQuery;
     using Shouldly;
-    using System.Linq;
     using TechTalk.SpecFlow;
     using Vitality.Extensions.Selenium;
 

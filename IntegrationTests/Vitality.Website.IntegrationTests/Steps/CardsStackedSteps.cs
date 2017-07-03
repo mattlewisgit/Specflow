@@ -1,14 +1,8 @@
 ﻿namespace Vitality.Website.IntegrationTests.Steps
 {
-    using System.Drawing;
     using Selenium.WebDriver.Extensions.JQuery;
     using Shouldly;
     using TechTalk.SpecFlow;
-    using Extensions;
-    using Utilities;
-    using OpenQA.Selenium.Interactions;
-    using By = OpenQA.Selenium.By;
-    using OpenQA.Selenium.Support.UI;
     using System;
 
 

@@ -1,20 +1,17 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Glass.Mapper.Sc.Configuration.Attributes;
-using Glass.Mapper.Sc.Fields;
-using Vitality.Website.Areas.Global.Models;
-using Vitality.Website.Areas.Presales.ComponentTemplates.Generic;
-
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
 {
+    using System.Collections.Generic;
+    using Glass.Mapper.Sc.Configuration.Attributes;
+    using Glass.Mapper.Sc.Fields;
+    using Global.Models;
+    using Generic;
+
     [SitecoreType(AutoMap = true)]
     public class AwardLeader : SitecoreItem
     {
         public AwardLeader()
         {
-            this.BackgroundImage = new Image();
+            BackgroundImage = new Image();
         }
 
         public string LeadIn { get; set; }

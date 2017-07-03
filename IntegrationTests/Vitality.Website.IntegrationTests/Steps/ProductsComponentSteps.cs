@@ -1,9 +1,5 @@
 ﻿using Selenium.WebDriver.Extensions.JQuery;
 using Shouldly;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using TechTalk.SpecFlow;
 using Vitality.Extensions.Selenium;
 

@@ -1,15 +1,13 @@
-using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Net.Http.Formatting;
-using System.Threading.Tasks;
-using System.Web.Http;
-
 namespace Vitality.Website.Areas.Presales.Controllers
 {
+    using MediatR;
+    using System;
+    using System.Net;
+    using System.Net.Http;
+    using System.Net.Http.Formatting;
+    using System.Threading.Tasks;
+    using System.Web.Http;
+
     public class BaseController : ApiController
     {
         private readonly IMediator _mediator;
