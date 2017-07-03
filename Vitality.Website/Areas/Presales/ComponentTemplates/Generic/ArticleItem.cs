@@ -1,4 +1,3 @@
-using System;
 using Glass.Mapper.Sc.Fields;
 using Vitality.Website.Areas.Global.Models;
 

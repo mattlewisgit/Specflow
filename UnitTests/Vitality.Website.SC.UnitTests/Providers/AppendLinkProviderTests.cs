@@ -1,6 +1,5 @@
 using Shouldly;
 using Vitality.Website.SC.Providers;
-using Vitality.Website.SC.Utilities;
 using Xunit;
 
 namespace Vitality.Website.SC.UnitTests.Providers

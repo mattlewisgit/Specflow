@@ -1,15 +1,11 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-
 namespace Vitality.Website.Areas.Presales.PageTemplates
 {
+    using System;
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
-
-    using Vitality.Website.Areas.Global.Models;
-    using Vitality.Website.Areas.Presales.ComponentTemplates.Literature;
+    using Global.Models;
+    using ComponentTemplates.Literature;
 
     public class LiteratureLibraryPage : SitecoreItem
     {

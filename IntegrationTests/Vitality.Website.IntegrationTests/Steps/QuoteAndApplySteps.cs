@@ -1,19 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Selenium.WebDriver.Extensions;
 using Shouldly;
 using TechTalk.SpecFlow;
-using By = OpenQA.Selenium.By;
 using OpenQA.Selenium;
 using Xunit;
-using System.Threading;
-using System.Collections.ObjectModel;
 using Selenium.WebDriver.Extensions.JQuery;
-using OpenQA.Selenium.Support.UI;
 using Vitality.Extensions.Selenium;
 using Vitality.Website.IntegrationTests.Extensions;
-using System.Collections;
 
 namespace Vitality.Website.IntegrationTests.Steps
 {

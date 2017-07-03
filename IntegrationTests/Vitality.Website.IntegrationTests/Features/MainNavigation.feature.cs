@@ -212,7 +212,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 46
     testRunner.When("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 47
-    testRunner.And("I click on the Login (small) button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I click on Login small button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 48
  testRunner.Then("I expect the Navigation Login button Member Zone to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 49
@@ -236,7 +236,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 54
     testRunner.When("I resize to full-screen view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 55
-    testRunner.And("I click on the Login (large) button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I click on Login large button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 56
  testRunner.Then("I expect the Navigation Login button Member Zone to be visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 57

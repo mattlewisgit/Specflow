@@ -125,10 +125,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PartnerHero.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\ProductHero.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductHero.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\ProductsComponent.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductsComponent.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\QuoteAndApply.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuoteAndApply.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\RewardLeader.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RewardLeader.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\WFFM.feature.cs">
       <AutoGen>True</AutoGen>
@@ -256,8 +271,11 @@
     <Compile Include="Steps\MessageBoxSteps.cs" />
     <Compile Include="Steps\MetaTagsSteps.cs" />
     <Compile Include="Steps\PartnerHeroSteps.cs" />
+    <Compile Include="Steps\ProductHeroSteps.cs" />
+    <Compile Include="Steps\ProductsComponentSteps.cs" />
     <Compile Include="Steps\QuoteAndApplySteps.cs" />
     <Compile Include="Steps\QuoteApplySteps.cs" />
+    <Compile Include="Steps\RewardLeaderSteps.cs" />
     <Compile Include="Steps\RichTextSteps.cs" />
     <Compile Include="Steps\SearchingSteps.cs" />
     <Compile Include="Steps\AwardLeaderSteps.cs" />
@@ -340,6 +358,14 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>MetaTags.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\ProductHero.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ProductHero.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\ProductsComponent.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ProductsComponent.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\QuoteAndApply.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>QuoteAndApply.feature.cs</LastGenOutput>
@@ -347,6 +373,10 @@
     <None Include="Features\QuoteApply.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>QuoteApply.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\RewardLeader.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RewardLeader.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\RichText.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

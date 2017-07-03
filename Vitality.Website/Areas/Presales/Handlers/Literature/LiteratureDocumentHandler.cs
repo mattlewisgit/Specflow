@@ -3,7 +3,6 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
     using MediatR;
     using SC;
     using Sitecore.ContentSearch;
-    using System;
     using System.Collections.Generic;
     using System.Linq;
 

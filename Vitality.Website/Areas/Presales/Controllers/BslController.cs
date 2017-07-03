@@ -2,7 +2,6 @@ using MediatR;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Newtonsoft.Json.Linq;
 using Vitality.Website.Areas.Presales.Handlers.Bsl;
 using Vitality.Website.Areas.Presales.Models;
 

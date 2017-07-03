@@ -1,14 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using Sitecore.ContentSearch.Linq;
-using Sitecore.Data.Items;
-using Sitecore.Links;
-using Sitecore.Sites;
-using Vitality.Website.Areas.Presales.Controllers;
-using Vitality.Website.Areas.Presales.Handlers.Literature;
-using Vitality.Website.Areas.Presales.Models;
 
 namespace Vitality.Website.Areas.Presales.Handlers.ContentSearch
 {

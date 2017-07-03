@@ -1,10 +1,7 @@
 namespace Vitality.Website.SC.Pipelines.HttpRequest
 {
     using System;
-    using System.IO;
     using System.Web;
-
-    using Sitecore.Data.Items;
     using Sitecore.Pipelines.HttpRequest;
     /// <remarks>
     /// Based off solution provided here https://sitecorecorner.com/2014/07/30/handling-sitecore-multi-site-instance-robots-txt/

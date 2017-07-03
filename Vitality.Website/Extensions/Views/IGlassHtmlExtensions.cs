@@ -2,7 +2,6 @@ using System;
 using System.Linq.Expressions;
 using System.Web;
 using Glass.Mapper.Sc;
-using Sitecore.Forms.Mvc.Extensions;
 
 namespace Vitality.Website.Extensions.Views
 {

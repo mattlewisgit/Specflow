@@ -26,5 +26,5 @@ Scenario: Home Hero click play on video
 Scenario: Home Hero click play and pause video
 	Given I am on presales /dev/home-hero
 	When I click on home hero play button
-	And I click on the home hero pause button
+	And I pause the home hero video
 	Then I expect the correct CSS home hero values to appear

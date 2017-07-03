@@ -93,7 +93,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 9
  testRunner.When(string.Format("I enter the form details {0} {1} {2} {3} {4} {5} {6} {7} {8}", firstname, lastname, othername, email, phone, day, month, year, dropList), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.And("I click on the Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click on webform Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
  testRunner.Then("I expect the web forms \'Thank you for filling in the form!\' message to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -123,7 +123,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 21
  testRunner.When(string.Format("I enter the form details {0} {1} {2} {3} {4} {5} {6} {7} {8}", firstname, lastname, othername, email, phone, day, month, year, dropList), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 22
- testRunner.And("I click on the Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click on webform Submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23
  testRunner.Then(string.Format("I expect the web forms {0} error message to appear", errorMessage), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

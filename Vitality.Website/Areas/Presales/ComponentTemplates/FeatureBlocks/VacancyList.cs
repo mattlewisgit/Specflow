@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Configuration.Attributes;
-using Sitecore.Data.Fields;
-using Sitecore.Data.Items;
 using Vitality.Website.Areas.Global.Models;
 using Vitality.Website.Areas.Presales.SettingsTemplates;
 

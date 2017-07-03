@@ -1,11 +1,6 @@
-using System.Collections.Generic;
-using System.Linq;
-using Glass.Mapper.Sc;
-
 namespace Vitality.Website.Areas.Global.Models
 {
     using System;
-
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
 

@@ -15,7 +15,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         [BeforeScenario]
         public static void BeforeTestRun()
         {
-            IWebDriverExtensions.DefaultWaitTimeSpan = new TimeSpan(0, 5, 0);
+            IWebDriverExtensions.DefaultWaitTimeSpan = new TimeSpan(0, 2, 0);
             WebDriver = DriverFactory.Chrome();
 
             // Need to set these after as there are no options for Chrome.

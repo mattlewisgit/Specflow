@@ -7,7 +7,7 @@
 	Scenario Outline: Submit Valid Web Form
     Given I am on advisers /dev/wffm
 	When I enter the form details <Firstname> <Lastname> <Othername> <Email> <Phone> <Day> <Month> <Year> <DropList>
-	And I click on the Submit button
+	And I click on webform Submit button 
 	Then I expect the web forms 'Thank you for filling in the form!' message to appear
 	
 	Examples:
@@ -19,7 +19,7 @@
 	Scenario Outline: Submit Invalid Web Form
     Given I am on advisers /dev/wffm
 	When I enter the form details <Firstname> <Lastname> <Othername> <Email> <Phone> <Day> <Month> <Year> <DropList>
-	And I click on the Submit button
+	And I click on webform Submit button 
 	Then I expect the web forms <ErrorMessage> error message to appear
 	
 	Examples:
