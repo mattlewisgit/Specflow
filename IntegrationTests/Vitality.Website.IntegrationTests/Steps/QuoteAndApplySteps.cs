@@ -8,6 +8,7 @@ using Xunit;
 using Selenium.WebDriver.Extensions.JQuery;
 using Vitality.Extensions.Selenium;
 using Vitality.Website.IntegrationTests.Extensions;
+using System.Threading;
 
 namespace Vitality.Website.IntegrationTests.Steps
 {
