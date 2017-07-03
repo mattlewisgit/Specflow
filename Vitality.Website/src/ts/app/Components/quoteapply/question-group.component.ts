@@ -22,14 +22,17 @@ export class QuestionGroupComponent implements OnInit {
 
     get isValid() {
         if (!this.questionGroup.isVisible) {
-            // If group is not visible make the group valid and completed
+            // If group is not visible mark the group completed.
             return this.questionGroup.isCompleted = true;
         }
+
         for (let entry of this.questionGroup.questions) {
             // If control is not visible make the group valid and completed
             let control = this.form.controls[entry.key];
+
             if (!control.valid && this.isControlVisible(entry)) {
                 this.questionGroup.isCompleted = false;
+
                 if (!control.pristine) {
                     return false;
                 }
@@ -37,6 +40,7 @@ export class QuestionGroupComponent implements OnInit {
                 this.questionGroup.isCompleted = true;
             }
         }
+
         return true;
     }
 

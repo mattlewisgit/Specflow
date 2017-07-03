@@ -32,18 +32,10 @@ export class QuestionControlService {
     }
 
     getValidators(validators: FieldValidator[]) {
-        const constructedValidators: any[] = [];
-        for (let entry of validators) {
-            constructedValidators.push(this.validationService.getValidator(entry.validatorName, entry.parameters));
-        }
-        return constructedValidators;
+        return validators.map(v => this.validationService.getValidator(v.validatorName, v.parameters));
     }
 
     getAsyncValidators(validators: FieldValidator[]) {
-        const constructedValidators: any[] = [];
-        for (let entry of validators) {
-            constructedValidators.push(this.validationService.getAsyncValidator(entry.validatorName, entry.parameters));
-        }
-        return constructedValidators;
+        return validators.map(v => this.validationService.getAsyncValidator(v.validatorName, v.parameters));
     }
 }

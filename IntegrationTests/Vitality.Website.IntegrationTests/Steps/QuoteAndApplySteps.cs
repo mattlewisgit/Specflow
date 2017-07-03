@@ -53,6 +53,11 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver
                 .FindElement(new JQuerySelector($".quote--content > quoteapply-form .question .question--input__text #{fieldName}"))
                 .SendKeys(inputText);
+
+            if( fieldName == "postcode")
+            {
+                Thread.Sleep(2000);
+            }
         }
 
         [When(@"I click on the (.*) button")]
@@ -215,11 +220,13 @@ namespace Vitality.Website.IntegrationTests.Steps
             switch (fieldName)
             {
                 case "insuredStatus":
+                    targetList.Add("Please select");
                     targetList.Add("currently insured");
                     targetList.Add("not currently insured");
                     break;
 
                 case "noOfClaimFreeYears":
+                    targetList.Add("Select");
                     targetList.Add("0 years");
                     targetList.Add("1 year");
                     targetList.Add("2 years");
@@ -229,6 +236,7 @@ namespace Vitality.Website.IntegrationTests.Steps
                     break;
 
                 case "noOfClaims":
+                    targetList.Add("Select");
                     targetList.Add("no claims");
                     targetList.Add("1 claim");
                     targetList.Add("2 claims");
@@ -236,6 +244,7 @@ namespace Vitality.Website.IntegrationTests.Steps
                     break;
 
                 case "membersToInsure":
+                    targetList.Add("Please select");
                     targetList.Add("just me");
                     targetList.Add("me and my kids");
                     targetList.Add("me and my partner");
@@ -243,7 +252,7 @@ namespace Vitality.Website.IntegrationTests.Steps
                     break;
 
                 case "noOfChildren":
-
+                    targetList.Add("Select");
                     targetList.Add("kid's");
                     targetList.Add("2 kids'");
                     targetList.Add("3 kids'");
@@ -255,6 +264,7 @@ namespace Vitality.Website.IntegrationTests.Steps
                     break;
 
                 case "marketingPermission":
+                    targetList.Add("Select");
                     targetList.Add("Agreed");
                     targetList.Add("Not Agreed");
                     break;
