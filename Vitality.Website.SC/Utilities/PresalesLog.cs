@@ -6,9 +6,6 @@ namespace Vitality.Website.SC.Utilities
     {
         private static ILog _log;
 
-        public static ILog Log
-        {
-            get { return _log ?? (_log = LogManager.GetLogger(typeof(PresalesLog))); }
-        }
+        public static ILog Log => _log ?? (_log = LogManager.GetLogger(typeof(PresalesLog)));
     }
 }

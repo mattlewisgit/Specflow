@@ -9,12 +9,6 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.Summary
 
         public string Body { get; set; }
 
-        public bool IsShortListItem
-        {
-            get
-            {
-                return TemplateId == ItemConstants.Presales.Templates.Summary.SummaryListItemShort.Id;
-            } 
-        }
+        public bool IsShortListItem => TemplateId == ItemConstants.Presales.Templates.Summary.SummaryListItemShort.Id;
     }
 }

@@ -10,13 +10,7 @@ namespace Vitality.Website.SC.WFFM.SaveActions
 {
     public class CallProSchema : DialogForm
     {
-        public string Params
-        {
-            get
-            {
-                return (System.Web.HttpContext.Current.Session[Sitecore.Web.WebUtil.GetQueryString("params")] as string);
-            }
-        }
+        public string Params => (System.Web.HttpContext.Current.Session[Sitecore.Web.WebUtil.GetQueryString("params")] as string);
 
         public string SchemaId { get; set; }
 
