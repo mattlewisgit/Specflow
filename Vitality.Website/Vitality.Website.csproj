@@ -382,6 +382,7 @@
     <TypeScriptCompile Include="src\ts\app\models\question.ts" />
     <TypeScriptCompile Include="src\ts\app\quoteapply-form-app.module.ts" />
     <TypeScriptCompile Include="src\ts\app\services\dob-control.service.ts" />
+    <TypeScriptCompile Include="src\ts\app\services\error.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\postcode.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\question-control.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\quoteapply.service.ts" />

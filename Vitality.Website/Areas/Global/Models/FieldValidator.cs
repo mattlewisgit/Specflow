@@ -4,7 +4,8 @@ namespace Vitality.Website.Areas.Global.Models
 {
     public class FieldValidator
     {
-        public string ValidatorName { get; set; }
+        public bool IsAsync { get; set; }
         public NameValueCollection Parameters { get; set; }
+        public string ValidatorName { get; set; }
     }
 }

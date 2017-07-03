@@ -73,9 +73,9 @@ namespace Vitality.Website.App_Start
                     opt => opt.MapFrom(src => string.IsNullOrEmpty(src.BasedOnValues)? null: src.BasedOnValues.Split(',')));
 
             config.CreateMap<QuoteApplyForm, QuoteApplyFormViewModel>()
-                .ForMember(
-                    dest => dest.PostcodeFeedEndpoint,
-                    opt => opt.MapFrom(src => src.PostcodeFeed.Endpoint));
+                  .ForMember(
+                    dest => dest.ServiceOutagePage,
+                    opt => opt.MapFrom(src => src.ServiceOutagePage.Url));
         }
     }
 }

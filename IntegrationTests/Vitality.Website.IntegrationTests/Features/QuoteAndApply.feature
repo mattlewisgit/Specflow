@@ -20,6 +20,8 @@
     And I go to the partnerDateOfBirth field and enter 01/01/1971
     And I go to the noOfChildren field and choose kid's
     And I go to the child1Dob field and enter 01/01/2005
+    And I go to the postcode field and enter BH1 1JD
+    And I go to the marketingPermission field and choose Agreed
     Then I don't see any field errors
 
     Scenario: Check that phone number formats are allowed #1
@@ -124,7 +126,7 @@
     When I go to the membersToInsure field and choose me and my kids
     Then the partnerDateOfBirth field is not displayed
     And the noOfChildren field is displayed
-    And the child1Dob field is displayed
+    And the child1Dob field is not displayed
 
     Scenario: Hide the fields relating to Kids
     Given I am on presales /dev/quote-and-apply
@@ -152,7 +154,7 @@
     When I go to the membersToInsure field and choose me, my partner and kids
     Then the partnerDateOfBirth field is displayed
     And the noOfChildren field is displayed
-    And the child1Dob field is displayed
+
 
     Scenario: Check error message when dateOfBirth date format incorrect
     Given I am on presales /dev/quote-and-apply

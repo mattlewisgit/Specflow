@@ -9,13 +9,15 @@ import {Question } from "../models/question";
 @Injectable()
 export class QuestionControlService {
     constructor(
-        private dobControlService : DobControlService,
+        private dobControlService: DobControlService,
         private validationService: ValidationService
     ) { }
 
     addFormControls(form: FormGroup, questions: Question<any>[]) {
         questions.forEach(question => {
-            let formControl = new FormControl(question.value || "", this.getValidators(question.validators));
+            let formControl = new FormControl(question.value || "",
+                this.getValidators(question.validators.filter(x => !x.isAsync)),
+                this.getAsyncValidators(question.validators.filter(x => x.isAsync)));
             if (question.key === "noOfChildren") {
              formControl.valueChanges.subscribe(data=> this.dobControlService.noOfKidsChanged(data));
             }
@@ -32,10 +34,10 @@ export class QuestionControlService {
     }
 
     getValidators(validators: FieldValidator[]) {
-        let constructedValidators: any[] = [];
-        for (let entry of validators) {
-            constructedValidators.push(this.validationService.getValidator(entry.validatorName, entry.parameters));
-        }
-        return constructedValidators;
+        return validators.map(v => this.validationService.getValidator(v.validatorName, v.parameters));
+    }
+
+    getAsyncValidators(validators: FieldValidator[]) {
+        return validators.map(v => this.validationService.getAsyncValidator(v.validatorName, v.parameters));
     }
 }

@@ -13,7 +13,7 @@ created: 20170615T150915Z
 ----version----
 language: en
 version: 1
-revision: 2ba979d2-1fea-4ce2-a29b-b467bd086e4a
+revision: 66dcd065-3892-493a-98b6-8b1fd2dd14cf
 
 ----field----
 field: {41F1F96F-0AA6-4E4C-95ED-EA251B3BD7E7}
@@ -22,6 +22,20 @@ key: validatorname
 content-length: 17
 
 postcodeValidator
+----field----
+field: {2DA36667-40DD-4A1C-952A-795FE6F0B4F0}
+name: Parameters
+key: parameters
+content-length: 53
+
+endpoint=address%2Flookup%2F&feedType=CustomerDetails
+----field----
+field: {C95395F6-D606-410B-B49C-2D0FF3CA70FC}
+name: IsAsync
+key: isasync
+content-length: 1
+
+1
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -49,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-2ba979d2-1fea-4ce2-a29b-b467bd086e4a
+66dcd065-3892-493a-98b6-8b1fd2dd14cf
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170616T105157Z
+20170628T122033Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
