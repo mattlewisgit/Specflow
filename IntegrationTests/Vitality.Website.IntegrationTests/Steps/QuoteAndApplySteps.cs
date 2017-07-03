@@ -54,7 +54,7 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .FindElement(new JQuerySelector($".quote--content > quoteapply-form .question .question--input__text #{fieldName}"))
                 .SendKeys(inputText);
 
-            if( fieldName == "postcode")
+            if (fieldName == "postcode")
             {
                 Thread.Sleep(2000);
             }

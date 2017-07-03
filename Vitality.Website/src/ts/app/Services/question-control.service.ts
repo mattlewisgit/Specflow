@@ -15,7 +15,9 @@ export class QuestionControlService {
 
     addFormControls(form: FormGroup, questions: Question<any>[]) {
         questions.forEach(question => {
-            let formControl = new FormControl(question.value || "", this.getValidators(question.validators.filter(x => !x.isAsync)), this.getAsyncValidators(question.validators.filter(x => x.isAsync)));
+            let formControl = new FormControl(question.value || "",
+                this.getValidators(question.validators.filter(x => !x.isAsync)),
+                this.getAsyncValidators(question.validators.filter(x => x.isAsync)));
             if (question.key === "noOfChildren") {
              formControl.valueChanges.subscribe(data=> this.dobControlService.noOfKidsChanged(data));
             }
