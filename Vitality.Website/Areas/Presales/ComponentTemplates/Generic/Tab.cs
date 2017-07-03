@@ -1,6 +1,6 @@
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.Generic
 {
-    using Vitality.Website.Areas.Global.Models;
+    using Global.Models;
 
     public class Tab : SitecoreItem
     {

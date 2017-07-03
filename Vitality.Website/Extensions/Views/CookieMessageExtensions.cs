@@ -4,7 +4,7 @@ namespace Vitality.Website.Extensions.Views
 
     using Glass.Mapper.Sc.Web.Mvc;
 
-    using Vitality.Website.Areas.Presales.SettingsTemplates;
+    using Areas.Presales.SettingsTemplates;
 
     public static class CookieMessageExtensions
     {

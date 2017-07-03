@@ -4,7 +4,7 @@ namespace Vitality.Website.IntegrationTests.Steps
 
     using TechTalk.SpecFlow;
 
-    using Vitality.Website.IntegrationTests.Extensions;
+    using Extensions;
 
     [Binding]
     public class MetaTagsSteps : BaseSteps
@@ -14,25 +14,25 @@ namespace Vitality.Website.IntegrationTests.Steps
         [When(@"I check the source")]
         public void WhenICheckTheSource()
         {
-            this.pageSource = WebDriver.PageSource;
+            pageSource = WebDriver.PageSource;
         }
 
         [Then(@"I expect the common meta tags to be in the source")]
         public void ThenIExpectTheToBeInTheSource()
         {
-            this.pageSource.ShouldContainAll(CommonTags);
+            pageSource.ShouldContainAll(CommonTags);
         }
 
         [Then(@"I expect the home meta tags to be in the source")]
         public void ThenIExpectTheHomeMetaTagsToBeInTheSource()
         {
-            this.pageSource.ShouldContainAll(HomeTags);
+            pageSource.ShouldContainAll(HomeTags);
         }
 
         [Then(@"I do not expect the home meta tags to be in the source")]
         public void ThenIDoNotExpectTheCommonTagsToBeInTheSource()
         {
-            this.pageSource.ShouldNotContainAll(HomeTags);
+            pageSource.ShouldNotContainAll(HomeTags);
         }
 
         private static IEnumerable<string> HomeTags

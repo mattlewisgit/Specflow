@@ -5,8 +5,8 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.Cards
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
 
-    using Vitality.Website.Areas.Global.Models;
-    using Vitality.Website.Areas.Presales.ComponentTemplates.Partners;
+    using Global.Models;
+    using Partners;
 
     public class CardsTabbed : SitecoreItem
     {

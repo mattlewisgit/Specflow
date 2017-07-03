@@ -2,7 +2,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.Cards
 {
     using Glass.Mapper.Sc.Fields;
 
-    using Vitality.Website.Areas.Global.Models;
+    using Global.Models;
 
     public class Card : SitecoreItem
     {

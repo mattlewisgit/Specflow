@@ -28,14 +28,14 @@ namespace Vitality.Website.SC.Pipelines.Response.RenderRendering
             get
             {
                 return _query ?? (_query = string.Format("./ancestor-or-self::*[{0}]",
-                    string.Join(" or ", this.templateIds.Select(id => $"@@templateid='{id}'"))));
+                    string.Join(" or ", templateIds.Select(id => $"@@templateid='{id}'"))));
             }
         }
 
         public void AddTemplateById(string templateId)
         {
             Assert.ArgumentNotNullOrEmpty(templateId, "templateId");
-            this.templateIds.Add(ID.Parse(templateId));
+            templateIds.Add(ID.Parse(templateId));
         }
 
         public override void Process(RenderRenderingArgs args)
@@ -49,7 +49,7 @@ namespace Vitality.Website.SC.Pipelines.Response.RenderRendering
                 return;
             }
 
-            var rendering = this.GetRenderingItem(args);
+            var rendering = GetRenderingItem(args);
 
             if (rendering == null || rendering["VaryByAncestor"] != "1")
             {
@@ -70,7 +70,7 @@ namespace Vitality.Website.SC.Pipelines.Response.RenderRendering
 
         private Item[] GetAncestorsWithTemplates(Item dataSourceItem)
         {
-            return dataSourceItem.Axes.SelectItems(this.Query) ?? new Item[0];
+            return dataSourceItem.Axes.SelectItems(Query) ?? new Item[0];
         }
 
         private Item GetRenderingItem(RenderRenderingArgs args)

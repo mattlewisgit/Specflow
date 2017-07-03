@@ -12,9 +12,9 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
 
         public LiteratureDocumentSummariesRequest(string library, string category = null, string title = null)
         {
-            this.Library = library;
-            this.Category = category;
-            this.Title = title;
+            Library = library;
+            Category = category;
+            Title = title;
         }
     }
 }

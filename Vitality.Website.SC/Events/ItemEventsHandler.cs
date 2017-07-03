@@ -17,7 +17,7 @@ namespace Vitality.Website.SC.Events
 
         public void SetSeoFriendlyItemName(object sender, EventArgs args)
         {
-            var item = this.GetItem(args);
+            var item = GetItem(args);
 
             if (ItemIsMasterDatabaseContentPage(item))
             {
@@ -35,7 +35,7 @@ namespace Vitality.Website.SC.Events
 
         public void SetSplitCamelCaseFieldTitle(object sender, EventArgs args)
         {
-            var item = this.GetItem(args);
+            var item = GetItem(args);
 
             if (item != null && ItemIsMasterDatabaseTemplateField(item) && FieldItemTitleIsNotSplitCamelCase(item))
             {
@@ -48,7 +48,7 @@ namespace Vitality.Website.SC.Events
 
         public void SetSubFolderInsertOptions(object sender, EventArgs args)
         {
-            var item = this.GetItem(args);
+            var item = GetItem(args);
             if (ItemIsMasterDatabaseSubFolder(item))
             {
                 var insertOptions = item.Parent["__Masters"];

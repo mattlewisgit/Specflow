@@ -4,10 +4,10 @@
 @using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
 {
     <div class="pinch">
-        <div class="@this.CssClass() @this.BackgroundColour() @this.ContentAlignment()">
-            <div class="@this.CssClass()__image @this.ImageRelativePosition() lazyload" data-bg="@this.BackgroundImage()"></div>
-            <div class="@this.CssClass()__content-container">
-                <div class="@this.CssClass()__content">
+        <div class="@(this.CssClass()) @(this.BackgroundColour()) @(this.ContentAlignment())">
+            <div class="@(this.CssClass())__image @(this.ImageRelativePosition()) lazyload" data-bg="@(this.BackgroundImage())"></div>
+            <div class="@(this.CssClass())__content-container">
+                <div class="@(this.CssClass())__content">
                     @if (IsInEditingMode || !string.IsNullOrWhiteSpace(Model.LeadIn))
                     {
                         <p class="feature-block__content--title">@Editable(Model, item => item.LeadIn)</p>

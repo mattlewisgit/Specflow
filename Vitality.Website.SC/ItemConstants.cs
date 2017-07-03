@@ -21,7 +21,7 @@ namespace Vitality.Website.SC
         {
             public static string GetItemFullPath(string itemRelativePath)
             {
-                return Sitecore.Context.Site.ContentStartPath + itemRelativePath;
+                return Context.Site.ContentStartPath + itemRelativePath;
             }
 
             public static class Content

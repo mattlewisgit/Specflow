@@ -13,7 +13,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
 
         public bool Equals(SitemapIndexesModel other)
         {
-            return String.Equals(this.Location, other.Location, StringComparison.InvariantCultureIgnoreCase);
+            return String.Equals(Location, other.Location, StringComparison.InvariantCultureIgnoreCase);
         }
     }
 }

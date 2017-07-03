@@ -32,35 +32,35 @@ namespace Vitality.Website.SC.WFFM.SaveActions
 
             if (!Sitecore.Context.ClientPage.IsEvent)
             {
-                this.Collection = ParametersUtil.XmlToNameValueCollection(Params);
+                Collection = ParametersUtil.XmlToNameValueCollection(Params);
 
-                SchemaId = this.Collection["SchemaId"];
+                SchemaId = Collection["SchemaId"];
 
-                if (!string.IsNullOrEmpty(this.SchemaId) && Sitecore.Data.ID.IsID(this.SchemaId))
+                if (!string.IsNullOrEmpty(SchemaId) && Sitecore.Data.ID.IsID(SchemaId))
                 {
-                    this.ItemDataContext.DefaultItem = this.SchemaId;
+                    ItemDataContext.DefaultItem = SchemaId;
                 }
 
-                this.OnNodeSelected(this, EventArgs.Empty);
+                OnNodeSelected(this, EventArgs.Empty);
             }
 
-            this.ItemTreeView.OnClick += this.OnNodeSelected;
+            ItemTreeView.OnClick += OnNodeSelected;
         }
 
         private void OnNodeSelected(object sender, EventArgs e)
         {
-            if (this.ItemDataContext.CurrentItem == null)
+            if (ItemDataContext.CurrentItem == null)
             {
                 return;
             }
 
-            var str = this.ItemDataContext.CurrentItem.ID.ToString();
-            this.Collection.Add("SchemaId", str);
+            var str = ItemDataContext.CurrentItem.ID.ToString();
+            Collection.Add("SchemaId", str);
         }
 
         protected override void OnOK(object sender, EventArgs args)
         {
-            var selectionItem = this.ItemTreeView.GetSelectionItem();
+            var selectionItem = ItemTreeView.GetSelectionItem();
 
             if (selectionItem == null)
             {
@@ -68,9 +68,9 @@ namespace Vitality.Website.SC.WFFM.SaveActions
                 return;
             }
 
-            this.Collection.Add("SchemaId", selectionItem.ID.ToString());
+            Collection.Add("SchemaId", selectionItem.ID.ToString());
 
-            var str = ParametersUtil.NameValueCollectionToXml(this.Collection);
+            var str = ParametersUtil.NameValueCollectionToXml(Collection);
 
             if (str.Length == 0)
             {

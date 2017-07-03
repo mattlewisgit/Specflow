@@ -47,7 +47,7 @@ namespace Vitality.Website.Areas.Presales.SettingsTemplates
     {
         public override void Configure()
         {
-            this.Map(
+            Map(
                 x => x.AutoMap(),
                 x => x.Delegate(settings => settings.DnsPrefetch).GetValue(context => context.Item["DnsPrefetch"].Split('|')));
         }

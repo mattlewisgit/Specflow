@@ -1,7 +1,7 @@
 ﻿@using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Navigation.NavigationSubSection>
 
-<li class="section-nav__item @this.MegaMenuCssClass()" >
+<li class="section-nav__item @(this.MegaMenuCssClass())" >
 
     @if (!this.CanShowMegaMenu())
     {

@@ -15,14 +15,14 @@
             {
                 using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", articleItem.Path))
                 {
-                    <div class="grid-col-@this.NumberOfColumns(articleItems)-12 article-index--container">
+                    <div class="grid-col-@(this.NumberOfColumns(articleItems))-12 article-index--container">
                         @using (BeginEditFrame(articleItem, "Edit Background image", item => item.Image))
                         {
                             <div class="grid-no-gutters article-snippet">
-                                <div class="@this.ColumnSplitOne(articleItems) article-snippet--image @this.ImageRelativePosition(articleItem) lazyload" data-bg="@this.BackgroundImage(articleItem)">
+                                <div class="@(this.ColumnSplitOne(articleItems)) article-snippet--image @(this.ImageRelativePosition(articleItem)) lazyload" data-bg="@(this.BackgroundImage(articleItem))">
                                     <div class="tablet-less-than">@GlassHtml.RenderLazyImage(articleItem, x => x.Image, new { mw = 720 })</div>
                                 </div>
-                                <div class="@this.ColumnSplitTwo(articleItems) article-snippet--content">
+                                <div class="@(this.ColumnSplitTwo(articleItems)) article-snippet--content">
                                     @using (BeginRenderLink(articleItem, item => item.Link, isEditable: true))
                                     {
                                         <h3>

@@ -8,7 +8,7 @@
     }
     @foreach (var panel in Model.Panels)
     {
-    <div class="grid-col-1-@this.NumberOfColumns()">
+    <div class="grid-col-1-@(this.NumberOfColumns())">
         @using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", panel.Path))
         {
         <div class="grid-module">

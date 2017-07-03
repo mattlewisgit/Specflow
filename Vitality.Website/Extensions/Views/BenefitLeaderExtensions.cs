@@ -2,8 +2,8 @@ namespace Vitality.Website.Extensions.Views
 {
     using Glass.Mapper.Sc.Web.Mvc;
 
-    using Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks;
-    using Vitality.Website.Areas.Presales.RenderingTemplates;
+    using Areas.Presales.ComponentTemplates.FeatureBlocks;
+    using Areas.Presales.RenderingTemplates;
 
     public static class BenefitLeaderExtensions
     {

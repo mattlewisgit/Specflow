@@ -3,8 +3,8 @@
 
 @using (BeginEditFrame(Model, "Edit background image", m => m.PosterImage))
 {
-    <div class="home-hero @this.VideoTheme()">
-        <div class="home-hero--static @this.ImageRelativePosition() @this.FontTheme() lazyload" data-bg="@this.BackgroundImage()">
+    <div class="home-hero @(this.VideoTheme())">
+        <div class="home-hero--static @(this.ImageRelativePosition()) @(this.FontTheme()) lazyload" data-bg="@(this.BackgroundImage())">
             <div class="home-hero--static__container">
                 <div class="header">
                     <h1>@Editable(Model, m => m.SecondHeadline)</h1>

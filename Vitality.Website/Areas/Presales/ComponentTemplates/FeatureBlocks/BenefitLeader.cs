@@ -2,13 +2,13 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
 {
     using Glass.Mapper.Sc.Fields;
 
-    using Vitality.Website.Areas.Global.Models;
+    using Global.Models;
 
     public class BenefitLeader : SitecoreItem
     {
         public BenefitLeader()
         {
-            this.BackgroundImage = new Image();
+            BackgroundImage = new Image();
         }
 
         public string LeadIn { get; set; }

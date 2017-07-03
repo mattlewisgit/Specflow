@@ -5,14 +5,14 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.Summary
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
 
-    using Vitality.Website.Areas.Global.Models;
+    using Global.Models;
 
     public class SummaryComponent : SitecoreItem
     {
         public SummaryComponent()
         {
-            this.BackgroundImage = new Image();
-            this.CallToAction = new Link();
+            BackgroundImage = new Image();
+            CallToAction = new Link();
         }
 
         public string LeftContentLeadIn { get; set; }

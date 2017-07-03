@@ -4,7 +4,7 @@
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<VacancyList>
 
 @{
-    var localEnv = "presales.vitality.co.uk" == System.Web.HttpContext.Current.Request.Url.Host;
+    var localEnv = "presales.vitality.co.uk" == HttpContext.Current.Request.Url.Host;
     var angularModel = JsonConvert.SerializeObject(Mapper.Map<VacancyListViewModel>(Model));
 }
 

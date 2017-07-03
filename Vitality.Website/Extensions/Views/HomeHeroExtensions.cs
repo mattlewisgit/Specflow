@@ -2,8 +2,8 @@ namespace Vitality.Website.Extensions.Views
 {
     using Glass.Mapper.Sc.Web.Mvc;
 
-    using Vitality.Website.Areas.Presales.ComponentTemplates.Banners;
-    using Vitality.Website.Areas.Presales.RenderingTemplates;
+    using Areas.Presales.ComponentTemplates.Banners;
+    using Areas.Presales.RenderingTemplates;
 
     public static class HomeHeroExtensions
     {

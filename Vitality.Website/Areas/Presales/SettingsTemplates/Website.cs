@@ -1,6 +1,6 @@
 namespace Vitality.Website.Areas.Presales.SettingsTemplates
 {
-    using Vitality.Website.Areas.Global.Models;
+    using Global.Models;
 
     public class Website : SitecoreItem
     {

@@ -4,8 +4,8 @@ namespace Vitality.Website.Extensions.Views
 
     using Glass.Mapper.Sc.Web.Mvc;
 
-    using Vitality.Website.Areas.Presales.PageTemplates;
-    using Vitality.Website.SC;
+    using Areas.Presales.PageTemplates;
+    using SC;
 
     public static class BasePageExtensions
     {

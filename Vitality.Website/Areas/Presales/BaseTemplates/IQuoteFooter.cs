@@ -5,7 +5,7 @@ namespace Vitality.Website.Areas.Presales.BaseTemplates
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
 
-    using Vitality.Website.Areas.Global.Models;
+    using Global.Models;
 
     public interface IQuoteFooter
     {

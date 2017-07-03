@@ -4,7 +4,7 @@ using Glass.Mapper.Sc.Web.Mvc;
 
 namespace Vitality.Website.Extensions.Views
 {
-    using Vitality.Website.Areas.Presales.ComponentTemplates.Products;
+    using Areas.Presales.ComponentTemplates.Products;
 
     public static class ProductsComponentExtensions
     {
