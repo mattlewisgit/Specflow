@@ -49,6 +49,7 @@ export class QuoteApplyFormComponent implements OnInit, OnDestroy{
         this.completedPercentageSubscription = this.progressBarService.onCompletedPercentageChange()
             .subscribe((percentage: number) => {
                 this.completedPercentage = percentage;
+                this.isAllCompleted = this.completedPercentage === 100;
             });
     }
 
