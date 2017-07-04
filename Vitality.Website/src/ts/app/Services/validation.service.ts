@@ -76,12 +76,12 @@ export class ValidationService {
         return (control: any) => {
             if (this.dateValidator(control) == null) {
                 const dateParts = control.value.split("/");
-                const futureDate = new Date(dateParts[2], dateParts[1], dateParts[0]);
+                const futureDate = new Date(dateParts[2], dateParts[1] -1 , dateParts[0]);
                 const now = new Date();
                 if (options.minDaysAhead) {
                     now.setDate(now.getDate() + parseInt(options.minDaysAhead));
                 }
-                if (futureDate.getDate() <= now.getDate()) {
+                if (futureDate >= new Date() && futureDate <= now) {
                     return null;
                 }
             }
