@@ -3,7 +3,6 @@ import { FormArray, FormBuilder, FormGroup } from "@angular/forms";
 import { Subscription } from "rxjs/Subscription";
 
 import { QuoteApplyService } from "../../services/quoteapply.service";
-import { ProgressBarService } from "../../services/progress-bar.service";
 import { DobControlService } from "../../services/dob-control.service";
 import { QuestionGroup }     from "../../models/question-group";
 import { Question }     from "../../models/question";
@@ -27,7 +26,6 @@ export class QuoteApplyFormComponent implements OnInit, OnDestroy{
     constructor(
         private fb: FormBuilder,
         private dobControlService: DobControlService,
-        private progressBarService : ProgressBarService,
         private quoteApplyService: QuoteApplyService,
         private winRef: WindowRef) {
     }
@@ -44,13 +42,15 @@ export class QuoteApplyFormComponent implements OnInit, OnDestroy{
         });
 
         this.quoteApplyForm = new FormGroup({});
-        this.completedPercentage = this.progressBarService.getCompletedPercentage();
+        this.quoteApplyForm.valueChanges.subscribe(data => {
+            this.calculateCompletedPercentage();
+        });
+    }
 
-        this.completedPercentageSubscription = this.progressBarService.onCompletedPercentageChange()
-            .subscribe((percentage: number) => {
-                this.completedPercentage = percentage;
-                this.isAllCompleted = this.completedPercentage === 100;
-            });
+    calculateCompletedPercentage() {
+        let visibleQuestionGroups = this.questionGroups.filter(x => !x.isHidden);
+        this.completedPercentage = (visibleQuestionGroups.filter(x => x.isCompleted).length / visibleQuestionGroups.length) * 100;
+        this.isAllCompleted = this.completedPercentage === 100;
     }
 
     getQuestionGroup(key: string) {

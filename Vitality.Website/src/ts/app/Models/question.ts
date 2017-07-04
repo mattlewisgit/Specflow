@@ -9,6 +9,6 @@ export class Question<T>{
     validators: FieldValidator[];
     onValueChange : any;
     controlType: string;
-    isVisible: boolean;
+    isHidden: boolean;
     relatedData: { key: string, value: string }[] = [];
 }

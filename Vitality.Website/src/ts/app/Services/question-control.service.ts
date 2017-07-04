@@ -3,8 +3,8 @@
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { DobControlService } from "../services/dob-control.service";
 import { ValidationService } from "../services/validation.service";
-import {FieldValidator } from "../models/field-validator";
-import {Question } from "../models/question";
+import { FieldValidator } from "../models/field-validator";
+import { QuestionGroup } from "../models/question-group";
 
 @Injectable()
 export class QuestionControlService {
@@ -13,20 +13,51 @@ export class QuestionControlService {
         private validationService: ValidationService
     ) { }
 
-    addFormControls(form: FormGroup, questions: Question<any>[]) {
-        questions.forEach(question => {
+    addFormControls(form: FormGroup, questionGroup: QuestionGroup) {
+        questionGroup.questions.forEach(question => {
             let formControl = new FormControl(question.value || "",
                 this.getValidators(question.validators.filter(x => !x.isAsync)),
                 this.getAsyncValidators(question.validators.filter(x => x.isAsync)));
             if (question.key === "noOfChildren") {
-             formControl.valueChanges.subscribe(data=> this.dobControlService.noOfKidsChanged(data));
+                formControl.valueChanges.subscribe(data => {
+                    this.dobControlService.noOfKidsChanged(data);
+                    this.isValid(form, questionGroup);
+                });
             }
             else if (question.key === "membersToInsure") {
-                formControl.valueChanges.subscribe(data => this.dobControlService.membersToInsureChanged(data));
+                formControl.valueChanges.subscribe(data => {
+                    this.dobControlService.membersToInsureChanged(data);
+                    this.isValid(form, questionGroup);
+                });
+            } else {
+                formControl.valueChanges.subscribe(data => this.isValid(form, questionGroup));
             }
 
             form.addControl(question.key, formControl);
         });
+    }
+
+    isValid(form: FormGroup, questionGroup: QuestionGroup): void {
+        questionGroup.isInvalid = false;
+        if (questionGroup.isHidden) {
+            // If group is not visible mark the group completed.
+            questionGroup.isCompleted = true;
+        }
+
+        for (let entry of questionGroup.questions) {
+            // If control is not visible make the group valid and completed
+            let control = form.controls[entry.key];
+            if (!control.valid && !entry.isHidden) {
+                questionGroup.isCompleted = false;
+
+                if (!control.pristine) {
+                    questionGroup.isInvalid = true;
+                    break;
+                }
+            } else {
+                questionGroup.isCompleted = true;
+            }
+        }
     }
 
     private handleError(error: any): void {

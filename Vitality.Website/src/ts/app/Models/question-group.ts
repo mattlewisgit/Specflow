@@ -8,6 +8,7 @@ export class QuestionGroup {
     helpText: string;
     validationMessage: string;
     questions: Question<any>[];
-    isVisible: boolean;
+    isHidden: boolean;
     isCompleted: boolean;
+    isInvalid: boolean;
 }

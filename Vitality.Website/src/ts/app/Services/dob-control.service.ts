@@ -87,6 +87,7 @@ export class DobControlService {
             childDobToAdd.placeholder = this.child1DobQuestion.placeholder;
             childDobToAdd.validators = this.child1DobQuestion.validators;
             childDobToAdd.controlType = this.child1DobQuestion.controlType;
+            childDobToAdd.isHidden = true;
             this.childrenQuestionGroup.questions.push(childDobToAdd);
         }
     }
