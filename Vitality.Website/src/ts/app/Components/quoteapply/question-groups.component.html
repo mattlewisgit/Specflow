@@ -18,6 +18,6 @@
             </ng-container>
         </ng-container>
         <div class="question--input__info" *ngIf="questionGroup.helpText">{{ questionGroup.helpText}}</div>
-        <div class="question--input__error" *ngIf="!isValid(questionGroup)" id="questionGroup.label">{{ questionGroup.validationMessage }} </div>
+        <div class="question--input__error" *ngIf="!isValid(questionGroup)">{{ questionGroup.validationMessage }} </div>
     </div>
 </ng-container>
