@@ -4,6 +4,7 @@ namespace Vitality.Website.IntegrationTests.Steps
     using OpenQA.Selenium.Support.UI;
     using Selenium.WebDriver.Extensions.JQuery;
     using Shouldly;
+    using System.Linq;
     using TechTalk.SpecFlow;
     using Vitality.Extensions.Selenium;
     using By = OpenQA.Selenium.By;
@@ -11,63 +12,90 @@ namespace Vitality.Website.IntegrationTests.Steps
     [Binding]
     public sealed class WFFMSteps : BaseSteps
     {
+        private string WebFormID = "wffm6f9c146419a24306ad5b9a7db5e9b409_";
 
-        [When(@"I enter the form details (.*) (.*) (.*) (.*) (.*) (.*) (.*) (.*) (.*)")]
-        public void WhenIEnterTheFormDetails(string Firstname, string Lastname, string Othername, string Email, string Phone, string Day, string Month, string Year, string Droplist)
+
+        [Given(@"I have entered web forms section (.*) and field (.*) text box (.*)")]
+        public void GivenIHaveEnteredWebFormsSectionAndFieldTextBox(int section, int field, string text)
         {
-            const string WebFormID = "wffm6f9c146419a24306ad5b9a7db5e9b409_";
+            //Scroll to element.
+            WebDriver.ScrollToElement($"#{WebFormID + "Sections_" + section + "__Fields_" + field + "__Value"}");
 
-            // First Name.
+            // Enter text field.
             WebDriver
-                .FindElement(By.Id(WebFormID + "Sections_0__Fields_0__Value"))
+                .WaitForElement(By.Id(WebFormID + "Sections_" + section + "__Fields_" + field + "__Value"))
                 .ClearAndContinue()
-                .SendKeys(Firstname);
+                .SendKeys(text);
+        }
 
-            // Last Name.
-            WebDriver
-                .FindElement(By.Id(WebFormID + "Sections_0__Fields_1__Value"))
-                .ClearAndContinue()
-                .SendKeys(Lastname);
+        [Given(@"I have entered web forms section (.*) and field (.*) date field (.*) (.*) (.*)")]
+        public void GivenIHaveEnteredWebFormsSectionAndFieldDateField(int section, int field, string day, string month, string year)
+        {
+            //Scroll to element.
+            WebDriver.ScrollToElement($"#{WebFormID + "Sections_" + section + "__Fields_" + field + "__Day"}");
 
-            // Other names.
-            WebDriver
-                .FindElement(By.Id(WebFormID + "Sections_0__Fields_2__Value"))
-                .ClearAndContinue()
-                .SendKeys(Othername);
+            // Enter date field.
+            //Select day.
+            var possibleDays = new SelectElement(WebDriver
+                .FindElement(By.Id(WebFormID + "Sections_" + section + "__Fields_" + field + "__Day")));
 
-            // Email Address.
-            WebDriver
-                .FindElement(By.Id(WebFormID + "Sections_0__Fields_3__Value"))
-                .ClearAndContinue()
-                .SendKeys(Email);
+            possibleDays.SelectByText(day);
 
-            // Phone Number.
-            WebDriver
-                .FindElement(By.Id(WebFormID + "Sections_0__Fields_4__Value"))
-                .ClearAndContinue()
-                .SendKeys(Phone);
+            // Enter date field.
+            //Select month.
+            var possibleMonth = new SelectElement(WebDriver
+                .FindElement(By.Id(WebFormID + "Sections_" + section + "__Fields_" + field + "__Month")));
 
-            // Date.
-            new SelectElement(WebDriver.FindElement(By.Id(WebFormID + "Sections_0__Fields_5__Day"))).SelectByText(Day);
-            new SelectElement(WebDriver.FindElement(By.Id(WebFormID + "Sections_0__Fields_5__Month"))).SelectByText(Month);
-            new SelectElement(WebDriver.FindElement(By.Id(WebFormID + "Sections_0__Fields_5__Year"))).SelectByText(Year);
+            possibleMonth.SelectByText(month);
 
-            // Drop List.
-            new SelectElement(WebDriver.FindElement(By.Id(WebFormID + "Sections_1__Fields_0__Value"))).SelectByText(Droplist);
+            // Enter date field.
+            //Select year.
+            var possibleYear = new SelectElement(WebDriver
+                .FindElement(By.Id(WebFormID + "Sections_" + section + "__Fields_" + field + "__Year")));
+
+            possibleYear.SelectByText(year);
+        }
+
+
+        [Given(@"I have entered web forms section (.*) and field (.*) dropdown list (.*)")]
+        public void GivenIHaveEnteredWebFormsSectionAndFieldDropdownList(int section, int field, string dropdown)
+        {
+            //Scroll to element.
+            WebDriver.ScrollToElement($"#{WebFormID + "Sections_" + section + "__Fields_" + field + "__Value"}");
+
+            // Enter date field.
+            //Select year.
+            var possibleYear = new SelectElement(WebDriver
+                .FindElement(By.Id(WebFormID + "Sections_" + section + "__Fields_" + field + "__Value")));
+
+            possibleYear.SelectByText(dropdown);
+        }
+
+        [Given(@"I have entered web forms section (.*) and field (.*) check box (.*)")]
+        public void GivenIHaveEnteredWebFormsSectionAndFieldCheckBox(int section, int field, string Checkbox)
+        {
+            //Scroll to element.
+            WebDriver.ScrollToElement($"#{WebFormID + "Sections_" + section + "__Fields_" + field + "__Value"}");
 
             // Check Box.
-            WebDriver.FindElement(By.Id(WebFormID + "Sections_1__Fields_1__Value")).Click();
+            WebDriver
+                .FindElement(By.Id(WebFormID + "Sections_" + section + "__Fields_" + field + "__Value"))
+                .Click();
         }
 
         [When(@"I click on webform (.*) button")]
         public void WhenIClickOnWebformButton(string button)
         {
-            WebDriver
-                .FindElement(new JQuerySelector(".form-submit-border .btn.btn-default"))
-                .Click();
+            //Find button called button
+            var test = WebDriver
+                .FindElements(new JQuerySelector(".form-submit-border .btn.btn-default"))
+                .FirstOrDefault(e => e.InnerElement.GetAttribute("value").Contains(button));
+
+            //Click on button
+            test.Click();
         }
 
-        [Then(@"I expect the web forms '(.*)' message to appear")]
+        [Then(@"I expect the web forms (.*) message to appear")]
         public void ThenIExpectTheWebFormsMessageToAppear(string SuccessMessage)
         {
             WebDriver
