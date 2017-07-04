@@ -1,7 +1,9 @@
-import { Component, Inject, OnInit, Input }      from "@angular/core";
+import { Component, DoCheck, Inject, OnDestroy, OnInit, Input }      from "@angular/core";
 import { FormArray, FormBuilder, FormGroup } from "@angular/forms";
+import { Subscription } from "rxjs/Subscription";
 
 import { QuoteApplyService } from "../../services/quoteapply.service";
+import { ProgressBarService } from "../../services/progress-bar.service";
 import { DobControlService } from "../../services/dob-control.service";
 import { QuestionGroup }     from "../../models/question-group";
 import { Question }     from "../../models/question";
@@ -11,12 +13,13 @@ import { WindowRef } from "./../windowref";
     selector: "quoteapply-form",
     templateUrl: "./js/app/components/quoteapply/quoteapply-form.component.html"
 })
-export class QuoteApplyFormComponent implements OnInit {
+export class QuoteApplyFormComponent implements OnInit, OnDestroy{
     quoteApplyForm: FormGroup;
     callToActionText: string;
     payload: string;
     questionGroups: QuestionGroup[];
     completedPercentage: number;
+    private completedPercentageSubscription: Subscription;
     submitted: boolean;
     isAllCompleted = false;
     childrenQuestionGroupKey = "childrenDobGroup";
@@ -24,6 +27,7 @@ export class QuoteApplyFormComponent implements OnInit {
     constructor(
         private fb: FormBuilder,
         private dobControlService: DobControlService,
+        private progressBarService : ProgressBarService,
         private quoteApplyService: QuoteApplyService,
         private winRef: WindowRef) {
     }
@@ -40,17 +44,12 @@ export class QuoteApplyFormComponent implements OnInit {
         });
 
         this.quoteApplyForm = new FormGroup({});
+        this.completedPercentage = this.progressBarService.getCompletedPercentage();
 
-        this.quoteApplyForm.valueChanges.subscribe(data => {
-            this.calculateCompletedPercentage();
-        });
-    }
-
-    calculateCompletedPercentage() {
-        // TODO ensure this is fired after QuestionGroupComponent.isValid
-        let visibleQuestionGroups = this.questionGroups.filter(x => x.isVisible);
-        this.completedPercentage = (visibleQuestionGroups.filter(x => x.isCompleted).length / visibleQuestionGroups.length) * 100;
-        this.isAllCompleted = this.completedPercentage === 100;
+        this.completedPercentageSubscription = this.progressBarService.onCompletedPercentageChange()
+            .subscribe((percentage: number) => {
+                this.completedPercentage = percentage;
+            });
     }
 
     getQuestionGroup(key: string) {
@@ -61,5 +60,11 @@ export class QuoteApplyFormComponent implements OnInit {
         //Do it only when isvalid
         this.submitted = true;
         this.quoteApplyService.apply(this.quoteApplyForm.value);
+    }
+
+    ngOnDestroy(): void {
+        if (this.completedPercentageSubscription) {
+            this.completedPercentageSubscription.unsubscribe();
+        }
     }
 }

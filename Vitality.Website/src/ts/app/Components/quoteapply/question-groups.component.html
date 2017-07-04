@@ -1,0 +1,23 @@
+﻿<ng-container *ngFor="let questionGroup of questionGroups">
+    <div class="question" *ngIf="isGroupVisible(questionGroup)" [formGroup]="form">
+        <span [innerHTML]="questionGroup.label"> </span>
+        <ng-container *ngFor="let question of questionGroup.questions" [ngSwitch]="question.controlType">
+            <ng-container *ngSwitchCase="'dropdown'">
+                <select [id]="question.key" [formControlName]="question.key">
+                    <option *ngIf="question.placeholder " value="">{{ question.placeholder }}</option>
+                    <option *ngFor="let opt of question.relatedData" [value]="opt.key">{{opt.value}}</option>
+                </select>
+                {{ question.label }}
+            </ng-container>
+            <ng-container *ngSwitchDefault>
+                <div class="question--input__text" *ngIf="isControlVisible(question)">
+                    {{ question.label }}
+                    <input [formControlName]="question.key"
+                           [id]="question.key" [type]="question.controlType" placeholder="{{ question.placeholder }}" [attr.auto-scroll-to]="question.scrollTo">
+                </div>
+            </ng-container>
+        </ng-container>
+        <div class="question--input__info" *ngIf="questionGroup.helpText">{{ questionGroup.helpText}}</div>
+        <div class="question--input__error" *ngIf="!isValid(questionGroup)" id="questionGroup.label">{{ questionGroup.validationMessage }} </div>
+    </div>
+</ng-container>

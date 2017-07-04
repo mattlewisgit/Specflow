@@ -1,5 +1,5 @@
 <form [formGroup]="quoteApplyForm" (ngSubmit)="apply(quoteApplyForm.valid)" novalidate>
-    <question-group *ngFor="let questionGroup of questionGroups" [questionGroup]="questionGroup" [form]="quoteApplyForm"></question-group>
+    <question-groups [questionGroups]="questionGroups" [form]="quoteApplyForm"></question-groups>
 
     <div class="quote--footer">
         <div class="quote--footer__logo">

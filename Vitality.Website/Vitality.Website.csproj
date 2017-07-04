@@ -368,11 +368,11 @@
     <Content Include="src\js\countdown-timer-app.js" />
     <Content Include="src\js\global-functions.js" />
     <Content Include="src\js\vitality-wffm-main.js" />
-    <Content Include="src\ts\app\components\quoteapply\question-group.component.html" />
+    <Content Include="src\ts\app\components\quoteapply\question-groups.component.html" />
     <Content Include="src\ts\app\components\quoteapply\quoteapply-form.component.html" />
     <Content Include="src\ts\app\components\vacancy-detailstemplate.html" />
     <Content Include="src\ts\app\components\vacancylisttemplate.html" />
-    <TypeScriptCompile Include="src\ts\app\components\quoteapply\question-group.component.ts" />
+    <TypeScriptCompile Include="src\ts\app\components\quoteapply\question-groups.component.ts" />
     <TypeScriptCompile Include="src\ts\app\components\quoteapply\quoteapply-form.component.ts" />
     <TypeScriptCompile Include="src\ts\app\components\windowref.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\auto-scroll-to.directive.ts" />
