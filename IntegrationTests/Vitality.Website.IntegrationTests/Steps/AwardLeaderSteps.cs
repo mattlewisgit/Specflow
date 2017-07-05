@@ -64,15 +64,14 @@
         [When(@"I click on the Award Leader (.*) link")]
         public void IClickOnTheAwardLeaderLink(string memberStory)
         {
+            // Send a "scroll" (required in mobile view as panels stack)
+            WebDriver
+                .ScrollToElement($@".award-leader .award-leader--articles .article-snippet:has(h3:contains(""{memberStory}""))");
+
             // Find the header containing the text...
             var memberStoryArticle = WebDriver
                 .FindElements(new JQuerySelector(".award-leader .award-leader--articles .article-snippet h3"))
                 .FirstOrDefault(e => e.Text.Equals(memberStory));
-
-            // Get the parent anchor and send a "scroll" (required in mobile view as panels stack)
-            memberStoryArticle
-                .GetParent()
-                .SendKeys(Keys.Space);
 
             memberStoryArticle.Click();
         }

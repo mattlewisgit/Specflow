@@ -340,7 +340,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 86
     this.ScenarioSetup(scenarioInfo);
 #line 87
-    testRunner.Given("I am on advisers /dev", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on advisers /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 88
  testRunner.Then("I should not see any console logs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
