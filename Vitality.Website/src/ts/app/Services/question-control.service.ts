@@ -8,10 +8,12 @@ import { QuestionGroup } from "../models/question-group";
 
 @Injectable()
 export class QuestionControlService {
+
     constructor(
         private dobControlService: DobControlService,
         private validationService: ValidationService
-    ) { }
+    ) {
+    }
 
     addFormControls(form: FormGroup, questionGroup: QuestionGroup) {
         questionGroup.questions.forEach(question => {
@@ -23,16 +25,15 @@ export class QuestionControlService {
                     this.dobControlService.noOfKidsChanged(data);
                     this.isValid(form, questionGroup);
                 });
-            }
-            else if (question.key === "membersToInsure") {
+            } else if (question.key === "membersToInsure") {
                 formControl.valueChanges.subscribe(data => {
                     this.dobControlService.membersToInsureChanged(data);
                     this.isValid(form, questionGroup);
                 });
-            } else {
+            }
+            else {
                 formControl.valueChanges.subscribe(data => this.isValid(form, questionGroup));
             }
-
             form.addControl(question.key, formControl);
         });
     }
@@ -49,7 +50,6 @@ export class QuestionControlService {
             let control = form.controls[entry.key];
             if (!control.valid && !entry.isHidden) {
                 questionGroup.isCompleted = false;
-
                 if (!control.pristine) {
                     questionGroup.isInvalid = true;
                     break;

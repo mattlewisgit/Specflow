@@ -4,6 +4,7 @@ import { Subscription } from "rxjs/Subscription";
 
 import { QuoteApplyService } from "../../services/quoteapply.service";
 import { DobControlService } from "../../services/dob-control.service";
+import { PostcodeService } from "../../services/postcode.service";
 import { QuestionGroup }     from "../../models/question-group";
 import { Question }     from "../../models/question";
 import { WindowRef } from "./../windowref";
@@ -18,12 +19,13 @@ export class QuoteApplyFormComponent implements OnInit, OnDestroy{
     payload: string;
     questionGroups: QuestionGroup[];
     completedPercentage: number;
-    private completedPercentageSubscription: Subscription;
+    private postcodeAsyncValidationSubscription: Subscription;
     submitted: boolean;
     isAllCompleted = false;
     childrenQuestionGroupKey = "childrenDobGroup";
 
     constructor(
+        private postcodeService: PostcodeService,
         private fb: FormBuilder,
         private dobControlService: DobControlService,
         private quoteApplyService: QuoteApplyService,
@@ -45,6 +47,16 @@ export class QuoteApplyFormComponent implements OnInit, OnDestroy{
         this.quoteApplyForm.valueChanges.subscribe(data => {
             this.calculateCompletedPercentage();
         });
+
+        this.postcodeAsyncValidationSubscription = this.postcodeService.onPostcodeAsyncValidation()
+            .subscribe((data: boolean) => {
+                if (data) {
+                    var questionGroup = this.getQuestionGroup("postcodeGroup");
+                    questionGroup.isInvalid = false;
+                    questionGroup.isCompleted = true;
+                    this.calculateCompletedPercentage();
+                }
+            });
     }
 
     calculateCompletedPercentage() {
@@ -64,8 +76,8 @@ export class QuoteApplyFormComponent implements OnInit, OnDestroy{
     }
 
     ngOnDestroy(): void {
-        if (this.completedPercentageSubscription) {
-            this.completedPercentageSubscription.unsubscribe();
+        if (this.postcodeAsyncValidationSubscription) {
+            this.postcodeAsyncValidationSubscription.unsubscribe();
         }
     }
 }

@@ -123,6 +123,7 @@ export class ValidationService {
                     postcodeService.lookupPostcode(control.value)
                         .then((data:any) => {
                             if (data.Addresses.length > 0) {
+                                postcodeService.postcodeAsyncValidationEmitter.emit(true);
                                 return resolve(null);
                             } else {
                                 return resolve(failedMessage);
