@@ -66,21 +66,21 @@
 	When I click on field First name tool tips
 	Then I expect Enter First Name tool tips to be displayed
 
-	@SIT
+	@ignore
 	Scenario: Web Form Date tool tips - Presales
     Given I am on presales /dev/wffm
 	And I have entered web forms section 0 and field 5 date field 1 January 2016
 	When I click on field Submission Date tool tips
 	Then I expect Enter Submission Date tool tips to be displayed
 
-	@SIT
+	@ignore
 	Scenario: Web Form Phone Number tool tips - Advisers
     Given I am on advisers /dev/wffm
 	And I have entered web forms section 0 and field 4 text box 02380999999
 	When I click on field Phone number tool tips
 	Then I expect Enter Phone Number tool tips to be displayed
 
-	@SIT
+	@ignore
 	Scenario: Web Form Date Check box - Advisers
     Given I am on advisers /dev/wffm
 	And I have entered web forms section 1 and field 0 dropdown list Magic

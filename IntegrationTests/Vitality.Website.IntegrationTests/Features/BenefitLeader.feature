@@ -10,7 +10,6 @@ Scenario: Check Benefit Leader in mobile view
 	When I resize to mobile view
 	Then I expect the Benefit Leader Left alignment CSS values to appear
 	And I expect the Benefit Leader Right alignment CSS values to appear
-	And I expect the Benefit Leader Gradient alignment CSS values to appear
 
 	@SIT
 Scenario: Check Benefit Leader in full size view
@@ -18,7 +17,6 @@ Scenario: Check Benefit Leader in full size view
 	When I resize to full-screen view
 	Then I expect the Benefit Leader Left alignment CSS values to appear
 	And I expect the Benefit Leader Right alignment CSS values to appear
-	And I expect the Benefit Leader Gradient alignment CSS values to appear
 
 	@SIT
 Scenario: Check Benefit Leader button links internally

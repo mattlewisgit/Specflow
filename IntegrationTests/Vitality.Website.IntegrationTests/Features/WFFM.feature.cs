@@ -238,14 +238,13 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Web Form Date tool tips - Presales")]
+        [Xunit.FactAttribute(DisplayName="Web Form Date tool tips - Presales", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "WFFM")]
         [Xunit.TraitAttribute("Description", "Web Form Date tool tips - Presales")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void WebFormDateToolTips_Presales()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Web Form Date tool tips - Presales", new string[] {
-                        "SIT"});
+                        "ignore"});
 #line 70
  this.ScenarioSetup(scenarioInfo);
 #line 71
@@ -260,14 +259,13 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Web Form Phone Number tool tips - Advisers")]
+        [Xunit.FactAttribute(DisplayName="Web Form Phone Number tool tips - Advisers", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "WFFM")]
         [Xunit.TraitAttribute("Description", "Web Form Phone Number tool tips - Advisers")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void WebFormPhoneNumberToolTips_Advisers()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Web Form Phone Number tool tips - Advisers", new string[] {
-                        "SIT"});
+                        "ignore"});
 #line 77
  this.ScenarioSetup(scenarioInfo);
 #line 78
@@ -282,14 +280,13 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Web Form Date Check box - Advisers")]
+        [Xunit.FactAttribute(DisplayName="Web Form Date Check box - Advisers", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "WFFM")]
         [Xunit.TraitAttribute("Description", "Web Form Date Check box - Advisers")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void WebFormDateCheckBox_Advisers()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Web Form Date Check box - Advisers", new string[] {
-                        "SIT"});
+                        "ignore"});
 #line 84
  this.ScenarioSetup(scenarioInfo);
 #line 85
