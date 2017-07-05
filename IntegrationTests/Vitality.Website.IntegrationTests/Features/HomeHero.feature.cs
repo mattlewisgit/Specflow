@@ -112,43 +112,41 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Home Hero click play on video")]
+        [Xunit.FactAttribute(DisplayName="Home Hero click play on video", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "HomeHero")]
         [Xunit.TraitAttribute("Description", "Home Hero click play on video")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void HomeHeroClickPlayOnVideo()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home Hero click play on video", new string[] {
-                        "SIT"});
-#line 20
-this.ScenarioSetup(scenarioInfo);
+                        "ignore"});
 #line 21
- testRunner.Given("I am on presales /dev/home-hero", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 22
- testRunner.When("I click on home hero play button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I am on presales /dev/home-hero", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 23
+ testRunner.When("I click on home hero play button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 24
  testRunner.Then("I expect the home hero video to play", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Home Hero click play and pause video")]
+        [Xunit.FactAttribute(DisplayName="Home Hero click play and pause video", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "HomeHero")]
         [Xunit.TraitAttribute("Description", "Home Hero click play and pause video")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void HomeHeroClickPlayAndPauseVideo()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Home Hero click play and pause video", new string[] {
-                        "SIT"});
-#line 26
-this.ScenarioSetup(scenarioInfo);
+                        "ignore"});
 #line 27
- testRunner.Given("I am on presales /dev/home-hero", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 28
- testRunner.When("I click on home hero play button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I am on presales /dev/home-hero", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 29
- testRunner.And("I pause the home hero video", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I click on home hero play button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 30
+ testRunner.And("I pause the home hero video", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
  testRunner.Then("I expect the correct CSS home hero values to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
