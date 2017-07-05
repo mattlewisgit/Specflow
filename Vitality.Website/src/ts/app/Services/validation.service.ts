@@ -78,10 +78,9 @@ export class ValidationService {
                 const dateParts = control.value.split("/");
                 const futureDate = new Date(dateParts[2], dateParts[1] -1 , dateParts[0]);
                 const now = new Date();
-                if (options.minDaysAhead) {
-                    now.setDate(now.getDate() + parseInt(options.minDaysAhead));
-                }
-                if (futureDate >= new Date() && futureDate <= now) {
+                let timeDifference = futureDate.getTime() - now.getTime();
+                let dateDifference =  timeDifference / (24 * 3600 * 1000);
+                if (dateDifference <= options.minDaysAhead && dateDifference > -1) {
                     return null;
                 }
             }
