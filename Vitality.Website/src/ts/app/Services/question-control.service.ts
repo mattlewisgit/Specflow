@@ -8,14 +8,21 @@ import { QuestionGroup } from "../models/question-group";
 
 @Injectable()
 export class QuestionControlService {
-
+    private questionGroups : QuestionGroup[];
     constructor(
         private dobControlService: DobControlService,
         private validationService: ValidationService
     ) {
     }
+    setQuestionGroups(questionGroups:QuestionGroup[]) {
+        this.questionGroups = questionGroups;
+    }
 
     addFormControls(form: FormGroup, questionGroup: QuestionGroup) {
+        // if it is based on another control make it hidden to starts with
+        if (questionGroup.basedOnKey) {
+            questionGroup.isHidden = true;
+        }
         questionGroup.questions.forEach(question => {
             let formControl = new FormControl(question.value || "",
                 this.getValidators(question.validators.filter(x => !x.isAsync)),
@@ -23,22 +30,22 @@ export class QuestionControlService {
             if (question.key === "noOfChildren") {
                 formControl.valueChanges.subscribe(data => {
                     this.dobControlService.noOfKidsChanged(data);
-                    this.isValid(form, questionGroup);
+                    this.isValid(data, form, questionGroup);
                 });
             } else if (question.key === "membersToInsure") {
                 formControl.valueChanges.subscribe(data => {
                     this.dobControlService.membersToInsureChanged(data);
-                    this.isValid(form, questionGroup);
+                    this.isValid(data, form, questionGroup);
                 });
             }
             else {
-                formControl.valueChanges.subscribe(data => this.isValid(form, questionGroup));
+                formControl.valueChanges.subscribe(data => this.isValid(data, form, questionGroup));
             }
             form.addControl(question.key, formControl);
         });
     }
 
-    isValid(form: FormGroup, questionGroup: QuestionGroup): void {
+    isValid(value:any, form: FormGroup, questionGroup: QuestionGroup): void {
         questionGroup.isInvalid = false;
         if (questionGroup.isHidden) {
             // If group is not visible mark the group completed.
@@ -46,6 +53,7 @@ export class QuestionControlService {
         }
 
         for (let entry of questionGroup.questions) {
+            this.handleHiddenGroups(entry.key, value);
             // If control is not visible make the group valid and completed
             let control = form.controls[entry.key];
             if (!control.valid && !entry.isHidden) {
@@ -56,6 +64,19 @@ export class QuestionControlService {
                 }
             } else {
                 questionGroup.isCompleted = true;
+            }
+        }
+    }
+
+
+    handleHiddenGroups(key: string, value: any): void {
+        //Get all the questionGroups based on current group
+        let conditionalGroups = this.questionGroups.filter(x => x.basedOnKey === key);
+        for (let cqg of conditionalGroups) {
+            if (cqg.basedOnValues.indexOf(value) > -1) {
+                cqg.isHidden = false;
+            } else {
+                cqg.isHidden = true;
             }
         }
     }

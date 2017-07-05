@@ -1,4 +1,4 @@
-﻿<div class="question" *ngIf="!isGroupHidden(questionGroup)" [formGroup]="form">
+﻿<div class="question" *ngIf="!questionGroup.isHidden" [formGroup]="form">
     <span [innerHTML]="questionGroup.label"> </span>
     <ng-container *ngFor="let question of questionGroup.questions" [ngSwitch]="question.controlType">
         <ng-container *ngSwitchCase="'dropdown'">

@@ -4,6 +4,7 @@ import { Subscription } from "rxjs/Subscription";
 
 import { QuoteApplyService } from "../../services/quoteapply.service";
 import { DobControlService } from "../../services/dob-control.service";
+import { QuestionControlService } from "../../services/question-control.service";
 import { PostcodeService } from "../../services/postcode.service";
 import { QuestionGroup }     from "../../models/question-group";
 import { Question }     from "../../models/question";
@@ -28,6 +29,7 @@ export class QuoteApplyFormComponent implements OnInit, OnDestroy{
         private postcodeService: PostcodeService,
         private fb: FormBuilder,
         private dobControlService: DobControlService,
+        private questionControlService: QuestionControlService,
         private quoteApplyService: QuoteApplyService,
         private winRef: WindowRef) {
     }
@@ -36,6 +38,7 @@ export class QuoteApplyFormComponent implements OnInit, OnDestroy{
         this.questionGroups = this.winRef.nativeWindow.angularData.questionGroups;
         this.callToActionText = this.winRef.nativeWindow.angularData.callToActionText;
         let childrenQuestionGroup = this.getQuestionGroup(this.childrenQuestionGroupKey);
+        this.questionControlService.setQuestionGroups(this.questionGroups);
 
         this.dobControlService.initialize({
             childrenQuestionGroup: childrenQuestionGroup,

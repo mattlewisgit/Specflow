@@ -19,19 +19,6 @@ export class QuestionGroupComponent implements OnInit {
         this.qcs.addFormControls(this.form, this.questionGroup);
     }
 
-    isGroupHidden(questionGroup: QuestionGroup): boolean {
-        if (!questionGroup.basedOnKey || !questionGroup.basedOnValues) {
-           return questionGroup.isHidden = false;
-        }
-        let control = this.form.controls[questionGroup.basedOnKey];
-        for (let basedOnValue of questionGroup.basedOnValues) {
-            if (control.value === basedOnValue) {
-                return questionGroup.isHidden = false;
-            }
-        }
-        return questionGroup.isHidden = true;
-    }
-
     // Only used for children Dobs
     isControlHidden(question: Question<any>): boolean {
         if (!question.basedOnKey) {
