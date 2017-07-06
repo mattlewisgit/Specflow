@@ -61,11 +61,6 @@
                 .FindElement(new JQuerySelector(".article-index .grid-no-gutters .grid-col-6-12 .grid-no-gutters .grid-col-7-12.article-snippet--content a p"))
                 .GetCssValue("color")
                 .ShouldBe("rgba(255, 255, 255, 1)");
-
-            WebDriver
-                .FindElement(new JQuerySelector(".article-index .grid-no-gutters .grid-col-6-12 .grid-no-gutters .grid-col-7-12.article-snippet--content a p"))
-                .GetCssValue("font-size")
-                .ShouldBe("25px");
         }
 
 

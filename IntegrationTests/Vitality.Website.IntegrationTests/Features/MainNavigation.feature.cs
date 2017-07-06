@@ -332,16 +332,14 @@ namespace Vitality.Website.IntegrationTests.Features
         [Xunit.FactAttribute(DisplayName="Check console logs on advisers")]
         [Xunit.TraitAttribute("FeatureTitle", "Main Navigation")]
         [Xunit.TraitAttribute("Description", "Check console logs on advisers")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void CheckConsoleLogsOnAdvisers()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check console logs on advisers", new string[] {
-                        "SIT"});
-#line 86
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check console logs on advisers", ((string[])(null)));
+#line 85
     this.ScenarioSetup(scenarioInfo);
-#line 87
+#line 86
     testRunner.Given("I am on advisers /", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 88
+#line 87
  testRunner.Then("I should not see any console logs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
