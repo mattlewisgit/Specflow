@@ -145,7 +145,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 27
  testRunner.Given("I am on presales /dev/rewards-leader", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 28
- testRunner.When("I click on rewards leader background colour blue with partner logo virgin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on rewards leader background colour blue with partner logo cineworld", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 29
  testRunner.Then("I expect the presales / to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -167,7 +167,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 34
  testRunner.And("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 35
- testRunner.When("I click on rewards leader background colour blue with partner logo garmin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I click on rewards leader background colour blue with partner logo virgin", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 36
  testRunner.Then("I expect the presales / to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

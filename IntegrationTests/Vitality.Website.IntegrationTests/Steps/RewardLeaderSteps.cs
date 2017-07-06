@@ -154,16 +154,14 @@ namespace Vitality.Website.IntegrationTests.Steps
             {
                 bgcolour = "tertiary";
             }
+            // Send a "scroll" to rewards leader component
+            WebDriver
+                .ScrollToElement($@".feature-block.feature-block--" + bgcolour + ".rewards_leader .feature-block__content .feature-block__image-list div a img");
 
             //Find Logo containing 'LogoLink'
             var Logo = WebDriver
                 .FindElements(new JQuerySelector(".feature-block.feature-block--" + bgcolour + ".rewards_leader .feature-block__content .feature-block__image-list div a .lazyloaded"))
                 .FirstOrDefault(e => e.InnerElement.GetAttribute("data-src").Contains(logolink));
-
-            //Move to logo
-            Logo
-                .GetParent()
-                .SendKeys(Keys.Space);
 
             //Click on logo
             Logo.Click();
