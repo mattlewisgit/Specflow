@@ -9,7 +9,7 @@
             {{ question.label }}
         </ng-container>
         <ng-container *ngSwitchDefault>
-            <div class="question--input__text" *ngIf="!isControlHidden(question)">
+            <div class="question--input__text" *ngIf="!question.isHidden">
                 {{ question.label }}
                 <input [formControlName]="question.key"
                        [id]="question.key" [type]="question.controlType" placeholder="{{ question.placeholder }}"  [auto-scroll-to]="question.scrollTo">

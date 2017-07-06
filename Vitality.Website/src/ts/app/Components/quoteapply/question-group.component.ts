@@ -18,13 +18,4 @@ export class QuestionGroupComponent implements OnInit {
     ngOnInit(): void {
         this.qcs.addFormControls(this.form, this.questionGroup);
     }
-
-    // Only used for children Dobs
-    isControlHidden(question: Question<any>): boolean {
-        if (!question.basedOnKey) {
-            return question.isHidden = false;
-        }
-        const control = this.form.controls[question.basedOnKey];
-        return question.isHidden = +control.value < question.basedOnValue;
-    }
 }

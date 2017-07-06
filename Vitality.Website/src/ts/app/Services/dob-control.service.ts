@@ -72,10 +72,22 @@ export class DobControlService {
                 currentchildDobQuestion.label = this.childDobSeperatorLabel;
             }
         }
+        this.handleDobQuestionVisibility(noOfChildren);
+    }
+
+    handleDobQuestionVisibility(noOfChildren: number) {
+        this.childrenQuestionGroup.questions.forEach((question, index) => {
+            if (index <= noOfChildren) {
+                question.isHidden = false;
+            } else {
+                question.isHidden = true;
+            }
+        });
     }
 
     addChildrenDobQuestions(): void {
         this.child1DobQuestion.basedOnKey = this.noOfChildrenQuestion.key;
+        this.child1DobQuestion.isHidden = true;
         this.child1DobQuestion.basedOnValue = 1;
         for (let i = 2; i < 6; i++) {
             let childDobToAdd = Object.apply({}, this.child1DobQuestion);

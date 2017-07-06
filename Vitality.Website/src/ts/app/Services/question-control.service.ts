@@ -60,14 +60,13 @@ export class QuestionControlService {
                 questionGroup.isCompleted = false;
                 if (!control.pristine) {
                     questionGroup.isInvalid = true;
-                    break;
                 }
+                break;
             } else {
                 questionGroup.isCompleted = true;
             }
         }
     }
-
 
     handleHiddenGroups(key: string, value: any): void {
         //Get all the questionGroups based on current group
