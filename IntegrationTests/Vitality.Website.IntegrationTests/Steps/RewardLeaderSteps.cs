@@ -121,23 +121,16 @@ namespace Vitality.Website.IntegrationTests.Steps
                 bgcolour = "tertiary";
             }
 
-            //WebDriver
-            //    .FindElement(new JQuerySelector(".feature-block.feature-block--" + bgcolour + ".rewards_leader .feature-block__content .box-button.box-button--light.box-button--rounded:contains('" + button + "')"))
-            //    .Click();
-
+            // Send a "scroll" to rewards leader component
+            WebDriver
+                .ScrollToElement($@".feature-block.feature-block--" + bgcolour + ".rewards_leader .feature-block__content .box-button.box-button--light.box-button--rounded");
 
             // Find the button containing the text...
             var RewardLeaderArticle = WebDriver
                 .FindElements(new JQuerySelector(".feature-block.feature-block--" + bgcolour + ".rewards_leader .feature-block__content .box-button.box-button--light.box-button--rounded"))
                 .FirstOrDefault(e => e.Text.Equals(button));
 
-            // Send a "scroll" (required if object is not in view)
-            RewardLeaderArticle
-                .SendKeys(Keys.Space);
-
             RewardLeaderArticle.Click();
-
-
         }
 
 
