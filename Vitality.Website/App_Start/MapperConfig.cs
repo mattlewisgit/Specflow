@@ -59,7 +59,10 @@ namespace Vitality.Website.App_Start
                     dest => dest.RelatedData,
                     opt =>
                         opt.MapFrom(
-                            src => src.RelatedData.Select(i => new KeyValuePair<string, string>(i.Name, i.Value))));
+                            src => src.RelatedData.Select(i => new KeyValuePair<string, string>(i.Name, i.Value))))
+                .ForMember(
+                    dest => dest.ScrollTo,
+                    opt => opt.MapFrom(src => src.ScrollTo.Value));
 
             config.CreateMap<QuestionGroup, QuestionGroupViewModel>()
                  .ForMember(

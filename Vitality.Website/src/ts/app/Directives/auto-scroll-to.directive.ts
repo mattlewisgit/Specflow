@@ -1,32 +1,34 @@
-import {AfterContentInit, Directive, ElementRef, HostListener, Renderer2, Input} from "@angular/core";
+import { Directive, ElementRef, HostListener, Inject, Input} from "@angular/core";
+import { DOCUMENT } from "@angular/platform-browser";
 import { WindowRef } from "../components/windowref";
 import { NgControl } from "@angular/forms";
 
 @Directive({
     selector: "[auto-scroll-to]"
 })
-export class AutoScrollTo implements AfterContentInit {
+export class AutoScrollTo {
     @Input("auto-scroll-to") scrollToId: string;
 
     private nativeElement: HTMLElement;
     private scrollToElement: HTMLElement;
 
-    constructor(element: ElementRef,  private control : NgControl, private renderer: Renderer2, private winRef: WindowRef) {
+    constructor(element: ElementRef, private control: NgControl,@Inject(DOCUMENT) private document: any, private winRef: WindowRef) {
         this.nativeElement = element.nativeElement;
     }
 
-    ngAfterContentInit(): void {
-        this.scrollToElement = this.renderer.selectRootElement(this.scrollToId);
-    }
-
     @HostListener("keydown",['$event'])
-    public onkeydown(event:MouseEvent){
-        if(event.which === 13 || event.which ===9)
-         {
+    public onkeydown(event: MouseEvent) {
+        if(this.scrollToId && (event.which === 13 || event.which ===9))
+        {
+            // Can't use Lifescycle hooks as the form is dynamic. Assign the scrollToElement here instead
+            if (!this.scrollToElement) {
+                this.scrollToElement = this.document.getElementById(this.scrollToId);
+                console.log(this.scrollToElement);
+            }
+
             event.preventDefault();
             if( this.control.valid )
             {
-                this.scrollToElement.focus();
                 const startY = this.currentYPosition();
                 const stopY = this.elmYPosition();
                 const distance = stopY > startY ? stopY - startY : startY - stopY;
@@ -49,6 +51,8 @@ export class AutoScrollTo implements AfterContentInit {
                     this.scrollTo(leapY, timer * speed);
                     leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
                 }
+
+                this.scrollToElement.focus();
             }
          }
     }
@@ -78,6 +82,7 @@ export class AutoScrollTo implements AfterContentInit {
         while (node.offsetParent && node.offsetParent !== document.body) {
             node = (node.offsetParent as HTMLElement);
             y += node.offsetTop;
-        } return y;
+        }
+        return y;
     }
 }

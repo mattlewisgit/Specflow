@@ -11,4 +11,5 @@ export class Question<T>{
     controlType: string;
     isHidden: boolean;
     relatedData: { key: string, value: string }[] = [];
+    scrollTo: string;
 }
