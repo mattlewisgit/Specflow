@@ -11,6 +11,8 @@ import { QuestionControlService }    from "../../services/question-control.servi
 export class QuestionGroupComponent implements OnInit {
     @Input() questionGroup: QuestionGroup;
     @Input() form: FormGroup;
+    @Input() renderingData: {};
+
 
     constructor(private qcs: QuestionControlService) {
     }

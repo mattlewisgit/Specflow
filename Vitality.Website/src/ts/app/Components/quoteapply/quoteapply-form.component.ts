@@ -17,6 +17,8 @@ import { WindowRef } from "./../windowref";
 export class QuoteApplyFormComponent implements OnInit, OnDestroy{
     quoteApplyForm: FormGroup;
     callToActionText: string;
+    renderingData: {};
+    okBtnHelpText: string;
     payload: string;
     questionGroups: QuestionGroup[];
     completedPercentage: number;
@@ -35,15 +37,17 @@ export class QuoteApplyFormComponent implements OnInit, OnDestroy{
     }
 
     ngOnInit(): void {
-        this.questionGroups = this.winRef.nativeWindow.angularData.questionGroups;
-        this.callToActionText = this.winRef.nativeWindow.angularData.callToActionText;
+        let angularData = this.winRef.nativeWindow.angularData;
+        this.questionGroups = angularData.questionGroups;
+        this.callToActionText = angularData.callToActionText;
+        this.renderingData = { okBtnText: angularData.okBtnText, okBtnHelpText: angularData.okBtnHelpText };
         let childrenQuestionGroup = this.getQuestionGroup(this.childrenQuestionGroupKey);
         this.questionControlService.setQuestionGroups(this.questionGroups);
 
         this.dobControlService.initialize({
             childrenQuestionGroup: childrenQuestionGroup,
-            childDobLastLabel: this.winRef.nativeWindow.angularData.childDobLastLabel,
-            childDobSeperatorLabel: this.winRef.nativeWindow.angularData.childDobSeperatorLabel
+            childDobLastLabel: angularData.childDobLastLabel,
+            childDobSeperatorLabel: angularData.childDobSeperatorLabel
         });
 
         this.quoteApplyForm = new FormGroup({});

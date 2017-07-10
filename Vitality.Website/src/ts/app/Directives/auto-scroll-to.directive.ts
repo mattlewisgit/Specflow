@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Inject, Input} from "@angular/core";
+import { Directive, ElementRef, HostListener, Inject, Input, Optional} from "@angular/core";
 import { DOCUMENT } from "@angular/platform-browser";
 import { WindowRef } from "../components/windowref";
 import { NgControl } from "@angular/forms";
@@ -7,57 +7,133 @@ import { NgControl } from "@angular/forms";
     selector: "[auto-scroll-to]"
 })
 export class AutoScrollTo {
-    @Input("auto-scroll-to") scrollToId: string;
+    private formInputFieldSelector = "input,select";
+    private hideClass = "hide";
+    private okBtnGroupSelector = "ok-btn-group";
+    private questionGroupSelector = "question";
 
     private nativeElement: HTMLElement;
     private scrollToElement: HTMLElement;
+    private questionParent: HTMLElement;
 
-    constructor(element: ElementRef, private control: NgControl,@Inject(DOCUMENT) private document: any, private winRef: WindowRef) {
+    constructor(element: ElementRef, @Inject(DOCUMENT) private document: any, private winRef: WindowRef, @Optional() private control?: NgControl) {
         this.nativeElement = element.nativeElement;
+        this.questionParent = this.nativeElement.parentElement;
     }
 
-    @HostListener("keydown",['$event'])
-    public onkeydown(event: MouseEvent) {
-        if(this.scrollToId && (event.which === 13 || event.which ===9))
-        {
-            // Can't use Lifescycle hooks as the form is dynamic. Assign the scrollToElement here instead
-            if (!this.scrollToElement) {
-                this.scrollToElement = this.document.getElementById(this.scrollToId);
-                console.log(this.scrollToElement);
+    @HostListener("keyup", ['$event'])
+    onkeyup(event: MouseEvent) {
+        event.preventDefault();
+        if (this.control && this.control.valid) {
+            const okBtn = this.getReleventOkBtn();
+            this.showOkBtn(okBtn);
+            if (event.shiftKey && event.which === 9) {
+                this.handleScrolling(false);
+                this.changeFocus(event, okBtn);
+            } else if (event.which === 13 || event.which === 9) {
+                this.handleScrolling(true);
+                this.changeFocus(event, okBtn);
             }
+        }
+    }
 
-            event.preventDefault();
-            if( this.control.valid )
-            {
-                const startY = this.currentYPosition();
-                const stopY = this.elmYPosition();
-                const distance = stopY > startY ? stopY - startY : startY - stopY;
+    @HostListener("focus", ["$event"])
+    onFocus(event: MouseEvent) {
+        if (this.control && this.control.valid) {
+            this.showOkBtn(this.getReleventOkBtn());
+        }
+    }
 
-                if (distance < 100) {
-                    this.winRef.nativeWindow.scrollTo(0, stopY); return;
-                }
-                let speed = Math.round(distance / 100);
-                if (speed >= 20) speed = 20;
-                const step = Math.round(distance / 100);
-                let leapY = stopY > startY ? startY + step : startY - step;
-                let timer = 0;
-                if (stopY > startY) {
-                    for (var i = startY; i < stopY; i += step) {
-                        this.scrollTo(leapY, timer * speed);
-                        leapY += step; if (leapY > stopY) leapY = stopY; timer++;
-                    } return;
-                }
-                for (var i = startY; i > stopY; i -= step) {
+    @HostListener("focusout", ["$event"])
+    onFocusOut(event: MouseEvent) {
+        this.hideOkBtn(this.getReleventOkBtn());
+    }
+
+    @HostListener("click", ['$event'])
+    onclick(event: MouseEvent) {
+        //let parent = this.nativeElement.parentElement;
+        //if (event.which === 13 || event.which === 9) {
+        //    // Check whether this is the last element in the group
+        //    if (!parent.nextElementSibling) {
+        //    }
+        //}
+    }
+
+    private getReleventOkBtn(): Element {
+        const nextElement = this.questionParent.nextElementSibling;
+        if (nextElement.classList.contains(this.okBtnGroupSelector)) {
+            const okBtnGroups = this.nativeElement.parentElement.parentElement
+                .getElementsByClassName(this.okBtnGroupSelector);
+            // Check whether this is the last element in the group
+            if (okBtnGroups.length > 0) {
+               return okBtnGroups[0];
+            }
+        }
+        return null;
+    }
+
+    private showOkBtn(btn: Element) {
+       if (btn) {
+           btn.classList.remove(this.hideClass);
+       }
+    }
+
+    private hideOkBtn(btn: Element) {
+        if (btn) {
+            btn.classList.add(this.hideClass);
+        }
+    }
+
+    private handleScrolling(goDown: boolean): void {
+        // Can't use Lifescycle hooks as the form is dynamic. Assign the scrollToElement here instead
+        const parentQuestionGroup = this.questionParent.classList.contains(this.questionGroupSelector)
+            ? this.questionParent.parentElement
+            : this.questionParent.parentElement.parentElement;
+        this.scrollToElement = (goDown
+            ? parentQuestionGroup.nextElementSibling
+            : parentQuestionGroup.previousElementSibling) as HTMLElement;
+
+        const startY = this.currentYPosition();
+        const stopY = this.elmYPosition();
+        const distance = stopY > startY ? stopY - startY : startY - stopY;
+
+        if (distance < 100) {
+            this.winRef.nativeWindow.scrollTo(0, stopY);
+        } else {
+            let speed = Math.round(distance / 100);
+            if (speed >= 20) speed = 20;
+            const step = Math.round(distance / 100);
+            let leapY = stopY > startY ? startY + step : startY - step;
+            let timer = 0;
+            if (stopY > startY) {
+                for (let i = startY; i < stopY; i += step) {
                     this.scrollTo(leapY, timer * speed);
-                    leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+                    leapY += step;
+                    if (leapY > stopY) leapY = stopY;
+                    timer++;
                 }
-
-                this.scrollToElement.focus();
+            } else {
+                for (let i = startY; i > stopY; i -= step) {
+                    this.scrollTo(leapY, timer * speed);
+                    leapY -= step;
+                    if (leapY < stopY) leapY = stopY;
+                    timer++;
+                }
             }
-         }
+        }
     }
 
-	scrollTo(yPoint: number, duration: number) {
+    private changeFocus(event: MouseEvent, okBtn: Element) {
+        if (!(event.shiftKey && event.which === 9)) {
+            var inputElements = this.scrollToElement.querySelectorAll(this.formInputFieldSelector);
+            if (inputElements.length > 0) {
+                (inputElements[0] as HTMLElement).focus();
+            }
+            this.hideOkBtn(okBtn);
+        }
+    }
+
+    private scrollTo(yPoint: number, duration: number) {
 		setTimeout(() => {
 		    this.winRef.nativeWindow.scrollTo(0, yPoint);
 		}, duration);
@@ -83,6 +159,6 @@ export class AutoScrollTo {
             node = (node.offsetParent as HTMLElement);
             y += node.offsetTop;
         }
-        return y;
+        return y -300;
     }
 }
