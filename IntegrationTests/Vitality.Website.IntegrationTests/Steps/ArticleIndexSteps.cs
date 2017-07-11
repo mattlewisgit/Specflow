@@ -3,6 +3,7 @@
     using Selenium.WebDriver.Extensions.JQuery;
     using Shouldly;
     using TechTalk.SpecFlow;
+    using Vitality.Extensions.Selenium;
 
     [Binding]
     public sealed class ArticleIndexSteps : BaseSteps
@@ -127,6 +128,10 @@
         [When(@"I click on Article Index (.*) card")]
         public void WhenIClickOnArticleIndexCard(string ArticleIndexCard)
         {
+            // Send a "scroll" (required in mobile view as panels stack)
+            WebDriver
+                .ScrollToElement($@".grid-col-7-12.article-snippet--content:contains(""{ArticleIndexCard}"")");
+
             //Check card image
             WebDriver
                 .FindElement(new JQuerySelector(".grid-col-7-12.article-snippet--content:contains('" + ArticleIndexCard + "')"))
