@@ -115,6 +115,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ArticleIndex.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\CardsTabbed.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CardsTabbed.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\HomeHero.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -151,6 +156,7 @@
       <DependentUpon>WFFM.feature</DependentUpon>
     </Compile>
     <Compile Include="Steps\ArticleIndexSteps.cs" />
+    <Compile Include="Steps\CardsTabbedSteps.cs" />
     <Compile Include="Steps\CareersSteps.cs" />
     <Compile Include="Features\BenefitLeader.feature.cs">
       <AutoGen>True</AutoGen>
@@ -317,6 +323,10 @@
     <None Include="Features\CardsStacked.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CardsStacked.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\CardsTabbed.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CardsTabbed.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Cookies.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
