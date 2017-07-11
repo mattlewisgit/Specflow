@@ -1,67 +1,95 @@
 import { Directive, ElementRef, HostListener, Inject, Input, Optional} from "@angular/core";
 import { DOCUMENT } from "@angular/platform-browser";
 import { WindowRef } from "../components/windowref";
-import { NgControl } from "@angular/forms";
 
 @Directive({
     selector: "[auto-scroll-to]"
 })
 export class AutoScrollTo {
+    @Input("isGroupCompleted") isGroupCompleted : boolean;
+    private btnTagName = "BUTTON";
+    private dropdownTagName = "SELECT";
     private formInputFieldSelector = "input,select";
     private hideClass = "hide";
     private okBtnGroupSelector = "ok-btn-group";
     private questionGroupSelector = "question";
 
+    private okBtnGroup: Element;
     private nativeElement: HTMLElement;
-    private scrollToElement: HTMLElement;
     private questionParent: HTMLElement;
 
-    constructor(element: ElementRef, @Inject(DOCUMENT) private document: any, private winRef: WindowRef, @Optional() private control?: NgControl) {
+    constructor(element: ElementRef, @Inject(DOCUMENT) private document: any, private winRef: WindowRef) {
         this.nativeElement = element.nativeElement;
-        this.questionParent = this.nativeElement.parentElement;
+        this.questionParent = this.nativeElement.parentElement ?  this.nativeElement.parentElement : this.nativeElement;
     }
 
-    @HostListener("keyup", ['$event'])
+    @HostListener("keyup", ["$event"])
     onkeyup(event: MouseEvent) {
-        event.preventDefault();
-        if (this.control && this.control.valid) {
-            const okBtn = this.getReleventOkBtn();
-            this.showOkBtn(okBtn);
+        if (!this.isDisabled && this.isGroupCompleted) {
+            this.showOkBtnGroup();
+        }
+    }
+
+    @HostListener("keydown", ["$event"])
+    onkeydown(event: MouseEvent) {
+        if (this.isDisabled) {
+            return;
+        }
+        if (event.which === 9 && this.isGroupCompleted) {
+            event.preventDefault();
+        }
+        if (this.isGroupCompleted) {
             if (event.shiftKey && event.which === 9) {
-                this.handleScrolling(false);
-                this.changeFocus(event, okBtn);
+                this.changeFocus(false);
             } else if (event.which === 13 || event.which === 9) {
-                this.handleScrolling(true);
-                this.changeFocus(event, okBtn);
+                this.changeFocus(true);
             }
+        }
+    }
+
+    @HostListener("click", ["$event"])
+    onclick(event: MouseEvent) {
+        if (!this.isDisabled && this.nativeElement.tagName === this.btnTagName) {
+            this.changeFocus(true);
+        }
+    }
+
+    @HostListener("change", ["$event"])
+    onchange(event: MouseEvent) {
+        //Just do a timeout to trigger this after model changed
+        setTimeout(() => this.onDropDownChange(), 0);
+    }
+
+    private onDropDownChange() {
+        if (!this.isDisabled && this.nativeElement.tagName === this.dropdownTagName && this.isGroupCompleted) {
+            this.changeFocus(true);
         }
     }
 
     @HostListener("focus", ["$event"])
     onFocus(event: MouseEvent) {
-        if (this.control && this.control.valid) {
-            this.showOkBtn(this.getReleventOkBtn());
+        if (this.isDisabled) {
+            return;
         }
+        if (this.nativeElement.tagName !== this.btnTagName && this.nativeElement.tagName !== this.dropdownTagName) {
+            this.hideOkBtnGroups();
+            if (this.isGroupCompleted) {
+                this.showOkBtnGroup();
+            }
+        }
+        this.handleScrolling();
     }
 
-    @HostListener("focusout", ["$event"])
-    onFocusOut(event: MouseEvent) {
-        this.hideOkBtn(this.getReleventOkBtn());
-    }
-
-    @HostListener("click", ['$event'])
-    onclick(event: MouseEvent) {
-        //let parent = this.nativeElement.parentElement;
-        //if (event.which === 13 || event.which === 9) {
-        //    // Check whether this is the last element in the group
-        //    if (!parent.nextElementSibling) {
-        //    }
-        //}
+    private get isDisabled() {
+        if (this.questionParent.nextElementSibling) {
+            return this.questionParent.nextElementSibling.querySelectorAll(this.formInputFieldSelector).length > 0;
+        }
+        return false;
     }
 
     private getReleventOkBtn(): Element {
         const nextElement = this.questionParent.nextElementSibling;
-        if (nextElement.classList.contains(this.okBtnGroupSelector)) {
+        if (nextElement && nextElement.classList.contains(this.okBtnGroupSelector)) {
             const okBtnGroups = this.nativeElement.parentElement.parentElement
                 .getElementsByClassName(this.okBtnGroupSelector);
             // Check whether this is the last element in the group
@@ -72,31 +100,44 @@ export class AutoScrollTo {
         return null;
     }
 
-    private showOkBtn(btn: Element) {
-       if (btn) {
-           btn.classList.remove(this.hideClass);
-       }
-    }
-
-    private hideOkBtn(btn: Element) {
-        if (btn) {
-            btn.classList.add(this.hideClass);
+    private showOkBtnGroup() {
+        if (!this.okBtnGroup) {
+            this.okBtnGroup = this.getReleventOkBtn();
+        }
+        // okBtnGroup still can be null
+        if (this.okBtnGroup) {
+            this.okBtnGroup.classList.remove(this.hideClass);
         }
     }
 
-    private handleScrolling(goDown: boolean): void {
+    private hideOkBtnGroups() {
+        const okBtnGroups = this.document.getElementsByClassName(this.okBtnGroupSelector);
+        for (let okBtnGroup of okBtnGroups) {
+            okBtnGroup.classList.add(this.hideClass);
+        }
+    }
+
+    private changeFocus(goDown: boolean) {
         // Can't use Lifescycle hooks as the form is dynamic. Assign the scrollToElement here instead
-        const parentQuestionGroup = this.questionParent.classList.contains(this.questionGroupSelector)
+        let parentQuestionGroup = this.questionParent.classList.contains(this.questionGroupSelector)
             ? this.questionParent.parentElement
             : this.questionParent.parentElement.parentElement;
-        this.scrollToElement = (goDown
-            ? parentQuestionGroup.nextElementSibling
-            : parentQuestionGroup.previousElementSibling) as HTMLElement;
+        let inputElement = null;
+        while (inputElement == null) {
+            parentQuestionGroup = (goDown
+                ? parentQuestionGroup.nextElementSibling
+                : parentQuestionGroup.previousElementSibling) as HTMLElement;
+            inputElement = parentQuestionGroup.querySelector(this.formInputFieldSelector);
+        }
+        if (inputElement) {
+            (inputElement as HTMLElement).focus();
+        }
+    }
 
+    private handleScrolling(): void {
         const startY = this.currentYPosition();
         const stopY = this.elmYPosition();
         const distance = stopY > startY ? stopY - startY : startY - stopY;
-
         if (distance < 100) {
             this.winRef.nativeWindow.scrollTo(0, stopY);
         } else {
@@ -123,16 +164,6 @@ export class AutoScrollTo {
         }
     }
 
-    private changeFocus(event: MouseEvent, okBtn: Element) {
-        if (!(event.shiftKey && event.which === 9)) {
-            var inputElements = this.scrollToElement.querySelectorAll(this.formInputFieldSelector);
-            if (inputElements.length > 0) {
-                (inputElements[0] as HTMLElement).focus();
-            }
-            this.hideOkBtn(okBtn);
-        }
-    }
-
     private scrollTo(yPoint: number, duration: number) {
 		setTimeout(() => {
 		    this.winRef.nativeWindow.scrollTo(0, yPoint);
@@ -144,18 +175,18 @@ export class AutoScrollTo {
         // Firefox, Chrome, Opera, Safari
         if (self.pageYOffset) return self.pageYOffset;
         // Internet Explorer 6 - standards mode
-        if (document.documentElement && document.documentElement.scrollTop)
-            return document.documentElement.scrollTop;
+        if (this.document && this.document.scrollTop)
+            return this.document.scrollTop;
         // Internet Explorer 6, 7 and 8
-        if (document.body.scrollTop) return document.body.scrollTop;
+        if (this.document.body.scrollTop) return this.document.body.scrollTop;
         return 0;
     }
 
     private elmYPosition() {
-        const elm = this.scrollToElement;
+        const elm = this.nativeElement;
         let y = elm.offsetTop;
         let node = elm;
-        while (node.offsetParent && node.offsetParent !== document.body) {
+        while (node.offsetParent && node.offsetParent !== this.document.body) {
             node = (node.offsetParent as HTMLElement);
             y += node.offsetTop;
         }
