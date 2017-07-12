@@ -1,6 +1,9 @@
 import { Directive, ElementRef, HostListener, Inject, Input, Optional} from "@angular/core";
 import { DOCUMENT } from "@angular/platform-browser";
 import { WindowRef } from "../components/windowref";
+import { Subscription } from "rxjs/Subscription";
+
+import { PostcodeService } from "../services/postcode.service";
 
 @Directive({
     selector: "[auto-scroll-to]"
@@ -14,21 +17,18 @@ export class AutoScrollTo {
     private hideClass = "hide";
     private okBtnGroupClass = "ok-btn-group";
 
-
+    private postcodeAsyncValidationSubscription: Subscription;
     private okBtnGroup: Element;
     private currentElement: HTMLElement;
     private currentElementParent: HTMLElement;
 
-    constructor(element: ElementRef, @Inject(DOCUMENT) private document: any, private winRef: WindowRef) {
+    constructor(element: ElementRef, @Inject(DOCUMENT) private document: any, private postcodeService: PostcodeService, private winRef: WindowRef) {
         this.currentElement = element.nativeElement;
         this.currentElementParent = this.currentElement.parentElement;
         //this.postcodeAsyncValidationSubscription = this.postcodeService.onPostcodeAsyncValidation()
         //    .subscribe((data: boolean) => {
         //        if (data) {
-        //            var questionGroup = this.getQuestionGroup("postcodeGroup");
-        //            questionGroup.isInvalid = false;
-        //            questionGroup.isCompleted = true;
-        //            this.calculateCompletedPercentage();
+        //            this.showOkBtnGroup();
         //        }
         //    });
     }
@@ -37,6 +37,8 @@ export class AutoScrollTo {
     onkeyup(event: MouseEvent) {
         if (this.isGroupCompleted) {
             this.showOkBtnGroup();
+        } else {
+            this.hideOkBtnGroups();
         }
     }
 
@@ -88,7 +90,6 @@ export class AutoScrollTo {
         if (!this.okBtnGroup) {
             this.okBtnGroup = this.questionElement.querySelector(this.classSelector+ this.okBtnGroupClass);
         }
-        console.log(this.okBtnGroup);
         // okBtnGroup still can be null
         if (this.okBtnGroup) {
             this.okBtnGroup.classList.remove(this.hideClass);
