@@ -66,14 +66,17 @@
         {
             // Send a "scroll" (required in mobile view as panels stack)
             WebDriver
-                .ScrollToElement($@".award-leader .award-leader--articles .article-snippet:has(h3:contains(""{memberStory}""))");
+                .ScrollToElement($@".award-leader .award-leader--articles .article-snippet .grid-col-8-12.article-snippet--content a h3:contains(""{memberStory}"")");
 
             // Find the header containing the text...
             var memberStoryArticle = WebDriver
                 .FindElements(new JQuerySelector(".award-leader .award-leader--articles .article-snippet h3"))
                 .FirstOrDefault(e => e.Text.Equals(memberStory));
 
-            memberStoryArticle.Click();
+            //click on article story.
+            memberStoryArticle
+                .GetParent()
+                .Click();
         }
     }
 }
