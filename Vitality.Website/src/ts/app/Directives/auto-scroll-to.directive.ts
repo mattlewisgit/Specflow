@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, Inject, Input, Optional} from "@angular/core";
+import { Directive, ElementRef, HostListener, Inject, Input, AfterViewInit, Optional} from "@angular/core";
 import { DOCUMENT } from "@angular/platform-browser";
 import { WindowRef } from "../components/windowref";
 import { Subscription } from "rxjs/Subscription";
@@ -8,7 +8,7 @@ import { PostcodeService } from "../services/postcode.service";
 @Directive({
     selector: "[auto-scroll-to]"
 })
-export class AutoScrollTo {
+export class AutoScrollTo implements AfterViewInit{
     @Input("isGroupCompleted") isGroupCompleted : boolean;
     private btnTagName = "BUTTON";
     private dropdownTagName = "SELECT";
@@ -25,17 +25,24 @@ export class AutoScrollTo {
     constructor(element: ElementRef, @Inject(DOCUMENT) private document: any, private postcodeService: PostcodeService, private winRef: WindowRef) {
         this.currentElement = element.nativeElement;
         this.currentElementParent = this.currentElement.parentElement;
-        //this.postcodeAsyncValidationSubscription = this.postcodeService.onPostcodeAsyncValidation()
-        //    .subscribe((data: boolean) => {
-        //        if (data) {
-        //            this.showOkBtnGroup();
-        //        }
-        //    });
+    }
+
+    ngAfterViewInit() {
+        if (this.currentElement.id === "postcode") {
+            this.postcodeAsyncValidationSubscription = this.postcodeService.onPostcodeAsyncValidation()
+                .subscribe((data: boolean) => {
+                    this.hideShowOkBtnGroup(data);
+                });
+        }
     }
 
     @HostListener("keyup", ["$event"])
     onkeyup(event: MouseEvent) {
-        if (this.isGroupCompleted) {
+            this.hideShowOkBtnGroup(this.isGroupCompleted);
+    }
+
+    private hideShowOkBtnGroup(show: boolean) {
+        if (show) {
             this.showOkBtnGroup();
         } else {
             this.hideOkBtnGroups();
@@ -191,6 +198,6 @@ export class AutoScrollTo {
             node = (node.offsetParent as HTMLElement);
             y += node.offsetTop;
         }
-        return y -300;
+        return y -200;
     }
 }

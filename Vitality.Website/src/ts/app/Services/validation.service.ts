@@ -125,6 +125,7 @@ export class ValidationService {
                                 postcodeService.postcodeAsyncValidationEmitter.emit(true);
                                 return resolve(null);
                             } else {
+                                postcodeService.postcodeAsyncValidationEmitter.emit(false);
                                 return resolve(failedMessage);
                             }
                         })
