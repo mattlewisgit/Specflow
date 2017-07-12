@@ -10,35 +10,42 @@ export class AutoScrollTo {
     private btnTagName = "BUTTON";
     private dropdownTagName = "SELECT";
     private formInputFieldSelector = "input,select";
+    private classSelector = ".";
     private hideClass = "hide";
-    private okBtnGroupSelector = "ok-btn-group";
-    private questionGroupSelector = "question";
+    private okBtnGroupClass = "ok-btn-group";
+
 
     private okBtnGroup: Element;
-    private nativeElement: HTMLElement;
-    private questionParent: HTMLElement;
+    private currentElement: HTMLElement;
+    private currentElementParent: HTMLElement;
 
     constructor(element: ElementRef, @Inject(DOCUMENT) private document: any, private winRef: WindowRef) {
-        this.nativeElement = element.nativeElement;
-        this.questionParent = this.nativeElement.parentElement ?  this.nativeElement.parentElement : this.nativeElement;
+        this.currentElement = element.nativeElement;
+        this.currentElementParent = this.currentElement.parentElement;
+        //this.postcodeAsyncValidationSubscription = this.postcodeService.onPostcodeAsyncValidation()
+        //    .subscribe((data: boolean) => {
+        //        if (data) {
+        //            var questionGroup = this.getQuestionGroup("postcodeGroup");
+        //            questionGroup.isInvalid = false;
+        //            questionGroup.isCompleted = true;
+        //            this.calculateCompletedPercentage();
+        //        }
+        //    });
     }
 
     @HostListener("keyup", ["$event"])
     onkeyup(event: MouseEvent) {
-        if (!this.isDisabled && this.isGroupCompleted) {
+        if (this.isGroupCompleted) {
             this.showOkBtnGroup();
         }
     }
 
     @HostListener("keydown", ["$event"])
     onkeydown(event: MouseEvent) {
-        if (this.isDisabled) {
-            return;
-        }
-        if (event.which === 9 && this.isGroupCompleted) {
-            event.preventDefault();
-        }
         if (this.isGroupCompleted) {
+            if (event.which === 9) {
+                event.preventDefault();
+            }
             if (event.shiftKey && event.which === 9) {
                 this.changeFocus(false);
             } else if (event.which === 13 || event.which === 9) {
@@ -49,7 +56,7 @@ export class AutoScrollTo {
 
     @HostListener("click", ["$event"])
     onclick(event: MouseEvent) {
-        if (!this.isDisabled && this.nativeElement.tagName === this.btnTagName) {
+        if (this.currentElement.tagName === this.btnTagName) {
             this.changeFocus(true);
         }
     }
@@ -61,17 +68,14 @@ export class AutoScrollTo {
     }
 
     private onDropDownChange() {
-        if (!this.isDisabled && this.nativeElement.tagName === this.dropdownTagName && this.isGroupCompleted) {
+        if (this.currentElement.tagName === this.dropdownTagName && this.isGroupCompleted) {
             this.changeFocus(true);
         }
     }
 
     @HostListener("focus", ["$event"])
     onFocus(event: MouseEvent) {
-        if (this.isDisabled) {
-            return;
-        }
-        if (this.nativeElement.tagName !== this.btnTagName && this.nativeElement.tagName !== this.dropdownTagName) {
+        if (this.currentElement.tagName !== this.btnTagName && this.currentElement.tagName !== this.dropdownTagName) {
             this.hideOkBtnGroups();
             if (this.isGroupCompleted) {
                 this.showOkBtnGroup();
@@ -80,30 +84,11 @@ export class AutoScrollTo {
         this.handleScrolling();
     }
 
-    private get isDisabled() {
-        if (this.questionParent.nextElementSibling) {
-            return this.questionParent.nextElementSibling.querySelectorAll(this.formInputFieldSelector).length > 0;
-        }
-        return false;
-    }
-
-    private getReleventOkBtn(): Element {
-        const nextElement = this.questionParent.nextElementSibling;
-        if (nextElement && nextElement.classList.contains(this.okBtnGroupSelector)) {
-            const okBtnGroups = this.nativeElement.parentElement.parentElement
-                .getElementsByClassName(this.okBtnGroupSelector);
-            // Check whether this is the last element in the group
-            if (okBtnGroups.length > 0) {
-               return okBtnGroups[0];
-            }
-        }
-        return null;
-    }
-
     private showOkBtnGroup() {
         if (!this.okBtnGroup) {
-            this.okBtnGroup = this.getReleventOkBtn();
+            this.okBtnGroup = this.questionElement.querySelector(this.classSelector+ this.okBtnGroupClass);
         }
+        console.log(this.okBtnGroup);
         // okBtnGroup still can be null
         if (this.okBtnGroup) {
             this.okBtnGroup.classList.remove(this.hideClass);
@@ -111,27 +96,42 @@ export class AutoScrollTo {
     }
 
     private hideOkBtnGroups() {
-        const okBtnGroups = this.document.getElementsByClassName(this.okBtnGroupSelector);
+        const okBtnGroups = this.document.getElementsByClassName(this.okBtnGroupClass);
         for (let okBtnGroup of okBtnGroups) {
             okBtnGroup.classList.add(this.hideClass);
         }
     }
 
     private changeFocus(goDown: boolean) {
-        // Can't use Lifescycle hooks as the form is dynamic. Assign the scrollToElement here instead
-        let parentQuestionGroup = this.questionParent.classList.contains(this.questionGroupSelector)
-            ? this.questionParent.parentElement
-            : this.questionParent.parentElement.parentElement;
+        const nextOrPrevSibiling = goDown
+            ? this.currentElementParent.nextElementSibling
+            : this.currentElementParent.previousElementSibling;
+        if (nextOrPrevSibiling) {
+            const nextOrPrevQuestion = nextOrPrevSibiling.querySelector(this.formInputFieldSelector);
+            if (nextOrPrevQuestion) {
+                (nextOrPrevQuestion as HTMLElement).focus();
+                return;
+            }
+        }
+
         let inputElement = null;
+        let questionGroupElement = this.questionGroupElement;
         while (inputElement == null) {
-            parentQuestionGroup = (goDown
-                ? parentQuestionGroup.nextElementSibling
-                : parentQuestionGroup.previousElementSibling) as HTMLElement;
-            inputElement = parentQuestionGroup.querySelector(this.formInputFieldSelector);
+            questionGroupElement = (goDown
+                ? questionGroupElement.nextElementSibling
+                : questionGroupElement.previousElementSibling) as HTMLElement;
+            inputElement = questionGroupElement.querySelector(this.formInputFieldSelector);
         }
         if (inputElement) {
             (inputElement as HTMLElement).focus();
         }
+    }
+
+    private get questionElement(): HTMLElement {
+        return this.currentElementParent.parentElement;
+    }
+    private get questionGroupElement() : HTMLElement {
+        return this.currentElementParent.parentElement.parentElement;
     }
 
     private handleScrolling(): void {
@@ -183,7 +183,7 @@ export class AutoScrollTo {
     }
 
     private elmYPosition() {
-        const elm = this.nativeElement;
+        const elm = this.currentElement;
         let y = elm.offsetTop;
         let node = elm;
         while (node.offsetParent && node.offsetParent !== this.document.body) {
