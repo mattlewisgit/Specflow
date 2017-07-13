@@ -84,13 +84,15 @@ export class AutoScrollTo implements AfterViewInit{
 
     @HostListener("focus", ["$event"])
     onFocus(event: MouseEvent) {
-        if (this.currentElement.tagName !== this.btnTagName && this.currentElement.tagName !== this.dropdownTagName) {
-            this.hideOkBtnGroups();
-            if (this.isGroupCompleted) {
-                this.showOkBtnGroup();
+        if (this.currentElement.tagName !== this.btnTagName) {
+            if (this.currentElement.tagName !== this.dropdownTagName) {
+                this.hideOkBtnGroups();
+                if (this.isGroupCompleted) {
+                    this.showOkBtnGroup();
+                }
             }
+            this.handleScrolling();
         }
-        this.handleScrolling();
     }
 
     private showOkBtnGroup() {
@@ -198,6 +200,6 @@ export class AutoScrollTo implements AfterViewInit{
             node = (node.offsetParent as HTMLElement);
             y += node.offsetTop;
         }
-        return y -200;
+        return y - (this.winRef.nativeWindow.screen.height/2 -200);
     }
 }

@@ -28,6 +28,9 @@ body {
     body {
       padding: 3em; } }
 
+form {
+  padding: 20% 0; }
+
 a {
   border-color: white; }
 
