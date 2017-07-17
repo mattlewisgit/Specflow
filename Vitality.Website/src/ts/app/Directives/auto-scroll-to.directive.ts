@@ -52,12 +52,11 @@ export class AutoScrollTo implements AfterViewInit{
     @HostListener("keydown", ["$event"])
     onkeydown(event: MouseEvent) {
         if (this.isGroupCompleted) {
-            if (event.which === 9) {
-                event.preventDefault();
-            }
             if (event.shiftKey && event.which === 9) {
+                event.preventDefault();
                 this.changeFocus(false);
             } else if (event.which === 13 || event.which === 9) {
+                event.preventDefault();
                 this.changeFocus(true);
             }
         }
