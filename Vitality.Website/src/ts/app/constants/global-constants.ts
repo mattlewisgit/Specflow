@@ -1,7 +1,7 @@
 ﻿export namespace GlobalConstants {
     export const tagNames= {
         button: "BUTTON",
-        dropdown: "DROPDOWN"
+        dropdown: "SELECT"
     };
     export const selectors = {
         classIdentifier: ".",
@@ -11,5 +11,5 @@
     export const keyboardKeys = {
         enter: 13,
         tab: 9
-    }
+    };
 };
