@@ -32,6 +32,7 @@
     "gulp-task-listing": "~1.0.1",
     "gulp-typescript": "~3.1.6",
     "gulp-uglify": "~2.1.2",
+    "moment": "^2.18.1",
     "rimraf": "~2.6.1",
     "run-sequence": "~1.2.2",
     "rxjs": "~5.0.1",

@@ -12,4 +12,7 @@
         enter: 13,
         tab: 9
     };
+    export const formats = {
+        dateFormat: "DD/MM/YYYY"
+    };
 };

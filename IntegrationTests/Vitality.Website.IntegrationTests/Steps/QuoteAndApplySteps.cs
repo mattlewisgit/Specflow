@@ -212,26 +212,11 @@ namespace Vitality.Website.IntegrationTests.Steps
             var percent = WebDriver
                 .FindElement(new JQuerySelector($".quote--footer .progress .progress-bar")).GetAttribute("style");
 
-            var regex = new Regex(@"(?<=width: )\d+");
-            var actualProgress = regex.Matches(percent);
-
-
-            var arr = Regex.Matches(percent, @"(?<=width: )\d+")
+            Regex.Matches(percent, @"(?<=width: )d+")
                 .Cast<Match>()
                 .Select(m => m.Value)
-                .ToArray();
-
-            
-            try
-            {
-                Assert.True(arr[0] == progressPercentage);
-            }
-            catch (Exception)
-            {
-                throw new Exception("Expected " + progressPercentage + "%, but got " + arr[0] + "%");
-            }
-
-
+                .First()
+                .ShouldBe(progressPercentage);
         }
 
         [Then(@"I see that the (.*) options are as expected")]
@@ -328,9 +313,8 @@ namespace Vitality.Website.IntegrationTests.Steps
             }
             catch (Exception)
             {
-                throw;
+                Assert.True(false, "Apply button not found");
             }
-            return;
         }
     }
 
