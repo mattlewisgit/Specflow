@@ -2,6 +2,7 @@ a,
 body,
 button,
 input,
+kbd,
 select {
   color: white;
   font-family: "Hind Siliguri", Helvetica, Arial, sans-serif;
@@ -27,6 +28,9 @@ body {
     body {
       padding: 3em; } }
 
+form {
+  padding: 20% 0; }
+
 a {
   border-color: white; }
 
@@ -43,8 +47,12 @@ h4 {
   font-weight: 300;
   margin: 0.375em 0; }
 
-button {
+button,
+select {
   cursor: pointer; }
+
+kbd {
+  font-weight: 600; }
 
 .button--box {
   border-color: #cccccc;
@@ -98,6 +106,9 @@ button {
     top: 0;
     width: 3em; }
 
+.hide {
+  display: none; }
+
 .quote {
   max-width: 100%;
   margin-left: auto;
@@ -115,6 +126,18 @@ button {
       width: 49.15254%;
       float: left;
       margin-right: 1.69492%; }
+      .quote--content .fade {
+        width: 100%;
+        height: 45%;
+        position: fixed;
+        pointer-events: none; }
+        .quote--content .fade.upper {
+          top: 0;
+          background: linear-gradient(to bottom, #f41a5c, rgba(244, 26, 92, 0)); }
+        .quote--content .fade.lower {
+          bottom: 0;
+          margin-bottom: 6em;
+          background: linear-gradient(to top, #f41a5c, rgba(244, 26, 92, 0)); }
     .quote--right {
       float: right;
       margin-right: 0; } }
@@ -207,7 +230,6 @@ button {
     color: #710a2c;
     font-weight: 600; }
   .question--input__text {
-    display: inline-block;
     margin-left: 0.375em; }
     .question--input__text input[type="email"], .question--input__text input[type="text"] {
       background: none;
@@ -223,14 +245,26 @@ button {
         color: rgba(255, 255, 255, 0.6); }
       .question--input__text input[type="email"]:-moz-placeholder, .question--input__text input[type="text"]:-moz-placeholder {
         color: rgba(255, 255, 255, 0.6); }
-  .question select {
+  .question--input__text, .question--input__select {
+    display: inline-block; }
+  .question select,
+  .question button {
     background: none;
     border: 2px #bb114a solid;
     border-radius: 0.1875em;
     color: white;
     margin: 0 0.375em;
-    padding: 0 0.375em; }
+    padding: 0 0.375em;
+    transition: border 200ms ease-out; }
+    .question select:hover,
+    .question button:hover {
+      border-color: #8c0d37; }
+  .question button {
+    padding: 8px 30px; }
   .question option {
     color: black; }
+  .question .ok-btn-group {
+    margin-top: 15px;
+    font-size: 16px; }
 
 /*# sourceMappingURL=main.css.map */

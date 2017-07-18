@@ -1,55 +1,75 @@
-import { Component, Inject, OnInit, Input }      from "@angular/core";
+import { Component, Inject, OnDestroy, Input, OnInit }      from "@angular/core";
 import { FormArray, FormBuilder, FormGroup } from "@angular/forms";
+import { Subscription } from "rxjs/Subscription";
 
-import { QuoteApplyService } from "../../services/quoteapply.service";
 import { DobControlService } from "../../services/dob-control.service";
-import { QuestionGroup }     from "../../models/question-group";
-import { Question }     from "../../models/question";
+import { QuoteApplyConstants } from "../../constants/quoteapply-constants";
+import { QuoteApplyService } from "../../services/quoteapply.service";
+import { QuestionControlService } from "../../services/question-control.service";
+import { QuestionGroup } from "../../models/question-group";
+import { PostcodeService } from "../../services/postcode.service";
 import { WindowRef } from "./../windowref";
 
 @Component({
     selector: "quoteapply-form",
     templateUrl: "./js/app/components/quoteapply/quoteapply-form.component.html"
 })
-export class QuoteApplyFormComponent implements OnInit {
-    quoteApplyForm: FormGroup;
+export class QuoteApplyFormComponent implements OnInit, OnDestroy {
     callToActionText: string;
-    payload: string;
-    questionGroups: QuestionGroup[];
     completedPercentage: number;
-    submitted: boolean;
     isAllCompleted = false;
-    childrenQuestionGroupKey = "childrenDobGroup";
+    quoteApplyForm: FormGroup;
+    okBtnHelpText: string;
+    payload: string;
+    private postcodeAsyncValidationSubscription: Subscription;
+    questionGroups: QuestionGroup[];
+    renderingData: {};
+    submitted: boolean;
 
     constructor(
-        private fb: FormBuilder,
         private dobControlService: DobControlService,
+        private fb: FormBuilder,
+        private postcodeService: PostcodeService,
+        private questionControlService: QuestionControlService,
         private quoteApplyService: QuoteApplyService,
         private winRef: WindowRef) {
     }
 
     ngOnInit(): void {
-        this.questionGroups = this.winRef.nativeWindow.angularData.questionGroups;
-        this.callToActionText = this.winRef.nativeWindow.angularData.callToActionText;
-        let childrenQuestionGroup = this.getQuestionGroup(this.childrenQuestionGroupKey);
+        const angularData = this.winRef.nativeWindow.angularData;
+        this.questionGroups = angularData.questionGroups;
+        this.callToActionText = angularData.callToActionText;
+        this.renderingData = { okBtnText: angularData.okBtnText, okBtnHelpText: angularData.okBtnHelpText };
+        const childrenQuestionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.childrenQuestionGroup);
+        this.questionControlService.setQuestionGroups(this.questionGroups);
 
         this.dobControlService.initialize({
             childrenQuestionGroup: childrenQuestionGroup,
-            childDobLastLabel: this.winRef.nativeWindow.angularData.childDobLastLabel,
-            childDobSeperatorLabel: this.winRef.nativeWindow.angularData.childDobSeperatorLabel
+            childDobLastLabel: angularData.childDobLastLabel,
+            childDobSeperatorLabel: angularData.childDobSeperatorLabel
         });
 
         this.quoteApplyForm = new FormGroup({});
-
         this.quoteApplyForm.valueChanges.subscribe(data => {
             this.calculateCompletedPercentage();
         });
+
+        this.postcodeAsyncValidationSubscription = this.postcodeService.onPostcodeAsyncValidation()
+            .subscribe((data: boolean) => {
+                if (data) {
+                    var questionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.postcodeQuestionGroup);
+                    questionGroup.isInvalid = false;
+                    questionGroup.isCompleted = true;
+                    this.calculateCompletedPercentage();
+                }
+            });
     }
 
     calculateCompletedPercentage() {
-        // TODO ensure this is fired after QuestionGroupComponent.isValid
-        let visibleQuestionGroups = this.questionGroups.filter(x => x.isVisible);
-        this.completedPercentage = (visibleQuestionGroups.filter(x => x.isCompleted).length / visibleQuestionGroups.length) * 100;
+        const visibleQuestionGroups = this.questionGroups.filter(x => !x.isHidden);
+        this.completedPercentage = (visibleQuestionGroups.filter(x => x.isCompleted).length /
+                visibleQuestionGroups.length) *
+            100;
         this.isAllCompleted = this.completedPercentage === 100;
     }
 
@@ -61,5 +81,11 @@ export class QuoteApplyFormComponent implements OnInit {
         //Do it only when isvalid
         this.submitted = true;
         this.quoteApplyService.apply(this.quoteApplyForm.value);
+    }
+
+    ngOnDestroy(): void {
+        if (this.postcodeAsyncValidationSubscription) {
+            this.postcodeAsyncValidationSubscription.unsubscribe();
+        }
     }
 }

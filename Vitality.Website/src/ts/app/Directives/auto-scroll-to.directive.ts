@@ -1,59 +1,177 @@
-import {AfterContentInit, Directive, ElementRef, HostListener, Renderer2, Input} from "@angular/core";
+import {  AfterViewInit, Directive, ElementRef, HostListener, Inject, Input, Optional} from "@angular/core";
+import { DOCUMENT } from "@angular/platform-browser";
 import { WindowRef } from "../components/windowref";
-import { NgControl } from "@angular/forms";
+import { Subscription } from "rxjs/Subscription";
+
+import { GlobalConstants } from "../constants/global-constants";
+import { PostcodeService } from "../services/postcode.service";
+import { QuoteApplyConstants } from "../constants/quoteapply-constants";
 
 @Directive({
     selector: "[auto-scroll-to]"
 })
-export class AutoScrollTo implements AfterContentInit {
-    @Input("auto-scroll-to") scrollToId: string;
+export class AutoScrollTo implements AfterViewInit{
+    @Input("isGroupCompleted") isGroupCompleted : boolean;
 
-    private nativeElement: HTMLElement;
-    private scrollToElement: HTMLElement;
+    private currentElement: HTMLElement;
+    private currentElementParent: HTMLElement;
+    private okBtnGroup: Element;
+    private postcodeAsyncValidationSubscription: Subscription;
 
-    constructor(element: ElementRef,  private control : NgControl, private renderer: Renderer2, private winRef: WindowRef) {
-        this.nativeElement = element.nativeElement;
+    constructor(element: ElementRef, @Inject(DOCUMENT) private document: any, private postcodeService: PostcodeService, private winRef: WindowRef) {
+        this.currentElement = element.nativeElement;
+        this.currentElementParent = this.currentElement.parentElement;
     }
 
-    ngAfterContentInit(): void {
-        this.scrollToElement = this.renderer.selectRootElement(this.scrollToId);
+    ngAfterViewInit() {
+        if (this.currentElement.id === QuoteApplyConstants.selectors.postcode) {
+            this.postcodeAsyncValidationSubscription = this.postcodeService.onPostcodeAsyncValidation()
+                .subscribe((data: boolean) => {
+                    this.hideShowOkBtnGroup(data);
+                });
+        }
     }
 
-    @HostListener("keydown",['$event'])
-    public onkeydown(event:MouseEvent){
-        if(event.which === 13 || event.which ===9)
-         {
-            event.preventDefault();
-            if( this.control.valid )
-            {
-                this.scrollToElement.focus();
-                const startY = this.currentYPosition();
-                const stopY = this.elmYPosition();
-                const distance = stopY > startY ? stopY - startY : startY - stopY;
+    @HostListener("keyup", ["$event"])
+    onkeyup(event: MouseEvent) {
+        if (this.currentElement.tagName !== GlobalConstants.tagNames.dropdown) {
+            this.hideShowOkBtnGroup(this.isGroupCompleted);
+        }
+    }
 
-                if (distance < 100) {
-                    this.winRef.nativeWindow.scrollTo(0, stopY); return;
-                }
-                let speed = Math.round(distance / 100);
-                if (speed >= 20) speed = 20;
-                const step = Math.round(distance / 100);
-                let leapY = stopY > startY ? startY + step : startY - step;
-                let timer = 0;
-                if (stopY > startY) {
-                    for (var i = startY; i < stopY; i += step) {
-                        this.scrollTo(leapY, timer * speed);
-                        leapY += step; if (leapY > stopY) leapY = stopY; timer++;
-                    } return;
-                }
-                for (var i = startY; i > stopY; i -= step) {
-                    this.scrollTo(leapY, timer * speed);
-                    leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+    @HostListener("keydown", ["$event"])
+    onkeydown(event: MouseEvent) {
+        if (this.isGroupCompleted) {
+            if (event.shiftKey && event.which === GlobalConstants.keyboardKeys.tab) {
+                event.preventDefault();
+                this.changeFocus(false);
+            } else if (event.which === GlobalConstants.keyboardKeys.enter || event.which === GlobalConstants.keyboardKeys.tab) {
+                event.preventDefault();
+                this.changeFocus(true);
+            }
+        }
+    }
+
+    @HostListener("click", ["$event"])
+    onclick(event: MouseEvent) {
+        if (this.currentElement.tagName === GlobalConstants.tagNames.button) {
+            this.changeFocus(true);
+        }
+    }
+
+    @HostListener("change", ["$event"])
+    onchange(event: MouseEvent) {
+        //Just do a timeout to trigger this after model changed
+        setTimeout(() => this.onDropDownChange(), 0);
+    }
+
+    @HostListener("focus", ["$event"])
+    onFocus(event: MouseEvent) {
+        if (this.currentElement.tagName !== GlobalConstants.tagNames.button) {
+            this.hideOkBtnGroups();
+            if (this.currentElement.tagName !== GlobalConstants.tagNames.dropdown) {
+                if (this.isGroupCompleted) {
+                    this.showOkBtnGroup();
                 }
             }
-         }
+            this.handleScrolling();
+        }
     }
 
-	scrollTo(yPoint: number, duration: number) {
+    private hideShowOkBtnGroup(show: boolean) {
+        if (show) {
+            this.showOkBtnGroup();
+        } else {
+            this.hideOkBtnGroups();
+        }
+    }
+
+    private showOkBtnGroup() {
+        if (!this.okBtnGroup) {
+            this.okBtnGroup = this.questionElement.querySelector(GlobalConstants.selectors.classIdentifier + QuoteApplyConstants.selectors.okBtnGroup);
+        }
+        // okBtnGroup still can be null
+        if (this.okBtnGroup) {
+            this.okBtnGroup.classList.remove(GlobalConstants.selectors.hide);
+        }
+    }
+
+    private hideOkBtnGroups() {
+        const okBtnGroups = this.document.getElementsByClassName(QuoteApplyConstants.selectors.okBtnGroup);
+        for (let okBtnGroup of okBtnGroups) {
+            okBtnGroup.classList.add(GlobalConstants.selectors.hide);
+        }
+    }
+
+    private onDropDownChange() {
+        if (this.currentElement.tagName === GlobalConstants.tagNames.dropdown && this.isGroupCompleted) {
+            this.changeFocus(true);
+        }
+    }
+
+    private changeFocus(goDown: boolean) {
+        const nextOrPrevSibiling = goDown
+            ? this.currentElementParent.nextElementSibling
+            : this.currentElementParent.previousElementSibling;
+        if (nextOrPrevSibiling) {
+            const nextOrPrevQuestion = nextOrPrevSibiling.querySelector(GlobalConstants.selectors.formInputFields);
+            if (nextOrPrevQuestion) {
+                (nextOrPrevQuestion as HTMLElement).focus();
+                return;
+            }
+        }
+
+        let inputElement = null;
+        let questionGroupElement = this.questionGroupElement;
+        while (inputElement == null) {
+            questionGroupElement = (goDown
+                ? questionGroupElement.nextElementSibling
+                : questionGroupElement.previousElementSibling) as HTMLElement;
+            inputElement = questionGroupElement.querySelector(GlobalConstants.selectors.formInputFields);
+        }
+        if (inputElement) {
+            (inputElement as HTMLElement).focus();
+        }
+    }
+
+    private get questionElement(): HTMLElement {
+        return this.currentElementParent.parentElement;
+    }
+    private get questionGroupElement() : HTMLElement {
+        return this.currentElementParent.parentElement.parentElement;
+    }
+
+    private handleScrolling(): void {
+        const startY = this.currentYPosition();
+        const stopY = this.elmYPosition();
+        const distance = stopY > startY ? stopY - startY : startY - stopY;
+        if (distance < 100) {
+            this.winRef.nativeWindow.scrollTo(0, stopY);
+        } else {
+            let speed = Math.round(distance / 100);
+            if (speed >= 20) speed = 20;
+            const step = Math.round(distance / 100);
+            let leapY = stopY > startY ? startY + step : startY - step;
+            let timer = 0;
+            if (stopY > startY) {
+                for (let i = startY; i < stopY; i += step) {
+                    this.scrollTo(leapY, timer * speed);
+                    leapY += step;
+                    if (leapY > stopY) leapY = stopY;
+                    timer++;
+                }
+            } else {
+                for (let i = startY; i > stopY; i -= step) {
+                    this.scrollTo(leapY, timer * speed);
+                    leapY -= step;
+                    if (leapY < stopY) leapY = stopY;
+                    timer++;
+                }
+            }
+        }
+    }
+
+    private scrollTo(yPoint: number, duration: number) {
 		setTimeout(() => {
 		    this.winRef.nativeWindow.scrollTo(0, yPoint);
 		}, duration);
@@ -64,20 +182,21 @@ export class AutoScrollTo implements AfterContentInit {
         // Firefox, Chrome, Opera, Safari
         if (self.pageYOffset) return self.pageYOffset;
         // Internet Explorer 6 - standards mode
-        if (document.documentElement && document.documentElement.scrollTop)
-            return document.documentElement.scrollTop;
+        if (this.document && this.document.scrollTop)
+            return this.document.scrollTop;
         // Internet Explorer 6, 7 and 8
-        if (document.body.scrollTop) return document.body.scrollTop;
+        if (this.document.body.scrollTop) return this.document.body.scrollTop;
         return 0;
     }
 
     private elmYPosition() {
-        const elm = this.scrollToElement;
+        const elm = this.currentElement;
         let y = elm.offsetTop;
         let node = elm;
-        while (node.offsetParent && node.offsetParent !== document.body) {
+        while (node.offsetParent && node.offsetParent !== this.document.body) {
             node = (node.offsetParent as HTMLElement);
             y += node.offsetTop;
-        } return y;
+        }
+        return y - (this.winRef.nativeWindow.screen.height/2 -200);
     }
 }

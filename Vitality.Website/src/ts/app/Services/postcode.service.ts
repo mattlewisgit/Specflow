@@ -1,12 +1,17 @@
-﻿import { Injectable }    from "@angular/core";
-import { Headers, Http } from "@angular/http";
+﻿import { EventEmitter, Injectable }    from "@angular/core";
 import { ErrorService } from "./error.service";
+import { Headers, Http } from "@angular/http";
 import "rxjs/add/operator/toPromise";
 
 @Injectable()
 export class PostcodeService {
     endpoint: string;
     feedType: string;
+
+    postcodeAsyncValidationEmitter = new EventEmitter<boolean>();
+    onPostcodeAsyncValidation() {
+        return this.postcodeAsyncValidationEmitter;
+    }
 
     constructor(private http: Http,
         private errorService: ErrorService) {

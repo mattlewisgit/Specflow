@@ -1,4 +1,4 @@
-﻿import {Question } from "./question";
+﻿import { Question } from "./question";
 
 export class QuestionGroup {
     key: string;
@@ -8,6 +8,7 @@ export class QuestionGroup {
     helpText: string;
     validationMessage: string;
     questions: Question<any>[];
-    isVisible: boolean;
+    isHidden: boolean;
     isCompleted: boolean;
+    isInvalid: boolean;
 }

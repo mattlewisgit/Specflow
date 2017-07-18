@@ -1,32 +1,74 @@
 ﻿import { Injectable }   from "@angular/core";
-
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+
 import { DobControlService } from "../services/dob-control.service";
+import { FieldValidator } from "../models/field-validator";
+import { QuoteApplyConstants } from "../constants/quoteapply-constants";
+import { QuestionGroup } from "../models/question-group";
 import { ValidationService } from "../services/validation.service";
-import {FieldValidator } from "../models/field-validator";
-import {Question } from "../models/question";
 
 @Injectable()
 export class QuestionControlService {
+    private questionGroups : QuestionGroup[];
     constructor(
         private dobControlService: DobControlService,
         private validationService: ValidationService
-    ) { }
+    ) {
+    }
+    setQuestionGroups(questionGroups:QuestionGroup[]) {
+        this.questionGroups = questionGroups;
+    }
 
-    addFormControls(form: FormGroup, questions: Question<any>[]) {
-        questions.forEach(question => {
-            let formControl = new FormControl(question.value || "",
+    addFormControls(form: FormGroup, questionGroup: QuestionGroup) {
+        // if it is based on another control make it hidden to starts with
+        if (questionGroup.basedOnKey) {
+            questionGroup.isHidden = true;
+        }
+        questionGroup.questions.forEach(question => {
+            const formControl = new FormControl(question.value || "",
                 this.getValidators(question.validators.filter(x => !x.isAsync)),
                 this.getAsyncValidators(question.validators.filter(x => x.isAsync)));
-            if (question.key === "noOfChildren") {
-             formControl.valueChanges.subscribe(data=> this.dobControlService.noOfKidsChanged(data));
+            if (question.key === QuoteApplyConstants.keys.noOfChildren) {
+                formControl.valueChanges.subscribe(data => {
+                    this.dobControlService.noOfKidsChanged(data);
+                    this.isValid(data, form, questionGroup);
+                });
+            } else if (question.key === QuoteApplyConstants.keys.membersToInsure) {
+                formControl.valueChanges.subscribe(data => {
+                    this.dobControlService.membersToInsureChanged(data);
+                    this.isValid(data, form, questionGroup);
+                });
             }
-            else if (question.key === "membersToInsure") {
-                formControl.valueChanges.subscribe(data => this.dobControlService.membersToInsureChanged(data));
+            else {
+                formControl.valueChanges.subscribe(data => this.isValid(data, form, questionGroup));
             }
-
             form.addControl(question.key, formControl);
         });
+    }
+
+    isValid(value:any, form: FormGroup, questionGroup: QuestionGroup): void {
+        questionGroup.isInvalid = false;
+        // If group is not visible mark the group completed.
+        questionGroup.isCompleted = questionGroup.isHidden;
+
+        for (let entry of questionGroup.questions) {
+            this.handleHiddenGroups(entry.key, value);
+            // If control is not visible make the group valid and completed
+            const control = form.controls[entry.key];
+            questionGroup.isCompleted = control.valid || entry.isHidden;
+            if (!questionGroup.isCompleted) {
+                questionGroup.isInvalid = !control.pristine;
+                break;
+            }
+        }
+    }
+
+    handleHiddenGroups(key: string, value: any): void {
+        //Get all the questionGroups based on current group
+        const conditionalGroups = this.questionGroups.filter(x => x.basedOnKey === key);
+        for (let cqg of conditionalGroups) {
+            cqg.isHidden = cqg.basedOnValues.indexOf(value) < 0;
+        }
     }
 
     private handleError(error: any): void {

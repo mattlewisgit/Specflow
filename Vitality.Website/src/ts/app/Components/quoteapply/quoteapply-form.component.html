@@ -1,10 +1,16 @@
 <form [formGroup]="quoteApplyForm" (ngSubmit)="apply(quoteApplyForm.valid)" novalidate>
-    <question-group *ngFor="let questionGroup of questionGroups" [questionGroup]="questionGroup" [form]="quoteApplyForm"></question-group>
+    <div class="fade upper"></div>
+    <div class="fade lower"></div>
+    <question-group *ngFor="let questionGroup of questionGroups"
+                    [questionGroup]="questionGroup"
+                    [renderingData]="renderingData"
+                    [form]="quoteApplyForm">
+    </question-group>
 
     <div class="quote--footer">
         <div class="quote--footer__logo">
             <div>
-                <img src="/images/star_ratings_secondary_logo_2017_5.png" alt="Defacto 5 star rating" />
+                <img src="/images/star_ratings_secondary_logo_2017_5.png" alt="Defacto 5 star rating"/>
             </div>
         </div>
 
@@ -21,7 +27,7 @@
 
         <div class="quote--footer__chat">
             <div>
-                <img src="/images/chat-open.svg" alt="Open chat window" />
+                <img src="/images/chat-open.svg" alt="Open chat window"/>
             </div>
         </div>
     </div>
@@ -31,3 +37,4 @@
     <h2>You will be submitting following values when development completed:</h2>
     {{payload}}
 </div>
+

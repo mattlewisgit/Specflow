@@ -375,7 +375,9 @@
     <TypeScriptCompile Include="src\ts\app\components\quoteapply\question-group.component.ts" />
     <TypeScriptCompile Include="src\ts\app\components\quoteapply\quoteapply-form.component.ts" />
     <TypeScriptCompile Include="src\ts\app\components\windowref.ts" />
+    <TypeScriptCompile Include="src\ts\app\constants\quoteapply-constants.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\auto-scroll-to.directive.ts" />
+    <TypeScriptCompile Include="src\ts\app\constants\global-constants.ts" />
     <TypeScriptCompile Include="src\ts\app\models\extradataitem.ts" />
     <TypeScriptCompile Include="src\ts\app\models\field-validator.ts" />
     <TypeScriptCompile Include="src\ts\app\models\question-group.ts" />

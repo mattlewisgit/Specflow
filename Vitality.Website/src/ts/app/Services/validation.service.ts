@@ -1,5 +1,8 @@
-﻿import { Injectable }   from "@angular/core";
+﻿import * as moment from "moment/moment";
+import { Injectable }  from "@angular/core";
 import { Validators } from "@angular/forms";
+
+import { GlobalConstants } from "../constants/global-constants";
 import { PostcodeService } from "./postcode.service";
 
 @Injectable()
@@ -55,15 +58,8 @@ export class ValidationService {
     ageRangeValidator(options: any) {
         return (control: any) => {
             if (this.dateValidator(control) == null) {
-                const dateParts = control.value.split("/");
-                const birthDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0]);
-                const now = new Date();
-                let years = (now.getFullYear() - birthDate.getFullYear());
-
-                if (now.getMonth() < birthDate.getMonth() ||
-                    now.getMonth() === birthDate.getMonth() && now.getDate() < birthDate.getDate()) {
-                    years--;
-                }
+                const birthDate = moment(control.value, GlobalConstants.formats.dateFormat);
+                const years = Math.ceil(moment().diff(birthDate, "years", true));
                 if (years >= options.minAge && years < options.maxAge) {
                     return null;
                 }
@@ -75,13 +71,9 @@ export class ValidationService {
     futureDateValidator(options: any) {
         return (control: any) => {
             if (this.dateValidator(control) == null) {
-                const dateParts = control.value.split("/");
-                const futureDate = new Date(dateParts[2], dateParts[1], dateParts[0]);
-                const now = new Date();
-                if (options.minDaysAhead) {
-                    now.setDate(now.getDate() + parseInt(options.minDaysAhead));
-                }
-                if (futureDate.getDate() <= now.getDate()) {
+                const futureDate = moment(control.value, GlobalConstants.formats.dateFormat);
+                const dateDifference = Math.ceil(futureDate.diff(moment(), "days", true));
+                if (dateDifference <= options.minDaysAhead && dateDifference > -1) {
                     return null;
                 }
             }
@@ -123,8 +115,10 @@ export class ValidationService {
                     postcodeService.lookupPostcode(control.value)
                         .then((data:any) => {
                             if (data.Addresses.length > 0) {
+                                postcodeService.postcodeAsyncValidationEmitter.emit(true);
                                 return resolve(null);
                             } else {
+                                postcodeService.postcodeAsyncValidationEmitter.emit(false);
                                 return resolve(failedMessage);
                             }
                         })

@@ -9,6 +9,7 @@ using Selenium.WebDriver.Extensions.JQuery;
 using Vitality.Extensions.Selenium;
 using Vitality.Website.IntegrationTests.Extensions;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace Vitality.Website.IntegrationTests.Steps
 {
@@ -205,6 +206,19 @@ namespace Vitality.Website.IntegrationTests.Steps
         }
 
 
+        [Then(@"I see that the Progress Bar is at (.*) %")]
+        public void ISeeThatTheProgressBarIsAt(string progressPercentage)
+        {
+            var percent = WebDriver
+                .FindElement(new JQuerySelector($".quote--footer .progress .progress-bar")).GetAttribute("style");
+
+            Regex.Matches(percent, @"(?<=width: )d+")
+                .Cast<Match>()
+                .Select(m => m.Value)
+                .First()
+                .ShouldBe(progressPercentage);
+        }
+
         [Then(@"I see that the (.*) options are as expected")]
         public void ThenISeeThatTheOptionsAreAsExpected(string fieldName)
         {
@@ -267,5 +281,42 @@ namespace Vitality.Website.IntegrationTests.Steps
             Assert.True(possibleOptions.CompareLists(targetList));
         }
 
+        [Then(@"I see that the Progress Bar is not displayed")]
+        public void ISeeThatTheProgressBarIsNotDisplayed()
+        {
+            try
+            {
+                WebDriver.FindElement
+                    (new JQuerySelector($"quote--footer .progress .progress-bar"))
+                    .ShouldBeNull();
+            }
+            catch (NoSuchElementException)
+            {
+                return;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+
+        [Then(@"I see that the Apply button is displayed")]
+        public void ISeeThatTheApplyButtonIsDisplayed()
+        {
+            try
+            {
+                WebDriver.FindElement
+                    (new JQuerySelector($".quote--footer .quote--footer__progress:has(button:contains('Apply'))"))
+                    .ShouldNotBeNull();
+            }
+            catch (Exception)
+            {
+                Assert.True(false, "Apply button not found");
+            }
+        }
     }
+
+
 }

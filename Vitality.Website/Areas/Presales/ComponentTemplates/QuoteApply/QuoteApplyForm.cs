@@ -13,6 +13,8 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         public string CallToActionText { get; set; }
         public string ChildDobSeperatorLabel { get; set; }
         public string ChildDobLastLabel { get; set; }
+        public string OkBtnText { get; set; }
+        public string OkBtnHelpText { get; set; }
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<QuestionGroup> QuestionGroups { get; set; }
         public Link ServiceOutagePage { get; set; }

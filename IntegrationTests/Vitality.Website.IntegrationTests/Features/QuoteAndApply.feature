@@ -506,4 +506,437 @@
     When I go to the marketingPermission field and look at the options available
     Then I see that the marketingPermission options are as expected
 
+    Scenario: Check the Policy Start Date allows today
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose not currently insured
+    And I go to the dateOfBirth field and make the age 18 minus 0 days
+    And I go to the coverStartDate field and make the date today plus 0 days
+    Then I don't see the coverStartDate field error
 
+    Scenario: Check the Policy Start Date allows 30 days from now
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose not currently insured
+    And I go to the dateOfBirth field and make the age 18 minus 0 days
+    And I go to the coverStartDate field and make the date today plus 30 days
+    Then I don't see the coverStartDate field error
+
+    Scenario: Check the Policy Start Date does not allow 31 days from now
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose not currently insured
+    And I go to the dateOfBirth field and make the age 18 minus 0 days
+    And I go to the coverStartDate field and make the date today plus 31 days
+    Then I see the coverStartDate field error text Please enter a valid date
+
+    Scenario: Check the Policy Start Date does not allow dates in the past
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose not currently insured
+    And I go to the dateOfBirth field and make the age 18 minus 0 days
+    And I go to the coverStartDate field and make the date today minus 1 days
+    Then I see the coverStartDate field error text Please enter a valid date
+
+    Scenario: Progress Bar - initialise at 0%
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    Then I see that the Progress Bar is at 0 %
+
+    Scenario: Progress Bar - Name row at 11%
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    Then I see that the Progress Bar is at 11 %
+
+    Scenario: Progress Bar - Phone Number row at 22%
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    Then I see that the Progress Bar is at 22 %
+
+    Scenario: Progress Bar - Email Address row at 33%
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    Then I see that the Progress Bar is at 33 %
+
+    Scenario: Progress Bar - Insured Status row at 44% (not currently insured)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose not currently insured
+    Then I see that the Progress Bar is at 44 %
+
+
+    Scenario: Progress Bar - Date of Birth row at 55% (not currently insured)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose not currently insured
+    And I go to the dateOfBirth field and make the age 18 minus 0 days
+    Then I see that the Progress Bar is at 55 %
+
+    Scenario: Progress Bar - Cover Start Date row at 66% (not currently insured)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose not currently insured
+    And I go to the dateOfBirth field and make the age 18 minus 0 days
+    And I go to the coverStartDate field and make the date today plus 0 days
+    Then I see that the Progress Bar is at 66 %
+
+    Scenario: Progress Bar - Members to Insure row at 77% (not currently insured)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose not currently insured
+    And I go to the dateOfBirth field and make the age 18 minus 0 days
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose just me
+    Then I see that the Progress Bar is at 77 %
+
+    Scenario: Progress Bar - Postcode row at 88% (not currently insured)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose not currently insured
+    And I go to the dateOfBirth field and make the age 18 minus 0 days
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose just me
+    And I go to the postcode field and enter BH1 1JD
+    Then I see that the Progress Bar is at 88 %
+
+    Scenario: Progress Bar - Insured Status row at 36% (currently insured)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    Then I see that the Progress Bar is at 36 %
+
+    Scenario: Progress Bar - No of Claim Free Years row at 45% (currently insured)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    Then I see that the Progress Bar is at 45 %
+
+    Scenario: Progress Bar - No of Claim Free Years row at 54% (currently insured)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    Then I see that the Progress Bar is at 54 %
+
+    Scenario: Progress Bar - Date of Birth row at 63% (currently insured)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    And I go to the dateOfBirth field and enter 01/01/1970
+    Then I see that the Progress Bar is at 63 %
+
+    Scenario: Progress Bar - Policy Start Date row at 72% (currently insured)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    And I go to the dateOfBirth field and enter 01/01/1970
+    And I go to the coverStartDate field and make the date today plus 0 days
+    Then I see that the Progress Bar is at 72 %
+
+    Scenario: Progress Bar - Members to Insure row at 81% (currently insured, just me)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    And I go to the dateOfBirth field and enter 01/01/1970
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose just me
+    Then I see that the Progress Bar is at 81 %
+
+    Scenario: Progress Bar - Postcode row at 90% (currently insured, just me)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    And I go to the dateOfBirth field and enter 01/01/1970
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose just me
+    And I go to the postcode field and enter BH1 1JD
+    Then I see that the Progress Bar is at 90 %
+
+    Scenario: Progress Bar - Terms and conditions (currently insured, just me)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    And I go to the dateOfBirth field and enter 01/01/1970
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose just me
+    And I go to the postcode field and enter BH1 1JD
+    And I go to the marketingPermission field and choose Agreed
+    Then I see that the Progress Bar is not displayed
+    And I see that the Apply button is displayed
+
+    Scenario: Progress Bar - Members to Insure row at 75% (currently insured, me and my partner)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    And I go to the dateOfBirth field and enter 01/01/1970
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose me and my partner
+    Then I see that the Progress Bar is at 75 %
+
+    Scenario: Progress Bar - Partner's Date of Birth row at 90% (currently insured, me and my partner)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    And I go to the dateOfBirth field and enter 01/01/1970
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose me and my partner
+    And I go to the partnerDateOfBirth field and enter 01/01/1971
+    Then I see that the Progress Bar is at 83 %
+
+    Scenario: Progress Bar - Postcode row at 90% (currently insured, me and my partner)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    And I go to the dateOfBirth field and enter 01/01/1970
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose me and my partner
+    And I go to the partnerDateOfBirth field and enter 01/01/1971
+    And I go to the postcode field and enter BH1 1JD
+    Then I see that the Progress Bar is at 91 %
+
+    Scenario: Progress Bar - Terms and conditions (currently insured, me and my partner)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    And I go to the dateOfBirth field and enter 01/01/1970
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose me and my partner
+    And I go to the partnerDateOfBirth field and enter 01/01/1971
+    And I go to the postcode field and enter BH1 1JD
+    And I go to the marketingPermission field and choose Agreed
+    Then I see that the Progress Bar is not displayed
+    And I see that the Apply button is displayed
+
+    Scenario: Progress Bar - Members to Insure row at 69% (currently insured, me, my partner and kids)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    And I go to the dateOfBirth field and enter 01/01/1970
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose me, my partner and kids
+    Then I see that the Progress Bar is at 69 %
+
+    Scenario: Progress Bar - Partner's Date of Birth row at 79% (currently insured, me, my partner and kids)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    And I go to the dateOfBirth field and enter 01/01/1970
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose me, my partner and kids
+    And I go to the partnerDateOfBirth field and enter 01/01/1971
+    Then I see that the Progress Bar is at 76 %
+
+    Scenario: Progress Bar - No of kids row at 84% (currently insured, me, my partner and kids)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    And I go to the dateOfBirth field and enter 01/01/1970
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose me, my partner and kids
+    And I go to the partnerDateOfBirth field and enter 01/01/1971
+    And I go to the noOfChildren field and choose 2 kids'
+    And I go to the child1Dob field and enter 01/01/2005
+    And I go to the child2Dob field and enter 01/02/2005
+    Then I see that the Progress Bar is at 84 %
+
+    Scenario: Progress Bar - Postcode row at 92% (currently insured, me, my partner and kids)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    And I go to the dateOfBirth field and enter 01/01/1970
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose me, my partner and kids
+    And I go to the partnerDateOfBirth field and enter 01/01/1971
+    And I go to the noOfChildren field and choose 2 kids'
+    And I go to the child1Dob field and enter 01/01/2005
+    And I go to the child2Dob field and enter 01/02/2005
+    And I go to the postcode field and enter BH1 1JD
+    Then I see that the Progress Bar is at 92 %
+
+    Scenario: Progress Bar - Terms and conditions (currently insured, me, my partner and kids)
+    Given I am on presales /dev/quote-and-apply
+    And I see the Quote And Apply page feed load has completed
+    And I go to the title field and choose Mrs
+    And I go to the firstName field and enter Test
+    And I go to the lastName field and enter User
+    And I go to the phoneNumber field and enter 01202 223344
+    And I go to the emailAddress field and enter test.user@gmail.com
+    And I go to the insuredStatus field and choose currently insured
+    And I go to the noOfClaimFreeYears field and choose 1 year
+    And I go to the noOfClaims field and choose 1 claim
+    And I go to the dateOfBirth field and enter 01/01/1970
+    And I go to the coverStartDate field and make the date today plus 0 days
+    And I go to the membersToInsure field and choose me, my partner and kids
+    And I go to the partnerDateOfBirth field and enter 01/01/1971
+    And I go to the noOfChildren field and choose 2 kids'
+    And I go to the child1Dob field and enter 01/01/2005
+    And I go to the child2Dob field and enter 01/02/2005
+    And I go to the postcode field and enter BH1 1JD
+    And I go to the marketingPermission field and choose Agreed
+    Then I see that the Progress Bar is not displayed
+    And I see that the Apply button is displayed

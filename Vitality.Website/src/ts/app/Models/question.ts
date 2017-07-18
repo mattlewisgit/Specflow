@@ -1,4 +1,4 @@
-﻿import {FieldValidator } from "./field-validator";
+﻿import { FieldValidator } from "./field-validator";
 export class Question<T>{
     value: T;
     basedOnKey: string;
@@ -9,6 +9,7 @@ export class Question<T>{
     validators: FieldValidator[];
     onValueChange : any;
     controlType: string;
-    isVisible: boolean;
+    isHidden: boolean;
     relatedData: { key: string, value: string }[] = [];
+    scrollTo: string;
 }
