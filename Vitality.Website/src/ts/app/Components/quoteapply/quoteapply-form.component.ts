@@ -1,47 +1,46 @@
-import { Component, DoCheck, Inject, OnDestroy, OnInit, Input }      from "@angular/core";
+import { Component, Inject, OnDestroy, Input, OnInit }      from "@angular/core";
 import { FormArray, FormBuilder, FormGroup } from "@angular/forms";
 import { Subscription } from "rxjs/Subscription";
 
-import { QuoteApplyService } from "../../services/quoteapply.service";
 import { DobControlService } from "../../services/dob-control.service";
+import { QuoteApplyConstants } from "../../constants/quoteapply-constants";
+import { QuoteApplyService } from "../../services/quoteapply.service";
 import { QuestionControlService } from "../../services/question-control.service";
+import { QuestionGroup } from "../../models/question-group";
 import { PostcodeService } from "../../services/postcode.service";
-import { QuestionGroup }     from "../../models/question-group";
-import { Question }     from "../../models/question";
 import { WindowRef } from "./../windowref";
 
 @Component({
     selector: "quoteapply-form",
     templateUrl: "./js/app/components/quoteapply/quoteapply-form.component.html"
 })
-export class QuoteApplyFormComponent implements OnInit, OnDestroy{
-    quoteApplyForm: FormGroup;
+export class QuoteApplyFormComponent implements OnInit, OnDestroy {
     callToActionText: string;
-    renderingData: {};
+    completedPercentage: number;
+    isAllCompleted = false;
+    quoteApplyForm: FormGroup;
     okBtnHelpText: string;
     payload: string;
-    questionGroups: QuestionGroup[];
-    completedPercentage: number;
     private postcodeAsyncValidationSubscription: Subscription;
+    questionGroups: QuestionGroup[];
+    renderingData: {};
     submitted: boolean;
-    isAllCompleted = false;
-    childrenQuestionGroupKey = "childrenDobGroup";
 
     constructor(
-        private postcodeService: PostcodeService,
-        private fb: FormBuilder,
         private dobControlService: DobControlService,
+        private fb: FormBuilder,
+        private postcodeService: PostcodeService,
         private questionControlService: QuestionControlService,
         private quoteApplyService: QuoteApplyService,
         private winRef: WindowRef) {
     }
 
     ngOnInit(): void {
-        let angularData = this.winRef.nativeWindow.angularData;
+        const angularData = this.winRef.nativeWindow.angularData;
         this.questionGroups = angularData.questionGroups;
         this.callToActionText = angularData.callToActionText;
         this.renderingData = { okBtnText: angularData.okBtnText, okBtnHelpText: angularData.okBtnHelpText };
-        let childrenQuestionGroup = this.getQuestionGroup(this.childrenQuestionGroupKey);
+        const childrenQuestionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.childrenQuestionGroup);
         this.questionControlService.setQuestionGroups(this.questionGroups);
 
         this.dobControlService.initialize({
@@ -58,7 +57,7 @@ export class QuoteApplyFormComponent implements OnInit, OnDestroy{
         this.postcodeAsyncValidationSubscription = this.postcodeService.onPostcodeAsyncValidation()
             .subscribe((data: boolean) => {
                 if (data) {
-                    var questionGroup = this.getQuestionGroup("postcodeGroup");
+                    var questionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.postcodeQuestionGroup);
                     questionGroup.isInvalid = false;
                     questionGroup.isCompleted = true;
                     this.calculateCompletedPercentage();
@@ -67,8 +66,10 @@ export class QuoteApplyFormComponent implements OnInit, OnDestroy{
     }
 
     calculateCompletedPercentage() {
-        let visibleQuestionGroups = this.questionGroups.filter(x => !x.isHidden);
-        this.completedPercentage = (visibleQuestionGroups.filter(x => x.isCompleted).length / visibleQuestionGroups.length) * 100;
+        const visibleQuestionGroups = this.questionGroups.filter(x => !x.isHidden);
+        this.completedPercentage = (visibleQuestionGroups.filter(x => x.isCompleted).length /
+                visibleQuestionGroups.length) *
+            100;
         this.isAllCompleted = this.completedPercentage === 100;
     }
 

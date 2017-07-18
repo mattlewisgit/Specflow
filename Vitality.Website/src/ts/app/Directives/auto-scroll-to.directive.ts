@@ -1,10 +1,11 @@
-import { Directive, ElementRef, HostListener, Inject, Input, AfterViewInit, Optional} from "@angular/core";
+import {  AfterViewInit, Directive, ElementRef, HostListener, Inject, Input, Optional} from "@angular/core";
 import { DOCUMENT } from "@angular/platform-browser";
 import { WindowRef } from "../components/windowref";
 import { Subscription } from "rxjs/Subscription";
 
-import { Constants } from "../models/constants";
+import { GlobalConstants } from "../constants/global-constants";
 import { PostcodeService } from "../services/postcode.service";
+import { QuoteApplyConstants } from "../constants/quoteapply-constants";
 
 @Directive({
     selector: "[auto-scroll-to]"
@@ -12,10 +13,10 @@ import { PostcodeService } from "../services/postcode.service";
 export class AutoScrollTo implements AfterViewInit{
     @Input("isGroupCompleted") isGroupCompleted : boolean;
 
-    private postcodeAsyncValidationSubscription: Subscription;
-    private okBtnGroup: Element;
     private currentElement: HTMLElement;
     private currentElementParent: HTMLElement;
+    private okBtnGroup: Element;
+    private postcodeAsyncValidationSubscription: Subscription;
 
     constructor(element: ElementRef, @Inject(DOCUMENT) private document: any, private postcodeService: PostcodeService, private winRef: WindowRef) {
         this.currentElement = element.nativeElement;
@@ -23,7 +24,7 @@ export class AutoScrollTo implements AfterViewInit{
     }
 
     ngAfterViewInit() {
-        if (this.currentElement.id === Constants.quoteApply.selectors.postcode) {
+        if (this.currentElement.id === QuoteApplyConstants.selectors.postcode) {
             this.postcodeAsyncValidationSubscription = this.postcodeService.onPostcodeAsyncValidation()
                 .subscribe((data: boolean) => {
                     this.hideShowOkBtnGroup(data);
@@ -33,8 +34,47 @@ export class AutoScrollTo implements AfterViewInit{
 
     @HostListener("keyup", ["$event"])
     onkeyup(event: MouseEvent) {
-        if (this.currentElement.tagName !== Constants.tagNames.dropdown) {
+        if (this.currentElement.tagName !== GlobalConstants.tagNames.dropdown) {
             this.hideShowOkBtnGroup(this.isGroupCompleted);
+        }
+    }
+
+    @HostListener("keydown", ["$event"])
+    onkeydown(event: MouseEvent) {
+        if (this.isGroupCompleted) {
+            if (event.shiftKey && event.which === GlobalConstants.keyboardKeys.tab) {
+                event.preventDefault();
+                this.changeFocus(false);
+            } else if (event.which === GlobalConstants.keyboardKeys.enter || event.which === GlobalConstants.keyboardKeys.tab) {
+                event.preventDefault();
+                this.changeFocus(true);
+            }
+        }
+    }
+
+    @HostListener("click", ["$event"])
+    onclick(event: MouseEvent) {
+        if (this.currentElement.tagName === GlobalConstants.tagNames.button) {
+            this.changeFocus(true);
+        }
+    }
+
+    @HostListener("change", ["$event"])
+    onchange(event: MouseEvent) {
+        //Just do a timeout to trigger this after model changed
+        setTimeout(() => this.onDropDownChange(), 0);
+    }
+
+    @HostListener("focus", ["$event"])
+    onFocus(event: MouseEvent) {
+        if (this.currentElement.tagName !== GlobalConstants.tagNames.button) {
+            this.hideOkBtnGroups();
+            if (this.currentElement.tagName !== GlobalConstants.tagNames.dropdown) {
+                if (this.isGroupCompleted) {
+                    this.showOkBtnGroup();
+                }
+            }
+            this.handleScrolling();
         }
     }
 
@@ -46,65 +86,26 @@ export class AutoScrollTo implements AfterViewInit{
         }
     }
 
-    @HostListener("keydown", ["$event"])
-    onkeydown(event: MouseEvent) {
-        if (this.isGroupCompleted) {
-            if (event.shiftKey && event.which === 9) {
-                event.preventDefault();
-                this.changeFocus(false);
-            } else if (event.which === 13 || event.which === 9) {
-                event.preventDefault();
-                this.changeFocus(true);
-            }
-        }
-    }
-
-    @HostListener("click", ["$event"])
-    onclick(event: MouseEvent) {
-        if (this.currentElement.tagName === Constants.tagNames.button) {
-            this.changeFocus(true);
-        }
-    }
-
-    @HostListener("change", ["$event"])
-    onchange(event: MouseEvent) {
-        //Just do a timeout to trigger this after model changed
-        setTimeout(() => this.onDropDownChange(), 0);
-    }
-
-    private onDropDownChange() {
-        if (this.currentElement.tagName === Constants.tagNames.dropdown && this.isGroupCompleted) {
-            this.changeFocus(true);
-        }
-    }
-
-    @HostListener("focus", ["$event"])
-    onFocus(event: MouseEvent) {
-        if (this.currentElement.tagName !== Constants.tagNames.button) {
-            this.hideOkBtnGroups();
-            if (this.currentElement.tagName !== Constants.tagNames.dropdown) {
-                if (this.isGroupCompleted) {
-                    this.showOkBtnGroup();
-                }
-            }
-            this.handleScrolling();
-        }
-    }
-
     private showOkBtnGroup() {
         if (!this.okBtnGroup) {
-            this.okBtnGroup = this.questionElement.querySelector(Constants.global.selectors.classIdentifier + Constants.quoteApply.selectors.okBtnGroup);
+            this.okBtnGroup = this.questionElement.querySelector(GlobalConstants.selectors.classIdentifier + QuoteApplyConstants.selectors.okBtnGroup);
         }
         // okBtnGroup still can be null
         if (this.okBtnGroup) {
-            this.okBtnGroup.classList.remove(Constants.global.selectors.hide);
+            this.okBtnGroup.classList.remove(GlobalConstants.selectors.hide);
         }
     }
 
     private hideOkBtnGroups() {
-        const okBtnGroups = this.document.getElementsByClassName(Constants.quoteApply.selectors.okBtnGroup);
+        const okBtnGroups = this.document.getElementsByClassName(QuoteApplyConstants.selectors.okBtnGroup);
         for (let okBtnGroup of okBtnGroups) {
-            okBtnGroup.classList.add(Constants.global.selectors.hide);
+            okBtnGroup.classList.add(GlobalConstants.selectors.hide);
+        }
+    }
+
+    private onDropDownChange() {
+        if (this.currentElement.tagName === GlobalConstants.tagNames.dropdown && this.isGroupCompleted) {
+            this.changeFocus(true);
         }
     }
 
@@ -113,7 +114,7 @@ export class AutoScrollTo implements AfterViewInit{
             ? this.currentElementParent.nextElementSibling
             : this.currentElementParent.previousElementSibling;
         if (nextOrPrevSibiling) {
-            const nextOrPrevQuestion = nextOrPrevSibiling.querySelector(Constants.global.selectors.formInputFields);
+            const nextOrPrevQuestion = nextOrPrevSibiling.querySelector(GlobalConstants.selectors.formInputFields);
             if (nextOrPrevQuestion) {
                 (nextOrPrevQuestion as HTMLElement).focus();
                 return;
@@ -126,7 +127,7 @@ export class AutoScrollTo implements AfterViewInit{
             questionGroupElement = (goDown
                 ? questionGroupElement.nextElementSibling
                 : questionGroupElement.previousElementSibling) as HTMLElement;
-            inputElement = questionGroupElement.querySelector(Constants.global.selectors.formInputFields);
+            inputElement = questionGroupElement.querySelector(GlobalConstants.selectors.formInputFields);
         }
         if (inputElement) {
             (inputElement as HTMLElement).focus();
