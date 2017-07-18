@@ -3,6 +3,7 @@ import { DOCUMENT } from "@angular/platform-browser";
 import { WindowRef } from "../components/windowref";
 import { Subscription } from "rxjs/Subscription";
 
+import { Constants } from "../models/constants";
 import { PostcodeService } from "../services/postcode.service";
 
 @Directive({
@@ -10,12 +11,6 @@ import { PostcodeService } from "../services/postcode.service";
 })
 export class AutoScrollTo implements AfterViewInit{
     @Input("isGroupCompleted") isGroupCompleted : boolean;
-    private btnTagName = "BUTTON";
-    private dropdownTagName = "SELECT";
-    private formInputFieldSelector = "input,select";
-    private classSelector = ".";
-    private hideClass = "hide";
-    private okBtnGroupClass = "ok-btn-group";
 
     private postcodeAsyncValidationSubscription: Subscription;
     private okBtnGroup: Element;
@@ -28,7 +23,7 @@ export class AutoScrollTo implements AfterViewInit{
     }
 
     ngAfterViewInit() {
-        if (this.currentElement.id === "postcode") {
+        if (this.currentElement.id === Constants.quoteApply.selectors.postcode) {
             this.postcodeAsyncValidationSubscription = this.postcodeService.onPostcodeAsyncValidation()
                 .subscribe((data: boolean) => {
                     this.hideShowOkBtnGroup(data);
@@ -38,7 +33,9 @@ export class AutoScrollTo implements AfterViewInit{
 
     @HostListener("keyup", ["$event"])
     onkeyup(event: MouseEvent) {
+        if (this.currentElement.tagName !== Constants.tagNames.dropdown) {
             this.hideShowOkBtnGroup(this.isGroupCompleted);
+        }
     }
 
     private hideShowOkBtnGroup(show: boolean) {
@@ -64,7 +61,7 @@ export class AutoScrollTo implements AfterViewInit{
 
     @HostListener("click", ["$event"])
     onclick(event: MouseEvent) {
-        if (this.currentElement.tagName === this.btnTagName) {
+        if (this.currentElement.tagName === Constants.tagNames.button) {
             this.changeFocus(true);
         }
     }
@@ -76,16 +73,16 @@ export class AutoScrollTo implements AfterViewInit{
     }
 
     private onDropDownChange() {
-        if (this.currentElement.tagName === this.dropdownTagName && this.isGroupCompleted) {
+        if (this.currentElement.tagName === Constants.tagNames.dropdown && this.isGroupCompleted) {
             this.changeFocus(true);
         }
     }
 
     @HostListener("focus", ["$event"])
     onFocus(event: MouseEvent) {
-        if (this.currentElement.tagName !== this.btnTagName) {
-            if (this.currentElement.tagName !== this.dropdownTagName) {
-                this.hideOkBtnGroups();
+        if (this.currentElement.tagName !== Constants.tagNames.button) {
+            this.hideOkBtnGroups();
+            if (this.currentElement.tagName !== Constants.tagNames.dropdown) {
                 if (this.isGroupCompleted) {
                     this.showOkBtnGroup();
                 }
@@ -96,18 +93,18 @@ export class AutoScrollTo implements AfterViewInit{
 
     private showOkBtnGroup() {
         if (!this.okBtnGroup) {
-            this.okBtnGroup = this.questionElement.querySelector(this.classSelector+ this.okBtnGroupClass);
+            this.okBtnGroup = this.questionElement.querySelector(Constants.global.selectors.classIdentifier + Constants.quoteApply.selectors.okBtnGroup);
         }
         // okBtnGroup still can be null
         if (this.okBtnGroup) {
-            this.okBtnGroup.classList.remove(this.hideClass);
+            this.okBtnGroup.classList.remove(Constants.global.selectors.hide);
         }
     }
 
     private hideOkBtnGroups() {
-        const okBtnGroups = this.document.getElementsByClassName(this.okBtnGroupClass);
+        const okBtnGroups = this.document.getElementsByClassName(Constants.quoteApply.selectors.okBtnGroup);
         for (let okBtnGroup of okBtnGroups) {
-            okBtnGroup.classList.add(this.hideClass);
+            okBtnGroup.classList.add(Constants.global.selectors.hide);
         }
     }
 
@@ -116,7 +113,7 @@ export class AutoScrollTo implements AfterViewInit{
             ? this.currentElementParent.nextElementSibling
             : this.currentElementParent.previousElementSibling;
         if (nextOrPrevSibiling) {
-            const nextOrPrevQuestion = nextOrPrevSibiling.querySelector(this.formInputFieldSelector);
+            const nextOrPrevQuestion = nextOrPrevSibiling.querySelector(Constants.global.selectors.formInputFields);
             if (nextOrPrevQuestion) {
                 (nextOrPrevQuestion as HTMLElement).focus();
                 return;
@@ -129,7 +126,7 @@ export class AutoScrollTo implements AfterViewInit{
             questionGroupElement = (goDown
                 ? questionGroupElement.nextElementSibling
                 : questionGroupElement.previousElementSibling) as HTMLElement;
-            inputElement = questionGroupElement.querySelector(this.formInputFieldSelector);
+            inputElement = questionGroupElement.querySelector(Constants.global.selectors.formInputFields);
         }
         if (inputElement) {
             (inputElement as HTMLElement).focus();
