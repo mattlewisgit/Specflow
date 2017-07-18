@@ -35,7 +35,7 @@ namespace Vitality.Website.Extensions.Views
             var lazyLoadedImageFirstPart = renderImageTag.Replace("src=", "data-src=").Replace("/>", string.Empty);
             var lazyLoadedImageSecondPart = renderLazyImageTag.Replace("<img ", string.Empty)
                 .Replace("alt=''", String.Empty);
-            var lazyLoadedImage = string.Format("{0}{1}", lazyLoadedImageFirstPart, lazyLoadedImageSecondPart);
+            var lazyLoadedImage = $"{lazyLoadedImageFirstPart}{lazyLoadedImageSecondPart}";
             lazyLoadedImage = lazyLoadedImage.Contains("class='")
                 ? lazyLoadedImage.Replace("class='", "class='lazyload ")
                 : lazyLoadedImage.Replace("/>", " class='lazyload' />");

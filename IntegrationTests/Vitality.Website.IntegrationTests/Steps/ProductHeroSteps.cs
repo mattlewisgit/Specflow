@@ -94,12 +94,10 @@ namespace Vitality.Website.IntegrationTests.Steps
         [When(@"I click on the Product Hero (.*) Button")]
         public void WhenIClickOnTheProductHeroButton(string button)
         {
-            var buttonSelector = new JQuerySelector($".product-hero.feature-block.feature-block--primary .feature-block__content-container .feature-block__content .button-cta:contains('{button}')");
-
-            // Scroll to button if not visible.
             WebDriver
-                .WaitForElement(buttonSelector)
-                .SendKeys(Keys.Space);
+                .ScrollToElement($@".product-hero.feature-block.feature-block--primary .feature-block__content-container .feature-block__content .button-cta:contains(""{button}"")");
+
+            var buttonSelector = new JQuerySelector($".product-hero.feature-block.feature-block--primary .feature-block__content-container .feature-block__content .button-cta:contains('{button}')");
 
             // Click on button.
             WebDriver

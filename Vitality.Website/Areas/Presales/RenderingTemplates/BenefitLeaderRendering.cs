@@ -3,7 +3,7 @@ namespace Vitality.Website.Areas.Presales.RenderingTemplates
     using Glass.Mapper.Sc.Configuration;
     using Glass.Mapper.Sc.Configuration.Attributes;
 
-    using Vitality.Website.Areas.Global.Models;
+    using Global.Models;
 
     [SitecoreType(TemplateId = "{B9CDB7FF-850D-4B1E-9EF0-05F29F29B16E}", AutoMap = true)]
     public class BenefitLeaderRendering

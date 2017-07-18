@@ -21,15 +21,15 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
             string title,
             bool includeAvailableLiterature)
         {
-            this.Library = library;
-            this.Category = category;
-            this.Title = title;
-            this.IncludeAvailableLiterature = includeAvailableLiterature;
+            Library = library;
+            Category = category;
+            Title = title;
+            IncludeAvailableLiterature = includeAvailableLiterature;
         }
 
         public LiteratureDocumentRequest(string library)
         {
-            this.Library = library;
+            Library = library;
         }
     }
 }

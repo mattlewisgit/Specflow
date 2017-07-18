@@ -2,13 +2,13 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.Banners
 {
     using Glass.Mapper.Sc.Fields;
 
-    using Vitality.Website.Areas.Global.Models;
+    using Global.Models;
 
     public class HomeHero : SitecoreItem
     {
         public HomeHero()
         {
-            this.PosterImage = new Image();
+            PosterImage = new Image();
         }
 
         public Image PosterImage { get; set; }

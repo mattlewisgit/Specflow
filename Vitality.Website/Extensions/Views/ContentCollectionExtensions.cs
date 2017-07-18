@@ -43,12 +43,12 @@ namespace Vitality.Website.Extensions.Views
 
         public static string SmallArticleTextCss(this SmallArticle smallArticle)
         {
-            return string.Format("text-{0}", smallArticle.ColourScheme);
+            return $"text-{smallArticle.ColourScheme}";
         }
 
         public static string LargeArticleTextCss(this LargeArticle largeArticle)
         {
-            return string.Format("text-{0}", largeArticle.ColourScheme);
+            return $"text-{largeArticle.ColourScheme}";
         }
 
         public static string LargeArticleButtonCss(this LargeArticle largeArticle)

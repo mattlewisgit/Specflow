@@ -2,7 +2,7 @@
 @using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Rewards.RewardsLeader>
 
-<div class="feature-block feature-block--@this.BackgroundColour() rewards_leader">
+<div class="feature-block feature-block--@(this.BackgroundColour()) rewards_leader">
     <div class="feature-block__content">
         <h2>@Editable(Model, item => item.Headline)</h2>
 

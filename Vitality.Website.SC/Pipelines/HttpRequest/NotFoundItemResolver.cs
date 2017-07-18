@@ -19,14 +19,14 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
         {
             if (Sitecore.Context.Item != null || 
                 Sitecore.Context.Site == null ||
-                this.NotFoundItemIsNotConfigured() ||
-                this.RequestIsASitecoreClientRequest(args) ||
-                this.RequestIsAPhysicalFileRequest(args))
+                NotFoundItemIsNotConfigured() ||
+                RequestIsASitecoreClientRequest(args) ||
+                RequestIsAPhysicalFileRequest(args))
             {
                 return;
             }
 
-            Sitecore.Context.Item = this.GetSiteNotFoundItem();
+            Sitecore.Context.Item = GetSiteNotFoundItem();
 
             if (Sitecore.Context.Item != null)
             {

@@ -25,8 +25,8 @@ namespace Vitality.Website.SC.Agents.Sitemaps
             {
                 var presales = Sitecore.Configuration.Factory.GetSite(website);
 
-                var domainUrl = string.Format("{0}://{1}/", presales.SiteInfo.Scheme, presales.SiteInfo.HostName);
-                var sitemapUrl = string.Format("{0}{1}", domainUrl, sitemap.Name + ".xml");
+                var domainUrl = $"{presales.SiteInfo.Scheme}://{presales.SiteInfo.HostName}/";
+                var sitemapUrl = $"{domainUrl}{sitemap.Name + ".xml"}";
 
                 var sitemapIndexes = sitemapIndexFile.Sitemaps.FirstOrDefault(x => x.Location.Equals(sitemapUrl, StringComparison.OrdinalIgnoreCase));
                 if (sitemapIndexes == null)
@@ -50,7 +50,7 @@ namespace Vitality.Website.SC.Agents.Sitemaps
             }
 
             //Update the file name to reflect the current site
-            IndexFile = string.Format("{0}_{1}", website, IndexFile);
+            IndexFile = $"{website}_{IndexFile}";
 
             SitemapHelper<SitemapIndexModel>.SaveSitemapToDisk(sitemapIndexFile, IndexFile, false);
         }

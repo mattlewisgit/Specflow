@@ -12,12 +12,12 @@ namespace Vitality.Website.UnitTests.TestDoubles
 
         public MediatorStub(IRequestHandler<TRequest, TResponse> requestHandler)
         {
-            this.handler = requestHandler;
+            handler = requestHandler;
         }
 
         public Task<TResponse1> Send<TResponse1>(IRequest<TResponse1> request, CancellationToken cancellationToken = new CancellationToken())
         {
-            return this.handler.Handle((dynamic)request);
+            return handler.Handle((dynamic)request);
         }
 
         public Task Send(IRequest request, CancellationToken cancellationToken = new CancellationToken())

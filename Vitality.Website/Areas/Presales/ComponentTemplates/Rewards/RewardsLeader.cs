@@ -5,7 +5,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.Rewards
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
 
-    using Vitality.Website.Areas.Global.Models;
+    using Global.Models;
 
     public class RewardsLeader : SitecoreItem
     {

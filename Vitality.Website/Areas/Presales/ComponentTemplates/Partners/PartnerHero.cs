@@ -2,14 +2,14 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.Partners
 {
     using Glass.Mapper.Sc.Fields;
 
-    using Vitality.Website.Areas.Global.Models;
+    using Global.Models;
 
     public class PartnerHero : SitecoreItem
     {
         public PartnerHero()
         {
-            this.PartnerIcon = new Image();
-            this.BackgroundImage = new Image();
+            PartnerIcon = new Image();
+            BackgroundImage = new Image();
         }
 
         public Image BackgroundImage { get; set; }

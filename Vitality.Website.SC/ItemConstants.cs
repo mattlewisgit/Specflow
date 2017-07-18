@@ -21,7 +21,7 @@ namespace Vitality.Website.SC
         {
             public static string GetItemFullPath(string itemRelativePath)
             {
-                return Sitecore.Context.Site.ContentStartPath + itemRelativePath;
+                return Context.Site.ContentStartPath + itemRelativePath;
             }
 
             public static class Content
@@ -29,10 +29,7 @@ namespace Vitality.Website.SC
                 public static class Home
                 {
                     public static string RelativePath = "/home";
-                    public static string Path
-                    {
-                        get { return Context.Site.StartPath; }
-                    }
+                    public static string Path => Context.Site.StartPath;
                 }
 
                 public static class ContentFolder
@@ -44,34 +41,22 @@ namespace Vitality.Website.SC
                 {
                     public static class QuoteFooter
                     {
-                        public static string Path
-                        {
-                            get { return GetItemFullPath("/Configuration/Quote Footer"); }
-                        }
+                        public static string Path => GetItemFullPath("/Configuration/Quote Footer");
                     }
 
                     public static class SiteSettings
                     {
-                        public static string Path
-                        {
-                            get { return GetItemFullPath("/Configuration/Site Settings"); }
-                        }
+                        public static string Path => GetItemFullPath("/Configuration/Site Settings");
                     }
 
                     public static class CookieSettings
                     {
-                        public static string Path
-                        {
-                            get { return GetItemFullPath("/Configuration/Cookie Settings"); }
-                        }
+                        public static string Path => GetItemFullPath("/Configuration/Cookie Settings");
                     }
 
                     public static class Sitemaps
                     {
-                        public static string Path
-                        {
-                            get { return GetItemFullPath("/Configuration/Sitemaps"); }
-                        }
+                        public static string Path => GetItemFullPath("/Configuration/Sitemaps");
                     }
                 }
             }
@@ -101,10 +86,7 @@ namespace Vitality.Website.SC
                 {
                     public const string Id = "{EDCF6697-B4B9-48CC-BAC2-2DDE182DC317}";
 
-                    public static string Path
-                    {
-                        get { return GetItemFullPath("/Component Templates/Navigation/Navigation Section"); }
-                    }
+                    public static string Path => GetItemFullPath("/Component Templates/Navigation/Navigation Section");
                 }
 
                 public static class Summary

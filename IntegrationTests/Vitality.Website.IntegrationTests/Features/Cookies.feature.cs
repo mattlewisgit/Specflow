@@ -117,11 +117,9 @@ this.ScenarioSetup(scenarioInfo);
         [Xunit.FactAttribute(DisplayName="Cookies appears on advisers after clearing cache")]
         [Xunit.TraitAttribute("FeatureTitle", "Cookies")]
         [Xunit.TraitAttribute("Description", "Cookies appears on advisers after clearing cache")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void CookiesAppearsOnAdvisersAfterClearingCache()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cookies appears on advisers after clearing cache", new string[] {
-                        "SIT"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Cookies appears on advisers after clearing cache", ((string[])(null)));
 #line 21
 this.ScenarioSetup(scenarioInfo);
 #line 22
@@ -137,11 +135,9 @@ this.ScenarioSetup(scenarioInfo);
         [Xunit.FactAttribute(DisplayName="Accepting cookies on advisers closes down the cookie message")]
         [Xunit.TraitAttribute("FeatureTitle", "Cookies")]
         [Xunit.TraitAttribute("Description", "Accepting cookies on advisers closes down the cookie message")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void AcceptingCookiesOnAdvisersClosesDownTheCookieMessage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Accepting cookies on advisers closes down the cookie message", new string[] {
-                        "SIT"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Accepting cookies on advisers closes down the cookie message", ((string[])(null)));
 #line 27
 this.ScenarioSetup(scenarioInfo);
 #line 28

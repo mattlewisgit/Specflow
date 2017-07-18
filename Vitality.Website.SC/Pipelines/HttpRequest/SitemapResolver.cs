@@ -42,7 +42,7 @@ namespace Vitality.Website.SC.Pipelines.HttpRequest
                 }
                 else
                 {
-                    Log.Warn(string.Format("Requested sitemap file {0} does not exist.", fileName), this);
+                    Log.Warn($"Requested sitemap file {fileName} does not exist.", this);
                 }
             }
             else if (context.Request.CurrentExecutionFilePathExtension

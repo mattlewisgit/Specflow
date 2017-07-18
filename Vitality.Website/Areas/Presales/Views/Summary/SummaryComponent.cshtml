@@ -13,7 +13,7 @@
     </div>
     @using (BeginEditFrame(Model, "Edit background image", m => m.BackgroundImage))
     {
-        <div class="summary-right feature-block-gradient__image @this.BackgroundPosition() text-light grid-col-6-12 lazyload" data-bg="@this.BackgroundImage()">
+        <div class="summary-right feature-block-gradient__image @(this.BackgroundPosition()) text-light grid-col-6-12 lazyload" data-bg="@(this.BackgroundImage())">
             <div class="title">
                 <p>@Editable(Model, m => m.RightContentHeadline)</p>
             </div>
@@ -28,7 +28,7 @@
 
                 @foreach (var summaryListItemsGroup in this.GroupSummaryListItems())
                 {
-                    <ul class="iconlist iconlist--check @this.SummaryListClass(summaryListItemsGroup.Key)">
+                    <ul class="iconlist iconlist--check @(this.SummaryListClass(summaryListItemsGroup.Key))">
                         @foreach (var summaryListItem in summaryListItemsGroup)
                         {
                             using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", summaryListItem.Path))

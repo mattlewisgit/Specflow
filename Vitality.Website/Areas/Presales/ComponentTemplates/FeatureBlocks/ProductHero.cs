@@ -2,14 +2,14 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks
 {
     using Glass.Mapper.Sc.Fields;
 
-    using Vitality.Website.Areas.Global.Models;
+    using Global.Models;
 
     public class ProductHero : SitecoreItem
     {
         public ProductHero()
         {
-            this.Image = new Image();
-            this.VitalityLogo = new Image();
+            Image = new Image();
+            VitalityLogo = new Image();
         }
 
         public string Headline { get; set; }

@@ -64,14 +64,14 @@
         [When(@"I click on FAQ Leader paragraph anchor (.*) link")]
         public void WhenIClickOnFAQLeaderParagraphAnchorLink(string anchorText)
         {
+            //Send scroll to anchor
+            WebDriver
+                .ScrollToElement($@".faq_leader .faqs .grid-no-gutters .grid-col-1-2 p:has(a:contains(""{anchorText}""))");
+
             //Find All anchor texts containing 'anchortext'
             var anchorSelector = WebDriver
                 .FindElements(new JQuerySelector(".faq_leader .faqs .grid-no-gutters .grid-col-1-2 p a"))
                 .FirstOrDefault(e => e.Text.Equals(anchorText));
-
-            // Send a "scroll" to the anchor text so it is in view (required in mobile view as panels stack)
-            anchorSelector
-                .SendKeys(Keys.Space);
 
             //Click on 'anchortext'
             anchorSelector.Click();
@@ -80,12 +80,11 @@
         [When(@"I click on FAQ Leader bottom button (.*) link")]
         public void WhenIClickOnFAQLeaderComponentLink(string buttonLink)
         {
-            var buttonSelector = new JQuerySelector($".faq_leader .more a:contains('{buttonLink}')");
-
-            // Scroll to button if not visible.
+            //Send scroll to button
             WebDriver
-                .WaitForElement(buttonSelector)
-                .SendKeys(Keys.Space);
+                .ScrollToElement($@".faq_leader .more:has(a:contains(""{buttonLink}""))");
+
+            var buttonSelector = new JQuerySelector($".faq_leader .more a:contains('{buttonLink}')");
 
             // Click on button.
             WebDriver

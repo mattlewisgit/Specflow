@@ -6,8 +6,8 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.Navigation
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Fields;
 
-    using Vitality.Website.Areas.Global.Models;
-    using Vitality.Website.SC;
+    using Global.Models;
+    using SC;
 
     public class MainNavigation : SitecoreItem
     {

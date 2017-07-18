@@ -12,7 +12,6 @@ Scenario: Check Breadcrumbs on presales
 	And then I click on breadcrumbs Dev
 	Then I expect the presales /dev/ to open
 
-	@SIT
 Scenario: Check Breadcrumbs on advisers
 	Given I am on advisers /dev/member-library
 	Then I expect the breadcrumb to show Dev

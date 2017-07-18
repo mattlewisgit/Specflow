@@ -28,7 +28,7 @@
             {
                 using (BeginEditFrame(partnerCard, "Edit partner categories", m => m.Categories))
                 {
-                <li class="js-filtered-container__item" data-filter="@this.PartnerCategories(partnerCard)">
+                <li class="js-filtered-container__item" data-filter="@(this.PartnerCategories(partnerCard))">
                     <div class="spotlight-item__top-content">
                         <div class="spotlight-item__intro-image burst">
                             @GlassHtml.RenderLazyImage(partnerCard, m => m.Image, new { mw = 388 })

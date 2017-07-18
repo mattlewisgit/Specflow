@@ -121,23 +121,16 @@ namespace Vitality.Website.IntegrationTests.Steps
                 bgcolour = "tertiary";
             }
 
-            //WebDriver
-            //    .FindElement(new JQuerySelector(".feature-block.feature-block--" + bgcolour + ".rewards_leader .feature-block__content .box-button.box-button--light.box-button--rounded:contains('" + button + "')"))
-            //    .Click();
-
+            // Send a "scroll" to rewards leader component
+            WebDriver
+                .ScrollToElement($@".feature-block.feature-block--" + bgcolour + ".rewards_leader .feature-block__content .box-button.box-button--light.box-button--rounded");
 
             // Find the button containing the text...
             var RewardLeaderArticle = WebDriver
                 .FindElements(new JQuerySelector(".feature-block.feature-block--" + bgcolour + ".rewards_leader .feature-block__content .box-button.box-button--light.box-button--rounded"))
                 .FirstOrDefault(e => e.Text.Equals(button));
 
-            // Send a "scroll" (required if object is not in view)
-            RewardLeaderArticle
-                .SendKeys(Keys.Space);
-
             RewardLeaderArticle.Click();
-
-
         }
 
 
@@ -154,16 +147,14 @@ namespace Vitality.Website.IntegrationTests.Steps
             {
                 bgcolour = "tertiary";
             }
+            // Send a "scroll" to rewards leader component
+            WebDriver
+                .ScrollToElement($@".feature-block.feature-block--" + bgcolour + ".rewards_leader .feature-block__content .feature-block__image-list div a img");
 
             //Find Logo containing 'LogoLink'
             var Logo = WebDriver
                 .FindElements(new JQuerySelector(".feature-block.feature-block--" + bgcolour + ".rewards_leader .feature-block__content .feature-block__image-list div a .lazyloaded"))
                 .FirstOrDefault(e => e.InnerElement.GetAttribute("data-src").Contains(logolink));
-
-            //Move to logo
-            Logo
-                .GetParent()
-                .SendKeys(Keys.Space);
 
             //Click on logo
             Logo.Click();

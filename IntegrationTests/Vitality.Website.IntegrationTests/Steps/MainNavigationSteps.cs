@@ -149,14 +149,14 @@ namespace Vitality.Website.IntegrationTests.Steps
             var actions = new Actions(WebDriver);
 
             // Find element called "hoverLink" and then perform a hover over
-            var mainMenu = WebDriver.FindElement(OpenQA.Selenium.By.LinkText(hoverLink));
+            var mainMenu = WebDriver.FindElement(By.LinkText(hoverLink));
             actions.MoveToElement(mainMenu).Perform();
 
             // Having some problems with this bit, need to revisit with a better solution....
             Thread.Sleep(1000);
 
             // Find element called "clickLink", perform a hover over, and then click it
-            var subMenu = WebDriver.FindElement(OpenQA.Selenium.By.LinkText(clickLink));
+            var subMenu = WebDriver.FindElement(By.LinkText(clickLink));
             actions.MoveToElement(subMenu).Perform();
             actions.Click().Perform();
 

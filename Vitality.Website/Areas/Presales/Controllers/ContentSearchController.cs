@@ -23,7 +23,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
                 return new HttpResponseMessage(HttpStatusCode.BadRequest);
             }
 
-            return this.GetResponse<ContentSearchRequest, IEnumerable<SearchDocumentDto>>(
+            return GetResponse<ContentSearchRequest, IEnumerable<SearchDocumentDto>>(
                 model,
                 documents => documents.Any());
         }

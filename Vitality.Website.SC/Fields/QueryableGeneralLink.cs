@@ -12,7 +12,7 @@ namespace Vitality.Website.SC.Fields
 
         public string ItemId
         {
-            get { return StringUtil.GetString(new[] {_itemId}); }
+            get => StringUtil.GetString(new[] {_itemId});
             set
             {
                 Assert.ArgumentNotNull(value, "value");
@@ -22,7 +22,7 @@ namespace Vitality.Website.SC.Fields
 
         public new string Source
         {
-            get { return base.Source; }
+            get => base.Source;
             set
             {
                 var dataSource = StringUtil

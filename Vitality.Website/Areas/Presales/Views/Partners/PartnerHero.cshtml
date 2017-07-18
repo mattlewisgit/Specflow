@@ -4,9 +4,9 @@
 
 @using (BeginEditFrame(Model, "Edit Background image", item => item.BackgroundImage))
 {
-    <div class="partner-hero @this.PartnerWithCardClass() @this.ImageRelativePosition() lazyload" data-bg="@this.BackgroundImage()">
+    <div class="partner-hero @(this.PartnerWithCardClass()) @(this.ImageRelativePosition()) lazyload" data-bg="@(this.BackgroundImage())">
         <div class="grid">
-            <div class="partner-hero--headline @this.ColumnSpan() @this.FontTheme()">
+            <div class="partner-hero--headline @(this.ColumnSpan()) @(this.FontTheme())">
                 <p class="partner-hero--headline__intro">@Editable(Model, item => item.Headline1)</p>
                 <h1>@Editable(Model, item => item.Headline2)</h1>
 

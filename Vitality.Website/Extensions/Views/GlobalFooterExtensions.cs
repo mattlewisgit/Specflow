@@ -5,7 +5,7 @@ namespace Vitality.Website.Extensions.Views
 
     using Glass.Mapper.Sc.Web.Mvc;
 
-    using Vitality.Website.Areas.Presales.ComponentTemplates.Navigation;
+    using Areas.Presales.ComponentTemplates.Navigation;
 
     public static class GlobalFooterExtensions
     {

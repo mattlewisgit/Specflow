@@ -31,6 +31,7 @@ Scenario: Check Award Leader Member Story 2 link works
 	@SIT
 Scenario: Check Award Leader Member Story 3 link works
 	Given I am on presales /dev/award-leader
+	And I resize to mobile view
 	When I click on the Award Leader Member Stories 3 link
 	Then I expect the presales /dev/home-hero/ to open
 

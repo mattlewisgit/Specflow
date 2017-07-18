@@ -4,8 +4,8 @@ namespace Vitality.Website.Extensions.Views
 
     using Glass.Mapper.Sc.Web.Mvc;
 
-    using Vitality.Website.Areas.Global.Models;
-    using Vitality.Website.Areas.Presales.ComponentTemplates.Navigation;
+    using Areas.Global.Models;
+    using Areas.Presales.ComponentTemplates.Navigation;
 
     public static class MainNavigationExtensions
     {

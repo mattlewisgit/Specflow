@@ -54,26 +54,21 @@
         [When(@"I click on CTA (.*) button")]
         public void WhenIClickOnCTAButton(string button)
         {
-            //WebDriver
-            //     .WaitForElement(new JQuerySelector(
-            //         $".cta .grid-module .box-button.box-button--rounded.box-button--secondary:contains('{button}')"))
-            //     .Click();
+            WebDriver
+                .ScrollToElement(
+                $@".cta .grid-module:has(a:contains(""{button}""))");
 
-                        
+            // Send a "scroll" (required in mobile view as panels stack)
+            //WebDriver
+            //    .ScrollToElement($@".cta .grid-module .box-button.box-button--rounded.box-button--secondary:contains(""{button}""))");
+
             var buttonSelector = new JQuerySelector(
                      $".cta .grid-module .box-button.box-button--rounded.box-button--secondary:contains('{button}')");
-
-            // Scroll to button if not visible.
-            WebDriver
-                .WaitForElement(buttonSelector)
-                .SendKeys(Keys.Space);
 
             // Click on button.
             WebDriver
                 .WaitForElement(buttonSelector)
                 .Click();
-
-
         }
     }
 }

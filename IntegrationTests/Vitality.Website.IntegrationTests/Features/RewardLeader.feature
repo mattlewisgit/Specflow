@@ -25,13 +25,13 @@ Scenario: Check Reward leader cta button works
 	@SIT
 Scenario: Check Reward leader partner image button works in full view
 	Given I am on presales /dev/rewards-leader
-	When I click on rewards leader background colour blue with partner logo virgin
+	When I click on rewards leader background colour blue with partner logo cineworld
 	Then I expect the presales / to open
 
 	@SIT
 Scenario: Check Reward leader partner image button works in mobile view
 	Given I am on presales /dev/rewards-leader
 	And I resize to mobile view
-	When I click on rewards leader background colour blue with partner logo garmin
+	When I click on rewards leader background colour blue with partner logo virgin
 	Then I expect the presales / to open
 

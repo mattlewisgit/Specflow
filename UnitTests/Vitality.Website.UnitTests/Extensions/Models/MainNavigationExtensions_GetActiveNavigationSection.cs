@@ -7,9 +7,9 @@ namespace Vitality.Website.UnitTests.Extensions.Models
 
     using Shouldly;
 
-    using Vitality.Website.Areas.Global.Models;
-    using Vitality.Website.Areas.Presales.ComponentTemplates.Navigation;
-    using Vitality.Website.Extensions.Views;
+    using Areas.Global.Models;
+    using Areas.Presales.ComponentTemplates.Navigation;
+    using Website.Extensions.Views;
 
     using Xunit;
 
@@ -20,7 +20,7 @@ namespace Vitality.Website.UnitTests.Extensions.Models
         [Fact]
         public void No_navigation_sections_should_return_null()
         {
-            var mainNavigation = this.builder.Build();
+            var mainNavigation = builder.Build();
             var contextItem = new SitecoreItem();
 
             var result = mainNavigation.GetActiveNavigationSection(contextItem);
@@ -31,8 +31,8 @@ namespace Vitality.Website.UnitTests.Extensions.Models
         [Fact]
         public void Single_navigation_section_should_return_navigation_section()
         {
-            var navigationSection = this.builder.AddNavigationSection("/home");
-            var mainNavigation = this.builder.Build();
+            var navigationSection = builder.AddNavigationSection("/home");
+            var mainNavigation = builder.Build();
             var contextItem = new SitecoreItem { Url = "/home/illness-protection" };
 
             var result = mainNavigation.GetActiveNavigationSection(contextItem);
@@ -43,9 +43,9 @@ namespace Vitality.Website.UnitTests.Extensions.Models
         [Fact]
         public void Selected_navigation_section_should_be_ancestor_of_context_item()
         {
-            this.builder.AddNavigationSection("/home/business");
-            var selectedNavigationSection = this.builder.AddNavigationSection("/home");
-            var mainNavigation = this.builder.Build();
+            builder.AddNavigationSection("/home/business");
+            var selectedNavigationSection = builder.AddNavigationSection("/home");
+            var mainNavigation = builder.Build();
             var contextItem = new SitecoreItem { Url = "/home/illness-protection" };
 
             var result = mainNavigation.GetActiveNavigationSection(contextItem);
@@ -56,9 +56,9 @@ namespace Vitality.Website.UnitTests.Extensions.Models
         [Fact]
         public void Given_multiple_ancestors_selected_navigation_section_should_be_nearest_ancestor_of_context_item()
         {
-            this.builder.AddNavigationSection("/home");
-            var selectedNavigationSection = this.builder.AddNavigationSection("/home/business");
-            var mainNavigation = this.builder.Build();
+            builder.AddNavigationSection("/home");
+            var selectedNavigationSection = builder.AddNavigationSection("/home/business");
+            var mainNavigation = builder.Build();
             var contextItem = new SitecoreItem { Url = "/home/business/business-protection" };
 
             var result = mainNavigation.GetActiveNavigationSection(contextItem);
@@ -73,13 +73,13 @@ namespace Vitality.Website.UnitTests.Extensions.Models
             public NavigationSection AddNavigationSection(string url)
             {
                 var navigationSection = new NavigationSection { SectionLink = new Link { Url = url } };
-                this.navigationSections.Add(navigationSection);
+                navigationSections.Add(navigationSection);
                 return navigationSection;
             }
 
             public GlassView<MainNavigation> Build()
             {
-                return new MainNavigationViewStub(new MainNavigation { NavigationSections = this.navigationSections });
+                return new MainNavigationViewStub(new MainNavigation { NavigationSections = navigationSections });
             }
         }
 
@@ -87,7 +87,7 @@ namespace Vitality.Website.UnitTests.Extensions.Models
         {
             public MainNavigationViewStub(MainNavigation model)
             {
-                this.ViewData.Model = model;
+                ViewData.Model = model;
             }
 
             public override void Execute()

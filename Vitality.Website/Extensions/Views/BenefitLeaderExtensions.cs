@@ -2,8 +2,8 @@ namespace Vitality.Website.Extensions.Views
 {
     using Glass.Mapper.Sc.Web.Mvc;
 
-    using Vitality.Website.Areas.Presales.ComponentTemplates.FeatureBlocks;
-    using Vitality.Website.Areas.Presales.RenderingTemplates;
+    using Areas.Presales.ComponentTemplates.FeatureBlocks;
+    using Areas.Presales.RenderingTemplates;
 
     public static class BenefitLeaderExtensions
     {
@@ -11,7 +11,7 @@ namespace Vitality.Website.Extensions.Views
         {
             if (Parameters(view).BackgroundColour != null)
             {
-                return string.Format("{0}--{1}", CssClass(view), Parameters(view).BackgroundColour.Value);
+                return $"{CssClass(view)}--{Parameters(view).BackgroundColour.Value}";
             }
             return CssClass(view) + "--light";
         }
@@ -20,7 +20,7 @@ namespace Vitality.Website.Extensions.Views
         {
             if (Parameters(view).ContentAlignment != null)
             {
-                return string.Format("{0}--{1}", CssClass(view), Parameters(view).ContentAlignment.Value);
+                return $"{CssClass(view)}--{Parameters(view).ContentAlignment.Value}";
             }
             return string.Empty;
         }

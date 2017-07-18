@@ -10,7 +10,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
     using Sitecore.ContentSearch;
     using Sitecore.ContentSearch.Linq.Utilities;
 
-    using Vitality.Website.SC;
+    using SC;
 
     public class LiteratureDocumentSummariesHandler : IRequestHandler<LiteratureDocumentSummariesRequest, IEnumerable<LiteratureDocumentSummaryDto>>
     {
@@ -20,16 +20,16 @@ namespace Vitality.Website.Areas.Presales.Handlers.Literature
         {
             if (Sitecore.Context.Site != null)
             {
-                var searchableIndex = string.Format("{0}_literature_library", Sitecore.Context.Site.Name);
-                this._searchContext = ContentSearchManager.GetIndex(searchableIndex).CreateSearchContext();
+                var searchableIndex = $"{Sitecore.Context.Site.Name}_literature_library";
+                _searchContext = ContentSearchManager.GetIndex(searchableIndex).CreateSearchContext();
             }
         }
 
         public IEnumerable<LiteratureDocumentSummaryDto> Handle(LiteratureDocumentSummariesRequest request)
         {
-            var searchResults = this._searchContext
+            var searchResults = _searchContext
                 .GetQueryable<LiteratureDocumentSearchResult>()
-                .Where(this.MatchingLiteratureDocumentSummaries(request))
+                .Where(MatchingLiteratureDocumentSummaries(request))
                 .ToArray();
 
             return searchResults.Select(LiteratureDocumentSummaryDto.From).ToArray();

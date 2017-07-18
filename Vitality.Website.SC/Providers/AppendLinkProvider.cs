@@ -83,7 +83,7 @@ namespace Vitality.Website.SC.Providers
                 var prefix = url.Substring(0, slashPosition);
 
                 return !prefix.EndsWith(slash)
-                    ? string.Format("{0}/{1}", prefix, url.Substring(slashPosition))
+                    ? $"{prefix}/{url.Substring(slashPosition)}"
                     : url;
             }
 

@@ -18,7 +18,7 @@ namespace Vitality.Website.SC.WFFM
 
             var request = new RestRequest(Method.POST).AddParameter(
                 "application/x-www-form-urlencoded",
-                string.Format("xml={0}", xml),
+                $"xml={xml}",
                 ParameterType.RequestBody);
 
             return new RestClient(baseUrl.ToString()).Post(request).StatusCode;

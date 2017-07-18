@@ -9,10 +9,10 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
     using Glass.Mapper.Sc.Configuration.Attributes;
     using Glass.Mapper.Sc.Maps;
     using Sitecore.Data.Fields;
-    using Vitality.Website.Areas.Global.Models;
-    using Vitality.Website.Areas.Presales.BaseTemplates;
-    using Vitality.Website.Areas.Presales.SettingsTemplates;
-    using Vitality.Website.SC;
+    using Global.Models;
+    using BaseTemplates;
+    using SettingsTemplates;
+    using SC;
 
     public class BasePage : SitecoreItem, IQuoteFooter, IAppReferenceGlobal, IBrowserLatencyGlobal, IBrowserStylingGlobal, IDuplicateContentPage, IGoogleAuthorshipGlobal, IGoogleTagManagerGlobal,
         IIndexationPage, IOpenGraphGlobal, IOpenGraphPage, IQubitOpenTagGlobal, ISerpAppearancePage, ITwitterGlobal, ITwitterPage, IWebmasterToolsGlobal, IJsonSchemaGlobal, ISitemap, ISearch
@@ -75,7 +75,7 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
 
         public override void Configure()
         {
-            this.Map(
+            Map(
                 x => x.AutoMap(),
                 x => x.Delegate(footer => footer.Headline).GetValue(
                     context => context.Service.GetItem<QuoteFooter>(ItemConstants.Presales.Content.Configuration.QuoteFooter.Path).Headline)
@@ -97,7 +97,7 @@ namespace Vitality.Website.Areas.Presales.PageTemplates
 
                 if (_mapTypeValue.ContainsKey(property.PropertyType))
                 {
-                    this.Map(x => x.Delegate(basePageProperty).GetValue
+                    Map(x => x.Delegate(basePageProperty).GetValue
                         (context => _mapTypeValue[property.PropertyType](context, fieldName, siteSettingsProperty)));
                 }
             }

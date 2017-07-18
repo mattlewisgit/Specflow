@@ -8,8 +8,8 @@ namespace Vitality.Website.UnitTests.TestDoubles
     using Sitecore.ContentSearch.Linq.Common;
     using Sitecore.ContentSearch.Security;
 
-    using Vitality.Website.Areas.Presales.Handlers.Literature;
-    using Vitality.Website.SC;
+    using Areas.Presales.Handlers.Literature;
+    using SC;
 
     public class SearchContextStub : IProviderSearchContext
     {
@@ -46,7 +46,7 @@ namespace Vitality.Website.UnitTests.TestDoubles
 
         public SearchContextStub()
         {
-            this.documents = new[] { MatchingResult, AdditionalMatchingResult, NonMatchingResult }.AsQueryable();
+            documents = new[] { MatchingResult, AdditionalMatchingResult, NonMatchingResult }.AsQueryable();
         }
 
         public void Dispose()
@@ -56,7 +56,7 @@ namespace Vitality.Website.UnitTests.TestDoubles
 
         public IQueryable<TItem> GetQueryable<TItem>()
         {
-            return (IQueryable<TItem>)this.documents;
+            return (IQueryable<TItem>)documents;
         }
 
         public IEnumerable<SearchIndexTerm> GetTermsByFieldName(string fieldName, string prefix)

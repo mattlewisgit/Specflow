@@ -8,7 +8,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
 
     using MediatR;
 
-    using Vitality.Website.Areas.Presales.Handlers.Literature;
+    using Handlers.Literature;
 
     public class LiteratureLibraryController : BaseController
     {
@@ -24,7 +24,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
                 return new HttpResponseMessage(HttpStatusCode.BadRequest);
             }
 
-            return this.GetResponse<LiteratureDocumentRequest, LiteratureDocumentDto>(
+            return GetResponse<LiteratureDocumentRequest, LiteratureDocumentDto>(
                 new LiteratureDocumentRequest(library, category, title, includeAvailableLiterature),
                 document => document != null);
         }
@@ -38,7 +38,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
                 return new HttpResponseMessage(HttpStatusCode.BadRequest);                
             }
 
-            return this.GetResponse<LiteratureDocumentSummariesRequest, IEnumerable<LiteratureDocumentSummaryDto>>(
+            return GetResponse<LiteratureDocumentSummariesRequest, IEnumerable<LiteratureDocumentSummaryDto>>(
                 new LiteratureDocumentSummariesRequest(library, title: title),
                 documents => documents.Any());
         }
@@ -52,7 +52,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
                 return new HttpResponseMessage(HttpStatusCode.BadRequest);
             }
 
-            return this.GetResponse<LiteratureDocumentRequest, IEnumerable<LiteratureDocumentDto>>(
+            return GetResponse<LiteratureDocumentRequest, IEnumerable<LiteratureDocumentDto>>(
                 new LiteratureDocumentRequest(library),
                 documents => documents.Any());
         }
@@ -66,7 +66,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
                 return new HttpResponseMessage(HttpStatusCode.BadRequest);
             }
 
-            return this.GetResponse<LiteratureDocumentSummariesRequest, IEnumerable<LiteratureDocumentSummaryDto>>(
+            return GetResponse<LiteratureDocumentSummariesRequest, IEnumerable<LiteratureDocumentSummaryDto>>(
                 new LiteratureDocumentSummariesRequest(library, category),
                 documents => documents.Any());
         }

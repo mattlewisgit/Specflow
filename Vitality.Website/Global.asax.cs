@@ -5,7 +5,7 @@ namespace Vitality.Website
     {
         protected void Application_PreSendRequestHeaders()
         {
-            this.Response.Headers.Remove("Server");
+            Response.Headers.Remove("Server");
         }
 
         protected void Session_Start()
