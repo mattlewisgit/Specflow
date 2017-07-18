@@ -16,8 +16,6 @@ namespace Vitality.Website.Areas.Global.Models
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<KeyValuePair>  RelatedData { get; set; }
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public KeyValuePair ScrollTo { get; set; }
-        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<FieldValidator> Validators { get; set; }
     }
 }
