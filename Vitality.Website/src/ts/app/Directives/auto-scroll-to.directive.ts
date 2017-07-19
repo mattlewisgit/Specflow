@@ -13,6 +13,10 @@ import { QuoteApplyConstants } from "../constants/quoteapply-constants";
 export class AutoScrollTo implements AfterViewInit{
     @Input("isGroupCompleted") isGroupCompleted : boolean;
 
+    private minDistance = 30;
+    private scrollStepDistance = 100;
+    private scrollSpeed = 20;
+
     private currentElement: HTMLElement;
     private currentElementParent: HTMLElement;
     private okBtnGroup: Element;
@@ -64,7 +68,7 @@ export class AutoScrollTo implements AfterViewInit{
         if (this.currentElement.tagName === GlobalConstants.tagNames.dropdown) {
             const startY = this.currentYPosition();
             const stopY = this.elmYPosition();
-            if (Math.abs(startY - stopY) > 30) {
+            if (Math.abs(startY - stopY) > this.minDistance) {
                 event.preventDefault();
                 this.handleScrolling(startY, stopY);
             }
@@ -156,12 +160,12 @@ export class AutoScrollTo implements AfterViewInit{
 
     private handleScrolling(startY: number, stopY:number): void {
         const distance = stopY > startY ? stopY - startY : startY - stopY;
-        if (distance < 100) {
+        if (distance < this.scrollStepDistance) {
             this.winRef.nativeWindow.scrollTo(0, stopY);
         } else {
-            let speed = Math.round(distance / 100);
-            if (speed >= 20) speed = 20;
-            const step = Math.round(distance / 100);
+            let speed = Math.round(distance / this.scrollStepDistance);
+            if (speed >= this.scrollSpeed) speed = this.scrollSpeed;
+            const step = Math.round(distance / this.scrollStepDistance);
             let leapY = stopY > startY ? startY + step : startY - step;
             let timer = 0;
             if (stopY > startY) {
@@ -208,6 +212,6 @@ export class AutoScrollTo implements AfterViewInit{
             node = (node.offsetParent as HTMLElement);
             y += node.offsetTop;
         }
-        return y - (this.winRef.nativeWindow.screen.height/2 -200);
+        return y - (this.winRef.nativeWindow.screen.height/2 - 200);
     }
 }
