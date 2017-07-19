@@ -59,6 +59,19 @@ export class AutoScrollTo implements AfterViewInit{
         }
     }
 
+    @HostListener("mousedown", ["$event"])
+    mousedown(event: MouseEvent) {
+        if (this.currentElement.tagName === GlobalConstants.tagNames.dropdown) {
+            const startY = this.currentYPosition();
+            const stopY = this.elmYPosition();
+            if (Math.abs(startY - stopY) > 30) {
+                event.preventDefault();
+                this.handleScrolling(startY, stopY);
+            }
+        }
+    }
+
+
     @HostListener("change", ["$event"])
     onchange(event: MouseEvent) {
         //Just do a timeout to trigger this after model changed
@@ -74,7 +87,7 @@ export class AutoScrollTo implements AfterViewInit{
                     this.showOkBtnGroup();
                 }
             }
-            this.handleScrolling();
+            this.handleScrolling(this.currentYPosition(),this.elmYPosition());
         }
     }
 
@@ -141,9 +154,7 @@ export class AutoScrollTo implements AfterViewInit{
         return this.currentElementParent.parentElement.parentElement;
     }
 
-    private handleScrolling(): void {
-        const startY = this.currentYPosition();
-        const stopY = this.elmYPosition();
+    private handleScrolling(startY: number, stopY:number): void {
         const distance = stopY > startY ? stopY - startY : startY - stopY;
         if (distance < 100) {
             this.winRef.nativeWindow.scrollTo(0, stopY);
