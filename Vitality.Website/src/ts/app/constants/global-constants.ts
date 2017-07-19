@@ -15,4 +15,8 @@
     export const formats = {
         dateFormat: "DD/MM/YYYY"
     };
+    export const moments = {
+        days: "days" as "Q",
+        years: "years" as "Q"
+    };
 };

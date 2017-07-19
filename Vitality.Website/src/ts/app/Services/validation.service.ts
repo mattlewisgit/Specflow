@@ -59,8 +59,10 @@ export class ValidationService {
         return (control: any) => {
             if (this.dateValidator(control) == null) {
                 const birthDate = moment(control.value, GlobalConstants.formats.dateFormat);
-                const years = Math.ceil(moment().diff(birthDate, "years", true));
-                if (years >= options.minAge && years < options.maxAge) {
+                const now = moment();
+                const years = Math.floor(now.diff(birthDate, GlobalConstants.moments.years, true));
+                if ((years >= options.minAge && years < options.maxAge) ||
+                    (years == options.maxAge && this.isSameDay(birthDate, now))) {
                     return null;
                 }
             }
@@ -72,13 +74,20 @@ export class ValidationService {
         return (control: any) => {
             if (this.dateValidator(control) == null) {
                 const futureDate = moment(control.value, GlobalConstants.formats.dateFormat);
-                const dateDifference = Math.ceil(futureDate.diff(moment(), "days", true));
+                const dateDifference = Math.ceil(futureDate.diff(moment(), GlobalConstants.moments.days, true));
                 if (dateDifference <= options.minDaysAhead && dateDifference > -1) {
                     return null;
                 }
             }
             return { "invalidFutureDate": true };
         }
+    }
+
+    isSameDay(from: moment.Moment, to: moment.Moment): boolean {
+        if (from.date() === to.date() && from.month() === to.month()) {
+            return true;
+        }
+        return false;
     }
 
     emailValidator(control: any) {
