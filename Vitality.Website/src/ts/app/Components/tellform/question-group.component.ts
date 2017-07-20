@@ -6,7 +6,7 @@ import { QuestionControlService }    from "../../services/question-control.servi
 
 @Component({
     selector: "question-group",
-    templateUrl: "./js/app/components/quoteapply/question-group.component.html"
+    templateUrl: "./js/app/components/tellform/question-group.component.html"
 })
 export class QuestionGroupComponent implements OnInit {
     @Input() questionGroup: QuestionGroup;

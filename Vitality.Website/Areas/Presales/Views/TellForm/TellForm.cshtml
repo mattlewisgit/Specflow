@@ -34,7 +34,7 @@
             <script type="text/javascript" src='@(localEnv ? "/js/systemjs.config.js" : "/js/systemjs.config.server.js")'></script>
 
             <script type="text/javascript">
-                System.import('/js/quoteapply-main.js')
+                System.import('/js/tell-form-main.js')
                                 .catch(function (err) { throw err; });
             </script>
 
@@ -43,6 +43,6 @@
                 window.angularData = @Html.Raw(angularModel);
             </script>
 
-            <quoteapply-form><div class="loader__icon"></div></quoteapply-form>
+            <tell-form><div class="loader__icon"></div></tell-form>
         }
     </div>

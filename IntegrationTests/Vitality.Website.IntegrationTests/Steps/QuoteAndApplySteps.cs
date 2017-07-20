@@ -32,7 +32,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver.ScrollToElement($"#{fieldName}");
 
             var possibleOptions = WebDriver
-                .FindElements(new JQuerySelector($".quote--content > quoteapply-form .question #{fieldName} option"));
+                .FindElements(new JQuerySelector($".quote--content > tell-form .question #{fieldName} option"));
 
             possibleOptions
                 .FirstOrDefault(e => e.Text.Equals(option))
@@ -47,7 +47,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver.ScrollToElement($"#{fieldName}");
 
             WebDriver
-                .FindElement(new JQuerySelector($".quote--content > quoteapply-form .question .question--input__text #{fieldName}"))
+                .FindElement(new JQuerySelector($".quote--content > tell-form .question .question--input__text #{fieldName}"))
                 .SendKeys(inputText);
 
             if (fieldName == "postcode")
@@ -78,7 +78,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             try
             {
                 WebDriver.FindElement
-                    (new JQuerySelector($".quote--content > quoteapply-form .question #{fieldName}"));
+                    (new JQuerySelector($".quote--content > tell-form .question #{fieldName}"));
             }
             catch (NoSuchElementException)
             {
@@ -96,7 +96,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         public void TheFieldIsDisplayed(string fieldName)
         {
             WebDriver
-                .FindElement(new JQuerySelector($".quote--content > quoteapply-form .question #{fieldName}"))
+                .FindElement(new JQuerySelector($".quote--content > tell-form .question #{fieldName}"))
                 .ShouldNotBeNull();
         }
 
@@ -105,7 +105,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         {
 
             WebDriver
-                .FindElement(new JQuerySelector($".quote--content > quoteapply-form .question:has(#{fieldName}) .question--input__error"))
+                .FindElement(new JQuerySelector($".quote--content > tell-form .question:has(#{fieldName}) .question--input__error"))
                 .Text.LooseEquals(errorText)
                 .ShouldBe(true);
 
@@ -117,7 +117,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             try
             {
                 WebDriver.FindElement
-                    (new JQuerySelector($".quote--content > quoteapply-form .question:has(#{fieldName}) .question--input__error"))
+                    (new JQuerySelector($".quote--content > tell-form .question:has(#{fieldName}) .question--input__error"))
                     .ShouldBeNull();
             }
             catch (NoSuchElementException)
@@ -137,7 +137,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             try
             {
                 WebDriver.FindElement
-                    (new JQuerySelector($".quote--content > quoteapply-form .question .question--input__error"))
+                    (new JQuerySelector($".quote--content > tell-form .question .question--input__error"))
                     .ShouldBeNull();
             }
             catch (NoSuchElementException)
@@ -169,7 +169,7 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .ToString("dd/MM/yyyy");
 
             WebDriver
-                .FindElement(new JQuerySelector($".quote--content > quoteapply-form .question .question--input__text #{fieldName}"))
+                .FindElement(new JQuerySelector($".quote--content > tell-form .question .question--input__text #{fieldName}"))
                 .SendKeys(inputText);
         }
 
@@ -183,7 +183,7 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .ToString("dd/MM/yyyy");
 
             WebDriver
-                .FindElement(new JQuerySelector($".quote--content > quoteapply-form .question .question--input__text #{fieldName}"))
+                .FindElement(new JQuerySelector($".quote--content > tell-form .question .question--input__text #{fieldName}"))
                 .SendKeys(inputText);
         }
 
@@ -193,7 +193,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver.ScrollToElement($"#{fieldName}");
 
             var possibleOptions = WebDriver
-                .FindElements(new JQuerySelector($".quote--content > quoteapply-form .question #{fieldName} option"));
+                .FindElements(new JQuerySelector($".quote--content > tell-form .question #{fieldName} option"));
 
 
             ScenarioContext.Current.Add(fieldName, possibleOptions.Select(e => e.Text));

@@ -11,14 +11,14 @@ import { PostcodeService } from "../../services/postcode.service";
 import { WindowRef } from "./../windowref";
 
 @Component({
-    selector: "quoteapply-form",
-    templateUrl: "./js/app/components/quoteapply/quoteapply-form.component.html"
+    selector: "tell-form",
+    templateUrl: "./js/app/components/tellform/tell-form.component.html"
 })
-export class QuoteApplyFormComponent implements OnInit, OnDestroy {
+export class TellFormComponent implements OnInit, OnDestroy {
     callToActionText: string;
     completedPercentage: number;
     isAllCompleted = false;
-    quoteApplyForm: FormGroup;
+    tellForm: FormGroup;
     okBtnHelpText: string;
     payload: string;
     private postcodeAsyncValidationSubscription: Subscription;
@@ -43,14 +43,16 @@ export class QuoteApplyFormComponent implements OnInit, OnDestroy {
         const childrenQuestionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.childrenQuestionGroup);
         this.questionControlService.setQuestionGroups(this.questionGroups);
 
-        this.dobControlService.initialize({
-            childrenQuestionGroup: childrenQuestionGroup,
-            childDobLastLabel: angularData.childDobLastLabel,
-            childDobSeperatorLabel: angularData.childDobSeperatorLabel
-        });
+        if(childrenQuestionGroup) {
+            this.dobControlService.initialize({
+                childrenQuestionGroup: childrenQuestionGroup,
+                childDobLastLabel: angularData.childDobLastLabel,
+                childDobSeperatorLabel: angularData.childDobSeperatorLabel
+            });
+        }
 
-        this.quoteApplyForm = new FormGroup({});
-        this.quoteApplyForm.valueChanges.subscribe(data => {
+        this.tellForm = new FormGroup({});
+        this.tellForm.valueChanges.subscribe(data => {
             this.calculateCompletedPercentage();
         });
 
@@ -80,7 +82,7 @@ export class QuoteApplyFormComponent implements OnInit, OnDestroy {
     apply(isValid: boolean): void {
         //Do it only when isvalid
         this.submitted = true;
-        this.quoteApplyService.apply(this.quoteApplyForm.value);
+        this.quoteApplyService.apply(this.tellForm.value);
     }
 
     ngOnDestroy(): void {

@@ -1,10 +1,10 @@
-<form [formGroup]="quoteApplyForm" (ngSubmit)="apply(quoteApplyForm.valid)" novalidate>
+<form [formGroup]="tellForm" (ngSubmit)="apply(tellForm.valid)" novalidate>
     <div class="fade upper"></div>
     <div class="fade lower"></div>
     <question-group *ngFor="let questionGroup of questionGroups"
                     [questionGroup]="questionGroup"
                     [renderingData]="renderingData"
-                    [form]="quoteApplyForm">
+                    [form]="tellForm">
     </question-group>
 
     <div class="quote--footer">
