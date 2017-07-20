@@ -363,8 +363,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
-    <Content Include="Areas\Presales\Views\QuoteApply\QuoteApplyForm.cshtml" />
-    <None Include="Areas\Presales\Views\Shared\QuoteApplyLayout.cshtml" />
+    <Content Include="Areas\Presales\Views\TellForm\TellForm.cshtml" />
+    <None Include="Areas\Presales\Views\Shared\TellFormLayout.cshtml" />
     <Content Include="src\js\countdown-timer-app.js" />
     <Content Include="src\js\global-functions.js" />
     <Content Include="src\js\vitality-wffm-main.js" />
@@ -3931,7 +3931,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Areas\Global\Models\FieldValidator.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\FieldValidatorViewModel.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\TellForm\FieldValidatorViewModel.cs" />
     <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />
     <Compile Include="Pipelines\AppStartInitializer.cs" />
     <Compile Include="App_Start\GlassMapperSc.cs" />
@@ -4001,11 +4001,11 @@
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Navigation\NavigationSubSection.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Partners\PartnerCard.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuestionGroup.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuestionGroupViewModel.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuestionViewModel.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFormViewModel.cs" />
-    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyForm.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\TellForm\QuestionGroup.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\TellForm\QuestionGroupViewModel.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\TellForm\QuestionViewModel.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\TellForm\TellFormViewModel.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\TellForm\TellForm.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Rewards\RewardsLeader.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryComponent.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\Summary\SummaryListItem.cs" />

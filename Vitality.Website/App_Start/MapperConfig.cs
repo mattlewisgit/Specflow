@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
-
-namespace Vitality.Website.App_Start
+﻿namespace Vitality.Website.App_Start
 {
     using Areas.Global.Models;
     using Areas.Presales.ComponentTemplates.FeatureBlocks;
-    using Areas.Presales.ComponentTemplates.QuoteApply;
+    using Areas.Presales.ComponentTemplates.TellForm;
     using AutoMapper;
+    using System.Collections.Generic;
     using System.Linq;
 
     public static class MapperConfig
@@ -72,7 +71,7 @@ namespace Vitality.Website.App_Start
                     dest => dest.BasedOnValues,
                     opt => opt.MapFrom(src => string.IsNullOrEmpty(src.BasedOnValues)? null: src.BasedOnValues.Split(',')));
 
-            config.CreateMap<QuoteApplyForm, QuoteApplyFormViewModel>()
+            config.CreateMap<TellForm, TellFormViewModel>()
                   .ForMember(
                     dest => dest.ServiceOutagePage,
                     opt => opt.MapFrom(src => src.ServiceOutagePage.Url));

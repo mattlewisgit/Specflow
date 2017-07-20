@@ -1,0 +1,66 @@
+----item----
+version: 1
+id: {20F5D00E-7AFD-4477-9EBB-5BF0F1F94CBC}
+database: master
+path: /sitecore/content/Presales/Content/Tell Form/Quote Apply Form/And my email is/Email
+parent: {ECE14C2F-40D8-4807-AA4E-BDC11C753B8F}
+name: Email
+master: {00000000-0000-0000-0000-000000000000}
+template: {16446BB0-1CE3-44A5-81FA-2417CE6A1FEB}
+templatekey: Question
+created: 20170613T091904Z
+
+----version----
+language: en
+version: 1
+revision: 1463876f-1297-4b6e-810c-294038df1f5c
+
+----field----
+field: {365CBF3B-BCA1-4C43-A070-68B9FD55DAE2}
+name: Key
+key: key
+content-length: 38
+
+{FA3BEAB9-EFFC-4751-ACB3-7A19466B75C6}
+----field----
+field: {EDBA5F60-C406-43A0-8E4E-145A7BCD98FF}
+name: ControlType
+key: controltype
+content-length: 38
+
+{6EEED019-DE8A-4C59-8D3E-89A85ED4D35D}
+----field----
+field: {98D8AEE3-52A2-4CCE-9654-16DDD64735BD}
+name: Validators
+key: validators
+content-length: 77
+
+{F9D8696B-D818-4BD7-AAA3-1F270F7EF184}|{406363C6-15CC-4864-97C8-6F5CA120916A}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170613T091904Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+1463876f-1297-4b6e-810c-294038df1f5c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170615T120834Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

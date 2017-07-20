@@ -1,34 +1,41 @@
 ----item----
 version: 1
-id: {A32FE368-CF2A-44AC-B234-131B878CAE39}
+id: {4363FAD3-AE13-4DEB-B344-F429B35CEFEA}
 database: master
-path: /sitecore/content/Presales/Configuration/Field Validators/Adult Age Validator
-parent: {38BDCDEF-A8A4-4C3C-93AD-9BD62C745FB7}
-name: Adult Age Validator
+path: /sitecore/templates/Presales/Component Templates/Tell Form/Tell Form/Contents/OkBtnHelpText
+parent: {0363AF28-AB2D-4274-80B2-3D584FEA31A9}
+name: OkBtnHelpText
 master: {00000000-0000-0000-0000-000000000000}
-template: {C631EE17-FF6E-4C17-8303-CFCE777FD8A2}
-templatekey: Field Validator
-created: 20170615T150840Z
+template: {455A3E98-A627-4B40-8035-E683A0331AC7}
+templatekey: Template field
+created: 20170707T094400Z
 
+----field----
+field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
+name: Type
+key: type
+content-length: 16
+
+Single-Line Text
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+1300
 ----version----
 language: en
 version: 1
-revision: daa7eeb7-931f-4a81-9e45-90e99b554b8c
+revision: d1c90a94-9f10-469c-be90-6ac656a86d84
 
 ----field----
-field: {41F1F96F-0AA6-4E4C-95ED-EA251B3BD7E7}
-name: ValidatorName
-key: validatorname
-content-length: 17
+field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
+name: Title
+key: title
+content-length: 16
 
-ageRangeValidator
-----field----
-field: {2DA36667-40DD-4A1C-952A-795FE6F0B4F0}
-name: Parameters
-key: parameters
-content-length: 19
-
-minAge=18&maxAge=80
+Ok Btn Help Text
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -42,7 +49,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170615T150840Z
+20170707T094400Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-daa7eeb7-931f-4a81-9e45-90e99b554b8c
+d1c90a94-9f10-469c-be90-6ac656a86d84
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170719T111845Z
+20170707T094400Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
