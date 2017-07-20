@@ -9,6 +9,7 @@
         hide: "hide"
     };
     export const keyboardKeys = {
+        zero: 0,
         enter: 13,
         tab: 9
     };

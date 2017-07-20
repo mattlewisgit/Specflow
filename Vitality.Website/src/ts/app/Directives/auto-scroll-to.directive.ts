@@ -37,14 +37,14 @@ export class AutoScrollTo implements AfterViewInit{
     }
 
     @HostListener("keyup", ["$event"])
-    onkeyup(event: MouseEvent) {
+    onkeyup(event: KeyboardEvent) {
         if (this.currentElement.tagName !== GlobalConstants.tagNames.dropdown) {
             this.hideShowOkBtnGroup(this.isGroupCompleted);
         }
     }
 
     @HostListener("keydown", ["$event"])
-    onkeydown(event: MouseEvent) {
+    onkeydown(event: KeyboardEvent) {
         if (this.isGroupCompleted) {
             if (event.shiftKey && event.which === GlobalConstants.keyboardKeys.tab) {
                 event.preventDefault();
@@ -58,7 +58,9 @@ export class AutoScrollTo implements AfterViewInit{
 
     @HostListener("click", ["$event"])
     onclick(event: MouseEvent) {
-        if (this.currentElement.tagName === GlobalConstants.tagNames.button) {
+        if (this.currentElement.tagName === GlobalConstants.tagNames.button ||
+        (this.currentElement.tagName === GlobalConstants.tagNames.dropdown &&
+            event.which === GlobalConstants.keyboardKeys.zero)) {
             this.changeFocus(true);
         }
     }
@@ -73,13 +75,6 @@ export class AutoScrollTo implements AfterViewInit{
                 this.handleScrolling(startY, stopY);
             }
         }
-    }
-
-
-    @HostListener("change", ["$event"])
-    onchange(event: MouseEvent) {
-        //Just do a timeout to trigger this after model changed
-        setTimeout(() => this.onDropDownChange(), 0);
     }
 
     @HostListener("focus", ["$event"])
@@ -117,12 +112,6 @@ export class AutoScrollTo implements AfterViewInit{
         const okBtnGroups = this.document.getElementsByClassName(QuoteApplyConstants.selectors.okBtnGroup);
         for (let okBtnGroup of okBtnGroups) {
             okBtnGroup.classList.add(GlobalConstants.selectors.hide);
-        }
-    }
-
-    private onDropDownChange() {
-        if (this.currentElement.tagName === GlobalConstants.tagNames.dropdown && this.isGroupCompleted) {
-            this.changeFocus(true);
         }
     }
 
