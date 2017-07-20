@@ -2,12 +2,13 @@
 version: 1
 id: {B4B319B5-5C49-4175-9006-90FF71000786}
 database: master
-path: /sitecore/templates/Presales/Page Templates/Quote Apply Page/Content
+path: /sitecore/templates/Presales/Page Templates/Tell Form Page/Content
 parent: {55835F09-68C5-4E6D-91C1-851FFA6FB359}
 name: Content
 master: {00000000-0000-0000-0000-000000000000}
 template: {E269FBB5-3750-427A-9149-7AA950B49301}
 templatekey: Template section
+created: 20170610T141145Z
 
 ----version----
 language: en

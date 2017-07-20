@@ -2,12 +2,13 @@
 version: 1
 id: {55835F09-68C5-4E6D-91C1-851FFA6FB359}
 database: master
-path: /sitecore/templates/Presales/Page Templates/Quote Apply Page
+path: /sitecore/templates/Presales/Page Templates/Tell Form Page
 parent: {B2AD4D9A-BD16-4ADD-B01D-E2911328525B}
-name: Quote Apply Page
+name: Tell Form Page
 master: {00000000-0000-0000-0000-000000000000}
 template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
 templatekey: Template
+created: 20170610T141145Z
 
 ----field----
 field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
@@ -33,7 +34,7 @@ Applications/32x32/form_green_edit.png
 ----version----
 language: en
 version: 1
-revision: 7a4ed9e9-e387-4687-9612-85bfce64797a
+revision: ebdeb53a-be84-4c68-96a5-871cd137a4ad
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -48,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7a4ed9e9-e387-4687-9612-85bfce64797a
+ebdeb53a-be84-4c68-96a5-871cd137a4ad
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170531T124118Z
+20170720T104255Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
