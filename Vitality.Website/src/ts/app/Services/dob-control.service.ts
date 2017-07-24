@@ -18,8 +18,7 @@ export class DobControlService {
 
     initialize(options: {
         childrenQuestionGroup: QuestionGroup,
-        childDobLastLabel: string,
-        childDobSeperatorLabel: string})
+        additionalData: any})
     {
         this.childrenQuestionGroup = options.childrenQuestionGroup;
 
@@ -31,8 +30,8 @@ export class DobControlService {
         // Default to empty label
         this.noOfChildrenQuestion.label = QuoteApplyConstants.labels.emptyLabel ;
 
-        this.childDobLastLabel = options.childDobLastLabel;
-        this.childDobSeperatorLabel = options.childDobSeperatorLabel;
+        this.childDobLastLabel = options.additionalData.childDobLastLabel;
+        this.childDobSeperatorLabel = options.additionalData.childDobSeperatorLabel;
 
         this.addChildrenDobQuestions();
     }

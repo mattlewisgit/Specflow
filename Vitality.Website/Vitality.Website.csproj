@@ -382,7 +382,7 @@
     <TypeScriptCompile Include="src\ts\app\models\field-validator.ts" />
     <TypeScriptCompile Include="src\ts\app\models\question-group.ts" />
     <TypeScriptCompile Include="src\ts\app\models\question.ts" />
-    <TypeScriptCompile Include="src\ts\app\services\call-me-back.service.ts" />
+    <TypeScriptCompile Include="src\ts\app\services\callback.service.ts" />
     <TypeScriptCompile Include="src\ts\app\tell-form-app.module.ts" />
     <TypeScriptCompile Include="src\ts\app\services\dob-control.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\error.service.ts" />

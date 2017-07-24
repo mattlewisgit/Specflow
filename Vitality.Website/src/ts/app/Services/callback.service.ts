@@ -1,23 +1,21 @@
 ﻿import { Injectable }   from "@angular/core";
 import * as moment from "moment/moment";
-import "twix";
-
-
+import { extendMoment } from "momentrange/dist/moment-range.js";
 
 import { FormControl } from "@angular/forms";
 import { Question } from "../models/question";
 import { QuoteApplyConstants } from "../constants/quoteapply-constants";
 
 @Injectable()
-export class CallMeBackService {
+export class CallbackService {
     interval: number;
-    options: {};
+    additionalData: {};
 
     initialize(options: {}) {
-        this.options = options;
+        this.additionalData = options;
     }
-
-    populateRanges(question : Question<any>) {
-        
+    populateRanges(question: Question<any>) {
+        console.log(question);
+        console.log(this.additionalData);
     }
 }

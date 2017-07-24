@@ -1,7 +1,7 @@
 ﻿import { Injectable }   from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 
-import { CallMeBackService } from "../services/call-me-back.service";
+import { CallbackService } from "../services/callback.service";
 import { DobControlService } from "../services/dob-control.service";
 import { FieldValidator } from "../models/field-validator";
 import { QuoteApplyConstants } from "../constants/quoteapply-constants";
@@ -13,6 +13,7 @@ export class QuestionControlService {
     private questionGroups: QuestionGroup[];
 
     constructor(
+        private callbackService: CallbackService,
         private dobControlService: DobControlService,
         private validationService: ValidationService
     ) {
@@ -33,10 +34,16 @@ export class QuestionControlService {
                 this.getAsyncValidators(question.validators.filter(x => x.isAsync)));
 
             formControl.valueChanges.subscribe(data => {
-                if (question.key === QuoteApplyConstants.keys.noOfChildren) {
-                    this.dobControlService.noOfKidsChanged(data);
-                } else if (question.key === QuoteApplyConstants.keys.membersToInsure) {
-                    this.dobControlService.membersToInsureChanged(data);
+                switch(question.key) {
+                    case QuoteApplyConstants.keys.noOfChildren:
+                        this.dobControlService.noOfKidsChanged(data);
+                        break;
+                    case QuoteApplyConstants.keys.membersToInsure:
+                        this.dobControlService.membersToInsureChanged(data);
+                        break;
+                    case QuoteApplyConstants.keys.callbackDate:
+                        this.callbackService.populateRanges(questionGroup.questions.filter(x => x.key === QuoteApplyConstants.keys.callbackTimeQuestionGroup)[0]);
+                        break;
                 }
                 this.isValid(data, form, questionGroup);
             });

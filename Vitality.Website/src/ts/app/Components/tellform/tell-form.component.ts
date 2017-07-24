@@ -2,7 +2,7 @@ import { Component, Inject, OnDestroy, Input, OnInit }      from "@angular/core"
 import { FormArray, FormBuilder, FormGroup } from "@angular/forms";
 import { Subscription } from "rxjs/Subscription";
 
-import { CallMeBackService } from "../../services/call-me-back.service";
+import { CallbackService } from "../../services/callback.service";
 import { DobControlService } from "../../services/dob-control.service";
 import { QuoteApplyConstants } from "../../constants/quoteapply-constants";
 import { QuoteApplyService } from "../../services/quoteapply.service";
@@ -28,6 +28,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
     submitted: boolean;
 
     constructor(
+        private callbackService: CallbackService,
         private dobControlService: DobControlService,
         private fb: FormBuilder,
         private postcodeService: PostcodeService,
@@ -47,9 +48,11 @@ export class TellFormComponent implements OnInit, OnDestroy {
         if (childrenQuestionGroup) {
             this.dobControlService.initialize({
                 childrenQuestionGroup: childrenQuestionGroup,
-                childDobLastLabel: angularData.additionalData.childDobLastLabel,
-                childDobSeperatorLabel: angularData.additionalData.childDobSeperatorLabel
+                additionalData: angularData.additionalData
             });
+        }
+        if (this.getQuestionGroup(QuoteApplyConstants.keys.callbackTimeQuestionGroup)) {
+            this.callbackService.initialize(angularData.additionalData);
         }
 
         this.tellForm = new FormGroup({});
