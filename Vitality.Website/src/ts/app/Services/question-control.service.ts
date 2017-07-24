@@ -1,6 +1,7 @@
 ﻿import { Injectable }   from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 
+import { CallMeBackService } from "../services/call-me-back.service";
 import { DobControlService } from "../services/dob-control.service";
 import { FieldValidator } from "../models/field-validator";
 import { QuoteApplyConstants } from "../constants/quoteapply-constants";
@@ -9,13 +10,15 @@ import { ValidationService } from "../services/validation.service";
 
 @Injectable()
 export class QuestionControlService {
-    private questionGroups : QuestionGroup[];
+    private questionGroups: QuestionGroup[];
+
     constructor(
         private dobControlService: DobControlService,
         private validationService: ValidationService
     ) {
     }
-    setQuestionGroups(questionGroups:QuestionGroup[]) {
+
+    setQuestionGroups(questionGroups: QuestionGroup[]) {
         this.questionGroups = questionGroups;
     }
 
@@ -28,20 +31,15 @@ export class QuestionControlService {
             const formControl = new FormControl(question.value || "",
                 this.getValidators(question.validators.filter(x => !x.isAsync)),
                 this.getAsyncValidators(question.validators.filter(x => x.isAsync)));
-            if (question.key === QuoteApplyConstants.keys.noOfChildren) {
-                formControl.valueChanges.subscribe(data => {
+
+            formControl.valueChanges.subscribe(data => {
+                if (question.key === QuoteApplyConstants.keys.noOfChildren) {
                     this.dobControlService.noOfKidsChanged(data);
-                    this.isValid(data, form, questionGroup);
-                });
-            } else if (question.key === QuoteApplyConstants.keys.membersToInsure) {
-                formControl.valueChanges.subscribe(data => {
+                } else if (question.key === QuoteApplyConstants.keys.membersToInsure) {
                     this.dobControlService.membersToInsureChanged(data);
-                    this.isValid(data, form, questionGroup);
-                });
-            }
-            else {
-                formControl.valueChanges.subscribe(data => this.isValid(data, form, questionGroup));
-            }
+                }
+                this.isValid(data, form, questionGroup);
+            });
             form.addControl(question.key, formControl);
         });
     }
