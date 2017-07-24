@@ -2,6 +2,7 @@ import { Component, Inject, OnDestroy, Input, OnInit }      from "@angular/core"
 import { FormArray, FormBuilder, FormGroup } from "@angular/forms";
 import { Subscription } from "rxjs/Subscription";
 
+import { CallMeBackService } from "../../services/call-me-back.service";
 import { DobControlService } from "../../services/dob-control.service";
 import { QuoteApplyConstants } from "../../constants/quoteapply-constants";
 import { QuoteApplyService } from "../../services/quoteapply.service";
@@ -43,11 +44,11 @@ export class TellFormComponent implements OnInit, OnDestroy {
         const childrenQuestionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.childrenQuestionGroup);
         this.questionControlService.setQuestionGroups(this.questionGroups);
 
-        if(childrenQuestionGroup) {
+        if (childrenQuestionGroup) {
             this.dobControlService.initialize({
                 childrenQuestionGroup: childrenQuestionGroup,
-                childDobLastLabel: angularData.childDobLastLabel,
-                childDobSeperatorLabel: angularData.childDobSeperatorLabel
+                childDobLastLabel: angularData.additionalData.childDobLastLabel,
+                childDobSeperatorLabel: angularData.additionalData.childDobSeperatorLabel
             });
         }
 
@@ -59,7 +60,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
         this.postcodeAsyncValidationSubscription = this.postcodeService.onPostcodeAsyncValidation()
             .subscribe((data: boolean) => {
                 if (data) {
-                    var questionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.postcodeQuestionGroup);
+                    let questionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.postcodeQuestionGroup);
                     questionGroup.isInvalid = false;
                     questionGroup.isCompleted = true;
                     this.calculateCompletedPercentage();

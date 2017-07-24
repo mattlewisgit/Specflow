@@ -41,6 +41,8 @@ export class ValidationService {
             return this.ageRangeValidator(params);
         case "futureDateValidator":
             return this.futureDateValidator(params);
+        case "excludeDayValidator":
+            return this.excludeDayValidator(params);
         default:
             return null;
         }
@@ -74,11 +76,23 @@ export class ValidationService {
             if (this.dateValidator(control) == null) {
                 const futureDate = moment(control.value, GlobalConstants.formats.dateFormat);
                 const dateDifference = Math.ceil(futureDate.diff(moment(), GlobalConstants.moments.days, true));
-                if (dateDifference <= options.minDaysAhead && dateDifference > -1) {
+                if (dateDifference <= options.maxDaysAhead && dateDifference > -1) {
                     return null;
                 }
             }
             return { "invalidFutureDate": true };
+        }
+    }
+
+    excludeDayValidator(options: any) {
+        return (control: any) => {
+            if (this.dateValidator(control) == null) {
+                const date = moment(control.value, GlobalConstants.formats.dateFormat);
+                if (date.day() != options.exclude) {
+                    return null;
+                }
+            }
+            return { "invalidDate": true };
         }
     }
 

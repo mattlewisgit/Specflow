@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.Specialized;
 using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Configuration.Attributes;
 using Glass.Mapper.Sc.Fields;
@@ -6,13 +7,11 @@ using Glass.Mapper.Sc.Fields;
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.TellForm
 {
     using Global.Models;
-    using SettingsTemplates;
 
     public class TellForm : SitecoreItem
     {
+        public NameValueCollection AdditionalData { get; set; }
         public string CallToActionText { get; set; }
-        public string ChildDobSeperatorLabel { get; set; }
-        public string ChildDobLastLabel { get; set; }
         public string OkBtnText { get; set; }
         public string OkBtnHelpText { get; set; }
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]

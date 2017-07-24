@@ -74,7 +74,11 @@
             config.CreateMap<TellForm, TellFormViewModel>()
                   .ForMember(
                     dest => dest.ServiceOutagePage,
-                    opt => opt.MapFrom(src => src.ServiceOutagePage.Url));
+                    opt => opt.MapFrom(src => src.ServiceOutagePage.Url))
+                    .ForMember(
+                    dest => dest.AdditionalData,
+                    opt => opt.MapFrom(src => src.AdditionalData.AllKeys.ToDictionary(i => i, i => src.AdditionalData[i])));
+            ;
         }
     }
 }
