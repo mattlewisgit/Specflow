@@ -42,7 +42,11 @@ export class QuestionControlService {
                         this.dobControlService.membersToInsureChanged(data);
                         break;
                     case QuoteApplyConstants.keys.callbackDate:
-                        this.callbackService.populateRanges(questionGroup.questions.filter(x => x.key === QuoteApplyConstants.keys.callbackTimeQuestionGroup)[0]);
+                        if (form.controls[QuoteApplyConstants.keys.callbackDate].valid) {
+                            this.callbackService
+                                .populateRanges(data, questionGroup.questions
+                                    .filter(x => x.key === QuoteApplyConstants.keys.callbackTime)[0]);
+                        }
                         break;
                 }
                 this.isValid(data, form, questionGroup);

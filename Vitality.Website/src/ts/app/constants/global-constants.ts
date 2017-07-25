@@ -14,10 +14,13 @@
         tab: 9
     };
     export const formats = {
-        dateFormat: "DD/MM/YYYY"
+        dateFormat: "DD/MM/YYYY",
+        dddd: "dddd",
+        hoursMinutes: "HH:mm"
     };
     export const moments = {
         days: "days" as "Q",
-        years: "years" as "Q"
+        years: "years" as "Q",
+        minutes: "minutes" as "Q"
     };
 };

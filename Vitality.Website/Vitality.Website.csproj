@@ -380,9 +380,11 @@
     <TypeScriptCompile Include="src\ts\app\constants\global-constants.ts" />
     <TypeScriptCompile Include="src\ts\app\models\extradataitem.ts" />
     <TypeScriptCompile Include="src\ts\app\models\field-validator.ts" />
+    <TypeScriptCompile Include="src\ts\app\models\opening-hours.ts" />
     <TypeScriptCompile Include="src\ts\app\models\question-group.ts" />
     <TypeScriptCompile Include="src\ts\app\models\question.ts" />
     <TypeScriptCompile Include="src\ts\app\services\callback.service.ts" />
+    <TypeScriptCompile Include="src\ts\app\services\moment-extended.service.ts" />
     <TypeScriptCompile Include="src\ts\app\tell-form-app.module.ts" />
     <TypeScriptCompile Include="src\ts\app\services\dob-control.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\error.service.ts" />
