@@ -3,11 +3,11 @@
     <ng-container *ngFor="let question of questionGroup.questions" [ngSwitch]="question.controlType">
         <ng-container *ngSwitchCase="'dropdown'">
             <div class="question--input__select">
+                {{ question.label }}
                 <select [id]="question.key" [formControlName]="question.key" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">
                     <option *ngIf="question.placeholder " value="">{{ question.placeholder }}</option>
                     <option *ngFor="let opt of question.relatedData" [value]="opt.key">{{opt.value}}</option>
                 </select>
-                {{ question.label }}
             </div>
         </ng-container>
         <ng-container *ngSwitchDefault>

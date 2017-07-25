@@ -54,11 +54,9 @@ export class DobControlService {
     noOfKidsChanged(noOfChildren: number) {
         //Do not use ===
         if (noOfChildren == 1) {
-            this.noOfChildrenQuestion.label = null;
             this.child1DobQuestion.label = this.child1DobLabel;
         } else if (noOfChildren > 1) {
-            this.noOfChildrenQuestion.label = this.noOfChildrenLabel;
-            this.child1DobQuestion.label = null;
+            this.child1DobQuestion.label = this.noOfChildrenLabel;
         } else {
             this.noOfChildrenQuestion.label = null;
             this.child1DobQuestion.label = null;
