@@ -64,7 +64,7 @@ export class QuestionControlService {
             this.handleHiddenGroups(entry.key, value);
             // If control is not visible make the group valid and completed
             const control = form.controls[entry.key];
-            questionGroup.isCompleted = control.valid || entry.isHidden;
+            questionGroup.isCompleted = control.valid || entry.isHidden || this.isNotRequiredAndEmpty(value, entry.validators);
             if (!questionGroup.isCompleted) {
                 questionGroup.isInvalid = !control.pristine;
                 break;
@@ -78,6 +78,10 @@ export class QuestionControlService {
         for (let cqg of conditionalGroups) {
             cqg.isHidden = cqg.basedOnValues.indexOf(value) < 0;
         }
+    }
+
+    private isNotRequiredAndEmpty(value: any, validators: FieldValidator[]) {
+        return !value && validators.filter(x => x.validatorName === "required").length ===0;
     }
 
     private handleError(error: any): void {

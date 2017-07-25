@@ -46,7 +46,5 @@ export class CallbackService {
             callbackDateOpeningHours.endMinute);
 
         question.relatedData = MomentExtendedService.getRanges(this.interval, starts, ends);
-        console.log(question);
     }
-
 }
