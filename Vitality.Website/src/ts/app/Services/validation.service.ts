@@ -48,18 +48,19 @@ export class ValidationService {
         }
     }
 
-    dateValidator(control: any) {
-        if (control.value
-            .match(/^(((0[1-9]|[12]\d|3[01])\/(0[13578]|1[02])\/((19|[2-9]\d)\d{2}))|((0[1-9]|[12]\d|30)\/(0[13456789]|1[012])\/((19|[2-9]\d)\d{2}))|((0[1-9]|1\d|2[0-8])\/02\/((19|[2-9]\d)\d{2}))|(29\/02\/((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$/g)) {
-            return null;
-        } else {
-            return { "invalidDate": true };
+    dateValidator() {
+        return (control: any) => {
+            if (this.matchDate(control.value)) {
+                return null;
+            } else {
+                return { "invalidDate": true };
+            }
         }
     }
 
     ageRangeValidator(options: any) {
         return (control: any) => {
-            if (this.dateValidator(control) == null) {
+            if (this.matchDate(control.value)) {
                 const birthDate = moment(control.value, GlobalConstants.formats.dateFormat);
                 const now = moment();
                 const years = Math.floor(now.diff(birthDate, GlobalConstants.moments.years, true));
@@ -73,7 +74,7 @@ export class ValidationService {
 
     futureDateValidator(options: any) {
         return (control: any) => {
-            if (this.dateValidator(control) == null) {
+            if (this.matchDate(control.value)) {
                 const futureDate = moment(control.value, GlobalConstants.formats.dateFormat);
                 const dateDifference = Math.ceil(futureDate.diff(moment(), GlobalConstants.moments.days, true));
                 if (dateDifference <= options.maxDaysAhead && dateDifference > -1) {
@@ -86,7 +87,7 @@ export class ValidationService {
 
     excludeDayValidator(options: any) {
         return (control: any) => {
-            if (this.dateValidator(control) == null) {
+            if (this.matchDate(control.value)) {
                 const date = moment(control.value, GlobalConstants.formats.dateFormat);
                 if (date.day() != options.exclude) {
                     return null;
@@ -145,5 +146,10 @@ export class ValidationService {
                 }
             });
         }
+    }
+
+    private matchDate(value: string): boolean {
+        return value
+            .match(/^(((0[1-9]|[12]\d|3[01])\/(0[13578]|1[02])\/((19|[2-9]\d)\d{2}))|((0[1-9]|[12]\d|30)\/(0[13456789]|1[012])\/((19|[2-9]\d)\d{2}))|((0[1-9]|1\d|2[0-8])\/02\/((19|[2-9]\d)\d{2}))|(29\/02\/((1[6-9]|[2-9]\d)(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00))))$/g)!=null;
     }
 }
