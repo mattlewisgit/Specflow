@@ -1,27 +1,34 @@
 ----item----
 version: 1
-id: {15593453-37CB-4EA4-B837-C36156C0D734}
+id: {A3D2DC89-BA29-47D6-9A77-5873B48FF70B}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Tell Form/Tell Form/__Standard Values
-parent: {2ADA24F8-7B05-48A5-AD7A-081AD11637D2}
-name: __Standard Values
+path: /sitecore/content/Presales/Configuration/Field Validators/Future Max Date Validator
+parent: {38BDCDEF-A8A4-4C3C-93AD-9BD62C745FB7}
+name: Future Max Date Validator
 master: {00000000-0000-0000-0000-000000000000}
-template: {2ADA24F8-7B05-48A5-AD7A-081AD11637D2}
-templatekey: Tell Form
-created: 20170610T202646Z
+template: {C631EE17-FF6E-4C17-8303-CFCE777FD8A2}
+templatekey: Field Validator
+created: 20170616T105027Z
 
-----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
-content-length: 38
-
-{338B1198-FD2E-4C63-94F2-CA164AF1E26C}
 ----version----
 language: en
 version: 1
-revision: 30873225-bf7c-4ded-a0f7-74e7a2573e02
+revision: 6e3658f9-ca3c-42ba-865e-2dd9eecf1b42
 
+----field----
+field: {41F1F96F-0AA6-4E4C-95ED-EA251B3BD7E7}
+name: ValidatorName
+key: validatorname
+content-length: 19
+
+futureDateValidator
+----field----
+field: {2DA36667-40DD-4A1C-952A-795FE6F0B4F0}
+name: Parameters
+key: parameters
+content-length: 15
+
+maxDaysAhead=30
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -35,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170610T202646Z
+20170616T105028Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-30873225-bf7c-4ded-a0f7-74e7a2573e02
+6e3658f9-ca3c-42ba-865e-2dd9eecf1b42
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170613T163428Z
+20170721T161225Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

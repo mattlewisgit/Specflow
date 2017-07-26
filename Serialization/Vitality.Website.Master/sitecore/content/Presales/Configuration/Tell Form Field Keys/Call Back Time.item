@@ -1,27 +1,27 @@
 ----item----
 version: 1
-id: {15593453-37CB-4EA4-B837-C36156C0D734}
+id: {8A098FA3-33B0-424A-B42F-32F1126A009F}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Tell Form/Tell Form/__Standard Values
-parent: {2ADA24F8-7B05-48A5-AD7A-081AD11637D2}
-name: __Standard Values
+path: /sitecore/content/Presales/Configuration/Tell Form Field Keys/Call Back Time
+parent: {55A7FBBD-D36E-4BA8-862D-DC58B4943080}
+name: Call Back Time
 master: {00000000-0000-0000-0000-000000000000}
-template: {2ADA24F8-7B05-48A5-AD7A-081AD11637D2}
-templatekey: Tell Form
-created: 20170610T202646Z
+template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
+templatekey: Key Value Pair
+created: 20170721T155924Z
 
-----field----
-field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
-name: __Masters
-key: __masters
-content-length: 38
-
-{338B1198-FD2E-4C63-94F2-CA164AF1E26C}
 ----version----
 language: en
 version: 1
-revision: 30873225-bf7c-4ded-a0f7-74e7a2573e02
+revision: 9938f04c-0366-4e38-8ae5-ed3f6fc51daa
 
+----field----
+field: {C01F61CF-8603-4C48-A96A-EFDDDFEB52ED}
+name: Value
+key: value
+content-length: 12
+
+callbackTime
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -35,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170610T202646Z
+20170721T155924Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-30873225-bf7c-4ded-a0f7-74e7a2573e02
+9938f04c-0366-4e38-8ae5-ed3f6fc51daa
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170613T163428Z
+20170721T155934Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

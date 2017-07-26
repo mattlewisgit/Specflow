@@ -1,62 +1,76 @@
 ----item----
 version: 1
-id: {5313D3D6-5E06-4677-ACC4-98446799B577}
+id: {CFE0B1F0-161A-46D9-81B4-CD5F4612464C}
 database: master
-path: /sitecore/content/Presales/Content/Tell Form/Call me back Form/My name is
+path: /sitecore/content/Presales/Content/Tell Form/Call me back Form/Call me back on
 parent: {10CD33C4-6E19-4CAA-BD68-31C1FC18B93D}
-name: My name is
+name: Call me back on
 master: {00000000-0000-0000-0000-000000000000}
 template: {338B1198-FD2E-4C63-94F2-CA164AF1E26C}
 templatekey: Question Group
-created: 20170720T105600Z
+created: 20170720T144656Z
 
 ----version----
 language: en
 version: 1
-revision: 43c0a8ed-cf35-42cf-b62e-a62228581680
+revision: d9dd2092-2edf-4747-99b6-126855b6bff1
 
 ----field----
 field: {DE38D3EB-81E3-4D60-8F57-F803A68EBEF2}
 name: Label
 key: label
-content-length: 10
+content-length: 15
 
-My name is
+Call me back on
 ----field----
 field: {B5971C34-6E72-4FE6-A8A0-1252FD55986A}
 name: Questions
 key: questions
-content-length: 116
+content-length: 77
 
-{C442986B-58F6-4A2C-94AF-203FE0CA82B0}|{5C75775E-9638-4E1E-B594-1994586D3420}|{DB91628D-A17D-47AF-BA17-104E3E9061AD}
+{3DE27DEE-27C7-40D4-98FA-6F51B3C6AC0D}|{D8A5FCFD-FEB0-4051-B46D-286B7ECE0570}
 ----field----
 field: {3754388B-A1F5-4D59-BB18-D8F583537122}
 name: ValidationMessage
 key: validationmessage
-content-length: 27
+content-length: 52
 
-Please enter your full name
+Please enter a valid date, Sundays are not included 
+----field----
+field: {119DDC94-4309-4020-A0DE-938EDF5850F3}
+name: HelpText
+key: helptext
+content-length: 154
+
+Leave blank and we'll get back to you in the next half an hour, if we're still open. Our opening times are Monday - Thursday 9am to 7pm, Friday 9am to 5pm
+----field----
+field: {41388122-00F1-4C68-A855-929CD212BD72}
+name: Key
+key: key
+content-length: 38
+
+{584D2DBA-C3AB-4450-B684-E0348E5D171E}
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170610T211134Z
+20170720T144656Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-43c0a8ed-cf35-42cf-b62e-a62228581680
+d9dd2092-2edf-4747-99b6-126855b6bff1
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170720T150909Z
+20170724T103844Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -12,6 +12,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.TellForm
     {
         public NameValueCollection AdditionalData { get; set; }
         public string CallToActionText { get; set; }
+        public bool EnableProgressBar { get; set; }
         public string OkBtnText { get; set; }
         public string OkBtnHelpText { get; set; }
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]

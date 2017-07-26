@@ -19,6 +19,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
     callToActionText: string;
     completedPercentage: number;
     isAllCompleted = false;
+    enableProgressBar = false;
     tellForm: FormGroup;
     okBtnHelpText: string;
     payload: string;
@@ -41,6 +42,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
         const angularData = this.winRef.nativeWindow.angularData;
         this.questionGroups = angularData.questionGroups;
         this.callToActionText = angularData.callToActionText;
+        this.enableProgressBar = angularData.enableProgressBar;
         this.renderingData = { okBtnText: angularData.okBtnText, okBtnHelpText: angularData.okBtnHelpText };
         const childrenQuestionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.childrenQuestionGroup);
         this.questionControlService.setQuestionGroups(this.questionGroups);
