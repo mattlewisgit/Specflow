@@ -1,0 +1,73 @@
+----item----
+version: 1
+id: {9CB634C4-C69E-4DD3-BB15-749259729836}
+database: master
+path: /sitecore/content/Presales/Content/Tell Form/Quote Apply Form/Cover starts on/Cover Start Date
+parent: {1BB3A99B-D686-4D9D-B627-E8F956FEA255}
+name: Cover Start Date
+master: {00000000-0000-0000-0000-000000000000}
+template: {16446BB0-1CE3-44A5-81FA-2417CE6A1FEB}
+templatekey: Question
+created: 20170613T101731Z
+
+----version----
+language: en
+version: 1
+revision: cabd287d-d82f-4cf5-98f4-78679d6e7b59
+
+----field----
+field: {365CBF3B-BCA1-4C43-A070-68B9FD55DAE2}
+name: Key
+key: key
+content-length: 38
+
+{3D203ACC-C99E-453B-92B3-B4FA6C8114B3}
+----field----
+field: {EDBA5F60-C406-43A0-8E4E-145A7BCD98FF}
+name: ControlType
+key: controltype
+content-length: 38
+
+{85F5E2CD-877A-45A3-B9B2-BB53B36EECD3}
+----field----
+field: {AF4DB38F-344A-443B-B34C-FB7EB529AAB7}
+name: Placeholder
+key: placeholder
+content-length: 10
+
+DD/MM/YYYY
+----field----
+field: {98D8AEE3-52A2-4CCE-9654-16DDD64735BD}
+name: Validators
+key: validators
+content-length: 116
+
+{F9D8696B-D818-4BD7-AAA3-1F270F7EF184}|{E38F5FF8-A3FB-4A37-ACFD-F80521B9EC95}|{A3D2DC89-BA29-47D6-9A77-5873B48FF70B}
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170613T101731Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+cabd287d-d82f-4cf5-98f4-78679d6e7b59
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170616T105239Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

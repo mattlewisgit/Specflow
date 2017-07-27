@@ -1,0 +1,23 @@
+<div class="quote--footer__logo">
+    <div>
+        <img src="/images/star_ratings_secondary_logo_2017_5.png" alt="Defacto 5 star rating" />
+    </div>
+</div>
+
+<div class="quote--footer__progress">
+    <div class="progress" *ngIf="!isAllCompleted && enableProgressBar">
+        <div class="progress-bar" role="progressbar"
+             aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [style.width.%]="completedPercentage">
+        </div>
+    </div>
+    <div *ngIf="isAllCompleted || !enableProgressBar">
+        <button type="button" class="button--box" (click)="submit()">{{ callToActionText }}</button>
+    </div>
+</div>
+
+<div class="quote--footer__chat">
+    <div>
+        <img src="/images/chat-open.svg" alt="Open chat window" />
+    </div>
+</div>
+

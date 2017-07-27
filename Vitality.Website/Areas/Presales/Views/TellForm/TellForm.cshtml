@@ -1,0 +1,32 @@
+﻿@using AutoMapper
+@using Newtonsoft.Json
+@using Newtonsoft.Json.Serialization
+@using Vitality.Website.Areas.Presales.ComponentTemplates.TellForm
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<TellForm>
+@{
+    var serializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
+    var angularModel = JsonConvert.SerializeObject(Mapper.Map<TellFormViewModel>(Model), serializerSettings);
+}
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div class="question">
+        <ul>
+            @foreach (var questionGroups in Model.QuestionGroups)
+            {
+                using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", questionGroups.Path))
+                {
+
+                }
+            }
+        </ul>
+    </div>
+}
+else
+{
+    <script type="text/javascript">
+        window.angularData = window.angularData || {};
+        window.angularData = @Html.Raw(angularModel);
+    </script>
+
+    <tell-form><div class="loader__icon"></div></tell-form>
+}

@@ -4,6 +4,9 @@
         postcode: "postcode"
     };
     export const keys = {
+        callbackTimeQuestionGroup: "callbackTimeQuestionGroup",
+        callbackDate: "callbackDate",
+        callbackTime: "callbackTime",
         child1Dob: "child1Dob",
         childrenQuestionGroup: "childrenDobGroup",
         membersToInsure: "membersToInsure",

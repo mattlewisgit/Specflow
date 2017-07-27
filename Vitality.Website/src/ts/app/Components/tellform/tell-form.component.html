@@ -1,0 +1,10 @@
+<form [formGroup]="tellForm" novalidate>
+    <div class="fade upper"></div>
+    <div class="fade lower"></div>
+    <question-group *ngFor="let questionGroup of questionGroups"
+                    [questionGroup]="questionGroup"
+                    [renderingData]="renderingData"
+                    [form]="tellForm">
+    </question-group>
+</form>
+
