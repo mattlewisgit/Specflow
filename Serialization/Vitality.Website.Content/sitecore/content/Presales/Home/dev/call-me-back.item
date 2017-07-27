@@ -1,19 +1,19 @@
 ----item----
 version: 1
-id: {C81216F4-E0EF-4257-A05E-546D6270A98F}
+id: {D6DA3A82-1EB1-4F14-92C1-F3F1886847DC}
 database: master
-path: /sitecore/content/Presales/home/dev/quote-and-apply
+path: /sitecore/content/Presales/home/dev/call-me-back
 parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
-name: quote-and-apply
+name: call-me-back
 master: {00000000-0000-0000-0000-000000000000}
 template: {55835F09-68C5-4E6D-91C1-851FFA6FB359}
 templatekey: Quote Apply Page
-created: 20170605T154043Z
+created: 20170720T092845Z
 
 ----version----
 language: en
 version: 1
-revision: 739f2d34-4699-44e5-9055-4a321c36b96f
+revision: 3790886b-e684-4200-a2c0-2f933b9162c7
 
 ----field----
 field: {3CBA56ED-F4D1-4412-BEBB-6ACED1AC1D34}
@@ -23,68 +23,47 @@ content-length: 58
 
 <image mediaid="{C6CEAFDD-641F-4D7D-8406-81CE603B3FF4}" />
 ----field----
-field: {B6E8B615-EE7A-485C-B14E-611876076E39}
-name: InheritSitemapSettings
-key: inheritsitemapsettings
-content-length: 0
-
-
-----field----
-field: {7AE135AE-220D-40F0-B2EC-D72B2A5659FC}
-name: ChangeFrequency
-key: changefrequency
-content-length: 0
-
-
-----field----
 field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
 name: Title
 key: title
-content-length: 0
+content-length: 19
 
-
+Request a call back
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 15
+content-length: 12
 
-Quote and Apply
+Call me back
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
 content-length: 453
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{B74C1800-371B-48AD-A0E6-D4CE6928B708}" p:before="*" s:ds="{B94E68FC-5F55-4CB3-96F0-683F58252F9A}" s:id="{F93FB20E-4857-48D5-9E8F-00DEA2EEF653}" s:ph="QuoteApplyFooter" /><r uid="{2DB2A365-14B9-48F2-9BF9-0EC57C91540A}" p:after="*[1=2]" s:ds="{78A08764-97F8-477F-A1FB-5643492C7BD3}" s:id="{4ED51072-8E9C-4812-BB4C-48494E3D9D00}" s:ph="QuoteApplyContent" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{EE53ED0D-A1DE-4381-9BCC-AB86A6EA63C2}" p:before="*" s:ds="{4EC42F72-9B18-41A7-8EFF-52DF81EB948E}" s:id="{F93FB20E-4857-48D5-9E8F-00DEA2EEF653}" s:ph="QuoteApplyFooter" /><r uid="{C4EDC29F-3057-4990-A56C-E9616AD3023E}" p:after="*[1=2]" s:ds="{10CD33C4-6E19-4CAA-BD68-31C1FC18B93D}" s:id="{4ED51072-8E9C-4812-BB4C-48494E3D9D00}" s:ph="QuoteApplyContent" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170605T154043Z
-----field----
-field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
-name: __Created by
-key: __created by
-content-length: 14
-
-sitecore\admin
+20170720T092845Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-739f2d34-4699-44e5-9055-4a321c36b96f
+3790886b-e684-4200-a2c0-2f933b9162c7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170727T120143Z
+20170727T115841Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
