@@ -13,7 +13,7 @@ created: 20170605T154043Z
 ----version----
 language: en
 version: 1
-revision: 4e77f670-a055-4389-bb87-e4ffc385c1d9
+revision: 47cdde0b-a1a8-49ff-9507-2afa5b5ca1d6
 
 ----field----
 field: {3CBA56ED-F4D1-4412-BEBB-6ACED1AC1D34}
@@ -54,9 +54,9 @@ Quote and Apply
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 257
+content-length: 454
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{2DB2A365-14B9-48F2-9BF9-0EC57C91540A}" s:ds="{78A08764-97F8-477F-A1FB-5643492C7BD3}" s:id="{4ED51072-8E9C-4812-BB4C-48494E3D9D00}" s:ph="QuoteApplyContent" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{C1525DDD-FB7A-4DBE-814B-CDFC5509EAF5}" p:before="*" s:ds="{7CDCE2BD-456C-47AC-8830-BD58592ACB69}" s:id="{22F063C3-8EEB-47BC-9656-93984B0AA084}" s:ph="QuoteApplySidebar" /><r uid="{8098BEE1-CC67-444A-9D6A-C4D8A3008915}" p:after="*[1=2]" s:ds="{10CD33C4-6E19-4CAA-BD68-31C1FC18B93D}" s:id="{4ED51072-8E9C-4812-BB4C-48494E3D9D00}" s:ph="QuoteApplyContent" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -77,21 +77,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4e77f670-a055-4389-bb87-e4ffc385c1d9
+47cdde0b-a1a8-49ff-9507-2afa5b5ca1d6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T151248Z
+20170727T150243Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave
 ----field----
 field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
 name: __Lock

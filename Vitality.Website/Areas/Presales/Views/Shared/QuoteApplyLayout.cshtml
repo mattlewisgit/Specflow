@@ -1,15 +1,12 @@
 ﻿@using Sitecore.Mvc
 @using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.QuoteApplyPage>
-@{
-    var localEnv = "presales.vitality.co.uk" == HttpContext.Current.Request.Url.Host;
-}
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     @if (IsInEditingMode)
     {
-        <link rel="stylesheet" href="/css/experience_editor_fix.css" />
+        <link rel="stylesheet" href="/css/experience_editor_fix.css"/>
     }
     else
     {
@@ -18,45 +15,32 @@
     @Html.Sitecore().Placeholder("gtm")
     @Html.Sitecore().Placeholder("metadata")
 
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700" />
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700"/>
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
 </head>
 <body>
-    @Html.Sitecore().Placeholder("gtmnoscript")
-    <main tabindex="-1">
-        <div class="quote">
-            <div class="quote--header">
-                @GlassHtml.RenderLazyImage(Model, item => item.Logo)
-                <h1>@Editable(Model, item => item.Title)</h1>
-            </div>
-
-            <div class="quote--left">
-                &nbsp;
-            </div>
-            <div class="quote--content">
-                @Html.Sitecore().Placeholder("QuoteApplyContent")
-            </div>
-            <div class="quote--right">
-                &nbsp;
-            </div>
-            <footer class="quote--footer">
-                @Html.Sitecore().Placeholder("QuoteApplyFooter")
-            </footer>
+@Html.Sitecore().Placeholder("gtmnoscript")
+<main tabindex="-1">
+    <div class="quote">
+        <div class="quote--header">
+            @GlassHtml.RenderLazyImage(Model, item => item.Logo)
+            <h1>@Editable(Model , item=> item.Title)</h1>
         </div>
-    </main>
-    <script type="text/javascript" src='@(localEnv ? "node_modules/core-js/client/shim.min.js" : "https://unpkg.com/core-js/client/shim.min.js")'></script>
-    <script type="text/javascript" src='@(localEnv ? "node_modules/zone.js/dist/zone.js" : "https://unpkg.com/zone.js@0.8.4/dist/zone.min.js?main=browser")'></script>
-    <script type="text/javascript" src='@(localEnv ? "node_modules/systemjs/dist/system.src.js" : "https://unpkg.com/systemjs@0.19.39/dist/system.js")'></script>
-    <script>if (!(window.SystemJS)) window.cdnizerLoad("node_modules/core-js/client/shim.min.js");</script>
-    <script>if (!(window.SystemJS)) window.cdnizerLoad("node_modules/zone.js/dist/zone.js");</script>
-    <script>if (!(window.SystemJS)) window.cdnizerLoad("node_modules/systemjs/dist/system.src.js");</script>
-    <script type="text/javascript" src='@(localEnv ? "/js/systemjs.config.js" : "/js/systemjs.config.server.js")'></script>
 
-    <script type="text/javascript">
-        System.import('/js/quote-apply-main.js')
-            .catch(function(err) { throw err; });
-    </script>
+        <div class="quote--left">
+            &nbsp;
+        </div>
+        @Html.Sitecore().Placeholder("QuoteApplyContent")
+
+
+        <div class="quote--right">
+            &nbsp;
+        </div>
+
+        @Html.Sitecore().Placeholder("QuoteApplySidebar")
+    </div>
+</main>
     @Html.Partial("_JsThirdParty")
 
     <script type="text/javascript" src="/js/vitality.presales.min.js"></script>

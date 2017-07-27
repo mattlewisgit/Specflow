@@ -10,7 +10,7 @@ select {
 
 body,
 select {
-  line-height: 2; }
+  line-height: 1.65; }
 
 button,
 h1,
@@ -18,7 +18,7 @@ h2,
 h3,
 h4,
 input {
-  line-height: 1; }
+  line-height: 1.1; }
 
 body {
   background: #f41a5c;
@@ -51,7 +51,9 @@ button,
 select {
   cursor: pointer; }
 
-kbd {
+b,
+kbd,
+strong {
   font-weight: 600; }
 
 .button--box {
@@ -193,20 +195,78 @@ kbd {
       padding-right: 1.5em;
       text-align: right; }
     .quote--footer__chat img {
-      filter: drop-shadow(0 0 10px rgba(51, 51, 51, 0.6));
+      filter: drop-shadow(0 0 0.75em rgba(0, 0, 0, 0.4));
       max-width: 3em; }
 
 .chat-window {
+  filter: drop-shadow(0 0 0.75em rgba(0, 0, 0, 0.4));
   background: white;
-  padding: 1.5em; }
+  border-radius: 0.75em;
+  bottom: 6em;
+  line-height: 1.1;
+  overflow-y: auto;
+  padding-top: 0.75em;
+  position: fixed;
+  right: 1.5em;
+  top: 3em;
+  width: 25%;
+  z-index: 1; }
+  .chat-window a {
+    font-weight: 600; }
   .chat-window--bubble {
-    background-color: #ccc;
-    border-radius: 0.75em;
-    color: black;
-    margin-bottom: 1.5em;
-    padding: 0.75em; }
-    .chat-window--bubble:last-child {
-      margin-bottom: 0; }
+    display: flex;
+    flex-direction: row;
+    margin: 0 0.75em 0.75em; }
+    .chat-window--bubble a {
+      border-bottom: 2px dotted #f41a5c;
+      color: #f41a5c;
+      clear: right;
+      display: inline-block;
+      margin: 0.375em 0 0.75em;
+      text-decoration: none;
+      transition: color 0.2s ease-in, border-bottom 0.2s ease-in; }
+      .chat-window--bubble a[href^='tel:'] {
+        font-size: 36px; }
+      .chat-window--bubble a:last-child {
+        margin-bottom: 0.1875em; }
+      .chat-window--bubble a:hover {
+        border-bottom: 2px solid #bb114a;
+        color: #bb114a; }
+    .chat-window--bubble b,
+    .chat-window--bubble strong {
+      color: #f41a5c; }
+    .chat-window--bubble__avatar, .chat-window--bubble__content {
+      align-self: flex-end;
+      display: block;
+      justify-content: flex-end; }
+    .chat-window--bubble__avatar img {
+      max-width: 3em;
+      width: 3em; }
+    .chat-window--bubble__content {
+      background-color: #ebf0f4;
+      border-radius: 0.75em;
+      color: black;
+      margin-left: 0.375em;
+      padding: 0 0.75em;
+      white-space: pre-line;
+      width: 100%; }
+      .chat-window--bubble__content::after {
+        border: solid transparent;
+        border-bottom-color: #ebf0f4;
+        border-width: 0.375em;
+        bottom: 1.5em;
+        content: " ";
+        height: 0;
+        margin-left: -1.1em;
+        position: relative;
+        width: 0; }
+  @media (max-width: 49.99em) {
+    .chat-window {
+      font-size: 16px;
+      line-height: 1.65;
+      width: 50%; }
+      .chat-window .chat-window--bubble a[href^='tel:'] {
+        font-size: 24px; } }
 
 .progress {
   background: #bb114a;

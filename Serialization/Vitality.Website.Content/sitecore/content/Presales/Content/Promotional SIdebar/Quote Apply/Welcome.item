@@ -1,0 +1,61 @@
+----item----
+version: 1
+id: {AAF6FA86-13BA-41F4-8747-7A70A80B624D}
+database: master
+path: /sitecore/content/Presales/Content/Promotional SIdebar/Quote Apply/Welcome
+parent: {7CDCE2BD-456C-47AC-8830-BD58592ACB69}
+name: Welcome
+master: {00000000-0000-0000-0000-000000000000}
+template: {3CBFEB56-A2D0-4F38-BC15-87F864A982B5}
+templatekey: Promotional Sidebar Content
+created: 20170727T150350Z
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 2
+
+50
+----version----
+language: en
+version: 1
+revision: d3ea9ccd-93c0-4bf6-a649-118e98cab365
+
+----field----
+field: {9BF6F516-1771-4061-949B-B16356B35D72}
+name: Content
+key: content
+content-length: 746
+
+Hello there!<br />
+<div class="telerik_paste_container" style="border-width: 0px; position: absolute; overflow: hidden; margin: 0px; padding: 0px; left: 3px; top: 8px; width: 1px; height: 1px;"><span style="white-space: pre-line; background-color: #ebf0f4; font-family: 'Hind Siliguri', Helvetica, Arial, sans-serif; font-size: 24px; color: #000000;">&nbsp;Hello there!</span></div>
+<div class="telerik_paste_container" style="border-width: 0px; position: absolute; overflow: hidden; margin: 0px; padding: 0px; left: 3px; top: 8px; width: 1px; height: 1px;"><span style="white-space: pre-line; background-color: #ebf0f4; font-family: 'Hind Siliguri', Helvetica, Arial, sans-serif; font-size: 24px; color: #000000;">&nbsp;Hello there!</span></div>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170727T150350Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d3ea9ccd-93c0-4bf6-a649-118e98cab365
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170727T150521Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 13
+
+sitecore\Dave

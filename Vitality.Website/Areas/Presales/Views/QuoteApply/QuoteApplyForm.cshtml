@@ -1,0 +1,48 @@
+﻿@using AutoMapper
+@using Newtonsoft.Json
+@using Newtonsoft.Json.Serialization
+@using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<QuoteApplyForm>
+ @{
+     var localEnv = "presales.vitality.co.uk" == HttpContext.Current.Request.Url.Host;
+     var serializerSettings = new JsonSerializerSettings {ContractResolver = new CamelCasePropertyNamesContractResolver()};
+     var angularModel = JsonConvert.SerializeObject(Mapper.Map<QuoteApplyFormViewModel>(Model), serializerSettings);
+ }
+    <div class="quote--content">
+        @if (Sitecore.Context.PageMode.IsExperienceEditor)
+        {
+            <div class="question">
+                <ul>
+                    @foreach (var questionGroups in Model.QuestionGroups)
+                    {
+                        using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", questionGroups.Path))
+                        {
+                            <span>@questionGroups.Label</span>
+                        }
+                    }
+                </ul>
+            </div>
+        }
+        else
+        {
+            <script type="text/javascript" src='@(localEnv ? "node_modules/core-js/client/shim.min.js" : "https://unpkg.com/core-js/client/shim.min.js")'></script>
+            <script type="text/javascript" src='@(localEnv ? "node_modules/zone.js/dist/zone.js" : "https://unpkg.com/zone.js@0.8.4/dist/zone.min.js?main=browser")'></script>
+            <script type="text/javascript" src='@(localEnv ? "node_modules/systemjs/dist/system.src.js" : "https://unpkg.com/systemjs@0.19.39/dist/system.js")'></script>
+            <script>if(!(window.SystemJS)) window.cdnizerLoad("node_modules/core-js/client/shim.min.js");</script>
+            <script>if(!(window.SystemJS)) window.cdnizerLoad("node_modules/zone.js/dist/zone.js");</script>
+            <script>if(!(window.SystemJS)) window.cdnizerLoad("node_modules/systemjs/dist/system.src.js");</script>
+            <script type="text/javascript" src='@(localEnv ? "/js/systemjs.config.js" : "/js/systemjs.config.server.js")'></script>
+
+            <script type="text/javascript">
+                System.import('/js/quoteapply-main.js')
+                                .catch(function (err) { throw err; });
+            </script>
+
+            <script type="text/javascript">
+                window.angularData = window.angularData || {};
+                window.angularData = @Html.Raw(angularModel);
+            </script>
+
+            <quoteapply-form><div class="loader__icon"></div></quoteapply-form>
+        }
+    </div>
