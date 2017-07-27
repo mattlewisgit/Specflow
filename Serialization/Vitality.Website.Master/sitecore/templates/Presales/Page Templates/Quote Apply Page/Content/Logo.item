@@ -2,7 +2,7 @@
 version: 1
 id: {3CBA56ED-F4D1-4412-BEBB-6ACED1AC1D34}
 database: master
-path: /sitecore/templates/Presales/Page Templates/Tell Form Page/Content/Logo
+path: /sitecore/templates/Presales/Page Templates/Quote Apply Page/Content/Logo
 parent: {B4B319B5-5C49-4175-9006-90FF71000786}
 name: Logo
 master: {00000000-0000-0000-0000-000000000000}

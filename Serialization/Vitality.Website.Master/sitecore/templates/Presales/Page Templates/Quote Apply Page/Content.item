@@ -2,7 +2,7 @@
 version: 1
 id: {B4B319B5-5C49-4175-9006-90FF71000786}
 database: master
-path: /sitecore/templates/Presales/Page Templates/Tell Form Page/Content
+path: /sitecore/templates/Presales/Page Templates/Quote Apply Page/Content
 parent: {55835F09-68C5-4E6D-91C1-851FFA6FB359}
 name: Content
 master: {00000000-0000-0000-0000-000000000000}
