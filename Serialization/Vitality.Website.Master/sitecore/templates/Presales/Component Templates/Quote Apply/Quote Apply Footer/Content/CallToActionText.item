@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {F5F65715-DEDB-4786-BD3D-D34DFB43883F}
+id: {04CC9454-8BFE-400B-B389-89D19AA295F4}
 database: master
-path: /sitecore/templates/Presales/Component Templates/Tell Form/Tell Form/Contents/CallToActionText
-parent: {0363AF28-AB2D-4274-80B2-3D584FEA31A9}
+path: /sitecore/templates/Presales/Component Templates/Quote Apply/Quote Apply Footer/Content/CallToActionText
+parent: {D39CC1D2-6382-4061-9B4A-79CF7A9F0971}
 name: CallToActionText
 master: {00000000-0000-0000-0000-000000000000}
 template: {455A3E98-A627-4B40-8035-E683A0331AC7}
 templatekey: Template field
-created: 20170627T091718Z
+created: 20170726T141042Z
 
 ----field----
 field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
@@ -23,11 +23,11 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-900
+100
 ----version----
 language: en
 version: 1
-revision: dab836d7-b0ca-41dc-bc69-3b09627d3e6f
+revision: 28979fd3-4bf5-4975-b911-4f903d7449e5
 
 ----field----
 field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
@@ -49,7 +49,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170627T091718Z
+20170726T141042Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-dab836d7-b0ca-41dc-bc69-3b09627d3e6f
+28979fd3-4bf5-4975-b911-4f903d7449e5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170707T094400Z
+20170726T151334Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

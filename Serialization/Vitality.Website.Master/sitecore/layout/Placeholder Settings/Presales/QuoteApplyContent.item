@@ -2,9 +2,9 @@
 version: 1
 id: {5F03ADE1-0508-4C84-9198-6A905D6ADDE9}
 database: master
-path: /sitecore/layout/Placeholder Settings/Presales/TellFormContent
+path: /sitecore/layout/Placeholder Settings/Presales/QuoteApplyContent
 parent: {8D383B87-ADB9-47E8-93A6-01E99591C7BE}
-name: TellFormContent
+name: QuoteApplyContent
 master: {00000000-0000-0000-0000-000000000000}
 template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
 templatekey: Placeholder
@@ -14,9 +14,9 @@ created: 20170612T102837Z
 field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
 name: Placeholder Key
 key: placeholder key
-content-length: 15
+content-length: 17
 
-TellFormContent
+QuoteApplyContent
 ----field----
 field: {E391B526-D0C5-439D-803E-17512EAE6222}
 name: Allowed Controls
@@ -27,7 +27,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: a85c46b8-0985-4d79-aef7-480a499b3b02
+revision: 174469e9-bfcf-4357-9c66-49fbab3ed0b6
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -49,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a85c46b8-0985-4d79-aef7-480a499b3b02
+174469e9-bfcf-4357-9c66-49fbab3ed0b6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170720T102851Z
+20170726T155936Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

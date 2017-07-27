@@ -30,13 +30,6 @@ content-length: 155
 
 {5313D3D6-5E06-4677-ACC4-98446799B577}|{DCEC597C-A255-4F6E-B8D4-5FBC8F594FB8}|{CDE81A68-ED16-4136-84C0-8D0ED9436C8C}|{CFE0B1F0-161A-46D9-81B4-CD5F4612464C}
 ----field----
-field: {F5F65715-DEDB-4786-BD3D-D34DFB43883F}
-name: CallToActionText
-key: calltoactiontext
-content-length: 7
-
-Call Me
-----field----
 field: {756E5F75-3478-4B27-B4CF-A763FB5E0CD4}
 name: OkBtnText
 key: okbtntext
