@@ -3939,6 +3939,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Areas\Global\Models\FieldValidator.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\PromotionSidebar\PromotionSidebar.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\PromotionSidebar\PromotionSidebarContent.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFooter.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFooterViewModel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\TellForm\FieldValidatorViewModel.cs" />

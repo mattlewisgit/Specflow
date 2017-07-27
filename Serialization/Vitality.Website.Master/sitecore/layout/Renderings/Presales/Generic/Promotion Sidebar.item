@@ -56,13 +56,13 @@ query:./ancestor-or-self::*[@@templatename='Website']/Content/Promotional Sideba
 field: {1A7C85E5-DC0B-490D-9187-BB1DBCB4C72F}
 name: Datasource Template
 key: datasource template
-content-length: 84
+content-length: 86
 
-/sitecore/templates/Presales/Component Templates/Generic/Promotional Sidebar Content
+/sitecore/templates/Presales/Component Templates/Promotion Sidebar/Promotional Sidebar
 ----version----
 language: en
 version: 1
-revision: 9a47de0e-3971-45bc-a696-2a404533487b
+revision: a8df7bf3-c7d3-428a-a1bc-8658a5330e68
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -91,14 +91,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9a47de0e-3971-45bc-a696-2a404533487b
+a8df7bf3-c7d3-428a-a1bc-8658a5330e68
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170727T141419Z
+20170727T152501Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

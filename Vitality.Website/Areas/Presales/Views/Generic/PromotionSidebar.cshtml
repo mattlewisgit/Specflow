@@ -1,12 +1,11 @@
 ﻿@using AutoMapper
 @using Newtonsoft.Json
 @using Newtonsoft.Json.Serialization
-@using Vitality.Website.Areas.Presales.ComponentTemplates.TellForm
-@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<TellForm>
+@using Vitality.Website.Areas.Presales.ComponentTemplates.PromotionSidebar;
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<PromotionSidebar>
 @{
-    var serializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
-    var angularModel = JsonConvert.SerializeObject(Mapper.Map<TellFormViewModel>(Model), serializerSettings);
 }
+
 @if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
     <div class="chat-window">
