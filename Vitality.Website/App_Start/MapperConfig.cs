@@ -19,6 +19,16 @@ namespace Vitality.Website.App_Start
 
         private static void SetMapping(IMapperConfigurationExpression config)
         {
+            config.CreateMap<Acknowledgement, AcknowledgementViewModel>()
+                .ForMember(
+                    dest => dest.AdditionalData,
+                    opt =>
+                        opt.MapFrom(
+                            src => src.AdditionalData.AllKeys.ToDictionary(i => i, i => src.AdditionalData[i])))
+                .ForMember(
+                    dest => dest.CallToAction,
+                    opt => opt.MapFrom(src => src.CallToAction.Url));
+
             config
                 .CreateMap<VacancyList, VacancyListViewModel>()
                 .ForMember(
@@ -76,12 +86,18 @@ namespace Vitality.Website.App_Start
             config.CreateMap<QuoteApplyFooter, QuoteApplyFooterViewModel>();
 
             config.CreateMap<TellForm, TellFormViewModel>()
-                  .ForMember(
-                    dest => dest.ServiceOutagePage,
-                    opt => opt.MapFrom(src => src.ServiceOutagePage.Url))
-                    .ForMember(
+                .ForMember(
                     dest => dest.AdditionalData,
-                    opt => opt.MapFrom(src => src.AdditionalData.AllKeys.ToDictionary(i => i, i => src.AdditionalData[i])));
+                    opt =>
+                        opt.MapFrom(
+                            src => src.AdditionalData.AllKeys.ToDictionary(i => i, i => src.AdditionalData[i])))
+                .ForMember(
+                    dest => dest.CallToAction,
+                    opt => opt.MapFrom(src => src.CallToAction.Url))
+                .ForMember(
+                    dest => dest.ServiceOutagePage,
+                    opt => opt.MapFrom(src => src.ServiceOutagePage.Url));
+
         }
     }
 }

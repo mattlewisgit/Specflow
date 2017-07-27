@@ -364,6 +364,7 @@
     </Content>
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
     <Content Include="Areas\Presales\Views\TellForm\TellForm.cshtml" />
+    <Content Include="Areas\Presales\Views\QuoteApply\Acknowledgement.cshtml" />
     <None Include="Areas\Presales\Views\Shared\QuoteApplyLayout.cshtml" />
     <Content Include="src\js\countdown-timer-app.js" />
     <Content Include="src\js\global-functions.js" />
@@ -380,19 +381,23 @@
     <TypeScriptCompile Include="src\ts\app\constants\quoteapply-constants.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\auto-scroll-to.directive.ts" />
     <TypeScriptCompile Include="src\ts\app\constants\global-constants.ts" />
+    <TypeScriptCompile Include="src\ts\app\factories\footer-bar-service.factory.ts" />
     <TypeScriptCompile Include="src\ts\app\models\extradataitem.ts" />
     <TypeScriptCompile Include="src\ts\app\models\field-validator.ts" />
     <TypeScriptCompile Include="src\ts\app\models\opening-hours.ts" />
     <TypeScriptCompile Include="src\ts\app\models\question-group.ts" />
     <TypeScriptCompile Include="src\ts\app\models\question.ts" />
+    <TypeScriptCompile Include="src\ts\app\quote-apply-footer.module.ts" />
+    <TypeScriptCompile Include="src\ts\tell-form.main.ts" />
+    <TypeScriptCompile Include="src\ts\quote-apply-footer.main.ts" />
     <TypeScriptCompile Include="src\ts\app\services\callback.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\moment-extended.service.ts" />
-    <TypeScriptCompile Include="src\ts\app\quote-apply-app.module.ts" />
+    <TypeScriptCompile Include="src\ts\app\tell-form.module.ts" />
     <TypeScriptCompile Include="src\ts\app\services\dob-control.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\error.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\postcode.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\tell-form.service.ts" />
-    <TypeScriptCompile Include="src\ts\app\services\progress-bar.service.ts" />
+    <TypeScriptCompile Include="src\ts\app\services\footer-bar.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\question-control.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\validation.service.ts" />
     <TypeScriptCompile Include="src\ts\app\vacancydetails-app.module.ts" />
@@ -658,6 +663,7 @@
     <Content Include="Areas\Presales\Views\Generic\MessageBox.cshtml" />
     <Content Include="Areas\Presales\Views\Generic\CountdownTimer.cshtml" />
     <Content Include="Areas\Presales\Views\QuoteApply\QuoteApplyFooter.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\_JsAngular.cshtml" />
     <None Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.intellisense.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.min.js" />
@@ -3938,7 +3944,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Areas\Global\Models\FieldValidator.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\Acknowledgement.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFooter.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\AcknowledgementViewModel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFooterViewModel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\TellForm\FieldValidatorViewModel.cs" />
     <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />

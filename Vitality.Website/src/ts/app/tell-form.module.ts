@@ -6,8 +6,9 @@ import { ReactiveFormsModule }   from "@angular/forms";
 import { CallbackService }  from "./services/callback.service";
 import { DobControlService }  from "./services/dob-control.service";
 import { ErrorService }  from "./services/error.service";
+import { FooterBarService }  from "./services/footer-bar.service";
+import { footerBarServiceFactory }  from "./factories/footer-bar-service.factory";
 import { PostcodeService }  from "./services/postcode.service";
-import { ProgressBarService }  from "./services/progress-bar.service";
 import { QuestionControlService }  from "./services/question-control.service";
 import { TellFormService }  from "./services/tell-form.service";
 import { ValidationService }  from "./services/validation.service";
@@ -16,8 +17,7 @@ import { AutoScrollTo } from "./directives/auto-scroll-to.directive";
 import { QuestionGroupComponent } from "./components/tellform/question-group.component";
 import { QuoteApplyFooterComponent }  from "./components/quoteapply/quote-apply-footer.component";
 import { TellFormComponent }  from "./components/tellform/tell-form.component";
-
-import { WindowRef }  from "./components/windowref";
+import { WindowRef } from "./components/windowref";
 
 @NgModule({
     imports: [
@@ -25,8 +25,8 @@ import { WindowRef }  from "./components/windowref";
         ReactiveFormsModule,
         HttpModule
     ],
-    declarations: [AutoScrollTo, TellFormComponent, QuestionGroupComponent, QuoteApplyFooterComponent],
-    providers: [CallbackService, DobControlService, ErrorService, PostcodeService, ProgressBarService, QuestionControlService, TellFormService, ValidationService, WindowRef],
-    bootstrap: [TellFormComponent, QuoteApplyFooterComponent]
+    declarations: [AutoScrollTo, TellFormComponent, QuestionGroupComponent],
+    providers: [CallbackService, DobControlService, ErrorService, PostcodeService, { provide: FooterBarService, useValue: footerBarServiceFactory() }, QuestionControlService, TellFormService, ValidationService, WindowRef],
+    bootstrap: [TellFormComponent]
 })
-export class QuoteApplyAppModule { }
+export class TellFormModule { }

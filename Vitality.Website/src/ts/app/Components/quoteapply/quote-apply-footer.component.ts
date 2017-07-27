@@ -1,8 +1,7 @@
-import { Component, Inject, Input, OnInit }      from "@angular/core";
+import { Component, Input, OnInit, ChangeDetectorRef }      from "@angular/core";
 import { WindowRef } from "./../windowref";
 import { Subscription } from "rxjs/Subscription";
-import { ProgressBarService } from "../../services/progress-bar.service";
-import { TellFormService } from "../../services/tell-form.service";
+import { FooterBarService } from "../../services/footer-bar.service";
 
 @Component({
     selector: "quote-apply-footer",
@@ -16,8 +15,8 @@ export class QuoteApplyFooterComponent implements OnInit {
     private completedPercentageSubscription: Subscription;
 
     constructor(
-        private progressBarService: ProgressBarService,
-        private tellFormService: TellFormService,
+        private ref: ChangeDetectorRef,
+        private footerBarService: FooterBarService,
         private winRef: WindowRef) {
     }
 
@@ -25,14 +24,17 @@ export class QuoteApplyFooterComponent implements OnInit {
         const quoteFooterData = this.winRef.nativeWindow.angularData.quoteApplyFooter;
         this.callToActionText = quoteFooterData.callToActionText;
         this.enableProgressBar = quoteFooterData.enableProgressBar;
-        this.completedPercentageSubscription = this.progressBarService.onCompletedPercentageChange()
+        this.completedPercentageSubscription = this.footerBarService.onCompletedPercentageChange()
             .subscribe((data: number) => {
-                this.completedPercentage = data;
-                this.isAllCompleted = this.completedPercentage === 100;
+                if (this.completedPercentage !== data) {
+                    this.completedPercentage = data;
+                    this.isAllCompleted = this.completedPercentage === 100;
+                    this.ref.detectChanges();
+                }
             });
     }
 
     submit(): void {
-        this.tellFormService.submitEmitter.emit(true);
+        this.footerBarService.submitEmitter.emit(true);
     }
 }

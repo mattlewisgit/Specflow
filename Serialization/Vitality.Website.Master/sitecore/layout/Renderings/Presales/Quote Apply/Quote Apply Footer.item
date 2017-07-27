@@ -28,9 +28,9 @@ Presales
 field: {F4069D71-74D7-4422-941D-54B517CF3001}
 name: Placeholder
 key: placeholder
-content-length: 0
+content-length: 16
 
-
+QuoteApplyFooter
 ----field----
 field: {2E51DF70-D3E4-458C-B03A-95C734DD39E7}
 name: Data source
@@ -62,7 +62,7 @@ content-length: 58
 ----version----
 language: en
 version: 1
-revision: fb278d49-e613-433e-8074-5333582eab0e
+revision: f1a5c019-b2d0-4025-87ae-d60ec235a285
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -91,14 +91,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-fb278d49-e613-433e-8074-5333582eab0e
+f1a5c019-b2d0-4025-87ae-d60ec235a285
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170727T103312Z
+20170727T124354Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

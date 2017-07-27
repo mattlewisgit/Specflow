@@ -1,22 +1,22 @@
 ----item----
 version: 1
-id: {4ED51072-8E9C-4812-BB4C-48494E3D9D00}
+id: {D27ACD9A-1323-455D-933C-6E90ECB1D7F3}
 database: master
-path: /sitecore/layout/Renderings/Presales/TellForm/Tell Form
-parent: {03906E8F-D048-4C45-820B-F09B8B0CC5A4}
-name: Tell Form
+path: /sitecore/layout/Renderings/Presales/Quote Apply/Acknowledgement
+parent: {01657016-6A69-4924-A787-9753465E7D2C}
+name: Acknowledgement
 master: {00000000-0000-0000-0000-000000000000}
 template: {99F8905D-4A87-4EB8-9F8B-A9BEBFB3ADD6}
 templatekey: View rendering
-created: 20170610T141146Z
+created: 20170727T123510Z
 
 ----field----
 field: {51B435BC-F7B9-478A-9C51-52916AF96FF5}
 name: Path
 key: path
-content-length: 46
+content-length: 55
 
-/Areas/Presales/Views/TellForm/TellForm.cshtml
+/Areas/Presales/Views/QuoteApply/Acknowledgement.cshtml
 ----field----
 field: {F869E724-0718-43E4-92A0-D612FE191CFB}
 name: Area
@@ -35,35 +35,35 @@ QuoteApplyContent
 field: {B5B27AF1-25EF-405C-87CE-369B3A004016}
 name: Datasource Location
 key: datasource location
-content-length: 71
+content-length: 90
 
-query:./ancestor-or-self::*[@@templatename='Website']/Content/Tell Form
+query:./ancestor-or-self::*[@@templatename='Website']/Content/Quote Apply/Acknowledgements
 ----field----
 field: {1A7C85E5-DC0B-490D-9187-BB1DBCB4C72F}
 name: Datasource Template
 key: datasource template
-content-length: 68
+content-length: 76
 
-/sitecore/templates/Presales/Component Templates/Tell Form/Tell Form
-----field----
-field: {C7C26117-DBB1-42B2-AB5E-F7223845CCA3}
-name: __Thumbnail
-key: __thumbnail
-content-length: 58
-
-<image mediaid="{6C85AF4D-2F80-497C-8B39-4C9FA27D06AB}" />
+/sitecore/templates/Presales/Component Templates/Quote Apply/Acknowledgement
 ----version----
 language: en
 version: 1
-revision: 5340cfef-6bd5-420a-9c19-aca70e30e8d3
+revision: 075c49c3-adec-4a4d-842d-9848529a1097
 
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170526T152619Z
+20170727T123510Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -77,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5340cfef-6bd5-420a-9c19-aca70e30e8d3
+075c49c3-adec-4a4d-842d-9848529a1097
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170727T124405Z
+20170727T124341Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

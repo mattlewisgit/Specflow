@@ -8,7 +8,7 @@ import { QuoteApplyConstants } from "../../constants/quoteapply-constants";
 import { QuestionControlService } from "../../services/question-control.service";
 import { QuestionGroup } from "../../models/question-group";
 import { PostcodeService } from "../../services/postcode.service";
-import { ProgressBarService } from "../../services/progress-bar.service";
+import { FooterBarService } from "../../services/footer-bar.service";
 import { TellFormService } from "../../services/tell-form.service";
 import { WindowRef } from "./../windowref";
 
@@ -31,7 +31,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
         private fb: FormBuilder,
         private postcodeService: PostcodeService,
         private questionControlService: QuestionControlService,
-        private progressBarService: ProgressBarService,
+        private footerBarService: FooterBarService,
         private tellFormService: TellFormService,
         private winRef: WindowRef) {
     }
@@ -68,7 +68,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
                 }
             });
 
-        this.submitSubscription = this.tellFormService.onSubmitClicked()
+        this.submitSubscription = this.footerBarService.onSubmitClicked()
             .subscribe((data: boolean) => {
                 if (data) {
                     if (this.tellForm.valid) {
@@ -80,7 +80,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
 
     calculateCompletedPercentage() {
         const visibleQuestionGroups = this.questionGroups.filter(x => !x.isHidden);
-        this.progressBarService.completedPercentageEmitter
+        this.footerBarService.completedPercentageEmitter
             .emit((visibleQuestionGroups.filter(x => x.isCompleted).length /
                     visibleQuestionGroups.length) *
                 100);

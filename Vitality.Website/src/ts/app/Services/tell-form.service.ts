@@ -7,11 +7,6 @@ import { ErrorService } from "./error.service";
 
 @Injectable()
 export class TellFormService {
-    submitEmitter = new EventEmitter<boolean>();
-    onSubmitClicked() {
-        return this.submitEmitter;
-    }
-
     constructor(private http: Http,
         private errorService: ErrorService) {
     }

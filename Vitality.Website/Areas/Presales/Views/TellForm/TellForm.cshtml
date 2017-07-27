@@ -28,5 +28,10 @@ else
         window.angularData = @Html.Raw(angularModel);
     </script>
 
+    <script type="text/javascript">
+        System.import('/js/tell-form.main.js')
+            .catch(function (err) { throw err; });
+    </script>
+
     <tell-form><div class="loader__icon"></div></tell-form>
 }

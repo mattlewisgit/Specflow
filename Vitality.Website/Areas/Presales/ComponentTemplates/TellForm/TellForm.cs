@@ -11,6 +11,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.TellForm
     public class TellForm : SitecoreItem
     {
         public NameValueCollection AdditionalData { get; set; }
+        public Link CallToAction { get; set; }
         public string OkBtnText { get; set; }
         public string OkBtnHelpText { get; set; }
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
