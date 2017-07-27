@@ -1,4 +1,6 @@
-﻿namespace Vitality.Website.App_Start
+﻿using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply;
+
+namespace Vitality.Website.App_Start
 {
     using Areas.Global.Models;
     using Areas.Presales.ComponentTemplates.FeatureBlocks;
@@ -71,6 +73,8 @@
                     dest => dest.BasedOnValues,
                     opt => opt.MapFrom(src => string.IsNullOrEmpty(src.BasedOnValues)? null: src.BasedOnValues.Split(',')));
 
+            config.CreateMap<QuoteApplyFooter, QuoteApplyFooterViewModel>();
+
             config.CreateMap<TellForm, TellFormViewModel>()
                   .ForMember(
                     dest => dest.ServiceOutagePage,
@@ -78,7 +82,6 @@
                     .ForMember(
                     dest => dest.AdditionalData,
                     opt => opt.MapFrom(src => src.AdditionalData.AllKeys.ToDictionary(i => i, i => src.AdditionalData[i])));
-            ;
         }
     }
 }
