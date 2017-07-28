@@ -20,8 +20,15 @@ content-length: 2
 ----version----
 language: en
 version: 1
-revision: d3ea9ccd-93c0-4bf6-a649-118e98cab365
+revision: 84fe1fb6-483c-49dd-bb2d-5de9627f01a5
 
+----field----
+field: {069900A3-4ECA-425F-9470-962CBA97CB63}
+name: Avatar
+key: avatar
+content-length: 58
+
+<image mediaid="{4808F53B-58FA-4DA1-AF89-04FB2F862055}" />
 ----field----
 field: {9BF6F516-1771-4061-949B-B16356B35D72}
 name: Content
@@ -44,14 +51,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d3ea9ccd-93c0-4bf6-a649-118e98cab365
+84fe1fb6-483c-49dd-bb2d-5de9627f01a5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170727T150521Z
+20170728T081753Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
