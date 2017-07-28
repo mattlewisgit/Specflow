@@ -365,6 +365,7 @@
     <Content Include="App_Config\Include\Vitality\Vitality.AdvisersContentSearch.config" />
     <Content Include="Areas\Presales\Views\TellForm\TellForm.cshtml" />
     <Content Include="Areas\Presales\Views\QuoteApply\Acknowledgement.cshtml" />
+     <Content Include="Areas\Presales\Views\Generic\PromotionSidebar.cshtml" />
     <None Include="Areas\Presales\Views\Shared\QuoteApplyLayout.cshtml" />
     <Content Include="src\js\countdown-timer-app.js" />
     <Content Include="src\js\global-functions.js" />
@@ -3944,6 +3945,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Areas\Global\Models\FieldValidator.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\PromotionSidebar\PromotionSidebar.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\PromotionSidebar\PromotionSidebarContent.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\Acknowledgement.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFooter.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\AcknowledgementViewModel.cs" />
