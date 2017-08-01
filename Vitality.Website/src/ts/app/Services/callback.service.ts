@@ -1,4 +1,5 @@
 ﻿import { Injectable }   from "@angular/core";
+import * as _ from "underscore";
 import * as moment from "moment/moment";
 
 import { MomentExtendedService } from "../services/moment-extended.service";
@@ -19,13 +20,8 @@ export class CallbackService {
             // add safely
             try {
                 const openingHoursArr = options[weekday.toLowerCase()].split("-");
-                const startArr = openingHoursArr[0].split(":");
-                const endArr = openingHoursArr[1].split(":");
-                openingHour = new OpeningHours(weekday,
-                    Number(startArr[0]),
-                    Number(startArr[1]),
-                    Number(endArr[0]),
-                    Number(endArr[1]));
+                const [ startHour, startMinute, endHour, endMinute ]= (_.flatten(openingHoursArr.map((x: string) => x.split(":"))));
+                openingHour = new OpeningHours(weekday, startHour, startMinute, endHour, endMinute);
             } catch (ex) {
                 // Default 8 to 18.
                 openingHour = new OpeningHours(weekday, 8, 0, 18, 0);
