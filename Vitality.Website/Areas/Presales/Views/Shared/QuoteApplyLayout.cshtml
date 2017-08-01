@@ -24,18 +24,16 @@
 <body>
     @Html.Sitecore().Placeholder("gtmnoscript")
 <main tabindex="-1">
-    <quote-apply></quote-apply>
+
     <div class="quote">
         <div class="quote--header">
             @GlassHtml.RenderLazyImage(Model, item => item.Logo)
             <h1>@Editable(Model, item => item.Title)</h1>
         </div>
 
-        <div class="quote--left">
-            &nbsp;
-        </div>
+        <div class="quote--gutter" aria-hidden="true">&nbsp;</div>
         <div class="quote--content">
-            @Html.Sitecore().Placeholder("QuoteApplyContent")
+           @Html.Sitecore().Placeholder("QuoteApplyContent")
         </div>
         <div class="quote--right">
             &nbsp;

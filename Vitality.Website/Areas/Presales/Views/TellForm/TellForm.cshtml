@@ -7,6 +7,8 @@
     var serializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
     var angularModel = JsonConvert.SerializeObject(Mapper.Map<TellFormViewModel>(Model), serializerSettings);
 }
+<div class="fade--upper" aria-hidden="true"></div>
+<div class="fade--gutter" aria-hidden="true"></div>
 @if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
     <div class="question">
@@ -35,3 +37,6 @@ else
 
     <tell-form><div class="loader__icon"></div></tell-form>
 }
+
+<div class="fade--gutter" aria-hidden="true"></div>
+<div class="fade--lower" aria-hidden="true"></div>
