@@ -1,0 +1,42 @@
+﻿@using AutoMapper
+@using Newtonsoft.Json
+@using Newtonsoft.Json.Serialization
+@using Vitality.Website.Areas.Presales.ComponentTemplates.TellForm
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<TellForm>
+@{
+    var serializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
+    var angularModel = JsonConvert.SerializeObject(Mapper.Map<TellFormViewModel>(Model), serializerSettings);
+}
+<div class="fade--upper" aria-hidden="true"></div>
+<div class="fade--gutter" aria-hidden="true"></div>
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div class="question">
+        <ul>
+            @foreach (var questionGroups in Model.QuestionGroups)
+            {
+                using (BeginEditFrame("/sitecore/content/Applications/WebEdit/Edit Frame Buttons/Subitems", questionGroups.Path))
+                {
+                    <span>@questionGroups.Label</span>
+                }
+            }
+        </ul>
+    </div>
+}
+else
+{
+    <script type="text/javascript">
+        window.angularData = window.angularData || {};
+        window.angularData = @Html.Raw(angularModel);
+    </script>
+
+    <script type="text/javascript">
+        System.import('/js/tell-form.main.js')
+            .catch(function (err) { throw err; });
+    </script>
+
+    <tell-form><div class="loader__icon"></div></tell-form>
+}
+
+<div class="fade--gutter" aria-hidden="true"></div>
+<div class="fade--lower" aria-hidden="true"></div>

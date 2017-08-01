@@ -13,6 +13,10 @@ import { QuoteApplyConstants } from "../constants/quoteapply-constants";
 export class AutoScrollTo implements AfterViewInit{
     @Input("isGroupCompleted") isGroupCompleted : boolean;
 
+    private readonly minDistance = 30;
+    private readonly scrollStepDistance = 100;
+    private readonly scrollSpeed = 20;
+
     private currentElement: HTMLElement;
     private currentElementParent: HTMLElement;
     private okBtnGroup: Element;
@@ -33,14 +37,14 @@ export class AutoScrollTo implements AfterViewInit{
     }
 
     @HostListener("keyup", ["$event"])
-    onkeyup(event: MouseEvent) {
+    onkeyup(event: KeyboardEvent) {
         if (this.currentElement.tagName !== GlobalConstants.tagNames.dropdown) {
             this.hideShowOkBtnGroup(this.isGroupCompleted);
         }
     }
 
     @HostListener("keydown", ["$event"])
-    onkeydown(event: MouseEvent) {
+    onkeydown(event: KeyboardEvent) {
         if (this.isGroupCompleted) {
             if (event.shiftKey && event.which === GlobalConstants.keyboardKeys.tab) {
                 event.preventDefault();
@@ -54,15 +58,23 @@ export class AutoScrollTo implements AfterViewInit{
 
     @HostListener("click", ["$event"])
     onclick(event: MouseEvent) {
-        if (this.currentElement.tagName === GlobalConstants.tagNames.button) {
+        if (this.currentElement.tagName === GlobalConstants.tagNames.button ||
+        (this.currentElement.tagName === GlobalConstants.tagNames.dropdown &&
+            event.which === GlobalConstants.keyboardKeys.zero)) {
             this.changeFocus(true);
         }
     }
 
-    @HostListener("change", ["$event"])
-    onchange(event: MouseEvent) {
-        //Just do a timeout to trigger this after model changed
-        setTimeout(() => this.onDropDownChange(), 0);
+    @HostListener("mousedown", ["$event"])
+    mousedown(event: MouseEvent) {
+        if (this.currentElement.tagName === GlobalConstants.tagNames.dropdown) {
+            const startY = this.currentYPosition();
+            const stopY = this.elmYPosition();
+            if (Math.abs(startY - stopY) > this.minDistance) {
+                event.preventDefault();
+                this.handleScrolling(startY, stopY);
+            }
+        }
     }
 
     @HostListener("focus", ["$event"])
@@ -74,7 +86,7 @@ export class AutoScrollTo implements AfterViewInit{
                     this.showOkBtnGroup();
                 }
             }
-            this.handleScrolling();
+            this.handleScrolling(this.currentYPosition(),this.elmYPosition());
         }
     }
 
@@ -100,12 +112,6 @@ export class AutoScrollTo implements AfterViewInit{
         const okBtnGroups = this.document.getElementsByClassName(QuoteApplyConstants.selectors.okBtnGroup);
         for (let okBtnGroup of okBtnGroups) {
             okBtnGroup.classList.add(GlobalConstants.selectors.hide);
-        }
-    }
-
-    private onDropDownChange() {
-        if (this.currentElement.tagName === GlobalConstants.tagNames.dropdown && this.isGroupCompleted) {
-            this.changeFocus(true);
         }
     }
 
@@ -141,16 +147,14 @@ export class AutoScrollTo implements AfterViewInit{
         return this.currentElementParent.parentElement.parentElement;
     }
 
-    private handleScrolling(): void {
-        const startY = this.currentYPosition();
-        const stopY = this.elmYPosition();
+    private handleScrolling(startY: number, stopY:number): void {
         const distance = stopY > startY ? stopY - startY : startY - stopY;
-        if (distance < 100) {
+        if (distance < this.scrollStepDistance) {
             this.winRef.nativeWindow.scrollTo(0, stopY);
         } else {
-            let speed = Math.round(distance / 100);
-            if (speed >= 20) speed = 20;
-            const step = Math.round(distance / 100);
+            let speed = Math.round(distance / this.scrollStepDistance);
+            if (speed >= this.scrollSpeed) speed = this.scrollSpeed;
+            const step = Math.round(distance / this.scrollStepDistance);
             let leapY = stopY > startY ? startY + step : startY - step;
             let timer = 0;
             if (stopY > startY) {
@@ -197,6 +201,6 @@ export class AutoScrollTo implements AfterViewInit{
             node = (node.offsetParent as HTMLElement);
             y += node.offsetTop;
         }
-        return y - (this.winRef.nativeWindow.screen.height/2 -200);
+        return y - (this.winRef.nativeWindow.screen.height/2 - 200);
     }
 }

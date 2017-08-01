@@ -13,7 +13,7 @@ created: 20170605T154043Z
 ----version----
 language: en
 version: 1
-revision: 4e77f670-a055-4389-bb87-e4ffc385c1d9
+revision: 739f2d34-4699-44e5-9055-4a321c36b96f
 
 ----field----
 field: {3CBA56ED-F4D1-4412-BEBB-6ACED1AC1D34}
@@ -21,7 +21,7 @@ name: Logo
 key: logo
 content-length: 58
 
-<image mediaid="{B3862E21-9685-4BFB-BEF8-9E5C91045E2E}" />
+<image mediaid="{C6CEAFDD-641F-4D7D-8406-81CE603B3FF4}" />
 ----field----
 field: {B6E8B615-EE7A-485C-B14E-611876076E39}
 name: InheritSitemapSettings
@@ -54,9 +54,9 @@ Quote and Apply
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 257
+content-length: 453
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{2DB2A365-14B9-48F2-9BF9-0EC57C91540A}" s:ds="{78A08764-97F8-477F-A1FB-5643492C7BD3}" s:id="{4ED51072-8E9C-4812-BB4C-48494E3D9D00}" s:ph="QuoteApplyContent" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{B74C1800-371B-48AD-A0E6-D4CE6928B708}" p:before="*" s:ds="{B94E68FC-5F55-4CB3-96F0-683F58252F9A}" s:id="{F93FB20E-4857-48D5-9E8F-00DEA2EEF653}" s:ph="QuoteApplyFooter" /><r uid="{2DB2A365-14B9-48F2-9BF9-0EC57C91540A}" p:after="*[1=2]" s:ds="{78A08764-97F8-477F-A1FB-5643492C7BD3}" s:id="{4ED51072-8E9C-4812-BB4C-48494E3D9D00}" s:ph="QuoteApplyContent" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -77,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4e77f670-a055-4389-bb87-e4ffc385c1d9
+739f2d34-4699-44e5-9055-4a321c36b96f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170621T151248Z
+20170727T120143Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

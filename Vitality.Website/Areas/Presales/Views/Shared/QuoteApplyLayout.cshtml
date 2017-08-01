@@ -1,12 +1,13 @@
 ﻿@using Sitecore.Mvc
 @using Vitality.Website.Extensions.Views
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.QuoteApplyPage>
+
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     @if (IsInEditingMode)
     {
-        <link rel="stylesheet" href="/css/experience_editor_fix.css"/>
+        <link rel="stylesheet" href="/css/experience_editor_fix.css" />
     }
     else
     {
@@ -15,30 +16,34 @@
     @Html.Sitecore().Placeholder("gtm")
     @Html.Sitecore().Placeholder("metadata")
 
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"/>
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700"/>
-    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600,700" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    @Html.Partial("_JsAngular")
 </head>
 <body>
-@Html.Sitecore().Placeholder("gtmnoscript")
+    @Html.Sitecore().Placeholder("gtmnoscript")
 <main tabindex="-1">
+
     <div class="quote">
         <div class="quote--header">
             @GlassHtml.RenderLazyImage(Model, item => item.Logo)
-            <h1>@Editable(Model , item=> item.Title)</h1>
+            <h1>@Editable(Model, item => item.Title)</h1>
         </div>
 
-        <div class="quote--left">
-            &nbsp;
+        <div class="quote--gutter" aria-hidden="true">&nbsp;</div>
+        <div class="quote--content">
+           @Html.Sitecore().Placeholder("QuoteApplyContent")
         </div>
-        @Html.Sitecore().Placeholder("QuoteApplyContent")
-
-
         <div class="quote--right">
             &nbsp;
         </div>
+        <footer class="quote--footer">
+            @Html.Sitecore().Placeholder("QuoteApplyFooter")
+        </footer>
     </div>
 </main>
+
     @Html.Partial("_JsThirdParty")
 
     <script type="text/javascript" src="/js/vitality.presales.min.js"></script>

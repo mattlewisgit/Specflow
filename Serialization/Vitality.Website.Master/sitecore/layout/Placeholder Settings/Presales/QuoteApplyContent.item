@@ -8,6 +8,7 @@ name: QuoteApplyContent
 master: {00000000-0000-0000-0000-000000000000}
 template: {5C547D4E-7111-4995-95B0-6B561751BF2E}
 templatekey: Placeholder
+created: 20170612T102837Z
 
 ----field----
 field: {7256BDAB-1FD2-49DD-B205-CB4873D2917C}
@@ -26,7 +27,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 5026749d-98fd-4289-bd46-a701096d0c0f
+revision: 174469e9-bfcf-4357-9c66-49fbab3ed0b6
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -48,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5026749d-98fd-4289-bd46-a701096d0c0f
+174469e9-bfcf-4357-9c66-49fbab3ed0b6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170530T141602Z
+20170726T155936Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

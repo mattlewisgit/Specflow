@@ -1,0 +1,73 @@
+----item----
+version: 1
+id: {89D76495-BE4C-4848-B780-329C27661445}
+database: master
+path: /sitecore/templates/Presales/Component Templates/Tell Form/Question Group/__Standard Values
+parent: {338B1198-FD2E-4C63-94F2-CA164AF1E26C}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {338B1198-FD2E-4C63-94F2-CA164AF1E26C}
+templatekey: Question Group
+created: 20170610T205440Z
+
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{16446BB0-1CE3-44A5-81FA-2417CE6A1FEB}
+----version----
+language: en
+version: 1
+revision: b3c79577-f1b6-457b-b4ba-20c43392067b
+
+----field----
+field: {DE38D3EB-81E3-4D60-8F57-F803A68EBEF2}
+name: Label
+key: label
+content-length: 5
+
+$name
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170610T205440Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+b3c79577-f1b6-457b-b4ba-20c43392067b
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170613T121927Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
