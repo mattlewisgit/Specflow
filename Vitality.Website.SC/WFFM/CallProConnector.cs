@@ -35,7 +35,7 @@ namespace Vitality.Website.SC.WFFM
                     ParameterType.RequestBody);
                 var client = new RestClient(baseUrl.ToString());
 
-                var response = await client.ExecutePostTaskAsync(request);// ExecuteTaskAsync(request);
+                var response = client.Post(request);
 
                 return new HttpResponseMessage(response.StatusCode);
             }
@@ -43,26 +43,6 @@ namespace Vitality.Website.SC.WFFM
             {
                 throw ex;
             }
-        }
-
-        public static async Task<HttpResponseMessage> CreateCallProData(Dictionary<string,string> dictionary )
-        {
-            var item = Sitecore.Context.Database.GetItem(new ID("6CC3BF23-E604-4CC6-8FFC-62DE90C86075"));
-
-            var xmlTemplate = item.Fields["Xml"].Value;
-
-            string requestXml;
-
-            try
-            {
-                // Transform XML.
-                requestXml = xmlTemplate.Replace(dictionary);
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return await Send(requestXml);
         }
     }
 }

@@ -11,6 +11,7 @@ using Vitality.Mvc.Models;
 using Vitality.Mvc.Utilities;
 using Vitality.Website.Areas.Presales.Handlers.CallBack;
 using Vitality.Website.Areas.Presales.Models;
+using Vitality.Website.SC.CallPro;
 using Vitality.Website.SC.WFFM;
 
 namespace Vitality.Website.Areas.Presales.Services
@@ -19,13 +20,14 @@ namespace Vitality.Website.Areas.Presales.Services
     {
         public async Task<HttpResponseMessage> Post(CallBackPostRequest postData)
         {
-            var dict = CreateCallProData(postData);
-            return await CallProConnector.CreateCallProData(dict);
+            var genaretdData = GenerateCallProData(postData);
+
+            return await CallProAgent.Execute(genaretdData);
         }
 
-        public static Dictionary<string, string> CreateCallProData(CallBackPostRequest callBackPostRequest)
+        public static Dictionary<string, string> GenerateCallProData(CallBackPostRequest callBackPostRequest)
         {
-            var today = new DateTime();
+            var today = DateTime.Today;
 
             var formFieldsDictionary = new Dictionary<string, string>
             {
@@ -38,24 +40,23 @@ namespace Vitality.Website.Areas.Presales.Services
                 {"{TELEPHONENUMBER}", callBackPostRequest.PostData.Telephone},
                 {"{TITLE}", callBackPostRequest.PostData.Title},
                 {"{FIRSTNAME}", callBackPostRequest.PostData.Firstname},
-                {"{SURNAME}", callBackPostRequest.PostData.Lastname},
-                {"{EMAIL}", callBackPostRequest.PostData.Email},
-                {"{ANAL88}", callBackPostRequest.PostData.CallBackTime}
+                {"{LASTNAME}", callBackPostRequest.PostData.Lastname},
+                {"{EMAILADDRESS}", callBackPostRequest.PostData.Email},
+                {"{CALLBACKTIME}", callBackPostRequest.PostData.CallBackTime}
             };
 
             var utmCookie = UtmCookieHelper.GetUtmCookie(new HttpRequestWrapper(HttpContext.Current.Request));
 
-            if (utmCookie != null)
-            {
-                var utmCookieSettings = UtmCookieSettings.Instance;
+            if (utmCookie == null) { return formFieldsDictionary;}
 
-                formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieCampaignKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieCampaignKey]);
-                formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieContentKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieContentKey]);
-                formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieMediumKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieMediumKey]);
-                formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieRefUrlKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieRefUrlKey]);
-                formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieSourceKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieSourceKey]);
-                formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieTermKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieTermKey]);
-            }
+            var utmCookieSettings = UtmCookieSettings.Instance;
+
+            formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieCampaignKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieCampaignKey]);
+            formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieContentKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieContentKey]);
+            formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieMediumKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieMediumKey]);
+            formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieRefUrlKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieRefUrlKey]);
+            formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieSourceKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieSourceKey]);
+            formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieTermKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieTermKey]);
 
             return formFieldsDictionary;
         }
