@@ -7,11 +7,13 @@ using MediatR;
 
 namespace Vitality.Website.Areas.Presales.Handlers.CallBack
 {
-    public class CallBackPostRequest : IRequest<CallBackDto>, IRequest<HttpResponseMessage>
+    public class CallBackPostRequest : IRequest<CallBackDto>
     {
-        public readonly Models.CallBack PostData;
+        public readonly Models.CallBackData PostData;
 
-        public CallBackPostRequest(Models.CallBack postData)
+        public CallBackPostRequest(){}
+
+        public CallBackPostRequest(Models.CallBackData postData)
         {
             PostData = postData;
         }

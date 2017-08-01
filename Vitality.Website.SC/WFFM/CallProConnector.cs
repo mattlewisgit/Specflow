@@ -4,12 +4,13 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
+using System.Net.Http;
 
 namespace Vitality.Website.SC.WFFM
 {
     public static class CallProConnector
     {
-        public static async Task<HttpStatusCode> Send(string xml)
+        public static async Task<HttpResponseMessage> Send(string xml)
         {
             // Once this app is moved to an API, use a strongly-typed config interface
             // with section, a URI builder and Dependency Injection.
@@ -21,17 +22,19 @@ namespace Vitality.Website.SC.WFFM
             try
             {
                 var request = new RestRequest(Method.POST).AddParameter(
-                "application/x-www-form-urlencoded",
-                $"xml={xml}",
-                ParameterType.RequestBody);
+                        "application/x-www-form-urlencoded",
+                        $"xml={xml}",
+                        ParameterType.RequestBody);
+                var client = new RestClient(baseUrl.ToString());
 
-                return new RestClient(baseUrl.ToString()).Post(request).StatusCode;
+                var response = await client.ExecuteTaskAsync(request);
+
+                return new HttpResponseMessage(response.StatusCode);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            
         }
     }
 }

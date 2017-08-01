@@ -9,7 +9,7 @@ using Vitality.Website.Areas.Presales.Services;
 
 namespace Vitality.Website.Areas.Presales.Handlers.CallBack
 {
-    public class CallBackHandler : IAsyncRequestHandler<CallBackPostRequest, HttpResponseMessage> 
+    public class CallBackHandler : IAsyncRequestHandler<CallBackPostRequest, CallBackDto> 
     {
         private readonly ICallBackService _callBackService;
 
@@ -18,9 +18,9 @@ namespace Vitality.Website.Areas.Presales.Handlers.CallBack
             _callBackService = callBackService;
         }
 
-        public async Task<HttpResponseMessage> Handle(CallBackPostRequest request)
+        public async Task<CallBackDto> Handle(CallBackPostRequest request)
         {
-            return await _callBackService.Post(request);
+            return await CallBackDto.From(_callBackService.Post(request));
         }
     }
 }

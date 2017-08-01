@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace Vitality.Website.Areas.Presales.Handlers.CallBack
 {
@@ -10,11 +11,11 @@ namespace Vitality.Website.Areas.Presales.Handlers.CallBack
 
         public string Reason { get; set; }
 
-        public static CallBackDto From(HttpResponseMessage bslResponse, string reason)
+        public static async Task<CallBackDto> From(Task<HttpResponseMessage> bslResponse, string reason = "")
         {
             return new CallBackDto
             {
-                BslResponse = bslResponse,
+                BslResponse = await bslResponse,
                 Reason = reason
             };
         }

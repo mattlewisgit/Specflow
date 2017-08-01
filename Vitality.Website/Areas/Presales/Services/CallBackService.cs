@@ -28,7 +28,7 @@ namespace Vitality.Website.Areas.Presales.Services
 
         public async Task<HttpResponseMessage> Post(CallBackPostRequest postData)
         {
-            var postDataXml = Serialize(postData);
+            var postDataXml = Serialize(postData.PostData);
             return await CallProConnector.Send(postDataXml);
         }
     }
