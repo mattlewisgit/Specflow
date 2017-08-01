@@ -13,8 +13,15 @@ import { QuoteApplyFooterComponent }  from "./components/quoteapply/quote-apply-
     imports: [
         BrowserModule
     ],
-    declarations: [QuoteApplyFooterComponent],
-    providers: [CallbackService, TellFormService, { provide: FooterBarService, useValue: footerBarServiceFactory() }, WindowRef],
+    declarations: [
+        QuoteApplyFooterComponent
+    ],
+    providers: [
+        CallbackService,
+        TellFormService,
+        { provide: FooterBarService, useValue: footerBarServiceFactory() },
+        WindowRef
+    ],
     bootstrap: [QuoteApplyFooterComponent]
 })
-export class QuoteApplyFooterModule {}
+export class QuoteApplyFooterModule { }
