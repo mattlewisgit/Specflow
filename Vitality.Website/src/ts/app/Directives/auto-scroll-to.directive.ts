@@ -13,9 +13,9 @@ import { QuoteApplyConstants } from "../constants/quoteapply-constants";
 export class AutoScrollTo implements AfterViewInit{
     @Input("isGroupCompleted") isGroupCompleted : boolean;
 
-    private minDistance = 30;
-    private scrollStepDistance = 100;
-    private scrollSpeed = 20;
+    private readonly minDistance = 30;
+    private readonly scrollStepDistance = 100;
+    private readonly scrollSpeed = 20;
 
     private currentElement: HTMLElement;
     private currentElementParent: HTMLElement;
