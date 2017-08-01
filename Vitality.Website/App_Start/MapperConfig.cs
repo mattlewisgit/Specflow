@@ -1,9 +1,8 @@
-﻿using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply;
-
-namespace Vitality.Website.App_Start
+﻿namespace Vitality.Website.App_Start
 {
     using Areas.Global.Models;
     using Areas.Presales.ComponentTemplates.FeatureBlocks;
+    using Areas.Presales.ComponentTemplates.QuoteApply;
     using Areas.Presales.ComponentTemplates.TellForm;
     using AutoMapper;
     using System.Collections.Generic;
@@ -19,16 +18,6 @@ namespace Vitality.Website.App_Start
 
         private static void SetMapping(IMapperConfigurationExpression config)
         {
-            config.CreateMap<Acknowledgement, AcknowledgementViewModel>()
-                .ForMember(
-                    dest => dest.AdditionalData,
-                    opt =>
-                        opt.MapFrom(
-                            src => src.AdditionalData.AllKeys.ToDictionary(i => i, i => src.AdditionalData[i])))
-                .ForMember(
-                    dest => dest.CallToAction,
-                    opt => opt.MapFrom(src => src.CallToAction.Url));
-
             config
                 .CreateMap<VacancyList, VacancyListViewModel>()
                 .ForMember(
