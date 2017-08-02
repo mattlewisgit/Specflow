@@ -10,10 +10,17 @@ template: {96382665-A7A9-44DF-B3EC-2B50B5F89114}
 templatekey: Product Panel
 created: 20170802T132254Z
 
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: 264c6ce5-913f-4548-825f-db035b465f10
+revision: cd18f646-ac58-48f8-bd17-f98a7e6ad6af
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-264c6ce5-913f-4548-825f-db035b465f10
+cd18f646-ac58-48f8-bd17-f98a7e6ad6af
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170802T132254Z
+20170802T141650Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

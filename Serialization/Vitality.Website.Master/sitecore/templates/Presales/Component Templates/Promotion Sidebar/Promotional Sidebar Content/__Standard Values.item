@@ -10,10 +10,17 @@ template: {3CBFEB56-A2D0-4F38-BC15-87F864A982B5}
 templatekey: Promotional Sidebar Content
 created: 20170727T145957Z
 
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: d43ca42d-0415-4656-a106-09afd648ec07
+revision: c97be82e-5cbf-4fc8-9496-1eedc8d287fc
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d43ca42d-0415-4656-a106-09afd648ec07
+c97be82e-5cbf-4fc8-9496-1eedc8d287fc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170727T145957Z
+20170802T141757Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

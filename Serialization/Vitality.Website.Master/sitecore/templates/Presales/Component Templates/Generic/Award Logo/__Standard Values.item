@@ -10,10 +10,17 @@ template: {25EB72FE-6AE2-44E4-AC1E-9631E53D3AB0}
 templatekey: Award Logo
 created: 20170802T131827Z
 
+----field----
+field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
+name: __Default workflow
+key: __default workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
 ----version----
 language: en
 version: 1
-revision: 4807549a-02ac-4e4e-bd82-50d27843ab6c
+revision: f92e070e-2785-413e-a552-33f974e99f81
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -42,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-4807549a-02ac-4e4e-bd82-50d27843ab6c
+f92e070e-2785-413e-a552-33f974e99f81
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170802T131827Z
+20170802T141159Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
