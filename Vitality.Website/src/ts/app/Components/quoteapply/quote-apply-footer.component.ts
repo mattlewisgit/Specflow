@@ -8,10 +8,9 @@ import { FooterBarService } from "../../services/footer-bar.service";
     templateUrl: "./js/app/components/quoteapply/quote-apply-footer.component.html"
 })
 export class QuoteApplyFooterComponent implements OnInit {
-    callToActionText: string;
     completedPercentage = 0;
     isAllCompleted = false;
-    enableProgressBar = false;
+    quoteFooterData: any;
     private completedPercentageSubscription: Subscription;
 
     constructor(
@@ -21,9 +20,7 @@ export class QuoteApplyFooterComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        const quoteFooterData = this.winRef.nativeWindow.angularData.quoteApplyFooter;
-        this.callToActionText = quoteFooterData.callToActionText;
-        this.enableProgressBar = quoteFooterData.enableProgressBar;
+        this.quoteFooterData = this.winRef.nativeWindow.angularData.quoteApplyFooter;
         this.completedPercentageSubscription = this.footerBarService.onCompletedPercentageChange()
             .subscribe((data: number) => {
                 if (this.completedPercentage !== data) {

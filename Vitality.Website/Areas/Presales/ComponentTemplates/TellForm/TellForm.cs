@@ -11,9 +11,9 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.TellForm
     public class TellForm : SitecoreItem
     {
         public NameValueCollection AdditionalData { get; set; }
-        public Link CallToAction { get; set; }
         public string OkBtnText { get; set; }
         public string OkBtnHelpText { get; set; }
+        public string PostAction { get; set; }
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<QuestionGroup> QuestionGroups { get; set; }
         public Link ServiceOutagePage { get; set; }
