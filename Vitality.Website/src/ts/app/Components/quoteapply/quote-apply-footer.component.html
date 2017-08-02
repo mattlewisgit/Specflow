@@ -17,7 +17,7 @@
     </div>
 </div>
 <div *ngIf="quoteFooterData.callUsText">
-    <p>{{ quoteFooterData.callUsText + " "+ quoteFooterData.contactNumber }}</p>
+    <p>{{ quoteFooterData.callUsText + " "+ quoteFooterData.contactNumber +" "+  quoteFooterData.joinUsText}}</p>
     <p>{{ quoteFooterData.openingHoursText }}</p>
 
         <a *ngIf="quoteFooterData.callToAction" class="ok-btn" [href]="quoteFooterData.callToAction">{{ quoteFooterData.callToActionText }}</a>

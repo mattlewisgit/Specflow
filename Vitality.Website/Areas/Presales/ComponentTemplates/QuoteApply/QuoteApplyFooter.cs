@@ -13,6 +13,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public KeyValuePair ContactNumber { get; set; }
         public bool EnableProgressBar { get; set; }
+        public string JoinUsText { get; set; }
         public Image LeftImage { get; set; }
         public Image MiddleImage { get; set; }
         public Image RightImage { get; set; }
