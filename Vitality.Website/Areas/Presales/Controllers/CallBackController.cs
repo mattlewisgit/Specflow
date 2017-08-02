@@ -19,7 +19,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
         }
 
         [HttpPost]
-        [Route("api/callback")]
+        [Route("api/callback/callpro")]
         public HttpResponseMessage Post(CallBackData model)
         {
             if (string.IsNullOrWhiteSpace(model.Firstname) ||

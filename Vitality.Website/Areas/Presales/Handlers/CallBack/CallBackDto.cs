@@ -7,7 +7,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.CallBack
 {
     public class CallBackDto
     {
-        public HttpResponseMessage BslResponse { get; set; }
+        public HttpResponseMessage CallBackResponse { get; set; }
 
         public string Reason { get; set; }
 
@@ -15,7 +15,7 @@ namespace Vitality.Website.Areas.Presales.Handlers.CallBack
         {
             return new CallBackDto
             {
-                BslResponse = await bslResponse,
+                CallBackResponse = await bslResponse,
                 Reason = reason
             };
         }
