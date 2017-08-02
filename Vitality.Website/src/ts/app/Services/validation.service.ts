@@ -50,11 +50,7 @@ export class ValidationService {
 
     dateValidator() {
         return (control: any) => {
-            if (this.matchDate(control.value)) {
-                return null;
-            } else {
-                return { "invalidDate": true };
-            }
+            return this.matchDate(control.value) ? null : { "invalidDate": true };
         }
     }
 

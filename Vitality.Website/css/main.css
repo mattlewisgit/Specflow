@@ -28,9 +28,6 @@ body {
     body {
       padding: 3em; } }
 
-form {
-  padding: 20% 0; }
-
 a {
   border-color: white; }
 
@@ -120,29 +117,14 @@ strong {
     display: block;
     clear: both; }
   @media (min-width: 50em) {
-    .quote--left, .quote--right {
+    .quote--gutter {
       width: 23.72881%;
       float: left;
       margin-right: 1.69492%; }
     .quote--content {
       width: 49.15254%;
       float: left;
-      margin-right: 1.69492%; }
-      .quote--content .fade {
-        width: 100%;
-        height: 45%;
-        position: fixed;
-        pointer-events: none; }
-        .quote--content .fade.upper {
-          top: 0;
-          background: linear-gradient(to bottom, #f41a5c, rgba(244, 26, 92, 0)); }
-        .quote--content .fade.lower {
-          bottom: 0;
-          margin-bottom: 6em;
-          background: linear-gradient(to top, #f41a5c, rgba(244, 26, 92, 0)); }
-    .quote--right {
-      float: right;
-      margin-right: 0; } }
+      margin-right: 1.69492%; } }
   .quote--header {
     left: 1.5em;
     max-width: 30%;
@@ -267,6 +249,30 @@ strong {
       width: 50%; }
       .chat-window .chat-window--bubble a[href^='tel:'] {
         font-size: 24px; } }
+
+.fade--lower, .fade--upper {
+  height: 40%;
+  pointer-events: none;
+  position: fixed;
+  width: 100%; }
+
+.fade--gutter {
+  padding: 12.5% 0;
+  pointer-events: none; }
+
+.fade--lower {
+  background: linear-gradient(to top, #f41a5c, rgba(244, 26, 92, 0));
+  bottom: 0; }
+
+.fade--upper {
+  background: linear-gradient(to bottom, #f41a5c, rgba(244, 26, 92, 0));
+  top: 0; }
+
+@media (max-width: 49.99em) {
+  .fade--lower, .fade--upper {
+    height: 30%; }
+  .fade--gutter {
+    padding: 0; } }
 
 .progress {
   background: #bb114a;

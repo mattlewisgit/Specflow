@@ -25,8 +25,20 @@ import { WindowRef } from "./components/windowref";
         ReactiveFormsModule,
         HttpModule
     ],
-    declarations: [AutoScrollTo, TellFormComponent, QuestionGroupComponent],
-    providers: [CallbackService, DobControlService, ErrorService, PostcodeService, { provide: FooterBarService, useValue: footerBarServiceFactory() }, QuestionControlService, TellFormService, ValidationService, WindowRef],
+    declarations: [
+        AutoScrollTo,
+        TellFormComponent,
+        QuestionGroupComponent],
+    providers: [
+        CallbackService,
+        DobControlService,
+        ErrorService,
+        PostcodeService,
+        { provide: FooterBarService, useValue: footerBarServiceFactory() },
+        QuestionControlService,
+        TellFormService,
+        ValidationService,
+        WindowRef],
     bootstrap: [TellFormComponent]
 })
 export class TellFormModule { }

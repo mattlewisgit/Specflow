@@ -1,6 +1,6 @@
 ﻿using System.Collections.Specialized;
-using Glass.Mapper.Sc.Fields;
 using Vitality.Website.Areas.Global.Models;
+using Glass.Mapper.Sc.Fields;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 {
