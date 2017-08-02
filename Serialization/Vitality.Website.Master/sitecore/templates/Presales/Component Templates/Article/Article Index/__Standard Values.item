@@ -8,7 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {C4FA053C-ABF0-416E-A290-40589EB293DE}
 templatekey: Article Index
-created: 20160818T132916Z
+created: 20160720T162918Z
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
@@ -28,13 +28,13 @@ content-length: 0
 field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
 name: __Default workflow
 key: __default workflow
-content-length: 38
+content-length: 0
 
-{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
+
 ----version----
 language: en
 version: 1
-revision: 8263c27c-533b-4d2b-b337-379dbaf3f141
+revision: 0b8db48b-056c-4f9d-a0cd-4c60b6788808
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -63,18 +63,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8263c27c-533b-4d2b-b337-379dbaf3f141
+0b8db48b-056c-4f9d-a0cd-4c60b6788808
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170512T145657Z
+20170802T124727Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave

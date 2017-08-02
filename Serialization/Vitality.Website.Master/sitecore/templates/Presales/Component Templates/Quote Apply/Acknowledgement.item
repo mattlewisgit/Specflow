@@ -18,6 +18,13 @@ content-length: 38
 
 {1930BBEB-7805-471A-A3BE-4858AC7CF696}
 ----field----
+field: {F7D48A55-2158-4F02-9356-756654404F73}
+name: __Standard values
+key: __standard values
+content-length: 38
+
+{D439B23B-C324-4853-B098-12589A1A416F}
+----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
@@ -27,7 +34,7 @@ Business/32x32/message_ok.png
 ----version----
 language: en
 version: 1
-revision: a2908eb9-e5eb-45bc-bf14-eeb72d722dc5
+revision: f64c081f-22f9-46e7-b842-a691e28c441b
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a2908eb9-e5eb-45bc-bf14-eeb72d722dc5
+f64c081f-22f9-46e7-b842-a691e28c441b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170727T125623Z
+20170802T132342Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave

@@ -8,7 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {F7CFF045-57AE-49F5-BD7A-B24C06EF287B}
 templatekey: Tab Collection
-created: 20160818T132938Z
+created: 20160610T123457Z
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
@@ -21,13 +21,13 @@ content-length: 38
 field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
 name: __Default workflow
 key: __default workflow
-content-length: 38
+content-length: 0
 
-{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
+
 ----version----
 language: en
 version: 1
-revision: 80ad4df4-a3ea-4d37-8cfa-4b669695d481
+revision: a3f58702-2bab-4988-a162-23600cdda9ca
 
 ----field----
 field: {7EE590B1-EA5E-4B79-9EAA-B5D99E61AE43}
@@ -63,18 +63,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-80ad4df4-a3ea-4d37-8cfa-4b669695d481
+a3f58702-2bab-4988-a162-23600cdda9ca
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170512T154041Z
+20170802T131948Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave

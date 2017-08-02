@@ -1,3 +1,4 @@
+using System;
 using Sitecore.Data.Items;
 
 namespace Vitality.Website.SC.Utilities
@@ -8,8 +9,13 @@ namespace Vitality.Website.SC.Utilities
 
         public static string ResolveQuery(this string query, ItemAxes axes)
         {
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                return query;
+            }
+
             var cleanQuery = query.Substring(QueryStartText.Length);
-            return axes?.SelectSingleItem(cleanQuery).Paths.FullPath ?? string.Empty;
+            return axes?.SelectSingleItem(cleanQuery) != null ? axes?.SelectSingleItem(cleanQuery).Paths.FullPath ?? string.Empty : String.Empty;
         }
     }
 }
