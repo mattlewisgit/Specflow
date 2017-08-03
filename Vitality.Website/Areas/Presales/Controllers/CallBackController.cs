@@ -20,17 +20,8 @@ namespace Vitality.Website.Areas.Presales.Controllers
 
         [HttpPost]
         [Route("api/callback/callpro")]
-        public HttpResponseMessage Post(CallBackData model)
-        {
-            if (string.IsNullOrWhiteSpace(model.Firstname) ||
-                string.IsNullOrWhiteSpace(model.Lastname) ||
-                string.IsNullOrWhiteSpace(model.Title) ||
-                string.IsNullOrWhiteSpace(model.Telephone))
-            {
-                return new HttpResponseMessage(HttpStatusCode.BadRequest);
-            }
-
-            return GetResponse<CallBackPostRequest, CallBackDto>(new CallBackPostRequest(model), result => result != null);
-        }
+        public HttpResponseMessage Post(CallBackData model) => !ModelState.IsValid
+            ? new HttpResponseMessage(HttpStatusCode.BadRequest)
+            : GetResponse<CallBackPostRequest, CallBackDto>(new CallBackPostRequest(model), result => result != null);
     } 
 }

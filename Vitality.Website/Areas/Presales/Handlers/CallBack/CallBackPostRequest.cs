@@ -11,8 +11,6 @@ namespace Vitality.Website.Areas.Presales.Handlers.CallBack
     {
         public readonly Models.CallBackData PostData;
 
-        public CallBackPostRequest(){}
-
         public CallBackPostRequest(Models.CallBackData postData)
         {
             PostData = postData;

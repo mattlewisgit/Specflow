@@ -20,9 +20,9 @@ namespace Vitality.Website.Areas.Presales.Services
     {
         public async Task<HttpResponseMessage> Post(CallBackPostRequest postData)
         {
-            var genaretdData = GenerateCallProData(postData);
+            var generatedData = GenerateCallProData(postData);
 
-            return await CallProAgent.Execute(genaretdData);
+            return await CallProAgent.Execute(generatedData);
         }
 
         public static Dictionary<string, string> GenerateCallProData(CallBackPostRequest callBackPostRequest)
