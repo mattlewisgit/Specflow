@@ -60,6 +60,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Glass.Mapper.Sc.4.0.11.63\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="Humanizer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Humanizer.Core.2.2.0\lib\netstandard1.0\Humanizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MediatR, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MediatR.3.0.1\lib\net45\MediatR.dll</HintPath>
       <Private>True</Private>
@@ -173,6 +177,7 @@
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
     <Compile Include="Extensions\Models\MainNavigationExtensions_GetActiveNavigationSection.cs" />
+    <Compile Include="Extensions\View\AcknowledgementExtensionsTests.cs" />
     <Compile Include="Extensions\View\ContentCollectionExtenstionsTest.cs" />
     <Compile Include="Presales\Controllers\BslControllerTests\GetTests.cs" />
     <Compile Include="Presales\Controllers\BslControllerTests\PostTests.cs" />
