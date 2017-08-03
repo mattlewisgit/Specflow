@@ -3952,6 +3952,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFooterViewModel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\TellForm\FieldValidatorViewModel.cs" />
     <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />
+    <Compile Include="Extensions\Views\AcknowledgementExtensions.cs" />
     <Compile Include="Pipelines\AppStartInitializer.cs" />
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />
