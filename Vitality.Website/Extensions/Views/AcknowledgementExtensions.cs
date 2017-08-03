@@ -35,23 +35,22 @@ namespace Vitality.Website.Extensions.Views
                 model.AdditionalData[CallYouText]
             };
 
-            if (!string.IsNullOrEmpty(callbackDateString))
+
+            DateTime callbackDate;
+            if (DateTime.TryParse(callbackDateString, out callbackDate))
             {
-                DateTime callbackDate;
-                if (DateTime.TryParse(callbackDateString, out callbackDate))
+                // Seleted Today but out of opening hours
+                var isCallbackTimeAvailable = string.IsNullOrEmpty(callbackTime);
+                if (callbackDate.Date == DateTime.Now.Date && isCallbackTimeAvailable)
                 {
-                    // Seleted Today but out of opening hours
-                    if (callbackDate.Date == DateTime.Now.Date && string.IsNullOrEmpty(callbackTime))
-                    {
-                            messageParts.Add(model.AdditionalData[TomorrowText]);
-                    }
-                    else
-                    {
-                        var callbackDateFormatted = $"{callbackDate.Day.Ordinalize()} {callbackDate:MMMM}";
-                        messageParts.Add(string.IsNullOrEmpty(callbackTime)
-                            ? $"{onText} {callbackDateFormatted}"
-                            : $"{model.AdditionalData[AtText]} {callbackTime} {onText} {callbackDateFormatted}");
-                    }
+                    messageParts.Add(model.AdditionalData[TomorrowText]);
+                }
+                else
+                {
+                    var callbackDateFormatted = $"{callbackDate.Day.Ordinalize()} {callbackDate:MMMM}";
+                    messageParts.Add(isCallbackTimeAvailable
+                        ? $"{onText} {callbackDateFormatted}"
+                        : $"{model.AdditionalData[AtText]} {callbackTime} {onText} {callbackDateFormatted}");
                 }
             }
             else
@@ -63,9 +62,6 @@ namespace Vitality.Website.Extensions.Views
             return FormatMessage(messageParts);
         }
 
-        private static string FormatMessage(IEnumerable<string> messageParts)
-        {
-            return string.Join(" ", messageParts.Where(m => !string.IsNullOrEmpty(m)));
-        }
+        private static string FormatMessage(IEnumerable<string> messageParts) => string.Join(" ", messageParts.Where(m => !string.IsNullOrEmpty(m)));
     }
 }
