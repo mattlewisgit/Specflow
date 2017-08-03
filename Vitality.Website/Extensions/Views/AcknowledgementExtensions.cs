@@ -2,12 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
+using Humanizer;
 using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply;
 
 namespace Vitality.Website.Extensions.Views
 {
-    using Glass.Mapper.Sc.Web.Mvc;
-
     public static class AcknowledgementExtensions
     {
         private const string AsapText = "AsapText";
@@ -48,9 +47,10 @@ namespace Vitality.Website.Extensions.Views
                     }
                     else
                     {
+                        var callbackDateFormatted = $"{callbackDate.Day.Ordinalize()} {callbackDate:MMMM}";
                         messageParts.Add(string.IsNullOrEmpty(callbackTime)
-                            ? $"{onText} {callbackDate:dd MMMM}"
-                            : $"{model.AdditionalData[AtText]} {callbackTime} {onText} {callbackDate:dd MMMM}");
+                            ? $"{onText} {callbackDateFormatted}"
+                            : $"{model.AdditionalData[AtText]} {callbackTime} {onText} {callbackDateFormatted}");
                     }
                 }
             }

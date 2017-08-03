@@ -78,6 +78,10 @@
       <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Hi.UrlRewrite.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Humanizer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Humanizer.Core.2.2.0\lib\netstandard1.0\Humanizer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Krusen.Sitecore.WebApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Krusen.Sitecore.WebApi.1.0.0\lib\net45\Krusen.Sitecore.WebApi.dll</HintPath>
       <Private>True</Private>

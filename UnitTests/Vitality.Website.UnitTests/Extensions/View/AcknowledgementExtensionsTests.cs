@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Specialized;
+using Humanizer;
 using Shouldly;
 using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply;
 using Vitality.Website.Extensions.Views;
@@ -42,8 +43,8 @@ namespace Vitality.Website.UnitTests.Extensions.View
                 var futureDate = today.AddDays(5);
                 _todayString = $"{today:dd/MM/yyyy}";
                 _futureDateString = $"{futureDate:dd/MM/yyyy}";
-                _todayFormatted = $"{DateTime.Now:dd MMMM}";
-                _futureDateFormatted = $"{futureDate:dd MMMM}";
+                _todayFormatted =  $"{today.Day.Ordinalize()} {today:MMMM}";
+                _futureDateFormatted = $"{futureDate.Day.Ordinalize()} {futureDate:MMMM}";
             }
 
             [Fact]
@@ -51,16 +52,16 @@ namespace Vitality.Website.UnitTests.Extensions.View
             {
                 _queryParams.Add("cbdate", _futureDateString);
                 _queryParams.Add("cbtime", "10:00 - 10:30");
-                var message = _model.DisplayMessage(_queryParams);
-                message.ShouldBe($"Thanks Joe, we'll call you back at 10:00 - 10:30 on {_futureDateFormatted} on {Telephone}");
+                _model.DisplayMessage(_queryParams)
+                    .ShouldBe($"Thanks Joe, we'll call you back at 10:00 - 10:30 on {_futureDateFormatted} on {Telephone}");
             }
 
             [Fact]
             public void Callback_future_date_no_time_available()
             {
                 _queryParams.Add("cbdate", _futureDateString);
-                var message = _model.DisplayMessage(_queryParams);
-                message.ShouldBe($"Thanks Joe, we'll call you back on {_futureDateFormatted} on {Telephone}");
+                _model.DisplayMessage(_queryParams)
+                    .ShouldBe($"Thanks Joe, we'll call you back on {_futureDateFormatted} on {Telephone}");
             }
 
             [Fact]
@@ -68,31 +69,23 @@ namespace Vitality.Website.UnitTests.Extensions.View
             {
                 _queryParams.Add("cbdate", _todayString);
                 _queryParams.Add("cbtime", "10:00 - 10:30");
-                var message = _model.DisplayMessage(_queryParams);
-                message.ShouldBe($"Thanks Joe, we'll call you back at 10:00 - 10:30 on {_todayFormatted} on {Telephone}");
+                _model.DisplayMessage(_queryParams)
+                    .ShouldBe($"Thanks Joe, we'll call you back at 10:00 - 10:30 on {_todayFormatted} on {Telephone}");
             }
 
             [Fact]
             public void Callback_today_no_time_available()
             {
                 _queryParams.Add("cbdate", _todayString);
-                var message = _model.DisplayMessage(_queryParams);
-                message.ShouldBe($"Thanks Joe, we'll call you back next working day on {Telephone}");
+                _model.DisplayMessage(_queryParams)
+                    .ShouldBe($"Thanks Joe, we'll call you back next working day on {Telephone}");
             }
 
             [Fact]
             public void Callback_no_date_no_time_available()
             {
-                var message = _model.DisplayMessage(_queryParams);
-                message.ShouldBe($"Thanks Joe, we'll call you back in the next half an hour on {Telephone}");
-            }
-            private NameValueCollection QueryParams()
-            {
-                return new NameValueCollection
-                {
-                    {"name", "Joe"},
-                    {"telephone", "01202743214"},
-                };
+                _model.DisplayMessage(_queryParams)
+                    .ShouldBe($"Thanks Joe, we'll call you back in the next half an hour on {Telephone}");
             }
         }
     }
