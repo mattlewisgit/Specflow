@@ -439,14 +439,18 @@
     <Error Condition="!Exists('..\..\packages\Selenium.Firefox.WebDriver.0.11.1\build\Selenium.Firefox.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Selenium.Firefox.WebDriver.0.11.1\build\Selenium.Firefox.WebDriver.targets'))" />
     <Error Condition="!Exists('..\..\packages\Selenium.WebDriver.ChromeDriver.2.30.0\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Selenium.WebDriver.ChromeDriver.2.30.0\build\Selenium.WebDriver.ChromeDriver.targets'))" />
     <Error Condition="!Exists('..\..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\packages\Pickles.MSBuild.2.16.0\build\Pickles.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Pickles.MSBuild.2.16.0\build\Pickles.MSBuild.targets'))" />
   </Target>
   <Import Project="..\..\packages\Selenium.Firefox.WebDriver.0.11.1\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\..\packages\Selenium.Firefox.WebDriver.0.11.1\build\Selenium.Firefox.WebDriver.targets')" />
   <Import Project="..\..\packages\Selenium.WebDriver.ChromeDriver.2.30.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\..\packages\Selenium.WebDriver.ChromeDriver.2.30.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
+  <Import Project="..\..\packages\Pickles.MSBuild.2.16.0\build\Pickles.MSBuild.targets" Condition="Exists('..\..\packages\Pickles.MSBuild.2.16.0\build\Pickles.MSBuild.targets')" />
+  <PropertyGroup>
+    <Pickles_Generate>True</Pickles_Generate>
+    <Pickles_DocumentationFormat>dhtml</Pickles_DocumentationFormat>
+    <Pickles_OutputDirectory>C:\Temp\PresalesPickles\Web\</Pickles_OutputDirectory>
+  </PropertyGroup>
+  <Target Name="document">
+    <MakeDir Directories="$(OutputDirectory)" />
+    <Pickles FeatureDirectory="$(FeatureDirectory)" OutputDirectory="$(OutputDirectory)" />
   </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
