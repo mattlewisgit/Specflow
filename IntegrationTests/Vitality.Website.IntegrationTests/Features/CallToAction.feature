@@ -21,9 +21,3 @@
 	Given I am on presales /dev/call-to-action
 	When I click on CTA Internal button 
 	Then I expect the presales / to open
-
-	@SIT
-	Scenario: Check CTA Component button links externally
-	Given I am on presales /dev/call-to-action
-	When I click on CTA External button 
-	Then I see the http://www.bbc.co.uk/ page
