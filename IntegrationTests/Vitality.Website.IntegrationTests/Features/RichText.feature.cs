@@ -118,6 +118,88 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute(DisplayName="Check Rich Text Card Snippet in mobile view")]
+        [Xunit.TraitAttribute("FeatureTitle", "RichText")]
+        [Xunit.TraitAttribute("Description", "Check Rich Text Card Snippet in mobile view")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void CheckRichTextCardSnippetInMobileView()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Rich Text Card Snippet in mobile view", new string[] {
+                        "SIT"});
+#line 23
+this.ScenarioSetup(scenarioInfo);
+#line 24
+ testRunner.Given("I am on presales /dev/content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 25
+ testRunner.When("I resize to full-screen view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 26
+ testRunner.Then("I expect the correct CSS Card Snippet values to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check Rich Text Card Snippet in full view")]
+        [Xunit.TraitAttribute("FeatureTitle", "RichText")]
+        [Xunit.TraitAttribute("Description", "Check Rich Text Card Snippet in full view")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void CheckRichTextCardSnippetInFullView()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Rich Text Card Snippet in full view", new string[] {
+                        "SIT"});
+#line 29
+this.ScenarioSetup(scenarioInfo);
+#line 30
+ testRunner.Given("I am on presales /dev/content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 31
+ testRunner.When("I resize to full-screen view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
+ testRunner.Then("I expect the correct CSS Card Snippet values to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check Rich Text Card Snippet button link works in full view")]
+        [Xunit.TraitAttribute("FeatureTitle", "RichText")]
+        [Xunit.TraitAttribute("Description", "Check Rich Text Card Snippet button link works in full view")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void CheckRichTextCardSnippetButtonLinkWorksInFullView()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Rich Text Card Snippet button link works in full view", new string[] {
+                        "SIT"});
+#line 35
+this.ScenarioSetup(scenarioInfo);
+#line 36
+ testRunner.Given("I am on presales /dev/content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 37
+ testRunner.When("I click on the rich text card snippet Get a quote link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 38
+ testRunner.Then("I see the webpage https://join.vitality.co.uk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check Rich Text Card Snippet button link works in mobile view")]
+        [Xunit.TraitAttribute("FeatureTitle", "RichText")]
+        [Xunit.TraitAttribute("Description", "Check Rich Text Card Snippet button link works in mobile view")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void CheckRichTextCardSnippetButtonLinkWorksInMobileView()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Rich Text Card Snippet button link works in mobile view", new string[] {
+                        "SIT"});
+#line 41
+this.ScenarioSetup(scenarioInfo);
+#line 42
+ testRunner.Given("I am on presales /dev/content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 43
+ testRunner.And("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 44
+ testRunner.When("I click on the rich text card snippet Get a quote link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 45
+ testRunner.Then("I see the webpage https://join.vitality.co.uk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable
