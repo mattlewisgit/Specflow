@@ -10,7 +10,8 @@ namespace Vitality.Website.Areas.Presales.SettingsTemplates
 
     [SitecoreType(Cachable = true)]
     public class SiteSettings : SitecoreItem, IAppReferenceGlobal, IBrowserLatencyGlobal, IBrowserStylingGlobal, IDuplicateContentPage, IGoogleAuthorshipGlobal, IGoogleTagManagerGlobal,
-        IIndexationPage, IOpenGraphGlobal, IOpenGraphPage, IQubitOpenTagGlobal, ISerpAppearancePage, ITwitterGlobal, ITwitterPage, IWebmasterToolsGlobal, IJsonSchemaGlobal
+        IIndexationPage, IOpenGraphGlobal, IOpenGraphPage, IQubitOpenTagGlobal, ISerpAppearancePage, ITwitterGlobal, ITwitterPage, IWebmasterToolsGlobal, IJsonSchemaGlobal,
+        IGoogle360
     {
         public string AppleITunesApp { get; set; }
         public string[] DnsPrefetch { get; set; }
@@ -41,6 +42,7 @@ namespace Vitality.Website.Areas.Presales.SettingsTemplates
         public string GoogleSiteVerification { get; set; }
         public string BingSiteVerification { get; set; }
         public string JsonSchemaScript { get; set; }
+        public string Google360Id { get; set; }
     }
 
     public class SiteSettingsConfig : SitecoreGlassMap<SiteSettings>
