@@ -24,7 +24,10 @@ export class VacanciesService {
      return this.http.post("/api/bsl/post?bslendpoint=" + encodeURIComponent(this.endpoint),
           { FeedType: this.feedType, MockDataFile: encodeURI(this.mockDataFile )})
                .toPromise()
-               .then(response => response.json().BslResponse as Vacancies)
+               .then(response => {
+                   var vacancies = response.json().BslResponse as Vacancies;
+                   return vacancies;
+         })
           .catch(this.handleError);
   }
 
