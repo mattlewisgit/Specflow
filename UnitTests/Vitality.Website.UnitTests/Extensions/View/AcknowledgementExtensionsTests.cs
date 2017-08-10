@@ -5,6 +5,8 @@ using Shouldly;
 using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply;
 using Vitality.Website.Extensions.Views;
 using Xunit;
+using System.Globalization;
+using System.Threading;
 
 namespace Vitality.Website.UnitTests.Extensions.View
 {
@@ -21,6 +23,9 @@ namespace Vitality.Website.UnitTests.Extensions.View
             private const string Telephone = "01202743214";
             public DisplayMessage()
             {
+                // Enforce current culture...
+                Thread.CurrentThread.CurrentCulture = new CultureInfo("en-GB");
+
                 _model = new Acknowledgement
                 {
                     AdditionalData = new NameValueCollection
