@@ -669,6 +669,7 @@
     <Content Include="Areas\Presales\Views\Generic\CountdownTimer.cshtml" />
     <Content Include="Areas\Presales\Views\QuoteApply\QuoteApplyFooter.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_JsAngular.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\_Google360.cshtml" />
     <None Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.intellisense.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.min.js" />
@@ -3949,6 +3950,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Areas\Global\Models\FieldValidator.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IGoogle360.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\PromotionSidebar\PromotionSidebar.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\PromotionSidebar\PromotionSidebarContent.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\Acknowledgement.cs" />
