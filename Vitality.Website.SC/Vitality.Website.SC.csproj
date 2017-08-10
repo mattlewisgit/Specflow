@@ -136,6 +136,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Linq" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -159,6 +160,7 @@
     <Compile Include="Agents\Sitemaps\Sitemap.cs" />
     <Compile Include="Agents\Sitemaps\SitemapGenerator.cs" />
     <Compile Include="Agents\Sitemaps\SitemapIndex.cs" />
+    <Compile Include="CallPro\CallProAgent.cs" />
     <Compile Include="ContentSearch\Analyzers\LowerCaseLetterAnalyzer.cs" />
     <Compile Include="ContentSearch\ComputedFields\AncestorField.cs" />
     <Compile Include="ContentSearch\ComputedFields\MediaItemSize.cs" />

@@ -1,13 +1,24 @@
+using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Net;
 using System.Text;
+using System.Threading.Tasks;
 using RestSharp;
+using System.Net.Http;
+using System.Web;
+using Sitecore.Data;
+using Sitecore.Data.Items;
+using Sitecore.Diagnostics;
+using Vitality.Core;
+using Vitality.Mvc.Models;
+using Vitality.Mvc.Utilities;
 
 namespace Vitality.Website.SC.WFFM
 {
     public static class CallProConnector
     {
-        public static HttpStatusCode Send(string xml)
+        public static async Task<HttpResponseMessage> Send(string xml)
         {
             // Once this app is moved to an API, use a strongly-typed config interface
             // with section, a URI builder and Dependency Injection.
@@ -16,12 +27,22 @@ namespace Vitality.Website.SC.WFFM
                 .Append("?mode=import&hash=")
                 .Append(ConfigurationManager.AppSettings["CALL_PRO_HASH_CODE"]);
 
-            var request = new RestRequest(Method.POST).AddParameter(
-                "application/x-www-form-urlencoded",
-                $"xml={xml}",
-                ParameterType.RequestBody);
+            try
+            {
+                var request = new RestRequest(Method.POST).AddParameter(
+                    "application/x-www-form-urlencoded",
+                    $"xml={xml}",
+                    ParameterType.RequestBody);
+                var client = new RestClient(baseUrl.ToString());
 
-            return new RestClient(baseUrl.ToString()).Post(request).StatusCode;
+                var response = client.Post(request);
+
+                return new HttpResponseMessage(response.StatusCode);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }
