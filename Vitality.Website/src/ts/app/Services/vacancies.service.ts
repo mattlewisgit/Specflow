@@ -32,7 +32,10 @@ export class VacanciesService {
   }
 
   getVacancy(advertId: number): Promise<Vacancy> {
-      return this.getVacancies().then(v => v.Vacancies.find(p => p.Advertid === advertId));
+      return this.getVacancies().then(v => {
+          var vacancies = v.Vacancies.find(p => p.Advertid === advertId);
+          return vacancies;
+      });
   }
 
   private handleError(error: any): void {
