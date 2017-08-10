@@ -215,16 +215,16 @@
       <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Nexus.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Ship, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.dll</HintPath>
+    <Reference Include="Sitecore.Ship, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Ship.0.4.0.150819\lib\net45\Sitecore.Ship.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Ship.Core, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.Core.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Ship.0.4.0.150819\lib\net45\Sitecore.Ship.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Ship.Infrastructure, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.Infrastructure.dll</HintPath>
+    <Reference Include="Sitecore.Ship.Infrastructure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Ship.0.4.0.150819\lib\net45\Sitecore.Ship.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Speak.Client, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -339,7 +339,6 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Captcha.config" />
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
-    <Content Include="App_Config\Include\ship.config" />
     <Content Include="App_Config\Commands.config" />
     <Content Include="App_Config\FieldTypes.config" />
     <Content Include="App_Config\Icons.config" />
@@ -353,6 +352,7 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\ship.config" />
     <None Include="App_Config\Include\Sitecore.Forms.config">
       <SubType>Designer</SubType>
     </None>
