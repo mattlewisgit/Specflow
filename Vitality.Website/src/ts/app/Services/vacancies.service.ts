@@ -27,8 +27,7 @@ export class VacanciesService {
                .then(response => {
                    var vacancies = response.json().BslResponse as Vacancies;
                    return vacancies;
-         })
-          .catch(this.handleError);
+         });
   }
 
   getVacancy(advertId: number): Promise<Vacancy> {
