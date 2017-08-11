@@ -1,21 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
-using System.Web;
-using System.Xml.Serialization;
-using Sitecore.Data;
-using Vitality.Core;
-using Vitality.Mvc.Models;
-using Vitality.Mvc.Utilities;
-using Vitality.Website.Areas.Presales.Handlers.CallBack;
-using Vitality.Website.Areas.Presales.Models;
-using Vitality.Website.SC.CallPro;
-using Vitality.Website.SC.WFFM;
-
 namespace Vitality.Website.Areas.Presales.Services
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Net.Http;
+    using System.Threading.Tasks;
+    using System.Web;
+    using Handlers.CallBack;
+    using Mvc.Models;
+    using Mvc.Utilities;
+    using SC.CallPro;
+
     public class CallBackService : ICallBackService
     {
         public async Task<HttpResponseMessage> Post(CallBackPostRequest postData)
