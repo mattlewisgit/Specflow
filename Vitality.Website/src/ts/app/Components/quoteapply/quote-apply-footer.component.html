@@ -16,7 +16,7 @@
         <button type="button" class="button--box" (click)="submit()">{{ quoteFooterData.callToActionText }}</button>
     </div>
 </div>
-<div *ngIf="quoteFooterData.callUsText">
+<div *ngIf="quoteFooterData.callUsText" class="quote--footer__call">
     <p>{{ quoteFooterData.callUsText + " "+ quoteFooterData.contactNumber +" "+  quoteFooterData.joinUsText}}</p>
     <p>{{ quoteFooterData.openingHoursText }}</p>
 
