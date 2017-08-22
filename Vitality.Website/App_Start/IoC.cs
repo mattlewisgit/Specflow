@@ -14,7 +14,6 @@ namespace Vitality.Website.App_Start
 
             serviceCollection.AddTransient(provider => SitecoreContext.GetFromHttpContext());
             serviceCollection.AddScoped<IPresalesBslService, PresalesBslService>();
-            serviceCollection.AddScoped<ICallBackService, CallBackService>();
 
             serviceCollection.AddMediatR(assemblies);
             serviceCollection.AddScoped<SingleInstanceFactory>(p => t => p.GetService(t));

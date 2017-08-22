@@ -1,11 +1,9 @@
-﻿using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
-using System.Web;
-using Vitality.Website.Areas.Presales.Handlers.CallBack;
-
-namespace Vitality.Website.Areas.Presales.Services
+﻿namespace Vitality.Website.Areas.Presales.Services
 {
+    using System.Net.Http;
+    using System.Threading.Tasks;
+    using Handlers.CallBack;
+
     public interface ICallBackService
     {
         Task<HttpResponseMessage> Post(CallBackPostRequest postData);

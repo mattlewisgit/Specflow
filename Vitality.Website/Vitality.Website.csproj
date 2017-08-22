@@ -436,8 +436,8 @@
     <None Include="App_Config\Include\ZPerformance.Dev.config" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="gulpfile.js" />
-    <Content Include="css\experience_editor_fix.css" />
-    <Content Include="css\tablesaw.css" />
+    <Content Include="sitecore\css\experience_editor_fix.css" />
+    <Content Include="sitecore\css\tablesaw.css" />
     <Content Include="Data\Sitecore_Wffm.ldf">
       <DependentUpon>Sitecore_Wffm.mdf</DependentUpon>
     </Content>
@@ -3951,6 +3951,10 @@
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFooter.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFooterViewModel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\TellForm\FieldValidatorViewModel.cs" />
+    <Compile Include="Areas\Presales\Controllers\CallProController.cs" />
+    <Compile Include="Areas\Presales\Handlers\CallBack\CallBackDto.cs" />
+    <Compile Include="Areas\Presales\Handlers\CallBack\CallBackPostRequest.cs" />
+    <Compile Include="Areas\Presales\Models\CallBackData.cs" />
     <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />
     <Compile Include="Pipelines\AppStartInitializer.cs" />
     <Compile Include="App_Start\GlassMapperSc.cs" />
