@@ -36,7 +36,16 @@ body {
   background: #f41a5c;
   font-size: 24px;
   padding: 1.5em; }
-  @media (min-width: 50em) {
+  @media (max-width: 34.365em) {
+    body {
+      padding: 0.1875em; } }
+  @media (min-width: 34.375em) and (max-width: 49.99em) {
+    body {
+      padding: 0.375em; } }
+  @media (min-width: 64em) and (max-width: 85.365em) {
+    body {
+      padding: 0.75em; } }
+  @media (min-width: 85.375em) {
     body {
       padding: 3em; } }
 
@@ -77,7 +86,7 @@ table {
     border: 2px solid white;
     font-weight: 300;
     padding: 1.5em; }
-    @media (min-width: 64.0625em) and (max-width: 85.365em) {
+    @media (min-width: 64em) and (max-width: 85.365em) {
       table td,
       table th {
         padding: 0.75em; } }
@@ -188,6 +197,36 @@ table {
     .button--box__small:hover, .button--box__small:focus {
       box-shadow: 0 0 0 0.375em rgba(0, 0, 0, 0.4); }
 
+.checkbox-list {
+  padding-left: 0;
+  padding-right: 30px; }
+  .checkbox-list input[type="checkbox"] {
+    display: none; }
+    .checkbox-list input[type="checkbox"]:checked + label {
+      background-image: url(/images/tick-white.svg);
+      background-color: #bb114a;
+      background-repeat: no-repeat;
+      background-position: right 50%;
+      background-size: 3em 1.5em; }
+      @media (max-width: 49.99em) {
+        .checkbox-list input[type="checkbox"]:checked + label {
+          background-size: 3em 0.75em; } }
+  .checkbox-list label {
+    border: 2px solid #bb114a;
+    border-radius: 0.375em;
+    cursor: pointer;
+    display: block;
+    padding: 0.375em;
+    transition: background-color 0.4s ease-out; }
+    .checkbox-list label:hover {
+      background: #bb114a; }
+    @media (max-width: 49.99em) {
+      .checkbox-list label {
+        font-size: 16px; } }
+  .checkbox-list li {
+    list-style: none;
+    margin-bottom: 0.375em; }
+
 .highlight {
   color: #f41a5c; }
 
@@ -208,7 +247,12 @@ table {
     content: " ";
     display: block;
     clear: both; }
-  @media (min-width: 50em) {
+  @media (min-width: 50em) and (max-width: 63.99em) {
+    .quote--gutter {
+      width: 23.72881%;
+      float: left;
+      margin-right: 1.69492%; } }
+  @media (min-width: 64em) {
     .quote--gutter {
       width: 23.72881%;
       float: left;
@@ -232,7 +276,6 @@ table {
     border-top: 2px dotted #bb114a;
     bottom: 0;
     left: 0;
-    max-height: 6em;
     padding: 0.75em 0;
     position: fixed;
     right: 0; }
@@ -248,13 +291,44 @@ table {
       font-size: 24px; }
       .quote--footer__progress button {
         width: 100%; }
+    .quote--footer__call {
+      text-align: center; }
+      .quote--footer__call h3,
+      .quote--footer__call p {
+        margin: 0.1875em 0; }
+      .quote--footer__call h3 {
+        font-weight: 600; }
+      .quote--footer__call p {
+        font-size: 16px; }
     @media (max-width: 49.99em) {
-      .quote--footer__logo, .quote--footer__chat {
-        display: none; }
+      .quote--footer {
+        font-size: 16px; }
+        .quote--footer__logo, .quote--footer__chat {
+          display: none; }
+        .quote--footer__progress {
+          padding: 0 1.5em; }
+        .quote--footer .button--box {
+          font-size: 16px; } }
+    @media (max-width: 22.49em) {
+      .quote--footer button {
+        width: 100%; }
       .quote--footer__progress {
-        padding: 0 3em 0 1.5em; } }
-    @media (min-width: 50em) {
-      .quote--footer__logo, .quote--footer__chat {
+        padding: 0 0.375em; } }
+    @media (min-width: 22.5em) and (max-width: 34.365em) {
+      .quote--footer button {
+        margin-left: 10%;
+        min-width: 250px;
+        width: 75%; } }
+    @media (min-width: 34.375em) and (max-width: 49.99em) {
+      .quote--footer button {
+        margin-left: 25%;
+        min-width: 12em;
+        width: 50%;
+        font-size: 75%; } }
+    @media (min-width: 50em) and (max-width: 63.99em) {
+      .quote--footer button {
+        font-size: 75%; }
+      .quote--footer__logo, .quote--footer__call, .quote--footer__chat {
         width: 32.20339%;
         float: left;
         margin-right: 1.69492%; }
@@ -262,9 +336,29 @@ table {
         width: 32.20339%;
         float: left;
         margin-right: 1.69492%; }
-      .quote--footer__chat {
+      .quote--footer__call, .quote--footer__chat {
         float: right;
-        margin-right: 0; } }
+        margin-right: 0; }
+      .quote--footer__call div {
+        padding-right: 1.5em;
+        text-align: right; } }
+    @media (min-width: 64em) {
+      .quote--footer button {
+        font-size: 100%; }
+      .quote--footer__logo, .quote--footer__call, .quote--footer__chat {
+        width: 32.20339%;
+        float: left;
+        margin-right: 1.69492%; }
+      .quote--footer__progress {
+        width: 32.20339%;
+        float: left;
+        margin-right: 1.69492%; }
+      .quote--footer__call, .quote--footer__chat {
+        float: right;
+        margin-right: 0; }
+      .quote--footer__call div {
+        padding-right: 1.5em;
+        text-align: right; } }
     .quote--footer__chat div {
       padding-right: 1.5em;
       text-align: right; }
@@ -436,11 +530,11 @@ table {
 .comparison-table .tooltip--link {
   color: #f41a5c; }
 
-@media (max-width: 64.0525em) {
+@media (max-width: 63.99em) {
   table.comparison-table {
     display: none; } }
 
-@media (min-width: 64.0625em) {
+@media (min-width: 64em) {
   div.comparison-table {
     display: none; } }
 

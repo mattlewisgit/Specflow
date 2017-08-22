@@ -10,6 +10,25 @@
                 </select>
             </div>
         </ng-container>
+        <ng-container *ngSwitchCase="'multiselect'">
+            <div class="question--input__info">
+                {{ question.label }}
+            </div>
+            <ul class="checkbox-list">
+                <li>
+                    <input id="gym" type="checkbox" value="gym" aria-hidden="true" />
+                    <label for="gym">Half price gym</label>
+                </li>
+                <li>
+                    <input id="apple-watch" type="checkbox" value="gym" checked="checked" aria-hidden="true" />
+                    <label for="apple-watch">Apply Watch for &pound;69</label>
+                </li>
+                <li>
+                    <input id="motivational" type="checkbox" value="gym" aria-hidden="true" />
+                    <label for="motivational">Motivational rewards like free cinema</label>
+                </li>
+            </ul>
+        </ng-container>
         <ng-container *ngSwitchDefault>
             <div class="question--input__text" *ngIf="!question.isHidden">
                 {{ question.label }}
