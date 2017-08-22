@@ -8,7 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {AE3F57CB-C2D8-4F83-9F44-EA6DDC6F73D2}
 templatekey: Products Component
-created: 20160818T132951Z
+created: 20160627T151727Z
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
@@ -27,7 +27,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 01a09496-60bb-4fdc-bc14-e2745842a5fe
+revision: 7869e213-176a-4189-9695-7b33177618ec
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -56,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-01a09496-60bb-4fdc-bc14-e2745842a5fe
+7869e213-176a-4189-9695-7b33177618ec
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170512T154503Z
+20170802T141733Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave

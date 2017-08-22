@@ -8,7 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {68B9701F-44A3-4FDF-9D4F-8253B232A692}
 templatekey: Cards Tabbed
-created: 20160818T132927Z
+created: 20160627T151726Z
 
 ----field----
 field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
@@ -20,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 1e955676-4f2e-4574-9991-f6c65ef561aa
+revision: cbb6bb36-708f-4cfa-b5f2-c19331b929cd
 
 ----field----
 field: {DE51AE3E-F03B-43F7-9FF1-ED9C5B32C935}
@@ -63,18 +63,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-1e955676-4f2e-4574-9991-f6c65ef561aa
+cbb6bb36-708f-4cfa-b5f2-c19331b929cd
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170512T153355Z
+20170802T140837Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave

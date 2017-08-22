@@ -1,6 +1,6 @@
-﻿@using AutoMapper
-@using Newtonsoft.Json
-@using Newtonsoft.Json.Serialization
-@using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
-@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<QuoteApplyFooter>
-<p>To be implimented once Damith finished the post action. </p>
+@using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply;
+@using Vitality.Website.Extensions.Views;
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Acknowledgement>
+
+<p>@Model.DisplayMessage(Request.QueryString)</p>
+<a href="@Model.CallToAction.Url">@Model.AdditionalData["CallToActionText"]</a>

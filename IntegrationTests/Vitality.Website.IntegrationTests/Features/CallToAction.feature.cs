@@ -132,26 +132,6 @@ namespace Vitality.Website.IntegrationTests.Features
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check CTA Component button links externally")]
-        [Xunit.TraitAttribute("FeatureTitle", "CallToAction")]
-        [Xunit.TraitAttribute("Description", "Check CTA Component button links externally")]
-        [Xunit.TraitAttribute("Category", "SIT")]
-        public virtual void CheckCTAComponentButtonLinksExternally()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check CTA Component button links externally", new string[] {
-                        "SIT"});
-#line 26
- this.ScenarioSetup(scenarioInfo);
-#line 27
- testRunner.Given("I am on presales /dev/call-to-action", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 28
- testRunner.When("I click on CTA External button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 29
- testRunner.Then("I see the http://www.bbc.co.uk/ page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable

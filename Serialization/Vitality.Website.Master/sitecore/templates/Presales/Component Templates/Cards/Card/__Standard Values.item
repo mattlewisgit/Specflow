@@ -8,7 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {4616C2A8-C5BE-456A-8314-F8961D50A109}
 templatekey: Card
-created: 20160818T132923Z
+created: 20160526T152412Z
 
 ----field----
 field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
@@ -20,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 20b89653-fc8b-48d7-927c-85d802cf24e6
+revision: 58c0f265-1386-44bf-97cc-571bc5f2dca9
 
 ----field----
 field: {A709A5E9-9DF9-4783-A36D-13F9678FB487}
@@ -56,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-20b89653-fc8b-48d7-927c-85d802cf24e6
+58c0f265-1386-44bf-97cc-571bc5f2dca9
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170512T153333Z
+20170802T140808Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave

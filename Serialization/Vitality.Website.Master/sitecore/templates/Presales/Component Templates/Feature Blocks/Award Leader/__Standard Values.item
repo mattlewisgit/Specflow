@@ -8,7 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {056C6833-9BE7-418D-A47B-CCD697D9EDA3}
 templatekey: Award Leader
-created: 20160818T132930Z
+created: 20160726T132329Z
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
@@ -27,7 +27,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 5c679dca-759a-40fa-a5dc-f611c0084040
+revision: dba8cf39-bbc6-48c4-907f-e0b9b71c5392
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -56,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5c679dca-759a-40fa-a5dc-f611c0084040
+dba8cf39-bbc6-48c4-907f-e0b9b71c5392
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170512T153606Z
+20170802T141019Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave

@@ -8,7 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {1B6BD083-B9CA-44F6-8B2D-F742FCAFF3E4}
 templatekey: Call To Action Panel
-created: 20160818T132921Z
+created: 20160621T100129Z
 
 ----field----
 field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
@@ -20,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 280dde63-cc54-43ab-ad9b-3425b71c6867
+revision: 3d1b1876-99cc-4817-9398-7330b97b8f8f
 
 ----field----
 field: {448B79B6-D57E-416F-AF3E-CF4202E2F0ED}
@@ -56,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-280dde63-cc54-43ab-ad9b-3425b71c6867
+3d1b1876-99cc-4817-9398-7330b97b8f8f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170512T162312Z
+20170802T140738Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave

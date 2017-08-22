@@ -8,7 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {E8118048-EB94-4F70-8793-30A460D1B041}
 templatekey: Partner Card
-created: 20160818T132948Z
+created: 20160627T151726Z
 
 ----field----
 field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
@@ -20,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 1e8ba7b1-6eaf-4242-924d-a3b7f199bdfd
+revision: 2c085279-79c0-46b3-a914-ffa67dcee8b4
 
 ----field----
 field: {116B55E0-A9AE-4A68-A962-34AC7B6BEB7A}
@@ -56,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-1e8ba7b1-6eaf-4242-924d-a3b7f199bdfd
+2c085279-79c0-46b3-a914-ffa67dcee8b4
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170512T154414Z
+20170802T141610Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave

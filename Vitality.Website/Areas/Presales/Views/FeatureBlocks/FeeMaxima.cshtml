@@ -85,6 +85,8 @@
     </div>
 </div>
 
+@if (Model.FeedSettings != null)
+{
     <script>
         window.angularData = window.angularData || {};
         window.angularData.feedSettings = {
@@ -92,3 +94,4 @@
             MockDataFile: "@Model.FeedSettings.MockDataFile.Url"
         };
     </script>
+}

@@ -36,11 +36,11 @@
     "moment": "^2.18.1",
     "rimraf": "~2.6.1",
     "run-sequence": "~1.2.2",
-    "rxjs": "~5.0.1",
+    "rxjs": "~5.4.2",
     "systemjs": "~0.19.40",
     "tsify": "3.0.1",
     "twix": "^1.2.0",
-    "typescript": "^2.3.2",
+    "typescript": "^2.4.0",
     "underscore": "^1.8.3",
     "vinyl-source-stream": "1.1.0",
     "zone.js": "~0.7.4"

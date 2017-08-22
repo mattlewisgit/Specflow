@@ -51,7 +51,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AjaxMin, Version=4.0.202.1, Culture=neutral, PublicKeyToken=24297a69a7eae424, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\AjaxMin.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\AjaxMin.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
@@ -75,7 +75,11 @@
       <HintPath>..\packages\Glass.Mapper.Sc.Core.4.2.1.188\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Hi.UrlRewrite, Version=1.8.5779.17263, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Hi.UrlRewrite.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Hi.UrlRewrite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Humanizer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Humanizer.Core.2.2.0\lib\netstandard1.0\Humanizer.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Krusen.Sitecore.WebApi, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -108,7 +112,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="MSCaptcha, Version=4.0.4250.31585, Culture=neutral, PublicKeyToken=b9ff12f28cdcf412, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\MSCaptcha.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\MSCaptcha.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nancy, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -180,15 +184,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Forms.Core, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.Forms.Core.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.Forms.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Forms.Custom, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.Forms.Custom.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.Forms.Custom.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Forms.Mvc, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.Forms.Mvc.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.Forms.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.ItemWebApi, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -211,20 +215,24 @@
       <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Nexus.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Ship, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.dll</HintPath>
+    <Reference Include="Sitecore.Ship, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Ship.0.4.0.150819\lib\net45\Sitecore.Ship.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Ship.Core, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.Core.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Ship.0.4.0.150819\lib\net45\Sitecore.Ship.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Sitecore.Ship.Infrastructure, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Ship.0.4.0.150818\lib\net45\Sitecore.Ship.Infrastructure.dll</HintPath>
+    <Reference Include="Sitecore.Ship.Infrastructure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Ship.0.4.0.150819\lib\net45\Sitecore.Ship.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Speak.Client, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\Sitecore.Speak.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Sitecore.Support.139810, Version=8.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.Support.139810.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Web, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -232,27 +240,27 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.WFFM.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Abstractions, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Abstractions.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.WFFM.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Actions, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Actions.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.WFFM.Actions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Analytics, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Analytics.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.WFFM.Analytics.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Services, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Services.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.WFFM.Services.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Update, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.2\lib\net452\Sitecore.WFFM.Update.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.WFFM.Update.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.ComponentModel" />
@@ -335,7 +343,6 @@
   <ItemGroup>
     <Content Include="App_Config\Include\Captcha.config" />
     <Content Include="App_Config\Include\Z.SwitchMasterToWeb\important.txt" />
-    <Content Include="App_Config\Include\ship.config" />
     <Content Include="App_Config\Commands.config" />
     <Content Include="App_Config\FieldTypes.config" />
     <Content Include="App_Config\Icons.config" />
@@ -349,6 +356,7 @@
     <Content Include="App_Config\Include\Vitality\Vitality.Agents.Release.config.disabled">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="App_Config\Include\ship.config" />
     <None Include="App_Config\Include\Sitecore.Forms.config">
       <SubType>Designer</SubType>
     </None>
@@ -436,8 +444,8 @@
     <None Include="App_Config\Include\ZPerformance.Dev.config" />
     <None Include="Areas\Presales\Views\Cards\CardsStacked.cshtml" />
     <Content Include="gulpfile.js" />
-    <Content Include="css\experience_editor_fix.css" />
-    <Content Include="css\tablesaw.css" />
+    <Content Include="sitecore\css\experience_editor_fix.css" />
+    <Content Include="sitecore\css\tablesaw.css" />
     <Content Include="Data\Sitecore_Wffm.ldf">
       <DependentUpon>Sitecore_Wffm.mdf</DependentUpon>
     </Content>
@@ -665,6 +673,7 @@
     <Content Include="Areas\Presales\Views\Generic\CountdownTimer.cshtml" />
     <Content Include="Areas\Presales\Views\QuoteApply\QuoteApplyFooter.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\_JsAngular.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\_Google360.cshtml" />
     <None Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.intellisense.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.js" />
     <Content Include="sitecore modules\Web\Web Forms for Marketers\mvc\libs\jquery\jquery-2.1.3.min.js" />
@@ -3945,13 +3954,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Areas\Global\Models\FieldValidator.cs" />
+    <Compile Include="Areas\Presales\BaseTemplates\IGoogle360.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\PromotionSidebar\PromotionSidebar.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\PromotionSidebar\PromotionSidebarContent.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\Acknowledgement.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFooter.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFooterViewModel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\TellForm\FieldValidatorViewModel.cs" />
+    <Compile Include="Areas\Presales\Controllers\CallProController.cs" />
+    <Compile Include="Areas\Presales\Handlers\CallBack\CallBackDto.cs" />
+    <Compile Include="Areas\Presales\Handlers\CallBack\CallBackPostRequest.cs" />
+    <Compile Include="Areas\Presales\Models\CallBackData.cs" />
     <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />
+    <Compile Include="Extensions\Views\AcknowledgementExtensions.cs" />
     <Compile Include="Pipelines\AppStartInitializer.cs" />
     <Compile Include="App_Start\GlassMapperSc.cs" />
     <Compile Include="App_Start\GlassMapperScCustom.cs" />

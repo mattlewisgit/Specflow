@@ -8,7 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {E5B15680-FB0E-4273-83F4-E19F8783440E}
 templatekey: Message Box
-created: 20170512T160030Z
+created: 20170428T113701Z
 
 ----field----
 field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
@@ -20,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 10b4c845-b1b9-438c-8043-baa4bc99858f
+revision: ef221d73-2591-4341-914a-db2e0a78a562
 
 ----field----
 field: {25DB54E0-075B-4BED-AE8C-F229FCE27D60}
@@ -56,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-10b4c845-b1b9-438c-8043-baa4bc99858f
+ef221d73-2591-4341-914a-db2e0a78a562
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170512T160456Z
+20170802T141247Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave

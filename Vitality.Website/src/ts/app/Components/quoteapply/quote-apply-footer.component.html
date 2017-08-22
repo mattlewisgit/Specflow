@@ -1,29 +1,24 @@
 <div class="quote--footer__logo">
     <div>
-        <img [src]="quoteFooterData.leftImage.src" [alt]="quoteFooterData.leftImage.alt" />
-    </div>
-    <div class="quote--footer__stanley" *ngIf="quoteFooterData.middleImage">
-        <img [src]="quoteFooterData.middleImage.src" [alt]="quoteFooterData.middleImage.alt" />
+        <img src="/images/star_ratings_secondary_logo_2017_5.png" alt="Defacto 5 star rating" />
     </div>
 </div>
-<div class="quote--footer__progress" *ngIf="quoteFooterData.isFormAttached">
-    <div class="progress" *ngIf="!isAllCompleted && quoteFooterData.enableProgressBar">
+
+<div class="quote--footer__progress">
+    <div class="progress" *ngIf="!isAllCompleted && enableProgressBar">
         <div class="progress-bar" role="progressbar"
              aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [style.width.%]="completedPercentage">
         </div>
     </div>
-    <div *ngIf="isAllCompleted || !quoteFooterData.enableProgressBar">
-        <button type="button" class="button--box" (click)="submit()">{{ quoteFooterData.callToActionText }}</button>
+    <div *ngIf="isAllCompleted || !enableProgressBar">
+        <button type="button" class="button--box" (click)="submit()">{{ callToActionText }}</button>
     </div>
 </div>
-<div *ngIf="quoteFooterData.callUsText" class="quote--footer__call">
-    <p>{{ quoteFooterData.callUsText + " "+ quoteFooterData.contactNumber +" "+  quoteFooterData.joinUsText}}</p>
-    <p>{{ quoteFooterData.openingHoursText }}</p>
 
-        <a *ngIf="quoteFooterData.callToAction" class="ok-btn" [href]="quoteFooterData.callToAction">{{ quoteFooterData.callToActionText }}</a>
-</div>
 <div class="quote--footer__chat">
     <div>
-        <img [src]="quoteFooterData.rightImage.src" [alt]="quoteFooterData.rightImage.alt" />
+        <div>
+            <img src="/images/chat-close.svg" alt="Open chat window" data-opens-chat-window="" data-switch-on-click="/images/chat-open.svg">
+        </div>
     </div>
 </div>

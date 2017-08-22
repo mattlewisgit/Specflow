@@ -40,5 +40,53 @@
                 .WaitForElement(new JQuerySelector("span.featherlight-close-icon.featherlight-close"))
                 .Click();
         }
+
+
+        [Then(@"I expect the correct CSS Card Snippet values to appear")]
+        public void ThenIExpectTheCorrectCSSCardSnippetValuesToAppear()
+        {
+            //Card snippet.
+
+            //Card snippet image.
+            WebDriver
+                .WaitForElement(new JQuerySelector(".grid .grid-col-12-12 .grid-col-4-12.text-center .spotlight .spotlight__list-item.spotlight__standalone .spotlight-item .spotlight-item__top-content .spotlight-item__intro-image.burst img"))
+                .Displayed
+                .ShouldBeTrue();
+
+            //Card snippet heading.
+            WebDriver
+                .WaitForElement(new JQuerySelector(".grid .grid-col-12-12 .grid-col-4-12.text-center .spotlight .spotlight__list-item.spotlight__standalone .spotlight-item .spotlight-item__top-content .spotlight-item__heading"))
+                .Displayed
+                .ShouldBeTrue();
+
+            //Card snippet paragraph.
+            WebDriver
+                .WaitForElement(new JQuerySelector(".grid .grid-col-12-12 .grid-col-4-12.text-center .spotlight .spotlight__list-item.spotlight__standalone .spotlight-item .spotlight-item__top-content .spotlight-item__content p"))
+                .Displayed
+                .ShouldBeTrue();
+
+            //Card snippet 
+            WebDriver
+                .WaitForElement(new JQuerySelector(".grid .grid-col-12-12 .grid-col-4-12.text-center .spotlight .spotlight__list-item.spotlight__standalone .spotlight-item .spotlight-item__cta a"))
+                .Displayed
+                .ShouldBeTrue();
+        }
+
+        [When(@"I click on the rich text card snippet (.*) link")]
+        public void WhenIClickOnTheRichTextCardSnippetLink(string button)
+        {
+            //Send scroll to button
+            WebDriver
+                .ScrollToElement($@".grid .grid-col-12-12 .grid-col-4-12.text-center .spotlight .spotlight__list-item.spotlight__standalone .spotlight-item .spotlight-item__cta:has(a:contains(""{button}""))");
+            
+            //Identify button
+            var buttonSelector = new JQuerySelector($".grid .grid-col-12-12 .grid-col-4-12.text-center .spotlight .spotlight__list-item.spotlight__standalone .spotlight-item .spotlight-item__cta a:contains('{button}')");
+
+            //Click on button.
+            WebDriver
+                .WaitForElement(buttonSelector)
+                .Click();
+        }
+
     }
 }

@@ -8,7 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {18709C78-2661-47A9-AF8D-2FAB087EC546}
 templatekey: Primary Call To Action
-created: 20160818T132922Z
+created: 20160621T100130Z
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
@@ -27,7 +27,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 7eafb2a7-eb76-4efa-99e7-5cd9cb36cae9
+revision: 1176c519-02e8-41df-a5ab-ab4c959776a5
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -56,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7eafb2a7-eb76-4efa-99e7-5cd9cb36cae9
+1176c519-02e8-41df-a5ab-ab4c959776a5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170512T153311Z
+20170802T140750Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave

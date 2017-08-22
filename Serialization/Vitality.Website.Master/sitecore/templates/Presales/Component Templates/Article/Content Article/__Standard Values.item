@@ -8,7 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {81935A24-283D-4CDD-BF31-649344827115}
 templatekey: Content Article
-created: 20170403T142930Z
+created: 20170120T125131Z
 
 ----field----
 field: {CA9B9F52-4FB0-4F87-A79F-24DEA62CDA65}
@@ -20,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 7e0a6227-9922-43ce-9390-7d9118b9b576
+revision: 56d1ef18-add8-4837-ba68-2cb7cd7a257a
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -49,18 +49,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7e0a6227-9922-43ce-9390-7d9118b9b576
+56d1ef18-add8-4837-ba68-2cb7cd7a257a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170512T152736Z
+20170802T140627Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave

@@ -24,12 +24,17 @@ export class VacanciesService {
      return this.http.post("/api/bsl/post?bslendpoint=" + encodeURIComponent(this.endpoint),
           { FeedType: this.feedType, MockDataFile: encodeURI(this.mockDataFile )})
                .toPromise()
-               .then(response => response.json().BslResponse as Vacancies)
-          .catch(this.handleError);
+               .then(response => {
+                   var vacancies = response.json().BslResponse as Vacancies;
+                   return vacancies;
+         });
   }
 
   getVacancy(advertId: number): Promise<Vacancy> {
-      return this.getVacancies().then(v => v.Vacancies.find(p => p.Advertid === advertId));
+      return this.getVacancies().then(v => {
+          var vacancies = v.Vacancies.find(p => p.Advertid === advertId);
+          return vacancies;
+      });
   }
 
   private handleError(error: any): void {

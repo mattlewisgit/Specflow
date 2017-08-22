@@ -8,7 +8,7 @@ name: __Standard Values
 master: {00000000-0000-0000-0000-000000000000}
 template: {89D4A4DE-9F77-4427-86CB-CF824F5EEF02}
 templatekey: Cards Stacked
-created: 20160818T132925Z
+created: 20160526T152410Z
 
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
@@ -27,7 +27,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 39031284-6aa2-40bf-a6ce-ca5566c8f220
+revision: ea1a5c35-6074-4789-966a-3a1f272fddd6
 
 ----field----
 field: {EBCCD884-A229-439B-95A2-2E2BF2375995}
@@ -63,18 +63,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-39031284-6aa2-40bf-a6ce-ca5566c8f220
+ea1a5c35-6074-4789-966a-3a1f272fddd6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170512T153345Z
+20170802T140824Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave
