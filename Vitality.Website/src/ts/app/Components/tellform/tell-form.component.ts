@@ -71,9 +71,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
         this.submitSubscription = this.footerBarService.onSubmitClicked()
             .subscribe((data: boolean) => {
                 if (data) {
-                    if (this.tellForm.valid) {
-                        this.tellFormService.submit(this.tellForm.value);
-                    }
+                    this.tellFormService.submit(this.tellForm.value);
                 }
             });
     }

@@ -11,5 +11,10 @@
         {
             public static string PresalesBslUrl = "PresalesBslUrl";
         }
+
+        public static class QuoteApply
+        {
+            public static string ApplicationKey = "QuoteApplication";
+        }
     }
 }

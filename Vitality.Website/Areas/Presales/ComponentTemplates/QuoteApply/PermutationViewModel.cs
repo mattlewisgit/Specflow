@@ -6,6 +6,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
     {
         public IEnumerable<BenefitOptionViewModel> BenefitOptions { get; set; }
         public string ExternalIdentifier { get; set; }
+        public string PerMonthText { get; set; }
         public string Title { get; set; }
     }
 }

@@ -7,7 +7,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
     {
         public Guid Id { get; set; }
         public bool IsEditable { get; set; }
-        public Image Image { get; set; }
+        public Image Icon { get; set; }
         public string Title { get; set; }
         public string Tooltip { get; set; }
     }

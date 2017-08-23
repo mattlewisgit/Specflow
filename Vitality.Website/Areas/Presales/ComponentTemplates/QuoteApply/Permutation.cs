@@ -11,6 +11,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         public IEnumerable<BenefitOption> BenefitOptions { get; set; }
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public KeyValuePair ExternalIdentifier { get; set; }
+        public string PerMonthText { get; set; }
         public string Title { get; set; }
     }
 }
