@@ -13,8 +13,15 @@ created: 20170822T121853Z
 ----version----
 language: en
 version: 1
-revision: 32bd7ffd-7cfc-4b2d-86e3-7e1cc7b4fdd7
+revision: 431e9e06-9a5b-464d-ac78-65bf6a529b62
 
+----field----
+field: {365CBF3B-BCA1-4C43-A070-68B9FD55DAE2}
+name: Key
+key: key
+content-length: 38
+
+{921ABBD7-460F-4671-B1B9-13A5FB256D02}
 ----field----
 field: {EDBA5F60-C406-43A0-8E4E-145A7BCD98FF}
 name: ControlType
@@ -29,6 +36,20 @@ key: label
 content-length: 26
 
 Choose as many as you like
+----field----
+field: {98D8AEE3-52A2-4CCE-9654-16DDD64735BD}
+name: Validators
+key: validators
+content-length: 38
+
+{F9D8696B-D818-4BD7-AAA3-1F270F7EF184}
+----field----
+field: {142376C6-E1DA-431C-B6D1-5796FF970557}
+name: RelatedData
+key: relateddata
+content-length: 116
+
+{7E141E78-2576-4ADA-9AE0-20C99B22288A}|{745C17CD-DF5B-4BDC-80A0-1DBE14CB1F2B}|{41544DB8-B5C7-457E-B240-5A29DB7B3E54}
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -56,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-32bd7ffd-7cfc-4b2d-86e3-7e1cc7b4fdd7
+431e9e06-9a5b-464d-ac78-65bf6a529b62
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170822T121948Z
+20170823T090748Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

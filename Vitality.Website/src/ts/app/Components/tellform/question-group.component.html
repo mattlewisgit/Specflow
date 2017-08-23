@@ -15,17 +15,9 @@
                 {{ question.label }}
             </div>
             <ul class="checkbox-list">
-                <li>
-                    <input id="gym" type="checkbox" value="gym" aria-hidden="true" />
-                    <label for="gym">Half price gym</label>
-                </li>
-                <li>
-                    <input id="apple-watch" type="checkbox" value="gym" checked="checked" aria-hidden="true" />
-                    <label for="apple-watch">Apply Watch for &pound;69</label>
-                </li>
-                <li>
-                    <input id="motivational" type="checkbox" value="gym" aria-hidden="true" />
-                    <label for="motivational">Motivational rewards like free cinema</label>
+                <li *ngFor="let opt of question.relatedData">
+                    <input [id]="opt.key" type="checkbox" [value]="opt.value" aria-hidden="true" />
+                    <label for="{{opt.key}}">{{opt.value}}</label>
                 </li>
             </ul>
         </ng-container>
