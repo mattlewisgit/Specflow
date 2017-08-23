@@ -72,7 +72,16 @@
                     dest => dest.BasedOnValues,
                     opt => opt.MapFrom(src => string.IsNullOrEmpty(src.BasedOnValues)? null: src.BasedOnValues.Split(',')));
 
-            config.CreateMap<QuoteApplyFooter, QuoteApplyFooterViewModel>();
+            config.CreateMap<QuoteApplyFooter, QuoteApplyFooterViewModel>()
+                .ForMember(
+                    dest => dest.CallToAction,
+                    opt => opt.MapFrom(src => src.CallToAction.Url))
+                 .ForMember(
+                    dest => dest.ContactNumber,
+                    opt => opt.MapFrom(src => src.ContactNumber.Value))
+                     .ForMember(
+                    dest => dest.OpeningHoursText,
+                    opt => opt.MapFrom(src => src.OpeningHoursText.Value));
 
             config.CreateMap<TellForm, TellFormViewModel>()
                 .ForMember(
@@ -80,9 +89,6 @@
                     opt =>
                         opt.MapFrom(
                             src => src.AdditionalData.AllKeys.ToDictionary(i => i, i => src.AdditionalData[i])))
-                .ForMember(
-                    dest => dest.CallToAction,
-                    opt => opt.MapFrom(src => src.CallToAction.Url))
                 .ForMember(
                     dest => dest.ServiceOutagePage,
                     opt => opt.MapFrom(src => src.ServiceOutagePage.Url));

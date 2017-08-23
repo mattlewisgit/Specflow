@@ -36,12 +36,6 @@ body {
   background: #f41a5c;
   font-size: 24px;
   padding: 1.5em; }
-  @media (max-width: 34.365em) {
-    body {
-      padding: 0.1875em; } }
-  @media (min-width: 34.375em) and (max-width: 49.99em) {
-    body {
-      padding: 0.375em; } }
   @media (min-width: 64em) and (max-width: 85.365em) {
     body {
       padding: 0.75em; } }
@@ -247,12 +241,7 @@ table {
     content: " ";
     display: block;
     clear: both; }
-  @media (min-width: 50em) and (max-width: 63.99em) {
-    .quote--gutter {
-      width: 23.72881%;
-      float: left;
-      margin-right: 1.69492%; } }
-  @media (min-width: 64em) {
+  @media (min-width: 50em) {
     .quote--gutter {
       width: 23.72881%;
       float: left;
@@ -309,12 +298,7 @@ table {
           padding: 0 1.5em; }
         .quote--footer .button--box {
           font-size: 16px; } }
-    @media (max-width: 22.49em) {
-      .quote--footer button {
-        width: 100%; }
-      .quote--footer__progress {
-        padding: 0 0.375em; } }
-    @media (min-width: 22.5em) and (max-width: 34.365em) {
+    @media (max-width: 34.365em) {
       .quote--footer button {
         margin-left: 10%;
         min-width: 250px;
@@ -323,28 +307,8 @@ table {
       .quote--footer button {
         margin-left: 25%;
         min-width: 12em;
-        width: 50%;
-        font-size: 75%; } }
-    @media (min-width: 50em) and (max-width: 63.99em) {
-      .quote--footer button {
-        font-size: 75%; }
-      .quote--footer__logo, .quote--footer__call, .quote--footer__chat {
-        width: 32.20339%;
-        float: left;
-        margin-right: 1.69492%; }
-      .quote--footer__progress {
-        width: 32.20339%;
-        float: left;
-        margin-right: 1.69492%; }
-      .quote--footer__call, .quote--footer__chat {
-        float: right;
-        margin-right: 0; }
-      .quote--footer__call div {
-        padding-right: 1.5em;
-        text-align: right; } }
-    @media (min-width: 64em) {
-      .quote--footer button {
-        font-size: 100%; }
+        width: 50%; } }
+    @media (min-width: 50em) {
       .quote--footer__logo, .quote--footer__call, .quote--footer__chat {
         width: 32.20339%;
         float: left;

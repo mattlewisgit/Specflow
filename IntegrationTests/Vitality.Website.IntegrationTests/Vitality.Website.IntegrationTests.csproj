@@ -150,6 +150,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RewardLeader.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\SummaryComponent.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SummaryComponent.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\WFFM.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -285,6 +290,7 @@
     <Compile Include="Steps\RichTextSteps.cs" />
     <Compile Include="Steps\SearchingSteps.cs" />
     <Compile Include="Steps\AwardLeaderSteps.cs" />
+    <Compile Include="Steps\SummaryComponentSteps.cs" />
     <Compile Include="Steps\TabbedSteps.cs" />
     <Compile Include="Steps\WFFMSteps.cs" />
     <Compile Include="Utilities\PageItems.cs" />
@@ -403,6 +409,10 @@
     <None Include="Features\Careers.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Careers.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\SummaryComponent.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SummaryComponent.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Tabbed.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
