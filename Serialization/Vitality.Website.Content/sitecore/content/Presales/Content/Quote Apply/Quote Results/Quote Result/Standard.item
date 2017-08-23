@@ -13,8 +13,50 @@ created: 20170823T074814Z
 ----version----
 language: en
 version: 1
-revision: 3da57485-d01b-4418-a8c0-bb86235dfe14
+revision: 3f0e0acf-fcd5-432a-9d32-25e8ddf4eccc
 
+----field----
+field: {8ED52A41-6E55-4410-A648-CAA125852707}
+name: ExternalIdentifier
+key: externalidentifier
+content-length: 38
+
+{A5117D97-E027-4975-8731-757E5E62E9C7}
+----field----
+field: {7B5A2CE8-9F0C-4705-AE81-EAC50D36256F}
+name: Title
+key: title
+content-length: 8
+
+Standard
+----field----
+field: {2055B167-AF64-434E-96F3-DAE1DF208DA4}
+name: BenefitOptions
+key: benefitoptions
+content-length: 38
+
+{18587FE3-D0E7-4054-8900-E3961230860A}
+----field----
+field: {CC6E6F38-B830-419A-A53B-214F2FE55E4E}
+name: PerMonthText
+key: permonthtext
+content-length: 9
+
+per Month
+----field----
+field: {85597394-EC20-4F86-BE76-BEA04A9975C9}
+name: CrossIcon
+key: crossicon
+content-length: 58
+
+<image mediaid="{2383913C-ED6B-474A-AE46-D99C627E62BA}" />
+----field----
+field: {01A50A2E-386D-48B6-A2EA-F3F06BF10C19}
+name: TickIcon
+key: tickicon
+content-length: 58
+
+<image mediaid="{8EF1CBDC-988C-4716-B712-6CED321EAAE9}" />
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -42,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3da57485-d01b-4418-a8c0-bb86235dfe14
+3f0e0acf-fcd5-432a-9d32-25e8ddf4eccc
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170823T074815Z
+20170823T215532Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

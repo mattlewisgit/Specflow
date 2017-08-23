@@ -86,7 +86,10 @@
                     opt => opt.MapFrom(src => src.OpeningHoursText.Value));
 
 
-            config.CreateMap<Benefit, BenefitViewModel>();
+            config.CreateMap<Benefit, BenefitViewModel>()
+                .ForMember(
+                    dest => dest.ModuleCode,
+                    opt => opt.MapFrom(src => src.ModuleCode.Value));
             config.CreateMap<BenefitOption, BenefitOptionViewModel>()
                 .ForMember(
                     dest => dest.Code,

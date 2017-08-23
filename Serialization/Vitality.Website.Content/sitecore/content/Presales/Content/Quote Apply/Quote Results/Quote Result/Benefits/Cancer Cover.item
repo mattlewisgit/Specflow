@@ -1,19 +1,19 @@
 ----item----
 version: 1
-id: {E698430D-BCAB-4D2F-B554-2A681D704BA5}
+id: {1489EFC2-52BF-4991-8D4D-B2C3BE63AB80}
 database: master
-path: /sitecore/content/Presales/Content/Quote Apply/Quote Results/Quote Result/Benefits/Vitality Savings
+path: /sitecore/content/Presales/Content/Quote Apply/Quote Results/Quote Result/Benefits/Cancer Cover
 parent: {340AB8EF-B497-40DF-9406-FABC2D8DE0A8}
-name: Vitality Savings
+name: Cancer Cover
 master: {00000000-0000-0000-0000-000000000000}
 template: {81B607A2-FD0A-46EF-B5A8-570AD55EF3A8}
 templatekey: Benefit
-created: 20170823T080038Z
+created: 20170823T214822Z
 
 ----version----
 language: en
 version: 1
-revision: 794ee502-8dce-4f63-bd5d-2f815a255ed9
+revision: eb6eb7c2-6675-40ba-8876-1d0fd88073d8
 
 ----field----
 field: {7C4D704F-ECB4-4A3D-A507-60BFCD032F2B}
@@ -21,35 +21,28 @@ name: Icon
 key: icon
 content-length: 58
 
-<image mediaid="{21498FA8-5045-4A94-8FD5-EA0CE011AA83}" />
+<image mediaid="{A7D2AEE1-BD11-4167-B6F6-A76D2C1C65FA}" />
 ----field----
 field: {795E6C7B-EE16-4F9C-992B-0C76D16604FC}
 name: Title
 key: title
-content-length: 21
+content-length: 12
 
-Your Vitality Savings
+Cancer Cover
 ----field----
 field: {8915940D-A983-4B58-8D36-CE0482622915}
 name: Tooltip
 key: tooltip
-content-length: 34
+content-length: 30
 
-Some useful explanation here<br />
-----field----
-field: {50089D18-EADE-45D4-B407-4E10ED4CA5CD}
-name: IsEditable
-key: iseditable
-content-length: 1
-
-1
+Test tool time sdfsdfs w fsfsd
 ----field----
 field: {174BDE68-37E9-4C21-B69D-5FAA38757390}
 name: ModuleCode
 key: modulecode
-content-length: 0
+content-length: 38
 
-
+{066D147F-1E8A-46BF-B41F-688AB399B944}
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -63,7 +56,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170823T080038Z
+20170823T214822Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -77,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-794ee502-8dce-4f63-bd5d-2f815a255ed9
+eb6eb7c2-6675-40ba-8876-1d0fd88073d8
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170823T214808Z
+20170823T215058Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

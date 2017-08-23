@@ -13,15 +13,15 @@ created: 20170823T075504Z
 ----version----
 language: en
 version: 1
-revision: 3c89196c-dfb0-434f-acdd-bd53ae432403
+revision: 9cc72f86-32a2-4ead-91a2-3a246aa56e5b
 
 ----field----
 field: {4255A7D9-C0F3-40B8-8273-937FEC12D1AE}
 name: Code
 key: code
-content-length: 0
+content-length: 38
 
-
+{40454ED1-2A6F-49D3-BDB8-7C2FEF4A3259}
 ----field----
 field: {4D6560B1-1D7A-4799-90F0-BA7D14046E77}
 name: Title
@@ -29,6 +29,13 @@ key: title
 content-length: 26
 
 Save up to 25.80 per month
+----field----
+field: {031DA3FF-9BD8-4E4F-AC5A-ABC2A9133316}
+name: Description
+key: description
+content-length: 0
+
+
 ----field----
 field: {32D2AAB5-1212-4CAD-8A71-925A955E1270}
 name: BenefitId
@@ -63,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3c89196c-dfb0-434f-acdd-bd53ae432403
+9cc72f86-32a2-4ead-91a2-3a246aa56e5b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170823T094527Z
+20170823T190650Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

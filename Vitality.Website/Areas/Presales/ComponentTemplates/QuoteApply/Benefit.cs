@@ -1,4 +1,6 @@
-﻿using Glass.Mapper.Sc.Fields;
+﻿using Glass.Mapper.Sc.Configuration;
+using Glass.Mapper.Sc.Configuration.Attributes;
+using Glass.Mapper.Sc.Fields;
 using Vitality.Website.Areas.Global.Models;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
@@ -7,6 +9,8 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
     {
         public bool IsEditable { get; set; }
         public Image Icon { get; set; }
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public KeyValuePair ModuleCode { get; set; }
         public string Title { get; set; }
         public string Tooltip { get; set; }
     }

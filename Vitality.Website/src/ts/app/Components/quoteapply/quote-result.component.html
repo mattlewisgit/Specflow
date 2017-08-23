@@ -37,35 +37,16 @@
                             <img src="/images/hospital.svg" alt="Hospital">
                         </div>
                         <div class="comparison-table--label__text">
-                            <p>Hospital Network / Treatment Pathway</p>
+                            <p>{{ benefit.title }}</p>
                             <span class="tooltip--link">What is this?</span>
                             <div class="tooltip--content">
-                                <h3>Title</h3>
-                                <p>Some <i>useful</i> explanation here.</p>
+                                {{ benefit.tooltip}}
                             </div>
                         </div>
                     </div>
                 </td>
-                <td>
-                    <p>
-                        <b>Consultant Select</b>
-                        <br>
-                        Chosen for you by a Vitality GP, based on your medical needs
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <b>Local</b>
-                        <br>
-                        Any hospital in your area, except Central London
-                    </p>
-                </td>
-                <td>
-                    <p>
-                        <b>Countrywide Plus</b>
-                        <br>
-                        Any private hospital or NHS hospital with private facilities
-                    </p>
+                <td *ngFor="let  permutation of quoteResultData.permutations;">
+                   <benefit-option [benefitId]="benefit.id" [benefitOptions]="permutation.benefitOptions"></benefit-option>
                 </td>
             </tr>
             <tr>
