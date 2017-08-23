@@ -374,6 +374,7 @@
     <Content Include="Areas\Presales\Views\TellForm\TellForm.cshtml" />
     <Content Include="Areas\Presales\Views\QuoteApply\Acknowledgement.cshtml" />
     <Content Include="Areas\Presales\Views\Generic\PromotionSidebar.cshtml" />
+    <Content Include="Areas\Presales\Views\QuoteApply\QuoteResults.cshtml" />
     <None Include="Areas\Presales\Views\Shared\QuoteApplyLayout.cshtml" />
     <Content Include="src\js\countdown-timer-app.js" />
     <Content Include="src\js\global-functions.js" />
@@ -3958,8 +3959,16 @@
     <Compile Include="Areas\Presales\ComponentTemplates\PromotionSidebar\PromotionSidebar.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\PromotionSidebar\PromotionSidebarContent.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\Acknowledgement.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\BenefitViewModel.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\Benefit.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\BenefitOptionViewModel.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\PermutationViewModel.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\Permutation.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFooter.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteApplyFooterViewModel.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\BenefitOption.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteResultViewModel.cs" />
+    <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteResult.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\TellForm\FieldValidatorViewModel.cs" />
     <Compile Include="Areas\Presales\Controllers\CallProController.cs" />
     <Compile Include="Areas\Presales\Handlers\CallBack\CallBackDto.cs" />

@@ -1,34 +1,27 @@
 ----item----
 version: 1
-id: {B94E68FC-5F55-4CB3-96F0-683F58252F9A}
+id: {2B70B1F0-CB64-48DD-A4F7-F0D35B365FF8}
 database: master
-path: /sitecore/content/Presales/Content/Quote Apply/Footers/With Progress Bar
-parent: {5689CB6B-D257-4599-8932-A6EE646D3F9D}
-name: With Progress Bar
+path: /sitecore/content/Presales/Content/Quote Apply/Quote Results/Quote Result/Benefit Options
+parent: {C2EBE946-99DD-4BC0-AED7-1760C66620BB}
+name: Benefit Options
 master: {00000000-0000-0000-0000-000000000000}
-template: {E19F5204-A02E-4C9D-B0E2-34E9318473F2}
-templatekey: Quote Apply Footer
-created: 20170726T160246Z
+template: {4902517E-93B7-41B5-BCC4-387E1D0304A7}
+templatekey: Subfolder
+created: 20170823T074838Z
 
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{1589F4AD-1F3A-40E9-B148-1FDF65735FC6}
 ----version----
 language: en
 version: 1
-revision: 088b697f-a97f-4830-8874-3858c3251ff9
+revision: 98da7f8d-6a14-42ca-9b37-5fdc6c4d8300
 
-----field----
-field: {04CC9454-8BFE-400B-B389-89D19AA295F4}
-name: CallToActionText
-key: calltoactiontext
-content-length: 5
-
-Apply
-----field----
-field: {ED5FC897-A785-41F9-A0BE-FBECD4242EBA}
-name: EnableProgressBar
-key: enableprogressbar
-content-length: 1
-
-1
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -42,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170726T160246Z
+20170823T074838Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -56,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-088b697f-a97f-4830-8874-3858c3251ff9
+98da7f8d-6a14-42ca-9b37-5fdc6c4d8300
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170726T172601Z
+20170823T075438Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
