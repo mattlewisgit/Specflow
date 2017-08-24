@@ -20,7 +20,7 @@ export class QuoteResultComponent implements OnInit {
 
     ngOnInit(): void {
         this.quoteResultData = this.winRef.nativeWindow.angularData.quoteResult;
-        this.quoteService.callRtpe()
+        this.quoteService.callRtpe(this.quoteResultData.permutations)
             .then((data: any) => {
                 this.quotes = data.Quotes;
             });
