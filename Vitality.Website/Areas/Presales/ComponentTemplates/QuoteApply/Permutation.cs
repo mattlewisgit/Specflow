@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Glass.Mapper.Sc.Configuration;
+﻿using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Configuration.Attributes;
 using Glass.Mapper.Sc.Fields;
 using Vitality.Website.Areas.Global.Models;

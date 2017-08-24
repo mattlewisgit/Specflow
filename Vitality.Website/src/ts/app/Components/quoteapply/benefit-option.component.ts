@@ -18,9 +18,6 @@ export class BenefitOptionComponent implements OnInit {
     tickIcon: Image;
 
     ngOnInit(): void {
-
         this.benefitOption = this.benefitOptions.filter(x =>  x.permutations.filter(p => p === this.permutationId).length>0)[0];
-        console.log(this.permutationId);
-        console.log(this.benefitOption);
     }
 }

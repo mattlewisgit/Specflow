@@ -1,7 +1,8 @@
-import { Component, Input, OnInit, ChangeDetectorRef }      from "@angular/core";
+import { Component, Input, OnInit }      from "@angular/core";
 import { WindowRef } from "./../windowref";
 import { Subscription } from "rxjs/Subscription";
 import { QuoteService } from "../../services/quote.service";
+
 import { BenefitOption } from "../..//models/quote/benefit-option";
 
 @Component({
@@ -10,6 +11,7 @@ import { BenefitOption } from "../..//models/quote/benefit-option";
 })
 export class QuoteResultComponent implements OnInit {
     quoteResultData: any;
+    quotes: any[] = [];
 
     constructor(
         private quoteService: QuoteService,
@@ -18,12 +20,17 @@ export class QuoteResultComponent implements OnInit {
 
     ngOnInit(): void {
         this.quoteResultData = this.winRef.nativeWindow.angularData.quoteResult;
-        console.log(this.quoteResultData);
-        console.log(this.quoteService.quoteApplication);
+        this.quoteService.callRtpe()
+            .then((data: any) => {
+                this.quotes = data.Quotes;
+            });
     }
 
-    getBenefitOption(benefitId: string, benefitOptions: BenefitOption[]): BenefitOption {
-        console.log(benefitId + benefitOptions);
-        return benefitOptions.filter(x => x.benefitId === benefitId)[0];
+    getQuotePrice(externalIdentifier: string): number {
+        const quote = this.quotes.filter(x => x.ExternalQuoteIdentifier === externalIdentifier)[0];
+        if (quote) {
+            return quote.PolicyGrossPremium;
+        }
+        return 0;
     }
 }

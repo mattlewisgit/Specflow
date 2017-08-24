@@ -7,7 +7,7 @@
                 <th *ngFor="let permutation of quoteResultData.permutations">
                     <p> {{ permutation.title}}
                         <br>
-                        <b>&pound;35.80 {{ permutation.perMonthText}}</b>
+                        <b>&pound; {{ getQuotePrice(permutation.externalIdentifier)}} {{ permutation.perMonthText}}</b>
                     </p>
                 </th>
             </tr>
