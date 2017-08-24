@@ -13,7 +13,7 @@ created: 20170823T074814Z
 ----version----
 language: en
 version: 1
-revision: 6a59d4fd-0dad-45e6-8fde-fb919b584e36
+revision: a1887d24-b043-4e17-b5c7-252616435518
 
 ----field----
 field: {8ED52A41-6E55-4410-A648-CAA125852707}
@@ -51,6 +51,13 @@ content-length: 58
 
 <image mediaid="{8EF1CBDC-988C-4716-B712-6CED321EAAE9}" />
 ----field----
+field: {E9DB4AC7-DEA3-4D13-B9E5-D1C52F7761C9}
+name: CoreModules
+key: coremodules
+content-length: 38
+
+{16AA1ECA-69AE-42B8-8C4F-E99B44A39DBE}
+----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
 key: __owner
@@ -77,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6a59d4fd-0dad-45e6-8fde-fb919b584e36
+a1887d24-b043-4e17-b5c7-252616435518
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170824T085049Z
+20170824T190651Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

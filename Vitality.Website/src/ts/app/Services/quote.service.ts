@@ -54,25 +54,41 @@ export class QuoteService {
             .catch(this.errorService.handleServiceOutage.bind(this.errorService));
     }
 
-    private getRtpeRequest(permutations: any[]): QuoteRequest {
+    private getRtpeRequest(quoteResultData: any): QuoteRequest {
         const lives = this.getLives();
-        const modules = new Array<Module>();
-        modules.push(new Module("P01"));
-        modules.push(new Module("P20"));
-        modules.push(new Module("P03"));
-
-        let permutationRequests = new Array<PermutationRequest>();
+        const moduleBenefits = quoteResultData.benefits.filter((b:any) => b.isModule);
+        const otherBenefits = quoteResultData.benefits.filter((b: any) => !b.isModule && b.code);
+        const permutationRequests = new Array<PermutationRequest>();
         let i = 0;
-        for (let permutation of permutations) {
-            console.log(permutation);
-            i=i+1;
+        for (let permutation of quoteResultData.permutations) {
+            i = i + 1;
+            const modules = new Array<Module>();
+
+            for (let code of permutation.coreModules) {
+                modules.push(new Module(code));
+            }
+            for (let moduleBenefit of moduleBenefits) {
+                const moduleBenefitsOption = moduleBenefit.benefitOptions.filter((x:any) => x.permutations.filter((p:string) => p === permutation.id).length > 0)[0];
+                if (moduleBenefitsOption) {
+                    modules.push(new Module(moduleBenefitsOption.code));
+                }
+            }
+
             const individualQuoteRequest = new IndividualQuoteRequest();
+            for (let otherBenefit of otherBenefits) {
+                const otherBenefitsOption = otherBenefit.benefitOptions.filter((x: any) => x.permutations.filter((p: string) => p === permutation.id).length > 0)[0];
+                if (otherBenefitsOption) {
+                    individualQuoteRequest[otherBenefit.code] = otherBenefitsOption.code;
+                }
+            }
+            console.log(individualQuoteRequest.hospitalList);
+
+
             individualQuoteRequest.claimFreeYears= this.quoteApplication.noOfClaimFreeYears;
             individualQuoteRequest.competitorRenwalPrem = 0.0;
             individualQuoteRequest.excessAmount = QuoteApplyConstants.excessAmount.hundred;
             individualQuoteRequest.excessType = QuoteApplyConstants.excessType.perClaim;
             individualQuoteRequest.externalQuoteIdentifier = permutation.externalIdentifier;
-            individualQuoteRequest.hospitalList = QuoteApplyConstants.hospitalNetwork.countrywide;
             individualQuoteRequest.occupation = 1;
             individualQuoteRequest.policyPostcode = this.quoteApplication.postcode;
             individualQuoteRequest.policyUwChoiceCode = "A01";
@@ -121,7 +137,6 @@ export class QuoteService {
     }
 
     private getAge(birthDayString: string): number {
-        console.log(birthDayString);
         const birthDate = moment(birthDayString, GlobalConstants.formats.dateFormat);
         const now = moment();
         const age = Math.floor(now.diff(birthDate, GlobalConstants.moments.years, true));
