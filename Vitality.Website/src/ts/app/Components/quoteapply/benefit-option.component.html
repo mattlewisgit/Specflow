@@ -1,6 +1,12 @@
-<p *ngIf="benefitOption">
+<p *ngIf="benefitOption && benefitOption.title">
     <b>{{ benefitOption.title }}</b>
     <br>
-   {{ benefitOption.description }}
+    {{ benefitOption.description }}
+</p>
+<p  *ngIf="benefitOption && !benefitOption.title" class="comparison-table--available">
+    <img [src]="tickIcon.src" [alt]="tickIcon.alt">
 </p>
 
+<p *ngIf="!benefitOption" class="comparison-table--available">
+    <img [src]="crossIcon.src" [alt]="crossIcon.alt">
+</p>

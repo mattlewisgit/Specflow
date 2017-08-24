@@ -19,5 +19,6 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         public string PrintText { get; set; }
         public string QuoteReferenceText { get; set; }
         public string QuoteValidText { get; set; }
+        public string TooltipText { get; set; }
     }
 }

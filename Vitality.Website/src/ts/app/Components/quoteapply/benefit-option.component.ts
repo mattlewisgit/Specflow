@@ -1,5 +1,6 @@
-import { Component, Input, OnInit} from "@angular/core";
-import { BenefitOption } from "../..//models/quote/benefit-option";
+import { Component, Input, OnInit } from "@angular/core";
+import { Image } from "../../models/image";
+import { BenefitOption } from "../../models/quote/benefit-option";
 
 @Component({
     selector: "benefit-option",
@@ -11,9 +12,12 @@ export class BenefitOptionComponent implements OnInit {
     @Input()
     benefitOptions: BenefitOption[];
     benefitOption: BenefitOption;
+    @Input()
+    crossIcon: Image;
+    @Input()
+    tickIcon: Image;
 
     ngOnInit(): void {
         this.benefitOption = this.benefitOptions.filter(x => x.benefitId === this.benefitId)[0];
-        console.log(this.benefitOption);
     }
 }

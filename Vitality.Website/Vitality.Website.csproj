@@ -424,6 +424,7 @@
     <TypeScriptCompile Include="src\ts\quote-apply-main.ts" />
     <TypeScriptCompile Include="src\ts\vacancydetails-main.ts" />
     <TypeScriptCompile Include="src\ts\systemjs.config.ts" />
+    <TypeScriptCompile Include="src\ts\app\models\image.ts" />
     <Content Include="_Heartbeat.html" />
     <None Include="App_Config\Include\Vitality\Vitality.Pipelines.Release.config.disabled">
       <SubType>Designer</SubType>
