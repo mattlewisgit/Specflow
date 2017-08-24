@@ -1,69 +1,62 @@
 ----item----
 version: 1
-id: {A32FE368-CF2A-44AC-B234-131B878CAE39}
+id: {745C17CD-DF5B-4BDC-80A0-1DBE14CB1F2B}
 database: master
-path: /sitecore/content/Presales/Configuration/Field Validators/Adult Age Validator
-parent: {38BDCDEF-A8A4-4C3C-93AD-9BD62C745FB7}
-name: Adult Age Validator
+path: /sitecore/content/Presales/Content/Tell Form/Quote Apply Form/What is important to you/Choose as many as you like/Discounted gym membership
+parent: {63D2D39C-DDEE-43E9-9165-B43B34E03BA8}
+name: Discounted gym membership
 master: {00000000-0000-0000-0000-000000000000}
-template: {C631EE17-FF6E-4C17-8303-CFCE777FD8A2}
-templatekey: Field Validator
-created: 20170615T150840Z
+template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
+templatekey: Key Value Pair
+created: 20170822T155719Z
 
 ----version----
 language: en
 version: 1
-revision: f003b9f8-8c11-4622-981c-5a70d4adcc74
+revision: 14aad5e9-e2ed-4c20-8896-3240cbfdf596
 
 ----field----
-field: {41F1F96F-0AA6-4E4C-95ED-EA251B3BD7E7}
-name: ValidatorName
-key: validatorname
-content-length: 17
+field: {C01F61CF-8603-4C48-A96A-EFDDDFEB52ED}
+name: Value
+key: value
+content-length: 25
 
-ageRangeValidator
-----field----
-field: {2DA36667-40DD-4A1C-952A-795FE6F0B4F0}
-name: Parameters
-key: parameters
-content-length: 19
-
-minAge=16&maxAge=80
+Discounted gym membership
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
 key: __owner
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170615T150840Z
+20170822T155719Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
 key: __created by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-f003b9f8-8c11-4622-981c-5a70d4adcc74
+14aad5e9-e2ed-4c20-8896-3240cbfdf596
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170823T150603Z
+20170824T100124Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

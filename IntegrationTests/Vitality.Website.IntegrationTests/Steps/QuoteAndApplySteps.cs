@@ -29,7 +29,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         [Given(@"I go to the (.*) field and choose (.*)")]
         public void IGoToTheFieldAndChoose(string fieldName, string option)
         {
-            WebDriver.ScrollToElement($"#{fieldName}");
+            //WebDriver.ScrollToElement($"#{fieldName}");
 
             var possibleOptions = WebDriver
                 .FindElements(new JQuerySelector($".quote--content > tell-form .question #{fieldName} option"));
@@ -44,7 +44,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         [When(@"I go to the (.*) field and enter (.*)")]
         public void IGoToTheFieldAndEnter(string fieldName, string inputText)
         {
-            WebDriver.ScrollToElement($"#{fieldName}");
+            //WebDriver.ScrollToElement($"#{fieldName}");
 
             WebDriver
                 .FindElement(new JQuerySelector($".quote--content > tell-form .question .question--input__text #{fieldName}"))
@@ -212,11 +212,24 @@ namespace Vitality.Website.IntegrationTests.Steps
             var percent = WebDriver
                 .FindElement(new JQuerySelector($".quote--footer .progress .progress-bar")).GetAttribute("style");
 
-            Regex.Matches(percent, @"(?<=width: )d+")
+            var regex = new Regex(@"(?<=width: )\d+");
+            var actualProgress = regex.Matches(percent);
+
+
+            var arr = Regex.Matches(percent, @"(?<=width: )\d+")
                 .Cast<Match>()
                 .Select(m => m.Value)
-                .First()
-                .ShouldBe(progressPercentage);
+                .ToArray();
+
+
+            try
+            {
+                Assert.True(arr[0] == progressPercentage);
+            }
+            catch (Exception)
+            {
+                throw new Exception("Expected " + progressPercentage + "%, but got " + arr[0] + "%");
+            }
         }
 
         [Then(@"I see that the (.*) options are as expected")]

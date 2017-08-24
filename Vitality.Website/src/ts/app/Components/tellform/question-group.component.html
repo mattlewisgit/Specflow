@@ -10,6 +10,17 @@
                 </select>
             </div>
         </ng-container>
+        <ng-container *ngSwitchCase="'multiselect'">
+            <div class="question--input__info">
+                {{ question.label }}
+            </div>
+            <ul class="checkbox-list">
+                <li *ngFor="let opt of question.relatedData">
+                    <input [id]="opt.key" type="checkbox" [value]="opt.value" aria-hidden="true" />
+                    <label for="{{opt.key}}">{{opt.value}}</label>
+                </li>
+            </ul>
+        </ng-container>
         <ng-container *ngSwitchDefault>
             <div class="question--input__text" *ngIf="!question.isHidden">
                 {{ question.label }}
