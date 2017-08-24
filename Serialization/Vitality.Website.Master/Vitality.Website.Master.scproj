@@ -6119,15 +6119,15 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Quote Apply\Benefit Option\Contents\BenefitId.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Quote Apply\Benefit Option\Contents\Code.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Quote Apply\Benefit Option\Contents\Description.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Quote Apply\Benefit Option\Contents\Permutations.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
@@ -6140,6 +6140,10 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Quote Apply\Benefit\Contents.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Quote Apply\Benefit\Contents\BenefitOptions.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
@@ -6168,10 +6172,6 @@
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Quote Apply\Permutation\Contents.item">
-      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
-      <ItemDeployment>AlwaysUpdate</ItemDeployment>
-    </SitecoreItem>
-    <SitecoreItem Include="sitecore\templates\Presales\Component Templates\Quote Apply\Permutation\Contents\BenefitOptions.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>

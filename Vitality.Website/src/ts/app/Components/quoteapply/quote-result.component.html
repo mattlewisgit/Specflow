@@ -44,8 +44,8 @@
                     </div>
                 </td>
                 <td *ngFor="let  permutation of quoteResultData.permutations;">
-                    <benefit-option [benefitId]="benefit.id"
-                                    [benefitOptions]="permutation.benefitOptions"
+                    <benefit-option [permutationId]="permutation.id"
+                                    [benefitOptions]="benefit.benefitOptions"
                                     [crossIcon]="permutation.crossIcon"
                                     [tickIcon]="permutation.tickIcon"></benefit-option>
                 </td>

@@ -8,8 +8,6 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 {
     public class Permutation : SitecoreItem
     {
-        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public IEnumerable<BenefitOption> BenefitOptions { get; set; }
         public Image CrossIcon { get; set; }
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public KeyValuePair ExternalIdentifier { get; set; }

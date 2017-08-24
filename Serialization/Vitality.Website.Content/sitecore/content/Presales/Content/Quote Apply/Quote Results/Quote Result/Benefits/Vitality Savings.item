@@ -13,7 +13,7 @@ created: 20170823T080038Z
 ----version----
 language: en
 version: 1
-revision: 794ee502-8dce-4f63-bd5d-2f815a255ed9
+revision: b38ccc0f-2fab-42a6-8d24-ea77483b55b0
 
 ----field----
 field: {7C4D704F-ECB4-4A3D-A507-60BFCD032F2B}
@@ -51,6 +51,13 @@ content-length: 0
 
 
 ----field----
+field: {65D3DEFB-193B-41F9-ACB2-D28B99A5DA1C}
+name: BenefitOptions
+key: benefitoptions
+content-length: 77
+
+{18587FE3-D0E7-4054-8900-E3961230860A}|{7EBAADFF-ABD0-43BE-9B93-21F8EC2022E6}
+----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
 key: __owner
@@ -77,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-794ee502-8dce-4f63-bd5d-2f815a255ed9
+b38ccc0f-2fab-42a6-8d24-ea77483b55b0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170823T214808Z
+20170824T094158Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

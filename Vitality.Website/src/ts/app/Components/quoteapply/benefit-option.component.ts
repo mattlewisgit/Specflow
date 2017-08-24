@@ -8,7 +8,7 @@ import { BenefitOption } from "../../models/quote/benefit-option";
 })
 export class BenefitOptionComponent implements OnInit {
     @Input()
-    benefitId: string;
+    permutationId: string;
     @Input()
     benefitOptions: BenefitOption[];
     benefitOption: BenefitOption;
@@ -18,6 +18,9 @@ export class BenefitOptionComponent implements OnInit {
     tickIcon: Image;
 
     ngOnInit(): void {
-        this.benefitOption = this.benefitOptions.filter(x => x.benefitId === this.benefitId)[0];
+
+        this.benefitOption = this.benefitOptions.filter(x =>  x.permutations.filter(p => p === this.permutationId).length>0)[0];
+        console.log(this.permutationId);
+        console.log(this.benefitOption);
     }
 }

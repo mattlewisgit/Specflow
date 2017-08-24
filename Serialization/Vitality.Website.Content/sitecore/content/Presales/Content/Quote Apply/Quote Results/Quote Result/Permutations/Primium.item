@@ -2,8 +2,8 @@
 version: 1
 id: {0AAFDC54-40E1-4F34-86CF-39721BE1228F}
 database: master
-path: /sitecore/content/Presales/Content/Quote Apply/Quote Results/Quote Result/Primium
-parent: {C2EBE946-99DD-4BC0-AED7-1760C66620BB}
+path: /sitecore/content/Presales/Content/Quote Apply/Quote Results/Quote Result/Permutations/Primium
+parent: {368528FE-6E19-4625-ABB3-BACFE4C58365}
 name: Primium
 master: {00000000-0000-0000-0000-000000000000}
 template: {2827D004-B8E0-4AE7-AC15-F08A011D1520}
@@ -13,7 +13,7 @@ created: 20170823T213719Z
 ----version----
 language: en
 version: 1
-revision: 9f875864-7c43-439b-9253-5ee4cc01d272
+revision: 164c8e9a-8d3c-4ceb-8a9f-12c33af3d74f
 
 ----field----
 field: {8ED52A41-6E55-4410-A648-CAA125852707}
@@ -29,13 +29,6 @@ key: title
 content-length: 7
 
 Primium
-----field----
-field: {2055B167-AF64-434E-96F3-DAE1DF208DA4}
-name: BenefitOptions
-key: benefitoptions
-content-length: 77
-
-{18587FE3-D0E7-4054-8900-E3961230860A}|{1FA1B999-BBA4-40AB-9502-BBF2067E6A2D}
 ----field----
 field: {CC6E6F38-B830-419A-A53B-214F2FE55E4E}
 name: PerMonthText
@@ -84,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9f875864-7c43-439b-9253-5ee4cc01d272
+164c8e9a-8d3c-4ceb-8a9f-12c33af3d74f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170823T215526Z
+20170824T085100Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
