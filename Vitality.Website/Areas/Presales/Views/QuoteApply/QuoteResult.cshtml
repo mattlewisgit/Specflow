@@ -7,21 +7,18 @@
     var serializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
     var angularModel = JsonConvert.SerializeObject(Mapper.Map<QuoteResultViewModel>(Model), serializerSettings);
 }
-else
-{
-    <script type="text/javascript">
-        window.angularData = window.angularData || {};
-        window.angularData.quoteResult = @Html.Raw(angularModel);
-    </script>
+<script type="text/javascript">
+    window.angularData = window.angularData || {};
+    window.angularData.quoteResult = @Html.Raw(angularModel);
+</script>
 
-    <quote-result>
-        <div class="loader__icon"></div>
-    </quote-result>
+<quote-result>
+    <div class="loader__icon"></div>
+</quote-result>
 
 
-    <script type="text/javascript">
-    System.import('/js/quote-result.main.js')
-        .catch(function(err) { throw err; });
-    </script>
-}
+<script type="text/javascript">
+System.import('/js/quote-result.main.js')
+    .catch(function(err) { throw err; });
+</script>
 
