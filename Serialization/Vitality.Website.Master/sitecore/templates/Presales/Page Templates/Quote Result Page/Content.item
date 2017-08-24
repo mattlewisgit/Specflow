@@ -1,0 +1,45 @@
+----item----
+version: 1
+id: {87D8DD2E-2F1F-4864-AFE9-162B15BA9F5F}
+database: master
+path: /sitecore/templates/Presales/Page Templates/Quote Result Page/Content
+parent: {58A271C2-627F-4B12-B134-B54D80588F4E}
+name: Content
+master: {00000000-0000-0000-0000-000000000000}
+template: {E269FBB5-3750-427A-9149-7AA950B49301}
+templatekey: Template section
+created: 20170823T161016Z
+
+----version----
+language: en
+version: 1
+revision: 455a801c-1a20-4465-b0f8-d3b56e7ef438
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170531T085132Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+455a801c-1a20-4465-b0f8-d3b56e7ef438
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170823T161038Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
