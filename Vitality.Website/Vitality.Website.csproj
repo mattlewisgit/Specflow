@@ -3985,14 +3985,10 @@
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteResultViewModel.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteResult.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\TellForm\FieldValidatorViewModel.cs" />
-    <Compile Include="Areas\Presales\Controllers\QuoteApplyController.cs" />
     <Compile Include="Areas\Presales\Controllers\CallProController.cs" />
     <Compile Include="Areas\Presales\Handlers\CallBack\CallBackDto.cs" />
     <Compile Include="Areas\Presales\Handlers\CallBack\CallBackPostRequest.cs" />
-    <Compile Include="Areas\Presales\Handlers\QuoteApply\SaveApplicationHandler.cs" />
-    <Compile Include="Areas\Presales\Handlers\QuoteApply\BslPostRequest.cs" />
     <Compile Include="Areas\Presales\Models\CallBackData.cs" />
-    <Compile Include="Areas\Presales\Models\QuoteApply\QuoteApplication.cs" />
     <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />
     <Compile Include="Extensions\Views\AcknowledgementExtensions.cs" />
     <Compile Include="Pipelines\AppStartInitializer.cs" />
