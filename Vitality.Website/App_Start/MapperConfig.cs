@@ -43,7 +43,7 @@
             config.CreateMap<FieldValidator, FieldValidatorViewModel>()
                 .ForMember(
                     dest => dest.Parameters,
-                    opt => opt.MapFrom(src => src.Parameters.AllKeys.ToDictionary(i=>i, i=> src.Parameters[i])));
+                    opt => opt.MapFrom(src => src.Parameters.AllKeys.ToDictionary(i => i, i => src.Parameters[i])));
 
             config.CreateMap<Question, QuestionViewModel>()
                 .ForMember(
@@ -62,7 +62,7 @@
                             src => src.RelatedData.Select(i => new KeyValuePair<string, string>(i.Name, i.Value))));
 
             config.CreateMap<QuestionGroup, QuestionGroupViewModel>()
-                 .ForMember(
+                .ForMember(
                     dest => dest.Key,
                     opt => opt.MapFrom(src => src.Key.Value))
                 .ForMember(
@@ -70,18 +70,37 @@
                     opt => opt.MapFrom(src => src.BasedOnKey.Value))
                 .ForMember(
                     dest => dest.BasedOnValues,
-                    opt => opt.MapFrom(src => string.IsNullOrEmpty(src.BasedOnValues)? null: src.BasedOnValues.Split(',')));
+                    opt =>
+                        opt.MapFrom(
+                            src => string.IsNullOrEmpty(src.BasedOnValues) ? null : src.BasedOnValues.Split(',')));
 
             config.CreateMap<QuoteApplyFooter, QuoteApplyFooterViewModel>()
                 .ForMember(
                     dest => dest.CallToAction,
                     opt => opt.MapFrom(src => src.CallToAction.Url))
-                 .ForMember(
+                .ForMember(
                     dest => dest.ContactNumber,
                     opt => opt.MapFrom(src => src.ContactNumber.Value))
-                     .ForMember(
+                .ForMember(
                     dest => dest.OpeningHoursText,
                     opt => opt.MapFrom(src => src.OpeningHoursText.Value));
+
+
+            config.CreateMap<Benefit, BenefitViewModel>()
+                .ForMember(
+                    dest => dest.ModuleCode,
+                    opt => opt.MapFrom(src => src.ModuleCode.Value));
+            config.CreateMap<BenefitOption, BenefitOptionViewModel>()
+                .ForMember(
+                    dest => dest.Code,
+                    opt => opt.MapFrom(src => src.Code.Value));
+
+            config.CreateMap<Permutation, PermutationViewModel>()
+                .ForMember(
+                    dest => dest.ExternalIdentifier,
+                    opt => opt.MapFrom(src => src.ExternalIdentifier.Value));
+
+            config.CreateMap<QuoteResult, QuoteResultViewModel>();
 
             config.CreateMap<TellForm, TellFormViewModel>()
                 .ForMember(

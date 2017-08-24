@@ -1,0 +1,94 @@
+----item----
+version: 1
+id: {203C0AD4-0740-4409-8732-3A406534D6BD}
+database: master
+path: /sitecore/content/Presales/Content/Quote Apply/Quote Results/Quote Result/Permutations/Standard
+parent: {368528FE-6E19-4625-ABB3-BACFE4C58365}
+name: Standard
+master: {00000000-0000-0000-0000-000000000000}
+template: {2827D004-B8E0-4AE7-AC15-F08A011D1520}
+templatekey: Permutation
+created: 20170823T074814Z
+
+----version----
+language: en
+version: 1
+revision: 6a59d4fd-0dad-45e6-8fde-fb919b584e36
+
+----field----
+field: {8ED52A41-6E55-4410-A648-CAA125852707}
+name: ExternalIdentifier
+key: externalidentifier
+content-length: 38
+
+{A5117D97-E027-4975-8731-757E5E62E9C7}
+----field----
+field: {7B5A2CE8-9F0C-4705-AE81-EAC50D36256F}
+name: Title
+key: title
+content-length: 8
+
+Standard
+----field----
+field: {CC6E6F38-B830-419A-A53B-214F2FE55E4E}
+name: PerMonthText
+key: permonthtext
+content-length: 9
+
+per Month
+----field----
+field: {85597394-EC20-4F86-BE76-BEA04A9975C9}
+name: CrossIcon
+key: crossicon
+content-length: 58
+
+<image mediaid="{2383913C-ED6B-474A-AE46-D99C627E62BA}" />
+----field----
+field: {01A50A2E-386D-48B6-A2EA-F3F06BF10C19}
+name: TickIcon
+key: tickicon
+content-length: 58
+
+<image mediaid="{8EF1CBDC-988C-4716-B712-6CED321EAAE9}" />
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170823T074815Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+6a59d4fd-0dad-45e6-8fde-fb919b584e36
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170824T085049Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

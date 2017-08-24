@@ -25,7 +25,7 @@ namespace Vitality.Website.UnitTests.Presales.Controllers.BslControllerTests
         public async void Should_return_400_bad_request_when_end_point_is_not_provided()
         {
             Init();
-            var result = await _controller.Post(null,It.IsAny<BslPostData>());
+            var result = await _controller.Post(null,It.IsAny<object>());
             result.StatusCode.ShouldBe(HttpStatusCode.BadRequest);
         }
 
@@ -50,7 +50,7 @@ namespace Vitality.Website.UnitTests.Presales.Controllers.BslControllerTests
         {
             _presalesBslService.Setup(p => p.Post<string>(It.IsAny<string>(), It.IsAny<object>())).ReturnsAsync(_sampleJson);
             Init();
-            var result = await _controller.Post("test", new BslPostData {MockDataFile = "mockfile"});
+            var result = await _controller.Post("test", new {MockDataFile = "mockfile"});
             result.StatusCode.ShouldBe(HttpStatusCode.OK);
         }
 

@@ -5,13 +5,13 @@
 </div>
 
 <div class="quote--footer__progress">
-    <div class="progress" *ngIf="!isAllCompleted && enableProgressBar">
+    <div class="progress" *ngIf="!isAllCompleted && quoteFooterData.enableProgressBar">
         <div class="progress-bar" role="progressbar"
              aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" [style.width.%]="completedPercentage">
         </div>
     </div>
-    <div *ngIf="isAllCompleted || !enableProgressBar">
-        <button type="button" class="button--box" (click)="submit()">{{ callToActionText }}</button>
+    <div *ngIf="isAllCompleted || !quoteFooterData.enableProgressBar">
+        <button type="button" class="button--box" (click)="submit()">{{ quoteFooterData.callToActionText }}</button>
     </div>
 </div>
 
