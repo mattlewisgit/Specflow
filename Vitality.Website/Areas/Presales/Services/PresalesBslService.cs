@@ -24,7 +24,7 @@ namespace Vitality.Website.Areas.Presales.Services
         public async Task<T> Post<T>(string endpoint, object postData)
         {
             var request = CreateRequest(endpoint, Method.POST);
-            request.AddJsonBody(postData);
+            request.AddParameter(PresalesConstants.ContentTypes.ApplicationJson, postData, ParameterType.RequestBody);
             return Handle(await _restClient.ExecuteTaskAsync<T>(request));
         }
 
