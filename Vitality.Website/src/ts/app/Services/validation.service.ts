@@ -43,6 +43,8 @@ export class ValidationService {
             return this.futureDateValidator(params);
         case "excludeDayValidator":
             return this.excludeDayValidator(params);
+        case "maxSelectionsValidator":
+            return this.maxSelectionsValidator(params);
         default:
             return null;
         }
@@ -70,6 +72,7 @@ export class ValidationService {
 
     futureDateValidator(options: any) {
         return (control: any) => {
+            console.log(control.value);
             if (this.matchDate(control.value)) {
                 const futureDate = moment(control.value, GlobalConstants.formats.dateFormat);
                 const dateDifference = Math.ceil(futureDate.diff(moment(), GlobalConstants.moments.days, true));
@@ -141,6 +144,15 @@ export class ValidationService {
                     return resolve(failedMessage);
                 }
             });
+        }
+    }
+
+    maxSelectionsValidator(options: any) {
+        return (control: any) => {
+            //let selections = control.value.split("|");
+            //return selections.length > options.maxSelections ? { "maxSelectionsExceeded": true } : null;
+            console.log(control.value);
+            return { "invalidDate": true };
         }
     }
 
