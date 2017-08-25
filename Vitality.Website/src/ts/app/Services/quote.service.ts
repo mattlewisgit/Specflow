@@ -81,17 +81,12 @@ export class QuoteService {
                     individualQuoteRequest[otherBenefit.code] = otherBenefitsOption.code;
                 }
             }
-            console.log(individualQuoteRequest.hospitalList);
-
 
             individualQuoteRequest.claimFreeYears= this.quoteApplication.noOfClaimFreeYears;
             individualQuoteRequest.competitorRenwalPrem = 0.0;
-            individualQuoteRequest.excessAmount = QuoteApplyConstants.excessAmount.hundred;
-            individualQuoteRequest.excessType = QuoteApplyConstants.excessType.perClaim;
             individualQuoteRequest.externalQuoteIdentifier = permutation.externalIdentifier;
             individualQuoteRequest.occupation = 1;
             individualQuoteRequest.policyPostcode = this.quoteApplication.postcode;
-            individualQuoteRequest.policyUwChoiceCode = "A01";
             individualQuoteRequest.previousInsurer = 0;
             individualQuoteRequest.previousInsurerClaims = this.quoteApplication.noOfClaims;
             individualQuoteRequest.isPreviouslyInsured = this.quoteApplication.insuredStatus === 1;
