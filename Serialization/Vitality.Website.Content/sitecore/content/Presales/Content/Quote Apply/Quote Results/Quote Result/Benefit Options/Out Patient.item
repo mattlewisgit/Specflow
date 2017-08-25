@@ -1,27 +1,27 @@
 ----item----
 version: 1
-id: {066D147F-1E8A-46BF-B41F-688AB399B944}
+id: {169E8418-D0DE-4259-AB21-611CCCDFA9F0}
 database: master
-path: /sitecore/content/Presales/Configuration/Quote/Modules/Cancer Cover
-parent: {52906428-F5F0-4B25-B78B-6261ED0D2FFB}
-name: Cancer Cover
+path: /sitecore/content/Presales/Content/Quote Apply/Quote Results/Quote Result/Benefit Options/Out Patient
+parent: {2B70B1F0-CB64-48DD-A4F7-F0D35B365FF8}
+name: Out Patient
 master: {00000000-0000-0000-0000-000000000000}
-template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
-templatekey: Key Value Pair
-created: 20170823T213319Z
+template: {4902517E-93B7-41B5-BCC4-387E1D0304A7}
+templatekey: Subfolder
+created: 20170825T072944Z
 
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 38
+
+{1589F4AD-1F3A-40E9-B148-1FDF65735FC6}
 ----version----
 language: en
 version: 1
-revision: bf808f99-a6b7-4906-95ca-3b66d8653e23
+revision: bc15ad44-07d2-48e3-8595-0ac5e789b58d
 
-----field----
-field: {C01F61CF-8603-4C48-A96A-EFDDDFEB52ED}
-name: Value
-key: value
-content-length: 3
-
-P01
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -35,28 +35,21 @@ name: __Created
 key: __created
 content-length: 16
 
-20170823T213319Z
-----field----
-field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
-name: __Created by
-key: __created by
-content-length: 14
-
-sitecore\Admin
+20170825T072944Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-bf808f99-a6b7-4906-95ca-3b66d8653e23
+bc15ad44-07d2-48e3-8595-0ac5e789b58d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170823T213339Z
+20170825T073013Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
