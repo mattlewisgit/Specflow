@@ -329,6 +329,23 @@ namespace Vitality.Website.IntegrationTests.Steps
                 Assert.True(false, "Apply button not found");
             }
         }
+
+
+        [Given(@"I go to the (.*) checkbox field and select the value")]
+        public void GivenIGoToTheCheckboxFieldAndSelectTheValue(string checkbox)
+        {
+            WebDriver
+                .ScrollToElement(
+                    $@".quote--content > tell-form .question .checkbox-list li label:contains(""{checkbox}"")");
+
+
+            WebDriver
+                .FindElement(new JQuerySelector(
+                    $".quote--content > tell-form .question .checkbox-list li label:contains('{checkbox}')"))
+                .Click();
+
+        }
+
     }
 
 
