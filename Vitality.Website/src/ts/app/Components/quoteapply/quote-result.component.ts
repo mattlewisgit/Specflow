@@ -42,6 +42,9 @@ export class QuoteResultComponent implements OnInit {
         return  benefitOptions.filter(x => x.permutations.filter(p => p === permutationId).length > 0)[0];
     }
     enableEdit(benefit: any): void {
+        for (let bnt of this.quoteResultData.benefits) {
+            bnt.isEditing = false;
+        }
         benefit.isEditing = true;
     }
 
