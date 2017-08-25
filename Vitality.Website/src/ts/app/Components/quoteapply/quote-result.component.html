@@ -70,4 +70,34 @@
 
         </tbody>
     </table>
+    <div class="comparison-table">
+        <div class="comparison-table--header" style="background-image: url(/images/ambassadors.png);">
+            <p>
+                <b>{{ quoteResultData.quoteValidText }}</b>
+            </p>
+            <p>
+                <b>{{ quoteResultData.quoteReferenceText }} <span class="highlight">1234567-0</span></b>
+            </p>
+        </div>
+        <div *ngFor="let permutation of quoteResultData.permutations; let i = index;" class="comparison-table--single">
+            <div class="comparison-table--body">
+                <div class="comparison-table--row">
+                    <span>{{ permutation.title}}</span>
+                    <span class="pull--right"><b>&pound; {{ getQuotePrice(permutation.externalIdentifier)}} {{ permutation.perMonthText}}</b></span>
+                </div>
+                <div *ngFor="let benefit of quoteResultData.benefits" class="comparison-table--row">
+                   {{ benefit.title }}
+                    <span class="pull--right tooltip--link tooltip--link__left">?</span>
+                    <div class="tooltip--content">
+                        {{ benefit.tooltip}}
+                    </div>
+                </div>
+            </div>
+            <div class="comparison-table--footer">
+                <p class="comparison-table--buy">
+                    <button class="button--box button--box__primary button--box__small width--full">{{ quoteResultData.callToActionText }}</button>
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
