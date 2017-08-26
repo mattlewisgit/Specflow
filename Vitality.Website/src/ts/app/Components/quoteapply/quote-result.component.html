@@ -79,7 +79,7 @@
                 <b>{{ quoteResultData.quoteReferenceText }} <span class="highlight">1234567-0</span></b>
             </p>
         </div>
-        <div *ngFor="let permutation of quoteResultData.permutations; let i = index;" class="comparison-table--single">
+        <div *ngFor="let permutation of quoteResultData.permutations;odd as isOdd;" class="comparison-table--single" [class.comparison-table__highlight]="isOdd">
             <div class="comparison-table--body">
                 <div class="comparison-table--row">
                     <span>{{ permutation.title}}</span>
