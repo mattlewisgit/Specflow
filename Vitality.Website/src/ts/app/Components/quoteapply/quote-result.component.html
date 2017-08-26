@@ -53,18 +53,11 @@
                 </div>
             </td>
             <td *ngFor="let  permutation of quoteResultData.permutations;">
-                <p *ngIf="getBenefitOption(benefit.benefitOptions, permutation.id) && getBenefitOption(benefit.benefitOptions, permutation.id).title">
-                    <b>{{ getBenefitOption(benefit.benefitOptions, permutation.id).title }}</b>
-                    <br>
-                    {{ getBenefitOption(benefit.benefitOptions, permutation.id).description }}
-                </p>
-                <p *ngIf="getBenefitOption(benefit.benefitOptions, permutation.id) && !getBenefitOption(benefit.benefitOptions, permutation.id).title" class="comparison-table--available">
-                    <img [src]="permutation.tickIcon.src" [alt]="permutation.tickIcon.alt">
-                </p>
-
-                <p *ngIf="!getBenefitOption(benefit.benefitOptions, permutation.id)" class="comparison-table--available">
-                    <img [src]="permutation.crossIcon.src" [alt]="permutation.crossIcon.alt">
-                </p>
+                <benefit-option [permutationId]="permutation.id"
+                                [benefitOptions]="benefit.benefitOptions"
+                                [currentTime] ="currentTime"
+                                [crossIcon]="permutation.crossIcon"
+                                [tickIcon]="permutation.tickIcon"></benefit-option>
             </td>
         </tr>
 

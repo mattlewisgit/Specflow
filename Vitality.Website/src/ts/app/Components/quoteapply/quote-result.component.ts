@@ -12,6 +12,7 @@ import { BenefitOption } from "../..//models/quote/benefit-option";
 export class QuoteResultComponent implements OnInit {
     quoteResultData: any;
     quotes: any[] = [];
+    currentTime : Date;
 
     constructor(
         private quoteService: QuoteService,
@@ -41,6 +42,7 @@ export class QuoteResultComponent implements OnInit {
     getBenefitOption(benefitOptions: BenefitOption[], permutationId:string): any {
         return  benefitOptions.filter(x => x.permutations.filter(p => p === permutationId).length > 0)[0];
     }
+
     enableEdit(benefit: any): void {
         for (let bnt of this.quoteResultData.benefits) {
             bnt.isEditing = false;
@@ -64,6 +66,7 @@ export class QuoteResultComponent implements OnInit {
                 }
             }
         }
+        this.currentTime = new Date();
         this.getQuotes();
     }
 }
