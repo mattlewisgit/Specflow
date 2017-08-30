@@ -38,7 +38,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
         /// <param name="postData">Data to post to BSL</param>
         [HttpPost]
         [Route("api/bsl/post")]
-        public async Task<HttpResponseMessage> Post(string bslEndpoint, BslPostData postData)
+        public async Task<HttpResponseMessage> Post(string bslEndpoint, object postData)
         {
             if (string.IsNullOrEmpty(bslEndpoint) || postData == null)
             {

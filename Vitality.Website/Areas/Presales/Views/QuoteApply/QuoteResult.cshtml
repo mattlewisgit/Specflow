@@ -1,0 +1,24 @@
+﻿@using AutoMapper
+@using Newtonsoft.Json
+@using Newtonsoft.Json.Serialization
+@using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<QuoteResult>
+@{
+    var serializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
+    var angularModel = JsonConvert.SerializeObject(Mapper.Map<QuoteResultViewModel>(Model), serializerSettings);
+}
+<script type="text/javascript">
+    window.angularData = window.angularData || {};
+    window.angularData.quoteResult = @Html.Raw(angularModel);
+</script>
+
+<quote-result>
+    <div class="loader__icon"></div>
+</quote-result>
+
+
+<script type="text/javascript">
+System.import('/js/quote-result.main.js')
+    .catch(function(err) { throw err; });
+</script>
+

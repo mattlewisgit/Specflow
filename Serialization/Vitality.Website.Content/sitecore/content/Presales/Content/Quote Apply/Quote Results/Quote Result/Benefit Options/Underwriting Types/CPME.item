@@ -1,0 +1,80 @@
+----item----
+version: 1
+id: {C718B2E7-8415-44A5-BE2C-72EADBFC6D80}
+database: master
+path: /sitecore/content/Presales/Content/Quote Apply/Quote Results/Quote Result/Benefit Options/Underwriting Types/CPME
+parent: {EB4A64EC-F35A-4558-8070-04A281A0EEC7}
+name: CPME
+master: {00000000-0000-0000-0000-000000000000}
+template: {1589F4AD-1F3A-40E9-B148-1FDF65735FC6}
+templatekey: Benefit Option
+created: 20170825T091804Z
+
+----version----
+language: en
+version: 1
+revision: d3fd1ea5-a654-48f8-b95d-a31155a4fbb6
+
+----field----
+field: {4255A7D9-C0F3-40B8-8273-937FEC12D1AE}
+name: Code
+key: code
+content-length: 38
+
+{F80C1194-C859-4589-A99C-AF6E9716531F}
+----field----
+field: {4D6560B1-1D7A-4799-90F0-BA7D14046E77}
+name: Title
+key: title
+content-length: 4
+
+CPME
+----field----
+field: {1310D2AC-3FD0-45C4-A404-70B95E7596BD}
+name: Permutations
+key: permutations
+content-length: 38
+
+{203C0AD4-0740-4409-8732-3A406534D6BD}
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170824T191604Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+d3fd1ea5-a654-48f8-b95d-a31155a4fbb6
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170825T092325Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

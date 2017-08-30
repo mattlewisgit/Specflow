@@ -7,6 +7,7 @@ import { ErrorService } from "./error.service";
 
 @Injectable()
 export class TellFormService {
+    formData : any;
     constructor(private http: Http,
         private errorService: ErrorService) {
     }

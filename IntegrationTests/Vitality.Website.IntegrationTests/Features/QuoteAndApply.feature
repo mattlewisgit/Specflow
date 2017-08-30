@@ -58,7 +58,7 @@
     And I go to the firstName field and enter Test
     And I go to the lastName field and enter User
     When I go to the phoneNumber field and enter 01202 22334
-    Then I see the phoneNumber field error text Please enter a valid phone number
+    Then I see the phoneNumber field error text Please enter valid phone number
 
     Scenario: Check error message when phone number too long
     Given I am on presales /dev/quote-and-apply
@@ -67,7 +67,7 @@
     And I go to the firstName field and enter Test
     And I go to the lastName field and enter User
     When I go to the phoneNumber field and enter 01202 2233445
-    Then I see the phoneNumber field error text Please enter a valid phone number
+    Then I see the phoneNumber field error text Please enter valid phone number
 
     Scenario: Check error message when phone number not numeric
     Given I am on presales /dev/quote-and-apply
@@ -76,7 +76,7 @@
     And I go to the firstName field and enter Test
     And I go to the lastName field and enter User
     When I go to the phoneNumber field and enter 01202 eeeeee
-    Then I see the phoneNumber field error text Please enter a valid phone number
+    Then I see the phoneNumber field error text Please enter valid phone number
 
     Scenario: Check error message when email format incorrect
     Given I am on presales /dev/quote-and-apply
@@ -166,7 +166,7 @@
     And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     When I go to the dateOfBirth field and enter 01/01/197
-    Then I see the dateOfBirth field error text Please enter valid date
+    Then I see the dateOfBirth field error text Please enter valid birth date
 
     Scenario: Check error message when dateOfBirth makes Member too old
     Given I am on presales /dev/quote-and-apply
@@ -178,7 +178,7 @@
     And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     When I go to the dateOfBirth field and make the age 80 plus 0 days
-    Then I see the dateOfBirth field error text Please enter valid date
+    Then I see the dateOfBirth field error text Please enter valid birth date
 
     Scenario: Check error message when dateOfBirth makes Member too young
     Given I am on presales /dev/quote-and-apply
@@ -190,7 +190,7 @@
     And I go to the emailAddress field and enter test.user@gmail.com
     And I go to the insuredStatus field and choose not currently insured
     When I go to the dateOfBirth field and make the age 18 minus 1 days
-    Then I see the dateOfBirth field error text Please enter valid date
+    Then I see the dateOfBirth field error text Please enter valid birth date
 
     Scenario: Check error message does not appear when dateOfBirth makes Member almost too old
     Given I am on presales /dev/quote-and-apply
@@ -295,7 +295,7 @@
     And I go to the coverStartDate field and make the date today plus 0 days
     And I go to the membersToInsure field and choose me, my partner and kids
     When I go to the partnerDateOfBirth field and make the age 16 minus 1 days
-    Then I see the partnerDateOfBirth field error text Please enter valid date
+    Then I see the partnerDateOfBirth field error text Please enter valid birth date
 
     Scenario: Check error message when dateOfBirth makes Partner too old
     Given I am on presales /dev/quote-and-apply
@@ -310,7 +310,7 @@
     And I go to the coverStartDate field and make the date today plus 0 days
     And I go to the membersToInsure field and choose me, my partner and kids
     When I go to the partnerDateOfBirth field and make the age 80 plus 0 days
-    Then I see the partnerDateOfBirth field error text Please enter valid date
+    Then I see the partnerDateOfBirth field error text Please enter valid birth date
 
     Scenario: Check error message does not appears when dateOfBirth makes Partner almost too young
     Given I am on presales /dev/quote-and-apply
@@ -543,7 +543,7 @@
     And I go to the insuredStatus field and choose not currently insured
     And I go to the dateOfBirth field and make the age 18 minus 0 days
     And I go to the coverStartDate field and make the date today plus 31 days
-    Then I see the coverStartDate field error text Please enter a valid date
+    Then I see the coverStartDate field error text Please enter valid date
 
     Scenario: Check the Policy Start Date does not allow dates in the past
     Given I am on presales /dev/quote-and-apply
@@ -556,7 +556,7 @@
     And I go to the insuredStatus field and choose not currently insured
     And I go to the dateOfBirth field and make the age 18 minus 0 days
     And I go to the coverStartDate field and make the date today minus 1 days
-    Then I see the coverStartDate field error text Please enter a valid date
+    Then I see the coverStartDate field error text Please enter valid date
 
     Scenario: Progress Bar - initialise at 0%
     Given I am on presales /dev/quote-and-apply

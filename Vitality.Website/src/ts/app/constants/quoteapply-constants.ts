@@ -17,7 +17,22 @@
         emptyLabel: ""
     };
     export const values = {
+        me: "me",
+        mePartner: "mepartner",
         mePartnerChildren: "mepartnerchildren",
         meChildren: "mechildren"
     }
+
+    // Drive these from Sitecore
+    export const roleType = {
+        employeePrincipal: "EMP",
+        partner: "PTR",
+        child: "CHI",
+        adultDependant: "ADT"
+    };
+    export const gender =
+    {
+        male: "M",
+        female: "F"
+    };
 };

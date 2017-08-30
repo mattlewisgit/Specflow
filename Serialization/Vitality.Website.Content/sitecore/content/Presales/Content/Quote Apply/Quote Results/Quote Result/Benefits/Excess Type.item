@@ -1,0 +1,101 @@
+----item----
+version: 1
+id: {997F8219-4313-4963-BCB1-145E853032FF}
+database: master
+path: /sitecore/content/Presales/Content/Quote Apply/Quote Results/Quote Result/Benefits/Excess Type
+parent: {340AB8EF-B497-40DF-9406-FABC2D8DE0A8}
+name: Excess Type
+master: {00000000-0000-0000-0000-000000000000}
+template: {81B607A2-FD0A-46EF-B5A8-570AD55EF3A8}
+templatekey: Benefit
+created: 20170825T092508Z
+
+----version----
+language: en
+version: 1
+revision: cae72be8-50b8-4fce-ace7-5bb3bbacffb5
+
+----field----
+field: {7C4D704F-ECB4-4A3D-A507-60BFCD032F2B}
+name: Icon
+key: icon
+content-length: 58
+
+<image mediaid="{A7D2AEE1-BD11-4167-B6F6-A76D2C1C65FA}" />
+----field----
+field: {795E6C7B-EE16-4F9C-992B-0C76D16604FC}
+name: Title
+key: title
+content-length: 11
+
+Excess Type
+----field----
+field: {8915940D-A983-4B58-8D36-CE0482622915}
+name: Tooltip
+key: tooltip
+content-length: 21
+
+Important Information
+----field----
+field: {50089D18-EADE-45D4-B407-4E10ED4CA5CD}
+name: IsEditable
+key: iseditable
+content-length: 1
+
+1
+----field----
+field: {65D3DEFB-193B-41F9-ACB2-D28B99A5DA1C}
+name: BenefitOptions
+key: benefitoptions
+content-length: 77
+
+{86F32A62-88C6-4687-94F2-6DC1FF215DB6}|{24E0785F-7987-4120-BA54-05F83011FFA1}
+----field----
+field: {AA448E2E-CFC4-411D-94EA-5325CBBE3F85}
+name: Code
+key: code
+content-length: 38
+
+{7E5D28AD-4BE5-419D-A768-93D3A2B0EC15}
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170825T092508Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+cae72be8-50b8-4fce-ace7-5bb3bbacffb5
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170825T092552Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

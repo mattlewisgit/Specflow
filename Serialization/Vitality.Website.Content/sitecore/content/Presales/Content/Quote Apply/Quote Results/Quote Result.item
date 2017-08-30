@@ -1,0 +1,123 @@
+----item----
+version: 1
+id: {C2EBE946-99DD-4BC0-AED7-1760C66620BB}
+database: master
+path: /sitecore/content/Presales/Content/Quote Apply/Quote Results/Quote Result
+parent: {67FED829-5FEC-41C9-91A5-3A46B22F8A14}
+name: Quote Result
+master: {00000000-0000-0000-0000-000000000000}
+template: {CA327A7F-E865-4EC5-ADE2-9BB0322825A1}
+templatekey: Quote Result
+created: 20170823T074724Z
+
+----field----
+field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
+name: __Masters
+key: __masters
+content-length: 77
+
+{2827D004-B8E0-4AE7-AC15-F08A011D1520}|{4902517E-93B7-41B5-BCC4-387E1D0304A7}
+----version----
+language: en
+version: 1
+revision: 67c71dd7-d1b7-40cc-93e5-0f6a9645a09c
+
+----field----
+field: {AD6E6AF9-FA48-4332-BAD5-5811A81237E5}
+name: Benefits
+key: benefits
+content-length: 233
+
+{1489EFC2-52BF-4991-8D4D-B2C3BE63AB80}|{E90B573D-1CC9-4C29-88CD-122D328AC765}|{50FC0C7C-7070-4BB3-8DA4-7A2DA28B29FD}|{E910DB9C-CBF6-4653-B933-9554B47C3493}|{997F8219-4313-4963-BCB1-145E853032FF}|{6B6EAE1F-81B0-4A9D-BF12-87F65E430B65}
+----field----
+field: {4BF81B5D-545D-4CFD-9FB0-05C3790B3F12}
+name: Permutations
+key: permutations
+content-length: 116
+
+{203C0AD4-0740-4409-8732-3A406534D6BD}|{502D2BC7-91DE-4C08-897D-8EB8D1DFC643}|{0AAFDC54-40E1-4F34-86CF-39721BE1228F}
+----field----
+field: {047C3A14-83B9-4621-AD1C-B02E29CA2508}
+name: HelpText
+key: helptext
+content-length: 107
+
+<strong>Did you know?</strong><br />
+You can click the pencil icon to edit options and adjust your premium.
+----field----
+field: {419D84E6-57EE-4815-B3F2-40047EADBCE4}
+name: PrintText
+key: printtext
+content-length: 16
+
+Print your quote
+----field----
+field: {974C6F80-F404-42FD-B1CC-EA8DFAA4FF4F}
+name: CallToActionText
+key: calltoactiontext
+content-length: 10
+
+BUY ONLINE
+----field----
+field: {6D614ABB-3AA4-45C4-B445-07A9F4163950}
+name: QuoteValidText
+key: quotevalidtext
+content-length: 23
+
+This quote is valid for
+----field----
+field: {20AEF334-E5E8-4C0D-AC13-9736FB45111B}
+name: QuoteReferenceText
+key: quotereferencetext
+content-length: 23
+
+Your quote reference is
+----field----
+field: {906B6351-5189-46A0-BF8F-A103D38724D6}
+name: TooltipText
+key: tooltiptext
+content-length: 12
+
+What is this
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170823T074724Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+67c71dd7-d1b7-40cc-93e5-0f6a9645a09c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170825T092618Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

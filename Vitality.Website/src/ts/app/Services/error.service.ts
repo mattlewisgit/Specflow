@@ -7,6 +7,6 @@ export class ErrorService {
     }
 
     handleServiceOutage(): void {
-        this.winRef.nativeWindow.location.href = this.winRef.nativeWindow.angularData.serviceOutagePage;
+        //this.winRef.nativeWindow.location.href = this.winRef.nativeWindow.angularData.serviceOutagePage;
     }
 }

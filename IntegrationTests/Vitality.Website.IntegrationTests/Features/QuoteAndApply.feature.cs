@@ -221,7 +221,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 60
     testRunner.When("I go to the phoneNumber field and enter 01202 22334", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 61
-    testRunner.Then("I see the phoneNumber field error text Please enter a valid phone number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see the phoneNumber field error text Please enter valid phone number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -247,7 +247,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 69
     testRunner.When("I go to the phoneNumber field and enter 01202 2233445", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 70
-    testRunner.Then("I see the phoneNumber field error text Please enter a valid phone number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see the phoneNumber field error text Please enter valid phone number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -273,7 +273,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 78
     testRunner.When("I go to the phoneNumber field and enter 01202 eeeeee", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 79
-    testRunner.Then("I see the phoneNumber field error text Please enter a valid phone number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see the phoneNumber field error text Please enter valid phone number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -507,7 +507,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 168
     testRunner.When("I go to the dateOfBirth field and enter 01/01/197", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 169
-    testRunner.Then("I see the dateOfBirth field error text Please enter valid date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see the dateOfBirth field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -539,7 +539,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 180
     testRunner.When("I go to the dateOfBirth field and make the age 80 plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 181
-    testRunner.Then("I see the dateOfBirth field error text Please enter valid date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see the dateOfBirth field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -571,7 +571,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 192
     testRunner.When("I go to the dateOfBirth field and make the age 18 minus 1 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 193
-    testRunner.Then("I see the dateOfBirth field error text Please enter valid date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see the dateOfBirth field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -832,7 +832,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 297
     testRunner.When("I go to the partnerDateOfBirth field and make the age 16 minus 1 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 298
-    testRunner.Then("I see the partnerDateOfBirth field error text Please enter valid date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see the partnerDateOfBirth field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -870,7 +870,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 312
     testRunner.When("I go to the partnerDateOfBirth field and make the age 80 plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 313
-    testRunner.Then("I see the partnerDateOfBirth field error text Please enter valid date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see the partnerDateOfBirth field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -1466,7 +1466,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 545
     testRunner.And("I go to the coverStartDate field and make the date today plus 31 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 546
-    testRunner.Then("I see the coverStartDate field error text Please enter a valid date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see the coverStartDate field error text Please enter valid date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -1500,7 +1500,7 @@ namespace Vitality.Website.IntegrationTests.Features
 #line 558
     testRunner.And("I go to the coverStartDate field and make the date today minus 1 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 559
-    testRunner.Then("I see the coverStartDate field error text Please enter a valid date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see the coverStartDate field error text Please enter valid date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
