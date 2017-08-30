@@ -22,6 +22,7 @@ export class ValidationService {
     }
 
     getValidator(validatorName: string, params: any): any {
+        console.log('params:' + params.length);
         switch (validatorName) {
         case "required":
             return Validators.required;
@@ -72,7 +73,6 @@ export class ValidationService {
 
     futureDateValidator(options: any) {
         return (control: any) => {
-            console.log(control.value);
             if (this.matchDate(control.value)) {
                 const futureDate = moment(control.value, GlobalConstants.formats.dateFormat);
                 const dateDifference = Math.ceil(futureDate.diff(moment(), GlobalConstants.moments.days, true));
@@ -149,10 +149,17 @@ export class ValidationService {
 
     maxSelectionsValidator(options: any) {
         return (control: any) => {
-            //let selections = control.value.split("|");
-            //return selections.length > options.maxSelections ? { "maxSelectionsExceeded": true } : null;
-            console.log(control.value);
-            return { "invalidDate": true };
+            let selectionsCount = 0;
+            if (options.selectedCheckboxes) {
+                selectionsCount = options.selectedCheckboxes.length;
+            }
+
+            //TODO: remove this line
+            options.maxSelectionsExceeded = 2;
+
+            console.log('comparing:' + selectionsCount + ' with ' + options.maxSelectionsExceeded);
+            
+            return selectionsCount > options.maxSelectionsExceeded ? { "maxSelectionsExceeded": true } : null;
         }
     }
 
