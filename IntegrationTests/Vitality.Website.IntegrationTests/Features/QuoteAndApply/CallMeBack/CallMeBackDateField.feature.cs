@@ -10,22 +10,22 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
+namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CallMeBack
 {
     using TechTalk.SpecFlow;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class MarketingPermissionsFeature : Xunit.IClassFixture<MarketingPermissionsFeature.FixtureData>, System.IDisposable
+    public partial class CallMeBackDateFieldFeature : Xunit.IClassFixture<CallMeBackDateFieldFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "MarketingPermissions.feature"
+#line 1 "CallMeBackDateField.feature"
 #line hidden
         
-        public MarketingPermissionsFeature()
+        public CallMeBackDateFieldFeature()
         {
             this.TestInitialize();
         }
@@ -33,8 +33,8 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "MarketingPermissions", "\tIn order to validation the marketing permissions field\r\n\tAs a quote and apply us" +
-                    "er\r\n\tI want to be able to check the marketing permissions field", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CallMeBackDateField", "\tIn order to validation the callmeback date and time field\r\n\tAs a quote and apply" +
+                    " user\r\n\tI want to be able to check the callmeback date and time field", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -63,7 +63,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void SetFixture(MarketingPermissionsFeature.FixtureData fixtureData)
+        public virtual void SetFixture(CallMeBackDateFieldFeature.FixtureData fixtureData)
         {
         }
         
@@ -72,27 +72,22 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Marketing Permission - Check the options that are available in Marketing Permissi" +
-            "on")]
-        [Xunit.TraitAttribute("FeatureTitle", "MarketingPermissions")]
-        [Xunit.TraitAttribute("Description", "Marketing Permission - Check the options that are available in Marketing Permissi" +
-            "on")]
+        [Xunit.FactAttribute(DisplayName="Policy Start Date - Check the Policy Start Date allows today")]
+        [Xunit.TraitAttribute("FeatureTitle", "CallMeBackDateField")]
+        [Xunit.TraitAttribute("Description", "Policy Start Date - Check the Policy Start Date allows today")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void MarketingPermission_CheckTheOptionsThatAreAvailableInMarketingPermission()
+        public virtual void PolicyStartDate_CheckThePolicyStartDateAllowsToday()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Marketing Permission - Check the options that are available in Marketing Permissi" +
-                    "on", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Policy Start Date - Check the Policy Start Date allows today", new string[] {
                         "QuoteAndApply"});
-#line 7
-    this.ScenarioSetup(scenarioInfo);
 #line 8
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    this.ScenarioSetup(scenarioInfo);
 #line 9
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.Given("I am on presales /dev/call-me-back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
-    testRunner.When("I go to the marketingPermission field and look at the options available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
-    testRunner.Then("I see that the marketingPermission options are as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.When("I go to the callbackDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -104,12 +99,12 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
             
             public FixtureData()
             {
-                MarketingPermissionsFeature.FeatureSetup();
+                CallMeBackDateFieldFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                MarketingPermissionsFeature.FeatureTearDown();
+                CallMeBackDateFieldFeature.FeatureTearDown();
             }
         }
     }
