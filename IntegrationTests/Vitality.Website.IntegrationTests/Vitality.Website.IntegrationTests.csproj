@@ -110,52 +110,102 @@
   <ItemGroup>
     <Compile Include="AppSettings.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Features\ArticleIndex.feature.cs">
+    <Compile Include="Features\Presales\ArticleIndex.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ArticleIndex.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\CardsTabbed.feature.cs">
+    <Compile Include="Features\Presales\CardsTabbed.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CardsTabbed.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\HomeHero.feature.cs">
+    <Compile Include="Features\Presales\HomeHero.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HomeHero.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\PartnerHero.feature.cs">
+    <Compile Include="Features\Presales\PartnerHero.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PartnerHero.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\ProductHero.feature.cs">
+    <Compile Include="Features\Presales\ProductHero.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductHero.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\ProductsComponent.feature.cs">
+    <Compile Include="Features\Presales\ProductsComponent.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductsComponent.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\QuoteAndApply.feature.cs">
+    <Compile Include="Features\QuoteAndApply\CurrentlyInsuredField.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuoteAndApply.feature</DependentUpon>
+      <DependentUpon>CurrentlyInsuredField.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\RewardLeader.feature.cs">
+    <Compile Include="Features\QuoteAndApply\DateOfBirth.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DateOfBirth.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\QuoteAndApply\EmailField.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmailField.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\QuoteAndApply\EndToEnd.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EndToEnd.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\QuoteAndApply\InsureFamilyMembersField.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsureFamilyMembersField.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\QuoteAndApply\MarketingPermissions.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarketingPermissions.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\QuoteAndApply\MultiselectorField.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultiselectorField.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\QuoteAndApply\PhoneNumberField.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PhoneNumberField.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\QuoteAndApply\PolicyStartDateField.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PolicyStartDateField.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\QuoteAndApply\PostcodeField.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PostcodeField.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\QuoteAndApply\ProgressBar.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgressBar.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Presales\RewardLeader.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RewardLeader.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\SummaryComponent.feature.cs">
+    <Compile Include="Features\Presales\SummaryComponent.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SummaryComponent.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\WFFM.feature.cs">
+    <Compile Include="Features\Presales\WFFM.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>WFFM.feature</DependentUpon>
@@ -163,104 +213,99 @@
     <Compile Include="Steps\ArticleIndexSteps.cs" />
     <Compile Include="Steps\CardsTabbedSteps.cs" />
     <Compile Include="Steps\CareersSteps.cs" />
-    <Compile Include="Features\BenefitLeader.feature.cs">
+    <Compile Include="Features\Presales\BenefitLeader.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BenefitLeader.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\CallToAction.feature.cs">
+    <Compile Include="Features\Presales\CallToAction.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CallToAction.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\CardsStacked.feature.cs">
+    <Compile Include="Features\Presales\CardsStacked.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CardsStacked.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\FAQLeader.feature.cs">
+    <Compile Include="Features\Presales\FAQLeader.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FAQLeader.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Feemaxima.feature.cs">
+    <Compile Include="Features\Presales\Feemaxima.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Feemaxima.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\MessageBox.feature.cs">
+    <Compile Include="Features\Presales\MessageBox.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MessageBox.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\RichText.feature.cs">
+    <Compile Include="Features\Presales\RichText.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RichText.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\AwardLeader.feature.cs">
+    <Compile Include="Features\Presales\AwardLeader.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AwardLeader.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Careers.feature.cs">
+    <Compile Include="Features\Presales\Careers.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Careers.feature</DependentUpon>
     </Compile>
     <Compile Include="Drivers\DriverFactory.cs" />
     <Compile Include="Extensions\AssertionExtensions.cs" />
-    <Compile Include="Features\Accordion.feature.cs">
+    <Compile Include="Features\Presales\Accordion.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Accordion.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Breadcrumb.feature.cs">
+    <Compile Include="Features\Presales\Breadcrumb.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Breadcrumb.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\AdvisersContent.feature.cs">
+    <Compile Include="Features\Presales\AdvisersContent.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AdvisersContent.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Cookies.feature.cs">
+    <Compile Include="Features\Presales\Cookies.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Cookies.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\PresalesContent.feature.cs">
+    <Compile Include="Features\Presales\PresalesContent.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>PresalesContent.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\LiteratureLibrary.feature.cs">
+    <Compile Include="Features\Presales\LiteratureLibrary.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>LiteratureLibrary.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\MainNavigation.feature.cs">
+    <Compile Include="Features\Presales\MainNavigation.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MainNavigation.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\MetaTags.feature.cs">
+    <Compile Include="Features\Presales\MetaTags.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>MetaTags.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\QuoteApply.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuoteApply.feature</DependentUpon>
-    </Compile>
-    <Compile Include="Features\SearchingContent.feature.cs">
+    <Compile Include="Features\Presales\SearchingContent.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SearchingContent.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Tabbed.feature.cs">
+    <Compile Include="Features\Presales\Tabbed.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Tabbed.feature</DependentUpon>
@@ -285,7 +330,6 @@
     <Compile Include="Steps\ProductHeroSteps.cs" />
     <Compile Include="Steps\ProductsComponentSteps.cs" />
     <Compile Include="Steps\QuoteAndApplySteps.cs" />
-    <Compile Include="Steps\QuoteApplySteps.cs" />
     <Compile Include="Steps\RewardLeaderSteps.cs" />
     <Compile Include="Steps\RichTextSteps.cs" />
     <Compile Include="Steps\SearchingSteps.cs" />
@@ -302,123 +346,159 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Features\Accordion.feature">
+    <None Include="Features\Presales\Accordion.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Accordion.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\ArticleIndex.feature">
+    <None Include="Features\Presales\ArticleIndex.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ArticleIndex.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\BenefitLeader.feature">
+    <None Include="Features\Presales\BenefitLeader.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>BenefitLeader.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Breadcrumb.feature">
+    <None Include="Features\Presales\Breadcrumb.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Breadcrumb.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\AdvisersContent.feature">
+    <None Include="Features\Presales\AdvisersContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AdvisersContent.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\CallToAction.feature">
+    <None Include="Features\Presales\CallToAction.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CallToAction.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\CardsStacked.feature">
+    <None Include="Features\Presales\CardsStacked.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CardsStacked.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\CardsTabbed.feature">
+    <None Include="Features\Presales\CardsTabbed.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CardsTabbed.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Cookies.feature">
+    <None Include="Features\Presales\Cookies.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Cookies.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\FAQLeader.feature">
+    <None Include="Features\Presales\FAQLeader.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>FAQLeader.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Feemaxima.feature">
+    <None Include="Features\Presales\Feemaxima.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Feemaxima.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\HomeHero.feature">
+    <None Include="Features\Presales\HomeHero.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>HomeHero.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\MessageBox.feature">
+    <None Include="Features\Presales\MessageBox.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>MessageBox.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\PartnerHero.feature">
+    <None Include="Features\Presales\PartnerHero.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PartnerHero.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\PresalesContent.feature">
+    <None Include="Features\Presales\PresalesContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PresalesContent.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\LiteratureLibrary.feature">
+    <None Include="Features\Presales\LiteratureLibrary.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>LiteratureLibrary.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\MainNavigation.feature">
+    <None Include="Features\Presales\MainNavigation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>MainNavigation.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\MetaTags.feature">
+    <None Include="Features\Presales\MetaTags.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>MetaTags.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\ProductHero.feature">
+    <None Include="Features\Presales\ProductHero.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ProductHero.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\ProductsComponent.feature">
+    <None Include="Features\Presales\ProductsComponent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ProductsComponent.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\QuoteAndApply.feature">
+    <None Include="Features\QuoteAndApply\CurrentlyInsuredField.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>QuoteAndApply.feature.cs</LastGenOutput>
+      <LastGenOutput>CurrentlyInsuredField.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\QuoteApply.feature">
+    <None Include="Features\QuoteAndApply\DateOfBirth.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>QuoteApply.feature.cs</LastGenOutput>
+      <LastGenOutput>DateOfBirth.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\RewardLeader.feature">
+    <None Include="Features\QuoteAndApply\EmailField.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EmailField.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\EndToEnd.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EndToEnd.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\InsureFamilyMembersField.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>InsureFamilyMembersField.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\MarketingPermissions.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MarketingPermissions.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\MultiselectorField.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MultiselectorField.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\PhoneNumberField.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PhoneNumberField.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\PolicyStartDateField.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PolicyStartDateField.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\PostcodeField.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PostcodeField.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\ProgressBar.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ProgressBar.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Presales\RewardLeader.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>RewardLeader.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\RichText.feature">
+    <None Include="Features\Presales\RichText.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>RichText.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\SearchingContent.feature">
+    <None Include="Features\Presales\SearchingContent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SearchingContent.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\AwardLeader.feature">
+    <None Include="Features\Presales\AwardLeader.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AwardLeader.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Careers.feature">
+    <None Include="Features\Presales\Careers.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Careers.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\SummaryComponent.feature">
+    <None Include="Features\Presales\SummaryComponent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SummaryComponent.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\Tabbed.feature">
+    <None Include="Features\Presales\Tabbed.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Tabbed.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\WFFM.feature">
+    <None Include="Features\Presales\WFFM.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>WFFM.feature.cs</LastGenOutput>
     </None>
