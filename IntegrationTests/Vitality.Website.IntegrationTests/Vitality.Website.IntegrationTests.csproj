@@ -175,6 +175,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MultiselectorField.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\QuoteAndApply\NameField.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NameField.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\QuoteAndApply\PhoneNumberField.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -453,6 +458,10 @@
     <None Include="Features\QuoteAndApply\MultiselectorField.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>MultiselectorField.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\NameField.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>NameField.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\QuoteAndApply\PhoneNumberField.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
