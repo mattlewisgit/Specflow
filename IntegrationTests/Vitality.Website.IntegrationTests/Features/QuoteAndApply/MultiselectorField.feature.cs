@@ -87,40 +87,10 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
 #line 9
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When("I go to the Discounted gym membership checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
- testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
- testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 18
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
-    testRunner.And("I go to the noOfClaims field and choose no claims", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 20
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 21
-    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 22
-    testRunner.And("I go to the partnerDateOfBirth field and enter 01/01/1971", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
-    testRunner.And("I go to the noOfChildren field and choose kid\'s", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 24
-    testRunner.And("I go to the child1Dob field and enter 01/01/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
- testRunner.And("I go to the Discounted gym membership checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
     testRunner.And("I go to the marketingPermission field and choose Agreed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
+#line 12
     testRunner.Then("I don\'t see any field errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

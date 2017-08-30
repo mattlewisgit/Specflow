@@ -72,13 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check error message when dateOfBirth date format incorrect")]
+        [Xunit.FactAttribute(DisplayName="DOB - Check error message when dateOfBirth date format incorrect")]
         [Xunit.TraitAttribute("FeatureTitle", "DateOfBirth")]
-        [Xunit.TraitAttribute("Description", "Check error message when dateOfBirth date format incorrect")]
+        [Xunit.TraitAttribute("Description", "DOB - Check error message when dateOfBirth date format incorrect")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageWhenDateOfBirthDateFormatIncorrect()
+        public virtual void DOB_CheckErrorMessageWhenDateOfBirthDateFormatIncorrect()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message when dateOfBirth date format incorrect", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DOB - Check error message when dateOfBirth date format incorrect", new string[] {
                         "QuoteAndApply"});
 #line 7
     this.ScenarioSetup(scenarioInfo);
@@ -87,414 +87,103 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
 #line 9
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
     testRunner.When("I go to the dateOfBirth field and enter 01/01/197", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
+    testRunner.Then("I see the dateOfBirth field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="DOB - Check error message when dateOfBirth makes Member too old")]
+        [Xunit.TraitAttribute("FeatureTitle", "DateOfBirth")]
+        [Xunit.TraitAttribute("Description", "DOB - Check error message when dateOfBirth makes Member too old")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void DOB_CheckErrorMessageWhenDateOfBirthMakesMemberTooOld()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DOB - Check error message when dateOfBirth makes Member too old", new string[] {
+                        "QuoteAndApply"});
+#line 15
+    this.ScenarioSetup(scenarioInfo);
+#line 16
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 17
-    testRunner.Then("I see the dateOfBirth field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Check error message when dateOfBirth makes Member too old")]
-        [Xunit.TraitAttribute("FeatureTitle", "DateOfBirth")]
-        [Xunit.TraitAttribute("Description", "Check error message when dateOfBirth makes Member too old")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageWhenDateOfBirthMakesMemberTooOld()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message when dateOfBirth makes Member too old", new string[] {
-                        "QuoteAndApply"});
-#line 20
-    this.ScenarioSetup(scenarioInfo);
-#line 21
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 22
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 24
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
+#line 18
     testRunner.When("I go to the dateOfBirth field and make the age 80 plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 30
+#line 19
     testRunner.Then("I see the dateOfBirth field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check error message when dateOfBirth makes Member too young")]
+        [Xunit.FactAttribute(DisplayName="DOB - Check error message when dateOfBirth makes Member too young")]
         [Xunit.TraitAttribute("FeatureTitle", "DateOfBirth")]
-        [Xunit.TraitAttribute("Description", "Check error message when dateOfBirth makes Member too young")]
+        [Xunit.TraitAttribute("Description", "DOB - Check error message when dateOfBirth makes Member too young")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageWhenDateOfBirthMakesMemberTooYoung()
+        public virtual void DOB_CheckErrorMessageWhenDateOfBirthMakesMemberTooYoung()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message when dateOfBirth makes Member too young", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DOB - Check error message when dateOfBirth makes Member too young", new string[] {
                         "QuoteAndApply"});
-#line 33
+#line 22
     this.ScenarioSetup(scenarioInfo);
-#line 34
+#line 23
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 35
+#line 24
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 36
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 37
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 38
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 39
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 40
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 41
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 42
+#line 25
     testRunner.When("I go to the dateOfBirth field and make the age 18 minus 1 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 43
+#line 26
     testRunner.Then("I see the dateOfBirth field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check error message does not appear when dateOfBirth makes Member almost too old")]
+        [Xunit.FactAttribute(DisplayName="DOB - Check error message does not appear when dateOfBirth makes Member almost to" +
+            "o old")]
         [Xunit.TraitAttribute("FeatureTitle", "DateOfBirth")]
-        [Xunit.TraitAttribute("Description", "Check error message does not appear when dateOfBirth makes Member almost too old")]
+        [Xunit.TraitAttribute("Description", "DOB - Check error message does not appear when dateOfBirth makes Member almost to" +
+            "o old")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageDoesNotAppearWhenDateOfBirthMakesMemberAlmostTooOld()
+        public virtual void DOB_CheckErrorMessageDoesNotAppearWhenDateOfBirthMakesMemberAlmostTooOld()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message does not appear when dateOfBirth makes Member almost too old", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DOB - Check error message does not appear when dateOfBirth makes Member almost to" +
+                    "o old", new string[] {
                         "QuoteAndApply"});
-#line 46
+#line 29
     this.ScenarioSetup(scenarioInfo);
-#line 47
+#line 30
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 48
+#line 31
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 49
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 50
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 51
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 53
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 54
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 55
+#line 32
     testRunner.When("I go to the dateOfBirth field and make the age 80 minus 1 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 56
+#line 33
     testRunner.Then("I don\'t see the dateOfBirth field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check error message does not appear when dateOfBirth makes Member almost too youn" +
-            "g")]
+        [Xunit.FactAttribute(DisplayName="DOB - Check error message does not appear when dateOfBirth makes Member almost to" +
+            "o young")]
         [Xunit.TraitAttribute("FeatureTitle", "DateOfBirth")]
-        [Xunit.TraitAttribute("Description", "Check error message does not appear when dateOfBirth makes Member almost too youn" +
-            "g")]
+        [Xunit.TraitAttribute("Description", "DOB - Check error message does not appear when dateOfBirth makes Member almost to" +
+            "o young")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageDoesNotAppearWhenDateOfBirthMakesMemberAlmostTooYoung()
+        public virtual void DOB_CheckErrorMessageDoesNotAppearWhenDateOfBirthMakesMemberAlmostTooYoung()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message does not appear when dateOfBirth makes Member almost too youn" +
-                    "g", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DOB - Check error message does not appear when dateOfBirth makes Member almost to" +
+                    "o young", new string[] {
                         "QuoteAndApply"});
-#line 59
+#line 36
     this.ScenarioSetup(scenarioInfo);
-#line 60
+#line 37
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 61
+#line 38
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 62
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 63
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 64
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 65
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 66
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 67
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 68
+#line 39
     testRunner.When("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 69
+#line 40
     testRunner.Then("I don\'t see the dateOfBirth field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Check error message when dateOfBirth makes Partner too young")]
-        [Xunit.TraitAttribute("FeatureTitle", "DateOfBirth")]
-        [Xunit.TraitAttribute("Description", "Check error message when dateOfBirth makes Partner too young")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageWhenDateOfBirthMakesPartnerTooYoung()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message when dateOfBirth makes Partner too young", new string[] {
-                        "QuoteAndApply"});
-#line 72
-    this.ScenarioSetup(scenarioInfo);
-#line 73
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 74
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 75
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 76
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 77
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 78
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 79
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 80
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 81
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 82
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 83
-    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 84
-    testRunner.When("I go to the partnerDateOfBirth field and make the age 16 minus 1 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 85
-    testRunner.Then("I see the partnerDateOfBirth field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Check error message when dateOfBirth makes Partner too old")]
-        [Xunit.TraitAttribute("FeatureTitle", "DateOfBirth")]
-        [Xunit.TraitAttribute("Description", "Check error message when dateOfBirth makes Partner too old")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageWhenDateOfBirthMakesPartnerTooOld()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message when dateOfBirth makes Partner too old", new string[] {
-                        "QuoteAndApply"});
-#line 88
-    this.ScenarioSetup(scenarioInfo);
-#line 89
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 90
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 91
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 92
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 93
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 94
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 95
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 96
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 97
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 98
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 99
-    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 100
-    testRunner.When("I go to the partnerDateOfBirth field and make the age 80 plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 101
-    testRunner.Then("I see the partnerDateOfBirth field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Check error message does not appears when dateOfBirth makes Partner almost too yo" +
-            "ung")]
-        [Xunit.TraitAttribute("FeatureTitle", "DateOfBirth")]
-        [Xunit.TraitAttribute("Description", "Check error message does not appears when dateOfBirth makes Partner almost too yo" +
-            "ung")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageDoesNotAppearsWhenDateOfBirthMakesPartnerAlmostTooYoung()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message does not appears when dateOfBirth makes Partner almost too yo" +
-                    "ung", new string[] {
-                        "QuoteAndApply"});
-#line 104
-    this.ScenarioSetup(scenarioInfo);
-#line 105
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 106
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 107
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 108
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 109
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 110
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 111
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 112
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 113
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 114
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 115
-    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 116
-    testRunner.When("I go to the partnerDateOfBirth field and make the age 16 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 117
-    testRunner.Then("I don\'t see the partnerDateOfBirth field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Check error message does not appear when dateOfBirth makes Partner almost too old" +
-            "")]
-        [Xunit.TraitAttribute("FeatureTitle", "DateOfBirth")]
-        [Xunit.TraitAttribute("Description", "Check error message does not appear when dateOfBirth makes Partner almost too old" +
-            "")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageDoesNotAppearWhenDateOfBirthMakesPartnerAlmostTooOld()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message does not appear when dateOfBirth makes Partner almost too old" +
-                    "", new string[] {
-                        "QuoteAndApply"});
-#line 120
-    this.ScenarioSetup(scenarioInfo);
-#line 121
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 122
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 123
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 124
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 125
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 126
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 127
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 128
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 129
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 130
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 131
-    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 132
-    testRunner.When("I go to the partnerDateOfBirth field and make the age 80 minus 1 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 133
-    testRunner.Then("I don\'t see the partnerDateOfBirth field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Check error message when dateOfBirth makes Child1 too old")]
-        [Xunit.TraitAttribute("FeatureTitle", "DateOfBirth")]
-        [Xunit.TraitAttribute("Description", "Check error message when dateOfBirth makes Child1 too old")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageWhenDateOfBirthMakesChild1TooOld()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message when dateOfBirth makes Child1 too old", new string[] {
-                        "QuoteAndApply"});
-#line 136
-    this.ScenarioSetup(scenarioInfo);
-#line 137
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 138
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 139
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 140
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 141
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 142
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 143
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 144
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 145
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 146
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 147
-    testRunner.And("I go to the membersToInsure field and choose me and my kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 148
-    testRunner.And("I go to the noOfChildren field and choose kid\'s", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 149
-    testRunner.When("I go to the child1Dob field and make the age 18 plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 150
-    testRunner.Then("I see the child1Dob field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Check error message when dateOfBirth makes Child3 too old")]
-        [Xunit.TraitAttribute("FeatureTitle", "DateOfBirth")]
-        [Xunit.TraitAttribute("Description", "Check error message when dateOfBirth makes Child3 too old")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageWhenDateOfBirthMakesChild3TooOld()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message when dateOfBirth makes Child3 too old", new string[] {
-                        "QuoteAndApply"});
-#line 153
-    this.ScenarioSetup(scenarioInfo);
-#line 154
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 155
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 156
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 157
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 158
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 159
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 160
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 161
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 162
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 163
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 164
-    testRunner.And("I go to the membersToInsure field and choose me and my kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 165
-    testRunner.And("I go to the noOfChildren field and choose 3 kids\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 166
-    testRunner.When("I go to the child1Dob field and make the age 12 plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 167
-    testRunner.When("I go to the child2Dob field and make the age 14 plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 168
-    testRunner.When("I go to the child3Dob field and make the age 18 plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 169
-    testRunner.Then("I see the child3Dob field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

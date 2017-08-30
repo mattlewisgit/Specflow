@@ -72,13 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check that phone number formats are allowed #1")]
+        [Xunit.FactAttribute(DisplayName="PhoneNumber - Check that phone number formats are allowed #1")]
         [Xunit.TraitAttribute("FeatureTitle", "PhoneNumberField")]
-        [Xunit.TraitAttribute("Description", "Check that phone number formats are allowed #1")]
+        [Xunit.TraitAttribute("Description", "PhoneNumber - Check that phone number formats are allowed #1")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckThatPhoneNumberFormatsAreAllowed1()
+        public virtual void PhoneNumber_CheckThatPhoneNumberFormatsAreAllowed1()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check that phone number formats are allowed #1", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PhoneNumber - Check that phone number formats are allowed #1", new string[] {
                         "QuoteAndApply"});
 #line 7
     this.ScenarioSetup(scenarioInfo);
@@ -87,154 +87,118 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
 #line 9
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
     testRunner.When("I go to the phoneNumber field and enter +44 1202 667788", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
+    testRunner.Then("I don\'t see the phoneNumber field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="PhoneNumber - Check that phone number formats are allowed #2")]
+        [Xunit.TraitAttribute("FeatureTitle", "PhoneNumberField")]
+        [Xunit.TraitAttribute("Description", "PhoneNumber - Check that phone number formats are allowed #2")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void PhoneNumber_CheckThatPhoneNumberFormatsAreAllowed2()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PhoneNumber - Check that phone number formats are allowed #2", new string[] {
+                        "QuoteAndApply"});
 #line 14
-    testRunner.Then("I don\'t see the phoneNumber field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Check that phone number formats are allowed #2")]
-        [Xunit.TraitAttribute("FeatureTitle", "PhoneNumberField")]
-        [Xunit.TraitAttribute("Description", "Check that phone number formats are allowed #2")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckThatPhoneNumberFormatsAreAllowed2()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check that phone number formats are allowed #2", new string[] {
-                        "QuoteAndApply"});
+    this.ScenarioSetup(scenarioInfo);
+#line 15
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 16
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
-    this.ScenarioSetup(scenarioInfo);
-#line 18
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 19
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 20
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 21
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 22
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
     testRunner.When("I go to the phoneNumber field and enter +44 1202 66 77 88", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
+    testRunner.Then("I don\'t see the phoneNumber field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="PhoneNumber - Check that phone number formats are allowed #3")]
+        [Xunit.TraitAttribute("FeatureTitle", "PhoneNumberField")]
+        [Xunit.TraitAttribute("Description", "PhoneNumber - Check that phone number formats are allowed #3")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void PhoneNumber_CheckThatPhoneNumberFormatsAreAllowed3()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PhoneNumber - Check that phone number formats are allowed #3", new string[] {
+                        "QuoteAndApply"});
+#line 21
+    this.ScenarioSetup(scenarioInfo);
+#line 22
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 23
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
-    testRunner.Then("I don\'t see the phoneNumber field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Check that phone number formats are allowed #3")]
-        [Xunit.TraitAttribute("FeatureTitle", "PhoneNumberField")]
-        [Xunit.TraitAttribute("Description", "Check that phone number formats are allowed #3")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckThatPhoneNumberFormatsAreAllowed3()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check that phone number formats are allowed #3", new string[] {
-                        "QuoteAndApply"});
-#line 27
-    this.ScenarioSetup(scenarioInfo);
-#line 28
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 29
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 33
     testRunner.When("I go to the phoneNumber field and enter +44 1202 667 788", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 25
     testRunner.Then("I don\'t see the phoneNumber field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check error message when phone number too short")]
+        [Xunit.FactAttribute(DisplayName="PhoneNumber - Check error message when phone number too short")]
         [Xunit.TraitAttribute("FeatureTitle", "PhoneNumberField")]
-        [Xunit.TraitAttribute("Description", "Check error message when phone number too short")]
+        [Xunit.TraitAttribute("Description", "PhoneNumber - Check error message when phone number too short")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageWhenPhoneNumberTooShort()
+        public virtual void PhoneNumber_CheckErrorMessageWhenPhoneNumberTooShort()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message when phone number too short", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PhoneNumber - Check error message when phone number too short", new string[] {
                         "QuoteAndApply"});
-#line 37
+#line 28
     this.ScenarioSetup(scenarioInfo);
-#line 38
+#line 29
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 39
+#line 30
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 40
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 41
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 42
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 43
+#line 31
     testRunner.When("I go to the phoneNumber field and enter 01202 22334", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 44
+#line 32
     testRunner.Then("I see the phoneNumber field error text Please enter valid phone number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check error message when phone number too long")]
+        [Xunit.FactAttribute(DisplayName="PhoneNumber - Check error message when phone number too long")]
         [Xunit.TraitAttribute("FeatureTitle", "PhoneNumberField")]
-        [Xunit.TraitAttribute("Description", "Check error message when phone number too long")]
+        [Xunit.TraitAttribute("Description", "PhoneNumber - Check error message when phone number too long")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageWhenPhoneNumberTooLong()
+        public virtual void PhoneNumber_CheckErrorMessageWhenPhoneNumberTooLong()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message when phone number too long", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PhoneNumber - Check error message when phone number too long", new string[] {
                         "QuoteAndApply"});
-#line 47
+#line 35
     this.ScenarioSetup(scenarioInfo);
-#line 48
+#line 36
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 49
+#line 37
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 50
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 51
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 53
+#line 38
     testRunner.When("I go to the phoneNumber field and enter 01202 2233445", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 54
+#line 39
     testRunner.Then("I see the phoneNumber field error text Please enter valid phone number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check error message when phone number not numeric")]
+        [Xunit.FactAttribute(DisplayName="PhoneNumber - Check error message when phone number not numeric")]
         [Xunit.TraitAttribute("FeatureTitle", "PhoneNumberField")]
-        [Xunit.TraitAttribute("Description", "Check error message when phone number not numeric")]
+        [Xunit.TraitAttribute("Description", "PhoneNumber - Check error message when phone number not numeric")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageWhenPhoneNumberNotNumeric()
+        public virtual void PhoneNumber_CheckErrorMessageWhenPhoneNumberNotNumeric()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message when phone number not numeric", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("PhoneNumber - Check error message when phone number not numeric", new string[] {
                         "QuoteAndApply"});
-#line 57
+#line 42
     this.ScenarioSetup(scenarioInfo);
-#line 58
+#line 43
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 59
+#line 44
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 60
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 61
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 62
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 63
+#line 45
     testRunner.When("I go to the phoneNumber field and enter 01202 eeeeee", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 64
+#line 46
     testRunner.Then("I see the phoneNumber field error text Please enter valid phone number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

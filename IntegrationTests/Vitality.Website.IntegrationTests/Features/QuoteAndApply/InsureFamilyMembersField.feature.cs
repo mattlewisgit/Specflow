@@ -72,13 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Hide the fields relating to Partner and Children")]
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Hide the fields relating to Partner and Children")]
         [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
-        [Xunit.TraitAttribute("Description", "Hide the fields relating to Partner and Children")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Hide the fields relating to Partner and Children")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void HideTheFieldsRelatingToPartnerAndChildren()
+        public virtual void InsuredMember_HideTheFieldsRelatingToPartnerAndChildren()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Hide the fields relating to Partner and Children", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Hide the fields relating to Partner and Children", new string[] {
                         "QuoteAndApply"});
 #line 7
     this.ScenarioSetup(scenarioInfo);
@@ -87,421 +87,429 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
 #line 9
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
     testRunner.When("I go to the membersToInsure field and choose just me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
+    testRunner.Then("the partnerDateOfBirth field is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
+    testRunner.And("the noOfChildren field is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+    testRunner.And("the child1Dob field is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Hide the fields relating to Partner")]
+        [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Hide the fields relating to Partner")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void InsuredMember_HideTheFieldsRelatingToPartner()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Hide the fields relating to Partner", new string[] {
+                        "QuoteAndApply"});
+#line 16
+    this.ScenarioSetup(scenarioInfo);
 #line 17
-    testRunner.Then("the partnerDateOfBirth field is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 18
-    testRunner.And("the noOfChildren field is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
-    testRunner.And("the child1Dob field is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Hide the fields relating to Partner")]
-        [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
-        [Xunit.TraitAttribute("Description", "Hide the fields relating to Partner")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void HideTheFieldsRelatingToPartner()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Hide the fields relating to Partner", new string[] {
-                        "QuoteAndApply"});
-#line 22
-    this.ScenarioSetup(scenarioInfo);
-#line 23
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 24
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
     testRunner.When("I go to the membersToInsure field and choose me and my kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 32
+#line 20
     testRunner.Then("the partnerDateOfBirth field is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 33
+#line 21
     testRunner.And("the noOfChildren field is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 34
+#line 22
     testRunner.And("the child1Dob field is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Hide the fields relating to Kids")]
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Hide the fields relating to Kids")]
         [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
-        [Xunit.TraitAttribute("Description", "Hide the fields relating to Kids")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Hide the fields relating to Kids")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void HideTheFieldsRelatingToKids()
+        public virtual void InsuredMember_HideTheFieldsRelatingToKids()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Hide the fields relating to Kids", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Hide the fields relating to Kids", new string[] {
                         "QuoteAndApply"});
-#line 37
+#line 25
     this.ScenarioSetup(scenarioInfo);
-#line 38
+#line 26
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 39
+#line 27
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 40
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 41
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 42
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 43
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 44
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 45
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 46
+#line 28
     testRunner.When("I go to the membersToInsure field and choose me and my partner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 47
+#line 29
     testRunner.Then("the partnerDateOfBirth field is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 48
+#line 30
     testRunner.And("the noOfChildren field is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 49
+#line 31
     testRunner.And("the child1Dob field is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Show all fields relating to Partner and Kids")]
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Show all fields relating to Partner and Kids")]
         [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
-        [Xunit.TraitAttribute("Description", "Show all fields relating to Partner and Kids")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Show all fields relating to Partner and Kids")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ShowAllFieldsRelatingToPartnerAndKids()
+        public virtual void InsuredMember_ShowAllFieldsRelatingToPartnerAndKids()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Show all fields relating to Partner and Kids", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Show all fields relating to Partner and Kids", new string[] {
                         "QuoteAndApply"});
-#line 52
+#line 34
     this.ScenarioSetup(scenarioInfo);
-#line 53
+#line 35
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 54
+#line 36
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 55
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 56
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 57
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 58
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 59
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 60
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 61
+#line 37
     testRunner.When("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 62
+#line 38
     testRunner.Then("the partnerDateOfBirth field is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 63
+#line 39
     testRunner.And("the noOfChildren field is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Enter two children, no partner in Quote")]
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Enter two children, no partner in Quote")]
         [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
-        [Xunit.TraitAttribute("Description", "Enter two children, no partner in Quote")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Enter two children, no partner in Quote")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void EnterTwoChildrenNoPartnerInQuote()
+        public virtual void InsuredMember_EnterTwoChildrenNoPartnerInQuote()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter two children, no partner in Quote", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Enter two children, no partner in Quote", new string[] {
                         "QuoteAndApply"});
-#line 66
+#line 42
     this.ScenarioSetup(scenarioInfo);
-#line 67
+#line 43
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 68
+#line 44
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 69
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 70
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 71
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 72
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 73
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 74
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 75
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 76
-    testRunner.And("I go to the noOfClaims field and choose no claims", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 77
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 78
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 79
+#line 45
     testRunner.And("I go to the membersToInsure field and choose me and my kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 80
+#line 46
     testRunner.And("the partnerDateOfBirth field is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 81
+#line 47
     testRunner.And("I go to the noOfChildren field and choose 2 kids\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 82
+#line 48
     testRunner.And("I go to the child1Dob field and enter 01/01/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 83
+#line 49
     testRunner.And("I go to the child2Dob field and enter 01/02/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 84
+#line 50
     testRunner.Then("I don\'t see any field errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Enter five children, no partner in Quote")]
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Enter five children, no partner in Quote")]
         [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
-        [Xunit.TraitAttribute("Description", "Enter five children, no partner in Quote")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Enter five children, no partner in Quote")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void EnterFiveChildrenNoPartnerInQuote()
+        public virtual void InsuredMember_EnterFiveChildrenNoPartnerInQuote()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter five children, no partner in Quote", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Enter five children, no partner in Quote", new string[] {
                         "QuoteAndApply"});
-#line 87
+#line 53
     this.ScenarioSetup(scenarioInfo);
-#line 88
+#line 54
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 89
+#line 55
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 90
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 91
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 92
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 93
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 94
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 95
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 96
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 97
-    testRunner.And("I go to the noOfClaims field and choose no claims", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 98
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 99
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 100
+#line 56
     testRunner.And("I go to the membersToInsure field and choose me and my kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 101
+#line 57
     testRunner.And("the partnerDateOfBirth field is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 102
+#line 58
     testRunner.And("I go to the noOfChildren field and choose 5 kids\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 103
+#line 59
     testRunner.And("I go to the child1Dob field and enter 01/01/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 104
+#line 60
     testRunner.And("I go to the child2Dob field and enter 01/02/2006", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 105
+#line 61
     testRunner.And("I go to the child3Dob field and enter 01/01/2007", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 106
+#line 62
     testRunner.And("I go to the child4Dob field and enter 01/02/2008", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 107
+#line 63
     testRunner.And("I go to the child5Dob field and enter 01/02/2009", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 108
+#line 64
     testRunner.Then("I don\'t see any field errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Enter four children and partner in Quote")]
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Enter four children and partner in Quote")]
         [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
-        [Xunit.TraitAttribute("Description", "Enter four children and partner in Quote")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Enter four children and partner in Quote")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void EnterFourChildrenAndPartnerInQuote()
+        public virtual void InsuredMember_EnterFourChildrenAndPartnerInQuote()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Enter four children and partner in Quote", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Enter four children and partner in Quote", new string[] {
                         "QuoteAndApply"});
-#line 111
+#line 67
     this.ScenarioSetup(scenarioInfo);
-#line 112
+#line 68
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 113
+#line 69
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 114
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 115
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 116
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 117
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 118
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 119
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 120
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 121
-    testRunner.And("I go to the noOfClaims field and choose no claims", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 122
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 123
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 124
+#line 70
     testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 125
+#line 71
     testRunner.And("I go to the partnerDateOfBirth field and enter 20/01/1990", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 126
+#line 72
     testRunner.And("I go to the noOfChildren field and choose 4 kids\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 127
+#line 73
     testRunner.And("I go to the child1Dob field and enter 01/01/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 128
+#line 74
     testRunner.And("I go to the child2Dob field and enter 01/02/2006", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 129
+#line 75
     testRunner.And("I go to the child3Dob field and enter 01/01/2007", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 130
+#line 76
     testRunner.And("I go to the child4Dob field and enter 01/02/2008", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 131
+#line 77
     testRunner.And("the child5Dob field is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 132
+#line 78
     testRunner.Then("I don\'t see any field errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check the options that are available in Members To Insure")]
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Check the options that are available in Members To Insure")]
         [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
-        [Xunit.TraitAttribute("Description", "Check the options that are available in Members To Insure")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Check the options that are available in Members To Insure")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckTheOptionsThatAreAvailableInMembersToInsure()
+        public virtual void InsuredMember_CheckTheOptionsThatAreAvailableInMembersToInsure()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options that are available in Members To Insure", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Check the options that are available in Members To Insure", new string[] {
                         "QuoteAndApply"});
-#line 135
+#line 81
     this.ScenarioSetup(scenarioInfo);
-#line 136
+#line 82
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 137
+#line 83
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 138
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 139
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 140
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 141
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 142
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 143
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 144
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 145
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 146
+#line 84
     testRunner.When("I go to the membersToInsure field and look at the options available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 147
+#line 85
     testRunner.Then("I see that the membersToInsure options are as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check the options that are available in No of Children (no Partner)")]
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Check the options that are available in No of Children (no Partne" +
+            "r)")]
         [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
-        [Xunit.TraitAttribute("Description", "Check the options that are available in No of Children (no Partner)")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Check the options that are available in No of Children (no Partne" +
+            "r)")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckTheOptionsThatAreAvailableInNoOfChildrenNoPartner()
+        public virtual void InsuredMember_CheckTheOptionsThatAreAvailableInNoOfChildrenNoPartner()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options that are available in No of Children (no Partner)", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Check the options that are available in No of Children (no Partne" +
+                    "r)", new string[] {
                         "QuoteAndApply"});
-#line 150
+#line 88
     this.ScenarioSetup(scenarioInfo);
-#line 151
+#line 89
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 152
+#line 90
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 153
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 154
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 155
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 156
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 157
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 158
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 159
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 160
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 161
+#line 91
     testRunner.And("I go to the membersToInsure field and choose me and my kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 162
+#line 92
     testRunner.And("I set the PartnerContext as NoPartner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 163
+#line 93
     testRunner.When("I go to the noOfChildren field and look at the options available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 164
+#line 94
     testRunner.Then("I see that the noOfChildren options are as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check the options that are available in No of Children (with Partner)")]
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Check the options that are available in No of Children (with Part" +
+            "ner)")]
         [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
-        [Xunit.TraitAttribute("Description", "Check the options that are available in No of Children (with Partner)")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Check the options that are available in No of Children (with Part" +
+            "ner)")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckTheOptionsThatAreAvailableInNoOfChildrenWithPartner()
+        public virtual void InsuredMember_CheckTheOptionsThatAreAvailableInNoOfChildrenWithPartner()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options that are available in No of Children (with Partner)", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Check the options that are available in No of Children (with Part" +
+                    "ner)", new string[] {
                         "QuoteAndApply"});
-#line 167
+#line 97
     this.ScenarioSetup(scenarioInfo);
-#line 168
+#line 98
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 169
+#line 99
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 170
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 171
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 172
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 173
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 174
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 175
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 176
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 177
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 178
+#line 100
     testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 179
+#line 101
     testRunner.And("I set the PartnerContext as WithPartner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 180
+#line 102
     testRunner.When("I go to the noOfChildren field and look at the options available", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 181
+#line 103
     testRunner.Then("I see that the noOfChildren options are as expected", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Check error message when dateOfBirth makes Partner too young")]
+        [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Check error message when dateOfBirth makes Partner too young")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void InsuredMember_CheckErrorMessageWhenDateOfBirthMakesPartnerTooYoung()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Check error message when dateOfBirth makes Partner too young", new string[] {
+                        "QuoteAndApply"});
+#line 107
+    this.ScenarioSetup(scenarioInfo);
+#line 108
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 109
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 110
+    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 111
+    testRunner.When("I go to the partnerDateOfBirth field and make the age 16 minus 1 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 112
+    testRunner.Then("I see the partnerDateOfBirth field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Check error message when dateOfBirth makes Partner too old")]
+        [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Check error message when dateOfBirth makes Partner too old")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void InsuredMember_CheckErrorMessageWhenDateOfBirthMakesPartnerTooOld()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Check error message when dateOfBirth makes Partner too old", new string[] {
+                        "QuoteAndApply"});
+#line 115
+    this.ScenarioSetup(scenarioInfo);
+#line 116
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 117
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 118
+    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 119
+    testRunner.When("I go to the partnerDateOfBirth field and make the age 80 plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 120
+    testRunner.Then("I see the partnerDateOfBirth field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Check error message does not appears when dateOfBirth makes Partn" +
+            "er almost too young")]
+        [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Check error message does not appears when dateOfBirth makes Partn" +
+            "er almost too young")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void InsuredMember_CheckErrorMessageDoesNotAppearsWhenDateOfBirthMakesPartnerAlmostTooYoung()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Check error message does not appears when dateOfBirth makes Partn" +
+                    "er almost too young", new string[] {
+                        "QuoteAndApply"});
+#line 123
+    this.ScenarioSetup(scenarioInfo);
+#line 124
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 125
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 126
+    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 127
+    testRunner.When("I go to the partnerDateOfBirth field and make the age 16 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 128
+    testRunner.Then("I don\'t see the partnerDateOfBirth field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Check error message does not appear when dateOfBirth makes Partne" +
+            "r almost too old")]
+        [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Check error message does not appear when dateOfBirth makes Partne" +
+            "r almost too old")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void InsuredMember_CheckErrorMessageDoesNotAppearWhenDateOfBirthMakesPartnerAlmostTooOld()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Check error message does not appear when dateOfBirth makes Partne" +
+                    "r almost too old", new string[] {
+                        "QuoteAndApply"});
+#line 131
+    this.ScenarioSetup(scenarioInfo);
+#line 132
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 133
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 134
+    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 135
+    testRunner.When("I go to the partnerDateOfBirth field and make the age 80 minus 1 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 136
+    testRunner.Then("I don\'t see the partnerDateOfBirth field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Check error message when dateOfBirth makes Child1 too old")]
+        [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Check error message when dateOfBirth makes Child1 too old")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void InsuredMember_CheckErrorMessageWhenDateOfBirthMakesChild1TooOld()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Check error message when dateOfBirth makes Child1 too old", new string[] {
+                        "QuoteAndApply"});
+#line 139
+    this.ScenarioSetup(scenarioInfo);
+#line 140
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 141
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 142
+    testRunner.And("I go to the membersToInsure field and choose me and my kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 143
+    testRunner.And("I go to the noOfChildren field and choose kid\'s", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 144
+    testRunner.When("I go to the child1Dob field and make the age 18 plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 145
+    testRunner.Then("I see the child1Dob field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="InsuredMember - Check error message when dateOfBirth makes Child3 too old")]
+        [Xunit.TraitAttribute("FeatureTitle", "InsureFamilyMembersField")]
+        [Xunit.TraitAttribute("Description", "InsuredMember - Check error message when dateOfBirth makes Child3 too old")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void InsuredMember_CheckErrorMessageWhenDateOfBirthMakesChild3TooOld()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("InsuredMember - Check error message when dateOfBirth makes Child3 too old", new string[] {
+                        "QuoteAndApply"});
+#line 148
+    this.ScenarioSetup(scenarioInfo);
+#line 149
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 150
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 151
+    testRunner.And("I go to the membersToInsure field and choose me and my kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 152
+    testRunner.And("I go to the noOfChildren field and choose 3 kids\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 153
+    testRunner.When("I go to the child1Dob field and make the age 12 plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 154
+    testRunner.When("I go to the child2Dob field and make the age 14 plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 155
+    testRunner.When("I go to the child3Dob field and make the age 18 plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 156
+    testRunner.Then("I see the child3Dob field error text Please enter valid birth date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

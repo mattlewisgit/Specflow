@@ -105,7 +105,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         {
 
             WebDriver
-                .FindElement(new JQuerySelector($".quote--content > tell-form .question:has(#{fieldName}) .question--input__error"))
+                .WaitForElement(new JQuerySelector($".quote--content > tell-form .question:has(#{fieldName}) .question--input__error"))
                 .Text.LooseEquals(errorText)
                 .ShouldBe(true);
 
@@ -332,6 +332,7 @@ namespace Vitality.Website.IntegrationTests.Steps
 
 
         [Given(@"I go to the (.*) checkbox field and select the value")]
+        [When(@"I go to the (.*) checkbox field and select the value")]
         public void GivenIGoToTheCheckboxFieldAndSelectTheValue(string checkbox)
         {
             WebDriver

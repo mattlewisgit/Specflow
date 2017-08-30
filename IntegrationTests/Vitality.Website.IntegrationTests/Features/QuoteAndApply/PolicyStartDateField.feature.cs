@@ -72,13 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check the Policy Start Date allows today")]
+        [Xunit.FactAttribute(DisplayName="Policy Start Date - Check the Policy Start Date allows today")]
         [Xunit.TraitAttribute("FeatureTitle", "PolicyStartDateField")]
-        [Xunit.TraitAttribute("Description", "Check the Policy Start Date allows today")]
+        [Xunit.TraitAttribute("Description", "Policy Start Date - Check the Policy Start Date allows today")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckThePolicyStartDateAllowsToday()
+        public virtual void PolicyStartDate_CheckThePolicyStartDateAllowsToday()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the Policy Start Date allows today", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Policy Start Date - Check the Policy Start Date allows today", new string[] {
                         "QuoteAndApply"});
 #line 7
     this.ScenarioSetup(scenarioInfo);
@@ -87,34 +87,42 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
 #line 9
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.When("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.Then("I don\'t see the coverStartDate field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Policy Start Date - Check the Policy Start Date allows 30 days from now")]
+        [Xunit.TraitAttribute("FeatureTitle", "PolicyStartDateField")]
+        [Xunit.TraitAttribute("Description", "Policy Start Date - Check the Policy Start Date allows 30 days from now")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void PolicyStartDate_CheckThePolicyStartDateAllows30DaysFromNow()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Policy Start Date - Check the Policy Start Date allows 30 days from now", new string[] {
+                        "QuoteAndApply"});
 #line 14
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    this.ScenarioSetup(scenarioInfo);
 #line 15
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 16
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.When("I go to the coverStartDate field and make the date today plus 30 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
     testRunner.Then("I don\'t see the coverStartDate field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check the Policy Start Date allows 30 days from now")]
+        [Xunit.FactAttribute(DisplayName="Policy Start Date - Check the Policy Start Date does not allow 31 days from now")]
         [Xunit.TraitAttribute("FeatureTitle", "PolicyStartDateField")]
-        [Xunit.TraitAttribute("Description", "Check the Policy Start Date allows 30 days from now")]
+        [Xunit.TraitAttribute("Description", "Policy Start Date - Check the Policy Start Date does not allow 31 days from now")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckThePolicyStartDateAllows30DaysFromNow()
+        public virtual void PolicyStartDate_CheckThePolicyStartDateDoesNotAllow31DaysFromNow()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the Policy Start Date allows 30 days from now", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Policy Start Date - Check the Policy Start Date does not allow 31 days from now", new string[] {
                         "QuoteAndApply"});
 #line 21
     this.ScenarioSetup(scenarioInfo);
@@ -123,94 +131,30 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
 #line 23
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.When("I go to the coverStartDate field and make the date today plus 31 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 25
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
-    testRunner.And("I go to the coverStartDate field and make the date today plus 30 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
-    testRunner.Then("I don\'t see the coverStartDate field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Check the Policy Start Date does not allow 31 days from now")]
-        [Xunit.TraitAttribute("FeatureTitle", "PolicyStartDateField")]
-        [Xunit.TraitAttribute("Description", "Check the Policy Start Date does not allow 31 days from now")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckThePolicyStartDateDoesNotAllow31DaysFromNow()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the Policy Start Date does not allow 31 days from now", new string[] {
-                        "QuoteAndApply"});
-#line 35
-    this.ScenarioSetup(scenarioInfo);
-#line 36
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 37
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 38
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 39
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 40
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 41
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 42
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 43
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 44
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 45
-    testRunner.And("I go to the coverStartDate field and make the date today plus 31 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 46
     testRunner.Then("I see the coverStartDate field error text Please enter valid date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check the Policy Start Date does not allow dates in the past")]
+        [Xunit.FactAttribute(DisplayName="Policy Start Date - Check the Policy Start Date does not allow dates in the past")]
         [Xunit.TraitAttribute("FeatureTitle", "PolicyStartDateField")]
-        [Xunit.TraitAttribute("Description", "Check the Policy Start Date does not allow dates in the past")]
+        [Xunit.TraitAttribute("Description", "Policy Start Date - Check the Policy Start Date does not allow dates in the past")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckThePolicyStartDateDoesNotAllowDatesInThePast()
+        public virtual void PolicyStartDate_CheckThePolicyStartDateDoesNotAllowDatesInThePast()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the Policy Start Date does not allow dates in the past", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Policy Start Date - Check the Policy Start Date does not allow dates in the past", new string[] {
                         "QuoteAndApply"});
-#line 49
+#line 28
     this.ScenarioSetup(scenarioInfo);
-#line 50
+#line 29
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 51
+#line 30
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 52
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 53
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 54
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 55
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 56
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 57
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 58
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 59
-    testRunner.And("I go to the coverStartDate field and make the date today minus 1 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 60
+#line 31
+    testRunner.When("I go to the coverStartDate field and make the date today minus 1 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
     testRunner.Then("I see the coverStartDate field error text Please enter valid date", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

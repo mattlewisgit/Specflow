@@ -72,13 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check error message does not appears when postCode is valid")]
+        [Xunit.FactAttribute(DisplayName="Postcode - Check error message does not appears when postCode is valid #6 values")]
         [Xunit.TraitAttribute("FeatureTitle", "PostcodeField")]
-        [Xunit.TraitAttribute("Description", "Check error message does not appears when postCode is valid")]
+        [Xunit.TraitAttribute("Description", "Postcode - Check error message does not appears when postCode is valid #6 values")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageDoesNotAppearsWhenPostCodeIsValid()
+        public virtual void Postcode_CheckErrorMessageDoesNotAppearsWhenPostCodeIsValid6Values()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message does not appears when postCode is valid", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Postcode - Check error message does not appears when postCode is valid #6 values", new string[] {
                         "QuoteAndApply"});
 #line 7
     this.ScenarioSetup(scenarioInfo);
@@ -87,66 +87,52 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
 #line 9
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 18
-    testRunner.And("I go to the membersToInsure field and choose just me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 19
     testRunner.When("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
+#line 11
     testRunner.Then("I don\'t see the postcode field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check error message when postCode is invalid")]
+        [Xunit.FactAttribute(DisplayName="Postcode - Check error message does not appears when postCode is valid #7 values")]
         [Xunit.TraitAttribute("FeatureTitle", "PostcodeField")]
-        [Xunit.TraitAttribute("Description", "Check error message when postCode is invalid")]
+        [Xunit.TraitAttribute("Description", "Postcode - Check error message does not appears when postCode is valid #7 values")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageWhenPostCodeIsInvalid()
+        public virtual void Postcode_CheckErrorMessageDoesNotAppearsWhenPostCodeIsValid7Values()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message when postCode is invalid", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Postcode - Check error message does not appears when postCode is valid #7 values", new string[] {
                         "QuoteAndApply"});
-#line 23
+#line 14
     this.ScenarioSetup(scenarioInfo);
-#line 24
+#line 15
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 25
+#line 16
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 26
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 28
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 30
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
-    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 33
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 34
-    testRunner.And("I go to the membersToInsure field and choose just me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 35
+#line 17
+    testRunner.When("I go to the postcode field and enter BH20 6HH", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
+    testRunner.Then("I don\'t see the postcode field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Postcode - Check error message when postCode is invalid")]
+        [Xunit.TraitAttribute("FeatureTitle", "PostcodeField")]
+        [Xunit.TraitAttribute("Description", "Postcode - Check error message when postCode is invalid")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void Postcode_CheckErrorMessageWhenPostCodeIsInvalid()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Postcode - Check error message when postCode is invalid", new string[] {
+                        "QuoteAndApply"});
+#line 21
+    this.ScenarioSetup(scenarioInfo);
+#line 22
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 23
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 24
     testRunner.When("I go to the postcode field and enter BH 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 36
+#line 25
     testRunner.Then("I see the postcode field error text Please enter valid postcode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

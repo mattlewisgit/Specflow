@@ -72,13 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check error message when email format incorrect")]
+        [Xunit.FactAttribute(DisplayName="Email - Check error message when email format incorrect #1")]
         [Xunit.TraitAttribute("FeatureTitle", "EmailField")]
-        [Xunit.TraitAttribute("Description", "Check error message when email format incorrect")]
+        [Xunit.TraitAttribute("Description", "Email - Check error message when email format incorrect #1")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CheckErrorMessageWhenEmailFormatIncorrect()
+        public virtual void Email_CheckErrorMessageWhenEmailFormatIncorrect1()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check error message when email format incorrect", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Email - Check error message when email format incorrect #1", new string[] {
                         "QuoteAndApply"});
 #line 7
     this.ScenarioSetup(scenarioInfo);
@@ -87,17 +87,53 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
 #line 9
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
-    testRunner.And("I go to the phoneNumber field and enter 01202 222222", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 14
     testRunner.When("I go to the emailAddress field and enter test.user@gmail", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 15
+#line 11
     testRunner.Then("I see the emailAddress field error text Please enter valid email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Email - Check error message when email format incorrect #2")]
+        [Xunit.TraitAttribute("FeatureTitle", "EmailField")]
+        [Xunit.TraitAttribute("Description", "Email - Check error message when email format incorrect #2")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void Email_CheckErrorMessageWhenEmailFormatIncorrect2()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Email - Check error message when email format incorrect #2", new string[] {
+                        "QuoteAndApply"});
+#line 14
+    this.ScenarioSetup(scenarioInfo);
+#line 15
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 16
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+    testRunner.When("I go to the emailAddress field and enter @gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
+    testRunner.Then("I see the emailAddress field error text Please enter valid email address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Email - User enters a valid email address")]
+        [Xunit.TraitAttribute("FeatureTitle", "EmailField")]
+        [Xunit.TraitAttribute("Description", "Email - User enters a valid email address")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void Email_UserEntersAValidEmailAddress()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Email - User enters a valid email address", new string[] {
+                        "QuoteAndApply"});
+#line 21
+    this.ScenarioSetup(scenarioInfo);
+#line 22
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 23
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 24
+    testRunner.When("I go to the emailAddress field and enter test.user@gmail.co.uk", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 25
+    testRunner.Then("I don\'t see the emailAddress field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
