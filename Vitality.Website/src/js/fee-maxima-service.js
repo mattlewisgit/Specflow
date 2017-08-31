@@ -27,9 +27,8 @@
 
        this.getChapters = function () {
            var deferred = $q.defer();
-
            $http.post(action + encodeURIComponent(feedSettings.Endpoint),
-                { MockDataFile: encodeURI(feedSettings.MockDataFile) })
+                { MockDataFile: encodeURI(feedSettings.MockDataFile), FeedType: feedSettings.FeedType })
                .success(function (dt) {
                    deferred.resolve(dt.BslResponse);
                })
