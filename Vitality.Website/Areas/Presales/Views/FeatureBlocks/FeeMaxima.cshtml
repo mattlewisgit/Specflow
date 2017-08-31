@@ -32,10 +32,7 @@
             </div>
             <div class="expanding-list js-expander-is-accordion expander--init" data-ng-hide="noResultsFound || sectionSelected" data-ng-cloak>
                 <a ng-repeat-start="chapter in chapters" class="expander__link grid" href="#expander1-{{chapter.Id}}">
-                    <div class="grid-col-2-12 chapter">
-                        @Editable(Model, m => m.ChapterText) {{chapter.Id}}
-                    </div>
-                    <div class="grid-col-10-12 name" ng-bind-html="chapter.Name | unsafe">
+                <div class="grid-col-10-12 name" ng-bind-html="chapter.Name | unsafe">
                     </div>
                 </a>
                 <div ng-repeat-end class="expander__content" id="expander1-{{chapter.Id}}">
@@ -43,11 +40,7 @@
 
                         <div class="grid-col-2-12 chapter"></div>
 
-                        <div class="grid-col-2-12 subchapter">
-                            @Editable(Model, m => m.ChapterText) {{chapter.Id}}.{{section.Id}}
-                        </div>
-
-                        <div class="grid-col-8-12 name" ng-bind-html="section.Name | unsafe">
+                        <div class="grid-col-10-12 name" ng-bind-html="section.Name | unsafe">
                         </div>
                     </a>
                 </div>
