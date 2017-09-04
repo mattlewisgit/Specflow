@@ -1,6 +1,6 @@
 ﻿import { IndividualQuoteRequest } from "./individual-quote-request";
 
 export class PermutationRequest {
-    individualQuoteRequest: IndividualQuoteRequest[];
+    individualQuoteRequest: IndividualQuoteRequest;
     permutationNumber: number;
 }

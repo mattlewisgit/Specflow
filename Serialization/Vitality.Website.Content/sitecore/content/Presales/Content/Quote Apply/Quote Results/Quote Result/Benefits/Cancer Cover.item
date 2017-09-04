@@ -13,7 +13,7 @@ created: 20170823T214822Z
 ----version----
 language: en
 version: 1
-revision: 32c6f40d-ebe8-4966-a692-6a22a907916f
+revision: d50a1bc5-c71c-4194-a1de-2e2089d137cb
 
 ----field----
 field: {7C4D704F-ECB4-4A3D-A507-60BFCD032F2B}
@@ -38,18 +38,18 @@ content-length: 30
 Test tool time sdfsdfs w fsfsd
 ----field----
 field: {174BDE68-37E9-4C21-B69D-5FAA38757390}
-name: ModuleCode
-key: modulecode
-content-length: 38
+name: IsModule
+key: ismodule
+content-length: 1
 
-{066D147F-1E8A-46BF-B41F-688AB399B944}
+1
 ----field----
 field: {65D3DEFB-193B-41F9-ACB2-D28B99A5DA1C}
 name: BenefitOptions
 key: benefitoptions
-content-length: 38
+content-length: 77
 
-{1FA1B999-BBA4-40AB-9502-BBF2067E6A2D}
+{1FA1B999-BBA4-40AB-9502-BBF2067E6A2D}|{86023B96-C9E9-483F-A253-86C660AC62BC}
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -77,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-32c6f40d-ebe8-4966-a692-6a22a907916f
+d50a1bc5-c71c-4194-a1de-2e2089d137cb
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170824T085315Z
+20170824T200704Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

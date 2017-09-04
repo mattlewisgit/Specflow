@@ -6,6 +6,7 @@
 {
     public class PermutationViewModel
     {
+        public IEnumerable<string> CoreModules { get; set; }
         public Image CrossIcon { get; set; }
         public string ExternalIdentifier { get; set; }
         public Guid Id { get; set; }

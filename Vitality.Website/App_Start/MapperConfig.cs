@@ -88,14 +88,18 @@
 
             config.CreateMap<Benefit, BenefitViewModel>()
                 .ForMember(
-                    dest => dest.ModuleCode,
-                    opt => opt.MapFrom(src => src.ModuleCode.Value));
+                    dest => dest.Code,
+                    opt => opt.MapFrom(src => src.Code.Value));
+
             config.CreateMap<BenefitOption, BenefitOptionViewModel>()
                 .ForMember(
                     dest => dest.Code,
                     opt => opt.MapFrom(src => src.Code.Value));
 
             config.CreateMap<Permutation, PermutationViewModel>()
+                 .ForMember(
+                    dest => dest.CoreModules,
+                    opt => opt.MapFrom(src => src.CoreModules.Select(c=>c.Value)))
                 .ForMember(
                     dest => dest.ExternalIdentifier,
                     opt => opt.MapFrom(src => src.ExternalIdentifier.Value));
