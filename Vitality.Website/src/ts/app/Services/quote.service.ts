@@ -29,7 +29,7 @@ export class QuoteService {
         child3Dob: "",
         child4Dob: "",
         child5Dob: "",
-        coverStartDate: "03/09/2017",
+        coverStartDate: "03/10/2017",
         dateOfBirth: "03/02/1999",
         emailAddress: "sd@dsfs.com",
         firstName: "Janaka",
