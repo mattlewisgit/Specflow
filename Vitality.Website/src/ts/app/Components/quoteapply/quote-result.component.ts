@@ -1,4 +1,4 @@
-import { Component, Input, OnInit}      from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
 import { WindowRef } from "./../windowref";
 import { Subscription } from "rxjs/Subscription";
 import { QuoteService } from "../../services/quote.service";
@@ -21,6 +21,7 @@ export class QuoteResultComponent implements OnInit {
 
     ngOnInit(): void {
         this.quoteResultData = this.winRef.nativeWindow.angularData.quoteResult;
+        this.quoteService.getQuoteApplication(this.quoteResultData.referenceId);
         this.getQuotes();
     }
 

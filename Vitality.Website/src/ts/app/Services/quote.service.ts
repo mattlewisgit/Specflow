@@ -46,9 +46,21 @@ export class QuoteService {
         title: "mr"
     }
 
+    getQuoteApplication(referenceId: string): any {
+        const responsePromise = this.http.get(QuoteApplyConstants.endpoints.getApplication + referenceId)
+            .toPromise()
+            .then(response => response)
+            .catch(this.errorService.handleServiceOutage.bind(this.errorService));
+
+        responsePromise.then((data: any) => {
+            this.quoteApplication = data.Quotes;
+            console.log(this.quoteApplication);
+        });
+    }
+
     callRtpe(permutations: any[]): Promise<any> {
         let requestData= this.getRtpeRequest(permutations);
-        return this.http.post(`/api/bsl/post?bslendpoint=${encodeURIComponent(this.endpoint)}`,requestData)
+        return this.http.post(GlobalConstants.endpoints.bslEndpoint + encodeURIComponent(this.endpoint),requestData)
             .toPromise()
             .then(response => response.json().BslResponse)
             .catch(this.errorService.handleServiceOutage.bind(this.errorService));

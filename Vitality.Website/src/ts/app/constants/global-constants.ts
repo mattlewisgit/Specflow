@@ -3,10 +3,17 @@
         button: "BUTTON",
         dropdown: "SELECT"
     };
+    export const endpoints =
+    {
+        bslEndpoint: "/api/bsl/post?bslendpoint="
+    };
     export const selectors = {
         classIdentifier: ".",
         formInputFields: "input,select",
         hide: "hide"
+    };
+    export const strings = {
+        empty: ""
     };
     export const keyboardKeys = {
         zero: 0,
