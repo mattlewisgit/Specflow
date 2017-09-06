@@ -21,12 +21,14 @@ export class QuoteResultComponent implements OnInit {
 
     ngOnInit(): void {
         this.quoteResultData = this.winRef.nativeWindow.angularData.quoteResult;
-        this.quoteService.getQuoteApplication(this.quoteResultData.referenceId);
-        this.getQuotes();
+        this.quoteService.getQuoteApplication(this.quoteResultData.referenceId)
+            .then((data: any) => {
+                this.getQuotes(data);
+            });
     }
 
-    getQuotes(): void {
-        this.quoteService.callRtpe(this.quoteResultData)
+    getQuotes(application:any): void {
+        this.quoteService.callRtpe(application, this.quoteResultData)
             .then((data: any) => {
                 this.quotes = data.Quotes;
             });
@@ -68,6 +70,6 @@ export class QuoteResultComponent implements OnInit {
             }
         }
         this.currentTime = new Date();
-        this.getQuotes();
+        this.getQuotes(null);
     }
 }

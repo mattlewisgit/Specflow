@@ -18,6 +18,7 @@ import { GlobalConstants } from "../constants/global-constants";
 @Injectable()
 export class QuoteService {
     endpoint = "rtpe/quotelist";
+    lives = new Array<Life>();
 
     constructor(private http: Http,
         private errorService: ErrorService) {
@@ -47,27 +48,25 @@ export class QuoteService {
     }
 
     getQuoteApplication(referenceId: string): any {
-        const responsePromise = this.http.get(QuoteApplyConstants.endpoints.getApplication + referenceId)
+        return this.http.get(QuoteApplyConstants.endpoints.getApplication + referenceId)
             .toPromise()
-            .then(response => response)
+            .then(response => response.json())
             .catch(this.errorService.handleServiceOutage.bind(this.errorService));
-
-        responsePromise.then((data: any) => {
-            this.quoteApplication = data.Quotes;
-            console.log(this.quoteApplication);
-        });
     }
 
-    callRtpe(permutations: any[]): Promise<any> {
-        let requestData= this.getRtpeRequest(permutations);
-        return this.http.post(GlobalConstants.endpoints.bslEndpoint + encodeURIComponent(this.endpoint),requestData)
+    callRtpe(application: any, permutations: any[]): Promise<any> {
+        if (application) {
+            this.quoteApplication = application;
+            this.getLives();
+        }
+        const requestData = this.getRtpeRequest(permutations);
+        return this.http.post(GlobalConstants.endpoints.bslEndpoint + encodeURIComponent(this.endpoint), requestData)
             .toPromise()
             .then(response => response.json().BslResponse)
             .catch(this.errorService.handleServiceOutage.bind(this.errorService));
     }
 
     private getRtpeRequest(quoteResultData: any): QuoteRequest {
-        const lives = this.getLives();
         const moduleBenefits = quoteResultData.benefits.filter((b:any) => b.isModule);
         const otherBenefits = quoteResultData.benefits.filter((b: any) => !b.isModule && b.code);
         const permutationRequests = new Array<PermutationRequest>();
@@ -80,7 +79,8 @@ export class QuoteService {
                 modules.push(new Module(code));
             }
             for (let moduleBenefit of moduleBenefits) {
-                const moduleBenefitsOption = moduleBenefit.benefitOptions.filter((x:any) => x.permutations.filter((p:string) => p === permutation.id).length > 0)[0];
+                const moduleBenefitsOption = moduleBenefit.benefitOptions
+                    .filter((x: any) => x.permutations.filter((p: string) => p === permutation.id).length > 0)[0];
                 if (moduleBenefitsOption) {
                     modules.push(new Module(moduleBenefitsOption.code));
                 }
@@ -88,13 +88,14 @@ export class QuoteService {
 
             const individualQuoteRequest = new IndividualQuoteRequest();
             for (let otherBenefit of otherBenefits) {
-                const otherBenefitsOption = otherBenefit.benefitOptions.filter((x: any) => x.permutations.filter((p: string) => p === permutation.id).length > 0)[0];
+                const otherBenefitsOption = otherBenefit.benefitOptions
+                    .filter((x: any) => x.permutations.filter((p: string) => p === permutation.id).length > 0)[0];
                 if (otherBenefitsOption) {
                     individualQuoteRequest[otherBenefit.code] = otherBenefitsOption.code;
                 }
             }
 
-            individualQuoteRequest.claimFreeYears= this.quoteApplication.noOfClaimFreeYears;
+            individualQuoteRequest.claimFreeYears = this.quoteApplication.noOfClaimFreeYears;
             individualQuoteRequest.competitorRenwalPrem = 0.0;
             individualQuoteRequest.externalQuoteIdentifier = permutation.externalIdentifier;
             individualQuoteRequest.occupation = 1;
@@ -102,12 +103,17 @@ export class QuoteService {
             individualQuoteRequest.previousInsurer = 0;
             individualQuoteRequest.previousInsurerClaims = this.quoteApplication.noOfClaims;
             individualQuoteRequest.isPreviouslyInsured = this.quoteApplication.insuredStatus === 1;
-            individualQuoteRequest.previouslyInsured = this.quoteApplication.insuredStatus === 1 ? "PI0" : "PI1";
-            individualQuoteRequest.productCode ="PHC";
+
+            individualQuoteRequest.previouslyInsured = this.quoteApplication.insuredStatus === 1
+                ? QuoteApplyConstants.previouslyInsured.yes
+                : QuoteApplyConstants.previouslyInsured.no;
+
+            individualQuoteRequest.productCode = QuoteApplyConstants.values.productCode;
             individualQuoteRequest.renewalDate = this.quoteApplication.coverStartDate;
             individualQuoteRequest.startDate = this.quoteApplication.coverStartDate;
-            individualQuoteRequest.lives = lives;
-            individualQuoteRequest.modules= modules;
+            individualQuoteRequest.lives = this.lives;
+            individualQuoteRequest.modules = modules;
+
             const permutationRequest = new PermutationRequest();
             permutationRequest.individualQuoteRequest = individualQuoteRequest;
             permutationRequest.permutationNumber = i;
@@ -117,30 +123,28 @@ export class QuoteService {
         return new QuoteRequest(permutationRequests);
     }
 
-    private getLives(): Life[] {
-        const lives = new Array<Life>();
-        lives.push(new Life(this.getAge(this.quoteApplication.dateOfBirth),
+    private getLives(): void {
+        this.lives.push(new Life(this.getAge(this.quoteApplication.dateOfBirth),
             QuoteApplyConstants.gender.male,
             0,
             QuoteApplyConstants.roleType.employeePrincipal));
         if (this.quoteApplication.membersToInsure === QuoteApplyConstants.values.mePartner ||
             this.quoteApplication.membersToInsure === QuoteApplyConstants.values.mePartnerChildren) {
-            lives.push(new Life(this.getAge(this.quoteApplication.partnerDateOfBirth),
+            this.lives.push(new Life(this.getAge(this.quoteApplication.partnerDateOfBirth),
                 QuoteApplyConstants.gender.male,
-                lives.length,
+                this.lives.length,
                 QuoteApplyConstants.roleType.partner));
         }
         if (this.quoteApplication.membersToInsure === QuoteApplyConstants.values.meChildren ||
             this.quoteApplication.membersToInsure === QuoteApplyConstants.values.mePartnerChildren) {
 
             for (let i = 1; i <= this.quoteApplication.noOfChildren; i++) {
-                lives.push(new Life(this.getAge(this.quoteApplication[`child${i}Dob`]),
+                this.lives.push(new Life(this.getAge(this.quoteApplication[`child${i}Dob`]),
                     QuoteApplyConstants.gender.male,
-                    lives.length,
+                    this.lives.length,
                     QuoteApplyConstants.roleType.child));
             }
         }
-        return lives;
     }
 
     private getAge(birthDayString: string): number {

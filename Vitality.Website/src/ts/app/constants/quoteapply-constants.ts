@@ -22,6 +22,11 @@
         male: "M",
         female: "F"
     };
+    export const previouslyInsured =
+    {
+        yes: "PI0",
+        no: "PI1"
+    };
     export const roleType = {
         employeePrincipal: "EMP",
         partner: "PTR",
@@ -32,6 +37,7 @@
         me: "me",
         mePartner: "mepartner",
         mePartnerChildren: "mepartnerchildren",
-        meChildren: "mechildren"
+        meChildren: "mechildren",
+        productCode: "PHC"
     };
 };
