@@ -23,7 +23,7 @@ export class QuoteService {
     constructor(private http: Http,
         private errorService: ErrorService) {
     }
-
+    // TODO : remove this before going live... For testing purpose only
     quoteApplication = {
         child1Dob: "04/02/2012",
         child2Dob: "04/08/2002",
