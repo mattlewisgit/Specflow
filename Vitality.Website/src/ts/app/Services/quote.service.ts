@@ -50,8 +50,7 @@ export class QuoteService {
     getQuoteApplication(referenceId: string): any {
         return this.http.get(QuoteApplyConstants.endpoints.getApplication + referenceId)
             .toPromise()
-            .then(response => response.json())
-            .catch(this.errorService.handleServiceOutage.bind(this.errorService));
+            .then(response => response.json());
     }
 
     callRtpe(application: any, permutations: any[]): Promise<any> {
