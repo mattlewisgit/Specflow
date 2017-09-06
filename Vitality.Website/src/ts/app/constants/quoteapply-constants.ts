@@ -24,8 +24,8 @@
     };
     export const previouslyInsured =
     {
-        yes: "PI0",
-        no: "PI1"
+        no: "PI0",
+        yes: "PI1"
     };
     export const roleType = {
         employeePrincipal: "EMP",

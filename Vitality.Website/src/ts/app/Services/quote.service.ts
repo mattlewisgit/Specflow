@@ -103,8 +103,9 @@ export class QuoteService {
             individualQuoteRequest.previousInsurer = 0;
             individualQuoteRequest.previousInsurerClaims = this.quoteApplication.noOfClaims;
             individualQuoteRequest.isPreviouslyInsured = this.quoteApplication.insuredStatus === 1;
-
-            individualQuoteRequest.previouslyInsured = this.quoteApplication.insuredStatus === 1
+            // If  previously insured default to 1. This will change when ABC project goes live
+            individualQuoteRequest.previousInsurerYears = individualQuoteRequest.isPreviouslyInsured ? 1 : 0;
+            individualQuoteRequest.previouslyInsured = individualQuoteRequest.isPreviouslyInsured
                 ? QuoteApplyConstants.previouslyInsured.yes
                 : QuoteApplyConstants.previouslyInsured.no;
 
@@ -124,13 +125,13 @@ export class QuoteService {
     }
 
     private getLives(): void {
-        this.lives.push(new Life(this.getAge(this.quoteApplication.dateOfBirth),
+        this.lives.push(new Life(this.quoteApplication.dateOfBirth,
             QuoteApplyConstants.gender.male,
             0,
             QuoteApplyConstants.roleType.employeePrincipal));
         if (this.quoteApplication.membersToInsure === QuoteApplyConstants.values.mePartner ||
             this.quoteApplication.membersToInsure === QuoteApplyConstants.values.mePartnerChildren) {
-            this.lives.push(new Life(this.getAge(this.quoteApplication.partnerDateOfBirth),
+            this.lives.push(new Life(this.quoteApplication.partnerDateOfBirth,
                 QuoteApplyConstants.gender.male,
                 this.lives.length,
                 QuoteApplyConstants.roleType.partner));
@@ -139,18 +140,11 @@ export class QuoteService {
             this.quoteApplication.membersToInsure === QuoteApplyConstants.values.mePartnerChildren) {
 
             for (let i = 1; i <= this.quoteApplication.noOfChildren; i++) {
-                this.lives.push(new Life(this.getAge(this.quoteApplication[`child${i}Dob`]),
+                this.lives.push(new Life(this.quoteApplication[`child${i}Dob`],
                     QuoteApplyConstants.gender.male,
                     this.lives.length,
                     QuoteApplyConstants.roleType.child));
             }
         }
-    }
-
-    private getAge(birthDayString: string): number {
-        const birthDate = moment(birthDayString, GlobalConstants.formats.dateFormat);
-        const now = moment();
-        const age = Math.floor(now.diff(birthDate, GlobalConstants.moments.years, true));
-        return age;
     }
 }

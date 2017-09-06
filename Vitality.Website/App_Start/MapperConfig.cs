@@ -104,7 +104,10 @@
                     dest => dest.ExternalIdentifier,
                     opt => opt.MapFrom(src => src.ExternalIdentifier.Value));
 
-            config.CreateMap<QuoteResult, QuoteResultViewModel>();
+            config.CreateMap<QuoteResult, QuoteResultViewModel>()
+                  .ForMember(
+                    dest => dest.ServiceOutagePage,
+                    opt => opt.MapFrom(src => src.ServiceOutagePage.Url));
 
             config.CreateMap<TellForm, TellFormViewModel>()
                 .ForMember(
