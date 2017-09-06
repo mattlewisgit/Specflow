@@ -11,7 +11,8 @@
         childrenQuestionGroup: "childrenDobGroup",
         membersToInsure: "membersToInsure",
         noOfChildren: "noOfChildren",
-        postcodeQuestionGroup: "postcodeGroup"
+        postcodeQuestionGroup: "postcodeGroup",
+        featuresAndBenefitsGroup: "featuresAndBenefits"
     };
     export const labels = {
         emptyLabel: ""

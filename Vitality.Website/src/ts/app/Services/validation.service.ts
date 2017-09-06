@@ -22,7 +22,6 @@ export class ValidationService {
     }
 
     getValidator(validatorName: string, params: any): any {
-        console.log('params:' + params.length);
         switch (validatorName) {
         case "required":
             return Validators.required;
@@ -58,6 +57,8 @@ export class ValidationService {
     }
 
     ageRangeValidator(options: any) {
+        // TODO: remove this. proves these params are coming through
+        console.log('age: ' + options.maxAge);
         return (control: any) => {
             if (this.matchDate(control.value)) {
                 const birthDate = moment(control.value, GlobalConstants.formats.dateFormat);
@@ -148,17 +149,18 @@ export class ValidationService {
     }
 
     maxSelectionsValidator(options: any) {
+        // TODO: remove this once param is coming through
+        console.log('max selections:' + options.maxSelectionsExceeded);
         return (control: any) => {
             let selectionsCount = 0;
             if (options.selectedCheckboxes) {
-                selectionsCount = options.selectedCheckboxes.length;
+                selectionsCount = options.selectedCheckboxes;
             }
 
-            //TODO: remove this line
-            options.maxSelectionsExceeded = 2;
-
+            //TODO: remove these lines, hardcoded value to get validation working
+            //options.maxSelectionsExceeded = 2;
             console.log('comparing:' + selectionsCount + ' with ' + options.maxSelectionsExceeded);
-            
+
             return selectionsCount > options.maxSelectionsExceeded ? { "maxSelectionsExceeded": true } : null;
         }
     }

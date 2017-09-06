@@ -16,7 +16,6 @@ export class QuestionGroupComponent implements OnInit {
     form: FormGroup;
     @Input()
     renderingData: {};
-    selectedCheckboxes: Array<string> = [];
 
     constructor(private qcs: QuestionControlService) {
     }
@@ -29,20 +28,19 @@ export class QuestionGroupComponent implements OnInit {
         var key = event.target.getAttribute('value');
         var checked = event.target.checked;
 
+        question.selectedValues = question.selectedValues || new Array<string>();
+
         // Add/Remove checkbox value from array
         if (checked) {
-            this.selectedCheckboxes.push(key);
+            question.selectedValues.push(key);
         } else {
-            var index = this.selectedCheckboxes.indexOf(key, 0);
+            var index = question.selectedValues.indexOf(key, 0);
             if (index > -1) {
-                this.selectedCheckboxes.splice(index, 1);
+                question.selectedValues.splice(index, 1);
             }
         }
 
-        var maxSelectionsValidator = question.validators.filter(x => x.validatorName === "maxSelectionsValidator")[0];
-        if (maxSelectionsValidator != null) {
-            maxSelectionsValidator.parameters['selectedCheckboxes'] = this.selectedCheckboxes;
-            console.log('limit: ' + maxSelectionsValidator.parameters['maxSelectionsExceeded']);
-        }
+        // TODO: remove this line once working
+        console.log('question = ' + question.selectedValues.toString());        
     }
 }
