@@ -153,13 +153,11 @@ this.ScenarioSetup(scenarioInfo);
         [Xunit.TraitAttribute("Description", "Check Benefit Leader button links externally")]
         [Xunit.TraitAttribute("Category", "Presales")]
         [Xunit.TraitAttribute("Category", "BenefitLeader")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void CheckBenefitLeaderButtonLinksExternally()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Benefit Leader button links externally", new string[] {
                         "Presales",
-                        "BenefitLeader",
-                        "SIT"});
+                        "BenefitLeader"});
 #line 28
 this.ScenarioSetup(scenarioInfo);
 #line 29

@@ -10,22 +10,22 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
+namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CallMeBack
 {
     using TechTalk.SpecFlow;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class EmailFieldFeature : Xunit.IClassFixture<EmailFieldFeature.FixtureData>, System.IDisposable
+    public partial class CallMeBackEmailFieldFeature : Xunit.IClassFixture<CallMeBackEmailFieldFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "EmailField.feature"
+#line 1 "CallMeBackEmailField.feature"
 #line hidden
         
-        public EmailFieldFeature()
+        public CallMeBackEmailFieldFeature()
         {
             this.TestInitialize();
         }
@@ -33,8 +33,8 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "EmailField", "\tIn order to validation the email field\r\n\tAs a quote and apply user\r\n\tI want to b" +
-                    "e able to check the email field", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CallMeBackEmailField", "\tIn order to validation the callmeback email field\r\n\tAs a quote and apply user\r\n\t" +
+                    "I want to be able to check the callmeback email field", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -63,7 +63,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void SetFixture(EmailFieldFeature.FixtureData fixtureData)
+        public virtual void SetFixture(CallMeBackEmailFieldFeature.FixtureData fixtureData)
         {
         }
         
@@ -72,18 +72,18 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Email - Check error message when email format incorrect #1")]
-        [Xunit.TraitAttribute("FeatureTitle", "EmailField")]
-        [Xunit.TraitAttribute("Description", "Email - Check error message when email format incorrect #1")]
+        [Xunit.FactAttribute(DisplayName="CallMeBack - Email - Check error message when email format incorrect #1")]
+        [Xunit.TraitAttribute("FeatureTitle", "CallMeBackEmailField")]
+        [Xunit.TraitAttribute("Description", "CallMeBack - Email - Check error message when email format incorrect #1")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void Email_CheckErrorMessageWhenEmailFormatIncorrect1()
+        public virtual void CallMeBack_Email_CheckErrorMessageWhenEmailFormatIncorrect1()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Email - Check error message when email format incorrect #1", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CallMeBack - Email - Check error message when email format incorrect #1", new string[] {
                         "QuoteAndApply"});
 #line 7
     this.ScenarioSetup(scenarioInfo);
 #line 8
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /dev/call-me-back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
@@ -94,18 +94,18 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Email - Check error message when email format incorrect #2")]
-        [Xunit.TraitAttribute("FeatureTitle", "EmailField")]
-        [Xunit.TraitAttribute("Description", "Email - Check error message when email format incorrect #2")]
+        [Xunit.FactAttribute(DisplayName="CallMeBack - Email - Check error message when email format incorrect #2")]
+        [Xunit.TraitAttribute("FeatureTitle", "CallMeBackEmailField")]
+        [Xunit.TraitAttribute("Description", "CallMeBack - Email - Check error message when email format incorrect #2")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void Email_CheckErrorMessageWhenEmailFormatIncorrect2()
+        public virtual void CallMeBack_Email_CheckErrorMessageWhenEmailFormatIncorrect2()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Email - Check error message when email format incorrect #2", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CallMeBack - Email - Check error message when email format incorrect #2", new string[] {
                         "QuoteAndApply"});
 #line 14
     this.ScenarioSetup(scenarioInfo);
 #line 15
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /dev/call-me-back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 16
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
@@ -116,18 +116,18 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Email - User enters a valid email address")]
-        [Xunit.TraitAttribute("FeatureTitle", "EmailField")]
-        [Xunit.TraitAttribute("Description", "Email - User enters a valid email address")]
+        [Xunit.FactAttribute(DisplayName="CallMeBack - Email - User enters a valid email address")]
+        [Xunit.TraitAttribute("FeatureTitle", "CallMeBackEmailField")]
+        [Xunit.TraitAttribute("Description", "CallMeBack - Email - User enters a valid email address")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void Email_UserEntersAValidEmailAddress()
+        public virtual void CallMeBack_Email_UserEntersAValidEmailAddress()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Email - User enters a valid email address", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CallMeBack - Email - User enters a valid email address", new string[] {
                         "QuoteAndApply"});
 #line 21
     this.ScenarioSetup(scenarioInfo);
 #line 22
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /dev/call-me-back", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 23
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
@@ -145,12 +145,12 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply
             
             public FixtureData()
             {
-                EmailFieldFeature.FeatureSetup();
+                CallMeBackEmailFieldFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                EmailFieldFeature.FeatureTearDown();
+                CallMeBackEmailFieldFeature.FeatureTearDown();
             }
         }
     }

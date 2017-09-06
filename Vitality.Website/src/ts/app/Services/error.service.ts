@@ -3,10 +3,17 @@ import { WindowRef } from "../components/windowref";
 
 @Injectable()
 export class ErrorService {
+    serviceOutagePage: string;
     constructor(private winRef: WindowRef) {
     }
 
+    initialize(serviceOutagePage: string) {
+        this.serviceOutagePage = serviceOutagePage;
+    }
+
     handleServiceOutage(): void {
-        //this.winRef.nativeWindow.location.href = this.winRef.nativeWindow.angularData.serviceOutagePage;
+        if (this.serviceOutagePage) {
+            this.winRef.nativeWindow.location.href = this.serviceOutagePage;
+        }
     }
 }

@@ -1,11 +1,11 @@
 ﻿export class Life {
-    lifeAgeOrBirthDate: { age: number };
+    lifeAgeOrBirthDate: { birthDate: string };
     gender: string;
     lifeNumber: number;
     roleType: string;
 
-    constructor(calculatedAge: number, gender: string, index: number, roleType: string) {
-        this.lifeAgeOrBirthDate = { age: calculatedAge };
+    constructor(birthDate: string, gender: string, index: number, roleType: string) {
+        this.lifeAgeOrBirthDate = { birthDate: birthDate };
         this.gender = gender;
         this.lifeNumber = index;
         this.roleType = roleType;

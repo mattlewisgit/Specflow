@@ -1,41 +1,34 @@
 ----item----
 version: 1
-id: {5ECB727C-906A-40F2-A02C-AE7E862F710A}
+id: {97CEBA20-D6BA-4232-80A1-8D3EE49D3520}
 database: master
-path: /sitecore/content/Presales/Configuration/Feed Settings/Ccsd Feed
-parent: {1AB4A224-7BC3-481C-8B5A-16ECD10B728A}
-name: Ccsd Feed
+path: /sitecore/content/Presales/Configuration/Field Validators/Future Date Validator
+parent: {38BDCDEF-A8A4-4C3C-93AD-9BD62C745FB7}
+name: Future Date Validator
 master: {00000000-0000-0000-0000-000000000000}
-template: {2FFAE337-E3CA-4DB3-8CEF-1F6575DAC46A}
-templatekey: Feed Settings
-created: 20170831T090302Z
+template: {C631EE17-FF6E-4C17-8303-CFCE777FD8A2}
+templatekey: Field Validator
+created: 20170721T161249Z
 
 ----version----
 language: en
 version: 1
-revision: 7e5a028f-85c6-4fe5-9683-021a21dac815
+revision: 4e9ab799-0a1f-47aa-b29c-44a1c895c92f
 
 ----field----
-field: {61883224-82A0-44A7-81FB-9A6C9E916CE9}
-name: Endpoint
-key: endpoint
-content-length: 14
+field: {41F1F96F-0AA6-4E4C-95ED-EA251B3BD7E7}
+name: ValidatorName
+key: validatorname
+content-length: 19
 
-feemaxima/list
+futureDateValidator
 ----field----
-field: {C002D72F-2B0E-487C-90D1-694E103BD41D}
-name: MockDataFile
-key: mockdatafile
-content-length: 132
+field: {2DA36667-40DD-4A1C-952A-795FE6F0B4F0}
+name: Parameters
+key: parameters
+content-length: 17
 
-<link linktype="external" url="https://www.vitality.co.uk/media-online/presales/data-files/ccsdchapters.json" anchor="" target="" />
-----field----
-field: {835BA4CC-D19B-4D03-BCA9-E7556480119C}
-name: FeedType
-key: feedtype
-content-length: 4
-
-Ccsd
+maxDaysAhead=3600
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -49,7 +42,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170320T163511Z
+20170721T161249Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7e5a028f-85c6-4fe5-9683-021a21dac815
+4e9ab799-0a1f-47aa-b29c-44a1c895c92f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170831T090348Z
+20170721T161356Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

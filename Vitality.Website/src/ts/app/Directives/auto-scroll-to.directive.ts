@@ -99,7 +99,7 @@ export class AutoScrollTo implements AfterViewInit{
     }
 
     private showOkBtnGroup() {
-        if (!this.okBtnGroup) {
+        if (!this.okBtnGroup && this.questionElement) {
             this.okBtnGroup = this.questionElement.querySelector(GlobalConstants.selectors.classIdentifier + QuoteApplyConstants.selectors.okBtnGroup);
         }
         // okBtnGroup still can be null
