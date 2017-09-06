@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { WindowRef } from "./../windowref";
 import { Subscription } from "rxjs/Subscription";
+import { ErrorService } from "../../services/error.service";
 import { QuoteService } from "../../services/quote.service";
 
 import { BenefitOption } from "../..//models/quote/benefit-option";
@@ -15,12 +16,14 @@ export class QuoteResultComponent implements OnInit {
     currentTime : Date;
 
     constructor(
+        private errorService: ErrorService,
         private quoteService: QuoteService,
         private winRef: WindowRef) {
     }
 
     ngOnInit(): void {
         this.quoteResultData = this.winRef.nativeWindow.angularData.quoteResult;
+        this.errorService.initialize(this.quoteResultData.serviceOutagePage);
         this.quoteService.getQuoteApplication(this.quoteResultData.referenceId)
             .then(this.getQuotes)
             // TODO remove catch before going live
