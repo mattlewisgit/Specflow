@@ -13,7 +13,7 @@ created: 20170613T104655Z
 ----version----
 language: en
 version: 1
-revision: fe11762b-80d8-44c8-a465-ffd80121e58a
+revision: 208a168e-676c-4adc-bd39-9540d73f551a
 
 ----field----
 field: {DE38D3EB-81E3-4D60-8F57-F803A68EBEF2}
@@ -35,7 +35,7 @@ name: ValidationMessage
 key: validationmessage
 content-length: 29
 
-Please enter valid birth date
+Please enter valid birth day 
 ----field----
 field: {E8A3ACCA-67D0-4EFD-BDEB-0C179CD59302}
 name: BasedOnKey
@@ -70,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-fe11762b-80d8-44c8-a465-ffd80121e58a
+208a168e-676c-4adc-bd39-9540d73f551a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170822T165242Z
+20170621T095743Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

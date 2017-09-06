@@ -3,6 +3,10 @@
         okBtnGroup: "ok-btn-group",
         postcode: "postcode"
     };
+    export const endpoints =
+    {
+        getApplication: "/api/quote/getapplication/"
+    };
     export const keys = {
         callbackTimeQuestionGroup: "callbackTimeQuestionGroup",
         callbackDate: "callbackDate",
@@ -13,11 +17,27 @@
         noOfChildren: "noOfChildren",
         postcodeQuestionGroup: "postcodeGroup"
     };
-    export const labels = {
-        emptyLabel: ""
+    export const gender =
+    {
+        male: "M",
+        female: "F"
+    };
+    export const previouslyInsured =
+    {
+        yes: "PI0",
+        no: "PI1"
+    };
+    export const roleType = {
+        employeePrincipal: "EMP",
+        partner: "PTR",
+        child: "CHI",
+        adultDependant: "ADT"
     };
     export const values = {
+        me: "me",
+        mePartner: "mepartner",
         mePartnerChildren: "mepartnerchildren",
-        meChildren: "mechildren"
-    }
+        meChildren: "mechildren",
+        productCode: "PHC"
+    };
 };

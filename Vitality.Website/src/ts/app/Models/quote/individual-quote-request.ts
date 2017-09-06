@@ -4,13 +4,13 @@ import { Module } from "./module";
 export class IndividualQuoteRequest {
     claimFreeYears: number;
     competitorRenwalPrem: number;
-    excessAmount: number;
-    excessType: number;
+    excessAmount: string;
+    excessType: string;
     externalQuoteIdentifier: string;
-    hospitalList: number;
+    hospitalList: string;
     occupation: number;
     policyPostcode: string;
-    policyUwChoiceCode: number;
+    policyUwChoiceCode: string;
     previousInsurer: number;
     previousInsurerClaims: number;
     previousInsurerYears: number;

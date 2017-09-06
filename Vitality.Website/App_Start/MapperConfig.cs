@@ -88,14 +88,18 @@
 
             config.CreateMap<Benefit, BenefitViewModel>()
                 .ForMember(
-                    dest => dest.ModuleCode,
-                    opt => opt.MapFrom(src => src.ModuleCode.Value));
+                    dest => dest.Code,
+                    opt => opt.MapFrom(src => src.Code.Value));
+
             config.CreateMap<BenefitOption, BenefitOptionViewModel>()
                 .ForMember(
                     dest => dest.Code,
                     opt => opt.MapFrom(src => src.Code.Value));
 
             config.CreateMap<Permutation, PermutationViewModel>()
+                .ForMember(
+                    dest => dest.CoreModules,
+                    opt => opt.MapFrom(src => src.CoreModules.Select(c => c.Value)))
                 .ForMember(
                     dest => dest.ExternalIdentifier,
                     opt => opt.MapFrom(src => src.ExternalIdentifier.Value));
@@ -108,6 +112,12 @@
                     opt =>
                         opt.MapFrom(
                             src => src.AdditionalData.AllKeys.ToDictionary(i => i, i => src.AdditionalData[i])))
+                .ForMember(
+                    dest => dest.PostAction,
+                    opt => opt.MapFrom(src => src.PostAction.Endpoint))
+                .ForMember(
+                    dest => dest.RedirectTo,
+                    opt => opt.MapFrom(src => $"{src.RedirectTo.Url}?{src.RedirectTo.Query}"))
                 .ForMember(
                     dest => dest.ServiceOutagePage,
                     opt => opt.MapFrom(src => src.ServiceOutagePage.Url));

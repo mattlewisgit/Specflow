@@ -10,10 +10,11 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
     {
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<BenefitOption> BenefitOptions { get; set; }
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public KeyValuePair Code { get; set; }
         public bool IsEditable { get; set; }
         public Image Icon { get; set; }
-        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
-        public KeyValuePair ModuleCode { get; set; }
+        public bool IsModule { get; set; }
         public string Title { get; set; }
         public string Tooltip { get; set; }
     }

@@ -45,8 +45,8 @@ content-length: 1
 1
 ----field----
 field: {174BDE68-37E9-4C21-B69D-5FAA38757390}
-name: ModuleCode
-key: modulecode
+name: IsModule
+key: ismodule
 content-length: 0
 
 
