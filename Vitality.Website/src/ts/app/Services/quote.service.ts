@@ -103,8 +103,9 @@ export class QuoteService {
             individualQuoteRequest.previousInsurer = 0;
             individualQuoteRequest.previousInsurerClaims = this.quoteApplication.noOfClaims;
             individualQuoteRequest.isPreviouslyInsured = this.quoteApplication.insuredStatus === 1;
-
-            individualQuoteRequest.previouslyInsured = this.quoteApplication.insuredStatus === 1
+            // If  previously insured default to 1. This will change when ABC project goes live
+            individualQuoteRequest.previousInsurerYears = individualQuoteRequest.isPreviouslyInsured ? 1 : 0;
+            individualQuoteRequest.previouslyInsured = individualQuoteRequest.isPreviouslyInsured
                 ? QuoteApplyConstants.previouslyInsured.yes
                 : QuoteApplyConstants.previouslyInsured.no;
 
