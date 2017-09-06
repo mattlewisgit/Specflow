@@ -22,9 +22,9 @@ export class QuoteResultComponent implements OnInit {
     ngOnInit(): void {
         this.quoteResultData = this.winRef.nativeWindow.angularData.quoteResult;
         this.quoteService.getQuoteApplication(this.quoteResultData.referenceId)
-            .then((data: any) => {
-                this.getQuotes(data);
-            });
+            .then(this.getQuotes)
+            // TODO remove catch before going live
+            .catch(this.getQuotes(this.quoteService.quoteApplication));
     }
 
     getQuotes(application:any): void {
