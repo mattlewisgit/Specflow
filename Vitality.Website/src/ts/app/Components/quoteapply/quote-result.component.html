@@ -1,70 +1,77 @@
 <div class="example">
+    <div style="background-image: url({{ quoteResultData.primaryImage }});">
+        <h1 class="text--uppercase">{{ quoteResultData.personalisedGreetingText }} {{ quoteApplication.firstName }}</h1>
+        <div [innerHTML]="quoteResultData.introductionText"></div>
+        DEBUG:regular image<img src="{{quoteResultData.primaryImage}}" width="200px"/>
+    </div>
+
     <table class="comparison-table table--4-col table--highlight-col-3">
         <thead>
-        <tr>
-            <th [innerHTML]="quoteResultData.helpText"></th>
+            <tr>
+                <th [innerHTML]="quoteResultData.helpText"></th>
 
-            <th *ngFor="let permutation of quoteResultData.permutations">
-                <p> {{ permutation.title}}
-                    <br>
-                    <b>&pound; {{ getQuotePrice(permutation.externalIdentifier)}} {{ permutation.perMonthText}}</b>
-                </p>
-            </th>
-        </tr>
-        <tr>
-            <th>
-                <p>
-                    <b>{{ quoteResultData.quoteValidText }}</b>
-                </p>
-                <p>
-                    <b>{{ quoteResultData.quoteReferenceText }} <span class="highlight">1234567-0</span></b>
-                </p>
-            </th>
-            <th *ngFor="let permutation of quoteResultData.permutations">
-                <p>
-                    <button class="button--box button--box__primary button--box__small">{{ quoteResultData.callToActionText }}</button>
-                </p>
-            </th>
-        </tr>
+                <th *ngFor="let permutation of quoteResultData.permutations">
+                    <p>
+                        {{ permutation.title}}
+                        <br>
+                        <b>&pound; {{ getQuotePrice(permutation.externalIdentifier)}} {{ permutation.perMonthText}}</b>
+                    </p>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                    <p>
+                        <b>{{ quoteResultData.quoteValidText }}</b>
+                    </p>
+                    <p>
+                        <b>{{ quoteResultData.quoteReferenceText }} <span class="highlight">1234567-0</span></b>
+                    </p>
+                </th>
+                <th *ngFor="let permutation of quoteResultData.permutations">
+                    <p>
+                        <button class="button--box button--box__primary button--box__small">{{ quoteResultData.callToActionText }}</button>
+                    </p>
+                </th>
+            </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let benefit of quoteResultData.benefits">
-            <td>
-                <div class="comparison-table--label">
-                    <div class="comparison-table--label__icon">
-                        <img [src]="benefit.icon.src" [alt]="benefit.icon.alt">
-                    </div>
-                    <div class="comparison-table--label__text">
-                        <p>{{ benefit.title }}</p>
-                        <span class="tooltip--link">{{ quoteResultData.tooltipText }}</span>
-                        <div class="tooltip--content">
-                            {{ benefit.tooltip}}
+            <tr *ngFor="let benefit of quoteResultData.benefits">
+                <td>
+                    <div class="comparison-table--label">
+                        <div class="comparison-table--label__icon">
+                            <img [src]="benefit.icon.src" [alt]="benefit.icon.alt">
+                        </div>
+                        <div class="comparison-table--label__text">
+                            <p>{{ benefit.title }}</p>
+                            <span class="tooltip--link">{{ quoteResultData.tooltipText }}</span>
+                            <div class="tooltip--content">
+                                {{ benefit.tooltip}}
+                            </div>
+                        </div>
+                        <div *ngIf="benefit.isEditable">
+                            <button (click)="enableEdit(benefit)" *ngIf="!benefit.isEditing">Edit</button>
+                            <div *ngIf="benefit.isEditing">
+                                <select style="color: black;" (change)="optionChange(benefit.id, $event.target.value)">
+                                    <option value="">Please select</option>
+                                    <option *ngFor="let opt of benefit.benefitOptions" [value]="opt.code">{{opt.title}}</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
-                    <div *ngIf="benefit.isEditable">
-                        <button (click)="enableEdit(benefit)" *ngIf="!benefit.isEditing">Edit</button>
-                        <div *ngIf="benefit.isEditing">
-                            <select style="color: black;" (change)="optionChange(benefit.id, $event.target.value)">
-                                <option value="">Please select</option>
-                                <option *ngFor="let opt of benefit.benefitOptions" [value]="opt.code">{{opt.title}}</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </td>
-            <td *ngFor="let  permutation of quoteResultData.permutations;">
-                <benefit-option [permutationId]="permutation.id"
-                                [benefitOptions]="benefit.benefitOptions"
-                                [currentTime] ="currentTime"
-                                [crossIcon]="permutation.crossIcon"
-                                [tickIcon]="permutation.tickIcon"></benefit-option>
-            </td>
-        </tr>
+                </td>
+                <td *ngFor="let  permutation of quoteResultData.permutations;">
+                    <benefit-option [permutationId]="permutation.id"
+                                    [benefitOptions]="benefit.benefitOptions"
+                                    [currentTime]="currentTime"
+                                    [crossIcon]="permutation.crossIcon"
+                                    [tickIcon]="permutation.tickIcon"></benefit-option>
+                </td>
+            </tr>
 
         </tbody>
     </table>
     <div class="comparison-table">
-        <div class="comparison-table--header" style="background-image: url(/images/ambassadors.png);">
+        <div class="comparison-table--header" style="background-image: url({{ quoteResultData.primaryImage }});">
             <p>
                 <b>{{ quoteResultData.quoteValidText }}</b>
             </p>
@@ -79,7 +86,7 @@
                     <span class="pull--right"><b>&pound; {{ getQuotePrice(permutation.externalIdentifier)}} {{ permutation.perMonthText}}</b></span>
                 </div>
                 <div *ngFor="let benefit of quoteResultData.benefits" class="comparison-table--row">
-                   {{ benefit.title }}
+                    {{ benefit.title }}
                     <span class="pull--right tooltip--link tooltip--link__left">?</span>
                     <div class="tooltip--content">
                         {{ benefit.tooltip}}

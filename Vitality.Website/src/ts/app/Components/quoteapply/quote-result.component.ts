@@ -13,7 +13,8 @@ import { BenefitOption } from "../..//models/quote/benefit-option";
 export class QuoteResultComponent implements OnInit {
     quoteResultData: any;
     quotes: any[] = [];
-    currentTime : Date;
+    currentTime: Date;
+    quoteApplication: any;
 
     constructor(
         private errorService: ErrorService,
@@ -24,6 +25,7 @@ export class QuoteResultComponent implements OnInit {
     ngOnInit(): void {
         this.quoteResultData = this.winRef.nativeWindow.angularData.quoteResult;
         this.errorService.initialize(this.quoteResultData.serviceOutagePage);
+        this.quoteApplication = this.quoteService.quoteApplication;
         this.quoteService.getQuoteApplication(this.quoteResultData.referenceId)
             .then(this.getQuotes)
             // TODO remove catch before going live
