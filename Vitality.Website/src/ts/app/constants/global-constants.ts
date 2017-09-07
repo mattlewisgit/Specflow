@@ -30,4 +30,7 @@
         years: "years" as "Q",
         minutes: "minutes" as "Q"
     };
+    export const validators = {
+        maxSelectionsValidator: "maxSelectionsValidator"
+    };
 };

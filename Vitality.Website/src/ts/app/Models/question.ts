@@ -12,5 +12,4 @@ export class Question<T>{
     isHidden: boolean;
     relatedData: { key: string, value: string }[] = [];
     scrollTo: string;
-    selectedValues: Array<string> = [];
 }

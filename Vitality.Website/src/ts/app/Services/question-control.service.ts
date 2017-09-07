@@ -29,24 +29,6 @@ export class QuestionControlService {
             questionGroup.isHidden = true;
         }
         questionGroup.questions.forEach(question => {
-
-            if (question.controlType === "multiselect") {
-                console.log('in multiselect');
-                var maxSelectionsValidator = question.validators.filter(x => x.validatorName === "maxSelectionsValidator")[0];
-                if (maxSelectionsValidator != null) {
-                    console.log('got validator');
-                    let selectedValuesCount = question.selectedValues ? question.selectedValues.length : 0;
-                    maxSelectionsValidator.parameters['selectedCheckboxes'] = selectedValuesCount;
-                    // TODO: maxselectionsexceeded undefined here so can't set limit for validation
-                    console.log('limit: ' + maxSelectionsValidator.parameters['maxSelectionsExceeded'] + ' current: ' + selectedValuesCount);
-                }
-            }
-
-            // TODO: attempt to debug params
-            //question.validators.forEach(v => (v.parameters as Array<any>).forEach(p => console.log('param: ' + p.toString())));
-            //question.validators.forEach(v => console.log('params ' + v.parameters.toString()));
-            
-
             const formControl = new FormControl(question.value || "",
                 this.getValidators(question.validators.filter(x => !x.isAsync)),
                 this.getAsyncValidators(question.validators.filter(x => x.isAsync)));
@@ -60,18 +42,10 @@ export class QuestionControlService {
                         this.dobControlService.membersToInsureChanged(data);
                         break;
                     case QuoteApplyConstants.keys.callbackDate:
-                        // TODO: re-add these lines, probably need to rename variable as its causing me issues
-                        //let question = questionGroup.questions
-                      //      .filter(x => x.key === QuoteApplyConstants.keys.callbackTime)[0];
-                        //question.relatedData = [];
                         if (form.controls[QuoteApplyConstants.keys.callbackDate].valid) {
                             this.callbackService
                                 .populateRanges(data, question);
                         }
-                        break;
-                    case QuoteApplyConstants.keys.featuresAndBenefitsGroup:
-                        // TODO: have access to selectedvalues here, but do we need to do anything?
-                        console.log('switch2:' + question.selectedValues);
                         break;
                 }
                 this.isValid(data, form, questionGroup);

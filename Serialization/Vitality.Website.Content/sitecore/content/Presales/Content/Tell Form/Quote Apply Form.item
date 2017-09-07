@@ -20,7 +20,7 @@ content-length: 3
 ----version----
 language: en
 version: 1
-revision: 341b43db-2fac-4a85-9a4f-2ac59c94375c
+revision: 76863034-ca02-43e1-8cf0-d59eaae2fa1b
 
 ----field----
 field: {8E5E6B0A-3ADE-4BF5-98C2-87284065DAC9}
@@ -54,9 +54,9 @@ content-length: 136
 field: {B4BD3C9E-8C96-4DA3-98F0-4782B5BC2779}
 name: ServiceOutagePage
 key: serviceoutagepage
-content-length: 124
+content-length: 175
 
-<link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{A21A056A-363E-4E51-A11E-FF8ACBF8C9D1}" />
+<link id="{A21A056A-363E-4E51-A11E-FF8ACBF8C9D1}" querystring="" text="" anchor="" title="" class="" url="/Presales/home/dev/quote-apply-service-outage" linktype="internal" />
 ----field----
 field: {756E5F75-3478-4B27-B4CF-A763FB5E0CD4}
 name: OkBtnText
@@ -105,14 +105,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-341b43db-2fac-4a85-9a4f-2ac59c94375c
+76863034-ca02-43e1-8cf0-d59eaae2fa1b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170905T154214Z
+20170906T164406Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

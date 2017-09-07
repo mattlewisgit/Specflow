@@ -16,7 +16,7 @@
             </div>
             <ul class="checkbox-list" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">
                 <li *ngFor="let opt of question.relatedData">
-                    <input [id]="opt.key" type="checkbox" [value]="opt.value" aria-hidden="true" [formControlName]="question.key" (click)="storeSelectedCheckboxValues($event, question)"/>
+                    <input [id]="opt.key" type="checkbox" aria-hidden="true" [formControlName]="question.key" (click)="storeSelectedCheckboxValues($event, opt.value, question)"/>
                     <label for="{{opt.key}}">{{opt.value}}</label>
                 </li>
             </ul>

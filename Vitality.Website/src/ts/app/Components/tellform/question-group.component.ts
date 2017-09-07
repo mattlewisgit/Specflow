@@ -1,6 +1,8 @@
 ﻿import { Component, Input, OnInit  } from "@angular/core";
 import { FormGroup }  from "@angular/forms";
 
+import { GlobalConstants } from "../../constants/global-constants";
+
 import { QuestionGroup }     from "../../models/question-group";
 import { Question }     from "../../models/question";
 import { QuestionControlService }    from "../../services/question-control.service";
@@ -24,23 +26,34 @@ export class QuestionGroupComponent implements OnInit {
         this.qcs.addFormControls(this.form, this.questionGroup);
     }
 
-    storeSelectedCheckboxValues(event:any, question: Question<any>): void {
-        var key = event.target.getAttribute('value');
-        var checked = event.target.checked;
-
-        question.selectedValues = question.selectedValues || new Array<string>();
-
+    storeSelectedCheckboxValues(event: any, selectedValue: string, question: Question<any>): void {
+        question.value = question.value || new Array<string>();
+        const checked = event.target.checked;
         // Add/Remove checkbox value from array
         if (checked) {
-            question.selectedValues.push(key);
+            question.value.push(selectedValue);
         } else {
-            var index = question.selectedValues.indexOf(key, 0);
-            if (index > -1) {
-                question.selectedValues.splice(index, 1);
-            }
+            this.removeOption(selectedValue, question);
         }
 
-        // TODO: remove this line once working
-        console.log('question = ' + question.selectedValues.toString());        
+        const maxSelectionsValidator = question.validators
+            .filter(x => x.validatorName === GlobalConstants.validators.maxSelectionsValidator)[0];
+        if (maxSelectionsValidator != null) {
+            console.log(question.value);
+            if (question.value.length > maxSelectionsValidator.parameters.maxNumber) {
+                maxSelectionsValidator.parameters.maxNumberExceeded = true;
+                this.removeOption(selectedValue, question);
+                event.target.checked = false;
+            } else {
+                maxSelectionsValidator.parameters.maxNumberExceeded = false;
+            }
+        }
+    }
+
+    removeOption(selectedValue: string, question: Question<any>): void {
+        const index = question.value.indexOf(selectedValue, 0);
+        if (index > -1) {
+            question.value.splice(index, 1);
+        }
     }
 }
