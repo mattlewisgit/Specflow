@@ -1,5 +1,5 @@
 <div class="example">
-    <table class="comparison-table table--4-col table--highlight-col-3">
+    <table class="comparison-table table--4-col table--highlight-col-3" *ngIf="quotes.length>1">
         <thead>
         <tr>
             <th [innerHTML]="quoteResultData.helpText"></th>
