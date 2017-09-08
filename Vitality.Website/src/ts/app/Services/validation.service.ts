@@ -14,7 +14,7 @@ export class ValidationService {
 
     getAsyncValidator(validatorName: string, params: any): any {
         switch (validatorName) {
-        case "postcodeValidator":
+        case GlobalConstants.validators.postcodeValidator:
             return this.postcodeValidator(params, this.postcodeService);
         default:
             return null;
@@ -23,27 +23,27 @@ export class ValidationService {
 
     getValidator(validatorName: string, params: any): any {
         switch (validatorName) {
-        case "required":
+        case GlobalConstants.validators.required:
             return Validators.required;
-        case "dateValidator":
+        case GlobalConstants.validators.dateValidator:
             return this.dateValidator;
-        case "emailValidator":
+        case GlobalConstants.validators.emailValidator:
             return this.emailValidator;
-        case "phoneNumberValidator":
+        case GlobalConstants.validators.phoneNumberValidator:
             return this.phoneNumberValidator;
-        case "textOnly":
+        case GlobalConstants.validators.textOnly:
             return this.textOnlyValidator;
-        case "minLength":
+        case GlobalConstants.validators.minLength:
             return Validators.minLength(params.minLength);
-        case "maxLength":
+        case GlobalConstants.validators.maxLength:
             return Validators.maxLength(params.maxLength);
-        case "ageRangeValidator":
+        case GlobalConstants.validators.ageRangeValidator:
             return this.ageRangeValidator(params);
-        case "futureDateValidator":
+        case GlobalConstants.validators.futureDateValidator:
             return this.futureDateValidator(params);
-        case "excludeDayValidator":
+        case GlobalConstants.validators.excludeDayValidator:
             return this.excludeDayValidator(params);
-        case "maxSelectionsValidator":
+        case GlobalConstants.validators.maxSelectionsValidator:
             return this.maxSelectionsValidator(params);
         default:
             return null;
