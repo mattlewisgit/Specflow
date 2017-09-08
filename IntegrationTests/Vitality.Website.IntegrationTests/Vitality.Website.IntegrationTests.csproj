@@ -145,6 +145,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuoteAndApply.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\QuoteResults.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuoteResults.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\RewardLeader.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -286,6 +291,7 @@
     <Compile Include="Steps\ProductsComponentSteps.cs" />
     <Compile Include="Steps\QuoteAndApplySteps.cs" />
     <Compile Include="Steps\QuoteApplySteps.cs" />
+    <Compile Include="Steps\QuoteResultsSteps.cs" />
     <Compile Include="Steps\RewardLeaderSteps.cs" />
     <Compile Include="Steps\RichTextSteps.cs" />
     <Compile Include="Steps\SearchingSteps.cs" />
@@ -389,6 +395,10 @@
     <None Include="Features\QuoteApply.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>QuoteApply.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteResults.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>QuoteResults.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\RewardLeader.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

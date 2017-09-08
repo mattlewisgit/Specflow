@@ -12,6 +12,14 @@ namespace Vitality.Website.IntegrationTests.Steps
     [Binding]
     public class QuoteResultsSteps : BaseSteps
     {
+        private class QuoteModel
+        {
+            public string OptionRow { get; set; }
+            public string Selection { get; set; }
+
+        }
+
+
         [Given(@"I see the Quote Results page feed load has completed")]
         public void ISeeTheQuoteResultsPageFeedLoadHasCompleted()
         {
@@ -24,8 +32,12 @@ namespace Vitality.Website.IntegrationTests.Steps
         public void IEditTheQuoteTo(string fieldName, string updatedOption)
         {
             // Store these choices in case we want to validate them in following steps
-            ScenarioContext.Current.Add("OptionRow", fieldName);
-            ScenarioContext.Current.Add("Selection", updatedOption);
+            ScenarioContext.Current.Set<QuoteModel>(new QuoteModel
+            {
+                OptionRow = fieldName,
+                Selection = updatedOption
+            } );
+
             
             var section = WebDriver
                 .FindElement(new JQuerySelector($"quote-result .comparison-table .comparison-table--label:has(.comparison-table--label__text:contains('{fieldName}'))"));
@@ -54,12 +66,12 @@ namespace Vitality.Website.IntegrationTests.Steps
         [Then(@"I see this reflected across all the offerings")]
         public void ISeeThisReflectedAcrossAllTheOfferings()
         {
-            var optionRow = ScenarioContext.Current.Get<string>("OptionRow");
-            var selection = ScenarioContext.Current.Get<string>("Selection");
+
+            var quoteModel = ScenarioContext.Current.Get<QuoteModel>(); 
 
             WebDriver
-            .FindElements(new JQuerySelector($"quote-result .comparison-table tr:has(.comparison-table--label__text:contains('{optionRow}')) benefit-option b"))
-                .All(e => e.Text.Equals(selection));
+            .FindElements(new JQuerySelector($"quote-result .comparison-table tr:has(.comparison-table--label__text:contains('{quoteModel.OptionRow}')) benefit-option b"))
+                .All(e => e.Text.Equals(quoteModel.Selection));
 
         }
 

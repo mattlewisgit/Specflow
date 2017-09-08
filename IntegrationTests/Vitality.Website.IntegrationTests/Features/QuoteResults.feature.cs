@@ -214,7 +214,7 @@ namespace Vitality.Website.IntegrationTests.Features
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Data"});
             table1.AddRow(new string[] {
-                        "Consultant Selec"});
+                        "Consultant Select"});
             table1.AddRow(new string[] {
                         "Countrywide Plus"});
             table1.AddRow(new string[] {

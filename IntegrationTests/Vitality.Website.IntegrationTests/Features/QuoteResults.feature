@@ -45,7 +45,7 @@
     When I look at the options available within the Hospital Network / Treatment Pathway dropdown
     Then I see the following options
    	| Data              |
-	| Consultant Selec |
+	| Consultant Select |
     | Countrywide Plus  |
     | Local             |
 
