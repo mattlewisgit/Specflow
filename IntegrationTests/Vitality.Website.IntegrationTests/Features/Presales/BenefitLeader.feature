@@ -24,7 +24,7 @@ Scenario: Check Benefit Leader button links internally
 	When I click on benefit leader Left alignment button Explore Vitality GP
 	Then I expect the presales / to open
 
-@Presales BenefitLeader SIT
+@Presales BenefitLeader
 Scenario: Check Benefit Leader button links externally
 	Given I am on presales /dev/benefit-leader
 	When I click on benefit leader Right alignment button Explore Vitality GP

@@ -4,6 +4,7 @@ import { Subscription } from "rxjs/Subscription";
 
 import { CallbackService } from "../../services/callback.service";
 import { DobControlService } from "../../services/dob-control.service";
+import { GlobalConstants } from "../../constants/global-constants";
 import { QuoteApplyConstants } from "../../constants/quoteapply-constants";
 import { QuestionControlService } from "../../services/question-control.service";
 import { QuestionGroup } from "../../models/question-group";
@@ -18,8 +19,9 @@ import { WindowRef } from "./../windowref";
 })
 export class TellFormComponent implements OnInit, OnDestroy {
     tellForm: FormGroup;
-    okBtnHelpText: string;
-    payload: string;
+    postAction: string;
+    redirectTo: string;
+    referenceId: string;
     private postcodeAsyncValidationSubscription: Subscription;
     questionGroups: QuestionGroup[];
     renderingData: {};
@@ -34,11 +36,15 @@ export class TellFormComponent implements OnInit, OnDestroy {
         private footerBarService: FooterBarService,
         private tellFormService: TellFormService,
         private winRef: WindowRef) {
+        this.referenceId = GlobalConstants.strings.empty;
     }
 
     ngOnInit(): void {
         const angularData = this.winRef.nativeWindow.angularData;
         this.questionGroups = angularData.questionGroups;
+        this.postAction = angularData.postAction;
+        this.redirectTo = angularData.redirectTo;
+        console.log(this.redirectTo);
         this.renderingData = { okBtnText: angularData.okBtnText, okBtnHelpText: angularData.okBtnHelpText };
         const childrenQuestionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.childrenQuestionGroup);
         this.questionControlService.setQuestionGroups(this.questionGroups);
@@ -71,7 +77,11 @@ export class TellFormComponent implements OnInit, OnDestroy {
         this.submitSubscription = this.footerBarService.onSubmitClicked()
             .subscribe((data: boolean) => {
                 if (data) {
-                    this.tellFormService.submit(this.tellForm.value);
+                    this.tellFormService.submit(`${this.postAction}${this.referenceId}`, this.tellForm.value)
+                        .then((data: string) => {
+                            this.referenceId = data;
+                            this.winRef.nativeWindow.location.href = `${this.redirectTo}${this.referenceId}`;
+                        });
                 }
             });
     }

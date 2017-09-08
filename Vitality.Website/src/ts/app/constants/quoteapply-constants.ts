@@ -3,6 +3,10 @@
         okBtnGroup: "ok-btn-group",
         postcode: "postcode"
     };
+    export const endpoints =
+    {
+        getApplication: "/api/quote/getapplication/"
+    };
     export const keys = {
         callbackTimeQuestionGroup: "callbackTimeQuestionGroup",
         callbackDate: "callbackDate",
@@ -11,28 +15,30 @@
         childrenQuestionGroup: "childrenDobGroup",
         membersToInsure: "membersToInsure",
         noOfChildren: "noOfChildren",
-        postcodeQuestionGroup: "postcodeGroup"
+        postcodeQuestionGroup: "postcodeGroup",
+        featuresAndBenefitsGroup: "featuresAndBenefits"
     };
-    export const labels = {
-        emptyLabel: ""
+    export const gender =
+    {
+        male: "M",
+        female: "F"
     };
-    export const values = {
-        me: "me",
-        mePartner: "mepartner",
-        mePartnerChildren: "mepartnerchildren",
-        meChildren: "mechildren"
-    }
-
-    // Drive these from Sitecore
+    export const previouslyInsured =
+    {
+        no: "PI0",
+        yes: "PI1"
+    };
     export const roleType = {
         employeePrincipal: "EMP",
         partner: "PTR",
         child: "CHI",
         adultDependant: "ADT"
     };
-    export const gender =
-    {
-        male: "M",
-        female: "F"
+    export const values = {
+        me: "me",
+        mePartner: "mepartner",
+        mePartnerChildren: "mepartnerchildren",
+        meChildren: "mechildren",
+        productCode: "PHC"
     };
 };

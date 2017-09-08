@@ -3,10 +3,17 @@
         button: "BUTTON",
         dropdown: "SELECT"
     };
+    export const endpoints =
+    {
+        bslEndpoint: "/api/bsl/post?bslendpoint="
+    };
     export const selectors = {
         classIdentifier: ".",
         formInputFields: "input,select",
         hide: "hide"
+    };
+    export const strings = {
+        empty: ""
     };
     export const keyboardKeys = {
         zero: 0,
@@ -22,5 +29,19 @@
         days: "days" as "Q",
         years: "years" as "Q",
         minutes: "minutes" as "Q"
+    };
+    export const validators = {
+        ageRangeValidator: "ageRangeValidator",
+        dateValidator: "dateValidator",
+        emailValidator: "emailValidator",
+        excludeDayValidator: "excludeDayValidator",
+        futureDateValidator: "futureDateValidator",
+        maxLength: "maxLength",
+        maxSelectionsValidator: "maxSelectionsValidator",
+        minLength: "minLength",
+        required : "required",
+        phoneNumberValidator: "phoneNumberValidator",
+        postcodeValidator: "postcodeValidator",
+        textOnly: "textOnly"
     };
 };

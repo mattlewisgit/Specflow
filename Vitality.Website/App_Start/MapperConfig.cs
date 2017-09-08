@@ -97,14 +97,17 @@
                     opt => opt.MapFrom(src => src.Code.Value));
 
             config.CreateMap<Permutation, PermutationViewModel>()
-                 .ForMember(
+                .ForMember(
                     dest => dest.CoreModules,
-                    opt => opt.MapFrom(src => src.CoreModules.Select(c=>c.Value)))
+                    opt => opt.MapFrom(src => src.CoreModules.Select(c => c.Value)))
                 .ForMember(
                     dest => dest.ExternalIdentifier,
                     opt => opt.MapFrom(src => src.ExternalIdentifier.Value));
 
-            config.CreateMap<QuoteResult, QuoteResultViewModel>();
+            config.CreateMap<QuoteResult, QuoteResultViewModel>()
+                  .ForMember(
+                    dest => dest.ServiceOutagePage,
+                    opt => opt.MapFrom(src => src.ServiceOutagePage.Url));
 
             config.CreateMap<TellForm, TellFormViewModel>()
                 .ForMember(
@@ -112,6 +115,12 @@
                     opt =>
                         opt.MapFrom(
                             src => src.AdditionalData.AllKeys.ToDictionary(i => i, i => src.AdditionalData[i])))
+                .ForMember(
+                    dest => dest.PostAction,
+                    opt => opt.MapFrom(src => src.PostAction.Endpoint))
+                .ForMember(
+                    dest => dest.RedirectTo,
+                    opt => opt.MapFrom(src => $"{src.RedirectTo.Url}?{src.RedirectTo.Query}"))
                 .ForMember(
                     dest => dest.ServiceOutagePage,
                     opt => opt.MapFrom(src => src.ServiceOutagePage.Url));

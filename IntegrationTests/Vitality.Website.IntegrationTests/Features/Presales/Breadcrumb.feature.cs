@@ -105,13 +105,11 @@ this.ScenarioSetup(scenarioInfo);
         [Xunit.TraitAttribute("Description", "Check Breadcrumbs on advisers")]
         [Xunit.TraitAttribute("Category", "Presales")]
         [Xunit.TraitAttribute("Category", "Breadcrumb")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void CheckBreadcrumbsOnAdvisers()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Breadcrumbs on advisers", new string[] {
                         "Presales",
-                        "Breadcrumb",
-                        "SIT"});
+                        "Breadcrumb"});
 #line 16
 this.ScenarioSetup(scenarioInfo);
 #line 17

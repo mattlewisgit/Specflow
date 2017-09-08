@@ -3,6 +3,7 @@
 import { FormControl } from "@angular/forms";
 import { Question } from "../models/question";
 import { QuestionGroup } from "../models/question-group";
+import { GlobalConstants } from "../constants/global-constants";
 import { QuoteApplyConstants } from "../constants/quoteapply-constants";
 
 @Injectable()
@@ -28,7 +29,7 @@ export class DobControlService {
         this.noOfChildrenQuestion = this.getQuestion(QuoteApplyConstants.keys.noOfChildren, this.childrenQuestionGroup);
         this.noOfChildrenLabel = this.noOfChildrenQuestion.label;
         // Default to empty label
-        this.noOfChildrenQuestion.label = QuoteApplyConstants.labels.emptyLabel ;
+        this.noOfChildrenQuestion.label = GlobalConstants.strings.empty;
 
         this.childDobLastLabel = options.additionalData.childDobLastLabel;
         this.childDobSeperatorLabel = options.additionalData.childDobSeperatorLabel;
