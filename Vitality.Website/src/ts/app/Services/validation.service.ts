@@ -148,8 +148,6 @@ export class ValidationService {
 
     maxSelectionsValidator(options: any) {
         return (control: any) => {
-
-            console.log(options.maxNumberExceeded);
             return options.maxNumberExceeded ? { "maxSelectionsExceeded": true } : null;
         }
     }

@@ -39,13 +39,11 @@ export class QuestionGroupComponent implements OnInit {
         const maxSelectionsValidator = question.validators
             .filter(x => x.validatorName === GlobalConstants.validators.maxSelectionsValidator)[0];
         if (maxSelectionsValidator != null) {
-            console.log(question.value);
-            if (question.value.length > maxSelectionsValidator.parameters.maxNumber) {
-                maxSelectionsValidator.parameters.maxNumberExceeded = true;
+            maxSelectionsValidator.parameters
+                .maxNumberExceeded = question.value.length > maxSelectionsValidator.parameters.maxNumber;
+            if (maxSelectionsValidator.parameters.maxNumberExceeded) {
                 this.removeOption(selectedValue, question);
                 event.target.checked = false;
-            } else {
-                maxSelectionsValidator.parameters.maxNumberExceeded = false;
             }
         }
     }
