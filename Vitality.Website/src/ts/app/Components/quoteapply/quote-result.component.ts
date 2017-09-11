@@ -27,13 +27,21 @@ export class QuoteResultComponent implements OnInit {
         this.errorService.initialize(this.quoteResultData.serviceOutagePage);
         this.quoteApplication = this.quoteService.quoteApplication;
         this.quoteService.getQuoteApplication(this.quoteResultData.referenceId)
-            .then(this.getQuotes)
+            .then((data: any) => {
+                this.quoteApplication = data;
+                this.quoteService.setQuoteApplication(this.quoteApplication);
+                this.getQuotes();
+            })
             // TODO remove catch before going live
-            .catch(this.getQuotes(this.quoteService.quoteApplication));
+            .catch((err: any) => {
+                this.quoteApplication = this.quoteService.quoteApplication;
+                this.quoteService.setQuoteApplication(this.quoteApplication);
+                this.getQuotes();
+            });
     }
 
-    getQuotes(application:any): void {
-        this.quoteService.callRtpe(application, this.quoteResultData)
+    getQuotes(): void {
+        this.quoteService.callRtpe(this.quoteResultData)
             .then((data: any) => {
                 this.quotes = data.Quotes;
             });
@@ -75,6 +83,6 @@ export class QuoteResultComponent implements OnInit {
             }
         }
         this.currentTime = new Date();
-        this.getQuotes(null);
+        this.getQuotes();
     }
 }
