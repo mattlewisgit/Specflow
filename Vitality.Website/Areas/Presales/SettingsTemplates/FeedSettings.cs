@@ -8,6 +8,7 @@ namespace Vitality.Website.Areas.Presales.SettingsTemplates
     public class FeedSettings : SitecoreItem
     {
         public string Endpoint { get; set; }
+        public string FeedType { get; set; }
         public Link MockDataFile { get; set; }
     }
 }

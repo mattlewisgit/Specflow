@@ -30,4 +30,18 @@
         years: "years" as "Q",
         minutes: "minutes" as "Q"
     };
+    export const validators = {
+        ageRangeValidator: "ageRangeValidator",
+        dateValidator: "dateValidator",
+        emailValidator: "emailValidator",
+        excludeDayValidator: "excludeDayValidator",
+        futureDateValidator: "futureDateValidator",
+        maxLength: "maxLength",
+        maxSelectionsValidator: "maxSelectionsValidator",
+        minLength: "minLength",
+        required : "required",
+        phoneNumberValidator: "phoneNumberValidator",
+        postcodeValidator: "postcodeValidator",
+        textOnly: "textOnly"
+    };
 };

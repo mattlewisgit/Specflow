@@ -27,9 +27,8 @@
 
        this.getChapters = function () {
            var deferred = $q.defer();
-
            $http.post(action + encodeURIComponent(feedSettings.Endpoint),
-                { MockDataFile: encodeURI(feedSettings.MockDataFile) })
+                { MockDataFile: encodeURI(feedSettings.MockDataFile), FeedType: feedSettings.FeedType })
                .success(function (dt) {
                    deferred.resolve(dt.BslResponse);
                })
@@ -58,11 +57,17 @@
                });
        };
 
-       this.searchDatasets = function (sourceName, key, text) {
+
+       this.searchDatasets = function (sourceName, text, searchKey1, searchKey2) {
            text = (text || "").toLowerCase();
 
            return _.sortBy(this.datasets[sourceName].filter(function (item) {
-               return item[key].toLowerCase().indexOf(text) > -1;
-           }), key);
+               if (searchKey2 == null) {
+                   return item[searchKey1].toLowerCase().indexOf(text) > -1;
+               } else {
+                   return item[searchKey1].toLowerCase().indexOf(text) > -1 ||
+                      item[searchKey2].toLowerCase().indexOf(text) > -1;
+               }
+           }), searchKey1);
        };
    }]);
