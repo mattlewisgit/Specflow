@@ -232,7 +232,7 @@
     And I go to the postcode field and enter BH1 1JD
     And I go to the marketingPermission field and choose Agreed
     Then I see that the Progress Bar is not displayed
-    And I see that the Apply button is displayed
+    And I see that the quote and apply Apply button is displayed
 
 	@QuoteAndApply
     Scenario: Progress Bar - Members to Insure row at 75% (currently insured, me and my partner)
@@ -307,7 +307,7 @@
     And I go to the postcode field and enter BH1 1JD
     And I go to the marketingPermission field and choose Agreed
     Then I see that the Progress Bar is not displayed
-    And I see that the Apply button is displayed
+    And I see that the quote and apply Apply button is displayed
 
 	@QuoteAndApply
     Scenario: Progress Bar - Members to Insure row at 69% (currently insured, me, my partner and kids)
@@ -409,4 +409,4 @@
     And I go to the postcode field and enter BH1 1JD
     And I go to the marketingPermission field and choose Agreed
     Then I see that the Progress Bar is not displayed
-    And I see that the Apply button is displayed
+    And I see that the quote and apply Apply button is displayed

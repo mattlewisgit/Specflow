@@ -235,6 +235,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WFFM.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\QuoteAndApply\QuoteResults\PersonaliseGreeting.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonaliseGreeting.feature</DependentUpon>
+    </Compile>
     <Compile Include="Steps\ArticleIndexSteps.cs" />
     <Compile Include="Steps\CardsTabbedSteps.cs" />
     <Compile Include="Steps\CareersSteps.cs" />
@@ -547,6 +552,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>WFFM.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\QuoteAndApply\QuoteResults\PersonaliseGreeting.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PersonaliseGreeting.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -562,7 +571,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\QuoteAndApply\QuoteResults\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
