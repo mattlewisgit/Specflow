@@ -23,5 +23,5 @@
 	Then I see that the Progress Bar is not displayed
     And I see that the quote and apply Apply button is displayed
 	And I click on the quote and apply Apply button
-	Then I expect the advisers /dev/quote-result to open
+	Then I expect the presales /dev/quote-result to open
 	And I expect the personalised greeting to contain the correct details

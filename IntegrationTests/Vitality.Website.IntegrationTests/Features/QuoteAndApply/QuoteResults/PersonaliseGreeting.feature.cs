@@ -120,7 +120,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
 #line 25
  testRunner.And("I click on the quote and apply Apply button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 26
- testRunner.Then("I expect the advisers /dev/quote-result to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales /dev/quote-result to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 27
  testRunner.And("I expect the personalised greeting to contain the correct details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

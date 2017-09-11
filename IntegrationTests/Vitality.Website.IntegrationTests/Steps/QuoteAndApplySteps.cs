@@ -46,6 +46,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         {
             //WebDriver.ScrollToElement($"#{fieldName}");
 
+
             WebDriver
                 .FindElement(new JQuerySelector($".quote--content > tell-form .question .question--input__text #{fieldName}"))
                 .SendKeys(inputText);
@@ -361,6 +362,25 @@ namespace Vitality.Website.IntegrationTests.Steps
                 .Click();
 
         }
+
+        [Then(@"I expect the personalised greeting to contain the correct details")]
+        public void ThenIExpectThePersonalisedGreetingToContainTheCorrectDetails()
+        {
+            //Need to add scenario context first name into hard coded value
+            try
+            {
+                WebDriver
+                    .FindElement(new JQuerySelector(
+                    ".example .background--right H1"))
+                    .GetAttribute("innerText")
+                    .ShouldContain("Test");
+            }
+            catch (Exception)
+            {
+                Assert.True(false, "** Personalised Greeting is incorrect");
+            }
+        }
+
 
     }
 
