@@ -13,7 +13,8 @@ import { BenefitOption } from "../..//models/quote/benefit-option";
 export class QuoteResultComponent implements OnInit {
     quoteResultData: any;
     quotes: any[] = [];
-    currentTime : Date;
+    currentTime: Date;
+    quoteApplication: any;
 
     constructor(
         private errorService: ErrorService,
@@ -25,13 +26,21 @@ export class QuoteResultComponent implements OnInit {
         this.quoteResultData = this.winRef.nativeWindow.angularData.quoteResult;
         this.errorService.initialize(this.quoteResultData.serviceOutagePage);
         this.quoteService.getQuoteApplication(this.quoteResultData.referenceId)
-            .then(this.getQuotes)
+            .then((data: any) => {
+                this.quoteApplication = data;
+                this.quoteService.setQuoteApplication(this.quoteApplication);
+                this.getQuotes();
+            })
             // TODO remove catch before going live
-            .catch(this.getQuotes(this.quoteService.quoteApplication));
+            .catch((err: any) => {
+                this.quoteApplication = this.quoteService.quoteApplication;
+                this.quoteService.setQuoteApplication(this.quoteApplication);
+                this.getQuotes();
+            });
     }
 
-    getQuotes(application:any): void {
-        this.quoteService.callRtpe(application, this.quoteResultData)
+    getQuotes(): void {
+        this.quoteService.callRtpe(this.quoteResultData)
             .then((data: any) => {
                 this.quotes = data.Quotes;
             });
@@ -73,6 +82,6 @@ export class QuoteResultComponent implements OnInit {
             }
         }
         this.currentTime = new Date();
-        this.getQuotes(null);
+        this.getQuotes();
     }
 }

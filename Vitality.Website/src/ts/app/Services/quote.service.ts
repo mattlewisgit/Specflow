@@ -53,11 +53,12 @@ export class QuoteService {
             .then(response => response.json());
     }
 
-    callRtpe(application: any, permutations: any[]): Promise<any> {
-        if (application) {
-            this.quoteApplication = application;
-            this.getLives();
-        }
+    setQuoteApplication(application: any) {
+        this.quoteApplication = application;
+        this.getLives();
+    }
+
+    callRtpe(permutations: any[]): Promise<any> {
         const requestData = this.getRtpeRequest(permutations);
         return this.http.post(GlobalConstants.endpoints.bslEndpoint + encodeURIComponent(this.endpoint), requestData)
             .toPromise()
