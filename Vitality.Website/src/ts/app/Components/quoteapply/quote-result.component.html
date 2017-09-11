@@ -21,9 +21,12 @@
                 </p>
             </th>
             <th *ngFor="let permutation of quoteResultData.permutations">
-                <p>
-                    <button class="button--box button--box__primary button--box__small">{{ quoteResultData.callToActionText }}</button>
-                </p>
+                <permutation-button                                    
+                                    [alternativeCallToAction] ="quoteResultData.alternativeCallToAction"
+                                    [alternativeCallToActionText]="quoteResultData.alternativeCallToActionText"
+                                    [callToAction] ="quoteResultData.callToAction"
+                                    [callToActionText]="quoteResultData.callToActionText"
+                                    [optionCode]="getUnderwritingType(permutation.id)"></permutation-button>               
             </th>
         </tr>
         </thead>
@@ -44,8 +47,7 @@
                     <div *ngIf="benefit.isEditable">
                         <button (click)="enableEdit(benefit)" *ngIf="!benefit.isEditing">Edit</button>
                         <div *ngIf="benefit.isEditing">
-                            <select style="color: black;" (change)="optionChange(benefit.id, $event.target.value)">
-                                <option value="">Please select</option>
+                            <select style="color: black;" (change)="optionChange(benefit.id, $event.target.value)">                               
                                 <option *ngFor="let opt of benefit.benefitOptions" [value]="opt.code">{{opt.title}}</option>
                             </select>
                         </div>

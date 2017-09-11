@@ -8,10 +8,14 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 {
     public class QuoteResult : SitecoreItem
     {
+        public Link AlternativeCallToAction { get; set; }
+        public string AlternativeCallToActionText { get; set; }    
+
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<Benefit> Benefits { get; set; }
 
-        public string CallToActionText { get; set; }
+        public Link CallToAction { get; set; }
+        public string CallToActionText { get; set; }     
         public string HelpText { get; set; }
 
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
