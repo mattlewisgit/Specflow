@@ -1,6 +1,9 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { WindowRef } from "./../windowref";
 import { Subscription } from "rxjs/Subscription";
+
+import { QuoteApplyConstants } from "../../constants/quoteapply-constants";
+
 import { ErrorService } from "../../services/error.service";
 import { QuoteService } from "../../services/quote.service";
 
@@ -56,6 +59,16 @@ export class QuoteResultComponent implements OnInit {
 
     getBenefitOption(benefitOptions: BenefitOption[], permutationId:string): any {
         return  benefitOptions.filter(x => x.permutations.filter(p => p === permutationId).length > 0)[0];
+    }
+
+    getUnderwritingType(permutationId: string): BenefitOption {
+        for (let benefit of this.quoteResultData.benefits) {
+            if (benefit.code === QuoteApplyConstants.keys.underwritingType) {
+                const benefitOption = this.getBenefitOption(benefit.benefitOptions, permutationId);
+                return benefitOption ? benefitOption.code : null;
+            }
+        }
+        return null;
     }
 
     enableEdit(benefit: any): void {

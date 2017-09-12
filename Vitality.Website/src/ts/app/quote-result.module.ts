@@ -8,6 +8,7 @@ import { QuoteService }  from "./services/quote.service";
 
 import { QuoteResultComponent } from "./components/quoteapply/quote-result.component";
 import { BenefitOptionComponent } from "./components/quoteapply/benefit-option.component";
+import { PermutationButtonComponent } from "./components/quoteapply/permutation-button.component"
 
 @NgModule({
     imports: [
@@ -16,7 +17,8 @@ import { BenefitOptionComponent } from "./components/quoteapply/benefit-option.c
     ],
     declarations: [
         QuoteResultComponent,
-        BenefitOptionComponent
+        BenefitOptionComponent,
+        PermutationButtonComponent
     ],
     providers: [
         ErrorService,
