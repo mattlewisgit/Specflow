@@ -140,6 +140,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductsComponent.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Presales\RewardLeader.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RewardLeader.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\QuoteAndApply\CallMeBack\CallMeBackDateField.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -174,11 +179,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EmailField.feature</DependentUpon>
-    </Compile>
-      <Compile Include="Features\QuoteAndApply.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuoteAndApply.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\QuoteAndApply\QuoteAndApply\EndToEnd.feature.cs">
       <AutoGen>True</AutoGen>
@@ -220,20 +220,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PostcodeField.feature</DependentUpon>
     </Compile>
-      <Compile Include="Features\QuoteAndApply\QuoteAndApply\ProgressBar.feature.cs">
+    <Compile Include="Features\QuoteAndApply\QuoteAndApply\ProgressBar.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ProgressBar.feature</DependentUpon>
-    </Compile>
-       <Compile Include="Features\QuoteResults.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QuoteResults.feature</DependentUpon>
-    </Compile>
-    <Compile Include="Features\RewardLeader.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RewardLeader.feature</DependentUpon>
     </Compile>
     <Compile Include="Features\Presales\SummaryComponent.feature.cs">
       <AutoGen>True</AutoGen>
@@ -365,7 +355,6 @@
     <Compile Include="Steps\ProductHeroSteps.cs" />
     <Compile Include="Steps\ProductsComponentSteps.cs" />
     <Compile Include="Steps\QuoteAndApplySteps.cs" />
-   <Compile Include="Steps\QuoteApplySteps.cs" />
     <Compile Include="Steps\QuoteResultsSteps.cs" />
     <Compile Include="Steps\RewardLeaderSteps.cs" />
     <Compile Include="Steps\RichTextSteps.cs" />
@@ -523,6 +512,7 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PostcodeField.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\QuoteAndApply\QuoteAndApply\ProgressBar.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
     </None>
     <None Include="Features\Presales\RewardLeader.feature">
@@ -557,6 +547,10 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>WFFM.feature.cs</LastGenOutput>
     </None>
+    <None Include="Features\QuoteAndApply\QuoteResults\QuoteResults.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>QuoteResults.feature.cs</LastGenOutput>
+    </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
@@ -572,7 +566,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Features\QuoteAndApply\QuoteResults\" />
     <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
