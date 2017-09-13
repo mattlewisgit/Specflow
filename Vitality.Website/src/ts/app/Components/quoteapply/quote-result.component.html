@@ -78,8 +78,8 @@
                     <span>{{ permutation.title}}</span>
                     <span class="pull--right"><b>&pound; {{ getQuotePrice(permutation.externalIdentifier)}} {{ permutation.perMonthText}}</b></span>
                 </div>
-                <div *ngFor="let benefit of quoteResultData.benefits" class="comparison-table--row">
-                   {{ benefit.title }}
+                <div *ngFor="let benefit of filterBenefitOptions(permutation.id)" class="comparison-table--row">
+                   {{getBenefitOptionTitle(benefit.benefitOptions, permutation.id, benefit.title)}}
                     <span class="pull--right tooltip--link tooltip--link__left">?</span>
                     <div class="tooltip--content">
                         {{ benefit.tooltip}}

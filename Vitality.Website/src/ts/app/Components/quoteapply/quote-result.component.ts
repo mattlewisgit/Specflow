@@ -58,6 +58,23 @@ export class QuoteResultComponent implements OnInit {
         return  benefitOptions.filter(x => x.permutations.filter(p => p === permutationId).length > 0)[0];
     }
 
+    filterBenefitOptions(permutationId: string) : any {
+        return this.quoteResultData.benefits.filter((x:any) => x.benefitOptions.filter((p:BenefitOption) => p.permutations.indexOf(permutationId) > -1).length > 0);
+    }
+
+    getBenefitOptionTitle(benefitOptions: BenefitOption[], permutationId: string, benefitTitle: string) : any {
+        var benefitOption = this.getBenefitOption(benefitOptions, permutationId);
+        //cross
+        if (!benefitOption)
+            return null;
+        //tick
+        if (!benefitOption.title)
+            return benefitTitle;
+
+        //text
+        return benefitTitle + " - " + benefitOption.title;
+    }
+
     enableEdit(benefit: any): void {
         for (let bnt of this.quoteResultData.benefits) {
             bnt.isEditing = false;
