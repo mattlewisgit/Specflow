@@ -73,20 +73,14 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
             this.ScenarioTearDown();
         }
         
-        [Xunit.TheoryAttribute()]
+        [Xunit.FactAttribute(DisplayName="Check first name appears in the personalise greeting quote results")]
         [Xunit.TraitAttribute("FeatureTitle", "PersonaliseGreeting")]
         [Xunit.TraitAttribute("Description", "Check first name appears in the personalise greeting quote results")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        [Xunit.InlineDataAttribute("Test", new string[0])]
-        public virtual void CheckFirstNameAppearsInThePersonaliseGreetingQuoteResults(string firstName, string[] exampleTags)
+        public virtual void CheckFirstNameAppearsInThePersonaliseGreetingQuoteResults()
         {
-            string[] @__tags = new string[] {
-                    "QuoteAndApply"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check first name appears in the personalise greeting quote results", @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check first name appears in the personalise greeting quote results", new string[] {
+                        "QuoteAndApply"});
 #line 7
     this.ScenarioSetup(scenarioInfo);
 #line 8
@@ -96,7 +90,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
 #line 10
     testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
-    testRunner.And(string.Format("I go to the firstName field and enter {0}", firstName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
     testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 13
@@ -128,7 +122,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
 #line 26
  testRunner.Then("I expect the presales /dev/quote-result to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 27
- testRunner.And(string.Format("I expect the personalised greeting to contain the name {0}", firstName), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I expect the quote result personalised greeting to contain the users first name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }

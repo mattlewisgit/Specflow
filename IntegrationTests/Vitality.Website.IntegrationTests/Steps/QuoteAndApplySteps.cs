@@ -54,6 +54,11 @@ namespace Vitality.Website.IntegrationTests.Steps
             {
                 Thread.Sleep(2000);
             }
+            if (fieldName == "firstName")
+            {
+                ScenarioContext.Current.Add("quoteFirstName", inputText);
+                Thread.Sleep(2000);
+            }
 
         }
 
@@ -366,21 +371,26 @@ namespace Vitality.Website.IntegrationTests.Steps
 
         }
 
-
-        [Then(@"I expect the personalised greeting to contain the name (.*)")]
-        public void ThenIExpectThePersonalisedGreetingToContainTheName(string firstName)
+        [Then(@"I expect the quote result personalised greeting to contain the users first name")]
+        public void ThenIExpectTheQuoteResultPersonalisedGreetingToContainTheUsersFirstName()
         {
+            //Pull in quote first name.
+            var quoteFirstName = ScenarioContext.Current["quoteFirstName"].ToString();
+
             try
             {
-                WebDriver
-                    .WaitForElement(new JQuerySelector(
-                    ".example .background--right H1"))
-                    .GetAttribute("innerText")
-                    .ShouldContain(firstName);
+                //find H1 quote result name
+                var resultFirstName = WebDriver
+                        .FindElement(new JQuerySelector(
+                        ".example .background--right H1"))
+                        .GetAttribute("innerText");
+
+                //compare quote first name to results personalise greeting
+                resultFirstName.ShouldContain(quoteFirstName);
             }
             catch (Exception)
             {
-                Assert.True(false, "personal greeting name " + firstName + " is not correct");
+                Assert.True(false, "personal greeting name " + quoteFirstName + " is not correct");
             }
         }
 
