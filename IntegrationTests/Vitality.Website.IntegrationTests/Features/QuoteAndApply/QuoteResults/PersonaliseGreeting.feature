@@ -4,11 +4,11 @@
 	I want to be able to check the personalised greeting appears on the reults page
 
 	@QuoteAndApply
-    Scenario: Check the personaise greeting name
+    Scenario Outline: Check first name appears in the personalise greeting quote results
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
-    And I go to the firstName field and enter Test
+    And I go to the firstName field and enter <firstName>
     And I go to the lastName field and enter User
 	And I go to the dateOfBirth field and enter 01/01/1970
     And I go to the phoneNumber field and enter 01202 223344
@@ -20,8 +20,12 @@
     And I go to the coverStartDate field and make the date today plus 0 days
     And I go to the membersToInsure field and choose just me
     And I go to the marketingPermission field and choose Agreed
-	Then I see that the Progress Bar is not displayed
+	And I see that the Progress Bar is not displayed
     And I see that the quote and apply Apply button is displayed
 	And I click on the quote and apply Apply button
 	Then I expect the presales /dev/quote-result to open
-	And I expect the personalised greeting to contain the correct details
+	And I expect the personalised greeting to contain the name <firstName>
+
+	Examples:
+	| firstName	    |
+	| Test			|
