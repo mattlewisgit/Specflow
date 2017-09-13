@@ -240,6 +240,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>PersonaliseGreeting.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\QuoteAndApply\QuoteResults\RichText.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RichText.feature</DependentUpon>
+    </Compile>
     <Compile Include="Steps\ArticleIndexSteps.cs" />
     <Compile Include="Steps\CardsTabbedSteps.cs" />
     <Compile Include="Steps\CareersSteps.cs" />
@@ -360,6 +365,7 @@
     <Compile Include="Steps\ProductHeroSteps.cs" />
     <Compile Include="Steps\ProductsComponentSteps.cs" />
     <Compile Include="Steps\QuoteAndApplySteps.cs" />
+    <Compile Include="Steps\QuoteAndApply\QuoteResults\RichTextSteps.cs" />
     <Compile Include="Steps\RewardLeaderSteps.cs" />
     <Compile Include="Steps\RichTextSteps.cs" />
     <Compile Include="Steps\SearchingSteps.cs" />
@@ -555,6 +561,10 @@
     <None Include="Features\QuoteAndApply\QuoteResults\PersonaliseGreeting.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>PersonaliseGreeting.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\QuoteResults\RichText.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RichText.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
