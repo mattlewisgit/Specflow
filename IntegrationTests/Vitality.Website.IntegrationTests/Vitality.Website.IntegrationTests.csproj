@@ -235,6 +235,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WFFM.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\QuoteAndApply\QuoteResults\RichText.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RichText.feature</DependentUpon>
+    </Compile>
     <Compile Include="Steps\ArticleIndexSteps.cs" />
     <Compile Include="Steps\CardsTabbedSteps.cs" />
     <Compile Include="Steps\CareersSteps.cs" />
@@ -355,6 +360,7 @@
     <Compile Include="Steps\ProductHeroSteps.cs" />
     <Compile Include="Steps\ProductsComponentSteps.cs" />
     <Compile Include="Steps\QuoteAndApplySteps.cs" />
+    <Compile Include="Steps\QuoteAndApply\QuoteResults\RichTextSteps.cs" />
     <Compile Include="Steps\QuoteResultsSteps.cs" />
     <Compile Include="Steps\RewardLeaderSteps.cs" />
     <Compile Include="Steps\RichTextSteps.cs" />
@@ -550,6 +556,10 @@
     <None Include="Features\QuoteAndApply\QuoteResults\QuoteResults.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>QuoteResults.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\QuoteResults\RichText.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RichText.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config">
       <SubType>Designer</SubType>
