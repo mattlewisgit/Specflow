@@ -5,6 +5,7 @@ import { Permutation } from "./permutation";
 export class QuoteResultRenderingData {
     benefits: Array<Benefit>;
     callToActionText: string;
+    editIcon:Image;
     helpText: string;
     permutations: Array<Permutation>;
     printText: string;
@@ -13,4 +14,5 @@ export class QuoteResultRenderingData {
     referenceId: string;
     serviceOutagePage: string;
     tooltipText: string;
+    tooltipButtonText:string;
 }
