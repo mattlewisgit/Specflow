@@ -1,4 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
+import { FormsModule } from '@angular/forms';
 import { HttpModule } from "@angular/http";
 import { NgModule }      from "@angular/core";
 import { WindowRef }  from "./components/windowref";
@@ -8,13 +9,16 @@ import { QuoteService }  from "./services/quote.service";
 
 import { QuoteResultComponent } from "./components/quoteapply/quote-result.component";
 import { BenefitOptionComponent } from "./components/quoteapply/benefit-option.component";
+import { ClickOutside } from "./directives/click-outside"
 
 @NgModule({
     imports: [
         BrowserModule,
+        FormsModule,
         HttpModule
     ],
     declarations: [
+        ClickOutside,
         QuoteResultComponent,
         BenefitOptionComponent
     ],

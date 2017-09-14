@@ -7,7 +7,7 @@
             <th *ngFor="let permutation of quoteResultData.permutations">
                 <p> {{ permutation.title}}
                     <br>
-                    <b>&pound; {{ getQuotePrice(permutation.externalIdentifier)}} {{ permutation.perMonthText}}</b>
+                    <b>{{ getQuotePrice(permutation.externalIdentifier)}} {{ permutation.perMonthText}}</b>
                 </p>
             </th>
         </tr>
@@ -36,19 +36,25 @@
                     </div>
                     <div class="comparison-table--label__text">
                         <p>{{ benefit.title }}</p>
-                        <span class="tooltip--link">{{ quoteResultData.tooltipText }}</span>
-                        <div class="tooltip--content">
-                            {{ benefit.tooltip}}
-                        </div>
+
+                        <dl class="tooltip  tooltip__bottom" [class.tooltip__visible]="benefit.helpTextVisible" *ngIf="benefit.tooltip" click-outside (clickOutside)="closeHelpText(benefit)">
+                            <dt class="tooltip--term" (click)="showHelpText(benefit)">{{ quoteResultData.tooltipText }}
+                            </dt>
+                            <dd class="tooltip--description" [innerHTML]="benefit.tooltip"></dd>
+                        </dl>
                     </div>
-                    <div *ngIf="benefit.isEditable">
-                        <button (click)="enableEdit(benefit)" *ngIf="!benefit.isEditing">Edit</button>
-                        <div *ngIf="benefit.isEditing">
-                            <select style="color: black;" (change)="optionChange(benefit.id, $event.target.value)">
-                                <option value="">Please select</option>
-                                <option *ngFor="let opt of benefit.benefitOptions" [value]="opt.code">{{opt.title}}</option>
-                            </select>
-                        </div>
+                    <div class="comparison-table--label__edit">
+                        <dl class="tooltip  tooltip__bottom tooltip__wide" [class.tooltip__visible]="benefit.isEditing" *ngIf="benefit.isEditable" click-outside (clickOutside)="closeEditBox(benefit)">
+                            <dt class="tooltip--term">
+                                <button (click)="enableEdit(benefit)">Edit</button>
+                            </dt>
+                            <dd class="tooltip--description">
+                                <select [(ngModel)]="benefit.selectedOption">
+                                    <option *ngFor="let opt of benefit.benefitOptions" [value]="opt.code">{{opt.title}}</option>
+                                </select>
+                                <button type="button" (click)="optionChange(benefit)">Select</button>
+                            </dd>
+                        </dl>
                     </div>
                 </div>
             </td>
