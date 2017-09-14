@@ -145,6 +145,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RewardLeader.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Presales\TwitterFeed.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TwitterFeed.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\QuoteAndApply\CallMeBack\CallMeBackDateField.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -362,6 +367,7 @@
     <Compile Include="Steps\AwardLeaderSteps.cs" />
     <Compile Include="Steps\SummaryComponentSteps.cs" />
     <Compile Include="Steps\TabbedSteps.cs" />
+    <Compile Include="Steps\TwitterFeedSteps.cs" />
     <Compile Include="Steps\WFFMSteps.cs" />
     <Compile Include="Utilities\PageItems.cs" />
   </ItemGroup>
@@ -451,6 +457,10 @@
     <None Include="Features\Presales\ProductsComponent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ProductsComponent.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Presales\TwitterFeed.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TwitterFeed.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\QuoteAndApply\CallMeBack\CallMeBackDateField.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
