@@ -394,6 +394,17 @@ namespace Vitality.Website.IntegrationTests.Steps
             }
         }
 
+        [Then(@"I expect the quote result personalised greeting image to be hidden")]
+        public void ThenIExpectTheQuoteResultPersonalisedGreetingImageToBeHidden()
+        {
+            //check that the personlaised greeting image is hidden on mobile view
+            WebDriver
+                .FindElement(new JQuerySelector(".example .background--right"))
+                .GetCssValue("background-image")
+                .ShouldBe("none");
+        }
+
+
 
     }
 
