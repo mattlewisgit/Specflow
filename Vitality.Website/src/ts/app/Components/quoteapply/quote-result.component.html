@@ -41,14 +41,17 @@
                             {{ benefit.tooltip}}
                         </div>
                     </div>
-                    <div *ngIf="benefit.isEditable">
-                        <button (click)="enableEdit(benefit)" *ngIf="!benefit.isEditing">Edit</button>
-                        <div *ngIf="benefit.isEditing">
-                            <select style="color: black;" (change)="optionChange(benefit.id, $event.target.value)">
-                                <option value="">Please select</option>
-                                <option *ngFor="let opt of benefit.benefitOptions" [value]="opt.code">{{opt.title}}</option>
-                            </select>
-                        </div>
+                    <div *ngIf="benefit.isEditable" class="comparison-table--label__edit">
+                        <span class="tooltip--link">
+                            <img (click)="enableEdit(benefit)" *ngIf="!benefit.isEditing" [src]="quoteResultData.editIcon.src" [alt]="quoteResultData.editIcon.alt" />
+                        </span>
+                    </div>
+                    <div *ngIf="benefit.isEditing">
+                        <select style="color: black;" (change)="optionChange(benefit.id, $event.target.value)">
+                            <option value="">Please select</option>
+                            <option *ngFor="let opt of benefit.benefitOptions" [value]="opt.code">{{opt.title}}</option>
+                        </select>
+                        <button type="button">{{ quoteResultData.tooltipButtonText }}</button>
                     </div>
                 </div>
             </td>

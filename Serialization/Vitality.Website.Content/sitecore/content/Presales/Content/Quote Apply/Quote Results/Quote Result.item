@@ -20,7 +20,7 @@ content-length: 77
 ----version----
 language: en
 version: 1
-revision: 67c71dd7-d1b7-40cc-93e5-0f6a9645a09c
+revision: 50ee6357-1ddb-4eeb-b9d1-9040c027d4bb
 
 ----field----
 field: {AD6E6AF9-FA48-4332-BAD5-5811A81237E5}
@@ -80,6 +80,20 @@ content-length: 12
 
 What is this
 ----field----
+field: {622A60FC-0BC6-433F-A259-EE053E32988A}
+name: EditIcon
+key: editicon
+content-length: 58
+
+<image mediaid="{33B21218-28E1-417F-88D0-2E757474251F}" />
+----field----
+field: {80D17615-348F-4753-8812-2FD0B7ABB623}
+name: TooltipButtonText
+key: tooltipbuttontext
+content-length: 6
+
+Select
+----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
 key: __owner
@@ -106,14 +120,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-67c71dd7-d1b7-40cc-93e5-0f6a9645a09c
+50ee6357-1ddb-4eeb-b9d1-9040c027d4bb
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170825T092618Z
+20170914T085553Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
