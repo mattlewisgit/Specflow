@@ -372,41 +372,15 @@ namespace Vitality.Website.IntegrationTests.Steps
         }
 
         [Then(@"I expect the quote result personalised greeting to contain the users first name")]
-        public void ThenIExpectTheQuoteResultPersonalisedGreetingToContainTheUsersFirstName()
-        {
-            //Pull in quote first name.
-            var quoteFirstName = ScenarioContext.Current["quoteFirstName"].ToString();
-
-            try
-            {
-                //find H1 quote result name
-                var resultFirstName = WebDriver
-                        .FindElement(new JQuerySelector(
-                        ".example .background--right H1"))
-                        .GetAttribute("innerText");
-
-                //compare quote first name to results personalise greeting
-                resultFirstName.ShouldContain(quoteFirstName);
-            }
-            catch (Exception)
-            {
-                Assert.True(false, "personal greeting name " + quoteFirstName + " is not correct");
-            }
-        }
+        public void ThenIExpectTheQuoteResultPersonalisedGreetingToContainTheUsersFirstName() => WebDriver
+            .FindElement(new JQuerySelector(".ambassabanner--content h1"))
+            .Text
+            .ShouldContain(ScenarioContext.Current["quoteFirstName"].ToString());
 
         [Then(@"I expect the quote result personalised greeting image to be hidden")]
-        public void ThenIExpectTheQuoteResultPersonalisedGreetingImageToBeHidden()
-        {
-            //check that the personlaised greeting image is hidden on mobile view
-            WebDriver
-                .FindElement(new JQuerySelector(".example .background--right"))
-                .GetCssValue("background-image")
-                .ShouldBe("none");
-        }
-
-
-
+        public void ThenIExpectTheQuoteResultPersonalisedGreetingImageToBeHidden() => WebDriver
+            .FindElement(new JQuerySelector(".ambassabanner--image img"))
+            .Displayed
+            .ShouldBeFalse();
     }
-
-
 }
