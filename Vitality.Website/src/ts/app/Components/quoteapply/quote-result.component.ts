@@ -89,13 +89,6 @@ export class QuoteResultComponent implements OnInit {
         return benefitTitle + " - " + benefitOption.title;
     }
 
-    enableEdit(benefit: Benefit): void {
-        for (let bnt of this.quoteResultData.benefits) {
-            bnt.isEditing = false;
-        }
-        benefit.isEditing = true;
-    }
-
     optionChange(benefit: Benefit): void {
         for (let benefitOption of benefit.benefitOptions) {
             benefitOption.permutations = [];
@@ -108,15 +101,32 @@ export class QuoteResultComponent implements OnInit {
         this.getQuotes();
     }
 
-    showHelpText(benefit: Benefit): void {
-        benefit.helpTextVisible = true;
+    toggleEditBox(benefit: Benefit, enableEdit: boolean): void {
+        benefit.isEditing = enableEdit;
     }
 
-    closeEditBox(benefit: Benefit): void {
-        benefit.isEditing = false;
+    toggleMobileEditBox(benefit: Benefit, enableEdit: boolean, permutationId:string): void {
+        if (enableEdit) {
+            this.selectedPermutationId = permutationId;
+       }
+       if(this.selectedPermutationId === permutationId)
+        {
+            benefit.isMobileEditing = enableEdit;
+        }
     }
 
-    closeHelpText(benefit: Benefit): void {
-        benefit.helpTextVisible = false;
+    toggleHelpText(benefit: Benefit, makeVisible: boolean): void {
+        benefit.helpTextVisible = makeVisible;
+    }
+
+    selectedPermutationId:string;
+    toggleMobileHelpText(benefit: Benefit, makeVisible: boolean, permutationId: string): void {
+        if (makeVisible) {
+            this.selectedPermutationId = permutationId;
+        }
+
+        if (this.selectedPermutationId === permutationId) {
+            benefit.mobileHelpTextVisible = makeVisible;
+        }
     }
 }

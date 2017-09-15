@@ -6,11 +6,13 @@ export class Benefit {
     code: string;
     editTitle: string;
     editTooltip:string;
-    helpTextVisible:boolean;
+    helpTextVisible: boolean;
+    mobileHelpTextVisible: boolean;
     icon: Image;
     id: string;
     isEditable: boolean;
     isEditing: boolean;
+    isMobileEditing: boolean;
     isModule: boolean;
     selectedOption: string;
     title: string;
