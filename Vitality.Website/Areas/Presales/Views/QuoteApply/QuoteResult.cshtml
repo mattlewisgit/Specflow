@@ -21,44 +21,5 @@
 <script type="text/javascript">
 System.import('/js/quote-result.main.js')
     .catch(function(err) { throw err; });
-
-setTimeout(function() {
-    $(".tooltip--link")
-        .each((i, el) => {
-            var $el = $(el);
-            var $content = $el.next(".tooltip--content");
-            var isTooltipLeft = $el.hasClass("tooltip--link__left");
-
-            $el.qtip({
-                content: {
-                    text: $content.html()
-                },
-                hide: {
-                    event: "unfocus"
-                },
-                position: {
-                    adjust: {
-                        x: isTooltipLeft ? - 25 : 25
-                    },
-                    at: (isTooltipLeft ? "left" : "right") + " center",
-                    my: (isTooltipLeft ? "right" : "left") + " center",
-                },
-                show: {
-                    event: "click"
-                },
-                style: {
-                    tip: {
-                        corner: (isTooltipLeft ? "right" : "left") + " center",
-                        mimic: "center",
-                        width: 8
-                    }
-                },
-                suppress: true
-            });
-
-            $content.remove();
-        });
-
-},4000);
 </script>
 
