@@ -28,6 +28,7 @@ export class QuoteResultComponent implements OnInit {
     ngOnInit(): void {
         this.quoteResultData = this.winRef.nativeWindow.angularData.quoteResult;
         this.errorService.initialize(this.quoteResultData.serviceOutagePage);
+        this.quoteApplication = this.quoteService.quoteApplication;
         this.quoteService.getQuoteApplication(this.quoteResultData.referenceId)
             .then((data: any) => {
                 this.quoteApplication = data;

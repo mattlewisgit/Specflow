@@ -11,6 +11,7 @@
     window.angularData = window.angularData || {};
     window.angularData.quoteResult = @Html.Raw(angularModel);
     window.angularData.quoteResult.referenceId = "@Context.Request.QueryString["referenceId"]";
+    window.angularData.quoteResult.primaryImage= "@Model.PrimaryImage.Src";
 </script>
 
 <quote-result>

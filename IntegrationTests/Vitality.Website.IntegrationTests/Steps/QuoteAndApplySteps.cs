@@ -314,19 +314,34 @@ namespace Vitality.Website.IntegrationTests.Steps
         }
 
 
-
-        [Then(@"I see that the Apply button is displayed")]
-        public void ISeeThatTheApplyButtonIsDisplayed()
+        [Then(@"I see that the quote and apply (.*) button is displayed")]
+        public void ThenISeeThatTheQuoteAndApplyButtonIsDisplayed(string button)
         {
             try
             {
                 WebDriver.FindElement
-                    (new JQuerySelector($".quote--footer .quote--footer__progress:has(button:contains('Apply'))"))
+                    (new JQuerySelector($".quote--footer .quote--footer__progress:has(button:contains('{button}'))"))
                     .ShouldNotBeNull();
             }
             catch (Exception)
             {
-                Assert.True(false, "Apply button not found");
+                Assert.True(false, ""+ button +" button not found");
+            }
+        }
+
+        [When(@"I click on the quote and apply (.*) button")]
+        [Then(@"I click on the quote and apply (.*) button")]
+        public void ThenIClickOnTheQuoteAndApplyButton(string button)
+        {
+            try
+            {
+                WebDriver.FindElement
+                    (new JQuerySelector($".quote--footer .quote--footer__progress:has(button:contains('{button}'))"))
+                    .Click();
+            }
+            catch (Exception)
+            {
+                Assert.True(false, "" + button + " button not found");
             }
         }
 

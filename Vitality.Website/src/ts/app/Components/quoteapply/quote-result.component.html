@@ -1,4 +1,9 @@
 <div class="example">
+    <div class="background--right" [ngStyle]="{ 'background-image': 'url(' + quoteResultData.primaryImage + ')'}">
+
+        <h1 class="text--uppercase">{{ quoteResultData.personalisedGreetingText }} {{ quoteApplication.firstName }}</h1>
+        <div [innerHTML]="quoteResultData.introductionText"></div>
+    </div>
     <table class="comparison-table table--4-col table--highlight-col-3" *ngIf="quotes.length>1">
         <thead>
         <tr>
@@ -57,7 +62,7 @@
             <td *ngFor="let  permutation of quoteResultData.permutations;">
                 <benefit-option [permutationId]="permutation.id"
                                 [benefitOptions]="benefit.benefitOptions"
-                                [currentTime] ="currentTime"
+                                [currentTime]="currentTime"
                                 [crossIcon]="permutation.crossIcon"
                                 [tickIcon]="permutation.tickIcon"></benefit-option>
             </td>
@@ -66,7 +71,7 @@
         </tbody>
     </table>
     <div class="comparison-table">
-        <div class="comparison-table--header" style="background-image: url(/images/ambassadors.png);">
+        <div class="comparison-table--header" [ngStyle]="{ 'background-image': 'url(' + quoteResultData.primaryImage + ')'}">
             <p>
                 <b>{{ quoteResultData.quoteValidText }}</b>
             </p>
@@ -81,7 +86,7 @@
                     <span class="pull--right"><b>&pound; {{ getQuotePrice(permutation.externalIdentifier)}} {{ permutation.perMonthText}}</b></span>
                 </div>
                 <div *ngFor="let benefit of quoteResultData.benefits" class="comparison-table--row">
-                   {{ benefit.title }}
+                    {{ benefit.title }}
                     <span class="pull--right tooltip--link tooltip--link__left">?</span>
                     <div class="tooltip--content">
                         {{ benefit.tooltip}}

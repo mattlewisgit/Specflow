@@ -21,13 +21,13 @@ QuoteContent
 field: {E391B526-D0C5-439D-803E-17512EAE6222}
 name: Allowed Controls
 key: allowed controls
-content-length: 38
+content-length: 77
 
-{2B90B330-682F-40EA-9DD7-8C194E81D47D}
+{2B90B330-682F-40EA-9DD7-8C194E81D47D}|{25359980-8C72-4BA2-8B4C-755725B6C8BB}
 ----version----
 language: en
 version: 1
-revision: b716ed98-cb2d-4b2e-9cbc-3c16990d5d2f
+revision: 749f552b-c6f3-4f05-b661-485f9077e082
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -56,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b716ed98-cb2d-4b2e-9cbc-3c16990d5d2f
+749f552b-c6f3-4f05-b661-485f9077e082
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170823T160427Z
+20170912T092921Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\Admin
+sitecore\Dave
