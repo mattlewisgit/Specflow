@@ -45,7 +45,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver
                 .WaitForPageLoad()
                 .Url
-                .ShouldBe(AppSettings.Links.VitalityPresalesUrl + link);
+                .ShouldContain(AppSettings.Links.VitalityPresalesUrl + link);
         }
 
         [Then(@"I expect the production presales (.*) to open")]
@@ -63,7 +63,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver
                 .WaitForPageLoad()
                 .Url
-                .ShouldBe(AppSettings.Links.VitalityAdvisersUrl + link);
+                .ShouldContain(AppSettings.Links.VitalityAdvisersUrl + link);
         }
 
         [Then(@"I expect the production advisers (.*) to open")]
