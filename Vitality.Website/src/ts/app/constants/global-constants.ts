@@ -1,7 +1,8 @@
 ﻿export namespace GlobalConstants {
     export const tagNames= {
         button: "BUTTON",
-        dropdown: "SELECT"
+        dropdown: "SELECT",
+        input: "INPUT"
     };
     export const endpoints =
     {
@@ -37,7 +38,6 @@
         excludeDayValidator: "excludeDayValidator",
         futureDateValidator: "futureDateValidator",
         maxLength: "maxLength",
-        maxSelectionsValidator: "maxSelectionsValidator",
         minLength: "minLength",
         required : "required",
         phoneNumberValidator: "phoneNumberValidator",

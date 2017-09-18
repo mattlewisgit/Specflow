@@ -44,7 +44,6 @@ export class TellFormComponent implements OnInit, OnDestroy {
         this.questionGroups = angularData.questionGroups;
         this.postAction = angularData.postAction;
         this.redirectTo = angularData.redirectTo;
-        console.log(this.redirectTo);
         this.renderingData = { okBtnText: angularData.okBtnText, okBtnHelpText: angularData.okBtnHelpText };
         const childrenQuestionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.childrenQuestionGroup);
         this.questionControlService.setQuestionGroups(this.questionGroups);
@@ -67,7 +66,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
         this.postcodeAsyncValidationSubscription = this.postcodeService.onPostcodeAsyncValidation()
             .subscribe((data: boolean) => {
                 if (data) {
-                    let questionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.postcodeQuestionGroup);
+                    const questionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.postcodeQuestionGroup);
                     questionGroup.isInvalid = false;
                     questionGroup.isCompleted = true;
                     this.calculateCompletedPercentage();
@@ -87,10 +86,10 @@ export class TellFormComponent implements OnInit, OnDestroy {
     }
 
     calculateCompletedPercentage() {
-        const visibleQuestionGroups = this.questionGroups.filter(x => !x.isHidden);
+        const requiredQuestionGroups = this.questionGroups.filter(x => !x.isHidden && !x.ignoreForPercentage);
         this.footerBarService.completedPercentageEmitter
-            .emit((visibleQuestionGroups.filter(x => x.isCompleted).length /
-                    visibleQuestionGroups.length) *
+            .emit((requiredQuestionGroups.filter(x => x.isCompleted).length /
+                requiredQuestionGroups.length) *
                 100);
     }
 

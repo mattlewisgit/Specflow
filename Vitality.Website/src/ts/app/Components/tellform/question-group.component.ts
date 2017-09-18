@@ -1,4 +1,4 @@
-﻿import { Component, Input, OnInit  } from "@angular/core";
+﻿import { Component, EventEmitter, Input, OnInit } from "@angular/core";
 import { FormGroup }  from "@angular/forms";
 
 import { GlobalConstants } from "../../constants/global-constants";
@@ -18,7 +18,7 @@ export class QuestionGroupComponent implements OnInit {
     form: FormGroup;
     @Input()
     renderingData: {};
-
+  
     constructor(private qcs: QuestionControlService) {
     }
 
@@ -35,17 +35,7 @@ export class QuestionGroupComponent implements OnInit {
         } else {
             this.removeOption(selectedValue, question);
         }
-
-        const maxSelectionsValidator = question.validators
-            .filter(x => x.validatorName === GlobalConstants.validators.maxSelectionsValidator)[0];
-        if (maxSelectionsValidator != null) {
-            maxSelectionsValidator.parameters
-                .maxNumberExceeded = question.value.length > maxSelectionsValidator.parameters.maxNumber;
-            if (maxSelectionsValidator.parameters.maxNumberExceeded) {
-                this.removeOption(selectedValue, question);
-                event.target.checked = false;
-            }
-        }
+        this.qcs.multiSelectOptionsEmitter.emit(question.value.length >= this.questionGroup.basedOnValues[0]);
     }
 
     removeOption(selectedValue: string, question: Question<any>): void {

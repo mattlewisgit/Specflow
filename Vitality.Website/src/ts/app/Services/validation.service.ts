@@ -43,8 +43,6 @@ export class ValidationService {
             return this.futureDateValidator(params);
         case GlobalConstants.validators.excludeDayValidator:
             return this.excludeDayValidator(params);
-        case GlobalConstants.validators.maxSelectionsValidator:
-            return this.maxSelectionsValidator(params);
         default:
             return null;
         }
@@ -143,12 +141,6 @@ export class ValidationService {
                     return resolve(failedMessage);
                 }
             });
-        }
-    }
-
-    maxSelectionsValidator(options: any) {
-        return (control: any) => {
-            return options.maxNumberExceeded ? { "maxSelectionsExceeded": true } : null;
         }
     }
 
