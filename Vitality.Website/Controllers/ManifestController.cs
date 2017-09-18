@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Newtonsoft.Json;
+using Sitecore;
 using Sitecore.Data;
 using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
@@ -11,6 +12,7 @@ using Sitecore.Mvc.Helpers;
 using Vitality.Website.Areas.AppManifests;
 using Vitality.Website.Areas.AppManifests.Models;
 using Vitality.Website.SC.Utilities;
+using Log = Sitecore.Diagnostics.Log;
 
 namespace Vitality.Website.Controllers
 {
@@ -38,14 +40,9 @@ namespace Vitality.Website.Controllers
             }
             catch (Exception ex)
             {
-
-                // In case of exception set Error object with code and description.
-                //WebExceptionManager.HandleException(
-                    //ex,
-                    //ASSEMBLY_NAME,
-                    //METHOD_NAME);
-                //Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                return null;
+                var item = Context.Item;
+                Log.Error($"Error serializing app mainfest {item.Name} ({item.ID}): Error:{ex.Message}. InnerException: {ex.InnerException?.Message ?? string.Empty}", "ManifestController");
+                throw;
             }
         }
 
