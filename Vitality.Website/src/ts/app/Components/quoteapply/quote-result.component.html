@@ -1,8 +1,14 @@
-<div class="example">
-    <div class="background--right" [ngStyle]="{ 'background-image': 'url(' + quoteResultData.primaryImage + ')'}">
-
-        <h1 class="text--uppercase">{{ quoteResultData.personalisedGreetingText }} {{ quoteApplication.firstName }}</h1>
-        <div [innerHTML]="quoteResultData.introductionText"></div>
+<div>
+    <div class="ambassabanner">
+        <div class="ambassabanner--content">
+            <h1 class="text--uppercase">
+                {{ quoteResultData.personalisedGreetingText }} {{ quoteApplication.firstName }}
+            </h1>
+            <div [innerHTML]="quoteResultData.introductionText"></div>
+        </div>
+        <div class="ambassabanner--image">
+            <img [src]="quoteResultData.primaryImage" alt="Vitality Ambassadors">
+        </div>
     </div>
     <table class="comparison-table table--4-col table--highlight-col-3" *ngIf="quotes.length>1">
         <thead>
@@ -26,12 +32,12 @@
                 </p>
             </th>
             <th *ngFor="let permutation of quoteResultData.permutations">
-                <permutation-button                                    
+                <permutation-button
                                     [alternativeCallToAction] ="quoteResultData.alternativeCallToAction"
                                     [alternativeCallToActionText]="quoteResultData.alternativeCallToActionText"
                                     [callToAction] ="quoteResultData.callToAction"
                                     [callToActionText]="quoteResultData.callToActionText"
-                                    [optionCode]="getUnderwritingType(permutation.id)"></permutation-button>               
+                                    [optionCode]="getUnderwritingType(permutation.id)"></permutation-button>
             </th>
         </tr>
         </thead>
@@ -52,7 +58,7 @@
                     <div *ngIf="benefit.isEditable">
                         <button (click)="enableEdit(benefit)" *ngIf="!benefit.isEditing">Edit</button>
                         <div *ngIf="benefit.isEditing">
-                            <select style="color: black;" (change)="optionChange(benefit.id, $event.target.value)">                               
+                            <select style="color: black;" (change)="optionChange(benefit.id, $event.target.value)">
                                 <option *ngFor="let opt of benefit.benefitOptions" [value]="opt.code">{{opt.title}}</option>
                             </select>
                         </div>
