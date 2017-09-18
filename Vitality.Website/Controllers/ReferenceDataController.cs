@@ -12,6 +12,7 @@ using Sitecore.Mvc.Helpers;
 using Vitality.Website.Areas.AppManifests;
 using Vitality.Website.Areas.AppManifests.Models;
 using Vitality.Website.SC.Utilities;
+using Log = Sitecore.Diagnostics.Log;
 
 namespace Vitality.Website.Controllers
 {
@@ -37,12 +38,8 @@ namespace Vitality.Website.Controllers
             }
             catch (Exception ex)
             {
-                // In case of exception, show error code and description.
-                //WebExceptionManager.HandleException(
-                    //ex,
-                    //ASSEMBLY_NAME,
-                    //METHOD_NAME);
-                //Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                var item = Sitecore.Context.Item;
+                Log.Error($"Error serializing app mainfest reference data {item.Name} ({item.ID}): Error:{ex.Message}. InnerException: {ex.InnerException?.Message ?? string.Empty}", "ManifestController");
                 return null;
             }
         }
