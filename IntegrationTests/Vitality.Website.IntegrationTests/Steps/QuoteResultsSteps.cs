@@ -109,15 +109,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         [When(@"I look at the cover available within the (.*) offering")]
         public void ILookAtTheCoverAvailableWithinTheOffering(string offering)
         {
-            //var index = WebDriver.ExecuteScript<long>
-            //($@"return $(""quote-result .comparison-table th:has(p:contains('{offering}'))"").index();");
-            //index.ShouldBePositive();
-
-            //WebDriver.ExecuteScript($"$('form {buttonName}')[0].scrollIntoView();");
-
-
             // Don't know why, but form sometimes not ready!!
-
             Thread.Sleep(1000);
 
             var tableHeaders = WebDriver
