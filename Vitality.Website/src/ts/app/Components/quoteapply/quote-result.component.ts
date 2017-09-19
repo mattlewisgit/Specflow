@@ -71,16 +71,6 @@ export class QuoteResultComponent implements OnInit {
         return benefitOptions.filter(x => x.permutations.filter(p => p === permutationId).length > 0)[0];
     }
 
-    getUnderwritingType(permutationId: string): BenefitOption {
-        for (let benefit of this.quoteResultData.benefits) {
-            if (benefit.code === QuoteApplyConstants.keys.underwritingType) {
-                const benefitOption = this.getBenefitOption(benefit.benefitOptions, permutationId);
-                return benefitOption ? benefitOption.code : null;
-            }
-        }
-        return null;
-    }
-
     filterBenefitOptions(permutationId: string): Benefit[] {
         return this.quoteResultData.benefits
             .filter((x: any) => x.benefitOptions
@@ -92,14 +82,16 @@ export class QuoteResultComponent implements OnInit {
     getBenefitOptionTitle(benefitOptions: BenefitOption[], permutationId: string, benefitTitle: string): string {
         const benefitOption = this.getBenefitOption(benefitOptions, permutationId);
         //cross
-        if (!benefitOption)
+        if (!benefitOption) {
             return null;
+        }
         //tick
-        if (!benefitOption.title)
+        if (!benefitOption.title) {
             return benefitTitle;
+        }
 
         //text
-        return benefitTitle + " - " + benefitOption.title;
+        return `${benefitTitle} - ${benefitOption.title}`;
     }
 
     optionChange(benefit: Benefit): void {
