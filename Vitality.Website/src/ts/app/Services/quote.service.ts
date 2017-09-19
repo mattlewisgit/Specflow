@@ -12,6 +12,8 @@ import { PermutationRequest } from "./../models/quote/permutation-request";
 import { IndividualQuoteRequest } from "./../models/quote/individual-quote-request";
 import { Life } from "./../models/quote/life";
 import { Module } from "./../models/quote/module";
+import { Benefit } from "./../models/quote/benefit";
+import { Permutation } from "./../models/quote/permutation";
 import { QuoteApplyConstants } from "../constants/quoteapply-constants";
 import { GlobalConstants } from "../constants/global-constants";
 
@@ -47,7 +49,7 @@ export class QuoteService {
         title: "mr"
     }
 
-    getQuoteApplication(referenceId: string): any {
+    getQuoteApplication(referenceId: string): Promise<any>  {
         return this.http.get(QuoteApplyConstants.endpoints.getApplication + referenceId)
             .toPromise()
             .then(response => response.json());
@@ -58,20 +60,20 @@ export class QuoteService {
         this.getLives();
     }
 
-    callRtpe(permutations: any[]): Promise<any> {
-        const requestData = this.getRtpeRequest(permutations);
+    callRtpe(benefits: Benefit[], permutations: Permutation[]): Promise<any> {
+        const requestData = this.getRtpeRequest(benefits, permutations);
         return this.http.post(GlobalConstants.endpoints.bslEndpoint + encodeURIComponent(this.endpoint), requestData)
             .toPromise()
             .then(response => response.json().BslResponse)
             .catch(this.errorService.handleServiceOutage.bind(this.errorService));
     }
 
-    private getRtpeRequest(quoteResultData: any): QuoteRequest {
-        const moduleBenefits = quoteResultData.benefits.filter((b:any) => b.isModule);
-        const otherBenefits = quoteResultData.benefits.filter((b: any) => !b.isModule && b.code);
+    private getRtpeRequest(benefits: Benefit[], permutations: Permutation[]): QuoteRequest {
+        const moduleBenefits = benefits.filter(b => b.isModule);
+        const otherBenefits = benefits.filter(b => !b.isModule && b.code);
         const permutationRequests = new Array<PermutationRequest>();
         let i = 0;
-        for (let permutation of quoteResultData.permutations) {
+        for (let permutation of permutations) {
             i = i + 1;
             const modules = new Array<Module>();
 
@@ -80,7 +82,7 @@ export class QuoteService {
             }
             for (let moduleBenefit of moduleBenefits) {
                 const moduleBenefitsOption = moduleBenefit.benefitOptions
-                    .filter((x: any) => x.permutations.filter((p: string) => p === permutation.id).length > 0)[0];
+                    .filter(x => x.permutations.filter(p => p === permutation.id).length > 0)[0];
                 if (moduleBenefitsOption) {
                     modules.push(new Module(moduleBenefitsOption.code));
                 }
@@ -89,7 +91,7 @@ export class QuoteService {
             const individualQuoteRequest = new IndividualQuoteRequest();
             for (let otherBenefit of otherBenefits) {
                 const otherBenefitsOption = otherBenefit.benefitOptions
-                    .filter((x: any) => x.permutations.filter((p: string) => p === permutation.id).length > 0)[0];
+                    .filter(x => x.permutations.filter(p => p === permutation.id).length > 0)[0];
                 if (otherBenefitsOption) {
                     individualQuoteRequest[otherBenefit.code] = otherBenefitsOption.code;
                 }

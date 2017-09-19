@@ -1,8 +1,8 @@
 namespace Vitality.Website.IntegrationTests.Extensions
 {
     using System.Collections.Generic;
-
     using Shouldly;
+    using Xunit;
 
     public static class AssertionExtensions
     {
@@ -21,5 +21,7 @@ namespace Vitality.Website.IntegrationTests.Extensions
                 actual.ShouldNotContain(@string);
             }
         }
+
+        public static void Fail(string message) => Assert.True(false, message);
     }
 }

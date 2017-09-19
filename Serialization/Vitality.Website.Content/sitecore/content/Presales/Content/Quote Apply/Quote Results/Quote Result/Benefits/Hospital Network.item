@@ -13,7 +13,7 @@ created: 20170824T184024Z
 ----version----
 language: en
 version: 1
-revision: 21f09e99-d718-4ca2-a4b2-119a0b03587a
+revision: af23998a-f27d-47df-a540-70abf1a03a78
 
 ----field----
 field: {7C4D704F-ECB4-4A3D-A507-60BFCD032F2B}
@@ -33,9 +33,10 @@ Hospital Network / Treatment Pathway
 field: {8915940D-A983-4B58-8D36-CE0482622915}
 name: Tooltip
 key: tooltip
-content-length: 23
+content-length: 60
 
-Some useful information
+<h3>Title</h3>
+<p>Some <em>useful</em> explanation here.</p>
 ----field----
 field: {50089D18-EADE-45D4-B407-4E10ED4CA5CD}
 name: IsEditable
@@ -65,6 +66,28 @@ content-length: 38
 
 {6CDA65CD-244D-4512-8EC0-0CC8A1D43C6A}
 ----field----
+field: {894AE1E0-ED3F-4A0B-936D-25A7BE6DAAFE}
+name: SelectedOption
+key: selectedoption
+content-length: 38
+
+{8F349189-D5E4-42E1-9601-41BAAD593879}
+----field----
+field: {51CEB7A4-2E75-4FB8-B0AF-1B939009CC11}
+name: EditTitle
+key: edittitle
+content-length: 25
+
+Choose a Hospital Network
+----field----
+field: {C053749C-58F6-450A-82B6-30AFF01D8391}
+name: EditTooltip
+key: edittooltip
+content-length: 72
+
+<p>Choose a hospital network.</p>
+<p>Central London is not available</p>
+----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
 key: __owner
@@ -91,14 +114,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-21f09e99-d718-4ca2-a4b2-119a0b03587a
+af23998a-f27d-47df-a540-70abf1a03a78
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170824T213242Z
+20170914T162200Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

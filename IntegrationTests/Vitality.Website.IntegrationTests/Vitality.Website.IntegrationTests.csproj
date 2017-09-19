@@ -240,10 +240,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WFFM.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\QuoteAndApply\QuoteResults\RichText.feature.cs">
+     <Compile Include="Features\QuoteAndApply\QuoteResults\RichText.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RichText.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\QuoteAndApply\QuoteResults\QuoteResults.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuoteResults.feature</DependentUpon>
     </Compile>
     <Compile Include="Steps\ArticleIndexSteps.cs" />
     <Compile Include="Steps\CardsTabbedSteps.cs" />
@@ -530,6 +535,7 @@
     </None>
     <None Include="Features\QuoteAndApply\QuoteAndApply\ProgressBar.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ProgressBar.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Presales\RewardLeader.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
