@@ -1,7 +1,7 @@
 <div>
     <div class="ambassabanner">
         <div class="ambassabanner--content">
-            <h1 class="text--uppercase">
+            <h1 class="text--uppercase" *ngIf="quoteApplication">
                 {{ quoteResultData.personalisedGreetingText }} {{ quoteApplication.firstName }}
             </h1>
             <div [innerHTML]="quoteResultData.introductionText"></div>

@@ -59,6 +59,16 @@ export class QuoteResultComponent implements OnInit {
             });
     }
 
+    getUnderwritingType(permutationId: string): string {
+        for (let benefit of this.quoteResultData.benefits) {
+            if (benefit.code === QuoteApplyConstants.keys.underwritingType) {
+                const benefitOption = this.getBenefitOption(benefit.benefitOptions, permutationId);
+                return benefitOption ? benefitOption.code : GlobalConstants.strings.empty;
+            }
+        }
+        return GlobalConstants.strings.empty;
+    }
+
     getQuotePrice(externalIdentifier: string): string {
         const quote = this.quotes.filter(x => x.ExternalQuoteIdentifier === externalIdentifier)[0];
         if (quote) {
