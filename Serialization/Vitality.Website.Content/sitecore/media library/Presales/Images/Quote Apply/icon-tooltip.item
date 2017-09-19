@@ -1,27 +1,34 @@
 ----item----
 version: 1
-id: {33B21218-28E1-417F-88D0-2E757474251F}
+id: {5BA43839-770E-45CA-BA97-60352F0DFCD6}
 database: master
-path: /sitecore/media library/Presales/Images/Quote Apply/pencil
+path: /sitecore/media library/Presales/Images/Quote Apply/icon-tooltip
 parent: {66D309E0-D35A-454D-9DF8-60238838D898}
-name: pencil
+name: icon-tooltip
 master: {00000000-0000-0000-0000-000000000000}
 template: {F1828A2C-7E5D-4BBD-98CA-320474871548}
 templatekey: Image
-created: 20170913T105805Z
+created: 20170918T135714Z
 
 ----field----
 field: {40E50ED9-BA07-4702-992E-A912738D32DC}
 name: Blob
 key: blob
-content-length: 450
+content-length: 940
 
-PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS4w
-MSAxNS4wMSI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiM0ZDRkNGQ7fTwvc3R5bGU+PC9kZWZz
-Pjx0aXRsZT5wZW5jaWw8L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIi
-PjxnIGlkPSJMYXllcl8xMiIgZGF0YS1uYW1lPSJMYXllciAxMiI+PHBhdGggY2xhc3M9ImNscy0x
-IiBkPSJNMCwxNWwuNzYtMy43NCwzLDNabTYtMi4yN0E4Ljk0LDguOTQsMCwwLDAsMi4yNyw5bDkt
-OUEzLjU1LDMuNTUsMCwwLDEsMTUsMy43NFoiLz48L2c+PC9nPjwvc3ZnPg==
+PHN2ZyBpZD0iTGF5ZXJfMiIgZGF0YS1uYW1lPSJMYXllciAyIiB4bWxucz0iaHR0cDovL3d3dy53
+My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOC42NyAxOC42NyI+CiAgPGRlZnM+CiAgICA8
+c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogI2UwZTBlMDsKICAgICAgfQoKICAg
+ICAgLmNscy0yIHsKICAgICAgICBmaWxsOiAjZmZmOwogICAgICB9CiAgICA8L3N0eWxlPgogIDwv
+ZGVmcz4KICA8dGl0bGU+aWNvbi10b29sdGlwPC90aXRsZT4KICA8Zz4KICAgIDxjaXJjbGUgY2xh
+c3M9ImNscy0xIiBjeD0iOS4zMyIgY3k9IjkuMzMiIHI9IjkuMzMiLz4KICAgIDxwYXRoIGNsYXNz
+PSJjbHMtMiIgZD0iTTcsNS4xOWE1LjQ3LDUuNDcsMCwwLDEsMi4zLS40MiwzLjM4LDMuMzgsMCww
+LDEsMi4yNy43NCwyLjUsMi41LDAsMCwxLC44NywyLDIuNzMsMi43MywwLDAsMS0uMjcsMS4yMiwy
+LjQzLDIuNDMsMCwwLDEtLjY4Ljg2LDIuNjEsMi42MSwwLDAsMS0xLjUuNjNsMCwxLjIzaC0ybDAt
+Mi4yN3EyLjMxLDAsMi4zMS0xLjQxYTEuMTcsMS4xNywwLDAsMC0uMzItMC44NiwxLjMsMS4zLDAs
+MCwwLTEtLjMyLDMuNTEsMy41MSwwLDAsMC0yLC42NVY1LjE5Wm0xLDkuNTNhMS4zNywxLjM3LDAs
+MCwxLDEuOTQtMS45NEExLjM3LDEuMzcsMCwwLDEsNy45NCwxNC43MloiLz4KICA8L2c+Cjwvc3Zn
+Pgo=
 ----field----
 field: {22EAC599-F13B-4607-A89D-C091763A467D}
 name: Width
@@ -56,26 +63,26 @@ name: Size
 key: size
 content-length: 3
 
-328
+686
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
 name: __Icon
 key: __icon
 content-length: 66
 
-media-online/33b2121828e1417f88d02e757474251f.ashx?h=16&thn=1&w=16
+media-online/5ba43839770e45caba9760352f0dfcd6.ashx?h=16&thn=1&w=16
 ----version----
 language: en
 version: 1
-revision: 5f2a24f8-836d-4539-b21d-bcc93316649f
+revision: f6f09d8c-3929-47ab-b3ef-c3d228c3e8ab
 
 ----field----
 field: {65885C44-8FCD-4A7F-94F1-EE63703FE193}
 name: Alt
 key: alt
-content-length: 4
+content-length: 1
 
-Edit
+?
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -89,7 +96,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170913T105805Z
+20170918T135714Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -103,14 +110,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5f2a24f8-836d-4539-b21d-bcc93316649f
+f6f09d8c-3929-47ab-b3ef-c3d228c3e8ab
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170919T145634Z
+20170918T144226Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
