@@ -45,7 +45,7 @@
                     <div class="comparison-table--label__edit">
                         <dl class="tooltip  tooltip__bottom tooltip__wide" [class.tooltip__visible]="benefit.isEditing" *ngIf="benefit.isEditable" click-outside (clickOutside)="toggleEditBox(benefit, false)">
                             <dt class="tooltip--term">
-                                <img src="" (click)="toggleEditBox(benefit, true)" [alt]="quoteResultData.editIcon.alt">
+                                <img [src]="quoteResultData.editIcon.src" (click)="toggleEditBox(benefit, true)" [alt]="quoteResultData.editIcon.alt">
                             </dt>
                             <dd class="tooltip--description">
                                 <p><b>{{ benefit.editTitle }}</b></p>
