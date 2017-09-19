@@ -18,6 +18,9 @@ export class QuoteResultComponent implements OnInit {
     quotes: any[] = [];
     currentTime: Date;
     quoteApplication: any;
+    marketingMessage: string;
+    timeoutExpired = false;
+
 
     constructor(
         private errorService: ErrorService,
@@ -27,6 +30,11 @@ export class QuoteResultComponent implements OnInit {
 
     ngOnInit(): void {
         this.quoteResultData = this.winRef.nativeWindow.angularData.quoteResult;
+        let delay: number = this.quoteResultData.marketingMessageTimeOut * 1000;
+        setTimeout(() => {
+            this.timeoutExpired = true;
+        }, delay);
+        this.marketingMessage = this.quoteResultData.marketingMessages[Math.floor(Math.random() * this.quoteResultData.marketingMessages.length)];
         this.errorService.initialize(this.quoteResultData.serviceOutagePage);
         this.quoteApplication = this.quoteService.quoteApplication;
         this.quoteService.getQuoteApplication(this.quoteResultData.referenceId)

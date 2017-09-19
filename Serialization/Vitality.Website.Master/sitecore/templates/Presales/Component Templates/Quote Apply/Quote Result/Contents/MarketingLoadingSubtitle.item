@@ -1,41 +1,41 @@
 ----item----
 version: 1
-id: {86023B96-C9E9-483F-A253-86C660AC62BC}
+id: {0DFDBF60-5523-438B-AD6B-E8FC27996955}
 database: master
-path: /sitecore/content/Presales/Content/Quote Apply/Quote Results/Quote Result/Benefit Options/Cancer Cover/Core Cancer Cover
-parent: {695DE71C-9749-4CA3-BEC1-7096583C20B5}
-name: Core Cancer Cover
+path: /sitecore/templates/Presales/Component Templates/Quote Apply/Quote Result/Contents/MarketingLoadingSubtitle
+parent: {B5709F24-CA2D-46B9-B2A9-4EF136CFFEA6}
+name: MarketingLoadingSubtitle
 master: {00000000-0000-0000-0000-000000000000}
-template: {1589F4AD-1F3A-40E9-B148-1FDF65735FC6}
-templatekey: Benefit Option
-created: 20170824T191604Z
+template: {455A3E98-A627-4B40-8035-E683A0331AC7}
+templatekey: Template field
+created: 20170919T091352Z
 
+----field----
+field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
+name: Type
+key: type
+content-length: 16
+
+Single-Line Text
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 4
+
+1400
 ----version----
 language: en
 version: 1
-revision: e45a8c1a-1258-41cc-978f-ca041d1d3789
+revision: daad6896-e9aa-4cb2-ab59-4c9ef0965a9b
 
 ----field----
-field: {4255A7D9-C0F3-40B8-8273-937FEC12D1AE}
-name: Code
-key: code
-content-length: 38
-
-{066D147F-1E8A-46BF-B41F-688AB399B944}
-----field----
-field: {4D6560B1-1D7A-4799-90F0-BA7D14046E77}
+field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
 name: Title
 key: title
-content-length: 19
+content-length: 26
 
-Core Cancer Cover 2
-----field----
-field: {1310D2AC-3FD0-45C4-A404-70B95E7596BD}
-name: Permutations
-key: permutations
-content-length: 38
-
-{203C0AD4-0740-4409-8732-3A406534D6BD}
+Marketing Loading Subtitle
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -49,7 +49,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170824T191604Z
+20170919T091352Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e45a8c1a-1258-41cc-978f-ca041d1d3789
+daad6896-e9aa-4cb2-ab59-4c9ef0965a9b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170908T144325Z
+20170919T092453Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

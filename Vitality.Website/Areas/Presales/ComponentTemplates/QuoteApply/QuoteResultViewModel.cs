@@ -2,6 +2,7 @@
 using Glass.Mapper.Sc.Configuration;
 using Glass.Mapper.Sc.Configuration.Attributes;
 using Vitality.Website.Areas.Global.Models;
+using Vitality.Website.Areas.Presales.ComponentTemplates.Generic;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 {
@@ -21,5 +22,8 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         public string QuoteValidText { get; set; }
         public string ServiceOutagePage { get; set; }
         public string TooltipText { get; set; }
+        public IEnumerable<string> MarketingMessages { get; set; }
+        public string MarketingLoadingSubtitle { get; set; }
+        public double MarketingMessageTimeOut { get; set; }
     }
 }

@@ -7,6 +7,7 @@
     using AutoMapper;
     using System.Collections.Generic;
     using System.Linq;
+    using Vitality.Website.Areas.Presales.ComponentTemplates.Generic;
 
     public static class MapperConfig
     {
@@ -111,6 +112,9 @@
                 .ForMember(
                     dest => dest.CallToAction,
                     opt => opt.MapFrom(src => src.CallToAction.Url))
+                .ForMember(
+                    dest => dest.MarketingMessages,
+                    opt => opt.MapFrom(src => src.MarketingMessages.Select(m=>m.RichText)))
                 .ForMember(
                     dest => dest.ServiceOutagePage,
                     opt => opt.MapFrom(src => src.ServiceOutagePage.Url));

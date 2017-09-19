@@ -1,0 +1,90 @@
+----item----
+version: 1
+id: {06976FDF-8E0D-4AD4-8675-F8F7EB3D1F47}
+database: master
+path: /sitecore/content/Presales/Content/Quote Apply/Quote Results/Quote Result/MarketingMessages/marketingMessage01
+parent: {3BA89D67-02F2-4CD9-8089-209359510870}
+name: marketingMessage01
+master: {00000000-0000-0000-0000-000000000000}
+template: {1EFF0C91-5C21-4AE9-B0AA-8F05772410E6}
+templatekey: Content
+created: 20170912T141326Z
+
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
+----version----
+language: en
+version: 1
+revision: 64ff8c44-b1e8-475f-904f-c8b5b7c47709
+
+----field----
+field: {35B57356-DA32-4179-AFD5-3A74F13831B9}
+name: RichText
+key: richtext
+content-length: 545
+
+<span style="background-color: #ffffff; text-align: justify; color: #000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+Integer lectus purus, tempor gravida risus et, luctus consectetur nibh. Nam scelerisque risus eu dolor tincidunt ultrices. <br />
+<br />
+Nullam id pellentesque urna. Fusce nec risus <strong>vitae massa tempus consequat</strong> in ac ante. Nulla facilisi. Aenean eget malesuada nisl, a condimentum sem. Etiam pulvinar ipsum <strong>pellentesque ante elementum</strong>, ac efficitur felis mollis.</span>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170912T141326Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+64ff8c44-b1e8-475f-904f-c8b5b7c47709
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170912T153343Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

@@ -105,6 +105,18 @@ gulp.task(tasks.bower.default, [tasks.bower.run], function () {
         .pipe(gulp.dest("./img/spritesheets/"));
 });
 
+gulp.task(tasks.bower.default, [tasks.bower.run], function () {
+    var boilerplateDist = "./bower_components/quote.boilerplate/images/";
+
+    gulp
+        .src(boilerplateDist + "*.*")
+        .pipe(gulp.dest("./images/"));
+
+    return gulp
+        .src(boilerplateDist + "svg-sprite.svg")
+        .pipe(gulp.dest("./img/spritesheets/"));
+});
+
 gulp.task(tasks.bower.run, function () {
     return plugins.bower({ cmd: "update" });
 });
