@@ -2,7 +2,7 @@
 version: 1
 id: {F6721CD4-E57F-47E7-8989-E305B12EF9F2}
 database: master
-path: /sitecore/content/Presales/home/app-manifests/vgp/errormessages
+path: /sitecore/content/Apps/Manifests/vgp/errormessages
 parent: {3C6D71A7-0CBA-44AA-8C95-0B013A96FE5E}
 name: errormessages
 master: {00000000-0000-0000-0000-000000000000}

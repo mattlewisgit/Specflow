@@ -1,22 +1,15 @@
 ----item----
 version: 1
-id: {7ACD5E1E-7CC5-4303-9034-6C6BCA892A63}
+id: {9E4A637C-D96D-43EF-B915-A7E47B902C94}
 database: master
-path: /sitecore/content/Presales/home/app-manifests
-parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
-name: app-manifests
+path: /sitecore/content/Apps/Manifests
+parent: {882205BC-A4E8-4118-8DA4-F299BF51CF0C}
+name: Manifests
 master: {00000000-0000-0000-0000-000000000000}
 template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
 templatekey: Folder
-created: 20170914T105024Z
+created: 20170919T103715Z
 
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 3
-
-200
 ----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
 name: __Masters
@@ -27,15 +20,8 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 32d412c4-993c-4c72-b3f5-d81402382eef
+revision: 2904ad11-4046-47b5-8d13-33b735204cc5
 
-----field----
-field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
-name: __Display name
-key: __display name
-content-length: 13
-
-App Manifests
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -49,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170914T105024Z
+20170919T103715Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-32d412c4-993c-4c72-b3f5-d81402382eef
+2904ad11-4046-47b5-8d13-33b735204cc5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170914T122503Z
+20170919T105736Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,48 +1,55 @@
 ----item----
 version: 1
-id: {3C6D71A7-0CBA-44AA-8C95-0B013A96FE5E}
+id: {882205BC-A4E8-4118-8DA4-F299BF51CF0C}
 database: master
-path: /sitecore/content/Presales/home/app-manifests/vgp
-parent: {7ACD5E1E-7CC5-4303-9034-6C6BCA892A63}
-name: vgp
+path: /sitecore/content/Apps
+parent: {0DE95AE4-41AB-4D01-9EB0-67441B7C2450}
+name: Apps
 master: {00000000-0000-0000-0000-000000000000}
-template: {EF6DF931-E970-4E3A-908B-037927AE9291}
-templatekey: App Manifest
-created: 20170914T122515Z
+template: {1071F01B-20DD-4C43-95D3-037E394960D9}
+templatekey: Website
+created: 20170919T103538Z
 
 ----version----
 language: en
 version: 1
-revision: dfdfff55-f760-41ed-9c84-536a3cd14499
+revision: 769f42ac-8b90-4bcf-992c-cb5f827d1286
 
 ----field----
-field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
-name: __Display name
-key: __display name
-content-length: 3
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 13
 
-VGP
+sitecore\Dave
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170914T122515Z
+20170919T103538Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 13
+
+sitecore\Dave
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-dfdfff55-f760-41ed-9c84-536a3cd14499
+769f42ac-8b90-4bcf-992c-cb5f827d1286
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170914T122515Z
+20170919T103538Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

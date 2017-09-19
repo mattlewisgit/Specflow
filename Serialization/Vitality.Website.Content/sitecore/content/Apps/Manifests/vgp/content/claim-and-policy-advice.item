@@ -1,73 +1,95 @@
 ----item----
 version: 1
-id: {A16F7548-07D5-4C89-9501-D193CA6993D3}
+id: {8D85599B-D160-464E-8A1C-6A62BFC34345}
 database: master
-path: /sitecore/content/Presales/home/app-manifests/vgp/content/general-health
+path: /sitecore/content/Apps/Manifests/vgp/content/claim-and-policy-advice
 parent: {9A4FF7FA-E740-46EC-A9F7-86943BD3F9D9}
-name: general-health
+name: claim-and-policy-advice
 master: {00000000-0000-0000-0000-000000000000}
 template: {C1079D59-71E4-416B-B965-07AEB4BC621E}
 templatekey: Content
-created: 20170914T161009Z
+created: 20170914T160328Z
 
 ----version----
 language: en
 version: 1
-revision: 4839297a-bf05-4904-a996-ce7e71f08e58
+revision: b1ab3833-be55-4ac9-8dd5-5cd5d55c1737
 
 ----field----
 field: {061193DF-411E-4CEE-BFDB-7160DED9D9A6}
 name: Name
 key: name
-content-length: 14
+content-length: 23
 
-General Health
+Claim and policy advice
+----field----
+field: {E176092A-A35B-42A7-81DD-9616ED9886EC}
+name: Description
+key: description
+content-length: 16
+
+description text
 ----field----
 field: {1BBECB05-C8CC-4C17-8C75-0CB84A07B7A1}
 name: Text
 key: text
-content-length: 19
+content-length: 281
 
-General health text
+<p>Claim and policy advice text</p>
+<p>
+<strong>this is bold</strong><br />
+<em>this is italic</em><br />
+<br />
+here is an ordered list</p>
+<ol>
+    <li>item one</li>
+    <li>item 2</li>
+</ol>
+<br />
+here is an ordered list</p>
+<ul>
+    <li>item one</li>
+    <li>item 2</li>
+</ul>
 ----field----
 field: {64562504-49F5-4585-B268-87D2040BCE7A}
 name: CTAData
 key: ctadata
-content-length: 38
+content-length: 77
 
-{1A8A1B6B-107F-45B4-8CA7-6DEF0E0EEAAA}
+{83551733-F33F-41BD-AFCC-D417A7EEF29F}|{E03F0E7E-D719-4F44-B6C6-FC43CE8B1441}
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 14
+content-length: 23
 
-General Health
+Claim and policy advice
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20170914T161009Z
+20170914T160328Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-4839297a-bf05-4904-a996-ce7e71f08e58
+b1ab3833-be55-4ac9-8dd5-5cd5d55c1737
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170914T205340Z
+20170918T105305Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 13
+content-length: 14
 
-sitecore\Dave
+sitecore\Admin
