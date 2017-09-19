@@ -32,5 +32,6 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         public Link ServiceOutagePage { get; set; }
         public string TooltipText { get; set; }
         public string TooltipButtonText { get; set; }
+        public Image TooltipImage { get; set; }
     }
 }
