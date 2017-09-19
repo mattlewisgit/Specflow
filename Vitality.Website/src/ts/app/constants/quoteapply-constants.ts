@@ -16,7 +16,9 @@
         membersToInsure: "membersToInsure",
         noOfChildren: "noOfChildren",
         postcodeQuestionGroup: "postcodeGroup",
-        featuresAndBenefitsGroup: "featuresAndBenefits"
+        featuresAndBenefitsGroup: "featuresAndBenefits",
+        moratorium: "A01",
+        underwritingType: "policyUwChoiceCode"
     };
     export const gender =
     {

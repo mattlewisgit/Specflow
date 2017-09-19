@@ -54,6 +54,12 @@ namespace Vitality.Website.IntegrationTests.Steps
             {
                 Thread.Sleep(2000);
             }
+            if (fieldName == "firstName")
+            {
+                ScenarioContext.Current.Add("quoteFirstName", inputText);
+                Thread.Sleep(2000);
+            }
+
         }
 
         [When(@"I click on the (.*) button")]
@@ -92,6 +98,7 @@ namespace Vitality.Website.IntegrationTests.Steps
 
 
         [Given(@"the (.*) field is displayed")]
+        [When(@"the (.*) field is displayed")]
         [Then(@"the (.*) field is displayed")]
         public void TheFieldIsDisplayed(string fieldName)
         {
@@ -294,6 +301,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             Assert.True(possibleOptions.CompareLists(targetList));
         }
 
+        [Given(@"I see that the Progress Bar is not displayed")]
         [Then(@"I see that the Progress Bar is not displayed")]
         public void ISeeThatTheProgressBarIsNotDisplayed()
         {
@@ -313,20 +321,36 @@ namespace Vitality.Website.IntegrationTests.Steps
             }
         }
 
-
-
-        [Then(@"I see that the Apply button is displayed")]
-        public void ISeeThatTheApplyButtonIsDisplayed()
+        [Given(@"I see that the quote and apply (.*) button is displayed")]
+        [Then(@"I see that the quote and apply (.*) button is displayed")]
+        public void ThenISeeThatTheQuoteAndApplyButtonIsDisplayed(string button)
         {
             try
             {
                 WebDriver.FindElement
-                    (new JQuerySelector($".quote--footer .quote--footer__progress:has(button:contains('Apply'))"))
+                    (new JQuerySelector($".quote--footer .quote--footer__progress:has(button:contains('{button}'))"))
                     .ShouldNotBeNull();
             }
             catch (Exception)
             {
-                Assert.True(false, "Apply button not found");
+                Assert.True(false, ""+ button +" button not found");
+            }
+        }
+
+        [Given(@"I click on the quote and apply (.*) button")]
+        [When(@"I click on the quote and apply (.*) button")]
+        [Then(@"I click on the quote and apply (.*) button")]
+        public void ThenIClickOnTheQuoteAndApplyButton(string button)
+        {
+            try
+            {
+                WebDriver.FindElement
+                    (new JQuerySelector($".quote--footer .quote--footer__progress:has(button:contains('{button}'))"))
+                    .Click();
+            }
+            catch (Exception)
+            {
+                Assert.True(false, "" + button + " button not found");
             }
         }
 
@@ -347,7 +371,16 @@ namespace Vitality.Website.IntegrationTests.Steps
 
         }
 
+        [Then(@"I expect the quote result personalised greeting to contain the users first name")]
+        public void ThenIExpectTheQuoteResultPersonalisedGreetingToContainTheUsersFirstName() => WebDriver
+            .FindElement(new JQuerySelector(".ambassabanner--content h1"))
+            .Text
+            .ShouldContain(ScenarioContext.Current["quoteFirstName"].ToString());
+
+        [Then(@"I expect the quote result personalised greeting image to be hidden")]
+        public void ThenIExpectTheQuoteResultPersonalisedGreetingImageToBeHidden() => WebDriver
+            .FindElement(new JQuerySelector(".ambassabanner--image img"))
+            .Displayed
+            .ShouldBeFalse();
     }
-
-
 }

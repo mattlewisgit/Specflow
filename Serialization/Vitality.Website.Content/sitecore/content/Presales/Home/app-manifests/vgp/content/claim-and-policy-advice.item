@@ -1,0 +1,73 @@
+----item----
+version: 1
+id: {8D85599B-D160-464E-8A1C-6A62BFC34345}
+database: master
+path: /sitecore/content/Presales/home/app-manifests/vgp/content/claim-and-policy-advice
+parent: {9A4FF7FA-E740-46EC-A9F7-86943BD3F9D9}
+name: claim-and-policy-advice
+master: {00000000-0000-0000-0000-000000000000}
+template: {C1079D59-71E4-416B-B965-07AEB4BC621E}
+templatekey: Content
+created: 20170914T160328Z
+
+----version----
+language: en
+version: 1
+revision: 34a5c09f-be3b-4581-b704-2d48332fab0f
+
+----field----
+field: {061193DF-411E-4CEE-BFDB-7160DED9D9A6}
+name: Name
+key: name
+content-length: 23
+
+Claim and policy advice
+----field----
+field: {1BBECB05-C8CC-4C17-8C75-0CB84A07B7A1}
+name: Text
+key: text
+content-length: 28
+
+Claim and policy advice text
+----field----
+field: {64562504-49F5-4585-B268-87D2040BCE7A}
+name: CTAData
+key: ctadata
+content-length: 77
+
+{83551733-F33F-41BD-AFCC-D417A7EEF29F}|{E03F0E7E-D719-4F44-B6C6-FC43CE8B1441}
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 23
+
+Claim and policy advice
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170914T160328Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+34a5c09f-be3b-4581-b704-2d48332fab0f
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170914T204754Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 13
+
+sitecore\Dave

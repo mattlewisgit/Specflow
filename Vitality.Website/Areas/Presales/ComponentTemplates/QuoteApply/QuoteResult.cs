@@ -9,9 +9,16 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 {
     public class QuoteResult : SitecoreItem
     {
+        public string PersonalisedGreetingText { get; set; }
+        public string IntroductionText { get; set; }
+        public Image PrimaryImage { get; set; }
+        public Link AlternativeCallToAction { get; set; }
+        public string AlternativeCallToActionText { get; set; }
+
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<Benefit> Benefits { get; set; }
 
+        public Link CallToAction { get; set; }
         public string CallToActionText { get; set; }
         public Image EditIcon { get; set; }
         public string HelpText { get; set; }

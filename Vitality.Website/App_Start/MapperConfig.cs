@@ -108,7 +108,13 @@
                     opt => opt.MapFrom(src => src.ExternalIdentifier.Value));
 
             config.CreateMap<QuoteResult, QuoteResultViewModel>()
-                  .ForMember(
+                .ForMember(
+                    dest => dest.AlternativeCallToAction,
+                    opt => opt.MapFrom(src => src.AlternativeCallToAction.Url))
+                .ForMember(
+                    dest => dest.CallToAction,
+                    opt => opt.MapFrom(src => src.CallToAction.Url))
+                .ForMember(
                     dest => dest.ServiceOutagePage,
                     opt => opt.MapFrom(src => src.ServiceOutagePage.Url));
 

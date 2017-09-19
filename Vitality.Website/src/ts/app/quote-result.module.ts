@@ -9,6 +9,7 @@ import { QuoteService }  from "./services/quote.service";
 
 import { QuoteResultComponent } from "./components/quoteapply/quote-result.component";
 import { BenefitOptionComponent } from "./components/quoteapply/benefit-option.component";
+import { PermutationButtonComponent } from "./components/quoteapply/permutation-button.component"
 import { ClickOutside } from "./directives/click-outside"
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ClickOutside } from "./directives/click-outside"
     declarations: [
         ClickOutside,
         QuoteResultComponent,
-        BenefitOptionComponent
+        BenefitOptionComponent,
+	PermutationButtonComponent
     ],
     providers: [
         ErrorService,

@@ -14,6 +14,7 @@ import { TellFormService }  from "./services/tell-form.service";
 import { ValidationService }  from "./services/validation.service";
 
 import { AutoScrollTo } from "./directives/auto-scroll-to.directive";
+import { LimitMultiSelect } from "./directives/limit-multi-select.directive";
 import { QuestionGroupComponent } from "./components/tellform/question-group.component";
 import { QuoteApplyFooterComponent }  from "./components/quoteapply/quote-apply-footer.component";
 import { TellFormComponent }  from "./components/tellform/tell-form.component";
@@ -27,6 +28,7 @@ import { WindowRef } from "./components/windowref";
     ],
     declarations: [
         AutoScrollTo,
+        LimitMultiSelect,
         TellFormComponent,
         QuestionGroupComponent],
     providers: [

@@ -665,7 +665,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
 #line 234
     testRunner.Then("I see that the Progress Bar is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 235
-    testRunner.And("I see that the Apply button is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I see that the quote and apply Apply button is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -853,7 +853,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
 #line 309
     testRunner.Then("I see that the Progress Bar is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 310
-    testRunner.And("I see that the Apply button is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I see that the quote and apply Apply button is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -1106,7 +1106,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
 #line 411
     testRunner.Then("I see that the Progress Bar is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 412
-    testRunner.And("I see that the Apply button is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I see that the quote and apply Apply button is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
