@@ -20,8 +20,15 @@ content-length: 77
 ----version----
 language: en
 version: 1
-revision: 41f75287-8d74-4598-964b-0a51448fb26b
+revision: 23b92fed-e278-4e61-a604-389952096827
 
+----field----
+field: {C2C33986-4B81-430D-93F1-B0A5C768B50E}
+name: PrimaryImage
+key: primaryimage
+content-length: 58
+
+<image mediaid="{5894EEFF-2694-4010-92E9-51957D80B63B}" />
 ----field----
 field: {AD6E6AF9-FA48-4332-BAD5-5811A81237E5}
 name: Benefits
@@ -141,14 +148,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-41f75287-8d74-4598-964b-0a51448fb26b
+23b92fed-e278-4e61-a604-389952096827
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170918T135955Z
+20170919T145224Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

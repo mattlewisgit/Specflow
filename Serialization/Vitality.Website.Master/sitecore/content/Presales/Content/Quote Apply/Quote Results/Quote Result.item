@@ -20,8 +20,15 @@ content-length: 77
 ----version----
 language: en
 version: 1
-revision: 41f75287-8d74-4598-964b-0a51448fb26b
+revision: 23b92fed-e278-4e61-a604-389952096827
 
+----field----
+field: {C2C33986-4B81-430D-93F1-B0A5C768B50E}
+name: PrimaryImage
+key: primaryimage
+content-length: 58
+
+<image mediaid="{5894EEFF-2694-4010-92E9-51957D80B63B}" />
 ----field----
 field: {AD6E6AF9-FA48-4332-BAD5-5811A81237E5}
 name: Benefits
@@ -52,13 +59,6 @@ content-length: 16
 
 Print your quote
 ----field----
-field: {974C6F80-F404-42FD-B1CC-EA8DFAA4FF4F}
-name: CallToActionText
-key: calltoactiontext
-content-length: 10
-
-BUY ONLINE
-----field----
 field: {6D614ABB-3AA4-45C4-B445-07A9F4163950}
 name: QuoteValidText
 key: quotevalidtext
@@ -87,12 +87,26 @@ content-length: 124
 
 <link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{A21A056A-363E-4E51-A11E-FF8ACBF8C9D1}" />
 ----field----
+field: {974C6F80-F404-42FD-B1CC-EA8DFAA4FF4F}
+name: CallToActionText
+key: calltoactiontext
+content-length: 10
+
+BUY ONLINE
+----field----
 field: {622A60FC-0BC6-433F-A259-EE053E32988A}
 name: EditIcon
 key: editicon
 content-length: 58
 
 <image mediaid="{33B21218-28E1-417F-88D0-2E757474251F}" />
+----field----
+field: {4A77B883-1D83-458A-843B-5AD86EF22F57}
+name: AlternativeCallToActionText
+key: alternativecalltoactiontext
+content-length: 16
+
+REQUEST CALLBACK
 ----field----
 field: {80D17615-348F-4753-8812-2FD0B7ABB623}
 name: TooltipButtonText
@@ -134,14 +148,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-41f75287-8d74-4598-964b-0a51448fb26b
+23b92fed-e278-4e61-a604-389952096827
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170918T135955Z
+20170919T145224Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
