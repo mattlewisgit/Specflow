@@ -15,6 +15,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         public Image EditIcon { get; set; }
         public string HelpText { get; set; }
         public IEnumerable<PermutationViewModel> Permutations { get; set; }
+        public Image PrimaryImage { get; set; }
         public string PrintText { get; set; }
         public string QuoteReferenceText { get; set; }
         public string QuoteValidText { get; set; }
