@@ -31,7 +31,7 @@ namespace Vitality.Website.Areas.AppManifests
         /// <summary>
         /// Sitecore content root path.
         /// </summary>
-        public const string SitecoreContentRootPath = "/sitecore/content/presales/home";
+        public const string SitecoreContentRootPath = "/sitecore/content";
 
         /// <summary>
         /// Sitecore field Version.
