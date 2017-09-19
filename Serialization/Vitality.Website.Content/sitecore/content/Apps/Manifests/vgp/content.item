@@ -2,7 +2,7 @@
 version: 1
 id: {9A4FF7FA-E740-46EC-A9F7-86943BD3F9D9}
 database: master
-path: /sitecore/content/Presales/home/app-manifests/vgp/content
+path: /sitecore/content/Apps/Manifests/vgp/content
 parent: {3C6D71A7-0CBA-44AA-8C95-0B013A96FE5E}
 name: content
 master: {00000000-0000-0000-0000-000000000000}

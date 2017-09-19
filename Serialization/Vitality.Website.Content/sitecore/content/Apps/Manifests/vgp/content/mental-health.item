@@ -2,7 +2,7 @@
 version: 1
 id: {74897838-C1A3-4560-AC33-C78DBD09A9C7}
 database: master
-path: /sitecore/content/Presales/home/app-manifests/vgp/content/mental-health
+path: /sitecore/content/Apps/Manifests/vgp/content/mental-health
 parent: {9A4FF7FA-E740-46EC-A9F7-86943BD3F9D9}
 name: mental-health
 master: {00000000-0000-0000-0000-000000000000}
