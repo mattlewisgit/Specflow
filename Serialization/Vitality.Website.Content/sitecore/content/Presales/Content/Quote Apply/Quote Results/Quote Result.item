@@ -20,8 +20,15 @@ content-length: 77
 ----version----
 language: en
 version: 1
-revision: 5f7eade7-3185-4339-8600-a270396c22ae
+revision: 23b92fed-e278-4e61-a604-389952096827
 
+----field----
+field: {C2C33986-4B81-430D-93F1-B0A5C768B50E}
+name: PrimaryImage
+key: primaryimage
+content-length: 58
+
+<image mediaid="{5894EEFF-2694-4010-92E9-51957D80B63B}" />
 ----field----
 field: {AD6E6AF9-FA48-4332-BAD5-5811A81237E5}
 name: Benefits
@@ -73,6 +80,13 @@ content-length: 12
 
 What is this
 ----field----
+field: {ED7DD961-4A22-4BDF-B14D-93A0F728887C}
+name: ServiceOutagePage
+key: serviceoutagepage
+content-length: 124
+
+<link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{A21A056A-363E-4E51-A11E-FF8ACBF8C9D1}" />
+----field----
 field: {974C6F80-F404-42FD-B1CC-EA8DFAA4FF4F}
 name: CallToActionText
 key: calltoactiontext
@@ -80,47 +94,33 @@ content-length: 10
 
 BUY ONLINE
 ----field----
-field: {31B33C0F-872A-4E66-9042-325C1109BBF9}
-name: CallToAction
-key: calltoaction
-content-length: 124
+field: {622A60FC-0BC6-433F-A259-EE053E32988A}
+name: EditIcon
+key: editicon
+content-length: 58
 
-<link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{736472B3-DF0A-4B21-B0AE-C0DC2F0FD587}" />
+<image mediaid="{33B21218-28E1-417F-88D0-2E757474251F}" />
 ----field----
 field: {4A77B883-1D83-458A-843B-5AD86EF22F57}
 name: AlternativeCallToActionText
 key: alternativecalltoactiontext
-content-length: 19
+content-length: 16
 
-Request a call back
+REQUEST CALLBACK
 ----field----
-field: {451321B3-4083-47E6-B192-FABCF7C6A00B}
-name: AlternativeCallToAction
-key: alternativecalltoaction
-content-length: 124
+field: {80D17615-348F-4753-8812-2FD0B7ABB623}
+name: TooltipButtonText
+key: tooltipbuttontext
+content-length: 6
 
-<link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{D6DA3A82-1EB1-4F14-92C1-F3F1886847DC}" />
+Select
 ----field----
-field: {FAEDE46C-82A2-4D5B-96C3-1CF2DE54A148}
-name: MarketingMessages
-key: marketingmessages
-content-length: 77
+field: {32D6D8FF-2E58-4EB5-BE2E-57A4E65B0450}
+name: TooltipImage
+key: tooltipimage
+content-length: 58
 
-{06976FDF-8E0D-4AD4-8675-F8F7EB3D1F47}|{32E27548-44BB-4D9B-A7DD-1079AD15034D}
-----field----
-field: {0DFDBF60-5523-438B-AD6B-E8FC27996955}
-name: MarketingLoadingSubtitle
-key: marketingloadingsubtitle
-content-length: 19
-
-Fetching your quote
-----field----
-field: {44EB7A9A-C8E8-4868-A999-2E385BBFC178}
-name: MarketingMessageTimeOut
-key: marketingmessagetimeout
-content-length: 1
-
-5
+<image mediaid="{5BA43839-770E-45CA-BA97-60352F0DFCD6}" />
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -148,14 +148,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5f7eade7-3185-4339-8600-a270396c22ae
+23b92fed-e278-4e61-a604-389952096827
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170919T092540Z
+20170919T145224Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

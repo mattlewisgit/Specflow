@@ -90,7 +90,10 @@
             config.CreateMap<Benefit, BenefitViewModel>()
                 .ForMember(
                     dest => dest.Code,
-                    opt => opt.MapFrom(src => src.Code.Value));
+                    opt => opt.MapFrom(src => src.Code.Value))
+                     .ForMember(
+                    dest => dest.SelectedOption,
+                    opt => opt.MapFrom(src => src.SelectedOption.Value));
 
             config.CreateMap<BenefitOption, BenefitOptionViewModel>()
                 .ForMember(

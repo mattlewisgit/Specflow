@@ -13,7 +13,7 @@ created: 20170613T101657Z
 ----version----
 language: en
 version: 1
-revision: ed2f1b4b-fd5d-42ad-a153-408e8f306867
+revision: dfeaf9f0-17d9-4154-b320-f66e0bca7649
 
 ----field----
 field: {DE38D3EB-81E3-4D60-8F57-F803A68EBEF2}
@@ -33,9 +33,9 @@ content-length: 38
 field: {3754388B-A1F5-4D59-BB18-D8F583537122}
 name: ValidationMessage
 key: validationmessage
-content-length: 26
+content-length: 23
 
-Please enter a  valid date
+Please enter valid date
 ----field----
 field: {119DDC94-4309-4020-A0DE-938EDF5850F3}
 name: HelpText
@@ -56,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ed2f1b4b-fd5d-42ad-a153-408e8f306867
+dfeaf9f0-17d9-4154-b320-f66e0bca7649
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170613T101833Z
+20170823T110514Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

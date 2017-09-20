@@ -92,3 +92,11 @@
    	| CPME       |
    	| FMU        |
    	| Moratorium |
+
+    Scenario: Check CTA button labelling
+    Given I am on presales /dev/quote-result
+    And I see the Quote Results page feed load has completed
+    When I look at the cover available within the Enhanced offering
+    Then I see that the Underwriting Types cover option is set to Moratorium
+    And I see that the Quote CTA button text is set to BUY ONLINE
+

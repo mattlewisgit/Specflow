@@ -349,6 +349,28 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute(DisplayName="Check CTA button labelling")]
+        [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
+        [Xunit.TraitAttribute("Description", "Check CTA button labelling")]
+        public virtual void CheckCTAButtonLabelling()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check CTA button labelling", ((string[])(null)));
+#line 96
+    this.ScenarioSetup(scenarioInfo);
+#line 97
+    testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 98
+    testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 99
+    testRunner.When("I look at the cover available within the Enhanced offering", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 100
+    testRunner.Then("I see that the Underwriting Types cover option is set to Moratorium", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 101
+    testRunner.And("I see that the Quote CTA button text is set to BUY ONLINE", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable

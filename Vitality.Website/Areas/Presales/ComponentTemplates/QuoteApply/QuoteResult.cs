@@ -4,6 +4,7 @@ using Glass.Mapper.Sc.Configuration.Attributes;
 using Glass.Mapper.Sc.Fields;
 using Vitality.Website.Areas.Global.Models;
 using Vitality.Website.Areas.Presales.ComponentTemplates.Generic;
+using Vitality.Website.SC.Utilities;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 {
@@ -20,6 +21,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 
         public Link CallToAction { get; set; }
         public string CallToActionText { get; set; }
+        public Image EditIcon { get; set; }
         public string HelpText { get; set; }
 
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
@@ -30,6 +32,8 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         public string QuoteValidText { get; set; }
         public Link ServiceOutagePage { get; set; }
         public string TooltipText { get; set; }
+        public string TooltipButtonText { get; set; }
+        public Image TooltipImage { get; set; }
 
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<Content> MarketingMessages { get; set; }
