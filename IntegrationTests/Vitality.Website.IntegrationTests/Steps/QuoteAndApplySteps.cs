@@ -359,17 +359,41 @@ namespace Vitality.Website.IntegrationTests.Steps
         [When(@"I go to the (.*) checkbox field and select the value")]
         public void GivenIGoToTheCheckboxFieldAndSelectTheValue(string checkbox)
         {
-            WebDriver
+            try
+            {
+                WebDriver
                 .ScrollToElement(
+
                     $@".quote--content > tell-form .question .checkbox-list li label:contains(""{checkbox}"")");
 
-
-            WebDriver
+                WebDriver
                 .FindElement(new JQuerySelector(
                     $".quote--content > tell-form .question .checkbox-list li label:contains('{checkbox}')"))
                 .Click();
-
+            }
+            catch (Exception)
+            {
+                Assert.True(false, "" + checkbox + " multiselector not found");
+            }
         }
+
+        [Then(@"I expect the (.*) checkbox field to be disabled")]
+        public void ThenIExpectTheCheckboxFieldToBeDisabled(string checkbox)
+        {
+            try
+            {
+                WebDriver
+                .FindElement(new JQuerySelector(
+                    $".quote--content > tell-form .question .checkbox-list li:contains('{checkbox}')"))
+                    .GetAttribute("outerHTML")
+                    .ShouldContain("disabled");
+            }
+            catch (Exception)
+            {
+                Assert.True(false, "multiselector" + checkbox + " is not disabled");
+            }
+        }
+
 
         [Then(@"I expect the quote result personalised greeting to contain the users first name")]
         public void ThenIExpectTheQuoteResultPersonalisedGreetingToContainTheUsersFirstName() => WebDriver

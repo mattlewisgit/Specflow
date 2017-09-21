@@ -89,9 +89,61 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
 #line 10
  testRunner.When("I go to the Discounted gym membership checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
-    testRunner.And("I go to the marketingPermission field and choose Agreed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
     testRunner.Then("I don\'t see any field errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Multiselector - Select three values")]
+        [Xunit.TraitAttribute("FeatureTitle", "MultiselectorField")]
+        [Xunit.TraitAttribute("Description", "Multiselector - Select three values")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void Multiselector_SelectThreeValues()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiselector - Select three values", new string[] {
+                        "QuoteAndApply"});
+#line 14
+ this.ScenarioSetup(scenarioInfo);
+#line 15
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 16
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+ testRunner.When("I go to the Discounted gym membership checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
+    testRunner.And("I go to the Mental wellbeing checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 19
+    testRunner.And("I go to the Apple watch checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 20
+    testRunner.Then("I don\'t see any field errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Multiselector - Unable to exceed maximum amount of selections (max 3)")]
+        [Xunit.TraitAttribute("FeatureTitle", "MultiselectorField")]
+        [Xunit.TraitAttribute("Description", "Multiselector - Unable to exceed maximum amount of selections (max 3)")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void Multiselector_UnableToExceedMaximumAmountOfSelectionsMax3()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiselector - Unable to exceed maximum amount of selections (max 3)", new string[] {
+                        "QuoteAndApply"});
+#line 23
+ this.ScenarioSetup(scenarioInfo);
+#line 24
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 25
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 26
+ testRunner.When("I go to the Discounted gym membership checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 27
+    testRunner.And("I go to the Mental wellbeing checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
+    testRunner.And("I go to the Apple watch checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 29
+    testRunner.Then("I expect the Fast private GP access and diagnosis checkbox field to be disabled", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 30
+    testRunner.And("I don\'t see any field errors", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
