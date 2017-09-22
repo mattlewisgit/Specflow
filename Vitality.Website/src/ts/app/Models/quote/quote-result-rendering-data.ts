@@ -14,5 +14,8 @@ export class QuoteResultRenderingData {
     referenceId: string;
     serviceOutagePage: string;
     tooltipText: string;
-    tooltipButtonText:string;
+    tooltipButtonText: string;
+    marketingMessages: Array<string>;
+    marketingMessageTimeOut: number;
+    marketingLoadingSubtitle: string;
 }
