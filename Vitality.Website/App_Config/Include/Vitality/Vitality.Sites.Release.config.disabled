@@ -33,6 +33,22 @@
            set:htmlCacheSize="100MB"
            set:cacheRenderingParameters="true"
            set:renderingParametersCacheSize="20MB" />
+        <site name="apps-temp"
+           set:hostName="#{Vitality.Website.PresalesHostName}"
+           set:cacheHtml="true"
+           set:database="#{Vitality.Website.Database}"
+           set:scheme="#{Vitality.Website.Protocol}"
+           set:htmlCacheSize="100MB"
+           set:cacheRenderingParameters="true"
+           set:renderingParametersCacheSize="20MB" />
+        <site name="apps"
+           set:hostName="#{Vitality.Website.AppsHostName}"
+           set:cacheHtml="true"
+           set:database="#{Vitality.Website.Database}"
+           set:scheme="#{Vitality.Website.Protocol}"
+           set:htmlCacheSize="100MB"
+           set:cacheRenderingParameters="true"
+           set:renderingParametersCacheSize="20MB" />
     </sites>
     <databases>
       <database id="web">

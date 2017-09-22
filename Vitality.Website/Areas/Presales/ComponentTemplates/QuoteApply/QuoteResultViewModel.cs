@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
-using Glass.Mapper.Sc.Configuration;
-using Glass.Mapper.Sc.Configuration.Attributes;
-using Vitality.Website.Areas.Global.Models;
+using Glass.Mapper.Sc.Fields;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 {
@@ -14,12 +12,16 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         public IEnumerable<BenefitViewModel> Benefits { get; set; }
         public string CallToAction { get; set; }
         public string CallToActionText { get; set; }
+        public Image EditIcon { get; set; }
         public string HelpText { get; set; }
         public IEnumerable<PermutationViewModel> Permutations { get; set; }
+        public Image PrimaryImage { get; set; }
         public string PrintText { get; set; }
         public string QuoteReferenceText { get; set; }
         public string QuoteValidText { get; set; }
         public string ServiceOutagePage { get; set; }
+        public string TooltipButtonText { get; set; }
         public string TooltipText { get; set; }
+        public Image TooltipImage { get; set; }
     }
 }
