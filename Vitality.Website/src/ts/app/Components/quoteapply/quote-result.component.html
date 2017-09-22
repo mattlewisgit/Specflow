@@ -15,8 +15,8 @@
             </h1>
             <div [innerHTML]="quoteResultData.introductionText"></div>
         </div>
-        <div class="ambassabanner--image">
-            <img [src]="quoteResultData.primaryImage" alt="Vitality Ambassadors">
+        <div class="ambassabanner--image" *ngIf="quoteResultData.primaryImage">
+            <img [src]="quoteResultData.primaryImage.src" [alt]="quoteResultData.primaryImage.alt">
         </div>
     </div>
     <table class="comparison-table table--4-col table--highlight-col-3" *ngIf="quotes.length>1">
@@ -95,7 +95,7 @@
         </tbody>
     </table>
     <div class="comparison-table">
-        <div class="comparison-table--header" [ngStyle]="{ 'background-image': 'url(' + quoteResultData.primaryImage + ')'}">
+        <div class="comparison-table--header" [ngStyle]="{ 'background-image': 'url(' + quoteResultData.primaryImage.src + ')'}">
             <p>
                 <b>{{ quoteResultData.quoteValidText }}</b>
             </p>

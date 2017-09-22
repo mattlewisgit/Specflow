@@ -12,7 +12,6 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
     {
         public string PersonalisedGreetingText { get; set; }
         public string IntroductionText { get; set; }
-        public Image PrimaryImage { get; set; }
         public Link AlternativeCallToAction { get; set; }
         public string AlternativeCallToActionText { get; set; }
 
@@ -26,7 +25,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<Permutation> Permutations { get; set; }
-
+        public Image PrimaryImage { get; set; }
         public string PrintText { get; set; }
         public string QuoteReferenceText { get; set; }
         public string QuoteValidText { get; set; }

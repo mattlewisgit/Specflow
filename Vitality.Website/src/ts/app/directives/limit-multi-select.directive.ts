@@ -29,7 +29,11 @@ export class LimitMultiSelect implements OnInit {
     private toggleCheckBoxes(disable: boolean) {
         for (let elem of this.checkBoxes) {
             if (!elem.checked) {
-                elem.disabled = disable;
+                if (disable) {
+                    elem.setAttribute("disabled", "disabled");
+                } else {
+                    elem.removeAttribute("disabled");
+                }
             }
         }
     }
