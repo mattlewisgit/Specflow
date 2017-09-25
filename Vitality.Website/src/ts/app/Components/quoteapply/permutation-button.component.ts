@@ -18,6 +18,8 @@ export class PermutationButtonComponent implements OnChanges {
     callToActionText: string;
     @Input()
     optionCode: string;
+    @Input()
+    cssClass: string;
 
     isBuyNow: boolean;
 

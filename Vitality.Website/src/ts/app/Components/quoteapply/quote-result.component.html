@@ -33,12 +33,12 @@
                 </p>
             </th>
             <th *ngFor="let permutation of quoteResultData.permutations">
-                <permutation-button
-                                    [alternativeCallToAction] ="quoteResultData.alternativeCallToAction"
-                                    [alternativeCallToActionText]="quoteResultData.alternativeCallToActionText"
-                                    [callToAction] ="quoteResultData.callToAction"
-                                    [callToActionText]="quoteResultData.callToActionText"
-                                    [optionCode]="getUnderwritingType(permutation.id)"></permutation-button>
+                    <permutation-button [alternativeCallToAction]="quoteResultData.alternativeCallToAction"
+                                        [alternativeCallToActionText]="quoteResultData.alternativeCallToActionText"
+                                        [callToAction]="quoteResultData.callToAction"
+                                        [callToActionText]="quoteResultData.callToActionText"
+                                        [optionCode]="getUnderwritingType(permutation.id)"
+                                        [cssClass]="'button--box button--box__primary button--box__small'"></permutation-button>
             </th>
         </tr>
         </thead>
@@ -128,9 +128,12 @@
                 </div>
             </div>
             <div class="comparison-table--footer">
-                <p class="comparison-table--buy">
-                    <button class="button--box button--box__primary button--box__small width--full">{{ quoteResultData.callToActionText }}</button>
-                </p>
+                        <permutation-button [alternativeCallToAction]="quoteResultData.alternativeCallToAction"
+                                            [alternativeCallToActionText]="quoteResultData.alternativeCallToActionText"
+                                            [callToAction]="quoteResultData.callToAction"
+                                            [callToActionText]="quoteResultData.callToActionText"
+                                            [optionCode]="getUnderwritingType(permutation.id)"
+                                            [cssClass]="'button--box button--box__primary button--box__small width--full'"></permutation-button>
             </div>
         </div>
     </div>
