@@ -1,0 +1,35 @@
+﻿@using AutoMapper
+@using Newtonsoft.Json
+@using Newtonsoft.Json.Serialization
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Generic.Content>
+
+@{
+    var serializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
+    var angularModel = JsonConvert.SerializeObject(Model, serializerSettings);
+}
+
+@if (Sitecore.Context.PageMode.IsExperienceEditor)
+{
+    <div class="grid">
+        <div class="grid-col-12-12">
+            @Editable(Model, item => item.RichText)
+        </div>
+    </div>
+}
+else
+{
+    <script type="text/javascript">
+    window.angularData = window.angularData || {};
+        window.angularData.richTextContent = @Html.Raw(angularModel);
+    </script>
+
+    <rich-text-content>
+    </rich-text-content>
+
+
+
+    <script type="text/javascript">
+        System.import('/js/rich-text-content.main.js')
+            .catch(function (err) { throw err; });
+    </script>
+}           
