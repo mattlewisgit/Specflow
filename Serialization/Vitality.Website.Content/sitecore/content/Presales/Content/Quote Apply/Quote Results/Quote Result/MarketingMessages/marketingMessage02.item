@@ -20,17 +20,17 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 9aa82e63-297d-438d-a743-6667437e5540
+revision: dcbc9340-67a3-454b-918e-aa48cc210db0
 
 ----field----
 field: {35B57356-DA32-4179-AFD5-3A74F13831B9}
 name: RichText
 key: richtext
-content-length: 439
+content-length: 369
 
-<span style="background-color: #ffffff; text-align: justify; color: #000000;">Donec vitae hendrerit sapien, et iaculis felis. Praesent semper nibh sapien, eu elementum neque pulvinar quis.<br />
-In lacinia eros ac orci ultricies, vel feugiat mi tincidunt.<br />
-Curabitur libero sapien, <strong>semper non efficitur in, efficitur</strong> vitae mi. Sed eros nisi, <strong>bibendum quis eleifend</strong> id, pulvinar porttitor erat.</span>
+<span style="background-color: #ffffff; text-align: justify; color: #000000;"></span>
+<p><strong>Make every step count with an activity tracker</strong></p>
+<p>Though our Vitality partners we give our members big savings on a wide range of activity trackers. Then you can make every step count by earning Vitality points and active rewards for getting active.&nbsp;</p>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -58,14 +58,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9aa82e63-297d-438d-a743-6667437e5540
+dcbc9340-67a3-454b-918e-aa48cc210db0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170912T153355Z
+20170929T124416Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

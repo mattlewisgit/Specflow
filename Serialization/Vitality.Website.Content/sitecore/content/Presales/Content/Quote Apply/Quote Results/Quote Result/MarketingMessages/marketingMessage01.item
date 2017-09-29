@@ -20,18 +20,17 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 64ff8c44-b1e8-475f-904f-c8b5b7c47709
+revision: 8ee6529d-c0c2-4c89-aa17-210923cd80e7
 
 ----field----
 field: {35B57356-DA32-4179-AFD5-3A74F13831B9}
 name: RichText
 key: richtext
-content-length: 545
+content-length: 345
 
-<span style="background-color: #ffffff; text-align: justify; color: #000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-Integer lectus purus, tempor gravida risus et, luctus consectetur nibh. Nam scelerisque risus eu dolor tincidunt ultrices. <br />
-<br />
-Nullam id pellentesque urna. Fusce nec risus <strong>vitae massa tempus consequat</strong> in ac ante. Nulla facilisi. Aenean eget malesuada nisl, a condimentum sem. Etiam pulvinar ipsum <strong>pellentesque ante elementum</strong>, ac efficitur felis mollis.</span>
+<span style="background-color: #ffffff; text-align: justify; color: #000000;"></span>
+<p><strong>Save up to &pound;135 per year on coffee.</strong></p>
+<p>Get a free coffee every week on us! Take out a policy with us and we give you the chance to enjoy your favourite handcrafted coffee every week at Starbucks just for getting active.&nbsp;</p>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -59,14 +58,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-64ff8c44-b1e8-475f-904f-c8b5b7c47709
+8ee6529d-c0c2-4c89-aa17-210923cd80e7
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170912T153343Z
+20170929T124154Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
