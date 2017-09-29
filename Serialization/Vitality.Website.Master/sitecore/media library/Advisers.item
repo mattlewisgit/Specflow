@@ -2,40 +2,26 @@
 version: 1
 id: {DD522B88-4C13-4648-B243-B7C1D426186A}
 database: master
-path: /sitecore/media library/advisers
+path: /sitecore/media library/Advisers
 parent: {3D6658D8-A0BF-4E75-B3E2-D050FABCF4E1}
-name: advisers
+name: Advisers
 master: {00000000-0000-0000-0000-000000000000}
 template: {FE5DD826-48C6-436D-B87A-7C4210C7413B}
 templatekey: Media folder
-created: 20161024T164259Z
+created: 20160907T154022Z
 
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 1
-
-0
 ----field----
 field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
 name: __Security
 key: __security
-content-length: 251
+content-length: 168
 
-ar|sitecore\Apps User|pe|!*|pd|!*|ar|sitecore\Presales User|pe|!*|pd|!*|ar|sitecore\HealthiestWorkplace User|pe|!*|pd|!*|ar|sitecore\Advisers User|pe|+item:create|+item:write|+item:read|pd|+item:rename|+item:write|+item:read|+item:delete|+item:create|
+ar|sitecore\Advisers User|pe|+item:create|+item:write|+item:read|pd|+item:rename|+item:write|+item:read|+item:delete|+item:create|ar|sitecore\Presales User|pe|!*|pd|!*|
 ----version----
 language: en
 version: 1
-revision: ad06d6bb-ac4f-4d8c-9b4e-9dbaf64d9e03
+revision: a32696be-f755-4f7e-b599-ec62d2d6977a
 
-----field----
-field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
-name: __Display name
-key: __display name
-content-length: 8
-
-Advisers
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -56,21 +42,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ad06d6bb-ac4f-4d8c-9b4e-9dbaf64d9e03
+a32696be-f755-4f7e-b599-ec62d2d6977a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170920T113453Z
+20161117T170238Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 13
 
-sitecore\Dave
+sitecore\dave
 ----field----
 field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
 name: __Lock

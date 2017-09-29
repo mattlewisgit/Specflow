@@ -2,12 +2,13 @@
 version: 1
 id: {C02BF85D-8B29-4882-A9C7-B34CC19D8912}
 database: master
-path: /sitecore/media library/presales/Components/lady-in-park
+path: /sitecore/media library/Presales/Components/lady-in-park
 parent: {5C450172-7FEE-4F80-B107-BBC6C1B9A44D}
 name: lady-in-park
 master: {00000000-0000-0000-0000-000000000000}
 template: {DAF085E8-602E-43A6-8299-038FF171349F}
 templatekey: Jpeg
+created: 20170403T145005Z
 
 ----field----
 field: {40E50ED9-BA07-4702-992E-A912738D32DC}

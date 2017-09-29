@@ -2,12 +2,13 @@
 version: 1
 id: {729F0ED0-F71A-44DD-9FEA-295152ECE87D}
 database: master
-path: /sitecore/media library/presales/components/Defaqto
+path: /sitecore/media library/Presales/Components/Defaqto
 parent: {5C450172-7FEE-4F80-B107-BBC6C1B9A44D}
 name: Defaqto
 master: {00000000-0000-0000-0000-000000000000}
 template: {FE5DD826-48C6-436D-B87A-7C4210C7413B}
 templatekey: Media folder
+created: 20170904T141321Z
 
 ----version----
 language: en

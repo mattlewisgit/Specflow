@@ -1,0 +1,52 @@
+----item----
+version: 1
+id: {CEA1CF6B-BA7E-4210-8102-ECC8636A375C}
+database: master
+path: /sitecore/content/Presales/Configuration/Partners/Categories/Fitness
+parent: {E1E99AFB-A222-4A4B-ABED-EEA483296B34}
+name: Fitness
+master: {00000000-0000-0000-0000-000000000000}
+template: {57BC115E-A8B8-4FA7-A378-F9D8A5F1EE38}
+templatekey: Taxonomy
+created: 20170919T161902Z
+
+----version----
+language: en
+version: 1
+revision: 782f12f6-c97f-4b9b-a6ed-3b4df6b18d50
+
+----field----
+field: {90D47B80-C408-4DE9-84C2-93AB87633245}
+name: Title
+key: title
+content-length: 7
+
+Fitness
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20160622T092451Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+782f12f6-c97f-4b9b-a6ed-3b4df6b18d50
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20160622T092451Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

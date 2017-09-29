@@ -2,12 +2,13 @@
 version: 1
 id: {B9027383-14AC-49F2-A899-AFC1F5D67571}
 database: master
-path: /sitecore/media library/presales/Components/boy-playing-with-train
+path: /sitecore/media library/Presales/Components/boy-playing-with-train
 parent: {5C450172-7FEE-4F80-B107-BBC6C1B9A44D}
 name: boy-playing-with-train
 master: {00000000-0000-0000-0000-000000000000}
 template: {DAF085E8-602E-43A6-8299-038FF171349F}
 templatekey: Jpeg
+created: 20170403T145001Z
 
 ----field----
 field: {40E50ED9-BA07-4702-992E-A912738D32DC}

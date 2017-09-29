@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {077FEBB4-E848-4606-B9C5-5B186C648E97}
+id: {7C17A46C-F3B0-4710-B6E1-6BF290D2F372}
 database: master
 path: /sitecore/content/Presales/home/development
 parent: {110D559F-DEA5-42EA-9C1C-8A5DF7E70EF9}
@@ -8,14 +8,8 @@ name: development
 master: {00000000-0000-0000-0000-000000000000}
 template: {EAE876EB-8043-4F1B-95C4-C015EAE09215}
 templatekey: Product Overview Page
+created: 20170606T111139Z
 
-----field----
-field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
-name: __Renderings
-key: __renderings
-content-length: 208
-
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}"><p:d /></r><r uid="{B59AF949-7B41-4E23-8CD4-A41D5128E3F8}"><p:d /></r></d></r>
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
 name: __Workflow
@@ -26,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 99f21a78-3b0a-403e-9ae8-62142d4a66c7
+revision: 69c08c23-466c-450a-bfc0-e773deff173b
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
@@ -39,37 +33,51 @@ Development
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 334
+content-length: 398
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{9183BB04-FF65-4475-9693-B66572AB5C7C}" p:before="*" s:ds="{EDDF994A-9A92-46B2-9758-81A247B8FB91}" s:id="{26C84568-1294-4492-B482-3ED4DA4915BC}" s:ph="PresalesContent" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{154422BB-0F5D-4767-92A7-D9930599460D}" p:before="*" s:ds="{6A308190-B4CE-4A7F-84E2-6C24F7B3E56A}" s:id="{2E89254C-C84F-482E-9B60-5C18B0BC7D3E}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160617T155718Z
+20170606T111139Z
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-99f21a78-3b0a-403e-9ae8-62142d4a66c7
+69c08c23-466c-450a-bfc0-e773deff173b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160725T092952Z
+20170606T111850Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin
 ----field----
 field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
 name: __Workflow state
