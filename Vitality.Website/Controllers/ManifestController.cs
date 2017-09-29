@@ -62,7 +62,7 @@ namespace Vitality.Website.Controllers
             {
                 // Sitecore fast query to get all the children item having below mentioned template id. 
                 var query = string.Format(
-                    "fast:/{0}//*[@@templateid ={1}]",
+                    "fast:/{0}//*[@@templateid ='{1}']",
                     Sitecore.Context.Item.Paths.Path,
                     AppManifestsConstants.ReferenceDataTemplateId);
 
