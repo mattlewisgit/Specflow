@@ -76,6 +76,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
             formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieRefUrlKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieRefUrlKey]);
             formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieSourceKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieSourceKey]);
             formFieldsDictionary.Add($"{{{utmCookieSettings.UtmCookieTermKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmCookieTermKey]);
+            formFieldsDictionary.Add($"{{{utmCookieSettings.UtmAdGroupKey.ToUpper()}}}", utmCookie[utmCookieSettings.UtmAdGroupKey]);
 
             return formFieldsDictionary;
         }
