@@ -84,6 +84,7 @@ gulp.task(tasks.js.default, [tasks.js.typescript], function () {
 // Standard task runner that installs and builds eveything.
 gulp.task(tasks.default, function () {
     runSequence(
+        tasks.bower.default,
         [
             tasks.css.default,
             tasks.js.default

@@ -2,8 +2,7 @@
   "directory": "./bower_components",
   "registry": {
     "search": [
-      "http://172.27.160.110/bower/Bower",
-      "https://bower.herokuapp.com"
+      "http://172.27.160.110/bower/Bower"
     ]
   }
 }
