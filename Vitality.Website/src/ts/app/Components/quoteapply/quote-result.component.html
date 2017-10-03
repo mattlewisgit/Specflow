@@ -28,8 +28,8 @@
                 <p>
                     <b>{{ quoteResultData.quoteValidText }}</b>
                 </p>
-                <p>
-                    <b>{{ quoteResultData.quoteReferenceText }} <span class="highlight">1234567-0</span></b>
+                <p *ngIf="quoteResultData.referenceId">
+                    <b>{{ quoteResultData.quoteReferenceText }} <span class="highlight">{{ quoteResultData.referenceId }}</span></b>
                 </p>
             </th>
             <th *ngFor="let permutation of quoteResultData.permutations">
@@ -38,7 +38,8 @@
                                         [callToAction]="quoteResultData.callToAction"
                                         [callToActionText]="quoteResultData.callToActionText"
                                         [optionCode]="getUnderwritingType(permutation.id)"
-                                        [cssClass]="'button--box button--box__primary button--box__small'"></permutation-button>
+                                        [cssClass]="'button--box button--box__primary button--box__small'"
+                                        [referenceId]="quoteResultData.referenceId"></permutation-button>
             </th>
         </tr>
         </thead>
@@ -90,8 +91,8 @@
             <p>
                 <b>{{ quoteResultData.quoteValidText }}</b>
             </p>
-            <p>
-                <b>{{ quoteResultData.quoteReferenceText }} <span class="highlight">1234567-0</span></b>
+            <p *ngIf="quoteResultData.referenceId">
+                <b>{{ quoteResultData.quoteReferenceText }} <span class="highlight">{{ quoteResultData.referenceId }}</span></b>
             </p>
         </div>
         <div *ngFor="let permutation of quoteResultData.permutations;odd as isOdd;" class="comparison-table--single" [class.comparison-table__highlight]="isOdd">
@@ -133,7 +134,8 @@
                                             [callToAction]="quoteResultData.callToAction"
                                             [callToActionText]="quoteResultData.callToActionText"
                                             [optionCode]="getUnderwritingType(permutation.id)"
-                                            [cssClass]="'button--box button--box__primary button--box__small width--full'"></permutation-button>
+                                            [cssClass]="'button--box button--box__primary button--box__small width--full'"
+                                            [referenceId]="quoteResultData.referenceId"></permutation-button>
             </div>
         </div>
     </div>
