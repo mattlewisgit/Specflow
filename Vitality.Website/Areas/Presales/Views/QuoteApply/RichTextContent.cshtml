@@ -1,11 +1,9 @@
-﻿@using AutoMapper
-@using Newtonsoft.Json
-@using Newtonsoft.Json.Serialization
-@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.ComponentTemplates.Generic.Content>
+﻿@using Vitality.Website.Areas.Presales.ComponentTemplates.Generic
+@using Vitality.Website.Extensions
+@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Content>
 
 @{
-    var serializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
-    var angularModel = JsonConvert.SerializeObject(Model, serializerSettings);
+    var angularModel = Model.SerializeToCamelCase<Content>();
 }
 
 @if (Sitecore.Context.PageMode.IsExperienceEditor)
@@ -32,4 +30,4 @@ else
         System.import('/js/rich-text-content.main.js')
             .catch(function (err) { throw err; });
     </script>
-}           
+}

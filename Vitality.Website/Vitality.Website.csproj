@@ -4018,6 +4018,7 @@
     <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />
     <Compile Include="Controllers\ManifestController.cs" />
     <Compile Include="Controllers\ReferenceDataController.cs" />
+    <Compile Include="Extensions\JsonExtensions.cs" />
     <Compile Include="Extensions\Views\AcknowledgementExtensions.cs" />
     <Compile Include="Pipelines\AppStartInitializer.cs" />
     <Compile Include="App_Start\GlassMapperSc.cs" />
