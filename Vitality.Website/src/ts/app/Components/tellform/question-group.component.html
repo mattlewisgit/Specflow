@@ -4,19 +4,19 @@
         <ng-container *ngSwitchCase="'dropdown'">
             <div class="question--input__select">
                 {{ question.label }}
-                <select [id]="question.key" [formControlName]="question.key" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">
-                    <option *ngIf="question.placeholder " value="">{{ question.placeholder }}</option>
-                    <option *ngFor="let opt of question.relatedData" [value]="opt.key">{{opt.value}}</option>
-                </select>
+                    <select [id]="question.key" [formControlName]="question.key" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">
+                        <option *ngIf="question.placeholder " value="">{{ question.placeholder }}</option>
+                        <option *ngFor="let opt of question.relatedData" [value]="opt.key">{{opt.value}}</option>
+                    </select>
             </div>
         </ng-container>
         <ng-container *ngSwitchCase="'multiselect'">
             <div class="question--input__info">
                 {{ question.label }}
             </div>
-            <ul class="checkbox-list" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted" limit-multi-select>
-                <li *ngFor="let opt of question.relatedData">
-                    <input [id]="opt.key" type="checkbox" aria-hidden="true" [formControlName]="question.key" (click)="storeSelectedCheckboxValues($event, opt.value, question)"/>
+            <ul class="question--checkbox-list" limit-multi-select *ngFor="let opt of question.relatedData">
+                <li >
+                    <input [id]="opt.key" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted" type="checkbox" aria-hidden="true" [formControlName]="question.key" (click)="storeSelectedCheckboxValues($event, opt.value, question)"/>
                     <label for="{{opt.key}}">{{opt.value}}</label>
                 </li>
             </ul>
@@ -30,7 +30,7 @@
         </ng-container>
     </ng-container>
     <div class="ok-btn-group hide">
-        <button type="button" class="ok-btn" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">{{ renderingData.okBtnText }}</button> <span [innerHTML]="renderingData.okBtnHelpText"> </span>
+        <button type="button" tabindex="-1" class="ok-btn" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">{{ renderingData.okBtnText }}</button> <span [innerHTML]="renderingData.okBtnHelpText"> </span>
     </div>
     <div class="question--input__info" *ngIf="questionGroup.helpText">{{ questionGroup.helpText}}</div>
     <div class="question--input__error" *ngIf="questionGroup.isInvalid">{{ questionGroup.validationMessage }} </div>

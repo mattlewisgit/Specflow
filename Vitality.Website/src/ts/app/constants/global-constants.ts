@@ -2,8 +2,11 @@
     export const tagNames= {
         button: "BUTTON",
         dropdown: "SELECT",
-        input: "INPUT"
+        input: "INPUT",
+        questionGroup: "QUESTION-GROUP"
     };
+    export const questionElementClass = "question";
+
     export const endpoints =
     {
         bslEndpoint: "/api/bsl/post?bslendpoint="

@@ -27,7 +27,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 6a887185-5efe-4051-966d-c489b3bd4b77
+revision: 45479b87-aa4f-408c-92fb-05019ad38ad5
 
 ----field----
 field: {DE38D3EB-81E3-4D60-8F57-F803A68EBEF2}
@@ -47,16 +47,23 @@ content-length: 38
 field: {3754388B-A1F5-4D59-BB18-D8F583537122}
 name: ValidationMessage
 key: validationmessage
-content-length: 26
+content-length: 27
 
-Maximum selections reached
+Maximum selections exceeded
 ----field----
-field: {DE134F64-7C89-4CF5-B0D9-6C8DAF0D9117}
-name: BasedOnValues
-key: basedonvalues
-content-length: 1
+field: {E8A3ACCA-67D0-4EFD-BDEB-0C179CD59302}
+name: BasedOnKey
+key: basedonkey
+content-length: 0
 
-3
+
+----field----
+field: {41388122-00F1-4C68-A855-929CD212BD72}
+name: Key
+key: key
+content-length: 0
+
+
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -84,14 +91,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-6a887185-5efe-4051-966d-c489b3bd4b77
+45479b87-aa4f-408c-92fb-05019ad38ad5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170920T144217Z
+20171002T151910Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,4 +1,4 @@
-import {  AfterViewInit, Directive, ElementRef, HostListener, Inject, Input, Optional} from "@angular/core";
+import { AfterViewInit, Directive, ElementRef, HostListener, Inject, Input, Optional } from "@angular/core";
 import { DOCUMENT } from "@angular/platform-browser";
 import { WindowRef } from "../components/windowref";
 import { Subscription } from "rxjs/Subscription";
@@ -10,8 +10,9 @@ import { QuoteApplyConstants } from "../constants/quoteapply-constants";
 @Directive({
     selector: "[auto-scroll-to]"
 })
-export class AutoScrollTo implements AfterViewInit{
-    @Input("isGroupCompleted") isGroupCompleted : boolean;
+export class AutoScrollTo implements AfterViewInit {
+    @Input("isGroupCompleted")
+    isGroupCompleted: boolean;
 
     private readonly minDistance = 30;
     private readonly scrollStepDistance = 100;
@@ -22,7 +23,10 @@ export class AutoScrollTo implements AfterViewInit{
     private okBtnGroup: Element;
     private postcodeAsyncValidationSubscription: Subscription;
 
-    constructor(element: ElementRef, @Inject(DOCUMENT) private document: any, private postcodeService: PostcodeService, private winRef: WindowRef) {
+    constructor(element: ElementRef,
+        @Inject(DOCUMENT) private document: any,
+        private postcodeService: PostcodeService,
+        private winRef: WindowRef) {
         this.currentElement = element.nativeElement;
         this.currentElementParent = this.currentElement.parentElement;
     }
@@ -46,12 +50,17 @@ export class AutoScrollTo implements AfterViewInit{
     @HostListener("keydown", ["$event"])
     onkeydown(event: KeyboardEvent) {
         if (this.isGroupCompleted) {
+            if (event.which === GlobalConstants.keyboardKeys.enter) {
+                event.preventDefault();
+                this.changeFocus(true, this.isGroupCompleted);
+            }
+        } else {
             if (event.shiftKey && event.which === GlobalConstants.keyboardKeys.tab) {
                 event.preventDefault();
-                this.changeFocus(false);
-            } else if (event.which === GlobalConstants.keyboardKeys.enter || event.which === GlobalConstants.keyboardKeys.tab) {
+                this.changeFocus(false, false);
+            } else if (event.which === GlobalConstants.keyboardKeys.tab) {
                 event.preventDefault();
-                this.changeFocus(true);
+                this.changeFocus(true, false);
             }
         }
     }
@@ -59,9 +68,9 @@ export class AutoScrollTo implements AfterViewInit{
     @HostListener("click", ["$event"])
     onclick(event: MouseEvent) {
         if (this.currentElement.tagName === GlobalConstants.tagNames.button ||
-        (this.currentElement.tagName === GlobalConstants.tagNames.dropdown &&
-            event.which === GlobalConstants.keyboardKeys.zero)) {
-            this.changeFocus(true);
+            (this.currentElement.tagName === GlobalConstants.tagNames.dropdown &&
+                event.which === GlobalConstants.keyboardKeys.zero)) {
+            this.changeFocus(true,false);
         }
     }
 
@@ -86,7 +95,7 @@ export class AutoScrollTo implements AfterViewInit{
                     this.showOkBtnGroup();
                 }
             }
-            this.handleScrolling(this.currentYPosition(),this.elmYPosition());
+            this.handleScrolling(this.currentYPosition(), this.elmYPosition());
         }
     }
 
@@ -100,7 +109,9 @@ export class AutoScrollTo implements AfterViewInit{
 
     private showOkBtnGroup() {
         if (!this.okBtnGroup && this.questionElement) {
-            this.okBtnGroup = this.questionElement.querySelector(GlobalConstants.selectors.classIdentifier + QuoteApplyConstants.selectors.okBtnGroup);
+            this.okBtnGroup =
+                this.questionGroupElement.querySelector(GlobalConstants.selectors.classIdentifier +
+                    QuoteApplyConstants.selectors.okBtnGroup);
         }
         // okBtnGroup still can be null
         if (this.okBtnGroup) {
@@ -115,39 +126,53 @@ export class AutoScrollTo implements AfterViewInit{
         }
     }
 
-    private changeFocus(goDown: boolean) {
+    private changeFocus(goDown: boolean, changeGroup: boolean) {
         const nextOrPrevSibiling = goDown
-            ? this.currentElementParent.nextElementSibling
-            : this.currentElementParent.previousElementSibling;
+            ? this.questionElement.nextElementSibling
+            : this.questionElement.previousElementSibling;
         if (nextOrPrevSibiling) {
             const nextOrPrevQuestion = nextOrPrevSibiling.querySelector(GlobalConstants.selectors.formInputFields);
-            if (nextOrPrevQuestion) {
+            if (nextOrPrevQuestion && changeGroup === false) {
                 (nextOrPrevQuestion as HTMLElement).focus();
                 return;
-            }
+            } else
+                changeGroup = true;
         }
 
-        let inputElement = null;
-        let questionGroupElement = this.questionGroupElement;
-        while (inputElement == null) {
+        if (changeGroup) {
+            let questionGroupElement = this.questionGroupElement;
+
             questionGroupElement = (goDown
                 ? questionGroupElement.nextElementSibling
                 : questionGroupElement.previousElementSibling) as HTMLElement;
-            inputElement = questionGroupElement.querySelector(GlobalConstants.selectors.formInputFields);
-        }
-        if (inputElement) {
-            (inputElement as HTMLElement).focus();
+            if (questionGroupElement != null) {
+                (questionGroupElement.querySelector(GlobalConstants.selectors.formInputFields) as HTMLElement).focus();
+            }
         }
     }
 
     private get questionElement(): HTMLElement {
-        return this.currentElementParent.parentElement;
+        return this.getParentElementByClass(GlobalConstants.questionElementClass, this.currentElement);
     }
-    private get questionGroupElement() : HTMLElement {
-        return this.currentElementParent.parentElement.parentElement;
+    private get questionGroupElement(): HTMLElement {
+        return this.getParentElementByTag(GlobalConstants.tagNames.questionGroup, this.currentElement);
     }
 
-    private handleScrolling(startY: number, stopY:number): void {
+    private getParentElementByClass(key: string, element: HTMLElement): HTMLElement {
+        while (element.className.indexOf(key)===-1) {
+            element = element.parentElement;
+        }
+        return element;
+    }
+
+    private getParentElementByTag(key: string, element: HTMLElement): HTMLElement {
+        while (element.tagName !== key) {
+            element = element.parentElement;
+        }
+        return element;
+    }
+
+    private handleScrolling(startY: number, stopY: number): void {
         const distance = stopY > startY ? stopY - startY : startY - stopY;
         if (distance < this.scrollStepDistance) {
             this.winRef.nativeWindow.scrollTo(0, stopY);
@@ -176,13 +201,13 @@ export class AutoScrollTo implements AfterViewInit{
     }
 
     private scrollTo(yPoint: number, duration: number) {
-		setTimeout(() => {
-		    this.winRef.nativeWindow.scrollTo(0, yPoint);
-		}, duration);
-		return;
-	}
+        setTimeout(() => {
+            this.winRef.nativeWindow.scrollTo(0, yPoint);
+        }, duration);
+        return;
+    }
 
-     private currentYPosition() {
+    private currentYPosition() {
         // Firefox, Chrome, Opera, Safari
         if (self.pageYOffset) return self.pageYOffset;
         // Internet Explorer 6 - standards mode
@@ -201,6 +226,6 @@ export class AutoScrollTo implements AfterViewInit{
             node = (node.offsetParent as HTMLElement);
             y += node.offsetTop;
         }
-        return y - (this.winRef.nativeWindow.screen.height/2 - 200);
+        return y - (this.winRef.nativeWindow.screen.height / 2 - 200);
     }
 }

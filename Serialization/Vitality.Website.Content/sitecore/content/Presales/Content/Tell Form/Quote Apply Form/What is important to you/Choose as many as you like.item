@@ -13,7 +13,7 @@ created: 20170822T121853Z
 ----version----
 language: en
 version: 1
-revision: 26dbe569-63e1-40ce-ac25-b44589994605
+revision: d9dddc54-ad2a-44d0-93a3-f5e34949c737
 
 ----field----
 field: {365CBF3B-BCA1-4C43-A070-68B9FD55DAE2}
@@ -33,16 +33,16 @@ content-length: 38
 field: {FB8609FA-B563-4BC8-A82F-492875A9BA40}
 name: Label
 key: label
-content-length: 32
+content-length: 26
 
-Choose a maximum of two benefits
+Choose as many as you like
 ----field----
 field: {98D8AEE3-52A2-4CCE-9654-16DDD64735BD}
 name: Validators
 key: validators
-content-length: 0
+content-length: 77
 
-
+{F9D8696B-D818-4BD7-AAA3-1F270F7EF184}|{0B373C70-978C-40AE-8F7C-E080A228F35A}
 ----field----
 field: {142376C6-E1DA-431C-B6D1-5796FF970557}
 name: RelatedData
@@ -77,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-26dbe569-63e1-40ce-ac25-b44589994605
+d9dddc54-ad2a-44d0-93a3-f5e34949c737
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170920T144133Z
+20171004T130340Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
