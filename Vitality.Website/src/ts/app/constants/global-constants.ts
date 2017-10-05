@@ -6,10 +6,7 @@
     };
     export const endpoints =
     {
-        //-=-=-=-=-=-= TODO: CHANGE IT AFTER THE SERVICE GET BACK ON =-=-=-=-=-=
-        //bslEndpoint: "/api/bsl/post?bslendpoint="
-        bslEndpoint: "http://demo8833796.mockable.io/"
-        //-=-=-=-=-=-= TODO: CHANGE IT AFTER THE SERVICE GET BACK ON =-=-=-=-=-=
+        bslEndpoint: "/api/bsl/post?bslendpoint="
     };
     export const selectors = {
         classIdentifier: ".",

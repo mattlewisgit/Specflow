@@ -7,8 +7,7 @@
     using AutoMapper;
     using System.Collections.Generic;
     using System.Linq;
-    using Vitality.Website.Areas.Presales.ComponentTemplates.Generic;
-
+ 
     public static class MapperConfig
     {
         public static void Init()

@@ -36,9 +36,7 @@ export class QuoteResultComponent implements OnInit {
     ngOnInit(): void {
         this.quoteResultData = this.winRef.nativeWindow.angularData.quoteResult;
         let delay: number = this.quoteResultData.marketingMessageTimeOut * 1000;
-        setTimeout(() => {
-            this.timeoutExpired = true;
-        }, delay);
+        setTimeout(() => this.timeoutExpired = true, delay);
         this.marketingMessage = this.quoteResultData.marketingMessages[Math.floor(Math.random() * this.quoteResultData.marketingMessages.length)];
         this.permutationIds = new Array<string>();
         for (let permutation of this.quoteResultData.permutations) {
