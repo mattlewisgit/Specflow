@@ -2,12 +2,13 @@
 version: 1
 id: {9122D836-C6EC-43E4-8520-BC37F48507DC}
 database: master
-path: /sitecore/media library/presales/System/vitality-health-logo
+path: /sitecore/media library/Presales/System/vitality-health-logo
 parent: {CCA76D55-AA9E-4882-A395-AE2D4FBD749C}
 name: vitality-health-logo
 master: {00000000-0000-0000-0000-000000000000}
 template: {F1828A2C-7E5D-4BBD-98CA-320474871548}
 templatekey: Image
+created: 20170904T142107Z
 
 ----field----
 field: {40E50ED9-BA07-4702-992E-A912738D32DC}

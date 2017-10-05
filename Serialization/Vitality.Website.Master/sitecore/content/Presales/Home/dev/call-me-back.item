@@ -1,0 +1,80 @@
+----item----
+version: 1
+id: {D6DA3A82-1EB1-4F14-92C1-F3F1886847DC}
+database: master
+path: /sitecore/content/Presales/home/dev/call-me-back
+parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+name: call-me-back
+master: {00000000-0000-0000-0000-000000000000}
+template: {55835F09-68C5-4E6D-91C1-851FFA6FB359}
+templatekey: Quote Apply Page
+created: 20170720T092845Z
+
+----version----
+language: en
+version: 1
+revision: 10286718-7884-44a6-b90a-d038754d34d1
+
+----field----
+field: {3CBA56ED-F4D1-4412-BEBB-6ACED1AC1D34}
+name: Logo
+key: logo
+content-length: 58
+
+<image mediaid="{C6CEAFDD-641F-4D7D-8406-81CE603B3FF4}" />
+----field----
+field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
+name: Title
+key: title
+content-length: 19
+
+Request a call back
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 12
+
+Call me back
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 679
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{71AA880E-1177-4D34-8659-125169D205C7}" p:before="*" s:ds="{7CDCE2BD-456C-47AC-8830-BD58592ACB69}" s:id="{22F063C3-8EEB-47BC-9656-93984B0AA084}" s:ph="QuoteApplySidebar" /><r uid="{2448A582-4207-471E-BA02-8E0DD87E0E33}" p:after="r[@uid='{71AA880E-1177-4D34-8659-125169D205C7}']" s:ds="{4EC42F72-9B18-41A7-8EFF-52DF81EB948E}" s:id="{F93FB20E-4857-48D5-9E8F-00DEA2EEF653}" s:ph="QuoteApplyFooter" /><r uid="{52F405D5-7059-46F4-B273-FA18938C0966}" p:after="*[1=2]" s:ds="{10CD33C4-6E19-4CAA-BD68-31C1FC18B93D}" s:id="{4ED51072-8E9C-4812-BB4C-48494E3D9D00}" s:ph="QuoteApplyContent" /></d></r>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170720T092845Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+10286718-7884-44a6-b90a-d038754d34d1
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170907T085452Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

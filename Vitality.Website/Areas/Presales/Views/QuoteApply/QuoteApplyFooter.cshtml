@@ -1,11 +1,8 @@
-﻿@using AutoMapper
-@using Newtonsoft.Json
-@using Newtonsoft.Json.Serialization
-@using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
+﻿@using Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
+@using Vitality.Website.Extensions
 @inherits Glass.Mapper.Sc.Web.Mvc.GlassView<QuoteApplyFooter>
 @{
-    var serializerSettings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
-    var angularModel = JsonConvert.SerializeObject(Mapper.Map<QuoteApplyFooterViewModel>(Model), serializerSettings);
+    var angularModel = Model.SerializeToCamelCase<QuoteApplyFooterViewModel>();
 }
 @if (Sitecore.Context.PageMode.IsExperienceEditor)
 {
@@ -19,7 +16,7 @@ else
     </script>
 
     <quote-apply-footer>
-        <div class="loader__icon"></div></quote-apply-footer>
+    </quote-apply-footer>
 
 
     <script type="text/javascript">

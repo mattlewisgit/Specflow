@@ -2,12 +2,13 @@
 version: 1
 id: {1758A7ED-D61A-42A3-9E33-073774EAD8C6}
 database: master
-path: /sitecore/media library/presales/Components/Phone
+path: /sitecore/media library/Presales/Components/Phone
 parent: {5C450172-7FEE-4F80-B107-BBC6C1B9A44D}
 name: Phone
 master: {00000000-0000-0000-0000-000000000000}
 template: {F1828A2C-7E5D-4BBD-98CA-320474871548}
 templatekey: Image
+created: 20170403T145008Z
 
 ----field----
 field: {40E50ED9-BA07-4702-992E-A912738D32DC}

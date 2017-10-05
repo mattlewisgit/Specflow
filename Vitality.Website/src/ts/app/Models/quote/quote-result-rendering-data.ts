@@ -22,4 +22,7 @@ export class QuoteResultRenderingData {
     tooltipText: string;
     tooltipButtonText: string;
     tooltipImage:string;
+    marketingMessages: Array<string>;
+    marketingMessageTimeOut: number;
+    marketingLoadingSubtitle: string;
 }
