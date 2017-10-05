@@ -54,6 +54,8 @@ export class TellFormComponent implements OnInit, OnDestroy {
                 additionalData: angularData.additionalData
             });
         }
+
+        console.log(this.postAction);
         if (this.getQuestionGroup(QuoteApplyConstants.keys.callbackTimeQuestionGroup)) {
             this.callbackService.initialize(angularData.additionalData);
         }

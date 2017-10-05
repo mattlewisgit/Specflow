@@ -14,23 +14,21 @@ using Vitality.Core;
 using Vitality.Mvc.Models;
 using Vitality.Mvc.Utilities;
 using Vitality.Website.Areas.Presales.Handlers.Bsl;
-using Vitality.Website.Areas.Presales.Handlers.CallBack;
-using Vitality.Website.Areas.Presales.Handlers.ContentSearch;
 using Vitality.Website.Areas.Presales.Models;
 using Vitality.Website.SC.Utilities;
 using Vitality.Website.SC.WFFM;
 
 namespace Vitality.Website.Areas.Presales.Controllers
 {
-    public class CallProController : BaseController
+    public class CallBackController : BaseController
     {
-        public CallProController(IMediator mediator) : base(mediator)
+        public CallBackController(IMediator mediator) : base(mediator)
         {
         }
 
         [HttpPost]
         [Route("api/callpro")]
-        public async Task<HttpResponseMessage> Post(string bslEndpoint, CallBackData model)
+        public async Task<HttpResponseMessage> CallPro(string bslEndpoint, CallBackData model)
         {
             if (string.IsNullOrEmpty(bslEndpoint) || !ModelState.IsValid)
             {
@@ -113,5 +111,5 @@ namespace Vitality.Website.Areas.Presales.Controllers
 
             return requestXml;
         }
-    } 
+    }
 }
