@@ -140,13 +140,28 @@ export class AutoScrollTo implements AfterViewInit {
         }
 
         if (changeGroup) {
+
             let questionGroupElement = this.questionGroupElement;
 
             questionGroupElement = (goDown
                 ? questionGroupElement.nextElementSibling
                 : questionGroupElement.previousElementSibling) as HTMLElement;
+
             if (questionGroupElement != null) {
-                (questionGroupElement.querySelector(GlobalConstants.selectors.formInputFields) as HTMLElement).focus();
+                let element = questionGroupElement.querySelector(GlobalConstants.selectors.formInputFields);
+
+                while (element === null && (goDown
+                    ? questionGroupElement.nextElementSibling
+                    : questionGroupElement.previousElementSibling) !== null) {
+
+                    questionGroupElement = ((goDown
+                        ? questionGroupElement.nextElementSibling
+                        : questionGroupElement.previousElementSibling) as HTMLElement);
+
+                    element = questionGroupElement.querySelector(GlobalConstants.selectors.formInputFields);
+                }
+                if (element !== null)
+                    (element as HTMLElement).focus();
             }
         }
     }

@@ -13,7 +13,7 @@ created: 20170822T121853Z
 ----version----
 language: en
 version: 1
-revision: 9078dcd4-7ea5-4655-ad34-b4adb308274c
+revision: cb980881-5b20-495b-912a-a6551e32de4f
 
 ----field----
 field: {365CBF3B-BCA1-4C43-A070-68B9FD55DAE2}
@@ -40,9 +40,9 @@ Choose as many as you like
 field: {98D8AEE3-52A2-4CCE-9654-16DDD64735BD}
 name: Validators
 key: validators
-content-length: 77
+content-length: 38
 
-{F9D8696B-D818-4BD7-AAA3-1F270F7EF184}|{0B373C70-978C-40AE-8F7C-E080A228F35A}
+{F9D8696B-D818-4BD7-AAA3-1F270F7EF184}
 ----field----
 field: {142376C6-E1DA-431C-B6D1-5796FF970557}
 name: RelatedData
@@ -77,18 +77,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9078dcd4-7ea5-4655-ad34-b4adb308274c
+cb980881-5b20-495b-912a-a6551e32de4f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170824T211757Z
+20171006T152811Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 13
+content-length: 14
 
-sitecore\Dave
+sitecore\Admin
