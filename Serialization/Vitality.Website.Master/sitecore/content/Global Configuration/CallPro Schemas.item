@@ -8,6 +8,7 @@ name: CallPro Schemas
 master: {00000000-0000-0000-0000-000000000000}
 template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
 templatekey: Folder
+created: 20161024T164252Z
 
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
@@ -23,10 +24,17 @@ key: __masters
 content-length: 38
 
 {8AE60F3E-4350-4973-BAAB-720EAEB6543D}
+----field----
+field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
+name: __Security
+key: __security
+content-length: 135
+
+ar|sitecore\Vitality Configuration Manager|pe|+item:read|+item:create|pd|+item:rename|+item:write|+item:read|+item:delete|+item:create|
 ----version----
 language: en
 version: 1
-revision: c49556fa-b9bd-4c73-b28b-8cd0ae77981a
+revision: b395eb10-ed43-4bc0-afc5-fbe525f702ea
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -48,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c49556fa-b9bd-4c73-b28b-8cd0ae77981a
+b395eb10-ed43-4bc0-afc5-fbe525f702ea
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161006T124709Z
+20161025T160126Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 14
+content-length: 13
 
-sitecore\admin
+sitecore\dave

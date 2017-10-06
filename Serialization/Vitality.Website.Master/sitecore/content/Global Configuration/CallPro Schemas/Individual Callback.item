@@ -1,0 +1,91 @@
+----item----
+version: 1
+id: {6CC3BF23-E604-4CC6-8FFC-62DE90C86075}
+database: master
+path: /sitecore/content/Global Configuration/CallPro Schemas/Individual Callback
+parent: {1ADEA8EB-896E-4852-9907-5E3BAC3CA899}
+name: Individual Callback
+master: {00000000-0000-0000-0000-000000000000}
+template: {8AE60F3E-4350-4973-BAAB-720EAEB6543D}
+templatekey: Xml Schema
+created: 20170214T132437Z
+
+----version----
+language: en
+version: 1
+revision: 9449b984-0446-48a6-bffa-7d920afc9d45
+
+----field----
+field: {B9B3711A-156D-4AFC-A127-9A6C9537143B}
+name: Xml
+key: xml
+content-length: 1650
+
+<?xml version="1.0" encoding="utf-8"?>
+<importdata>
+  <area>027</area>
+  <data>
+    <account>
+      <field table="TELRCM" field="COMPANY">{COMPANYNAME}</field>
+      <field table="TELRCM" field="ADDRESS1">ADDR1</field>
+      <field table="TELRCM" field="ADDRESS2">ADDR2</field>
+      <field table="TELRCM" field="ADDRESS3">ADDR3</field>
+      <field table="TELRCM" field="ADDRESS4">ADDR4</field>
+      <field table="TELRCM" field="TELEPHONE">{TELEPHONENUMBER}</field>
+      <field table="TELRCM" field="POSTCODE">{POSTCODE}</field>
+      <field table="TELRCM" field="PROJECT">Call Me Back</field>
+      <field table="TELRCM" field="OWNER">Callmeback</field>
+      <field table="TELRCM" field="CUSTOMERSTATUS">Not Called</field>
+      <field table="TELRCM" field="NEXTDATE">{NEXTYEAR}</field>
+      <field table="RCMANL" field="ANAL88" />
+      <field table="RCMANL" field="ANAL80" />{UTM_SOURCE}</field>
+      <field table="RCMANL" field="ANAL81" /> {UTM_MEDIUM}</field>
+     <field table="RCMANL" field="ANAL86" /> {UTM_CAMPAIGN}</field>
+      <field table="RCMANL" field="ANAL91" /> {UTM_TERM}</field>
+     <field table="RCMANL" field="ANAL99" /> {UTM_CONTENT}</field>
+     <field table="RCMANL" field="ANAL97" />STOAPPCMB{MONTH}{YEAR}A</field>
+    </account>
+    <contact>
+      <field table="CONT" field="FIRSTDATE">{TODAY}</field>
+      <field table="CONT" field="TITLE">{TITLE}</field>
+      <field table="CONT" field="FIRSTNAME">{FIRSTNAME}</field>
+      <field table="CONT" field="SURNAME">{LASTNAME}</field>
+      <field table="CONT" field="EMAIL">{EMAILADDRESS}</field>
+    </contact>
+  </data>
+</importdata>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20161006T125905Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+9449b984-0446-48a6-bffa-7d920afc9d45
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170404T100825Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 21
+
+sitecore\SteveWatling
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />
