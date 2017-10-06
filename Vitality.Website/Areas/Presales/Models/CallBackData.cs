@@ -11,9 +11,10 @@ namespace Vitality.Website.Areas.Presales.Models
         [Required]
         public string Lastname { get; set; }
         [Required]
-        public string Email { get; set; }
+        public string EmailAddress { get; set; }
         [Required]
-        public string Telephone { get; set; }
+        public string PhoneNumber { get; set; }
         public string CallBackTime { get; set; }
+        public string ReferenceId { get; set; }
     }
 }

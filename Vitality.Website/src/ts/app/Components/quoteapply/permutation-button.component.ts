@@ -34,10 +34,6 @@ export class PermutationButtonComponent implements OnChanges {
     }
 
     handleAction(): void {
-        this.winRef.nativeWindow.location.href = this.isBuyNow ? this.callToAction : this.getAlternativeCallToAction();
-    }
-
-    getAlternativeCallToAction(): any {
-        return this.referenceId ? `${this.alternativeCallToAction}/${this.referenceId}` : this.alternativeCallToAction;
+        this.winRef.nativeWindow.location.href = this.isBuyNow ? this.callToAction : `${this.alternativeCallToAction}?referenceId=${this.referenceId}`;
     }
 }

@@ -54,12 +54,13 @@ namespace Vitality.Website.Areas.Presales.Controllers
                 {"{YEAR}", today.Year.ToString()},
                 {"{NEXTMONTH}", today.AddMonths(1).ToShortDateString()},
                 {"{NEXTYEAR}", today.AddYears(1).ToShortDateString()},
-                {"{TELEPHONENUMBER}", callBackPostRequest.Telephone},
+                {"{TELEPHONENUMBER}", callBackPostRequest.PhoneNumber},
                 {"{TITLE}", callBackPostRequest.Title},
                 {"{FIRSTNAME}", callBackPostRequest.Firstname},
                 {"{LASTNAME}", callBackPostRequest.Lastname},
-                {"{EMAILADDRESS}", callBackPostRequest.Email},
-                {"{CALLBACKTIME}", callBackPostRequest.CallBackTime}
+                {"{EMAILADDRESS}", callBackPostRequest.EmailAddress},
+                {"{CALLBACKTIME}", callBackPostRequest.CallBackTime},
+                {"{REFERENCEID}", callBackPostRequest.ReferenceId } //TODO get the referenceId
             };
 
             var utmCookie = UtmCookieHelper.GetUtmCookie(new HttpRequestWrapper(HttpContext.Current.Request));
