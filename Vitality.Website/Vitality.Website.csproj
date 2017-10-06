@@ -376,10 +376,13 @@
     <Content Include="Areas\Presales\Views\Generic\PromotionSidebar.cshtml" />
     <Content Include="Areas\Presales\Views\QuoteApply\QuoteResult.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\QuoteMainLayout.cshtml" />
+    <Content Include="Areas\Presales\Views\QuoteApply\RichTextContent.cshtml" />
     <None Include="Areas\Presales\Views\Shared\QuoteApplyLayout.cshtml" />
+    <Content Include="img\spinner.gif" />
     <Content Include="src\js\countdown-timer-app.js" />
     <Content Include="src\js\global-functions.js" />
     <Content Include="src\js\vitality-wffm-main.js" />
+    <Content Include="src\ts\app\components\quoteapply\rich-text-content.component.html" />
     <Content Include="src\ts\app\components\quoteapply\permutation-button.component.html" />
     <Content Include="src\ts\app\components\quoteapply\benefit-option.component.html" />
     <Content Include="src\ts\app\components\quoteapply\quote-result.component.html" />
@@ -388,6 +391,7 @@
     <Content Include="src\ts\app\components\tellform\tell-form.component.html" />
     <Content Include="src\ts\app\components\vacancy-detailstemplate.html" />
     <Content Include="src\ts\app\components\vacancylisttemplate.html" />
+    <TypeScriptCompile Include="src\ts\app\components\quoteapply\rich-text-content.component.ts" />
     <TypeScriptCompile Include="src\ts\app\components\quoteapply\permutation-button.component.ts" />
     <TypeScriptCompile Include="src\ts\app\components\quoteapply\benefit-option.component.ts" />
     <TypeScriptCompile Include="src\ts\app\components\quoteapply\quote-result.component.ts" />
@@ -415,9 +419,11 @@
     <TypeScriptCompile Include="src\ts\app\models\quote\individual-quote-request.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\benefit-option.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\quote-result-rendering-data.ts" />
+    <TypeScriptCompile Include="src\ts\app\rich-text-content.module.ts" />
     <TypeScriptCompile Include="src\ts\app\quote-result.module.ts" />
     <TypeScriptCompile Include="src\ts\app\quote-apply-footer.module.ts" />
     <TypeScriptCompile Include="src\ts\app\services\quote.service.ts" />
+    <TypeScriptCompile Include="src\ts\rich-text-content.main.ts" />
     <TypeScriptCompile Include="src\ts\quote-result.main.ts" />
     <TypeScriptCompile Include="src\ts\tell-form.main.ts" />
     <TypeScriptCompile Include="src\ts\quote-apply-footer.main.ts" />
@@ -4011,6 +4017,7 @@
     <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />
     <Compile Include="Controllers\ManifestController.cs" />
     <Compile Include="Controllers\ReferenceDataController.cs" />
+    <Compile Include="Extensions\JsonExtensions.cs" />
     <Compile Include="Extensions\Views\AcknowledgementExtensions.cs" />
     <Compile Include="Pipelines\AppStartInitializer.cs" />
     <Compile Include="App_Start\GlassMapperSc.cs" />

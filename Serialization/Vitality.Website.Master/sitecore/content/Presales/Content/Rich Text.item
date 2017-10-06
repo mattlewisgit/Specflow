@@ -8,6 +8,7 @@ name: Rich Text
 master: {00000000-0000-0000-0000-000000000000}
 template: {7C96FFFF-DA60-44F1-BC58-2E4315D2F483}
 templatekey: Datasource Folder
+created: 20160818T133108Z
 
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
@@ -27,13 +28,13 @@ content-length: 77
 field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
 name: __Security
 key: __security
-content-length: 184
+content-length: 183
 
-ar|sitecore\Presales Content Author|pd|+item:rename|+item:delete|ar|sitecore\Presales User|pe|+item:write|+item:create|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
+ar|sitecore\Presales Content Author|pd|+item:rename|+item:delete|ar|sitecore\Presales User|pe|+item:read|+item:create|pd|+item:rename|+item:create|+item:write|+item:read|+item:delete|
 ----version----
 language: en
 version: 1
-revision: e592a8a8-041d-4f45-b4d4-3f51aa2890d9
+revision: 8718b3e8-71d5-415d-9066-a98bab454ea0
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -55,14 +56,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-e592a8a8-041d-4f45-b4d4-3f51aa2890d9
+8718b3e8-71d5-415d-9066-a98bab454ea0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160715T144039Z
+20160705T095540Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

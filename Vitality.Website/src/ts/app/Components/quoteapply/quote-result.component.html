@@ -1,3 +1,12 @@
+<div class="full-loading-overlay" *ngIf="quotes.length<1 || !timeoutExpired">
+    <div class="full-loading-logo"></div>
+    <div class="full-loading-title"><h3>Get a quote in just 2 minutes</h3></div>
+    <div class="full-loading-content">
+        <h3 [innerHTML]="marketingMessage"></h3>
+        <div class="loader__icon"></div>
+        <p class="full-loading-loading-text">{{ quoteResultData.marketingLoadingSubtitle }}</p>
+    </div>
+</div>
 <div>
     <div class="ambassabanner">
         <div class="ambassabanner--content">
@@ -73,7 +82,7 @@
                         </dl>
                     </div>
                 </div>
-            </td>
+            </td> 
             <td *ngFor="let  permutation of quoteResultData.permutations;">
                 <benefit-option [permutationId]="permutation.id"
                                 [benefitOptions]="benefit.benefitOptions"

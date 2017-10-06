@@ -2,12 +2,13 @@
 version: 1
 id: {AA43C0D6-F6AF-43F0-8574-68B5682254C3}
 database: master
-path: /sitecore/media library/presales/Documents
+path: /sitecore/media library/Presales/Documents
 parent: {2FF25D48-AF5B-4A05-9B30-90F9127F0F4D}
 name: Documents
 master: {00000000-0000-0000-0000-000000000000}
 template: {FE5DD826-48C6-436D-B87A-7C4210C7413B}
 templatekey: Media folder
+created: 20170904T141323Z
 
 ----version----
 language: en

@@ -2,12 +2,13 @@
 version: 1
 id: {248AE30A-942F-4D29-8206-725336F7B494}
 database: master
-path: /sitecore/media library/presales/Components/holiday-scene
+path: /sitecore/media library/Presales/Components/holiday-scene
 parent: {5C450172-7FEE-4F80-B107-BBC6C1B9A44D}
 name: holiday-scene
 master: {00000000-0000-0000-0000-000000000000}
 template: {DAF085E8-602E-43A6-8299-038FF171349F}
 templatekey: Jpeg
+created: 20170403T145004Z
 
 ----field----
 field: {40E50ED9-BA07-4702-992E-A912738D32DC}

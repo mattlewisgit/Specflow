@@ -1,5 +1,9 @@
 ﻿using System.Collections.Generic;
+using Glass.Mapper.Sc.Configuration;
+using Glass.Mapper.Sc.Configuration.Attributes;
+using Vitality.Website.Areas.Global.Models;
 using Glass.Mapper.Sc.Fields;
+using Vitality.Website.Areas.Presales.ComponentTemplates.Generic;
 
 namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
 {
@@ -23,5 +27,8 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
         public string TooltipButtonText { get; set; }
         public string TooltipText { get; set; }
         public Image TooltipImage { get; set; }
+        public IEnumerable<string> MarketingMessages { get; set; }
+        public string MarketingLoadingSubtitle { get; set; }
+        public double MarketingMessageTimeOut { get; set; }
     }
 }
