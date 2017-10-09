@@ -79,7 +79,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
             .subscribe((data: boolean) => {
                 if (data) {
                     this.tellForm.value.referenceId = this.referenceId;                    
-                    this.tellFormService.submit(`${this.postAction}${this.referenceId}`, this.tellForm.value)
+                    this.tellFormService.submit(`${this.postAction}`, this.tellForm.value)
                         .then((data: string) => {
                             this.referenceId = data;
                             this.winRef.nativeWindow.location.href = `${this.redirectTo}${this.referenceId}`;
