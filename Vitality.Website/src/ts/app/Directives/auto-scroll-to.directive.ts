@@ -67,9 +67,10 @@ export class AutoScrollTo implements AfterViewInit {
 
     @HostListener("click", ["$event"])
     onclick(event: MouseEvent) {
-        if (this.currentElement.tagName === GlobalConstants.tagNames.button ||
-            (this.currentElement.tagName === GlobalConstants.tagNames.dropdown &&
-                event.which === GlobalConstants.keyboardKeys.zero)) {
+        if (this.currentElement.tagName === GlobalConstants.tagNames.button) {
+            this.changeFocus(true, true);
+        } else if (this.currentElement.tagName === GlobalConstants.tagNames.dropdown &&
+            event.which === GlobalConstants.keyboardKeys.zero) {
             this.changeFocus(true,false);
         }
     }
