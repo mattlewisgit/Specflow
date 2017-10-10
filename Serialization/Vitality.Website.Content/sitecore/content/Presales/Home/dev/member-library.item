@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {D88F32DA-9E86-4B32-935E-7678F00259C9}
+id: {3BC82849-7037-4370-9F0D-1F67C776C6F7}
 database: master
 path: /sitecore/content/Presales/home/dev/member-library
-parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+parent: {B50E8F71-CA37-40FF-9D2D-81F8B5D071CC}
 name: member-library
 master: {00000000-0000-0000-0000-000000000000}
 template: {D61EEE7C-7D66-4652-BA48-0569E9EED6AD}
 templatekey: Member Literature Library Page
+created: 20171010T141834Z
 
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
@@ -161,10 +162,3 @@ key: __workflow state
 content-length: 38
 
 {BBC08507-1651-4F93-804C-AF45D7A30D0C}
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />

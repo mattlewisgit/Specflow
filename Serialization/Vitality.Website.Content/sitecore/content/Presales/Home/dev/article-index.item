@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {49412E83-CAC4-4BEF-86DE-044AC8C8F812}
+id: {42C14DFF-73FD-4B86-B754-F22E9D6EA670}
 database: master
 path: /sitecore/content/Presales/home/dev/article-index
-parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+parent: {B50E8F71-CA37-40FF-9D2D-81F8B5D071CC}
 name: article-index
 master: {00000000-0000-0000-0000-000000000000}
 template: {87BED180-12E1-4B27-B352-B5C5D06521D0}
 templatekey: Product Details Page
+created: 20171010T141834Z
 
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
@@ -84,10 +85,3 @@ key: __workflow state
 content-length: 38
 
 {BBC08507-1651-4F93-804C-AF45D7A30D0C}
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />
