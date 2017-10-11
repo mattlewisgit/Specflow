@@ -6,6 +6,7 @@ import { Subscription } from "rxjs/Subscription";
 import { GlobalConstants } from "../constants/global-constants";
 import { PostcodeService } from "../services/postcode.service";
 import { QuoteApplyConstants } from "../constants/quoteapply-constants";
+import { Common } from "./common-directive";
 
 @Directive({
     selector: "[auto-scroll-to]"
@@ -26,6 +27,7 @@ export class AutoScrollTo implements AfterViewInit {
     constructor(element: ElementRef,
         @Inject(DOCUMENT) private document: any,
         private postcodeService: PostcodeService,
+        private common: Common,
         private winRef: WindowRef) {
         this.currentElement = element.nativeElement;
         this.currentElementParent = this.currentElement.parentElement;
@@ -168,24 +170,10 @@ export class AutoScrollTo implements AfterViewInit {
     }
 
     private get questionElement(): HTMLElement {
-        return this.getParentElementByClass(GlobalConstants.questionElementClass, this.currentElement);
+        return this.common.getParentElementByClass(GlobalConstants.questionElementClass, this.currentElement);
     }
     private get questionGroupElement(): HTMLElement {
-        return this.getParentElementByTag(GlobalConstants.tagNames.questionGroup, this.currentElement);
-    }
-
-    private getParentElementByClass(key: string, element: HTMLElement): HTMLElement {
-        while (element.className.indexOf(key)===-1) {
-            element = element.parentElement;
-        }
-        return element;
-    }
-
-    private getParentElementByTag(key: string, element: HTMLElement): HTMLElement {
-        while (element.tagName !== key) {
-            element = element.parentElement;
-        }
-        return element;
+        return this.common.getParentElementByTag(GlobalConstants.tagNames.questionGroup, this.currentElement);
     }
 
     private handleScrolling(startY: number, stopY: number): void {
