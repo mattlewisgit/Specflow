@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {EF5C416D-58DF-4ACF-86A4-2F1F3E38C089}
+id: {60736308-1088-4A01-9E3E-6CDF0ABBEDE0}
 database: master
 path: /sitecore/content/Presales/home/dev/your-quote
-parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+parent: {B50E8F71-CA37-40FF-9D2D-81F8B5D071CC}
 name: your-quote
 master: {00000000-0000-0000-0000-000000000000}
 template: {55835F09-68C5-4E6D-91C1-851FFA6FB359}
 templatekey: Quote Apply Page
-created: 20170823T070022Z
+created: 20171010T141834Z
 
 ----version----
 language: en

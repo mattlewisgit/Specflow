@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {7312566D-D719-4CF3-86F8-32AC688A7F36}
+id: {8568293B-4F34-4B8B-9F1C-9931ECF1B97A}
 database: master
 path: /sitecore/content/Presales/home/dev/vacancies/*
-parent: {3055F0AA-BED4-4845-8D0D-505AAB5BCE27}
+parent: {00EC2DA4-DAE4-4FCF-899B-FF2B84FE1257}
 name: *
 master: {00000000-0000-0000-0000-000000000000}
 template: {487B20F5-0959-4419-B030-D8E8C21120ED}
 templatekey: Generic Page
+created: 20171010T141834Z
 
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}

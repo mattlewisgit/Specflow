@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {AA738E90-2BB0-4555-9B2F-263B12796A9A}
+id: {793C6BF3-7596-4845-B10D-E46AF7AB07BA}
 database: master
 path: /sitecore/content/Presales/home/dev/accordion-content
-parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+parent: {B50E8F71-CA37-40FF-9D2D-81F8B5D071CC}
 name: accordion-content
 master: {00000000-0000-0000-0000-000000000000}
 template: {EAE876EB-8043-4F1B-95C4-C015EAE09215}
 templatekey: Product Overview Page
+created: 20171010T141834Z
 
 ----field----
 field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
@@ -98,10 +99,3 @@ key: __workflow state
 content-length: 38
 
 {BBC08507-1651-4F93-804C-AF45D7A30D0C}
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />
