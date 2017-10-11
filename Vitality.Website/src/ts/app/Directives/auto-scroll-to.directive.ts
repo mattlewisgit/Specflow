@@ -6,7 +6,7 @@ import { Subscription } from "rxjs/Subscription";
 import { GlobalConstants } from "../constants/global-constants";
 import { PostcodeService } from "../services/postcode.service";
 import { QuoteApplyConstants } from "../constants/quoteapply-constants";
-import { Common } from "./common-directive";
+import { Common } from "../modules/common-module";
 
 @Directive({
     selector: "[auto-scroll-to]"
