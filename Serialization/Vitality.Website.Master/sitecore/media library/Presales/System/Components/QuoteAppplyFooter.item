@@ -2,7 +2,7 @@
 version: 1
 id: {273BED45-94FE-4775-8C5F-CE89CFBA1436}
 database: master
-path: /sitecore/media library/presales/System/Components/QuoteAppplyFooter
+path: /sitecore/media library/Presales/System/Components/QuoteAppplyFooter
 parent: {6BB90892-E9F5-462E-A157-E1CDF33582E8}
 name: QuoteAppplyFooter
 master: {00000000-0000-0000-0000-000000000000}

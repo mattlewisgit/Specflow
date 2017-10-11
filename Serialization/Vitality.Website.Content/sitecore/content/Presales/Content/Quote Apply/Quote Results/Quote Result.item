@@ -20,7 +20,7 @@ content-length: 77
 ----version----
 language: en
 version: 1
-revision: 5306a1b9-6764-4b24-9d12-04e480d50c34
+revision: 0b8e3341-dc90-4964-b76a-2254bb9848ea
 
 ----field----
 field: {C2C33986-4B81-430D-93F1-B0A5C768B50E}
@@ -129,6 +129,27 @@ content-length: 58
 
 <image mediaid="{5BA43839-770E-45CA-BA97-60352F0DFCD6}" />
 ----field----
+field: {FAEDE46C-82A2-4D5B-96C3-1CF2DE54A148}
+name: MarketingMessages
+key: marketingmessages
+content-length: 77
+
+{06976FDF-8E0D-4AD4-8675-F8F7EB3D1F47}|{32E27548-44BB-4D9B-A7DD-1079AD15034D}
+----field----
+field: {0DFDBF60-5523-438B-AD6B-E8FC27996955}
+name: MarketingLoadingSubtitle
+key: marketingloadingsubtitle
+content-length: 19
+
+Fetching your quote
+----field----
+field: {44EB7A9A-C8E8-4868-A999-2E385BBFC178}
+name: MarketingMessageTimeOut
+key: marketingmessagetimeout
+content-length: 1
+
+5
+----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
 key: __owner
@@ -155,14 +176,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5306a1b9-6764-4b24-9d12-04e480d50c34
+0b8e3341-dc90-4964-b76a-2254bb9848ea
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20171006T161630Z
+20170920T083659Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {425EAC4E-CEDB-4930-B864-F15A27FF5280}
+id: {2E5DBED1-7D2D-423B-B6AB-BD6EE99AA189}
 database: master
-path: /sitecore/content/Presales/Content/Rich Text/QuoteResultContent
-parent: {16D790E9-5910-45CC-93B0-AA186A7D387D}
-name: QuoteResultContent
+path: /sitecore/content/Presales/home/dev/twitter
+parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+name: twitter
 master: {00000000-0000-0000-0000-000000000000}
-template: {1EFF0C91-5C21-4AE9-B0AA-8F05772410E6}
-templatekey: Content
-created: 20170913T134343Z
+template: {487B20F5-0959-4419-B030-D8E8C21120ED}
+templatekey: Generic Page
+created: 20170914T105745Z
 
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
@@ -20,25 +20,22 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: f2abbbdb-def4-4d28-ae6a-cbcc6517c703
+revision: 54ea7344-dd2d-4347-bfc8-11bf3c767d6a
 
 ----field----
-field: {35B57356-DA32-4179-AFD5-3A74F13831B9}
-name: RichText
-key: richtext
-content-length: 472
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 7
 
-<p style="text-align: center;">
-For full health details on all the  elements of our health cover, see our <span style="text-decoration: underline;">Guide to Personal Healthcare.
-</span><br />
-<br />
-Your quote includes Vitality Rewards, our healthy living rewards programme, which allows you to make significant savings through our rewards partners.
-<br />
-<br />
-See our <span style="text-decoration: underline;">Guide to Vitality Rewards.<br />
-<br />
-<br />
-</span></p>
+Twitter
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 584
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{BCC4AE6E-1EA6-4277-80E3-F87B3B2DBC68}" p:before="*" s:ds="{89124E90-60CE-4CD0-A2DC-E9D5F27AE134}" s:id="{25359980-8C72-4BA2-8B4C-755725B6C8BB}" s:ph="PresalesContent" /><r uid="{2E4ACF00-8619-45EA-B865-CDF4FDC5D8E3}" p:after="r[@uid='{BCC4AE6E-1EA6-4277-80E3-F87B3B2DBC68}']" s:ds="" s:id="{8829319E-7570-4398-8C4E-C362B276D003}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -52,7 +49,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170913T134344Z
+20170914T105745Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -66,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-f2abbbdb-def4-4d28-ae6a-cbcc6517c703
+54ea7344-dd2d-4347-bfc8-11bf3c767d6a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170913T145550Z
+20170914T141319Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

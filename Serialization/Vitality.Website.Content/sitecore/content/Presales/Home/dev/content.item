@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {4664DDD5-DB61-4767-A420-681B6EEF354F}
+id: {1104F0CB-7CA5-45CC-A053-4EF76025630C}
 database: master
 path: /sitecore/content/Presales/home/dev/content
-parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+parent: {B50E8F71-CA37-40FF-9D2D-81F8B5D071CC}
 name: content
 master: {00000000-0000-0000-0000-000000000000}
 template: {487B20F5-0959-4419-B030-D8E8C21120ED}
 templatekey: Generic Page
-created: 20161215T113010Z
+created: 20171010T141834Z
 
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
@@ -85,13 +85,6 @@ key: __workflow state
 content-length: 38
 
 {BBC08507-1651-4F93-804C-AF45D7A30D0C}
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />
 ----version----
 language: en
 version: 2
@@ -167,10 +160,3 @@ key: __updated by
 content-length: 14
 
 sitecore\Admin
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />

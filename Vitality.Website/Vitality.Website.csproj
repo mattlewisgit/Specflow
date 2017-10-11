@@ -313,8 +313,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Vitality.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Vitality.Mvc.1.0.0\lib\net45\Vitality.Mvc.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Vitality.Mvc.1.0.1\lib\net45\Vitality.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\WebActivatorEx.dll</HintPath>
@@ -377,10 +376,13 @@
     <Content Include="Areas\Presales\Views\Generic\PromotionSidebar.cshtml" />
     <Content Include="Areas\Presales\Views\QuoteApply\QuoteResult.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\QuoteMainLayout.cshtml" />
+    <Content Include="Areas\Presales\Views\QuoteApply\RichTextContent.cshtml" />
     <None Include="Areas\Presales\Views\Shared\QuoteApplyLayout.cshtml" />
+    <Content Include="img\spinner.gif" />
     <Content Include="src\js\countdown-timer-app.js" />
     <Content Include="src\js\global-functions.js" />
     <Content Include="src\js\vitality-wffm-main.js" />
+    <Content Include="src\ts\app\components\quoteapply\rich-text-content.component.html" />
     <Content Include="src\ts\app\components\quoteapply\permutation-button.component.html" />
     <Content Include="src\ts\app\components\quoteapply\benefit-option.component.html" />
     <Content Include="src\ts\app\components\quoteapply\quote-result.component.html" />
@@ -389,6 +391,7 @@
     <Content Include="src\ts\app\components\tellform\tell-form.component.html" />
     <Content Include="src\ts\app\components\vacancy-detailstemplate.html" />
     <Content Include="src\ts\app\components\vacancylisttemplate.html" />
+    <TypeScriptCompile Include="src\ts\app\components\quoteapply\rich-text-content.component.ts" />
     <TypeScriptCompile Include="src\ts\app\components\quoteapply\permutation-button.component.ts" />
     <TypeScriptCompile Include="src\ts\app\components\quoteapply\benefit-option.component.ts" />
     <TypeScriptCompile Include="src\ts\app\components\quoteapply\quote-result.component.ts" />
@@ -399,6 +402,7 @@
     <TypeScriptCompile Include="src\ts\app\constants\quoteapply-constants.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\auto-scroll-to.directive.ts" />
     <TypeScriptCompile Include="src\ts\app\constants\global-constants.ts" />
+    <TypeScriptCompile Include="src\ts\app\modules\common-module.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\click-outside.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\limit-multi-select.directive.ts" />
     <TypeScriptCompile Include="src\ts\app\factories\footer-bar-service.factory.ts" />
@@ -416,9 +420,11 @@
     <TypeScriptCompile Include="src\ts\app\models\quote\individual-quote-request.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\benefit-option.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\quote-result-rendering-data.ts" />
+    <TypeScriptCompile Include="src\ts\app\rich-text-content.module.ts" />
     <TypeScriptCompile Include="src\ts\app\quote-result.module.ts" />
     <TypeScriptCompile Include="src\ts\app\quote-apply-footer.module.ts" />
     <TypeScriptCompile Include="src\ts\app\services\quote.service.ts" />
+    <TypeScriptCompile Include="src\ts\rich-text-content.main.ts" />
     <TypeScriptCompile Include="src\ts\quote-result.main.ts" />
     <TypeScriptCompile Include="src\ts\tell-form.main.ts" />
     <TypeScriptCompile Include="src\ts\quote-apply-footer.main.ts" />
@@ -4012,6 +4018,7 @@
     <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />
     <Compile Include="Controllers\ManifestController.cs" />
     <Compile Include="Controllers\ReferenceDataController.cs" />
+    <Compile Include="Extensions\JsonExtensions.cs" />
     <Compile Include="Extensions\Views\AcknowledgementExtensions.cs" />
     <Compile Include="Pipelines\AppStartInitializer.cs" />
     <Compile Include="App_Start\GlassMapperSc.cs" />

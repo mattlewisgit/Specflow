@@ -240,7 +240,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>WFFM.feature</DependentUpon>
     </Compile>
-     <Compile Include="Features\QuoteAndApply\QuoteResults\RichText.feature.cs">
+    <Compile Include="Features\QuoteAndApply\QuoteResults\MarketingMessage.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MarketingMessage.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\QuoteAndApply\QuoteResults\RichText.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RichText.feature</DependentUpon>
@@ -370,6 +375,7 @@
     <Compile Include="Steps\ProductHeroSteps.cs" />
     <Compile Include="Steps\ProductsComponentSteps.cs" />
     <Compile Include="Steps\QuoteAndApplySteps.cs" />
+    <Compile Include="Steps\QuoteAndApply\QuoteResults\MarketingMessageSteps.cs" />
     <Compile Include="Steps\QuoteAndApply\QuoteResults\RichTextSteps.cs" />
     <Compile Include="Steps\QuoteResultsSteps.cs" />
     <Compile Include="Steps\RewardLeaderSteps.cs" />
@@ -568,6 +574,10 @@
     <None Include="Features\Presales\WFFM.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>WFFM.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\QuoteResults\MarketingMessage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MarketingMessage.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\QuoteAndApply\QuoteResults\QuoteResults.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

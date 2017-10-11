@@ -2,12 +2,13 @@
 version: 1
 id: {D52CF2FC-9126-42A4-8DC1-F02BB3F42AA6}
 database: master
-path: /sitecore/media library/presales/System/Components/Vacancy
+path: /sitecore/media library/Presales/System/Components/Vacancy
 parent: {6BB90892-E9F5-462E-A157-E1CDF33582E8}
 name: Vacancy
 master: {00000000-0000-0000-0000-000000000000}
 template: {F1828A2C-7E5D-4BBD-98CA-320474871548}
 templatekey: Image
+created: 20170904T142107Z
 
 ----field----
 field: {40E50ED9-BA07-4702-992E-A912738D32DC}

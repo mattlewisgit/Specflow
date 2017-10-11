@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {7F76716A-F352-4B03-BD7B-3871B81B58B3}
+id: {16F66757-5B29-4798-89F8-79D9081068B0}
 database: master
 path: /sitecore/content/Presales/home/dev/award-leader
-parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+parent: {B50E8F71-CA37-40FF-9D2D-81F8B5D071CC}
 name: award-leader
 master: {00000000-0000-0000-0000-000000000000}
 template: {487B20F5-0959-4419-B030-D8E8C21120ED}
 templatekey: Generic Page
+created: 20171010T141834Z
 
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
@@ -19,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 7c379f2d-9f2f-4bb9-b0be-577ce89a9e1a
+revision: 233cf733-9376-49ea-aaa2-34150248cd1d
 
 ----field----
 field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
@@ -62,21 +63,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7c379f2d-9f2f-4bb9-b0be-577ce89a9e1a
+233cf733-9376-49ea-aaa2-34150248cd1d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170112T123559Z
+20170614T143326Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin
 ----field----
 field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
 name: __Workflow state

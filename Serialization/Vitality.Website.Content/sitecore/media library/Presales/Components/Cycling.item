@@ -2,12 +2,13 @@
 version: 1
 id: {7D773239-99B4-4B79-9ABA-72EC6AF3B8C2}
 database: master
-path: /sitecore/media library/presales/Components/Cycling
+path: /sitecore/media library/Presales/Components/Cycling
 parent: {5C450172-7FEE-4F80-B107-BBC6C1B9A44D}
 name: Cycling
 master: {00000000-0000-0000-0000-000000000000}
 template: {DAF085E8-602E-43A6-8299-038FF171349F}
 templatekey: Jpeg
+created: 20170403T145003Z
 
 ----field----
 field: {40E50ED9-BA07-4702-992E-A912738D32DC}

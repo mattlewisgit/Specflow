@@ -1,19 +1,19 @@
 ----item----
 version: 1
-id: {A42B99DE-A02F-4BCC-B883-C65FD56741B9}
+id: {CB85637E-F8D1-4E0A-9E32-10670D356016}
 database: master
 path: /sitecore/content/Presales/home/dev/quote-result
-parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+parent: {B50E8F71-CA37-40FF-9D2D-81F8B5D071CC}
 name: quote-result
 master: {00000000-0000-0000-0000-000000000000}
 template: {58A271C2-627F-4B12-B134-B54D80588F4E}
 templatekey: Quote Result Page
-created: 20170823T161117Z
+created: 20171010T141834Z
 
 ----version----
 language: en
 version: 1
-revision: 669a941e-828d-457b-9388-1fc259f72d5e
+revision: 72f27432-29b8-47bc-9988-d3a85f314502
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
@@ -28,7 +28,7 @@ name: __Final Renderings
 key: __final renderings
 content-length: 669
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{DEA8A357-EA21-4EF2-B010-C65778840AAD}" p:before="*" s:ds="{81D1F8E1-C95E-48EC-96E6-8E360CFCD673}" s:id="{F93FB20E-4857-48D5-9E8F-00DEA2EEF653}" s:ph="QuoteApplyFooter" /><r uid="{0D803DC9-6894-44FB-A4D1-0DA7F9639EF5}" p:after="r[@uid='{DEA8A357-EA21-4EF2-B010-C65778840AAD}']" s:ds="{C2EBE946-99DD-4BC0-AED7-1760C66620BB}" s:id="{2B90B330-682F-40EA-9DD7-8C194E81D47D}" s:ph="QuoteContent" /><r uid="{4BCA459C-0E01-4F69-A657-9379E0F86E29}" p:after="*[1=2]" s:ds="{425EAC4E-CEDB-4930-B864-F15A27FF5280}" s:id="{25359980-8C72-4BA2-8B4C-755725B6C8BB}" s:ph="QuoteContent" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{0D803DC9-6894-44FB-A4D1-0DA7F9639EF5}" p:before="*" s:ds="{C2EBE946-99DD-4BC0-AED7-1760C66620BB}" s:id="{2B90B330-682F-40EA-9DD7-8C194E81D47D}" s:ph="QuoteContent" /><r uid="{B3D7DEFF-4DE0-45A2-BD21-2535122F1E3D}" p:after="r[@uid='{0D803DC9-6894-44FB-A4D1-0DA7F9639EF5}']" s:ds="{D96B0641-FE8A-43C7-ADF9-0CBD8FB66F15}" s:id="{565B472D-4767-42D2-81AC-E4727925829C}" s:ph="QuoteContent" /><r uid="{DEA8A357-EA21-4EF2-B010-C65778840AAD}" p:after="*[1=2]" s:ds="{81D1F8E1-C95E-48EC-96E6-8E360CFCD673}" s:id="{F93FB20E-4857-48D5-9E8F-00DEA2EEF653}" s:ph="QuoteApplyFooter" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -42,14 +42,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-669a941e-828d-457b-9388-1fc259f72d5e
+72f27432-29b8-47bc-9988-d3a85f314502
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170913T134424Z
+20170922T162317Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -57,10 +57,3 @@ key: __updated by
 content-length: 14
 
 sitecore\Admin
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />

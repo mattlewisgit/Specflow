@@ -1,0 +1,171 @@
+----item----
+version: 1
+id: {D88F32DA-9E86-4B32-935E-7678F00259C9}
+database: master
+path: /sitecore/content/Presales/home/dev/member-library
+parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+name: member-library
+master: {00000000-0000-0000-0000-000000000000}
+template: {D61EEE7C-7D66-4652-BA48-0569E9EED6AD}
+templatekey: Member Literature Library Page
+created: 20170919T161903Z
+
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
+----version----
+language: en
+version: 1
+revision: 8a2ac994-bf4e-4cc1-82c9-19b2d9ffc683
+
+----field----
+field: {93334BBA-ED1B-4C1A-9377-D60DB8F96BFB}
+name: Headline
+key: headline
+content-length: 25
+
+Member Literature Amazing
+----field----
+field: {A4173792-23E7-458A-B9DF-F8DE511757ED}
+name: CardOpeningParagraph
+key: cardopeningparagraph
+content-length: 38
+
+Amet molestiae et dolorum cumque modi.
+----field----
+field: {393F704D-856E-402A-88EE-A824885C7816}
+name: OpeningParagraph
+key: openingparagraph
+content-length: 421
+
+Presales - Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
+----field----
+field: {31155173-0BA1-4FA0-9A6F-22E5CC4CCCC1}
+name: CardHeadline
+key: cardheadline
+content-length: 16
+
+Sales Literature
+----field----
+field: {DFA3E916-2321-41D9-B7D0-7CC81D65ED97}
+name: CardLink
+key: cardlink
+content-length: 156
+
+<link linktype="internal" text="View Sales Literature" title="View Sales Literature" querystring="" target="" id="{397B8FD2-33BF-4087-B729-319FBA812E14}" />
+----field----
+field: {6A542E9D-13E4-4227-AC02-49E589FD94D9}
+name: CardImage
+key: cardimage
+content-length: 58
+
+<image mediaid="{FDE3B9E4-D5EF-4823-A699-ED7154A26934}" />
+----field----
+field: {65DC4D1A-DA76-425A-9975-A06F76BED0DB}
+name: DownloadLinkText
+key: downloadlinktext
+content-length: 8
+
+Download
+----field----
+field: {E2A53D0E-830D-48AE-90CC-D0BA2971AEB6}
+name: EmailLinkText
+key: emaillinktext
+content-length: 5
+
+Email
+----field----
+field: {A08B2E8B-FE19-42FA-B321-B2A669CB4E7C}
+name: SearchHeadline
+key: searchheadline
+content-length: 26
+
+Plan Start or Renewal Date
+----field----
+field: {8B542FFC-CD3C-4A83-B165-46F28401C60E}
+name: CategoriesHeadline
+key: categoriesheadline
+content-length: 22
+
+Choose Literature Type
+----field----
+field: {221BF9F8-9987-4803-A002-3D7C156BDC5A}
+name: LiteratureHeadline
+key: literatureheadline
+content-length: 20
+
+Available Literature
+----field----
+field: {5EB83260-6E41-4EBE-9898-D6467385287F}
+name: SelectionHeadline
+key: selectionheadline
+content-length: 14
+
+Your Selection
+----field----
+field: {A2AE3591-AE0B-40AE-A645-B3BC690EE87E}
+name: LiteratureLibrary
+key: literaturelibrary
+content-length: 38
+
+{B28203CD-9DBE-4A8E-9E63-1258019CC67E}
+----field----
+field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
+name: __Display name
+key: __display name
+content-length: 14
+
+Member Library
+----field----
+field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
+name: __Final Renderings
+key: __final renderings
+content-length: 293
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /><r uid="{5F45C54C-6E51-47A6-9A65-FE9686D024B5}" s:ph="PresalesContent" /></d></r>
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170405T142253Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+8a2ac994-bf4e-4cc1-82c9-19b2d9ffc683
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20170405T143044Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

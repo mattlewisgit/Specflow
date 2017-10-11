@@ -2,12 +2,13 @@
 version: 1
 id: {F869FAA9-35AA-43E7-9143-18887099CCFF}
 database: master
-path: /sitecore/media library/presales/pdf/Development/Testing document 7
+path: /sitecore/media library/Presales/pdf/Development/Testing document 7
 parent: {F1C1A8B6-5EF8-458F-82AD-62DF8B4E521C}
 name: Testing document 7
 master: {00000000-0000-0000-0000-000000000000}
 template: {0603F166-35B8-469F-8123-E8D87BEDC171}
 templatekey: Pdf
+created: 20170403T145012Z
 
 ----field----
 field: {40E50ED9-BA07-4702-992E-A912738D32DC}
