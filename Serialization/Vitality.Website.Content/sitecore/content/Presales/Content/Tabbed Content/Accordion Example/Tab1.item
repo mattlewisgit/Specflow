@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {EDA0A349-93FD-45DD-AA7A-59AF63DD931E}
+id: {131F8B68-E000-48AD-9BFD-74F141EA5F2C}
 database: master
 path: /sitecore/content/Presales/Content/Tabbed Content/Accordion Example/Tab1
-parent: {BADF66B1-34D7-4B5C-8CB7-E85D61B44AAD}
+parent: {C838215E-AAB5-4A83-BCA3-C4E5F0910DF2}
 name: Tab1
 master: {00000000-0000-0000-0000-000000000000}
 template: {A5530129-F521-479B-8A24-520E741BA5A7}
 templatekey: Tab
+created: 20171012T131305Z
 
 ----version----
 language: en
