@@ -1,9 +1,9 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule }    from "@angular/http";
 import { NgModule }      from "@angular/core";
-import { ReactiveFormsModule }   from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 
-import { CallbackService }  from "./services/callback.service";
+import { CallbackService } from "./services/callback.service";
 import { DobControlService }  from "./services/dob-control.service";
 import { ErrorService }  from "./services/error.service";
 import { FooterBarService }  from "./services/footer-bar.service";
@@ -24,7 +24,7 @@ import { WindowRef } from "./components/windowref";
     imports: [
         BrowserModule,
         ReactiveFormsModule,
-        HttpModule
+        HttpModule        
     ],
     declarations: [
         AutoScrollTo,
