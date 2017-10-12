@@ -120,7 +120,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             {
                 buttonsize = Button.LOGIN_SMALL;
             }
-            
+
             //Button size small or large
             WebDriver
                 .WaitForElement(new JQuerySelector(buttonsize))
@@ -232,5 +232,28 @@ namespace Vitality.Website.IntegrationTests.Steps
                     !l.Message.Contains("deprecated"))
                 .ShouldBeEmpty();
         }
+
+        [Then(@"I expect the page (.*) to appear")]
+        public void ThenIExpectThePageToAppear(string Page)
+        {
+            WebDriver
+                .WaitForElement(new JQuerySelector(".server-error h1:contains('" + Page + "')"))
+                .Displayed
+                .ShouldBeTrue();
+
+            WebDriver
+                .WaitForElement(new JQuerySelector(".server-error .server-error--detail"))
+                .Displayed
+                .ShouldBeTrue();
+
+            WebDriver
+                .WaitForElement(new JQuerySelector(".server-error .server-error--cta.match-width"))
+                .Displayed
+                .ShouldBeTrue();
+
+        }
+
+
+
     }
 }

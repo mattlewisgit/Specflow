@@ -72,15 +72,15 @@ namespace Vitality.Website.IntegrationTests.Features.Presales
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check redirects (cricket) work on Presales")]
+        [Xunit.FactAttribute(DisplayName="Check redirects (cricket) works on Presales")]
         [Xunit.TraitAttribute("FeatureTitle", "Redirects")]
-        [Xunit.TraitAttribute("Description", "Check redirects (cricket) work on Presales")]
+        [Xunit.TraitAttribute("Description", "Check redirects (cricket) works on Presales")]
         [Xunit.TraitAttribute("Category", "Presales")]
         [Xunit.TraitAttribute("Category", "Redirects")]
         [Xunit.TraitAttribute("Category", "SIT")]
-        public virtual void CheckRedirectsCricketWorkOnPresales()
+        public virtual void CheckRedirectsCricketWorksOnPresales()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check redirects (cricket) work on Presales", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check redirects (cricket) works on Presales", new string[] {
                         "Presales",
                         "Redirects",
                         "SIT"});
@@ -94,24 +94,90 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check redirects (fitbug) work on Advisers")]
+        [Xunit.FactAttribute(DisplayName="Check redirects (youtube) works on Presales")]
         [Xunit.TraitAttribute("FeatureTitle", "Redirects")]
-        [Xunit.TraitAttribute("Description", "Check redirects (fitbug) work on Advisers")]
+        [Xunit.TraitAttribute("Description", "Check redirects (youtube) works on Presales")]
         [Xunit.TraitAttribute("Category", "Presales")]
         [Xunit.TraitAttribute("Category", "Redirects")]
         [Xunit.TraitAttribute("Category", "SIT")]
-        public virtual void CheckRedirectsFitbugWorkOnAdvisers()
+        public virtual void CheckRedirectsYoutubeWorksOnPresales()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check redirects (fitbug) work on Advisers", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check redirects (youtube) works on Presales", new string[] {
                         "Presales",
                         "Redirects",
                         "SIT"});
 #line 12
 this.ScenarioSetup(scenarioInfo);
 #line 13
- testRunner.Given("I am on advisers /rewards/partners/activity-tracking/fitbug/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I am on presales /usingmemberzone/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 14
+ testRunner.Then("I see the webpage https://www.youtube.com/watch?v=MaS5qoh8AUQ&feature=youtu.be", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check redirects (fitbug) works on Advisers")]
+        [Xunit.TraitAttribute("FeatureTitle", "Redirects")]
+        [Xunit.TraitAttribute("Description", "Check redirects (fitbug) works on Advisers")]
+        [Xunit.TraitAttribute("Category", "Presales")]
+        [Xunit.TraitAttribute("Category", "Redirects")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void CheckRedirectsFitbugWorksOnAdvisers()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check redirects (fitbug) works on Advisers", new string[] {
+                        "Presales",
+                        "Redirects",
+                        "SIT"});
+#line 17
+this.ScenarioSetup(scenarioInfo);
+#line 18
+ testRunner.Given("I am on advisers /rewards/partners/activity-tracking/fitbug/", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 19
     testRunner.Then("I expect the advisers /rewards/partners/activity-tracking/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check page not found works on Presales")]
+        [Xunit.TraitAttribute("FeatureTitle", "Redirects")]
+        [Xunit.TraitAttribute("Description", "Check page not found works on Presales")]
+        [Xunit.TraitAttribute("Category", "Presales")]
+        [Xunit.TraitAttribute("Category", "Redirects")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void CheckPageNotFoundWorksOnPresales()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check page not found works on Presales", new string[] {
+                        "Presales",
+                        "Redirects",
+                        "SIT"});
+#line 22
+this.ScenarioSetup(scenarioInfo);
+#line 23
+ testRunner.Given("I am on presales /unknownpage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 24
+    testRunner.Then("I expect the page Not found to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Check page not found works on Advisers")]
+        [Xunit.TraitAttribute("FeatureTitle", "Redirects")]
+        [Xunit.TraitAttribute("Description", "Check page not found works on Advisers")]
+        [Xunit.TraitAttribute("Category", "Presales")]
+        [Xunit.TraitAttribute("Category", "Redirects")]
+        [Xunit.TraitAttribute("Category", "SIT")]
+        public virtual void CheckPageNotFoundWorksOnAdvisers()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check page not found works on Advisers", new string[] {
+                        "Presales",
+                        "Redirects",
+                        "SIT"});
+#line 27
+this.ScenarioSetup(scenarioInfo);
+#line 28
+ testRunner.Given("I am on advisers /unknownpage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 29
+    testRunner.Then("I expect the page Not found to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
