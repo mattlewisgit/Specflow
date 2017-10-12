@@ -3,6 +3,7 @@ using System;
 using System.Linq;
 using System.Collections.Specialized;
 using Vitality.Website.Areas.Presales.Models;
+using Vitality.Core;
 
 namespace Vitality.Website.Areas.Presales.Services
 {
@@ -55,12 +56,10 @@ namespace Vitality.Website.Areas.Presales.Services
 
         private static List<OptalitixMember> GetMemberList(IEnumerable<DateTime?> additionalMemberDob)
         {
-            var members = new List<OptalitixMember>();
-            foreach (var memberDob in additionalMemberDob.Where(x => x.HasValue))
-            {
-                members.Add(new OptalitixMember { DateOfBirth = memberDob.Value });
-            }
-            return members;
-        }        
+            return additionalMemberDob
+                .Where(x => x.HasValue)
+                .Select(memberDob => new OptalitixMember { DateOfBirth = memberDob.Value })
+                .ToList();
+        }
     }
 }
