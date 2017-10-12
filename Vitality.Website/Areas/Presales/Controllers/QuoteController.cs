@@ -23,11 +23,11 @@ namespace Vitality.Website.Areas.Presales.Controllers
             var response = GetResponse<SaveApplicationRequest, string>(new SaveApplicationRequest(application, referenceId), refId => !string.IsNullOrEmpty(refId));
 
             var utmCookie = UtmCookieHelper.GetUtmCookie(new System.Web.HttpRequestWrapper(System.Web.HttpContext.Current.Request));
-            var refIdTemp = response.Content.ReadAsStringAsync().Result;
+            var refIdTemp = JsonConvert.DeserializeObject<string>(response.Content.ReadAsStringAsync().Result ?? string.Empty);
             var optalitixRequest = OptalitixQuoteRequestFactory.From(application, utmCookie, refIdTemp);
             GetResponseAsync<BslPostRequest, BslDto>(new BslPostRequest("optalitix/createquote",
                 JsonConvert.SerializeObject(new { FeedSettings = new object(), OptalitixQuoteRequest = optalitixRequest })), result => result != null);
-            
+
             return response;
         }
 

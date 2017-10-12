@@ -17,6 +17,7 @@ using Vitality.Website.Areas.Presales.Handlers.Bsl;
 using Vitality.Website.Areas.Presales.Models;
 using Vitality.Website.SC.Utilities;
 using Vitality.Website.SC.WFFM;
+using Newtonsoft.Json;
 
 namespace Vitality.Website.Areas.Presales.Controllers
 {
@@ -37,9 +38,9 @@ namespace Vitality.Website.Areas.Presales.Controllers
 
             var generatedCallProData = GenerateCallProData(model);
 
-            var xml = TransformXML(generatedCallProData);
+            var request = JsonConvert.SerializeObject(new { FeedSettings = new object(), Xml = TransformXML(generatedCallProData) });
 
-            return await GetResponseAsync<BslPostRequest, BslDto>(new BslPostRequest(bslEndpoint, xml), result => result != null);
+            return await GetResponseAsync<BslPostRequest, BslDto>(new BslPostRequest(bslEndpoint, request), result => result != null);
         }
 
         private Dictionary<string, string> GenerateCallProData(CallBackData callBackPostRequest)
@@ -60,7 +61,7 @@ namespace Vitality.Website.Areas.Presales.Controllers
                 {"{LASTNAME}", callBackPostRequest.Lastname},
                 {"{EMAILADDRESS}", callBackPostRequest.EmailAddress},
                 {"{CALLBACKTIME}", callBackPostRequest.CallBackTime},
-                {"{REFERENCEID}", callBackPostRequest.ReferenceId } //TODO get the referenceId
+                {"{REFERENCEID}", callBackPostRequest.ReferenceId }
             };
 
             var utmCookie = UtmCookieHelper.GetUtmCookie(new HttpRequestWrapper(HttpContext.Current.Request));

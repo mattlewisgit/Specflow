@@ -13,13 +13,13 @@ created: 20170214T132437Z
 ----version----
 language: en
 version: 1
-revision: 9449b984-0446-48a6-bffa-7d920afc9d45
+revision: 30427c50-8463-47c7-891d-b83fe2cf249a
 
 ----field----
 field: {B9B3711A-156D-4AFC-A127-9A6C9537143B}
 name: Xml
 key: xml
-content-length: 1650
+content-length: 1716
 
 <?xml version="1.0" encoding="utf-8"?>
 <importdata>
@@ -37,6 +37,7 @@ content-length: 1650
       <field table="TELRCM" field="OWNER">Callmeback</field>
       <field table="TELRCM" field="CUSTOMERSTATUS">Not Called</field>
       <field table="TELRCM" field="NEXTDATE">{NEXTYEAR}</field>
+      <field table="ADDN83" field="ANAL83">{REFERENCEID}</field>
       <field table="RCMANL" field="ANAL88" />
       <field table="RCMANL" field="ANAL80" />{UTM_SOURCE}</field>
       <field table="RCMANL" field="ANAL81" /> {UTM_MEDIUM}</field>
@@ -67,21 +68,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9449b984-0446-48a6-bffa-7d920afc9d45
+30427c50-8463-47c7-891d-b83fe2cf249a
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170404T100825Z
+20171012T091728Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 21
+content-length: 14
 
-sitecore\SteveWatling
+sitecore\Admin
 ----field----
 field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
 name: __Lock
