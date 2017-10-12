@@ -402,7 +402,7 @@
     <TypeScriptCompile Include="src\ts\app\constants\quoteapply-constants.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\auto-scroll-to.directive.ts" />
     <TypeScriptCompile Include="src\ts\app\constants\global-constants.ts" />
-    <TypeScriptCompile Include="src\ts\app\modules\common-module.ts" />
+    <TypeScriptCompile Include="src\ts\app\modules\common.module.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\click-outside.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\limit-multi-select.directive.ts" />
     <TypeScriptCompile Include="src\ts\app\factories\footer-bar-service.factory.ts" />
@@ -420,9 +420,9 @@
     <TypeScriptCompile Include="src\ts\app\models\quote\individual-quote-request.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\benefit-option.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\quote-result-rendering-data.ts" />
-    <TypeScriptCompile Include="src\ts\app\rich-text-content.module.ts" />
-    <TypeScriptCompile Include="src\ts\app\quote-result.module.ts" />
-    <TypeScriptCompile Include="src\ts\app\quote-apply-footer.module.ts" />
+    <TypeScriptCompile Include="src\ts\app\modules\rich-text-content.module.ts" />
+    <TypeScriptCompile Include="src\ts\app\modules\quote-result.module.ts" />
+    <TypeScriptCompile Include="src\ts\app\modules\quote-apply-footer.module.ts" />
     <TypeScriptCompile Include="src\ts\app\services\quote.service.ts" />
     <TypeScriptCompile Include="src\ts\rich-text-content.main.ts" />
     <TypeScriptCompile Include="src\ts\quote-result.main.ts" />
@@ -430,7 +430,7 @@
     <TypeScriptCompile Include="src\ts\quote-apply-footer.main.ts" />
     <TypeScriptCompile Include="src\ts\app\services\callback.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\moment-extended.service.ts" />
-    <TypeScriptCompile Include="src\ts\app\tell-form.module.ts" />
+    <TypeScriptCompile Include="src\ts\app\modules\tell-form.module.ts" />
     <TypeScriptCompile Include="src\ts\app\services\dob-control.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\error.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\postcode.service.ts" />
@@ -438,7 +438,7 @@
     <TypeScriptCompile Include="src\ts\app\services\footer-bar.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\question-control.service.ts" />
     <TypeScriptCompile Include="src\ts\app\services\validation.service.ts" />
-    <TypeScriptCompile Include="src\ts\app\vacancydetails-app.module.ts" />
+    <TypeScriptCompile Include="src\ts\app\modules\vacancydetails-app.module.ts" />
     <TypeScriptCompile Include="src\ts\systemjs.config.server.ts" />
     <TypeScriptCompile Include="src\ts\quote-apply-main.ts" />
     <TypeScriptCompile Include="src\ts\vacancydetails-main.ts" />
@@ -4922,7 +4922,7 @@
     <Analyzer Include="..\packages\SonarAnalyzer.CSharp.1.10.0\analyzers\SonarAnalyzer.dll" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\ts\app\vacancylist-app.module.ts" />
+    <TypeScriptCompile Include="src\ts\app\modules\vacancylist-app.module.ts" />
     <TypeScriptCompile Include="src\ts\app\components\vacancies.component.ts" />
     <TypeScriptCompile Include="src\ts\app\components\vacancy-details.component.ts" />
     <TypeScriptCompile Include="src\ts\app\models\vacancies.ts" />
