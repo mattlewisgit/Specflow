@@ -88,7 +88,7 @@ content-length: 38
 ----version----
 language: en
 version: 2
-revision: c860b777-502b-456d-be3b-f8e5bf173897
+revision: dc2e9e6e-f297-4bad-a70e-14c6b54e66e5
 
 ----field----
 field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
@@ -115,9 +115,9 @@ Content
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 622
+content-length: 1070
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{CC1AD02A-3F3E-4D97-B9E3-200BFF3E22C9}" p:before="*" s:ds="{A400CF2F-CC19-4788-8467-2C13642DD882}" s:id="{25359980-8C72-4BA2-8B4C-755725B6C8BB}" s:ph="PresalesContent" /><r uid="{4FAD6893-34C6-452B-B366-0C3BB5E45C23}" p:after="r[@uid='{CC1AD02A-3F3E-4D97-B9E3-200BFF3E22C9}']" s:ds="{F383B5CA-7708-4786-B9DE-0F8A975DE2E0}" s:id="{25359980-8C72-4BA2-8B4C-755725B6C8BB}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{C670291D-AE90-48FC-8DC1-E8439F87C346}" p:before="*" s:ds="{391A231A-5F02-47D4-A02C-49B03856D8D3}" s:id="{25359980-8C72-4BA2-8B4C-755725B6C8BB}" s:ph="PresalesContent" /><r uid="{CCA54AF2-0A15-43BA-AE63-5DE00E79A46F}" p:after="r[@uid='{C670291D-AE90-48FC-8DC1-E8439F87C346}']" s:ds="{47034561-865A-447B-8B38-FF372EAA28B8}" s:id="{25359980-8C72-4BA2-8B4C-755725B6C8BB}" s:ph="PresalesContent" /><r uid="{CC1AD02A-3F3E-4D97-B9E3-200BFF3E22C9}" p:after="r[@uid='{CCA54AF2-0A15-43BA-AE63-5DE00E79A46F}']" s:ds="{A400CF2F-CC19-4788-8467-2C13642DD882}" s:id="{25359980-8C72-4BA2-8B4C-755725B6C8BB}" s:ph="PresalesContent" /><r uid="{4FAD6893-34C6-452B-B366-0C3BB5E45C23}" p:after="r[@uid='{CC1AD02A-3F3E-4D97-B9E3-200BFF3E22C9}']" s:ds="{F383B5CA-7708-4786-B9DE-0F8A975DE2E0}" s:id="{25359980-8C72-4BA2-8B4C-755725B6C8BB}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
 ----field----
 field: {C8F93AFE-BFD4-4E8F-9C61-152559854661}
 name: __Valid from
@@ -145,14 +145,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-c860b777-502b-456d-be3b-f8e5bf173897
+dc2e9e6e-f297-4bad-a70e-14c6b54e66e5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170809T100214Z
+20171012T153702Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -160,3 +160,10 @@ key: __updated by
 content-length: 14
 
 sitecore\Admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

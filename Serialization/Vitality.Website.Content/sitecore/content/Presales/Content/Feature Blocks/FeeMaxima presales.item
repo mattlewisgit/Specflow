@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {55276F97-E11F-4F88-BA78-EF94C73BD44A}
+id: {7E5E1809-CC14-4E3A-8CE8-4063F7022FFD}
 database: master
 path: /sitecore/content/Presales/Content/Feature Blocks/FeeMaxima presales
 parent: {B626955A-8D36-4516-B6EB-F2A66D89D6BA}
@@ -8,6 +8,7 @@ name: FeeMaxima presales
 master: {00000000-0000-0000-0000-000000000000}
 template: {252D3793-4CAF-4F2C-A024-A5E57D000E7C}
 templatekey: FeeMaxima
+created: 20171012T154237Z
 
 ----version----
 language: en
@@ -161,10 +162,3 @@ key: __updated by
 content-length: 13
 
 sitecore\matt
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 51
-
-<r owner="sitecore\matt" date="20170412T155031Z" />

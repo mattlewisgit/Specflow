@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {F383B5CA-7708-4786-B9DE-0F8A975DE2E0}
+id: {47034561-865A-447B-8B38-FF372EAA28B8}
 database: master
 path: /sitecore/content/Presales/Content/Rich Text/Card Snippet Content
 parent: {16D790E9-5910-45CC-93B0-AA186A7D387D}
@@ -8,7 +8,7 @@ name: Card Snippet Content
 master: {00000000-0000-0000-0000-000000000000}
 template: {1EFF0C91-5C21-4AE9-B0AA-8F05772410E6}
 templatekey: Content
-created: 20170809T095325Z
+created: 20171012T153444Z
 
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
@@ -20,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 45358885-c2a8-4852-a36e-de029a820d7a
+revision: 869280a8-8831-4115-955b-236335522f25
 
 ----field----
 field: {35B57356-DA32-4179-AFD5-3A74F13831B9}
@@ -81,14 +81,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-45358885-c2a8-4852-a36e-de029a820d7a
+869280a8-8831-4115-955b-236335522f25
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170809T125542Z
+20171012T153522Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -1,26 +1,27 @@
 ----item----
 version: 1
-id: {11068783-DF6C-4C6C-A813-D90AC7C5984F}
+id: {1B70CF18-2732-4F16-8F4A-37CD971897F0}
 database: master
 path: /sitecore/content/Presales/Content/Products/Products Component Example/Vitality Health
-parent: {2B00F3B8-B8D6-4368-8E62-83C1FA08EDD6}
+parent: {40593DA3-6266-41D1-AC55-A0BE04049A72}
 name: Vitality Health
 master: {00000000-0000-0000-0000-000000000000}
 template: {96382665-A7A9-44DF-B3EC-2B50B5F89114}
 templatekey: Product Panel
+created: 20171012T160346Z
 
 ----version----
 language: en
 version: 1
-revision: 77566a9f-b9d1-4924-b6ba-d2f36944cc4e
+revision: b03bea9b-5a70-41f9-af7d-06cdc83b1bd2
 
 ----field----
 field: {A4AA3E4B-6ACF-443F-846E-A82260D82563}
 name: Image
 key: image
-content-length: 58
+content-length: 65
 
-<image mediaid="{127286D2-907C-48B0-8359-E2FF1436C450}" />
+<image mediaid="{127286D2-907C-48B0-8359-E2FF1436C450}" ></image>
 ----field----
 field: {E4B4284D-4323-4974-A51B-EFB701968699}
 name: OpeningParagraph
@@ -62,21 +63,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-77566a9f-b9d1-4924-b6ba-d2f36944cc4e
+b03bea9b-5a70-41f9-af7d-06cdc83b1bd2
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20161215T151210Z
+20171012T160514Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin
 ----field----
 field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
 name: __Lock

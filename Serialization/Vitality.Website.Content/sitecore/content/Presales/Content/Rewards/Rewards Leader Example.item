@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {6B0DFD74-966A-4BD5-B5F3-F92C9EE17958}
+id: {676246F6-76F5-442A-A658-6FA3C48B0BBD}
 database: master
 path: /sitecore/content/Presales/Content/Rewards/Rewards Leader Example
 parent: {0CD01959-A081-4C0A-BA07-C00D77C2C71C}
@@ -8,6 +8,7 @@ name: Rewards Leader Example
 master: {00000000-0000-0000-0000-000000000000}
 template: {5CDF9BF1-35E1-4E28-8718-21F6506D7AE5}
 templatekey: Rewards Leader
+created: 20171012T160641Z
 
 ----version----
 language: en

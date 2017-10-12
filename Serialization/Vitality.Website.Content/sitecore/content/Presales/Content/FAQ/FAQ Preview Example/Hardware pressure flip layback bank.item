@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {E2DF9CE9-4398-424F-A282-75E0C8738407}
+id: {2FB9BC71-7D18-48B1-B7F5-E354403C070E}
 database: master
-path: /sitecore/content/Presales/Content/FAQ/FAQ Preview Examplee/Hardware pressure flip layback bank
-parent: {CF74EB0C-44E0-460D-B723-7CAAE9FE65EC}
+path: /sitecore/content/Presales/Content/FAQ/FAQ Preview Example/Hardware pressure flip layback bank
+parent: {578DE631-1BD3-4ED7-AF32-4FE6CD433EB1}
 name: Hardware pressure flip layback bank
 master: {00000000-0000-0000-0000-000000000000}
 template: {E5BEA071-8E83-42C6-9348-68A6E7B0C66D}
 templatekey: FAQ Preview
+created: 20171012T153846Z
 
 ----version----
 language: en

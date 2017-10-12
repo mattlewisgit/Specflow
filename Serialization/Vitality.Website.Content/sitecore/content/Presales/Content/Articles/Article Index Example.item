@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {C811A129-2DE7-40EA-8B3D-84BF3B1BCB23}
+id: {8BF0811B-3D87-45A0-BCDD-E75FF998C3E9}
 database: master
 path: /sitecore/content/Presales/Content/Articles/Article Index Example
 parent: {B49CAB79-66AA-40AF-8F54-939D31F04DEC}
@@ -8,6 +8,7 @@ name: Article Index Example
 master: {00000000-0000-0000-0000-000000000000}
 template: {C4FA053C-ABF0-416E-A290-40589EB293DE}
 templatekey: Article Index
+created: 20171012T150901Z
 
 ----version----
 language: en

@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {CF74EB0C-44E0-460D-B723-7CAAE9FE65EC}
+id: {578DE631-1BD3-4ED7-AF32-4FE6CD433EB1}
 database: master
-path: /sitecore/content/Presales/Content/FAQ/FAQ Preview Examplee
+path: /sitecore/content/Presales/Content/FAQ/FAQ Preview Example
 parent: {3EF7FDAD-19C8-4931-846F-8BC623CB72C9}
-name: FAQ Preview Examplee
+name: FAQ Preview Example
 master: {00000000-0000-0000-0000-000000000000}
 template: {BE2854DE-BB75-42FF-879D-9E6C05B1C6AA}
 templatekey: FAQ Leader
+created: 20171012T153846Z
 
 ----version----
 language: en

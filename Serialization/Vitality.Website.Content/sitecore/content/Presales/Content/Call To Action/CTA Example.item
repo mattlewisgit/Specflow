@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {D0A55E3D-D363-44DF-A53E-12827079E4FC}
+id: {7EEF2B8E-EFC1-4408-B90A-1E60DA5A7C8C}
 database: master
 path: /sitecore/content/Presales/Content/Call To Action/CTA Example
 parent: {5B106F86-596A-4797-BF55-C991242BC1CD}
@@ -8,6 +8,7 @@ name: CTA Example
 master: {00000000-0000-0000-0000-000000000000}
 template: {18709C78-2661-47A9-AF8D-2FAB087EC546}
 templatekey: Primary Call To Action
+created: 20171012T152241Z
 
 ----version----
 language: en

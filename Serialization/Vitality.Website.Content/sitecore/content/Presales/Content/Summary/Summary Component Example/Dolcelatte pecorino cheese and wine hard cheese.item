@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {D9EA6274-FA31-4869-944D-7D884E7759A5}
+id: {4A6BD8DC-049B-4E65-A880-67BD23BFAAAD}
 database: master
-path: /sitecore/content/Presales/Content/Summary/Summary Component Examplee/Bavarian bergkase macaroni cheese mascarpone
-parent: {E667CF05-2F6B-4B46-A98B-80FCA23B3BF3}
-name: Bavarian bergkase macaroni cheese mascarpone
+path: /sitecore/content/Presales/Content/Summary/Summary Component Example/Dolcelatte pecorino cheese and wine hard cheese
+parent: {A7C3DCCB-150F-426F-831A-CEE55A399E43}
+name: Dolcelatte pecorino cheese and wine hard cheese
 master: {00000000-0000-0000-0000-000000000000}
 template: {428438C8-D8C7-4D8E-BA51-B4FAAE4269C5}
 templatekey: Summary List Item Short
+created: 20171012T161118Z
 
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
@@ -15,40 +16,40 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-100
+300
 ----version----
 language: en
 version: 1
-revision: 786c54b8-0356-497f-ae53-446961f30e24
+revision: 7317ff48-4cfc-4ebc-81c1-1781e621ace9
 
 ----field----
 field: {A29F2185-3E6E-4C22-A856-8D2D122A2376}
 name: Title
 key: title
-content-length: 44
+content-length: 47
 
-Bavarian bergkase macaroni cheese mascarpone
+Dolcelatte pecorino cheese and wine hard cheese
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160617T133735Z
+20160617T133834Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-786c54b8-0356-497f-ae53-446961f30e24
+7317ff48-4cfc-4ebc-81c1-1781e621ace9
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T133842Z
+20160617T133843Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

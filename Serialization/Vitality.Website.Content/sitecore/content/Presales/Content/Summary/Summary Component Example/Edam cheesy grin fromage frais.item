@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {663FE5B1-9D37-42D4-8641-6AE8F6D3ED05}
+id: {89FD1708-9849-4187-87E1-4C3CBA68A8B5}
 database: master
-path: /sitecore/content/Presales/Content/Summary/Summary Component Examplee/Dolcelatte pecorino cheese and wine hard cheese
-parent: {E667CF05-2F6B-4B46-A98B-80FCA23B3BF3}
-name: Dolcelatte pecorino cheese and wine hard cheese
+path: /sitecore/content/Presales/Content/Summary/Summary Component Example/Edam cheesy grin fromage frais
+parent: {A7C3DCCB-150F-426F-831A-CEE55A399E43}
+name: Edam cheesy grin fromage frais
 master: {00000000-0000-0000-0000-000000000000}
-template: {428438C8-D8C7-4D8E-BA51-B4FAAE4269C5}
-templatekey: Summary List Item Short
+template: {8E0DE43E-63DF-4B76-97C9-C4DCCB4546C5}
+templatekey: Summary List Item
+created: 20171012T161118Z
 
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
@@ -15,33 +16,40 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-300
+500
 ----version----
 language: en
 version: 1
-revision: 7317ff48-4cfc-4ebc-81c1-1781e621ace9
+revision: 943f2dfd-4cde-415e-a771-5c47324901fa
 
 ----field----
-field: {A29F2185-3E6E-4C22-A856-8D2D122A2376}
+field: {B1D34F37-4911-4153-A89B-284E8794DB1A}
 name: Title
 key: title
-content-length: 47
+content-length: 30
 
-Dolcelatte pecorino cheese and wine hard cheese
+Edam cheesy grin fromage frais
+----field----
+field: {5ADE367F-2CCB-4EEC-A026-F4CB0C295714}
+name: Body
+key: body
+content-length: 108
+
+Pecorino everyone loves ricotta macaroni cheese cheese on toast fromage chalk and cheese cheese and biscuits
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160617T133834Z
+20160617T133701Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-7317ff48-4cfc-4ebc-81c1-1781e621ace9
+943f2dfd-4cde-415e-a771-5c47324901fa
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated

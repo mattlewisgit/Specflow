@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {6B23788D-F5B7-41FD-ABF9-21B8E775FA9C}
+id: {5764BD9A-F646-405C-A498-20EAAC223A59}
 database: master
 path: /sitecore/content/Presales/Content/Rewards/Rewards Leader Example/Starbucks Coffee
-parent: {6B0DFD74-966A-4BD5-B5F3-F92C9EE17958}
+parent: {676246F6-76F5-442A-A658-6FA3C48B0BBD}
 name: Starbucks Coffee
 master: {00000000-0000-0000-0000-000000000000}
 template: {BDD88ED4-C40F-43A1-9900-572B18179434}
 templatekey: Image Link
+created: 20171012T160641Z
 
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
@@ -63,10 +64,3 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />

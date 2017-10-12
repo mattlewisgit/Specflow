@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {E7580CF4-FD88-49EE-9D90-D910A3611578}
+id: {DA9947B8-D1D6-4FB2-A094-E93EDD9B3437}
 database: master
-path: /sitecore/content/Presales/Content/Feature Blocks/Product Hero Examplee
+path: /sitecore/content/Presales/Content/Feature Blocks/Product Hero Example
 parent: {B626955A-8D36-4516-B6EB-F2A66D89D6BA}
-name: Product Hero Examplee
+name: Product Hero Example
 master: {00000000-0000-0000-0000-000000000000}
 template: {67B91FDD-B1BE-468B-9E13-8DDCCBF9BECC}
 templatekey: Product Hero
+created: 20171012T160011Z
 
 ----version----
 language: en
@@ -77,10 +78,3 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />

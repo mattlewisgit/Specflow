@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {4FF6568B-25A2-4DCD-81C2-025552554613}
+id: {2A142F05-416D-454F-BEFC-7730A5F07360}
 database: master
 path: /sitecore/content/Presales/Content/Tabbed Content/Tabbed Content Example/Tab2
-parent: {0DD1C5D7-12CF-4C0D-A218-7297C8229485}
+parent: {3AB174B8-23AB-4668-BA0B-E4C844AE042D}
 name: Tab2
 master: {00000000-0000-0000-0000-000000000000}
 template: {A5530129-F521-479B-8A24-520E741BA5A7}
 templatekey: Tab
+created: 20171012T152810Z
 
 ----version----
 language: en

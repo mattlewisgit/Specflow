@@ -20,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 233cf733-9376-49ea-aaa2-34150248cd1d
+revision: 89d9e73e-cf9c-4cbd-b9e6-d02393784be0
 
 ----field----
 field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
@@ -47,9 +47,9 @@ Award Leader
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 398
+content-length: 622
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{0517A59B-DA3F-4946-AAB5-4E7381FFF7A5}" p:before="*" s:ds="{C007FB3C-30BD-459B-880D-A56F62B64611}" s:id="{710B8254-618A-4081-A4F3-4FD76C37D29D}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{508FB704-8695-4C0A-9A22-A5F3A0C5B2CA}" p:before="*" s:ds="{A30274B4-36FC-4E9F-BC6B-2DF2037A69B0}" s:id="{710B8254-618A-4081-A4F3-4FD76C37D29D}" s:ph="PresalesContent" /><r uid="{0517A59B-DA3F-4946-AAB5-4E7381FFF7A5}" p:after="r[@uid='{508FB704-8695-4C0A-9A22-A5F3A0C5B2CA}']" s:ds="{C007FB3C-30BD-459B-880D-A56F62B64611}" s:id="{710B8254-618A-4081-A4F3-4FD76C37D29D}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -63,14 +63,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-233cf733-9376-49ea-aaa2-34150248cd1d
+89d9e73e-cf9c-4cbd-b9e6-d02393784be0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170614T143326Z
+20171012T151408Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -85,3 +85,10 @@ key: __workflow state
 content-length: 38
 
 {BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

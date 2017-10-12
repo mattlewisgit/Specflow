@@ -1,33 +1,34 @@
 ----item----
 version: 1
-id: {045C35D1-31E0-4B80-803E-D20FA20719D3}
+id: {A8322F7F-E9B5-4CBB-8CBE-336DAC473918}
 database: master
-path: /sitecore/content/Presales/Content/FAQ/FAQ Preview Examplee/Hang up downhill bruised heel skater grind betty manual
-parent: {CF74EB0C-44E0-460D-B723-7CAAE9FE65EC}
-name: Hang up downhill bruised heel skater grind betty manual
+path: /sitecore/content/Presales/Content/FAQ/FAQ Preview Example/Sick street backside hang ten
+parent: {578DE631-1BD3-4ED7-AF32-4FE6CD433EB1}
+name: Sick street backside hang ten
 master: {00000000-0000-0000-0000-000000000000}
 template: {E5BEA071-8E83-42C6-9348-68A6E7B0C66D}
 templatekey: FAQ Preview
+created: 20171012T153846Z
 
 ----version----
 language: en
 version: 1
-revision: b4638867-e181-4dea-b3ec-740b79b49d6f
+revision: 20843584-af24-4c09-8326-6ef6ed3100d6
 
 ----field----
 field: {09EF649A-71BB-420C-A987-034F16AB9884}
 name: QuestionText
 key: questiontext
-content-length: 56
+content-length: 30
 
-Hang up downhill bruised heel skater grind betty manual?
+Sick street backside hang ten?
 ----field----
 field: {00A14B16-A96C-430C-ADFF-6F10A55C1DFC}
 name: AnswerText
 key: answertext
-content-length: 285
+content-length: 250
 
-Primo slide air pop shove-it nose bump carve coffin mute-air mINUTEMEN. Nosepicker cab flip drop in aerial Chris Haslam rip grip steps front foot impossible. Casper slide coper shoveit bone air freestyle crail grab rail. Boneless lipslide birdie melancholy bone air nosebone skate key.
+Blind flail fakie out wax street. Switch 360 street egg plant. Nose-bump kingpin wheels Chico Brenes helipop. Transfer ledge 270 bigspin. Coping Tracker wheels gnarly. Skate or die melancholy hang up coping. Wall ride kidney slap maxwell G&S hang up.
 ----field----
 field: {3A595148-70F3-4622-A4B2-72346A971C92}
 name: ReadMoreLink
@@ -39,23 +40,23 @@ content-length: 114
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 55
+content-length: 29
 
-Hang up downhill bruised heel skater grind betty manual
+Sick street backside hang ten
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160617T125227Z
+20160617T125149Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-b4638867-e181-4dea-b3ec-740b79b49d6f
+20843584-af24-4c09-8326-6ef6ed3100d6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated

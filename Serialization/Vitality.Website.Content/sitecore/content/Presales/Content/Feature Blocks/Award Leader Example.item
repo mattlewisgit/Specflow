@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {C007FB3C-30BD-459B-880D-A56F62B64611}
+id: {A30274B4-36FC-4E9F-BC6B-2DF2037A69B0}
 database: master
 path: /sitecore/content/Presales/Content/Feature Blocks/Award Leader Example
 parent: {B626955A-8D36-4516-B6EB-F2A66D89D6BA}
@@ -8,6 +8,7 @@ name: Award Leader Example
 master: {00000000-0000-0000-0000-000000000000}
 template: {056C6833-9BE7-418D-A47B-CCD697D9EDA3}
 templatekey: Award Leader
+created: 20171012T151236Z
 
 ----version----
 language: en
@@ -63,10 +64,3 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />

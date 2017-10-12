@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {2B00F3B8-B8D6-4368-8E62-83C1FA08EDD6}
+id: {40593DA3-6266-41D1-AC55-A0BE04049A72}
 database: master
 path: /sitecore/content/Presales/Content/Products/Products Component Example
 parent: {92A93B34-38D3-4817-9CDE-FA506F2D39E7}
@@ -8,6 +8,7 @@ name: Products Component Example
 master: {00000000-0000-0000-0000-000000000000}
 template: {AE3F57CB-C2D8-4F83-9F44-EA6DDC6F73D2}
 templatekey: Products Component
+created: 20171012T160346Z
 
 ----version----
 language: en

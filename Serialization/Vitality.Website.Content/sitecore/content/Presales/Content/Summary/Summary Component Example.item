@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {E667CF05-2F6B-4B46-A98B-80FCA23B3BF3}
+id: {A7C3DCCB-150F-426F-831A-CEE55A399E43}
 database: master
-path: /sitecore/content/Presales/Content/Summary/Summary Component Examplee
+path: /sitecore/content/Presales/Content/Summary/Summary Component Example
 parent: {BFC5DF2D-C154-445E-B3FE-9F2227B9661B}
-name: Summary Component Examplee
+name: Summary Component Example
 master: {00000000-0000-0000-0000-000000000000}
 template: {F2A3AC96-B8E1-402D-B3B1-A18BC68E7A68}
 templatekey: Summary Component
+created: 20171012T161118Z
 
 ----version----
 language: en

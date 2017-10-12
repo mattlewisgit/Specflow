@@ -1,13 +1,14 @@
 ----item----
 version: 1
-id: {72DE05E1-8AA1-4D21-B7C5-7FA773CF555B}
+id: {FCE3E0D5-EE51-4950-9960-47258A0D4F33}
 database: master
-path: /sitecore/content/Presales/Content/Summary/Summary Component Examplee/Squirty cheese stinking bishop danish fontina
-parent: {E667CF05-2F6B-4B46-A98B-80FCA23B3BF3}
-name: Squirty cheese stinking bishop danish fontina
+path: /sitecore/content/Presales/Content/Summary/Summary Component Example/Fondue edam stinking bishop
+parent: {A7C3DCCB-150F-426F-831A-CEE55A399E43}
+name: Fondue edam stinking bishop
 master: {00000000-0000-0000-0000-000000000000}
 template: {8E0DE43E-63DF-4B76-97C9-C4DCCB4546C5}
 templatekey: Summary List Item
+created: 20171012T161118Z
 
 ----field----
 field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
@@ -15,47 +16,47 @@ name: __Sortorder
 key: __sortorder
 content-length: 3
 
-425
+450
 ----version----
 language: en
 version: 1
-revision: 273b9b63-39cb-4400-85a5-41adfce27039
+revision: d83d1eb8-bd4b-49a3-b9fc-ac1e008ffdd5
 
 ----field----
 field: {B1D34F37-4911-4153-A89B-284E8794DB1A}
 name: Title
 key: title
-content-length: 45
+content-length: 95
 
-Squirty cheese stinking bishop danish fontina
+<a href="~/link.aspx?_id=3313D0FF3AD04E34A8247246041531D7&_z=z">Fondue edam stinking bishop</a>
 ----field----
 field: {5ADE367F-2CCB-4EEC-A026-F4CB0C295714}
 name: Body
 key: body
-content-length: 281
+content-length: 98
 
-Ricotta when the cheese comes out everybody's happy airedale. Smelly cheese smelly cheese feta airedale danish fontina everyone loves port-salut red leicester. Bocconcini babybel fromage when the cheese comes out everybody's happy queso cheesy feet cheeseburger cauliflower cheese.
+Emmental monterey jack everyone loves who moved my cheese feta fondue cheeseburger stinking bishop
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160617T134046Z
+20160617T133914Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-273b9b63-39cb-4400-85a5-41adfce27039
+d83d1eb8-bd4b-49a3-b9fc-ac1e008ffdd5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160617T134128Z
+20160810T104616Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

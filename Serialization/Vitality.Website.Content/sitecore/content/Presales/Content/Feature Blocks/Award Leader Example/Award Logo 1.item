@@ -1,26 +1,27 @@
 ----item----
 version: 1
-id: {3DE8CA89-E07E-451A-B97F-80F3A1D28615}
+id: {CC02D520-FCFB-48B4-B2EF-4670237B6012}
 database: master
 path: /sitecore/content/Presales/Content/Feature Blocks/Award Leader Example/Award Logo 1
-parent: {C007FB3C-30BD-459B-880D-A56F62B64611}
+parent: {A30274B4-36FC-4E9F-BC6B-2DF2037A69B0}
 name: Award Logo 1
 master: {00000000-0000-0000-0000-000000000000}
 template: {25EB72FE-6AE2-44E4-AC1E-9631E53D3AB0}
 templatekey: Award Logo
+created: 20171012T151236Z
 
 ----version----
 language: en
 version: 1
-revision: b0e49bc2-878c-4c03-b8ae-8ad7385d7e96
+revision: 6506c3d6-8730-409e-bece-868e9066d43c
 
 ----field----
 field: {9A4D889C-168E-4BBA-90CB-C9AFBA966F76}
 name: Image
 key: image
-content-length: 58
+content-length: 65
 
-<image mediaid="{EA937974-5309-435E-9766-C92837F15D3F}" />
+<image mediaid="{E88CEE26-C1B9-4A76-8496-F8817A67A6AE}" ></image>
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -48,21 +49,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b0e49bc2-878c-4c03-b8ae-8ad7385d7e96
+6506c3d6-8730-409e-bece-868e9066d43c
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170425T140331Z
+20171012T151408Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin
 ----field----
 field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
 name: __Lock

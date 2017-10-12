@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {2679CA8A-45EC-4C06-A702-487763E6DDF0}
+id: {62321E06-7422-4D06-A914-6F3B8A46DA82}
 database: master
 path: /sitecore/content/Presales/Content/Message Boxes/Message Box Alert
 parent: {68666DF6-1924-459B-B484-D96A5CD23466}
@@ -8,6 +8,7 @@ name: Message Box Alert
 master: {00000000-0000-0000-0000-000000000000}
 template: {E5B15680-FB0E-4273-83F4-E19F8783440E}
 templatekey: Message Box
+created: 20171012T154813Z
 
 ----version----
 language: en
@@ -63,10 +64,3 @@ key: __updated by
 content-length: 14
 
 sitecore\admin
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />
