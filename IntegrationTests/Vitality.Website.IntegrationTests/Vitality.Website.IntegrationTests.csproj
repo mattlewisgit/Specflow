@@ -140,6 +140,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProductsComponent.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Presales\Redirects.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Redirects.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Presales\RewardLeader.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -474,6 +479,10 @@
     <None Include="Features\Presales\ProductsComponent.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ProductsComponent.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Presales\Redirects.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Redirects.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Presales\TwitterFeed.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
