@@ -1,6 +1,6 @@
 ----item----
 version: 1
-id: {BADF66B1-34D7-4B5C-8CB7-E85D61B44AAD}
+id: {C838215E-AAB5-4A83-BCA3-C4E5F0910DF2}
 database: master
 path: /sitecore/content/Presales/Content/Tabbed Content/Accordion Example
 parent: {E4388075-4463-4D15-9629-532E4D44CC0F}
@@ -8,6 +8,7 @@ name: Accordion Example
 master: {00000000-0000-0000-0000-000000000000}
 template: {F7CFF045-57AE-49F5-BD7A-B24C06EF287B}
 templatekey: Tab Collection
+created: 20171012T131305Z
 
 ----version----
 language: en
