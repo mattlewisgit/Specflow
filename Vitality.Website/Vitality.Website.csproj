@@ -309,8 +309,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="Vitality.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Vitality.Core.1.0.0\lib\net45\Vitality.Core.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Vitality.Core.1.0.26\lib\net45\Vitality.Core.dll</HintPath>
     </Reference>
     <Reference Include="Vitality.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Vitality.Mvc.1.0.1\lib\net45\Vitality.Mvc.dll</HintPath>
@@ -4007,7 +4006,7 @@
     <Compile Include="Areas\Presales\ComponentTemplates\QuoteApply\QuoteResult.cs" />
     <Compile Include="Areas\Presales\ComponentTemplates\TellForm\FieldValidatorViewModel.cs" />
     <Compile Include="Areas\Presales\Controllers\QuoteController.cs" />
-    <Compile Include="Areas\Presales\Controllers\CallProController.cs" />
+    <Compile Include="Areas\Presales\Controllers\CallBackController.cs" />
     <Compile Include="Areas\Presales\Handlers\CallBack\CallBackDto.cs" />
     <Compile Include="Areas\Presales\Handlers\CallBack\CallBackPostRequest.cs" />
     <Compile Include="Areas\Presales\Handlers\Quote\GetApplicationHandler.cs" />
@@ -4015,7 +4014,12 @@
     <Compile Include="Areas\Presales\Handlers\Quote\SaveApplicationHandler.cs" />
     <Compile Include="Areas\Presales\Handlers\Quote\SaveApplicationRequest.cs" />
     <Compile Include="Areas\Presales\Models\CallBackData.cs" />
+    <Compile Include="Areas\Presales\Models\OptalitixMember.cs" />
+    <Compile Include="Areas\Presales\Models\OptalitixQuoteRequest.cs" />
+    <Compile Include="Areas\Presales\Models\SaveApplicationModel.cs" />
+    <Compile Include="Areas\Presales\Services\ICallBackService.cs" />
     <Compile Include="Areas\Presales\Services\IPresalesBslService.cs" />
+    <Compile Include="Areas\Presales\Services\OptalitixQuoteRequestFactory.cs" />
     <Compile Include="Controllers\ManifestController.cs" />
     <Compile Include="Controllers\ReferenceDataController.cs" />
     <Compile Include="Extensions\JsonExtensions.cs" />

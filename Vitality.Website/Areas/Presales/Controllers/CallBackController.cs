@@ -14,23 +14,22 @@ using Vitality.Core;
 using Vitality.Mvc.Models;
 using Vitality.Mvc.Utilities;
 using Vitality.Website.Areas.Presales.Handlers.Bsl;
-using Vitality.Website.Areas.Presales.Handlers.CallBack;
-using Vitality.Website.Areas.Presales.Handlers.ContentSearch;
 using Vitality.Website.Areas.Presales.Models;
 using Vitality.Website.SC.Utilities;
 using Vitality.Website.SC.WFFM;
+using Newtonsoft.Json;
 
 namespace Vitality.Website.Areas.Presales.Controllers
 {
-    public class CallProController : BaseController
+    public class CallBackController : BaseController
     {
-        public CallProController(IMediator mediator) : base(mediator)
+        public CallBackController(IMediator mediator) : base(mediator)
         {
         }
 
         [HttpPost]
         [Route("api/callpro")]
-        public async Task<HttpResponseMessage> Post(string bslEndpoint, CallBackData model)
+        public async Task<HttpResponseMessage> CallPro(string bslEndpoint, CallBackData model)
         {
             if (string.IsNullOrEmpty(bslEndpoint) || !ModelState.IsValid)
             {
@@ -39,9 +38,9 @@ namespace Vitality.Website.Areas.Presales.Controllers
 
             var generatedCallProData = GenerateCallProData(model);
 
-            var xml = TransformXML(generatedCallProData);
+            var request = JsonConvert.SerializeObject(new { FeedSettings = new object(), Xml = TransformXML(generatedCallProData) });
 
-            return await GetResponseAsync<BslPostRequest, BslDto>(new BslPostRequest(bslEndpoint, xml), result => result != null);
+            return await GetResponseAsync<BslPostRequest, BslDto>(new BslPostRequest(bslEndpoint, request), result => result != null);
         }
 
         private Dictionary<string, string> GenerateCallProData(CallBackData callBackPostRequest)
@@ -56,12 +55,13 @@ namespace Vitality.Website.Areas.Presales.Controllers
                 {"{YEAR}", today.Year.ToString()},
                 {"{NEXTMONTH}", today.AddMonths(1).ToShortDateString()},
                 {"{NEXTYEAR}", today.AddYears(1).ToShortDateString()},
-                {"{TELEPHONENUMBER}", callBackPostRequest.Telephone},
+                {"{TELEPHONENUMBER}", callBackPostRequest.PhoneNumber},
                 {"{TITLE}", callBackPostRequest.Title},
                 {"{FIRSTNAME}", callBackPostRequest.Firstname},
                 {"{LASTNAME}", callBackPostRequest.Lastname},
-                {"{EMAILADDRESS}", callBackPostRequest.Email},
-                {"{CALLBACKTIME}", callBackPostRequest.CallBackTime}
+                {"{EMAILADDRESS}", callBackPostRequest.EmailAddress},
+                {"{CALLBACKTIME}", callBackPostRequest.CallBackTime},
+                {"{REFERENCEID}", callBackPostRequest.ReferenceId }
             };
 
             var utmCookie = UtmCookieHelper.GetUtmCookie(new HttpRequestWrapper(HttpContext.Current.Request));
@@ -114,5 +114,5 @@ namespace Vitality.Website.Areas.Presales.Controllers
 
             return requestXml;
         }
-    } 
+    }
 }

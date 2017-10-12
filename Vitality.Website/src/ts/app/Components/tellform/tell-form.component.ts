@@ -44,6 +44,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
         this.questionGroups = angularData.questionGroups;
         this.postAction = angularData.postAction;
         this.redirectTo = angularData.redirectTo;
+        this.referenceId = angularData.referenceId;
         this.renderingData = { okBtnText: angularData.okBtnText, okBtnHelpText: angularData.okBtnHelpText };
         const childrenQuestionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.childrenQuestionGroup);
         this.questionControlService.setQuestionGroups(this.questionGroups);
@@ -54,6 +55,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
                 additionalData: angularData.additionalData
             });
         }
+
         if (this.getQuestionGroup(QuoteApplyConstants.keys.callbackTimeQuestionGroup)) {
             this.callbackService.initialize(angularData.additionalData);
         }
@@ -76,7 +78,8 @@ export class TellFormComponent implements OnInit, OnDestroy {
         this.submitSubscription = this.footerBarService.onSubmitClicked()
             .subscribe((data: boolean) => {
                 if (data) {
-                    this.tellFormService.submit(`${this.postAction}${this.referenceId}`, this.tellForm.value)
+                    this.tellForm.value.referenceId = this.referenceId;                    
+                    this.tellFormService.submit(`${this.postAction}`, this.tellForm.value)
                         .then((data: string) => {
                             this.referenceId = data;
                             this.winRef.nativeWindow.location.href = `${this.redirectTo}${this.referenceId}`;

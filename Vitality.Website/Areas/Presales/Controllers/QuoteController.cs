@@ -2,6 +2,11 @@
 using System.Web.Http;
 using MediatR;
 using Vitality.Website.Areas.Presales.Handlers.Quote;
+using Vitality.Website.Areas.Presales.Handlers.Bsl;
+using Vitality.Mvc.Utilities;
+using Newtonsoft.Json;
+using Vitality.Website.Areas.Presales.Models;
+using Vitality.Website.Areas.Presales.Services;
 
 namespace Vitality.Website.Areas.Presales.Controllers
 {
@@ -13,11 +18,17 @@ namespace Vitality.Website.Areas.Presales.Controllers
 
         [HttpPost]
         [Route("api/quote/saveapplication")]
-        public HttpResponseMessage SaveApplication(object application, string referenceId)
+        public HttpResponseMessage SaveApplication(SaveApplicationModel application, string referenceId)
         {
-            return GetResponse<SaveApplicationRequest, string>(new SaveApplicationRequest(application, referenceId),
-                refId =>
-                        !string.IsNullOrEmpty(refId));
+            var response = GetResponse<SaveApplicationRequest, string>(new SaveApplicationRequest(application, referenceId), refId => !string.IsNullOrEmpty(refId));
+
+            var utmCookie = UtmCookieHelper.GetUtmCookie(new System.Web.HttpRequestWrapper(System.Web.HttpContext.Current.Request));
+            var refIdTemp = JsonConvert.DeserializeObject<string>(response.Content.ReadAsStringAsync().Result ?? string.Empty);
+            var optalitixRequest = OptalitixQuoteRequestFactory.From(application, utmCookie, refIdTemp);
+            GetResponseAsync<BslPostRequest, BslDto>(new BslPostRequest("optalitix/createquote",
+                JsonConvert.SerializeObject(new { FeedSettings = new object(), OptalitixQuoteRequest = optalitixRequest })), result => result != null);
+
+            return response;
         }
 
         [HttpGet]
