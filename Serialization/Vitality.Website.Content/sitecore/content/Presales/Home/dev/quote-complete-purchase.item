@@ -1,19 +1,26 @@
 ----item----
 version: 1
-id: {E1DCB71F-9C8D-4FC0-A43C-F8243527BF31}
+id: {1574AC21-6B74-4223-8762-4F3941F99A18}
 database: master
-path: /sitecore/content/Presales/home/dev/quote-and-apply
+path: /sitecore/content/Presales/home/dev/quote-complete-purchase
 parent: {B50E8F71-CA37-40FF-9D2D-81F8B5D071CC}
-name: quote-and-apply
+name: quote-complete-purchase
 master: {00000000-0000-0000-0000-000000000000}
 template: {55835F09-68C5-4E6D-91C1-851FFA6FB359}
 templatekey: Quote Apply Page
-created: 20171010T141834Z
+created: 20171013T095221Z
 
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 133
+
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" s:l="{43A74028-209F-4F09-B24B-21CB7111C851}" /></r>
 ----version----
 language: en
 version: 1
-revision: aec20c64-e655-4448-b9f7-e06652b0af19
+revision: 7d58f48c-2abd-4341-8c6b-39a3c00e9d65
 
 ----field----
 field: {3CBA56ED-F4D1-4412-BEBB-6ACED1AC1D34}
@@ -47,16 +54,16 @@ content-length: 0
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
 name: __Display name
 key: __display name
-content-length: 15
+content-length: 23
 
-Quote and Apply
+Quote Complete Purchase
 ----field----
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 679
+content-length: 473
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{06F1D3F5-352A-4BDF-926E-4873623D2608}" p:before="*" s:ds="{B94E68FC-5F55-4CB3-96F0-683F58252F9A}" s:id="{F93FB20E-4857-48D5-9E8F-00DEA2EEF653}" s:ph="QuoteApplyFooter" /><r uid="{5624946B-16F0-4718-9A10-EDBBC2828C91}" p:after="r[@uid='{06F1D3F5-352A-4BDF-926E-4873623D2608}']" s:ds="{7CDCE2BD-456C-47AC-8830-BD58592ACB69}" s:id="{22F063C3-8EEB-47BC-9656-93984B0AA084}" s:ph="QuoteApplySidebar" /><r uid="{B7D559F2-0E81-4B87-869F-8F64520C5C4F}" p:after="*[1=2]" s:ds="{78A08764-97F8-477F-A1FB-5643492C7BD3}" s:id="{4ED51072-8E9C-4812-BB4C-48494E3D9D00}" s:ph="QuoteApplyContent" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{06F1D3F5-352A-4BDF-926E-4873623D2608}" p:before="*" s:ds="{B94E68FC-5F55-4CB3-96F0-683F58252F9A}" s:id="{F93FB20E-4857-48D5-9E8F-00DEA2EEF653}" s:ph="QuoteApplyFooter" /><r uid="{B7D559F2-0E81-4B87-869F-8F64520C5C4F}" p:after="*[1=2]" s:ds="{B5743B02-442C-4685-8AB5-5134C49DF793}" s:id="{4ED51072-8E9C-4812-BB4C-48494E3D9D00}" s:par="" s:ph="QuoteCompletePurchaseContent" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -77,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-aec20c64-e655-4448-b9f7-e06652b0af19
+7d58f48c-2abd-4341-8c6b-39a3c00e9d65
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170907T084323Z
+20171013T134236Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

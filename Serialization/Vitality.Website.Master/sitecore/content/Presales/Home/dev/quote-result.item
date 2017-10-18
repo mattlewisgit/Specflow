@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {A42B99DE-A02F-4BCC-B883-C65FD56741B9}
+id: {CB85637E-F8D1-4E0A-9E32-10670D356016}
 database: master
 path: /sitecore/content/Presales/home/dev/quote-result
-parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+parent: {B50E8F71-CA37-40FF-9D2D-81F8B5D071CC}
 name: quote-result
 master: {00000000-0000-0000-0000-000000000000}
 template: {58A271C2-627F-4B12-B134-B54D80588F4E}
 templatekey: Quote Result Page
-created: 20170823T161117Z
+created: 20171010T141834Z
 
 ----version----
 language: en
@@ -57,10 +57,3 @@ key: __updated by
 content-length: 14
 
 sitecore\Admin
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />

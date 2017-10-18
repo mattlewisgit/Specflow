@@ -20,7 +20,7 @@ content-length: 77
 ----version----
 language: en
 version: 1
-revision: 8019bed9-1b3f-4727-ba96-90a3d46d50bf
+revision: 52057829-0213-4e80-8585-e336ea86db6d
 
 ----field----
 field: {C2C33986-4B81-430D-93F1-B0A5C768B50E}
@@ -83,9 +83,9 @@ What is this
 field: {ED7DD961-4A22-4BDF-B14D-93A0F728887C}
 name: ServiceOutagePage
 key: serviceoutagepage
-content-length: 124
+content-length: 179
 
-<link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{A21A056A-363E-4E51-A11E-FF8ACBF8C9D1}" />
+<link id="{A21A056A-363E-4E51-A11E-FF8ACBF8C9D1}" querystring="" text="" anchor="" title="" class="" url="/Presales/home/dev_old/quote-apply-service-outage" linktype="internal" />
 ----field----
 field: {974C6F80-F404-42FD-B1CC-EA8DFAA4FF4F}
 name: CallToActionText
@@ -97,9 +97,9 @@ BUY ONLINE
 field: {31B33C0F-872A-4E66-9042-325C1109BBF9}
 name: CallToAction
 key: calltoaction
-content-length: 124
+content-length: 176
 
-<link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{1574AC21-6B74-4223-8762-4F3941F99A18}" />
+<link id="{1574AC21-6B74-4223-8762-4F3941F99A18}" querystring="" text="" anchor="" title="" class="" url="/Presales/home/dev_old/quote-complete-purchase" linktype="internal" />
 ----field----
 field: {622A60FC-0BC6-433F-A259-EE053E32988A}
 name: EditIcon
@@ -125,9 +125,9 @@ Select
 field: {451321B3-4083-47E6-B192-FABCF7C6A00B}
 name: AlternativeCallToAction
 key: alternativecalltoaction
-content-length: 124
+content-length: 165
 
-<link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{D6DA3A82-1EB1-4F14-92C1-F3F1886847DC}" />
+<link id="{D6DA3A82-1EB1-4F14-92C1-F3F1886847DC}" querystring="" text="" anchor="" title="" class="" url="/Presales/home/dev_old/call-me-back" linktype="internal" />
 ----field----
 field: {32D6D8FF-2E58-4EB5-BE2E-57A4E65B0450}
 name: TooltipImage
@@ -183,14 +183,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-8019bed9-1b3f-4727-ba96-90a3d46d50bf
+52057829-0213-4e80-8585-e336ea86db6d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20171013T144325Z
+20171018T141242Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

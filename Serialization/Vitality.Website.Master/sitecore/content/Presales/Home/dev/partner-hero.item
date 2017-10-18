@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {B6011154-7505-457C-ACF9-C7EBFB66A379}
+id: {DDF3A6BC-700A-4059-BA7E-9034BC01C2DA}
 database: master
 path: /sitecore/content/Presales/home/dev/partner-hero
-parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+parent: {B50E8F71-CA37-40FF-9D2D-81F8B5D071CC}
 name: partner-hero
 master: {00000000-0000-0000-0000-000000000000}
 template: {487B20F5-0959-4419-B030-D8E8C21120ED}
 templatekey: Generic Page
-created: 20170919T161903Z
+created: 20171010T141834Z
 
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
@@ -20,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 094336e2-61e5-41d8-b020-d671213366c8
+revision: 99756fdd-1121-483b-8165-497bbd7b358e
 
 ----field----
 field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
@@ -47,9 +47,9 @@ Partner hero
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 752
+content-length: 1192
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{EE9698C6-4ACE-48EE-93D5-7C3EDCF4D932}" p:before="*" s:ds="{96A4601E-E3FC-4E94-AFCE-4F20DD280410}" s:id="{B24BABB6-F1E9-44E5-9C2E-F1A3BBBE7FD5}" s:par="FontTheme=%7BAF686E61-7006-4CA1-A15E-4A71E08567D6%7D&amp;ImageRelativePosition=%7B9097C6EB-902B-4408-B106-89CEDA90DBA8%7D" s:ph="PresalesContent" /><r uid="{5056F669-9706-4E78-AF58-06778576AAD4}" p:after="r[@uid='{EE9698C6-4ACE-48EE-93D5-7C3EDCF4D932}']" s:ds="{C8CE9978-EAD8-4981-98DD-2CD3D974027C}" s:id="{B24BABB6-F1E9-44E5-9C2E-F1A3BBBE7FD5}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{5198A3E5-03CE-4EE3-A292-E44BB12FC565}" p:before="*" s:ds="{31E7ED29-6CFA-4F24-B609-6D9B5FDBF1B3}" s:id="{B24BABB6-F1E9-44E5-9C2E-F1A3BBBE7FD5}" s:ph="PresalesContent" /><r uid="{A84CCEB8-2738-4869-8CC5-AF8B10039EF4}" p:after="r[@uid='{5198A3E5-03CE-4EE3-A292-E44BB12FC565}']" s:ds="{9F2F211F-F32F-4C3A-957B-B929E378FA46}" s:id="{B24BABB6-F1E9-44E5-9C2E-F1A3BBBE7FD5}" s:ph="PresalesContent" /><r uid="{EE9698C6-4ACE-48EE-93D5-7C3EDCF4D932}" p:after="r[@uid='{A84CCEB8-2738-4869-8CC5-AF8B10039EF4}']" s:ds="{96A4601E-E3FC-4E94-AFCE-4F20DD280410}" s:id="{B24BABB6-F1E9-44E5-9C2E-F1A3BBBE7FD5}" s:par="FontTheme={AF686E61-7006-4CA1-A15E-4A71E08567D6}&amp;ImageRelativePosition={9097C6EB-902B-4408-B106-89CEDA90DBA8}" s:ph="PresalesContent" /><r uid="{5056F669-9706-4E78-AF58-06778576AAD4}" p:after="r[@uid='{EE9698C6-4ACE-48EE-93D5-7C3EDCF4D932}']" s:ds="{C8CE9978-EAD8-4981-98DD-2CD3D974027C}" s:id="{B24BABB6-F1E9-44E5-9C2E-F1A3BBBE7FD5}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -63,21 +63,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-094336e2-61e5-41d8-b020-d671213366c8
+99756fdd-1121-483b-8165-497bbd7b358e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170112T180744Z
+20171012T155846Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin
 ----field----
 field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
 name: __Workflow state
