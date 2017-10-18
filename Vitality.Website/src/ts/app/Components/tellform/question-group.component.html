@@ -1,13 +1,20 @@
 ﻿<div class="question" *ngIf="!questionGroup.isHidden" [formGroup]="form">
     <span [innerHTML]="questionGroup.label"> </span>
     <ng-container *ngFor="let question of questionGroup.questions" [ngSwitch]="question.controlType">
+        <ng-container *ngSwitchCase="'numberMasked'">
+            <div class="question--input__text" *ngIf="!question.isHidden">
+                {{ question.label }}
+                <input [formControlName]="question.key"
+                       [id]="question.key" [type]="'text'" placeholder="{{ question.placeholder }}" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted" mask-number [mask]="question.relatedData[0].value">
+            </div>
+        </ng-container>
         <ng-container *ngSwitchCase="'dropdown'">
             <div class="question--input__select">
                 {{ question.label }}
-                    <select [id]="question.key" [formControlName]="question.key" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">
-                        <option *ngIf="question.placeholder " value="">{{ question.placeholder }}</option>
-                        <option *ngFor="let opt of question.relatedData" [value]="opt.key">{{opt.value}}</option>
-                    </select>
+                <select [id]="question.key" [formControlName]="question.key" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">
+                    <option *ngIf="question.placeholder " value="">{{ question.placeholder }}</option>
+                    <option *ngFor="let opt of question.relatedData" [value]="opt.key">{{opt.value}}</option>
+                </select>
             </div>
         </ng-container>
         <ng-container *ngSwitchCase="'multiselect'">

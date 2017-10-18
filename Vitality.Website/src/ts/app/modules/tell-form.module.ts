@@ -1,7 +1,8 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule }    from "@angular/http";
 import { NgModule }      from "@angular/core";
-import { ReactiveFormsModule }   from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
+import { MaskModule } from "soft-angular-mask";
 
 import { CallbackService }  from "../services/callback.service";
 import { DobControlService }  from "../services/dob-control.service";
@@ -26,7 +27,8 @@ import { WindowRef } from "../components/windowref";
     imports: [
         BrowserModule,
         ReactiveFormsModule,
-        HttpModule
+        HttpModule,
+        MaskModule
     ],
     declarations: [
         AutoScrollTo,

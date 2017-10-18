@@ -30,6 +30,7 @@ declare var System: any;
       "moment": "npm:moment",
       "rxjs": "npm:rxjs",
       "angular-in-memory-web-api": "npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js",
+      "soft-angular-mask": "npm:soft-angular-mask/soft-angular-mask.umd.js",
       "underscore": "npm:underscore/underscore.js"
     },
     // packages tells the System loader how to load when no filename and/or no extension
@@ -43,6 +44,6 @@ declare var System: any;
           rxjs: {
               defaultExtension: "js"
           }
-      }
+    }
   });
 })();
