@@ -20,7 +20,7 @@ content-length: 133
 ----version----
 language: en
 version: 1
-revision: 7d58f48c-2abd-4341-8c6b-39a3c00e9d65
+revision: 0a3f0ec9-97cb-4740-9873-1b0c6a1400be
 
 ----field----
 field: {3CBA56ED-F4D1-4412-BEBB-6ACED1AC1D34}
@@ -28,7 +28,7 @@ name: Logo
 key: logo
 content-length: 58
 
-<image mediaid="{C6CEAFDD-641F-4D7D-8406-81CE603B3FF4}" />
+<image mediaid="{6F4839E5-15DD-410A-9B98-99FA046CB494}" />
 ----field----
 field: {B6E8B615-EE7A-485C-B14E-611876076E39}
 name: InheritSitemapSettings
@@ -84,14 +84,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-7d58f48c-2abd-4341-8c6b-39a3c00e9d65
+0a3f0ec9-97cb-4740-9873-1b0c6a1400be
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20171013T134236Z
+20171018T152944Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
