@@ -60,6 +60,14 @@ export class TellFormComponent implements OnInit, OnDestroy {
             this.callbackService.initialize(angularData.additionalData);
         }
 
+        /*TODO:
+        if (this.ang.Name === "buynow") {
+            getapplication();
+            
+            let billinhgPostcode = getQuestionGroup();
+            let childrenquestions = this.getQuestionGroup()
+        }*/
+
         this.tellForm = new FormGroup({});
         this.tellForm.valueChanges.subscribe(data => {
             this.calculateCompletedPercentage();
