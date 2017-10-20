@@ -175,6 +175,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CallMeBackPhoneField.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\QuoteAndApply\CompletePurchase\AccountHolderName.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountHolderName.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\QuoteAndApply\CompletePurchase\AccountType.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountType.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\QuoteAndApply\QuoteAndApply\CurrentlyInsuredField.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -503,6 +513,14 @@
     <None Include="Features\QuoteAndApply\CallMeBack\CallMeBackPhoneField.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CallMeBackPhoneField.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\CompletePurchase\AccountHolderName.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AccountHolderName.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\CompletePurchase\AccountType.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AccountType.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\QuoteAndApply\QuoteAndApply\CurrentlyInsuredField.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
