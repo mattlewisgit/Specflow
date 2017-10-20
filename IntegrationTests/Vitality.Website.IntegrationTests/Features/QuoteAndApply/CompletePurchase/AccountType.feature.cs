@@ -72,83 +72,38 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurch
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Name - Check name field can be populated")]
+        [Xunit.FactAttribute(DisplayName="Complete Purchase - Joint account holder name")]
         [Xunit.TraitAttribute("FeatureTitle", "AccountType")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Name - Check name field can be populated")]
+        [Xunit.TraitAttribute("Description", "Complete Purchase - Joint account holder name")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_Name_CheckNameFieldCanBePopulated()
+        public virtual void CompletePurchase_JointAccountHolderName()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Name - Check name field can be populated", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Joint account holder name", new string[] {
                         "QuoteAndApply"});
 #line 8
-    this.ScenarioSetup(scenarioInfo);
+this.ScenarioSetup(scenarioInfo);
 #line 9
     testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 11
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.When("I go to the accountType field and choose a joint account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Complete Purchase - An individual account holder name")]
+        [Xunit.TraitAttribute("FeatureTitle", "AccountType")]
+        [Xunit.TraitAttribute("Description", "Complete Purchase - An individual account holder name")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void CompletePurchase_AnIndividualAccountHolderName()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - An individual account holder name", new string[] {
+                        "QuoteAndApply"});
 #line 13
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
 #line 14
- testRunner.Then("I don\'t see the lastName field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Name - Check name field can be populated with special charact" +
-            "er double barrelled name")]
-        [Xunit.TraitAttribute("FeatureTitle", "AccountType")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Name - Check name field can be populated with special charact" +
-            "er double barrelled name")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_Name_CheckNameFieldCanBePopulatedWithSpecialCharacterDoubleBarrelledName()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Name - Check name field can be populated with special charact" +
-                    "er double barrelled name", new string[] {
-                        "QuoteAndApply"});
-#line 17
-    this.ScenarioSetup(scenarioInfo);
-#line 18
     testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 19
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 20
-    testRunner.And("I go to the title field and choose Mr", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 21
-    testRunner.And("I go to the firstName field and enter James", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 22
-    testRunner.And("I go to the lastName field and enter Ward-Prowse", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 23
- testRunner.Then("I don\'t see the lastName field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Name - Check error message when name contains a number")]
-        [Xunit.TraitAttribute("FeatureTitle", "AccountType")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Name - Check error message when name contains a number")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_Name_CheckErrorMessageWhenNameContainsANumber()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Name - Check error message when name contains a number", new string[] {
-                        "QuoteAndApply"});
-#line 26
-    this.ScenarioSetup(scenarioInfo);
-#line 27
-    testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 28
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 29
-    testRunner.When("I go to the title field and choose Mr", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 30
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 31
-    testRunner.And("I go to the lastName field and enter 123", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
- testRunner.Then("I see the lastName field error text Please enter your full name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 15
+    testRunner.When("I go to the accountType field and choose a joint account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }

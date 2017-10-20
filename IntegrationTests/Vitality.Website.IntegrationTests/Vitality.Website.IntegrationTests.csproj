@@ -180,6 +180,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountHolderName.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\QuoteAndApply\CompletePurchase\AccountNumber.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AccountNumber.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\QuoteAndApply\CompletePurchase\AccountType.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -517,6 +522,10 @@
     <None Include="Features\QuoteAndApply\CompletePurchase\AccountHolderName.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AccountHolderName.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\CompletePurchase\AccountNumber.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AccountNumber.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\QuoteAndApply\CompletePurchase\AccountType.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
