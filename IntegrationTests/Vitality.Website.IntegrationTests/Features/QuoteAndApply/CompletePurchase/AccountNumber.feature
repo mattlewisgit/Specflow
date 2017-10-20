@@ -18,5 +18,5 @@ Scenario: Complete Purchase - Check incorrect account number error message
     @QuoteAndApply
 Scenario: Complete Purchase - Check account number masking
     Given I am on presales /dev/quote-complete-purchase
-    When I go to the accountNumber field and enter letters
+    When I go to the accountNumber field and enter letterss
     Then I see the accountNumber field error text Please enter your account number

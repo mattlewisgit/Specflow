@@ -17,15 +17,15 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurch
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class AccountNumberFeature : Xunit.IClassFixture<AccountNumberFeature.FixtureData>, System.IDisposable
+    public partial class SortCodeFieldFeature : Xunit.IClassFixture<SortCodeFieldFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "AccountNumber.feature"
+#line 1 "SortCodeField.feature"
 #line hidden
         
-        public AccountNumberFeature()
+        public SortCodeFieldFeature()
         {
             this.TestInitialize();
         }
@@ -33,8 +33,8 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurch
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AccountNumber", "\tIn order to validation the account number field\r\n\tAs a quote and apply user\r\n\tI " +
-                    "want to be able to check the account number field", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SortCodeField", "\tIn order to validation the sortcode field\r\n\tAs a quote and apply user\r\n\tI want t" +
+                    "o be able to check the sortcode field", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -63,7 +63,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurch
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void SetFixture(AccountNumberFeature.FixtureData fixtureData)
+        public virtual void SetFixture(SortCodeFieldFeature.FixtureData fixtureData)
         {
         }
         
@@ -72,60 +72,60 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurch
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Check account number field")]
-        [Xunit.TraitAttribute("FeatureTitle", "AccountNumber")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Check account number field")]
+        [Xunit.FactAttribute(DisplayName="Complete Purchase - Check sortcode field")]
+        [Xunit.TraitAttribute("FeatureTitle", "SortCodeField")]
+        [Xunit.TraitAttribute("Description", "Complete Purchase - Check sortcode field")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_CheckAccountNumberField()
+        public virtual void CompletePurchase_CheckSortcodeField()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Check account number field", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Check sortcode field", new string[] {
                         "QuoteAndApply"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
     testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
-    testRunner.When("I go to the accountNumber field and enter 12345678", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I go to the accountSortcode field and enter 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Check incorrect account number error message")]
-        [Xunit.TraitAttribute("FeatureTitle", "AccountNumber")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Check incorrect account number error message")]
+        [Xunit.FactAttribute(DisplayName="Complete Purchase - Check incorrect sortcode error message")]
+        [Xunit.TraitAttribute("FeatureTitle", "SortCodeField")]
+        [Xunit.TraitAttribute("Description", "Complete Purchase - Check incorrect sortcode error message")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_CheckIncorrectAccountNumberErrorMessage()
+        public virtual void CompletePurchase_CheckIncorrectSortcodeErrorMessage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Check incorrect account number error message", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Check incorrect sortcode error message", new string[] {
                         "QuoteAndApply"});
 #line 13
 this.ScenarioSetup(scenarioInfo);
 #line 14
     testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 15
-    testRunner.When("I go to the accountNumber field and enter 1234567", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I go to the accountSortcode field and enter 12345", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 16
-    testRunner.Then("I see the accountNumber field error text Please enter your account number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see the accountSortcode field error text Please enter your sortcode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Check account number masking")]
-        [Xunit.TraitAttribute("FeatureTitle", "AccountNumber")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Check account number masking")]
+        [Xunit.FactAttribute(DisplayName="Complete Purchase - Check sortcode masking")]
+        [Xunit.TraitAttribute("FeatureTitle", "SortCodeField")]
+        [Xunit.TraitAttribute("Description", "Complete Purchase - Check sortcode masking")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_CheckAccountNumberMasking()
+        public virtual void CompletePurchase_CheckSortcodeMasking()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Check account number masking", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Check sortcode masking", new string[] {
                         "QuoteAndApply"});
 #line 19
 this.ScenarioSetup(scenarioInfo);
 #line 20
     testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 21
-    testRunner.When("I go to the accountNumber field and enter letterss", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I go to the accountSortcode field and enter LETTE", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 22
-    testRunner.Then("I see the accountNumber field error text Please enter your account number", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see the accountSortcode field error text Please enter your sortcode", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -137,12 +137,12 @@ this.ScenarioSetup(scenarioInfo);
             
             public FixtureData()
             {
-                AccountNumberFeature.FeatureSetup();
+                SortCodeFieldFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                AccountNumberFeature.FeatureTearDown();
+                SortCodeFieldFeature.FeatureTearDown();
             }
         }
     }
