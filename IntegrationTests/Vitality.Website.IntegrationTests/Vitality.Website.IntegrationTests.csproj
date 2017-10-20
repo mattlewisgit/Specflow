@@ -270,6 +270,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MarketingMessage.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\QuoteAndApply\QuoteResults\PersonaliseGreeting.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PersonaliseGreeting.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\QuoteAndApply\QuoteResults\RichText.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -623,6 +628,10 @@
     <None Include="Features\QuoteAndApply\QuoteResults\MarketingMessage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>MarketingMessage.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\QuoteResults\PersonaliseGreeting.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PersonaliseGreeting.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\QuoteAndApply\QuoteResults\QuoteResults.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
