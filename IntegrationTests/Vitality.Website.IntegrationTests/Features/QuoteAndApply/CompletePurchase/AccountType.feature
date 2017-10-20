@@ -5,11 +5,13 @@
 
 
 	@QuoteAndApply
-Scenario: Complete Purchase - Joint account holder name
+Scenario: Complete Purchase - Account type - Joint account holder name
     Given I am on presales /dev/quote-complete-purchase
     When I go to the accountType field and choose a joint account
+    Then I don't see the accountType field error
 
     @QuoteAndApply
-Scenario: Complete Purchase - An individual account holder name
+Scenario: Complete Purchase - Account type - An individual account holder name
     Given I am on presales /dev/quote-complete-purchase
     When I go to the accountType field and choose a joint account
+    Then I don't see the accountType field error
