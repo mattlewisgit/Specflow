@@ -19,6 +19,7 @@
     And I go to the noOfClaims field and choose no claims
     And I go to the coverStartDate field and make the date today plus 0 days
     And I go to the membersToInsure field and choose just me
+    And I go to the Discounted gym membership checkbox field and select the value
     And I go to the marketingPermission field and choose Agreed
 	And I see that the Progress Bar is not displayed
     And I see that the quote and apply Apply button is displayed
@@ -44,10 +45,11 @@
     And I go to the noOfClaims field and choose no claims
     And I go to the coverStartDate field and make the date today plus 0 days
     And I go to the membersToInsure field and choose just me
+    And I go to the Discounted gym membership checkbox field and select the value
     And I go to the marketingPermission field and choose Agreed
 	And I see that the Progress Bar is not displayed
     And I see that the quote and apply Apply button is displayed
 	And I click on the quote and apply Apply button
 	Then I expect the presales /dev/quote-result to open
 	And I expect the quote result personalised greeting to contain the users first name
-	And I expect the quote result personalised greeting image to be hidden 
+	And I expect the quote result personalised greeting image to be hidden

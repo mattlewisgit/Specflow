@@ -72,13 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurch
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Joint account holder name")]
+        [Xunit.FactAttribute(DisplayName="Complete Purchase - Account type - Joint account holder name")]
         [Xunit.TraitAttribute("FeatureTitle", "AccountType")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Joint account holder name")]
+        [Xunit.TraitAttribute("Description", "Complete Purchase - Account type - Joint account holder name")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_JointAccountHolderName()
+        public virtual void CompletePurchase_AccountType_JointAccountHolderName()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Joint account holder name", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Account type - Joint account holder name", new string[] {
                         "QuoteAndApply"});
 #line 8
 this.ScenarioSetup(scenarioInfo);
@@ -86,24 +86,28 @@ this.ScenarioSetup(scenarioInfo);
     testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
     testRunner.When("I go to the accountType field and choose a joint account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
+    testRunner.Then("I don\'t see the accountType field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - An individual account holder name")]
+        [Xunit.FactAttribute(DisplayName="Complete Purchase - Account type - An individual account holder name")]
         [Xunit.TraitAttribute("FeatureTitle", "AccountType")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - An individual account holder name")]
+        [Xunit.TraitAttribute("Description", "Complete Purchase - Account type - An individual account holder name")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_AnIndividualAccountHolderName()
+        public virtual void CompletePurchase_AccountType_AnIndividualAccountHolderName()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - An individual account holder name", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Account type - An individual account holder name", new string[] {
                         "QuoteAndApply"});
-#line 13
-this.ScenarioSetup(scenarioInfo);
 #line 14
-    testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 15
+    testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 16
     testRunner.When("I go to the accountType field and choose a joint account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 17
+    testRunner.Then("I don\'t see the accountType field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

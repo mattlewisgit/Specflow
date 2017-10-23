@@ -72,13 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurch
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Check account number field")]
+        [Xunit.FactAttribute(DisplayName="Complete Purchase - Account Number - Check account number field")]
         [Xunit.TraitAttribute("FeatureTitle", "AccountNumber")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Check account number field")]
+        [Xunit.TraitAttribute("Description", "Complete Purchase - Account Number - Check account number field")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_CheckAccountNumberField()
+        public virtual void CompletePurchase_AccountNumber_CheckAccountNumberField()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Check account number field", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Account Number - Check account number field", new string[] {
                         "QuoteAndApply"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
@@ -86,17 +86,22 @@ this.ScenarioSetup(scenarioInfo);
     testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
     testRunner.When("I go to the accountNumber field and enter 12345678", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
+    testRunner.Then("I don\'t see the accountNumber field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Check incorrect account number error message")]
+        [Xunit.FactAttribute(DisplayName="Complete Purchase - Account Number - Check incorrect account number error message" +
+            "")]
         [Xunit.TraitAttribute("FeatureTitle", "AccountNumber")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Check incorrect account number error message")]
+        [Xunit.TraitAttribute("Description", "Complete Purchase - Account Number - Check incorrect account number error message" +
+            "")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_CheckIncorrectAccountNumberErrorMessage()
+        public virtual void CompletePurchase_AccountNumber_CheckIncorrectAccountNumberErrorMessage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Check incorrect account number error message", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Account Number - Check incorrect account number error message" +
+                    "", new string[] {
                         "QuoteAndApply"});
 #line 13
 this.ScenarioSetup(scenarioInfo);
@@ -110,13 +115,13 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Check account number masking")]
+        [Xunit.FactAttribute(DisplayName="Complete Purchase - Account Number - Check account number masking")]
         [Xunit.TraitAttribute("FeatureTitle", "AccountNumber")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Check account number masking")]
+        [Xunit.TraitAttribute("Description", "Complete Purchase - Account Number - Check account number masking")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_CheckAccountNumberMasking()
+        public virtual void CompletePurchase_AccountNumber_CheckAccountNumberMasking()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Check account number masking", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Account Number - Check account number masking", new string[] {
                         "QuoteAndApply"});
 #line 19
 this.ScenarioSetup(scenarioInfo);
