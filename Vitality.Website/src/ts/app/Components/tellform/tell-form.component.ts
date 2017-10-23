@@ -4,6 +4,7 @@ import { Subscription } from "rxjs/Subscription";
 
 import { CallbackService } from "../../services/callback.service";
 import { DobControlService } from "../../services/dob-control.service";
+import { QuoteService } from "../../services/quote.service";
 import { GlobalConstants } from "../../constants/global-constants";
 import { QuoteApplyConstants } from "../../constants/quoteapply-constants";
 import { QuestionControlService } from "../../services/question-control.service";
@@ -22,12 +23,14 @@ export class TellFormComponent implements OnInit, OnDestroy {
     postAction: string;
     redirectTo: string;
     referenceId: string;
+    quoteApplication: any;
     private postcodeAsyncValidationSubscription: Subscription;
     questionGroups: QuestionGroup[];
     renderingData: {};
     private submitSubscription: Subscription;
 
     constructor(
+        private quoteService: QuoteService,
         private callbackService: CallbackService,
         private dobControlService: DobControlService,
         private fb: FormBuilder,
@@ -60,13 +63,15 @@ export class TellFormComponent implements OnInit, OnDestroy {
             this.callbackService.initialize(angularData.additionalData);
         }
 
-        /*TODO:
-        if (this.ang.Name === "buynow") {
-            getapplication();
-            
-            let billinhgPostcode = getQuestionGroup();
-            let childrenquestions = this.getQuestionGroup()
-        }*/
+        this.quoteService.getQuoteApplication(this.referenceId)
+            .then((data: any) => {
+                this.quoteApplication = data;
+                this.getQuestionGroup("billingPostcode").questions.filter(x => x.key === "postcode")[0].value = data.Postcode.toUpperCase();
+            })
+            // TODO remove catch before going live
+            .catch((err: any) => {
+                this.quoteApplication = this.quoteService.quoteApplication;
+            });    
 
         this.tellForm = new FormGroup({});
         this.tellForm.valueChanges.subscribe(data => {

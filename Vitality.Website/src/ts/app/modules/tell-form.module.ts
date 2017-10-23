@@ -13,6 +13,7 @@ import { PostcodeService }  from "../services/postcode.service";
 import { QuestionControlService }  from "../services/question-control.service";
 import { TellFormService }  from "../services/tell-form.service";
 import { ValidationService } from "../services/validation.service";
+import { QuoteService } from "../services/quote.service";
 
 import { Common } from "../modules/common.module";
 
@@ -43,6 +44,7 @@ import { WindowRef } from "../components/windowref";
         PostcodeService,
         { provide: FooterBarService, useValue: footerBarServiceFactory() },
         QuestionControlService,
+        QuoteService,
         TellFormService,
         ValidationService,
         WindowRef],
