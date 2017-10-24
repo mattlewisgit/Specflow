@@ -92,13 +92,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Name row at 11%")]
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Name row at 10%")]
         [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Name row at 11%")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Name row at 10%")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_NameRowAt11()
+        public virtual void ProgressBar_NameRowAt10()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Name row at 11%", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Name row at 10%", new string[] {
                         "QuoteAndApply"});
 #line 13
     this.ScenarioSetup(scenarioInfo);
@@ -113,18 +113,18 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
 #line 18
     testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 19
-    testRunner.Then("I see that the Progress Bar is at 11 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see that the Progress Bar is at 10 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Phone Number row at 22%")]
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Date of Birth row at 20% (not currently insured)")]
         [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Phone Number row at 22%")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Date of Birth row at 20% (not currently insured)")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_PhoneNumberRowAt22()
+        public virtual void ProgressBar_DateOfBirthRowAt20NotCurrentlyInsured()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Phone Number row at 22%", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Date of Birth row at 20% (not currently insured)", new string[] {
                         "QuoteAndApply"});
 #line 22
     this.ScenarioSetup(scenarioInfo);
@@ -139,20 +139,20 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
 #line 27
     testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 28
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 29
-    testRunner.Then("I see that the Progress Bar is at 22 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see that the Progress Bar is at 20 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Email Address row at 33%")]
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Phone Number row at 30%")]
         [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Email Address row at 33%")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Phone Number row at 30%")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_EmailAddressRowAt33()
+        public virtual void ProgressBar_PhoneNumberRowAt30()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Email Address row at 33%", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Phone Number row at 30%", new string[] {
                         "QuoteAndApply"});
 #line 32
     this.ScenarioSetup(scenarioInfo);
@@ -167,22 +167,22 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
 #line 37
     testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 38
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 39
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 40
-    testRunner.Then("I see that the Progress Bar is at 33 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see that the Progress Bar is at 30 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Insured Status row at 44% (not currently insured)")]
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Email Address row at 40%")]
         [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Insured Status row at 44% (not currently insured)")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Email Address row at 40%")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_InsuredStatusRowAt44NotCurrentlyInsured()
+        public virtual void ProgressBar_EmailAddressRowAt40()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Insured Status row at 44% (not currently insured)", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Email Address row at 40%", new string[] {
                         "QuoteAndApply"});
 #line 43
     this.ScenarioSetup(scenarioInfo);
@@ -197,24 +197,24 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
 #line 48
     testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 49
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 50
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 51
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 52
-    testRunner.Then("I see that the Progress Bar is at 44 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see that the Progress Bar is at 40 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Date of Birth row at 55% (not currently insured)")]
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Postcode row at 50% (not currently insured)")]
         [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Date of Birth row at 55% (not currently insured)")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Postcode row at 50% (not currently insured)")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_DateOfBirthRowAt55NotCurrentlyInsured()
+        public virtual void ProgressBar_PostcodeRowAt50NotCurrentlyInsured()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Date of Birth row at 55% (not currently insured)", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Postcode row at 50% (not currently insured)", new string[] {
                         "QuoteAndApply"});
 #line 55
     this.ScenarioSetup(scenarioInfo);
@@ -229,26 +229,26 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
 #line 60
     testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 61
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 62
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 63
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 64
     testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 62
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 63
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 64
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 65
-    testRunner.Then("I see that the Progress Bar is at 55 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see that the Progress Bar is at 50 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Cover Start Date row at 66% (not currently insured)")]
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Insured Status row at 60% (not currently insured)")]
         [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Cover Start Date row at 66% (not currently insured)")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Insured Status row at 60% (not currently insured)")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_CoverStartDateRowAt66NotCurrentlyInsured()
+        public virtual void ProgressBar_InsuredStatusRowAt60NotCurrentlyInsured()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Cover Start Date row at 66% (not currently insured)", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Insured Status row at 60% (not currently insured)", new string[] {
                         "QuoteAndApply"});
 #line 68
     this.ScenarioSetup(scenarioInfo);
@@ -263,28 +263,28 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
 #line 73
     testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 74
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 75
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 76
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 77
     testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 75
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 76
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 77
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 78
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 79
-    testRunner.Then("I see that the Progress Bar is at 66 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see that the Progress Bar is at 60 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Members to Insure row at 77% (not currently insured)")]
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Cover Start Date row at 70% (not currently insured)")]
         [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Members to Insure row at 77% (not currently insured)")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Cover Start Date row at 70% (not currently insured)")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_MembersToInsureRowAt77NotCurrentlyInsured()
+        public virtual void ProgressBar_CoverStartDateRowAt70NotCurrentlyInsured()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Members to Insure row at 77% (not currently insured)", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Cover Start Date row at 70% (not currently insured)", new string[] {
                         "QuoteAndApply"});
 #line 82
     this.ScenarioSetup(scenarioInfo);
@@ -299,30 +299,30 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
 #line 87
     testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 88
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 89
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 90
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 91
     testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 89
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 90
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 91
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 92
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 93
-    testRunner.And("I go to the membersToInsure field and choose just me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 94
-    testRunner.Then("I see that the Progress Bar is at 77 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see that the Progress Bar is at 70 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Postcode row at 88% (not currently insured)")]
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Members to Insure row at 80% (not currently insured)")]
         [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Postcode row at 88% (not currently insured)")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Members to Insure row at 80% (not currently insured)")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_PostcodeRowAt88NotCurrentlyInsured()
+        public virtual void ProgressBar_MembersToInsureRowAt80NotCurrentlyInsured()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Postcode row at 88% (not currently insured)", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Members to Insure row at 80% (not currently insured)", new string[] {
                         "QuoteAndApply"});
 #line 97
     this.ScenarioSetup(scenarioInfo);
@@ -337,32 +337,32 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
 #line 102
     testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 103
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 104
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 105
-    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 106
     testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 107
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 108
-    testRunner.And("I go to the membersToInsure field and choose just me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 109
+#line 104
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 105
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 106
     testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 107
+    testRunner.And("I go to the insuredStatus field and choose not currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 108
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 109
+    testRunner.And("I go to the membersToInsure field and choose just me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 110
-    testRunner.Then("I see that the Progress Bar is at 88 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I see that the Progress Bar is at 80 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Insured Status row at 36% (currently insured)")]
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Insured Status row at 50% (currently insured)")]
         [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Insured Status row at 36% (currently insured)")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Insured Status row at 50% (currently insured)")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_InsuredStatusRowAt36CurrentlyInsured()
+        public virtual void ProgressBar_InsuredStatusRowAt50CurrentlyInsured()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Insured Status row at 36% (currently insured)", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Insured Status row at 50% (currently insured)", new string[] {
                         "QuoteAndApply"});
 #line 113
     this.ScenarioSetup(scenarioInfo);
@@ -377,247 +377,474 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
 #line 118
     testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 119
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 120
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 121
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 122
-    testRunner.Then("I see that the Progress Bar is at 36 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Progress Bar - No of Claim Free Years row at 45% (currently insured)")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - No of Claim Free Years row at 45% (currently insured)")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_NoOfClaimFreeYearsRowAt45CurrentlyInsured()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - No of Claim Free Years row at 45% (currently insured)", new string[] {
-                        "QuoteAndApply"});
-#line 125
-    this.ScenarioSetup(scenarioInfo);
-#line 126
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 127
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 128
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 129
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 130
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 131
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 132
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 133
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 134
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 135
-    testRunner.Then("I see that the Progress Bar is at 45 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Progress Bar - No of Claim Free Years row at 54% (currently insured)")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - No of Claim Free Years row at 54% (currently insured)")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_NoOfClaimFreeYearsRowAt54CurrentlyInsured()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - No of Claim Free Years row at 54% (currently insured)", new string[] {
-                        "QuoteAndApply"});
-#line 138
-    this.ScenarioSetup(scenarioInfo);
-#line 139
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 140
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 141
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 142
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 143
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 144
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 145
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 146
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 147
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 148
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 149
-    testRunner.Then("I see that the Progress Bar is at 54 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Date of Birth row at 63% (currently insured)")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Date of Birth row at 63% (currently insured)")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_DateOfBirthRowAt63CurrentlyInsured()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Date of Birth row at 63% (currently insured)", new string[] {
-                        "QuoteAndApply"});
-#line 152
-    this.ScenarioSetup(scenarioInfo);
-#line 153
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 154
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 155
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 156
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 157
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 158
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 159
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 160
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 161
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 162
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 163
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 164
-    testRunner.Then("I see that the Progress Bar is at 63 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Policy Start Date row at 72% (currently insured)")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Policy Start Date row at 72% (currently insured)")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_PolicyStartDateRowAt72CurrentlyInsured()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Policy Start Date row at 72% (currently insured)", new string[] {
-                        "QuoteAndApply"});
-#line 167
-    this.ScenarioSetup(scenarioInfo);
-#line 168
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 169
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 170
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 171
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 172
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 173
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 174
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 175
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 176
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 177
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 178
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 179
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 180
-    testRunner.Then("I see that the Progress Bar is at 72 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Members to Insure row at 81% (currently insured, just me)")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Members to Insure row at 81% (currently insured, just me)")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_MembersToInsureRowAt81CurrentlyInsuredJustMe()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Members to Insure row at 81% (currently insured, just me)", new string[] {
-                        "QuoteAndApply"});
-#line 183
-    this.ScenarioSetup(scenarioInfo);
-#line 184
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 185
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 186
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 187
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 188
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 189
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 190
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 191
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 192
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 193
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 194
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 195
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 196
-    testRunner.And("I go to the membersToInsure field and choose just me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 197
-    testRunner.Then("I see that the Progress Bar is at 81 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Postcode row at 90% (currently insured, just me)")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Postcode row at 90% (currently insured, just me)")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_PostcodeRowAt90CurrentlyInsuredJustMe()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Postcode row at 90% (currently insured, just me)", new string[] {
-                        "QuoteAndApply"});
-#line 200
-    this.ScenarioSetup(scenarioInfo);
-#line 201
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 202
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 203
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 204
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 205
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 206
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 207
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 208
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 209
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 210
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 211
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 212
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 213
-    testRunner.And("I go to the membersToInsure field and choose just me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 214
     testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 123
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 124
+    testRunner.Then("I see that the Progress Bar is at 50 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Progress Bar - No of Claim Free Years row at 58% (currently insured)")]
+        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - No of Claim Free Years row at 58% (currently insured)")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void ProgressBar_NoOfClaimFreeYearsRowAt58CurrentlyInsured()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - No of Claim Free Years row at 58% (currently insured)", new string[] {
+                        "QuoteAndApply"});
+#line 127
+    this.ScenarioSetup(scenarioInfo);
+#line 128
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 129
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 130
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 131
+    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 132
+    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 133
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 134
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 135
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 136
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 137
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 138
+    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 139
+    testRunner.Then("I see that the Progress Bar is at 58 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Progress Bar - No of Claim Free Years row at 66% (currently insured)")]
+        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - No of Claim Free Years row at 66% (currently insured)")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void ProgressBar_NoOfClaimFreeYearsRowAt66CurrentlyInsured()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - No of Claim Free Years row at 66% (currently insured)", new string[] {
+                        "QuoteAndApply"});
+#line 142
+    this.ScenarioSetup(scenarioInfo);
+#line 143
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 144
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 145
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 146
+    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 147
+    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 148
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 149
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 150
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 151
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 152
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 153
+    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 154
+    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 155
+    testRunner.Then("I see that the Progress Bar is at 66 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Policy Start Date row at 75% (currently insured)")]
+        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Policy Start Date row at 75% (currently insured)")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void ProgressBar_PolicyStartDateRowAt75CurrentlyInsured()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Policy Start Date row at 75% (currently insured)", new string[] {
+                        "QuoteAndApply"});
+#line 158
+    this.ScenarioSetup(scenarioInfo);
+#line 159
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 160
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 161
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 162
+    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 163
+    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 164
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 165
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 166
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 167
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 168
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 169
+    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 170
+    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 171
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 172
+    testRunner.Then("I see that the Progress Bar is at 75 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Members to Insure row at 83% (currently insured, just me)")]
+        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Members to Insure row at 83% (currently insured, just me)")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void ProgressBar_MembersToInsureRowAt83CurrentlyInsuredJustMe()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Members to Insure row at 83% (currently insured, just me)", new string[] {
+                        "QuoteAndApply"});
+#line 175
+    this.ScenarioSetup(scenarioInfo);
+#line 176
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 177
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 178
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 179
+    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 180
+    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 181
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 182
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 183
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 184
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 185
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 186
+    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 187
+    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 188
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 189
+    testRunner.And("I go to the membersToInsure field and choose just me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 190
+    testRunner.Then("I see that the Progress Bar is at 83 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Members to Insure row at 76% (currently insured, me and my partner" +
+            ")")]
+        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Members to Insure row at 76% (currently insured, me and my partner" +
+            ")")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void ProgressBar_MembersToInsureRowAt76CurrentlyInsuredMeAndMyPartner()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Members to Insure row at 76% (currently insured, me and my partner" +
+                    ")", new string[] {
+                        "QuoteAndApply"});
+#line 193
+    this.ScenarioSetup(scenarioInfo);
+#line 194
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 195
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 196
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 197
+    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 198
+    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 199
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 200
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 201
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 202
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 203
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 204
+    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 205
+    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 206
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 207
+    testRunner.And("I go to the membersToInsure field and choose me and my partner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 208
+    testRunner.Then("I see that the Progress Bar is at 76 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Partner\'s Date of Birth row at 84% (currently insured, me and my p" +
+            "artner)")]
+        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Partner\'s Date of Birth row at 84% (currently insured, me and my p" +
+            "artner)")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void ProgressBar_PartnerSDateOfBirthRowAt84CurrentlyInsuredMeAndMyPartner()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Partner\'s Date of Birth row at 84% (currently insured, me and my p" +
+                    "artner)", new string[] {
+                        "QuoteAndApply"});
+#line 211
+    this.ScenarioSetup(scenarioInfo);
+#line 212
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 213
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 214
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 215
-    testRunner.Then("I see that the Progress Bar is at 90 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 216
+    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 217
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 218
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 219
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 220
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 221
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 222
+    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 223
+    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 224
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 225
+    testRunner.And("I go to the membersToInsure field and choose me and my partner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 226
+    testRunner.And("I go to the partnerDateOfBirth field and enter 01/01/1971", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 227
+    testRunner.Then("I see that the Progress Bar is at 84 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Members to Insure row at 71% (currently insured, me, my partner an" +
+            "d kids)")]
+        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Members to Insure row at 71% (currently insured, me, my partner an" +
+            "d kids)")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void ProgressBar_MembersToInsureRowAt71CurrentlyInsuredMeMyPartnerAndKids()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Members to Insure row at 71% (currently insured, me, my partner an" +
+                    "d kids)", new string[] {
+                        "QuoteAndApply"});
+#line 230
+    this.ScenarioSetup(scenarioInfo);
+#line 231
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 232
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 233
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 234
+    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 235
+    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 236
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 237
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 238
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 239
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 240
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 241
+    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 242
+    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 243
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 244
+    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 245
+    testRunner.Then("I see that the Progress Bar is at 71 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Partner\'s Date of Birth row at 78% (currently insured, me, my part" +
+            "ner and kids)")]
+        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Partner\'s Date of Birth row at 78% (currently insured, me, my part" +
+            "ner and kids)")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void ProgressBar_PartnerSDateOfBirthRowAt78CurrentlyInsuredMeMyPartnerAndKids()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Partner\'s Date of Birth row at 78% (currently insured, me, my part" +
+                    "ner and kids)", new string[] {
+                        "QuoteAndApply"});
+#line 248
+    this.ScenarioSetup(scenarioInfo);
+#line 249
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 250
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 251
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 252
+    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 253
+    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 254
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 255
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 256
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 257
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 258
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 259
+    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 260
+    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 261
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 262
+    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 263
+    testRunner.And("I go to the partnerDateOfBirth field and enter 01/01/1971", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 264
+    testRunner.Then("I see that the Progress Bar is at 78 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Progress Bar - No of kids row at 85% (currently insured, me, my partner and kids)" +
+            "")]
+        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - No of kids row at 85% (currently insured, me, my partner and kids)" +
+            "")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void ProgressBar_NoOfKidsRowAt85CurrentlyInsuredMeMyPartnerAndKids()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - No of kids row at 85% (currently insured, me, my partner and kids)" +
+                    "", new string[] {
+                        "QuoteAndApply"});
+#line 267
+    this.ScenarioSetup(scenarioInfo);
+#line 268
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 269
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 270
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 271
+    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 272
+    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 273
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 274
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 275
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 276
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 277
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 278
+    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 279
+    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 280
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 281
+    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 282
+    testRunner.And("I go to the partnerDateOfBirth field and enter 01/01/1971", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 283
+    testRunner.And("I go to the noOfChildren field and choose 2 kids\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 284
+    testRunner.And("I go to the child1Dob field and enter 01/01/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 285
+    testRunner.And("I go to the child2Dob field and enter 01/02/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 286
+    testRunner.Then("I see that the Progress Bar is at 85 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Multiselector at 91% (just me)")]
+        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Multiselector at 91% (just me)")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void ProgressBar_MultiselectorAt91JustMe()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Multiselector at 91% (just me)", new string[] {
+                        "QuoteAndApply"});
+#line 289
+    this.ScenarioSetup(scenarioInfo);
+#line 290
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 291
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 292
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 293
+    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 294
+    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 295
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 296
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 297
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 298
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 299
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 300
+    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 301
+    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 302
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 303
+    testRunner.And("I go to the membersToInsure field and choose just me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 304
+    testRunner.And("I go to the Discounted gym membership checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 305
+    testRunner.Then("I see that the Progress Bar is at 91 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -630,427 +857,44 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Terms and conditions (currently insured, just me)", new string[] {
                         "QuoteAndApply"});
-#line 218
-    this.ScenarioSetup(scenarioInfo);
-#line 219
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 220
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 221
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 222
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 223
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 224
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 225
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 226
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 227
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 228
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 229
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 230
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 231
-    testRunner.And("I go to the membersToInsure field and choose just me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 232
-    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 233
-    testRunner.And("I go to the marketingPermission field and choose Agreed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 234
-    testRunner.Then("I see that the Progress Bar is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 235
-    testRunner.And("I see that the quote and apply Apply button is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Members to Insure row at 75% (currently insured, me and my partner" +
-            ")")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Members to Insure row at 75% (currently insured, me and my partner" +
-            ")")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_MembersToInsureRowAt75CurrentlyInsuredMeAndMyPartner()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Members to Insure row at 75% (currently insured, me and my partner" +
-                    ")", new string[] {
-                        "QuoteAndApply"});
-#line 238
-    this.ScenarioSetup(scenarioInfo);
-#line 239
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 240
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 241
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 242
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 243
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 244
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 245
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 246
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 247
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 248
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 249
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 250
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 251
-    testRunner.And("I go to the membersToInsure field and choose me and my partner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 252
-    testRunner.Then("I see that the Progress Bar is at 75 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Partner\'s Date of Birth row at 90% (currently insured, me and my p" +
-            "artner)")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Partner\'s Date of Birth row at 90% (currently insured, me and my p" +
-            "artner)")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_PartnerSDateOfBirthRowAt90CurrentlyInsuredMeAndMyPartner()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Partner\'s Date of Birth row at 90% (currently insured, me and my p" +
-                    "artner)", new string[] {
-                        "QuoteAndApply"});
-#line 255
-    this.ScenarioSetup(scenarioInfo);
-#line 256
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 257
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 258
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 259
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 260
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 261
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 262
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 263
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 264
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 265
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 266
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 267
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 268
-    testRunner.And("I go to the membersToInsure field and choose me and my partner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 269
-    testRunner.And("I go to the partnerDateOfBirth field and enter 01/01/1971", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 270
-    testRunner.Then("I see that the Progress Bar is at 83 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Postcode row at 90% (currently insured, me and my partner)")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Postcode row at 90% (currently insured, me and my partner)")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_PostcodeRowAt90CurrentlyInsuredMeAndMyPartner()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Postcode row at 90% (currently insured, me and my partner)", new string[] {
-                        "QuoteAndApply"});
-#line 273
-    this.ScenarioSetup(scenarioInfo);
-#line 274
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 275
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 276
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 277
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 278
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 279
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 280
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 281
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 282
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 283
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 284
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 285
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 286
-    testRunner.And("I go to the membersToInsure field and choose me and my partner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 287
-    testRunner.And("I go to the partnerDateOfBirth field and enter 01/01/1971", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 288
-    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 289
-    testRunner.Then("I see that the Progress Bar is at 91 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Terms and conditions (currently insured, me and my partner)")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Terms and conditions (currently insured, me and my partner)")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_TermsAndConditionsCurrentlyInsuredMeAndMyPartner()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Terms and conditions (currently insured, me and my partner)", new string[] {
-                        "QuoteAndApply"});
-#line 292
-    this.ScenarioSetup(scenarioInfo);
-#line 293
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 294
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 295
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 296
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 297
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 298
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 299
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 300
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 301
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 302
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 303
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 304
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 305
-    testRunner.And("I go to the membersToInsure field and choose me and my partner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 306
-    testRunner.And("I go to the partnerDateOfBirth field and enter 01/01/1971", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 307
-    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 308
-    testRunner.And("I go to the marketingPermission field and choose Agreed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    this.ScenarioSetup(scenarioInfo);
 #line 309
-    testRunner.Then("I see that the Progress Bar is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 310
-    testRunner.And("I see that the quote and apply Apply button is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Members to Insure row at 69% (currently insured, me, my partner an" +
-            "d kids)")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Members to Insure row at 69% (currently insured, me, my partner an" +
-            "d kids)")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_MembersToInsureRowAt69CurrentlyInsuredMeMyPartnerAndKids()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Members to Insure row at 69% (currently insured, me, my partner an" +
-                    "d kids)", new string[] {
-                        "QuoteAndApply"});
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 311
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 312
+    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 313
-    this.ScenarioSetup(scenarioInfo);
+    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 314
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 315
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 316
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 317
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 318
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 319
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 320
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 321
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 322
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 323
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 324
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 325
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 326
-    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 327
-    testRunner.Then("I see that the Progress Bar is at 69 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Partner\'s Date of Birth row at 79% (currently insured, me, my part" +
-            "ner and kids)")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Partner\'s Date of Birth row at 79% (currently insured, me, my part" +
-            "ner and kids)")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_PartnerSDateOfBirthRowAt79CurrentlyInsuredMeMyPartnerAndKids()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Partner\'s Date of Birth row at 79% (currently insured, me, my part" +
-                    "ner and kids)", new string[] {
-                        "QuoteAndApply"});
-#line 330
-    this.ScenarioSetup(scenarioInfo);
-#line 331
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 332
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 333
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 334
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 335
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 336
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 337
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 338
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 339
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 340
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 341
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 342
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 343
-    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 344
-    testRunner.And("I go to the partnerDateOfBirth field and enter 01/01/1971", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 345
-    testRunner.Then("I see that the Progress Bar is at 76 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Progress Bar - No of kids row at 84% (currently insured, me, my partner and kids)" +
-            "")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - No of kids row at 84% (currently insured, me, my partner and kids)" +
-            "")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_NoOfKidsRowAt84CurrentlyInsuredMeMyPartnerAndKids()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - No of kids row at 84% (currently insured, me, my partner and kids)" +
-                    "", new string[] {
-                        "QuoteAndApply"});
-#line 348
-    this.ScenarioSetup(scenarioInfo);
-#line 349
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 350
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 351
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 352
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 353
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 354
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 355
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 356
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 357
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 358
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 359
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 360
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 361
-    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 362
-    testRunner.And("I go to the partnerDateOfBirth field and enter 01/01/1971", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 363
-    testRunner.And("I go to the noOfChildren field and choose 2 kids\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 364
-    testRunner.And("I go to the child1Dob field and enter 01/01/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 365
-    testRunner.And("I go to the child2Dob field and enter 01/02/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 366
-    testRunner.Then("I see that the Progress Bar is at 84 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
-        
-        [Xunit.FactAttribute(DisplayName="Progress Bar - Postcode row at 92% (currently insured, me, my partner and kids)")]
-        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
-        [Xunit.TraitAttribute("Description", "Progress Bar - Postcode row at 92% (currently insured, me, my partner and kids)")]
-        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void ProgressBar_PostcodeRowAt92CurrentlyInsuredMeMyPartnerAndKids()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Postcode row at 92% (currently insured, me, my partner and kids)", new string[] {
-                        "QuoteAndApply"});
-#line 369
-    this.ScenarioSetup(scenarioInfo);
-#line 370
-    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 371
-    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 372
-    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 373
-    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 374
-    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 375
-    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 376
-    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 377
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 378
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 379
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 380
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 381
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 382
-    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 383
-    testRunner.And("I go to the partnerDateOfBirth field and enter 01/01/1971", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 384
-    testRunner.And("I go to the noOfChildren field and choose 2 kids\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 385
-    testRunner.And("I go to the child1Dob field and enter 01/01/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 386
-    testRunner.And("I go to the child2Dob field and enter 01/02/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 387
     testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 388
-    testRunner.Then("I see that the Progress Bar is at 92 %", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 318
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 319
+    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 320
+    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 321
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 322
+    testRunner.And("I go to the membersToInsure field and choose just me", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 323
+    testRunner.And("I go to the Discounted gym membership checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 324
+    testRunner.And("I go to the marketingPermission field and choose Agreed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 325
+    testRunner.Then("I see that the Progress Bar is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 326
+    testRunner.And("I see that the quote and apply Apply button is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -1063,49 +907,105 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteAndApply
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Terms and conditions (currently insured, me, my partner and kids)", new string[] {
                         "QuoteAndApply"});
-#line 391
+#line 329
     this.ScenarioSetup(scenarioInfo);
-#line 392
+#line 330
     testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 393
+#line 331
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 394
+#line 332
     testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 395
+#line 333
     testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 396
+#line 334
     testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 397
+#line 335
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 336
     testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 398
+#line 337
     testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 399
-    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 400
-    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 401
-    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 402
-    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 403
-    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 404
-    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 405
-    testRunner.And("I go to the partnerDateOfBirth field and enter 01/01/1971", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 406
-    testRunner.And("I go to the noOfChildren field and choose 2 kids\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 407
-    testRunner.And("I go to the child1Dob field and enter 01/01/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 408
-    testRunner.And("I go to the child2Dob field and enter 01/02/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 409
+#line 338
     testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 410
+#line 339
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 340
+    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 341
+    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 342
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 343
+    testRunner.And("I go to the membersToInsure field and choose me, my partner and kids", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 344
+    testRunner.And("I go to the partnerDateOfBirth field and enter 01/01/1971", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 345
+    testRunner.And("I go to the noOfChildren field and choose 2 kids\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 346
+    testRunner.And("I go to the child1Dob field and enter 01/01/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 347
+    testRunner.And("I go to the child2Dob field and enter 01/02/2005", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 348
+    testRunner.And("I go to the Discounted gym membership checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 349
     testRunner.And("I go to the marketingPermission field and choose Agreed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 411
+#line 350
     testRunner.Then("I see that the Progress Bar is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 412
+#line 351
+    testRunner.And("I see that the quote and apply Apply button is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Progress Bar - Terms and conditions (currently insured, me and my partner)")]
+        [Xunit.TraitAttribute("FeatureTitle", "ProgressBar")]
+        [Xunit.TraitAttribute("Description", "Progress Bar - Terms and conditions (currently insured, me and my partner)")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void ProgressBar_TermsAndConditionsCurrentlyInsuredMeAndMyPartner()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Progress Bar - Terms and conditions (currently insured, me and my partner)", new string[] {
+                        "QuoteAndApply"});
+#line 354
+    this.ScenarioSetup(scenarioInfo);
+#line 355
+    testRunner.Given("I am on presales /dev/quote-and-apply", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 356
+    testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 357
+    testRunner.And("I go to the title field and choose Mrs", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 358
+    testRunner.And("I go to the firstName field and enter Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 359
+    testRunner.And("I go to the lastName field and enter User", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 360
+    testRunner.And("I go to the dateOfBirth field and make the age 18 minus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 361
+    testRunner.And("I go to the phoneNumber field and enter 01202 223344", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 362
+    testRunner.And("I go to the emailAddress field and enter test.user@gmail.com", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 363
+    testRunner.And("I go to the postcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 364
+    testRunner.And("I go to the insuredStatus field and choose currently insured", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 365
+    testRunner.And("I go to the noOfClaimFreeYears field and choose 1 year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 366
+    testRunner.And("I go to the noOfClaims field and choose 1 claim", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 367
+    testRunner.And("I go to the dateOfBirth field and enter 01/01/1970", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 368
+    testRunner.And("I go to the coverStartDate field and make the date today plus 0 days", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 369
+    testRunner.And("I go to the membersToInsure field and choose me and my partner", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 370
+    testRunner.And("I go to the partnerDateOfBirth field and enter 01/01/1971", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 371
+    testRunner.And("I go to the Discounted gym membership checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 372
+    testRunner.And("I go to the marketingPermission field and choose Agreed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 373
+    testRunner.Then("I see that the Progress Bar is not displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 374
     testRunner.And("I see that the quote and apply Apply button is displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
