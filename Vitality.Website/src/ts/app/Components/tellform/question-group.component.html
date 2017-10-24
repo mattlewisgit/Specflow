@@ -4,10 +4,10 @@
         <ng-container *ngSwitchCase="'dropdown'">
             <div class="question--input__select">
                 {{ question.label }}
-                    <select [id]="question.key" [formControlName]="question.key" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">
-                        <option *ngIf="question.placeholder " value="">{{ question.placeholder }}</option>
-                        <option *ngFor="let opt of question.relatedData" [value]="opt.key">{{opt.value}}</option>
-                    </select>
+                <select [id]="question.key" [formControlName]="question.key" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">
+                    <option *ngIf="question.placeholder " value="">{{ question.placeholder }}</option>
+                    <option *ngFor="let opt of question.relatedData" [value]="opt.key">{{opt.value}}</option>
+                </select>
             </div>
         </ng-container>
         <ng-container *ngSwitchCase="'multiselect'">
@@ -23,8 +23,9 @@
         </ng-container>
         <ng-container *ngSwitchDefault>
             <div class="question--input__text" *ngIf="!question.isHidden">
-                {{ question.label }}
-                <input [formControlName]="question.key"
+                <input *ngIf="question.mask.length > 0" [formControlName]="question.key" [value]="question.value"
+                       [id]="question.key" [type]="question.controlType" placeholder="{{ question.placeholder }}" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted" mask-number [mask]="question.mask">
+                <input *ngIf="question.mask.length <= 0" [formControlName]="question.key" [value]="question.value"
                        [id]="question.key" [type]="question.controlType" placeholder="{{ question.placeholder }}" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">
             </div>
         </ng-container>

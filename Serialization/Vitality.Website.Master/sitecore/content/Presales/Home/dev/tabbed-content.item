@@ -1,14 +1,14 @@
 ----item----
 version: 1
-id: {0C69D1A1-58E6-4E08-BDD5-A42A578B58EE}
+id: {A44872BA-0FE5-457E-A4FE-F045CE6D75B3}
 database: master
 path: /sitecore/content/Presales/home/dev/tabbed-content
-parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+parent: {B50E8F71-CA37-40FF-9D2D-81F8B5D071CC}
 name: tabbed-content
 master: {00000000-0000-0000-0000-000000000000}
 template: {487B20F5-0959-4419-B030-D8E8C21120ED}
 templatekey: Generic Page
-created: 20170919T161904Z
+created: 20171010T141834Z
 
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
@@ -20,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 1ef981ab-5144-4550-ad50-5fa581c173d8
+revision: ca823ad1-0146-4d4d-8d33-8aa9ec3c1f46
 
 ----field----
 field: {7989200D-F64A-43F1-AED9-0EB82DB13223}
@@ -47,9 +47,9 @@ Tabbed Content
 field: {04BF00DB-F5FB-41F7-8AB7-22408372A981}
 name: __Final Renderings
 key: __final renderings
-content-length: 398
+content-length: 622
 
-<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{CDB12CAD-BB95-4AB7-B43B-95774FE5421F}" p:before="*" s:ds="{0DD1C5D7-12CF-4C0D-A218-7297C8229485}" s:id="{3486949D-2D21-47E3-A56D-6E99C71CC7CF}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
+<r xmlns:p="p" xmlns:s="s" p:p="1"><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}"><r uid="{C19128AC-E1AE-40A1-8640-57FE990838E1}" p:before="*" s:ds="{3AB174B8-23AB-4668-BA0B-E4C844AE042D}" s:id="{3486949D-2D21-47E3-A56D-6E99C71CC7CF}" s:ph="PresalesContent" /><r uid="{CDB12CAD-BB95-4AB7-B43B-95774FE5421F}" p:after="r[@uid='{C19128AC-E1AE-40A1-8640-57FE990838E1}']" s:ds="{0DD1C5D7-12CF-4C0D-A218-7297C8229485}" s:id="{3486949D-2D21-47E3-A56D-6E99C71CC7CF}" s:ph="PresalesContent" /><r uid="{2B32CF65-D71F-4145-A107-060200EE82D9}" s:ph="footer" /><r uid="{A72F763B-3DEE-44FB-800B-FF1758C3973B}" s:ph="metadata" /></d></r>
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -63,21 +63,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-1ef981ab-5144-4550-ad50-5fa581c173d8
+ca823ad1-0146-4d4d-8d33-8aa9ec3c1f46
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170112T180908Z
+20171012T161408Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin
 ----field----
 field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
 name: __Workflow state

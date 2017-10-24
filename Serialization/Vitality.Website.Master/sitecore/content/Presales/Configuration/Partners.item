@@ -8,6 +8,7 @@ name: Partners
 master: {00000000-0000-0000-0000-000000000000}
 template: {A87A00B1-E6DB-45AB-8B54-636FEC3B5523}
 templatekey: Folder
+created: 20160818T133017Z
 
 ----field----
 field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
@@ -17,23 +18,23 @@ content-length: 28
 
 Business/32x32/handshake.png
 ----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
+
+400
+----field----
 field: {1172F251-DAD4-4EFB-A329-0C63500E4F1E}
 name: __Masters
 key: __masters
 content-length: 0
 
 
-----field----
-field: {DEC8D2D5-E3CF-48B6-A653-8E69E2716641}
-name: __Security
-key: __security
-content-length: 147
-
-ar|sitecore\Presales Configuration Manager|pe|+item:read|+item:create|pd|+item:create|+item:read|+item:rename|+item:delete|+item:write|+item:admin|
 ----version----
 language: en
 version: 1
-revision: 82818323-72f9-4fdc-91f9-ac985e0cef81
+revision: 4226fc7a-c71a-46c8-9f2a-b7eb904ebc4e
 
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
@@ -55,18 +56,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-82818323-72f9-4fdc-91f9-ac985e0cef81
+4226fc7a-c71a-46c8-9f2a-b7eb904ebc4e
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160622T092158Z
+20170908T152141Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\admin
+sitecore\Admin

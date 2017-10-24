@@ -8,7 +8,7 @@ name: dev
 master: {00000000-0000-0000-0000-000000000000}
 template: {EAE876EB-8043-4F1B-95C4-C015EAE09215}
 templatekey: Product Overview Page
-created: 20171010T141834Z
+created: 20170919T161902Z
 
 ----field----
 field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
@@ -20,7 +20,7 @@ content-length: 38
 ----version----
 language: en
 version: 1
-revision: 9b58c51d-05d9-4e9d-bbc2-0fa4c0ae80a6
+revision: 1be5664b-8534-4aa0-861e-404937318469
 
 ----field----
 field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
@@ -42,21 +42,21 @@ name: __Revision
 key: __revision
 content-length: 36
 
-9b58c51d-05d9-4e9d-bbc2-0fa4c0ae80a6
+1be5664b-8534-4aa0-861e-404937318469
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20171010T141936Z
+20171018T140504Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\admin
 ----field----
 field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
 name: __Workflow state

@@ -364,11 +364,11 @@ namespace Vitality.Website.IntegrationTests.Steps
                 WebDriver
                 .ScrollToElement(
 
-                    $@".quote--content > tell-form .question .checkbox-list li label:contains(""{checkbox}"")");
+                    $@".quote--content > tell-form .question .question--checkbox-list li label:contains(""{checkbox}"")");
 
                 WebDriver
                 .FindElement(new JQuerySelector(
-                    $".quote--content > tell-form .question .checkbox-list li label:contains('{checkbox}')"))
+                    $".quote--content > tell-form .question .question--checkbox-list li label:contains('{checkbox}')"))
                 .Click();
             }
             catch (Exception)

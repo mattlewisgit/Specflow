@@ -1,7 +1,8 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule }    from "@angular/http";
 import { NgModule }      from "@angular/core";
-import { ReactiveFormsModule }   from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
+import { MaskModule } from "soft-angular-mask";
 
 import { CallbackService }  from "../services/callback.service";
 import { DobControlService }  from "../services/dob-control.service";
@@ -12,6 +13,7 @@ import { PostcodeService }  from "../services/postcode.service";
 import { QuestionControlService }  from "../services/question-control.service";
 import { TellFormService }  from "../services/tell-form.service";
 import { ValidationService } from "../services/validation.service";
+import { QuoteService } from "../services/quote.service";
 
 import { Common } from "../modules/common.module";
 
@@ -26,7 +28,8 @@ import { WindowRef } from "../components/windowref";
     imports: [
         BrowserModule,
         ReactiveFormsModule,
-        HttpModule
+        HttpModule,
+        MaskModule
     ],
     declarations: [
         AutoScrollTo,
@@ -41,6 +44,7 @@ import { WindowRef } from "../components/windowref";
         PostcodeService,
         { provide: FooterBarService, useValue: footerBarServiceFactory() },
         QuestionControlService,
+        QuoteService,
         TellFormService,
         ValidationService,
         WindowRef],

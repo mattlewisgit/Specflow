@@ -314,6 +314,9 @@
     <Reference Include="Vitality.Mvc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Vitality.Mvc.1.0.1\lib\net45\Vitality.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="WebActivator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivator.1.0.0.0\lib\WebActivator.dll</HintPath>
+    </Reference>
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\Sitecore.Binaries.8.2.161221.1\lib\WebActivatorEx.dll</HintPath>
       <Private>True</Private>
@@ -376,6 +379,7 @@
     <Content Include="Areas\Presales\Views\QuoteApply\QuoteResult.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\QuoteMainLayout.cshtml" />
     <Content Include="Areas\Presales\Views\QuoteApply\RichTextContent.cshtml" />
+    <Content Include="Areas\Presales\Views\Shared\QuoteCompletePurchaseLayout.cshtml" />
     <None Include="Areas\Presales\Views\Shared\QuoteApplyLayout.cshtml" />
     <Content Include="img\spinner.gif" />
     <Content Include="src\js\countdown-timer-app.js" />

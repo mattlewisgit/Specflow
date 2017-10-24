@@ -1,19 +1,19 @@
 ----item----
 version: 1
-id: {C81216F4-E0EF-4257-A05E-546D6270A98F}
+id: {E1DCB71F-9C8D-4FC0-A43C-F8243527BF31}
 database: master
 path: /sitecore/content/Presales/home/dev/quote-and-apply
-parent: {702C6867-8BFC-4D56-B524-8D3B97448C1A}
+parent: {B50E8F71-CA37-40FF-9D2D-81F8B5D071CC}
 name: quote-and-apply
 master: {00000000-0000-0000-0000-000000000000}
 template: {55835F09-68C5-4E6D-91C1-851FFA6FB359}
 templatekey: Quote Apply Page
-created: 20170605T154043Z
+created: 20171010T141834Z
 
 ----version----
 language: en
 version: 1
-revision: aec20c64-e655-4448-b9f7-e06652b0af19
+revision: 788de165-00ae-449a-bfef-6bb4b67b77b5
 
 ----field----
 field: {3CBA56ED-F4D1-4412-BEBB-6ACED1AC1D34}
@@ -21,7 +21,7 @@ name: Logo
 key: logo
 content-length: 58
 
-<image mediaid="{C6CEAFDD-641F-4D7D-8406-81CE603B3FF4}" />
+<image mediaid="{6F4839E5-15DD-410A-9B98-99FA046CB494}" />
 ----field----
 field: {B6E8B615-EE7A-485C-B14E-611876076E39}
 name: InheritSitemapSettings
@@ -77,14 +77,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-aec20c64-e655-4448-b9f7-e06652b0af19
+788de165-00ae-449a-bfef-6bb4b67b77b5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20170907T084323Z
+20171018T152931Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
@@ -92,10 +92,3 @@ key: __updated by
 content-length: 14
 
 sitecore\Admin
-----field----
-field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
-name: __Lock
-key: __lock
-content-length: 5
-
-<r />
