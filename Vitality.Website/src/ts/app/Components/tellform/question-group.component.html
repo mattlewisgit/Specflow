@@ -21,6 +21,11 @@
                 </li>
             </ul>
         </ng-container>
+        <ng-container *ngSwitchCase="'button'">
+            <div class="ok-btn-group">
+                <button type="button" class="ok-btn" (click)="btnAction(question.value)" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">{{ question.label }}</button> <span [innerHTML]="renderingData.okBtnHelpText"> </span>
+            </div>
+        </ng-container>
         <ng-container *ngSwitchDefault>
             <div class="question--input__text" *ngIf="!question.isHidden">
                 <input *ngIf="question.mask.length > 0" [formControlName]="question.key" [value]="question.value"

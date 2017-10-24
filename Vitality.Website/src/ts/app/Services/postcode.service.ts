@@ -13,6 +13,11 @@ export class PostcodeService {
         return this.postcodeAsyncValidationEmitter;
     }
 
+    updatePostcodeEmitter = new EventEmitter<string>();
+    onUpdatePostcode() {
+        return this.updatePostcodeEmitter;
+    }
+
     constructor(private http: Http,
         private errorService: ErrorService) {
     }

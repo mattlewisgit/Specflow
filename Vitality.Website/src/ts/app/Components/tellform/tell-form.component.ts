@@ -1,5 +1,5 @@
-import { Component, Inject, OnDestroy, Input, OnInit }      from "@angular/core";
-import { FormArray, FormBuilder, FormGroup } from "@angular/forms";
+import { Component, OnDestroy, OnInit }      from "@angular/core";
+import { FormBuilder, FormGroup } from "@angular/forms";
 import { Subscription } from "rxjs/Subscription";
 
 import { CallbackService } from "../../services/callback.service";
@@ -25,6 +25,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
     referenceId: string;
     quoteApplication: any;
     private postcodeAsyncValidationSubscription: Subscription;
+    private updatePostcodeSubscription : Subscription;
     questionGroups: QuestionGroup[];
     renderingData: {};
     private submitSubscription: Subscription;
@@ -66,12 +67,10 @@ export class TellFormComponent implements OnInit, OnDestroy {
         this.quoteService.getQuoteApplication(this.referenceId)
             .then((data: any) => {
                 this.quoteApplication = data;
-                this.getQuestionGroup("billingPostcode").questions.filter(x => x.key === "postcode")[0].value = data.Postcode.toUpperCase();
-            })
-            // TODO remove catch before going live
-            .catch((err: any) => {
-                this.quoteApplication = this.quoteService.quoteApplication;
-            });    
+                //this.getQuestionGroup("billingPostcode").questions.filter(x => x.key === "postcode")[0].value = data.Postcode.toUpperCase();
+
+                //this.updatePostcode();
+            });
 
         this.tellForm = new FormGroup({});
         this.tellForm.valueChanges.subscribe(data => {
@@ -87,6 +86,14 @@ export class TellFormComponent implements OnInit, OnDestroy {
                     this.calculateCompletedPercentage();
                 }
             });
+
+        this.updatePostcodeSubscription = this.postcodeService.onUpdatePostcode()
+            .subscribe((data: string) => {
+
+                console.log(data);
+                this.updatePostcode();
+            });
+
 
         this.submitSubscription = this.footerBarService.onSubmitClicked()
             .subscribe((data: boolean) => {
@@ -111,6 +118,28 @@ export class TellFormComponent implements OnInit, OnDestroy {
 
     getQuestionGroup(key: string) {
         return this.questionGroups.filter(x => x.key === key)[0];
+    }
+
+    updatePostcode() {
+        this.postcodeService.initialize("address/lookup/", "CustomerDetails");
+
+        let postcode: any = [];
+
+        this.postcodeService.lookupPostcode(this.quoteApplication.Postcode)
+            .then(
+                (data: any) => {
+                    console.log(data);
+                    console.log(data.Addresses);
+                    let i = 0;
+                    data.Addresses.forEach((item: any) => {
+                        postcode.push({
+                            key: i,
+                            value: item.AddressLine1 + " | " + item.AddressLine2
+                        });
+                        i++;
+                    });
+                });
+        this.getQuestionGroup("billingPostcodeGroup").questions.filter(x => x.key === "selectBillingAddress")[0].relatedData = postcode;
     }
 
     ngOnDestroy(): void {
