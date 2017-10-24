@@ -1,11 +1,10 @@
-﻿import { Component, EventEmitter, Input, OnInit } from "@angular/core";
+﻿import { Component, Input, OnInit } from "@angular/core";
 import { FormGroup }  from "@angular/forms";
-
-import { GlobalConstants } from "../../constants/global-constants";
 
 import { QuestionGroup }     from "../../models/question-group";
 import { Question }     from "../../models/question";
-import { QuestionControlService }    from "../../services/question-control.service";
+import { QuestionControlService } from "../../services/question-control.service";
+import { PostcodeService } from "../../services/postcode.service";
 
 @Component({
     selector: "question-group",
@@ -19,7 +18,7 @@ export class QuestionGroupComponent implements OnInit {
     @Input()
     renderingData: {};
   
-    constructor(private qcs: QuestionControlService) {
+    constructor(private qcs: QuestionControlService, private postcodeService: PostcodeService) {
     }
 
     ngOnInit(): void {
@@ -43,5 +42,17 @@ export class QuestionGroupComponent implements OnInit {
         if (index > -1) {
             question.value.splice(index, 1);
         }
+    }
+
+    btnAction(action: string) {
+        switch (action) {
+            case "postcodeSearch":
+                this.findAddress((this.questionGroup.questions.filter(x => x.key === "billingPostcode")[0]).value);
+        default:
+        }
+    }
+
+    findAddress(postcode: string) {
+        this.postcodeService.updatePostcodeEmitter.emit(postcode);
     }
 }
