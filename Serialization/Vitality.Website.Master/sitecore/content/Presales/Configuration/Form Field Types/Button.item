@@ -1,59 +1,66 @@
 ----item----
 version: 1
-id: {CBA0F0F7-5821-4F49-BFB7-07018C970D31}
+id: {423D4FF9-0FEB-4728-BBE1-03DAE9103E3A}
 database: master
-path: /sitecore/media library/Presales/Images/logos
-parent: {5C088042-086B-4428-8CCB-6BB48487E552}
-name: logos
+path: /sitecore/content/Presales/Configuration/Form Field Types/Button
+parent: {9110B859-EE0C-45F1-AF8A-496DCE26AC40}
+name: Button
 master: {00000000-0000-0000-0000-000000000000}
-template: {FE5DD826-48C6-436D-B87A-7C4210C7413B}
-templatekey: Media folder
-created: 20160622T172435Z
+template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
+templatekey: Key Value Pair
+created: 20171024T124523Z
 
 ----version----
 language: en
 version: 1
-revision: 32403fef-87ea-40b1-bf99-1340898b916b
+revision: ce37c90b-d4c0-4396-89b8-5132857414f6
 
 ----field----
-field: {B5E02AD9-D56F-4C41-A065-A133DB87BDEB}
-name: __Display name
-key: __display name
-content-length: 5
+field: {C01F61CF-8603-4C48-A96A-EFDDDFEB52ED}
+name: Value
+key: value
+content-length: 6
 
-Logos
+button
+----field----
+field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
+name: __Owner
+key: __owner
+content-length: 14
+
+sitecore\Admin
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20160622T172435Z
+20171024T124523Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
 key: __created by
-content-length: 21
+content-length: 14
 
-sitecore\SteveWatling
+sitecore\Admin
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-32403fef-87ea-40b1-bf99-1340898b916b
+ce37c90b-d4c0-4396-89b8-5132857414f6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20160622T172442Z
+20171024T124532Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
-content-length: 21
+content-length: 14
 
-sitecore\SteveWatling
+sitecore\Admin
