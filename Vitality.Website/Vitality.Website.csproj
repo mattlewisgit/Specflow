@@ -4399,7 +4399,6 @@
     <Content Include="Areas\Presales\Views\FeatureBlocks\BenefitLeader.cshtml" />
     <Content Include="Areas\Presales\Views\FAQ\FAQLeader.cshtml" />
     <Content Include="Areas\Presales\Views\Summary\SummaryComponent.cshtml" />
-    <Content Include="img\favicon\manifest.json" />
     <Content Include="Areas\Presales\Views\FeatureBlocks\ProductHero.cshtml">
       <SubType>Code</SubType>
     </Content>
