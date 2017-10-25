@@ -76,9 +76,11 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
         [Xunit.FactAttribute(DisplayName="Check Rich Text quote result page")]
         [Xunit.TraitAttribute("FeatureTitle", "RichText")]
         [Xunit.TraitAttribute("Description", "Check Rich Text quote result page")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
         public virtual void CheckRichTextQuoteResultPage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Rich Text quote result page", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Rich Text quote result page", new string[] {
+                        "QuoteAndApply"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8

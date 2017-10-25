@@ -75,14 +75,16 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
         [Xunit.FactAttribute(DisplayName="Check marketing message is displayed")]
         [Xunit.TraitAttribute("FeatureTitle", "MarketingMessage")]
         [Xunit.TraitAttribute("Description", "Check marketing message is displayed")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
         public virtual void CheckMarketingMessageIsDisplayed()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check marketing message is displayed", ((string[])(null)));
-#line 6
-    this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check marketing message is displayed", new string[] {
+                        "QuoteAndApply"});
 #line 7
-    testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    this.ScenarioSetup(scenarioInfo);
 #line 8
+    testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 9
     testRunner.Then("I expect the marketing message Fetching your quote to be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

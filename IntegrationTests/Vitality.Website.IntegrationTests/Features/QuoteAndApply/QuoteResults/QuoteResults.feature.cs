@@ -75,18 +75,20 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
         [Xunit.FactAttribute(DisplayName="Amend Hospital Network cover to Consultant Select")]
         [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
         [Xunit.TraitAttribute("Description", "Amend Hospital Network cover to Consultant Select")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
         public virtual void AmendHospitalNetworkCoverToConsultantSelect()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Amend Hospital Network cover to Consultant Select", ((string[])(null)));
-#line 6
-    this.ScenarioSetup(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Amend Hospital Network cover to Consultant Select", new string[] {
+                        "QuoteAndApply"});
 #line 7
-    testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    this.ScenarioSetup(scenarioInfo);
 #line 8
-    testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
-    testRunner.When("I Edit the Hospital Network / Treatment Pathway to Consultant Select", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
+    testRunner.When("I Edit the Hospital Network / Treatment Pathway to Consultant Select", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
     testRunner.Then("I see the price of the Standard offering change to £ 0 per Month", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -97,19 +99,21 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
         [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
         [Xunit.TraitAttribute("Description", "When Hospital Network amended to Consultant Select, all offerings are updated to " +
             "this")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
         public virtual void WhenHospitalNetworkAmendedToConsultantSelectAllOfferingsAreUpdatedToThis()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When Hospital Network amended to Consultant Select, all offerings are updated to " +
-                    "this", ((string[])(null)));
-#line 12
-    this.ScenarioSetup(scenarioInfo);
-#line 13
-    testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                    "this", new string[] {
+                        "QuoteAndApply"});
 #line 14
-    testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    this.ScenarioSetup(scenarioInfo);
 #line 15
-    testRunner.When("I Edit the Hospital Network / Treatment Pathway to Consultant Select", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 16
+    testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+    testRunner.When("I Edit the Hospital Network / Treatment Pathway to Consultant Select", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 18
     testRunner.Then("I see this reflected across all the offerings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -118,18 +122,20 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
         [Xunit.FactAttribute(DisplayName="When Out-Patient cover amended to Full Cover, all offerings are updated to this")]
         [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
         [Xunit.TraitAttribute("Description", "When Out-Patient cover amended to Full Cover, all offerings are updated to this")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
         public virtual void WhenOut_PatientCoverAmendedToFullCoverAllOfferingsAreUpdatedToThis()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When Out-Patient cover amended to Full Cover, all offerings are updated to this", ((string[])(null)));
-#line 18
-    this.ScenarioSetup(scenarioInfo);
-#line 19
-    testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 20
-    testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When Out-Patient cover amended to Full Cover, all offerings are updated to this", new string[] {
+                        "QuoteAndApply"});
 #line 21
-    testRunner.When("I Edit the Out-Patient cover to Full Cover", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    this.ScenarioSetup(scenarioInfo);
 #line 22
+    testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 23
+    testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 24
+    testRunner.When("I Edit the Out-Patient cover to Full Cover", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 25
     testRunner.Then("I see this reflected across all the offerings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -138,18 +144,20 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
         [Xunit.FactAttribute(DisplayName="When Excess Amount Per Year amended to £ 250, all offerings are updated to this")]
         [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
         [Xunit.TraitAttribute("Description", "When Excess Amount Per Year amended to £ 250, all offerings are updated to this")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
         public virtual void WhenExcessAmountPerYearAmendedTo250AllOfferingsAreUpdatedToThis()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When Excess Amount Per Year amended to £ 250, all offerings are updated to this", ((string[])(null)));
-#line 24
-    this.ScenarioSetup(scenarioInfo);
-#line 25
-    testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 26
-    testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 27
-    testRunner.When("I Edit the Excess Amount Per Year to £ 250", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When Excess Amount Per Year amended to £ 250, all offerings are updated to this", new string[] {
+                        "QuoteAndApply"});
 #line 28
+    this.ScenarioSetup(scenarioInfo);
+#line 29
+    testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 30
+    testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
+    testRunner.When("I Edit the Excess Amount Per Year to £ 250", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
     testRunner.Then("I see this reflected across all the offerings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -158,18 +166,20 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
         [Xunit.FactAttribute(DisplayName="When Excess Type amended to Per Policy Year, all offerings are updated to this")]
         [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
         [Xunit.TraitAttribute("Description", "When Excess Type amended to Per Policy Year, all offerings are updated to this")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
         public virtual void WhenExcessTypeAmendedToPerPolicyYearAllOfferingsAreUpdatedToThis()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When Excess Type amended to Per Policy Year, all offerings are updated to this", ((string[])(null)));
-#line 30
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When Excess Type amended to Per Policy Year, all offerings are updated to this", new string[] {
+                        "QuoteAndApply"});
+#line 35
     this.ScenarioSetup(scenarioInfo);
-#line 31
+#line 36
     testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 32
+#line 37
     testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 33
+#line 38
     testRunner.When("I Edit the Excess Type to Per Policy Year", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 34
+#line 39
     testRunner.Then("I see this reflected across all the offerings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -178,18 +188,20 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
         [Xunit.FactAttribute(DisplayName="When Underwriting Types amended to Moratorium, all offerings are updated to this")]
         [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
         [Xunit.TraitAttribute("Description", "When Underwriting Types amended to Moratorium, all offerings are updated to this")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
         public virtual void WhenUnderwritingTypesAmendedToMoratoriumAllOfferingsAreUpdatedToThis()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When Underwriting Types amended to Moratorium, all offerings are updated to this", ((string[])(null)));
-#line 36
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("When Underwriting Types amended to Moratorium, all offerings are updated to this", new string[] {
+                        "QuoteAndApply"});
+#line 42
     this.ScenarioSetup(scenarioInfo);
-#line 37
+#line 43
     testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 38
+#line 44
     testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 39
+#line 45
     testRunner.When("I Edit the Underwriting Types to Moratorium", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 40
+#line 46
     testRunner.Then("I see this reflected across all the offerings", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -198,16 +210,18 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
         [Xunit.FactAttribute(DisplayName="Check the options in the Hospital Network are as expected")]
         [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
         [Xunit.TraitAttribute("Description", "Check the options in the Hospital Network are as expected")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
         public virtual void CheckTheOptionsInTheHospitalNetworkAreAsExpected()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options in the Hospital Network are as expected", ((string[])(null)));
-#line 42
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options in the Hospital Network are as expected", new string[] {
+                        "QuoteAndApply"});
+#line 49
     this.ScenarioSetup(scenarioInfo);
-#line 43
+#line 50
     testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 44
+#line 51
     testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 45
+#line 52
     testRunner.When("I look at the options available within the Hospital Network / Treatment Pathway d" +
                     "ropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
@@ -219,7 +233,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
                         "Countrywide Plus"});
             table1.AddRow(new string[] {
                         "Local"});
-#line 46
+#line 53
     testRunner.Then("I see the following options", ((string)(null)), table1, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -228,16 +242,18 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
         [Xunit.FactAttribute(DisplayName="Check the options in the Out-Patient cover are as expected")]
         [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
         [Xunit.TraitAttribute("Description", "Check the options in the Out-Patient cover are as expected")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
         public virtual void CheckTheOptionsInTheOut_PatientCoverAreAsExpected()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options in the Out-Patient cover are as expected", ((string[])(null)));
-#line 52
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options in the Out-Patient cover are as expected", new string[] {
+                        "QuoteAndApply"});
+#line 60
     this.ScenarioSetup(scenarioInfo);
-#line 53
+#line 61
     testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 54
+#line 62
     testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 55
+#line 63
     testRunner.When("I look at the options available within the Out-Patient cover dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -254,7 +270,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
                         "£ 1500"});
             table2.AddRow(new string[] {
                         "Full Cover"});
-#line 56
+#line 64
     testRunner.Then("I see the following options", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -263,16 +279,18 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
         [Xunit.FactAttribute(DisplayName="Check the options in the Excess Amount Per Year are as expected")]
         [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
         [Xunit.TraitAttribute("Description", "Check the options in the Excess Amount Per Year are as expected")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
         public virtual void CheckTheOptionsInTheExcessAmountPerYearAreAsExpected()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options in the Excess Amount Per Year are as expected", ((string[])(null)));
-#line 65
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options in the Excess Amount Per Year are as expected", new string[] {
+                        "QuoteAndApply"});
+#line 74
     this.ScenarioSetup(scenarioInfo);
-#line 66
+#line 75
     testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 67
+#line 76
     testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 68
+#line 77
     testRunner.When("I look at the options available within the Excess Amount Per Year dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
@@ -287,7 +305,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
                         "£ 500"});
             table3.AddRow(new string[] {
                         "£ 1000"});
-#line 69
+#line 78
     testRunner.Then("I see the following options", ((string)(null)), table3, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -296,16 +314,18 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
         [Xunit.FactAttribute(DisplayName="Check the options in the Excess Type are as expected")]
         [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
         [Xunit.TraitAttribute("Description", "Check the options in the Excess Type are as expected")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
         public virtual void CheckTheOptionsInTheExcessTypeAreAsExpected()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options in the Excess Type are as expected", ((string[])(null)));
-#line 77
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options in the Excess Type are as expected", new string[] {
+                        "QuoteAndApply"});
+#line 87
     this.ScenarioSetup(scenarioInfo);
-#line 78
+#line 88
     testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 79
+#line 89
     testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 80
+#line 90
     testRunner.When("I look at the options available within the Excess Type dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
@@ -314,7 +334,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
                         "Per Claim"});
             table4.AddRow(new string[] {
                         "Per Policy Year"});
-#line 81
+#line 91
     testRunner.Then("I see the following options", ((string)(null)), table4, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -323,16 +343,18 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
         [Xunit.FactAttribute(DisplayName="Check the options in the Underwriting Types are as expected")]
         [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
         [Xunit.TraitAttribute("Description", "Check the options in the Underwriting Types are as expected")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
         public virtual void CheckTheOptionsInTheUnderwritingTypesAreAsExpected()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options in the Underwriting Types are as expected", ((string[])(null)));
-#line 86
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the options in the Underwriting Types are as expected", new string[] {
+                        "QuoteAndApply"});
+#line 97
     this.ScenarioSetup(scenarioInfo);
-#line 87
+#line 98
     testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 88
+#line 99
     testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 89
+#line 100
     testRunner.When("I look at the options available within the Underwriting Types dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
@@ -343,7 +365,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
                         "FMU"});
             table5.AddRow(new string[] {
                         "Moratorium"});
-#line 90
+#line 101
     testRunner.Then("I see the following options", ((string)(null)), table5, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -352,21 +374,45 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
         [Xunit.FactAttribute(DisplayName="Check CTA button labelling")]
         [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
         [Xunit.TraitAttribute("Description", "Check CTA button labelling")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
         public virtual void CheckCTAButtonLabelling()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check CTA button labelling", ((string[])(null)));
-#line 96
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check CTA button labelling", new string[] {
+                        "QuoteAndApply"});
+#line 108
     this.ScenarioSetup(scenarioInfo);
-#line 97
+#line 109
     testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 98
+#line 110
     testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 99
+#line 111
     testRunner.When("I look at the cover available within the Enhanced offering", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 100
+#line 112
     testRunner.Then("I see that the Underwriting Types cover option is set to Moratorium", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line 101
+#line 113
     testRunner.And("I see that the Quote CTA button text is set to BUY ONLINE", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Quote Result - Check navigation to complete purchase page")]
+        [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
+        [Xunit.TraitAttribute("Description", "Quote Result - Check navigation to complete purchase page")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void QuoteResult_CheckNavigationToCompletePurchasePage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Quote Result - Check navigation to complete purchase page", new string[] {
+                        "QuoteAndApply"});
+#line 116
+    this.ScenarioSetup(scenarioInfo);
+#line 117
+    testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 118
+    testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 119
+    testRunner.When("I click on the quote result BUY ONLINE button link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 120
+ testRunner.Then("I expect the presales /dev/quote-complete-purchase to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

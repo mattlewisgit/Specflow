@@ -24,6 +24,7 @@
 	And I see that the Progress Bar is not displayed
     And I see that the quote and apply Apply button is displayed
 	And I click on the quote and apply Apply button
+    And I see the Quote Results page feed load has completed
 	Then I expect the presales /dev/quote-result to open
 	And I expect the quote result personalised greeting to contain the users first name
 
@@ -50,6 +51,7 @@
 	And I see that the Progress Bar is not displayed
     And I see that the quote and apply Apply button is displayed
 	And I click on the quote and apply Apply button
+    And I see the Quote Results page feed load has completed
 	Then I expect the presales /dev/quote-result to open
 	And I expect the quote result personalised greeting to contain the users first name
 	And I expect the quote result personalised greeting image to be hidden
