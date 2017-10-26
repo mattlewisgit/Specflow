@@ -52,7 +52,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AjaxMin, Version=4.0.202.1, Culture=neutral, PublicKeyToken=24297a69a7eae424, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\AjaxMin.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.4\lib\net452\AjaxMin.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
@@ -76,7 +76,7 @@
       <HintPath>..\packages\Glass.Mapper.Sc.Core.4.2.1.188\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="Hi.UrlRewrite, Version=1.8.5779.17263, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Hi.UrlRewrite.dll</HintPath>
+      <HintPath>..\packages\URL.Rewrite.1.8.0\lib\Hi.UrlRewrite.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Humanizer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
@@ -113,7 +113,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="MSCaptcha, Version=4.0.4250.31585, Culture=neutral, PublicKeyToken=b9ff12f28cdcf412, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\MSCaptcha.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.4\lib\net452\MSCaptcha.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Nancy, Version=0.17.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -185,15 +185,15 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Forms.Core, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.Forms.Core.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.4\lib\net452\Sitecore.Forms.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Forms.Custom, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.Forms.Custom.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.4\lib\net452\Sitecore.Forms.Custom.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Forms.Mvc, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.Forms.Mvc.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.4\lib\net452\Sitecore.Forms.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.ItemWebApi, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -233,7 +233,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Support.139810, Version=8.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.Support.139810.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.4\lib\net452\Sitecore.Support.139810.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Web, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -241,27 +241,27 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.WFFM.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.4\lib\net452\Sitecore.WFFM.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Abstractions, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.WFFM.Abstractions.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.4\lib\net452\Sitecore.WFFM.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Actions, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.WFFM.Actions.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.4\lib\net452\Sitecore.WFFM.Actions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Analytics, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.WFFM.Analytics.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.4\lib\net452\Sitecore.WFFM.Analytics.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Services, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.WFFM.Services.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.4\lib\net452\Sitecore.WFFM.Services.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.WFFM.Update, Version=8.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.3\lib\net452\Sitecore.WFFM.Update.dll</HintPath>
+      <HintPath>..\packages\Sitecore.Modules.Files.8.2.161129.4\lib\net452\Sitecore.WFFM.Update.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.ComponentModel" />
