@@ -3,7 +3,7 @@
     using Selenium.WebDriver.Extensions.JQuery;
     using Shouldly;
     using TechTalk.SpecFlow;
-
+    using Vitality.Extensions.Selenium;
 
     [Binding]
     public sealed class BenefitLeaderSteps : BaseSteps
@@ -102,6 +102,12 @@
                 Gradient = "-gradient";
             }
 
+            //Identify JQuery Value(cannot have 2 variables passed into the scroll function so reducing down to 1 variable.)
+            var scrollBenefitLeader = BenefitLeader + " .feature-block" + Gradient + "__content-container .box-button.box-button--rounded";
+
+            //Send a "scroll"
+            WebDriver
+                  .ScrollToElement($@"{scrollBenefitLeader}");
 
             //Click on String button
             WebDriver

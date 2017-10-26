@@ -12,9 +12,14 @@ namespace Vitality.Website.IntegrationTests.Steps
         [When(@"I click on tabbed content tab '(.*)'")]
         public void WhenIClickOnTabbedContentTab(string tabName)
         {
+            // Send a "scroll"
             WebDriver
-                .FindElement(By.LinkText(tabName))
-                .Click();
+                .ScrollToElement($@".expander .expander__menu .expander__item:contains(""{tabName}"")");
+
+            WebDriver
+                    .FindElement(new JQuerySelector($@".expander .expander__menu .expander__item:contains(""{tabName}"")"))
+                    .Click();
+
         }
 
         [Then(@"I expect the tabbed content description '(.*)' to appear")]
