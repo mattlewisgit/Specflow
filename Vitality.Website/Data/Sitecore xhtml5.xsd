@@ -40,13 +40,13 @@
            elementFormDefault="qualified">
 
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
-             schemaLocation="xml.xsd"/>
+             schemaLocation="../sitecore/shell/schemas/xml.xsd"/>
 
   <xs:import namespace="http://www.w3.org/2000/svg"
-             schemaLocation="svg.xsd"/>
+             schemaLocation="../sitecore/shell/schemas/svg.xsd"/>
 
   <xs:import namespace="http://www.w3.org/1998/Math/MathML"
-             schemaLocation="math.xsd"/>
+             schemaLocation="../sitecore/shell/schemas/math.xsd"/>
 
   <!-- The root element ================================================== -->
 
