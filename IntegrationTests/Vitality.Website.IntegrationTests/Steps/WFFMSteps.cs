@@ -129,9 +129,9 @@ namespace Vitality.Website.IntegrationTests.Steps
         public void ThenIExpectToolTipsToBeDisplayed(string tooltip)
         {
             WebDriver
-                .WaitForElement(new JQuerySelector(".qtip.qtip-default.qtip-pos-br.qtip-focus .qtip-content:contains('" + tooltip + "')"))
-                .Displayed
-                .ShouldBeTrue();
+                .WaitForElement(new JQuerySelector(".qtip .qtip-content"))
+                .GetAttribute("innerText")
+                .ShouldContain(tooltip);
         }
     }
 }
