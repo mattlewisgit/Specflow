@@ -20,24 +20,24 @@ Scenario: Check Award Leader mobile view
 Scenario: Check Award Leader Member Story 1 link works
 	Given I am on presales /dev/award-leader
 	When I click on the Award Leader Member Stories 1 link
-	Then I expect the presales /dev/home-hero/ to open
+	Then I expect the presales / to open
 
 @Presales AwardLeader SIT
 Scenario: Check Award Leader Member Story 2 link works
 	Given I am on presales /dev/award-leader
 	When I click on the Award Leader member Stories 2 link
-	Then I expect the presales /dev/home-hero/ to open
+	Then I expect the presales / to open
 
 @Presales AwardLeader SIT
 Scenario: Check Award Leader Member Story 3 link works
 	Given I am on presales /dev/award-leader
 	And I resize to mobile view
 	When I click on the Award Leader Member Stories 3 link
-	Then I expect the presales /dev/home-hero/ to open
+	Then I expect the presales / to open
 
 @Presales AwardLeader SIT
 Scenario: Check Award Leader Member Story 1 link works in mobile view
 	Given I am on presales /dev/award-leader
     When I resize to mobile view
 	And I click on the Award Leader Member Stories 1 link
-	Then I expect the presales /dev/home-hero/ to open
+	Then I expect the presales / to open
