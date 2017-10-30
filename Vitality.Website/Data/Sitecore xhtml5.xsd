@@ -597,6 +597,7 @@
     <xs:attribute name="hreflang" type="languageTag"/>
     <xs:attribute name="media" type="mediaQueryList"/>
     <xs:attribute name="type" type="mimeType"/>
+    <xs:attribute name="data-widget-id" type="xs:string"/>
   </xs:attributeGroup>
 
   <xs:simpleType name="id">
