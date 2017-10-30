@@ -70,7 +70,7 @@ namespace Vitality.Website.IntegrationTests.Steps
             // Send a "scroll" to navigation menu containing ALL
             WebDriver
                 .ScrollToElement(".cards-tabbed.spotlight .filter-list.js-filter-options .filter-list__item.js-filter-options__item.js-filter-options__item--default .js-focus");
-            
+
             //Menu Bar - click on menu bar containing string.
             WebDriver
                 .FindElement(new JQuerySelector(
