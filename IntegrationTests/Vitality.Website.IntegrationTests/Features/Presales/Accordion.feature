@@ -7,7 +7,7 @@
 @Presales Accordion SIT
 Scenario: Check Accordion Expands on Page Load
 	Given I am on presales /dev/accordion-content
-	Then I expect the accordion description '#tab1' to appear
+	Then I expect the accordion description #tab1 to appear
 
 @Presales Accordion SIT
 Scenario: Check Accordion Expands on Click in full size view

@@ -89,7 +89,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 9
  testRunner.Given("I am on presales /dev/accordion-content", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
- testRunner.Then("I expect the accordion description \'#tab1\' to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the accordion description #tab1 to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
