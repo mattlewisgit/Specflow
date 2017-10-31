@@ -75,8 +75,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Glass.Mapper.Sc.Core.4.2.1.188\lib\Mvc52\Glass.Mapper.Sc.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="Hi.UrlRewrite, Version=1.8.5779.17263, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\URL.Rewrite.1.8.0\lib\Hi.UrlRewrite.dll</HintPath>
+    <Reference Include="Hi.UrlRewrite, Version=1.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\URL.Rewrite.1.8.2\lib\Hi.UrlRewrite.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Humanizer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=979442b78dfc278e, processorArchitecture=MSIL">
