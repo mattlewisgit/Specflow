@@ -72,18 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features.Presales
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check the twitter feed correctly renders")]
+        [Xunit.FactAttribute(DisplayName="Check the twitter feed correctly renders", Skip="Ignored")]
         [Xunit.TraitAttribute("FeatureTitle", "TwitterFeed")]
         [Xunit.TraitAttribute("Description", "Check the twitter feed correctly renders")]
-        [Xunit.TraitAttribute("Category", "Presales")]
-        [Xunit.TraitAttribute("Category", "twitter")]
-        [Xunit.TraitAttribute("Category", "SIT")]
         public virtual void CheckTheTwitterFeedCorrectlyRenders()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check the twitter feed correctly renders", new string[] {
-                        "Presales",
-                        "twitter",
-                        "SIT"});
+                        "ignore"});
 #line 8
 this.ScenarioSetup(scenarioInfo);
 #line 9
