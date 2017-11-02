@@ -1523,95 +1523,131 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\And my sortcode is.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\And my sortcode is.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\And my sortcode is\Account Sortcode.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\And my sortcode is\Account Sortcode.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\Error Messages.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\Direct Debit Message.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\Error Messages\500.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\Error Messages.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\My account is.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\Error Messages\500.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\My account is\Account Type.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\Initial Message.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\My account is\Account Type\0.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\My account is.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\My account is\Account Type\1.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\My account is\Account Type.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\My account number is.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\My account is\Account Type\0.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\My account number is\Account Number.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\My account is\Account Type\1.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\The name on the account is.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\My account number is.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\The name on the account is\First Name.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\My account number is\Account Number.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\The name on the account is\Last Name.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\The name on the account is.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\The name on the account is\Title.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\The name on the account is\First Name.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\The name on the account is\Title\miss.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\The name on the account is\Last Name.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\The name on the account is\Title\mr.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\The name on the account is\Title.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\The name on the account is\Title\mrs.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\The name on the account is\Title\miss.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\We need to collect you payment.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\The name on the account is\Title\mr.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\We need your address please.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\The name on the account is\Title\mrs.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\We need your address please\Find Address.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\We need your address please.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\We need your address please\Postcode.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\We need your address please\Address 1.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Complete Purchase Form\We need your address please\SelectBillingAddress.item">
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\We need your address please\Address 2.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\We need your address please\Address 3.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\We need your address please\Address 4.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\We need your address please\click here.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\We need your address please\Find Address.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\We need your address please\Or.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\We need your address please\Postcode.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\We need your address please\PostcodeSearch.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\We need your address please\SelectBillingAddress.item">
+      <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
+      <ItemDeployment>AlwaysUpdate</ItemDeployment>
+    </SitecoreItem>
+    <SitecoreItem Include="sitecore\content\Presales\Content\Tell Form\Payment Details Form\We need your address please\to enter you address manually.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
@@ -1979,7 +2015,7 @@
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>
-    <SitecoreItem Include="sitecore\content\Presales\Home\dev\quote-complete-purchase.item">
+    <SitecoreItem Include="sitecore\content\Presales\Home\dev\quote-payment-details.item">
       <ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization>
       <ItemDeployment>AlwaysUpdate</ItemDeployment>
     </SitecoreItem>

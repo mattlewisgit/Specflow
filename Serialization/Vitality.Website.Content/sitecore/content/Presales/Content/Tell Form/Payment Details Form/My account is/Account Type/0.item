@@ -1,41 +1,27 @@
 ----item----
 version: 1
-id: {FB8609FA-B563-4BC8-A82F-492875A9BA40}
+id: {A2B9B134-E0E9-41DA-9843-8B109A39254A}
 database: master
-path: /sitecore/templates/Global/Question/Contents/Label
-parent: {BA0671F6-DE34-4AE4-AE31-82214AE3CE3D}
-name: Label
+path: /sitecore/content/Presales/Content/Tell Form/Payment Details Form/My account is/Account Type/0
+parent: {1FAB101B-FF28-4431-8378-E6753684CAEB}
+name: 0
 master: {00000000-0000-0000-0000-000000000000}
-template: {455A3E98-A627-4B40-8035-E683A0331AC7}
-templatekey: Template field
-created: 20170610T184159Z
+template: {A0F7F1B2-BCE4-41CE-B91B-92B9336CDC11}
+templatekey: Key Value Pair
+created: 20171013T092147Z
 
-----field----
-field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
-name: Type
-key: type
-content-length: 9
-
-Rich Text
-----field----
-field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
-name: __Sortorder
-key: __sortorder
-content-length: 3
-
-400
 ----version----
 language: en
 version: 1
-revision: 79637c53-4969-4b63-b881-ec103c4ae5f0
+revision: 6283845e-4fe9-40c1-aeb5-c46bfa958ad6
 
 ----field----
-field: {19A69332-A23E-4E70-8D16-B2640CB24CC8}
-name: Title
-key: title
-content-length: 5
+field: {C01F61CF-8603-4C48-A96A-EFDDDFEB52ED}
+name: Value
+key: value
+content-length: 21
 
-Label
+an individual account
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
 name: __Owner
@@ -49,7 +35,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20170610T184159Z
+20170613T101336Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -63,14 +49,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-79637c53-4969-4b63-b881-ec103c4ae5f0
+6283845e-4fe9-40c1-aeb5-c46bfa958ad6
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20171102T095237Z
+20171013T093908Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
