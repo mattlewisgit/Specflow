@@ -4,6 +4,7 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { CallbackService } from "../services/callback.service";
 import { DobControlService } from "../services/dob-control.service";
 import { FieldValidator } from "../models/field-validator";
+
 import { QuoteApplyConstants } from "../constants/quoteapply-constants";
 import { QuestionGroup } from "../models/question-group";
 import { ValidationService } from "../services/validation.service";
@@ -19,6 +20,12 @@ export class QuestionControlService {
         private dobControlService: DobControlService,
         private validationService: ValidationService
     ) {
+    }
+
+    updateAddressEmitter = new EventEmitter<number>();
+    onUpdateAddress() {
+        console.log("emmit");
+        return this.updateAddressEmitter;
     }
 
     setQuestionGroups(questionGroups: QuestionGroup[]) {

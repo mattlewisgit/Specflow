@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit }      from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { Subscription } from "rxjs/Subscription";
 
@@ -9,6 +9,7 @@ import { GlobalConstants } from "../../constants/global-constants";
 import { QuoteApplyConstants } from "../../constants/quoteapply-constants";
 import { QuestionControlService } from "../../services/question-control.service";
 import { QuestionGroup } from "../../models/question-group";
+import { Address } from "../../models/address";
 import { PostcodeService } from "../../services/postcode.service";
 import { FooterBarService } from "../../services/footer-bar.service";
 import { TellFormService } from "../../services/tell-form.service";
@@ -25,8 +26,10 @@ export class TellFormComponent implements OnInit, OnDestroy {
     referenceId: string;
     quoteApplication: any;
     private postcodeAsyncValidationSubscription: Subscription;
-    private updatePostcodeSubscription : Subscription;
+    private updatePostcodeSubscription: Subscription;
+    private updateAddressSubscription: Subscription;
     questionGroups: QuestionGroup[];
+    address: Address[];
     renderingData: {};
     private submitSubscription: Subscription;
 
@@ -67,9 +70,9 @@ export class TellFormComponent implements OnInit, OnDestroy {
         this.quoteService.getQuoteApplication(this.referenceId)
             .then((data: any) => {
                 this.quoteApplication = data;
-                //this.getQuestionGroup("billingPostcode").questions.filter(x => x.key === "postcode")[0].value = data.Postcode.toUpperCase();
+                this.getQuestionGroup("billingPostcodeGroup").questions.filter(x => x.key === "billingPostcode")[0].value = data.Postcode.toUpperCase();
 
-                //this.updatePostcode();
+                this.updatePostcode(this.quoteApplication.Postcode);
             });
 
         this.tellForm = new FormGroup({});
@@ -89,16 +92,19 @@ export class TellFormComponent implements OnInit, OnDestroy {
 
         this.updatePostcodeSubscription = this.postcodeService.onUpdatePostcode()
             .subscribe((data: string) => {
+                this.updatePostcode(data);
+            });
 
-                console.log(data);
-                this.updatePostcode();
+        this.updateAddressSubscription = this.questionControlService.onUpdateAddress()
+            .subscribe((data: number) => {
+                this.updateAddress(data);
             });
 
 
         this.submitSubscription = this.footerBarService.onSubmitClicked()
             .subscribe((data: boolean) => {
                 if (data) {
-                    this.tellForm.value.referenceId = this.referenceId;                    
+                    this.tellForm.value.referenceId = this.referenceId;
                     this.tellFormService.submit(`${this.postAction}`, this.tellForm.value)
                         .then((data: string) => {
                             this.referenceId = data;
@@ -113,33 +119,48 @@ export class TellFormComponent implements OnInit, OnDestroy {
         this.footerBarService.completedPercentageEmitter
             .emit((requiredQuestionGroups.filter(x => x.isCompleted).length /
                 requiredQuestionGroups.length) *
-                100);
+            100);
     }
 
     getQuestionGroup(key: string) {
         return this.questionGroups.filter(x => x.key === key)[0];
     }
 
-    updatePostcode() {
+    updatePostcode(postcode: string) {
         this.postcodeService.initialize("address/lookup/", "CustomerDetails");
 
-        let postcode: any = [];
+        let postcodes: any = [];
 
-        this.postcodeService.lookupPostcode(this.quoteApplication.Postcode)
+        this.postcodeService.lookupPostcode(postcode)
             .then(
-                (data: any) => {
-                    console.log(data);
-                    console.log(data.Addresses);
-                    let i = 0;
-                    data.Addresses.forEach((item: any) => {
-                        postcode.push({
-                            key: i,
-                            value: item.AddressLine1 + " | " + item.AddressLine2
-                        });
-                        i++;
+            (data: any) => {
+                this.address = data.Addresses;
+                let i = 0;
+                data.Addresses.forEach((item: any) => {
+                    postcodes.push({
+                        key: i,
+                        value: item.AddressLine1 + (item.AddressLine2.length > 0 ? ", " + item.AddressLine2 : "")
                     });
+                    i++;
                 });
-        this.getQuestionGroup("billingPostcodeGroup").questions.filter(x => x.key === "selectBillingAddress")[0].relatedData = postcode;
+            });
+        this.getQuestionGroup("billingPostcodeGroup").questions.filter(x => x.key === "selectBillingAddress")[0].relatedData = postcodes;
+    }
+
+    updateAddress(index: number) {
+        if (this.address[index] !== undefined) {
+            this.tellForm.controls["address1"].setValue(this.address[index].AddressLine1);
+            this.tellForm.controls["address2"].setValue(this.address[index].AddressLine2);
+            this.tellForm.controls["address3"].setValue(this.address[index].AddressLine4);
+            this.tellForm.controls["address4"].setValue(this.address[index].Region);
+            this.tellForm.controls["postcode"].setValue(this.address[index].PostCode);
+        } else {
+            this.tellForm.controls["address1"].setValue("");
+            this.tellForm.controls["address2"].setValue("");
+            this.tellForm.controls["address3"].setValue("");
+            this.tellForm.controls["address4"].setValue("");
+            this.tellForm.controls["postcode"].setValue("");
+        }
     }
 
     ngOnDestroy(): void {

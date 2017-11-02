@@ -17,7 +17,12 @@ namespace Vitality.Website.Areas.Global.Models
         public IEnumerable<KeyValuePair>  RelatedData { get; set; }
         [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public IEnumerable<FieldValidator> Validators { get; set; }
-        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
         public string Mask { get; set; }
+        [SitecoreField(Setting = SitecoreFieldSettings.DontLoadLazily)]
+        public KeyValuePair FieldSize { get; set; }
+        public bool Breakline { get; set; }
+        public string FieldAction { get; set; }
+
+
     }
 }

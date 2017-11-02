@@ -405,6 +405,7 @@
     <TypeScriptCompile Include="src\ts\app\constants\quoteapply-constants.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\auto-scroll-to.directive.ts" />
     <TypeScriptCompile Include="src\ts\app\constants\global-constants.ts" />
+    <TypeScriptCompile Include="src\ts\app\models\address.ts" />
     <TypeScriptCompile Include="src\ts\app\modules\common.module.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\click-outside.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\limit-multi-select.directive.ts" />
@@ -426,6 +427,7 @@
     <TypeScriptCompile Include="src\ts\app\modules\rich-text-content.module.ts" />
     <TypeScriptCompile Include="src\ts\app\modules\quote-result.module.ts" />
     <TypeScriptCompile Include="src\ts\app\modules\quote-apply-footer.module.ts" />
+    <TypeScriptCompile Include="src\ts\app\pipes\safe-html.pipe.ts" />
     <TypeScriptCompile Include="src\ts\app\services\quote.service.ts" />
     <TypeScriptCompile Include="src\ts\rich-text-content.main.ts" />
     <TypeScriptCompile Include="src\ts\quote-result.main.ts" />

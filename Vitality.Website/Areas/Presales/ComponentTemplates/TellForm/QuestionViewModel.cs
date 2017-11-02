@@ -12,5 +12,9 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.TellForm
         public List<KeyValuePair<string, string>> RelatedData { get; set; }
         public List<FieldValidatorViewModel> Validators { get; set; }
         public string Mask { get; set; }
+        public string FieldSize { get; set; }
+        public bool Breakline { get; set; }
+        public string FieldAction { get; set; }
+
     }
 }
