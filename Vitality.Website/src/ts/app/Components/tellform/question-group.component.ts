@@ -45,6 +45,18 @@ export class QuestionGroupComponent implements OnInit {
         }
     }
 
+    btnAction(action: string) {
+        switch (action) {
+            case "postcodeSearch":
+                this.findAddress((this.questionGroup.questions.filter(x => x.key === "billingPostcode")[0]).value);
+        default:
+        }
+    }
+
+    findAddress(postcode: string) {
+        this.postcodeService.updatePostcodeEmitter.emit(postcode);
+    }
+
     triggerFieldAction(action: string) {
         switch (action) {
             case "postcodeSearch":

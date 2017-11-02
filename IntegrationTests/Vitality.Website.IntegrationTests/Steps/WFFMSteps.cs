@@ -12,7 +12,7 @@ namespace Vitality.Website.IntegrationTests.Steps
     [Binding]
     public sealed class WFFMSteps : BaseSteps
     {
-        private string WebFormID = "wffm6f9c146419a24306ad5b9a7db5e9b409_";
+        private string WebFormID = "wffmed8ddd1863744393b9623a3f0e6c373a_";
 
 
         [Given(@"I have entered web forms section (.*) and field (.*) text box (.*)")]
@@ -129,9 +129,9 @@ namespace Vitality.Website.IntegrationTests.Steps
         public void ThenIExpectToolTipsToBeDisplayed(string tooltip)
         {
             WebDriver
-                .WaitForElement(new JQuerySelector(".qtip.qtip-default.qtip-pos-br.qtip-focus .qtip-content:contains('" + tooltip + "')"))
-                .Displayed
-                .ShouldBeTrue();
+                .WaitForElement(new JQuerySelector(".qtip .qtip-content"))
+                .GetAttribute("innerText")
+                .ShouldContain(tooltip);
         }
     }
 }

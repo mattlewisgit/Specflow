@@ -140,7 +140,7 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.When("I go to the Internal Link cards stacked and I click on the Click Internal Link pa" +
                     "ge link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 23
- testRunner.Then("I see the /dev page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I see the / page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

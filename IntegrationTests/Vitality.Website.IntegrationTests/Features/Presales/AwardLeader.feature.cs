@@ -139,7 +139,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 22
  testRunner.When("I click on the Award Leader Member Stories 1 link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 23
- testRunner.Then("I expect the presales /dev/home-hero/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales / to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -163,7 +163,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 28
  testRunner.When("I click on the Award Leader member Stories 2 link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 29
- testRunner.Then("I expect the presales /dev/home-hero/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales / to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -189,7 +189,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 35
  testRunner.When("I click on the Award Leader Member Stories 3 link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 36
- testRunner.Then("I expect the presales /dev/home-hero/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales / to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -215,7 +215,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 42
  testRunner.And("I click on the Award Leader Member Stories 1 link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 43
- testRunner.Then("I expect the presales /dev/home-hero/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales / to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

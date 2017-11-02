@@ -93,7 +93,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 11
  testRunner.Then("I expect the correct CSS cards tabbed values to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 12
- testRunner.And("I expect the cards tabbed partner Garmin to be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I expect the cards tabbed partner Cineworld Vue to be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -119,7 +119,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 18
  testRunner.Then("I expect the correct CSS cards tabbed values to appear", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 19
- testRunner.And("I expect the cards tabbed partner Garmin to be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I expect the cards tabbed partner Cineworld Vue to be displayed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -167,12 +167,10 @@ this.ScenarioSetup(scenarioInfo);
 #line 30
  testRunner.Given("I am on presales /dev/cards-tabbed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 31
- testRunner.And("I resize to mobile view", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 32
  testRunner.When("I click on cards tabbed navigation menu Active Rewards", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 32
+ testRunner.And("I click on the cards tabbed Starbucks partner Explore Starbucks button link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 33
- testRunner.And("I click on the cards tabbed Starbucks partner Learn more button link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 34
  testRunner.Then("I expect the presales /rewards/partners/active-rewards/starbucks/ to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
