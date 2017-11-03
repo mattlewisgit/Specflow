@@ -24,7 +24,6 @@ export class QuestionControlService {
 
     updateAddressEmitter = new EventEmitter<number>();
     onUpdateAddress() {
-        console.log("emmit");
         return this.updateAddressEmitter;
     }
 

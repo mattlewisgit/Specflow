@@ -31,7 +31,9 @@ export class TellFormComponent implements OnInit, OnDestroy {
     questionGroups: QuestionGroup[];
     address: Address[];
     renderingData: {};
+    formName:string;
     private submitSubscription: Subscription;
+
 
     constructor(
         private quoteService: QuoteService,

@@ -43,4 +43,17 @@
         meChildren: "mechildren",
         productCode: "PHC"
     };
+    export const formNames = {
+        quoteAndApply: "Quote Apply Form",
+        quotePaymentDetails: "Payment Details Form"
+    };
+    export const fieldNames = {
+        billingPostcode: "billingPostcode",
+        selectBillingAddress: "selectBillingAddress",
+        address1: "address1",
+        address2: "address2",
+        address3: "address3",
+        address4: "address4",
+        postcode: "postcode",
+    }; 
 };

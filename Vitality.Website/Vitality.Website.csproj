@@ -379,7 +379,6 @@
     <Content Include="Areas\Presales\Views\QuoteApply\QuoteResult.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\QuoteMainLayout.cshtml" />
     <Content Include="Areas\Presales\Views\QuoteApply\RichTextContent.cshtml" />
-    <Content Include="Areas\Presales\Views\Shared\QuoteCompletePurchaseLayout.cshtml" />
     <None Include="Areas\Presales\Views\Shared\QuoteApplyLayout.cshtml" />
     <Content Include="img\spinner.gif" />
     <Content Include="src\js\countdown-timer-app.js" />
