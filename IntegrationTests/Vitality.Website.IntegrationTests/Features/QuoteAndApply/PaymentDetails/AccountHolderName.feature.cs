@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurchase
+namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetails
 {
     using TechTalk.SpecFlow;
     
@@ -83,7 +83,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurch
 #line 8
     this.ScenarioSetup(scenarioInfo);
 #line 9
-    testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /dev/quote-payment-details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
@@ -112,7 +112,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurch
 #line 17
     this.ScenarioSetup(scenarioInfo);
 #line 18
-    testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /dev/quote-payment-details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 19
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 20
@@ -138,7 +138,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurch
 #line 26
     this.ScenarioSetup(scenarioInfo);
 #line 27
-    testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /dev/quote-payment-details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 28
     testRunner.And("I see the Quote And Apply page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 29

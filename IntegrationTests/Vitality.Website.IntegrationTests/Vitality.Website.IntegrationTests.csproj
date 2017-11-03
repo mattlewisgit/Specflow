@@ -175,22 +175,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CallMeBackPhoneField.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\QuoteAndApply\CompletePurchase\AccountHolderName.feature.cs">
+    <Compile Include="Features\QuoteAndApply\PaymentDetails\AccountHolderName.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountHolderName.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\QuoteAndApply\CompletePurchase\AccountNumber.feature.cs">
+    <Compile Include="Features\QuoteAndApply\PaymentDetails\AccountNumber.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountNumber.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\QuoteAndApply\CompletePurchase\AccountType.feature.cs">
+    <Compile Include="Features\QuoteAndApply\PaymentDetails\AccountType.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountType.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\QuoteAndApply\CompletePurchase\SortCodeField.feature.cs">
+    <Compile Include="Features\QuoteAndApply\PaymentDetails\SortCodeField.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SortCodeField.feature</DependentUpon>
@@ -529,19 +529,19 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CallMeBackPhoneField.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\QuoteAndApply\CompletePurchase\AccountHolderName.feature">
+    <None Include="Features\QuoteAndApply\PaymentDetails\AccountHolderName.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AccountHolderName.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\QuoteAndApply\CompletePurchase\AccountNumber.feature">
+    <None Include="Features\QuoteAndApply\PaymentDetails\AccountNumber.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AccountNumber.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\QuoteAndApply\CompletePurchase\AccountType.feature">
+    <None Include="Features\QuoteAndApply\PaymentDetails\AccountType.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AccountType.feature.cs</LastGenOutput>
     </None>
-    <None Include="Features\QuoteAndApply\CompletePurchase\SortCodeField.feature">
+    <None Include="Features\QuoteAndApply\PaymentDetails\SortCodeField.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>SortCodeField.feature.cs</LastGenOutput>
     </None>

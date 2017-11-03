@@ -6,7 +6,7 @@
 
     @QuoteAndApply
     Scenario: Complete Purchase - Name - Check name field can be populated
-    Given I am on presales /dev/quote-complete-purchase
+    Given I am on presales /dev/quote-payment-details
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
     And I go to the firstName field and enter Test
@@ -15,7 +15,7 @@
 
 	@QuoteAndApply
     Scenario: Complete Purchase - Name - Check name field can be populated with special character double barrelled name
-    Given I am on presales /dev/quote-complete-purchase
+    Given I am on presales /dev/quote-payment-details
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mr
     And I go to the firstName field and enter James
@@ -24,7 +24,7 @@
 
 	@QuoteAndApply
     Scenario: Complete Purchase - Name - Check error message when name contains a number
-    Given I am on presales /dev/quote-complete-purchase
+    Given I am on presales /dev/quote-payment-details
     And I see the Quote And Apply page feed load has completed
     When I go to the title field and choose Mr
     And I go to the firstName field and enter Test

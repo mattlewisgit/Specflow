@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurchase
+namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetails
 {
     using TechTalk.SpecFlow;
     
@@ -83,7 +83,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurch
 #line 8
 this.ScenarioSetup(scenarioInfo);
 #line 9
-    testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /dev/quote-payment-details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
     testRunner.When("I go to the accountType field and choose a joint account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
@@ -103,9 +103,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 14
 this.ScenarioSetup(scenarioInfo);
 #line 15
-    testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /dev/quote-payment-details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 16
-    testRunner.When("I go to the accountType field and choose a joint account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I go to the accountType field and choose an individual account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 17
     testRunner.Then("I don\'t see the accountType field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
