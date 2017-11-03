@@ -54,8 +54,10 @@ export class TellFormComponent implements OnInit, OnDestroy {
         this.postAction = angularData.postAction;
         this.redirectTo = angularData.redirectTo;
         this.referenceId = angularData.referenceId;
+        this.formName = angularData.name;
         this.renderingData = { okBtnText: angularData.okBtnText, okBtnHelpText: angularData.okBtnHelpText };
         const childrenQuestionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.childrenQuestionGroup);
+        
         this.questionControlService.setQuestionGroups(this.questionGroups);
 
         if (childrenQuestionGroup) {
@@ -69,13 +71,36 @@ export class TellFormComponent implements OnInit, OnDestroy {
             this.callbackService.initialize(angularData.additionalData);
         }
 
-        this.quoteService.getQuoteApplication(this.referenceId)
-            .then((data: any) => {
-                this.quoteApplication = data;
-                this.getQuestionGroup("billingPostcodeGroup").questions.filter(x => x.key === "billingPostcode")[0].value = data.Postcode.toUpperCase();
+        if (this.formName === QuoteApplyConstants.formNames.quotePaymentDetails) {
+            this.quoteService.getQuoteApplication(this.referenceId)
+                .then((data: any) => {
+                    this.quoteApplication = data;
+                    this.getQuestionGroup(QuoteApplyConstants.keys.billingPostcodeGroup).questions.filter(x => x.key === QuoteApplyConstants.fieldNames.billingPostcode)[0]
+                        .value = data.Postcode.toUpperCase();
 
-                this.updatePostcode(this.quoteApplication.Postcode);
-            });
+                    this.updatePostcode(this.quoteApplication.Postcode);
+                });
+
+            this.updateAddressSubscription = this.questionControlService.onUpdateAddress()
+                .subscribe((data: number) => {
+                    this.updateAddress(data);
+                });
+
+            this.updatePostcodeSubscription = this.postcodeService.onUpdatePostcode()
+                .subscribe((data: string) => {
+                    this.updatePostcode(data);
+                });
+
+            const fullNameQuestionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.fullNameQuestionGroup);
+
+            let partner = JSON.parse(JSON.stringify(fullNameQuestionGroup));
+            partner.label = "Your spouse/partner's name?";
+            partner.questions[0].breakline = true;
+
+            this.questionGroups.push(partner); 
+
+            console.log(this.questionGroups);
+        }
 
         this.tellForm = new FormGroup({});
         this.tellForm.valueChanges.subscribe(data => {
@@ -91,17 +116,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
                     this.calculateCompletedPercentage();
                 }
             });
-
-        this.updatePostcodeSubscription = this.postcodeService.onUpdatePostcode()
-            .subscribe((data: string) => {
-                this.updatePostcode(data);
-            });
-
-        this.updateAddressSubscription = this.questionControlService.onUpdateAddress()
-            .subscribe((data: number) => {
-                this.updateAddress(data);
-            });
-
+      
 
         this.submitSubscription = this.footerBarService.onSubmitClicked()
             .subscribe((data: boolean) => {
@@ -129,7 +144,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
     }
 
     updatePostcode(postcode: string) {
-        this.postcodeService.initialize("address/lookup/", "CustomerDetails");
+        this.postcodeService.initialize(QuoteApplyConstants.endpoints.addressLookup, QuoteApplyConstants.keys.feedType);
 
         let postcodes: any = [];
 
@@ -146,28 +161,34 @@ export class TellFormComponent implements OnInit, OnDestroy {
                     i++;
                 });
             });
-        this.getQuestionGroup("billingPostcodeGroup").questions.filter(x => x.key === "selectBillingAddress")[0].relatedData = postcodes;
+        this.getQuestionGroup(QuoteApplyConstants.keys.billingPostcodeGroup).questions.filter(x => x.key === QuoteApplyConstants.fieldNames.selectBillingAddress)[0].relatedData = postcodes;
     }
 
     updateAddress(index: number) {
         if (this.address[index] !== undefined) {
-            this.tellForm.controls["address1"].setValue(this.address[index].AddressLine1);
-            this.tellForm.controls["address2"].setValue(this.address[index].AddressLine2);
-            this.tellForm.controls["address3"].setValue(this.address[index].AddressLine4);
-            this.tellForm.controls["address4"].setValue(this.address[index].Region);
-            this.tellForm.controls["postcode"].setValue(this.address[index].PostCode);
+            this.tellForm.controls[QuoteApplyConstants.fieldNames.address1].setValue(this.address[index].AddressLine1);
+            this.tellForm.controls[QuoteApplyConstants.fieldNames.address2].setValue(this.address[index].AddressLine2);
+            this.tellForm.controls[QuoteApplyConstants.fieldNames.address3].setValue(this.address[index].AddressLine4);
+            this.tellForm.controls[QuoteApplyConstants.fieldNames.address4].setValue(this.address[index].Region);
+            this.tellForm.controls[QuoteApplyConstants.fieldNames.postcode].setValue(this.address[index].PostCode);
         } else {
-            this.tellForm.controls["address1"].setValue("");
-            this.tellForm.controls["address2"].setValue("");
-            this.tellForm.controls["address3"].setValue("");
-            this.tellForm.controls["address4"].setValue("");
-            this.tellForm.controls["postcode"].setValue("");
+            this.tellForm.controls[QuoteApplyConstants.fieldNames.address1].setValue("");
+            this.tellForm.controls[QuoteApplyConstants.fieldNames.address2].setValue("");
+            this.tellForm.controls[QuoteApplyConstants.fieldNames.address3].setValue("");
+            this.tellForm.controls[QuoteApplyConstants.fieldNames.address4].setValue("");
+            this.tellForm.controls[QuoteApplyConstants.fieldNames.postcode].setValue("");
         }
     }
 
     ngOnDestroy(): void {
         if (this.postcodeAsyncValidationSubscription) {
             this.postcodeAsyncValidationSubscription.unsubscribe();
+        }
+        if (this.updateAddressSubscription) {
+            this.updateAddressSubscription.unsubscribe();
+        }
+        if (this.updatePostcodeSubscription) {
+            this.updatePostcodeSubscription.unsubscribe();
         }
     }
 }

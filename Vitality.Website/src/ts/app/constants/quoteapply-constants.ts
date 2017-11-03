@@ -4,32 +4,36 @@
         postcode: "postcode"
     };
     export const endpoints =
-    {
-        getApplication: "/api/quote/getapplication/"
-    };
+        {
+            getApplication: "/api/quote/getapplication/",
+            addressLookup: "address/lookup/"
+        };
     export const keys = {
         callbackTimeQuestionGroup: "callbackTimeQuestionGroup",
         callbackDate: "callbackDate",
         callbackTime: "callbackTime",
         child1Dob: "child1Dob",
         childrenQuestionGroup: "childrenDobGroup",
+        fullNameQuestionGroup: "fullNameGroup",
         membersToInsure: "membersToInsure",
         noOfChildren: "noOfChildren",
         postcodeQuestionGroup: "postcodeGroup",
+        billingPostcodeGroup: "billingPostcodeGroup",
         featuresAndBenefitsGroup: "featuresAndBenefits",
         moratorium: "A01",
-        underwritingType: "policyUwChoiceCode"
+        underwritingType: "policyUwChoiceCode",
+        feedType: "CustomerDetails"
     };
     export const gender =
-    {
-        male: "M",
-        female: "F"
-    };
+        {
+            male: "M",
+            female: "F"
+        };
     export const previouslyInsured =
-    {
-        no: "PI0",
-        yes: "PI1"
-    };
+        {
+            no: "PI0",
+            yes: "PI1"
+        };
     export const roleType = {
         employeePrincipal: "EMP",
         partner: "PTR",
@@ -55,5 +59,5 @@
         address3: "address3",
         address4: "address4",
         postcode: "postcode",
-    }; 
+    };
 };

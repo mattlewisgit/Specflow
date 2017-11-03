@@ -25,9 +25,10 @@ export class QuestionGroupComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        console.log(this.formName);
         this.questionControlService.addFormControls(this.form, this.questionGroup);
-        this.hideManualAddressfields(true);
+        if (this.formName === QuoteApplyConstants.formNames.quotePaymentDetails) {
+            this.hideManualAddressfields(true);
+        };
     }
 
     storeSelectedCheckboxValues(event: any, selectedValue: string, question: Question<any>): void {

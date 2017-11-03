@@ -13,4 +13,5 @@ export class Question<T>{
     relatedData: { key: string, value: string }[] = [];
     scrollTo: string;
     mask: string;
+    breakline:boolean;
 }
