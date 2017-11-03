@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurchase
+namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetails
 {
     using TechTalk.SpecFlow;
     

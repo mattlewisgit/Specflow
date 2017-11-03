@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurchase
+namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetails
 {
     using TechTalk.SpecFlow;
     
@@ -83,7 +83,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.CompletePurch
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
-    testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /dev/quote-payment-details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
     testRunner.When("I go to the accountNumber field and enter 12345678", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
@@ -106,7 +106,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 13
 this.ScenarioSetup(scenarioInfo);
 #line 14
-    testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /dev/quote-payment-details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 15
     testRunner.When("I go to the accountNumber field and enter 1234567", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 16
@@ -126,7 +126,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 19
 this.ScenarioSetup(scenarioInfo);
 #line 20
-    testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /dev/quote-payment-details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 21
     testRunner.When("I go to the accountNumber field and enter letterss", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 22
