@@ -1,11 +1,8 @@
 ﻿import { Injectable }   from "@angular/core";
 import * as _ from "underscore";
-import * as moment from "moment/moment";
 import { ErrorService } from "./error.service";
-import { Headers, Http } from "@angular/http";
+import { Http } from "@angular/http";
 import "rxjs/add/operator/toPromise";
-
-import { MomentExtendedService } from "./moment-extended.service";
 
 import { QuoteRequest } from "./../models/quote/quote-request";
 import { PermutationRequest } from "./../models/quote/permutation-request";
@@ -21,36 +18,14 @@ import { GlobalConstants } from "../constants/global-constants";
 export class QuoteService {
     endpoint = "rtpe/quotelist";
     lives = new Array<Life>();
+    quoteApplication: any;
 
     constructor(private http: Http,
         private errorService: ErrorService) {
     }
-    // TODO : remove this before going live... For testing purpose only
-    quoteApplication = {
-        child1Dob: "04/02/2012",
-        child2Dob: "04/08/2002",
-        child3Dob: "",
-        child4Dob: "",
-        child5Dob: "",
-        coverStartDate: "03/10/2017",
-        dateOfBirth: "03/02/1999",
-        emailAddress: "sd@dsfs.com",
-        firstName: "Janaka",
-        insuredStatus: 1,
-        lastName: "Lakmal",
-        marketingPermission: 1,
-        membersToInsure: "mepartnerchildren",
-        noOfChildren: 2,
-        noOfClaimFreeYears: 2,
-        noOfClaims: 2,
-        partnerDateOfBirth: "04/03/1994",
-        phoneNumber: "03434334232",
-        postcode: "BH48dx",
-        title: "mr"
-    }
 
-    getQuoteApplication(referenceId: string): Promise<any>  {
-        return this.http.get(QuoteApplyConstants.endpoints.getApplication + referenceId)
+    getQuoteApplication(referenceNumber: string): Promise<any>  {
+        return this.http.get(`${QuoteApplyConstants.endpoints.bslGet}${encodeURIComponent(QuoteApplyConstants.endpoints.getApplication + referenceNumber)}`)
             .toPromise()
             .then(response => response.json());
     }

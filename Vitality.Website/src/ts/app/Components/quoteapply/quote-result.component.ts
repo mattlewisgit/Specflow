@@ -44,15 +44,9 @@ export class QuoteResultComponent implements OnInit {
         }
 
         this.errorService.initialize(this.quoteResultData.serviceOutagePage);
-        this.quoteService.getQuoteApplication(this.quoteResultData.referenceId)
+        this.quoteService.getQuoteApplication(this.quoteResultData.referenceNumber)
             .then((data: any) => {
                 this.quoteApplication = data;
-                this.quoteService.setQuoteApplication(this.quoteApplication);
-                this.getQuotes();
-            })
-            // TODO remove catch before going live
-            .catch((err: any) => {
-                this.quoteApplication = this.quoteService.quoteApplication;
                 this.quoteService.setQuoteApplication(this.quoteApplication);
                 this.getQuotes();
             });

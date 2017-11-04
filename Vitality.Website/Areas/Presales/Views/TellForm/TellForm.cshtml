@@ -25,7 +25,7 @@ else
     <script type="text/javascript">
         window.angularData = window.angularData || {};
         window.angularData = @Html.Raw(angularModel);
-        window.angularData.referenceId = "@Context.Request.QueryString["referenceId"]";
+        window.angularData.referenceNumber = "@Context.Request.QueryString["ref"]";
     </script>
 
     <script type="text/javascript">

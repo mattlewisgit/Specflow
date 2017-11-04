@@ -5,8 +5,11 @@
     };
     export const endpoints =
     {
-        getApplication: "/api/quote/getapplication/"
+        getApplication: "quote/getapplication/",
+        bslGet: "/api/bsl/get?bslendpoint=",
+        bslPost: "/api/bsl/post?bslendpoint="
     };
+
     export const keys = {
         callbackTimeQuestionGroup: "callbackTimeQuestionGroup",
         callbackDate: "callbackDate",

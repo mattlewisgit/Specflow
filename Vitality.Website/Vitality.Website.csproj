@@ -4013,10 +4013,8 @@
     <Compile Include="Areas\Presales\Controllers\CallBackController.cs" />
     <Compile Include="Areas\Presales\Handlers\CallBack\CallBackDto.cs" />
     <Compile Include="Areas\Presales\Handlers\CallBack\CallBackPostRequest.cs" />
-    <Compile Include="Areas\Presales\Handlers\Quote\GetApplicationHandler.cs" />
-    <Compile Include="Areas\Presales\Handlers\Quote\GetApplicationRequest.cs" />
-    <Compile Include="Areas\Presales\Handlers\Quote\SaveApplicationHandler.cs" />
-    <Compile Include="Areas\Presales\Handlers\Quote\SaveApplicationRequest.cs" />
+    <Compile Include="Areas\Presales\Handlers\Quote\SendToOptalatixHandler.cs" />
+    <Compile Include="Areas\Presales\Handlers\Quote\SendToOptalatixRequest.cs" />
     <Compile Include="Areas\Presales\Models\CallBackData.cs" />
     <Compile Include="Areas\Presales\Models\OptalitixMember.cs" />
     <Compile Include="Areas\Presales\Models\OptalitixQuoteRequest.cs" />
