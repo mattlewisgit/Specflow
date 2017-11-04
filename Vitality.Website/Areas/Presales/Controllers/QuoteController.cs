@@ -38,34 +38,5 @@ namespace Vitality.Website.Areas.Presales.Controllers
                 })), result => result != null);
 
         }
-
-        [HttpPost]
-        [Route("api/quote/saveapplication/{referenceNumber}")]
-        public async Task<HttpResponseMessage> SaveApplication(string bslEndpoint, string referenceNumber, object application)
-        {
-            return await GetResponseAsync<BslPostRequest, BslDto>(
-                new BslPostRequest(bslEndpoint, JsonConvert.SerializeObject(new
-                {
-                    QuoteRequest = new
-                    {
-                        QuoteApplication = application
-                    },
-                    ReferenceNumber = referenceNumber
-                })), result => result != null);
-        }
-
-
-        [HttpPost]
-        [Route("api/quote/savequoterequest/{referenceNumber}")]
-        public async Task<HttpResponseMessage> SaveQuoteRequest(string bslEndpoint, string referenceNumber,
-            object quoteRequest)
-        {
-            return await GetResponseAsync<BslPostRequest, BslDto>(
-                new BslPostRequest(bslEndpoint, new
-                {
-                    QuoteRequest =  quoteRequest,
-                    ReferenceNumber = referenceNumber
-                }), result => result != null);
-        }
     }
 }
