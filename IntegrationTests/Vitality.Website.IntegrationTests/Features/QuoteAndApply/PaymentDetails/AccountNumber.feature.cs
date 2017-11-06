@@ -72,13 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Account Number - Check account number field")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Account Number - Check account number field")]
         [Xunit.TraitAttribute("FeatureTitle", "AccountNumber")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Account Number - Check account number field")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Account Number - Check account number field")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_AccountNumber_CheckAccountNumberField()
+        public virtual void PaymentDetails_AccountNumber_CheckAccountNumberField()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Account Number - Check account number field", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Account Number - Check account number field", new string[] {
                         "QuoteAndApply"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
@@ -92,16 +92,13 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Account Number - Check incorrect account number error message" +
-            "")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Account Number - Check incorrect account number error message")]
         [Xunit.TraitAttribute("FeatureTitle", "AccountNumber")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Account Number - Check incorrect account number error message" +
-            "")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Account Number - Check incorrect account number error message")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_AccountNumber_CheckIncorrectAccountNumberErrorMessage()
+        public virtual void PaymentDetails_AccountNumber_CheckIncorrectAccountNumberErrorMessage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Account Number - Check incorrect account number error message" +
-                    "", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Account Number - Check incorrect account number error message", new string[] {
                         "QuoteAndApply"});
 #line 13
 this.ScenarioSetup(scenarioInfo);
@@ -115,13 +112,13 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Account Number - Check account number masking")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Account Number - Check account number masking")]
         [Xunit.TraitAttribute("FeatureTitle", "AccountNumber")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Account Number - Check account number masking")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Account Number - Check account number masking")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_AccountNumber_CheckAccountNumberMasking()
+        public virtual void PaymentDetails_AccountNumber_CheckAccountNumberMasking()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Account Number - Check account number masking", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Account Number - Check account number masking", new string[] {
                         "QuoteAndApply"});
 #line 19
 this.ScenarioSetup(scenarioInfo);

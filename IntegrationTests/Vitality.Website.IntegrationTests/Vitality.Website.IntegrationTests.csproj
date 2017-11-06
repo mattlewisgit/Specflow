@@ -190,6 +190,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountType.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\QuoteAndApply\PaymentDetails\PostalAddress.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PostalAddress.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\QuoteAndApply\PaymentDetails\SortCodeField.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -405,6 +410,7 @@
     <Compile Include="Steps\ProductHeroSteps.cs" />
     <Compile Include="Steps\ProductsComponentSteps.cs" />
     <Compile Include="Steps\QuoteAndApplySteps.cs" />
+    <Compile Include="Steps\QuoteAndApply\PaymentDetails\PaymentDetailsSteps.cs" />
     <Compile Include="Steps\QuoteAndApply\QuoteResults\MarketingMessageSteps.cs" />
     <Compile Include="Steps\QuoteAndApply\QuoteResults\RichTextSteps.cs" />
     <Compile Include="Steps\QuoteResultsSteps.cs" />
@@ -540,6 +546,10 @@
     <None Include="Features\QuoteAndApply\PaymentDetails\AccountType.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AccountType.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\PaymentDetails\PostalAddress.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PostalAddress.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\QuoteAndApply\PaymentDetails\SortCodeField.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

@@ -17,15 +17,15 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class AccountTypeFeature : Xunit.IClassFixture<AccountTypeFeature.FixtureData>, System.IDisposable
+    public partial class PostalAddressFeature : Xunit.IClassFixture<PostalAddressFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "AccountType.feature"
+#line 1 "PostalAddress.feature"
 #line hidden
         
-        public AccountTypeFeature()
+        public PostalAddressFeature()
         {
             this.TestInitialize();
         }
@@ -33,8 +33,8 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AccountType", "\tIn order to validation the account type field\r\n\tAs a quote and apply user\r\n\tI wa" +
-                    "nt to be able to check the account type field", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "PostalAddress", "\tIn order to validation the Direct Debit Postal Address Field\r\n\tAs a quote and ap" +
+                    "ply user\r\n\tI want to be able to check the Direct Debit Postal Address Field", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -63,7 +63,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void SetFixture(AccountTypeFeature.FixtureData fixtureData)
+        public virtual void SetFixture(PostalAddressFeature.FixtureData fixtureData)
         {
         }
         
@@ -72,42 +72,50 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Payment Details - Account type - Joint account holder name")]
-        [Xunit.TraitAttribute("FeatureTitle", "AccountType")]
-        [Xunit.TraitAttribute("Description", "Payment Details - Account type - Joint account holder name")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Postal Address - Check Postcode Field does not have errors")]
+        [Xunit.TraitAttribute("FeatureTitle", "PostalAddress")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Postal Address - Check Postcode Field does not have errors")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void PaymentDetails_AccountType_JointAccountHolderName()
+        public virtual void PaymentDetails_PostalAddress_CheckPostcodeFieldDoesNotHaveErrors()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Account type - Joint account holder name", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Postal Address - Check Postcode Field does not have errors", new string[] {
                         "QuoteAndApply"});
-#line 8
+#line 7
 this.ScenarioSetup(scenarioInfo);
-#line 9
+#line 8
     testRunner.Given("I am on presales /dev/quote-payment-details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 9
+    testRunner.When("I go to the billingPostcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
-    testRunner.When("I go to the accountType field and choose a joint account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 11
-    testRunner.Then("I don\'t see the accountType field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I don\'t see the billingPostcode field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Payment Details - Account type - An individual account holder name")]
-        [Xunit.TraitAttribute("FeatureTitle", "AccountType")]
-        [Xunit.TraitAttribute("Description", "Payment Details - Account type - An individual account holder name")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Postal Address - Check Billing Address Returns Vitality Address" +
+            "")]
+        [Xunit.TraitAttribute("FeatureTitle", "PostalAddress")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Postal Address - Check Billing Address Returns Vitality Address" +
+            "")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void PaymentDetails_AccountType_AnIndividualAccountHolderName()
+        public virtual void PaymentDetails_PostalAddress_CheckBillingAddressReturnsVitalityAddress()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Account type - An individual account holder name", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Postal Address - Check Billing Address Returns Vitality Address" +
+                    "", new string[] {
                         "QuoteAndApply"});
-#line 14
+#line 13
 this.ScenarioSetup(scenarioInfo);
-#line 15
+#line 14
     testRunner.Given("I am on presales /dev/quote-payment-details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 15
+    testRunner.When("I go to the billingPostcode field and enter BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 16
-    testRunner.When("I go to the accountType field and choose an individual account", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.And("I go to the button field and click on the button Find Address", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
-    testRunner.Then("I don\'t see the accountType field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.And("I go to the selectBillingAddress field and I choose the dropdown MARSHALL POINT, " +
+                    "4 RICHMOND GARDENS", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 18
+    testRunner.Then("I don\'t see the billingPostcode field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -119,12 +127,12 @@ this.ScenarioSetup(scenarioInfo);
             
             public FixtureData()
             {
-                AccountTypeFeature.FeatureSetup();
+                PostalAddressFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                AccountTypeFeature.FeatureTearDown();
+                PostalAddressFeature.FeatureTearDown();
             }
         }
     }
