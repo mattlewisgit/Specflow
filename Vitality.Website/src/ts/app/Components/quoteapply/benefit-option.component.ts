@@ -8,7 +8,7 @@ import { BenefitOption } from "../../models/quote/benefit-option";
 })
 export class BenefitOptionComponent implements OnChanges {
     @Input()
-    permutationId: string;
+    permutationId: number;
     @Input()
     benefitOptions: BenefitOption[];
     benefitOption: BenefitOption;

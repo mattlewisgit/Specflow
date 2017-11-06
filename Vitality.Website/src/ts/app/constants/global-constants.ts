@@ -9,7 +9,8 @@
 
     export const endpoints =
     {
-        bslEndpoint: "/api/bsl/post?bslendpoint="
+            bslGet: "/api/bsl/get?bslendpoint=",
+            bslPost: "/api/bsl/post?bslendpoint=",
     };
     export const selectors = {
         classIdentifier: ".",

@@ -416,7 +416,7 @@
     <TypeScriptCompile Include="src\ts\app\models\question.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\benefit.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\permutation.ts" />
-    <TypeScriptCompile Include="src\ts\app\models\quote\quote-request.ts" />
+    <TypeScriptCompile Include="src\ts\app\models\quote\pricing-request.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\permutation-request.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\life.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\module.ts" />

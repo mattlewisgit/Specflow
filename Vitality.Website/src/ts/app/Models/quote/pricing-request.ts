@@ -1,6 +1,6 @@
 ﻿import { PermutationRequest } from "./permutation-request";
 
-export class QuoteRequest {
+export class PricingRequest {
     permutations: PermutationRequest[];
 
     constructor(permutations: PermutationRequest[]) {

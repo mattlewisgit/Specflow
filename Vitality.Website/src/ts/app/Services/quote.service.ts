@@ -4,7 +4,7 @@ import { ErrorService } from "./error.service";
 import { Http } from "@angular/http";
 import "rxjs/add/operator/toPromise";
 
-import { QuoteRequest } from "./../models/quote/quote-request";
+import { PricingRequest } from "./../models/quote/pricing-request";
 import { PermutationRequest } from "./../models/quote/permutation-request";
 import { IndividualQuoteRequest } from "./../models/quote/individual-quote-request";
 import { Life } from "./../models/quote/life";
@@ -16,7 +16,6 @@ import { GlobalConstants } from "../constants/global-constants";
 
 @Injectable()
 export class QuoteService {
-    endpoint = "rtpe/quotelist";
     lives = new Array<Life>();
     quoteApplication: any;
 
@@ -25,7 +24,7 @@ export class QuoteService {
     }
 
     getQuoteApplication(referenceNumber: string): Promise<any>  {
-        return this.http.get(`${QuoteApplyConstants.endpoints.bslGet}${encodeURIComponent(QuoteApplyConstants.endpoints.getApplication + referenceNumber)}`)
+        return this.http.get(`${GlobalConstants.endpoints.bslGet}${encodeURIComponent(QuoteApplyConstants.endpoints.getApplication + referenceNumber)}`)
             .toPromise()
             .then(response => response.json());
     }
@@ -35,15 +34,46 @@ export class QuoteService {
         this.getLives();
     }
 
-    callRtpe(benefits: Benefit[], permutations: Permutation[]): Promise<any> {
-        const requestData = this.getRtpeRequest(benefits, permutations);
-        return this.http.post(GlobalConstants.endpoints.bslEndpoint + encodeURIComponent(this.endpoint), requestData)
+    getRtpeQuoteList(pricingRequest: PricingRequest): Promise<any> {
+        return this.callBslPost(QuoteApplyConstants.endpoints.getRtpeQuoteList,
+            {
+                FeedSettings: {},
+                Permutations: pricingRequest.permutations
+            });
+    }
+
+    savePricingRequest(referenceNumber: string, pricingRequest: PricingRequest): Promise<any> {
+        return this.callBslPost(QuoteApplyConstants.endpoints.savePricingRequest,
+            {
+                ReferenceNumber: referenceNumber,
+                Permutations: pricingRequest.permutations
+            });
+    }
+
+    savePricingResponse(referenceNumber: string, pricingResponse: any): Promise<any> {
+        return this.callBslPost(QuoteApplyConstants.endpoints.savePricingResponse,
+            {
+                ReferenceNumber: referenceNumber,
+                PermutationResponses: pricingResponse
+            });
+    }
+
+    healSave(referenceNumber: string, permutationNumber: number): Promise<any> {
+        return this.callBslPost(QuoteApplyConstants.endpoints.healSave,
+            {
+                ReferenceNumber: referenceNumber,
+                PermutationNumber: permutationNumber
+            });
+    }
+
+    callBslPost(endpoint: string, postData: any): Promise<any> {
+        return this.http.post(GlobalConstants.endpoints.bslPost + encodeURIComponent(endpoint), postData)
             .toPromise()
             .then(response => response.json().BslResponse)
             .catch(this.errorService.handleServiceOutage.bind(this.errorService));
     }
 
-    private getRtpeRequest(benefits: Benefit[], permutations: Permutation[]): QuoteRequest {
+    getPricingRequest(benefits: Benefit[], permutations: Permutation[]): PricingRequest {
         const moduleBenefits = benefits.filter(b => b.isModule);
         const otherBenefits = benefits.filter(b => !b.isModule && b.code);
         const permutationRequests = new Array<PermutationRequest>();
@@ -98,7 +128,7 @@ export class QuoteService {
             permutationRequests.push(permutationRequest);
         }
 
-        return new QuoteRequest(permutationRequests);
+        return new PricingRequest(permutationRequests);
     }
 
     private getLives(): void {

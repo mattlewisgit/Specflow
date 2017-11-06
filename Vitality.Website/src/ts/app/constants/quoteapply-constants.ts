@@ -6,10 +6,11 @@
     export const endpoints =
     {
         getApplication: "quote/getapplication/",
-        bslGet: "/api/bsl/get?bslendpoint=",
-        bslPost: "/api/bsl/post?bslendpoint="
+        getRtpeQuoteList: "rtpe/quotelist",
+        healSave: "quote/healsave",
+        savePricingRequest: "quote/savepricingrequest",
+        savePricingResponse: "quote/savepricingresponse"
     };
-
     export const keys = {
         callbackTimeQuestionGroup: "callbackTimeQuestionGroup",
         callbackDate: "callbackDate",

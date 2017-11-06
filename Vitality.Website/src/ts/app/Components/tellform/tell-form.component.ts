@@ -102,7 +102,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
                         FormData: this.tellForm.value,
                         ReferenceNumber: this.referenceNumber
                     };
-                    this.tellFormService.submit(`${QuoteApplyConstants.endpoints.bslPost}${encodeURIComponent(this.postAction)}`, postData)
+                    this.tellFormService.submit(`${GlobalConstants.endpoints.bslPost}${encodeURIComponent(this.postAction)}`, postData)
                         .then((data: any) => {
                             this.referenceNumber = data.BslResponse.ReferenceNumber;
                             if (this.referenceNumber) {
