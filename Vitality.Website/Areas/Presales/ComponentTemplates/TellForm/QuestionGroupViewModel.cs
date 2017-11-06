@@ -11,5 +11,6 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.TellForm
         public string Label { get; set; }
         public IEnumerable<QuestionViewModel> Questions { get; set; }
         public string ValidationMessage { get; set; }
+        public bool isHidden { get; set; }
     }
 }

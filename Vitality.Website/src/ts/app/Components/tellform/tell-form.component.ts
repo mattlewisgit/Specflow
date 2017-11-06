@@ -91,7 +91,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
                     this.updatePostcode(data);
                 });
 
-            const fullNameQuestionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.fullNameQuestionGroup);
+            /*const fullNameQuestionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.fullNameQuestionGroup);
 
             let partner = JSON.parse(JSON.stringify(fullNameQuestionGroup));
             partner.label = "Your spouse/partner's name?";
@@ -99,7 +99,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
 
             this.questionGroups.push(partner); 
 
-            console.log(this.questionGroups);
+            console.log(this.questionGroups);*/
         }
 
         this.tellForm = new FormGroup({});
