@@ -73,7 +73,6 @@ export class QuestionGroupComponent implements OnInit {
             case "addressChanged":
                 this.showManualAddress();
                 setTimeout(() => this.questionControlService.updateAddressEmitter.emit(this.form.controls[QuoteApplyConstants.fieldNames.selectBillingAddress].value), 0);
-               
                 break;
         }
     }

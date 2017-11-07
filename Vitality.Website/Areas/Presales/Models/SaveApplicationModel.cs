@@ -16,11 +16,11 @@
         public string MembersToInsure { get; set; }
         public string PartnerDateOfBirth { get; set; }
         public int NoOfChildren { get; set; }
-        public string Child1Dob { get; set; }
-        public string Child2Dob { get; set; }
-        public string Child3Dob { get; set; }
-        public string Child4Dob { get; set; }
-        public string Child5Dob { get; set; }
+        public string ChildDob1 { get; set; }
+        public string ChildDob2 { get; set; }
+        public string ChildDob3 { get; set; }
+        public string ChildDob4 { get; set; }
+        public string ChildDob5 { get; set; }
         public bool MarketingPermission { get; set; }
         public string FeaturesAndBenefits { get; set; }
         public string ReferenceId { get; set; }

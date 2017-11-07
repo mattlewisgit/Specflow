@@ -21,5 +21,6 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.TellForm
         public IEnumerable<Question> Questions { get; set; }
         public string ValidationMessage { get; set; }
         public bool isHidden { get; set; }
+        public bool questionTitleBreakLine { get; set; }
     }
 }

@@ -22,8 +22,7 @@ export class DobControlService {
         additionalData: any})
     {
         this.childrenQuestionGroup = options.childrenQuestionGroup;
-
-        this.child1DobQuestion = this.getQuestion(QuoteApplyConstants.keys.child1Dob, this.childrenQuestionGroup);
+        this.child1DobQuestion = this.getQuestion(QuoteApplyConstants.keys.childDob, this.childrenQuestionGroup);
         this.child1DobLabel = this.child1DobQuestion.label;
 
         this.noOfChildrenQuestion = this.getQuestion(QuoteApplyConstants.keys.noOfChildren, this.childrenQuestionGroup);
@@ -63,7 +62,7 @@ export class DobControlService {
             this.child1DobQuestion.label = null;
         }
         for (let i = 2; i <= noOfChildren; i++) {
-            let currentchildDobQuestion = this.getQuestion(`child${i}Dob`, this.childrenQuestionGroup);
+            let currentchildDobQuestion = this.getQuestion(QuoteApplyConstants.keys.childDob + i.toString(), this.childrenQuestionGroup);
             if (i == noOfChildren) {
                 currentchildDobQuestion.label = this.childDobLastLabel;
             } else {
@@ -85,6 +84,7 @@ export class DobControlService {
 
     addChildrenDobQuestions(): void {
         this.child1DobQuestion.basedOnKey = this.noOfChildrenQuestion.key;
+        this.child1DobQuestion.key = QuoteApplyConstants.keys.childDob + "1";
         this.child1DobQuestion.isHidden = true;
         this.child1DobQuestion.basedOnValue = 1;
         for (let i = 2; i < 6; i++) {
@@ -92,7 +92,7 @@ export class DobControlService {
             childDobToAdd.value = null;
             childDobToAdd.basedOnKey = this.noOfChildrenQuestion.key;
             childDobToAdd.basedOnValue = i;
-            childDobToAdd.key = `child${i}Dob`;
+            childDobToAdd.key = QuoteApplyConstants.keys.childDob + i.toString();
             childDobToAdd.label = this.childDobSeperatorLabel;
             childDobToAdd.placeholder = this.child1DobQuestion.placeholder;
             childDobToAdd.validators = this.child1DobQuestion.validators;

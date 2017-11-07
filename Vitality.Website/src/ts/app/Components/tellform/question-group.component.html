@@ -1,5 +1,5 @@
 ﻿<div class="question" *ngIf="!questionGroup.isHidden" [formGroup]="form">
-    <span [innerHTML]="questionGroup.label"> </span>
+    <span class="{{questionGroup.questionTitleBreakLine ? 'breakline' : ''}}" [innerHTML]="questionGroup.label"> </span>
     <ng-container *ngFor="let question of questionGroup.questions" [ngSwitch]="question.controlType">
         <ng-container *ngSwitchCase="'dropdown'">
             <div class="question--input__select {{question.fieldSize}} {{question.breakline ? 'breakline' : ''}}">

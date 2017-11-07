@@ -12,7 +12,6 @@
         callbackTimeQuestionGroup: "callbackTimeQuestionGroup",
         callbackDate: "callbackDate",
         callbackTime: "callbackTime",
-        child1Dob: "child1Dob",
         childrenQuestionGroup: "childrenDobGroup",
         fullNameQuestionGroup: "fullNameGroup",
         membersToInsure: "membersToInsure",
@@ -22,7 +21,11 @@
         featuresAndBenefitsGroup: "featuresAndBenefits",
         moratorium: "A01",
         underwritingType: "policyUwChoiceCode",
-        feedType: "CustomerDetails"
+        feedType: "CustomerDetails",
+        spousePartnerDetailsGroup: "spousePartnerDetailsGroup",
+        dependantDOBGroup: "dependantDOBGroup",
+        childDob: "childDob",
+        childDetails: "childDetails"
     };
     export const gender =
         {
@@ -59,5 +62,6 @@
         address3: "address3",
         address4: "address4",
         postcode: "postcode",
+        partnerDateOfBirth: "PartnerDateOfBirth"
     };
 };

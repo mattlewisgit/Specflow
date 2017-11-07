@@ -79,6 +79,40 @@ export class TellFormComponent implements OnInit, OnDestroy {
                         .value = data.Postcode.toUpperCase();
 
                     this.updatePostcode(this.quoteApplication.Postcode);
+
+                    if (this.quoteApplication[QuoteApplyConstants.fieldNames.partnerDateOfBirth] !== "") {
+                        this.getQuestionGroup(QuoteApplyConstants.keys.spousePartnerDetailsGroup).isHidden = false;
+
+                        let dependantsDOBGroup = JSON.parse(JSON.stringify(this.getQuestionGroup(QuoteApplyConstants.keys.dependantDOBGroup)));
+                        
+                        dependantsDOBGroup.isHidden = false;
+                        dependantsDOBGroup.questions[0].key = QuoteApplyConstants.fieldNames.partnerDateOfBirth;
+                        dependantsDOBGroup.questions[0].value = this.quoteApplication[QuoteApplyConstants.fieldNames.partnerDateOfBirth];
+
+                        this.questionGroups.push(dependantsDOBGroup);
+
+                    }
+
+                    //TODO: Load quantity of children from Sitecore
+                    for (var i = 1; i <= 4; i++) {
+                        if (this.quoteApplication[QuoteApplyConstants.keys.childDob + i.toString()] !== "") {
+                            let dependantsDetailsGroup = JSON.parse(JSON.stringify(this.getQuestionGroup("childrensDetailsGroup")));
+
+                            dependantsDetailsGroup.isHidden = false;
+                            dependantsDetailsGroup.key = QuoteApplyConstants.keys.childDetails + i.toString();
+
+                            this.questionGroups.push(dependantsDetailsGroup);
+
+                            let dependantsDOBGroup = JSON.parse(JSON.stringify(this.getQuestionGroup("dependantDOBGroup")));
+
+                            dependantsDOBGroup.isHidden = false;
+                            dependantsDOBGroup.questions[0].key = QuoteApplyConstants.keys.childDob + i.toString();
+                            dependantsDOBGroup.questions[0].value = this.quoteApplication[QuoteApplyConstants.keys.childDob + i.toString()];
+
+                            this.questionGroups.push(dependantsDOBGroup);
+
+                        }
+                    }
                 });
 
             this.updateAddressSubscription = this.questionControlService.onUpdateAddress()
@@ -90,16 +124,6 @@ export class TellFormComponent implements OnInit, OnDestroy {
                 .subscribe((data: string) => {
                     this.updatePostcode(data);
                 });
-
-            /*const fullNameQuestionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.fullNameQuestionGroup);
-
-            let partner = JSON.parse(JSON.stringify(fullNameQuestionGroup));
-            partner.label = "Your spouse/partner's name?";
-            partner.questions[0].breakline = true;
-
-            this.questionGroups.push(partner); 
-
-            console.log(this.questionGroups);*/
         }
 
         this.tellForm = new FormGroup({});

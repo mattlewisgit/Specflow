@@ -17,11 +17,11 @@ namespace Vitality.Website.Areas.Presales.Services
                 ContactOptIn = quoteApplyModel.MarketingPermission,
                 Dependents = GetMemberList(new List<DateTime?> {
                     quoteApplyModel.PartnerDateOfBirth.ToDateTime(),
-                    quoteApplyModel.Child1Dob.ToDateTime(),
-                    quoteApplyModel.Child2Dob.ToDateTime(),
-                    quoteApplyModel.Child3Dob.ToDateTime(),
-                    quoteApplyModel.Child4Dob.ToDateTime(),
-                    quoteApplyModel.Child5Dob.ToDateTime() }),
+                    quoteApplyModel.ChildDob1.ToDateTime(),
+                    quoteApplyModel.ChildDob2.ToDateTime(),
+                    quoteApplyModel.ChildDob3.ToDateTime(),
+                    quoteApplyModel.ChildDob4.ToDateTime(),
+                    quoteApplyModel.ChildDob5.ToDateTime() }),
                 HasInsurance = quoteApplyModel.InsuredStatus,
                 MainMember = new OptalitixMember
                 {

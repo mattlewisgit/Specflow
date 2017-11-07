@@ -12,4 +12,5 @@ export class QuestionGroup {
     isHidden: boolean;
     isCompleted: boolean;
     isInvalid: boolean;
+    questionTitleBreakLine: boolean;
 }
