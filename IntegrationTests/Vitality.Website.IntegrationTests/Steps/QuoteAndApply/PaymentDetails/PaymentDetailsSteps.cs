@@ -9,6 +9,7 @@ namespace Vitality.Website.IntegrationTests.Steps.QuoteAndApply.PaymentDetails
     using Xunit;
     using OpenQA.Selenium.Support.UI;
     using System.Threading;
+    using Shouldly;
 
     [Binding]
     public sealed class PaymentDetailsSteps : BaseSteps
@@ -42,11 +43,10 @@ namespace Vitality.Website.IntegrationTests.Steps.QuoteAndApply.PaymentDetails
         public void WhenIGoToTheFieldAndIChooseTheDropdown(string fieldName, string option)
         {
 
-
             try
             {
                 //Need to implement Thread.Sleep in a better way.
-                Thread.Sleep(5000);
+                Thread.Sleep(10000);
 
                 var findAddressList = WebDriver
                    .FindElements(new JQuerySelector($".quote--content > tell-form .question #{fieldName} option"))
@@ -64,18 +64,73 @@ namespace Vitality.Website.IntegrationTests.Steps.QuoteAndApply.PaymentDetails
                 Assert.True(false, "" + option + " dropdown option cannot be selected");
             }
 
+        }
 
 
-            //WebDriver.Manage().Timeouts().ImplicitlyWait(250);
+        [When(@"I enter the postal address manually and click on (.*)")]
+        public void WhenIEnterThePostalAddressManuallyAndClickOn(string manualAddress)
+        {
+            try
+            {
+                WebDriver
+                    .FindElement(new JQuerySelector($@".question--input__rich-text:contains(""{manualAddress}"")"))
+                    .Click();
+            }
+            catch (NoSuchElementException)
+            {
+                return;
+            }
+            catch (Exception)
+            {
+                Assert.True(false, "" + manualAddress + " manual address link not found");
+            }
+        }
 
-            //WebDriver.Manage().Timeouts().ImplicitlyWait(250, TimeUnit.MILLISECONDS);
 
-            //var possibleOptions = WebDriver
-            //    .FindElements(new JQuerySelector($".quote--content > tell-form .question #{fieldName} option"));
+        [Then(@"I expect the postal address (.*) to be visible")]
+        public void ThenIExpectThePostalAddressToBeVisible(string fieldName)
+        {
+            try
+            {
+                WebDriver
+                   .FindElement(new JQuerySelector($".quote--content > tell-form .question #{fieldName} option"))
+                   .Displayed
+                   .ShouldBeTrue();
 
-            //possibleOptions
-            //    .FirstOrDefault(e => e.Text.Equals(option))
-            //    .Click();
+
+            }
+            catch (NoSuchElementException)
+            {
+                return;
+            }
+            catch (Exception)
+            {
+                Assert.True(false, "" + fieldName + " manual address field is not visible");
+            }
+        }
+
+
+        [Then(@"I expect the (.*) field to contain (.*)")]
+        public void ThenIExpectTheFieldToContain(string fieldName, string p1)
+        {
+            try
+            {
+                WebDriver
+                    .FindElement(new JQuerySelector($".quote--content > tell-form .question #{fieldName} option"))
+                    .Text
+                    .Equals(ScenarioContext.Current["quotePostcode"].ToString());
+
+            }
+            catch (NoSuchElementException)
+            {
+                return;
+            }
+            catch (Exception)
+            {
+                Assert.True(false, "" + fieldName + " does not match quote and apply postcode ");
+            }
+
+
         }
 
 
