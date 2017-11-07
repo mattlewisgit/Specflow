@@ -79,7 +79,6 @@ export class QuoteResultComponent implements OnInit {
 
     getQuotePrice(externalIdentifier: string): string {
         const permutationResponse = this.permutationResponses.filter(x => x.Quote.ExternalQuoteIdentifier === externalIdentifier)[0];
-        console.log(permutationResponse);
         if (permutationResponse) {
             return permutationResponse.Quote.PolicyGrossPremium;
         }

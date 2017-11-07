@@ -32,7 +32,6 @@ export class QuoteService {
 
     setQuoteApplication(application: any) {
         this.quoteApplication = new QuoteApplication(application);
-        console.log(this.quoteApplication.coverStartDate.format(GlobalConstants.formats.dateFormat));
         this.getLives();
     }
 
