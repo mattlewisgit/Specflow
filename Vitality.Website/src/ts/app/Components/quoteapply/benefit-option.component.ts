@@ -8,7 +8,7 @@ import { BenefitOption } from "../../models/quote/benefit-option";
 })
 export class BenefitOptionComponent implements OnChanges {
     @Input()
-    permutationId: number;
+    permutationId: string;
     @Input()
     benefitOptions: BenefitOption[];
     benefitOption: BenefitOption;
@@ -24,6 +24,6 @@ export class BenefitOptionComponent implements OnChanges {
     currentTime : Date;
 
     ngOnChanges(): void {
-        this.benefitOption = this.benefitOptions.filter(x => x.permutations.filter(p => p === this.permutationId).length > 0)[0];
+        this.benefitOption = this.benefitOptions.filter(x => x.permutationIds.filter(p => p === this.permutationId).length > 0)[0];
     }
 }

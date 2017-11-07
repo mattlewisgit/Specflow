@@ -2,6 +2,6 @@
     benefitId:string;
     code:string;
     description: string;
-    permutations: number[];
+    permutationIds: string[];
     title:string;
 }

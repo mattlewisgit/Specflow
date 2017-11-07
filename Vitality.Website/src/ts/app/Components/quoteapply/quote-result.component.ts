@@ -19,7 +19,7 @@ import { GlobalConstants } from "../../constants/global-constants";
 export class QuoteResultComponent implements OnInit {
     quoteResultData: QuoteResultRenderingData;
     permutationResponses: any[] = [];
-    permutationIds: Array<number>;
+    permutationIds: Array<string>;
     currentTime: Date;
     quoteApplication: any;
     marketingMessage: string;
@@ -36,7 +36,7 @@ export class QuoteResultComponent implements OnInit {
         let delay: number = this.quoteResultData.marketingMessageTimeOut * 1000;
         setTimeout(() => this.timeoutExpired = true, delay);
         this.marketingMessage = this.quoteResultData.marketingMessages[Math.floor(Math.random() * this.quoteResultData.marketingMessages.length)];
-        this.permutationIds = new Array<number>();
+        this.permutationIds = new Array<string>();
         for (let permutation of this.quoteResultData.permutations) {
             this.permutationIds.push(permutation.id);
         }
@@ -67,7 +67,7 @@ export class QuoteResultComponent implements OnInit {
             });
     }
 
-    getUnderwritingType(permutationId: number): string {
+    getUnderwritingType(permutationId: string): string {
         for (let benefit of this.quoteResultData.benefits) {
             if (benefit.code === QuoteApplyConstants.keys.underwritingType) {
                 const benefitOption = this.getBenefitOption(benefit.benefitOptions, permutationId);
@@ -86,19 +86,19 @@ export class QuoteResultComponent implements OnInit {
         return GlobalConstants.strings.empty;
     }
 
-    getBenefitOption(benefitOptions: BenefitOption[], permutationId: number): BenefitOption {
-        return benefitOptions.filter(x => x.permutations.filter(p => p === permutationId).length > 0)[0];
+    getBenefitOption(benefitOptions: BenefitOption[], permutationId: string): BenefitOption {
+        return benefitOptions.filter(x => x.permutationIds.filter(p => p === permutationId).length > 0)[0];
     }
 
-    filterBenefitOptions(permutationId: number): Benefit[] {
+    filterBenefitOptions(permutationId: string): Benefit[] {
         return this.quoteResultData.benefits
             .filter((x: any) => x.benefitOptions
-                .filter((p: BenefitOption) => p.permutations.indexOf(permutationId) > -1)
+                .filter((p: BenefitOption) => p.permutationIds.indexOf(permutationId) > -1)
                 .length >
                 0);
     }
 
-    getBenefitOptionTitle(benefitOptions: BenefitOption[], permutationId: number, benefitTitle: string): string {
+    getBenefitOptionTitle(benefitOptions: BenefitOption[], permutationId: string, benefitTitle: string): string {
         const benefitOption = this.getBenefitOption(benefitOptions, permutationId);
         //cross
         if (!benefitOption) {
@@ -115,9 +115,9 @@ export class QuoteResultComponent implements OnInit {
 
     optionChange(benefit: Benefit): void {
         for (let benefitOption of benefit.benefitOptions) {
-            benefitOption.permutations = [];
+            benefitOption.permutationIds = [];
             if (benefit.selectedOption === benefitOption.code) {
-                benefitOption.permutations = this.permutationIds;
+                benefitOption.permutationIds = this.permutationIds;
             }
         }
 

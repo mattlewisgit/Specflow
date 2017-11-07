@@ -4,7 +4,7 @@ export class Permutation{
     coreModules : Array<string>;
     crossIcon: Image;
     externalIdentifier: string;
-    id :number;
+    id :string;
     perMonthText : string;
     tickIcon : Image;
     title : string;

@@ -89,7 +89,7 @@ export class QuoteService {
             }
             for (let moduleBenefit of moduleBenefits) {
                 const moduleBenefitsOption = moduleBenefit.benefitOptions
-                    .filter(x => x.permutations.filter(p => p === permutation.id).length > 0)[0];
+                    .filter(x => x.permutationIds.filter(p => p === permutation.id).length > 0)[0];
                 if (moduleBenefitsOption) {
                     modules.push(new Module(moduleBenefitsOption.code));
                 }
@@ -98,7 +98,7 @@ export class QuoteService {
             const individualQuoteRequest = new IndividualQuoteRequest();
             for (let otherBenefit of otherBenefits) {
                 const otherBenefitsOption = otherBenefit.benefitOptions
-                    .filter(x => x.permutations.filter(p => p === permutation.id).length > 0)[0];
+                    .filter(x => x.permutationIds.filter(p => p === permutation.id).length > 0)[0];
                 if (otherBenefitsOption) {
                     individualQuoteRequest[otherBenefit.code] = otherBenefitsOption.code;
                 }
