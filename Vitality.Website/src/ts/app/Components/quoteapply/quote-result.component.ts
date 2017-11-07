@@ -18,7 +18,7 @@ import { GlobalConstants } from "../../constants/global-constants";
 })
 export class QuoteResultComponent implements OnInit {
     quoteResultData: QuoteResultRenderingData;
-    quotes: any[] = [];
+    permutationResponses: any[] = [];
     permutationIds: Array<number>;
     currentTime: Date;
     quoteApplication: any;
@@ -35,7 +35,6 @@ export class QuoteResultComponent implements OnInit {
         this.quoteResultData = this.winRef.nativeWindow.angularData.quoteResult;
         let delay: number = this.quoteResultData.marketingMessageTimeOut * 1000;
         setTimeout(() => this.timeoutExpired = true, delay);
-        console.log(this.quoteResultData.marketingMessages);
         this.marketingMessage = this.quoteResultData.marketingMessages[Math.floor(Math.random() * this.quoteResultData.marketingMessages.length)];
         this.permutationIds = new Array<number>();
         for (let permutation of this.quoteResultData.permutations) {
@@ -58,12 +57,12 @@ export class QuoteResultComponent implements OnInit {
 
         this.quoteService.getRtpeQuoteList(quoteRequest)
             .then((data: any) => {
-                this.quotes = data.Permutations;
+                this.permutationResponses = data.Permutations;
                 this.quoteService.savePricingResponse(this.quoteResultData.referenceNumber, data.Permutations);
 
                 if (sendToHeal)
-                    for (let permutationId of this.permutationIds) {
-                        this.quoteService.healSave(this.quoteResultData.referenceNumber, permutationId);
+                    for (let permutation of this.permutationResponses) {
+                        this.quoteService.healSave(this.quoteResultData.referenceNumber, permutation.PermutationNumber);
                 }
             });
     }
@@ -79,9 +78,10 @@ export class QuoteResultComponent implements OnInit {
     }
 
     getQuotePrice(externalIdentifier: string): string {
-        const quote = this.quotes.filter(x => x.ExternalQuoteIdentifier === externalIdentifier)[0];
-        if (quote) {
-            return quote.PolicyGrossPremium;
+        const permutationResponse = this.permutationResponses.filter(x => x.Quote.ExternalQuoteIdentifier === externalIdentifier)[0];
+        console.log(permutationResponse);
+        if (permutationResponse) {
+            return permutationResponse.Quote.PolicyGrossPremium;
         }
         return GlobalConstants.strings.empty;
     }

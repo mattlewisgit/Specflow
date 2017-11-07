@@ -6,6 +6,7 @@ import "rxjs/add/operator/toPromise";
 
 import { PricingRequest } from "./../models/quote/pricing-request";
 import { PermutationRequest } from "./../models/quote/permutation-request";
+import { QuoteApplication } from "./../models/quote/quote-application";
 import { IndividualQuoteRequest } from "./../models/quote/individual-quote-request";
 import { Life } from "./../models/quote/life";
 import { Module } from "./../models/quote/module";
@@ -17,7 +18,7 @@ import { GlobalConstants } from "../constants/global-constants";
 @Injectable()
 export class QuoteService {
     lives = new Array<Life>();
-    quoteApplication: any;
+    quoteApplication: QuoteApplication;
 
     constructor(private http: Http,
         private errorService: ErrorService) {
@@ -26,11 +27,12 @@ export class QuoteService {
     getQuoteApplication(referenceNumber: string): Promise<any>  {
         return this.http.get(`${GlobalConstants.endpoints.bslGet}${encodeURIComponent(QuoteApplyConstants.endpoints.getApplication + referenceNumber)}`)
             .toPromise()
-            .then(response => response.json());
+            .then(response => response.json().BslResponse);
     }
 
     setQuoteApplication(application: any) {
-        this.quoteApplication = application;
+        this.quoteApplication = new QuoteApplication(application);
+        console.log(this.quoteApplication.coverStartDate.format(GlobalConstants.formats.dateFormat));
         this.getLives();
     }
 
@@ -109,7 +111,7 @@ export class QuoteService {
             individualQuoteRequest.policyPostcode = this.quoteApplication.postcode;
             individualQuoteRequest.previousInsurer = 0;
             individualQuoteRequest.previousInsurerClaims = this.quoteApplication.noOfClaims;
-            individualQuoteRequest.isPreviouslyInsured = this.quoteApplication.insuredStatus === 1;
+            individualQuoteRequest.isPreviouslyInsured = this.quoteApplication.insuredStatus;
             // If  previously insured default to 1. This will change when ABC project goes live
             individualQuoteRequest.previousInsurerYears = individualQuoteRequest.isPreviouslyInsured ? 1 : 0;
             individualQuoteRequest.previouslyInsured = individualQuoteRequest.isPreviouslyInsured
@@ -117,8 +119,8 @@ export class QuoteService {
                 : QuoteApplyConstants.previouslyInsured.no;
 
             individualQuoteRequest.productCode = QuoteApplyConstants.values.productCode;
-            individualQuoteRequest.renewalDate = this.quoteApplication.coverStartDate;
-            individualQuoteRequest.startDate = this.quoteApplication.coverStartDate;
+            individualQuoteRequest.renewalDate = this.quoteApplication.coverStartDate.format(GlobalConstants.formats.dateFormat);
+            individualQuoteRequest.startDate = individualQuoteRequest.renewalDate;
             individualQuoteRequest.lives = this.lives;
             individualQuoteRequest.modules = modules;
 
@@ -132,13 +134,13 @@ export class QuoteService {
     }
 
     private getLives(): void {
-        this.lives.push(new Life(this.quoteApplication.dateOfBirth,
+        this.lives.push(new Life(this.quoteApplication.dateOfBirth.format(GlobalConstants.formats.dateFormat),
             QuoteApplyConstants.gender.male,
             0,
             QuoteApplyConstants.roleType.employeePrincipal));
         if (this.quoteApplication.membersToInsure === QuoteApplyConstants.values.mePartner ||
             this.quoteApplication.membersToInsure === QuoteApplyConstants.values.mePartnerChildren) {
-            this.lives.push(new Life(this.quoteApplication.partnerDateOfBirth,
+            this.lives.push(new Life(this.quoteApplication.partnerDateOfBirth.format(GlobalConstants.formats.dateFormat),
                 QuoteApplyConstants.gender.male,
                 this.lives.length,
                 QuoteApplyConstants.roleType.partner));
@@ -147,7 +149,7 @@ export class QuoteService {
             this.quoteApplication.membersToInsure === QuoteApplyConstants.values.mePartnerChildren) {
 
             for (let i = 1; i <= this.quoteApplication.noOfChildren; i++) {
-                this.lives.push(new Life(this.quoteApplication[`child${i}Dob`],
+                this.lives.push(new Life(this.quoteApplication[`child${i}Dob`].format(GlobalConstants.formats.dateFormat),
                     QuoteApplyConstants.gender.male,
                     this.lives.length,
                     QuoteApplyConstants.roleType.child));

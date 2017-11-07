@@ -405,6 +405,7 @@
     <TypeScriptCompile Include="src\ts\app\constants\quoteapply-constants.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\auto-scroll-to.directive.ts" />
     <TypeScriptCompile Include="src\ts\app\constants\global-constants.ts" />
+    <TypeScriptCompile Include="src\ts\app\models\quote\quote-application.ts" />
     <TypeScriptCompile Include="src\ts\app\modules\common.module.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\click-outside.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\limit-multi-select.directive.ts" />
