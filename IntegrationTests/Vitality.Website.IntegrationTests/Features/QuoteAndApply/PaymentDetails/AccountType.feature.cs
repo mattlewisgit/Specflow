@@ -72,13 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Account type - Joint account holder name")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Account type - Joint account holder name")]
         [Xunit.TraitAttribute("FeatureTitle", "AccountType")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Account type - Joint account holder name")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Account type - Joint account holder name")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_AccountType_JointAccountHolderName()
+        public virtual void PaymentDetails_AccountType_JointAccountHolderName()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Account type - Joint account holder name", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Account type - Joint account holder name", new string[] {
                         "QuoteAndApply"});
 #line 8
 this.ScenarioSetup(scenarioInfo);
@@ -92,13 +92,13 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Account type - An individual account holder name")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Account type - An individual account holder name")]
         [Xunit.TraitAttribute("FeatureTitle", "AccountType")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Account type - An individual account holder name")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Account type - An individual account holder name")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_AccountType_AnIndividualAccountHolderName()
+        public virtual void PaymentDetails_AccountType_AnIndividualAccountHolderName()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Account type - An individual account holder name", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Account type - An individual account holder name", new string[] {
                         "QuoteAndApply"});
 #line 14
 this.ScenarioSetup(scenarioInfo);

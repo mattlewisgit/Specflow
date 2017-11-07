@@ -72,18 +72,18 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Sortcode - Check sortcode field")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Sortcode - Check sortcode field")]
         [Xunit.TraitAttribute("FeatureTitle", "SortCodeField")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Sortcode - Check sortcode field")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Sortcode - Check sortcode field")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_Sortcode_CheckSortcodeField()
+        public virtual void PaymentDetails_Sortcode_CheckSortcodeField()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Sortcode - Check sortcode field", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Sortcode - Check sortcode field", new string[] {
                         "QuoteAndApply"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
-    testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /dev/quote-payment-details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
     testRunner.When("I go to the accountSortcode field and enter 123456", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
@@ -92,18 +92,18 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Sortcode - Check incorrect sortcode error message")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Sortcode - Check incorrect sortcode error message")]
         [Xunit.TraitAttribute("FeatureTitle", "SortCodeField")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Sortcode - Check incorrect sortcode error message")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Sortcode - Check incorrect sortcode error message")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_Sortcode_CheckIncorrectSortcodeErrorMessage()
+        public virtual void PaymentDetails_Sortcode_CheckIncorrectSortcodeErrorMessage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Sortcode - Check incorrect sortcode error message", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Sortcode - Check incorrect sortcode error message", new string[] {
                         "QuoteAndApply"});
 #line 14
 this.ScenarioSetup(scenarioInfo);
 #line 15
-    testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /dev/quote-payment-details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 16
     testRunner.When("I go to the accountSortcode field and enter 12345", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 17
@@ -112,18 +112,18 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Sortcode - Check sortcode masking")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Sortcode - Check sortcode masking")]
         [Xunit.TraitAttribute("FeatureTitle", "SortCodeField")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Sortcode - Check sortcode masking")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Sortcode - Check sortcode masking")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_Sortcode_CheckSortcodeMasking()
+        public virtual void PaymentDetails_Sortcode_CheckSortcodeMasking()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Sortcode - Check sortcode masking", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Sortcode - Check sortcode masking", new string[] {
                         "QuoteAndApply"});
 #line 20
 this.ScenarioSetup(scenarioInfo);
 #line 21
-    testRunner.Given("I am on presales /dev/quote-complete-purchase", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I am on presales /dev/quote-payment-details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 22
     testRunner.When("I go to the accountSortcode field and enter LETTE", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 23

@@ -72,13 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Name - Check name field can be populated")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Name - Check name field can be populated")]
         [Xunit.TraitAttribute("FeatureTitle", "AccountHolderName")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Name - Check name field can be populated")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Name - Check name field can be populated")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_Name_CheckNameFieldCanBePopulated()
+        public virtual void PaymentDetails_Name_CheckNameFieldCanBePopulated()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Name - Check name field can be populated", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Name - Check name field can be populated", new string[] {
                         "QuoteAndApply"});
 #line 8
     this.ScenarioSetup(scenarioInfo);
@@ -98,16 +98,16 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Name - Check name field can be populated with special charact" +
-            "er double barrelled name")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Name - Check name field can be populated with special character" +
+            " double barrelled name")]
         [Xunit.TraitAttribute("FeatureTitle", "AccountHolderName")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Name - Check name field can be populated with special charact" +
-            "er double barrelled name")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Name - Check name field can be populated with special character" +
+            " double barrelled name")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_Name_CheckNameFieldCanBePopulatedWithSpecialCharacterDoubleBarrelledName()
+        public virtual void PaymentDetails_Name_CheckNameFieldCanBePopulatedWithSpecialCharacterDoubleBarrelledName()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Name - Check name field can be populated with special charact" +
-                    "er double barrelled name", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Name - Check name field can be populated with special character" +
+                    " double barrelled name", new string[] {
                         "QuoteAndApply"});
 #line 17
     this.ScenarioSetup(scenarioInfo);
@@ -127,13 +127,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Complete Purchase - Name - Check error message when name contains a number")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Name - Check error message when name contains a number")]
         [Xunit.TraitAttribute("FeatureTitle", "AccountHolderName")]
-        [Xunit.TraitAttribute("Description", "Complete Purchase - Name - Check error message when name contains a number")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Name - Check error message when name contains a number")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void CompletePurchase_Name_CheckErrorMessageWhenNameContainsANumber()
+        public virtual void PaymentDetails_Name_CheckErrorMessageWhenNameContainsANumber()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Complete Purchase - Name - Check error message when name contains a number", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Name - Check error message when name contains a number", new string[] {
                         "QuoteAndApply"});
 #line 26
     this.ScenarioSetup(scenarioInfo);

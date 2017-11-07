@@ -117,4 +117,11 @@
     Given I am on presales /dev/quote-result
     And I see the Quote Results page feed load has completed
     When I click on the quote result BUY ONLINE button link
-	Then I expect the presales /dev/quote-complete-purchase to open
+	Then I expect the presales /dev/quote-payment-details to open
+
+    @QuoteAndApply
+    Scenario: Quote Result - Check navigation to call me back page
+    Given I am on presales /dev/quote-result
+    And I see the Quote Results page feed load has completed
+    When I click on the quote result REQUEST CALLBACK button link
+	Then I expect the presales /dev/call-me-back to open

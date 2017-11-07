@@ -412,7 +412,29 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.QuoteResults
 #line 119
     testRunner.When("I click on the quote result BUY ONLINE button link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 120
- testRunner.Then("I expect the presales /dev/quote-complete-purchase to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("I expect the presales /dev/quote-payment-details to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute(DisplayName="Quote Result - Check navigation to call me back page")]
+        [Xunit.TraitAttribute("FeatureTitle", "QuoteResults")]
+        [Xunit.TraitAttribute("Description", "Quote Result - Check navigation to call me back page")]
+        [Xunit.TraitAttribute("Category", "QuoteAndApply")]
+        public virtual void QuoteResult_CheckNavigationToCallMeBackPage()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Quote Result - Check navigation to call me back page", new string[] {
+                        "QuoteAndApply"});
+#line 123
+    this.ScenarioSetup(scenarioInfo);
+#line 124
+    testRunner.Given("I am on presales /dev/quote-result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 125
+    testRunner.And("I see the Quote Results page feed load has completed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 126
+    testRunner.When("I click on the quote result REQUEST CALLBACK button link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 127
+ testRunner.Then("I expect the presales /dev/call-me-back to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
