@@ -17,7 +17,7 @@ export class QuoteResultRenderingData {
     printText: string;
     quoteReferenceText: string;
     quoteValidText: string;
-    referenceId: string;
+    referenceNumber: string;
     serviceOutagePage: string;
     tooltipText: string;
     tooltipButtonText: string;

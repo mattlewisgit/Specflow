@@ -1,11 +1,9 @@
 ﻿import { PermutationRequest } from "./permutation-request";
 
-export class QuoteRequest {
-    feedSettings: {};
+export class PricingRequest {
     permutations: PermutationRequest[];
 
     constructor(permutations: PermutationRequest[]) {
-        this.feedSettings = {};
         this.permutations = permutations;
     }
 }

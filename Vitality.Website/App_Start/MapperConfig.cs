@@ -7,7 +7,7 @@
     using AutoMapper;
     using System.Collections.Generic;
     using System.Linq;
- 
+
     public static class MapperConfig
     {
         public static void Init()
@@ -100,7 +100,10 @@
             config.CreateMap<BenefitOption, BenefitOptionViewModel>()
                 .ForMember(
                     dest => dest.Code,
-                    opt => opt.MapFrom(src => src.Code.Value));
+                    opt => opt.MapFrom(src => src.Code.Value))
+                .ForMember(
+                    dest => dest.PermutationIds,
+                    opt => opt.MapFrom(src => src.Permutations));
 
             config.CreateMap<Permutation, PermutationViewModel>()
                 .ForMember(

@@ -7,6 +7,11 @@
         {
             getApplication: "/api/quote/getapplication/",
             addressLookup: "address/lookup/"
+        getApplication: "quote/getapplication/",
+        getRtpeQuoteList: "rtpe/quotelist",
+        healSave: "quote/healsave",
+        savePricingRequest: "quote/savepricingrequest",
+        savePricingResponse: "quote/savepricingresponse"
         };
     export const keys = {
         callbackTimeQuestionGroup: "callbackTimeQuestionGroup",

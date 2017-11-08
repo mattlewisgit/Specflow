@@ -1,4 +1,4 @@
-<div class="full-loading-overlay" *ngIf="quotes.length<1 || !timeoutExpired">
+<div class="full-loading-overlay" *ngIf="permutationResponses.length<1 || !timeoutExpired">
     <div class="full-loading-logo"></div>
     <div class="full-loading-title"><h3>Get a quote in just 2 minutes</h3></div>
     <div class="full-loading-content">
@@ -19,7 +19,7 @@
             <img [src]="quoteResultData.primaryImage.src" [alt]="quoteResultData.primaryImage.alt">
         </div>
     </div>
-    <table class="comparison-table table--4-col table--highlight-col-3" *ngIf="quotes.length>1">
+    <table class="comparison-table table--4-col table--highlight-col-3" *ngIf="permutationResponses.length>1">
         <thead>
         <tr>
             <th [innerHTML]="quoteResultData.helpText"></th>
@@ -83,7 +83,7 @@
                         </dl>
                     </div>
                 </div>
-            </td> 
+            </td>
             <td *ngFor="let  permutation of quoteResultData.permutations;">
                 <benefit-option [permutationId]="permutation.id"
                                 [benefitOptions]="benefit.benefitOptions"

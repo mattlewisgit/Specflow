@@ -4,12 +4,12 @@ using MediatR;
 
 namespace Vitality.Website.Areas.Presales.Handlers.Quote
 {
-    public class SaveApplicationHandler : IRequestHandler<SaveApplicationRequest, string>
+    public class SendToOptalatixHandler : IRequestHandler<SendToOptalatixRequest, string>
     {
         private static readonly ObjectCache MemoryCacheStore = MemoryCache.Default;
 
         //Don't use the mMemory Cache use database going foward, Story to add the DB is not yet in a sprint
-        public string Handle(SaveApplicationRequest request)
+        public string Handle(SendToOptalatixRequest request)
         {
             if (string.IsNullOrEmpty(request.ReferenceId))
             {
