@@ -7,7 +7,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.QuoteApply
     {
         public string Code { get; set; }
         public string Description { get; set; }
-        public IEnumerable<Guid> Permutations { get; set; }
+        public IEnumerable<Guid> PermutationIds { get; set; }
         public string Title { get; set; }
     }
 }

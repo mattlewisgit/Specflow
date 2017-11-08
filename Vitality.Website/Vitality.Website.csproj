@@ -405,6 +405,7 @@
     <TypeScriptCompile Include="src\ts\app\constants\quoteapply-constants.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\auto-scroll-to.directive.ts" />
     <TypeScriptCompile Include="src\ts\app\constants\global-constants.ts" />
+    <TypeScriptCompile Include="src\ts\app\models\quote\quote-application.ts" />
     <TypeScriptCompile Include="src\ts\app\modules\common.module.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\click-outside.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\limit-multi-select.directive.ts" />
@@ -416,7 +417,7 @@
     <TypeScriptCompile Include="src\ts\app\models\question.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\benefit.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\permutation.ts" />
-    <TypeScriptCompile Include="src\ts\app\models\quote\quote-request.ts" />
+    <TypeScriptCompile Include="src\ts\app\models\quote\pricing-request.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\permutation-request.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\life.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\module.ts" />
@@ -4013,10 +4014,8 @@
     <Compile Include="Areas\Presales\Controllers\CallBackController.cs" />
     <Compile Include="Areas\Presales\Handlers\CallBack\CallBackDto.cs" />
     <Compile Include="Areas\Presales\Handlers\CallBack\CallBackPostRequest.cs" />
-    <Compile Include="Areas\Presales\Handlers\Quote\GetApplicationHandler.cs" />
-    <Compile Include="Areas\Presales\Handlers\Quote\GetApplicationRequest.cs" />
-    <Compile Include="Areas\Presales\Handlers\Quote\SaveApplicationHandler.cs" />
-    <Compile Include="Areas\Presales\Handlers\Quote\SaveApplicationRequest.cs" />
+    <Compile Include="Areas\Presales\Handlers\Quote\SendToOptalatixHandler.cs" />
+    <Compile Include="Areas\Presales\Handlers\Quote\SendToOptalatixRequest.cs" />
     <Compile Include="Areas\Presales\Models\CallBackData.cs" />
     <Compile Include="Areas\Presales\Models\OptalitixMember.cs" />
     <Compile Include="Areas\Presales\Models\OptalitixQuoteRequest.cs" />

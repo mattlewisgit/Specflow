@@ -5,7 +5,11 @@
     };
     export const endpoints =
     {
-        getApplication: "/api/quote/getapplication/"
+        getApplication: "quote/getapplication/",
+        getRtpeQuoteList: "rtpe/quotelist",
+        healSave: "quote/healsave",
+        savePricingRequest: "quote/savepricingrequest",
+        savePricingResponse: "quote/savepricingresponse"
     };
     export const keys = {
         callbackTimeQuestionGroup: "callbackTimeQuestionGroup",

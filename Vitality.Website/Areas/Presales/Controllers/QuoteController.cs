@@ -1,4 +1,5 @@
 ﻿using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using MediatR;
 using Vitality.Website.Areas.Presales.Handlers.Quote;
@@ -17,26 +18,25 @@ namespace Vitality.Website.Areas.Presales.Controllers
         }
 
         [HttpPost]
-        [Route("api/quote/saveapplication")]
-        public HttpResponseMessage SaveApplication(SaveApplicationModel application, string referenceId)
+        [Route("api/quote/sendtooptalatix/{referenceNumber}")]
+        public async Task<HttpResponseMessage> SendToOptalatix(string bslEndpoint, string referenceNumber, SaveApplicationModel application)
         {
-            var response = GetResponse<SaveApplicationRequest, string>(new SaveApplicationRequest(application, referenceId), refId => !string.IsNullOrEmpty(refId));
+            var response = GetResponse<SendToOptalatixRequest, string>(
+                new SendToOptalatixRequest(application, referenceNumber), refId => !string.IsNullOrEmpty(refId));
 
-            var utmCookie = UtmCookieHelper.GetUtmCookie(new System.Web.HttpRequestWrapper(System.Web.HttpContext.Current.Request));
-            var refIdTemp = JsonConvert.DeserializeObject<string>(response.Content.ReadAsStringAsync().Result ?? string.Empty);
+            var utmCookie =
+                UtmCookieHelper.GetUtmCookie(new System.Web.HttpRequestWrapper(System.Web.HttpContext.Current.Request));
+            var refIdTemp =
+                JsonConvert.DeserializeObject<string>(response.Content.ReadAsStringAsync().Result ?? string.Empty);
+
             var optalitixRequest = OptalitixQuoteRequestFactory.From(application, utmCookie, refIdTemp);
-            GetResponseAsync<BslPostRequest, BslDto>(new BslPostRequest("optalitix/createquote",
-                JsonConvert.SerializeObject(new { FeedSettings = new object(), OptalitixQuoteRequest = optalitixRequest })), result => result != null);
+            return await GetResponseAsync<BslPostRequest, BslDto>(new BslPostRequest("optalitix/createquote",
+                JsonConvert.SerializeObject(new
+                {
+                    FeedSettings = new object(),
+                    OptalitixQuoteRequest = optalitixRequest
+                })), result => result != null);
 
-            return response;
-        }
-
-        [HttpGet]
-        [Route("api/quote/getapplication/{referenceId}")]
-        public HttpResponseMessage GetApplication(string referenceId)
-        {
-            return GetResponse<GetApplicationRequest, object>(new GetApplicationRequest(referenceId),
-                application => application != null);
         }
     }
 }

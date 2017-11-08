@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from "@angular/core";
 import { WindowRef } from "./../windowref";
-import { Subscription } from "rxjs/Subscription";
 
 import { QuoteApplyConstants } from "../../constants/quoteapply-constants";
 
@@ -9,7 +8,6 @@ import { QuoteService } from "../../services/quote.service";
 
 import { Benefit } from "../..//models/quote/benefit";
 import { BenefitOption } from "../..//models/quote/benefit-option";
-import { Permutation } from "../..//models/quote/permutation";
 import { QuoteResultRenderingData } from "../..//models/quote/quote-result-rendering-data";
 
 import { GlobalConstants } from "../../constants/global-constants";
@@ -20,7 +18,7 @@ import { GlobalConstants } from "../../constants/global-constants";
 })
 export class QuoteResultComponent implements OnInit {
     quoteResultData: QuoteResultRenderingData;
-    quotes: any[] = [];
+    permutationResponses: any[] = [];
     permutationIds: Array<string>;
     currentTime: Date;
     quoteApplication: any;
@@ -44,24 +42,28 @@ export class QuoteResultComponent implements OnInit {
         }
 
         this.errorService.initialize(this.quoteResultData.serviceOutagePage);
-        this.quoteService.getQuoteApplication(this.quoteResultData.referenceId)
+        this.quoteService.getQuoteApplication(this.quoteResultData.referenceNumber)
             .then((data: any) => {
                 this.quoteApplication = data;
                 this.quoteService.setQuoteApplication(this.quoteApplication);
-                this.getQuotes();
-            })
-            // TODO remove catch before going live
-            .catch((err: any) => {
-                this.quoteApplication = this.quoteService.quoteApplication;
-                this.quoteService.setQuoteApplication(this.quoteApplication);
-                this.getQuotes();
+                this.handlePricingRequest(true);
             });
     }
 
-    getQuotes(): void {
-        this.quoteService.callRtpe(this.quoteResultData.benefits, this.quoteResultData.permutations)
+    handlePricingRequest(sendToHeal: boolean) {
+        const quoteRequest = this.quoteService.getPricingRequest(this.quoteResultData.benefits, this.quoteResultData.permutations);
+
+        this.quoteService.savePricingRequest(this.quoteResultData.referenceNumber, quoteRequest);
+
+        this.quoteService.getRtpeQuoteList(quoteRequest)
             .then((data: any) => {
-                this.quotes = data.Quotes;
+                this.permutationResponses = data.Permutations;
+                this.quoteService.savePricingResponse(this.quoteResultData.referenceNumber, data.Permutations);
+
+                if (sendToHeal)
+                    for (let permutation of this.permutationResponses) {
+                        this.quoteService.healSave(this.quoteResultData.referenceNumber, permutation.PermutationNumber);
+                }
             });
     }
 
@@ -76,21 +78,21 @@ export class QuoteResultComponent implements OnInit {
     }
 
     getQuotePrice(externalIdentifier: string): string {
-        const quote = this.quotes.filter(x => x.ExternalQuoteIdentifier === externalIdentifier)[0];
-        if (quote) {
-            return quote.PolicyGrossPremium;
+        const permutationResponse = this.permutationResponses.filter(x => x.Quote.ExternalQuoteIdentifier === externalIdentifier)[0];
+        if (permutationResponse) {
+            return permutationResponse.Quote.PolicyGrossPremium;
         }
         return GlobalConstants.strings.empty;
     }
 
     getBenefitOption(benefitOptions: BenefitOption[], permutationId: string): BenefitOption {
-        return benefitOptions.filter(x => x.permutations.filter(p => p === permutationId).length > 0)[0];
+        return benefitOptions.filter(x => x.permutationIds.filter(p => p === permutationId).length > 0)[0];
     }
 
     filterBenefitOptions(permutationId: string): Benefit[] {
         return this.quoteResultData.benefits
             .filter((x: any) => x.benefitOptions
-                .filter((p: BenefitOption) => p.permutations.indexOf(permutationId) > -1)
+                .filter((p: BenefitOption) => p.permutationIds.indexOf(permutationId) > -1)
                 .length >
                 0);
     }
@@ -112,14 +114,14 @@ export class QuoteResultComponent implements OnInit {
 
     optionChange(benefit: Benefit): void {
         for (let benefitOption of benefit.benefitOptions) {
-            benefitOption.permutations = [];
+            benefitOption.permutationIds = [];
             if (benefit.selectedOption === benefitOption.code) {
-                benefitOption.permutations = this.permutationIds;
+                benefitOption.permutationIds = this.permutationIds;
             }
         }
 
         this.currentTime = new Date();
-        this.getQuotes();
+        this.handlePricingRequest(false);
     }
 
     toggleEditBox(benefit: Benefit, enableEdit: boolean): void {

@@ -22,7 +22,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
     tellForm: FormGroup;
     postAction: string;
     redirectTo: string;
-    referenceId: string;
+    referenceNumber: string;
     quoteApplication: any;
     private postcodeAsyncValidationSubscription: Subscription;
     private updatePostcodeSubscription : Subscription;
@@ -40,7 +40,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
         private footerBarService: FooterBarService,
         private tellFormService: TellFormService,
         private winRef: WindowRef) {
-        this.referenceId = GlobalConstants.strings.empty;
+        this.referenceNumber = GlobalConstants.strings.empty;
     }
 
     ngOnInit(): void {
@@ -48,7 +48,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
         this.questionGroups = angularData.questionGroups;
         this.postAction = angularData.postAction;
         this.redirectTo = angularData.redirectTo;
-        this.referenceId = angularData.referenceId;
+        this.referenceNumber = angularData.referenceNumber;
         this.renderingData = { okBtnText: angularData.okBtnText, okBtnHelpText: angularData.okBtnHelpText };
         const childrenQuestionGroup = this.getQuestionGroup(QuoteApplyConstants.keys.childrenQuestionGroup);
         this.questionControlService.setQuestionGroups(this.questionGroups);
@@ -64,13 +64,15 @@ export class TellFormComponent implements OnInit, OnDestroy {
             this.callbackService.initialize(angularData.additionalData);
         }
 
-        this.quoteService.getQuoteApplication(this.referenceId)
-            .then((data: any) => {
-                this.quoteApplication = data;
-                //this.getQuestionGroup("billingPostcode").questions.filter(x => x.key === "postcode")[0].value = data.Postcode.toUpperCase();
+        if (this.referenceNumber) {
+            this.quoteService.getQuoteApplication(this.referenceNumber)
+                .then((data: any) => {
+                    this.quoteApplication = data;
+                    //this.getQuestionGroup("billingPostcode").questions.filter(x => x.key === "postcode")[0].value = data.Postcode.toUpperCase();
 
-                //this.updatePostcode();
-            });
+                    //this.updatePostcode();
+                });
+        }
 
         this.tellForm = new FormGroup({});
         this.tellForm.valueChanges.subscribe(data => {
@@ -89,8 +91,6 @@ export class TellFormComponent implements OnInit, OnDestroy {
 
         this.updatePostcodeSubscription = this.postcodeService.onUpdatePostcode()
             .subscribe((data: string) => {
-
-                console.log(data);
                 this.updatePostcode();
             });
 
@@ -98,11 +98,16 @@ export class TellFormComponent implements OnInit, OnDestroy {
         this.submitSubscription = this.footerBarService.onSubmitClicked()
             .subscribe((data: boolean) => {
                 if (data) {
-                    this.tellForm.value.referenceId = this.referenceId;                    
-                    this.tellFormService.submit(`${this.postAction}`, this.tellForm.value)
-                        .then((data: string) => {
-                            this.referenceId = data;
-                            this.winRef.nativeWindow.location.href = `${this.redirectTo}${this.referenceId}`;
+                    const postData = {
+                        FormData: this.tellForm.value,
+                        ReferenceNumber: this.referenceNumber
+                    };
+                    this.tellFormService.submit(`${GlobalConstants.endpoints.bslPost}${encodeURIComponent(this.postAction)}`, postData)
+                        .then((data: any) => {
+                            this.referenceNumber = data.BslResponse.ReferenceNumber;
+                            if (this.referenceNumber) {
+                                this.winRef.nativeWindow.location.href = `${this.redirectTo}${this.referenceNumber}`;
+                            }
                         });
                 }
             });
@@ -128,8 +133,6 @@ export class TellFormComponent implements OnInit, OnDestroy {
         this.postcodeService.lookupPostcode(this.quoteApplication.Postcode)
             .then(
                 (data: any) => {
-                    console.log(data);
-                    console.log(data.Addresses);
                     let i = 0;
                     data.Addresses.forEach((item: any) => {
                         postcode.push({
@@ -139,7 +142,8 @@ export class TellFormComponent implements OnInit, OnDestroy {
                         i++;
                     });
                 });
-        this.getQuestionGroup("billingPostcodeGroup").questions.filter(x => x.key === "selectBillingAddress")[0].relatedData = postcode;
+        this.getQuestionGroup("billingPostcodeGroup").questions.filter(x => x.key === "selectBillingAddress")[0]
+            .relatedData = postcode;
     }
 
     ngOnDestroy(): void {
