@@ -148,7 +148,7 @@ export class QuoteService {
             this.quoteApplication.membersToInsure === QuoteApplyConstants.values.mePartnerChildren) {
 
             for (let i = 1; i <= this.quoteApplication.noOfChildren; i++) {
-                this.lives.push(new Life(this.quoteApplication[`child${i}Dob`].format(GlobalConstants.formats.dateFormat),
+                this.lives.push(new Life(this.quoteApplication[QuoteApplyConstants.keys.childDob + i.toString()].format(GlobalConstants.formats.dateFormat),
                     QuoteApplyConstants.gender.male,
                     this.lives.length,
                     QuoteApplyConstants.roleType.child));

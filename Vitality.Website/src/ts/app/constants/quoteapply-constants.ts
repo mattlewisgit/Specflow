@@ -5,8 +5,7 @@
     };
     export const endpoints =
         {
-            getApplication: "/api/quote/getapplication/",
-            addressLookup: "address/lookup/"
+        addressLookup: "address/lookup/",
         getApplication: "quote/getapplication/",
         getRtpeQuoteList: "rtpe/quotelist",
         healSave: "quote/healsave",

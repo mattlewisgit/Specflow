@@ -37,8 +37,8 @@
                 <p>
                     <b>{{ quoteResultData.quoteValidText }}</b>
                 </p>
-                <p *ngIf="quoteResultData.referenceId">
-                    <b>{{ quoteResultData.quoteReferenceText }} <span class="highlight">{{ quoteResultData.referenceId }}</span></b>
+                <p *ngIf="quoteResultData.referenceNumber">
+                    <b>{{ quoteResultData.quoteReferenceText }} <span class="highlight">{{ quoteResultData.referenceNumber }}</span></b>
                 </p>
             </th>
             <th *ngFor="let permutation of quoteResultData.permutations">
@@ -48,7 +48,7 @@
                                         [callToActionText]="quoteResultData.callToActionText"
                                         [optionCode]="getUnderwritingType(permutation.id)"
                                         [cssClass]="'button--box button--box__primary button--box__small'"
-                                        [referenceId]="quoteResultData.referenceId"></permutation-button>
+                                        [referenceNumber]="quoteResultData.referenceNumber"></permutation-button>
             </th>
         </tr>
         </thead>
@@ -144,7 +144,7 @@
                                             [callToActionText]="quoteResultData.callToActionText"
                                             [optionCode]="getUnderwritingType(permutation.id)"
                                             [cssClass]="'button--box button--box__primary button--box__small width--full'"
-                                            [referenceId]="quoteResultData.referenceId"></permutation-button>
+                                            [referenceNumber]="quoteResultData.referenceNumber"></permutation-button>
             </div>
         </div>
     </div>
