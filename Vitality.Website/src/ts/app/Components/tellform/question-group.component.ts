@@ -21,14 +21,21 @@ export class QuestionGroupComponent implements OnInit {
     @Input()
     formName: string;
 
-    constructor(private questionControlService: QuestionControlService, private postcodeService: PostcodeService) {
+    constructor(private questionControlService: QuestionControlService,
+        private postcodeService: PostcodeService) {
     }
 
     ngOnInit(): void {
+        console.log(this.questionGroup);
+        console.log("1");
         this.questionControlService.addFormControls(this.form, this.questionGroup);
+        console.log("2");
         if (this.formName === QuoteApplyConstants.formNames.quotePaymentDetails) {
+            console.log("3");
             this.hideManualAddressfields(true);
+            console.log("4");
         };
+        console.log("5");
     }
 
     storeSelectedCheckboxValues(event: any, selectedValue: string, question: Question<any>): void {

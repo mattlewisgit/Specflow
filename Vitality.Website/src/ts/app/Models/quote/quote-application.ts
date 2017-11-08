@@ -29,11 +29,11 @@ export class QuoteApplication {
     constructor(quoteApplication: any) {
         this.addressLine1 = quoteApplication.AddressLine1;
         this.addressLine2 = quoteApplication.AddressLine2;
-        this.childDob1 = moment(quoteApplication.childDob1);
-        this.childDob2 = moment(quoteApplication.childDob2);
-        this.childDob3 = moment(quoteApplication.childDob3);
-        this.childDob4 = moment(quoteApplication.childDob4);
-        this.childDob5 = moment(quoteApplication.childDob5);
+        this.childDob1 = moment(quoteApplication.ChildDob1);
+        this.childDob2 = moment(quoteApplication.ChildDob2);
+        this.childDob3 = moment(quoteApplication.ChildDob3);
+        this.childDob4 = moment(quoteApplication.ChildDob4);
+        this.childDob5 = moment(quoteApplication.ChildDob5);
         this.coverStartDate = moment(quoteApplication.CoverStartDate);
         this.dateOfBirth = moment(quoteApplication.DateOfBirth);
         this.emailAddress = quoteApplication.EmailAddress;

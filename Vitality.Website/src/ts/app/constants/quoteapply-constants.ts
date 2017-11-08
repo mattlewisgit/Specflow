@@ -66,6 +66,6 @@
         address3: "address3",
         address4: "address4",
         postcode: "postcode",
-        partnerDateOfBirth: "PartnerDateOfBirth"
+        partnerDateOfBirth: "partnerDateOfBirth"
     };
 };

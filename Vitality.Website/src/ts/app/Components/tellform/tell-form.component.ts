@@ -14,6 +14,7 @@ import { PostcodeService } from "../../services/postcode.service";
 import { FooterBarService } from "../../services/footer-bar.service";
 import { TellFormService } from "../../services/tell-form.service";
 import { WindowRef } from "./../windowref";
+import { QuoteApplication } from "../../models/quote/quote-application";
 
 @Component({
     selector: "tell-form",
@@ -24,7 +25,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
     postAction: string;
     redirectTo: string;
     referenceNumber: string;
-    quoteApplication: any;
+    quoteApplication: QuoteApplication;
     private postcodeAsyncValidationSubscription: Subscription;
     private updatePostcodeSubscription: Subscription;
     private updateAddressSubscription: Subscription;
@@ -33,7 +34,6 @@ export class TellFormComponent implements OnInit, OnDestroy {
     renderingData: {};
     formName:string;
     private submitSubscription: Subscription;
-
 
     constructor(
         private quoteService: QuoteService,
@@ -72,35 +72,34 @@ export class TellFormComponent implements OnInit, OnDestroy {
         }
 
         if (this.referenceNumber) {
-            console.log(this.referenceNumber);
             this.quoteService.getQuoteApplication(this.referenceNumber)
                 .then((data: any) => {
-                    this.quoteApplication = data;
+                    this.quoteApplication = new QuoteApplication(data);
                     this.getQuestionGroup(QuoteApplyConstants.keys.billingPostcodeGroup).questions
                         .filter(x => x.key === QuoteApplyConstants.fieldNames.billingPostcode)[0]
                         .value = data.Postcode.toUpperCase();
 
-                    this.updatePostcode(this.quoteApplication.Postcode);
-
-                    if (this.quoteApplication[QuoteApplyConstants.fieldNames.partnerDateOfBirth] !== "") {
+                    this.updatePostcode(this.quoteApplication.postcode);
+                    
+                    if (this.quoteApplication[QuoteApplyConstants.fieldNames.partnerDateOfBirth].isValid()) {
                         this.getQuestionGroup(QuoteApplyConstants.keys.spousePartnerDetailsGroup).isHidden = false;
 
                         let dependantsDOBGroup =
-                            JSON.parse(
+                            JSON.parse( 
                                 JSON.stringify(this.getQuestionGroup(QuoteApplyConstants.keys.dependantDOBGroup)));
 
                         dependantsDOBGroup.isHidden = false;
                         dependantsDOBGroup.questions[0].key = QuoteApplyConstants.fieldNames.partnerDateOfBirth;
                         dependantsDOBGroup.questions[0].value =
-                            this.quoteApplication[QuoteApplyConstants.fieldNames.partnerDateOfBirth];
+                            this.quoteApplication[QuoteApplyConstants.fieldNames.partnerDateOfBirth].format(GlobalConstants.formats.dateFormat);
 
                         this.questionGroups.push(dependantsDOBGroup);
 
                     }
 
                     //TODO: Load quantity of children from Sitecore
-                    for (var i = 1; i <= 4; i++) {
-                        if (this.quoteApplication[QuoteApplyConstants.keys.childDob + i.toString()] !== "") {
+                     for (var i = 1; i <= 4; i++) {                        
+                        if (this.quoteApplication[QuoteApplyConstants.keys.childDob + i.toString()].isValid()) {
                             let dependantsDetailsGroup =
                                 JSON.parse(JSON.stringify(this.getQuestionGroup("childrensDetailsGroup")));
 
@@ -115,7 +114,7 @@ export class TellFormComponent implements OnInit, OnDestroy {
                             dependantsDOBGroup.isHidden = false;
                             dependantsDOBGroup.questions[0].key = QuoteApplyConstants.keys.childDob + i.toString();
                             dependantsDOBGroup.questions[0].value =
-                                this.quoteApplication[QuoteApplyConstants.keys.childDob + i.toString()];
+                               this.quoteApplication[QuoteApplyConstants.keys.childDob + i.toString()].format(GlobalConstants.formats.dateFormat);
 
                             this.questionGroups.push(dependantsDOBGroup);
 
