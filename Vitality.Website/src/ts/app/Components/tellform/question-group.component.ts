@@ -26,16 +26,10 @@ export class QuestionGroupComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        console.log(this.questionGroup);
-        console.log("1");
         this.questionControlService.addFormControls(this.form, this.questionGroup);
-        console.log("2");
         if (this.formName === QuoteApplyConstants.formNames.quotePaymentDetails) {
-            console.log("3");
             this.hideManualAddressfields(true);
-            console.log("4");
         };
-        console.log("5");
     }
 
     storeSelectedCheckboxValues(event: any, selectedValue: string, question: Question<any>): void {
@@ -57,14 +51,6 @@ export class QuestionGroupComponent implements OnInit {
         }
     }
 
-    btnAction(action: string) {
-        switch (action) {
-            case "postcodeSearch":
-                this.findAddress((this.questionGroup.questions.filter(x => x.key === QuoteApplyConstants.fieldNames.billingPostcode)[0]).value);
-        default:
-        }
-    }
-
     findAddress(postcode: string) {
         this.postcodeService.updatePostcodeEmitter.emit(postcode);
     }
@@ -72,7 +58,7 @@ export class QuestionGroupComponent implements OnInit {
     triggerFieldAction(action: string) {
         switch (action) {
             case "postcodeSearch":
-                this.findAddress(this.form.controls[QuoteApplyConstants.fieldNames.billingPostcode].value);
+                this.findAddress((this.questionGroup.questions.filter(x => x.key === QuoteApplyConstants.fieldNames.billingPostcode)[0]).value);
                 break;
             case "showManualAddress":
                 this.showManualAddress();

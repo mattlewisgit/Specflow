@@ -118,6 +118,7 @@ export class AutoScrollTo implements AfterViewInit {
         }
         // okBtnGroup still can be null
         if (this.okBtnGroup) {
+            console.log("enter if 2");
             this.okBtnGroup.classList.remove(GlobalConstants.selectors.hide);
         }
     }
