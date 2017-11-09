@@ -5,6 +5,7 @@ import { QuestionGroup } from "../../models/question-group";
 import { Question } from "../../models/question";
 import { QuestionControlService } from "../../services/question-control.service";
 import { PostcodeService } from "../../services/postcode.service";
+import { GlobalConstants } from "../../constants/global-constants";
 import { QuoteApplyConstants } from "../../constants/quoteapply-constants";
 
 @Component({
@@ -27,7 +28,7 @@ export class QuestionGroupComponent implements OnInit {
 
     ngOnInit(): void {
         this.questionControlService.addFormControls(this.form, this.questionGroup);
-        if (this.formName === QuoteApplyConstants.formNames.quotePaymentDetails) {
+        if (this.formName === GlobalConstants.formNames.quotePaymentDetails) {
             this.hideManualAddressfields(true);
         };
     }

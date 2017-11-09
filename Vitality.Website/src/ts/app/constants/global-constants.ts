@@ -1,16 +1,19 @@
 ﻿export namespace GlobalConstants {
-    export const tagNames= {
+    export const tagNames = {
         button: "BUTTON",
         dropdown: "SELECT",
         input: "INPUT",
         questionGroup: "QUESTION-GROUP"
     };
     export const questionElementClass = "question";
-
+    export const formNames = {
+        quoteAndApply: "quoteapplyform",
+        quotePaymentDetails: "Payment Details Form"
+    };
     export const endpoints =
     {
-            bslGet: "/api/bsl/get?bslendpoint=",
-            bslPost: "/api/bsl/post?bslendpoint=",
+        bslGet: "/api/bsl/get?bslendpoint=",
+        bslPost: "/api/bsl/post?bslendpoint=",
     };
     export const selectors = {
         classIdentifier: ".",
@@ -43,7 +46,7 @@
         futureDateValidator: "futureDateValidator",
         maxLength: "maxLength",
         minLength: "minLength",
-        required : "required",
+        required: "required",
         phoneNumberValidator: "phoneNumberValidator",
         postcodeValidator: "postcodeValidator",
         textOnly: "textOnly"

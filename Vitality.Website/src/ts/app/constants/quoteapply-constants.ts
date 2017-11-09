@@ -5,12 +5,12 @@
     };
     export const endpoints =
         {
-        addressLookup: "address/lookup/",
-        getApplication: "quote/getapplication/",
-        getRtpeQuoteList: "rtpe/quotelist",
-        healSave: "quote/healsave",
-        savePricingRequest: "quote/savepricingrequest",
-        savePricingResponse: "quote/savepricingresponse"
+            addressLookup: "address/lookup/",
+            getApplication: "quote/getapplication/",
+            getRtpeQuoteList: "rtpe/quotelist",
+            healSave: "quote/healsave",
+            savePricingRequest: "quote/savepricingrequest",
+            savePricingResponse: "quote/savepricingresponse"
         };
     export const keys = {
         callbackTimeQuestionGroup: "callbackTimeQuestionGroup",
@@ -53,10 +53,6 @@
         mePartnerChildren: "mepartnerchildren",
         meChildren: "mechildren",
         productCode: "PHC"
-    };
-    export const formNames = {
-        quoteAndApply: "Quote Apply Form",
-        quotePaymentDetails: "Payment Details Form"
     };
     export const fieldNames = {
         billingPostcode: "billingPostcode",

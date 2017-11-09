@@ -20,7 +20,7 @@ content-length: 77
 ----version----
 language: en
 version: 1
-revision: a2660c9d-e65b-493c-b154-00c9faddceca
+revision: 0d9e9708-6fa4-4789-897f-11e18dde51fe
 
 ----field----
 field: {C2C33986-4B81-430D-93F1-B0A5C768B50E}
@@ -97,9 +97,9 @@ BUY ONLINE
 field: {31B33C0F-872A-4E66-9042-325C1109BBF9}
 name: CallToAction
 key: calltoaction
-content-length: 182
+content-length: 128
 
-<link id="{1574AC21-6B74-4223-8762-4F3941F99A18}" querystring="referenceId=" text="" anchor="" url="/Presales/home/dev/quote-payment-details" title="" class="" linktype="internal" />
+<link text="" anchor="" linktype="internal" class="" title=""  querystring="ref=" id="{1574AC21-6B74-4223-8762-4F3941F99A18}" />
 ----field----
 field: {622A60FC-0BC6-433F-A259-EE053E32988A}
 name: EditIcon
@@ -125,9 +125,9 @@ Select
 field: {451321B3-4083-47E6-B192-FABCF7C6A00B}
 name: AlternativeCallToAction
 key: alternativecalltoaction
-content-length: 136
+content-length: 128
 
-<link text="" anchor="" linktype="internal" class="" title=""  querystring="referenceId=" id="{5234D2C0-7213-41BE-ACA5-3F160FAC3345}" />
+<link text="" anchor="" linktype="internal" class="" title=""  querystring="ref=" id="{5234D2C0-7213-41BE-ACA5-3F160FAC3345}" />
 ----field----
 field: {32D6D8FF-2E58-4EB5-BE2E-57A4E65B0450}
 name: TooltipImage
@@ -183,14 +183,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-a2660c9d-e65b-493c-b154-00c9faddceca
+0d9e9708-6fa4-4789-897f-11e18dde51fe
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20171101T150318Z
+20171109T143205Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
