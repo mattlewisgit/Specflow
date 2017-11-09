@@ -1,0 +1,87 @@
+----item----
+version: 1
+id: {AACCEFBD-EF5F-4F48-BA72-B0FE6A539D9E}
+database: master
+path: /sitecore/content/Presales/Content/Tell Form/Payment Details Form/Direct Debit Message
+parent: {B5743B02-442C-4685-8AB5-5134C49DF793}
+name: Direct Debit Message
+master: {00000000-0000-0000-0000-000000000000}
+template: {338B1198-FD2E-4C63-94F2-CA164AF1E26C}
+templatekey: Question Group
+created: 20171102T103717Z
+
+----field----
+field: {A4F985D9-98B3-4B52-AAAF-4344F6E747C6}
+name: __Workflow
+key: __workflow
+content-length: 38
+
+{D148818F-4040-46FD-9434-F8CCF9FE2E9C}
+----version----
+language: en
+version: 1
+revision: c24c9946-6d22-4413-9898-aa0d231637e8
+
+----field----
+field: {DE38D3EB-81E3-4D60-8F57-F803A68EBEF2}
+name: Label
+key: label
+content-length: 1068
+
+<strong>Direct Debit Intruction<br />
+</strong><br />
+<span style="background-color: #ffffff; text-align: justify; color: #000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed arcu accumsan, viverra nisi vel, accumsan orci. Phasellus lectus mauris, malesuada ac mollis et, volutpat sit amet ipsum. Vivamus laoreet, sem a pulvinar sagittis, libero diam commodo ex, consectetur condimentum lacus ligula a nisi. Sed in euismod justo.<br />
+<br />
+<img alt="" src="media-online/d6f0e976c44749fa93cbdd9d20336ad3.ashx?h=122&amp;w=132" style="width: 132px; height: 122px;" /></span><br />
+<strong>Direct Debit Guarantee<br />
+</strong><br />
+<span style="background-color: #ffffff; text-align: justify; color: #000000;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed arcu accumsan, viverra nisi vel, accumsan orci. Phasellus lectus mauris, malesuada ac mollis et, volutpat sit amet ipsum. Vivamus laoreet, sem a pulvinar sagittis, libero diam commodo ex, consectetur condimentum lacus ligula a nisi. Sed in euismod justo.</span>
+----field----
+field: {B5971C34-6E72-4FE6-A8A0-1252FD55986A}
+name: Questions
+key: questions
+content-length: 0
+
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20171102T103717Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+c24c9946-6d22-4413-9898-aa0d231637e8
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20171102T104750Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin
+----field----
+field: {3E431DE1-525E-47A3-B6B0-1CCBEC3A8C98}
+name: __Workflow state
+key: __workflow state
+content-length: 38
+
+{BBC08507-1651-4F93-804C-AF45D7A30D0C}
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

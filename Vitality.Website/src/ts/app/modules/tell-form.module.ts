@@ -17,6 +17,8 @@ import { QuoteService } from "../services/quote.service";
 
 import { Common } from "../modules/common.module";
 
+import { SafeHtmlPipe } from "../pipes/safe-html.pipe";
+
 import { AutoScrollTo } from "../directives/auto-scroll-to.directive";
 import { LimitMultiSelect } from "../directives/limit-multi-select.directive";
 import { QuestionGroupComponent } from "../components/tellform/question-group.component";
@@ -35,7 +37,8 @@ import { WindowRef } from "../components/windowref";
         AutoScrollTo,
         LimitMultiSelect,
         TellFormComponent,
-        QuestionGroupComponent],
+        QuestionGroupComponent,
+        SafeHtmlPipe],
     providers: [
         CallbackService,
         Common,

@@ -45,19 +45,30 @@ namespace Vitality.Website.IntegrationTests.Steps
         public void IGoToTheFieldAndEnter(string fieldName, string inputText)
         {
             //WebDriver.ScrollToElement($"#{fieldName}");
-
-            WebDriver
-                .FindElement(new JQuerySelector($".quote--content > tell-form .question .question--input__text #{fieldName}"))
-                .SendKeys(inputText);
-
-            if (fieldName == "postcode")
+            try
             {
-                Thread.Sleep(2000);
+                WebDriver
+                    .FindElement(new JQuerySelector($".quote--content > tell-form .question .question--input__text #{fieldName}"))
+                    .SendKeys(inputText);
+
+                if (fieldName == "postcode")
+                {
+                    ScenarioContext.Current.Add("quotePostcode", inputText);
+                    Thread.Sleep(2000);
+                }
+                if (fieldName == "firstName")
+                {
+                    ScenarioContext.Current.Add("quoteFirstName", inputText);
+                    Thread.Sleep(2000);
+                }
             }
-            if (fieldName == "firstName")
+            catch (NoSuchElementException)
             {
-                ScenarioContext.Current.Add("quoteFirstName", inputText);
-                Thread.Sleep(2000);
+                return;
+            }
+            catch (Exception)
+            {
+                Assert.True(false, "" + fieldName + " field cannot enter " + inputText + "");
             }
 
         }

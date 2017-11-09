@@ -1,0 +1,122 @@
+----item----
+version: 1
+id: {60335EBF-7510-40A8-9030-C892701162F6}
+database: master
+path: /sitecore/content/Presales/Content/Tell Form/Payment Details Form/We need your address please/SelectBillingAddress
+parent: {71AC9401-44C3-4098-802A-520250F9A8CF}
+name: SelectBillingAddress
+master: {00000000-0000-0000-0000-000000000000}
+template: {16446BB0-1CE3-44A5-81FA-2417CE6A1FEB}
+templatekey: Question
+created: 20171024T084849Z
+
+----field----
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 2
+
+50
+----version----
+language: en
+version: 1
+revision: db8ca47e-76ff-442c-96c8-c952e9d4791b
+
+----field----
+field: {365CBF3B-BCA1-4C43-A070-68B9FD55DAE2}
+name: Key
+key: key
+content-length: 38
+
+{12B44D4E-F169-4364-B6E6-8AF06D15EF33}
+----field----
+field: {EDBA5F60-C406-43A0-8E4E-145A7BCD98FF}
+name: ControlType
+key: controltype
+content-length: 38
+
+{E77FFF18-83B4-4891-9DD5-A2962DC2FF36}
+----field----
+field: {FB8609FA-B563-4BC8-A82F-492875A9BA40}
+name: Label
+key: label
+content-length: 0
+
+
+----field----
+field: {AF4DB38F-344A-443B-B34C-FB7EB529AAB7}
+name: Placeholder
+key: placeholder
+content-length: 19
+
+Select your address
+----field----
+field: {683C6454-743E-40A8-8259-3A89EBEEA95E}
+name: DefaultValue
+key: defaultvalue
+content-length: 0
+
+
+----field----
+field: {98D8AEE3-52A2-4CCE-9654-16DDD64735BD}
+name: Validators
+key: validators
+content-length: 0
+
+
+----field----
+field: {142376C6-E1DA-431C-B6D1-5796FF970557}
+name: RelatedData
+key: relateddata
+content-length: 0
+
+
+----field----
+field: {E2ADEF8F-F958-4257-98B2-4FB9A4D42268}
+name: Breakline
+key: breakline
+content-length: 1
+
+1
+----field----
+field: {AD72079D-4225-462B-98CF-C87ED57FFB76}
+name: FieldSize
+key: fieldsize
+content-length: 38
+
+{9A74A1CA-9FE5-45BF-885E-67BCA30CECF9}
+----field----
+field: {6945424E-60F5-43F2-AFC1-7642D746A4E6}
+name: FieldAction
+key: fieldaction
+content-length: 14
+
+addressChanged
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20170613T094406Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+db8ca47e-76ff-442c-96c8-c952e9d4791b
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20171102T095432Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\Admin

@@ -3,6 +3,7 @@
 	As a prospective Member
 	I want marketing message to display
 
+    @QuoteAndApply
     Scenario: Check marketing message is displayed
     Given I am on presales /dev/quote-result
     Then I expect the marketing message Fetching your quote to be displayed

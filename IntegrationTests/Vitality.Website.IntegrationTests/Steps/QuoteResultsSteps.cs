@@ -10,6 +10,7 @@ using Xunit;
 using OpenQA.Selenium;
 using System.Threading;
 using System.Text.RegularExpressions;
+using OpenQA.Selenium.Support.UI;
 
 namespace Vitality.Website.IntegrationTests.Steps
 {
@@ -27,8 +28,12 @@ namespace Vitality.Website.IntegrationTests.Steps
         [Given(@"I see the Quote Results page feed load has completed")]
         public void ISeeTheQuoteResultsPageFeedLoadHasCompleted()
         {
+            //Not ideal, but wiating for interstitual page to complete (5 seconds waiting)
+            Thread.Sleep(10000);
+
             WebDriver
                 .WaitForAngular();
+
         }
 
 
@@ -152,5 +157,21 @@ namespace Vitality.Website.IntegrationTests.Steps
                .Text.LooseEquals(ctaText)
                .ShouldBe(true);
         }
+
+
+        [When(@"I click on the quote result (.*) button link")]
+        public void WhenIClickOnTheQuoteResultButtonLink(string buttonLink)
+        {
+
+            var QuoteResultButton = WebDriver
+               .FindElements(new JQuerySelector("quote-result .comparison-table tr th permutation-button p .button--box.button--box__primary.button--box__small"))
+               .FirstOrDefault(e => e.Text.Equals(buttonLink));
+
+            QuoteResultButton
+                .GetParent()
+                .Click();
+
+        }
+
     }
 }

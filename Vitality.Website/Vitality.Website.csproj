@@ -379,7 +379,6 @@
     <Content Include="Areas\Presales\Views\QuoteApply\QuoteResult.cshtml" />
     <Content Include="Areas\Presales\Views\Shared\QuoteMainLayout.cshtml" />
     <Content Include="Areas\Presales\Views\QuoteApply\RichTextContent.cshtml" />
-    <Content Include="Areas\Presales\Views\Shared\QuoteCompletePurchaseLayout.cshtml" />
     <None Include="Areas\Presales\Views\Shared\QuoteApplyLayout.cshtml" />
     <Content Include="img\spinner.gif" />
     <Content Include="src\js\countdown-timer-app.js" />
@@ -405,6 +404,7 @@
     <TypeScriptCompile Include="src\ts\app\constants\quoteapply-constants.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\auto-scroll-to.directive.ts" />
     <TypeScriptCompile Include="src\ts\app\constants\global-constants.ts" />
+    <TypeScriptCompile Include="src\ts\app\models\address.ts" />
     <TypeScriptCompile Include="src\ts\app\models\quote\quote-application.ts" />
     <TypeScriptCompile Include="src\ts\app\modules\common.module.ts" />
     <TypeScriptCompile Include="src\ts\app\directives\click-outside.ts" />
@@ -427,6 +427,7 @@
     <TypeScriptCompile Include="src\ts\app\modules\rich-text-content.module.ts" />
     <TypeScriptCompile Include="src\ts\app\modules\quote-result.module.ts" />
     <TypeScriptCompile Include="src\ts\app\modules\quote-apply-footer.module.ts" />
+    <TypeScriptCompile Include="src\ts\app\pipes\safe-html.pipe.ts" />
     <TypeScriptCompile Include="src\ts\app\services\quote.service.ts" />
     <TypeScriptCompile Include="src\ts\rich-text-content.main.ts" />
     <TypeScriptCompile Include="src\ts\quote-result.main.ts" />

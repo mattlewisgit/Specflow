@@ -3,11 +3,11 @@
 export class QuoteApplication {
     addressLine1: string;
     addressLine2: string;
-    child1Dob: moment.Moment;
-    child2Dob: moment.Moment;
-    child3Dob: moment.Moment;
-    child4Dob: moment.Moment;
-    child5Dob: moment.Moment;
+    childDob1: moment.Moment;
+    childDob2: moment.Moment;
+    childDob3: moment.Moment;
+    childDob4: moment.Moment;
+    childDob5: moment.Moment;
     coverStartDate: moment.Moment;
     dateOfBirth: moment.Moment;
     emailAddress: string;
@@ -29,11 +29,11 @@ export class QuoteApplication {
     constructor(quoteApplication: any) {
         this.addressLine1 = quoteApplication.AddressLine1;
         this.addressLine2 = quoteApplication.AddressLine2;
-        this.child1Dob = moment(quoteApplication.Child1Dob);
-        this.child2Dob = moment(quoteApplication.Child2Dob);
-        this.child3Dob = moment(quoteApplication.Child3Dob);
-        this.child4Dob = moment(quoteApplication.Child4Dob);
-        this.child5Dob = moment(quoteApplication.Child5Dob);
+        this.childDob1 = moment(quoteApplication.ChildDob1);
+        this.childDob2 = moment(quoteApplication.ChildDob2);
+        this.childDob3 = moment(quoteApplication.ChildDob3);
+        this.childDob4 = moment(quoteApplication.ChildDob4);
+        this.childDob5 = moment(quoteApplication.ChildDob5);
         this.coverStartDate = moment(quoteApplication.CoverStartDate);
         this.dateOfBirth = moment(quoteApplication.DateOfBirth);
         this.emailAddress = quoteApplication.EmailAddress;

@@ -1,11 +1,11 @@
 ﻿<div class="question" *ngIf="!questionGroup.isHidden" [formGroup]="form">
-    <span [innerHTML]="questionGroup.label"> </span>
+    <span class="{{questionGroup.questionTitleBreakLine ? 'breakline' : ''}}" [innerHTML]="questionGroup.label"> </span>
     <ng-container *ngFor="let question of questionGroup.questions" [ngSwitch]="question.controlType">
         <ng-container *ngSwitchCase="'dropdown'">
-            <div class="question--input__select">
+            <div class="question--input__select {{question.fieldSize}} {{question.breakline ? 'breakline' : ''}}">
                 {{ question.label }}
-                <select [id]="question.key" [formControlName]="question.key" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">
-                    <option *ngIf="question.placeholder " value="">{{ question.placeholder }}</option>
+                <select (change)="triggerFieldAction(question.fieldAction)" [id]="question.key" [formControlName]="question.key" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">
+                    <option *ngIf="question.placeholder" value="">{{ question.placeholder }}</option>
                     <option *ngFor="let opt of question.relatedData" [value]="opt.key">{{opt.value}}</option>
                 </select>
             </div>
@@ -23,11 +23,14 @@
         </ng-container>
         <ng-container *ngSwitchCase="'button'">
             <div class="ok-btn-group">
-                <button type="button" class="ok-btn" (click)="btnAction(question.value)" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">{{ question.label }}</button> <span [innerHTML]="renderingData.okBtnHelpText"> </span>
+                <button type="button" class="ok-btn" (click)="triggerFieldAction(question.fieldAction)" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted">{{ question.label }}</button> <span [innerHTML]="renderingData.okBtnHelpText"> </span>
             </div>
         </ng-container>
+        <ng-container *ngSwitchCase="'richText'">
+            <div class="question--input__rich-text" (click)="triggerFieldAction(question.fieldAction)" [innerHTML]="question.label | safeHtml"></div>
+        </ng-container>
         <ng-container *ngSwitchDefault>
-            <div class="question--input__text" *ngIf="!question.isHidden">
+            <div class="question--input__text {{question.fieldSize}} {{question.breakline ? 'breakline' : ''}}" *ngIf="!question.isHidden">
                 <input *ngIf="question.mask.length > 0" [formControlName]="question.key" [value]="question.value"
                        [id]="question.key" [type]="question.controlType" placeholder="{{ question.placeholder }}" auto-scroll-to [isGroupCompleted]="questionGroup.isCompleted" mask-number [mask]="question.mask">
                 <input *ngIf="question.mask.length <= 0" [formControlName]="question.key" [value]="question.value"

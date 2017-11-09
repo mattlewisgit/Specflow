@@ -4,6 +4,7 @@ namespace Vitality.Website.Areas.Presales.ComponentTemplates.TellForm
 {
     public class TellFormViewModel
     {
+        public string Name { get; set; }
         public Dictionary<string, string> AdditionalData { get; set; }
         public string OkBtnText { get; set; }
         public string OkBtnHelpText { get; set; }

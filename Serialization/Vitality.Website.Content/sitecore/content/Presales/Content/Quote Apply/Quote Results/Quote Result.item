@@ -20,7 +20,7 @@ content-length: 77
 ----version----
 language: en
 version: 1
-revision: b2461aed-a17c-4593-b0a7-1d7834986070
+revision: a2660c9d-e65b-493c-b154-00c9faddceca
 
 ----field----
 field: {C2C33986-4B81-430D-93F1-B0A5C768B50E}
@@ -97,9 +97,9 @@ BUY ONLINE
 field: {31B33C0F-872A-4E66-9042-325C1109BBF9}
 name: CallToAction
 key: calltoaction
-content-length: 136
+content-length: 182
 
-<link text="" anchor="" linktype="internal" class="" title=""  querystring="referenceId=" id="{1574AC21-6B74-4223-8762-4F3941F99A18}" />
+<link id="{1574AC21-6B74-4223-8762-4F3941F99A18}" querystring="referenceId=" text="" anchor="" url="/Presales/home/dev/quote-payment-details" title="" class="" linktype="internal" />
 ----field----
 field: {622A60FC-0BC6-433F-A259-EE053E32988A}
 name: EditIcon
@@ -183,14 +183,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-b2461aed-a17c-4593-b0a7-1d7834986070
+a2660c9d-e65b-493c-b154-00c9faddceca
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20171019T142142Z
+20171101T150318Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

@@ -21,7 +21,7 @@ export class PermutationButtonComponent implements OnChanges {
     @Input()
     cssClass: string;
     @Input()
-    referenceId: string;
+    referenceNumber: string;
 
     isBuyNow: boolean;
 
@@ -34,6 +34,6 @@ export class PermutationButtonComponent implements OnChanges {
     }
 
     handleAction(): void {
-        this.winRef.nativeWindow.location.href = this.isBuyNow ? `${this.callToAction}?ref=${this.referenceId}` : `${this.alternativeCallToAction}?ref=${this.referenceId}`;
+        this.winRef.nativeWindow.location.href = this.isBuyNow ? `${this.callToAction}?ref=${this.referenceNumber}` : `${this.alternativeCallToAction}?ref=${this.referenceNumber}`;
     }
 }
