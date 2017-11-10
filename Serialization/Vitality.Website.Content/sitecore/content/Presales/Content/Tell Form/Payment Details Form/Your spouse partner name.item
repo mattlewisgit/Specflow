@@ -1,48 +1,62 @@
 ----item----
 version: 1
-id: {E1AB1C5A-3DB3-4F9F-889C-22C0BFB7293C}
+id: {ACCC4CB7-8692-4FA3-96C5-21A239724E12}
 database: master
-path: /sitecore/content/Presales/Content/Tell Form/Payment Details Form/The name on the account is
+path: /sitecore/content/Presales/Content/Tell Form/Payment Details Form/Your spouse partner name
 parent: {B5743B02-442C-4685-8AB5-5134C49DF793}
-name: The name on the account is
+name: Your spouse partner name
 master: {00000000-0000-0000-0000-000000000000}
 template: {338B1198-FD2E-4C63-94F2-CA164AF1E26C}
 templatekey: Question Group
-created: 20171013T092148Z
+created: 20171106T101641Z
 
 ----version----
 language: en
 version: 1
-revision: 5a05e604-f25b-42b6-b8fe-e45993a58c07
+revision: 30478418-3bb3-45fb-a605-aa225a3b0925
 
 ----field----
 field: {DE38D3EB-81E3-4D60-8F57-F803A68EBEF2}
 name: Label
 key: label
-content-length: 26
+content-length: 27
 
-The name on the account is
+Your spouse/partner's name?
 ----field----
 field: {B5971C34-6E72-4FE6-A8A0-1252FD55986A}
 name: Questions
 key: questions
 content-length: 116
 
-{472A5010-2D21-4E4E-9C57-9CBBDC76CDF0}|{B50133B4-5F91-4C2D-AAD1-35D15A809F6D}|{03732F52-4A3C-4A13-ADE0-45608726F78A}
+{2C64DCBA-D00D-42F1-8ABA-0625D2AB67BB}|{2C30E59E-DABE-4866-B665-23112FA71CB0}|{14CA742E-C80C-43B3-BBFC-A292FD1734F9}
 ----field----
 field: {3754388B-A1F5-4D59-BB18-D8F583537122}
 name: ValidationMessage
 key: validationmessage
-content-length: 27
+content-length: 42
 
-Please enter your full name
+Please enter your partner/spouse full name
 ----field----
 field: {41388122-00F1-4C68-A855-929CD212BD72}
 name: Key
 key: key
 content-length: 38
 
-{70347C59-0671-40AA-9D1E-F391F5034E21}
+{5B3B7D2B-0F76-414B-A34B-F3CC61FC2CAD}
+----field----
+field: {8EA93966-6BCC-49B4-ACAE-A5743671D9D0}
+name: isHidden
+key: ishidden
+content-length: 1
+
+1
+----field----
+field: {A4D11EE7-6D02-4EAA-93E4-C4C7DA256BC1}
+name: QuestionTitleBreakLine
+key: questiontitlebreakline
+content-length: 1
+
+1
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -56,14 +70,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-5a05e604-f25b-42b6-b8fe-e45993a58c07
+30478418-3bb3-45fb-a605-aa225a3b0925
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20171103T152202Z
+20171107T112347Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
