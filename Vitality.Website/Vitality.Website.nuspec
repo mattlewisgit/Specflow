@@ -22,6 +22,7 @@
     <file src="bin\**\*.lic" target="bin" />
     <file src="css\*.css" target="css" />
     <file src="css\*.png" target="css" />
+    <file src="Data\Sitecore xhtml5.xsd" target="Data" />
     <file src="error.html" />
     <file src="Global.asax" />
     <file src="_Heartbeat.html" />
