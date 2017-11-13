@@ -20,7 +20,7 @@ content-length: 77
 ----version----
 language: en
 version: 1
-revision: 3e5564ee-2295-4f9b-ae70-cd0ca4210bf8
+revision: 7c3e99b5-b822-437a-a88f-91c4e4215c73
 
 ----field----
 field: {C2C33986-4B81-430D-93F1-B0A5C768B50E}
@@ -125,9 +125,9 @@ Select
 field: {451321B3-4083-47E6-B192-FABCF7C6A00B}
 name: AlternativeCallToAction
 key: alternativecalltoaction
-content-length: 136
+content-length: 128
 
-<link text="" anchor="" linktype="internal" class="" title=""  querystring="referenceId=" id="{5234D2C0-7213-41BE-ACA5-3F160FAC3345}" />
+<link text="" anchor="" linktype="internal" class="" title=""  querystring="ref=" id="{5234D2C0-7213-41BE-ACA5-3F160FAC3345}" />
 ----field----
 field: {32D6D8FF-2E58-4EB5-BE2E-57A4E65B0450}
 name: TooltipImage
@@ -183,14 +183,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-3e5564ee-2295-4f9b-ae70-cd0ca4210bf8
+7c3e99b5-b822-437a-a88f-91c4e4215c73
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20171108T110530Z
+20171109T165801Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
