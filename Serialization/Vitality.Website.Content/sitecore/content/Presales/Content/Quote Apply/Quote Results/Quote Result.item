@@ -20,7 +20,7 @@ content-length: 77
 ----version----
 language: en
 version: 1
-revision: 0d9e9708-6fa4-4789-897f-11e18dde51fe
+revision: 7c3e99b5-b822-437a-a88f-91c4e4215c73
 
 ----field----
 field: {C2C33986-4B81-430D-93F1-B0A5C768B50E}
@@ -83,9 +83,9 @@ What is this
 field: {ED7DD961-4A22-4BDF-B14D-93A0F728887C}
 name: ServiceOutagePage
 key: serviceoutagepage
-content-length: 124
+content-length: 0
 
-<link text="" anchor="" linktype="internal" class="" title=""  querystring="" id="{CBBC82DB-A5C3-4A12-A19F-C82394168F73}" />
+
 ----field----
 field: {974C6F80-F404-42FD-B1CC-EA8DFAA4FF4F}
 name: CallToActionText
@@ -183,14 +183,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-0d9e9708-6fa4-4789-897f-11e18dde51fe
+7c3e99b5-b822-437a-a88f-91c4e4215c73
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20171109T143205Z
+20171109T165801Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
