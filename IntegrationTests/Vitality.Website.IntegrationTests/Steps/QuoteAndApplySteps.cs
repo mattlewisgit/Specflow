@@ -29,6 +29,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         [Given(@"I go to the (.*) field and choose (.*)")]
         public void IGoToTheFieldAndChoose(string fieldName, string option)
         {
+            WebDriver.WaitForAngular();
             //WebDriver.ScrollToElement($"#{fieldName}");
 
             var possibleOptions = WebDriver
@@ -44,6 +45,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         [When(@"I go to the (.*) field and enter (.*)")]
         public void IGoToTheFieldAndEnter(string fieldName, string inputText)
         {
+            WebDriver.WaitForAngular();
             //WebDriver.ScrollToElement($"#{fieldName}");
             try
             {
