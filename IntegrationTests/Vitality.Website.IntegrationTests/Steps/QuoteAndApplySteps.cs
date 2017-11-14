@@ -50,13 +50,12 @@ namespace Vitality.Website.IntegrationTests.Steps
             //WebDriver.ScrollToElement($"#{fieldName}");
             try
             {
-                Thread.Sleep(2000);
+
                 WebDriver
                     .FindElement(new JQuerySelector($".quote--content > tell-form .question .question--input__text #{fieldName}"))
                     .SendKeys(inputText);
 
                 ScenarioContext.Current.Add($"quote{fieldName}", inputText);
-                Thread.Sleep(2000);
 
             }
             catch (NoSuchElementException)
@@ -378,7 +377,6 @@ namespace Vitality.Website.IntegrationTests.Steps
             {
                 WebDriver
                 .ScrollToElement(
-
                     $@".quote--content > tell-form .question .question--checkbox-list li label:contains(""{checkbox}"")");
 
                 WebDriver
