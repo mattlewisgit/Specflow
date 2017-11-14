@@ -43,7 +43,7 @@ Scenario: Payment Details - Postal Address - Manually entering an address
     Then I don't see the billingPostcode field error
 
     @QuoteAndApply
-Scenario: Payment Details - Postal Address - Check postcode is pre-populated from the Q&A Journey
+Scenario: Payment Details - Postal Address - Check postcode is autopopulated
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed
     And I go to the title field and choose Mrs
@@ -67,5 +67,5 @@ Scenario: Payment Details - Postal Address - Check postcode is pre-populated fro
 	Then I expect the presales /dev/quote-result to open
     When I click on the quote result BUY ONLINE button link
     Then I expect the presales /dev/quote-payment-details to open
-    Then I expect the billingPostcode field to contain BH1 1JD
+    Then I expect the billingPostcode field to autopopulate with the correct information
     Then I don't see the billingPostcode field error

@@ -10,6 +10,7 @@ namespace Vitality.Website.IntegrationTests.Steps.QuoteAndApply.PaymentDetails
     using OpenQA.Selenium.Support.UI;
     using System.Threading;
     using Shouldly;
+    using Vitality.Extensions.Selenium;
 
     [Binding]
     public sealed class PaymentDetailsSteps : BaseSteps
@@ -110,16 +111,17 @@ namespace Vitality.Website.IntegrationTests.Steps.QuoteAndApply.PaymentDetails
         }
 
 
-        [Then(@"I expect the (.*) field to contain (.*)")]
-        public void ThenIExpectTheFieldToContain(string fieldName, string p1)
+        [Then(@"I expect the (.*) field to autopopulate with the correct information")]
+        public void ThenIExpectTheFieldToAutopopulateWithTheCorrectInformation(string fieldName)
         {
+            WebDriver.WaitForAngular();
+
             try
             {
                 WebDriver
                     .FindElement(new JQuerySelector($".quote--content > tell-form .question #{fieldName} option"))
                     .Text
-                    .Equals(ScenarioContext.Current["quotePostcode"].ToString());
-
+                    .Equals(ScenarioContext.Current[$"quote{fieldName}"].ToString());
             }
             catch (NoSuchElementException)
             {
@@ -127,13 +129,9 @@ namespace Vitality.Website.IntegrationTests.Steps.QuoteAndApply.PaymentDetails
             }
             catch (Exception)
             {
-                Assert.True(false, "" + fieldName + " does not match quote and apply postcode ");
+                Assert.True(false, "" + fieldName + " does not match quote and apply" + (ScenarioContext.Current[$"quote{fieldName}"].ToString()) + "");
             }
-
-
         }
-
-
 
     }
 }

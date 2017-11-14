@@ -46,6 +46,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         public void IGoToTheFieldAndEnter(string fieldName, string inputText)
         {
             WebDriver.WaitForAngular();
+
             //WebDriver.ScrollToElement($"#{fieldName}");
             try
             {
@@ -53,16 +54,50 @@ namespace Vitality.Website.IntegrationTests.Steps
                     .FindElement(new JQuerySelector($".quote--content > tell-form .question .question--input__text #{fieldName}"))
                     .SendKeys(inputText);
 
-                if (fieldName == "postcode")
-                {
-                    ScenarioContext.Current.Add("quotePostcode", inputText);
-                    Thread.Sleep(2000);
-                }
-                if (fieldName == "firstName")
-                {
-                    ScenarioContext.Current.Add("quoteFirstName", inputText);
-                    Thread.Sleep(2000);
-                }
+                ScenarioContext.Current.Add($"quote{fieldName}", inputText);
+                Thread.Sleep(2000);
+
+                //if (fieldName == "postcode")
+                //{
+                //    ScenarioContext.Current.Add("quotepostcode", inputText);
+                //    Thread.Sleep(2000);
+                //}
+                //if (fieldName == "firstName")
+                //{
+                //    ScenarioContext.Current.Add("quoteFirstName", inputText);
+                //    Thread.Sleep(2000);
+                //}
+                //if (fieldName == "partnerDateOfBirth")
+                //{
+                //    ScenarioContext.Current.Add("quotepartnerDateOfBirth", inputText);
+                //    Thread.Sleep(2000);
+                //}
+                //if (fieldName == "child1Dob")
+                //{
+                //    ScenarioContext.Current.Add("quotechildDob1", inputText);
+                //    Thread.Sleep(2000);
+                //}
+                //if (fieldName == "child2Dob")
+                //{
+                //    ScenarioContext.Current.Add("quotechildDob2", inputText);
+                //    Thread.Sleep(2000);
+                //}
+                //if (fieldName == "child3Dob")
+                //{
+                //    ScenarioContext.Current.Add("quotechildDob3", inputText);
+                //    Thread.Sleep(2000);
+                //}
+                //if (fieldName == "child4Dob")
+                //{
+                //    ScenarioContext.Current.Add("quotechildDob4", inputText);
+                //    Thread.Sleep(2000);
+                //}
+                //if (fieldName == "child4Dob")
+                //{
+                //    ScenarioContext.Current.Add("quotechildDob5", inputText);
+                //    Thread.Sleep(2000);
+                //}
+
             }
             catch (NoSuchElementException)
             {
@@ -191,6 +226,13 @@ namespace Vitality.Website.IntegrationTests.Steps
             WebDriver
                 .FindElement(new JQuerySelector($".quote--content > tell-form .question .question--input__text #{fieldName}"))
                 .SendKeys(inputText);
+
+            if (fieldName == "postcode")
+            {
+                ScenarioContext.Current.Add("quoteDOB", inputText);
+                Thread.Sleep(2000);
+            }
+
         }
 
         [Given(@"I go to the (.*) field and make the date today (.*) (.*) days")]
