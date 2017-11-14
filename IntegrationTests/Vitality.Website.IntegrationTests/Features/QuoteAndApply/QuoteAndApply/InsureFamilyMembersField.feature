@@ -102,8 +102,8 @@
     When I go to the noOfChildren field and look at the options available
     Then I see that the noOfChildren options are as expected
 
-	
-	@QuoteAndApply	
+
+	@QuoteAndApply
     Scenario: InsuredMember - Check error message when dateOfBirth makes Partner too young
     Given I am on presales /dev/quote-and-apply
     And I see the Quote And Apply page feed load has completed

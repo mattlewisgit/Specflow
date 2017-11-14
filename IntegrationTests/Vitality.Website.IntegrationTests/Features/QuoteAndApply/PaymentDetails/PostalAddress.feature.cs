@@ -186,16 +186,13 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Payment Details - Postal Address - Check postcode is pre-populated from the Q&A J" +
-            "ourney")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Postal Address - Check postcode is autopopulated")]
         [Xunit.TraitAttribute("FeatureTitle", "PostalAddress")]
-        [Xunit.TraitAttribute("Description", "Payment Details - Postal Address - Check postcode is pre-populated from the Q&A J" +
-            "ourney")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Postal Address - Check postcode is autopopulated")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void PaymentDetails_PostalAddress_CheckPostcodeIsPre_PopulatedFromTheQAJourney()
+        public virtual void PaymentDetails_PostalAddress_CheckPostcodeIsAutopopulated()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Postal Address - Check postcode is pre-populated from the Q&A J" +
-                    "ourney", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Postal Address - Check postcode is autopopulated", new string[] {
                         "QuoteAndApply"});
 #line 46
 this.ScenarioSetup(scenarioInfo);
@@ -246,7 +243,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 69
     testRunner.Then("I expect the presales /dev/quote-payment-details to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 70
-    testRunner.Then("I expect the billingPostcode field to contain BH1 1JD", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I expect the billingPostcode field to autopopulate with the correct information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 71
     testRunner.Then("I don\'t see the billingPostcode field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

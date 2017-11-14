@@ -190,6 +190,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AccountType.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\QuoteAndApply\PaymentDetails\DependantDetails.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DependantDetails.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\QuoteAndApply\PaymentDetails\PostalAddress.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -546,6 +551,10 @@
     <None Include="Features\QuoteAndApply\PaymentDetails\AccountType.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AccountType.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\QuoteAndApply\PaymentDetails\DependantDetails.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DependantDetails.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\QuoteAndApply\PaymentDetails\PostalAddress.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
