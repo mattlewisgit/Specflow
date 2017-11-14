@@ -72,13 +72,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Payment Details - Dependant Details - Check Partner DOB is correct")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Dependant Details - Check Partner DOB is autopopulated")]
         [Xunit.TraitAttribute("FeatureTitle", "DependantDetails")]
-        [Xunit.TraitAttribute("Description", "Payment Details - Dependant Details - Check Partner DOB is correct")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Dependant Details - Check Partner DOB is autopopulated")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void PaymentDetails_DependantDetails_CheckPartnerDOBIsCorrect()
+        public virtual void PaymentDetails_DependantDetails_CheckPartnerDOBIsAutopopulated()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Dependant Details - Check Partner DOB is correct", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Dependant Details - Check Partner DOB is autopopulated", new string[] {
                         "QuoteAndApply"});
 #line 8
     this.ScenarioSetup(scenarioInfo);
@@ -139,13 +139,13 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Payment Details - Dependant Details - Check Child 1 DOB is correct")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Dependant Details - Check Child 1 DOB is autopopulated")]
         [Xunit.TraitAttribute("FeatureTitle", "DependantDetails")]
-        [Xunit.TraitAttribute("Description", "Payment Details - Dependant Details - Check Child 1 DOB is correct")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Dependant Details - Check Child 1 DOB is autopopulated")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void PaymentDetails_DependantDetails_CheckChild1DOBIsCorrect()
+        public virtual void PaymentDetails_DependantDetails_CheckChild1DOBIsAutopopulated()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Dependant Details - Check Child 1 DOB is correct", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Dependant Details - Check Child 1 DOB is autopopulated", new string[] {
                         "QuoteAndApply"});
 #line 37
     this.ScenarioSetup(scenarioInfo);
@@ -180,7 +180,7 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
 #line 52
     testRunner.And("I go to the noOfChildren field and choose kid\'s", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 53
-    testRunner.And("I go to the child1Dob field and enter 01/01/2010", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the childDob1 field and enter 01/01/2010", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 54
     testRunner.And("I go to the Discounted gym membership checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 55
@@ -200,23 +200,23 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
 #line 62
     testRunner.Then("I expect the presales /dev/quote-payment-details to open", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 63
-    testRunner.Then("I expect the child1Dob field to autopopulate with the correct information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I expect the childDob1 field to autopopulate with the correct information", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 64
     testRunner.Then("I don\'t see the partnerDateOfBirth field error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
-        [Xunit.FactAttribute(DisplayName="Payment Details - Dependant Details - Check Partner and 4 children DOB is correct" +
-            "")]
+        [Xunit.FactAttribute(DisplayName="Payment Details - Dependant Details - Check Partner and 4 children DOB is autopop" +
+            "ulated")]
         [Xunit.TraitAttribute("FeatureTitle", "DependantDetails")]
-        [Xunit.TraitAttribute("Description", "Payment Details - Dependant Details - Check Partner and 4 children DOB is correct" +
-            "")]
+        [Xunit.TraitAttribute("Description", "Payment Details - Dependant Details - Check Partner and 4 children DOB is autopop" +
+            "ulated")]
         [Xunit.TraitAttribute("Category", "QuoteAndApply")]
-        public virtual void PaymentDetails_DependantDetails_CheckPartnerAnd4ChildrenDOBIsCorrect()
+        public virtual void PaymentDetails_DependantDetails_CheckPartnerAnd4ChildrenDOBIsAutopopulated()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Dependant Details - Check Partner and 4 children DOB is correct" +
-                    "", new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Payment Details - Dependant Details - Check Partner and 4 children DOB is autopop" +
+                    "ulated", new string[] {
                         "QuoteAndApply"});
 #line 67
     this.ScenarioSetup(scenarioInfo);
@@ -251,15 +251,15 @@ namespace Vitality.Website.IntegrationTests.Features.QuoteAndApply.PaymentDetail
 #line 82
     testRunner.And("I go to the partnerDateOfBirth field and enter 20/01/1990", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 83
-    testRunner.And("I go to the noOfChildren field and choose kid\'s", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the noOfChildren field and choose 4 kids\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 84
-    testRunner.And("I go to the child1Dob field and enter 01/01/2010", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the childDob1 field and enter 01/01/2010", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 85
-    testRunner.And("I go to the child2Dob field and enter 01/01/2011", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the childDob2 field and enter 01/01/2011", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 86
-    testRunner.And("I go to the child3Dob field and enter 01/01/2012", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the childDob3 field and enter 01/01/2012", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 87
-    testRunner.And("I go to the child4Dob field and enter 01/01/2013", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I go to the childDob4 field and enter 01/01/2013", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 88
     testRunner.And("I go to the Discounted gym membership checkbox field and select the value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 89

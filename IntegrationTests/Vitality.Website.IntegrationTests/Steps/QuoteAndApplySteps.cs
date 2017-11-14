@@ -50,53 +50,13 @@ namespace Vitality.Website.IntegrationTests.Steps
             //WebDriver.ScrollToElement($"#{fieldName}");
             try
             {
+                Thread.Sleep(2000);
                 WebDriver
                     .FindElement(new JQuerySelector($".quote--content > tell-form .question .question--input__text #{fieldName}"))
                     .SendKeys(inputText);
 
                 ScenarioContext.Current.Add($"quote{fieldName}", inputText);
                 Thread.Sleep(2000);
-
-                //if (fieldName == "postcode")
-                //{
-                //    ScenarioContext.Current.Add("quotepostcode", inputText);
-                //    Thread.Sleep(2000);
-                //}
-                //if (fieldName == "firstName")
-                //{
-                //    ScenarioContext.Current.Add("quoteFirstName", inputText);
-                //    Thread.Sleep(2000);
-                //}
-                //if (fieldName == "partnerDateOfBirth")
-                //{
-                //    ScenarioContext.Current.Add("quotepartnerDateOfBirth", inputText);
-                //    Thread.Sleep(2000);
-                //}
-                //if (fieldName == "child1Dob")
-                //{
-                //    ScenarioContext.Current.Add("quotechildDob1", inputText);
-                //    Thread.Sleep(2000);
-                //}
-                //if (fieldName == "child2Dob")
-                //{
-                //    ScenarioContext.Current.Add("quotechildDob2", inputText);
-                //    Thread.Sleep(2000);
-                //}
-                //if (fieldName == "child3Dob")
-                //{
-                //    ScenarioContext.Current.Add("quotechildDob3", inputText);
-                //    Thread.Sleep(2000);
-                //}
-                //if (fieldName == "child4Dob")
-                //{
-                //    ScenarioContext.Current.Add("quotechildDob4", inputText);
-                //    Thread.Sleep(2000);
-                //}
-                //if (fieldName == "child4Dob")
-                //{
-                //    ScenarioContext.Current.Add("quotechildDob5", inputText);
-                //    Thread.Sleep(2000);
-                //}
 
             }
             catch (NoSuchElementException)
