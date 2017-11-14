@@ -20,7 +20,7 @@ content-length: 77
 ----version----
 language: en
 version: 1
-revision: 733fd7f9-5149-4241-b7b8-7f4cbb6beae9
+revision: 67f9c1ec-290a-4dfa-9c72-6e3480c1a52b
 
 ----field----
 field: {C2C33986-4B81-430D-93F1-B0A5C768B50E}
@@ -47,9 +47,9 @@ content-length: 116
 field: {047C3A14-83B9-4621-AD1C-B02E29CA2508}
 name: HelpText
 key: helptext
-content-length: 70
+content-length: 0
 
-You can click the pencil icon to edit options and adjust your premium.
+
 ----field----
 field: {419D84E6-57EE-4815-B3F2-40047EADBCE4}
 name: PrintText
@@ -182,14 +182,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-733fd7f9-5149-4241-b7b8-7f4cbb6beae9
+67f9c1ec-290a-4dfa-9c72-6e3480c1a52b
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20171113T163652Z
+20171114T101120Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
