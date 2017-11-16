@@ -1,8 +1,9 @@
 {
-  "directory": "./bower_components",
-  "registry": {
-    "search": [
-      "http://172.27.160.110/bower/Bower"
-    ]
-  }
+    "directory": "bower_components",
+    "registry": {
+        "search": [
+            "https://devops.vitality.co.uk/nexus/repository/vitality-bower/"
+        ]
+    },
+    "resolvers": [ "bower-nexus3-resolver" ]
 }

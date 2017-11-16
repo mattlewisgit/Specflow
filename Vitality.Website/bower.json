@@ -10,7 +10,7 @@
     "amd"
   ],
   "homepage": "https://www.vitality.co.uk/",
-  "private": true,
+  "private": false,
   "ignore": [
     "*"
   ],
