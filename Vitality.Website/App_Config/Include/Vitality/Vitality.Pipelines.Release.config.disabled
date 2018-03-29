@@ -1,9 +1,0 @@
- <configuration xmlns:patch="http://www.sitecore.net/xmlconfig/" xmlns:set="http://www.sitecore.net/xmlconfig/set/">
-  <sitecore>
-    <pipelines>
-      <initialize>
-        <processor type="Vitality.Website.SC.Agents.Sitemaps.InitializeSitemap, Vitality.Website.SC"/>
-      </initialize>
-    </pipelines>
-  </sitecore>
-</configuration>

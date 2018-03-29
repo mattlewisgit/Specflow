@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Vitality.Website.IntegrationTests.Extensions
+namespace Kingfisher.Website.IntegrationTests.Extensions
 {
     using System;
     using System.Collections.Generic;

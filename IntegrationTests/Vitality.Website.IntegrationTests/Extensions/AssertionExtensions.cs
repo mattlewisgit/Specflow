@@ -1,4 +1,4 @@
-namespace Vitality.Website.IntegrationTests.Extensions
+namespace Kingfisher.Website.IntegrationTests.Extensions
 {
     using System.Collections.Generic;
     using Shouldly;

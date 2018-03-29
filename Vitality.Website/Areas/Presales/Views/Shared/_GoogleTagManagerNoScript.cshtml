@@ -1,9 +1,0 @@
-﻿@inherits Glass.Mapper.Sc.Web.Mvc.GlassView<Vitality.Website.Areas.Presales.PageTemplates.BasePage>
-
-@if (!string.IsNullOrWhiteSpace(Model.GoogleTagManagerId))
-{
-    <noscript>
-        <iframe src="//www.googletagmanager.com/ns.html?id=@Model.GoogleTagManagerId"
-                height="0" width="0" style="display: none; visibility: hidden"></iframe>
-    </noscript>
-}

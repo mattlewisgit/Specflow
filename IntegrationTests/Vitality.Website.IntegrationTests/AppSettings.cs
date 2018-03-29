@@ -1,29 +1,21 @@
 using System.Configuration;
 
-namespace Vitality.Website.IntegrationTests
+namespace Kingfisher.Website.IntegrationTests
 {
     public static class AppSettings
     {
         public static class Paths
         {
             public static string Firefox => GetValue("Paths.Firefox");
-
             public static string Firefox64 => GetValue("Paths.Firefox64");
-
             public static string PhantomJS => GetValue("Paths.PhantomJS");
         }
 
         public static class Links
         {
-            public static string VitalityBaseUrl => GetValue("Links.VitalityBaseUrl");
-
-            public static string VitalityAdvisersUrl => GetValue("Links.VitalityAdvisersUrl");
-
-            public static string VitalityPresalesUrl => GetValue("Links.VitalityPresalesUrl");
-
-
-            public static string VitalityAdvisersProductionUrl => GetValue("Links.VitalityAdvisersProductionUrl");
-            public static string VitalityPresalesProductionUrl => GetValue("Links.VitalityPresalesProductionUrl");
+            public static string DIYBaseUrl => GetValue("Links.DIYBaseUrl");
+            public static string StockEndpointUrl => GetValue("Links.StockEndpointUrl");
+            public static string RiversandBaseUrl => GetValue("Links.RiversandBaseUrl");
         }
         private static string GetValue(string key)
         {

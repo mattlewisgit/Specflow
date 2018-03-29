@@ -1,10 +1,10 @@
-namespace Vitality.Website.IntegrationTests.Drivers
+namespace Kingfisher.Website.IntegrationTests.Drivers
 {
+    using Extensions;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Chrome;
     using OpenQA.Selenium.Firefox;
     using OpenQA.Selenium.PhantomJS;
-    using Vitality.Extensions.Selenium;
 
     public static class DriverFactory
     {

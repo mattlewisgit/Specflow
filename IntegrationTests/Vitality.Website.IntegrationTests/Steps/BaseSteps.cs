@@ -1,10 +1,10 @@
-namespace Vitality.Website.IntegrationTests.Steps
+namespace Kingfisher.Website.IntegrationTests.Steps
 {
     using System;
     using Drivers;
+    using Extensions;
     using OpenQA.Selenium;
     using TechTalk.SpecFlow;
-    using Vitality.Extensions.Selenium;
 
     [Binding]
     public class BaseSteps
@@ -15,7 +15,7 @@ namespace Vitality.Website.IntegrationTests.Steps
         [BeforeScenario]
         public static void BeforeTestRun()
         {
-            IWebDriverExtensions.DefaultWaitTimeSpan = new TimeSpan(0, 2, 0);
+            IWebDriverExtensions.DefaultWaitTimeSpan = new TimeSpan(0, 0, 30);
             WebDriver = DriverFactory.Chrome();
 
             // Need to set these after as there are no options for Chrome.
