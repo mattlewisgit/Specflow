@@ -17,15 +17,15 @@ namespace Vitality.Website.IntegrationTests.Features.GAPI
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.1.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class StockFeedFeature : Xunit.IClassFixture<StockFeedFeature.FixtureData>, System.IDisposable
+    public partial class PriceFeedFeature : Xunit.IClassFixture<PriceFeedFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "StockFeed.feature"
+#line 1 "PriceFeed.feature"
 #line hidden
         
-        public StockFeedFeature()
+        public PriceFeedFeature()
         {
             this.TestInitialize();
         }
@@ -33,8 +33,8 @@ namespace Vitality.Website.IntegrationTests.Features.GAPI
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "StockFeed", "\tIn order to check the stock endpoint\n\tAs a stock feed user\n\tI want to be able to" +
-                    " check stock levels change", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Price feed", "\tIn order to check the GAPI price feed\n\tAs a price feed user\n\tI want to verify th" +
+                    "at the price is correct", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -63,7 +63,7 @@ namespace Vitality.Website.IntegrationTests.Features.GAPI
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void SetFixture(StockFeedFeature.FixtureData fixtureData)
+        public virtual void SetFixture(PriceFeedFeature.FixtureData fixtureData)
         {
         }
         
@@ -72,20 +72,24 @@ namespace Vitality.Website.IntegrationTests.Features.GAPI
             this.ScenarioTearDown();
         }
         
-        [Xunit.FactAttribute(DisplayName="Check stock feed levels are updated")]
-        [Xunit.TraitAttribute("FeatureTitle", "StockFeed")]
-        [Xunit.TraitAttribute("Description", "Check stock feed levels are updated")]
-        [Xunit.TraitAttribute("Category", "GAPI")]
-        public virtual void CheckStockFeedLevelsAreUpdated()
+        [Xunit.FactAttribute(DisplayName="Check Group API price feed")]
+        [Xunit.TraitAttribute("FeatureTitle", "Price feed")]
+        [Xunit.TraitAttribute("Description", "Check Group API price feed")]
+        [Xunit.TraitAttribute("Category", "mytag")]
+        public virtual void CheckGroupAPIPriceFeed()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check stock feed levels are updated", new string[] {
-                        "GAPI"});
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Check Group API price feed", new string[] {
+                        "mytag"});
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.Given("I am on stock API endpoint URL /1011/00804256", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have entered 50 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
-    testRunner.Then("I expect the quantity to be 300", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I have entered 70 into the calculator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 10
+ testRunner.When("I press add", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 11
+ testRunner.Then("the result should be 120 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -97,12 +101,12 @@ this.ScenarioSetup(scenarioInfo);
             
             public FixtureData()
             {
-                StockFeedFeature.FeatureSetup();
+                PriceFeedFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                StockFeedFeature.FeatureTearDown();
+                PriceFeedFeature.FeatureTearDown();
             }
         }
     }

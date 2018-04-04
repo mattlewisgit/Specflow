@@ -21,10 +21,10 @@ namespace Kingfisher.Website.IntegrationTests.Steps
             // Need to set these after as there are no options for Chrome.
             WebDriver
                 .Manage()
-                .Timeouts()
-                .SetPageLoadTimeout(IWebDriverExtensions.DefaultWaitTimeSpan)
-                .SetScriptTimeout(IWebDriverExtensions.DefaultWaitTimeSpan)
-                .ImplicitlyWait(IWebDriverExtensions.DefaultWaitTimeSpan);
+                .Timeouts();
+                //.SetPageLoadTimeout(IWebDriverExtensions.DefaultWaitTimeSpan)
+                //.SetScriptTimeout(IWebDriverExtensions.DefaultWaitTimeSpan)
+                //.ImplicitlyWait(IWebDriverExtensions.DefaultWaitTimeSpan);
         }
 
         [AfterScenario]

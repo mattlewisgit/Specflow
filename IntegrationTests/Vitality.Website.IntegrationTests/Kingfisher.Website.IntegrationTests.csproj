@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\..\packages\xunit.runner.visualstudio.2.3.1\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\..\packages\xunit.runner.visualstudio.2.3.1\build\net20\xunit.runner.visualstudio.props')" />
+  <Import Project="..\..\packages\xunit.runner.console.2.3.1\build\xunit.runner.console.props" Condition="Exists('..\..\packages\xunit.runner.console.2.3.1\build\xunit.runner.console.props')" />
+  <Import Project="..\..\packages\Microsoft.Net.Compilers.2.7.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\packages\Microsoft.Net.Compilers.2.7.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="..\..\packages\xunit.core.2.1.0\build\portable-net45+win8+wp8+wpa81\xunit.core.props" Condition="Exists('..\..\packages\xunit.core.2.1.0\build\portable-net45+win8+wp8+wpa81\xunit.core.props')" />
-  <Import Project="..\..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props" Condition="Exists('..\..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -50,20 +51,12 @@
       <HintPath>..\..\packages\Selenium.WebDriver.PhantomJS.Xplatform.2.45.0.1\lib\net40\Ionic.Zip.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Selenium.WebDriver.Extensions.Core, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Selenium.WebDriver.Extensions.Core.1.7.485\lib\net45\Selenium.WebDriver.Extensions.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Selenium.WebDriver.Extensions.JQuery, Version=1.7.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Selenium.WebDriver.Extensions.JQuery.1.7.485\lib\net45\Selenium.WebDriver.Extensions.JQuery.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Shouldly, Version=2.8.2.0, Culture=neutral, PublicKeyToken=6042cbcb05cbc941, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Shouldly.2.8.2\lib\net40\Shouldly.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -75,36 +68,35 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="TechTalk.SpecFlow, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="TechTalk.SpecFlow">
+      <HintPath>..\..\packages\SpecFlow.2.3.1\lib\net45\TechTalk.SpecFlow.dll</HintPath>
     </Reference>
-    <Reference Include="Vitality.Extensions.Selenium">
-      <HintPath>..\..\packages\Vitality.Extensions.Selenium.1.0.6\lib\net452\Vitality.Extensions.Selenium.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Selenium.WebDriver.3.0.1\lib\net40\WebDriver.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="WebDriver">
+      <HintPath>..\..\packages\Selenium.WebDriver.3.11.0\lib\net45\WebDriver.dll</HintPath>
     </Reference>
-    <Reference Include="WebDriver.Support, Version=2.53.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Selenium.Support.2.53.0\lib\net40\WebDriver.Support.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="WebDriver.Support">
+      <HintPath>..\..\packages\Selenium.Support.3.11.0\lib\net45\WebDriver.Support.dll</HintPath>
     </Reference>
-    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+    <Reference Include="Shouldly">
+      <HintPath>..\..\packages\Shouldly.3.0.0\lib\net451\Shouldly.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple">
+      <HintPath>..\..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.abstractions">
       <HintPath>..\..\packages\xunit.abstractions.2.0.0\lib\net35\xunit.abstractions.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\xunit.assert.2.1.0\lib\portable-net45+win8+wp8+wpa81\xunit.assert.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="xunit.assert">
+      <HintPath>..\..\packages\xunit.assert.2.1.0\lib\dotnet\xunit.assert.dll</HintPath>
     </Reference>
-    <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\xunit.extensibility.core.2.1.0\lib\portable-net45+win8+wp8+wpa81\xunit.core.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="xunit.core">
+      <HintPath>..\..\packages\xunit.extensibility.core.2.1.0\lib\dotnet\xunit.core.dll</HintPath>
     </Reference>
-    <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+    <Reference Include="xunit.execution.desktop">
       <HintPath>..\..\packages\xunit.extensibility.execution.2.1.0\lib\net45\xunit.execution.desktop.dll</HintPath>
-      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +142,9 @@
     <Compile Include="Steps\GAPI\StockEndpointSteps.cs" />
     <Compile Include="Steps\Riversand\RSLoginSteps.cs" />
     <Compile Include="Utilities\PageItems.cs" />
+    <Compile Include="Features\GAPI\PriceFeed.feature.cs">
+      <DependentUpon>PriceFeed.feature</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
@@ -181,6 +176,10 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Features\GAPI\PriceFeed.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>PriceFeed.feature.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\..\packages\PhantomJS.2.1.1\tools\phantomjs\phantomjs.exe">
@@ -199,15 +198,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\xunit.runner.visualstudio.2.1.0\build\net20\xunit.runner.visualstudio.props'))" />
     <Error Condition="!Exists('..\..\packages\xunit.core.2.1.0\build\portable-net45+win8+wp8+wpa81\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\xunit.core.2.1.0\build\portable-net45+win8+wp8+wpa81\xunit.core.props'))" />
-    <Error Condition="!Exists('..\..\packages\Selenium.Firefox.WebDriver.0.11.1\build\Selenium.Firefox.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Selenium.Firefox.WebDriver.0.11.1\build\Selenium.Firefox.WebDriver.targets'))" />
-    <Error Condition="!Exists('..\..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Microsoft.Net.Compilers.2.0.1\build\Microsoft.Net.Compilers.props'))" />
-    <Error Condition="!Exists('..\..\packages\Pickles.MSBuild.2.16.0\build\Pickles.MSBuild.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Pickles.MSBuild.2.16.0\build\Pickles.MSBuild.targets'))" />
-    <Error Condition="!Exists('..\..\packages\Selenium.WebDriver.ChromeDriver.2.33.0\build\Selenium.WebDriver.ChromeDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Selenium.WebDriver.ChromeDriver.2.33.0\build\Selenium.WebDriver.ChromeDriver.targets'))" />
   </Target>
-  <Import Project="..\..\packages\Selenium.Firefox.WebDriver.0.11.1\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\..\packages\Selenium.Firefox.WebDriver.0.11.1\build\Selenium.Firefox.WebDriver.targets')" />
-  <Import Project="..\..\packages\Pickles.MSBuild.2.16.0\build\Pickles.MSBuild.targets" Condition="Exists('..\..\packages\Pickles.MSBuild.2.16.0\build\Pickles.MSBuild.targets')" />
   <PropertyGroup>
     <Pickles_Generate>True</Pickles_Generate>
     <Pickles_DocumentationFormat>dhtml</Pickles_DocumentationFormat>
@@ -217,5 +209,8 @@
     <MakeDir Directories="$(OutputDirectory)" />
     <Pickles FeatureDirectory="$(FeatureDirectory)" OutputDirectory="$(OutputDirectory)" />
   </Target>
-  <Import Project="..\..\packages\Selenium.WebDriver.ChromeDriver.2.33.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\..\packages\Selenium.WebDriver.ChromeDriver.2.33.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
+  <Import Project="..\..\packages\SpecFlow.2.3.1\build\SpecFlow.targets" Condition="Exists('..\..\packages\SpecFlow.2.3.1\build\SpecFlow.targets')" />
+  <Import Project="..\..\packages\Pickles.MSBuild.2.18.0\build\Pickles.MSBuild.targets" Condition="Exists('..\..\packages\Pickles.MSBuild.2.18.0\build\Pickles.MSBuild.targets')" />
+  <Import Project="..\..\packages\Selenium.Firefox.WebDriver.0.20.0\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\..\packages\Selenium.Firefox.WebDriver.0.20.0\build\Selenium.Firefox.WebDriver.targets')" />
+  <Import Project="..\..\packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets" Condition="Exists('..\..\packages\Selenium.WebDriver.ChromeDriver.2.37.0\build\Selenium.WebDriver.ChromeDriver.targets')" />
 </Project>
